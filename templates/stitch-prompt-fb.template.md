@@ -99,6 +99,7 @@ Use `<img>` tags with descriptive `alt` attributes. Real photos will replace pla
 - Do NOT use `transition: all` — animate specific properties with purpose; include `:active` scale on buttons.
 - Do NOT invent fake awards, star rating widgets, or "#1 rated" unless review score is provided above.
 - Do NOT use stock photo URLs or AI placeholder image services.
+- Do NOT use emojis anywhere — no emoji in headings, buttons, body copy, or labels.
 - Layout must feel specific to **{{VERTICAL}}** — not a Webflow clone or startup landing page.
 - Respect `prefers-reduced-motion`.
 - Phone must be a visible `tel:` link in header and hero.
