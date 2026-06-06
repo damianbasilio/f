@@ -8,7 +8,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { listLiveSlugs } from "../lib/slugs.mjs";
 import { hasUsableMapLocation } from "../lib/brief-fields.mjs";
-import { pageHasGoogleMap } from "../lib/map-embed.mjs";
+import { pageHasGoogleMap, auditMapLoadBehavior } from "../lib/map-embed.mjs";
+import { pageHasMockupNotice, pageHasLegacyMockupBanner } from "../lib/mockup-notice.mjs";
 import { root } from "../lib/load-env.mjs";
 import { slugDir } from "../lib/paths.mjs";
 
@@ -118,7 +119,8 @@ for (const slug of slugs) {
   }
 
   if (STOCK_RE.test(html)) errors.push("Stock/placeholder image URL detected in index.html");
-  if (!html.includes("mockup-banner")) errors.push("Missing mockup banner");
+  if (!pageHasMockupNotice(html)) errors.push("Missing mockup notice popup");
+  if (pageHasLegacyMockupBanner(html)) errors.push("Legacy top mockup banner still present (run mockup-notice migration)");
   if (!html.includes('class="skip-link"') && !html.includes("skip-link")) errors.push("Missing skip link");
   if (!html.includes('id="credibility"') && !html.includes('id=\'credibility\'')) {
     errors.push("Missing #credibility section");
@@ -144,6 +146,12 @@ for (const slug of slugs) {
     .replace(/<style[\s\S]*?<\/style>/gi, "")
     .replace(/<[^>]+>/g, " ");
   if (textOnly.includes("—")) errors.push("Em dash found in page copy");
+
+  if (pageHasGoogleMap(html)) {
+    for (const issue of auditMapLoadBehavior(html)) {
+      errors.push(`Map: ${issue} (run npm run mobile-layout:audit -- ${slug})`);
+    }
+  }
 
   if (css && !css.includes("prefers-reduced-motion")) {
     errors.push("styles.css missing prefers-reduced-motion rule");

@@ -26,11 +26,14 @@
   if (nameEl && title) nameEl.textContent = title.content;
 
   const ack = dialog.querySelector(".mockup-notice__ack");
+  const ackWrap = dialog.querySelector(".mockup-notice__ack-wrap");
+  const ackRing = dialog.querySelector(".mockup-notice__ack-ring");
   let closed = false;
 
   function closeNotice() {
     if (closed) return;
     closed = true;
+    ackWrap?.classList.remove("is-timing");
     dialog.classList.add("is-closing");
     document.body.classList.remove("mockup-notice-open");
     window.setTimeout(() => dialog.remove(), 280);
@@ -39,7 +42,9 @@
   document.body.classList.add("mockup-notice-open");
   ack?.addEventListener("click", closeNotice);
   ack?.focus();
-  window.setTimeout(closeNotice, 3000);
+  ackWrap?.classList.add("is-timing");
+  ackRing?.addEventListener("animationend", closeNotice, { once: true });
+  window.setTimeout(closeNotice, 3100);
 }
 
 initMockupNotice();
