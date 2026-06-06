@@ -3,16 +3,9 @@
 **Result:** PASS
 
 ## Autofix applied
+- refreshed map layout CSS
 - injected mobile safety CSS
 - refreshed map layout CSS
-- pulled in decorative absolute offsets
-- body overflow-x-clip
-- section overflow-hidden for decorative layers
-- map iframe: eager load (was lazy)
-- map iframe: fetchpriority high
-- preconnect https://www.google.com
-- preconnect https://maps.googleapis.com
-- preconnect https://maps.gstatic.com
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok

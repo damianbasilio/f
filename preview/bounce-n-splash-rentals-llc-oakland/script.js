@@ -42,22 +42,32 @@
         document.querySelectorAll('section').forEach(section => observer.observe(section));
 
 (() => {
-  function syncMockupBannerLayout() {
-    const banner = document.querySelector(".mockup-banner");
-    if (!banner) return;
-    document.documentElement.style.setProperty(
-      "--mockup-banner-height",
-      banner.offsetHeight + "px"
-    );
+  function initMockupNotice() {
+  const dialog = document.getElementById("mockup-notice");
+  if (!dialog) return;
+
+  const nameEl = dialog.querySelector("[data-business-name]");
+  const title = document.querySelector("meta[name='x-business-name']");
+  if (nameEl && title) nameEl.textContent = title.content;
+
+  const ack = dialog.querySelector(".mockup-notice__ack");
+  let closed = false;
+
+  function closeNotice() {
+    if (closed) return;
+    closed = true;
+    dialog.classList.add("is-closing");
+    document.body.classList.remove("mockup-notice-open");
+    window.setTimeout(() => dialog.remove(), 280);
   }
 
-  syncMockupBannerLayout();
-  window.addEventListener("resize", syncMockupBannerLayout);
+  document.body.classList.add("mockup-notice-open");
+  ack?.addEventListener("click", closeNotice);
+  ack?.focus();
+  window.setTimeout(closeNotice, 3000);
+}
 
-  const banner = document.querySelector(".mockup-banner strong[data-business-name]");
-  const title = document.querySelector("meta[name='x-business-name']");
-  if (banner && title) banner.textContent = title.content;
-
+initMockupNotice();
   document.querySelectorAll('a[href^="#"]').forEach((link) => {
     link.addEventListener("click", (e) => {
       const id = link.getAttribute("href");
