@@ -1,0 +1,446 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "The Honey Hole Venue System",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is built to reflect the dual nature of \"The Honey Hole\": a warm, reliable local eatery by day and a high-energy live music venue by night. The brand personality is **rugged, authentic, and soulful**. It targets locals and travelers seeking a genuine Iowa \"roadhouse\" experience.\n\nThe visual style is a blend of **Modern Brutalism and Tactile Editorial**. It leverages high-contrast typography and asymmetric layouts reminiscent of vintage letterpress show posters. To maintain an energetic \"party\" atmosphere, the UI uses slight rotational transforms (1–2 degrees) on key elements like \"Now Playing\" cards and digital ticket stubs. Physicality is introduced through CSS-simulated wood grain overlays and heavy, purposeful borders that anchor the content against a deep, nocturnal background.\n\n## Layout & Spacing\n\nThe design system employs an **Asymmetric Fluid Grid**. While content generally adheres to a 12-column layout on desktop, individual components (cards, images) should be intentionally offset by 8px to 16px from the grid lines or rotated by -1deg to +1deg to create a \"pasted poster\" feel.\n\n- **Desktop:** 12-column grid with generous 64px outer margins.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rhythm:** Use an 8px base unit. Section spacing should be aggressive (120px+) to allow the high-end photography and bold typography \"room to breathe,\" preventing the dark theme from feeling claustrophobic.\n\n## Elevation & Depth\n\nThis design system avoids soft, floating shadows in favor of **Tonal Layering and Hard Offsets**.\n\n1.  **Level 0 (Base):** Deep Charcoal background.\n2.  **Level 1 (Cards):** Saddle Brown with a subtle noise texture or wood grain overlay (opacity 5-10%).\n3.  **Depth Perception:** Instead of Gaussian blurs, use **hard 4px shadows** (black at 40% opacity) offset to the bottom-right. This reinforces the \"Brutalist\" and tactile nature of the brand.\n4.  **Glassmorphism:** Reserved only for the navigation bar (10px backdrop blur) to ensure content remains visible as the user scrolls through the venue's schedule.\n\n## Components\n\n- **Buttons:** Primary buttons are Honey Gold with black text, 4px radius, and a \"thick\" 2px bottom border for a tactile feel. The \"Party\" CTA (Orange Red) should use the same styling but with white text.\n- **Cards (Event Posters):** Cards should feature a slight rotation (alternate between +1deg and -1deg in a list). They use the Saddle Brown background with a thin Honey Gold top border.\n- **Chips (Genre Tags):** Use the monospaced Label font. They should be outlined (1px) in Honey Gold rather than filled, keeping the UI light.\n- **Input Fields:** Deep background with a 1px Saddle Brown border. On focus, the border transitions to Honey Gold with a 2px stroke.\n- **Lists (Menu Items):** Use a \"dotted leader\" (like a vintage menu) to connect the item name to the price. This reinforces the rustic restaurant feel.\n- **Digital Tickets:** A specific component featuring a dashed line \"tear-off\" section and the monospaced font for QR code data.",
+          "theme": {
+            "bodyFont": "SOURCE_SANS_THREE",
+            "bodyFontFamily": "Source Sans Three",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#daa520",
+            "designMd": "---\nname: The Honey Hole Venue System\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#20201f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#d3c5ae'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#9c8f7a'\n  outline-variant: '#4f4634'\n  surface-tint: '#f6be3b'\n  primary: '#f9c03d'\n  on-primary: '#402d00'\n  primary-container: '#daa520'\n  on-primary-container: '#553d00'\n  inverse-primary: '#795900'\n  secondary: '#ffb68c'\n  on-secondary: '#532200'\n  secondary-container: '#753401'\n  on-secondary-container: '#fb9f66'\n  tertiary: '#a8cbff'\n  on-tertiary: '#00315d'\n  tertiary-container: '#73b0ff'\n  on-tertiary-container: '#004279'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea0'\n  primary-fixed-dim: '#f6be3b'\n  on-primary-fixed: '#261900'\n  on-primary-fixed-variant: '#5c4300'\n  secondary-fixed: '#ffdbc9'\n  secondary-fixed-dim: '#ffb68c'\n  on-secondary-fixed: '#321200'\n  on-secondary-fixed-variant: '#753401'\n  tertiary-fixed: '#d4e3ff'\n  tertiary-fixed-dim: '#a4c9ff'\n  on-tertiary-fixed: '#001c39'\n  on-tertiary-fixed-variant: '#004883'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Arimo\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Arimo\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-xl:\n    fontFamily: Arimo\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Arimo\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Source Sans 3\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Source Sans 3\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is built to reflect the dual nature of \"The Honey Hole\": a warm, reliable local eatery by day and a high-energy live music venue by night. The brand personality is **rugged, authentic, and soulful**. It targets locals and travelers seeking a genuine Iowa \"roadhouse\" experience.\n\nThe visual style is a blend of **Modern Brutalism and Tactile Editorial**. It leverages high-contrast typography and asymmetric layouts reminiscent of vintage letterpress show posters. To maintain an energetic \"party\" atmosphere, the UI uses slight rotational transforms (1–2 degrees) on key elements like \"Now Playing\" cards and digital ticket stubs. Physicality is introduced through CSS-simulated wood grain overlays and heavy, purposeful borders that anchor the content against a deep, nocturnal background.\n\n## Colors\n\nThe palette is rooted in the \"Midnight & Honey\" concept. \n\n- **Primary (Honey Gold):** Used for highlights, branding, and active states. It evokes the glow of stage lights and the warmth of a local tavern.\n- **Secondary (Saddle Brown):** Primarily used for structural elements, simulated wood textures, and decorative dividers to ground the design in a rustic aesthetic.\n- **Accent (Orange Red):** Reserved strictly for high-priority Call-to-Actions (CTAs) like \"Buy Tickets\" or \"Book a Table.\"\n- **Background (Deep Charcoal):** Provides a high-contrast canvas that makes the gold and orange-red pop, mimicking the atmosphere of a dimly lit venue.\n- **Text (Off-White):** ensures maximum readability while avoiding the harshness of pure white on dark backgrounds.\n\n## Typography\n\nThe typography system is designed to be loud yet legible.\n\n- **Headlines:** Use **Arimo** set in Bold and Uppercase to mimic the blocky, impactful nature of woodblock printing and country-western posters. It provides a sturdy, no-nonsense header.\n- **Body:** Use **Source Sans 3** for its exceptional readability in low-light (dark mode) environments. It balances the \"ruggedness\" of the headers with professional clarity.\n- **Labels:** Use **JetBrains Mono** for technical details (dates, times, prices). The monospaced nature evokes old ticket stubs and ledger entries, adding to the \"authentic\" aesthetic.\n\n## Layout & Spacing\n\nThe design system employs an **Asymmetric Fluid Grid**. While content generally adheres to a 12-column layout on desktop, individual components (cards, images) should be intentionally offset by 8px to 16px from the grid lines or rotated by -1deg to +1deg to create a \"pasted poster\" feel.\n\n- **Desktop:** 12-column grid with generous 64px outer margins.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rhythm:** Use an 8px base unit. Section spacing should be aggressive (120px+) to allow the high-end photography and bold typography \"room to breathe,\" preventing the dark theme from feeling claustrophobic.\n\n## Elevation & Depth\n\nThis design system avoids soft, floating shadows in favor of **Tonal Layering and Hard Offsets**.\n\n1.  **Level 0 (Base):** Deep Charcoal background.\n2.  **Level 1 (Cards):** Saddle Brown with a subtle noise texture or wood grain overlay (opacity 5-10%).\n3.  **Depth Perception:** Instead of Gaussian blurs, use **hard 4px shadows** (black at 40% opacity) offset to the bottom-right. This reinforces the \"Brutalist\" and tactile nature of the brand.\n4.  **Glassmorphism:** Reserved only for the navigation bar (10px backdrop blur) to ensure content remains visible as the user scrolls through the venue's schedule.\n\n## Shapes\n\nThe shape language is **geometric and sturdy**. \n\nWe use a consistent **4px (Soft) radius** across all interactive elements. This is sharp enough to feel rugged and industrial—echoing the venue's small-town Iowa roots—while being just soft enough to feel modern and professional. \n\n**Decorative Cuts:** For ticket components, use a CSS `mask-image` or `clip-path` to create circular \"punches\" on the left and right sides of the card, reinforcing the music venue theme.\n\n## Components\n\n- **Buttons:** Primary buttons are Honey Gold with black text, 4px radius, and a \"thick\" 2px bottom border for a tactile feel. The \"Party\" CTA (Orange Red) should use the same styling but with white text.\n- **Cards (Event Posters):** Cards should feature a slight rotation (alternate between +1deg and -1deg in a list). They use the Saddle Brown background with a thin Honey Gold top border.\n- **Chips (Genre Tags):** Use the monospaced Label font. They should be outlined (1px) in Honey Gold rather than filled, keeping the UI light.\n- **Input Fields:** Deep background with a 1px Saddle Brown border. On focus, the border transitions to Honey Gold with a 2px stroke.\n- **Lists (Menu Items):** Use a \"dotted leader\" (like a vintage menu) to connect the item name to the price. This reinforces the rustic restaurant feel.\n- **Digital Tickets:** A specific component featuring a dashed line \"tear-off\" section and the monospaced font for QR code data.",
+            "font": "ARIMO",
+            "headlineFont": "ARIMO",
+            "headlineFontFamily": "Arimo",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313030",
+              "inverse_primary": "#795900",
+              "inverse_surface": "#e5e2e1",
+              "on_background": "#e5e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#402d00",
+              "on_primary_container": "#553d00",
+              "on_primary_fixed": "#261900",
+              "on_primary_fixed_variant": "#5c4300",
+              "on_secondary": "#532200",
+              "on_secondary_container": "#fb9f66",
+              "on_secondary_fixed": "#321200",
+              "on_secondary_fixed_variant": "#753401",
+              "on_surface": "#e5e2e1",
+              "on_surface_variant": "#d3c5ae",
+              "on_tertiary": "#00315d",
+              "on_tertiary_container": "#004279",
+              "on_tertiary_fixed": "#001c39",
+              "on_tertiary_fixed_variant": "#004883",
+              "outline": "#9c8f7a",
+              "outline_variant": "#4f4634",
+              "primary": "#f9c03d",
+              "primary_container": "#daa520",
+              "primary_fixed": "#ffdea0",
+              "primary_fixed_dim": "#f6be3b",
+              "secondary": "#ffb68c",
+              "secondary_container": "#753401",
+              "secondary_fixed": "#ffdbc9",
+              "secondary_fixed_dim": "#ffb68c",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#20201f",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353535",
+              "surface_container_low": "#1c1b1b",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#f6be3b",
+              "surface_variant": "#353535",
+              "tertiary": "#a8cbff",
+              "tertiary_container": "#73b0ff",
+              "tertiary_fixed": "#d4e3ff",
+              "tertiary_fixed_dim": "#a4c9ff"
+            },
+            "overrideNeutralColor": "#1a1a1a",
+            "overridePrimaryColor": "#daa520",
+            "overrideSecondaryColor": "#8b4513",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Source Sans 3",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Source Sans 3",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Arimo",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Arimo",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "1.1"
+              },
+              "headline-md": {
+                "fontFamily": "Arimo",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-xl": {
+                "fontFamily": "Arimo",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "label-caps": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/1cd319f4573a4a5db93d59263fe4ce54",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "16",
+            "id": "7d997784bed0444fb8a33e42b51fde25",
+            "name": "projects/7842348611622559056/screens/7d997784bed0444fb8a33e42b51fde25",
+            "prompt": "Image from https://static.xx.fbcdn.net/rsrc.php/y8/r/wJ1judZHi0x.webp",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsTq-LaiLBnqIMc4ccSeIHGew3TFINKPijLQiD1CKeLCy4OMH1AmH8_6WaFB9Du5ite3FuO5nxd4KhZSGFDCQG7wXkAHvX9Y7HXRcXvR8iwhacDMZMnxYncViKo0aQvj4T81xiCW8cy6uCyVZCTP4IbAqINfYjNfdi7w5GcGXy1dgeJ0mXzkvu_ywV7pMsl7UDlbOaNuY4JeAp8ocnqxqb81cGndqNrf8OMud4OZh_k2iLAB-JvCotFGg",
+              "name": "projects/7842348611622559056/files/a776e6c94cbb4a72b5f36ea33ec15540"
+            },
+            "theme": {},
+            "title": "Image from https://static.xx.fbcdn.net/rsrc.php/y8/r/wJ1judZHi0x.webp",
+            "width": "77"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "The Honey Hole Venue System",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is built to reflect the dual nature of \"The Honey Hole\": a warm, reliable local eatery by day and a high-energy live music venue by night. The brand personality is **rugged, authentic, and soulful**. It targets locals and travelers seeking a genuine Iowa \"roadhouse\" experience.\n\nThe visual style is a blend of **Modern Brutalism and Tactile Editorial**. It leverages high-contrast typography and asymmetric layouts reminiscent of vintage letterpress show posters. To maintain an energetic \"party\" atmosphere, the UI uses slight rotational transforms (1–2 degrees) on key elements like \"Now Playing\" cards and digital ticket stubs. Physicality is introduced through CSS-simulated wood grain overlays and heavy, purposeful borders that anchor the content against a deep, nocturnal background.\n\n## Layout & Spacing\n\nThe design system employs an **Asymmetric Fluid Grid**. While content generally adheres to a 12-column layout on desktop, individual components (cards, images) should be intentionally offset by 8px to 16px from the grid lines or rotated by -1deg to +1deg to create a \"pasted poster\" feel.\n\n- **Desktop:** 12-column grid with generous 64px outer margins.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rhythm:** Use an 8px base unit. Section spacing should be aggressive (120px+) to allow the high-end photography and bold typography \"room to breathe,\" preventing the dark theme from feeling claustrophobic.\n\n## Elevation & Depth\n\nThis design system avoids soft, floating shadows in favor of **Tonal Layering and Hard Offsets**.\n\n1.  **Level 0 (Base):** Deep Charcoal background.\n2.  **Level 1 (Cards):** Saddle Brown with a subtle noise texture or wood grain overlay (opacity 5-10%).\n3.  **Depth Perception:** Instead of Gaussian blurs, use **hard 4px shadows** (black at 40% opacity) offset to the bottom-right. This reinforces the \"Brutalist\" and tactile nature of the brand.\n4.  **Glassmorphism:** Reserved only for the navigation bar (10px backdrop blur) to ensure content remains visible as the user scrolls through the venue's schedule.\n\n## Components\n\n- **Buttons:** Primary buttons are Honey Gold with black text, 4px radius, and a \"thick\" 2px bottom border for a tactile feel. The \"Party\" CTA (Orange Red) should use the same styling but with white text.\n- **Cards (Event Posters):** Cards should feature a slight rotation (alternate between +1deg and -1deg in a list). They use the Saddle Brown background with a thin Honey Gold top border.\n- **Chips (Genre Tags):** Use the monospaced Label font. They should be outlined (1px) in Honey Gold rather than filled, keeping the UI light.\n- **Input Fields:** Deep background with a 1px Saddle Brown border. On focus, the border transitions to Honey Gold with a 2px stroke.\n- **Lists (Menu Items):** Use a \"dotted leader\" (like a vintage menu) to connect the item name to the price. This reinforces the rustic restaurant feel.\n- **Digital Tickets:** A specific component featuring a dashed line \"tear-off\" section and the monospaced font for QR code data.",
+                "theme": {
+                  "bodyFont": "SOURCE_SANS_THREE",
+                  "bodyFontFamily": "Source Sans Three",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#daa520",
+                  "designMd": "---\nname: The Honey Hole Venue System\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#20201f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#d3c5ae'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#9c8f7a'\n  outline-variant: '#4f4634'\n  surface-tint: '#f6be3b'\n  primary: '#f9c03d'\n  on-primary: '#402d00'\n  primary-container: '#daa520'\n  on-primary-container: '#553d00'\n  inverse-primary: '#795900'\n  secondary: '#ffb68c'\n  on-secondary: '#532200'\n  secondary-container: '#753401'\n  on-secondary-container: '#fb9f66'\n  tertiary: '#a8cbff'\n  on-tertiary: '#00315d'\n  tertiary-container: '#73b0ff'\n  on-tertiary-container: '#004279'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea0'\n  primary-fixed-dim: '#f6be3b'\n  on-primary-fixed: '#261900'\n  on-primary-fixed-variant: '#5c4300'\n  secondary-fixed: '#ffdbc9'\n  secondary-fixed-dim: '#ffb68c'\n  on-secondary-fixed: '#321200'\n  on-secondary-fixed-variant: '#753401'\n  tertiary-fixed: '#d4e3ff'\n  tertiary-fixed-dim: '#a4c9ff'\n  on-tertiary-fixed: '#001c39'\n  on-tertiary-fixed-variant: '#004883'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Arimo\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Arimo\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-xl:\n    fontFamily: Arimo\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Arimo\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Source Sans 3\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Source Sans 3\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is built to reflect the dual nature of \"The Honey Hole\": a warm, reliable local eatery by day and a high-energy live music venue by night. The brand personality is **rugged, authentic, and soulful**. It targets locals and travelers seeking a genuine Iowa \"roadhouse\" experience.\n\nThe visual style is a blend of **Modern Brutalism and Tactile Editorial**. It leverages high-contrast typography and asymmetric layouts reminiscent of vintage letterpress show posters. To maintain an energetic \"party\" atmosphere, the UI uses slight rotational transforms (1–2 degrees) on key elements like \"Now Playing\" cards and digital ticket stubs. Physicality is introduced through CSS-simulated wood grain overlays and heavy, purposeful borders that anchor the content against a deep, nocturnal background.\n\n## Colors\n\nThe palette is rooted in the \"Midnight & Honey\" concept. \n\n- **Primary (Honey Gold):** Used for highlights, branding, and active states. It evokes the glow of stage lights and the warmth of a local tavern.\n- **Secondary (Saddle Brown):** Primarily used for structural elements, simulated wood textures, and decorative dividers to ground the design in a rustic aesthetic.\n- **Accent (Orange Red):** Reserved strictly for high-priority Call-to-Actions (CTAs) like \"Buy Tickets\" or \"Book a Table.\"\n- **Background (Deep Charcoal):** Provides a high-contrast canvas that makes the gold and orange-red pop, mimicking the atmosphere of a dimly lit venue.\n- **Text (Off-White):** ensures maximum readability while avoiding the harshness of pure white on dark backgrounds.\n\n## Typography\n\nThe typography system is designed to be loud yet legible.\n\n- **Headlines:** Use **Arimo** set in Bold and Uppercase to mimic the blocky, impactful nature of woodblock printing and country-western posters. It provides a sturdy, no-nonsense header.\n- **Body:** Use **Source Sans 3** for its exceptional readability in low-light (dark mode) environments. It balances the \"ruggedness\" of the headers with professional clarity.\n- **Labels:** Use **JetBrains Mono** for technical details (dates, times, prices). The monospaced nature evokes old ticket stubs and ledger entries, adding to the \"authentic\" aesthetic.\n\n## Layout & Spacing\n\nThe design system employs an **Asymmetric Fluid Grid**. While content generally adheres to a 12-column layout on desktop, individual components (cards, images) should be intentionally offset by 8px to 16px from the grid lines or rotated by -1deg to +1deg to create a \"pasted poster\" feel.\n\n- **Desktop:** 12-column grid with generous 64px outer margins.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rhythm:** Use an 8px base unit. Section spacing should be aggressive (120px+) to allow the high-end photography and bold typography \"room to breathe,\" preventing the dark theme from feeling claustrophobic.\n\n## Elevation & Depth\n\nThis design system avoids soft, floating shadows in favor of **Tonal Layering and Hard Offsets**.\n\n1.  **Level 0 (Base):** Deep Charcoal background.\n2.  **Level 1 (Cards):** Saddle Brown with a subtle noise texture or wood grain overlay (opacity 5-10%).\n3.  **Depth Perception:** Instead of Gaussian blurs, use **hard 4px shadows** (black at 40% opacity) offset to the bottom-right. This reinforces the \"Brutalist\" and tactile nature of the brand.\n4.  **Glassmorphism:** Reserved only for the navigation bar (10px backdrop blur) to ensure content remains visible as the user scrolls through the venue's schedule.\n\n## Shapes\n\nThe shape language is **geometric and sturdy**. \n\nWe use a consistent **4px (Soft) radius** across all interactive elements. This is sharp enough to feel rugged and industrial—echoing the venue's small-town Iowa roots—while being just soft enough to feel modern and professional. \n\n**Decorative Cuts:** For ticket components, use a CSS `mask-image` or `clip-path` to create circular \"punches\" on the left and right sides of the card, reinforcing the music venue theme.\n\n## Components\n\n- **Buttons:** Primary buttons are Honey Gold with black text, 4px radius, and a \"thick\" 2px bottom border for a tactile feel. The \"Party\" CTA (Orange Red) should use the same styling but with white text.\n- **Cards (Event Posters):** Cards should feature a slight rotation (alternate between +1deg and -1deg in a list). They use the Saddle Brown background with a thin Honey Gold top border.\n- **Chips (Genre Tags):** Use the monospaced Label font. They should be outlined (1px) in Honey Gold rather than filled, keeping the UI light.\n- **Input Fields:** Deep background with a 1px Saddle Brown border. On focus, the border transitions to Honey Gold with a 2px stroke.\n- **Lists (Menu Items):** Use a \"dotted leader\" (like a vintage menu) to connect the item name to the price. This reinforces the rustic restaurant feel.\n- **Digital Tickets:** A specific component featuring a dashed line \"tear-off\" section and the monospaced font for QR code data.",
+                  "font": "ARIMO",
+                  "headlineFont": "ARIMO",
+                  "headlineFontFamily": "Arimo",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#131313",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#313030",
+                    "inverse_primary": "#795900",
+                    "inverse_surface": "#e5e2e1",
+                    "on_background": "#e5e2e1",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#402d00",
+                    "on_primary_container": "#553d00",
+                    "on_primary_fixed": "#261900",
+                    "on_primary_fixed_variant": "#5c4300",
+                    "on_secondary": "#532200",
+                    "on_secondary_container": "#fb9f66",
+                    "on_secondary_fixed": "#321200",
+                    "on_secondary_fixed_variant": "#753401",
+                    "on_surface": "#e5e2e1",
+                    "on_surface_variant": "#d3c5ae",
+                    "on_tertiary": "#00315d",
+                    "on_tertiary_container": "#004279",
+                    "on_tertiary_fixed": "#001c39",
+                    "on_tertiary_fixed_variant": "#004883",
+                    "outline": "#9c8f7a",
+                    "outline_variant": "#4f4634",
+                    "primary": "#f9c03d",
+                    "primary_container": "#daa520",
+                    "primary_fixed": "#ffdea0",
+                    "primary_fixed_dim": "#f6be3b",
+                    "secondary": "#ffb68c",
+                    "secondary_container": "#753401",
+                    "secondary_fixed": "#ffdbc9",
+                    "secondary_fixed_dim": "#ffb68c",
+                    "surface": "#131313",
+                    "surface_bright": "#393939",
+                    "surface_container": "#20201f",
+                    "surface_container_high": "#2a2a2a",
+                    "surface_container_highest": "#353535",
+                    "surface_container_low": "#1c1b1b",
+                    "surface_container_lowest": "#0e0e0e",
+                    "surface_dim": "#131313",
+                    "surface_tint": "#f6be3b",
+                    "surface_variant": "#353535",
+                    "tertiary": "#a8cbff",
+                    "tertiary_container": "#73b0ff",
+                    "tertiary_fixed": "#d4e3ff",
+                    "tertiary_fixed_dim": "#a4c9ff"
+                  },
+                  "overrideNeutralColor": "#1a1a1a",
+                  "overridePrimaryColor": "#daa520",
+                  "overrideSecondaryColor": "#8b4513",
+                  "roundness": "ROUND_FOUR",
+                  "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "section-gap": "120px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Source Sans 3",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Arimo",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Arimo",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Arimo",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Arimo",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "label-caps": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/1cd319f4573a4a5db93d59263fe4ce54",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9608",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzZmNTRlOTUwMjRkNzQ1Y2I5NmFjNTliOWZlOGRjYzg2EgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhM3ODQyMzQ4NjExNjIyNTU5MDU2&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/7842348611622559056/files/97b93f70c965423b9f69c18124bf894a"
+            },
+            "id": "4d51f8c1f0d94a78997000067dabcd12",
+            "name": "projects/7842348611622559056/screens/4d51f8c1f0d94a78997000067dabcd12",
+            "prompt": "Create the complete desktop landing page for '209 Broadway' (The Honey Hole). \n\nSections to include:\n1. Header: Use TopNavBar component. Include phone number +1 641-734-5063 prominently.\n2. Hero: Headline: \"🎶 LIVE COUNTRY MUSIC at The Honey Hole! 🎶\". Subheadline: \"Get ready for a night of real country music with Brooke Turner & The Rock’n D Boys.\" Include a \"Call Now\" CTA.\n3. Credibility: A subtle bar or badge indicating \"4.4 Star Rated on Facebook\" and \"Local Neighborhood Favorite in Diagonal, IA\".\n4. Services/Offerings: Use cards for \"Live Bands\", \"Country Music\", \"Cold Drinks\", and \"Good Times\". Use a warm, asymmetric grid.\n5. About: Use the text: \"Cold drinks, great people, and live music all night long — you won’t want to miss this one! Tag your crew and come party with us! 🍻\".\n6. Visit: Headline \"Come See Us\". Include the address: 209 Broadway St, Diagonal, IA 50845. \n   CRITICAL: Include the exact map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: A professional but simple form with Name, Email, and Message.\n8. Footer: Use Footer component. Include contact email: 209Broadway@gmail.com and the phone number.\n\nStyle: Dark mode background, Honey Gold accents (#DAA520). Rugged slab-serif typography for headers. High-fidelity frontend code with smooth scrolling and mobile navigation for the responsive breakpoint. Use character-for-character copy from the Facebook source. \n\nUse {{DATA:IMAGE:IMAGE_1}} if applicable for a logo or small brand element, otherwise use a stylized text wordmark.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_1}}\n  Description: Image from https://static.xx.fbcdn.net/rsrc.php/y8/r/wJ1judZHi0x.webp\n  Dimensions: 77x16\n  Aspect Ratio: 4.81\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsURkQGOO0JtaXkoR8V2mOD2CuBR3Ves5b_b_eCWrOhEvomRPMAM_-JxHkcUBxjMS3OUltYPS-qOr4DrWdVmEejnjRFFn6AD3nYcO5lk1y8Tt2ioAsTO3j7P14w_D4dOvHDyjVxZnFEwZoE77CDg6kO9OGHHX_mO8LHc6zy37Ziw4_JPTdXLLJgU8om3dJ55zwQ8qOevb9Rq8FounspOsWvrstYB2gqAQQ5iq_03Z-4bVh-YM60gOixmg",
+              "name": "projects/7842348611622559056/files/cdd8223669b1406ababa1e60ac222e3d"
+            },
+            "theme": {
+              "bodyFont": "SOURCE_SANS_THREE",
+              "bodyFontFamily": "Source Sans Three",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#daa520",
+              "designMd": "---\nname: The Honey Hole Venue System\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#20201f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#d3c5ae'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#9c8f7a'\n  outline-variant: '#4f4634'\n  surface-tint: '#f6be3b'\n  primary: '#f9c03d'\n  on-primary: '#402d00'\n  primary-container: '#daa520'\n  on-primary-container: '#553d00'\n  inverse-primary: '#795900'\n  secondary: '#ffb68c'\n  on-secondary: '#532200'\n  secondary-container: '#753401'\n  on-secondary-container: '#fb9f66'\n  tertiary: '#a8cbff'\n  on-tertiary: '#00315d'\n  tertiary-container: '#73b0ff'\n  on-tertiary-container: '#004279'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea0'\n  primary-fixed-dim: '#f6be3b'\n  on-primary-fixed: '#261900'\n  on-primary-fixed-variant: '#5c4300'\n  secondary-fixed: '#ffdbc9'\n  secondary-fixed-dim: '#ffb68c'\n  on-secondary-fixed: '#321200'\n  on-secondary-fixed-variant: '#753401'\n  tertiary-fixed: '#d4e3ff'\n  tertiary-fixed-dim: '#a4c9ff'\n  on-tertiary-fixed: '#001c39'\n  on-tertiary-fixed-variant: '#004883'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Arimo\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Arimo\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-xl:\n    fontFamily: Arimo\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Arimo\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Source Sans 3\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Source Sans 3\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is built to reflect the dual nature of \"The Honey Hole\": a warm, reliable local eatery by day and a high-energy live music venue by night. The brand personality is **rugged, authentic, and soulful**. It targets locals and travelers seeking a genuine Iowa \"roadhouse\" experience.\n\nThe visual style is a blend of **Modern Brutalism and Tactile Editorial**. It leverages high-contrast typography and asymmetric layouts reminiscent of vintage letterpress show posters. To maintain an energetic \"party\" atmosphere, the UI uses slight rotational transforms (1–2 degrees) on key elements like \"Now Playing\" cards and digital ticket stubs. Physicality is introduced through CSS-simulated wood grain overlays and heavy, purposeful borders that anchor the content against a deep, nocturnal background.\n\n## Colors\n\nThe palette is rooted in the \"Midnight & Honey\" concept. \n\n- **Primary (Honey Gold):** Used for highlights, branding, and active states. It evokes the glow of stage lights and the warmth of a local tavern.\n- **Secondary (Saddle Brown):** Primarily used for structural elements, simulated wood textures, and decorative dividers to ground the design in a rustic aesthetic.\n- **Accent (Orange Red):** Reserved strictly for high-priority Call-to-Actions (CTAs) like \"Buy Tickets\" or \"Book a Table.\"\n- **Background (Deep Charcoal):** Provides a high-contrast canvas that makes the gold and orange-red pop, mimicking the atmosphere of a dimly lit venue.\n- **Text (Off-White):** ensures maximum readability while avoiding the harshness of pure white on dark backgrounds.\n\n## Typography\n\nThe typography system is designed to be loud yet legible.\n\n- **Headlines:** Use **Arimo** set in Bold and Uppercase to mimic the blocky, impactful nature of woodblock printing and country-western posters. It provides a sturdy, no-nonsense header.\n- **Body:** Use **Source Sans 3** for its exceptional readability in low-light (dark mode) environments. It balances the \"ruggedness\" of the headers with professional clarity.\n- **Labels:** Use **JetBrains Mono** for technical details (dates, times, prices). The monospaced nature evokes old ticket stubs and ledger entries, adding to the \"authentic\" aesthetic.\n\n## Layout & Spacing\n\nThe design system employs an **Asymmetric Fluid Grid**. While content generally adheres to a 12-column layout on desktop, individual components (cards, images) should be intentionally offset by 8px to 16px from the grid lines or rotated by -1deg to +1deg to create a \"pasted poster\" feel.\n\n- **Desktop:** 12-column grid with generous 64px outer margins.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rhythm:** Use an 8px base unit. Section spacing should be aggressive (120px+) to allow the high-end photography and bold typography \"room to breathe,\" preventing the dark theme from feeling claustrophobic.\n\n## Elevation & Depth\n\nThis design system avoids soft, floating shadows in favor of **Tonal Layering and Hard Offsets**.\n\n1.  **Level 0 (Base):** Deep Charcoal background.\n2.  **Level 1 (Cards):** Saddle Brown with a subtle noise texture or wood grain overlay (opacity 5-10%).\n3.  **Depth Perception:** Instead of Gaussian blurs, use **hard 4px shadows** (black at 40% opacity) offset to the bottom-right. This reinforces the \"Brutalist\" and tactile nature of the brand.\n4.  **Glassmorphism:** Reserved only for the navigation bar (10px backdrop blur) to ensure content remains visible as the user scrolls through the venue's schedule.\n\n## Shapes\n\nThe shape language is **geometric and sturdy**. \n\nWe use a consistent **4px (Soft) radius** across all interactive elements. This is sharp enough to feel rugged and industrial—echoing the venue's small-town Iowa roots—while being just soft enough to feel modern and professional. \n\n**Decorative Cuts:** For ticket components, use a CSS `mask-image` or `clip-path` to create circular \"punches\" on the left and right sides of the card, reinforcing the music venue theme.\n\n## Components\n\n- **Buttons:** Primary buttons are Honey Gold with black text, 4px radius, and a \"thick\" 2px bottom border for a tactile feel. The \"Party\" CTA (Orange Red) should use the same styling but with white text.\n- **Cards (Event Posters):** Cards should feature a slight rotation (alternate between +1deg and -1deg in a list). They use the Saddle Brown background with a thin Honey Gold top border.\n- **Chips (Genre Tags):** Use the monospaced Label font. They should be outlined (1px) in Honey Gold rather than filled, keeping the UI light.\n- **Input Fields:** Deep background with a 1px Saddle Brown border. On focus, the border transitions to Honey Gold with a 2px stroke.\n- **Lists (Menu Items):** Use a \"dotted leader\" (like a vintage menu) to connect the item name to the price. This reinforces the rustic restaurant feel.\n- **Digital Tickets:** A specific component featuring a dashed line \"tear-off\" section and the monospaced font for QR code data.",
+              "font": "ARIMO",
+              "headlineFont": "ARIMO",
+              "headlineFontFamily": "Arimo",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#131313",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#313030",
+                "inverse_primary": "#795900",
+                "inverse_surface": "#e5e2e1",
+                "on_background": "#e5e2e1",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#402d00",
+                "on_primary_container": "#553d00",
+                "on_primary_fixed": "#261900",
+                "on_primary_fixed_variant": "#5c4300",
+                "on_secondary": "#532200",
+                "on_secondary_container": "#fb9f66",
+                "on_secondary_fixed": "#321200",
+                "on_secondary_fixed_variant": "#753401",
+                "on_surface": "#e5e2e1",
+                "on_surface_variant": "#d3c5ae",
+                "on_tertiary": "#00315d",
+                "on_tertiary_container": "#004279",
+                "on_tertiary_fixed": "#001c39",
+                "on_tertiary_fixed_variant": "#004883",
+                "outline": "#9c8f7a",
+                "outline_variant": "#4f4634",
+                "primary": "#f9c03d",
+                "primary_container": "#daa520",
+                "primary_fixed": "#ffdea0",
+                "primary_fixed_dim": "#f6be3b",
+                "secondary": "#ffb68c",
+                "secondary_container": "#753401",
+                "secondary_fixed": "#ffdbc9",
+                "secondary_fixed_dim": "#ffb68c",
+                "surface": "#131313",
+                "surface_bright": "#393939",
+                "surface_container": "#20201f",
+                "surface_container_high": "#2a2a2a",
+                "surface_container_highest": "#353535",
+                "surface_container_low": "#1c1b1b",
+                "surface_container_lowest": "#0e0e0e",
+                "surface_dim": "#131313",
+                "surface_tint": "#f6be3b",
+                "surface_variant": "#353535",
+                "tertiary": "#a8cbff",
+                "tertiary_container": "#73b0ff",
+                "tertiary_fixed": "#d4e3ff",
+                "tertiary_fixed_dim": "#a4c9ff"
+              },
+              "overrideNeutralColor": "#1a1a1a",
+              "overridePrimaryColor": "#daa520",
+              "overrideSecondaryColor": "#8b4513",
+              "roundness": "ROUND_FOUR",
+              "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "section-gap": "120px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Source Sans 3",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "Arimo",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Arimo",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.1"
+                },
+                "headline-md": {
+                  "fontFamily": "Arimo",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-xl": {
+                  "fontFamily": "Arimo",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "label-caps": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "209 Broadway Landing Page",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have completed the production-ready landing page for **209 Broadway** (The Honey Hole). \n\n### Design Rationale:\n*   **Brand Identity:** I established a rugged, warm, and energetic aesthetic using a \"Honey Gold\" (#DAA520) and deep charcoal palette to reflect the \"real country roadhouse\" vibe described in their Facebook content.\n*   **Content-First Approach:** Every headline and copy block was pulled directly from their recent Facebook posts and \"About\" section to ensure authenticity.\n*   **Asymmetric Layout:** I used an intentional, non-template grid for the services section (Live Bands, Cold Drinks, etc.) to give the site a bespoke, hand-crafted feel that matches a local neighborhood favorite.\n*   **Conversion Focused:** The \"Call Now\" CTA and phone number are prominently featured in the header and hero sections to drive immediate inquiries.\n*   **Technical Compliance:** The page includes a semantic HTML structure, a functional mobile navigation menu, smooth-scroll links, and the specific map slot requirement for your deployment.\n\nThe site is fully responsive and ready for use. How does the layout and local tone look to you?"
+    },
+    {
+      "suggestion": "Can we add a photo gallery section?"
+    },
+    {
+      "suggestion": "Make the 'Honey Gold' accents more prominent."
+    },
+    {
+      "suggestion": "Change the headline font to something even more rugged."
+    }
+  ],
+  "projectId": "7842348611622559056",
+  "sessionId": "4370324806862236793"
+}
