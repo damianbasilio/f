@@ -1,24 +1,16 @@
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            vertical-align: middle;
-        }
-        .sturdy-shadow {
-            box-shadow: 0px 4px 20px rgba(30, 58, 138, 0.08);
-        }
-        .hero-gradient {
-            background: linear-gradient(to right, rgba(0, 35, 111, 0.85), rgba(0, 35, 111, 0.4)), url('https://images.unsplash.com/photo-1595841055310-ca199577317e?q=80&w=2000&auto=format&fit=crop');
-            background-size: cover;
-            background-position: center;
-        }
-    
-
-
 /* map-embed (outreach) */
 .map-slot {
   position: relative;
   min-height: 280px;
   isolation: isolate;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+.map-shell:has(> .map-slot) {
+  min-height: 0 !important;
+  height: auto !important;
+  width: 100%;
 }
 .map-slot > .map-embed,
 .map-embed.map-embed--fill {
@@ -112,109 +104,39 @@ p.map-directions {
 }
 /* end map-embed (outreach) */
 
-/* Outreach mockup chrome */
 
-:root {
-  --mockup-banner-height: 2.25rem;
-}
-.mockup-banner {
-  position: sticky;
-  top: 0;
-  z-index: 10001;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  font-size: 0.8125rem;
-  text-align: center;
-  background: #1a1a1a;
-  color: #f5f5f5;
-  border-bottom: 1px solid #333;
-}
-.has-mockup-banner nav[class*="fixed"],
-.has-mockup-banner nav[class*="sticky"],
-.has-mockup-banner header[class*="fixed"],
-.has-mockup-banner header[class*="sticky"],
-body:has(.mockup-banner) nav[class*="fixed"],
-body:has(.mockup-banner) nav[class*="sticky"],
-body:has(.mockup-banner) header[class*="fixed"],
-body:has(.mockup-banner) header[class*="sticky"] {
-  top: var(--mockup-banner-height) !important;
-}
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  z-index: 10002;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  color: #111;
-}
-.skip-link:focus {
-  left: 0.5rem;
-  top: calc(var(--mockup-banner-height) + 0.5rem);
-}
-.form-notice {
-  font-size: 0.875rem;
-  color: #666;
-  margin-top: 0.75rem;
-}
-.map-embed {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .sturdy-shadow {
+            box-shadow: 0px 4px 20px rgba(30, 58, 138, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(0, 35, 111, 0.85), rgba(0, 35, 111, 0.4)), url('https://images.unsplash.com/photo-1595841055310-ca199577317e?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+
+/* map-layout-autofix */
+.map-slot:has(> .map-embed--fill),
+.map-slot:has(> .map-embed[data-map-embed]) {
   aspect-ratio: 16 / 9;
+  height: auto !important;
   min-height: 280px;
-  margin-top: 1.25rem;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #e5e5e5;
-}
-.map-embed iframe {
-  position: absolute;
-  inset: 0;
   width: 100%;
-  height: 100%;
-  border: 0;
+}
+.map-shell:has(> .map-slot) {
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: unset !important;
+}
+.map-slot > .map-embed.map-embed--fill,
+.map-slot > .map-embed[data-map-embed] {
+  position: absolute !important;
+  inset: 0 !important;
+  height: 100% !important;
+  margin: 0 !important;
+  aspect-ratio: unset !important;
 }
 
-p.map-directions {
-  display: none !important;
-}
-.visit-address {
-  margin: 0.5rem 0 0;
-}
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
-}
-
-
-/* design-qa: emil — press feedback */
-button:active,
-a[class*="btn"]:active,
-a[class*="button"]:active,
-[role="button"]:active {
-  transform: scale(0.97);
-}
-@media (prefers-reduced-motion: reduce) {
-  button:active,
-  a[class*="btn"]:active,
-  a[class*="button"]:active,
-  [role="button"]:active {
-    transform: none;
-  }
-}
-
-/* design-qa: brief brand fonts */
-:root {
-  --font-display: 'Playfair Display', Georgia, serif;
-  --font-body: 'Work Sans', system-ui, sans-serif;
-}
-html, body {
-  font-family: var(--font-body);
-}
-h1, h2, h3, h4, h5, h6,
-.font-display, [class*="font-display"], [class*="headline"] {
-  font-family: var(--font-display);
-}
-p, li, span, a, button, input, textarea, label, nav {
-  font-family: var(--font-body);
-}
