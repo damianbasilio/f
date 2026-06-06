@@ -13,4 +13,5 @@
 ## Errors (0)
 - none
 
-_Auto-run in post-build. Fixes overflow-x and tablet grid blowout._
+
+_Auto-run in post-build. Fixes overflow-x, nav toggle, and map slot gaps._
