@@ -13,7 +13,19 @@ const hubPath = path.join(root, "index.html");
 const START = "<!-- hub:sync:start -->";
 const END = "<!-- hub:sync:end -->";
 
-const slugs = listLiveSlugs();
+function excludeSlugs() {
+  const fromEnv = process.env.HUB_EXCLUDE_SLUGS?.trim();
+  const fromArg = process.argv.find((a) => a.startsWith("--exclude="))?.slice("--exclude=".length);
+  const raw = fromEnv || fromArg || "";
+  return new Set(
+    raw
+      .split(",")
+      .map((s) => s.trim())
+      .filter(Boolean)
+  );
+}
+
+const slugs = listLiveSlugs().filter((slug) => !excludeSlugs().has(slug));
 const cards = slugs.map((slug) => {
   const briefPath = slugDir(slug, "brief.md");
   let name = slug;
