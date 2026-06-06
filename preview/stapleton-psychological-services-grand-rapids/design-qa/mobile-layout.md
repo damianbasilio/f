@@ -3,14 +3,9 @@
 **Result:** PASS
 
 ## Autofix applied
+- refreshed map layout CSS
 - injected mobile safety CSS
 - refreshed map layout CSS
-- map-slot: removed h-full (use aspect-ratio fill)
-- map iframe: eager load (was lazy)
-- map iframe: fetchpriority high
-- preconnect https://www.google.com
-- preconnect https://maps.googleapis.com
-- preconnect https://maps.gstatic.com
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok
