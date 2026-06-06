@@ -1,6 +1,6 @@
 # Responsive QA — halsey-s-country-store-campton
 
-**Result:** FAIL
+**Result:** PASS
 
 ## Viewports checked
 - mobile: 390×844
@@ -9,11 +9,11 @@
 
 ## Notes
 - mobile (390×844): scroll=ok, h1≈3 lines, smallTargets=9
-- tablet (768×1024): scroll=overflow, h1≈3 lines, smallTargets=0
+- tablet (768×1024): scroll=ok, h1≈3 lines, smallTargets=0
 - desktop (1280×900): scroll=ok, h1≈2 lines, smallTargets=0
 
-## Errors (1)
-- tablet: horizontal overflow at 768px
+## Errors (0)
+- none
 
 ## Warnings (1)
 - mobile: 9 tap targets under 44px
