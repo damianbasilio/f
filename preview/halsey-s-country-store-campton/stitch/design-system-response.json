@@ -1,0 +1,441 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Heritage Hearth",
+        "styleGuidelines": "## Brand & Style\nThe brand personality is a bridge between the hardworking heritage of a rural hardware store and the artisanal warmth of a gourmet deli. It should feel established and trustworthy, yet approachable and tactile. \n\nThe design style is **Tactile Modernism**. This approach pairs clean, structural layouts with organic textures and physical metaphors—like the grain of wood or the tooth of high-quality parchment. It avoids the coldness of pure minimalism by using warmth and depth, ensuring the digital experience feels as grounded as a physical community hub. The aesthetic should evoke the sensory experience of walking through a local store: the smell of fresh cedar, the weight of iron tools, and the inviting aroma of a kitchen.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** for desktop to create a sense of focused, editorial containment, transitioning to a **Fluid Grid** for mobile devices.\n\n- **The Split-Hero Layout:** On desktop, the primary hero is divided vertically (50/50). The left side (Hardware) uses \"Iron Gray\" backgrounds or photography with cooler tones, while the right side (Deli) utilizes \"Parchment\" or warmer, appetizing photography.\n- **Editorial Margins:** Generous white space (using the Parchment color) is essential to prevent the \"cluttered hardware store\" trope, allowing each high-quality image to breathe.\n- **Breakpoints:** \n  - Desktop: 1280px+ (12-column)\n  - Tablet: 768px (8-column, stack hero vertically)\n  - Mobile: 375px (4-column, 16px margins)\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** rather than traditional shadows. This avoids a \"floating\" app feel and keeps the UI grounded.\n\n- **Surface Tiers:** Use subtle shifts in the parchment tone to define depth. A slightly darker parchment indicates a recessed area, while a pure white overlay indicates a foreground element.\n- **Low-Contrast Outlines:** Instead of shadows, use 1px solid borders in a very light \"Cedar\" or \"Iron\" tint to define cards and input fields.\n- **Tactile Overlays:** Use a subtle grain texture or \"noise\" overlay on primary brand surfaces to mimic physical materials.\n- **Selection State:** Active items should feel \"pressed\" into the surface (inset) rather than floating above it.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Forest Deep\" with \"Parchment\" text. Secondary buttons use a \"Cedar\" outline. Hover states should involve a subtle shift in color saturation rather than a change in depth.\n- **Cards:** Cards use a \"Parchment\" background with a thin 1px \"Cedar\" or \"Iron\" border. Title text should always be in \"Domine\".\n- **Split-Hero:** A custom component where two distinct categories (Deli/Hardware) are showcased. Each side has its own unique color-tinted overlay (Warm Cedar for Deli, Cool Iron for Hardware) to differentiate the departments at a glance.\n- **Input Fields:** Use a structured, rectangular look with the Parchment background and a clear \"Iron\" border when focused. Label text should be positioned above the field in `label-caps`.\n- **Chips/Badges:** Used for \"New In,\" \"Local,\" or \"Sale.\" These should look like small physical tags or labels, using \"Honey Accent\" for visibility.",
+        "theme": {
+          "bodyFont": "WORK_SANS",
+          "bodyFontFamily": "Work Sans",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1b3022",
+          "designMd": "---\nname: Heritage Hearth\ncolors:\n  surface: '#fcf9f2'\n  surface-dim: '#dcdad3'\n  surface-bright: '#fcf9f2'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3ec'\n  surface-container: '#f0eee7'\n  surface-container-high: '#ebe8e1'\n  surface-container-highest: '#e5e2db'\n  on-surface: '#1c1c18'\n  on-surface-variant: '#434843'\n  inverse-surface: '#31312c'\n  inverse-on-surface: '#f3f0ea'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#934b19'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffa26a'\n  on-secondary-container: '#783603'\n  tertiary: '#271013'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3f2427'\n  on-tertiary-container: '#b0898c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdbc9'\n  secondary-fixed-dim: '#ffb68c'\n  on-secondary-fixed: '#321200'\n  on-secondary-fixed-variant: '#753401'\n  tertiary-fixed: '#ffd9dc'\n  tertiary-fixed-dim: '#e7bcbf'\n  on-tertiary-fixed: '#2d1417'\n  on-tertiary-fixed-variant: '#5d3f42'\n  background: '#fcf9f2'\n  on-background: '#1c1c18'\n  surface-variant: '#e5e2db'\n  parchment-base: '#FCF9F2'\n  forest-deep: '#1B3022'\n  cedar-warm: '#8B4513'\n  iron-gray: '#343A40'\n  honey-accent: '#D4A373'\ntypography:\n  display-lg:\n    fontFamily: Domine\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Domine\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 42px\n  headline-md:\n    fontFamily: Domine\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Domine\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  grid-margin: 2rem\n  gutter: 1.5rem\n  section-gap: 5rem\n  stack-sm: 0.5rem\n  stack-md: 1rem\n  stack-lg: 2rem\n---\n\n## Brand & Style\nThe brand personality is a bridge between the hardworking heritage of a rural hardware store and the artisanal warmth of a gourmet deli. It should feel established and trustworthy, yet approachable and tactile. \n\nThe design style is **Tactile Modernism**. This approach pairs clean, structural layouts with organic textures and physical metaphors—like the grain of wood or the tooth of high-quality parchment. It avoids the coldness of pure minimalism by using warmth and depth, ensuring the digital experience feels as grounded as a physical community hub. The aesthetic should evoke the sensory experience of walking through a local store: the smell of fresh cedar, the weight of iron tools, and the inviting aroma of a kitchen.\n\n## Colors\nThe palette is rooted in the natural landscape of Campton. \n\n- **Primary (Forest Deep):** A dense, authoritative green used for headers, primary buttons, and navigation. It represents growth and the surrounding wilderness.\n- **Secondary (Cedar Warm):** A rich wood tone used for accents, underlines, and iconography. It adds a \"human touch\" and warmth.\n- **Neutral (Parchment Base):** Replacing sterile whites with a soft, off-white parchment. This reduces eye strain and provides a classic, archival feel.\n- **Named Colors:** \"Iron Gray\" is reserved for technical hardware specifications and hardware-focused UI sections, while \"Honey Accent\" provides a subtle glow for highlights and calls to action.\n\n## Typography\nThe typography system balances character with utility.\n\n- **Headlines (Domine):** Chosen for its sturdy serifs and classic storefront aesthetic. It conveys reliability and historical weight. Use `display-lg` for the hero sections to mimic traditional signage.\n- **Body & UI (Work Sans):** A clean, versatile sans-serif that ensures high legibility for product descriptions and hardware specs.\n- **Labels:** Use `label-caps` for small identifiers, category tags (e.g., \"DELI\", \"TOOLS\"), and navigation items to maintain a structured, organized feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** for desktop to create a sense of focused, editorial containment, transitioning to a **Fluid Grid** for mobile devices.\n\n- **The Split-Hero Layout:** On desktop, the primary hero is divided vertically (50/50). The left side (Hardware) uses \"Iron Gray\" backgrounds or photography with cooler tones, while the right side (Deli) utilizes \"Parchment\" or warmer, appetizing photography.\n- **Editorial Margins:** Generous white space (using the Parchment color) is essential to prevent the \"cluttered hardware store\" trope, allowing each high-quality image to breathe.\n- **Breakpoints:** \n  - Desktop: 1280px+ (12-column)\n  - Tablet: 768px (8-column, stack hero vertically)\n  - Mobile: 375px (4-column, 16px margins)\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** rather than traditional shadows. This avoids a \"floating\" app feel and keeps the UI grounded.\n\n- **Surface Tiers:** Use subtle shifts in the parchment tone to define depth. A slightly darker parchment indicates a recessed area, while a pure white overlay indicates a foreground element.\n- **Low-Contrast Outlines:** Instead of shadows, use 1px solid borders in a very light \"Cedar\" or \"Iron\" tint to define cards and input fields.\n- **Tactile Overlays:** Use a subtle grain texture or \"noise\" overlay on primary brand surfaces to mimic physical materials.\n- **Selection State:** Active items should feel \"pressed\" into the surface (inset) rather than floating above it.\n\n## Shapes\nThe shape language is **Soft (Level 1)**. \n\nCorners should have a slight 0.25rem radius, suggesting wood that has been sanded down rather than sharp, industrial metal. This subtle rounding maintains a professional structure while appearing more welcoming. \n- **Buttons:** Use the standard `rounded-sm`. Avoid pill-shapes, as they feel too modern/tech-oriented for a community hub.\n- **Product Cards:** Use `rounded-lg` (0.5rem) to softly frame photography.\n- **Icons:** Should be monolinear and slightly rounded to match the stroke weight of the body text.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Forest Deep\" with \"Parchment\" text. Secondary buttons use a \"Cedar\" outline. Hover states should involve a subtle shift in color saturation rather than a change in depth.\n- **Cards:** Cards use a \"Parchment\" background with a thin 1px \"Cedar\" or \"Iron\" border. Title text should always be in \"Domine\".\n- **Split-Hero:** A custom component where two distinct categories (Deli/Hardware) are showcased. Each side has its own unique color-tinted overlay (Warm Cedar for Deli, Cool Iron for Hardware) to differentiate the departments at a glance.\n- **Input Fields:** Use a structured, rectangular look with the Parchment background and a clear \"Iron\" border when focused. Label text should be positioned above the field in `label-caps`.\n- **Chips/Badges:** Used for \"New In,\" \"Local,\" or \"Sale.\" These should look like small physical tags or labels, using \"Honey Accent\" for visibility.",
+          "font": "DOMINE",
+          "headlineFont": "DOMINE",
+          "headlineFontFamily": "Domine",
+          "labelFont": "WORK_SANS",
+          "labelFontFamily": "Work Sans",
+          "namedColors": {
+            "background": "#fcf9f2",
+            "cedar-warm": "#8B4513",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "forest-deep": "#1B3022",
+            "honey-accent": "#D4A373",
+            "inverse_on_surface": "#f3f0ea",
+            "inverse_primary": "#b4cdb8",
+            "inverse_surface": "#31312c",
+            "iron-gray": "#343A40",
+            "on_background": "#1c1c18",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#819986",
+            "on_primary_fixed": "#0b2013",
+            "on_primary_fixed_variant": "#364c3c",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#783603",
+            "on_secondary_fixed": "#321200",
+            "on_secondary_fixed_variant": "#753401",
+            "on_surface": "#1c1c18",
+            "on_surface_variant": "#434843",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#b0898c",
+            "on_tertiary_fixed": "#2d1417",
+            "on_tertiary_fixed_variant": "#5d3f42",
+            "outline": "#737973",
+            "outline_variant": "#c3c8c1",
+            "parchment-base": "#FCF9F2",
+            "primary": "#061b0e",
+            "primary_container": "#1b3022",
+            "primary_fixed": "#d0e9d4",
+            "primary_fixed_dim": "#b4cdb8",
+            "secondary": "#934b19",
+            "secondary_container": "#ffa26a",
+            "secondary_fixed": "#ffdbc9",
+            "secondary_fixed_dim": "#ffb68c",
+            "surface": "#fcf9f2",
+            "surface_bright": "#fcf9f2",
+            "surface_container": "#f0eee7",
+            "surface_container_high": "#ebe8e1",
+            "surface_container_highest": "#e5e2db",
+            "surface_container_low": "#f6f3ec",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcdad3",
+            "surface_tint": "#4d6453",
+            "surface_variant": "#e5e2db",
+            "tertiary": "#271013",
+            "tertiary_container": "#3f2427",
+            "tertiary_fixed": "#ffd9dc",
+            "tertiary_fixed_dim": "#e7bcbf"
+          },
+          "overrideNeutralColor": "#fcf9f2",
+          "overridePrimaryColor": "#1b3022",
+          "overrideSecondaryColor": "#8b4513",
+          "roundness": "ROUND_FOUR",
+          "spacing": {
+            "grid-margin": "2rem",
+            "gutter": "1.5rem",
+            "section-gap": "5rem",
+            "stack-lg": "2rem",
+            "stack-md": "1rem",
+            "stack-sm": "0.5rem"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Work Sans",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Work Sans",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "display-lg": {
+              "fontFamily": "Domine",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "56px"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Domine",
+              "fontSize": "36px",
+              "fontWeight": "700",
+              "lineHeight": "42px"
+            },
+            "headline-md": {
+              "fontFamily": "Domine",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "40px"
+            },
+            "headline-sm": {
+              "fontFamily": "Domine",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "32px"
+            },
+            "label-caps": {
+              "fontFamily": "Work Sans",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "letterSpacing": "0.05em",
+              "lineHeight": "20px"
+            }
+          }
+        }
+      },
+      "name": "assets/55f687aff87e4d11b2e6d5f0c214100a",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Heritage Hearth",
+              "styleGuidelines": "## Brand & Style\nThe brand personality is a bridge between the hardworking heritage of a rural hardware store and the artisanal warmth of a gourmet deli. It should feel established and trustworthy, yet approachable and tactile. \n\nThe design style is **Tactile Modernism**. This approach pairs clean, structural layouts with organic textures and physical metaphors—like the grain of wood or the tooth of high-quality parchment. It avoids the coldness of pure minimalism by using warmth and depth, ensuring the digital experience feels as grounded as a physical community hub. The aesthetic should evoke the sensory experience of walking through a local store: the smell of fresh cedar, the weight of iron tools, and the inviting aroma of a kitchen.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** for desktop to create a sense of focused, editorial containment, transitioning to a **Fluid Grid** for mobile devices.\n\n- **The Split-Hero Layout:** On desktop, the primary hero is divided vertically (50/50). The left side (Hardware) uses \"Iron Gray\" backgrounds or photography with cooler tones, while the right side (Deli) utilizes \"Parchment\" or warmer, appetizing photography.\n- **Editorial Margins:** Generous white space (using the Parchment color) is essential to prevent the \"cluttered hardware store\" trope, allowing each high-quality image to breathe.\n- **Breakpoints:** \n  - Desktop: 1280px+ (12-column)\n  - Tablet: 768px (8-column, stack hero vertically)\n  - Mobile: 375px (4-column, 16px margins)\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** rather than traditional shadows. This avoids a \"floating\" app feel and keeps the UI grounded.\n\n- **Surface Tiers:** Use subtle shifts in the parchment tone to define depth. A slightly darker parchment indicates a recessed area, while a pure white overlay indicates a foreground element.\n- **Low-Contrast Outlines:** Instead of shadows, use 1px solid borders in a very light \"Cedar\" or \"Iron\" tint to define cards and input fields.\n- **Tactile Overlays:** Use a subtle grain texture or \"noise\" overlay on primary brand surfaces to mimic physical materials.\n- **Selection State:** Active items should feel \"pressed\" into the surface (inset) rather than floating above it.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Forest Deep\" with \"Parchment\" text. Secondary buttons use a \"Cedar\" outline. Hover states should involve a subtle shift in color saturation rather than a change in depth.\n- **Cards:** Cards use a \"Parchment\" background with a thin 1px \"Cedar\" or \"Iron\" border. Title text should always be in \"Domine\".\n- **Split-Hero:** A custom component where two distinct categories (Deli/Hardware) are showcased. Each side has its own unique color-tinted overlay (Warm Cedar for Deli, Cool Iron for Hardware) to differentiate the departments at a glance.\n- **Input Fields:** Use a structured, rectangular look with the Parchment background and a clear \"Iron\" border when focused. Label text should be positioned above the field in `label-caps`.\n- **Chips/Badges:** Used for \"New In,\" \"Local,\" or \"Sale.\" These should look like small physical tags or labels, using \"Honey Accent\" for visibility.",
+              "theme": {
+                "bodyFont": "WORK_SANS",
+                "bodyFontFamily": "Work Sans",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1b3022",
+                "designMd": "---\nname: Heritage Hearth\ncolors:\n  surface: '#fcf9f2'\n  surface-dim: '#dcdad3'\n  surface-bright: '#fcf9f2'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3ec'\n  surface-container: '#f0eee7'\n  surface-container-high: '#ebe8e1'\n  surface-container-highest: '#e5e2db'\n  on-surface: '#1c1c18'\n  on-surface-variant: '#434843'\n  inverse-surface: '#31312c'\n  inverse-on-surface: '#f3f0ea'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#934b19'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffa26a'\n  on-secondary-container: '#783603'\n  tertiary: '#271013'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3f2427'\n  on-tertiary-container: '#b0898c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdbc9'\n  secondary-fixed-dim: '#ffb68c'\n  on-secondary-fixed: '#321200'\n  on-secondary-fixed-variant: '#753401'\n  tertiary-fixed: '#ffd9dc'\n  tertiary-fixed-dim: '#e7bcbf'\n  on-tertiary-fixed: '#2d1417'\n  on-tertiary-fixed-variant: '#5d3f42'\n  background: '#fcf9f2'\n  on-background: '#1c1c18'\n  surface-variant: '#e5e2db'\n  parchment-base: '#FCF9F2'\n  forest-deep: '#1B3022'\n  cedar-warm: '#8B4513'\n  iron-gray: '#343A40'\n  honey-accent: '#D4A373'\ntypography:\n  display-lg:\n    fontFamily: Domine\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Domine\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 42px\n  headline-md:\n    fontFamily: Domine\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Domine\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  grid-margin: 2rem\n  gutter: 1.5rem\n  section-gap: 5rem\n  stack-sm: 0.5rem\n  stack-md: 1rem\n  stack-lg: 2rem\n---\n\n## Brand & Style\nThe brand personality is a bridge between the hardworking heritage of a rural hardware store and the artisanal warmth of a gourmet deli. It should feel established and trustworthy, yet approachable and tactile. \n\nThe design style is **Tactile Modernism**. This approach pairs clean, structural layouts with organic textures and physical metaphors—like the grain of wood or the tooth of high-quality parchment. It avoids the coldness of pure minimalism by using warmth and depth, ensuring the digital experience feels as grounded as a physical community hub. The aesthetic should evoke the sensory experience of walking through a local store: the smell of fresh cedar, the weight of iron tools, and the inviting aroma of a kitchen.\n\n## Colors\nThe palette is rooted in the natural landscape of Campton. \n\n- **Primary (Forest Deep):** A dense, authoritative green used for headers, primary buttons, and navigation. It represents growth and the surrounding wilderness.\n- **Secondary (Cedar Warm):** A rich wood tone used for accents, underlines, and iconography. It adds a \"human touch\" and warmth.\n- **Neutral (Parchment Base):** Replacing sterile whites with a soft, off-white parchment. This reduces eye strain and provides a classic, archival feel.\n- **Named Colors:** \"Iron Gray\" is reserved for technical hardware specifications and hardware-focused UI sections, while \"Honey Accent\" provides a subtle glow for highlights and calls to action.\n\n## Typography\nThe typography system balances character with utility.\n\n- **Headlines (Domine):** Chosen for its sturdy serifs and classic storefront aesthetic. It conveys reliability and historical weight. Use `display-lg` for the hero sections to mimic traditional signage.\n- **Body & UI (Work Sans):** A clean, versatile sans-serif that ensures high legibility for product descriptions and hardware specs.\n- **Labels:** Use `label-caps` for small identifiers, category tags (e.g., \"DELI\", \"TOOLS\"), and navigation items to maintain a structured, organized feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** for desktop to create a sense of focused, editorial containment, transitioning to a **Fluid Grid** for mobile devices.\n\n- **The Split-Hero Layout:** On desktop, the primary hero is divided vertically (50/50). The left side (Hardware) uses \"Iron Gray\" backgrounds or photography with cooler tones, while the right side (Deli) utilizes \"Parchment\" or warmer, appetizing photography.\n- **Editorial Margins:** Generous white space (using the Parchment color) is essential to prevent the \"cluttered hardware store\" trope, allowing each high-quality image to breathe.\n- **Breakpoints:** \n  - Desktop: 1280px+ (12-column)\n  - Tablet: 768px (8-column, stack hero vertically)\n  - Mobile: 375px (4-column, 16px margins)\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** rather than traditional shadows. This avoids a \"floating\" app feel and keeps the UI grounded.\n\n- **Surface Tiers:** Use subtle shifts in the parchment tone to define depth. A slightly darker parchment indicates a recessed area, while a pure white overlay indicates a foreground element.\n- **Low-Contrast Outlines:** Instead of shadows, use 1px solid borders in a very light \"Cedar\" or \"Iron\" tint to define cards and input fields.\n- **Tactile Overlays:** Use a subtle grain texture or \"noise\" overlay on primary brand surfaces to mimic physical materials.\n- **Selection State:** Active items should feel \"pressed\" into the surface (inset) rather than floating above it.\n\n## Shapes\nThe shape language is **Soft (Level 1)**. \n\nCorners should have a slight 0.25rem radius, suggesting wood that has been sanded down rather than sharp, industrial metal. This subtle rounding maintains a professional structure while appearing more welcoming. \n- **Buttons:** Use the standard `rounded-sm`. Avoid pill-shapes, as they feel too modern/tech-oriented for a community hub.\n- **Product Cards:** Use `rounded-lg` (0.5rem) to softly frame photography.\n- **Icons:** Should be monolinear and slightly rounded to match the stroke weight of the body text.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Forest Deep\" with \"Parchment\" text. Secondary buttons use a \"Cedar\" outline. Hover states should involve a subtle shift in color saturation rather than a change in depth.\n- **Cards:** Cards use a \"Parchment\" background with a thin 1px \"Cedar\" or \"Iron\" border. Title text should always be in \"Domine\".\n- **Split-Hero:** A custom component where two distinct categories (Deli/Hardware) are showcased. Each side has its own unique color-tinted overlay (Warm Cedar for Deli, Cool Iron for Hardware) to differentiate the departments at a glance.\n- **Input Fields:** Use a structured, rectangular look with the Parchment background and a clear \"Iron\" border when focused. Label text should be positioned above the field in `label-caps`.\n- **Chips/Badges:** Used for \"New In,\" \"Local,\" or \"Sale.\" These should look like small physical tags or labels, using \"Honey Accent\" for visibility.",
+                "font": "DOMINE",
+                "headlineFont": "DOMINE",
+                "headlineFontFamily": "Domine",
+                "labelFont": "WORK_SANS",
+                "labelFontFamily": "Work Sans",
+                "namedColors": {
+                  "background": "#fcf9f2",
+                  "cedar-warm": "#8B4513",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "forest-deep": "#1B3022",
+                  "honey-accent": "#D4A373",
+                  "inverse_on_surface": "#f3f0ea",
+                  "inverse_primary": "#b4cdb8",
+                  "inverse_surface": "#31312c",
+                  "iron-gray": "#343A40",
+                  "on_background": "#1c1c18",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#819986",
+                  "on_primary_fixed": "#0b2013",
+                  "on_primary_fixed_variant": "#364c3c",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#783603",
+                  "on_secondary_fixed": "#321200",
+                  "on_secondary_fixed_variant": "#753401",
+                  "on_surface": "#1c1c18",
+                  "on_surface_variant": "#434843",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#b0898c",
+                  "on_tertiary_fixed": "#2d1417",
+                  "on_tertiary_fixed_variant": "#5d3f42",
+                  "outline": "#737973",
+                  "outline_variant": "#c3c8c1",
+                  "parchment-base": "#FCF9F2",
+                  "primary": "#061b0e",
+                  "primary_container": "#1b3022",
+                  "primary_fixed": "#d0e9d4",
+                  "primary_fixed_dim": "#b4cdb8",
+                  "secondary": "#934b19",
+                  "secondary_container": "#ffa26a",
+                  "secondary_fixed": "#ffdbc9",
+                  "secondary_fixed_dim": "#ffb68c",
+                  "surface": "#fcf9f2",
+                  "surface_bright": "#fcf9f2",
+                  "surface_container": "#f0eee7",
+                  "surface_container_high": "#ebe8e1",
+                  "surface_container_highest": "#e5e2db",
+                  "surface_container_low": "#f6f3ec",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dcdad3",
+                  "surface_tint": "#4d6453",
+                  "surface_variant": "#e5e2db",
+                  "tertiary": "#271013",
+                  "tertiary_container": "#3f2427",
+                  "tertiary_fixed": "#ffd9dc",
+                  "tertiary_fixed_dim": "#e7bcbf"
+                },
+                "overrideNeutralColor": "#fcf9f2",
+                "overridePrimaryColor": "#1b3022",
+                "overrideSecondaryColor": "#8b4513",
+                "roundness": "ROUND_FOUR",
+                "spacing": {
+                  "grid-margin": "2rem",
+                  "gutter": "1.5rem",
+                  "section-gap": "5rem",
+                  "stack-lg": "2rem",
+                  "stack-md": "1rem",
+                  "stack-sm": "0.5rem"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Work Sans",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Work Sans",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "24px"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Domine",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "56px"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Domine",
+                    "fontSize": "36px",
+                    "fontWeight": "700",
+                    "lineHeight": "42px"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Domine",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "40px"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Domine",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "32px"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Work Sans",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "20px"
+                  }
+                }
+              }
+            },
+            "name": "assets/55f687aff87e4d11b2e6d5f0c214100a",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "6690",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2E4NzBiZTJmZGQ2NzRlZTY4MDg2MjU3YWVmOWJjNmJiEgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNjUyNTgzOTUyODE4MzAzODI5Mg&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/16525839528183038292/files/bf0b232d50ba4963adb60549e8635ba3"
+          },
+          "id": "f5d791f450b74329bb3ae6a8ab2082dd",
+          "name": "projects/16525839528183038292/screens/f5d791f450b74329bb3ae6a8ab2082dd",
+          "prompt": "Generate a professional homepage for Halsey's Country Store. \nUse the 'Heritage Hearth' design system.\nLayout:\n- Navigation: Use {{DATA:COMPONENTS:COMPONENTS_2}} TopNavBar.\n- Split-Hero: Left side features 'Expert Hardware & Supplies' (Paint, Plumbing, Electrical). Right side features 'Gourmet Deli & Fresh Cuts' (Premium meats, Daily soups). Bold CTA 'Call to Order: 606-668-3315'.\n- Services Grid: Showcase Hardware, Plumbing, Electrical, Paint, Key/Glass Cutting, Deli Meats, and Gourmet Soups. Use icons and short descriptions.\n- About Section: Focus on their 236 Main St location in Campton, KY. Use a 'Community Roots' theme.\n- Contact/Visit Section: Display address, phone, and email clearly. Include a placeholder for a Google Map.\n- Footer: Use {{DATA:COMPONENTS:COMPONENTS_2}} Footer.\nContent: Use real business details: 236 Main St, Campton, KY 41301. Phone: 606-668-3315. Email: halseyscountrystore@gmail.com.\nVisual style: High-contrast, warm, professional, community-focused.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsE-MYnIZaowR8VXVEOYC0Uwvw6mVWbhJq2B-lvehnui_Cx8ihP2Bs7jkH5lhgOy63HweL2NeV9Ydo9JGYA0bbV1R9vAr40-KfHG1l2FwnXNNmcnugD51wSkVwQ6m3mj0JPx4FsebRobkEXdzLLaCgnrS7pm-PhSsd0cmWjJFjUicAiSDsG0aYJhFkDNNqVCa5LN-ovO10v2SYbEiep3lV2Y5asIVHYjNqU4TeRY8IOikcFFcz8yOZPiCY",
+            "name": "projects/16525839528183038292/files/23017172bfa1444b8ed7aa0cd3fe1135"
+          },
+          "theme": {
+            "bodyFont": "WORK_SANS",
+            "bodyFontFamily": "Work Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1b3022",
+            "designMd": "---\nname: Heritage Hearth\ncolors:\n  surface: '#fcf9f2'\n  surface-dim: '#dcdad3'\n  surface-bright: '#fcf9f2'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3ec'\n  surface-container: '#f0eee7'\n  surface-container-high: '#ebe8e1'\n  surface-container-highest: '#e5e2db'\n  on-surface: '#1c1c18'\n  on-surface-variant: '#434843'\n  inverse-surface: '#31312c'\n  inverse-on-surface: '#f3f0ea'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#934b19'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffa26a'\n  on-secondary-container: '#783603'\n  tertiary: '#271013'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3f2427'\n  on-tertiary-container: '#b0898c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdbc9'\n  secondary-fixed-dim: '#ffb68c'\n  on-secondary-fixed: '#321200'\n  on-secondary-fixed-variant: '#753401'\n  tertiary-fixed: '#ffd9dc'\n  tertiary-fixed-dim: '#e7bcbf'\n  on-tertiary-fixed: '#2d1417'\n  on-tertiary-fixed-variant: '#5d3f42'\n  background: '#fcf9f2'\n  on-background: '#1c1c18'\n  surface-variant: '#e5e2db'\n  parchment-base: '#FCF9F2'\n  forest-deep: '#1B3022'\n  cedar-warm: '#8B4513'\n  iron-gray: '#343A40'\n  honey-accent: '#D4A373'\ntypography:\n  display-lg:\n    fontFamily: Domine\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Domine\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 42px\n  headline-md:\n    fontFamily: Domine\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Domine\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  grid-margin: 2rem\n  gutter: 1.5rem\n  section-gap: 5rem\n  stack-sm: 0.5rem\n  stack-md: 1rem\n  stack-lg: 2rem\n---\n\n## Brand & Style\nThe brand personality is a bridge between the hardworking heritage of a rural hardware store and the artisanal warmth of a gourmet deli. It should feel established and trustworthy, yet approachable and tactile. \n\nThe design style is **Tactile Modernism**. This approach pairs clean, structural layouts with organic textures and physical metaphors—like the grain of wood or the tooth of high-quality parchment. It avoids the coldness of pure minimalism by using warmth and depth, ensuring the digital experience feels as grounded as a physical community hub. The aesthetic should evoke the sensory experience of walking through a local store: the smell of fresh cedar, the weight of iron tools, and the inviting aroma of a kitchen.\n\n## Colors\nThe palette is rooted in the natural landscape of Campton. \n\n- **Primary (Forest Deep):** A dense, authoritative green used for headers, primary buttons, and navigation. It represents growth and the surrounding wilderness.\n- **Secondary (Cedar Warm):** A rich wood tone used for accents, underlines, and iconography. It adds a \"human touch\" and warmth.\n- **Neutral (Parchment Base):** Replacing sterile whites with a soft, off-white parchment. This reduces eye strain and provides a classic, archival feel.\n- **Named Colors:** \"Iron Gray\" is reserved for technical hardware specifications and hardware-focused UI sections, while \"Honey Accent\" provides a subtle glow for highlights and calls to action.\n\n## Typography\nThe typography system balances character with utility.\n\n- **Headlines (Domine):** Chosen for its sturdy serifs and classic storefront aesthetic. It conveys reliability and historical weight. Use `display-lg` for the hero sections to mimic traditional signage.\n- **Body & UI (Work Sans):** A clean, versatile sans-serif that ensures high legibility for product descriptions and hardware specs.\n- **Labels:** Use `label-caps` for small identifiers, category tags (e.g., \"DELI\", \"TOOLS\"), and navigation items to maintain a structured, organized feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** for desktop to create a sense of focused, editorial containment, transitioning to a **Fluid Grid** for mobile devices.\n\n- **The Split-Hero Layout:** On desktop, the primary hero is divided vertically (50/50). The left side (Hardware) uses \"Iron Gray\" backgrounds or photography with cooler tones, while the right side (Deli) utilizes \"Parchment\" or warmer, appetizing photography.\n- **Editorial Margins:** Generous white space (using the Parchment color) is essential to prevent the \"cluttered hardware store\" trope, allowing each high-quality image to breathe.\n- **Breakpoints:** \n  - Desktop: 1280px+ (12-column)\n  - Tablet: 768px (8-column, stack hero vertically)\n  - Mobile: 375px (4-column, 16px margins)\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** rather than traditional shadows. This avoids a \"floating\" app feel and keeps the UI grounded.\n\n- **Surface Tiers:** Use subtle shifts in the parchment tone to define depth. A slightly darker parchment indicates a recessed area, while a pure white overlay indicates a foreground element.\n- **Low-Contrast Outlines:** Instead of shadows, use 1px solid borders in a very light \"Cedar\" or \"Iron\" tint to define cards and input fields.\n- **Tactile Overlays:** Use a subtle grain texture or \"noise\" overlay on primary brand surfaces to mimic physical materials.\n- **Selection State:** Active items should feel \"pressed\" into the surface (inset) rather than floating above it.\n\n## Shapes\nThe shape language is **Soft (Level 1)**. \n\nCorners should have a slight 0.25rem radius, suggesting wood that has been sanded down rather than sharp, industrial metal. This subtle rounding maintains a professional structure while appearing more welcoming. \n- **Buttons:** Use the standard `rounded-sm`. Avoid pill-shapes, as they feel too modern/tech-oriented for a community hub.\n- **Product Cards:** Use `rounded-lg` (0.5rem) to softly frame photography.\n- **Icons:** Should be monolinear and slightly rounded to match the stroke weight of the body text.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Forest Deep\" with \"Parchment\" text. Secondary buttons use a \"Cedar\" outline. Hover states should involve a subtle shift in color saturation rather than a change in depth.\n- **Cards:** Cards use a \"Parchment\" background with a thin 1px \"Cedar\" or \"Iron\" border. Title text should always be in \"Domine\".\n- **Split-Hero:** A custom component where two distinct categories (Deli/Hardware) are showcased. Each side has its own unique color-tinted overlay (Warm Cedar for Deli, Cool Iron for Hardware) to differentiate the departments at a glance.\n- **Input Fields:** Use a structured, rectangular look with the Parchment background and a clear \"Iron\" border when focused. Label text should be positioned above the field in `label-caps`.\n- **Chips/Badges:** Used for \"New In,\" \"Local,\" or \"Sale.\" These should look like small physical tags or labels, using \"Honey Accent\" for visibility.",
+            "font": "DOMINE",
+            "headlineFont": "DOMINE",
+            "headlineFontFamily": "Domine",
+            "labelFont": "WORK_SANS",
+            "labelFontFamily": "Work Sans",
+            "namedColors": {
+              "background": "#fcf9f2",
+              "cedar-warm": "#8B4513",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "forest-deep": "#1B3022",
+              "honey-accent": "#D4A373",
+              "inverse_on_surface": "#f3f0ea",
+              "inverse_primary": "#b4cdb8",
+              "inverse_surface": "#31312c",
+              "iron-gray": "#343A40",
+              "on_background": "#1c1c18",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#819986",
+              "on_primary_fixed": "#0b2013",
+              "on_primary_fixed_variant": "#364c3c",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#783603",
+              "on_secondary_fixed": "#321200",
+              "on_secondary_fixed_variant": "#753401",
+              "on_surface": "#1c1c18",
+              "on_surface_variant": "#434843",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#b0898c",
+              "on_tertiary_fixed": "#2d1417",
+              "on_tertiary_fixed_variant": "#5d3f42",
+              "outline": "#737973",
+              "outline_variant": "#c3c8c1",
+              "parchment-base": "#FCF9F2",
+              "primary": "#061b0e",
+              "primary_container": "#1b3022",
+              "primary_fixed": "#d0e9d4",
+              "primary_fixed_dim": "#b4cdb8",
+              "secondary": "#934b19",
+              "secondary_container": "#ffa26a",
+              "secondary_fixed": "#ffdbc9",
+              "secondary_fixed_dim": "#ffb68c",
+              "surface": "#fcf9f2",
+              "surface_bright": "#fcf9f2",
+              "surface_container": "#f0eee7",
+              "surface_container_high": "#ebe8e1",
+              "surface_container_highest": "#e5e2db",
+              "surface_container_low": "#f6f3ec",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcdad3",
+              "surface_tint": "#4d6453",
+              "surface_variant": "#e5e2db",
+              "tertiary": "#271013",
+              "tertiary_container": "#3f2427",
+              "tertiary_fixed": "#ffd9dc",
+              "tertiary_fixed_dim": "#e7bcbf"
+            },
+            "overrideNeutralColor": "#fcf9f2",
+            "overridePrimaryColor": "#1b3022",
+            "overrideSecondaryColor": "#8b4513",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "grid-margin": "2rem",
+              "gutter": "1.5rem",
+              "section-gap": "5rem",
+              "stack-lg": "2rem",
+              "stack-md": "1rem",
+              "stack-sm": "0.5rem"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Work Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Work Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "display-lg": {
+                "fontFamily": "Domine",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "56px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Domine",
+                "fontSize": "36px",
+                "fontWeight": "700",
+                "lineHeight": "42px"
+              },
+              "headline-md": {
+                "fontFamily": "Domine",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-sm": {
+                "fontFamily": "Domine",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "32px"
+              },
+              "label-caps": {
+                "fontFamily": "Work Sans",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.05em",
+                "lineHeight": "20px"
+              }
+            }
+          },
+          "title": "Halsey's Country Store - Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed the first professional homepage for **Halsey's Country Store**, translating their Facebook presence into a cohesive digital storefront.\n\n### Design Highlights:\n*   **Split-Hero Layout:** Immediately balances the two core pillars of the business—Hardware and Gourmet Deli—ensuring both customer bases feel welcomed upon arrival.\n*   **Community-Rooted Aesthetic:** Using the \"Heritage Hearth\" design system, I've paired deep forest greens with warm parchment tones to evoke the classic, trustworthy feel of a local Kentucky country store.\n*   **Service-First Information Architecture:** A dedicated services grid highlights their diverse offerings, from plumbing and electrical to glass cutting and daily gourmet soups, making it easy for locals to see exactly how Halsey's can help them.\n*   **Local Trust Signals:** The business's 236 Main St address and contact info are featured prominently to drive local foot traffic and phone orders.\n\nWould you like to explore adding a specific menu page for the deli or perhaps a detailed hardware project request form?"
+  },
+  {
+    "suggestion": "Add a Deli Menu page"
+  },
+  {
+    "suggestion": "Add a Hardware Quote request form"
+  },
+  {
+    "suggestion": "Make the design feel more rustic"
+  }
+]
