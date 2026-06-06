@@ -101,9 +101,32 @@ p.map-directions {
     grid-column: 2;
     grid-row: 1 / -1;
     min-height: 320px;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    align-self: stretch;
+  }
+  .map-shell:has(> .map-slot) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .map-shell > .map-slot {
+    flex: 1 1 auto;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    min-height: 280px;
+    align-self: stretch;
+  }
+}
+@media (max-width: 767px) {
+  .map-shell:has(> .map-slot) {
+    min-height: 0 !important;
+    height: auto !important;
   }
 }
 /* end map-embed (outreach) */
+
+
 
 
         .material-symbols-outlined {
@@ -127,17 +150,33 @@ p.map-directions {
         }
 
 /* map-layout-autofix */
-.map-slot:has(> .map-embed--fill),
-.map-slot:has(> .map-embed[data-map-embed]) {
-  aspect-ratio: 16 / 9;
-  height: auto !important;
-  min-height: 280px;
-  width: 100%;
+@media (max-width: 767px) {
+  .map-slot:has(> .map-embed--fill),
+  .map-slot:has(> .map-embed[data-map-embed]) {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    min-height: 280px;
+    width: 100%;
+  }
+  .map-shell:has(> .map-slot) {
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: unset !important;
+  }
 }
-.map-shell:has(> .map-slot) {
-  min-height: 0 !important;
-  height: auto !important;
-  aspect-ratio: unset !important;
+@media (min-width: 768px) {
+  .map-shell:has(> .map-slot) {
+    display: flex;
+    flex-direction: column;
+  }
+  .map-shell > .map-slot,
+  .visit-grid > .visit-map-slot.map-slot {
+    flex: 1 1 auto;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    min-height: 280px;
+    align-self: stretch;
+  }
 }
 .map-slot > .map-embed.map-embed--fill,
 .map-slot > .map-embed[data-map-embed] {
