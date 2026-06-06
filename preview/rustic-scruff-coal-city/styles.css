@@ -1,83 +1,16 @@
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-            display: inline-block;
-            vertical-align: middle;
-        }
-        .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
-        .bg-paper-texture {
-            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
-        }
-    
-
-/* Outreach mockup chrome */
-
-:root {
-  --mockup-banner-height: 2.25rem;
-}
-.mockup-banner {
-  position: sticky;
-  top: 0;
-  z-index: 10001;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 0.5rem 1rem;
-  font-size: 0.8125rem;
-  text-align: center;
-  background: #1a1a1a;
-  color: #f5f5f5;
-  border-bottom: 1px solid #333;
-}
-.has-mockup-banner nav[class*="fixed"],
-.has-mockup-banner nav[class*="sticky"],
-.has-mockup-banner header[class*="fixed"],
-.has-mockup-banner header[class*="sticky"],
-body:has(.mockup-banner) nav[class*="fixed"],
-body:has(.mockup-banner) nav[class*="sticky"],
-body:has(.mockup-banner) header[class*="fixed"],
-body:has(.mockup-banner) header[class*="sticky"] {
-  top: var(--mockup-banner-height) !important;
-}
-.skip-link {
-  position: absolute;
-  left: -9999px;
-  z-index: 10002;
-  padding: 0.5rem 1rem;
-  background: #fff;
-  color: #111;
-}
-.skip-link:focus {
-  left: 0.5rem;
-  top: calc(var(--mockup-banner-height) + 0.5rem);
-}
-.form-notice {
-  font-size: 0.875rem;
-  color: #666;
-  margin-top: 0.75rem;
-}
-.map-embed {
-  position: relative;
-  width: 100%;
-  max-width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 280px;
-  margin-top: 1.25rem;
-  border-radius: 12px;
-  overflow: hidden;
-  background: #e5e5e5;
-}
-.map-embed iframe {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  border: 0;
-}
 /* map-embed (outreach) */
 .map-slot {
   position: relative;
   min-height: 280px;
   isolation: isolate;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  height: auto;
+}
+.map-shell:has(> .map-slot) {
+  min-height: 0 !important;
+  height: auto !important;
+  width: 100%;
 }
 .map-slot > .map-embed,
 .map-embed.map-embed--fill {
@@ -171,29 +104,36 @@ p.map-directions {
 }
 /* end map-embed (outreach) */
 
-p.map-directions {
-  display: none !important;
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .text-shadow-sm { text-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        .bg-paper-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+
+/* map-layout-autofix */
+.map-slot:has(> .map-embed--fill),
+.map-slot:has(> .map-embed[data-map-embed]) {
+  aspect-ratio: 16 / 9;
+  height: auto !important;
+  min-height: 280px;
+  width: 100%;
 }
-.visit-address {
-  margin: 0.5rem 0 0;
+.map-shell:has(> .map-slot) {
+  min-height: 0 !important;
+  height: auto !important;
+  aspect-ratio: unset !important;
 }
-@media (prefers-reduced-motion: reduce) {
-  html { scroll-behavior: auto; }
+.map-slot > .map-embed.map-embed--fill,
+.map-slot > .map-embed[data-map-embed] {
+  position: absolute !important;
+  inset: 0 !important;
+  height: 100% !important;
+  margin: 0 !important;
+  aspect-ratio: unset !important;
 }
 
-
-/* design-qa: emil — press feedback */
-button:active,
-a[class*="btn"]:active,
-a[class*="button"]:active,
-[role="button"]:active {
-  transform: scale(0.97);
-}
-@media (prefers-reduced-motion: reduce) {
-  button:active,
-  a[class*="btn"]:active,
-  a[class*="button"]:active,
-  [role="button"]:active {
-    transform: none;
-  }
-}
