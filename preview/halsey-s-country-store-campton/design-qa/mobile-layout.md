@@ -3,7 +3,13 @@
 **Result:** PASS
 
 ## Autofix applied
-- none
+- injected mobile safety CSS
+- refreshed map layout CSS
+- map iframe: eager load (was lazy)
+- map iframe: fetchpriority high
+- preconnect https://www.google.com
+- preconnect https://maps.googleapis.com
+- preconnect https://maps.gstatic.com
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok
