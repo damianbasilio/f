@@ -1,3 +1,112 @@
+/* mockup-notice (outreach) */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  z-index: 10002;
+  padding: 0.5rem 1rem;
+  background: #fff;
+  color: #111;
+}
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+.form-notice {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.75rem;
+}
+body.mockup-notice-open {
+  overflow: hidden;
+}
+.mockup-notice {
+  position: fixed;
+  inset: 0;
+  z-index: 10001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: max(1rem, env(safe-area-inset-top)) max(1rem, env(safe-area-inset-right))
+    max(1rem, env(safe-area-inset-bottom)) max(1rem, env(safe-area-inset-left));
+  opacity: 1;
+  transition: opacity 0.25s ease;
+}
+.mockup-notice.is-closing {
+  opacity: 0;
+  pointer-events: none;
+}
+.mockup-notice__backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.58);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+}
+.mockup-notice__panel {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 22rem);
+  padding: 1.5rem;
+  border-radius: 14px;
+  background: #1a1a1a;
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+}
+.mockup-notice__eyebrow {
+  margin: 0 0 0.35rem;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.55);
+}
+.mockup-notice__title {
+  margin: 0 0 0.75rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+.mockup-notice__body {
+  margin: 0 0 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.82);
+}
+.mockup-notice__body strong {
+  color: #fff;
+  font-weight: 600;
+}
+.mockup-notice__ack {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 7rem;
+  padding: 0.65rem 1.25rem;
+  border: 0;
+  border-radius: 999px;
+  background: #fff;
+  color: #111;
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.mockup-notice__ack:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+.mockup-notice__ack:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+/* end mockup-notice (outreach) */
+
+
 /* map-embed (outreach) */
 .map-slot {
   position: relative;
@@ -101,9 +210,31 @@ p.map-directions {
     grid-column: 2;
     grid-row: 1 / -1;
     min-height: 320px;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    align-self: stretch;
+  }
+  .map-shell:has(> .map-slot) {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .map-shell > .map-slot {
+    flex: 1 1 auto;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    min-height: 280px;
+    align-self: stretch;
+  }
+}
+@media (max-width: 767px) {
+  .map-shell:has(> .map-slot) {
+    min-height: 0 !important;
+    height: auto !important;
   }
 }
 /* end map-embed (outreach) */
+
 
 
 
@@ -123,17 +254,33 @@ p.map-directions {
         }
 
 /* map-layout-autofix */
-.map-slot:has(> .map-embed--fill),
-.map-slot:has(> .map-embed[data-map-embed]) {
-  aspect-ratio: 16 / 9;
-  height: auto !important;
-  min-height: 280px;
-  width: 100%;
+@media (max-width: 767px) {
+  .map-slot:has(> .map-embed--fill),
+  .map-slot:has(> .map-embed[data-map-embed]) {
+    aspect-ratio: 16 / 9;
+    height: auto !important;
+    min-height: 280px;
+    width: 100%;
+  }
+  .map-shell:has(> .map-slot) {
+    min-height: 0 !important;
+    height: auto !important;
+    aspect-ratio: unset !important;
+  }
 }
-.map-shell:has(> .map-slot) {
-  min-height: 0 !important;
-  height: auto !important;
-  aspect-ratio: unset !important;
+@media (min-width: 768px) {
+  .map-shell:has(> .map-slot) {
+    display: flex;
+    flex-direction: column;
+  }
+  .map-shell > .map-slot,
+  .visit-grid > .visit-map-slot.map-slot {
+    flex: 1 1 auto;
+    height: 100% !important;
+    aspect-ratio: unset !important;
+    min-height: 280px;
+    align-self: stretch;
+  }
 }
 .map-slot > .map-embed.map-embed--fill,
 .map-slot > .map-embed[data-map-embed] {
