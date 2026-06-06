@@ -16,14 +16,14 @@
       width: 100%; min-height: 200px; padding: 0.75rem; border-radius: 8px;
       border: 1px solid #333; background: #141414; color: #f5f5f5; font-family: ui-monospace, monospace; font-size: 0.8125rem;
     }
-    .row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0; }
+    .row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0; align-items: center; }
     button, .btn {
       padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #444; background: #1a1a1a;
       color: #f5f5f5; cursor: pointer; font-size: 0.875rem;
     }
     button.primary { background: #2563eb; border-color: #2563eb; }
+    button.secondary { background: #262626; }
     button:disabled { opacity: 0.5; cursor: not-allowed; }
-    button.danger { background: #7f1d1d; border-color: #991b1b; }
     .log {
       margin-top: 1.5rem; padding: 1rem; background: #141414; border: 1px solid #262626;
       border-radius: 8px; font-family: ui-monospace, monospace; font-size: 0.75rem;
@@ -32,12 +32,28 @@
     .status { margin-top: 1rem; padding: 0.75rem 1rem; background: #141414; border-radius: 8px; font-size: 0.875rem; }
     input[type=file] { font-size: 0.875rem; color: #a3a3a3; }
     a { color: #60a5fa; }
+    .review-panel {
+      margin-top: 1.5rem; padding: 1.25rem; background: #141414; border: 1px solid #333;
+      border-radius: 10px; display: none;
+    }
+    .review-panel.visible { display: block; }
+    .review-panel h2 { margin: 0 0 0.25rem; font-size: 1.125rem; }
+    .review-meta { color: #a3a3a3; font-size: 0.8125rem; margin-bottom: 1rem; }
+    .review-meta div { margin-bottom: 0.25rem; }
+    .email-body {
+      white-space: pre-wrap; font-family: ui-monospace, monospace; font-size: 0.8125rem;
+      background: #0a0a0a; border: 1px solid #262626; border-radius: 8px; padding: 1rem;
+      max-height: 360px; overflow: auto; margin: 1rem 0;
+    }
+    .queue-summary { font-size: 0.8125rem; color: #a3a3a3; margin-bottom: 0.75rem; }
+    .empty-review { color: #a3a3a3; font-size: 0.9375rem; padding: 0.5rem 0; }
+    .error-msg { color: #f87171; font-size: 0.875rem; margin: 0.5rem 0; }
   </style>
 </head>
 <body>
   <div class="wrap">
     <h1>Facebook Leads</h1>
-    <p class="sub">Paste or upload lead JSON → verify Facebook profiles → build mockups → review emails before send.</p>
+    <p class="sub">Paste or upload lead JSON → verify Facebook profiles → build mockups → review emails one at a time.</p>
 
     <label for="json">Lead JSON (array of objects)</label>
     <textarea id="json" placeholder='[{"name":"...","facebook":"https://...","emails":"..."}]'></textarea>
@@ -50,21 +66,153 @@
 
     <div class="status" id="status">Ready.</div>
 
-    <div class="row" id="reviewRow" style="display:none">
-      <a id="reportLink" href="#" target="_blank">Review outreach report</a>
-      <button type="button" class="danger" id="sendBtn">Approve &amp; send emails</button>
+    <div class="review-panel" id="reviewPanel">
+      <div class="queue-summary" id="queueSummary"></div>
+      <div id="reviewContent"></div>
     </div>
 
     <div class="log" id="log"></div>
   </div>
   <script>
     let currentBatch = null;
+    let pollTimer = null;
+    let currentReviewSlug = null;
+
     const logEl = document.getElementById("log");
     const statusEl = document.getElementById("status");
     const runBtn = document.getElementById("runBtn");
-    const reviewRow = document.getElementById("reviewRow");
+    const reviewPanel = document.getElementById("reviewPanel");
+    const reviewContent = document.getElementById("reviewContent");
+    const queueSummary = document.getElementById("queueSummary");
 
     function log(msg) { logEl.textContent += msg + "\n"; logEl.scrollTop = logEl.scrollHeight; }
+
+    function formatQueueSummary(counts) {
+      if (!counts) return "";
+      const parts = [];
+      const waiting = (counts.reviewPending || 0) + (counts.reviewReady || 0);
+      if (waiting) parts.push(`Review: ${counts.reviewReady || 0} ready · ${counts.reviewPending || 0} drafting`);
+      if (counts.sendQueued || counts.sendSending) parts.push(`Send: ${(counts.sendQueued || 0) + (counts.sendSending || 0)} queued`);
+      if (counts.sendSent) parts.push(`${counts.sendSent} sent`);
+      if (counts.sendFailed) parts.push(`${counts.sendFailed} failed`);
+      return parts.join(" · ") || "No queue activity";
+    }
+
+    async function refreshReview() {
+      if (!currentBatch) return;
+      const [reviewR, workersR] = await Promise.all([
+        fetch(`/api/batch/${currentBatch}/review/current`),
+        fetch("/api/workers/status"),
+      ]);
+      const review = await reviewR.json();
+      const workers = await workersR.json();
+
+      reviewPanel.classList.add("visible");
+      queueSummary.textContent = formatQueueSummary(review.counts);
+
+      if (workers.groqRunning && workers.groqCurrentSlug) {
+        queueSummary.textContent += ` · Groq drafting ${workers.groqCurrentSlug}`;
+      }
+      if (workers.sendRunning && workers.sendCurrentSlug) {
+        queueSummary.textContent += ` · Sending ${workers.sendCurrentSlug}`;
+      }
+
+      if (review.empty) {
+        currentReviewSlug = null;
+        if (review.drafting) {
+          reviewContent.innerHTML = '<p class="empty-review">Drafting next email…</p>';
+        } else if (review.counts?.reviewApproved === review.counts?.reviewTotal && review.counts?.reviewTotal > 0) {
+          reviewContent.innerHTML = '<p class="empty-review">All emails reviewed.</p>';
+        } else {
+          reviewContent.innerHTML = '<p class="empty-review">No emails ready for review yet.</p>';
+        }
+        return;
+      }
+
+      currentReviewSlug = review.slug;
+      const email = review.email;
+      if (review.parseError || !email) {
+        reviewContent.innerHTML = `
+          <h2>${review.slug}</h2>
+          <p class="error-msg">Could not load outreach.md: ${review.parseError || "missing file"}</p>
+          <div class="row">
+            <button type="button" class="secondary" id="regenBtn">Regenerate email</button>
+          </div>`;
+        document.getElementById("regenBtn")?.addEventListener("click", () => regenerate(review.slug));
+        return;
+      }
+
+      reviewContent.innerHTML = `
+        <h2>${escapeHtml(email.businessName || review.slug)}</h2>
+        <div class="review-meta">
+          <div><strong>To:</strong> ${escapeHtml(email.to)}</div>
+          <div><strong>Subject:</strong> ${escapeHtml(email.subject)}</div>
+          <div><strong>Mockup:</strong> <a href="${escapeHtml(email.mockupUrl)}" target="_blank">${escapeHtml(email.mockupUrl)}</a></div>
+        </div>
+        <div class="email-body">${escapeHtml(email.text)}</div>
+        <div class="row">
+          <button type="button" class="primary" id="approveBtn">Approve &amp; send</button>
+          <button type="button" class="secondary" id="regenBtn">Regenerate email</button>
+        </div>`;
+
+      document.getElementById("approveBtn").addEventListener("click", () => approve(review.slug));
+      document.getElementById("regenBtn").addEventListener("click", () => regenerate(review.slug));
+    }
+
+    function escapeHtml(s) {
+      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+    }
+
+    async function approve(slug) {
+      if (!currentBatch || !confirm(`Approve and send email for ${slug}?`)) return;
+      statusEl.textContent = "Approved — sending…";
+      const r = await fetch(`/api/batch/${currentBatch}/review/approve`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug }),
+      });
+      const data = await r.json();
+      if (!r.ok) {
+        statusEl.textContent = "Approve failed: " + (data.error || "unknown");
+        return;
+      }
+      statusEl.textContent = `Approved ${slug} — send queued.`;
+      await refreshReview();
+    }
+
+    async function regenerate(slug) {
+      if (!currentBatch) return;
+      statusEl.textContent = `Regenerating ${slug}…`;
+      const r = await fetch(`/api/batch/${currentBatch}/review/regenerate`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ slug }),
+      });
+      const data = await r.json();
+      if (!r.ok) {
+        statusEl.textContent = "Regenerate failed: " + (data.error || "unknown");
+        return;
+      }
+      statusEl.textContent = `Regenerating ${slug} — showing next ready email.`;
+      await refreshReview();
+    }
+
+    function startPolling() {
+      if (pollTimer) clearInterval(pollTimer);
+      pollTimer = setInterval(async () => {
+        const [statusR, logR] = await Promise.all([fetch("/api/status"), fetch("/api/pipeline/log")]);
+        const data = await statusR.json();
+        const logData = await logR.json();
+        if (logData.log) logEl.textContent = logData.log;
+
+        const workersActive = data.workers?.groqRunning || data.workers?.sendRunning;
+        if (currentBatch) await refreshReview();
+
+        if (data.pipelineRunning || logData.running || workersActive) {
+          statusEl.textContent = `Batch ${currentBatch} — pipeline or workers active…`;
+        }
+      }, 2000);
+    }
 
     document.getElementById("file").addEventListener("change", async (e) => {
       const f = e.target.files[0];
@@ -88,6 +236,7 @@
         log(data.output);
         statusEl.textContent = `Imported batch ${currentBatch}. Click Run pipeline.`;
         runBtn.disabled = false;
+        reviewPanel.classList.remove("visible");
       } catch (err) {
         statusEl.textContent = "Error: " + err.message;
       }
@@ -96,50 +245,40 @@
     runBtn.addEventListener("click", async () => {
       if (!currentBatch) return;
       logEl.textContent = "";
-      statusEl.textContent = "Pipeline running… (check terminal for Stitch progress)";
+      statusEl.textContent = "Pipeline running…";
       runBtn.disabled = true;
+      reviewPanel.classList.add("visible");
       await fetch("/api/pipeline/run", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ batchNum: currentBatch }),
       });
-      const poll = setInterval(async () => {
-        const [statusR, logR] = await Promise.all([fetch("/api/status"), fetch("/api/pipeline/log")]);
-        const data = await statusR.json();
+      startPolling();
+
+      const waitForPipeline = setInterval(async () => {
+        const logR = await fetch("/api/pipeline/log");
         const logData = await logR.json();
-        if (logData.log) logEl.textContent = logData.log;
-        if (!data.pipelineRunning && !logData.running) {
-          clearInterval(poll);
-          statusEl.textContent = `Pipeline finished — batch ${currentBatch}`;
+        if (!logData.running) {
+          clearInterval(waitForPipeline);
+          statusEl.textContent = `Pipeline finished — batch ${currentBatch}. Review emails below.`;
           runBtn.disabled = false;
-          if (data.latestReport) {
-            reviewRow.style.display = "flex";
-            document.getElementById("reportLink").href = "/" + data.latestReport;
-            document.getElementById("reportLink").textContent = "Review " + data.latestReport;
-          }
-        } else {
-          statusEl.textContent = `Pipeline running — batch ${currentBatch}…`;
+          await refreshReview();
         }
       }, 2000);
     });
 
-    document.getElementById("sendBtn").addEventListener("click", async () => {
-      if (!currentBatch || !confirm("Send all approved emails via Gmail?")) return;
-      statusEl.textContent = "Sending…";
-      const r = await fetch("/api/outreach/approve-send", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ batchNum: currentBatch }),
-      });
-      const data = await r.json();
-      log(data.output || "");
-      statusEl.textContent = data.code === 0 ? "Emails sent." : "Send failed — see log.";
-    });
-
-    fetch("/api/status").then(r => r.json()).then(data => {
-      if (data.latestReport) {
-        reviewRow.style.display = "flex";
-        document.getElementById("reportLink").href = "/" + data.latestReport;
+    fetch("/api/status").then(r => r.json()).then(async (data) => {
+      if (data.batches?.length) {
+        const latest = data.batches[0];
+        if (latest.batchNum) {
+          currentBatch = latest.batchNum;
+          runBtn.disabled = false;
+          if (latest.queues) {
+            reviewPanel.classList.add("visible");
+            await refreshReview();
+            startPolling();
+          }
+        }
       }
     });
   </script>

@@ -4,8 +4,6 @@
  */
 import fs from "node:fs";
 import path from "node:path";
-import { spawnSync } from "node:child_process";
-import { fileURLToPath } from "node:url";
 import { root, loadEnv, getStitchApiKeys } from "../lib/load-env.mjs";
 import { parseSlugs } from "../lib/slugs.mjs";
 import { verifyAndScrapeFacebook } from "../lib/facebook-verify.mjs";
@@ -14,8 +12,9 @@ import { writeFbStitchPrompt } from "../lib/stitch-prompt-fb.mjs";
 import { buildSlug } from "../lib/stitch-build-one.mjs";
 import { runPool, logPoolStart } from "../lib/stitch-pool.mjs";
 import { postBuildQueue } from "../lib/post-build-queue.mjs";
-import { resetBatchDedup, buildFbOutreachCopy, writeOutreachMd } from "../lib/outreach-email-fb.mjs";
-import { writeBatchSummary } from "../lib/pipeline-summary.mjs";
+import { resetBatchDedup } from "../lib/outreach-email-fb.mjs";
+import { enqueueReview } from "../lib/outreach-queues.mjs";
+import { drainGroqQueue } from "../lib/groq-draft-worker.mjs";
 import { slugDir } from "../lib/paths.mjs";
 
 const skipStitch = process.argv.includes("--skip-stitch");
@@ -131,32 +130,38 @@ if (stitchSlugs.length && getStitchApiKeys().length) {
   console.log("\n○ Stitch skipped — no STITCH_API_KEY in .env (use --skip-stitch to silence)");
 }
 
-let draftCount = 0;
+function canEnqueueForReview(slug, slugStatus) {
+  if (slugStatus?.postBuild === "pass") return true;
+  if (slugStatus?.stitch !== "pass") return false;
+  const htmlPath = slugDir(slug, "index.html");
+  if (!fs.existsSync(htmlPath)) return false;
+  const evalPath = slugDir(slug, "design-qa", "site-eval.md");
+  if (!fs.existsSync(evalPath)) return false;
+  return /\*\*Result:\*\*\s*PASS/i.test(fs.readFileSync(evalPath, "utf8"));
+}
 
 for (const slug of status.passed) {
-  try {
-    const copy = await buildFbOutreachCopy(slug, draftCount++);
-    writeOutreachMd(slug, copy);
-    console.log(`  ✓ outreach draft ${slug} (${copy.source || "groq"})`);
-    status.slugs[slug] = { ...status.slugs[slug], outreach: "drafted" };
-  } catch (err) {
-    console.error(`  ✗ outreach ${slug}: ${err.message}`);
+  const slugStatus = status.slugs[slug];
+  if (canEnqueueForReview(slug, slugStatus)) {
+    if (slugStatus?.postBuild !== "pass") {
+      console.log(`  ○ review enqueue (site built; post-build had non-blocking QA issues)`);
+    }
+    enqueueReview(batchNum, slug);
+    console.log(`  ✓ enqueued for review ${slug}`);
+    status.slugs[slug] = { ...status.slugs[slug], outreach: "queued" };
   }
 }
 
 status.finishedAt = new Date().toISOString();
 fs.writeFileSync(path.join(batchDir, "status.json"), JSON.stringify(status, null, 2) + "\n", "utf8");
 
-const reportScript = path.join(path.dirname(fileURLToPath(import.meta.url)), "outreach-report.mjs");
-spawnSync(process.execPath, [reportScript, "--batch", String(batchNum)], { cwd: root, stdio: "inherit" });
-
-spawnSync(process.execPath, [path.join(path.dirname(fileURLToPath(import.meta.url)), "hub-sync.mjs")], {
-  cwd: root,
-  stdio: "inherit",
-});
+if (!process.env.FB_PIPELINE_SPAWNED) {
+  console.log("\n  Drafting outreach emails (Groq queue)…");
+  await drainGroqQueue();
+}
 
 console.log(`\n── Batch ${batchNum} complete ──`);
 console.log(`  Passed: ${status.passed.length} | Skipped: ${status.skipped.length} | Failed: ${status.failed.length}`);
 console.log(`  Status: data/batches/batch-${batchNum}/status.json`);
-console.log(`  Report: outreach-report-${batchNum}.md`);
-console.log(`\n→ Review outreach-report-${batchNum}.md before: npm run outreach:send -- --file data/batches/batch-${batchNum}/approved.txt --send`);
+console.log(`  Review: data/batches/batch-${batchNum}/queues.json`);
+console.log(`\n→ Open http://localhost:3456 to review and approve emails one at a time.`);

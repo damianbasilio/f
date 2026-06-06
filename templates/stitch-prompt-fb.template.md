@@ -26,11 +26,17 @@ You are building **one specific local business website** from their **Facebook p
 **Full scraped profile (use this for About section, services, and copy voice — do not invent details):**
 {{PROFILE_SUMMARY}}
 
-**Recent post captions ({{POST_COUNT}} scraped — echo this voice in headlines and body copy):**
+**Recent post captions ({{POST_COUNT}} useful — echo voice in headlines; skip registry/SKU/listing lines):**
 {{POST_CAPTIONS}}
+
+**Design read:** {{DESIGN_READ}}
 
 **What to preserve:** The business name, location, services, and warm local tone from the Facebook page above.
 **What to fix:** No dedicated website — build a clean homepage with phone/CTA above fold, services, gallery, map slot, and contact form (preview only).
+
+---
+
+{{DESIGN_CRAFT_RULES}}
 
 ---
 
@@ -105,7 +111,7 @@ Use `<img>` tags with descriptive `alt` attributes. Real photos will replace pla
 ### Deliverable requirements
 
 - **Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`
-- **Responsive:** desktop-first, clean at 375px width
+- **Responsive:** mobile (390px), tablet (768px), desktop (1280px) — no horizontal scroll; hero + primary CTA visible on first mobile screen
 - **Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (preview only)
 - **Copy:** Use post caption voice and service bullets above — no lorem ipsum
 - **Unique layout:** {{LAYOUT_FAMILY}} — avoid default 3-column card grids

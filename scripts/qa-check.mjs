@@ -72,7 +72,7 @@ for (const slug of slugs) {
 
   if (outreach && fs.existsSync(statusPath)) {
     const status = fs.readFileSync(statusPath, "utf8");
-    for (const key of ["design-qa/emil", "design-qa/taste", "design-qa/audit", "design-qa/harden", "design-qa/polish"]) {
+    for (const key of ["design-qa/craft", "design-qa/emil", "design-qa/taste", "design-qa/audit", "design-qa/harden", "design-qa/polish"]) {
       const row = status.match(new RegExp(`\\|\\s*${key.replace("/", "\\/")}\\s*\\|\\s*(\\w+)\\s*\\|`, "i"));
       if (!row || row[1].toLowerCase() !== "done") {
         errors.push(`status.md: ${key} not done (required for outreach)`);
@@ -84,9 +84,15 @@ for (const slug of slugs) {
     } else if (!/\*\*Result:\*\*\s*PASS/i.test(fs.readFileSync(siteEvalPath, "utf8"))) {
       errors.push("site-eval did not PASS — fix broken links/images before outreach");
     }
+    const responsivePath = path.join(dir, "design-qa", "responsive-qa.md");
+    if (!fs.existsSync(responsivePath)) {
+      warnings.push("missing design-qa/responsive-qa.md (run npm run responsive:qa -- " + slug + ")");
+    } else if (!/\*\*Result:\*\*\s*PASS/i.test(fs.readFileSync(responsivePath, "utf8"))) {
+      warnings.push("responsive-qa did not PASS — check mobile overflow/tap targets");
+    }
   } else if (fs.existsSync(statusPath)) {
     const status = fs.readFileSync(statusPath, "utf8");
-    for (const key of ["design-qa/emil", "design-qa/taste", "design-qa/audit", "design-qa/harden", "design-qa/polish"]) {
+    for (const key of ["design-qa/craft", "design-qa/emil", "design-qa/taste", "design-qa/audit", "design-qa/harden", "design-qa/polish"]) {
       const row = status.match(new RegExp(`\\|\\s*${key.replace("/", "\\/")}\\s*\\|\\s*(\\w+)\\s*\\|`, "i"));
       if (!row || row[1].toLowerCase() !== "done") {
         warnings.push(`${key} still pending (run design skills before outreach)`);

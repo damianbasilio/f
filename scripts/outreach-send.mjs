@@ -1,24 +1,9 @@
-/**
- * Send outreach email from {slug}/outreach.md via Gmail SMTP.
- *
- * Usage:
- *   node scripts/outreach-send.mjs <slug>                    # dry-run
- *   node scripts/outreach-send.mjs <slug> --send
- *   node scripts/outreach-send.mjs --file batches/approved.txt [--send]
- *   node scripts/outreach-send.mjs <slug> --send --force
- *   node scripts/outreach-send.mjs <slug> --skip-live-check
- *   node scripts/outreach-send.mjs <slug> --send --test-to you@example.com
- */
 import { parseSlugs } from "../lib/slugs.mjs";
-import { parseOutreachMd } from "../lib/parse-outreach.mjs";
+import { parseOutreachMd, hasOutreachSignature } from "../lib/parse-outreach.mjs";
 import {
-  isAlreadySent,
-  markSent,
-  runOutreachQa,
-  checkLiveMockup,
-  sendEmail,
   getSendDelayMs,
   delayBetweenSends,
+  sendOutreachForSlug,
 } from "../lib/outreach-send.mjs";
 
 const doSend = process.argv.includes("--send");
@@ -78,63 +63,53 @@ function printPreview(slug, { to, subject, text, mockupUrl }) {
  * @returns {{ slug: string, result: string, reason?: string }}
  */
 async function processSlug(slug) {
-  let parsed;
-  try {
-    parsed = parseOutreachMd(slug);
-  } catch (err) {
-    return { slug, result: "fail", reason: err.message };
-  }
-
-  if (!isTestSend && isAlreadySent(slug) && !force) {
-    return { slug, result: "skipped", reason: "already sent (use --force to resend)" };
-  }
-
-  if (isTestSend) {
-    parsed.to = testTo;
-    parsed.subject = `[TEST] ${parsed.subject}`;
-    console.log(`\n── ${slug} (test send → ${testTo}) ──`);
-  }
-
-  if (!isTestSend) {
-  const qa = runOutreachQa(slug);
-  if (!qa.ok) {
-    const tail = (qa.stdout + qa.stderr).split("\n").filter((l) => l.includes("✗")).slice(0, 3).join("; ");
-    return { slug, result: "fail", reason: tail || "qa:check --outreach failed" };
-  }
-  }
-
-  if (!isTestSend && !skipLiveCheck) {
-    const live = await checkLiveMockup(parsed.mockupUrl);
-    if (!live.ok) {
-      const detail = live.error || `HTTP ${live.status}`;
-      return {
-        slug,
-        result: "fail",
-        reason: `mockup not live at ${parsed.mockupUrl} (${detail}) — push to GitHub Pages first`,
-      };
-    }
-  }
-
   if (!doSend) {
+    let parsed;
+    try {
+      parsed = parseOutreachMd(slug);
+    } catch (err) {
+      return { slug, result: "fail", reason: err.message };
+    }
+    if (isTestSend) {
+      parsed.to = testTo;
+      parsed.subject = `[TEST] ${parsed.subject}`;
+    }
     printPreview(slug, parsed);
     return { slug, result: "dry-run" };
   }
 
-  try {
-    const body = isTestSend
-      ? `[TEST — not sent to the business. Intended recipient was in outreach.md.]\n\n${parsed.text}`
-      : parsed.text;
-    await sendEmail({ to: parsed.to, subject: parsed.subject, text: body });
-    if (isTestSend) {
+  if (isTestSend) {
+    let parsed;
+    try {
+      parsed = parseOutreachMd(slug);
+    } catch (err) {
+      return { slug, result: "fail", reason: err.message };
+    }
+    parsed.to = testTo;
+    parsed.subject = `[TEST] ${parsed.subject}`;
+    const body = `[TEST — not sent to the business. Intended recipient was in outreach.md.]\n\n${parsed.text}`;
+    if (!hasOutreachSignature(body)) {
+      return { slug, result: "fail", reason: "email body missing signature block before send" };
+    }
+    const { sendEmail } = await import("../lib/outreach-send.mjs");
+    try {
+      await sendEmail({ to: parsed.to, subject: parsed.subject, text: body });
       console.log(`\n✓ Test sent ${slug} → ${parsed.to}`);
       return { slug, result: "test-sent" };
+    } catch (err) {
+      return { slug, result: "fail", reason: err.message };
     }
-    const sentAt = markSent(slug);
-    console.log(`\n✓ Sent ${slug} → ${parsed.to} at ${sentAt}`);
-    return { slug, result: "sent" };
-  } catch (err) {
-    return { slug, result: "fail", reason: err.message };
   }
+
+  const row = await sendOutreachForSlug(slug, { force, skipLiveCheck });
+  if (row.result === "skipped") {
+    return { slug, result: "skipped", reason: row.reason };
+  }
+  if (!row.ok) {
+    return { slug, result: "fail", reason: row.reason };
+  }
+  console.log(`\n✓ Sent ${slug} at ${row.sentAt}`);
+  return { slug, result: "sent" };
 }
 
 const results = [];

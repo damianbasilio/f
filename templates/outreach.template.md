@@ -17,6 +17,7 @@
 
 {{PRICING_PARAGRAPH}}
 
+Thanks,
 Damian Basilio  
 Freelance Web Developer  
 dam.basilio@gmail.com

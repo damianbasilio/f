@@ -8,6 +8,14 @@ import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
 import { root } from "../lib/load-env.mjs";
+import {
+  getQueueSummary,
+  getCurrentReviewItem,
+  approveReview,
+  regenerateReview,
+} from "../lib/outreach-queues.mjs";
+import { kickGroqDraftWorker, getGroqWorkerStatus } from "../lib/groq-draft-worker.mjs";
+import { kickSendWorker, getSendWorkerStatus } from "../lib/send-queue-worker.mjs";
 
 const app = express();
 const port = Number(process.env.PORT || 3456);
@@ -34,9 +42,14 @@ app.get("/api/status", (_req, res) => {
     .readdirSync(batchesDir)
     .filter((d) => d.startsWith("batch-"))
     .map((d) => {
+      const batchNum = d.replace(/^batch-/, "");
       const statusPath = path.join(batchesDir, d, "status.json");
-      if (!fs.existsSync(statusPath)) return { id: d, status: null };
-      return { id: d, status: JSON.parse(fs.readFileSync(statusPath, "utf8")) };
+      const queuesPath = path.join(batchesDir, d, "queues.json");
+      let status = null;
+      let queues = null;
+      if (fs.existsSync(statusPath)) status = JSON.parse(fs.readFileSync(statusPath, "utf8"));
+      if (fs.existsSync(queuesPath)) queues = getQueueSummary(batchNum);
+      return { id: d, batchNum, status, queues };
     })
     .sort((a, b) => b.id.localeCompare(a.id));
 
@@ -47,7 +60,52 @@ app.get("/api/status", (_req, res) => {
     batches,
     latestReport: reports[0] || null,
     pipelineRunning: Boolean(pipelineProcess),
+    workers: { ...getGroqWorkerStatus(), ...getSendWorkerStatus() },
   });
+});
+
+app.get("/api/workers/status", (_req, res) => {
+  res.json({ ...getGroqWorkerStatus(), ...getSendWorkerStatus() });
+});
+
+app.get("/api/batch/:batchNum/queues", (req, res) => {
+  const { batchNum } = req.params;
+  const queuesPath = path.join(root, "data", "batches", `batch-${batchNum}`, "queues.json");
+  if (!fs.existsSync(queuesPath)) return res.status(404).json({ error: "No queues for batch" });
+  res.json(getQueueSummary(batchNum));
+});
+
+app.get("/api/batch/:batchNum/review/current", (req, res) => {
+  const { batchNum } = req.params;
+  res.json(getCurrentReviewItem(batchNum));
+});
+
+app.post("/api/batch/:batchNum/review/approve", (req, res) => {
+  try {
+    const { batchNum } = req.params;
+    const slug = req.body?.slug;
+    if (!slug) return res.status(400).json({ error: "slug required" });
+
+    approveReview(batchNum, slug);
+    kickSendWorker();
+    res.json({ ok: true, slug });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+app.post("/api/batch/:batchNum/review/regenerate", (req, res) => {
+  try {
+    const { batchNum } = req.params;
+    const slug = req.body?.slug;
+    if (!slug) return res.status(400).json({ error: "slug required" });
+
+    regenerateReview(batchNum, slug);
+    kickGroqDraftWorker();
+    res.json({ ok: true, slug });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 });
 
 app.post("/api/import", (req, res) => {
@@ -89,7 +147,7 @@ app.post("/api/pipeline/run", (req, res) => {
   pipelineProcess = spawn(
     process.execPath,
     [path.join(scriptsDir, "pipeline-fb-run.mjs"), slugsFile, "--batch", String(batchNum)],
-    { cwd: root }
+    { cwd: root, env: { ...process.env, FB_PIPELINE_SPAWNED: "1" } }
   );
 
   pipelineProcess.stdout.on("data", (d) => {
@@ -101,6 +159,7 @@ app.post("/api/pipeline/run", (req, res) => {
   pipelineProcess.on("close", (code) => {
     pipelineLog += `\n[Pipeline exited with code ${code}]\n`;
     pipelineProcess = null;
+    kickGroqDraftWorker();
   });
 
   res.json({ started: true, batchNum });
@@ -110,24 +169,8 @@ app.get("/api/pipeline/log", (_req, res) => {
   res.json({ running: Boolean(pipelineProcess), log: pipelineLog });
 });
 
-app.post("/api/outreach/approve-send", (req, res) => {
-  const batchNum = req.body?.batchNum;
-  if (!batchNum) return res.status(400).json({ error: "batchNum required" });
-
-  const approvedFile = path.join(root, "data", "batches", `batch-${batchNum}`, "approved.txt");
-  if (!fs.existsSync(approvedFile)) return res.status(404).json({ error: "No approved.txt — run pipeline first" });
-
-  const proc = spawn(process.execPath, [path.join(scriptsDir, "outreach-send.mjs"), "--file", approvedFile, "--send"], {
-    cwd: root,
-  });
-  let out = "";
-  proc.stdout.on("data", (d) => (out += d));
-  proc.stderr.on("data", (d) => (out += d));
-  proc.on("close", (code) => {
-    res.json({ code, output: out });
-  });
-});
-
 app.listen(port, () => {
   console.log(`Facebook Leads UI → http://localhost:${port}`);
+  kickGroqDraftWorker();
+  kickSendWorker();
 });

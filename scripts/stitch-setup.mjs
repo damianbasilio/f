@@ -20,6 +20,17 @@ requireStitchKey();
 loadEnv();
 
 try {
+  const { launchBrowser } = await import("../lib/puppeteer-launch.mjs");
+  const browser = await launchBrowser();
+  await browser.close();
+  console.log("Puppeteer Chrome OK.");
+} catch (e) {
+  console.error("Puppeteer Chrome missing — run: npm run puppeteer:install");
+  console.error(e.message.split("\n")[0]);
+  process.exit(1);
+}
+
+try {
   await import("@google/stitch-sdk");
 } catch {
   console.error("Run: npm install");
