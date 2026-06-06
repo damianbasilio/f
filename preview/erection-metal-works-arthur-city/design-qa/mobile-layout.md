@@ -4,11 +4,12 @@
 
 ## Autofix applied
 - refreshed map layout CSS
+- injected mobile safety CSS
 
 ## Viewports
-- mobile (390px): overflow=no, tinyText=no, navToggle=ok
-- tablet (768px): overflow=no, tinyText=no, navToggle=ok
-- desktop (1280px): overflow=no, tinyText=no, navToggle=ok
+- mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok
+- tablet (768px): overflow=no, tinyText=no, navToggle=ok, width=ok
+- desktop (1280px): overflow=no, tinyText=no, navToggle=ok, width=ok
 
 ## Errors (0)
 - none
