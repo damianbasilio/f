@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stylin' Nails &amp; Spa | Springfield's Premier Nail Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-surface": "#303030",
+                    "surface-bright": "#fbf9f8",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-secondary-fixed": "#221b0b",
+                    "tertiary-container": "#222424",
+                    "on-secondary-container": "#6c614e",
+                    "outline": "#80737c",
+                    "surface-tint": "#804c7e",
+                    "on-secondary": "#ffffff",
+                    "primary-fixed-dim": "#f2b2eb",
+                    "on-surface": "#1b1c1c",
+                    "surface": "#fbf9f8",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-fixed-variant": "#663464",
+                    "inverse-on-surface": "#f2f0f0",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e4e2e2",
+                    "secondary": "#685d4a",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "surface-container": "#efeded",
+                    "outline-variant": "#d1c2cc",
+                    "primary-container": "#3e103f",
+                    "inverse-primary": "#f2b2eb",
+                    "primary": "#220024",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed-dim": "#c6c6c7",
+                    "on-primary-fixed": "#340636",
+                    "background": "#fbf9f8",
+                    "surface-dim": "#dbd9d9",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "secondary-fixed": "#f0e0c8",
+                    "on-surface-variant": "#4e444c",
+                    "tertiary": "#0c0f0f",
+                    "on-secondary-fixed-variant": "#4f4533",
+                    "on-primary-container": "#b178ad",
+                    "secondary-container": "#eddec5",
+                    "secondary-fixed-dim": "#d3c5ad",
+                    "on-background": "#1b1c1c",
+                    "error": "#ba1a1a",
+                    "surface-container-low": "#f5f3f3",
+                    "on-tertiary-container": "#8a8b8b",
+                    "primary-fixed": "#ffd6f8",
+                    "surface-container-highest": "#e4e2e2",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#eae8e7"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "section-gap": "120px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "64px",
+                    "unit": "8px",
+                    "container-max": "1280px"
+            },
+            "fontFamily": {
+                    "body-md": ["Montserrat"],
+                    "label-caps": ["Montserrat"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "button": ["Montserrat"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-surface {
+            background: rgba(251, 249, 248, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .organic-shadow {
+            box-shadow: 0 20px 40px rgba(62, 16, 63, 0.05);
+        }
+        .hairline-b { border-bottom: 0.5px solid rgba(128, 115, 124, 0.2); }
+        .hairline-r { border-right: 0.5px solid rgba(128, 115, 124, 0.2); }
+        .hairline-all { border: 0.5px solid rgba(128, 115, 124, 0.2); }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu-active { transform: translateY(0); opacity: 1; visibility: visible; }
+            .mobile-menu-inactive { transform: translateY(-10px); opacity: 0; visibility: hidden; }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-primary-fixed selection:text-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl dark:bg-surface-container-lowest/80 border-b border-outline/20 shadow-[0_20px_40px_rgba(62,16,63,0.05)] transition-all duration-500 ease-in-out">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4">
+<a class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-primary dark:text-primary-fixed-dim" href="#">
+                Stylin' Nails &amp; Spa
+            </a>
+<!-- Desktop Navigation -->
+<div class="hidden md:flex items-center gap-8">
+<div class="flex gap-6 font-body-md text-body-md">
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#services">Services</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#about">About</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#promise">The Promise</a>
+<a class="text-secondary dark:text-secondary-fixed hover:text-primary dark:hover:text-primary-fixed transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-4">
+<a class="flex items-center gap-2 text-primary" href="tel:4177715458">
+<span class="material-symbols-outlined text-[20px]" data-icon="call">call</span>
+<span class="font-semibold">(417) 771-5458</span>
+</a>
+<button class="bg-primary text-white font-button text-button px-6 py-3 uppercase tracking-widest hover:bg-primary-container transition-all">
+                        Book Now
+                    </button>
+</div>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined text-[32px]" data-icon="menu">menu</span>
+</button>
+</div>
+<!-- Mobile Nav Menu -->
+<div class="fixed inset-0 top-[72px] bg-surface glass-surface md:hidden mobile-menu-inactive transition-all duration-300 flex flex-col p-margin-mobile gap-8" id="mobile-menu">
+<a class="font-headline-sm text-primary" href="#services">Services</a>
+<a class="font-headline-sm text-primary" href="#about">About</a>
+<a class="font-headline-sm text-primary" href="#promise">The Promise</a>
+<a class="font-headline-sm text-primary" href="#contact">Contact</a>
+<div class="mt-auto flex flex-col gap-4">
+<a class="text-body-lg text-secondary font-medium" href="tel:4177715458">(417) 771-5458</a>
+<button class="w-full bg-primary text-white font-button text-button py-4 uppercase tracking-widest">Book Now</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<!-- Text Content -->
+<div class="md:col-span-7 z-10">
+<span class="font-label-caps text-label-caps text-on-primary-container bg-primary-container/10 px-4 py-2 rounded-full inline-block mb-6">SPRINGFIELD'S PREMIER NAIL STUDIO</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
+                        Elevating Artistry <br/>
+<span class="italic font-normal text-secondary">Through Soft Glam</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">
+                        Experience the perfect harmony of clinical precision and editorial luxury. Stylin' Nails &amp; Spa brings a new standard of bespoke nail design to Springfield.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-primary text-white font-button text-button px-10 py-5 uppercase tracking-widest organic-shadow hover:scale-[1.02] transition-transform">
+                            View Collections
+                        </button>
+<button class="bg-transparent border-b-2 border-primary/20 text-primary font-button text-button px-2 py-5 uppercase tracking-widest hover:border-primary transition-all">
+                            Our Service Menu
+                        </button>
+</div>
+</div>
+<!-- Asymmetric Image Composition -->
+<div class="md:col-span-5 relative">
+<div class="relative w-full aspect-[4/5] overflow-hidden organic-shadow rounded-lg">
+<img class="w-full h-full object-cover" data-alt="A sophisticated close-up of a hand with high-end, almond-shaped nail extensions featuring a soft champagne and plum ombre effect. The scene is set in a luxurious, light-filled spa environment with soft blur in the background. The lighting is ethereal and high-key, highlighting the glossy finish of the nail art and the elegant jewelry on the fingers. The overall mood is one of premium, soft glam luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBHSzxsxxDaWgVA5XltTMtL8K1nnl-yvLFk5vJqcJo5XkM7WEXB9LM9rQvXAkQ7RFbQglg8Sgvl9J06_QOnpFuwgxFiKU1q79-kHtfeCee6WiRcll_VghiFAHt0JF2H_ouS_rnkXO47H-x3Y50Cf27amVGB_5dRAQHFXg9KPqPGzNp0y9DuFJH0YFmpMCW4-smaykpDwOpNNyTkxKh39FeCKS8ym0MD_aLB3tV6zidCe_5pJRGGqT9G5Ww38ixk1JBweUgb4rwX4SM"/>
+</div>
+<div class="absolute -bottom-12 -left-12 w-2/3 aspect-square glass-surface p-2 hidden md:block organic-shadow">
+<img class="w-full h-full object-cover" data-alt="A macro photograph of professional nail technician tools laid out on a clean, pearl white marble surface. The tools are surgical-grade steel, reflecting the soft champagne-colored ambient light of the salon. A bottle of deep plum nail lacquer sits beside them, its glass bottle casting a gentle shadow. The composition is artistic and minimalist, emphasizing the hygienic and professional nature of the spa." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9m4GmEdBjq-CkKaqro7BQRz3oX_fTNLMNJCM-L0WqhMPgvzGIllH5cUECf_M-qJruvcwxrWetj6vZSCvgPjniPf2jWS8BmejOGbIzoBdSpImsJm1l-Up6bWUoHw3J9dG8Qna1Ue8eoZXbBKIoyuPgHQf-cKTPVnf8xiwpSds1amtpJ8Npfbdb00V029SSwF10zo4WeXhvdODVkBOrtUMeM6VuhhzEvtATRsdsVbyRDeJRwCkp630n1Ujf2mGNUOmARn28T4biM5M"/>
+</div>
+</div>
+</div>
+</div>
+<!-- Background Elements -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-container/20 -z-10 translate-x-1/2 -skew-x-12"></div>
+</header>
+<!-- The Stylin' Promise (Credibility) -->
+<section class="py-section-gap bg-surface-container-lowest" id="promise">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">The Stylin' Promise</h2>
+<div class="w-24 h-[1px] bg-outline-variant mx-auto"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="text-center p-8 transition-transform hover:-translate-y-2">
+<div class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary-container text-primary">
+<span class="material-symbols-outlined text-[32px]" data-icon="sanitizer">sanitizer</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Clinical Hygiene</h3>
+<p class="text-on-surface-variant font-body-md">Hospital-grade sterilization protocols ensure your safety is never compromised. We use single-use files and medical-grade autoclaves.</p>
+</div>
+<div class="text-center p-8 transition-transform hover:-translate-y-2">
+<div class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary-container text-primary">
+<span class="material-symbols-outlined text-[32px]" data-icon="brush">brush</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Master Artistry</h3>
+<p class="text-on-surface-variant font-body-md">Our technicians are artisans trained in the latest global trends, from minimalist chic to complex sculptural nail architecture.</p>
+</div>
+<div class="text-center p-8 transition-transform hover:-translate-y-2">
+<div class="mb-6 inline-flex items-center justify-center w-16 h-16 rounded-full bg-secondary-container text-primary">
+<span class="material-symbols-outlined text-[32px]" data-icon="workspace_premium">workspace_premium</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-primary mb-4">Luxury Products</h3>
+<p class="text-on-surface-variant font-body-md">We exclusively utilize premium, non-toxic, and cruelty-free lacquers and treatments that nourish your natural nails.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap relative overflow-hidden" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4 block">EXQUISITE EXPERIENCES</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary">The Service Menu</h2>
+</div>
+<div class="pb-2">
+<p class="text-on-surface-variant font-body-md max-w-sm italic">All services include a complimentary champagne or botanical tea service.</p>
+</div>
+</div>
+<!-- Service Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-4">
+<!-- Service Item -->
+<div class="py-8 hairline-b group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">The Signature Manicure</h4>
+<span class="font-headline-sm text-primary">$45+</span>
+</div>
+<p class="text-on-surface-variant font-body-md">Detailed cuticle work, shaping, therapeutic hand massage, and professional lacquer finish.</p>
+</div>
+<div class="py-8 hairline-b group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Apres Gel-X Sets</h4>
+<span class="font-headline-sm text-primary">$85+</span>
+</div>
+<p class="text-on-surface-variant font-body-md">The world's first soft gel nail extension system for natural-looking, durable length.</p>
+</div>
+<div class="py-8 hairline-b group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Luxe Spa Pedicure</h4>
+<span class="font-headline-sm text-primary">$65+</span>
+</div>
+<p class="text-on-surface-variant font-body-md">Extended soak in botanical salts, sugar scrub exfoliation, mud masque, and hot towel service.</p>
+</div>
+<div class="py-8 hairline-b group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Custom Nail Art</h4>
+<span class="font-headline-sm text-primary">By Quote</span>
+</div>
+<p class="text-on-surface-variant font-body-md">From French tips to hand-painted masterpieces. Pricing varies by complexity and time.</p>
+</div>
+<div class="py-8 hairline-b group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Structure Gel Overlay</h4>
+<span class="font-headline-sm text-primary">$60+</span>
+</div>
+<p class="text-on-surface-variant font-body-md">Reinforce natural nails with a flexible builder gel for extra strength without the bulk.</p>
+</div>
+<div class="py-8 hairline-b group cursor-pointer">
+<div class="flex justify-between items-baseline mb-2">
+<h4 class="font-headline-sm text-headline-sm text-primary group-hover:text-primary-container transition-colors">Paraffin Therapy</h4>
+<span class="font-headline-sm text-primary">$20</span>
+</div>
+<p class="text-on-surface-variant font-body-md">A deeply hydrating treatment for dry hands or feet, leaving skin soft and rejuvenated.</p>
+</div>
+</div>
+<div class="mt-16 flex justify-center">
+<button class="bg-primary-container text-on-primary-container font-button text-button px-12 py-5 uppercase tracking-widest organic-shadow hover:bg-primary hover:text-white transition-all">
+                    Download Full Price List (PDF)
+                </button>
+</div>
+</div>
+</section>
+<!-- About Section: The Story -->
+<section class="py-section-gap bg-secondary-container/10" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="grid grid-cols-2 gap-4">
+<div class="aspect-[3/4] overflow-hidden organic-shadow rounded-sm mt-12">
+<img class="w-full h-full object-cover" data-alt="Interior view of a high-end, minimalist nail spa in Springfield, MO. The design features soft champagne walls, pearl white marble manicure stations, and deep plum velvet chairs. Large windows let in soft natural daylight, creating a bright and airy atmosphere. The decor is refined with gold accents and fresh white flowers." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMBUjN8TL9qIXjVlDLCAxKZIpBbbhx7ssBat1E5v7ITQVkv--JFKEdXFkVaIbrPXoh_uYo4slZpJLWopUUinvMmfy2elbc0G2Y2agYzokUCUzRJJYQBamGlanYqprilq7i4rOtyOfP2WYeEmETnoKS2CeSD-y_nN5dPqCsbraIaEgcSyWHD21lDyymqd56aOA_148PlwZoRKKZJYXPH8oMgLxsqZMhoHm9Jwh7D_Qn_GnbhHidshC_zPJ1zwofm67IfAhwlYvunc0"/>
+</div>
+<div class="aspect-[3/4] overflow-hidden organic-shadow rounded-sm">
+<img class="w-full h-full object-cover" data-alt="A portrait of an elegant woman with professionally styled nails, laughing softly in a spa setting. The aesthetic is editorial and high-fashion, with soft-focus backgrounds and warm champagne lighting. The image captures the joy and confidence that comes with a premium self-care experience at Stylin' Nails &amp; Spa." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNUSsRECZjcSMhFehLIdkR5VG5OL8A1pdAmYdPHienVP2gykrJexSVuBZBJE5ZL_qoX77m6Hi5Zryo75RNsoOlRoUQODawec5_9lyFBNl46OSefV0bFt1JjBQz7UZk_fPTeBC0kN-M_6hDZJPYbIaWkZvcd6tqDu_S8IzFwkdmzgfW1mWo0Asto71sY-_eJSfkzROgO_hLYeJknR8hWf2etUQXk-bpD3E4BluSX65-A7EQYQp4QvPlhozv59-CU-oaZX9oIFXLwYs"/>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label-caps text-label-caps text-secondary mb-6 block">OUR SPRINGFIELD ROOTS</span>
+<h2 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">Born from a Passion for <span class="italic font-normal">Precision.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface mb-6">
+                        Stylin' Nails &amp; Spa began as a vision to transform the standard salon visit into a restorative ritual. Located in the heart of Springfield, we believe that beauty is found in the details.
+                    </p>
+<p class="font-body-md text-on-surface-variant mb-8">
+                        Our founders, seasoned in the luxury beauty industry, saw an opportunity to bring a "Soft Glam" aesthetic to Campbell Avenue—combining high-fashion sensibilities with the welcoming warmth of our Missouri community. Every chair in our studio is a sanctuary designed for your relaxation.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[32px]" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div>
+<p class="font-headline-sm text-primary">5,000+ Happy Clients</p>
+<p class="text-on-surface-variant">Since our opening in Springfield.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit & Contact Section -->
+<section class="py-section-gap" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Info & Map -->
+<div>
+<h2 class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md text-primary mb-8">Visit the Studio</h2>
+<div class="space-y-8 mb-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<h4 class="font-semibold text-primary uppercase tracking-widest text-sm mb-1">Address</h4>
+<p class="text-on-surface-variant">2775 South Campbell Avenue<br/>Springfield, MO 65807</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div>
+<h4 class="font-semibold text-primary uppercase tracking-widest text-sm mb-1">Hours</h4>
+<p class="text-on-surface-variant">Mon – Sat: 9:00 AM – 7:00 PM<br/>Sun: 11:00 AM – 5:00 PM</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+<div>
+<h4 class="font-semibold text-primary uppercase tracking-widest text-sm mb-1">Connect</h4>
+<p class="text-on-surface-variant">stylinnails.spa@gmail.com<br/>(417) 771-5458</p>
+</div>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] organic-shadow rounded-lg bg-surface-container" data-location="Springfield, MO" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center text-outline/40">
+<span class="material-symbols-outlined text-[64px]" data-icon="map">map</span>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="bg-surface glass-surface p-8 md:p-12 organic-shadow rounded-sm border border-outline/5">
+<h3 class="font-headline-sm text-headline-sm text-primary mb-8">Send an Inquiry</h3>
+<form class="space-y-6" id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary" for="name">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 py-3 transition-colors px-0 placeholder:text-outline/40" id="name" placeholder="Avery Johnson" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary" for="email">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 py-3 transition-colors px-0 placeholder:text-outline/40" id="email" placeholder="avery@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary" for="service">INTERESTED SERVICE</label>
+<select class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 py-3 transition-colors px-0" id="service">
+<option>Signature Manicure</option>
+<option>Apres Gel-X Sets</option>
+<option>Luxe Spa Pedicure</option>
+<option>Nail Art Consultation</option>
+<option>Other</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-secondary" for="message">YOUR MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-primary focus:ring-0 py-3 transition-colors px-0 placeholder:text-outline/40" id="message" placeholder="Tell us about your nail goals..." required="" rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary text-white font-button text-button py-5 uppercase tracking-widest hover:bg-primary-container transition-all flex justify-center items-center gap-2" id="submit-btn" type="submit">
+                                Send Message
+                                <span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+</button>
+<div class="hidden mt-4 text-center font-medium" id="form-feedback"></div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-low dark:bg-surface-container-highest w-full border-t border-outline/10">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between items-start gap-8">
+<div class="max-w-sm">
+<a class="font-display-lg-mobile text-display-lg-mobile text-primary dark:text-primary-fixed-dim block mb-6" href="#">Stylin' Nails &amp; Spa</a>
+<p class="text-on-surface-variant font-body-md mb-8">Springfield's premier studio for the art of soft glam. Dedicated to precision, luxury, and your well-being.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-outline/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">face_nod</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-x-16 gap-y-12">
+<div>
+<h5 class="font-label-caps text-label-caps text-primary mb-6">EXPLORE</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About Us</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#promise">Our Promise</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#contact">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-primary mb-6">LEGAL</h5>
+<ul class="space-y-4">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Refund Policy</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors" href="#">Safety Protocols</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 border-t border-outline/5 text-center md:text-left">
+<p class="font-body-md text-on-surface-variant opacity-60">© 2024 Stylin' Nails &amp; Spa. Springfield's Premier Nail Studio. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Mobile Menu Logic
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
+
+        menuToggle.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('mobile-menu-inactive');
+                mobileMenu.classList.add('mobile-menu-active');
+                menuToggle.querySelector('span').innerText = 'close';
+            } else {
+                mobileMenu.classList.add('mobile-menu-inactive');
+                mobileMenu.classList.remove('mobile-menu-active');
+                menuToggle.querySelector('span').innerText = 'menu';
+            }
+        });
+
+        // Form Validation & Feedback
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+        const submitBtn = document.getElementById('submit-btn');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // UI Feedback State
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="material-symbols-outlined animate-spin" data-icon="sync">sync</span> Processing...';
+            
+            // Mock Success Timeout
+            setTimeout(() => {
+                formFeedback.classList.remove('hidden', 'text-error');
+                formFeedback.classList.add('text-primary');
+                formFeedback.innerText = 'Thank you for your inquiry. Our studio will contact you shortly.';
+                
+                submitBtn.innerHTML = 'Message Sent!';
+                submitBtn.classList.add('bg-secondary');
+                
+                contactForm.reset();
+            }, 1500);
+        });
+
+        // Close mobile menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('mobile-menu-inactive');
+                mobileMenu.classList.remove('mobile-menu-active');
+                menuToggle.querySelector('span').innerText = 'menu';
+                isMenuOpen = false;
+            });
+        });
+
+        // Scroll shadow for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-3', 'shadow-lg');
+                nav.classList.remove('py-4', 'shadow-[0_20px_40px_rgba(62,16,63,0.05)]');
+            } else {
+                nav.classList.add('py-4', 'shadow-[0_20px_40px_rgba(62,16,63,0.05)]');
+                nav.classList.remove('py-3', 'shadow-lg');
+            }
+        });
+    </script>
+</body></html>

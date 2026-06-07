@@ -1,0 +1,460 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Soft Glam Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in \"Soft Glam,\" a premium visual identity tailored for a high-end spa experience. It targets a discerning clientele seeking luxury, serenity, and professional artistry. The aesthetic balances the tactile elegance of a fashion magazine with the digital precision of modern SaaS.\n\nThe style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes generous whitespace to create a \"breathing\" layout, punctuated by ultra-fine lines and \"organic glass\" surfaces. The emotional response is one of immediate calm, sophistication, and exclusivity. \n\n**Key Stylistic Pillars:**\n- **Editorial Composition:** Asymmetrical layouts and oversized typography reminiscent of luxury mastheads.\n- **Translucency:** Subtle background blurs that suggest depth without clutter.\n- **Precision:** 0.5px \"hairline\" borders that define structure with extreme delicacy.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain strict editorial control, transitioning to a fluid model for mobile.\n\n- **Rhythm:** An 8px base unit drives all padding and margins. \n- **Sectioning:** Vertical spacing is intentionally generous. A `section-gap` of 120px is used between major content blocks to ensure elements never feel crowded.\n- **Grid:** A 12-column grid on desktop with wide 64px outer margins creates a \"framed\" look, similar to a printed page. \n- **Hairlines:** Use 0.5px borders in `Warm Slate` (at 20% opacity) to separate content sections without adding visual weight.\n\n## Elevation & Depth\n\nDepth is achieved through \"Organic Glass\" layers rather than traditional heavy shadows.\n\n- **Surface Strategy:** Use `backdrop-filter: blur(12px)` on Pearl White surfaces with 80% opacity. This allows the Champagne brand colors to softly bleed through the UI.\n- **Shadows:** Avoid dark shadows. Use \"Ambient Glows\"—long, ultra-diffused shadows (e.g., `0 20px 40px rgba(62, 16, 63, 0.05)`) that take on a slight Plum tint.\n- **Z-Index Hierarchy:** Floating elements like navigation bars or booking modals should always utilize the frosted glass effect to maintain a sense of lightness.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Plum with white Montserrat-caps text. Secondary buttons are Pearl White \"Organic Glass\" with a 0.5px Plum border.\n- **Input Fields:** Minimalist design—bottom-border only (0.5px Warm Slate) that transitions to Deep Plum on focus.\n- **Cards:** Use the frosted glass effect. No heavy borders; let the ambient plum shadow define the edge against the Champagne background.\n- **Chips/Badges:** Small, wide-tracked uppercase text inside a Champagne-colored pill with 10% Deep Plum opacity.\n- **Service Menu:** List items should feature generous vertical padding (24px) with a 0.5px hairline separator that doesn't span the full width of the container.\n- **Signature Component (The \"Lookbook\" Carousel):** A full-bleed horizontal scroll for showcasing nail art, featuring Playfair Display captions overlapping the images.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#3e103f",
+            "designMd": "---\nname: Soft Glam Editorial\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbd9d9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#eae8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#4e444c'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#80737c'\n  outline-variant: '#d1c2cc'\n  surface-tint: '#804c7e'\n  primary: '#220024'\n  on-primary: '#ffffff'\n  primary-container: '#3e103f'\n  on-primary-container: '#b178ad'\n  inverse-primary: '#f2b2eb'\n  secondary: '#685d4a'\n  on-secondary: '#ffffff'\n  secondary-container: '#eddec5'\n  on-secondary-container: '#6c614e'\n  tertiary: '#0c0f0f'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#222424'\n  on-tertiary-container: '#8a8b8b'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffd6f8'\n  primary-fixed-dim: '#f2b2eb'\n  on-primary-fixed: '#340636'\n  on-primary-fixed-variant: '#663464'\n  secondary-fixed: '#f0e0c8'\n  secondary-fixed-dim: '#d3c5ad'\n  on-secondary-fixed: '#221b0b'\n  on-secondary-fixed-variant: '#4f4533'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is anchored in \"Soft Glam,\" a premium visual identity tailored for a high-end spa experience. It targets a discerning clientele seeking luxury, serenity, and professional artistry. The aesthetic balances the tactile elegance of a fashion magazine with the digital precision of modern SaaS.\n\nThe style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes generous whitespace to create a \"breathing\" layout, punctuated by ultra-fine lines and \"organic glass\" surfaces. The emotional response is one of immediate calm, sophistication, and exclusivity. \n\n**Key Stylistic Pillars:**\n- **Editorial Composition:** Asymmetrical layouts and oversized typography reminiscent of luxury mastheads.\n- **Translucency:** Subtle background blurs that suggest depth without clutter.\n- **Precision:** 0.5px \"hairline\" borders that define structure with extreme delicacy.\n\n## Colors\n\nThe palette is designed to evoke a sensory experience. \n- **Deep Plum (#3E103F):** Our primary brand color, used for high-impact typography, primary actions, and deep-toned sections to provide a sense of grounded luxury.\n- **Champagne (#F7E7CE):** A secondary \"glow\" color used for backgrounds, highlighting premium offers, and softening the transition between sections.\n- **Pearl White (#FFFFFF):** The canvas. Used to maintain a clean, airy feel and as the base for glassmorphic effects.\n- **Warm Slate (#4A4A4A):** The utility neutral. Used for long-form body text and subtle UI borders to ensure legibility without the harshness of pure black.\n\n## Typography\n\nThe typography system relies on high contrast between a traditional, high-waisted serif and a modern, wide-tracked sans-serif.\n\n- **Playfair Display (Headlines):** Used for all display and heading roles. It brings an authoritative yet graceful \"editorial\" voice to the interface.\n- **Montserrat (UI & Body):** Used for all functional text. To enhance the premium feel, body text and labels utilize increased letter-spacing (`tracking`) to create a light, rhythmic reading experience. \n\n**Application Note:** Use `label-caps` for small navigational elements or service categories to reinforce the fashion-magazine aesthetic.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain strict editorial control, transitioning to a fluid model for mobile.\n\n- **Rhythm:** An 8px base unit drives all padding and margins. \n- **Sectioning:** Vertical spacing is intentionally generous. A `section-gap` of 120px is used between major content blocks to ensure elements never feel crowded.\n- **Grid:** A 12-column grid on desktop with wide 64px outer margins creates a \"framed\" look, similar to a printed page. \n- **Hairlines:** Use 0.5px borders in `Warm Slate` (at 20% opacity) to separate content sections without adding visual weight.\n\n## Elevation & Depth\n\nDepth is achieved through \"Organic Glass\" layers rather than traditional heavy shadows.\n\n- **Surface Strategy:** Use `backdrop-filter: blur(12px)` on Pearl White surfaces with 80% opacity. This allows the Champagne brand colors to softly bleed through the UI.\n- **Shadows:** Avoid dark shadows. Use \"Ambient Glows\"—long, ultra-diffused shadows (e.g., `0 20px 40px rgba(62, 16, 63, 0.05)`) that take on a slight Plum tint.\n- **Z-Index Hierarchy:** Floating elements like navigation bars or booking modals should always utilize the frosted glass effect to maintain a sense of lightness.\n\n## Shapes\n\nThe shape language is \"Soft-Modern.\" While the layout is structured and grid-based, individual components use a subtle `0.25rem` (4px) radius to prevent the UI from feeling sharp or aggressive.\n\n- **Image Treatment:** Photography should use sharp corners or very large, organic radii (e.g., 100px on one corner) to mimic high-end magazine cutouts.\n- **Interactive Elements:** Buttons and input fields use the `Soft` (4px) setting to remain professional and clean.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Plum with white Montserrat-caps text. Secondary buttons are Pearl White \"Organic Glass\" with a 0.5px Plum border.\n- **Input Fields:** Minimalist design—bottom-border only (0.5px Warm Slate) that transitions to Deep Plum on focus.\n- **Cards:** Use the frosted glass effect. No heavy borders; let the ambient plum shadow define the edge against the Champagne background.\n- **Chips/Badges:** Small, wide-tracked uppercase text inside a Champagne-colored pill with 10% Deep Plum opacity.\n- **Service Menu:** List items should feature generous vertical padding (24px) with a 0.5px hairline separator that doesn't span the full width of the container.\n- **Signature Component (The \"Lookbook\" Carousel):** A full-bleed horizontal scroll for showcasing nail art, featuring Playfair Display captions overlapping the images.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fbf9f8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f0f0",
+              "inverse_primary": "#f2b2eb",
+              "inverse_surface": "#303030",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#b178ad",
+              "on_primary_fixed": "#340636",
+              "on_primary_fixed_variant": "#663464",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#6c614e",
+              "on_secondary_fixed": "#221b0b",
+              "on_secondary_fixed_variant": "#4f4533",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#4e444c",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#8a8b8b",
+              "on_tertiary_fixed": "#1a1c1c",
+              "on_tertiary_fixed_variant": "#454747",
+              "outline": "#80737c",
+              "outline_variant": "#d1c2cc",
+              "primary": "#220024",
+              "primary_container": "#3e103f",
+              "primary_fixed": "#ffd6f8",
+              "primary_fixed_dim": "#f2b2eb",
+              "secondary": "#685d4a",
+              "secondary_container": "#eddec5",
+              "secondary_fixed": "#f0e0c8",
+              "secondary_fixed_dim": "#d3c5ad",
+              "surface": "#fbf9f8",
+              "surface_bright": "#fbf9f8",
+              "surface_container": "#efeded",
+              "surface_container_high": "#eae8e7",
+              "surface_container_highest": "#e4e2e2",
+              "surface_container_low": "#f5f3f3",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbd9d9",
+              "surface_tint": "#804c7e",
+              "surface_variant": "#e4e2e2",
+              "tertiary": "#0c0f0f",
+              "tertiary_container": "#222424",
+              "tertiary_fixed": "#e2e2e2",
+              "tertiary_fixed_dim": "#c6c6c7"
+            },
+            "overrideNeutralColor": "#4a4a4a",
+            "overridePrimaryColor": "#3e103f",
+            "overrideSecondaryColor": "#f7e7ce",
+            "overrideTertiaryColor": "#ffffff",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.6"
+              },
+              "button": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/8a52613193a4418a91c084305222f98e",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Soft Glam Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in \"Soft Glam,\" a premium visual identity tailored for a high-end spa experience. It targets a discerning clientele seeking luxury, serenity, and professional artistry. The aesthetic balances the tactile elegance of a fashion magazine with the digital precision of modern SaaS.\n\nThe style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes generous whitespace to create a \"breathing\" layout, punctuated by ultra-fine lines and \"organic glass\" surfaces. The emotional response is one of immediate calm, sophistication, and exclusivity. \n\n**Key Stylistic Pillars:**\n- **Editorial Composition:** Asymmetrical layouts and oversized typography reminiscent of luxury mastheads.\n- **Translucency:** Subtle background blurs that suggest depth without clutter.\n- **Precision:** 0.5px \"hairline\" borders that define structure with extreme delicacy.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain strict editorial control, transitioning to a fluid model for mobile.\n\n- **Rhythm:** An 8px base unit drives all padding and margins. \n- **Sectioning:** Vertical spacing is intentionally generous. A `section-gap` of 120px is used between major content blocks to ensure elements never feel crowded.\n- **Grid:** A 12-column grid on desktop with wide 64px outer margins creates a \"framed\" look, similar to a printed page. \n- **Hairlines:** Use 0.5px borders in `Warm Slate` (at 20% opacity) to separate content sections without adding visual weight.\n\n## Elevation & Depth\n\nDepth is achieved through \"Organic Glass\" layers rather than traditional heavy shadows.\n\n- **Surface Strategy:** Use `backdrop-filter: blur(12px)` on Pearl White surfaces with 80% opacity. This allows the Champagne brand colors to softly bleed through the UI.\n- **Shadows:** Avoid dark shadows. Use \"Ambient Glows\"—long, ultra-diffused shadows (e.g., `0 20px 40px rgba(62, 16, 63, 0.05)`) that take on a slight Plum tint.\n- **Z-Index Hierarchy:** Floating elements like navigation bars or booking modals should always utilize the frosted glass effect to maintain a sense of lightness.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Plum with white Montserrat-caps text. Secondary buttons are Pearl White \"Organic Glass\" with a 0.5px Plum border.\n- **Input Fields:** Minimalist design—bottom-border only (0.5px Warm Slate) that transitions to Deep Plum on focus.\n- **Cards:** Use the frosted glass effect. No heavy borders; let the ambient plum shadow define the edge against the Champagne background.\n- **Chips/Badges:** Small, wide-tracked uppercase text inside a Champagne-colored pill with 10% Deep Plum opacity.\n- **Service Menu:** List items should feature generous vertical padding (24px) with a 0.5px hairline separator that doesn't span the full width of the container.\n- **Signature Component (The \"Lookbook\" Carousel):** A full-bleed horizontal scroll for showcasing nail art, featuring Playfair Display captions overlapping the images.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#3e103f",
+                  "designMd": "---\nname: Soft Glam Editorial\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbd9d9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#eae8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#4e444c'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#80737c'\n  outline-variant: '#d1c2cc'\n  surface-tint: '#804c7e'\n  primary: '#220024'\n  on-primary: '#ffffff'\n  primary-container: '#3e103f'\n  on-primary-container: '#b178ad'\n  inverse-primary: '#f2b2eb'\n  secondary: '#685d4a'\n  on-secondary: '#ffffff'\n  secondary-container: '#eddec5'\n  on-secondary-container: '#6c614e'\n  tertiary: '#0c0f0f'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#222424'\n  on-tertiary-container: '#8a8b8b'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffd6f8'\n  primary-fixed-dim: '#f2b2eb'\n  on-primary-fixed: '#340636'\n  on-primary-fixed-variant: '#663464'\n  secondary-fixed: '#f0e0c8'\n  secondary-fixed-dim: '#d3c5ad'\n  on-secondary-fixed: '#221b0b'\n  on-secondary-fixed-variant: '#4f4533'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is anchored in \"Soft Glam,\" a premium visual identity tailored for a high-end spa experience. It targets a discerning clientele seeking luxury, serenity, and professional artistry. The aesthetic balances the tactile elegance of a fashion magazine with the digital precision of modern SaaS.\n\nThe style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes generous whitespace to create a \"breathing\" layout, punctuated by ultra-fine lines and \"organic glass\" surfaces. The emotional response is one of immediate calm, sophistication, and exclusivity. \n\n**Key Stylistic Pillars:**\n- **Editorial Composition:** Asymmetrical layouts and oversized typography reminiscent of luxury mastheads.\n- **Translucency:** Subtle background blurs that suggest depth without clutter.\n- **Precision:** 0.5px \"hairline\" borders that define structure with extreme delicacy.\n\n## Colors\n\nThe palette is designed to evoke a sensory experience. \n- **Deep Plum (#3E103F):** Our primary brand color, used for high-impact typography, primary actions, and deep-toned sections to provide a sense of grounded luxury.\n- **Champagne (#F7E7CE):** A secondary \"glow\" color used for backgrounds, highlighting premium offers, and softening the transition between sections.\n- **Pearl White (#FFFFFF):** The canvas. Used to maintain a clean, airy feel and as the base for glassmorphic effects.\n- **Warm Slate (#4A4A4A):** The utility neutral. Used for long-form body text and subtle UI borders to ensure legibility without the harshness of pure black.\n\n## Typography\n\nThe typography system relies on high contrast between a traditional, high-waisted serif and a modern, wide-tracked sans-serif.\n\n- **Playfair Display (Headlines):** Used for all display and heading roles. It brings an authoritative yet graceful \"editorial\" voice to the interface.\n- **Montserrat (UI & Body):** Used for all functional text. To enhance the premium feel, body text and labels utilize increased letter-spacing (`tracking`) to create a light, rhythmic reading experience. \n\n**Application Note:** Use `label-caps` for small navigational elements or service categories to reinforce the fashion-magazine aesthetic.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain strict editorial control, transitioning to a fluid model for mobile.\n\n- **Rhythm:** An 8px base unit drives all padding and margins. \n- **Sectioning:** Vertical spacing is intentionally generous. A `section-gap` of 120px is used between major content blocks to ensure elements never feel crowded.\n- **Grid:** A 12-column grid on desktop with wide 64px outer margins creates a \"framed\" look, similar to a printed page. \n- **Hairlines:** Use 0.5px borders in `Warm Slate` (at 20% opacity) to separate content sections without adding visual weight.\n\n## Elevation & Depth\n\nDepth is achieved through \"Organic Glass\" layers rather than traditional heavy shadows.\n\n- **Surface Strategy:** Use `backdrop-filter: blur(12px)` on Pearl White surfaces with 80% opacity. This allows the Champagne brand colors to softly bleed through the UI.\n- **Shadows:** Avoid dark shadows. Use \"Ambient Glows\"—long, ultra-diffused shadows (e.g., `0 20px 40px rgba(62, 16, 63, 0.05)`) that take on a slight Plum tint.\n- **Z-Index Hierarchy:** Floating elements like navigation bars or booking modals should always utilize the frosted glass effect to maintain a sense of lightness.\n\n## Shapes\n\nThe shape language is \"Soft-Modern.\" While the layout is structured and grid-based, individual components use a subtle `0.25rem` (4px) radius to prevent the UI from feeling sharp or aggressive.\n\n- **Image Treatment:** Photography should use sharp corners or very large, organic radii (e.g., 100px on one corner) to mimic high-end magazine cutouts.\n- **Interactive Elements:** Buttons and input fields use the `Soft` (4px) setting to remain professional and clean.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Plum with white Montserrat-caps text. Secondary buttons are Pearl White \"Organic Glass\" with a 0.5px Plum border.\n- **Input Fields:** Minimalist design—bottom-border only (0.5px Warm Slate) that transitions to Deep Plum on focus.\n- **Cards:** Use the frosted glass effect. No heavy borders; let the ambient plum shadow define the edge against the Champagne background.\n- **Chips/Badges:** Small, wide-tracked uppercase text inside a Champagne-colored pill with 10% Deep Plum opacity.\n- **Service Menu:** List items should feature generous vertical padding (24px) with a 0.5px hairline separator that doesn't span the full width of the container.\n- **Signature Component (The \"Lookbook\" Carousel):** A full-bleed horizontal scroll for showcasing nail art, featuring Playfair Display captions overlapping the images.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fbf9f8",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f2f0f0",
+                    "inverse_primary": "#f2b2eb",
+                    "inverse_surface": "#303030",
+                    "on_background": "#1b1c1c",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#b178ad",
+                    "on_primary_fixed": "#340636",
+                    "on_primary_fixed_variant": "#663464",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#6c614e",
+                    "on_secondary_fixed": "#221b0b",
+                    "on_secondary_fixed_variant": "#4f4533",
+                    "on_surface": "#1b1c1c",
+                    "on_surface_variant": "#4e444c",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#8a8b8b",
+                    "on_tertiary_fixed": "#1a1c1c",
+                    "on_tertiary_fixed_variant": "#454747",
+                    "outline": "#80737c",
+                    "outline_variant": "#d1c2cc",
+                    "primary": "#220024",
+                    "primary_container": "#3e103f",
+                    "primary_fixed": "#ffd6f8",
+                    "primary_fixed_dim": "#f2b2eb",
+                    "secondary": "#685d4a",
+                    "secondary_container": "#eddec5",
+                    "secondary_fixed": "#f0e0c8",
+                    "secondary_fixed_dim": "#d3c5ad",
+                    "surface": "#fbf9f8",
+                    "surface_bright": "#fbf9f8",
+                    "surface_container": "#efeded",
+                    "surface_container_high": "#eae8e7",
+                    "surface_container_highest": "#e4e2e2",
+                    "surface_container_low": "#f5f3f3",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dbd9d9",
+                    "surface_tint": "#804c7e",
+                    "surface_variant": "#e4e2e2",
+                    "tertiary": "#0c0f0f",
+                    "tertiary_container": "#222424",
+                    "tertiary_fixed": "#e2e2e2",
+                    "tertiary_fixed_dim": "#c6c6c7"
+                  },
+                  "overrideNeutralColor": "#4a4a4a",
+                  "overridePrimaryColor": "#3e103f",
+                  "overrideSecondaryColor": "#f7e7ce",
+                  "overrideTertiaryColor": "#ffffff",
+                  "roundness": "ROUND_FOUR",
+                  "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "1.6"
+                    },
+                    "button": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.0"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.4"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/8a52613193a4418a91c084305222f98e",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10404",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzg0MTViODc1MzQwYjQ2ZTk4ZjcwMTYwMTM4NTA3NWQ5EgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM5MjMyNDc5NTU0NTczNjQyODMx&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/9232479554573642831/files/478b02bfa90547ac95da5ff155691a4f"
+            },
+            "id": "094658b994464888bd3dd39a365e4a83",
+            "name": "projects/9232479554573642831/screens/094658b994464888bd3dd39a365e4a83",
+            "prompt": "Create a complete, bespoke, production-ready landing page for Stylin' Nails & Spa. \nBusiness Info: (417) 771-5458, stylinnails.spa@gmail.com, 2775 South Campbell Avenue, Springfield, MO 65807.\nVisual Style: Editorial 'Soft Glam'. Use Champagne, Deep Plum, and Pearl White. High-contrast typography.\nLayout: Unique and memorable. \nHero: Asymmetric layout with large serif typography.\nSections to include: \n- Navigation: Fixed TopNavBar with phone number.\n- Hero: High-impact introduction.\n- Credibility: \"The Stylin' Promise\" (e.g., Hygiene, Artistry, Luxury).\n- Services: Detailed menu with elegant pricing display.\n- About: Narrative story about the spa's Springfield roots.\n- Visit: Contact info and the required empty map panel: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact Form: Premium form design with JS validation logic for UI feedback.\n- Footer: Professional footer with contact details and navigation.\nTechnical: Full semantic HTML, CSS custom properties for the palette, responsive at 375px, smooth scroll, and vanilla JS for form validation and mobile nav. No lorem ipsum.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuzLxmMRe8PTh2ZmzWKTElK_-5Y7YB-x4y7Jy8juXhixoeNJ3OnhCwFm_Evx7XH3AmBYq5f5KOCelPwkrWuHV3VhoKsgGDTtA0aLJ02S1rgKf7vky8G07DIRyMH-y1RSa5Di5Iz0qEU2ANBv9vK7ItkKHnUMJFT3SO6dgi8CtSlbkR67ErAsWMg1c4Evje7CV2j0Wz3sIy3_Z5fMn9WWWibDesLhhWd4Rbe1IDGZc7CsiU1oQhvw3PWYTY",
+              "name": "projects/9232479554573642831/files/2046f125ed2944de9d22d9f28129285c"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#3e103f",
+              "designMd": "---\nname: Soft Glam Editorial\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbd9d9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#eae8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#4e444c'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#80737c'\n  outline-variant: '#d1c2cc'\n  surface-tint: '#804c7e'\n  primary: '#220024'\n  on-primary: '#ffffff'\n  primary-container: '#3e103f'\n  on-primary-container: '#b178ad'\n  inverse-primary: '#f2b2eb'\n  secondary: '#685d4a'\n  on-secondary: '#ffffff'\n  secondary-container: '#eddec5'\n  on-secondary-container: '#6c614e'\n  tertiary: '#0c0f0f'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#222424'\n  on-tertiary-container: '#8a8b8b'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffd6f8'\n  primary-fixed-dim: '#f2b2eb'\n  on-primary-fixed: '#340636'\n  on-primary-fixed-variant: '#663464'\n  secondary-fixed: '#f0e0c8'\n  secondary-fixed-dim: '#d3c5ad'\n  on-secondary-fixed: '#221b0b'\n  on-secondary-fixed-variant: '#4f4533'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is anchored in \"Soft Glam,\" a premium visual identity tailored for a high-end spa experience. It targets a discerning clientele seeking luxury, serenity, and professional artistry. The aesthetic balances the tactile elegance of a fashion magazine with the digital precision of modern SaaS.\n\nThe style is a hybrid of **Minimalism** and **Glassmorphism**. It utilizes generous whitespace to create a \"breathing\" layout, punctuated by ultra-fine lines and \"organic glass\" surfaces. The emotional response is one of immediate calm, sophistication, and exclusivity. \n\n**Key Stylistic Pillars:**\n- **Editorial Composition:** Asymmetrical layouts and oversized typography reminiscent of luxury mastheads.\n- **Translucency:** Subtle background blurs that suggest depth without clutter.\n- **Precision:** 0.5px \"hairline\" borders that define structure with extreme delicacy.\n\n## Colors\n\nThe palette is designed to evoke a sensory experience. \n- **Deep Plum (#3E103F):** Our primary brand color, used for high-impact typography, primary actions, and deep-toned sections to provide a sense of grounded luxury.\n- **Champagne (#F7E7CE):** A secondary \"glow\" color used for backgrounds, highlighting premium offers, and softening the transition between sections.\n- **Pearl White (#FFFFFF):** The canvas. Used to maintain a clean, airy feel and as the base for glassmorphic effects.\n- **Warm Slate (#4A4A4A):** The utility neutral. Used for long-form body text and subtle UI borders to ensure legibility without the harshness of pure black.\n\n## Typography\n\nThe typography system relies on high contrast between a traditional, high-waisted serif and a modern, wide-tracked sans-serif.\n\n- **Playfair Display (Headlines):** Used for all display and heading roles. It brings an authoritative yet graceful \"editorial\" voice to the interface.\n- **Montserrat (UI & Body):** Used for all functional text. To enhance the premium feel, body text and labels utilize increased letter-spacing (`tracking`) to create a light, rhythmic reading experience. \n\n**Application Note:** Use `label-caps` for small navigational elements or service categories to reinforce the fashion-magazine aesthetic.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain strict editorial control, transitioning to a fluid model for mobile.\n\n- **Rhythm:** An 8px base unit drives all padding and margins. \n- **Sectioning:** Vertical spacing is intentionally generous. A `section-gap` of 120px is used between major content blocks to ensure elements never feel crowded.\n- **Grid:** A 12-column grid on desktop with wide 64px outer margins creates a \"framed\" look, similar to a printed page. \n- **Hairlines:** Use 0.5px borders in `Warm Slate` (at 20% opacity) to separate content sections without adding visual weight.\n\n## Elevation & Depth\n\nDepth is achieved through \"Organic Glass\" layers rather than traditional heavy shadows.\n\n- **Surface Strategy:** Use `backdrop-filter: blur(12px)` on Pearl White surfaces with 80% opacity. This allows the Champagne brand colors to softly bleed through the UI.\n- **Shadows:** Avoid dark shadows. Use \"Ambient Glows\"—long, ultra-diffused shadows (e.g., `0 20px 40px rgba(62, 16, 63, 0.05)`) that take on a slight Plum tint.\n- **Z-Index Hierarchy:** Floating elements like navigation bars or booking modals should always utilize the frosted glass effect to maintain a sense of lightness.\n\n## Shapes\n\nThe shape language is \"Soft-Modern.\" While the layout is structured and grid-based, individual components use a subtle `0.25rem` (4px) radius to prevent the UI from feeling sharp or aggressive.\n\n- **Image Treatment:** Photography should use sharp corners or very large, organic radii (e.g., 100px on one corner) to mimic high-end magazine cutouts.\n- **Interactive Elements:** Buttons and input fields use the `Soft` (4px) setting to remain professional and clean.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Plum with white Montserrat-caps text. Secondary buttons are Pearl White \"Organic Glass\" with a 0.5px Plum border.\n- **Input Fields:** Minimalist design—bottom-border only (0.5px Warm Slate) that transitions to Deep Plum on focus.\n- **Cards:** Use the frosted glass effect. No heavy borders; let the ambient plum shadow define the edge against the Champagne background.\n- **Chips/Badges:** Small, wide-tracked uppercase text inside a Champagne-colored pill with 10% Deep Plum opacity.\n- **Service Menu:** List items should feature generous vertical padding (24px) with a 0.5px hairline separator that doesn't span the full width of the container.\n- **Signature Component (The \"Lookbook\" Carousel):** A full-bleed horizontal scroll for showcasing nail art, featuring Playfair Display captions overlapping the images.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fbf9f8",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f2f0f0",
+                "inverse_primary": "#f2b2eb",
+                "inverse_surface": "#303030",
+                "on_background": "#1b1c1c",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#b178ad",
+                "on_primary_fixed": "#340636",
+                "on_primary_fixed_variant": "#663464",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#6c614e",
+                "on_secondary_fixed": "#221b0b",
+                "on_secondary_fixed_variant": "#4f4533",
+                "on_surface": "#1b1c1c",
+                "on_surface_variant": "#4e444c",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#8a8b8b",
+                "on_tertiary_fixed": "#1a1c1c",
+                "on_tertiary_fixed_variant": "#454747",
+                "outline": "#80737c",
+                "outline_variant": "#d1c2cc",
+                "primary": "#220024",
+                "primary_container": "#3e103f",
+                "primary_fixed": "#ffd6f8",
+                "primary_fixed_dim": "#f2b2eb",
+                "secondary": "#685d4a",
+                "secondary_container": "#eddec5",
+                "secondary_fixed": "#f0e0c8",
+                "secondary_fixed_dim": "#d3c5ad",
+                "surface": "#fbf9f8",
+                "surface_bright": "#fbf9f8",
+                "surface_container": "#efeded",
+                "surface_container_high": "#eae8e7",
+                "surface_container_highest": "#e4e2e2",
+                "surface_container_low": "#f5f3f3",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dbd9d9",
+                "surface_tint": "#804c7e",
+                "surface_variant": "#e4e2e2",
+                "tertiary": "#0c0f0f",
+                "tertiary_container": "#222424",
+                "tertiary_fixed": "#e2e2e2",
+                "tertiary_fixed_dim": "#c6c6c7"
+              },
+              "overrideNeutralColor": "#4a4a4a",
+              "overridePrimaryColor": "#3e103f",
+              "overrideSecondaryColor": "#f7e7ce",
+              "overrideTertiaryColor": "#ffffff",
+              "roundness": "ROUND_FOUR",
+              "spacing": {
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "section-gap": "120px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "1.6"
+                },
+                "button": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.0"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.4"
+                },
+                "label-caps": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "Stylin' Nails & Spa - Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed and built a bespoke, high-fidelity landing page for **Stylin' Nails & Spa**, moving away from standard templates to create a premium visual identity.\n\n### Design Highlights:\n*   **Visual Identity:** Established a \"Soft Glam\" editorial aesthetic using a palette of **Deep Plum, Champagne, and Pearl**. I paired a sophisticated high-contrast serif (Playfair Display) with a clean, modern sans-serif for a luxurious magazine-style feel.\n*   **Editorial Layout:** The hero section uses an asymmetric composition to break the typical \"local business\" grid, instantly signaling a higher level of artistry and attention to detail.\n*   **The Stylin' Promise:** A dedicated credibility section highlights the studio's commitment to clinical hygiene, master artistry, and luxury products.\n*   **The Service Menu:** A refined, easy-to-read price list designed with elegance, ensuring guests can explore offerings like Aprés Gel-X and Custom Nail Art with ease.\n*   ** Springfield Roots:** The \"About\" section tells the brand's story, grounding the luxury experience in its local Springfield, MO community.\n*   **Production-Ready Code:** The screen is built with semantic HTML5, CSS custom properties for easy theme management, and vanilla JavaScript for smooth scrolling and form validation feedback.\n\nThe site is fully responsive and includes the specific map placeholder and contact information as requested. How does this look for the first impression of the studio?"
+    },
+    {
+      "suggestion": "Can we add a section for a gallery of nail art?"
+    },
+    {
+      "suggestion": "Make the colors even softer, more pastel."
+    },
+    {
+      "suggestion": "Could we add some subtle scroll animations?"
+    }
+  ],
+  "projectId": "9232479554573642831",
+  "sessionId": "14053138063879750739"
+}
