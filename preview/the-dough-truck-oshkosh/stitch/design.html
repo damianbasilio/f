@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Dough Truck | Precision in Every Proof</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "outline-variant": "#cfc4bd",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#424939",
+                    "secondary-fixed": "#ffdfa0",
+                    "primary": "#181512",
+                    "on-tertiary-fixed": "#171d10",
+                    "surface-container-highest": "#e4e2dd",
+                    "secondary": "#795900",
+                    "secondary-fixed-dim": "#f6be39",
+                    "error": "#ba1a1a",
+                    "surface-container": "#f0eee9",
+                    "surface-tint": "#635d5a",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed": "#dee5cf",
+                    "tertiary-container": "#262c1d",
+                    "on-surface": "#1b1c19",
+                    "on-primary-container": "#96908b",
+                    "primary-fixed-dim": "#cdc5c0",
+                    "primary-fixed": "#e9e1dc",
+                    "on-error-container": "#93000a",
+                    "surface": "#fbf9f4",
+                    "on-secondary-container": "#715300",
+                    "surface-variant": "#e4e2dd",
+                    "on-secondary-fixed": "#261a00",
+                    "on-surface-variant": "#4d4540",
+                    "on-tertiary-container": "#8d9480",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "background": "#fbf9f4",
+                    "inverse-primary": "#cdc5c0",
+                    "secondary-container": "#ffc641",
+                    "inverse-on-surface": "#f2f1ec",
+                    "surface-container-high": "#eae8e3",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#5c4300",
+                    "inverse-surface": "#30312e",
+                    "on-primary-fixed": "#1e1b18",
+                    "primary-container": "#2d2926",
+                    "surface-bright": "#fbf9f4",
+                    "on-primary-fixed-variant": "#4b4642",
+                    "on-background": "#1b1c19",
+                    "error-container": "#ffdad6",
+                    "surface-dim": "#dbdad5",
+                    "tertiary": "#11170a",
+                    "outline": "#7e756f",
+                    "tertiary-fixed-dim": "#c2c9b4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "gutter": "24px",
+                    "overlap-offset": "-32px",
+                    "margin-safe": "40px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Bodoni Moda"],
+                    "label-sm": ["DM Sans"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "headline-md": ["Bodoni Moda"],
+                    "body-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"],
+                    "headline-lg-mobile": ["Bodoni Moda"]
+            },
+            "fontSize": {
+                    "display-xl": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f4; /* Flour White */
+            color: #181512; /* Charred Crust */
+            overflow-x: hidden;
+            position: relative;
+        }
+        /* Grain Overlay */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.02;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("https://www.transparenttextures.com/patterns/p6-dark.png");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .dough-wave {
+            clip-path: ellipse(80% 100% at 50% 100%);
+        }
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .image-rise {
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .image-rise:hover {
+            transform: scale(1.03);
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- TopNavBar Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md flex justify-between items-center px-gutter py-unit max-w-full mx-auto">
+<div class="font-headline-md text-headline-md tracking-tighter text-primary">The Dough Truck</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#menu">Our Menu</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#story">Story</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#locations">Locations</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-label-sm text-label-sm text-primary">555-0123</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-label-sm text-label-sm active:scale-95 transition-transform hover:bg-primary-container">Order Now</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-margin-safe overflow-hidden">
+<div class="container mx-auto asymmetric-grid">
+<div class="col-span-12 md:col-span-7 z-10">
+<div class="inline-block py-2 border-b border-primary mb-8 animate-fade-in">
+<span class="font-label-sm text-label-sm tracking-[0.3em] uppercase">Artisanal Precision</span>
+</div>
+<h1 class="font-display-xl text-headline-lg-mobile md:text-display-xl text-primary leading-none mb-6">Precision in Every Proof.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Crafted with wild yeast, stone-ground flour, and the patience of slow fermentation. We don't just bake; we engineer textures that speak of heritage and heat.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-label-sm text-label-sm hover:bg-primary-container transition-colors shadow-lg shadow-primary/10">Explore Our Daily Loaves</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 relative mt-12 md:mt-0">
+<div class="absolute -left-12 top-1/2 -rotate-90 origin-left hidden lg:block">
+<span class="font-label-sm text-label-sm tracking-[0.5em] text-outline opacity-40">ESTABLISHED 2024</span>
+</div>
+<div class="relative rounded-t-[120px] rounded-b-xl overflow-hidden shadow-2xl">
+<img alt="Sourdough Loaf" class="w-full h-[600px] object-cover image-rise" data-alt="A macro photograph of a perfectly scored sourdough loaf fresh from the oven, showcasing a dark, bubbly crust and dusted with a fine layer of flour. The lighting is dramatic and warm, emphasizing the organic textures of the bread against a minimalist charcoal stone background. The overall aesthetic is editorial and high-end, capturing the artisanal precision of the bakery brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPhOjTlbVeaszJuCvsM_nvywwmO7De_OVeExGZBbbSe1ohZ-mG_KYKH66WN5AdPBFBgEfr-Y_2YBa4X6Xerd4GkDSNjECzWITsC8SkdxdshLzgCW1pzhzYewodkvP-Lnpk8DODZin8s8YE9hG8nS8Gc7Jbag6TMJCRv5YwmA8jLJ6oPEPJWwPXBXNFVfHn-5cX9VgnR5n11V6Clh9reBTQHJhbBWMb1KZV3gzuC_swrkvflA1tFM_cTO7akfS93pOsH6ljiLyuusk"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility / Quote Section -->
+<section class="py-section-gap bg-surface-container-low px-margin-safe">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-8" data-icon="format_quote">format_quote</span>
+<blockquote class="font-headline-lg text-headline-lg-mobile md:text-headline-lg text-primary italic leading-tight mb-8">
+                    "The best thing to happen to Oshkosh since sliced bread. A masterclass in crust and crumb."
+                </blockquote>
+<cite class="font-label-sm text-label-sm tracking-widest text-on-surface-variant not-italic uppercase">— Local Food Critic, The Daily Ferment</cite>
+</div>
+</section>
+<!-- Services / Offerings Section -->
+<section class="py-section-gap px-margin-safe overflow-hidden" id="menu">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 border-b border-outline-variant pb-8">
+<div>
+<h2 class="font-display-xl text-headline-md md:text-headline-lg text-primary">The Offerings</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Three pillars of the Dough Truck experience.</p>
+</div>
+<span class="hidden md:block font-label-sm text-label-sm opacity-30">01 — 03</span>
+</div>
+<div class="space-y-32">
+<!-- Offering 1 -->
+<div class="asymmetric-grid items-center">
+<div class="col-span-12 md:col-span-6 md:order-2">
+<div class="relative p-gutter">
+<div class="absolute inset-0 bg-surface-container -rotate-2 rounded-xl -z-10"></div>
+<img alt="Daily Bake" class="w-full h-[500px] object-cover rounded-xl shadow-xl image-rise" data-alt="A serene scene of a bakery counter at dawn, featuring rows of golden croissants and crusty baguettes arranged neatly on wooden shelves. Soft, natural morning light filters through a large window, creating a warm, inviting glow. The setting is clean and minimalist with a palette of flour-whites and deep earthy browns, evoking a sense of calm artisanal craft." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZUsSGNaZkrDN2vjUZilNy67SYXlfMhiaXbLefP-adZHzACQYyEZVFkbVn8dUP6tCS4wgcGc0fDp1dqNO33QUaxDPyvcVbyWZlCHAxBMlIpcljSyRMO0QbGk9UGc1VPT-EHnySpHqjHcYnla8hbo1S1Nh3IqJ8IQo8nN9u_0TAtxU3SWYhbRXdco2YfZVCtfXiqSKwcJDl5iaYZ8P7XB7FL2HVFYIxPfeYilX3awzT7fJ_VpK7YbKfHqqBgEW6giHGJj8h8atXiis"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 md:order-1 mt-8 md:mt-0">
+<span class="font-label-sm text-label-sm text-secondary block mb-4">01. THE EXPERIENCE</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">The Daily Bake</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                                Every morning at 4 AM, our wood-fired oven is brought to temperature. We offer a rotating selection of sourdoughs, heirloom grain baguettes, and laminated pastries that disappear before noon.
+                            </p>
+<a class="inline-flex items-center font-label-sm text-label-sm group" href="#">
+                                VIEW TODAY'S MENU 
+                                <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Offering 2 -->
+<div class="asymmetric-grid items-center">
+<div class="col-span-12 md:col-span-6">
+<div class="relative p-gutter">
+<div class="absolute inset-0 bg-surface-container-high rotate-1 rounded-xl -z-10"></div>
+<img alt="Events &amp; Catering" class="w-full h-[500px] object-cover rounded-xl shadow-xl image-rise" data-alt="An elegant outdoor catering setup featuring long wooden tables adorned with linen runners and boards of artisanal breads, cheeses, and fresh fruits. The lighting is golden hour, casting long soft shadows across the scene. The vibe is sophisticated and communal, reflecting a high-end editorial style with focus on natural materials and premium food presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDQVmK3NoGAtYt22HzdvDcx-2stxp7YhNyToed5pJo_O2mVXhDtYs_Tq8yjPkE8V18Sh-kTfFRRFijNSg6g0rha9UwfUfP2mTxcLBFMUbnQeO8Frs9LeEOdfrasscuUKdM0hEfc2FoG90KxLL2mv7NWorlyeQ8FZkIegrRQEoam3pwS4q0v01ydZ5CFrqw94DAywrijJuru-tz_7PaA0mGbtavMIqA548I06k7lzK5KXv1yBizGGAXE74GEmTddvDzOPQKPb1D6_w"/>
+</div>
+</div>
+<div class="col-span-12 md:col-span-5 md:col-start-8 mt-8 md:mt-0">
+<span class="font-label-sm text-label-sm text-secondary block mb-4">02. PRIVATE AFFAIRS</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-6">Events &amp; Catering</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                                Bring the truck to your door. From intimate garden weddings to corporate gatherings, we provide a full-service bread bar and mobile wood-fired pizza experience tailored to your guest list.
+                            </p>
+<a class="inline-flex items-center font-label-sm text-label-sm group" href="#">
+                                BOOK THE TRUCK 
+                                <span class="material-symbols-outlined ml-2 group-hover:translate-x-2 transition-transform" data-icon="event">event</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Our Story Section with Dough Wave -->
+<section class="relative py-section-gap bg-primary text-on-primary overflow-hidden" id="story">
+<!-- Dough Wave Transition -->
+<div class="absolute top-0 left-0 w-full h-32 bg-surface dough-wave -translate-y-px"></div>
+<div class="container mx-auto px-margin-safe pt-32">
+<div class="max-w-6xl mx-auto asymmetric-grid items-center">
+<div class="col-span-12 lg:col-span-6 mb-12 lg:mb-0">
+<h2 class="font-display-xl text-headline-lg-mobile md:text-display-xl text-surface mb-12 leading-none">Our Story: <br/>The Science of Savor.</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-primary/70">
+<p>Founded on the belief that bread is the most complex simple thing in the world. Our journey began in a small garage with a 100-year-old starter and a relentless obsession with hydration levels.</p>
+<p>Today, The Dough Truck serves as a mobile beacon for those who value the "Slow Food" movement. We source exclusively from Midwest grain farmers who practice regenerative agriculture, ensuring every bite supports the earth it came from.</p>
+</div>
+<div class="mt-12 flex gap-12">
+<div>
+<span class="block font-display-xl text-headline-lg text-secondary-fixed mb-1">72hr</span>
+<span class="font-label-sm text-label-sm uppercase opacity-50">Fermentation</span>
+</div>
+<div>
+<span class="block font-display-xl text-headline-lg text-secondary-fixed mb-1">100%</span>
+<span class="font-label-sm text-label-sm uppercase opacity-50">Organic Flour</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8">
+<div class="relative group">
+<div class="absolute -inset-4 border border-on-primary/20 rounded-xl group-hover:inset-0 transition-all duration-700"></div>
+<img alt="Baker's Hands" class="w-full grayscale hover:grayscale-0 transition-all duration-1000 rounded-xl shadow-2xl" data-alt="A close-up, high-contrast black and white photograph of a baker's hands covered in a dusting of flour, gently shaping a round of dough on a wooden work surface. The image emphasizes the wrinkles in the hands and the texture of the dough, symbolizing years of dedicated craft. The lighting is low-key and dramatic, focusing on the tactile motion of baking." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4dw0YpghsBGv4_7xvJhiF-KS4RuMQl-vQmseH-0EDkTdBmDNpSE99JI8I1kfLcH7-pnr14k-jgQ2AAp_G-TDd1fcX7w9bCvNNPI8qMh8q1CYLQ0JvVevGq0k0nicOJfsXwGUyHOf-o1ZVPKojyTVelHz64b5B0LdJyy6wFkNh22LrSXVavQQ0uHqFOIk_NlCt5-Yj3MtzDygGztaVVAF2-oTJPHN-jgtADta6g-p9QXADkCyuh3JkWdhkbZpDd-nIlq9azxRmWfc"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="py-section-gap px-margin-safe bg-surface-container-lowest" id="locations">
+<div class="container mx-auto">
+<div class="asymmetric-grid mb-12">
+<div class="col-span-12 md:col-span-6">
+<span class="font-label-sm text-label-sm text-secondary mb-4 block">FIND US</span>
+<h2 class="font-display-xl text-headline-md md:text-headline-lg text-primary mb-4">606 Franklin Street</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Oshkosh, WI 54901. <br/>Our home base and main production house.</p>
+</div>
+<div class="col-span-12 md:col-span-6 flex md:justify-end items-end gap-12 mt-6 md:mt-0">
+<div class="text-right">
+<span class="block font-label-sm text-label-sm text-primary mb-2">THU — FRI</span>
+<span class="font-body-md text-body-md text-on-surface-variant">7:00 AM - 2:00 PM</span>
+</div>
+<div class="text-right">
+<span class="block font-label-sm text-label-sm text-primary mb-2">SAT — SUN</span>
+<span class="font-body-md text-body-md text-on-surface-variant">8:00 AM - 1:00 PM</span>
+</div>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] rounded-2xl shadow-inner bg-surface-container" data-location="Oshkosh, Wisconsin" data-map-slot="" style="">
+<!-- Placeholder for Map Interaction -->
+<div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+<span class="material-symbols-outlined text-9xl" data-icon="map">map</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap px-margin-safe bg-surface">
+<div class="container mx-auto asymmetric-grid">
+<div class="col-span-12 md:col-span-4 mb-16 md:mb-0">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Let's Flourish Together.</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Questions about our wholesale program or just want to talk crust? Drop us a line.</p>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="mailto:thedoughtruck365@gmail.com">
+<span class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="mail">mail</span>
+</span>
+<span class="font-body-md text-body-md">thedoughtruck365@gmail.com</span>
+</a>
+<a class="flex items-center gap-4 group" href="tel:9203792640">
+<span class="w-12 h-12 flex items-center justify-center rounded-full bg-surface-container text-primary group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="phone">phone</span>
+</span>
+<span class="font-body-md text-body-md">(920) 379-2640</span>
+</a>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6">
+<form class="space-y-10">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-primary py-4 px-0 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline/40 font-label-sm text-label-sm" id="name" placeholder="YOUR NAME" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-primary py-4 px-0 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline/40 font-label-sm text-label-sm" id="email" placeholder="EMAIL ADDRESS" type="email"/>
+</div>
+<div class="relative">
+<select class="w-full bg-transparent border-0 border-b border-primary py-4 px-0 focus:ring-0 focus:border-secondary transition-colors font-label-sm text-label-sm uppercase" id="subject">
+<option disabled="" selected="">ENQUIRY TYPE</option>
+<option>Wholesale Interest</option>
+<option>Event Catering</option>
+<option>General Hello</option>
+</select>
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-0 border-b border-primary py-4 px-0 focus:ring-0 focus:border-secondary transition-colors placeholder:text-outline/40 font-label-sm text-label-sm" id="message" placeholder="MESSAGE" rows="4"></textarea>
+</div>
+<button class="bg-primary text-on-primary px-12 py-5 rounded-full font-label-sm text-label-sm hover:bg-primary-container transition-all active:scale-95 shadow-xl shadow-primary/20" type="submit">SEND ENQUIRY</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-xl bg-primary text-on-primary px-margin-safe py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter relative overflow-hidden">
+<div class="absolute left-0 bottom-0 pointer-events-none select-none">
+<span class="font-display-xl text-display-xl text-surface-container opacity-5 uppercase leading-none block transform -translate-x-8 translate-y-8">THE DOUGH TRUCK</span>
+</div>
+<div class="z-10 max-w-sm">
+<div class="font-headline-md text-headline-md tracking-tighter mb-4">The Dough Truck</div>
+<p class="font-body-md text-body-md text-on-primary/60 mb-8">
+                © 2024 The Dough Truck. Artisanal Precision in Every Bite.
+            </p>
+</div>
+<div class="z-10 grid grid-cols-2 gap-x-20 gap-y-12">
+<div>
+<h4 class="font-label-sm text-label-sm text-secondary-fixed mb-6 uppercase tracking-widest">Connect</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-primary/60 hover:text-on-primary transition-opacity" href="#">Instagram</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary/60 hover:text-on-primary transition-opacity" href="#">Facebook</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary/60 hover:text-on-primary transition-opacity" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-label-sm text-secondary-fixed mb-6 uppercase tracking-widest">Legal</h4>
+<ul class="space-y-4">
+<li><a class="font-label-sm text-label-sm text-on-primary/60 hover:text-on-primary transition-opacity" href="#">Privacy Policy</a></li>
+<li><a class="font-label-sm text-label-sm text-on-primary/60 hover:text-on-primary transition-opacity" href="#">Accessibility</a></li>
+</ul>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth reveal on scroll for asymmetric elements
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-reveal');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Interactive effect for "rising" dough images (subtle parallax)
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const images = document.querySelectorAll('.image-rise');
+            images.forEach(img => {
+                const speed = 0.05;
+                const rect = img.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    const yPos = (rect.top - window.innerHeight / 2) * speed;
+                    img.style.transform = `translateY(${yPos}px) scale(1.03)`;
+                }
+            });
+        });
+    </script>
+</body></html>
