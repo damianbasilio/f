@@ -1,0 +1,317 @@
+{
+  "outputComponents": [
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Industrial Prestige",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is built on the concept of **Mechanical Authority**. It moves away from the frantic, emergency-first aesthetic of traditional towing and instead embraces the \"Industrial-Prestige\" of heavy-duty recovery. The brand personality is stoic, expert, and premium—positioning the service as a sophisticated engineering operation rather than just a roadside assistance provider.\n\nThe visual style is **Editorial Minimalism**. It utilizes heavy whitespace, high-contrast typography, and a \"constructed\" feel. It draws inspiration from high-end architectural journals and heavy machinery lookbooks, emphasizing precision and the raw power of steel. The emotional response should be one of absolute confidence: \"The situation is heavy, but the solution is precise.\"\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column rigid grid** with a focus on verticality. \n\n- **Vertical Continuity:** 1px Steel Grey vertical lines (the \"cable\" motif) should run the full height of sections, acting as column dividers or content anchors.\n- **Intentional Density:** Content is often grouped tightly in one area of the grid, leaving large amounts of \"Dead Space\" elsewhere to create a premium, editorial feel.\n- **Overlapping Elements:** To create depth without using shadows, images and text blocks should utilize negative margins (`stack-overlap`) to break the grid's horizontal planes.\n- **Breakpoints:** On mobile, the 12-column grid collapses to a 4-column layout, but the 1px vertical lines remain as a margin guide to maintain the \"Rigging\" aesthetic.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Z-index layering**.\n\n- **Stacked Planes:** Depth is communicated by elements physically overlapping one another. For example, a \"Heavy Recovery\" headline may sit halfway across a high-resolution image of a tow rig.\n- **Surface Tiers:** \n  - Level 0 (Base): Deep Midnight.\n  - Level 1 (Containers): Steel Grey at 10% opacity with a 1px solid border.\n  - Level 2 (Accents): Industrial Ochre for interactive or high-priority elements.\n- **Backdrop Blurs:** In rare cases where overlays are necessary (e.g., navigation), a subtle backdrop blur is used to maintain the glass-like hardness of the UI without losing the background's industrial texture.\n\n## Components\n\n- **Buttons:** High-contrast, rectangular blocks. Primary buttons are Industrial Ochre with Deep Midnight text. Hover states shift to a Steel Grey stroke with no fill.\n- **Chips/Status:** Small, all-caps labels using Archivo Narrow. They are always outlined (1px) rather than filled, mimicking industrial tags.\n- **Cards:** Defined by 1px Steel Grey borders. They do not have background fills that differ from the main surface unless they are \"active,\" in which case they take a 4px Industrial Ochre left-border.\n- **Input Fields:** Bottom-border only (2px Steel Grey). When focused, the border transitions to Industrial Ochre.\n- **The 'Cable' Divider:** A 1px vertical or horizontal line that often terminates in a small \"bolt\" (a 4px square) at the intersection of other lines.\n- **The 'Tread' Pattern:** A subtle, repeating 45-degree slash pattern used as a background fill for call-to-action sections or headers to provide tactile texture.",
+                "theme": {
+                  "bodyFont": "HANKEN_GROTESK",
+                  "bodyFontFamily": "Hanken Grotesk",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#080c10",
+                  "designMd": "---\nname: Industrial Prestige\ncolors:\n  surface: '#121412'\n  surface-dim: '#121412'\n  surface-bright: '#383a38'\n  surface-container-lowest: '#0d0f0d'\n  surface-container-low: '#1a1c1a'\n  surface-container: '#1e201e'\n  surface-container-high: '#292a29'\n  surface-container-highest: '#333533'\n  on-surface: '#e2e3e0'\n  on-surface-variant: '#c5c6ca'\n  inverse-surface: '#e2e3e0'\n  inverse-on-surface: '#2f312f'\n  outline: '#8f9194'\n  outline-variant: '#44474a'\n  surface-tint: '#c3c7cc'\n  primary: '#c3c7cc'\n  on-primary: '#2d3135'\n  primary-container: '#080c10'\n  on-primary-container: '#777a80'\n  inverse-primary: '#5b5f64'\n  secondary: '#ebc07e'\n  on-secondary: '#432c00'\n  secondary-container: '#61440d'\n  on-secondary-container: '#dcb272'\n  tertiary: '#bcc8d6'\n  on-tertiary: '#27313d'\n  tertiary-container: '#030c16'\n  on-tertiary-container: '#707b88'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e0e3e8'\n  primary-fixed-dim: '#c3c7cc'\n  on-primary-fixed: '#181c20'\n  on-primary-fixed-variant: '#43474c'\n  secondary-fixed: '#ffddae'\n  secondary-fixed-dim: '#ebc07e'\n  on-secondary-fixed: '#281800'\n  on-secondary-fixed-variant: '#5e410b'\n  tertiary-fixed: '#d8e4f2'\n  tertiary-fixed-dim: '#bcc8d6'\n  on-tertiary-fixed: '#121d27'\n  on-tertiary-fixed-variant: '#3d4854'\n  background: '#121412'\n  on-background: '#e2e3e0'\n  surface-variant: '#333533'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 26px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.15em\n  display-accent:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: 100px\n    letterSpacing: -0.04em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin: 64px\n  cable-line: 1px\n  stack-overlap: -40px\n---\n\n## Brand & Style\n\nThe design system is built on the concept of **Mechanical Authority**. It moves away from the frantic, emergency-first aesthetic of traditional towing and instead embraces the \"Industrial-Prestige\" of heavy-duty recovery. The brand personality is stoic, expert, and premium—positioning the service as a sophisticated engineering operation rather than just a roadside assistance provider.\n\nThe visual style is **Editorial Minimalism**. It utilizes heavy whitespace, high-contrast typography, and a \"constructed\" feel. It draws inspiration from high-end architectural journals and heavy machinery lookbooks, emphasizing precision and the raw power of steel. The emotional response should be one of absolute confidence: \"The situation is heavy, but the solution is precise.\"\n\n## Colors\n\nThe palette is anchored in **Deep Midnight**, a near-black blue that provides a weightier, more sophisticated foundation than pure black. This is accented by **Industrial Ochre**, a muted, metallic golden yellow that signifies caution and quality without the cheapness of neon safety colors.\n\n- **Deep Midnight (#080C10):** The primary surface color, providing a solid, immovable base.\n- **Industrial Ochre (#C59D5F):** Used for primary actions, critical highlights, and brand accents.\n- **Steel Grey (#717C89):** Used for secondary information, borders, and structural elements.\n- **Bone White (#EBEBE8):** Used for primary body text to ensure high readability against the dark backgrounds while feeling more \"natural\" and premium than stark white.\n\n## Typography\n\nThis design system uses a high-contrast typographic pairing to balance editorial elegance with industrial utility.\n\n- **Headline (Playfair Display):** A sophisticated serif that brings a sense of legacy and prestige. Headlines should often be oversized and occasionally overlap images or other text blocks.\n- **Body (Hanken Grotesk):** A clean, wide-set sans-serif that ensures maximum legibility. The wide tracking (letter spacing) reinforces the sense of space and modernism.\n- **Labels & Utility (Archivo Narrow):** A condensed, impactful sans-serif used for technical data, numbers, and uppercase labels. It evokes the feel of stamped metal plates on heavy machinery.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column rigid grid** with a focus on verticality. \n\n- **Vertical Continuity:** 1px Steel Grey vertical lines (the \"cable\" motif) should run the full height of sections, acting as column dividers or content anchors.\n- **Intentional Density:** Content is often grouped tightly in one area of the grid, leaving large amounts of \"Dead Space\" elsewhere to create a premium, editorial feel.\n- **Overlapping Elements:** To create depth without using shadows, images and text blocks should utilize negative margins (`stack-overlap`) to break the grid's horizontal planes.\n- **Breakpoints:** On mobile, the 12-column grid collapses to a 4-column layout, but the 1px vertical lines remain as a margin guide to maintain the \"Rigging\" aesthetic.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Z-index layering**.\n\n- **Stacked Planes:** Depth is communicated by elements physically overlapping one another. For example, a \"Heavy Recovery\" headline may sit halfway across a high-resolution image of a tow rig.\n- **Surface Tiers:** \n  - Level 0 (Base): Deep Midnight.\n  - Level 1 (Containers): Steel Grey at 10% opacity with a 1px solid border.\n  - Level 2 (Accents): Industrial Ochre for interactive or high-priority elements.\n- **Backdrop Blurs:** In rare cases where overlays are necessary (e.g., navigation), a subtle backdrop blur is used to maintain the glass-like hardness of the UI without losing the background's industrial texture.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. There are no rounded corners in this design system. Every button, image container, and input field must have 90-degree angles to reflect the unyielding nature of steel and heavy machinery.\n\nStructural elements like dividers should use the 'Cable' motif—a 1px Steel Grey line—while the 'Tread' motif is used as a repeating texture inside containers or as a subtle background pattern for section transitions.\n\n## Components\n\n- **Buttons:** High-contrast, rectangular blocks. Primary buttons are Industrial Ochre with Deep Midnight text. Hover states shift to a Steel Grey stroke with no fill.\n- **Chips/Status:** Small, all-caps labels using Archivo Narrow. They are always outlined (1px) rather than filled, mimicking industrial tags.\n- **Cards:** Defined by 1px Steel Grey borders. They do not have background fills that differ from the main surface unless they are \"active,\" in which case they take a 4px Industrial Ochre left-border.\n- **Input Fields:** Bottom-border only (2px Steel Grey). When focused, the border transitions to Industrial Ochre.\n- **The 'Cable' Divider:** A 1px vertical or horizontal line that often terminates in a small \"bolt\" (a 4px square) at the intersection of other lines.\n- **The 'Tread' Pattern:** A subtle, repeating 45-degree slash pattern used as a background fill for call-to-action sections or headers to provide tactile texture.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "ARCHIVO_NARROW",
+                  "labelFontFamily": "Archivo Narrow",
+                  "namedColors": {
+                    "background": "#121412",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2f312f",
+                    "inverse_primary": "#5b5f64",
+                    "inverse_surface": "#e2e3e0",
+                    "on_background": "#e2e3e0",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#2d3135",
+                    "on_primary_container": "#777a80",
+                    "on_primary_fixed": "#181c20",
+                    "on_primary_fixed_variant": "#43474c",
+                    "on_secondary": "#432c00",
+                    "on_secondary_container": "#dcb272",
+                    "on_secondary_fixed": "#281800",
+                    "on_secondary_fixed_variant": "#5e410b",
+                    "on_surface": "#e2e3e0",
+                    "on_surface_variant": "#c5c6ca",
+                    "on_tertiary": "#27313d",
+                    "on_tertiary_container": "#707b88",
+                    "on_tertiary_fixed": "#121d27",
+                    "on_tertiary_fixed_variant": "#3d4854",
+                    "outline": "#8f9194",
+                    "outline_variant": "#44474a",
+                    "primary": "#c3c7cc",
+                    "primary_container": "#080c10",
+                    "primary_fixed": "#e0e3e8",
+                    "primary_fixed_dim": "#c3c7cc",
+                    "secondary": "#ebc07e",
+                    "secondary_container": "#61440d",
+                    "secondary_fixed": "#ffddae",
+                    "secondary_fixed_dim": "#ebc07e",
+                    "surface": "#121412",
+                    "surface_bright": "#383a38",
+                    "surface_container": "#1e201e",
+                    "surface_container_high": "#292a29",
+                    "surface_container_highest": "#333533",
+                    "surface_container_low": "#1a1c1a",
+                    "surface_container_lowest": "#0d0f0d",
+                    "surface_dim": "#121412",
+                    "surface_tint": "#c3c7cc",
+                    "surface_variant": "#333533",
+                    "tertiary": "#bcc8d6",
+                    "tertiary_container": "#030c16",
+                    "tertiary_fixed": "#d8e4f2",
+                    "tertiary_fixed_dim": "#bcc8d6"
+                  },
+                  "overrideNeutralColor": "#ebebe8",
+                  "overridePrimaryColor": "#080c10",
+                  "overrideSecondaryColor": "#c59d5f",
+                  "overrideTertiaryColor": "#717c89",
+                  "spacing": {
+                    "cable-line": "1px",
+                    "gutter": "24px",
+                    "margin": "64px",
+                    "stack-overlap": "-40px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "20px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "32px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "26px"
+                    },
+                    "display-accent": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "120px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "100px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "56px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "64px"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "44px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "40px"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "84px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "92px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "14px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "20px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/3694d2c0f04f4cf7ae73134faa3f0df9",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9654",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA2MWIzYTgxMWRhMzRjNDQ5ZDZhNzA2M2I3ZjZhN2YyEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTMxMzI4OTA0NzIyNDUzMDQxMA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/11313289047224530410/files/2e2b176f1bdb49439a690b312e193bbc"
+            },
+            "id": "e2648a012c4d4b59b21196fb07107243",
+            "name": "projects/11313289047224530410/screens/e2648a012c4d4b59b21196fb07107243",
+            "prompt": "Build a complete, single-page DESKTOP landing page for D&D Wrecker Inc. \n\nUse the \"Industrial Prestige\" design system (Dark mode, Playfair Display, #080c10 background with ochre accents). \n\nLayout Requirements:\n- Use an asymmetric, editorial grid with high-contrast serif typography.\n- Motif: Recurring vertical lines and \"cable\" visual dividers.\n\nSections:\n1. Header: Use TopNavBar from predicted components. Must include 'Emergency Dispatch: (563) 326-1543'.\n2. Hero: High-impact section featuring {{DATA:IMAGE:IMAGE_2}}. Heading: \"THE HEAVY LIFT OF DAVENPORT\". Subtext about authority in heavy-duty recovery since 1974.\n3. Credibility (#credibility): Bold metrics for \"24/7 Operations\", \"PI (Police Impound)\", and \"50T Heavy Recovery\". Use large, outlined or low-opacity display type for the numbers.\n4. Services: A modern list-style layout labeled \"MECHANICAL AUTHORITY\". Items: 01 Heavy Duty Towing, 02 Police & Municipal Impound, 03 Rotator Recovery, 04 Incident Management. Include subtle icons for each.\n5. About: \"A LEGACY OF RECOVERY\" section featuring {{DATA:IMAGE:IMAGE_4}}. Describe their evolution from a small operation to a sophisticated specialist managing the Davenport ecosystem.\n6. Visit (#visit): Include the mandated empty map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px] bg-surface-container\" data-map-slot aria-label=\"Map\"></div>. Display address: 21355 North Brady Street, Davenport, IA 52806.\n7. Contact: A clean industrial form for dispatch requests. Fields: Full Name, Email, Recovery Type (Dropdown), Message.\n8. Footer: Use Footer from predicted components. Include email: policeimpounds@gmail.com and the Davenport address.\n\nTechnical: Production-ready HTML/CSS/JS. Smooth scroll, form validation UI, mobile-responsive navigation (even on desktop view), and descriptive alt tags. No lorem ipsum.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtwkgzAoTJFPW8yeikJj4g_i1_GRf1WNOGcdih9BJ6GYKMrH2kKNyJhrN86mh18B4y5j1i-kd_OGP9FQ7AP7fgiOfuaVcwpuD1MsV3zr_VSHeuuMi8-4deDlcKyZNkS_5hQankYuymz2bYK698rzdmcDNsD5feD8KUt5ucSBdOViOgOOSTWs3snZq-8A6L-x5pHGflA_wlAeAC8pfoiRL-QBjkP7HtiZ837t9J3U25_exXz3D86ascwwvf6",
+              "name": "projects/11313289047224530410/files/880012855fd94b3ab26d858bd55dc296"
+            },
+            "theme": {
+              "bodyFont": "HANKEN_GROTESK",
+              "bodyFontFamily": "Hanken Grotesk",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#080c10",
+              "designMd": "---\nname: Industrial Prestige\ncolors:\n  surface: '#121412'\n  surface-dim: '#121412'\n  surface-bright: '#383a38'\n  surface-container-lowest: '#0d0f0d'\n  surface-container-low: '#1a1c1a'\n  surface-container: '#1e201e'\n  surface-container-high: '#292a29'\n  surface-container-highest: '#333533'\n  on-surface: '#e2e3e0'\n  on-surface-variant: '#c5c6ca'\n  inverse-surface: '#e2e3e0'\n  inverse-on-surface: '#2f312f'\n  outline: '#8f9194'\n  outline-variant: '#44474a'\n  surface-tint: '#c3c7cc'\n  primary: '#c3c7cc'\n  on-primary: '#2d3135'\n  primary-container: '#080c10'\n  on-primary-container: '#777a80'\n  inverse-primary: '#5b5f64'\n  secondary: '#ebc07e'\n  on-secondary: '#432c00'\n  secondary-container: '#61440d'\n  on-secondary-container: '#dcb272'\n  tertiary: '#bcc8d6'\n  on-tertiary: '#27313d'\n  tertiary-container: '#030c16'\n  on-tertiary-container: '#707b88'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e0e3e8'\n  primary-fixed-dim: '#c3c7cc'\n  on-primary-fixed: '#181c20'\n  on-primary-fixed-variant: '#43474c'\n  secondary-fixed: '#ffddae'\n  secondary-fixed-dim: '#ebc07e'\n  on-secondary-fixed: '#281800'\n  on-secondary-fixed-variant: '#5e410b'\n  tertiary-fixed: '#d8e4f2'\n  tertiary-fixed-dim: '#bcc8d6'\n  on-tertiary-fixed: '#121d27'\n  on-tertiary-fixed-variant: '#3d4854'\n  background: '#121412'\n  on-background: '#e2e3e0'\n  surface-variant: '#333533'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 56px\n    fontWeight: '700'\n    lineHeight: 64px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 26px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.15em\n  display-accent:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: 100px\n    letterSpacing: -0.04em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin: 64px\n  cable-line: 1px\n  stack-overlap: -40px\n---\n\n## Brand & Style\n\nThe design system is built on the concept of **Mechanical Authority**. It moves away from the frantic, emergency-first aesthetic of traditional towing and instead embraces the \"Industrial-Prestige\" of heavy-duty recovery. The brand personality is stoic, expert, and premium—positioning the service as a sophisticated engineering operation rather than just a roadside assistance provider.\n\nThe visual style is **Editorial Minimalism**. It utilizes heavy whitespace, high-contrast typography, and a \"constructed\" feel. It draws inspiration from high-end architectural journals and heavy machinery lookbooks, emphasizing precision and the raw power of steel. The emotional response should be one of absolute confidence: \"The situation is heavy, but the solution is precise.\"\n\n## Colors\n\nThe palette is anchored in **Deep Midnight**, a near-black blue that provides a weightier, more sophisticated foundation than pure black. This is accented by **Industrial Ochre**, a muted, metallic golden yellow that signifies caution and quality without the cheapness of neon safety colors.\n\n- **Deep Midnight (#080C10):** The primary surface color, providing a solid, immovable base.\n- **Industrial Ochre (#C59D5F):** Used for primary actions, critical highlights, and brand accents.\n- **Steel Grey (#717C89):** Used for secondary information, borders, and structural elements.\n- **Bone White (#EBEBE8):** Used for primary body text to ensure high readability against the dark backgrounds while feeling more \"natural\" and premium than stark white.\n\n## Typography\n\nThis design system uses a high-contrast typographic pairing to balance editorial elegance with industrial utility.\n\n- **Headline (Playfair Display):** A sophisticated serif that brings a sense of legacy and prestige. Headlines should often be oversized and occasionally overlap images or other text blocks.\n- **Body (Hanken Grotesk):** A clean, wide-set sans-serif that ensures maximum legibility. The wide tracking (letter spacing) reinforces the sense of space and modernism.\n- **Labels & Utility (Archivo Narrow):** A condensed, impactful sans-serif used for technical data, numbers, and uppercase labels. It evokes the feel of stamped metal plates on heavy machinery.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column rigid grid** with a focus on verticality. \n\n- **Vertical Continuity:** 1px Steel Grey vertical lines (the \"cable\" motif) should run the full height of sections, acting as column dividers or content anchors.\n- **Intentional Density:** Content is often grouped tightly in one area of the grid, leaving large amounts of \"Dead Space\" elsewhere to create a premium, editorial feel.\n- **Overlapping Elements:** To create depth without using shadows, images and text blocks should utilize negative margins (`stack-overlap`) to break the grid's horizontal planes.\n- **Breakpoints:** On mobile, the 12-column grid collapses to a 4-column layout, but the 1px vertical lines remain as a margin guide to maintain the \"Rigging\" aesthetic.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Z-index layering**.\n\n- **Stacked Planes:** Depth is communicated by elements physically overlapping one another. For example, a \"Heavy Recovery\" headline may sit halfway across a high-resolution image of a tow rig.\n- **Surface Tiers:** \n  - Level 0 (Base): Deep Midnight.\n  - Level 1 (Containers): Steel Grey at 10% opacity with a 1px solid border.\n  - Level 2 (Accents): Industrial Ochre for interactive or high-priority elements.\n- **Backdrop Blurs:** In rare cases where overlays are necessary (e.g., navigation), a subtle backdrop blur is used to maintain the glass-like hardness of the UI without losing the background's industrial texture.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. There are no rounded corners in this design system. Every button, image container, and input field must have 90-degree angles to reflect the unyielding nature of steel and heavy machinery.\n\nStructural elements like dividers should use the 'Cable' motif—a 1px Steel Grey line—while the 'Tread' motif is used as a repeating texture inside containers or as a subtle background pattern for section transitions.\n\n## Components\n\n- **Buttons:** High-contrast, rectangular blocks. Primary buttons are Industrial Ochre with Deep Midnight text. Hover states shift to a Steel Grey stroke with no fill.\n- **Chips/Status:** Small, all-caps labels using Archivo Narrow. They are always outlined (1px) rather than filled, mimicking industrial tags.\n- **Cards:** Defined by 1px Steel Grey borders. They do not have background fills that differ from the main surface unless they are \"active,\" in which case they take a 4px Industrial Ochre left-border.\n- **Input Fields:** Bottom-border only (2px Steel Grey). When focused, the border transitions to Industrial Ochre.\n- **The 'Cable' Divider:** A 1px vertical or horizontal line that often terminates in a small \"bolt\" (a 4px square) at the intersection of other lines.\n- **The 'Tread' Pattern:** A subtle, repeating 45-degree slash pattern used as a background fill for call-to-action sections or headers to provide tactile texture.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "ARCHIVO_NARROW",
+              "labelFontFamily": "Archivo Narrow",
+              "namedColors": {
+                "background": "#121412",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2f312f",
+                "inverse_primary": "#5b5f64",
+                "inverse_surface": "#e2e3e0",
+                "on_background": "#e2e3e0",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#2d3135",
+                "on_primary_container": "#777a80",
+                "on_primary_fixed": "#181c20",
+                "on_primary_fixed_variant": "#43474c",
+                "on_secondary": "#432c00",
+                "on_secondary_container": "#dcb272",
+                "on_secondary_fixed": "#281800",
+                "on_secondary_fixed_variant": "#5e410b",
+                "on_surface": "#e2e3e0",
+                "on_surface_variant": "#c5c6ca",
+                "on_tertiary": "#27313d",
+                "on_tertiary_container": "#707b88",
+                "on_tertiary_fixed": "#121d27",
+                "on_tertiary_fixed_variant": "#3d4854",
+                "outline": "#8f9194",
+                "outline_variant": "#44474a",
+                "primary": "#c3c7cc",
+                "primary_container": "#080c10",
+                "primary_fixed": "#e0e3e8",
+                "primary_fixed_dim": "#c3c7cc",
+                "secondary": "#ebc07e",
+                "secondary_container": "#61440d",
+                "secondary_fixed": "#ffddae",
+                "secondary_fixed_dim": "#ebc07e",
+                "surface": "#121412",
+                "surface_bright": "#383a38",
+                "surface_container": "#1e201e",
+                "surface_container_high": "#292a29",
+                "surface_container_highest": "#333533",
+                "surface_container_low": "#1a1c1a",
+                "surface_container_lowest": "#0d0f0d",
+                "surface_dim": "#121412",
+                "surface_tint": "#c3c7cc",
+                "surface_variant": "#333533",
+                "tertiary": "#bcc8d6",
+                "tertiary_container": "#030c16",
+                "tertiary_fixed": "#d8e4f2",
+                "tertiary_fixed_dim": "#bcc8d6"
+              },
+              "overrideNeutralColor": "#ebebe8",
+              "overridePrimaryColor": "#080c10",
+              "overrideSecondaryColor": "#c59d5f",
+              "overrideTertiaryColor": "#717c89",
+              "spacing": {
+                "cable-line": "1px",
+                "gutter": "24px",
+                "margin": "64px",
+                "stack-overlap": "-40px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "20px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "32px"
+                },
+                "body-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "26px"
+                },
+                "display-accent": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "120px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "100px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "56px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "64px"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "44px"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "40px"
+                },
+                "headline-xl": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "84px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "92px"
+                },
+                "label-caps": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "20px"
+                }
+              }
+            },
+            "title": "D&D Wrecker Inc. | Professional Heavy Recovery",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have completed the production-ready desktop landing page for **D&D Wrecker Inc.**, fully localized to Davenport, IA, and built around the **Industrial Prestige** design system.\n\n### Design Highlights:\n*   **Industrial Prestige Identity:** The site uses a sophisticated **Midnight and Industrial Ochre** palette, moving away from standard towing templates to establish a sense of \"Heavy Lift\" authority.\n*   **Editorial Typography:** I've utilized **Playfair Display** in oversized, high-contrast layouts to create a memorable, premium first impression for commercial and municipal partners.\n*   **Specialized Content:** Every section is tailored to their specific operations—from the high-impact **Heavy Recovery** hero to the dedicated **Police Impound** metrics and the \"Legacy of Recovery\" narrative.\n*   **Technical Implementation:** The code includes a responsive navigation system, smooth-scroll anchoring for the #credibility and #visit sections, and the specific `data-map-slot` requirements for your backend integration.\n\nThe design is now live on your canvas for review. How would you like to proceed?"
+    },
+    {
+      "suggestion": "Create a mobile version of this page"
+    },
+    {
+      "suggestion": "Add an interactive 'Request a Quote' modal"
+    },
+    {
+      "suggestion": "Explore a lighter 'High-Vis' color variant"
+    }
+  ],
+  "projectId": "11313289047224530410",
+  "sessionId": "14316840802000351732"
+}
