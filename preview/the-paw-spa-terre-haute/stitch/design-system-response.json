@@ -1,0 +1,505 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "The Paw Spa",
+        "styleGuidelines": "## Brand & Style\nThe design system for this local dog grooming business is built on the philosophy of \"Gentle Professionalism.\" It bridges the gap between high-end boutique spa aesthetics and the warm, community-focused heart of Terre Haute. The target audience includes pet owners who view their dogs as family members and seek a stress-free, premium environment.\n\nThe style is a blend of **Modern Minimalism** and **Tactile Softness**. It avoids corporate rigidity by using organic shapes and a warm, luminous color palette. The UI should evoke an immediate sense of calm and cleanliness—mimicking the physical experience of a well-maintained spa. Visuals are characterized by generous whitespace, soft-focus imagery of happy pets, and a structured yet inviting layout that feels both reliable and approachable.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain a boutique, editorial feel, while transitioning to a fluid single-column layout on mobile devices.\n\n- **Desktop (1200px+):** 12-column grid with 24px gutters. Use wide 48px margins to frame content like a high-end magazine.\n- **Tablet (768px - 1199px):** 8-column grid with 24px gutters and 32px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 16px margins.\n\nSpacing follows an 8px incremental scale. Large \"Section Gaps\" (80px+) are encouraged to separate service categories, ensuring the UI never feels cluttered or overwhelming, reinforcing the \"spa\" experience.\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layers** and **Ambient Shadows**. \n\nAvoid heavy, dark drop-shadows. Instead, use \"Glow Shadows\"—low-opacity (8-12%) shadows that use a slight tint of the Primary color (#8FB9B3) rather than pure black. This makes elements feel like they are floating gently above the Cream Linen background.\n\nInteractive elements like cards should use a subtle 1px border in a slightly darker cream or a soft shadow to indicate interactability. Background blurs are used sparingly for navigation overlays to maintain a sense of \"transparency and airiness.\"\n\n## Components\n- **Buttons:** Primary buttons use a solid Spa Blue fill with white Quicksand text. Secondary buttons use a Warm Sand outline with charcoal text. Transitions should be soft (200ms ease-in-out).\n- **Cards:** Used for service listings (e.g., \"Full Groom,\" \"Bath & Brush\"). Cards feature a white background, a soft glow shadow, and a 16px corner radius.\n- **Service Chips:** Small, rounded pills in a light tint of Spa Blue used to highlight \"Puppy's First Spa\" or \"Hypoallergenic\" options.\n- **Input Fields:** Large, 48px height fields with a soft 1px border. Focus states should use a 2px Spa Blue glow.\n- **Lists:** Service menus should use ample vertical padding (16px between items) with thin, high-transparency dividers to maintain a clean, organized look.\n- **Booking Widget:** A specialized component featuring a calendar view with soft rounded date-pickers and a clear progress stepper at the top to guide users through the local booking process.",
+        "theme": {
+          "bodyFont": "WORK_SANS",
+          "bodyFontFamily": "Work Sans",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#8fb9b3",
+          "designMd": "---\nname: The Paw Spa\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbd9d9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#eae8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#404847'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#717977'\n  outline-variant: '#c0c8c6'\n  surface-tint: '#3d6561'\n  primary: '#3d6561'\n  on-primary: '#ffffff'\n  primary-container: '#8fb9b3'\n  on-primary-container: '#214a46'\n  inverse-primary: '#a4cfc9'\n  secondary: '#695c49'\n  on-secondary: '#ffffff'\n  secondary-container: '#efddc5'\n  on-secondary-container: '#6e614d'\n  tertiary: '#5e5e5b'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#b2b1ad'\n  on-tertiary-container: '#444441'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c0ebe5'\n  primary-fixed-dim: '#a4cfc9'\n  on-primary-fixed: '#00201d'\n  on-primary-fixed-variant: '#254d49'\n  secondary-fixed: '#f2e0c8'\n  secondary-fixed-dim: '#d5c4ad'\n  on-secondary-fixed: '#231a0b'\n  on-secondary-fixed-variant: '#514533'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  headline-lg:\n    fontFamily: Quicksand\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Quicksand\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Quicksand\n    fontSize: 28px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Quicksand\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 48px\n  section-gap: 80px\n---\n\n## Brand & Style\nThe design system for this local dog grooming business is built on the philosophy of \"Gentle Professionalism.\" It bridges the gap between high-end boutique spa aesthetics and the warm, community-focused heart of Terre Haute. The target audience includes pet owners who view their dogs as family members and seek a stress-free, premium environment.\n\nThe style is a blend of **Modern Minimalism** and **Tactile Softness**. It avoids corporate rigidity by using organic shapes and a warm, luminous color palette. The UI should evoke an immediate sense of calm and cleanliness—mimicking the physical experience of a well-maintained spa. Visuals are characterized by generous whitespace, soft-focus imagery of happy pets, and a structured yet inviting layout that feels both reliable and approachable.\n\n## Colors\nThe palette is inspired by natural elements: water, light wood, and clean linens. \n\n- **Spa Blue-Green (#8FB9B3):** The primary brand color. It represents hygiene, tranquility, and care. Used for primary actions and key brand moments.\n- **Warm Sand (#EAD8C0):** The secondary color, used for accents and secondary buttons. It adds a human, grounded touch reminiscent of a high-end interior.\n- **Cream Linen (#F9F7F2):** The foundation color for surfaces and backgrounds. It is softer and warmer than pure white, reducing eye strain and feeling more \"boutique.\"\n- **Charcoal Slate (#4A4A4A):** Used for typography to ensure high legibility while appearing softer than pure black.\n\n## Typography\nThe typography pairing balances friendliness with clarity. \n\n**Quicksand** is utilized for all headings. Its rounded terminals mirror the \"soft\" brand personality and appear non-threatening and modern. \n\n**Work Sans** serves as the body and label typeface. Its optimized legibility ensures that service menus and pricing details are easy to read for all age groups. It provides a professional, \"grounded\" contrast to the more playful Quicksand. \n\nKeep line lengths for body text between 45-75 characters to maintain a comfortable reading rhythm, especially for \"About Our Services\" sections.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain a boutique, editorial feel, while transitioning to a fluid single-column layout on mobile devices.\n\n- **Desktop (1200px+):** 12-column grid with 24px gutters. Use wide 48px margins to frame content like a high-end magazine.\n- **Tablet (768px - 1199px):** 8-column grid with 24px gutters and 32px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 16px margins.\n\nSpacing follows an 8px incremental scale. Large \"Section Gaps\" (80px+) are encouraged to separate service categories, ensuring the UI never feels cluttered or overwhelming, reinforcing the \"spa\" experience.\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layers** and **Ambient Shadows**. \n\nAvoid heavy, dark drop-shadows. Instead, use \"Glow Shadows\"—low-opacity (8-12%) shadows that use a slight tint of the Primary color (#8FB9B3) rather than pure black. This makes elements feel like they are floating gently above the Cream Linen background.\n\nInteractive elements like cards should use a subtle 1px border in a slightly darker cream or a soft shadow to indicate interactability. Background blurs are used sparingly for navigation overlays to maintain a sense of \"transparency and airiness.\"\n\n## Shapes\nThe shape language is consistently **Rounded**. There are no sharp 90-degree corners in the design system, as sharp edges contradict the \"safe and gentle\" promise of pet grooming.\n\n- **Standard Buttons & Inputs:** 0.5rem (8px) corner radius.\n- **Cards & Containers:** 1rem (16px) corner radius.\n- **Image Frames:** Use a mix of 1.5rem (24px) corners and fully circular frames for staff or dog profile photos to keep the look organic and friendly.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spa Blue fill with white Quicksand text. Secondary buttons use a Warm Sand outline with charcoal text. Transitions should be soft (200ms ease-in-out).\n- **Cards:** Used for service listings (e.g., \"Full Groom,\" \"Bath & Brush\"). Cards feature a white background, a soft glow shadow, and a 16px corner radius.\n- **Service Chips:** Small, rounded pills in a light tint of Spa Blue used to highlight \"Puppy's First Spa\" or \"Hypoallergenic\" options.\n- **Input Fields:** Large, 48px height fields with a soft 1px border. Focus states should use a 2px Spa Blue glow.\n- **Lists:** Service menus should use ample vertical padding (16px between items) with thin, high-transparency dividers to maintain a clean, organized look.\n- **Booking Widget:** A specialized component featuring a calendar view with soft rounded date-pickers and a clear progress stepper at the top to guide users through the local booking process.",
+          "font": "QUICKSAND",
+          "headlineFont": "QUICKSAND",
+          "headlineFontFamily": "Quicksand",
+          "labelFont": "WORK_SANS",
+          "labelFontFamily": "Work Sans",
+          "namedColors": {
+            "background": "#fbf9f8",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f2f0f0",
+            "inverse_primary": "#a4cfc9",
+            "inverse_surface": "#303030",
+            "on_background": "#1b1c1c",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#214a46",
+            "on_primary_fixed": "#00201d",
+            "on_primary_fixed_variant": "#254d49",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#6e614d",
+            "on_secondary_fixed": "#231a0b",
+            "on_secondary_fixed_variant": "#514533",
+            "on_surface": "#1b1c1c",
+            "on_surface_variant": "#404847",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#444441",
+            "on_tertiary_fixed": "#1b1c19",
+            "on_tertiary_fixed_variant": "#474744",
+            "outline": "#717977",
+            "outline_variant": "#c0c8c6",
+            "primary": "#3d6561",
+            "primary_container": "#8fb9b3",
+            "primary_fixed": "#c0ebe5",
+            "primary_fixed_dim": "#a4cfc9",
+            "secondary": "#695c49",
+            "secondary_container": "#efddc5",
+            "secondary_fixed": "#f2e0c8",
+            "secondary_fixed_dim": "#d5c4ad",
+            "surface": "#fbf9f8",
+            "surface_bright": "#fbf9f8",
+            "surface_container": "#efeded",
+            "surface_container_high": "#eae8e7",
+            "surface_container_highest": "#e4e2e2",
+            "surface_container_low": "#f5f3f3",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dbd9d9",
+            "surface_tint": "#3d6561",
+            "surface_variant": "#e4e2e2",
+            "tertiary": "#5e5e5b",
+            "tertiary_container": "#b2b1ad",
+            "tertiary_fixed": "#e4e2dd",
+            "tertiary_fixed_dim": "#c8c6c2"
+          },
+          "overrideNeutralColor": "#4a4a4a",
+          "overridePrimaryColor": "#8fb9b3",
+          "overrideSecondaryColor": "#ead8c0",
+          "overrideTertiaryColor": "#f9f7f2",
+          "roundness": "ROUND_EIGHT",
+          "spacing": {
+            "container-max": "1200px",
+            "gutter": "24px",
+            "margin-desktop": "48px",
+            "margin-mobile": "16px",
+            "section-gap": "80px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Work Sans",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Work Sans",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "headline-lg": {
+              "fontFamily": "Quicksand",
+              "fontSize": "40px",
+              "fontWeight": "600",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Quicksand",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Quicksand",
+              "fontSize": "28px",
+              "fontWeight": "500",
+              "lineHeight": "1.3"
+            },
+            "headline-sm": {
+              "fontFamily": "Quicksand",
+              "fontSize": "20px",
+              "fontWeight": "600",
+              "lineHeight": "1.4"
+            },
+            "label-md": {
+              "fontFamily": "Work Sans",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "letterSpacing": "0.05em",
+              "lineHeight": "1"
+            }
+          }
+        }
+      },
+      "name": "assets/263414563dff4c76839e8d8e430fd13c",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "8b27b64ce39142a3ae85d0b2e260852f",
+          "name": "projects/11390049946434521894/screens/8b27b64ce39142a3ae85d0b2e260852f",
+          "prompt": "Close-up of a professional groomer's hands gently brushing a fluffy white Pomeranian. The groomer is wearing a professional apron. Clean, bright, airy grooming studio in the background with professional equipment. Natural morning light.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLu6PLZDWLjMnLLUf5TMxHobZ0afB6cd0VA4LAWYvvZkI9W1cDZ3bzpjW5YuvsiNtQlBre-oW6vy2g0NvNJVAwQc4pX7MUmb-NmyidnZgO13uwOYAbvo2X_ySc8l5-l3lUJ5R1SUmQrxzI41Gk_dxY8iow0DZjRPT1OHdAIe-wJ8gsCHVkcVsGbb7p0BHLgdALts38vDyNinLpfNTzhyb3aUXmKUpoBM-lUCEjUxBqa_LhciiiJLXkuuDEA",
+            "name": "projects/11390049946434521894/files/b8f5f1b76d9d4d499292e872bb0f69dd"
+          },
+          "theme": {},
+          "title": "Close-up of a professional groomer's hands gently brushing a fluffy white Pomeranian. The groomer is wearing a professional apron. Clean, bright, airy grooming studio in the background with professional equipment. Natural morning light.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "0cf529c9f3784e07a2af9d3507be77ef",
+          "name": "projects/11390049946434521894/screens/0cf529c9f3784e07a2af9d3507be77ef",
+          "prompt": "High-fidelity, professional photography of a happy, clean dog (Golden Retriever) wrapped in a soft white towel after a grooming session at a luxury pet spa. Soft, natural lighting, warm neutral background with hints of mint green. Professional composition, shallow depth of field. High-end spa atmosphere.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuNrveXsuSOwJuO3LJh-vx2HqRInL6fQu9oMCQ_YPIKgvUbSbRndl24Joj3GgotMIufL0cPkAup4w-1M6iIQWF3LU12fv6-welnutDTRuKHqj8JBV4qbTMGie_uLoTpkuLRPRfttFOZWpUTwdhX6CVD2US7GJiZwFoI7167kCK_5HRYeqhtijeIBfkefSesyWFWeDt9oUNRBvXuA6H-1oCt719QYSsPL3nMViY3Ro06Dlw9msxNh1HBf9Ac",
+            "name": "projects/11390049946434521894/files/fb8e514cac9f4d40a018b81573805318"
+          },
+          "theme": {},
+          "title": "High-fidelity, professional photography of a happy, clean dog (Golden Retriever) wrapped in a soft white towel after a grooming session at a luxury pet spa. Soft, natural lighting, warm neutral background with hints of mint green. Professional composition, shallow depth of field. High-end spa atmosphere.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "b65cd415b07844b7af444d9faa58e245",
+          "name": "projects/11390049946434521894/screens/b65cd415b07844b7af444d9faa58e245",
+          "prompt": "Professional group portrait of a friendly team of four pet groomers (two men, two women) in a bright, modern pet spa lobby. They are smiling warmly at the camera, wearing professional branded attire. The atmosphere is welcoming and community-rooted. Professional lighting.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsi8mdIcjM6bQIkh98P8DwRGunsWlAFgH0n3gKjWqCk1YsT3l8oOaroEs3xZfP9yJ1TWWaG-6YR1EZLqnJj4omtX2L6Pi2aWiT4mdUkHgdcyRLr79DOyTHTmbQ3upa3kO9twj6Cblo6PAYjADJnuULPbHd35wHQhJHAUQx8IN8AOLAYegHNfAJnFJzRmltXt8oPnbdGUivRi0cP4Dz7pmytRMCM-1qlHE5WXvzs8RIULYfweH7HTTfModQ",
+            "name": "projects/11390049946434521894/files/66cabdda612342c49ee61ef80d2f94b2"
+          },
+          "theme": {},
+          "title": "Professional group portrait of a friendly team of four pet groomers (two men, two women) in a bright, modern pet spa lobby. They are smiling warmly at the camera, wearing professional branded attire. The atmosphere is welcoming and community-rooted. Professional lighting.",
+          "width": "1200"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "030edee220c04350ae75198016bcc0c5",
+          "name": "projects/11390049946434521894/screens/030edee220c04350ae75198016bcc0c5",
+          "prompt": "A high-quality photo of a dog being bathed in a professional stainless steel tub with bubbles. The dog (a Labradoodle) looks calm and happy. Warm, inviting colors, clean environment. Focus on the 'spa treatment' aspect.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsIOcSrZ_0BSgJq32L8pRLhtiJSPR-tXVe-JDrz2W2eSSfoJxy7pAp7M7YbvfvVtMZpvzAlLFtwHG4ZOuUu4YzjvD0zxxeuHhnz9UXkutDLG55R8nnL2ZVN2gTFnAQzK03WfDKCXMJBZUX_yYzegnlk2y_BscJy7pLSNI8qwunAkX4g4Rcsp3n_Lcsgb-ZnpMcTtqBhrGtuO1uKvrx36qKPNB1-PvDspDo60WOga3VL8-LbpZ1ecdmAqY3z",
+            "name": "projects/11390049946434521894/files/57f1949d85cd4ae4845e5d2c7c13760d"
+          },
+          "theme": {},
+          "title": "A high-quality photo of a dog being bathed in a professional stainless steel tub with bubbles. The dog (a Labradoodle) looks calm and happy. Warm, inviting colors, clean environment. Focus on the 'spa treatment' aspect.",
+          "width": "1264"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "The Paw Spa",
+              "styleGuidelines": "## Brand & Style\nThe design system for this local dog grooming business is built on the philosophy of \"Gentle Professionalism.\" It bridges the gap between high-end boutique spa aesthetics and the warm, community-focused heart of Terre Haute. The target audience includes pet owners who view their dogs as family members and seek a stress-free, premium environment.\n\nThe style is a blend of **Modern Minimalism** and **Tactile Softness**. It avoids corporate rigidity by using organic shapes and a warm, luminous color palette. The UI should evoke an immediate sense of calm and cleanliness—mimicking the physical experience of a well-maintained spa. Visuals are characterized by generous whitespace, soft-focus imagery of happy pets, and a structured yet inviting layout that feels both reliable and approachable.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain a boutique, editorial feel, while transitioning to a fluid single-column layout on mobile devices.\n\n- **Desktop (1200px+):** 12-column grid with 24px gutters. Use wide 48px margins to frame content like a high-end magazine.\n- **Tablet (768px - 1199px):** 8-column grid with 24px gutters and 32px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 16px margins.\n\nSpacing follows an 8px incremental scale. Large \"Section Gaps\" (80px+) are encouraged to separate service categories, ensuring the UI never feels cluttered or overwhelming, reinforcing the \"spa\" experience.\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layers** and **Ambient Shadows**. \n\nAvoid heavy, dark drop-shadows. Instead, use \"Glow Shadows\"—low-opacity (8-12%) shadows that use a slight tint of the Primary color (#8FB9B3) rather than pure black. This makes elements feel like they are floating gently above the Cream Linen background.\n\nInteractive elements like cards should use a subtle 1px border in a slightly darker cream or a soft shadow to indicate interactability. Background blurs are used sparingly for navigation overlays to maintain a sense of \"transparency and airiness.\"\n\n## Components\n- **Buttons:** Primary buttons use a solid Spa Blue fill with white Quicksand text. Secondary buttons use a Warm Sand outline with charcoal text. Transitions should be soft (200ms ease-in-out).\n- **Cards:** Used for service listings (e.g., \"Full Groom,\" \"Bath & Brush\"). Cards feature a white background, a soft glow shadow, and a 16px corner radius.\n- **Service Chips:** Small, rounded pills in a light tint of Spa Blue used to highlight \"Puppy's First Spa\" or \"Hypoallergenic\" options.\n- **Input Fields:** Large, 48px height fields with a soft 1px border. Focus states should use a 2px Spa Blue glow.\n- **Lists:** Service menus should use ample vertical padding (16px between items) with thin, high-transparency dividers to maintain a clean, organized look.\n- **Booking Widget:** A specialized component featuring a calendar view with soft rounded date-pickers and a clear progress stepper at the top to guide users through the local booking process.",
+              "theme": {
+                "bodyFont": "WORK_SANS",
+                "bodyFontFamily": "Work Sans",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#8fb9b3",
+                "designMd": "---\nname: The Paw Spa\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbd9d9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#eae8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#404847'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#717977'\n  outline-variant: '#c0c8c6'\n  surface-tint: '#3d6561'\n  primary: '#3d6561'\n  on-primary: '#ffffff'\n  primary-container: '#8fb9b3'\n  on-primary-container: '#214a46'\n  inverse-primary: '#a4cfc9'\n  secondary: '#695c49'\n  on-secondary: '#ffffff'\n  secondary-container: '#efddc5'\n  on-secondary-container: '#6e614d'\n  tertiary: '#5e5e5b'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#b2b1ad'\n  on-tertiary-container: '#444441'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c0ebe5'\n  primary-fixed-dim: '#a4cfc9'\n  on-primary-fixed: '#00201d'\n  on-primary-fixed-variant: '#254d49'\n  secondary-fixed: '#f2e0c8'\n  secondary-fixed-dim: '#d5c4ad'\n  on-secondary-fixed: '#231a0b'\n  on-secondary-fixed-variant: '#514533'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  headline-lg:\n    fontFamily: Quicksand\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Quicksand\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Quicksand\n    fontSize: 28px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Quicksand\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 48px\n  section-gap: 80px\n---\n\n## Brand & Style\nThe design system for this local dog grooming business is built on the philosophy of \"Gentle Professionalism.\" It bridges the gap between high-end boutique spa aesthetics and the warm, community-focused heart of Terre Haute. The target audience includes pet owners who view their dogs as family members and seek a stress-free, premium environment.\n\nThe style is a blend of **Modern Minimalism** and **Tactile Softness**. It avoids corporate rigidity by using organic shapes and a warm, luminous color palette. The UI should evoke an immediate sense of calm and cleanliness—mimicking the physical experience of a well-maintained spa. Visuals are characterized by generous whitespace, soft-focus imagery of happy pets, and a structured yet inviting layout that feels both reliable and approachable.\n\n## Colors\nThe palette is inspired by natural elements: water, light wood, and clean linens. \n\n- **Spa Blue-Green (#8FB9B3):** The primary brand color. It represents hygiene, tranquility, and care. Used for primary actions and key brand moments.\n- **Warm Sand (#EAD8C0):** The secondary color, used for accents and secondary buttons. It adds a human, grounded touch reminiscent of a high-end interior.\n- **Cream Linen (#F9F7F2):** The foundation color for surfaces and backgrounds. It is softer and warmer than pure white, reducing eye strain and feeling more \"boutique.\"\n- **Charcoal Slate (#4A4A4A):** Used for typography to ensure high legibility while appearing softer than pure black.\n\n## Typography\nThe typography pairing balances friendliness with clarity. \n\n**Quicksand** is utilized for all headings. Its rounded terminals mirror the \"soft\" brand personality and appear non-threatening and modern. \n\n**Work Sans** serves as the body and label typeface. Its optimized legibility ensures that service menus and pricing details are easy to read for all age groups. It provides a professional, \"grounded\" contrast to the more playful Quicksand. \n\nKeep line lengths for body text between 45-75 characters to maintain a comfortable reading rhythm, especially for \"About Our Services\" sections.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain a boutique, editorial feel, while transitioning to a fluid single-column layout on mobile devices.\n\n- **Desktop (1200px+):** 12-column grid with 24px gutters. Use wide 48px margins to frame content like a high-end magazine.\n- **Tablet (768px - 1199px):** 8-column grid with 24px gutters and 32px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 16px margins.\n\nSpacing follows an 8px incremental scale. Large \"Section Gaps\" (80px+) are encouraged to separate service categories, ensuring the UI never feels cluttered or overwhelming, reinforcing the \"spa\" experience.\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layers** and **Ambient Shadows**. \n\nAvoid heavy, dark drop-shadows. Instead, use \"Glow Shadows\"—low-opacity (8-12%) shadows that use a slight tint of the Primary color (#8FB9B3) rather than pure black. This makes elements feel like they are floating gently above the Cream Linen background.\n\nInteractive elements like cards should use a subtle 1px border in a slightly darker cream or a soft shadow to indicate interactability. Background blurs are used sparingly for navigation overlays to maintain a sense of \"transparency and airiness.\"\n\n## Shapes\nThe shape language is consistently **Rounded**. There are no sharp 90-degree corners in the design system, as sharp edges contradict the \"safe and gentle\" promise of pet grooming.\n\n- **Standard Buttons & Inputs:** 0.5rem (8px) corner radius.\n- **Cards & Containers:** 1rem (16px) corner radius.\n- **Image Frames:** Use a mix of 1.5rem (24px) corners and fully circular frames for staff or dog profile photos to keep the look organic and friendly.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spa Blue fill with white Quicksand text. Secondary buttons use a Warm Sand outline with charcoal text. Transitions should be soft (200ms ease-in-out).\n- **Cards:** Used for service listings (e.g., \"Full Groom,\" \"Bath & Brush\"). Cards feature a white background, a soft glow shadow, and a 16px corner radius.\n- **Service Chips:** Small, rounded pills in a light tint of Spa Blue used to highlight \"Puppy's First Spa\" or \"Hypoallergenic\" options.\n- **Input Fields:** Large, 48px height fields with a soft 1px border. Focus states should use a 2px Spa Blue glow.\n- **Lists:** Service menus should use ample vertical padding (16px between items) with thin, high-transparency dividers to maintain a clean, organized look.\n- **Booking Widget:** A specialized component featuring a calendar view with soft rounded date-pickers and a clear progress stepper at the top to guide users through the local booking process.",
+                "font": "QUICKSAND",
+                "headlineFont": "QUICKSAND",
+                "headlineFontFamily": "Quicksand",
+                "labelFont": "WORK_SANS",
+                "labelFontFamily": "Work Sans",
+                "namedColors": {
+                  "background": "#fbf9f8",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f2f0f0",
+                  "inverse_primary": "#a4cfc9",
+                  "inverse_surface": "#303030",
+                  "on_background": "#1b1c1c",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#214a46",
+                  "on_primary_fixed": "#00201d",
+                  "on_primary_fixed_variant": "#254d49",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#6e614d",
+                  "on_secondary_fixed": "#231a0b",
+                  "on_secondary_fixed_variant": "#514533",
+                  "on_surface": "#1b1c1c",
+                  "on_surface_variant": "#404847",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#444441",
+                  "on_tertiary_fixed": "#1b1c19",
+                  "on_tertiary_fixed_variant": "#474744",
+                  "outline": "#717977",
+                  "outline_variant": "#c0c8c6",
+                  "primary": "#3d6561",
+                  "primary_container": "#8fb9b3",
+                  "primary_fixed": "#c0ebe5",
+                  "primary_fixed_dim": "#a4cfc9",
+                  "secondary": "#695c49",
+                  "secondary_container": "#efddc5",
+                  "secondary_fixed": "#f2e0c8",
+                  "secondary_fixed_dim": "#d5c4ad",
+                  "surface": "#fbf9f8",
+                  "surface_bright": "#fbf9f8",
+                  "surface_container": "#efeded",
+                  "surface_container_high": "#eae8e7",
+                  "surface_container_highest": "#e4e2e2",
+                  "surface_container_low": "#f5f3f3",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dbd9d9",
+                  "surface_tint": "#3d6561",
+                  "surface_variant": "#e4e2e2",
+                  "tertiary": "#5e5e5b",
+                  "tertiary_container": "#b2b1ad",
+                  "tertiary_fixed": "#e4e2dd",
+                  "tertiary_fixed_dim": "#c8c6c2"
+                },
+                "overrideNeutralColor": "#4a4a4a",
+                "overridePrimaryColor": "#8fb9b3",
+                "overrideSecondaryColor": "#ead8c0",
+                "overrideTertiaryColor": "#f9f7f2",
+                "roundness": "ROUND_EIGHT",
+                "spacing": {
+                  "container-max": "1200px",
+                  "gutter": "24px",
+                  "margin-desktop": "48px",
+                  "margin-mobile": "16px",
+                  "section-gap": "80px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Work Sans",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Work Sans",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Quicksand",
+                    "fontSize": "40px",
+                    "fontWeight": "600",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Quicksand",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Quicksand",
+                    "fontSize": "28px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Quicksand",
+                    "fontSize": "20px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.4"
+                  },
+                  "label-md": {
+                    "fontFamily": "Work Sans",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "1"
+                  }
+                }
+              }
+            },
+            "name": "assets/263414563dff4c76839e8d8e430fd13c",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "8996",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2I0YzBjNDNmYTkwZTRmM2M4MWJmYzA5M2ViYTcxNGE5EgsSBxDBloTL-h4YAZIBJAoKcHJvamVjdF9pZBIWQhQxMTM5MDA0OTk0NjQzNDUyMTg5NA&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/11390049946434521894/files/4d36764bc0f14cbaa1f180a3b53cc3a2"
+          },
+          "id": "25d23703ff794a4eb321d057bc3330be",
+          "name": "projects/11390049946434521894/screens/25d23703ff794a4eb321d057bc3330be",
+          "prompt": "Create a complete, production-ready desktop landing page for 'The Paw Spa' in Terre Haute, IN. \n\nStructure:\n- Header: Sticky navigation with logo \"The Paw Spa\", links (Services, About, Visit, Contact), and a prominent CTA button \"Call Now: (812) 201-1623\".\n- Hero: Split-hero layout. Left side: Warm, welcoming headline \"Treat Your Pup to the Ultimate Spa Day\" with subtext about professional grooming in Terre Haute. CTA \"Book an Appointment\". Right side: Use {{DATA:IMAGE:IMAGE_5}}.\n- Credibility Section (#credibility): Highlights: \"4.8 Star Rated\", \"Locally Owned\", \"Professional Groomers\".\n- Services Section: Professional cards for \"Full Grooming\", \"Bathing & Bubbles\", and \"Puppy's First Spa Day\". Use {{DATA:IMAGE:IMAGE_4}} and {{DATA:IMAGE:IMAGE_6}} for visual context in these cards.\n- About Section: Content about Brianna Snowden (owner) and the team (Taylor Campbell, Kaylee Snowden, Edward Hall). Use {{DATA:IMAGE:IMAGE_3}}. Echo the warm, community-rooted tone from their Facebook posts.\n- Visit Section (#visit): Include the specific map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. Display the address: 826 West Johnson Drive, Terre Haute, IN 47802.\n- Contact Section: A clean contact form with validation UI (preview). \n- Footer: Full contact info (Phone, Email, Address), copyright, and quick links.\n\nTechnical:\n- Use Quicksand for headings.\n- Apply the 'Spa Blue/Mint' color palette from {{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}.\n- Ensure smooth scrolling and responsive design for 375px+.\n- No lorem ipsum—use the real names and details provided.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs0OFA0AqLahUrQewxkP2DK0x5q1y34kaNYbGPrVFPdxXeU9oxINeIXcP3ZwFZMDKJI-FXoXr4apKv60ORoTVTNQZFKNBl_8naQFMYwWTkxPcFLhZamtAF_d6d2JLRHDi1MsbSdfupH1H7MVQexHX3wjB-yal7yg9a39X0Hb09FK055Se-G8RhlVTPbeDyV3eaAzPDt6uiu424QKUrFW03gfOr5fFeQKyFtgjRIlBSgaE13ojqsJ3eABdQ",
+            "name": "projects/11390049946434521894/files/28e8038b931345f9a3816dead6984323"
+          },
+          "theme": {
+            "bodyFont": "WORK_SANS",
+            "bodyFontFamily": "Work Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#8fb9b3",
+            "designMd": "---\nname: The Paw Spa\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbd9d9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#eae8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#404847'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#717977'\n  outline-variant: '#c0c8c6'\n  surface-tint: '#3d6561'\n  primary: '#3d6561'\n  on-primary: '#ffffff'\n  primary-container: '#8fb9b3'\n  on-primary-container: '#214a46'\n  inverse-primary: '#a4cfc9'\n  secondary: '#695c49'\n  on-secondary: '#ffffff'\n  secondary-container: '#efddc5'\n  on-secondary-container: '#6e614d'\n  tertiary: '#5e5e5b'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#b2b1ad'\n  on-tertiary-container: '#444441'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c0ebe5'\n  primary-fixed-dim: '#a4cfc9'\n  on-primary-fixed: '#00201d'\n  on-primary-fixed-variant: '#254d49'\n  secondary-fixed: '#f2e0c8'\n  secondary-fixed-dim: '#d5c4ad'\n  on-secondary-fixed: '#231a0b'\n  on-secondary-fixed-variant: '#514533'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  headline-lg:\n    fontFamily: Quicksand\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Quicksand\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Quicksand\n    fontSize: 28px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Quicksand\n    fontSize: 20px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 48px\n  section-gap: 80px\n---\n\n## Brand & Style\nThe design system for this local dog grooming business is built on the philosophy of \"Gentle Professionalism.\" It bridges the gap between high-end boutique spa aesthetics and the warm, community-focused heart of Terre Haute. The target audience includes pet owners who view their dogs as family members and seek a stress-free, premium environment.\n\nThe style is a blend of **Modern Minimalism** and **Tactile Softness**. It avoids corporate rigidity by using organic shapes and a warm, luminous color palette. The UI should evoke an immediate sense of calm and cleanliness—mimicking the physical experience of a well-maintained spa. Visuals are characterized by generous whitespace, soft-focus imagery of happy pets, and a structured yet inviting layout that feels both reliable and approachable.\n\n## Colors\nThe palette is inspired by natural elements: water, light wood, and clean linens. \n\n- **Spa Blue-Green (#8FB9B3):** The primary brand color. It represents hygiene, tranquility, and care. Used for primary actions and key brand moments.\n- **Warm Sand (#EAD8C0):** The secondary color, used for accents and secondary buttons. It adds a human, grounded touch reminiscent of a high-end interior.\n- **Cream Linen (#F9F7F2):** The foundation color for surfaces and backgrounds. It is softer and warmer than pure white, reducing eye strain and feeling more \"boutique.\"\n- **Charcoal Slate (#4A4A4A):** Used for typography to ensure high legibility while appearing softer than pure black.\n\n## Typography\nThe typography pairing balances friendliness with clarity. \n\n**Quicksand** is utilized for all headings. Its rounded terminals mirror the \"soft\" brand personality and appear non-threatening and modern. \n\n**Work Sans** serves as the body and label typeface. Its optimized legibility ensures that service menus and pricing details are easy to read for all age groups. It provides a professional, \"grounded\" contrast to the more playful Quicksand. \n\nKeep line lengths for body text between 45-75 characters to maintain a comfortable reading rhythm, especially for \"About Our Services\" sections.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain a boutique, editorial feel, while transitioning to a fluid single-column layout on mobile devices.\n\n- **Desktop (1200px+):** 12-column grid with 24px gutters. Use wide 48px margins to frame content like a high-end magazine.\n- **Tablet (768px - 1199px):** 8-column grid with 24px gutters and 32px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 16px margins.\n\nSpacing follows an 8px incremental scale. Large \"Section Gaps\" (80px+) are encouraged to separate service categories, ensuring the UI never feels cluttered or overwhelming, reinforcing the \"spa\" experience.\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layers** and **Ambient Shadows**. \n\nAvoid heavy, dark drop-shadows. Instead, use \"Glow Shadows\"—low-opacity (8-12%) shadows that use a slight tint of the Primary color (#8FB9B3) rather than pure black. This makes elements feel like they are floating gently above the Cream Linen background.\n\nInteractive elements like cards should use a subtle 1px border in a slightly darker cream or a soft shadow to indicate interactability. Background blurs are used sparingly for navigation overlays to maintain a sense of \"transparency and airiness.\"\n\n## Shapes\nThe shape language is consistently **Rounded**. There are no sharp 90-degree corners in the design system, as sharp edges contradict the \"safe and gentle\" promise of pet grooming.\n\n- **Standard Buttons & Inputs:** 0.5rem (8px) corner radius.\n- **Cards & Containers:** 1rem (16px) corner radius.\n- **Image Frames:** Use a mix of 1.5rem (24px) corners and fully circular frames for staff or dog profile photos to keep the look organic and friendly.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spa Blue fill with white Quicksand text. Secondary buttons use a Warm Sand outline with charcoal text. Transitions should be soft (200ms ease-in-out).\n- **Cards:** Used for service listings (e.g., \"Full Groom,\" \"Bath & Brush\"). Cards feature a white background, a soft glow shadow, and a 16px corner radius.\n- **Service Chips:** Small, rounded pills in a light tint of Spa Blue used to highlight \"Puppy's First Spa\" or \"Hypoallergenic\" options.\n- **Input Fields:** Large, 48px height fields with a soft 1px border. Focus states should use a 2px Spa Blue glow.\n- **Lists:** Service menus should use ample vertical padding (16px between items) with thin, high-transparency dividers to maintain a clean, organized look.\n- **Booking Widget:** A specialized component featuring a calendar view with soft rounded date-pickers and a clear progress stepper at the top to guide users through the local booking process.",
+            "font": "QUICKSAND",
+            "headlineFont": "QUICKSAND",
+            "headlineFontFamily": "Quicksand",
+            "labelFont": "WORK_SANS",
+            "labelFontFamily": "Work Sans",
+            "namedColors": {
+              "background": "#fbf9f8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f0f0",
+              "inverse_primary": "#a4cfc9",
+              "inverse_surface": "#303030",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#214a46",
+              "on_primary_fixed": "#00201d",
+              "on_primary_fixed_variant": "#254d49",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#6e614d",
+              "on_secondary_fixed": "#231a0b",
+              "on_secondary_fixed_variant": "#514533",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#404847",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#444441",
+              "on_tertiary_fixed": "#1b1c19",
+              "on_tertiary_fixed_variant": "#474744",
+              "outline": "#717977",
+              "outline_variant": "#c0c8c6",
+              "primary": "#3d6561",
+              "primary_container": "#8fb9b3",
+              "primary_fixed": "#c0ebe5",
+              "primary_fixed_dim": "#a4cfc9",
+              "secondary": "#695c49",
+              "secondary_container": "#efddc5",
+              "secondary_fixed": "#f2e0c8",
+              "secondary_fixed_dim": "#d5c4ad",
+              "surface": "#fbf9f8",
+              "surface_bright": "#fbf9f8",
+              "surface_container": "#efeded",
+              "surface_container_high": "#eae8e7",
+              "surface_container_highest": "#e4e2e2",
+              "surface_container_low": "#f5f3f3",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbd9d9",
+              "surface_tint": "#3d6561",
+              "surface_variant": "#e4e2e2",
+              "tertiary": "#5e5e5b",
+              "tertiary_container": "#b2b1ad",
+              "tertiary_fixed": "#e4e2dd",
+              "tertiary_fixed_dim": "#c8c6c2"
+            },
+            "overrideNeutralColor": "#4a4a4a",
+            "overridePrimaryColor": "#8fb9b3",
+            "overrideSecondaryColor": "#ead8c0",
+            "overrideTertiaryColor": "#f9f7f2",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "container-max": "1200px",
+              "gutter": "24px",
+              "margin-desktop": "48px",
+              "margin-mobile": "16px",
+              "section-gap": "80px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Work Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Work Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "headline-lg": {
+                "fontFamily": "Quicksand",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Quicksand",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Quicksand",
+                "fontSize": "28px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Quicksand",
+                "fontSize": "20px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "label-md": {
+                "fontFamily": "Work Sans",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1"
+              }
+            }
+          },
+          "title": "The Paw Spa - Professional Pet Grooming Terre Haute",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've completed the production-ready homepage for **The Paw Spa**, transforming its Facebook presence into a professional digital storefront.\n\n### Design Highlights:\n*   **Brand-Specific Strategy**: I built a custom design system using a soft \"Spa Mint\" and warm neutral palette to evoke the luxury and care of a professional pet spa.\n*   **Split-Hero Layout**: The hero section features high-fidelity photography of a clean, happy \"pup\" to immediately establish a premium but welcoming tone for Terre Haute residents.\n*   **Real Data Integration**: Every detail—from the names of the groomers (Brianna, Taylor, Kaylee, and Edward) to the 4.8-star rating and the specific location near Haute City Center—was pulled directly from their social context.\n*   **Conversion-Focused**: A sticky header ensures the \"Call Now\" button and phone number are always accessible, while the service cards clearly outline the \"Spa Day\" experience.\n*   **Visit & Contact**: I included the requested map slot and a validated contact form to streamline the booking process for local pet owners.\n\nThe site is fully responsive and uses semantic HTML/CSS to ensure a fast, high-quality experience on any device."
+  },
+  {
+    "suggestion": "Add a \"Before & After\" gallery section"
+  },
+  {
+    "suggestion": "Create a mobile-specific version of this layout"
+  },
+  {
+    "suggestion": "Draft a \"New Client\" discount banner for the top of the page"
+  }
+]
