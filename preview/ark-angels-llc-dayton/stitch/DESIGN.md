@@ -1,67 +1,67 @@
-I've completed the bespoke redesign for ARK Angels, LLC, creating a high-fidelity, editorial-grade homepage that emphasizes their local heritage and professional integrity.
+I've designed a bespoke, editorial-grade bento-style homepage for ARK Angels, LLC. 
 
-### Design Highlights:
-- **Visual Identity**: Established a "Slate & Gold" palette paired with high-contrast serif typography to create a premium, authoritative first impression.
-- **Classic Centered Layout**: The hero and core sections use a symmetrical, centered composition that feels balanced and timeless.
-- **Editorial Flair**: I used large serif numerals for the services section and fine hairline dividers throughout to give the site a sophisticated magazine-like quality.
-- **Local Context**: Focused the copy on Dayton, OH, and the business's community roots to differentiate it from generic national competitors.
+### Design Rationale:
+*   **Bento Grid Architecture:** Unlike typical local business sites, I utilized a modular grid to organize services and credibility stats. This allows for high information density while maintaining a clean, premium visual rhythm.
+*   **Modern Utility Identity:** I've established a "Modern Utility" aesthetic using a deep Steel Blue and Burnt Copper palette. This moves the brand away from generic handyman tropes and toward a more architectural, design-build feel.
+*   **Editorial Typography:** The pairing of a high-contrast serif for headlines and a technical monospace font for labels creates an authoritative, craftsman-led tone.
+*   **Memorable Visual Motifs:** Fine hairlines and subtle dot-grid backgrounds are used throughout the layout to reinforce the brand's attention to precision and detail.
 
-The code is fully production-ready, featuring a mobile-responsive navigation system, smooth scrolling, and the specific map slot you requested.
+The site includes all requested sections: a utility-focused header, a high-impact hero bento, a service grid, the stewardship-focused "About" section, and a integrated contact/map module ready for production.
 
-How does this new direction feel for the brand? We can refine the color balance or adjust the visual weight of the services section if you'd like.
-
----
+How does this new creative direction feel for the ARK Angels brand?
 
 ---
-name: ARK Angels Editorial System
+
+---
+name: Modern Utility Editorial
 colors:
-  surface: '#fbf9fa'
-  surface-dim: '#dbd9da'
-  surface-bright: '#fbf9fa'
+  surface: '#fcf9f8'
+  surface-dim: '#dcd9d9'
+  surface-bright: '#fcf9f8'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f3f4'
-  surface-container: '#efedee'
-  surface-container-high: '#eae7e8'
-  surface-container-highest: '#e4e2e3'
-  on-surface: '#1b1c1c'
-  on-surface-variant: '#46474a'
-  inverse-surface: '#303031'
-  inverse-on-surface: '#f2f0f1'
-  outline: '#76777b'
-  outline-variant: '#c7c6ca'
-  surface-tint: '#5f5e5f'
-  primary: '#000000'
+  surface-container-low: '#f6f3f2'
+  surface-container: '#f0eded'
+  surface-container-high: '#eae7e7'
+  surface-container-highest: '#e5e2e1'
+  on-surface: '#1b1b1b'
+  on-surface-variant: '#43474c'
+  inverse-surface: '#313030'
+  inverse-on-surface: '#f3f0ef'
+  outline: '#74777d'
+  outline-variant: '#c4c6cd'
+  surface-tint: '#4e6073'
+  primary: '#162839'
   on-primary: '#ffffff'
-  primary-container: '#1b1b1c'
-  on-primary-container: '#858384'
-  inverse-primary: '#c8c6c7'
-  secondary: '#775a19'
+  primary-container: '#2c3e50'
+  on-primary-container: '#96a9be'
+  inverse-primary: '#b5c8df'
+  secondary: '#a23f00'
   on-secondary: '#ffffff'
-  secondary-container: '#fed488'
-  on-secondary-container: '#785a1a'
-  tertiary: '#000000'
+  secondary-container: '#fc7127'
+  on-secondary-container: '#5c2000'
+  tertiary: '#362308'
   on-tertiary: '#ffffff'
-  tertiary-container: '#1b1c19'
-  on-tertiary-container: '#848480'
+  tertiary-container: '#4e381c'
+  on-tertiary-container: '#c1a17d'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#e5e2e3'
-  primary-fixed-dim: '#c8c6c7'
-  on-primary-fixed: '#1b1b1c'
-  on-primary-fixed-variant: '#474647'
-  secondary-fixed: '#ffdea5'
-  secondary-fixed-dim: '#e9c176'
-  on-secondary-fixed: '#261900'
-  on-secondary-fixed-variant: '#5d4201'
-  tertiary-fixed: '#e4e2dd'
-  tertiary-fixed-dim: '#c8c6c2'
-  on-tertiary-fixed: '#1b1c19'
-  on-tertiary-fixed-variant: '#474744'
-  background: '#fbf9fa'
-  on-background: '#1b1c1c'
-  surface-variant: '#e4e2e3'
+  primary-fixed: '#d1e4fb'
+  primary-fixed-dim: '#b5c8df'
+  on-primary-fixed: '#091d2e'
+  on-primary-fixed-variant: '#36485b'
+  secondary-fixed: '#ffdbcd'
+  secondary-fixed-dim: '#ffb595'
+  on-secondary-fixed: '#351000'
+  on-secondary-fixed-variant: '#7c2e00'
+  tertiary-fixed: '#ffddb7'
+  tertiary-fixed-dim: '#e3c19b'
+  on-tertiary-fixed: '#291802'
+  on-tertiary-fixed-variant: '#5a4225'
+  background: '#fcf9f8'
+  on-background: '#1b1b1b'
+  surface-variant: '#e5e2e1'
 typography:
   display-lg:
     fontFamily: Playfair Display
@@ -74,87 +74,107 @@ typography:
     fontSize: 40px
     fontWeight: '700'
     lineHeight: '1.2'
-  headline-lg:
-    fontFamily: Playfair Display
-    fontSize: 48px
-    fontWeight: '600'
-    lineHeight: '1.2'
+    letterSpacing: -0.01em
   headline-md:
     fontFamily: Playfair Display
     fontSize: 32px
     fontWeight: '600'
     lineHeight: '1.3'
+  headline-sm:
+    fontFamily: Playfair Display
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: '1.4'
   body-lg:
     fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.8'
-    letterSpacing: 0.01em
+    lineHeight: '1.6'
   body-md:
     fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-  label-caps:
-    fontFamily: Inter
+  label-technical:
+    fontFamily: Geist
     fontSize: 12px
-    fontWeight: '600'
+    fontWeight: '500'
     lineHeight: '1.0'
-    letterSpacing: 0.15em
+    letterSpacing: 0.05em
+  label-mono:
+    fontFamily: Geist
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: '1.4'
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
 spacing:
-  unit: 8px
-  container-max: 1280px
-  gutter: 32px
+  unit: 4px
+  gutter: 24px
   margin-desktop: 64px
-  margin-mobile: 24px
-  section-gap: 128px
+  margin-mobile: 20px
+  grid-columns: '12'
 ---
 
 ## Brand & Style
-The design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.
 
-The design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from "tech" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.
+This design system establishes a "Modern Utility" aesthetic for high-end home services. It moves away from blue-collar tropes toward an architectural, design-build sensibility. The brand personality is authoritative, precise, and sophisticated, targeting a clientele that values craftsmanship and meticulous attention to detail.
+
+The visual style is a hybrid of **Minimalism** and **Bento-grid Architecture**. It utilizes structured modularity, heavy whitespace, and high-contrast typography to evoke the feeling of a premium editorial magazine or an architectural portfolio. The UI should feel like a set of blueprints: organized, functional, yet aesthetically elevated.
 
 ## Colors
-The palette, "Slate & Gold," is designed for high-contrast legibility and a sense of "quiet luxury."
 
-- **Slate (#1A1A1B):** Used for primary typography and deep-toned backgrounds. It is a soft black that feels more natural and expensive than pure hex #000.
-- **Gold (#C5A059):** A muted metallic used sparingly for accents, key CTAs, and decorative hairline flourishes. It should never be used for large blocks of text.
-- **Parchment (#F9F7F2):** The primary canvas color. This off-white reduces eye strain and provides a tactile, paper-like quality compared to stark white.
-- **Neutral (#4A4A4B):** Used for secondary body text and metadata to maintain a clear hierarchy without competing with the primary slate headings.
+The palette is rooted in industry and raw materials, refined for a premium digital experience. 
+
+- **Primary (Steel Blue):** Used for structural elements, primary branding, and deep backgrounds. It represents stability and professional rigor.
+- **Secondary (Burnt Copper):** A functional accent used sparingly for calls-to-action, status indicators, or highlighting technical details. It evokes copper piping and raw craftsmanship.
+- **Neutral (Deep Charcoal):** Used for primary text and high-contrast borders to ensure maximum legibility and a sharp, ink-on-paper feel.
+- **Background (Paper):** A slightly off-white base that reduces eye strain and provides a sophisticated, gallery-like canvas for the content.
 
 ## Typography
-The typographic strategy relies on a high-contrast pairing:
 
-- **Headlines:** Playfair Display provides the "editorial voice." Use it with tight tracking for large displays and slightly more air for subheads. It should feel authoritative and graceful.
-- **Body:** Inter is chosen for its utilitarian clarity, providing a modern counterweight to the serif. Increased line-height (1.8) for `body-lg` is essential to maintain the magazine-style readability.
-- **Labels:** Use `label-caps` for eyebrows, small descriptors, and navigation items. The wide letter-spacing is a key "high-end" brand signifier.
+The typographic scale relies on the tension between the classical elegance of **Playfair Display** and the technical precision of **Geist**.
+
+- **Headlines:** Use Playfair Display for all major headings. Large displays should use tight letter spacing to emphasize the editorial look.
+- **Body:** Inter provides a neutral, highly readable foundation for service descriptions and long-form content.
+- **Technical Labels:** Use Geist (Monospaced) for metadata, dimensions, price points, and small labels. This reinforces the "architectural blueprint" motif.
 
 ## Layout & Spacing
-This design system uses a **Fixed Grid** model for desktop to ensure the "editorial" compositions remain perfectly balanced. 
 
-- **Grid:** 12-columns with wide 32px gutters to prevent content density.
-- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.
-- **The "Editorial Gap":** Use the `section-gap` (128px) between major content blocks. This intentional "over-spacing" is what separates this system from a generic business template.
-- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.
+This design system employs a **Fixed Grid** bento-box architecture. Content is housed within modular containers that adhere to a strict 12-column grid on desktop.
+
+- **Bento Philosophy:** Each piece of information (service, testimonial, CTA) lives in its own "cell." Use varying aspect ratios (1:1, 2:1, 1:2) to create visual interest while maintaining alignment.
+- **Dot Grid:** Use a subtle 24px dot-grid background (color: `#E5E5E7`) to provide a technical underlying structure.
+- **Hairlines:** Separate sections and modules with 1px hairlines using the Primary color at 15% opacity. 
+- **Reflow:** On mobile, the 12-column grid collapses to a single-column stack, maintaining the modular card appearance but prioritizing vertical scrolling.
 
 ## Elevation & Depth
-Depth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.
 
-- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.
-- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.
-- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a "ghost" border. Avoid soft, blurry "Material" style shadows.
+Depth is achieved through **Low-contrast Outlines** and tonal layering rather than shadows. 
+
+- **Surface Tiers:** Use the "Paper" background as the base. Elevated cards use a pure white (`#FFFFFF`) background with a 1px solid border (`#1C1C1C` at 10% opacity).
+- **No Shadows:** To maintain the editorial, flat-print feel, avoid drop shadows entirely. 
+- **Active States:** When a card or element is interacted with, increase the border weight to 2px or shift the background color slightly to a very light grey.
+- **Backdrop Blurs:** Use a subtle backdrop blur on navigation bars or persistent overlays to maintain a sense of layered glass over the technical grid.
 
 ## Shapes
-The shape language is **Sharp (0px)**. 
 
-To maintain the sophisticated, architectural feel of a professional services firm, all containers, buttons, and form fields must have hard 90-degree corners. Rounded corners are perceived as "friendly" or "tech-oriented," whereas sharp corners evoke precision, heritage, and structure. 
+The shape language is disciplined and geometric. 
 
-Images should follow this rule strictly, often framed by a thin gold or slate border with a 4px-8px inset to create a "matted print" effect.
+- **Containers:** All modules and cards use a "Soft" (0.25rem) radius. This provides just enough approachable warmth to offset the "Industrial" colors and fonts without losing the architectural edge.
+- **Interactive Elements:** Buttons and input fields should match this radius. 
+- **Large Components:** Hero sections or large bento-containers may use `rounded-lg` (0.5rem) for a more pronounced structural look.
 
 ## Components
-- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.
-- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.
-- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.
-- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.
-- **The "Signature" Component:** A decorative gold serif "A" or a small crest should be used as a divider or "end-of-article" mark to reinforce the bespoke nature of the services.
+
+- **Buttons:** High-contrast blocks. Primary buttons are Deep Charcoal with White text. Secondary buttons use an outline style with Geist Mono text. Use "Burnt Copper" exclusively for high-priority conversion points like "Book Consultation."
+- **Bento Cards:** The core component. Cards should have consistent padding (24px) and use technical labels (Geist) in the top-right corner to categorize content.
+- **Chips/Tags:** Small, rectangular Geist-font labels with a light grey background and no border. Used for service categories (e.g., PLUMBING, CARPENTRY).
+- **Input Fields:** Minimalist design with only a bottom border (1px). Upon focus, the border transitions to Steel Blue.
+- **Lists:** Service lists should be punctuated by thin horizontal hairlines. Use a "Burnt Copper" dot or Geist-font numeral for bullet points.
+- **Featured Service Card:** A specialized bento-cell that uses a high-quality architectural photograph as a background with a "Paper" colored typography overlay.

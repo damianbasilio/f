@@ -1,46 +1,29 @@
-// Micro-interactions and subtle scroll effects
-        document.addEventListener('DOMContentLoaded', () => {
-            const observerOptions = {
-                threshold: 0.1
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('opacity-100', 'translate-y-0');
-                        entry.target.classList.remove('opacity-0', 'translate-y-8');
-                    }
-                });
-            }, observerOptions);
-
-            // Apply fade-in to major sections
-            document.querySelectorAll('section').forEach(section => {
-                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
-                observer.observe(section);
+// Micro-interactions for form inputs
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = 'var(--tw-color-secondary)';
             });
-
-            // Handle smooth navigation active states
-            const navLinks = document.querySelectorAll('nav a');
-            window.addEventListener('scroll', () => {
-                let current = "";
-                const sections = document.querySelectorAll('section');
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    if (pageYOffset >= (sectionTop - 200)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove('text-primary', 'border-b', 'border-primary', 'pb-1');
-                    link.classList.add('text-on-surface-variant');
-                    if (link.getAttribute('href').substring(1) === current) {
-                        link.classList.remove('text-on-surface-variant');
-                        link.classList.add('text-primary', 'border-b', 'border-primary', 'pb-1');
-                    }
-                });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').style.color = '';
             });
+        });
+
+        // Simple observer for reveal effects
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.bento-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(card);
         });
 
 (() => {

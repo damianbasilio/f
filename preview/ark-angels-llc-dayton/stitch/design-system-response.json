@@ -2,80 +2,79 @@
   {
     "designSystem": {
       "designSystem": {
-        "displayName": "ARK Angels Editorial System",
-        "styleGuidelines": "## Brand & Style\nThe design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.\n\nThe design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from \"tech\" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model for desktop to ensure the \"editorial\" compositions remain perfectly balanced. \n\n- **Grid:** 12-columns with wide 32px gutters to prevent content density.\n- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.\n- **The \"Editorial Gap\":** Use the `section-gap` (128px) between major content blocks. This intentional \"over-spacing\" is what separates this system from a generic business template.\n- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.\n\n- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.\n- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.\n- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a \"ghost\" border. Avoid soft, blurry \"Material\" style shadows.\n\n## Components\n- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.\n- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.\n- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.\n- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.\n- **The \"Signature\" Component:** A decorative gold serif \"A\" or a small crest should be used as a divider or \"end-of-article\" mark to reinforce the bespoke nature of the services.",
+        "displayName": "Modern Utility Editorial",
+        "styleGuidelines": "## Brand & Style\n\nThis design system establishes a \"Modern Utility\" aesthetic for high-end home services. It moves away from blue-collar tropes toward an architectural, design-build sensibility. The brand personality is authoritative, precise, and sophisticated, targeting a clientele that values craftsmanship and meticulous attention to detail.\n\nThe visual style is a hybrid of **Minimalism** and **Bento-grid Architecture**. It utilizes structured modularity, heavy whitespace, and high-contrast typography to evoke the feeling of a premium editorial magazine or an architectural portfolio. The UI should feel like a set of blueprints: organized, functional, yet aesthetically elevated.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** bento-box architecture. Content is housed within modular containers that adhere to a strict 12-column grid on desktop.\n\n- **Bento Philosophy:** Each piece of information (service, testimonial, CTA) lives in its own \"cell.\" Use varying aspect ratios (1:1, 2:1, 1:2) to create visual interest while maintaining alignment.\n- **Dot Grid:** Use a subtle 24px dot-grid background (color: `#E5E5E7`) to provide a technical underlying structure.\n- **Hairlines:** Separate sections and modules with 1px hairlines using the Primary color at 15% opacity. \n- **Reflow:** On mobile, the 12-column grid collapses to a single-column stack, maintaining the modular card appearance but prioritizing vertical scrolling.\n\n## Elevation & Depth\n\nDepth is achieved through **Low-contrast Outlines** and tonal layering rather than shadows. \n\n- **Surface Tiers:** Use the \"Paper\" background as the base. Elevated cards use a pure white (`#FFFFFF`) background with a 1px solid border (`#1C1C1C` at 10% opacity).\n- **No Shadows:** To maintain the editorial, flat-print feel, avoid drop shadows entirely. \n- **Active States:** When a card or element is interacted with, increase the border weight to 2px or shift the background color slightly to a very light grey.\n- **Backdrop Blurs:** Use a subtle backdrop blur on navigation bars or persistent overlays to maintain a sense of layered glass over the technical grid.\n\n## Components\n\n- **Buttons:** High-contrast blocks. Primary buttons are Deep Charcoal with White text. Secondary buttons use an outline style with Geist Mono text. Use \"Burnt Copper\" exclusively for high-priority conversion points like \"Book Consultation.\"\n- **Bento Cards:** The core component. Cards should have consistent padding (24px) and use technical labels (Geist) in the top-right corner to categorize content.\n- **Chips/Tags:** Small, rectangular Geist-font labels with a light grey background and no border. Used for service categories (e.g., PLUMBING, CARPENTRY).\n- **Input Fields:** Minimalist design with only a bottom border (1px). Upon focus, the border transitions to Steel Blue.\n- **Lists:** Service lists should be punctuated by thin horizontal hairlines. Use a \"Burnt Copper\" dot or Geist-font numeral for bullet points.\n- **Featured Service Card:** A specialized bento-cell that uses a high-quality architectural photograph as a background with a \"Paper\" colored typography overlay.",
         "theme": {
           "bodyFont": "INTER",
           "bodyFontFamily": "Inter",
           "colorMode": "LIGHT",
           "colorVariant": "FIDELITY",
-          "customColor": "#1a1a1b",
-          "designMd": "---\nname: ARK Angels Editorial System\ncolors:\n  surface: '#fbf9fa'\n  surface-dim: '#dbd9da'\n  surface-bright: '#fbf9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f4'\n  surface-container: '#efedee'\n  surface-container-high: '#eae7e8'\n  surface-container-highest: '#e4e2e3'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#46474a'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f1'\n  outline: '#76777b'\n  outline-variant: '#c7c6ca'\n  surface-tint: '#5f5e5f'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1b1b1c'\n  on-primary-container: '#858384'\n  inverse-primary: '#c8c6c7'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1b1c19'\n  on-tertiary-container: '#848480'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1b1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fbf9fa'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e3'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.\n\nThe design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from \"tech\" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.\n\n## Colors\nThe palette, \"Slate & Gold,\" is designed for high-contrast legibility and a sense of \"quiet luxury.\"\n\n- **Slate (#1A1A1B):** Used for primary typography and deep-toned backgrounds. It is a soft black that feels more natural and expensive than pure hex #000.\n- **Gold (#C5A059):** A muted metallic used sparingly for accents, key CTAs, and decorative hairline flourishes. It should never be used for large blocks of text.\n- **Parchment (#F9F7F2):** The primary canvas color. This off-white reduces eye strain and provides a tactile, paper-like quality compared to stark white.\n- **Neutral (#4A4A4B):** Used for secondary body text and metadata to maintain a clear hierarchy without competing with the primary slate headings.\n\n## Typography\nThe typographic strategy relies on a high-contrast pairing:\n\n- **Headlines:** Playfair Display provides the \"editorial voice.\" Use it with tight tracking for large displays and slightly more air for subheads. It should feel authoritative and graceful.\n- **Body:** Inter is chosen for its utilitarian clarity, providing a modern counterweight to the serif. Increased line-height (1.8) for `body-lg` is essential to maintain the magazine-style readability.\n- **Labels:** Use `label-caps` for eyebrows, small descriptors, and navigation items. The wide letter-spacing is a key \"high-end\" brand signifier.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model for desktop to ensure the \"editorial\" compositions remain perfectly balanced. \n\n- **Grid:** 12-columns with wide 32px gutters to prevent content density.\n- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.\n- **The \"Editorial Gap\":** Use the `section-gap` (128px) between major content blocks. This intentional \"over-spacing\" is what separates this system from a generic business template.\n- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.\n\n- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.\n- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.\n- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a \"ghost\" border. Avoid soft, blurry \"Material\" style shadows.\n\n## Shapes\nThe shape language is **Sharp (0px)**. \n\nTo maintain the sophisticated, architectural feel of a professional services firm, all containers, buttons, and form fields must have hard 90-degree corners. Rounded corners are perceived as \"friendly\" or \"tech-oriented,\" whereas sharp corners evoke precision, heritage, and structure. \n\nImages should follow this rule strictly, often framed by a thin gold or slate border with a 4px-8px inset to create a \"matted print\" effect.\n\n## Components\n- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.\n- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.\n- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.\n- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.\n- **The \"Signature\" Component:** A decorative gold serif \"A\" or a small crest should be used as a divider or \"end-of-article\" mark to reinforce the bespoke nature of the services.",
+          "customColor": "#2c3e50",
+          "designMd": "---\nname: Modern Utility Editorial\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e5e2e1'\n  on-surface: '#1b1b1b'\n  on-surface-variant: '#43474c'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#74777d'\n  outline-variant: '#c4c6cd'\n  surface-tint: '#4e6073'\n  primary: '#162839'\n  on-primary: '#ffffff'\n  primary-container: '#2c3e50'\n  on-primary-container: '#96a9be'\n  inverse-primary: '#b5c8df'\n  secondary: '#a23f00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fc7127'\n  on-secondary-container: '#5c2000'\n  tertiary: '#362308'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4e381c'\n  on-tertiary-container: '#c1a17d'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d1e4fb'\n  primary-fixed-dim: '#b5c8df'\n  on-primary-fixed: '#091d2e'\n  on-primary-fixed-variant: '#36485b'\n  secondary-fixed: '#ffdbcd'\n  secondary-fixed-dim: '#ffb595'\n  on-secondary-fixed: '#351000'\n  on-secondary-fixed-variant: '#7c2e00'\n  tertiary-fixed: '#ffddb7'\n  tertiary-fixed-dim: '#e3c19b'\n  on-tertiary-fixed: '#291802'\n  on-tertiary-fixed-variant: '#5a4225'\n  background: '#fcf9f8'\n  on-background: '#1b1b1b'\n  surface-variant: '#e5e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-technical:\n    fontFamily: Geist\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\n  label-mono:\n    fontFamily: Geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  grid-columns: '12'\n---\n\n## Brand & Style\n\nThis design system establishes a \"Modern Utility\" aesthetic for high-end home services. It moves away from blue-collar tropes toward an architectural, design-build sensibility. The brand personality is authoritative, precise, and sophisticated, targeting a clientele that values craftsmanship and meticulous attention to detail.\n\nThe visual style is a hybrid of **Minimalism** and **Bento-grid Architecture**. It utilizes structured modularity, heavy whitespace, and high-contrast typography to evoke the feeling of a premium editorial magazine or an architectural portfolio. The UI should feel like a set of blueprints: organized, functional, yet aesthetically elevated.\n\n## Colors\n\nThe palette is rooted in industry and raw materials, refined for a premium digital experience. \n\n- **Primary (Steel Blue):** Used for structural elements, primary branding, and deep backgrounds. It represents stability and professional rigor.\n- **Secondary (Burnt Copper):** A functional accent used sparingly for calls-to-action, status indicators, or highlighting technical details. It evokes copper piping and raw craftsmanship.\n- **Neutral (Deep Charcoal):** Used for primary text and high-contrast borders to ensure maximum legibility and a sharp, ink-on-paper feel.\n- **Background (Paper):** A slightly off-white base that reduces eye strain and provides a sophisticated, gallery-like canvas for the content.\n\n## Typography\n\nThe typographic scale relies on the tension between the classical elegance of **Playfair Display** and the technical precision of **Geist**.\n\n- **Headlines:** Use Playfair Display for all major headings. Large displays should use tight letter spacing to emphasize the editorial look.\n- **Body:** Inter provides a neutral, highly readable foundation for service descriptions and long-form content.\n- **Technical Labels:** Use Geist (Monospaced) for metadata, dimensions, price points, and small labels. This reinforces the \"architectural blueprint\" motif.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** bento-box architecture. Content is housed within modular containers that adhere to a strict 12-column grid on desktop.\n\n- **Bento Philosophy:** Each piece of information (service, testimonial, CTA) lives in its own \"cell.\" Use varying aspect ratios (1:1, 2:1, 1:2) to create visual interest while maintaining alignment.\n- **Dot Grid:** Use a subtle 24px dot-grid background (color: `#E5E5E7`) to provide a technical underlying structure.\n- **Hairlines:** Separate sections and modules with 1px hairlines using the Primary color at 15% opacity. \n- **Reflow:** On mobile, the 12-column grid collapses to a single-column stack, maintaining the modular card appearance but prioritizing vertical scrolling.\n\n## Elevation & Depth\n\nDepth is achieved through **Low-contrast Outlines** and tonal layering rather than shadows. \n\n- **Surface Tiers:** Use the \"Paper\" background as the base. Elevated cards use a pure white (`#FFFFFF`) background with a 1px solid border (`#1C1C1C` at 10% opacity).\n- **No Shadows:** To maintain the editorial, flat-print feel, avoid drop shadows entirely. \n- **Active States:** When a card or element is interacted with, increase the border weight to 2px or shift the background color slightly to a very light grey.\n- **Backdrop Blurs:** Use a subtle backdrop blur on navigation bars or persistent overlays to maintain a sense of layered glass over the technical grid.\n\n## Shapes\n\nThe shape language is disciplined and geometric. \n\n- **Containers:** All modules and cards use a \"Soft\" (0.25rem) radius. This provides just enough approachable warmth to offset the \"Industrial\" colors and fonts without losing the architectural edge.\n- **Interactive Elements:** Buttons and input fields should match this radius. \n- **Large Components:** Hero sections or large bento-containers may use `rounded-lg` (0.5rem) for a more pronounced structural look.\n\n## Components\n\n- **Buttons:** High-contrast blocks. Primary buttons are Deep Charcoal with White text. Secondary buttons use an outline style with Geist Mono text. Use \"Burnt Copper\" exclusively for high-priority conversion points like \"Book Consultation.\"\n- **Bento Cards:** The core component. Cards should have consistent padding (24px) and use technical labels (Geist) in the top-right corner to categorize content.\n- **Chips/Tags:** Small, rectangular Geist-font labels with a light grey background and no border. Used for service categories (e.g., PLUMBING, CARPENTRY).\n- **Input Fields:** Minimalist design with only a bottom border (1px). Upon focus, the border transitions to Steel Blue.\n- **Lists:** Service lists should be punctuated by thin horizontal hairlines. Use a \"Burnt Copper\" dot or Geist-font numeral for bullet points.\n- **Featured Service Card:** A specialized bento-cell that uses a high-quality architectural photograph as a background with a \"Paper\" colored typography overlay.",
           "font": "PLAYFAIR_DISPLAY",
           "headlineFont": "PLAYFAIR_DISPLAY",
           "headlineFontFamily": "Playfair Display",
-          "labelFont": "INTER",
-          "labelFontFamily": "Inter",
+          "labelFont": "GEIST",
+          "labelFontFamily": "Geist",
           "namedColors": {
-            "background": "#fbf9fa",
+            "background": "#fcf9f8",
             "error": "#ba1a1a",
             "error_container": "#ffdad6",
-            "inverse_on_surface": "#f2f0f1",
-            "inverse_primary": "#c8c6c7",
-            "inverse_surface": "#303031",
-            "on_background": "#1b1c1c",
+            "inverse_on_surface": "#f3f0ef",
+            "inverse_primary": "#b5c8df",
+            "inverse_surface": "#313030",
+            "on_background": "#1b1b1b",
             "on_error": "#ffffff",
             "on_error_container": "#93000a",
             "on_primary": "#ffffff",
-            "on_primary_container": "#858384",
-            "on_primary_fixed": "#1b1b1c",
-            "on_primary_fixed_variant": "#474647",
+            "on_primary_container": "#96a9be",
+            "on_primary_fixed": "#091d2e",
+            "on_primary_fixed_variant": "#36485b",
             "on_secondary": "#ffffff",
-            "on_secondary_container": "#785a1a",
-            "on_secondary_fixed": "#261900",
-            "on_secondary_fixed_variant": "#5d4201",
-            "on_surface": "#1b1c1c",
-            "on_surface_variant": "#46474a",
+            "on_secondary_container": "#5c2000",
+            "on_secondary_fixed": "#351000",
+            "on_secondary_fixed_variant": "#7c2e00",
+            "on_surface": "#1b1b1b",
+            "on_surface_variant": "#43474c",
             "on_tertiary": "#ffffff",
-            "on_tertiary_container": "#848480",
-            "on_tertiary_fixed": "#1b1c19",
-            "on_tertiary_fixed_variant": "#474744",
-            "outline": "#76777b",
-            "outline_variant": "#c7c6ca",
-            "primary": "#000000",
-            "primary_container": "#1b1b1c",
-            "primary_fixed": "#e5e2e3",
-            "primary_fixed_dim": "#c8c6c7",
-            "secondary": "#775a19",
-            "secondary_container": "#fed488",
-            "secondary_fixed": "#ffdea5",
-            "secondary_fixed_dim": "#e9c176",
-            "surface": "#fbf9fa",
-            "surface_bright": "#fbf9fa",
-            "surface_container": "#efedee",
-            "surface_container_high": "#eae7e8",
-            "surface_container_highest": "#e4e2e3",
-            "surface_container_low": "#f5f3f4",
+            "on_tertiary_container": "#c1a17d",
+            "on_tertiary_fixed": "#291802",
+            "on_tertiary_fixed_variant": "#5a4225",
+            "outline": "#74777d",
+            "outline_variant": "#c4c6cd",
+            "primary": "#162839",
+            "primary_container": "#2c3e50",
+            "primary_fixed": "#d1e4fb",
+            "primary_fixed_dim": "#b5c8df",
+            "secondary": "#a23f00",
+            "secondary_container": "#fc7127",
+            "secondary_fixed": "#ffdbcd",
+            "secondary_fixed_dim": "#ffb595",
+            "surface": "#fcf9f8",
+            "surface_bright": "#fcf9f8",
+            "surface_container": "#f0eded",
+            "surface_container_high": "#eae7e7",
+            "surface_container_highest": "#e5e2e1",
+            "surface_container_low": "#f6f3f2",
             "surface_container_lowest": "#ffffff",
-            "surface_dim": "#dbd9da",
-            "surface_tint": "#5f5e5f",
-            "surface_variant": "#e4e2e3",
-            "tertiary": "#000000",
-            "tertiary_container": "#1b1c19",
-            "tertiary_fixed": "#e4e2dd",
-            "tertiary_fixed_dim": "#c8c6c2"
+            "surface_dim": "#dcd9d9",
+            "surface_tint": "#4e6073",
+            "surface_variant": "#e5e2e1",
+            "tertiary": "#362308",
+            "tertiary_container": "#4e381c",
+            "tertiary_fixed": "#ffddb7",
+            "tertiary_fixed_dim": "#e3c19b"
           },
-          "overrideNeutralColor": "#4a4a4b",
-          "overridePrimaryColor": "#1a1a1b",
-          "overrideSecondaryColor": "#c5a059",
-          "overrideTertiaryColor": "#f9f7f2",
+          "overrideNeutralColor": "#1c1c1c",
+          "overridePrimaryColor": "#2c3e50",
+          "overrideSecondaryColor": "#d35400",
+          "roundness": "ROUND_FOUR",
           "spacing": {
-            "container-max": "1280px",
-            "gutter": "32px",
+            "grid-columns": "12",
+            "gutter": "24px",
             "margin-desktop": "64px",
-            "margin-mobile": "24px",
-            "section-gap": "128px",
-            "unit": "8px"
+            "margin-mobile": "20px",
+            "unit": "4px"
           },
           "spacingScale": 2,
           "typography": {
@@ -83,8 +82,7 @@
               "fontFamily": "Inter",
               "fontSize": "18px",
               "fontWeight": "400",
-              "letterSpacing": "0.01em",
-              "lineHeight": "1.8"
+              "lineHeight": "1.6"
             },
             "body-md": {
               "fontFamily": "Inter",
@@ -103,12 +101,7 @@
               "fontFamily": "Playfair Display",
               "fontSize": "40px",
               "fontWeight": "700",
-              "lineHeight": "1.2"
-            },
-            "headline-lg": {
-              "fontFamily": "Playfair Display",
-              "fontSize": "48px",
-              "fontWeight": "600",
+              "letterSpacing": "-0.01em",
               "lineHeight": "1.2"
             },
             "headline-md": {
@@ -117,17 +110,29 @@
               "fontWeight": "600",
               "lineHeight": "1.3"
             },
-            "label-caps": {
-              "fontFamily": "Inter",
-              "fontSize": "12px",
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
               "fontWeight": "600",
-              "letterSpacing": "0.15em",
+              "lineHeight": "1.4"
+            },
+            "label-mono": {
+              "fontFamily": "Geist",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "1.4"
+            },
+            "label-technical": {
+              "fontFamily": "Geist",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "letterSpacing": "0.05em",
               "lineHeight": "1.0"
             }
           }
         }
       },
-      "name": "assets/f837a56eb8e94fe5956b2460d1e1bf84",
+      "name": "assets/055e96ea8aa94f6fbe9970852099e6ef",
       "version": "1"
     }
   },
@@ -137,80 +142,79 @@
         {
           "designSystem": {
             "designSystem": {
-              "displayName": "ARK Angels Editorial System",
-              "styleGuidelines": "## Brand & Style\nThe design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.\n\nThe design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from \"tech\" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model for desktop to ensure the \"editorial\" compositions remain perfectly balanced. \n\n- **Grid:** 12-columns with wide 32px gutters to prevent content density.\n- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.\n- **The \"Editorial Gap\":** Use the `section-gap` (128px) between major content blocks. This intentional \"over-spacing\" is what separates this system from a generic business template.\n- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.\n\n- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.\n- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.\n- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a \"ghost\" border. Avoid soft, blurry \"Material\" style shadows.\n\n## Components\n- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.\n- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.\n- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.\n- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.\n- **The \"Signature\" Component:** A decorative gold serif \"A\" or a small crest should be used as a divider or \"end-of-article\" mark to reinforce the bespoke nature of the services.",
+              "displayName": "Modern Utility Editorial",
+              "styleGuidelines": "## Brand & Style\n\nThis design system establishes a \"Modern Utility\" aesthetic for high-end home services. It moves away from blue-collar tropes toward an architectural, design-build sensibility. The brand personality is authoritative, precise, and sophisticated, targeting a clientele that values craftsmanship and meticulous attention to detail.\n\nThe visual style is a hybrid of **Minimalism** and **Bento-grid Architecture**. It utilizes structured modularity, heavy whitespace, and high-contrast typography to evoke the feeling of a premium editorial magazine or an architectural portfolio. The UI should feel like a set of blueprints: organized, functional, yet aesthetically elevated.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** bento-box architecture. Content is housed within modular containers that adhere to a strict 12-column grid on desktop.\n\n- **Bento Philosophy:** Each piece of information (service, testimonial, CTA) lives in its own \"cell.\" Use varying aspect ratios (1:1, 2:1, 1:2) to create visual interest while maintaining alignment.\n- **Dot Grid:** Use a subtle 24px dot-grid background (color: `#E5E5E7`) to provide a technical underlying structure.\n- **Hairlines:** Separate sections and modules with 1px hairlines using the Primary color at 15% opacity. \n- **Reflow:** On mobile, the 12-column grid collapses to a single-column stack, maintaining the modular card appearance but prioritizing vertical scrolling.\n\n## Elevation & Depth\n\nDepth is achieved through **Low-contrast Outlines** and tonal layering rather than shadows. \n\n- **Surface Tiers:** Use the \"Paper\" background as the base. Elevated cards use a pure white (`#FFFFFF`) background with a 1px solid border (`#1C1C1C` at 10% opacity).\n- **No Shadows:** To maintain the editorial, flat-print feel, avoid drop shadows entirely. \n- **Active States:** When a card or element is interacted with, increase the border weight to 2px or shift the background color slightly to a very light grey.\n- **Backdrop Blurs:** Use a subtle backdrop blur on navigation bars or persistent overlays to maintain a sense of layered glass over the technical grid.\n\n## Components\n\n- **Buttons:** High-contrast blocks. Primary buttons are Deep Charcoal with White text. Secondary buttons use an outline style with Geist Mono text. Use \"Burnt Copper\" exclusively for high-priority conversion points like \"Book Consultation.\"\n- **Bento Cards:** The core component. Cards should have consistent padding (24px) and use technical labels (Geist) in the top-right corner to categorize content.\n- **Chips/Tags:** Small, rectangular Geist-font labels with a light grey background and no border. Used for service categories (e.g., PLUMBING, CARPENTRY).\n- **Input Fields:** Minimalist design with only a bottom border (1px). Upon focus, the border transitions to Steel Blue.\n- **Lists:** Service lists should be punctuated by thin horizontal hairlines. Use a \"Burnt Copper\" dot or Geist-font numeral for bullet points.\n- **Featured Service Card:** A specialized bento-cell that uses a high-quality architectural photograph as a background with a \"Paper\" colored typography overlay.",
               "theme": {
                 "bodyFont": "INTER",
                 "bodyFontFamily": "Inter",
                 "colorMode": "LIGHT",
                 "colorVariant": "FIDELITY",
-                "customColor": "#1a1a1b",
-                "designMd": "---\nname: ARK Angels Editorial System\ncolors:\n  surface: '#fbf9fa'\n  surface-dim: '#dbd9da'\n  surface-bright: '#fbf9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f4'\n  surface-container: '#efedee'\n  surface-container-high: '#eae7e8'\n  surface-container-highest: '#e4e2e3'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#46474a'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f1'\n  outline: '#76777b'\n  outline-variant: '#c7c6ca'\n  surface-tint: '#5f5e5f'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1b1b1c'\n  on-primary-container: '#858384'\n  inverse-primary: '#c8c6c7'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1b1c19'\n  on-tertiary-container: '#848480'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1b1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fbf9fa'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e3'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.\n\nThe design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from \"tech\" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.\n\n## Colors\nThe palette, \"Slate & Gold,\" is designed for high-contrast legibility and a sense of \"quiet luxury.\"\n\n- **Slate (#1A1A1B):** Used for primary typography and deep-toned backgrounds. It is a soft black that feels more natural and expensive than pure hex #000.\n- **Gold (#C5A059):** A muted metallic used sparingly for accents, key CTAs, and decorative hairline flourishes. It should never be used for large blocks of text.\n- **Parchment (#F9F7F2):** The primary canvas color. This off-white reduces eye strain and provides a tactile, paper-like quality compared to stark white.\n- **Neutral (#4A4A4B):** Used for secondary body text and metadata to maintain a clear hierarchy without competing with the primary slate headings.\n\n## Typography\nThe typographic strategy relies on a high-contrast pairing:\n\n- **Headlines:** Playfair Display provides the \"editorial voice.\" Use it with tight tracking for large displays and slightly more air for subheads. It should feel authoritative and graceful.\n- **Body:** Inter is chosen for its utilitarian clarity, providing a modern counterweight to the serif. Increased line-height (1.8) for `body-lg` is essential to maintain the magazine-style readability.\n- **Labels:** Use `label-caps` for eyebrows, small descriptors, and navigation items. The wide letter-spacing is a key \"high-end\" brand signifier.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model for desktop to ensure the \"editorial\" compositions remain perfectly balanced. \n\n- **Grid:** 12-columns with wide 32px gutters to prevent content density.\n- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.\n- **The \"Editorial Gap\":** Use the `section-gap` (128px) between major content blocks. This intentional \"over-spacing\" is what separates this system from a generic business template.\n- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.\n\n- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.\n- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.\n- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a \"ghost\" border. Avoid soft, blurry \"Material\" style shadows.\n\n## Shapes\nThe shape language is **Sharp (0px)**. \n\nTo maintain the sophisticated, architectural feel of a professional services firm, all containers, buttons, and form fields must have hard 90-degree corners. Rounded corners are perceived as \"friendly\" or \"tech-oriented,\" whereas sharp corners evoke precision, heritage, and structure. \n\nImages should follow this rule strictly, often framed by a thin gold or slate border with a 4px-8px inset to create a \"matted print\" effect.\n\n## Components\n- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.\n- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.\n- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.\n- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.\n- **The \"Signature\" Component:** A decorative gold serif \"A\" or a small crest should be used as a divider or \"end-of-article\" mark to reinforce the bespoke nature of the services.",
+                "customColor": "#2c3e50",
+                "designMd": "---\nname: Modern Utility Editorial\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e5e2e1'\n  on-surface: '#1b1b1b'\n  on-surface-variant: '#43474c'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#74777d'\n  outline-variant: '#c4c6cd'\n  surface-tint: '#4e6073'\n  primary: '#162839'\n  on-primary: '#ffffff'\n  primary-container: '#2c3e50'\n  on-primary-container: '#96a9be'\n  inverse-primary: '#b5c8df'\n  secondary: '#a23f00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fc7127'\n  on-secondary-container: '#5c2000'\n  tertiary: '#362308'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4e381c'\n  on-tertiary-container: '#c1a17d'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d1e4fb'\n  primary-fixed-dim: '#b5c8df'\n  on-primary-fixed: '#091d2e'\n  on-primary-fixed-variant: '#36485b'\n  secondary-fixed: '#ffdbcd'\n  secondary-fixed-dim: '#ffb595'\n  on-secondary-fixed: '#351000'\n  on-secondary-fixed-variant: '#7c2e00'\n  tertiary-fixed: '#ffddb7'\n  tertiary-fixed-dim: '#e3c19b'\n  on-tertiary-fixed: '#291802'\n  on-tertiary-fixed-variant: '#5a4225'\n  background: '#fcf9f8'\n  on-background: '#1b1b1b'\n  surface-variant: '#e5e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-technical:\n    fontFamily: Geist\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\n  label-mono:\n    fontFamily: Geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  grid-columns: '12'\n---\n\n## Brand & Style\n\nThis design system establishes a \"Modern Utility\" aesthetic for high-end home services. It moves away from blue-collar tropes toward an architectural, design-build sensibility. The brand personality is authoritative, precise, and sophisticated, targeting a clientele that values craftsmanship and meticulous attention to detail.\n\nThe visual style is a hybrid of **Minimalism** and **Bento-grid Architecture**. It utilizes structured modularity, heavy whitespace, and high-contrast typography to evoke the feeling of a premium editorial magazine or an architectural portfolio. The UI should feel like a set of blueprints: organized, functional, yet aesthetically elevated.\n\n## Colors\n\nThe palette is rooted in industry and raw materials, refined for a premium digital experience. \n\n- **Primary (Steel Blue):** Used for structural elements, primary branding, and deep backgrounds. It represents stability and professional rigor.\n- **Secondary (Burnt Copper):** A functional accent used sparingly for calls-to-action, status indicators, or highlighting technical details. It evokes copper piping and raw craftsmanship.\n- **Neutral (Deep Charcoal):** Used for primary text and high-contrast borders to ensure maximum legibility and a sharp, ink-on-paper feel.\n- **Background (Paper):** A slightly off-white base that reduces eye strain and provides a sophisticated, gallery-like canvas for the content.\n\n## Typography\n\nThe typographic scale relies on the tension between the classical elegance of **Playfair Display** and the technical precision of **Geist**.\n\n- **Headlines:** Use Playfair Display for all major headings. Large displays should use tight letter spacing to emphasize the editorial look.\n- **Body:** Inter provides a neutral, highly readable foundation for service descriptions and long-form content.\n- **Technical Labels:** Use Geist (Monospaced) for metadata, dimensions, price points, and small labels. This reinforces the \"architectural blueprint\" motif.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** bento-box architecture. Content is housed within modular containers that adhere to a strict 12-column grid on desktop.\n\n- **Bento Philosophy:** Each piece of information (service, testimonial, CTA) lives in its own \"cell.\" Use varying aspect ratios (1:1, 2:1, 1:2) to create visual interest while maintaining alignment.\n- **Dot Grid:** Use a subtle 24px dot-grid background (color: `#E5E5E7`) to provide a technical underlying structure.\n- **Hairlines:** Separate sections and modules with 1px hairlines using the Primary color at 15% opacity. \n- **Reflow:** On mobile, the 12-column grid collapses to a single-column stack, maintaining the modular card appearance but prioritizing vertical scrolling.\n\n## Elevation & Depth\n\nDepth is achieved through **Low-contrast Outlines** and tonal layering rather than shadows. \n\n- **Surface Tiers:** Use the \"Paper\" background as the base. Elevated cards use a pure white (`#FFFFFF`) background with a 1px solid border (`#1C1C1C` at 10% opacity).\n- **No Shadows:** To maintain the editorial, flat-print feel, avoid drop shadows entirely. \n- **Active States:** When a card or element is interacted with, increase the border weight to 2px or shift the background color slightly to a very light grey.\n- **Backdrop Blurs:** Use a subtle backdrop blur on navigation bars or persistent overlays to maintain a sense of layered glass over the technical grid.\n\n## Shapes\n\nThe shape language is disciplined and geometric. \n\n- **Containers:** All modules and cards use a \"Soft\" (0.25rem) radius. This provides just enough approachable warmth to offset the \"Industrial\" colors and fonts without losing the architectural edge.\n- **Interactive Elements:** Buttons and input fields should match this radius. \n- **Large Components:** Hero sections or large bento-containers may use `rounded-lg` (0.5rem) for a more pronounced structural look.\n\n## Components\n\n- **Buttons:** High-contrast blocks. Primary buttons are Deep Charcoal with White text. Secondary buttons use an outline style with Geist Mono text. Use \"Burnt Copper\" exclusively for high-priority conversion points like \"Book Consultation.\"\n- **Bento Cards:** The core component. Cards should have consistent padding (24px) and use technical labels (Geist) in the top-right corner to categorize content.\n- **Chips/Tags:** Small, rectangular Geist-font labels with a light grey background and no border. Used for service categories (e.g., PLUMBING, CARPENTRY).\n- **Input Fields:** Minimalist design with only a bottom border (1px). Upon focus, the border transitions to Steel Blue.\n- **Lists:** Service lists should be punctuated by thin horizontal hairlines. Use a \"Burnt Copper\" dot or Geist-font numeral for bullet points.\n- **Featured Service Card:** A specialized bento-cell that uses a high-quality architectural photograph as a background with a \"Paper\" colored typography overlay.",
                 "font": "PLAYFAIR_DISPLAY",
                 "headlineFont": "PLAYFAIR_DISPLAY",
                 "headlineFontFamily": "Playfair Display",
-                "labelFont": "INTER",
-                "labelFontFamily": "Inter",
+                "labelFont": "GEIST",
+                "labelFontFamily": "Geist",
                 "namedColors": {
-                  "background": "#fbf9fa",
+                  "background": "#fcf9f8",
                   "error": "#ba1a1a",
                   "error_container": "#ffdad6",
-                  "inverse_on_surface": "#f2f0f1",
-                  "inverse_primary": "#c8c6c7",
-                  "inverse_surface": "#303031",
-                  "on_background": "#1b1c1c",
+                  "inverse_on_surface": "#f3f0ef",
+                  "inverse_primary": "#b5c8df",
+                  "inverse_surface": "#313030",
+                  "on_background": "#1b1b1b",
                   "on_error": "#ffffff",
                   "on_error_container": "#93000a",
                   "on_primary": "#ffffff",
-                  "on_primary_container": "#858384",
-                  "on_primary_fixed": "#1b1b1c",
-                  "on_primary_fixed_variant": "#474647",
+                  "on_primary_container": "#96a9be",
+                  "on_primary_fixed": "#091d2e",
+                  "on_primary_fixed_variant": "#36485b",
                   "on_secondary": "#ffffff",
-                  "on_secondary_container": "#785a1a",
-                  "on_secondary_fixed": "#261900",
-                  "on_secondary_fixed_variant": "#5d4201",
-                  "on_surface": "#1b1c1c",
-                  "on_surface_variant": "#46474a",
+                  "on_secondary_container": "#5c2000",
+                  "on_secondary_fixed": "#351000",
+                  "on_secondary_fixed_variant": "#7c2e00",
+                  "on_surface": "#1b1b1b",
+                  "on_surface_variant": "#43474c",
                   "on_tertiary": "#ffffff",
-                  "on_tertiary_container": "#848480",
-                  "on_tertiary_fixed": "#1b1c19",
-                  "on_tertiary_fixed_variant": "#474744",
-                  "outline": "#76777b",
-                  "outline_variant": "#c7c6ca",
-                  "primary": "#000000",
-                  "primary_container": "#1b1b1c",
-                  "primary_fixed": "#e5e2e3",
-                  "primary_fixed_dim": "#c8c6c7",
-                  "secondary": "#775a19",
-                  "secondary_container": "#fed488",
-                  "secondary_fixed": "#ffdea5",
-                  "secondary_fixed_dim": "#e9c176",
-                  "surface": "#fbf9fa",
-                  "surface_bright": "#fbf9fa",
-                  "surface_container": "#efedee",
-                  "surface_container_high": "#eae7e8",
-                  "surface_container_highest": "#e4e2e3",
-                  "surface_container_low": "#f5f3f4",
+                  "on_tertiary_container": "#c1a17d",
+                  "on_tertiary_fixed": "#291802",
+                  "on_tertiary_fixed_variant": "#5a4225",
+                  "outline": "#74777d",
+                  "outline_variant": "#c4c6cd",
+                  "primary": "#162839",
+                  "primary_container": "#2c3e50",
+                  "primary_fixed": "#d1e4fb",
+                  "primary_fixed_dim": "#b5c8df",
+                  "secondary": "#a23f00",
+                  "secondary_container": "#fc7127",
+                  "secondary_fixed": "#ffdbcd",
+                  "secondary_fixed_dim": "#ffb595",
+                  "surface": "#fcf9f8",
+                  "surface_bright": "#fcf9f8",
+                  "surface_container": "#f0eded",
+                  "surface_container_high": "#eae7e7",
+                  "surface_container_highest": "#e5e2e1",
+                  "surface_container_low": "#f6f3f2",
                   "surface_container_lowest": "#ffffff",
-                  "surface_dim": "#dbd9da",
-                  "surface_tint": "#5f5e5f",
-                  "surface_variant": "#e4e2e3",
-                  "tertiary": "#000000",
-                  "tertiary_container": "#1b1c19",
-                  "tertiary_fixed": "#e4e2dd",
-                  "tertiary_fixed_dim": "#c8c6c2"
+                  "surface_dim": "#dcd9d9",
+                  "surface_tint": "#4e6073",
+                  "surface_variant": "#e5e2e1",
+                  "tertiary": "#362308",
+                  "tertiary_container": "#4e381c",
+                  "tertiary_fixed": "#ffddb7",
+                  "tertiary_fixed_dim": "#e3c19b"
                 },
-                "overrideNeutralColor": "#4a4a4b",
-                "overridePrimaryColor": "#1a1a1b",
-                "overrideSecondaryColor": "#c5a059",
-                "overrideTertiaryColor": "#f9f7f2",
+                "overrideNeutralColor": "#1c1c1c",
+                "overridePrimaryColor": "#2c3e50",
+                "overrideSecondaryColor": "#d35400",
+                "roundness": "ROUND_FOUR",
                 "spacing": {
-                  "container-max": "1280px",
-                  "gutter": "32px",
+                  "grid-columns": "12",
+                  "gutter": "24px",
                   "margin-desktop": "64px",
-                  "margin-mobile": "24px",
-                  "section-gap": "128px",
-                  "unit": "8px"
+                  "margin-mobile": "20px",
+                  "unit": "4px"
                 },
                 "spacingScale": 2,
                 "typography": {
@@ -218,8 +222,7 @@
                     "fontFamily": "Inter",
                     "fontSize": "18px",
                     "fontWeight": "400",
-                    "letterSpacing": "0.01em",
-                    "lineHeight": "1.8"
+                    "lineHeight": "1.6"
                   },
                   "body-md": {
                     "fontFamily": "Inter",
@@ -238,12 +241,7 @@
                     "fontFamily": "Playfair Display",
                     "fontSize": "40px",
                     "fontWeight": "700",
-                    "lineHeight": "1.2"
-                  },
-                  "headline-lg": {
-                    "fontFamily": "Playfair Display",
-                    "fontSize": "48px",
-                    "fontWeight": "600",
+                    "letterSpacing": "-0.01em",
                     "lineHeight": "1.2"
                   },
                   "headline-md": {
@@ -252,111 +250,122 @@
                     "fontWeight": "600",
                     "lineHeight": "1.3"
                   },
-                  "label-caps": {
-                    "fontFamily": "Inter",
-                    "fontSize": "12px",
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
                     "fontWeight": "600",
-                    "letterSpacing": "0.15em",
+                    "lineHeight": "1.4"
+                  },
+                  "label-mono": {
+                    "fontFamily": "Geist",
+                    "fontSize": "14px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.4"
+                  },
+                  "label-technical": {
+                    "fontFamily": "Geist",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.05em",
                     "lineHeight": "1.0"
                   }
                 }
               }
             },
-            "name": "assets/f837a56eb8e94fe5956b2460d1e1bf84",
+            "name": "assets/055e96ea8aa94f6fbe9970852099e6ef",
             "version": "1"
           },
           "deviceType": "DESKTOP",
           "generatedBy": "figaro_agent",
-          "height": "9544",
+          "height": "8086",
           "htmlCode": {
-            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzI3MDZiNDExYTc2NTRiYWFiZDRhOWJhNTc2MGIzZmZlEgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhM0OTI4Mjg5MjIzOTgzMTA0Mzc5&filename=&opi=96797242",
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzVhMmFmYzdhMjZhODQ5Njc5M2YwYzE0NWQ5OTFkMTE2EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDg3NjMwNzMyMjk4NjAwMDY2NA&filename=&opi=96797242",
             "mimeType": "text/html",
-            "name": "projects/4928289223983104379/files/8d0652be63b34a89aff3b1bc40fbb424"
+            "name": "projects/14876307322986000664/files/01c91e87f07f418e807179f480b2494f"
           },
-          "id": "64213eb2cfcc4f9d92e62d76504976e7",
-          "name": "projects/4928289223983104379/screens/64213eb2cfcc4f9d92e62d76504976e7",
-          "prompt": "Build the complete production-ready desktop homepage for ARK Angels, LLC. \n\nLayout Archetype: Classic Centered Hero.\nStyle: Editorial, premium, bespoke. \n\nRequired Sections (in this order):\n1. TopNavBar: Product name \"ARK Angels, LLC\", links (Services, About, Contact), and phone (937) 304-7574.\n2. Hero: Centered layout. Large serif headline: \"Excellence in Service, Rooted in Dayton.\" Wide hero image background with an elegant overlay.\n3. Credibility: A horizontal band of values: \"Local Heritage,\" \"Professional Integrity,\" \"Community First.\" Use hairline dividers.\n4. Services: An editorial grid. Each service should have a large serif numeral (01, 02, etc.), a clear title, and a brief description.\n5. About: A two-column section. Left: High-quality image. Right: Story of ARK Angels as a dedicated local partner.\n6. Visit: Split layout. Left: Address (4121 Stonewall Circle, Dayton, OH 45415) and contact. Right: A map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A sophisticated, centered contact form with fields for Name, Email, and Message.\n8. Footer: Complete brand footer with copyright and email (rldanner@roadrunner.com).\n\nVisual Details: Use a palette of Slate, Gold, and Parchment. Fine rules, generous whitespace, and high-contrast typography. No lorem ipsum. Use semantic HTML5.",
+          "id": "958d9393f98a4585b95ea8ab92c73664",
+          "name": "projects/14876307322986000664/screens/958d9393f98a4585b95ea8ab92c73664",
+          "prompt": "Create a complete production-ready desktop homepage for ARK Angels, LLC. \n\nLayout: Bento Grid. Modular, editorial, and high-density mid-page.\nVisual Style: Modern Utility Editorial. Steel blue, deep charcoal, and copper accents. Fine lines, dot-grid textures. \n\nSections:\n1. Header: Logo (ARK Angels), Links (Services, Portfolio, About), Phone ((937) 304-7574).\n2. Hero Bento: Large 'Statement' card with a high-fidelity image of architectural detail, smaller cards for 'Reliability' and 'Our Mission'.\n3. Credibility: A horizontal strip of stats: '15+ Years Experience', 'Dayton Local', 'Fully Licensed'.\n4. Services Bento: A dense grid of service cards (Interior Work, Exterior Maintenance, Remodeling, Handyman Services) each with distinct visual weight.\n5. About: A 'Human Element' section featuring a story about the craftsman/team.\n6. Visit: A modular section containing contact info (4121 Stonewall Circle, Dayton, OH) and the required empty map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A premium bento-style contact form integrated into the grid.\n8. Footer: Semantic layout with copyright and links.\n\nContent: No lorem ipsum. Use professional, authoritative copy for a home services brand. \nContact Info: (937) 304-7574, rldanner@roadrunner.com, 4121 Stonewall Circle, Dayton, OH 45415.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "DESIGN",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuItXA61V7zZMAO_JSiLNgJw242Y5EpdfljMk4r3MdvzUPpvuR1l7IMwKdnqmyhrR24CPXGc-f-3gKIzFGn6wqfUDNzTLmWg0RB0dLAGep2wFFUwTsuokLlTSZwruj907FTc18t6HtBECQPc-8E-mANzLcNSZ6pwJgolNyT2ddeBpcLumoZnkGLSKsi-wRfATb9xDRiRNj1sGLOk2OgzjGLOE5DAa4BGr9OhDpBqT8nubeaJUnyNxMNF8k",
-            "name": "projects/4928289223983104379/files/39aa309d0b1846d1b12d3641b6bbab9e"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuWjZaOih0FjJ4SbTJz1ehCoIU30Ae41EGNl30GnvnVJqql4iDid1hW6Ce4i8_IgKvva_AAKPtDlEec3Yc_pRFf3igjbMVwVwU4lV5pYp7eWhbMCR04Yeue7-01yFg_RjQ8vp5B4NuCcoRI_VW6D0XNmfbHW27byqB7QWegirOhukQy9ojgM-zfUufvc-Gr3ZrllCMPzPzahQ1tQkDiOXjM9AeA0q7jijmZvT3IhJfho7s0kPKFZTCA_eM2",
+            "name": "projects/14876307322986000664/files/9569cf8554f74563a8ecbc6dcca7da67"
           },
           "theme": {
             "bodyFont": "INTER",
             "bodyFontFamily": "Inter",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
-            "customColor": "#1a1a1b",
-            "designMd": "---\nname: ARK Angels Editorial System\ncolors:\n  surface: '#fbf9fa'\n  surface-dim: '#dbd9da'\n  surface-bright: '#fbf9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f4'\n  surface-container: '#efedee'\n  surface-container-high: '#eae7e8'\n  surface-container-highest: '#e4e2e3'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#46474a'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f1'\n  outline: '#76777b'\n  outline-variant: '#c7c6ca'\n  surface-tint: '#5f5e5f'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1b1b1c'\n  on-primary-container: '#858384'\n  inverse-primary: '#c8c6c7'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1b1c19'\n  on-tertiary-container: '#848480'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1b1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fbf9fa'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e3'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.\n\nThe design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from \"tech\" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.\n\n## Colors\nThe palette, \"Slate & Gold,\" is designed for high-contrast legibility and a sense of \"quiet luxury.\"\n\n- **Slate (#1A1A1B):** Used for primary typography and deep-toned backgrounds. It is a soft black that feels more natural and expensive than pure hex #000.\n- **Gold (#C5A059):** A muted metallic used sparingly for accents, key CTAs, and decorative hairline flourishes. It should never be used for large blocks of text.\n- **Parchment (#F9F7F2):** The primary canvas color. This off-white reduces eye strain and provides a tactile, paper-like quality compared to stark white.\n- **Neutral (#4A4A4B):** Used for secondary body text and metadata to maintain a clear hierarchy without competing with the primary slate headings.\n\n## Typography\nThe typographic strategy relies on a high-contrast pairing:\n\n- **Headlines:** Playfair Display provides the \"editorial voice.\" Use it with tight tracking for large displays and slightly more air for subheads. It should feel authoritative and graceful.\n- **Body:** Inter is chosen for its utilitarian clarity, providing a modern counterweight to the serif. Increased line-height (1.8) for `body-lg` is essential to maintain the magazine-style readability.\n- **Labels:** Use `label-caps` for eyebrows, small descriptors, and navigation items. The wide letter-spacing is a key \"high-end\" brand signifier.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model for desktop to ensure the \"editorial\" compositions remain perfectly balanced. \n\n- **Grid:** 12-columns with wide 32px gutters to prevent content density.\n- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.\n- **The \"Editorial Gap\":** Use the `section-gap` (128px) between major content blocks. This intentional \"over-spacing\" is what separates this system from a generic business template.\n- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.\n\n- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.\n- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.\n- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a \"ghost\" border. Avoid soft, blurry \"Material\" style shadows.\n\n## Shapes\nThe shape language is **Sharp (0px)**. \n\nTo maintain the sophisticated, architectural feel of a professional services firm, all containers, buttons, and form fields must have hard 90-degree corners. Rounded corners are perceived as \"friendly\" or \"tech-oriented,\" whereas sharp corners evoke precision, heritage, and structure. \n\nImages should follow this rule strictly, often framed by a thin gold or slate border with a 4px-8px inset to create a \"matted print\" effect.\n\n## Components\n- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.\n- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.\n- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.\n- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.\n- **The \"Signature\" Component:** A decorative gold serif \"A\" or a small crest should be used as a divider or \"end-of-article\" mark to reinforce the bespoke nature of the services.",
+            "customColor": "#2c3e50",
+            "designMd": "---\nname: Modern Utility Editorial\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e5e2e1'\n  on-surface: '#1b1b1b'\n  on-surface-variant: '#43474c'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#74777d'\n  outline-variant: '#c4c6cd'\n  surface-tint: '#4e6073'\n  primary: '#162839'\n  on-primary: '#ffffff'\n  primary-container: '#2c3e50'\n  on-primary-container: '#96a9be'\n  inverse-primary: '#b5c8df'\n  secondary: '#a23f00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fc7127'\n  on-secondary-container: '#5c2000'\n  tertiary: '#362308'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4e381c'\n  on-tertiary-container: '#c1a17d'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d1e4fb'\n  primary-fixed-dim: '#b5c8df'\n  on-primary-fixed: '#091d2e'\n  on-primary-fixed-variant: '#36485b'\n  secondary-fixed: '#ffdbcd'\n  secondary-fixed-dim: '#ffb595'\n  on-secondary-fixed: '#351000'\n  on-secondary-fixed-variant: '#7c2e00'\n  tertiary-fixed: '#ffddb7'\n  tertiary-fixed-dim: '#e3c19b'\n  on-tertiary-fixed: '#291802'\n  on-tertiary-fixed-variant: '#5a4225'\n  background: '#fcf9f8'\n  on-background: '#1b1b1b'\n  surface-variant: '#e5e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-technical:\n    fontFamily: Geist\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\n  label-mono:\n    fontFamily: Geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  grid-columns: '12'\n---\n\n## Brand & Style\n\nThis design system establishes a \"Modern Utility\" aesthetic for high-end home services. It moves away from blue-collar tropes toward an architectural, design-build sensibility. The brand personality is authoritative, precise, and sophisticated, targeting a clientele that values craftsmanship and meticulous attention to detail.\n\nThe visual style is a hybrid of **Minimalism** and **Bento-grid Architecture**. It utilizes structured modularity, heavy whitespace, and high-contrast typography to evoke the feeling of a premium editorial magazine or an architectural portfolio. The UI should feel like a set of blueprints: organized, functional, yet aesthetically elevated.\n\n## Colors\n\nThe palette is rooted in industry and raw materials, refined for a premium digital experience. \n\n- **Primary (Steel Blue):** Used for structural elements, primary branding, and deep backgrounds. It represents stability and professional rigor.\n- **Secondary (Burnt Copper):** A functional accent used sparingly for calls-to-action, status indicators, or highlighting technical details. It evokes copper piping and raw craftsmanship.\n- **Neutral (Deep Charcoal):** Used for primary text and high-contrast borders to ensure maximum legibility and a sharp, ink-on-paper feel.\n- **Background (Paper):** A slightly off-white base that reduces eye strain and provides a sophisticated, gallery-like canvas for the content.\n\n## Typography\n\nThe typographic scale relies on the tension between the classical elegance of **Playfair Display** and the technical precision of **Geist**.\n\n- **Headlines:** Use Playfair Display for all major headings. Large displays should use tight letter spacing to emphasize the editorial look.\n- **Body:** Inter provides a neutral, highly readable foundation for service descriptions and long-form content.\n- **Technical Labels:** Use Geist (Monospaced) for metadata, dimensions, price points, and small labels. This reinforces the \"architectural blueprint\" motif.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** bento-box architecture. Content is housed within modular containers that adhere to a strict 12-column grid on desktop.\n\n- **Bento Philosophy:** Each piece of information (service, testimonial, CTA) lives in its own \"cell.\" Use varying aspect ratios (1:1, 2:1, 1:2) to create visual interest while maintaining alignment.\n- **Dot Grid:** Use a subtle 24px dot-grid background (color: `#E5E5E7`) to provide a technical underlying structure.\n- **Hairlines:** Separate sections and modules with 1px hairlines using the Primary color at 15% opacity. \n- **Reflow:** On mobile, the 12-column grid collapses to a single-column stack, maintaining the modular card appearance but prioritizing vertical scrolling.\n\n## Elevation & Depth\n\nDepth is achieved through **Low-contrast Outlines** and tonal layering rather than shadows. \n\n- **Surface Tiers:** Use the \"Paper\" background as the base. Elevated cards use a pure white (`#FFFFFF`) background with a 1px solid border (`#1C1C1C` at 10% opacity).\n- **No Shadows:** To maintain the editorial, flat-print feel, avoid drop shadows entirely. \n- **Active States:** When a card or element is interacted with, increase the border weight to 2px or shift the background color slightly to a very light grey.\n- **Backdrop Blurs:** Use a subtle backdrop blur on navigation bars or persistent overlays to maintain a sense of layered glass over the technical grid.\n\n## Shapes\n\nThe shape language is disciplined and geometric. \n\n- **Containers:** All modules and cards use a \"Soft\" (0.25rem) radius. This provides just enough approachable warmth to offset the \"Industrial\" colors and fonts without losing the architectural edge.\n- **Interactive Elements:** Buttons and input fields should match this radius. \n- **Large Components:** Hero sections or large bento-containers may use `rounded-lg` (0.5rem) for a more pronounced structural look.\n\n## Components\n\n- **Buttons:** High-contrast blocks. Primary buttons are Deep Charcoal with White text. Secondary buttons use an outline style with Geist Mono text. Use \"Burnt Copper\" exclusively for high-priority conversion points like \"Book Consultation.\"\n- **Bento Cards:** The core component. Cards should have consistent padding (24px) and use technical labels (Geist) in the top-right corner to categorize content.\n- **Chips/Tags:** Small, rectangular Geist-font labels with a light grey background and no border. Used for service categories (e.g., PLUMBING, CARPENTRY).\n- **Input Fields:** Minimalist design with only a bottom border (1px). Upon focus, the border transitions to Steel Blue.\n- **Lists:** Service lists should be punctuated by thin horizontal hairlines. Use a \"Burnt Copper\" dot or Geist-font numeral for bullet points.\n- **Featured Service Card:** A specialized bento-cell that uses a high-quality architectural photograph as a background with a \"Paper\" colored typography overlay.",
             "font": "PLAYFAIR_DISPLAY",
             "headlineFont": "PLAYFAIR_DISPLAY",
             "headlineFontFamily": "Playfair Display",
-            "labelFont": "INTER",
-            "labelFontFamily": "Inter",
+            "labelFont": "GEIST",
+            "labelFontFamily": "Geist",
             "namedColors": {
-              "background": "#fbf9fa",
+              "background": "#fcf9f8",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f2f0f1",
-              "inverse_primary": "#c8c6c7",
-              "inverse_surface": "#303031",
-              "on_background": "#1b1c1c",
+              "inverse_on_surface": "#f3f0ef",
+              "inverse_primary": "#b5c8df",
+              "inverse_surface": "#313030",
+              "on_background": "#1b1b1b",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
-              "on_primary_container": "#858384",
-              "on_primary_fixed": "#1b1b1c",
-              "on_primary_fixed_variant": "#474647",
+              "on_primary_container": "#96a9be",
+              "on_primary_fixed": "#091d2e",
+              "on_primary_fixed_variant": "#36485b",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#785a1a",
-              "on_secondary_fixed": "#261900",
-              "on_secondary_fixed_variant": "#5d4201",
-              "on_surface": "#1b1c1c",
-              "on_surface_variant": "#46474a",
+              "on_secondary_container": "#5c2000",
+              "on_secondary_fixed": "#351000",
+              "on_secondary_fixed_variant": "#7c2e00",
+              "on_surface": "#1b1b1b",
+              "on_surface_variant": "#43474c",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#848480",
-              "on_tertiary_fixed": "#1b1c19",
-              "on_tertiary_fixed_variant": "#474744",
-              "outline": "#76777b",
-              "outline_variant": "#c7c6ca",
-              "primary": "#000000",
-              "primary_container": "#1b1b1c",
-              "primary_fixed": "#e5e2e3",
-              "primary_fixed_dim": "#c8c6c7",
-              "secondary": "#775a19",
-              "secondary_container": "#fed488",
-              "secondary_fixed": "#ffdea5",
-              "secondary_fixed_dim": "#e9c176",
-              "surface": "#fbf9fa",
-              "surface_bright": "#fbf9fa",
-              "surface_container": "#efedee",
-              "surface_container_high": "#eae7e8",
-              "surface_container_highest": "#e4e2e3",
-              "surface_container_low": "#f5f3f4",
+              "on_tertiary_container": "#c1a17d",
+              "on_tertiary_fixed": "#291802",
+              "on_tertiary_fixed_variant": "#5a4225",
+              "outline": "#74777d",
+              "outline_variant": "#c4c6cd",
+              "primary": "#162839",
+              "primary_container": "#2c3e50",
+              "primary_fixed": "#d1e4fb",
+              "primary_fixed_dim": "#b5c8df",
+              "secondary": "#a23f00",
+              "secondary_container": "#fc7127",
+              "secondary_fixed": "#ffdbcd",
+              "secondary_fixed_dim": "#ffb595",
+              "surface": "#fcf9f8",
+              "surface_bright": "#fcf9f8",
+              "surface_container": "#f0eded",
+              "surface_container_high": "#eae7e7",
+              "surface_container_highest": "#e5e2e1",
+              "surface_container_low": "#f6f3f2",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#dbd9da",
-              "surface_tint": "#5f5e5f",
-              "surface_variant": "#e4e2e3",
-              "tertiary": "#000000",
-              "tertiary_container": "#1b1c19",
-              "tertiary_fixed": "#e4e2dd",
-              "tertiary_fixed_dim": "#c8c6c2"
+              "surface_dim": "#dcd9d9",
+              "surface_tint": "#4e6073",
+              "surface_variant": "#e5e2e1",
+              "tertiary": "#362308",
+              "tertiary_container": "#4e381c",
+              "tertiary_fixed": "#ffddb7",
+              "tertiary_fixed_dim": "#e3c19b"
             },
-            "overrideNeutralColor": "#4a4a4b",
-            "overridePrimaryColor": "#1a1a1b",
-            "overrideSecondaryColor": "#c5a059",
-            "overrideTertiaryColor": "#f9f7f2",
+            "overrideNeutralColor": "#1c1c1c",
+            "overridePrimaryColor": "#2c3e50",
+            "overrideSecondaryColor": "#d35400",
+            "roundness": "ROUND_FOUR",
             "spacing": {
-              "container-max": "1280px",
-              "gutter": "32px",
+              "grid-columns": "12",
+              "gutter": "24px",
               "margin-desktop": "64px",
-              "margin-mobile": "24px",
-              "section-gap": "128px",
-              "unit": "8px"
+              "margin-mobile": "20px",
+              "unit": "4px"
             },
             "spacingScale": 2,
             "typography": {
@@ -364,8 +373,7 @@
                 "fontFamily": "Inter",
                 "fontSize": "18px",
                 "fontWeight": "400",
-                "letterSpacing": "0.01em",
-                "lineHeight": "1.8"
+                "lineHeight": "1.6"
               },
               "body-md": {
                 "fontFamily": "Inter",
@@ -384,12 +392,7 @@
                 "fontFamily": "Playfair Display",
                 "fontSize": "40px",
                 "fontWeight": "700",
-                "lineHeight": "1.2"
-              },
-              "headline-lg": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "48px",
-                "fontWeight": "600",
+                "letterSpacing": "-0.01em",
                 "lineHeight": "1.2"
               },
               "headline-md": {
@@ -398,16 +401,28 @@
                 "fontWeight": "600",
                 "lineHeight": "1.3"
               },
-              "label-caps": {
-                "fontFamily": "Inter",
-                "fontSize": "12px",
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
                 "fontWeight": "600",
-                "letterSpacing": "0.15em",
+                "lineHeight": "1.4"
+              },
+              "label-mono": {
+                "fontFamily": "Geist",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "1.4"
+              },
+              "label-technical": {
+                "fontFamily": "Geist",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
                 "lineHeight": "1.0"
               }
             }
           },
-          "title": "ARK Angels | Bespoke Editorial Homepage",
+          "title": "ARK Angels | Bespoke Home Services",
           "width": "2560"
         }
       ],
@@ -415,15 +430,15 @@
     }
   },
   {
-    "text": "I've completed the bespoke redesign for ARK Angels, LLC, creating a high-fidelity, editorial-grade homepage that emphasizes their local heritage and professional integrity.\n\n### Design Highlights:\n- **Visual Identity**: Established a \"Slate & Gold\" palette paired with high-contrast serif typography to create a premium, authoritative first impression.\n- **Classic Centered Layout**: The hero and core sections use a symmetrical, centered composition that feels balanced and timeless.\n- **Editorial Flair**: I used large serif numerals for the services section and fine hairline dividers throughout to give the site a sophisticated magazine-like quality.\n- **Local Context**: Focused the copy on Dayton, OH, and the business's community roots to differentiate it from generic national competitors.\n\nThe code is fully production-ready, featuring a mobile-responsive navigation system, smooth scrolling, and the specific map slot you requested.\n\nHow does this new direction feel for the brand? We can refine the color balance or adjust the visual weight of the services section if you'd like."
+    "text": "I've designed a bespoke, editorial-grade bento-style homepage for ARK Angels, LLC. \n\n### Design Rationale:\n*   **Bento Grid Architecture:** Unlike typical local business sites, I utilized a modular grid to organize services and credibility stats. This allows for high information density while maintaining a clean, premium visual rhythm.\n*   **Modern Utility Identity:** I've established a \"Modern Utility\" aesthetic using a deep Steel Blue and Burnt Copper palette. This moves the brand away from generic handyman tropes and toward a more architectural, design-build feel.\n*   **Editorial Typography:** The pairing of a high-contrast serif for headlines and a technical monospace font for labels creates an authoritative, craftsman-led tone.\n*   **Memorable Visual Motifs:** Fine hairlines and subtle dot-grid backgrounds are used throughout the layout to reinforce the brand's attention to precision and detail.\n\nThe site includes all requested sections: a utility-focused header, a high-impact hero bento, a service grid, the stewardship-focused \"About\" section, and a integrated contact/map module ready for production.\n\nHow does this new creative direction feel for the ARK Angels brand?"
   },
   {
-    "suggestion": "Change the gold accent to a deep burgundy"
+    "suggestion": "Add subtle animations to the bento cards"
   },
   {
-    "suggestion": "Make the hero section full-height with a video background"
+    "suggestion": "Darken the color palette for a more industrial feel"
   },
   {
-    "suggestion": "Add a testimonials carousel before the contact form"
+    "suggestion": "Expand the portfolio section with more bento slots"
   }
 ]
