@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SWEET BONEZ | Alabama BBQ Pitmaster Crafted</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=DM+Sans:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "error-container": "#93000a",
+                    "error": "#ffb4ab",
+                    "surface-container-lowest": "#110d0c",
+                    "on-secondary-fixed": "#1c1c1a",
+                    "surface-container-low": "#1f1b19",
+                    "on-secondary-container": "#b7b5b2",
+                    "on-tertiary": "#571e00",
+                    "on-secondary": "#31302f",
+                    "on-surface-variant": "#d0c4c0",
+                    "on-secondary-fixed-variant": "#474745",
+                    "primary": "#ccc5c3",
+                    "on-primary": "#33302e",
+                    "inverse-surface": "#ebe0dd",
+                    "primary-container": "#1a1716",
+                    "on-primary-container": "#85807e",
+                    "primary-fixed-dim": "#ccc5c3",
+                    "on-error": "#690005",
+                    "secondary-fixed-dim": "#c8c6c3",
+                    "surface-container-highest": "#393432",
+                    "surface-variant": "#393432",
+                    "on-primary-fixed-variant": "#4a4644",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed-dim": "#ffb595",
+                    "surface-tint": "#ccc5c3",
+                    "on-primary-fixed": "#1e1b1a",
+                    "tertiary": "#ffb595",
+                    "tertiary-fixed": "#ffdbcd",
+                    "outline-variant": "#4d4542",
+                    "surface-bright": "#3e3836",
+                    "surface-container-high": "#2e2927",
+                    "on-tertiary-fixed": "#351000",
+                    "surface": "#171211",
+                    "inverse-primary": "#625d5c",
+                    "background": "#171211",
+                    "inverse-on-surface": "#352f2d",
+                    "outline": "#998e8b",
+                    "surface-dim": "#171211",
+                    "primary-fixed": "#e9e1df",
+                    "secondary-fixed": "#e5e2df",
+                    "surface-container": "#231f1d",
+                    "on-background": "#ebe0dd",
+                    "tertiary-container": "#2f0d00",
+                    "on-tertiary-container": "#d95907",
+                    "on-tertiary-fixed-variant": "#7c2e00",
+                    "secondary": "#c8c6c3",
+                    "on-surface": "#ebe0dd"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "64px",
+                    "section-gap": "128px",
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "label-caps": ["DM Sans"],
+                    "headline-xl-mobile": ["Playfair Display"],
+                    "headline-xl": ["Playfair Display"],
+                    "body-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                    "headline-xl-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.04;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+        }
+
+        .asymmetric-rule {
+            height: 1px;
+            background-color: theme('colors.outline-variant');
+            width: calc(100% - 24px);
+        }
+
+        .vertical-rule {
+            width: 1px;
+            background-color: theme('colors.outline-variant');
+        }
+
+        .dotted-leader {
+            border-bottom: 1px dotted theme('colors.outline');
+            flex-grow: 1;
+            margin: 0 12px;
+            margin-bottom: 8px;
+        }
+
+        .floating-label-input:focus ~ label,
+        .floating-label-input:not(:placeholder-shown) ~ label {
+            transform: translateY(-24px) scale(0.85);
+            color: theme('colors.tertiary');
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden selection:bg-tertiary selection:text-on-tertiary">
+<div class="grain-overlay"></div>
+<!-- Header / TopAppBar -->
+<header class="w-full top-0 sticky bg-background border-b border-outline-variant flex justify-between items-center px-margin-desktop py-6 z-50">
+<div class="flex items-center gap-12">
+<h1 class="font-display-lg text-headline-xl tracking-tighter text-on-surface">SWEET BONEZ</h1>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface border-b border-on-surface hover:text-primary transition-colors duration-200" href="#">MENU</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">STORY</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#">LOCATION</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="font-label-caps text-label-caps hidden sm:block">(205) 555-0123</span>
+<span class="material-symbols-outlined cursor-pointer hover:text-primary transition-colors">shopping_bag</span>
+</div>
+</header>
+<main>
+<!-- Split Hero Section -->
+<section class="min-h-[870px] flex flex-col md:flex-row border-b border-outline-variant">
+<div class="w-full md:w-1/2 flex flex-col justify-center px-margin-desktop py-20">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-tertiary mb-6 block">TUSCALOOSA, ALABAMA</span>
+<h2 class="font-display-lg text-display-lg leading-[0.9] mb-8">THE SOUL<br/>OF THE<br/>PIT</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">No shortcuts. No gas. Just dry-rubbed hickory heat and forty-eight hours of patience. We don't just cook BBQ; we preserve a legacy.</p>
+<button class="bg-tertiary text-on-tertiary px-12 py-4 font-label-caps text-label-caps hover:bg-white transition-colors duration-100 active:scale-95">ORDER NOW</button>
+</div>
+</div>
+<div class="w-full md:w-1/2 relative bg-surface-container overflow-hidden min-h-[400px]">
+<img alt="Close-up of hickory smoke rising from a black metal pit" class="absolute inset-0 w-full h-full object-cover grayscale opacity-80" data-alt="A cinematic, high-contrast close-up shot of thick, ethereal wood smoke swirling around the blackened, textured metal edge of a traditional Alabama BBQ pit. The lighting is moody and low-key, emphasizing the gritty textures and charcoal-like depth of the scene. Wisps of white smoke contrast sharply against the deep black shadows, evoking the primal energy of a Southern pitmaster's workspace. The visual style is premium editorial photography with a subtle grainy texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6RXoHVWVACe5FZZ0E8DmoKd7wSOpBzW5nxuVAJkl0XGN5pPEpbyaxajWbBGfYLQTidJ5fz_r9BYq1xsfFu3PybGdTsdShAjrxnyEsaqc1V3cHXQy6olvpYumYvndhKmxa3kTuPxeVedHnZ7A6hFqbIRVE284P6ZbXjajoE57Also4DHkGEEpr9hg2-AFZni4-ENhnNuwM24rG-q_TLvES_LnWsQ3zGSloxFaMR4Iq6jDYjJfOxEMIGsDMOpS6PvJLwTScExde5-jz"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent md:block hidden"></div>
+</div>
+</section>
+<!-- Credibility Bar -->
+<section class="border-b border-outline-variant py-8 px-margin-desktop overflow-hidden">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8 md:gap-0">
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">EST.</span>
+<span class="font-headline-md text-headline-md">2021</span>
+</div>
+<div class="hidden md:block vertical-rule h-8"></div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">PROCESS</span>
+<span class="font-headline-md text-headline-md">100% HICKORY SMOKED</span>
+</div>
+<div class="hidden md:block vertical-rule h-8"></div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps text-on-surface-variant">ORIGIN</span>
+<span class="font-headline-md text-headline-md">TUSCALOOSA NATIVE</span>
+</div>
+</div>
+</section>
+<!-- Offerings: The Daily Smoke -->
+<section class="py-section-gap px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col justify-between">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary">CRAFTED DAILY</span>
+<h3 class="font-display-lg text-headline-xl mt-4">THE DAILY SMOKE</h3>
+</div>
+<div class="mt-12 hidden md:block">
+<p class="font-body-md text-body-md text-on-surface-variant">Available until sold out. We fire the pits at dawn so you can feast by noon.</p>
+</div>
+</div>
+<div class="md:col-span-8 space-y-12">
+<!-- Menu List High Density -->
+<div class="space-y-8">
+<div class="group">
+<div class="flex items-end">
+<span class="font-display-lg text-headline-md">ST. LOUIS SPARE RIBS</span>
+<div class="dotted-leader"></div>
+<span class="font-label-caps text-label-caps">$28</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Dry-rubbed with our signature 'Sweet Heat', smoked 6 hours over green hickory. Slab or half-slab.</p>
+</div>
+<div class="asymmetric-rule"></div>
+<div class="group">
+<div class="flex items-end">
+<span class="font-display-lg text-headline-md">CENTRAL ALABAMA BRISKET</span>
+<div class="dotted-leader"></div>
+<span class="font-label-caps text-label-caps">$32</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Certified Angus, salt &amp; pepper crust, 14-hour overnight smoke. Served with white bread and pickles.</p>
+</div>
+<div class="asymmetric-rule"></div>
+<div class="group">
+<div class="flex items-end">
+<span class="font-display-lg text-headline-md">HICKORY PULLED PORK</span>
+<div class="dotted-leader"></div>
+<span class="font-label-caps text-label-caps">$18</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Shoulder butt hand-pulled to order. Tossed in a light vinegar-base Alabama mop sauce.</p>
+</div>
+<div class="asymmetric-rule"></div>
+<div class="group">
+<div class="flex items-end">
+<span class="font-display-lg text-headline-md">SMOKED LINK SAUSAGE</span>
+<div class="dotted-leader"></div>
+<span class="font-label-caps text-label-caps">$14</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">House-made pork and beef blend, snap casing, heavy pepper finish.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About: A Heritage of Heat -->
+<section class="bg-surface-container-low py-section-gap px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 relative aspect-square md:aspect-auto md:h-[600px] bg-background">
+<img alt="Pitmaster Portrait" class="absolute inset-0 w-full h-full object-cover grayscale brightness-75" data-alt="A powerful, low-angle black and white portrait of an experienced BBQ pitmaster standing before a wall of stacked hickory wood logs. The lighting is dramatic side-lighting, casting deep shadows that accentuate the weathered texture of his skin and his focused, dignified expression. He wears a heavy leather apron dusted with light ash. The overall aesthetic is one of gritty authenticity and artisanal expertise, captured in a premium editorial style with deep blacks and bright highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA1Di7rDA65sYY18TuU-7WRgNCHgCeYdd8X1MMIHlVY4C3e7EuEOisojTta7B384IHy8mW3RFem8cumI_kAq9eiG3q0xzJpopVVPj_1MMuqr9W0uIA_WOtnEUZyKW6ZJmnUFqqDGYng54VXN9qbcafm8V3pBVsvfoGA5ZSf0sTPyNe2Y3IJ015uxTzPOGl7rHjkM8d3CBG61WoPCKFDid2UrMiamKJNscTnYnQOWIslm4A_b8fKDtwHAt2ljV34U-IWxhdoGeXY3TvZ"/>
+</div>
+<div class="md:col-span-5 md:col-start-8 py-12">
+<span class="font-label-caps text-label-caps text-tertiary">OUR STORY</span>
+<h3 class="font-display-lg text-headline-xl mt-4 mb-8">A HERITAGE<br/>OF HEAT</h3>
+<p class="font-body-lg text-body-lg mb-6">Sweet Bonez started in a backyard off 15th Street with nothing but a rusted offset smoker and a family recipe for white sauce that dates back four generations.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">We believe BBQ is the ultimate equalizer. In the pit, there are no shortcuts. You can't rush fire, and you certainly can't rush history. Every rack of ribs we serve carries the weight of Alabama's smoke-stained legacy.</p>
+<div class="mt-12 flex gap-8">
+<div class="vertical-rule h-12"></div>
+<div>
+<p class="font-label-caps text-label-caps">CHRIS "BONES" MILLER</p>
+<p class="font-body-md text-body-md italic text-on-surface-variant">Founder &amp; Head Pitmaster</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-baseline border-b border-outline-variant pb-8 mb-12">
+<h3 class="font-display-lg text-display-lg">#VISIT</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">OPEN TUES-SUN | 11AM - SOLD OUT</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border border-outline-variant bg-surface-container" data-location="Tuscaloosa, Alabama" data-map-slot="" style="">
+<!-- Map Placeholder visual -->
+<div class="absolute inset-0 grayscale opacity-40 bg-[url('https://api.placeholder.com/1200/500')] bg-cover"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-background p-6 border border-tertiary">
+<p class="font-label-caps text-label-caps text-tertiary">3718 16TH STREET NORTHEAST</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-4 flex flex-col justify-center space-y-8">
+<div class="p-8 border border-outline-variant bg-surface-container-lowest">
+<h4 class="font-label-caps text-label-caps text-tertiary mb-4">THE PIT LOCATION</h4>
+<p class="font-headline-md text-headline-md mb-2">TUSCALOOSA, AL</p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">3718 16th Street Northeast<br/>Tuscaloosa, AL 35404</p>
+<div class="asymmetric-rule mb-6"></div>
+<h4 class="font-label-caps text-label-caps text-tertiary mb-4">PHONE</h4>
+<p class="font-headline-md text-headline-md">(205) 555-0123</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-surface py-section-gap border-t border-outline-variant">
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-0">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-tertiary">CONTACT US</span>
+<h3 class="font-display-lg text-headline-xl mt-4">RESERVE THE PIT</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4">Inquire about catering, private events, or whole hog orders.</p>
+</div>
+<form class="space-y-12" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative">
+<input class="floating-label-input block w-full bg-transparent border-0 border-b border-outline-variant px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors peer" id="name" placeholder=" " required="" type="text"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-label-caps text-label-caps transition-all pointer-events-none uppercase" for="name">Full Name</label>
+</div>
+<div class="relative">
+<input class="floating-label-input block w-full bg-transparent border-0 border-b border-outline-variant px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors peer" id="email" placeholder=" " required="" type="email"/>
+<label class="absolute left-0 top-3 text-on-surface-variant font-label-caps text-label-caps transition-all pointer-events-none uppercase" for="email">Email Address</label>
+</div>
+</div>
+<div class="relative">
+<textarea class="floating-label-input block w-full bg-transparent border-0 border-b border-outline-variant px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors peer min-h-[48px] resize-none" id="message" placeholder=" " required="" rows="1"></textarea>
+<label class="absolute left-0 top-3 text-on-surface-variant font-label-caps text-label-caps transition-all pointer-events-none uppercase" for="message">Your Message</label>
+</div>
+<div class="flex justify-center mt-12">
+<button class="bg-tertiary text-on-tertiary px-16 py-5 font-label-caps text-label-caps hover:bg-white transition-all duration-300 active:scale-95 group flex items-center gap-4" type="submit">
+                            SEND MESSAGE
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full pt-section-gap pb-12 bg-surface-container-lowest border-t border-outline-variant px-margin-desktop flex flex-col md:flex-row justify-between items-center space-y-gutter md:space-y-0">
+<div class="flex flex-col items-center md:items-start">
+<h2 class="font-display-lg text-headline-md text-on-surface">SWEET BONEZ</h2>
+<p class="font-label-caps text-[10px] tracking-widest text-on-surface-variant mt-2">PITMASTER CRAFTED ALABAMA BBQ</p>
+</div>
+<div class="flex gap-12 font-label-caps text-label-caps">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">MENU</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">STORY</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">LOCATION</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors" href="#">ORDER</a>
+</div>
+<div class="text-center md:text-right">
+<p class="font-label-caps text-label-caps text-on-surface-variant max-w-[240px]">
+                3718 16TH STREET NORTHEAST,<br/>TUSCALOOSA, AL 35404
+            </p>
+<p class="font-label-caps text-[10px] text-on-secondary-container mt-4">© 2024 SWEET BONEZ ALABAMA BBQ. PITMASTER CRAFTED.</p>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Form Validation Micro-interaction
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            // Visual feedback
+            btn.disabled = true;
+            btn.innerHTML = 'SENT SUCCESSFULLY';
+            btn.classList.add('bg-on-surface', 'text-background');
+            
+            setTimeout(() => {
+                btn.disabled = false;
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-on-surface', 'text-background');
+                form.reset();
+            }, 3000);
+        });
+
+        // Dynamic Textarea Sizing
+        const textarea = document.getElementById('message');
+        textarea.addEventListener('input', function() {
+            this.style.height = 'auto';
+            this.style.height = (this.scrollHeight) + 'px';
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('bg-background/95', 'backdrop-blur-sm');
+            } else {
+                header.classList.remove('bg-background/95', 'backdrop-blur-sm');
+            }
+        });
+    </script>
+</body></html>
