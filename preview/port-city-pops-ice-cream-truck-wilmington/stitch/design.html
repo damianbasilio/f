@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Port City Pops | Nostalgic Coastal Cool Ice Cream</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;700&amp;family=Montserrat:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+    body {
+      background-color: #fbf9f4;
+      color: #1b1c19;
+      overflow-x: hidden;
+    }
+    
+    .scalloped-top {
+      mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 10'%3E%3Cpath d='M0 10 Q 5 0 10 10 T 20 10 T 30 10 T 40 10 T 50 10 T 60 10 T 70 10 T 80 10 T 90 10 T 100 10' fill='black'/%3E%3C/svg%3E");
+      mask-size: 100px 10px;
+      mask-repeat: repeat-x;
+      padding-top: 20px;
+    }
+
+    .porthole-frame {
+      position: relative;
+      border-radius: 50%;
+      border: 4px solid #002046;
+      box-shadow: 8px 8px 0px 0px rgba(180, 234, 224, 0.5);
+      overflow: hidden;
+    }
+
+    .asymmetric-offset-right {
+      transform: translateX(var(--asymmetric-offset));
+    }
+
+    .asymmetric-offset-left {
+      transform: translateX(calc(-1 * var(--asymmetric-offset)));
+    }
+
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+    }
+
+    @media (max-width: 768px) {
+      .asymmetric-offset-right, .asymmetric-offset-left {
+        transform: none;
+      }
+    }
+  </style>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "surface-dim": "#dbdad5",
+            "primary": "#002046",
+            "on-primary-fixed": "#001b3d",
+            "tertiary-container": "#4d2f00",
+            "surface": "#fbf9f4",
+            "outline": "#74777f",
+            "surface-variant": "#e4e2dd",
+            "primary-fixed-dim": "#aec7f7",
+            "inverse-on-surface": "#f2f1ec",
+            "on-tertiary": "#ffffff",
+            "on-error": "#ffffff",
+            "tertiary-fixed": "#ffddb6",
+            "secondary-fixed-dim": "#9bd1c7",
+            "secondary": "#33675f",
+            "surface-container-low": "#f5f3ee",
+            "surface-tint": "#465f88",
+            "tertiary-fixed-dim": "#ffb95a",
+            "on-error-container": "#93000a",
+            "surface-container-highest": "#e4e2dd",
+            "on-secondary-fixed-variant": "#174f48",
+            "primary-container": "#1b365d",
+            "surface-container-high": "#eae8e3",
+            "surface-container": "#f0eee9",
+            "error-container": "#ffdad6",
+            "on-background": "#1b1c19",
+            "surface-container-lowest": "#ffffff",
+            "secondary-container": "#b4eae0",
+            "on-tertiary-fixed-variant": "#643f00",
+            "on-surface": "#1b1c19",
+            "error": "#ba1a1a",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#00201c",
+            "tertiary": "#301c00",
+            "on-surface-variant": "#44474e",
+            "surface-bright": "#fbf9f4",
+            "background": "#fbf9f4",
+            "on-primary-fixed-variant": "#2e476f",
+            "outline-variant": "#c4c6cf",
+            "on-primary-container": "#87a0cd",
+            "on-tertiary-fixed": "#2a1800",
+            "inverse-surface": "#30312e",
+            "inverse-primary": "#aec7f7",
+            "secondary-fixed": "#b7ede3",
+            "primary-fixed": "#d6e3ff",
+            "on-secondary-container": "#376b63",
+            "on-tertiary-container": "#d69025",
+            "on-primary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "section-gap": "120px",
+            "container-padding": "24px",
+            "base": "8px",
+            "asymmetric-offset": "48px",
+            "gutter": "24px"
+          },
+          "fontFamily": {
+            "display-lg": ["Literata", "serif"],
+            "headline-lg": ["Literata", "serif"],
+            "headline-md": ["Literata", "serif"],
+            "body-lg": ["Montserrat", "sans-serif"],
+            "body-md": ["Montserrat", "sans-serif"],
+            "label-lg": ["Montserrat", "sans-serif"],
+            "label-md": ["Montserrat", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body class="font-body-md bg-surface text-on-surface">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-xl transition-all duration-300 shadow-sm">
+<div class="max-w-7xl mx-auto px-container-padding py-4 flex justify-between items-center">
+<div class="flex items-center gap-8">
+<a class="flex items-center gap-2 group" href="#">
+<img alt="Port City Pops Logo" class="h-10 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtvpAASd1dTXShH0P55ImwXC0iBhN2IVwufhcHtIytjqsadMTEzN4uFU0MltGBHgYKuZHpuP20G8wED2bQLCQpMF8r9dE1-TnmHotNdiTRIXSWy4S7mp3tkC4YGOt9_x3gTeuXF48RHj8d2AkHOAHdQSpcaQxlyu0aiO1NcQl0W1gxfkveP8Zahyc8ewlhgSFDN_XbnvsyK5D3doUUWbHmnq9czlTh1pdaNFJD4mapsl1shT_ia-JXSh4cd"/>
+<span class="font-display-lg text-headline-md font-bold text-primary transition-colors group-hover:text-secondary">Port City Pops</span>
+</a>
+<nav class="hidden md:flex gap-6">
+<a class="font-label-lg text-primary border-b-2 border-secondary pb-1 uppercase tracking-wider" href="#">Our Story</a>
+<a class="font-label-lg text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" href="#visit">The Truck</a>
+<a class="font-label-lg text-on-surface-variant hover:text-primary transition-colors uppercase tracking-wider" href="#">Flavor Menu</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-2 text-primary">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="font-label-lg tracking-wider">(910) 408-2304</span>
+</div>
+<a class="bg-primary text-surface px-8 py-3 rounded-full font-label-lg uppercase tracking-wider hover:bg-secondary transition-all duration-300 shadow-md hover:shadow-lg active:scale-95" href="#contact">
+          Book the Truck
+        </a>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Hero Background" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuW_WfMn11iDxcX-Y1yhIh1J4HeZqx7WtOLWTb9YkpEObBFsbN8AUFWk0BEHsuJGqSGmkRFtum-zxohThjFhBoS3LHk12J1MLi9uTKod3_IkcF0yXUaTIckj6FNQYaCadaRzKCvoGC__8bgMk_9DseNvGYtbCwdBW_wzv6xCaNhNemkCoOmAunvCK83Z7ljTjSC0IzWkk_0TltHCbJ05-Mfui8ak6sadu1gVCweo5aqQay4WjXPz9r3UqbR"/>
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-container-padding w-full">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1 rounded-full bg-secondary-container text-on-secondary-container font-label-md uppercase tracking-widest mb-6">Est. 2014 • Wilmington, NC</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">
+            Cooling the Coast, <br/>
+<span class="text-secondary italic">One Pop at a Time.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+            Experience the nostalgic joy of hand-scooped popsicles crafted with local coastal flavors. From sunny boardwalks to your private celebration.
+          </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-primary text-surface px-10 py-4 rounded-full font-label-lg uppercase tracking-wider hover:bg-secondary transition-all duration-300" href="#contact">
+              Check Our Schedule
+            </a>
+<a class="border-2 border-secondary text-secondary px-10 py-4 rounded-full font-label-lg uppercase tracking-wider hover:bg-secondary-container transition-all duration-300" href="#">
+              View Flavors
+            </a>
+</div>
+</div>
+</div>
+<!-- Scalloped transition to next section -->
+<div class="absolute bottom-0 left-0 w-full h-12 bg-surface scalloped-top"></div>
+</section>
+<!-- Credibility Section -->
+<section class="py-section-gap bg-surface">
+<div class="max-w-7xl mx-auto px-container-padding">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Locally Loved</h2>
+<div class="h-1 w-24 bg-tertiary-fixed-dim mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-center">
+<div class="p-8 bg-surface-container rounded-xl text-center group hover:bg-secondary-container transition-colors duration-500">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-surface">
+<span class="material-symbols-outlined text-primary text-[32px]">festival</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Community Days</h3>
+<p class="text-on-surface-variant">A staple at Wilmington’s biggest community gatherings since the beginning.</p>
+</div>
+<div class="p-8 bg-surface-container rounded-xl text-center transform scale-110 shadow-xl z-10 group hover:bg-secondary-container transition-colors duration-500">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-surface">
+<span class="material-symbols-outlined text-primary text-[32px]">waves</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Riverfront Market</h3>
+<p class="text-on-surface-variant">Catch us every weekend along the historic Cape Fear Riverwalk.</p>
+</div>
+<div class="p-8 bg-surface-container rounded-xl text-center group hover:bg-secondary-container transition-colors duration-500">
+<div class="w-16 h-16 bg-surface-container-highest rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-surface">
+<span class="material-symbols-outlined text-primary text-[32px]">park</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-2">Airlie Gardens</h3>
+<p class="text-on-surface-variant">The perfect sweet treat after a stroll through the garden's blooms.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services/Offerings -->
+<section class="py-section-gap relative overflow-hidden bg-surface-container-low">
+<div class="max-w-7xl mx-auto px-container-padding">
+<!-- Artisanal Flavors -->
+<div class="flex flex-col md:flex-row items-center gap-16 mb-section-gap">
+<div class="w-full md:w-1/2 asymmetric-offset-left">
+<div class="porthole-frame aspect-square w-full max-w-[500px] mx-auto">
+<img alt="Artisanal Flavors Popsicles" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuPljc5gRIxiJRWAgL5qRl51yqNHlGlsVGCR7WPXy0KP6i-uqcKChT0Rg_y6UuTtsdDNop2bpSG7izA_SIbJMupVaIPEIcg5CB7jk30m0ldZqoyIryxjxSflOhP5RvgEgs8Qx1hDgm4SwblksaeLV5JBJEU5JBbQl23_k0iIfJINF1Wz6FPoby2J3_vm2RFXZAoDscaacr4cId_rZMOSaSxFCcZRqgdWLqpXxfUW-IEJVKB7geMgj_Al2lN"/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-lg text-secondary uppercase tracking-[0.2em] mb-4 block">The Craft</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Artisanal Flavors</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+              We believe in small batches and big flavors. Using locally sourced fruits and premium creams, we've developed a rotating menu of coastal classics and daring new discoveries.
+            </p>
+<ul class="space-y-4 mb-10">
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 bg-tertiary-fixed-dim rounded-full"></span>
+<span class="font-body-md">Hand-picked Carolina Berries</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 bg-tertiary-fixed-dim rounded-full"></span>
+<span class="font-body-md">Coastal Cream Bases</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="w-2 h-2 bg-tertiary-fixed-dim rounded-full"></span>
+<span class="font-body-md">Vegan &amp; Dairy-Free Options</span>
+</li>
+</ul>
+<button class="bg-primary text-surface px-8 py-3 rounded-full font-label-lg uppercase tracking-wider hover:bg-secondary transition-all">Explore Flavor Menu</button>
+</div>
+</div>
+<!-- Private Events -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-16">
+<div class="w-full md:w-1/2 asymmetric-offset-right">
+<div class="porthole-frame aspect-square w-full max-w-[500px] mx-auto" style="border-color: #33675f; box-shadow: -8px 8px 0px 0px rgba(255, 221, 182, 0.5);">
+<img alt="Private Events Celebration" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuFhuEBsmS32ZP3hg6Kyfjz8wU-u802LViePaBCukkd6jmJbBF5vwEt7KG5K_7VvQ8w-N5Je-S-vGIxn5v8Ueu1-xoOYv8i2xdLcdx2eXHd9yBp74kIvmcBNtGSI8GLY6a039Fn-d2ZhDbFPlrsPYwB94bmUIe3snNU7JRxcAVTFWxR5DxysewhrEo8uyhak15gdatCXvmK0h93K2xXZBZuMl92X7aDlOFSlKU5gtCFq5LCSif6LMrlzLjk"/>
+</div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-lg text-tertiary-container uppercase tracking-[0.2em] mb-4 block">Celebrate With Us</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Private Events</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+              Make your special day even cooler. From weddings at the riverfront to corporate beach bashes, the Port City Pops truck brings the party directly to you.
+            </p>
+<div class="grid grid-cols-2 gap-4 mb-10">
+<div class="flex flex-col p-4 bg-surface rounded-lg">
+<span class="font-label-lg text-primary">Weddings</span>
+<span class="text-label-md text-on-surface-variant">Late-night sweet treats</span>
+</div>
+<div class="flex flex-col p-4 bg-surface rounded-lg">
+<span class="font-label-lg text-primary">Birthdays</span>
+<span class="text-label-md text-on-surface-variant">Fun for all ages</span>
+</div>
+</div>
+<button class="bg-secondary text-surface px-8 py-3 rounded-full font-label-lg uppercase tracking-wider hover:bg-primary transition-all">Event Inquiry</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap bg-surface relative">
+<div class="max-w-4xl mx-auto px-container-padding text-center">
+<div class="mb-12">
+<span class="material-symbols-outlined text-secondary text-[64px] mb-4" data-weight="fill">ice_skating</span> <!-- Ice cream icon surrogate -->
+<h2 class="font-display-lg text-headline-lg text-primary mt-4">Hand-Scooped Joy in Every Stick</h2>
+</div>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>
+            Born from a love of long summer days and the crisp breeze of the Atlantic, Port City Pops began in 2014 with a simple mission: to create a premium popsicle experience that captures the essence of Wilmington.
+          </p>
+<p>
+            What started as a single humble cart has grown into the coast's favorite vintage-style ice cream truck. We still do things the "old way"—slow churning, hand-pouring, and using real ingredients you can recognize. No shortcuts, just pure, frosty bliss.
+          </p>
+</div>
+<div class="mt-16 flex justify-center gap-12">
+<div class="text-center">
+<div class="text-headline-lg font-display-lg text-primary">10+</div>
+<div class="font-label-md uppercase text-on-surface-variant">Years of Joy</div>
+</div>
+<div class="text-center">
+<div class="text-headline-lg font-display-lg text-primary">40k+</div>
+<div class="font-label-md uppercase text-on-surface-variant">Pops Served</div>
+</div>
+<div class="text-center">
+<div class="text-headline-lg font-display-lg text-primary">100%</div>
+<div class="font-label-md uppercase text-on-surface-variant">Local Love</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Find the Truck Section -->
+<section class="py-section-gap bg-secondary-container/30" id="visit">
+<div class="max-w-7xl mx-auto px-container-padding">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary">Find the Truck</h2>
+<p class="font-body-md text-on-surface-variant mt-2">Live tracking of our coastal locations this week.</p>
+</div>
+<div class="flex gap-4 mt-6 md:mt-0">
+<div class="flex items-center gap-2 px-4 py-2 bg-surface rounded-full shadow-sm">
+<span class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></span>
+<span class="font-label-md text-primary">ON THE ROAD</span>
+</div>
+<div class="flex items-center gap-2 px-4 py-2 bg-surface rounded-full shadow-sm">
+<span class="font-label-md text-on-surface-variant">TODAY: WRIGHTSVILLE BEACH</span>
+</div>
+</div>
+</div>
+<div class="bg-surface rounded-3xl overflow-hidden shadow-xl border-4 border-surface">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px]" data-location="Wilmington, NC" data-map-slot="" style="">
+<!-- Simulated Map Visual -->
+<div class="absolute inset-0 bg-blue-50/50 flex items-center justify-center">
+<div class="relative">
+<div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center animate-ping absolute -inset-0"></div>
+<div class="relative bg-primary text-surface p-3 rounded-full shadow-lg z-10">
+<span class="material-symbols-outlined">touch_double</span>
+</div>
+</div>
+</div>
+<!-- Map Overlay -->
+<div class="absolute bottom-8 left-8 bg-surface/90 backdrop-blur p-6 rounded-2xl shadow-lg max-w-xs">
+<h4 class="font-headline-md text-primary mb-2">Live Location</h4>
+<p class="text-body-md text-on-surface-variant mb-4">Water Street Park, Downtown Wilmington</p>
+<p class="text-label-md font-bold text-secondary uppercase">Until 8:00 PM Tonight</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap bg-surface" id="contact">
+<div class="max-w-7xl mx-auto px-container-padding grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div>
+<h2 class="font-display-lg text-headline-lg text-primary mb-8">Let's Celebrate <br/><span class="italic text-secondary">Together</span></h2>
+<p class="font-body-lg text-on-surface-variant mb-12">
+            Ready to book the truck for your next event? Fill out the form and our event coordinator will get back to you within 24 hours to discuss flavor pairings and logistics.
+          </p>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<div class="bg-secondary-container p-4 rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<div>
+<h4 class="font-label-lg text-primary uppercase mb-1">Email Us</h4>
+<p class="text-body-md">portcitypopsnc@gmail.com</p>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<div class="bg-secondary-container p-4 rounded-full text-on-secondary-container">
+<span class="material-symbols-outlined">call</span>
+</div>
+<div>
+<h4 class="font-label-lg text-primary uppercase mb-1">Call Us</h4>
+<p class="text-body-md">(910) 408-2304</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-high p-10 rounded-3xl">
+<form class="space-y-6" onsubmit="event.preventDefault(); alert('Booking request sent! We will contact you soon.');">
+<div class="grid grid-cols-2 gap-6">
+<div>
+<label class="block font-label-md text-primary uppercase mb-2">Full Name</label>
+<input class="w-full px-6 py-4 rounded-lg border-2 border-primary focus:ring-2 focus:ring-secondary-container outline-none bg-surface transition-all" placeholder="John Smith" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-primary uppercase mb-2">Email Address</label>
+<input class="w-full px-6 py-4 rounded-lg border-2 border-primary focus:ring-2 focus:ring-secondary-container outline-none bg-surface transition-all" placeholder="john@example.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-primary uppercase mb-2">Event Type</label>
+<select class="w-full px-6 py-4 rounded-lg border-2 border-primary focus:ring-2 focus:ring-secondary-container outline-none bg-surface transition-all">
+<option>Wedding Celebration</option>
+<option>Corporate Beach Bash</option>
+<option>Private Birthday Party</option>
+<option>Community Festival</option>
+<option>Other Coastal Fun</option>
+</select>
+</div>
+<div>
+<label class="block font-label-md text-primary uppercase mb-2">Your Message</label>
+<textarea class="w-full px-6 py-4 rounded-lg border-2 border-primary focus:ring-2 focus:ring-secondary-container outline-none bg-surface transition-all" placeholder="Tell us about your event, expected guest count, and flavor preferences..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-surface py-5 rounded-full font-label-lg uppercase tracking-[0.2em] hover:bg-secondary transition-all shadow-lg shadow-primary/20" type="submit">
+              Send Booking Request
+            </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary pt-section-gap pb-12 w-full">
+<div class="max-w-7xl mx-auto px-container-padding">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter mb-20">
+<div class="col-span-1 md:col-span-1">
+<a class="font-display-lg text-headline-lg text-tertiary-fixed mb-6 block" href="#">Port City Pops</a>
+<p class="text-on-tertiary/80 text-body-md mb-8">
+            Crafting the finest artisanal popsicles on the Carolina coast. Nostalgic flavors for modern summers.
+          </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-on-tertiary/20 flex items-center justify-center hover:bg-secondary-container hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-tertiary/20 flex items-center justify-center hover:bg-secondary-container hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-tertiary/20 flex items-center justify-center hover:bg-secondary-container hover:text-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+<div>
+<h5 class="font-label-lg uppercase tracking-wider text-tertiary-fixed mb-8">Quick Links</h5>
+<ul class="space-y-4">
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#">Flavor Menu</a></li>
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#">Event Gallery</a></li>
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#">Wholesale</a></li>
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg uppercase tracking-wider text-tertiary-fixed mb-8">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#">Our Story</a></li>
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#visit">Find the Truck</a></li>
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#contact">Book the Truck</a></li>
+<li><a class="text-on-tertiary/80 hover:text-on-tertiary hover:translate-x-1 transition-transform inline-block" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-lg uppercase tracking-wider text-tertiary-fixed mb-8">Contact Information</h5>
+<ul class="space-y-4 text-on-tertiary/80">
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">call</span>
+<span>(910) 408-2304</span>
+</li>
+<li class="flex items-center gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">mail</span>
+<span>portcitypopsnc@gmail.com</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-tertiary-fixed">location_on</span>
+<span>Wilmington, North Carolina <br/> Serving the Entire Cape Fear Region</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-on-tertiary/10 pt-8 flex flex-col md:flex-row justify-between items-center text-label-md text-on-tertiary/60">
+<p>© 2024 Port City Pops. Hand-scooped in Wilmington, NC.</p>
+<div class="flex gap-8 mt-4 md:mt-0">
+<a class="hover:text-on-tertiary transition-colors" href="#">Accessibility</a>
+<a class="hover:text-on-tertiary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Simple header transformation on scroll
+    window.addEventListener('scroll', () => {
+      const header = document.querySelector('header');
+      if (window.scrollY > 50) {
+        header.classList.add('py-2', 'shadow-md');
+        header.classList.remove('py-4', 'shadow-sm');
+      } else {
+        header.classList.add('py-4', 'shadow-sm');
+        header.classList.remove('py-2', 'shadow-md');
+      }
+    });
+
+    // Mobile nav toggle (simplified for MVP)
+    // Functional form validation feedback is handled by native required attributes + alert for preview.
+  </script>
+</body></html>

@@ -1,0 +1,609 @@
+{
+  "outputComponents": [
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Nostalgic Coastal Cool",
+                "styleGuidelines": "## Brand & Style\nThe design system embodies the \"Nostalgic Coastal Cool\" of a premium seaside creamery. It balances the weight of maritime heritage with the lighthearted joy of a summer treat. The brand personality is established, yet unpretentious; premium, yet playful. \n\nThe aesthetic draws from **Minimalism** for its generous use of whitespace and \"Off-white Sand\" breathing room, blended with **Tactile** elements like scalloped motifs that mimic vintage boardwalk awnings and ice cream scoops. The goal is to evoke the sensory experience of the Atlantic coast—salty air, cold treats, and warm sunsets—through a sophisticated, modern lens.\n\n## Layout & Spacing\nThe layout philosophy is **Asymmetrical Fluidity**. While built on a 12-column grid, elements should frequently \"break\" the grid using the `asymmetric-offset` to create a custom, non-template look.\n\n- **Whitespace:** Use `section-gap` aggressively between content blocks to maintain a premium, calm feel.\n- **Asymmetry:** Offset images and text blocks horizontally. For example, a \"porthole\" image might be positioned on column 2, while its descriptive text starts on column 7.\n- **Mobile:** Reflow to a single column, but maintain the `asymmetric-offset` as a padding-left or padding-right variation to keep the brand's quirky character on small screens.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Soft Shadows**, avoiding harsh lines.\n\n- **Planes:** Most elements sit directly on the \"Off-white Sand\" surface. Depth is indicated by \"Seafoam Sorbet\" or \"Sunset Mango\" containers.\n- **Shadows:** Use extremely soft, long-spread shadows (e.g., 20px blur, 4% opacity of Atlantic Navy) to give \"Porthole\" images a subtle lift, making them feel like physical objects resting on sand.\n- **Glassmorphism:** Reserved for mobile navigation overlays, using a Seafoam Sorbet tint with a heavy backdrop blur (20px) to maintain the \"cool\" and \"frosty\" metaphor.\n\n## Components\n\n- **Buttons:** Use a \"pill-shape\" (fully rounded) for primary actions. The primary button is Atlantic Navy with Off-white Sand text. The secondary button is a \"Ghost\" style with a Seafoam Sorbet border.\n- **Chips / Tags:** Use Sunset Mango backgrounds with Atlantic Navy text for flavor categories (e.g., \"Dairy Free,\" \"Seasonal\").\n- **Cards:** Cards should not have visible borders. Use the soft shadow defined in Elevation or a subtle Seafoam Sorbet background fill. The top edge of a featured card can utilize a scalloped border.\n- **Porthole Frames:** A specific component for images that adds a 4px Atlantic Navy border ring around a circular image, slightly offset to create a \"shadow ring\" effect.\n- **Input Fields:** Thick 2px borders in Atlantic Navy, using a rounded-lg radius. Focused states should glow with a soft Seafoam Sorbet outer shadow.\n- **Lists:** Use small Sunset Mango circles as bullet points to echo the \"porthole\" motif.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#1b365d",
+                  "designMd": "---\nname: Nostalgic Coastal Cool\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#44474e'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#74777f'\n  outline-variant: '#c4c6cf'\n  surface-tint: '#465f88'\n  primary: '#002046'\n  on-primary: '#ffffff'\n  primary-container: '#1b365d'\n  on-primary-container: '#87a0cd'\n  inverse-primary: '#aec7f7'\n  secondary: '#33675f'\n  on-secondary: '#ffffff'\n  secondary-container: '#b4eae0'\n  on-secondary-container: '#376b63'\n  tertiary: '#301c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4d2f00'\n  on-tertiary-container: '#d69025'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d6e3ff'\n  primary-fixed-dim: '#aec7f7'\n  on-primary-fixed: '#001b3d'\n  on-primary-fixed-variant: '#2e476f'\n  secondary-fixed: '#b7ede3'\n  secondary-fixed-dim: '#9bd1c7'\n  on-secondary-fixed: '#00201c'\n  on-secondary-fixed-variant: '#174f48'\n  tertiary-fixed: '#ffddb6'\n  tertiary-fixed-dim: '#ffb95a'\n  on-tertiary-fixed: '#2a1800'\n  on-tertiary-fixed-variant: '#643f00'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: literata\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: literata\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: literata\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: montserrat\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.03em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 120px\n  container-padding: 24px\n  gutter: 24px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies the \"Nostalgic Coastal Cool\" of a premium seaside creamery. It balances the weight of maritime heritage with the lighthearted joy of a summer treat. The brand personality is established, yet unpretentious; premium, yet playful. \n\nThe aesthetic draws from **Minimalism** for its generous use of whitespace and \"Off-white Sand\" breathing room, blended with **Tactile** elements like scalloped motifs that mimic vintage boardwalk awnings and ice cream scoops. The goal is to evoke the sensory experience of the Atlantic coast—salty air, cold treats, and warm sunsets—through a sophisticated, modern lens.\n\n## Colors\nThe palette is anchored by **Atlantic Navy**, providing a grounded, premium foundation that replaces traditional black for all typography and structural elements. **Seafoam Sorbet** acts as the primary cooling element, used for secondary actions and soft surfaces. **Sunset Mango** is the \"flavor\" pop, reserved for high-priority calls to action and highlights. The background is strictly **Off-white Sand**, which provides a warmer, more organic feel than pure white, reminiscent of sun-bleached dunes.\n\n## Typography\nThe typography contrasts the scholarly, warm curves of **Literata** with the geometric precision of **Montserrat**. \n\n- **Headlines:** Use Literata with a heavy weight. Its slightly rounded serifs feel artisanal and established. \n- **Body:** Montserrat provides a clean, airy feel. Increase line-height (1.6) to ensure the text feels \"spacious\" and modern.\n- **Labels:** Use Montserrat in all-caps with generous letter-spacing to reference vintage nautical signage and menu boards.\n\n## Layout & Spacing\nThe layout philosophy is **Asymmetrical Fluidity**. While built on a 12-column grid, elements should frequently \"break\" the grid using the `asymmetric-offset` to create a custom, non-template look.\n\n- **Whitespace:** Use `section-gap` aggressively between content blocks to maintain a premium, calm feel.\n- **Asymmetry:** Offset images and text blocks horizontally. For example, a \"porthole\" image might be positioned on column 2, while its descriptive text starts on column 7.\n- **Mobile:** Reflow to a single column, but maintain the `asymmetric-offset` as a padding-left or padding-right variation to keep the brand's quirky character on small screens.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Soft Shadows**, avoiding harsh lines.\n\n- **Planes:** Most elements sit directly on the \"Off-white Sand\" surface. Depth is indicated by \"Seafoam Sorbet\" or \"Sunset Mango\" containers.\n- **Shadows:** Use extremely soft, long-spread shadows (e.g., 20px blur, 4% opacity of Atlantic Navy) to give \"Porthole\" images a subtle lift, making them feel like physical objects resting on sand.\n- **Glassmorphism:** Reserved for mobile navigation overlays, using a Seafoam Sorbet tint with a heavy backdrop blur (20px) to maintain the \"cool\" and \"frosty\" metaphor.\n\n## Shapes\nThe shape language is defined by the **Circle** and the **Scallop**.\n\n- **Portholes:** All primary photography must be contained within perfect circles or \"stadium\" shapes. \n- **Scalloped Edges:** Apply a custom CSS mask or SVG border to the bottom of header sections or the top of footer sections to mimic an ice cream shop awning.\n- **General Elements:** Standard components like buttons and input fields use a `rounded-lg` (1rem) corner radius to remain approachable and soft, never sharp.\n\n## Components\n\n- **Buttons:** Use a \"pill-shape\" (fully rounded) for primary actions. The primary button is Atlantic Navy with Off-white Sand text. The secondary button is a \"Ghost\" style with a Seafoam Sorbet border.\n- **Chips / Tags:** Use Sunset Mango backgrounds with Atlantic Navy text for flavor categories (e.g., \"Dairy Free,\" \"Seasonal\").\n- **Cards:** Cards should not have visible borders. Use the soft shadow defined in Elevation or a subtle Seafoam Sorbet background fill. The top edge of a featured card can utilize a scalloped border.\n- **Porthole Frames:** A specific component for images that adds a 4px Atlantic Navy border ring around a circular image, slightly offset to create a \"shadow ring\" effect.\n- **Input Fields:** Thick 2px borders in Atlantic Navy, using a rounded-lg radius. Focused states should glow with a soft Seafoam Sorbet outer shadow.\n- **Lists:** Use small Sunset Mango circles as bullet points to echo the \"porthole\" motif.",
+                  "font": "LITERATA",
+                  "headlineFont": "LITERATA",
+                  "headlineFontFamily": "Literata",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f2f1ec",
+                    "inverse_primary": "#aec7f7",
+                    "inverse_surface": "#30312e",
+                    "on_background": "#1b1c19",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#87a0cd",
+                    "on_primary_fixed": "#001b3d",
+                    "on_primary_fixed_variant": "#2e476f",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#376b63",
+                    "on_secondary_fixed": "#00201c",
+                    "on_secondary_fixed_variant": "#174f48",
+                    "on_surface": "#1b1c19",
+                    "on_surface_variant": "#44474e",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#d69025",
+                    "on_tertiary_fixed": "#2a1800",
+                    "on_tertiary_fixed_variant": "#643f00",
+                    "outline": "#74777f",
+                    "outline_variant": "#c4c6cf",
+                    "primary": "#002046",
+                    "primary_container": "#1b365d",
+                    "primary_fixed": "#d6e3ff",
+                    "primary_fixed_dim": "#aec7f7",
+                    "secondary": "#33675f",
+                    "secondary_container": "#b4eae0",
+                    "secondary_fixed": "#b7ede3",
+                    "secondary_fixed_dim": "#9bd1c7",
+                    "surface": "#fbf9f4",
+                    "surface_bright": "#fbf9f4",
+                    "surface_container": "#f0eee9",
+                    "surface_container_high": "#eae8e3",
+                    "surface_container_highest": "#e4e2dd",
+                    "surface_container_low": "#f5f3ee",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dbdad5",
+                    "surface_tint": "#465f88",
+                    "surface_variant": "#e4e2dd",
+                    "tertiary": "#301c00",
+                    "tertiary_container": "#4d2f00",
+                    "tertiary_fixed": "#ffddb6",
+                    "tertiary_fixed_dim": "#ffb95a"
+                  },
+                  "overrideNeutralColor": "#f9f7f2",
+                  "overridePrimaryColor": "#1b365d",
+                  "overrideSecondaryColor": "#a3d9cf",
+                  "overrideTertiaryColor": "#ffb347",
+                  "roundness": "ROUND_EIGHT",
+                  "spacing": {
+                    "asymmetric-offset": "48px",
+                    "base": "8px",
+                    "container-padding": "24px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "literata",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "literata",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "literata",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "literata",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "label-lg": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.2"
+                    },
+                    "label-md": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.03em",
+                      "lineHeight": "1.2"
+                    }
+                  }
+                }
+              },
+              "name": "assets/bb3a7c5e508a443b9db3b1b01da57987",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "11628",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM2NTJlODdjNDg3MjRmODNiYmE4ZTAwZThmMTRhNDFlEgsSBxDBloTL-h4YAZIBJAoKcHJvamVjdF9pZBIWQhQxNTY5MDM1Mzg3NTc2MDEwMTI4NA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/15690353875760101284/files/3d84e708e59045cab5e9eadee0b881b0"
+            },
+            "id": "aca18e1f348f4826ba167fccbcb2e54b",
+            "name": "projects/15690353875760101284/screens/aca18e1f348f4826ba167fccbcb2e54b",
+            "prompt": "Build a high-end, editorial DESKTOP landing page for Port City Pops Ice Cream Truck. \n\nStyle: Nostalgic Coastal Cool. Use Atlantic Navy, Seafoam Sorbet, and Sunset Mango. Incorporate porthole-style image treatments and scalloped section transitions.\n\nSections:\n1. Header: Include (910) 408-2304 and \"Book the Truck\" CTA.\n2. Hero: Use {{DATA:IMAGE:IMAGE_6}} (vintage truck at golden hour) with a bold headline about \"Cooling the Coast.\"\n3. Credibility: A sophisticated \"Locally Loved\" section featuring Wilmington Community Days, Riverfront Markets, and Airlie Gardens.\n4. Services/Offerings: Use {{DATA:IMAGE:IMAGE_4}} for \"Artisanal Flavors\" and {{DATA:IMAGE:IMAGE_5}} for \"Private Events.\" \n5. About: \"Hand-Scooped Joy in Every Stick\" featuring the brand's journey since 2014.\n6. Visit: Section ID #visit. Include a heading \"Find the Truck\" and an empty map panel: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: \"Let's Celebrate Together\" booking form with fields for Name, Email, Event Type, and Message.\n8. Footer: Complete with contact info (910) 408-2304, portcitypopsnc@gmail.com, and social links.\n\nTechnical: Full semantic HTML, responsive CSS, mobile nav, smooth scroll, form validation UI (preview), and no placeholder text. Use {{DATA:IMAGE:IMAGE_7}} for the logo.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuNJB_YLUukEwhAnjDp58LsbLWKJ86jLRm0nk0uqVXhNV7AUXEm1OfYVH0jeU4yNtSKUhS7wehNPS4FY9YYKgpPFYsxhR-IdHO1XBi1-_OXIdNxblOKNZOsjz5dJC5DY7nXIMJp64vp6TeQMnD6-RUd0GG6OAd7qs5yi-BksJ5owQ-lLXwT-HobzQUBoaR2nTs6YdReXnjMlK5OcfHV108pcev3c55t0TGwbB1bpvMlzTie1rmRkMIt5Ow",
+              "name": "projects/15690353875760101284/files/25b219f11d8b4a989e445a736153f121"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#1b365d",
+              "designMd": "---\nname: Nostalgic Coastal Cool\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#44474e'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#74777f'\n  outline-variant: '#c4c6cf'\n  surface-tint: '#465f88'\n  primary: '#002046'\n  on-primary: '#ffffff'\n  primary-container: '#1b365d'\n  on-primary-container: '#87a0cd'\n  inverse-primary: '#aec7f7'\n  secondary: '#33675f'\n  on-secondary: '#ffffff'\n  secondary-container: '#b4eae0'\n  on-secondary-container: '#376b63'\n  tertiary: '#301c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4d2f00'\n  on-tertiary-container: '#d69025'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d6e3ff'\n  primary-fixed-dim: '#aec7f7'\n  on-primary-fixed: '#001b3d'\n  on-primary-fixed-variant: '#2e476f'\n  secondary-fixed: '#b7ede3'\n  secondary-fixed-dim: '#9bd1c7'\n  on-secondary-fixed: '#00201c'\n  on-secondary-fixed-variant: '#174f48'\n  tertiary-fixed: '#ffddb6'\n  tertiary-fixed-dim: '#ffb95a'\n  on-tertiary-fixed: '#2a1800'\n  on-tertiary-fixed-variant: '#643f00'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: literata\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: literata\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: literata\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: montserrat\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.03em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 120px\n  container-padding: 24px\n  gutter: 24px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies the \"Nostalgic Coastal Cool\" of a premium seaside creamery. It balances the weight of maritime heritage with the lighthearted joy of a summer treat. The brand personality is established, yet unpretentious; premium, yet playful. \n\nThe aesthetic draws from **Minimalism** for its generous use of whitespace and \"Off-white Sand\" breathing room, blended with **Tactile** elements like scalloped motifs that mimic vintage boardwalk awnings and ice cream scoops. The goal is to evoke the sensory experience of the Atlantic coast—salty air, cold treats, and warm sunsets—through a sophisticated, modern lens.\n\n## Colors\nThe palette is anchored by **Atlantic Navy**, providing a grounded, premium foundation that replaces traditional black for all typography and structural elements. **Seafoam Sorbet** acts as the primary cooling element, used for secondary actions and soft surfaces. **Sunset Mango** is the \"flavor\" pop, reserved for high-priority calls to action and highlights. The background is strictly **Off-white Sand**, which provides a warmer, more organic feel than pure white, reminiscent of sun-bleached dunes.\n\n## Typography\nThe typography contrasts the scholarly, warm curves of **Literata** with the geometric precision of **Montserrat**. \n\n- **Headlines:** Use Literata with a heavy weight. Its slightly rounded serifs feel artisanal and established. \n- **Body:** Montserrat provides a clean, airy feel. Increase line-height (1.6) to ensure the text feels \"spacious\" and modern.\n- **Labels:** Use Montserrat in all-caps with generous letter-spacing to reference vintage nautical signage and menu boards.\n\n## Layout & Spacing\nThe layout philosophy is **Asymmetrical Fluidity**. While built on a 12-column grid, elements should frequently \"break\" the grid using the `asymmetric-offset` to create a custom, non-template look.\n\n- **Whitespace:** Use `section-gap` aggressively between content blocks to maintain a premium, calm feel.\n- **Asymmetry:** Offset images and text blocks horizontally. For example, a \"porthole\" image might be positioned on column 2, while its descriptive text starts on column 7.\n- **Mobile:** Reflow to a single column, but maintain the `asymmetric-offset` as a padding-left or padding-right variation to keep the brand's quirky character on small screens.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Soft Shadows**, avoiding harsh lines.\n\n- **Planes:** Most elements sit directly on the \"Off-white Sand\" surface. Depth is indicated by \"Seafoam Sorbet\" or \"Sunset Mango\" containers.\n- **Shadows:** Use extremely soft, long-spread shadows (e.g., 20px blur, 4% opacity of Atlantic Navy) to give \"Porthole\" images a subtle lift, making them feel like physical objects resting on sand.\n- **Glassmorphism:** Reserved for mobile navigation overlays, using a Seafoam Sorbet tint with a heavy backdrop blur (20px) to maintain the \"cool\" and \"frosty\" metaphor.\n\n## Shapes\nThe shape language is defined by the **Circle** and the **Scallop**.\n\n- **Portholes:** All primary photography must be contained within perfect circles or \"stadium\" shapes. \n- **Scalloped Edges:** Apply a custom CSS mask or SVG border to the bottom of header sections or the top of footer sections to mimic an ice cream shop awning.\n- **General Elements:** Standard components like buttons and input fields use a `rounded-lg` (1rem) corner radius to remain approachable and soft, never sharp.\n\n## Components\n\n- **Buttons:** Use a \"pill-shape\" (fully rounded) for primary actions. The primary button is Atlantic Navy with Off-white Sand text. The secondary button is a \"Ghost\" style with a Seafoam Sorbet border.\n- **Chips / Tags:** Use Sunset Mango backgrounds with Atlantic Navy text for flavor categories (e.g., \"Dairy Free,\" \"Seasonal\").\n- **Cards:** Cards should not have visible borders. Use the soft shadow defined in Elevation or a subtle Seafoam Sorbet background fill. The top edge of a featured card can utilize a scalloped border.\n- **Porthole Frames:** A specific component for images that adds a 4px Atlantic Navy border ring around a circular image, slightly offset to create a \"shadow ring\" effect.\n- **Input Fields:** Thick 2px borders in Atlantic Navy, using a rounded-lg radius. Focused states should glow with a soft Seafoam Sorbet outer shadow.\n- **Lists:** Use small Sunset Mango circles as bullet points to echo the \"porthole\" motif.",
+              "font": "LITERATA",
+              "headlineFont": "LITERATA",
+              "headlineFontFamily": "Literata",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fbf9f4",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f2f1ec",
+                "inverse_primary": "#aec7f7",
+                "inverse_surface": "#30312e",
+                "on_background": "#1b1c19",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#87a0cd",
+                "on_primary_fixed": "#001b3d",
+                "on_primary_fixed_variant": "#2e476f",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#376b63",
+                "on_secondary_fixed": "#00201c",
+                "on_secondary_fixed_variant": "#174f48",
+                "on_surface": "#1b1c19",
+                "on_surface_variant": "#44474e",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#d69025",
+                "on_tertiary_fixed": "#2a1800",
+                "on_tertiary_fixed_variant": "#643f00",
+                "outline": "#74777f",
+                "outline_variant": "#c4c6cf",
+                "primary": "#002046",
+                "primary_container": "#1b365d",
+                "primary_fixed": "#d6e3ff",
+                "primary_fixed_dim": "#aec7f7",
+                "secondary": "#33675f",
+                "secondary_container": "#b4eae0",
+                "secondary_fixed": "#b7ede3",
+                "secondary_fixed_dim": "#9bd1c7",
+                "surface": "#fbf9f4",
+                "surface_bright": "#fbf9f4",
+                "surface_container": "#f0eee9",
+                "surface_container_high": "#eae8e3",
+                "surface_container_highest": "#e4e2dd",
+                "surface_container_low": "#f5f3ee",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dbdad5",
+                "surface_tint": "#465f88",
+                "surface_variant": "#e4e2dd",
+                "tertiary": "#301c00",
+                "tertiary_container": "#4d2f00",
+                "tertiary_fixed": "#ffddb6",
+                "tertiary_fixed_dim": "#ffb95a"
+              },
+              "overrideNeutralColor": "#f9f7f2",
+              "overridePrimaryColor": "#1b365d",
+              "overrideSecondaryColor": "#a3d9cf",
+              "overrideTertiaryColor": "#ffb347",
+              "roundness": "ROUND_EIGHT",
+              "spacing": {
+                "asymmetric-offset": "48px",
+                "base": "8px",
+                "container-padding": "24px",
+                "gutter": "24px",
+                "section-gap": "120px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "literata",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "literata",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg": {
+                  "fontFamily": "literata",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "literata",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "label-lg": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.2"
+                },
+                "label-md": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.03em",
+                  "lineHeight": "1.2"
+                }
+              }
+            },
+            "title": "Port City Pops - Official Website",
+            "width": "2560"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Nostalgic Coastal Cool",
+                "styleGuidelines": "## Brand & Style\nThe design system embodies the \"Nostalgic Coastal Cool\" of a premium seaside creamery. It balances the weight of maritime heritage with the lighthearted joy of a summer treat. The brand personality is established, yet unpretentious; premium, yet playful. \n\nThe aesthetic draws from **Minimalism** for its generous use of whitespace and \"Off-white Sand\" breathing room, blended with **Tactile** elements like scalloped motifs that mimic vintage boardwalk awnings and ice cream scoops. The goal is to evoke the sensory experience of the Atlantic coast—salty air, cold treats, and warm sunsets—through a sophisticated, modern lens.\n\n## Layout & Spacing\nThe layout philosophy is **Asymmetrical Fluidity**. While built on a 12-column grid, elements should frequently \"break\" the grid using the `asymmetric-offset` to create a custom, non-template look.\n\n- **Whitespace:** Use `section-gap` aggressively between content blocks to maintain a premium, calm feel.\n- **Asymmetry:** Offset images and text blocks horizontally. For example, a \"porthole\" image might be positioned on column 2, while its descriptive text starts on column 7.\n- **Mobile:** Reflow to a single column, but maintain the `asymmetric-offset` as a padding-left or padding-right variation to keep the brand's quirky character on small screens.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Soft Shadows**, avoiding harsh lines.\n\n- **Planes:** Most elements sit directly on the \"Off-white Sand\" surface. Depth is indicated by \"Seafoam Sorbet\" or \"Sunset Mango\" containers.\n- **Shadows:** Use extremely soft, long-spread shadows (e.g., 20px blur, 4% opacity of Atlantic Navy) to give \"Porthole\" images a subtle lift, making them feel like physical objects resting on sand.\n- **Glassmorphism:** Reserved for mobile navigation overlays, using a Seafoam Sorbet tint with a heavy backdrop blur (20px) to maintain the \"cool\" and \"frosty\" metaphor.\n\n## Components\n\n- **Buttons:** Use a \"pill-shape\" (fully rounded) for primary actions. The primary button is Atlantic Navy with Off-white Sand text. The secondary button is a \"Ghost\" style with a Seafoam Sorbet border.\n- **Chips / Tags:** Use Sunset Mango backgrounds with Atlantic Navy text for flavor categories (e.g., \"Dairy Free,\" \"Seasonal\").\n- **Cards:** Cards should not have visible borders. Use the soft shadow defined in Elevation or a subtle Seafoam Sorbet background fill. The top edge of a featured card can utilize a scalloped border.\n- **Porthole Frames:** A specific component for images that adds a 4px Atlantic Navy border ring around a circular image, slightly offset to create a \"shadow ring\" effect.\n- **Input Fields:** Thick 2px borders in Atlantic Navy, using a rounded-lg radius. Focused states should glow with a soft Seafoam Sorbet outer shadow.\n- **Lists:** Use small Sunset Mango circles as bullet points to echo the \"porthole\" motif.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#1b365d",
+                  "designMd": "---\nname: Nostalgic Coastal Cool\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#44474e'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#74777f'\n  outline-variant: '#c4c6cf'\n  surface-tint: '#465f88'\n  primary: '#002046'\n  on-primary: '#ffffff'\n  primary-container: '#1b365d'\n  on-primary-container: '#87a0cd'\n  inverse-primary: '#aec7f7'\n  secondary: '#33675f'\n  on-secondary: '#ffffff'\n  secondary-container: '#b4eae0'\n  on-secondary-container: '#376b63'\n  tertiary: '#301c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4d2f00'\n  on-tertiary-container: '#d69025'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d6e3ff'\n  primary-fixed-dim: '#aec7f7'\n  on-primary-fixed: '#001b3d'\n  on-primary-fixed-variant: '#2e476f'\n  secondary-fixed: '#b7ede3'\n  secondary-fixed-dim: '#9bd1c7'\n  on-secondary-fixed: '#00201c'\n  on-secondary-fixed-variant: '#174f48'\n  tertiary-fixed: '#ffddb6'\n  tertiary-fixed-dim: '#ffb95a'\n  on-tertiary-fixed: '#2a1800'\n  on-tertiary-fixed-variant: '#643f00'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: literata\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: literata\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: literata\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: montserrat\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.03em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 120px\n  container-padding: 24px\n  gutter: 24px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies the \"Nostalgic Coastal Cool\" of a premium seaside creamery. It balances the weight of maritime heritage with the lighthearted joy of a summer treat. The brand personality is established, yet unpretentious; premium, yet playful. \n\nThe aesthetic draws from **Minimalism** for its generous use of whitespace and \"Off-white Sand\" breathing room, blended with **Tactile** elements like scalloped motifs that mimic vintage boardwalk awnings and ice cream scoops. The goal is to evoke the sensory experience of the Atlantic coast—salty air, cold treats, and warm sunsets—through a sophisticated, modern lens.\n\n## Colors\nThe palette is anchored by **Atlantic Navy**, providing a grounded, premium foundation that replaces traditional black for all typography and structural elements. **Seafoam Sorbet** acts as the primary cooling element, used for secondary actions and soft surfaces. **Sunset Mango** is the \"flavor\" pop, reserved for high-priority calls to action and highlights. The background is strictly **Off-white Sand**, which provides a warmer, more organic feel than pure white, reminiscent of sun-bleached dunes.\n\n## Typography\nThe typography contrasts the scholarly, warm curves of **Literata** with the geometric precision of **Montserrat**. \n\n- **Headlines:** Use Literata with a heavy weight. Its slightly rounded serifs feel artisanal and established. \n- **Body:** Montserrat provides a clean, airy feel. Increase line-height (1.6) to ensure the text feels \"spacious\" and modern.\n- **Labels:** Use Montserrat in all-caps with generous letter-spacing to reference vintage nautical signage and menu boards.\n\n## Layout & Spacing\nThe layout philosophy is **Asymmetrical Fluidity**. While built on a 12-column grid, elements should frequently \"break\" the grid using the `asymmetric-offset` to create a custom, non-template look.\n\n- **Whitespace:** Use `section-gap` aggressively between content blocks to maintain a premium, calm feel.\n- **Asymmetry:** Offset images and text blocks horizontally. For example, a \"porthole\" image might be positioned on column 2, while its descriptive text starts on column 7.\n- **Mobile:** Reflow to a single column, but maintain the `asymmetric-offset` as a padding-left or padding-right variation to keep the brand's quirky character on small screens.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Soft Shadows**, avoiding harsh lines.\n\n- **Planes:** Most elements sit directly on the \"Off-white Sand\" surface. Depth is indicated by \"Seafoam Sorbet\" or \"Sunset Mango\" containers.\n- **Shadows:** Use extremely soft, long-spread shadows (e.g., 20px blur, 4% opacity of Atlantic Navy) to give \"Porthole\" images a subtle lift, making them feel like physical objects resting on sand.\n- **Glassmorphism:** Reserved for mobile navigation overlays, using a Seafoam Sorbet tint with a heavy backdrop blur (20px) to maintain the \"cool\" and \"frosty\" metaphor.\n\n## Shapes\nThe shape language is defined by the **Circle** and the **Scallop**.\n\n- **Portholes:** All primary photography must be contained within perfect circles or \"stadium\" shapes. \n- **Scalloped Edges:** Apply a custom CSS mask or SVG border to the bottom of header sections or the top of footer sections to mimic an ice cream shop awning.\n- **General Elements:** Standard components like buttons and input fields use a `rounded-lg` (1rem) corner radius to remain approachable and soft, never sharp.\n\n## Components\n\n- **Buttons:** Use a \"pill-shape\" (fully rounded) for primary actions. The primary button is Atlantic Navy with Off-white Sand text. The secondary button is a \"Ghost\" style with a Seafoam Sorbet border.\n- **Chips / Tags:** Use Sunset Mango backgrounds with Atlantic Navy text for flavor categories (e.g., \"Dairy Free,\" \"Seasonal\").\n- **Cards:** Cards should not have visible borders. Use the soft shadow defined in Elevation or a subtle Seafoam Sorbet background fill. The top edge of a featured card can utilize a scalloped border.\n- **Porthole Frames:** A specific component for images that adds a 4px Atlantic Navy border ring around a circular image, slightly offset to create a \"shadow ring\" effect.\n- **Input Fields:** Thick 2px borders in Atlantic Navy, using a rounded-lg radius. Focused states should glow with a soft Seafoam Sorbet outer shadow.\n- **Lists:** Use small Sunset Mango circles as bullet points to echo the \"porthole\" motif.",
+                  "font": "LITERATA",
+                  "headlineFont": "LITERATA",
+                  "headlineFontFamily": "Literata",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f2f1ec",
+                    "inverse_primary": "#aec7f7",
+                    "inverse_surface": "#30312e",
+                    "on_background": "#1b1c19",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#87a0cd",
+                    "on_primary_fixed": "#001b3d",
+                    "on_primary_fixed_variant": "#2e476f",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#376b63",
+                    "on_secondary_fixed": "#00201c",
+                    "on_secondary_fixed_variant": "#174f48",
+                    "on_surface": "#1b1c19",
+                    "on_surface_variant": "#44474e",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#d69025",
+                    "on_tertiary_fixed": "#2a1800",
+                    "on_tertiary_fixed_variant": "#643f00",
+                    "outline": "#74777f",
+                    "outline_variant": "#c4c6cf",
+                    "primary": "#002046",
+                    "primary_container": "#1b365d",
+                    "primary_fixed": "#d6e3ff",
+                    "primary_fixed_dim": "#aec7f7",
+                    "secondary": "#33675f",
+                    "secondary_container": "#b4eae0",
+                    "secondary_fixed": "#b7ede3",
+                    "secondary_fixed_dim": "#9bd1c7",
+                    "surface": "#fbf9f4",
+                    "surface_bright": "#fbf9f4",
+                    "surface_container": "#f0eee9",
+                    "surface_container_high": "#eae8e3",
+                    "surface_container_highest": "#e4e2dd",
+                    "surface_container_low": "#f5f3ee",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dbdad5",
+                    "surface_tint": "#465f88",
+                    "surface_variant": "#e4e2dd",
+                    "tertiary": "#301c00",
+                    "tertiary_container": "#4d2f00",
+                    "tertiary_fixed": "#ffddb6",
+                    "tertiary_fixed_dim": "#ffb95a"
+                  },
+                  "overrideNeutralColor": "#f9f7f2",
+                  "overridePrimaryColor": "#1b365d",
+                  "overrideSecondaryColor": "#a3d9cf",
+                  "overrideTertiaryColor": "#ffb347",
+                  "roundness": "ROUND_EIGHT",
+                  "spacing": {
+                    "asymmetric-offset": "48px",
+                    "base": "8px",
+                    "container-padding": "24px",
+                    "gutter": "24px",
+                    "section-gap": "120px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "literata",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "literata",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "literata",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "literata",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "label-lg": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.2"
+                    },
+                    "label-md": {
+                      "fontFamily": "montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.03em",
+                      "lineHeight": "1.2"
+                    }
+                  }
+                }
+              },
+              "name": "assets/bb3a7c5e508a443b9db3b1b01da57987",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "HatterAgent",
+            "height": "11492",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2VkMWUyMGE5MGQwNTQ4OTg5ZjIzOTYwMTc4OTVmN2RmEgsSBxDBloTL-h4YAZIBJAoKcHJvamVjdF9pZBIWQhQxNTY5MDM1Mzg3NTc2MDEwMTI4NA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/15690353875760101284/files/dc85c6d547314da0b03eb138e8bdf05f"
+            },
+            "id": "f7c5166d30654fcd93d74b84560961ed",
+            "name": "projects/15690353875760101284/screens/f7c5166d30654fcd93d74b84560961ed",
+            "prompt": "Enhance the Port City Pops landing page with motion and interactive effects. \n\n1. Add a subtle floating animation to the 'porthole' image containers.\n2. Implement a scroll-reveal effect for the 'Locally Loved' and 'About' sections.\n3. Ensure the contact form has interactive focus states and a button hover transition.\n4. Add a smooth scroll behavior for all navigation links.\n5. Use vanilla JavaScript for the mobile menu toggle and scroll-triggered entrance animations.\n6. Maintain all existing layout, branding, and assets ({{DATA:IMAGE:IMAGE_4}}, {{DATA:IMAGE:IMAGE_5}}, {{DATA:IMAGE:IMAGE_6}}, {{DATA:IMAGE:IMAGE_7}}).\n7. Keep the specific map slot requirement: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs2Wy_2bst2vLZJb1KagkO9rWzpvxm5Nprkior9tIhLZGJAM1QqYJw9BodND_v1vH7RfA_rxJFPDaVxO8QcbU4j67F_t1FfWE0tPX9zHeZNz7LBBKINVeYSUsdKm7hvkyfElJc_sYzVcf6WyNEReViqncwCm4-ujNFWkdQWSZ8qPjGiBRi12g-3oaPWdVdBeeLOHxW6ZRF5dL1JnQTL-1cavvev7EYSyZgKtQthpbS1MVX0C1RNISqgVNzU",
+              "name": "projects/15690353875760101284/files/d1651aedd5a24fd09cdca68b9e494ade"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#1b365d",
+              "designMd": "---\nname: Nostalgic Coastal Cool\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#44474e'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#74777f'\n  outline-variant: '#c4c6cf'\n  surface-tint: '#465f88'\n  primary: '#002046'\n  on-primary: '#ffffff'\n  primary-container: '#1b365d'\n  on-primary-container: '#87a0cd'\n  inverse-primary: '#aec7f7'\n  secondary: '#33675f'\n  on-secondary: '#ffffff'\n  secondary-container: '#b4eae0'\n  on-secondary-container: '#376b63'\n  tertiary: '#301c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#4d2f00'\n  on-tertiary-container: '#d69025'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d6e3ff'\n  primary-fixed-dim: '#aec7f7'\n  on-primary-fixed: '#001b3d'\n  on-primary-fixed-variant: '#2e476f'\n  secondary-fixed: '#b7ede3'\n  secondary-fixed-dim: '#9bd1c7'\n  on-secondary-fixed: '#00201c'\n  on-secondary-fixed-variant: '#174f48'\n  tertiary-fixed: '#ffddb6'\n  tertiary-fixed-dim: '#ffb95a'\n  on-tertiary-fixed: '#2a1800'\n  on-tertiary-fixed-variant: '#643f00'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: literata\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: literata\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: literata\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: montserrat\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.03em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 120px\n  container-padding: 24px\n  gutter: 24px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies the \"Nostalgic Coastal Cool\" of a premium seaside creamery. It balances the weight of maritime heritage with the lighthearted joy of a summer treat. The brand personality is established, yet unpretentious; premium, yet playful. \n\nThe aesthetic draws from **Minimalism** for its generous use of whitespace and \"Off-white Sand\" breathing room, blended with **Tactile** elements like scalloped motifs that mimic vintage boardwalk awnings and ice cream scoops. The goal is to evoke the sensory experience of the Atlantic coast—salty air, cold treats, and warm sunsets—through a sophisticated, modern lens.\n\n## Colors\nThe palette is anchored by **Atlantic Navy**, providing a grounded, premium foundation that replaces traditional black for all typography and structural elements. **Seafoam Sorbet** acts as the primary cooling element, used for secondary actions and soft surfaces. **Sunset Mango** is the \"flavor\" pop, reserved for high-priority calls to action and highlights. The background is strictly **Off-white Sand**, which provides a warmer, more organic feel than pure white, reminiscent of sun-bleached dunes.\n\n## Typography\nThe typography contrasts the scholarly, warm curves of **Literata** with the geometric precision of **Montserrat**. \n\n- **Headlines:** Use Literata with a heavy weight. Its slightly rounded serifs feel artisanal and established. \n- **Body:** Montserrat provides a clean, airy feel. Increase line-height (1.6) to ensure the text feels \"spacious\" and modern.\n- **Labels:** Use Montserrat in all-caps with generous letter-spacing to reference vintage nautical signage and menu boards.\n\n## Layout & Spacing\nThe layout philosophy is **Asymmetrical Fluidity**. While built on a 12-column grid, elements should frequently \"break\" the grid using the `asymmetric-offset` to create a custom, non-template look.\n\n- **Whitespace:** Use `section-gap` aggressively between content blocks to maintain a premium, calm feel.\n- **Asymmetry:** Offset images and text blocks horizontally. For example, a \"porthole\" image might be positioned on column 2, while its descriptive text starts on column 7.\n- **Mobile:** Reflow to a single column, but maintain the `asymmetric-offset` as a padding-left or padding-right variation to keep the brand's quirky character on small screens.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Soft Shadows**, avoiding harsh lines.\n\n- **Planes:** Most elements sit directly on the \"Off-white Sand\" surface. Depth is indicated by \"Seafoam Sorbet\" or \"Sunset Mango\" containers.\n- **Shadows:** Use extremely soft, long-spread shadows (e.g., 20px blur, 4% opacity of Atlantic Navy) to give \"Porthole\" images a subtle lift, making them feel like physical objects resting on sand.\n- **Glassmorphism:** Reserved for mobile navigation overlays, using a Seafoam Sorbet tint with a heavy backdrop blur (20px) to maintain the \"cool\" and \"frosty\" metaphor.\n\n## Shapes\nThe shape language is defined by the **Circle** and the **Scallop**.\n\n- **Portholes:** All primary photography must be contained within perfect circles or \"stadium\" shapes. \n- **Scalloped Edges:** Apply a custom CSS mask or SVG border to the bottom of header sections or the top of footer sections to mimic an ice cream shop awning.\n- **General Elements:** Standard components like buttons and input fields use a `rounded-lg` (1rem) corner radius to remain approachable and soft, never sharp.\n\n## Components\n\n- **Buttons:** Use a \"pill-shape\" (fully rounded) for primary actions. The primary button is Atlantic Navy with Off-white Sand text. The secondary button is a \"Ghost\" style with a Seafoam Sorbet border.\n- **Chips / Tags:** Use Sunset Mango backgrounds with Atlantic Navy text for flavor categories (e.g., \"Dairy Free,\" \"Seasonal\").\n- **Cards:** Cards should not have visible borders. Use the soft shadow defined in Elevation or a subtle Seafoam Sorbet background fill. The top edge of a featured card can utilize a scalloped border.\n- **Porthole Frames:** A specific component for images that adds a 4px Atlantic Navy border ring around a circular image, slightly offset to create a \"shadow ring\" effect.\n- **Input Fields:** Thick 2px borders in Atlantic Navy, using a rounded-lg radius. Focused states should glow with a soft Seafoam Sorbet outer shadow.\n- **Lists:** Use small Sunset Mango circles as bullet points to echo the \"porthole\" motif.",
+              "font": "LITERATA",
+              "headlineFont": "LITERATA",
+              "headlineFontFamily": "Literata",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fbf9f4",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f2f1ec",
+                "inverse_primary": "#aec7f7",
+                "inverse_surface": "#30312e",
+                "on_background": "#1b1c19",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#87a0cd",
+                "on_primary_fixed": "#001b3d",
+                "on_primary_fixed_variant": "#2e476f",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#376b63",
+                "on_secondary_fixed": "#00201c",
+                "on_secondary_fixed_variant": "#174f48",
+                "on_surface": "#1b1c19",
+                "on_surface_variant": "#44474e",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#d69025",
+                "on_tertiary_fixed": "#2a1800",
+                "on_tertiary_fixed_variant": "#643f00",
+                "outline": "#74777f",
+                "outline_variant": "#c4c6cf",
+                "primary": "#002046",
+                "primary_container": "#1b365d",
+                "primary_fixed": "#d6e3ff",
+                "primary_fixed_dim": "#aec7f7",
+                "secondary": "#33675f",
+                "secondary_container": "#b4eae0",
+                "secondary_fixed": "#b7ede3",
+                "secondary_fixed_dim": "#9bd1c7",
+                "surface": "#fbf9f4",
+                "surface_bright": "#fbf9f4",
+                "surface_container": "#f0eee9",
+                "surface_container_high": "#eae8e3",
+                "surface_container_highest": "#e4e2dd",
+                "surface_container_low": "#f5f3ee",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dbdad5",
+                "surface_tint": "#465f88",
+                "surface_variant": "#e4e2dd",
+                "tertiary": "#301c00",
+                "tertiary_container": "#4d2f00",
+                "tertiary_fixed": "#ffddb6",
+                "tertiary_fixed_dim": "#ffb95a"
+              },
+              "overrideNeutralColor": "#f9f7f2",
+              "overridePrimaryColor": "#1b365d",
+              "overrideSecondaryColor": "#a3d9cf",
+              "overrideTertiaryColor": "#ffb347",
+              "roundness": "ROUND_EIGHT",
+              "spacing": {
+                "asymmetric-offset": "48px",
+                "base": "8px",
+                "container-padding": "24px",
+                "gutter": "24px",
+                "section-gap": "120px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "literata",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "literata",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg": {
+                  "fontFamily": "literata",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "literata",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "label-lg": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.2"
+                },
+                "label-md": {
+                  "fontFamily": "montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.03em",
+                  "lineHeight": "1.2"
+                }
+              }
+            },
+            "title": "Port City Pops - Interactive Landing Page",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've built the complete, production-ready landing page for Port City Pops. \n\n### Key Design Details:\n*   **Visual Motifs:** I've implemented the \"Nostalgic Coastal Cool\" aesthetic using custom porthole image treatments and scalloped transitions that reflect Wilmington's maritime charm.\n*   **Editorial Layout:** The page features a dynamic, asymmetric layout with high-fidelity photography (A high-end, editorial lifestyle photo of a vintage-style ice cream truck parked near the Wilmington, NC waterfront at golden hour. The truck is cream-colored with elegant navy and mango accents. People are smiling and holding colorful artisanal popsicles. Soft, hazy coastal lighting. Premium, professional photography., A close-up, high-detail shot of three artisanal popsicles (mango, sea salt caramel, and strawberry) arranged artistically on a marble slab. Fresh fruit garnishes nearby. Bright, vibrant colors, 'Seafoam Sorbet' and 'Sunset Mango' tones. Studio lighting, shallow depth of field., and A charming scene of a community event in a lush, coastal park in Wilmington. The Port City Pops truck is the center of attention, with a small, stylish queue of people. Coastal trees and wooden boardwalk in the background. Warm, inviting atmosphere.) to create a premium, lifestyle-focused impression.\n*   **Interactivity:** I added smooth-scroll navigation and subtle scroll-reveal animations to sections like \"Locally Loved\" to keep the user experience fluid and engaging.\n*   **Production Standards:** The site is fully responsive, built with semantic HTML, and includes a functional contact form UI for bookings.\n\nThe `#visit` section includes the requested empty `data-map-slot` container, ready for a live map integration. \n\nIs there a specific flavor or event detail you'd like to highlight further?"
+    },
+    {
+      "suggestion": "Add a flavor carousel section"
+    },
+    {
+      "suggestion": "Create a mobile-specific version"
+    },
+    {
+      "suggestion": "Update the contact form fields"
+    }
+  ],
+  "projectId": "15690353875760101284",
+  "sessionId": "6408578161982754451"
+}
