@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>R&amp;R Automotive | Visalia's Iron Standard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;family=Geist:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-error-container": "#ffdad6",
+                      "tertiary-container": "#989999",
+                      "primary-fixed-dim": "#ffb693",
+                      "on-tertiary": "#2f3131",
+                      "surface-container-low": "#1b1b1c",
+                      "surface-container-highest": "#353536",
+                      "surface-container-lowest": "#0e0e0f",
+                      "on-primary": "#561f00",
+                      "surface-container": "#1f1f20",
+                      "surface-bright": "#39393a",
+                      "on-secondary-container": "#bab8b9",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-dim": "#131314",
+                      "inverse-surface": "#e4e2e3",
+                      "inverse-on-surface": "#303031",
+                      "background": "#131314",
+                      "secondary-container": "#49494a",
+                      "surface-variant": "#353536",
+                      "surface": "#131314",
+                      "surface-container-high": "#2a2a2b",
+                      "secondary-fixed": "#e5e2e3",
+                      "on-surface": "#e4e2e3",
+                      "primary-fixed": "#ffdbcc",
+                      "on-error": "#690005",
+                      "on-secondary-fixed": "#1b1b1c",
+                      "surface-tint": "#ffb693",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "tertiary-fixed-dim": "#c6c6c6",
+                      "on-primary-fixed": "#351000",
+                      "on-primary-container": "#572000",
+                      "on-surface-variant": "#e2bfb0",
+                      "on-secondary-fixed-variant": "#474647",
+                      "on-secondary": "#303031",
+                      "secondary": "#c8c6c7",
+                      "secondary-fixed-dim": "#c8c6c7",
+                      "primary": "#ffb693",
+                      "inverse-primary": "#a04100",
+                      "outline": "#a98a7d",
+                      "outline-variant": "#5a4136",
+                      "on-background": "#e4e2e3",
+                      "on-tertiary-container": "#303132",
+                      "error-container": "#93000a",
+                      "on-primary-fixed-variant": "#7a3000",
+                      "tertiary": "#c6c6c6",
+                      "primary-container": "#ff6b00",
+                      "error": "#ffb4ab"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin": "32px",
+                      "lg": "24px",
+                      "md": "16px",
+                      "sm": "8px",
+                      "xs": "4px",
+                      "unit": "4px",
+                      "gutter": "24px",
+                      "xxl": "80px",
+                      "xl": "48px"
+              },
+              "fontFamily": {
+                      "mono-data": ["Geist"],
+                      "headline-lg": ["Archivo Narrow"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "label-caps": ["Geist"],
+                      "headline-lg-mobile": ["Archivo Narrow"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-md": ["Archivo Narrow"],
+                      "display-lg": ["Archivo Narrow"]
+              },
+              "fontSize": {
+                      "mono-data": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .industrial-border { border: 2px solid #3A3A3C; }
+        .industrial-border-t { border-top: 2px solid #3A3A3C; }
+        .industrial-border-b { border-bottom: 2px solid #3A3A3C; }
+        .industrial-border-l { border-left: 2px solid #3A3A3C; }
+        .industrial-border-r { border-right: 2px solid #3A3A3C; }
+        
+        .bg-grain {
+            background-image: url("https://www.transparenttextures.com/patterns/dark-matter.png");
+            background-repeat: repeat;
+        }
+
+        .btn-instant:active { transform: scale(0.98); }
+        
+        html { scroll-behavior: smooth; }
+        
+        /* Custom scrollbar */
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: #131314; }
+        ::-webkit-scrollbar-thumb { background: #3A3A3C; border-radius: 0; }
+        ::-webkit-scrollbar-thumb:hover { background: #ff6b00; }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md bg-grain selection:bg-primary-container selection:text-on-primary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 z-50 w-full bg-background/95 backdrop-blur-sm border-b-2 border-surface-container-highest px-margin py-md flex justify-between items-center">
+<div class="flex items-center gap-xl">
+<a class="font-headline-md text-headline-md font-bold tracking-tighter text-on-background" href="#">R&amp;R AUTOMOTIVE</a>
+<div class="hidden md:flex gap-lg items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#services">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#about">ABOUT</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#location">LOCATION</a>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<a class="hidden sm:block font-label-caps text-label-caps font-bold text-on-surface hover:text-primary" href="tel:5596252155">559-625-2155</a>
+<a class="bg-primary-container text-on-primary px-lg py-sm font-label-caps text-label-caps font-bold tracking-widest hover:bg-on-surface hover:text-background transition-none uppercase" href="#contact">EMERGENCY 24/7</a>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-end pt-xxl">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10"></div>
+<img alt="R&amp;R Heavy Recovery" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLuvxlocBMeUdncsLpNBj1ehqKqc9E3MFs9WS_4kE3sragHxupyeGiIK2dnzr32cqv9I01wsnfIZk7RrPCRouRxPTfQsFW9VpoyNlZL7BFWrneLn2r4iXFNpqV94s5SoeWPx1nQ8GGT2VRhQwndCaqHwQkMiaTv9AGOecSYUDW6HkxskHEyVKeRSUWGfxTX43BSIU7pua512q0aCUxQRopx95HvdQeNkjZAGRw0CNXAFTTyu-IL3sqMBRLv8"/>
+</div>
+<div class="relative z-20 px-margin pb-xxl max-w-7xl mx-auto w-full">
+<div class="flex flex-col md:flex-row md:items-end gap-xl border-l-4 border-primary-container pl-lg">
+<div class="flex-1">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] uppercase block mb-sm">Heavy Recovery &amp; Repair</span>
+<h1 class="font-display-lg text-display-lg uppercase leading-none mb-md">Visalia's Iron <br/><span class="text-primary-container">Standard</span></h1>
+</div>
+<div class="max-w-md pb-xs">
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                        When the heavy loads fail on the 99, we're the crew that answers. Since 1992, R&amp;R Automotive and Towing has provided the muscle and mechanical expertise Visalia depends on.
+                    </p>
+<div class="flex gap-md">
+<button class="bg-primary-container text-on-primary px-xl py-md font-label-caps text-label-caps font-bold transition-none btn-instant uppercase" onclick="document.getElementById('services').scrollIntoView()">View Capabilities</button>
+<button class="border-2 border-on-surface text-on-surface px-xl py-md font-label-caps text-label-caps font-bold hover:bg-on-surface hover:text-background transition-none btn-instant uppercase" onclick="document.getElementById('contact').scrollIntoView()">Request Help</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Stats -->
+<section class="bg-surface-container-lowest py-xl industrial-border-t industrial-border-b">
+<div class="px-margin max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-gutter text-center md:text-left">
+<div class="md:industrial-border-r md:pr-gutter last:border-0">
+<span class="font-mono-data text-mono-data text-primary-container mb-xs block">STATUS: ONLINE</span>
+<h3 class="font-headline-md text-headline-md uppercase font-bold">24/7 Response</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Emergency Dispatch</p>
+</div>
+<div class="md:industrial-border-r md:pr-gutter last:border-0">
+<span class="font-mono-data text-mono-data text-primary-container mb-xs block">ESTABLISHED</span>
+<h3 class="font-headline-md text-headline-md uppercase font-bold">1992 Legacy</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Decades of Grit</p>
+</div>
+<div class="md:industrial-border-r md:pr-gutter last:border-0">
+<span class="font-mono-data text-mono-data text-primary-container mb-xs block">LOCATION</span>
+<h3 class="font-headline-md text-headline-md uppercase font-bold">Visalia Locals</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Central Valley Rooted</p>
+</div>
+<div>
+<span class="font-mono-data text-mono-data text-primary-container mb-xs block">CAPACITY</span>
+<h3 class="font-headline-md text-headline-md uppercase font-bold">Heavy Duty</h3>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Class A to Diesel</p>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xxl px-margin max-w-7xl mx-auto overflow-hidden" id="services">
+<div class="flex flex-col md:flex-row gap-xl mb-xl items-baseline">
+<h2 class="font-headline-lg text-headline-lg uppercase border-b-4 border-primary-container pb-sm">Services</h2>
+<p class="font-label-caps text-label-caps tracking-widest text-on-surface-variant">REPAIR | RECOVERY | REHEDULLING</p>
+</div>
+<!-- Asymmetric Bento-style Layout -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Large Card: Heavy Recovery -->
+<div class="md:col-span-8 group industrial-border relative overflow-hidden h-[500px]">
+<img alt="Heavy Towing" class="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 brightness-50" src="https://lh3.googleusercontent.com/aida/AP1WRLuvxlocBMeUdncsLpNBj1ehqKqc9E3MFs9WS_4kE3sragHxupyeGiIK2dnzr32cqv9I01wsnfIZk7RrPCRouRxPTfQsFW9VpoyNlZL7BFWrneLn2r4iXFNpqV94s5SoeWPx1nQ8GGT2VRhQwndCaqHwQkMiaTv9AGOecSYUDW6HkxskHEyVKeRSUWGfxTX43BSIU7pua512q0aCUxQRopx95HvdQeNkjZAGRw0CNXAFTTyu-IL3sqMBRLv8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 p-xl flex flex-col items-start gap-md">
+<span class="bg-primary-container text-on-primary px-md py-xs font-mono-data text-mono-data">DEPT_RECOVERY</span>
+<h3 class="font-headline-lg text-headline-lg uppercase">Heavy Recovery &amp; Towing</h3>
+<p class="font-body-md text-body-md text-on-surface max-w-xl">From fleet accounts to highway accidents, our rotators and heavy wreckers handle the toughest recoveries in the Central Valley.</p>
+<button class="bg-on-surface text-background px-lg py-md font-label-caps text-label-caps font-bold transition-none btn-instant uppercase">Dispatch Now</button>
+</div>
+</div>
+<!-- Small Detail Card: Engine Repair -->
+<div class="md:col-span-4 flex flex-col gap-gutter">
+<div class="industrial-border bg-surface-container-high p-lg flex-1">
+<img alt="Engine Repair" class="w-full h-48 object-cover industrial-border mb-md grayscale hover:grayscale-0 transition-all duration-500" src="https://lh3.googleusercontent.com/aida/AP1WRLtVYYG8uI8dOTPYsmzUeFRCnS44KPDI2YwjBGbSQcGMtvT5UnTFuS_-iKzqqt9NUtua-Tx2gY_uTqhWZvC-RC0nc_vCOJ_-9EBQgFyhjn-jtVQOH900VfquOl7ENmnF5gRF3doLc6IfBVGNOvdNi1Eiqj_i3v2dhXVfTHWSnvPyn-NTYjW4AVCdISkbIGG6_II9E4hPd_P6AK8bEKLj-dokPhfwwnBv4f8A3gaf9I6366_4PMKDUvpAeHlD"/>
+<h3 class="font-headline-md text-headline-md uppercase mb-sm">Full Engine Repair</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-md">Precision diagnostics and repair for diesel and commercial gasoline engines. Keeping Visalia moving.</p>
+<ul class="font-label-caps text-label-caps space-y-xs text-on-surface">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-primary-container text-sm">build</span> TRANSMISSION OVERHAULS</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-primary-container text-sm">build</span> BRAKE SYSTEMS</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-primary-container text-sm">build</span> HYDRAULIC REPAIR</li>
+</ul>
+</div>
+</div>
+<!-- Secondary Service Blocks -->
+<div class="md:col-span-4 industrial-border bg-surface-container-lowest p-lg">
+<h4 class="font-label-caps text-label-caps text-primary-container mb-md">FLEET ACCOUNTS</h4>
+<p class="font-body-md text-body-md mb-lg">Customized maintenance and priority towing for commercial fleets. We minimize your downtime.</p>
+<a class="font-label-caps text-label-caps font-bold underline hover:text-primary transition-colors" href="#contact">INQUIRE ABOUT FLEET</a>
+</div>
+<div class="md:col-span-4 industrial-border bg-surface-container-lowest p-lg">
+<h4 class="font-label-caps text-label-caps text-primary-container mb-md">ROADSIDE ASSISTANCE</h4>
+<p class="font-body-md text-body-md mb-lg">Lockouts, jumps, and tire changes. Rapid response for light-duty vehicles across the county.</p>
+<a class="font-label-caps text-label-caps font-bold underline hover:text-primary transition-colors" href="#contact">CALL ASSISTANCE</a>
+</div>
+<div class="md:col-span-4 industrial-border bg-primary-container/10 p-lg border-primary-container/30">
+<h4 class="font-label-caps text-label-caps text-primary-container mb-md">VISALIA LOCAL HUB</h4>
+<p class="font-body-md text-body-md mb-lg">Located right on Mineral King Ave. Visit our shop for expert diagnosis and friendly service.</p>
+<a class="font-label-caps text-label-caps font-bold underline hover:text-primary transition-colors" href="#location">GET DIRECTIONS</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-lowest py-xxl" id="about">
+<div class="px-margin max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-xl items-center">
+<div class="industrial-border-l pl-xl py-lg">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-xl">Grit &amp; <br/><span class="text-primary-container">Integrity</span></h2>
+<div class="space-y-md font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>Established in 1992, R&amp;R Automotive and Towing was built on a simple premise: do the job right, no matter how heavy the load. We aren't just mechanics; we're the backbone of Visalia's infrastructure, ensuring that the wheels of commerce and community keep turning.</p>
+<p>Our facility at 1912 East Mineral King Avenue serves as a sanctuary for machines and a source of relief for drivers. We've weathered the storms, the heatwaves, and the shifting technologies of the automotive world, always coming out stronger and more capable.</p>
+<p>When you call R&amp;R, you're not getting a faceless dispatch. You're getting local experts who know every backroad in Tulare County.</p>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -top-4 -left-4 w-full h-full industrial-border pointer-events-none transition-transform group-hover:translate-x-2 group-hover:translate-y-2"></div>
+<img alt="Precision Work" class="w-full h-[500px] object-cover industrial-border grayscale contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLtVYYG8uI8dOTPYsmzUeFRCnS44KPDI2YwjBGbSQcGMtvT5UnTFuS_-iKzqqt9NUtua-Tx2gY_uTqhWZvC-RC0nc_vCOJ_-9EBQgFyhjn-jtVQOH900VfquOl7ENmnF5gRF3doLc6IfBVGNOvdNi1Eiqj_i3v2dhXVfTHWSnvPyn-NTYjW4AVCdISkbIGG6_II9E4hPd_P6AK8bEKLj-dokPhfwwnBv4f8A3gaf9I6366_4PMKDUvpAeHlD"/>
+<div class="absolute bottom-4 right-4 bg-background px-lg py-sm industrial-border">
+<span class="font-mono-data text-mono-data text-primary-container">CERTIFIED SINCE '92</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Map & Visit Section -->
+<section class="py-xxl industrial-border-t" id="location">
+<div class="px-margin max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter mb-xl">
+<div class="md:col-span-1">
+<h2 class="font-headline-md text-headline-md uppercase font-bold mb-md">Find Us</h2>
+<address class="not-italic space-y-sm font-body-lg text-body-lg text-on-surface-variant">
+<p class="text-on-surface font-bold">R&amp;R AUTOMOTIVE</p>
+<p>1912 East Mineral King Avenue</p>
+<p>Visalia, CA 93292</p>
+</address>
+<div class="mt-lg pt-lg industrial-border-t">
+<h4 class="font-label-caps text-label-caps text-primary-container mb-sm">OPERATING HOURS</h4>
+<div class="grid grid-cols-2 font-mono-data text-mono-data gap-y-xs">
+<span>MON - FRI</span> <span>8:00 - 17:00</span>
+<span>SATURDAY</span> <span>BY APPOINTMENT</span>
+<span>SUNDAY</span> <span>EMERGENCY ONLY</span>
+<span class="text-primary-container font-bold">24/7 TOWING</span> <span>ALWAYS OPEN</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-2 industrial-border relative">
+<div aria-label="Map of R&amp;R Automotive Location" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container" data-location="Visalia, California" data-map-slot="" style="">
+<!-- Map Placeholder visual -->
+<div class="absolute inset-0 opacity-30 bg-[url('https://www.transparenttextures.com/patterns/black-paper.png')]"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-primary-container text-6xl mb-md">location_on</span>
+<p class="font-headline-md text-headline-md font-bold uppercase">1912 E Mineral King Ave</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Service Request Form -->
+<section class="bg-surface py-xxl border-t-4 border-primary-container" id="contact">
+<div class="px-margin max-w-3xl mx-auto">
+<div class="text-center mb-xl">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-md">Request Service</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Fill out the details below for non-emergency inquiries. For urgent recovery, call us directly.</p>
+</div>
+<form class="space-y-lg industrial-border p-xl bg-surface-container-low" id="serviceForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Full Name</label>
+<input class="bg-background border border-surface-container-highest p-md focus:border-primary-container outline-none transition-all font-body-md text-on-surface" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Phone Number</label>
+<input class="bg-background border border-surface-container-highest p-md focus:border-primary-container outline-none transition-all font-body-md text-on-surface" placeholder="559-000-0000" required="" type="tel"/>
+</div>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Service Type</label>
+<select class="bg-background border border-surface-container-highest p-md focus:border-primary-container outline-none transition-all font-body-md text-on-surface appearance-none">
+<option>Heavy Recovery</option>
+<option>Standard Towing</option>
+<option>Engine Diagnosis</option>
+<option>Fleet Maintenance</option>
+<option>Other / Inquiry</option>
+</select>
+</div>
+<div class="flex flex-col gap-xs">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase">Vehicle/Issue Details</label>
+<textarea class="bg-background border border-surface-container-highest p-md focus:border-primary-container outline-none transition-all font-body-md text-on-surface" placeholder="Describe your vehicle and the service needed..." required="" rows="4"></textarea>
+</div>
+<div class="hidden font-mono-data text-mono-data text-primary-container border border-primary-container/30 p-md bg-primary-container/5" id="formStatus">
+                    REQUEST TRANSMITTED. OUR DISPATCH WILL CONTACT YOU SHORTLY.
+                </div>
+<button class="w-full bg-primary-container text-on-primary py-lg font-label-caps text-label-caps font-bold transition-none btn-instant uppercase text-center flex justify-center items-center gap-md" type="submit">
+<span>Submit Service Request</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-4 border-surface-container-highest">
+<div class="px-margin py-xxl max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-xl">
+<div class="md:col-span-1">
+<a class="font-headline-md text-headline-md font-bold text-on-surface uppercase mb-md block" href="#">R&amp;R AUTOMOTIVE</a>
+<p class="font-body-md text-body-md text-on-surface-variant mb-lg">Precision mechanical repair and heavy-duty recovery for Visalia and the greater Central Valley area.</p>
+<div class="flex gap-md">
+<span class="material-symbols-outlined text-primary-container cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary-container cursor-pointer hover:scale-110 transition-transform">chat</span>
+<span class="material-symbols-outlined text-primary-container cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps font-bold text-on-surface mb-lg">OPERATIONS</h5>
+<ul class="space-y-sm font-label-caps text-label-caps text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#services">TOWING SERVICES</a></li>
+<li><a class="hover:text-primary transition-colors" href="#services">DIESEL REPAIR</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FLEET ACCOUNTS</a></li>
+<li><a class="hover:text-primary transition-colors" href="#location">RECOVERY BASE</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps font-bold text-on-surface mb-lg">LEGAL &amp; INFO</h5>
+<ul class="space-y-sm font-label-caps text-label-caps text-secondary">
+<li><a class="hover:text-primary transition-colors" href="#">TERMS OF SERVICE</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">PRIVACY POLICY</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">SAFETY PROTOCOLS</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps font-bold text-on-surface mb-lg">CONTACT</h5>
+<ul class="space-y-sm font-label-caps text-label-caps text-secondary">
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">phone</span> 559-625-2155</li>
+<li class="flex items-center gap-xs"><span class="material-symbols-outlined text-sm">mail</span> randrautovisalia@gmail.com</li>
+<li class="flex items-start gap-xs"><span class="material-symbols-outlined text-sm">pin_drop</span> 1912 E Mineral King Ave,<br/>Visalia, CA 93292</li>
+</ul>
+</div>
+</div>
+<div class="px-margin py-lg border-t border-surface-container-highest">
+<div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center gap-md">
+<p class="font-label-caps text-label-caps text-secondary">© 2024 R&amp;R AUTOMOTIVE AND TOWING. VISALIA, CA. ALL RIGHTS RESERVED.</p>
+<div class="font-mono-data text-mono-data text-primary-container flex items-center gap-sm">
+<span class="w-2 h-2 rounded-full bg-primary-container animate-pulse"></span>
+                    SYSTEMS NOMINAL - DISPATCH LIVE
+                </div>
+</div>
+</div>
+</footer>
+<script>
+        // Form Interaction
+        const form = document.getElementById('serviceForm');
+        const status = document.getElementById('formStatus');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            status.classList.remove('hidden');
+            form.querySelectorAll('input, select, textarea, button').forEach(el => {
+                el.disabled = true;
+                el.classList.add('opacity-50');
+            });
+            
+            // Artificial delay to mimic mechanical processing
+            setTimeout(() => {
+                status.innerText = "SUCCESS: DISPATCH LOGGED #RR-" + Math.floor(Math.random() * 9000 + 1000);
+            }, 1500);
+        });
+
+        // Simple parallax-ish effect on scroll for images
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('.hero-img');
+            if(heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+
+        // Hover Inversion logic for buttons (handled via CSS transition-none but adding JS for extra snap if needed)
+        document.querySelectorAll('.btn-instant').forEach(btn => {
+            btn.addEventListener('mouseenter', () => {
+                // Potential for hardware-accelerated micro-vibration
+            });
+        });
+    </script>
+</body></html>
