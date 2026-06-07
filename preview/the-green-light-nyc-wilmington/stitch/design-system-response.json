@@ -1,0 +1,531 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Urban Nocturne",
+        "styleGuidelines": "## Brand & Style\n\nThis design system embodies the \"Modern Bistro meets Urban Night\" aesthetic. It is a premium, editorial framework designed to feel like a high-end menu discovered in a dimly lit, exclusive Manhattan corridor. The brand personality is sophisticated, confident, and slightly edgy, eschewing traditional \"foodie\" warmth for a cooler, more architectural atmosphere.\n\nThe visual style is a blend of **Minimalism** and **Modern Brutalism**. It relies on heavy whitespace (or \"dark space\"), high-contrast color pops, and a rigorous structural grid defined by physical lines rather than soft shadows. The emotional response should be one of discovery and exclusivity, evoking the feeling of a late-night culinary destination that is both raw and refined.\n\n## Layout & Spacing\n\nThis design system employs a **fixed-width container** on desktop with a 12-column grid, transitioning to a fluid 4-column grid on mobile. The layout philosophy is **asymmetric and rhythmic**; elements should frequently be offset by one or two columns to create visual interest and an editorial \"magazine\" feel.\n\nA defining feature is the use of **thick architectural rule lines** (2px for secondary divisions, 4px for primary sections). These lines replace standard padding-based separation, creating a structured, blueprint-like environment. \n\n**Breakpoints:**\n- Mobile: Up to 600px (Margins: 20px, Gutters: 16px)\n- Tablet: 601px - 1024px (Margins: 32px, Gutters: 24px)\n- Desktop: 1025px+ (Margins: 40px, Max-width: 1280px)\n\n## Elevation & Depth\n\nDepth is achieved through **tonal layering** and texture rather than traditional shadows. This design system rejects blurs and glows in favor of a flat, \"printed\" depth.\n\n1.  **Base Layer:** Deep Charcoal with a subtle, low-opacity grain texture overlay to simulate high-end paper or matte metal.\n2.  **Surface Layer:** Forest Green used for containers and cards, separated from the base by a 1px solid stroke in Charcoal or Cream.\n3.  **The \"Green Light\" Layer:** Elements in Electric Lime appear to \"sit on top\" of the UI purely through color vibration.\n4.  **Rule Lines:** Horizontal and vertical lines create a sense of skeletal structure, defining depth by enclosing content in rigid \"cells.\"\n\n## Components\n\n**Buttons**\nButtons are rectangular with sharp corners. The primary button is solid Electric Lime with Charcoal text, utilizing the `label-lg` typographic style. Secondary buttons use a thick 2px Cream border with no fill.\n\n**Cards**\nCards do not use shadows. They are defined by a solid Forest Green background and a 1px Cream border. Content within cards should be padded generously (32px+) to maintain the editorial feel.\n\n**Input Fields**\nInputs are minimalist, consisting only of a 2px bottom border in Cream. On focus, the border transitions to Electric Lime. Labels should sit above the line in `label-sm` uppercase.\n\n**Rule Lines & Dividers**\nUse 2px vertical and horizontal lines to separate menu items or list elements. In lists, the \"Green Light\" color should be used as a hover state for the divider line itself, making the grid feel interactive.\n\n**Imagery**\nPhotography should be high-contrast with deep shadows. All images must be framed in sharp-edged containers, occasionally using an asymmetric \"overlap\" where the image breaks the boundary of its container by a fixed spacing unit.",
+        "theme": {
+          "bodyFont": "DM_SANS",
+          "bodyFontFamily": "Dm Sans",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#ccff00",
+          "designMd": "---\nname: Urban Nocturne\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#c4c9ac'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#8e9379'\n  outline-variant: '#444933'\n  surface-tint: '#abd600'\n  primary: '#ffffff'\n  on-primary: '#283500'\n  primary-container: '#c3f400'\n  on-primary-container: '#556d00'\n  inverse-primary: '#506600'\n  secondary: '#b4ccbb'\n  on-secondary: '#203529'\n  secondary-container: '#364c3e'\n  on-secondary-container: '#a3bbaa'\n  tertiary: '#ffffff'\n  on-tertiary: '#31312d'\n  tertiary-container: '#e5e2dc'\n  on-tertiary-container: '#656460'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#c3f400'\n  primary-fixed-dim: '#abd600'\n  on-primary-fixed: '#161e00'\n  on-primary-fixed-variant: '#3c4d00'\n  secondary-fixed: '#d0e9d6'\n  secondary-fixed-dim: '#b4ccbb'\n  on-secondary-fixed: '#0a2014'\n  on-secondary-fixed-variant: '#364c3e'\n  tertiary-fixed: '#e5e2dc'\n  tertiary-fixed-dim: '#c9c6c1'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474743'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-lg:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin: 40px\n  rule_thick: 2px\n  rule_heavy: 4px\n---\n\n## Brand & Style\n\nThis design system embodies the \"Modern Bistro meets Urban Night\" aesthetic. It is a premium, editorial framework designed to feel like a high-end menu discovered in a dimly lit, exclusive Manhattan corridor. The brand personality is sophisticated, confident, and slightly edgy, eschewing traditional \"foodie\" warmth for a cooler, more architectural atmosphere.\n\nThe visual style is a blend of **Minimalism** and **Modern Brutalism**. It relies on heavy whitespace (or \"dark space\"), high-contrast color pops, and a rigorous structural grid defined by physical lines rather than soft shadows. The emotional response should be one of discovery and exclusivity, evoking the feeling of a late-night culinary destination that is both raw and refined.\n\n## Colors\n\nThe palette is driven by high-contrast tension. The foundation is a deep, matte **Charcoal** (#121212) which provides the \"Urban Night\" canvas. This is paired with a sophisticated **Forest Green** (#1A2F23) for tonal depth and layered surfaces.\n\nThe signature element is \"The Green Light\"—a vibrant, **Electric Lime** (#CCFF00) used sparingly for high-impact calls to action and navigational cues. This neon-adjacent hue is balanced by **Warm Cream** (#F9F6F0) used for primary typography and background accents to maintain a \"Bistro\" editorial feel, preventing the UI from feeling overly \"tech-heavy.\"\n\n## Typography\n\nThe typography strategy relies on the interplay between classical elegance and modern utility. \n\n**Headlines** utilize a high-contrast serif to provide a literary, editorial authority. These should be set with tight leading and slight negative letter-spacing for a \"masthead\" appearance. Large display sizes are encouraged to break the grid.\n\n**Body text** uses a wide-set, geometric sans-serif. The generous horizontal spacing of the characters ensures legibility against dark backgrounds and contributes to the premium, airy feel of the layout. All labels and secondary metadata should be set in uppercase with increased letter-spacing to mimic architectural signage.\n\n## Layout & Spacing\n\nThis design system employs a **fixed-width container** on desktop with a 12-column grid, transitioning to a fluid 4-column grid on mobile. The layout philosophy is **asymmetric and rhythmic**; elements should frequently be offset by one or two columns to create visual interest and an editorial \"magazine\" feel.\n\nA defining feature is the use of **thick architectural rule lines** (2px for secondary divisions, 4px for primary sections). These lines replace standard padding-based separation, creating a structured, blueprint-like environment. \n\n**Breakpoints:**\n- Mobile: Up to 600px (Margins: 20px, Gutters: 16px)\n- Tablet: 601px - 1024px (Margins: 32px, Gutters: 24px)\n- Desktop: 1025px+ (Margins: 40px, Max-width: 1280px)\n\n## Elevation & Depth\n\nDepth is achieved through **tonal layering** and texture rather than traditional shadows. This design system rejects blurs and glows in favor of a flat, \"printed\" depth.\n\n1.  **Base Layer:** Deep Charcoal with a subtle, low-opacity grain texture overlay to simulate high-end paper or matte metal.\n2.  **Surface Layer:** Forest Green used for containers and cards, separated from the base by a 1px solid stroke in Charcoal or Cream.\n3.  **The \"Green Light\" Layer:** Elements in Electric Lime appear to \"sit on top\" of the UI purely through color vibration.\n4.  **Rule Lines:** Horizontal and vertical lines create a sense of skeletal structure, defining depth by enclosing content in rigid \"cells.\"\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px roundedness)**. This reinforces the architectural, high-end bistro aesthetic. Every button, card, input, and image container must have 90-degree corners. This lack of \"friendliness\" in the corners is intentional, signaling a professional, curated experience that values precision over casualness.\n\n## Components\n\n**Buttons**\nButtons are rectangular with sharp corners. The primary button is solid Electric Lime with Charcoal text, utilizing the `label-lg` typographic style. Secondary buttons use a thick 2px Cream border with no fill.\n\n**Cards**\nCards do not use shadows. They are defined by a solid Forest Green background and a 1px Cream border. Content within cards should be padded generously (32px+) to maintain the editorial feel.\n\n**Input Fields**\nInputs are minimalist, consisting only of a 2px bottom border in Cream. On focus, the border transitions to Electric Lime. Labels should sit above the line in `label-sm` uppercase.\n\n**Rule Lines & Dividers**\nUse 2px vertical and horizontal lines to separate menu items or list elements. In lists, the \"Green Light\" color should be used as a hover state for the divider line itself, making the grid feel interactive.\n\n**Imagery**\nPhotography should be high-contrast with deep shadows. All images must be framed in sharp-edged containers, occasionally using an asymmetric \"overlap\" where the image breaks the boundary of its container by a fixed spacing unit.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "DM_SANS",
+          "labelFontFamily": "Dm Sans",
+          "namedColors": {
+            "background": "#131313",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#313030",
+            "inverse_primary": "#506600",
+            "inverse_surface": "#e5e2e1",
+            "on_background": "#e5e2e1",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#283500",
+            "on_primary_container": "#556d00",
+            "on_primary_fixed": "#161e00",
+            "on_primary_fixed_variant": "#3c4d00",
+            "on_secondary": "#203529",
+            "on_secondary_container": "#a3bbaa",
+            "on_secondary_fixed": "#0a2014",
+            "on_secondary_fixed_variant": "#364c3e",
+            "on_surface": "#e5e2e1",
+            "on_surface_variant": "#c4c9ac",
+            "on_tertiary": "#31312d",
+            "on_tertiary_container": "#656460",
+            "on_tertiary_fixed": "#1c1c18",
+            "on_tertiary_fixed_variant": "#474743",
+            "outline": "#8e9379",
+            "outline_variant": "#444933",
+            "primary": "#ffffff",
+            "primary_container": "#c3f400",
+            "primary_fixed": "#c3f400",
+            "primary_fixed_dim": "#abd600",
+            "secondary": "#b4ccbb",
+            "secondary_container": "#364c3e",
+            "secondary_fixed": "#d0e9d6",
+            "secondary_fixed_dim": "#b4ccbb",
+            "surface": "#131313",
+            "surface_bright": "#393939",
+            "surface_container": "#201f1f",
+            "surface_container_high": "#2a2a2a",
+            "surface_container_highest": "#353534",
+            "surface_container_low": "#1c1b1b",
+            "surface_container_lowest": "#0e0e0e",
+            "surface_dim": "#131313",
+            "surface_tint": "#abd600",
+            "surface_variant": "#353534",
+            "tertiary": "#ffffff",
+            "tertiary_container": "#e5e2dc",
+            "tertiary_fixed": "#e5e2dc",
+            "tertiary_fixed_dim": "#c9c6c1"
+          },
+          "overrideNeutralColor": "#121212",
+          "overridePrimaryColor": "#ccff00",
+          "overrideSecondaryColor": "#1a2f23",
+          "overrideTertiaryColor": "#f9f6f0",
+          "spacing": {
+            "gutter": "24px",
+            "margin": "40px",
+            "rule_heavy": "4px",
+            "rule_thick": "2px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "DM Sans",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "DM Sans",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "72px",
+              "fontWeight": "800",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "1.4"
+            },
+            "label-lg": {
+              "fontFamily": "DM Sans",
+              "fontSize": "14px",
+              "fontWeight": "700",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.2"
+            },
+            "label-sm": {
+              "fontFamily": "DM Sans",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "letterSpacing": "0.15em",
+              "lineHeight": "1.2"
+            }
+          }
+        }
+      },
+      "name": "assets/f496134d13ac4e5fbfd743a9ac89c230",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "8f79aae22bfd4977a4b79273030c1235",
+          "name": "projects/11546889191668490188/screens/8f79aae22bfd4977a4b79273030c1235",
+          "prompt": "An atmospheric, close-up shot of a modern, matte-black food truck window at night in NYC. A glowing green 'Open' sign in a minimalist font. Soft bokeh of city lights in the background. High-end, moody, urban vibe.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt1od69zv1O6kOOKbFBb_iLpfDQYUmgmoquLj_M396LpyyUsxOUV1CFRgV9rL0xHL_c_5VojgO2l2N6x0SzooVjgtVSzx7ECI4yL1XtOXEKztYzcE7XGF0x2CmN5QOYZ63JKVdjfizwPUglXEZeYi_uuC4OLz5YsRr37LQTn-AUhfldJTpBiXPlpuGBV5DQWEFOaX6rl6N9p77blq08v48b0n8BmTzzgVJGOfMDtjDts_H3SHxm-tuKRBM",
+            "name": "projects/11546889191668490188/files/60ba381ce80243be876b2054544ee8d0"
+          },
+          "theme": {},
+          "title": "An atmospheric, close-up shot of a modern, matte-black food truck window at night in NYC. A glowing green 'Open' sign in a minimalist font. Soft bokeh of city lights in the background. High-end, moody, urban vibe.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "512",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY1NzM3MWM0MDNmMDQ4Yzg5MmFjZWYxYmIzOWJhZGExEgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTU0Njg4OTE5MTY2ODQ5MDE4OA&filename=&opi=96797242",
+            "mimeType": "image/svg+xml",
+            "name": "projects/11546889191668490188/files/5321530a983745df9ae6a16c3d611b2e"
+          },
+          "id": "8c1929f3c9044df2b7c20016c08a4d02",
+          "name": "projects/11546889191668490188/screens/8c1929f3c9044df2b7c20016c08a4d02",
+          "prompt": "Brand logo",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "displayMode": "SVG",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtcJnl79qKpel7fOX8SfNrzDgZDXnj0IkPQk9yoW7_9ZoHYfy_QY3Wmbztmp7MRkhJGK5Aid0jQL_hWG891MxBrsRaDozMRGSAWvOfrED3_w2jWG3BDPtA4gKPz8ChWLkqZc31zWAGjk8CBiAjHzpOSpyvDTR1-8--SBJmGyVA0ol3wk5LsHNvubsgbnFwB8re3xscKtsv1yKnwfgEjeyCBw8JaSFthKvwI-9P9VgPGX0I9blVMDfUqMRiJ",
+            "name": "projects/11546889191668490188/files/28049a866b004db2bae499b5324cf4df"
+          },
+          "theme": {},
+          "title": "The Green Light NYC Logo",
+          "width": "512"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "0777815f661144449fdce2ce0c09fcaa",
+          "name": "projects/11546889191668490188/screens/0777815f661144449fdce2ce0c09fcaa",
+          "prompt": "A premium, editorial-style photograph of a gourmet street food dish from 'The Green Light NYC'. High-angle shot, moody lighting with a soft green neon glow reflecting off a dark metallic surface. The food is vibrant, colorful, and artfully plated. Professional food photography, 8k resolution, cinematic atmosphere.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtNfDTbxdUhE1Q9sZhRUFuFMjbeMWOkGE94QVF34YEQJW8rgTLdVtnWOxgYoT7qO948XmOy-Z9QC6rTQC3VehrVTl5bP9kGrasukNSuK0c62X-YiBAFcJ5KzSNoO6N6uexwvfNorDhLw4mDjdwvj9RvuzGmmgPwTs4roSBngo6SbGPK8oorMkpKAD1mQ3Hj2_uK-RXT61aOeTq2R8WI1VkPbCN__Sp5bY8UoEPb6iLRXUsNRnivpIT9w9i_",
+            "name": "projects/11546889191668490188/files/26793fdfd1274be1848a50d649c592a8"
+          },
+          "theme": {},
+          "title": "A premium, editorial-style photograph of a gourmet street food dish from 'The Green Light NYC'. High-angle shot, moody lighting with a soft green neon glow reflecting off a dark metallic surface. The food is vibrant, colorful, and artfully plated. Professional food photography, 8k resolution, cinematic atmosphere.",
+          "width": "1376"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Urban Nocturne",
+              "styleGuidelines": "## Brand & Style\n\nThis design system embodies the \"Modern Bistro meets Urban Night\" aesthetic. It is a premium, editorial framework designed to feel like a high-end menu discovered in a dimly lit, exclusive Manhattan corridor. The brand personality is sophisticated, confident, and slightly edgy, eschewing traditional \"foodie\" warmth for a cooler, more architectural atmosphere.\n\nThe visual style is a blend of **Minimalism** and **Modern Brutalism**. It relies on heavy whitespace (or \"dark space\"), high-contrast color pops, and a rigorous structural grid defined by physical lines rather than soft shadows. The emotional response should be one of discovery and exclusivity, evoking the feeling of a late-night culinary destination that is both raw and refined.\n\n## Layout & Spacing\n\nThis design system employs a **fixed-width container** on desktop with a 12-column grid, transitioning to a fluid 4-column grid on mobile. The layout philosophy is **asymmetric and rhythmic**; elements should frequently be offset by one or two columns to create visual interest and an editorial \"magazine\" feel.\n\nA defining feature is the use of **thick architectural rule lines** (2px for secondary divisions, 4px for primary sections). These lines replace standard padding-based separation, creating a structured, blueprint-like environment. \n\n**Breakpoints:**\n- Mobile: Up to 600px (Margins: 20px, Gutters: 16px)\n- Tablet: 601px - 1024px (Margins: 32px, Gutters: 24px)\n- Desktop: 1025px+ (Margins: 40px, Max-width: 1280px)\n\n## Elevation & Depth\n\nDepth is achieved through **tonal layering** and texture rather than traditional shadows. This design system rejects blurs and glows in favor of a flat, \"printed\" depth.\n\n1.  **Base Layer:** Deep Charcoal with a subtle, low-opacity grain texture overlay to simulate high-end paper or matte metal.\n2.  **Surface Layer:** Forest Green used for containers and cards, separated from the base by a 1px solid stroke in Charcoal or Cream.\n3.  **The \"Green Light\" Layer:** Elements in Electric Lime appear to \"sit on top\" of the UI purely through color vibration.\n4.  **Rule Lines:** Horizontal and vertical lines create a sense of skeletal structure, defining depth by enclosing content in rigid \"cells.\"\n\n## Components\n\n**Buttons**\nButtons are rectangular with sharp corners. The primary button is solid Electric Lime with Charcoal text, utilizing the `label-lg` typographic style. Secondary buttons use a thick 2px Cream border with no fill.\n\n**Cards**\nCards do not use shadows. They are defined by a solid Forest Green background and a 1px Cream border. Content within cards should be padded generously (32px+) to maintain the editorial feel.\n\n**Input Fields**\nInputs are minimalist, consisting only of a 2px bottom border in Cream. On focus, the border transitions to Electric Lime. Labels should sit above the line in `label-sm` uppercase.\n\n**Rule Lines & Dividers**\nUse 2px vertical and horizontal lines to separate menu items or list elements. In lists, the \"Green Light\" color should be used as a hover state for the divider line itself, making the grid feel interactive.\n\n**Imagery**\nPhotography should be high-contrast with deep shadows. All images must be framed in sharp-edged containers, occasionally using an asymmetric \"overlap\" where the image breaks the boundary of its container by a fixed spacing unit.",
+              "theme": {
+                "bodyFont": "DM_SANS",
+                "bodyFontFamily": "Dm Sans",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#ccff00",
+                "designMd": "---\nname: Urban Nocturne\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#c4c9ac'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#8e9379'\n  outline-variant: '#444933'\n  surface-tint: '#abd600'\n  primary: '#ffffff'\n  on-primary: '#283500'\n  primary-container: '#c3f400'\n  on-primary-container: '#556d00'\n  inverse-primary: '#506600'\n  secondary: '#b4ccbb'\n  on-secondary: '#203529'\n  secondary-container: '#364c3e'\n  on-secondary-container: '#a3bbaa'\n  tertiary: '#ffffff'\n  on-tertiary: '#31312d'\n  tertiary-container: '#e5e2dc'\n  on-tertiary-container: '#656460'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#c3f400'\n  primary-fixed-dim: '#abd600'\n  on-primary-fixed: '#161e00'\n  on-primary-fixed-variant: '#3c4d00'\n  secondary-fixed: '#d0e9d6'\n  secondary-fixed-dim: '#b4ccbb'\n  on-secondary-fixed: '#0a2014'\n  on-secondary-fixed-variant: '#364c3e'\n  tertiary-fixed: '#e5e2dc'\n  tertiary-fixed-dim: '#c9c6c1'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474743'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-lg:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin: 40px\n  rule_thick: 2px\n  rule_heavy: 4px\n---\n\n## Brand & Style\n\nThis design system embodies the \"Modern Bistro meets Urban Night\" aesthetic. It is a premium, editorial framework designed to feel like a high-end menu discovered in a dimly lit, exclusive Manhattan corridor. The brand personality is sophisticated, confident, and slightly edgy, eschewing traditional \"foodie\" warmth for a cooler, more architectural atmosphere.\n\nThe visual style is a blend of **Minimalism** and **Modern Brutalism**. It relies on heavy whitespace (or \"dark space\"), high-contrast color pops, and a rigorous structural grid defined by physical lines rather than soft shadows. The emotional response should be one of discovery and exclusivity, evoking the feeling of a late-night culinary destination that is both raw and refined.\n\n## Colors\n\nThe palette is driven by high-contrast tension. The foundation is a deep, matte **Charcoal** (#121212) which provides the \"Urban Night\" canvas. This is paired with a sophisticated **Forest Green** (#1A2F23) for tonal depth and layered surfaces.\n\nThe signature element is \"The Green Light\"—a vibrant, **Electric Lime** (#CCFF00) used sparingly for high-impact calls to action and navigational cues. This neon-adjacent hue is balanced by **Warm Cream** (#F9F6F0) used for primary typography and background accents to maintain a \"Bistro\" editorial feel, preventing the UI from feeling overly \"tech-heavy.\"\n\n## Typography\n\nThe typography strategy relies on the interplay between classical elegance and modern utility. \n\n**Headlines** utilize a high-contrast serif to provide a literary, editorial authority. These should be set with tight leading and slight negative letter-spacing for a \"masthead\" appearance. Large display sizes are encouraged to break the grid.\n\n**Body text** uses a wide-set, geometric sans-serif. The generous horizontal spacing of the characters ensures legibility against dark backgrounds and contributes to the premium, airy feel of the layout. All labels and secondary metadata should be set in uppercase with increased letter-spacing to mimic architectural signage.\n\n## Layout & Spacing\n\nThis design system employs a **fixed-width container** on desktop with a 12-column grid, transitioning to a fluid 4-column grid on mobile. The layout philosophy is **asymmetric and rhythmic**; elements should frequently be offset by one or two columns to create visual interest and an editorial \"magazine\" feel.\n\nA defining feature is the use of **thick architectural rule lines** (2px for secondary divisions, 4px for primary sections). These lines replace standard padding-based separation, creating a structured, blueprint-like environment. \n\n**Breakpoints:**\n- Mobile: Up to 600px (Margins: 20px, Gutters: 16px)\n- Tablet: 601px - 1024px (Margins: 32px, Gutters: 24px)\n- Desktop: 1025px+ (Margins: 40px, Max-width: 1280px)\n\n## Elevation & Depth\n\nDepth is achieved through **tonal layering** and texture rather than traditional shadows. This design system rejects blurs and glows in favor of a flat, \"printed\" depth.\n\n1.  **Base Layer:** Deep Charcoal with a subtle, low-opacity grain texture overlay to simulate high-end paper or matte metal.\n2.  **Surface Layer:** Forest Green used for containers and cards, separated from the base by a 1px solid stroke in Charcoal or Cream.\n3.  **The \"Green Light\" Layer:** Elements in Electric Lime appear to \"sit on top\" of the UI purely through color vibration.\n4.  **Rule Lines:** Horizontal and vertical lines create a sense of skeletal structure, defining depth by enclosing content in rigid \"cells.\"\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px roundedness)**. This reinforces the architectural, high-end bistro aesthetic. Every button, card, input, and image container must have 90-degree corners. This lack of \"friendliness\" in the corners is intentional, signaling a professional, curated experience that values precision over casualness.\n\n## Components\n\n**Buttons**\nButtons are rectangular with sharp corners. The primary button is solid Electric Lime with Charcoal text, utilizing the `label-lg` typographic style. Secondary buttons use a thick 2px Cream border with no fill.\n\n**Cards**\nCards do not use shadows. They are defined by a solid Forest Green background and a 1px Cream border. Content within cards should be padded generously (32px+) to maintain the editorial feel.\n\n**Input Fields**\nInputs are minimalist, consisting only of a 2px bottom border in Cream. On focus, the border transitions to Electric Lime. Labels should sit above the line in `label-sm` uppercase.\n\n**Rule Lines & Dividers**\nUse 2px vertical and horizontal lines to separate menu items or list elements. In lists, the \"Green Light\" color should be used as a hover state for the divider line itself, making the grid feel interactive.\n\n**Imagery**\nPhotography should be high-contrast with deep shadows. All images must be framed in sharp-edged containers, occasionally using an asymmetric \"overlap\" where the image breaks the boundary of its container by a fixed spacing unit.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "DM_SANS",
+                "labelFontFamily": "Dm Sans",
+                "namedColors": {
+                  "background": "#131313",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#313030",
+                  "inverse_primary": "#506600",
+                  "inverse_surface": "#e5e2e1",
+                  "on_background": "#e5e2e1",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#283500",
+                  "on_primary_container": "#556d00",
+                  "on_primary_fixed": "#161e00",
+                  "on_primary_fixed_variant": "#3c4d00",
+                  "on_secondary": "#203529",
+                  "on_secondary_container": "#a3bbaa",
+                  "on_secondary_fixed": "#0a2014",
+                  "on_secondary_fixed_variant": "#364c3e",
+                  "on_surface": "#e5e2e1",
+                  "on_surface_variant": "#c4c9ac",
+                  "on_tertiary": "#31312d",
+                  "on_tertiary_container": "#656460",
+                  "on_tertiary_fixed": "#1c1c18",
+                  "on_tertiary_fixed_variant": "#474743",
+                  "outline": "#8e9379",
+                  "outline_variant": "#444933",
+                  "primary": "#ffffff",
+                  "primary_container": "#c3f400",
+                  "primary_fixed": "#c3f400",
+                  "primary_fixed_dim": "#abd600",
+                  "secondary": "#b4ccbb",
+                  "secondary_container": "#364c3e",
+                  "secondary_fixed": "#d0e9d6",
+                  "secondary_fixed_dim": "#b4ccbb",
+                  "surface": "#131313",
+                  "surface_bright": "#393939",
+                  "surface_container": "#201f1f",
+                  "surface_container_high": "#2a2a2a",
+                  "surface_container_highest": "#353534",
+                  "surface_container_low": "#1c1b1b",
+                  "surface_container_lowest": "#0e0e0e",
+                  "surface_dim": "#131313",
+                  "surface_tint": "#abd600",
+                  "surface_variant": "#353534",
+                  "tertiary": "#ffffff",
+                  "tertiary_container": "#e5e2dc",
+                  "tertiary_fixed": "#e5e2dc",
+                  "tertiary_fixed_dim": "#c9c6c1"
+                },
+                "overrideNeutralColor": "#121212",
+                "overridePrimaryColor": "#ccff00",
+                "overrideSecondaryColor": "#1a2f23",
+                "overrideTertiaryColor": "#f9f6f0",
+                "spacing": {
+                  "gutter": "24px",
+                  "margin": "40px",
+                  "rule_heavy": "4px",
+                  "rule_thick": "2px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "72px",
+                    "fontWeight": "800",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.4"
+                  },
+                  "label-lg": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "14px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.2"
+                  },
+                  "label-sm": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "1.2"
+                  }
+                }
+              }
+            },
+            "name": "assets/f496134d13ac4e5fbfd743a9ac89c230",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "9078",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzljNzM0MTY3MDJkNzRlZTFhOTdlODYwZjM4ZmRjNTRkEgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTU0Njg4OTE5MTY2ODQ5MDE4OA&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/11546889191668490188/files/ddff7091a0e745c6876b7be960aa0781"
+          },
+          "id": "dde68b9549484969b4f955ed1c2f2f66",
+          "name": "projects/11546889191668490188/screens/dde68b9549484969b4f955ed1c2f2f66",
+          "prompt": "Create a bespoke, production-ready desktop homepage for 'The Green Light NYC'. \n\nVisual Identity: \n- Theme: Urban Nocturne (Dark Mode).\n- Primary Palette: Deep Charcoal (#131313), Electric Lime (#CCFF00), and Off-White/Cream.\n- Typography: High-contrast Serif for headlines (Playfair Display style), tracking-wide Sans-serif for body.\n- Motif: Heavy rule lines (borders), asymmetric grids, and generous whitespace.\n\nSections to include:\n1. Header: Includes logo {{DATA:IMAGE:IMAGE_1}} and phone (910) 880-0680. Use TopNavBar component.\n2. Hero: Cinematic background using {{DATA:IMAGE:IMAGE_3}}. Headline: 'Architectural Gastronomy'. Subheadline: 'A new beacon for street food in Wilmington.'\n3. #credibility: 'The Standard Bearer'. A clean section with bold typography and rule lines showcasing accolades (e.g., 'Best New Concept', 'Voted Top 10 NYC').\n4. Offerings: 'The Signature Series'. An asymmetric grid showing gourmet dishes. Use {{DATA:IMAGE:IMAGE_4}} as a featured item. Describe dishes like 'Truffle Arepas' or 'Short Rib Sliders' with premium copy.\n5. About: 'The Origin Story'. Editorial layout with large serif drop caps. Narrative about bringing NYC energy to Wilmington.\n6. Visit: '#visit' section. Include the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. Address: Wilmington, United States.\n7. Contact: A sophisticated, minimal form. Fields: Name, Email, Inquiry Type. Primary color buttons.\n8. Footer: Use the Footer component. Include the email thegreenlightfoodtruck@gmail.com.\n\nTechnical: \n- Use semantic HTML5.\n- Tailored CSS using the Urban Nocturne design tokens.\n- Responsive design for desktop, scaling down to 375px.\n- Smooth scroll and form validation UI logic in JS.\n- No placeholder text (lorem ipsum). Use evocative, brand-appropriate copy.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_1}}\n  Alt Text: The Green Light NYC Logo\n  Description: Brand logo\n  Dimensions: 512x512\n  Aspect Ratio: 1.00\n  Colors: #32FF00\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtuBAoJBAwLFgb9gGCzqeli__R7i4OZM4F1862EO1gAr9knhC2hsZrE5WWR_xOjzvhDelouAwhrPRniJrpEPkL3b7vY1ndoxKhwtsV_dDuOE_BQl1OTO3yiI3o5H7S2rFN5UUprOqfgI_7SkYSoBPL7xNQQ2zVRyXf0CNkAzf2ZaBKZ8xN3GgnN7ACny6zMw3dLNlZGwboL_hP4u8spnJVCalSzQ2UGLk5DgokOn8yvyu5fPiKPbUwH30k",
+            "name": "projects/11546889191668490188/files/a2616a940ccb4ba9bb79bedd31c0795e"
+          },
+          "theme": {
+            "bodyFont": "DM_SANS",
+            "bodyFontFamily": "Dm Sans",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ccff00",
+            "designMd": "---\nname: Urban Nocturne\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#c4c9ac'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#8e9379'\n  outline-variant: '#444933'\n  surface-tint: '#abd600'\n  primary: '#ffffff'\n  on-primary: '#283500'\n  primary-container: '#c3f400'\n  on-primary-container: '#556d00'\n  inverse-primary: '#506600'\n  secondary: '#b4ccbb'\n  on-secondary: '#203529'\n  secondary-container: '#364c3e'\n  on-secondary-container: '#a3bbaa'\n  tertiary: '#ffffff'\n  on-tertiary: '#31312d'\n  tertiary-container: '#e5e2dc'\n  on-tertiary-container: '#656460'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#c3f400'\n  primary-fixed-dim: '#abd600'\n  on-primary-fixed: '#161e00'\n  on-primary-fixed-variant: '#3c4d00'\n  secondary-fixed: '#d0e9d6'\n  secondary-fixed-dim: '#b4ccbb'\n  on-secondary-fixed: '#0a2014'\n  on-secondary-fixed-variant: '#364c3e'\n  tertiary-fixed: '#e5e2dc'\n  tertiary-fixed-dim: '#c9c6c1'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474743'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-lg:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin: 40px\n  rule_thick: 2px\n  rule_heavy: 4px\n---\n\n## Brand & Style\n\nThis design system embodies the \"Modern Bistro meets Urban Night\" aesthetic. It is a premium, editorial framework designed to feel like a high-end menu discovered in a dimly lit, exclusive Manhattan corridor. The brand personality is sophisticated, confident, and slightly edgy, eschewing traditional \"foodie\" warmth for a cooler, more architectural atmosphere.\n\nThe visual style is a blend of **Minimalism** and **Modern Brutalism**. It relies on heavy whitespace (or \"dark space\"), high-contrast color pops, and a rigorous structural grid defined by physical lines rather than soft shadows. The emotional response should be one of discovery and exclusivity, evoking the feeling of a late-night culinary destination that is both raw and refined.\n\n## Colors\n\nThe palette is driven by high-contrast tension. The foundation is a deep, matte **Charcoal** (#121212) which provides the \"Urban Night\" canvas. This is paired with a sophisticated **Forest Green** (#1A2F23) for tonal depth and layered surfaces.\n\nThe signature element is \"The Green Light\"—a vibrant, **Electric Lime** (#CCFF00) used sparingly for high-impact calls to action and navigational cues. This neon-adjacent hue is balanced by **Warm Cream** (#F9F6F0) used for primary typography and background accents to maintain a \"Bistro\" editorial feel, preventing the UI from feeling overly \"tech-heavy.\"\n\n## Typography\n\nThe typography strategy relies on the interplay between classical elegance and modern utility. \n\n**Headlines** utilize a high-contrast serif to provide a literary, editorial authority. These should be set with tight leading and slight negative letter-spacing for a \"masthead\" appearance. Large display sizes are encouraged to break the grid.\n\n**Body text** uses a wide-set, geometric sans-serif. The generous horizontal spacing of the characters ensures legibility against dark backgrounds and contributes to the premium, airy feel of the layout. All labels and secondary metadata should be set in uppercase with increased letter-spacing to mimic architectural signage.\n\n## Layout & Spacing\n\nThis design system employs a **fixed-width container** on desktop with a 12-column grid, transitioning to a fluid 4-column grid on mobile. The layout philosophy is **asymmetric and rhythmic**; elements should frequently be offset by one or two columns to create visual interest and an editorial \"magazine\" feel.\n\nA defining feature is the use of **thick architectural rule lines** (2px for secondary divisions, 4px for primary sections). These lines replace standard padding-based separation, creating a structured, blueprint-like environment. \n\n**Breakpoints:**\n- Mobile: Up to 600px (Margins: 20px, Gutters: 16px)\n- Tablet: 601px - 1024px (Margins: 32px, Gutters: 24px)\n- Desktop: 1025px+ (Margins: 40px, Max-width: 1280px)\n\n## Elevation & Depth\n\nDepth is achieved through **tonal layering** and texture rather than traditional shadows. This design system rejects blurs and glows in favor of a flat, \"printed\" depth.\n\n1.  **Base Layer:** Deep Charcoal with a subtle, low-opacity grain texture overlay to simulate high-end paper or matte metal.\n2.  **Surface Layer:** Forest Green used for containers and cards, separated from the base by a 1px solid stroke in Charcoal or Cream.\n3.  **The \"Green Light\" Layer:** Elements in Electric Lime appear to \"sit on top\" of the UI purely through color vibration.\n4.  **Rule Lines:** Horizontal and vertical lines create a sense of skeletal structure, defining depth by enclosing content in rigid \"cells.\"\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px roundedness)**. This reinforces the architectural, high-end bistro aesthetic. Every button, card, input, and image container must have 90-degree corners. This lack of \"friendliness\" in the corners is intentional, signaling a professional, curated experience that values precision over casualness.\n\n## Components\n\n**Buttons**\nButtons are rectangular with sharp corners. The primary button is solid Electric Lime with Charcoal text, utilizing the `label-lg` typographic style. Secondary buttons use a thick 2px Cream border with no fill.\n\n**Cards**\nCards do not use shadows. They are defined by a solid Forest Green background and a 1px Cream border. Content within cards should be padded generously (32px+) to maintain the editorial feel.\n\n**Input Fields**\nInputs are minimalist, consisting only of a 2px bottom border in Cream. On focus, the border transitions to Electric Lime. Labels should sit above the line in `label-sm` uppercase.\n\n**Rule Lines & Dividers**\nUse 2px vertical and horizontal lines to separate menu items or list elements. In lists, the \"Green Light\" color should be used as a hover state for the divider line itself, making the grid feel interactive.\n\n**Imagery**\nPhotography should be high-contrast with deep shadows. All images must be framed in sharp-edged containers, occasionally using an asymmetric \"overlap\" where the image breaks the boundary of its container by a fixed spacing unit.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "DM_SANS",
+            "labelFontFamily": "Dm Sans",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313030",
+              "inverse_primary": "#506600",
+              "inverse_surface": "#e5e2e1",
+              "on_background": "#e5e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#283500",
+              "on_primary_container": "#556d00",
+              "on_primary_fixed": "#161e00",
+              "on_primary_fixed_variant": "#3c4d00",
+              "on_secondary": "#203529",
+              "on_secondary_container": "#a3bbaa",
+              "on_secondary_fixed": "#0a2014",
+              "on_secondary_fixed_variant": "#364c3e",
+              "on_surface": "#e5e2e1",
+              "on_surface_variant": "#c4c9ac",
+              "on_tertiary": "#31312d",
+              "on_tertiary_container": "#656460",
+              "on_tertiary_fixed": "#1c1c18",
+              "on_tertiary_fixed_variant": "#474743",
+              "outline": "#8e9379",
+              "outline_variant": "#444933",
+              "primary": "#ffffff",
+              "primary_container": "#c3f400",
+              "primary_fixed": "#c3f400",
+              "primary_fixed_dim": "#abd600",
+              "secondary": "#b4ccbb",
+              "secondary_container": "#364c3e",
+              "secondary_fixed": "#d0e9d6",
+              "secondary_fixed_dim": "#b4ccbb",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#201f1f",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353534",
+              "surface_container_low": "#1c1b1b",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#abd600",
+              "surface_variant": "#353534",
+              "tertiary": "#ffffff",
+              "tertiary_container": "#e5e2dc",
+              "tertiary_fixed": "#e5e2dc",
+              "tertiary_fixed_dim": "#c9c6c1"
+            },
+            "overrideNeutralColor": "#121212",
+            "overridePrimaryColor": "#ccff00",
+            "overrideSecondaryColor": "#1a2f23",
+            "overrideTertiaryColor": "#f9f6f0",
+            "spacing": {
+              "gutter": "24px",
+              "margin": "40px",
+              "rule_heavy": "4px",
+              "rule_thick": "2px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "label-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.2"
+              },
+              "label-sm": {
+                "fontFamily": "DM Sans",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.2"
+              }
+            }
+          },
+          "title": "The Green Light NYC - Official Site",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have designed a bespoke, production-ready homepage for **The Green Light NYC**. This design moves away from generic local-business templates, opting instead for a high-fidelity \"Urban Nocturne\" aesthetic that positions the brand as a premium leader in Wilmington's street food scene.\n\n### Design Rationale:\n*   **Bespoke Identity:** The \"Urban Nocturne\" theme uses a deep charcoal base with electric lime accents to create a high-contrast, moody atmosphere reminiscent of a modern NYC bistro at night.\n*   **Editorial Layout:** I’ve implemented an asymmetric grid with generous whitespace and thick architectural rule lines to reinforce the \"Architectural Gastronomy\" brand narrative.\n*   **Premium Photography:** I generated custom atmospheric imagery (the \"Open\" sign and signature dish) to elevate the visual storytelling beyond stock photography.\n*   **Typographic Hierarchy:** A high-contrast serif (Playfair Display) is used for bold, editorial headlines, paired with a wide-set sans-serif for clean readability.\n*   **Technical Implementation:** The site features semantic HTML, tailored CSS variables for the color palette, and a custom JavaScript-driven contact form with validation UI. The required map slot is integrated into a dedicated \"Visit\" section.\n\nThe result is a memorable, high-end digital presence that transforms a local food truck into a sophisticated culinary destination."
+  },
+  {
+    "suggestion": "Add a mobile-specific navigation menu"
+  },
+  {
+    "suggestion": "Create a gallery page for the full menu"
+  },
+  {
+    "suggestion": "Add a scroll-triggered animation for the hero text"
+  }
+]
