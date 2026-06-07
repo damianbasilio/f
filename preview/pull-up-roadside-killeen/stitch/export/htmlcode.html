@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>PULL-UP ROADSIDE | Industrial Roadside Assistance</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=JetBrains+Mono:wght@400;600;700&amp;family=Inter:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @font-face {
+            font-family: 'anton';
+            src: local('Anton');
+        }
+        @font-face {
+            font-family: 'jetbrainsMono';
+            src: local('JetBrains Mono');
+        }
+        @font-face {
+            font-family: 'geist';
+            src: local('Inter');
+        }
+
+        :root {
+            --neon-yellow: #d4f000;
+            --asphalt-black: #131408;
+            --industrial-gray: #343627;
+        }
+
+        body {
+            background-color: var(--asphalt-black);
+            color: #e4e4ce;
+            font-family: 'geist', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .brutal-border {
+            border-bottom: 4px solid var(--neon-yellow);
+        }
+
+        .neon-shadow-hover:hover {
+            box-shadow: 8px 8px 0px 0px var(--asphalt-black);
+            transform: translate(-4px, -4px);
+        }
+
+        .marquee-container {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .marquee-content {
+            display: inline-block;
+            animation: marquee 30s linear infinite;
+        }
+
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .speed-line {
+            height: 2px;
+            background: linear-gradient(90deg, var(--neon-yellow) 0%, transparent 100%);
+            width: 100%;
+        }
+
+        .diagonal-bg {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0% 100%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#5e6b00",
+                        "surface-container-high": "#292b1d",
+                        "tertiary-container": "#e3e2e7",
+                        "primary-fixed": "#d4f000",
+                        "on-tertiary": "#2f3034",
+                        "secondary-fixed": "#e5e2e3",
+                        "error-container": "#93000a",
+                        "surface-container-low": "#1b1d0f",
+                        "surface-container-highest": "#343627",
+                        "inverse-surface": "#e4e4ce",
+                        "on-tertiary-fixed-variant": "#46464b",
+                        "surface-container": "#1f2113",
+                        "on-background": "#e4e4ce",
+                        "on-primary-fixed-variant": "#424b00",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "surface-dim": "#131408",
+                        "on-primary-fixed": "#191e00",
+                        "on-error": "#690005",
+                        "surface-container-lowest": "#0d0f04",
+                        "background": "#131408",
+                        "surface-tint": "#bad200",
+                        "on-error-container": "#ffdad6",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "tertiary": "#ffffff",
+                        "tertiary-fixed": "#e3e2e7",
+                        "surface": "#131408",
+                        "inverse-primary": "#586400",
+                        "surface-variant": "#343627",
+                        "outline-variant": "#464932",
+                        "on-surface-variant": "#c6c9ab",
+                        "outline": "#909378",
+                        "on-surface": "#e4e4ce",
+                        "error": "#ffb4ab",
+                        "on-tertiary-container": "#636469",
+                        "secondary": "#c8c6c7",
+                        "tertiary-fixed-dim": "#c6c6cb",
+                        "primary-container": "#d4f000",
+                        "primary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-secondary-container": "#bab8b9",
+                        "on-primary": "#2d3400",
+                        "primary-fixed-dim": "#bad200",
+                        "secondary-container": "#49494a",
+                        "on-secondary": "#303031",
+                        "inverse-on-surface": "#303223",
+                        "on-tertiary-fixed": "#1a1b1f",
+                        "surface-bright": "#393a2b"
+                    },
+                    "spacing": {
+                        "lg": "40px",
+                        "margin-mobile": "16px",
+                        "xs": "8px",
+                        "sm": "16px",
+                        "margin-desktop": "64px",
+                        "base": "4px",
+                        "gutter": "20px",
+                        "md": "24px",
+                        "xl": "64px"
+                    },
+                    "fontFamily": {
+                        "title-md": ["geist"],
+                        "label-caps": ["jetbrainsMono"],
+                        "body-sm": ["geist"],
+                        "display-xl": ["anton"],
+                        "headline-lg-mobile": ["anton"],
+                        "body-lg": ["geist"],
+                        "data-mono": ["jetbrainsMono"],
+                        "headline-lg": ["anton"]
+                    },
+                    "fontSize": {
+                        "title-md": ["20px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                        "display-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "40px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "data-mono": ["16px", {"lineHeight": "24px", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "52px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- Header: Predicted TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop h-[80px] bg-background border-b-4 border-primary dark:border-primary-fixed">
+<div class="flex items-center gap-md">
+<span class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed uppercase tracking-tighter">PULL-UP ROADSIDE</span>
+</div>
+<nav class="hidden md:flex gap-lg">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-150 border-b-2 border-transparent hover:border-primary" href="#services">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-150 border-b-2 border-transparent hover:border-primary" href="#fleet">FLEET</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-primary transition-colors duration-150 border-b-2 border-transparent hover:border-primary" href="#locations">LOCATIONS</a>
+</nav>
+<div class="flex items-center gap-md">
+<a class="hidden lg:block font-label-caps text-label-caps text-primary dark:text-primary-fixed font-bold" href="tel:5125722219">(512) 572-2219</a>
+<button class="bg-primary-fixed text-on-primary-fixed px-md py-xs font-label-caps text-label-caps font-bold hover:translate-x-1 hover:translate-y-1 transition-transform">
+                EMERGENCY CALL
+            </button>
+</div>
+</header>
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative h-[921px] flex items-center px-margin-desktop overflow-hidden bg-surface-container-lowest">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-30 grayscale contrast-125" data-alt="A long-exposure shot of a highway at night featuring vibrant neon light trails from passing vehicles against a deep asphalt black background. The atmosphere is industrial and high-tension, with blurred road textures creating a sense of rapid movement and urgency. The color palette is dominated by deep blacks and intense glowing streaks of yellow and white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDR5Oj-0UXSgUX2wWWEZ0FtuUFDkTX3Cz7Y10pRwuD_sobE0KWVovzWns2_R_Dd-g71VSa1KiAK0QE2HrllrZkYPuUy_DjwMsiTOdX_eznW-0hku9U7HnSmNwVjkm7qXPKoIoEkJ5M7hAL5eDrO78nnjtVKp_TZivO1hS8DK8DCAcvDfgQ5PVzBp3uDneJU09rmiTiurpCy6nChGdFqaP4mVNQXIM8gNFJjJRhGrdDPCuQQMndjoxnX_-jlTKkn_DWA19ZSi35QJF1Y"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-5xl">
+<div class="inline-block bg-primary-fixed text-on-primary-fixed px-sm py-xs font-label-caps text-label-caps mb-md">
+                    24/7 INDUSTRIAL ROADSIDE
+                </div>
+<h1 class="font-display-xl text-display-xl uppercase text-white leading-none mb-lg">
+                    WE DON'T JUST <span class="text-primary-fixed">PULL OVER</span>.<br/>
+                    WE PULL YOU <span class="italic">THROUGH</span>.
+                </h1>
+<div class="flex gap-md items-center">
+<div class="w-16 h-1 bg-primary-fixed"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                        Central Texas' premium mechanical response unit. Dispatching heavy-duty solutions for minor mishaps to major stalls.
+                    </p>
+</div>
+</div>
+<!-- Absolute decorative speed lines -->
+<div class="absolute bottom-10 right-0 w-1/3">
+<div class="speed-line mb-base"></div>
+<div class="speed-line mb-base opacity-60"></div>
+<div class="speed-line opacity-30"></div>
+</div>
+</section>
+<!-- Credibility Marquee -->
+<section class="bg-primary-fixed py-md border-y-4 border-asphalt-black overflow-hidden marquee-container">
+<div class="marquee-content flex gap-xl items-center">
+<span class="font-display-xl text-[40px] text-on-primary-fixed uppercase flex items-center gap-md">
+                    NOW SERVICING: AUSTIN <span class="material-symbols-outlined text-sm">circle</span> KILLEEN <span class="material-symbols-outlined text-sm">circle</span> ROUND ROCK <span class="material-symbols-outlined text-sm">circle</span> CEDAR PARK <span class="material-symbols-outlined text-sm">circle</span> GEORGETOWN
+                </span>
+<span class="font-display-xl text-[40px] text-on-primary-fixed uppercase flex items-center gap-md">
+                    NOW SERVICING: AUSTIN <span class="material-symbols-outlined text-sm">circle</span> KILLEEN <span class="material-symbols-outlined text-sm">circle</span> ROUND ROCK <span class="material-symbols-outlined text-sm">circle</span> CEDAR PARK <span class="material-symbols-outlined text-sm">circle</span> GEORGETOWN
+                </span>
+</div>
+</section>
+<!-- Services: Asymmetric Bento Grid -->
+<section class="py-xl px-margin-desktop bg-background border-b-4 border-outline-variant" id="services">
+<div class="grid grid-cols-12 gap-lg">
+<!-- Service Title -->
+<div class="col-span-12 md:col-span-4 flex flex-col justify-end">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-md">THE TOOLKIT</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Mechanical excellence deployed to your precise location.</p>
+</div>
+<!-- Service 01 -->
+<div class="col-span-12 md:col-span-8 grid grid-cols-1 md:grid-cols-2 gap-lg">
+<div class="group border-t-2 border-outline-variant pt-md hover:border-primary-fixed transition-colors">
+<div class="font-data-mono text-primary-fixed mb-xs">01</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-sm">TIRE CHANGE</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Professional hydraulic lift and impact-torque service on-site.</p>
+<span class="material-symbols-outlined text-primary-fixed group-hover:translate-x-4 transition-transform">arrow_forward</span>
+</div>
+<!-- Service 02 -->
+<div class="group border-t-2 border-outline-variant pt-md hover:border-primary-fixed transition-colors">
+<div class="font-data-mono text-primary-fixed mb-xs">02</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-sm">FUEL DELIVERY</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Grade-A diesel or unleaded delivered straight to your tank.</p>
+<span class="material-symbols-outlined text-primary-fixed group-hover:translate-x-4 transition-transform">arrow_forward</span>
+</div>
+<!-- Service 03 -->
+<div class="group border-t-2 border-outline-variant pt-md hover:border-primary-fixed transition-colors">
+<div class="font-data-mono text-primary-fixed mb-xs">03</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-sm">JUMPSTARTS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">High-amperage boost units for commercial and civilian batteries.</p>
+<span class="material-symbols-outlined text-primary-fixed group-hover:translate-x-4 transition-transform">arrow_forward</span>
+</div>
+<!-- Service 04 -->
+<div class="group border-t-2 border-outline-variant pt-md hover:border-primary-fixed transition-colors">
+<div class="font-data-mono text-primary-fixed mb-xs">04</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-sm">LOCKOUTS</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-md">Zero-damage entry techniques for all modern vehicle security.</p>
+<span class="material-symbols-outlined text-primary-fixed group-hover:translate-x-4 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl px-margin-desktop bg-surface-container-lowest flex flex-col md:flex-row gap-xl items-center border-b-4 border-outline-variant">
+<div class="w-full md:w-1/2">
+<img class="w-full aspect-[4/5] object-cover grayscale brightness-75 border-l-8 border-primary-fixed" data-alt="A powerful tow truck with bright yellow hazard markings parked under the industrial lights of a highway overpass at dusk. The vehicle looks rugged and ready for heavy-duty work, emphasizing speed and mechanical reliability. The scene is shot with a low angle to give a heroic, brutalist perspective, using a dark asphalt and neon yellow color scheme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9CtRQHkAajj2CnorRD6dgzUXq8WaFs3Bm1Fu1MvH_y_MBPmeExVqbzAdbBQBqOlSwiBuWrsch6xb8L1zIgXOIVO0z6BgNjxmoCsZG53p7VFYnEAyjyJxB4XtR0thOVHloGzH-OUAWK7B2Sxviwi63jpvJKa79yzB_VyRyCe2DdqvVw5lfRxGDnnjM6X3OZeg0A-Pdas5Jq_7OGjo9cn_tuUipG_nUokLO1K97PK1sQaF9YO7gL94b2JIHbq8G7AFqiSc2C6al2Nvh"/>
+</div>
+<div class="w-full md:w-1/2">
+<h2 class="font-display-xl text-headline-lg uppercase mb-md leading-none">
+                    BUILT ON THE ROADS OF<br/> <span class="text-primary-fixed">CENTRAL TEXAS.</span>
+</h2>
+<div class="space-y-md">
+<p class="font-body-lg text-body-lg">
+                        PULL-UP ROADSIDE isn't just a service; it's a structural necessity for the I-35 corridor. We operate with the precision of a pit crew and the reliability of a freight train.
+                    </p>
+<div class="grid grid-cols-2 gap-md pt-lg">
+<div>
+<div class="font-display-xl text-primary-fixed text-[48px]">15MIN</div>
+<div class="font-label-caps text-label-caps uppercase">AVG RESPONSE TIME</div>
+</div>
+<div>
+<div class="font-display-xl text-primary-fixed text-[48px]">10K+</div>
+<div class="font-label-caps text-label-caps uppercase">VEHICLES RECOVERED</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Local Reach / Map -->
+<section class="py-xl px-margin-desktop bg-background" id="locations">
+<div class="mb-lg">
+<h2 class="font-headline-lg text-headline-lg uppercase">LOCAL REACH</h2>
+<div class="w-24 h-1 bg-primary-fixed mt-xs"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg h-full">
+<div class="md:col-span-2">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border-4 border-surface-container-highest" data-location="Austin, Texas" data-map-slot="" style="">
+<!-- Simulated Map Texture -->
+<div class="absolute inset-0 bg-[#1b1d0f] opacity-50 mix-blend-multiply"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary-fixed text-[80px]">location_on</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col gap-md">
+<div class="bg-surface-container p-md border-l-4 border-primary-fixed">
+<h4 class="font-label-caps text-label-caps font-bold mb-xs">AUSTIN HQ</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Central Hub - 24hr Dispatch</p>
+<p class="font-data-mono text-data-mono mt-sm">(512) 572-2219</p>
+</div>
+<div class="bg-surface-container p-md opacity-60">
+<h4 class="font-label-caps text-label-caps font-bold mb-xs">KILLEEN DEPOT</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">North Fleet Operations</p>
+</div>
+<div class="bg-surface-container p-md opacity-60">
+<h4 class="font-label-caps text-label-caps font-bold mb-xs">ROUND ROCK</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Rapid Response Team C</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl px-margin-desktop bg-primary-fixed text-on-primary-fixed">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-display-xl text-headline-lg uppercase mb-md">GET BACK ON THE ASPHALT.</h2>
+<p class="font-body-lg text-body-lg mb-lg font-bold">Inquiry or emergency, we respond instantly.</p>
+<div class="space-y-sm">
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-data-mono font-bold text-xl">pullroadside@gmail.com</span>
+</div>
+<div class="flex items-center gap-md">
+<span class="material-symbols-outlined">call</span>
+<span class="font-data-mono font-bold text-xl">(512) 572-2219</span>
+</div>
+</div>
+</div>
+<div class="bg-asphalt-black p-lg">
+<form class="space-y-lg">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant absolute -top-6 left-0">NAME / OPERATOR</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-fixed text-white outline-none py-xs transition-colors" placeholder="ENTER FULL NAME" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant absolute -top-6 left-0">VEHICLE MAKE / MODEL</label>
+<input class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-fixed text-white outline-none py-xs transition-colors" placeholder="E.G. 2022 TOYOTA TUNDRA" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant absolute -top-6 left-0">SERVICE NEEDED</label>
+<select class="w-full bg-transparent border-b-2 border-outline-variant focus:border-primary-fixed text-white outline-none py-xs transition-colors appearance-none">
+<option class="bg-asphalt-black">TIRE CHANGE</option>
+<option class="bg-asphalt-black">FUEL DELIVERY</option>
+<option class="bg-asphalt-black">JUMPSTART</option>
+<option class="bg-asphalt-black">LOCKOUT</option>
+</select>
+</div>
+<button class="w-full bg-primary-fixed text-on-primary-fixed py-md font-headline-lg text-[24px] uppercase hover:bg-white transition-colors">
+                            REQUEST DISPATCH
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer: Predicted Footer -->
+<footer class="w-full py-xl px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-lg bg-surface-container-lowest border-t-4 border-outline-variant">
+<div class="flex flex-col gap-md">
+<span class="font-headline-lg text-headline-lg text-primary dark:text-primary-fixed">PULL-UP ROADSIDE</span>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-sm">Standardizing excellence in the Central Texas recovery landscape. Industrial grade speed for everyday roadside failure.</p>
+</div>
+<div class="flex flex-col md:flex-row gap-xl">
+<div class="flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-primary-fixed mb-xs">QUICK LINKS</span>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">PRIVACY POLICY</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">TERMS OF SERVICE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary-fixed transition-colors" href="#">DISPATCH LOGIN</a>
+</div>
+<div class="flex flex-col gap-sm">
+<span class="font-label-caps text-label-caps text-primary-fixed mb-xs">CONNECT</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">AUSTIN, TX</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">24/7 SUPPORT LINE</span>
+</div>
+</div>
+<div class="w-full md:w-auto mt-lg md:mt-0 pt-lg md:pt-0 border-t md:border-t-0 border-outline-variant">
+<p class="font-label-caps text-label-caps text-on-surface-variant">©2024 PULL-UP ROADSIDE ASSISTANCE. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Speed gauge effect for services (simple visual enhancement)
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('#services > div > div > div').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
+</body></html>

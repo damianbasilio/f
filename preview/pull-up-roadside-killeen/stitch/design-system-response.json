@@ -1,0 +1,456 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Asphalt & Neon",
+        "styleGuidelines": "## Brand & Style\n\nThe visual identity of the design system is rooted in the \"Hazard Neon & Asphalt\" aesthetic—a high-contrast, editorial take on industrial utility. It evokes the urgency and reliability of professional roadside assistance through a blend of **Brutalism** and **Modern Editorial** design. \n\nThe personality is unapologetically rugged and precise. It moves away from the \"soft\" friendliness of consumer apps toward a \"mechanical excellence\" vibe. Key visual motifs include:\n- **Kinetic Energy:** Subtle 15-degree slants and \"speed lines\" used as decorative dividers or background motifs.\n- **Structural Integrity:** Heavy rule lines (2px - 4px) that mimic road markings and technical blueprints.\n- **Asymmetric Tension:** Layouts that avoid standard centered grids in favor of purposeful, heavy-left or staggered compositions to suggest movement.\n- **Precision:** Zero-radius corners to reflect the sharp, calculated nature of mechanical repair.\n\n## Layout & Spacing\n\nThe design system utilizes a **Fixed Grid** with an aggressive spacing rhythm based on a 4px baseline.\n\n- **Desktop:** 12-column grid with wide 64px margins. Content is often pushed to the far edges of the container to create tension.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rule Lines:** Use horizontal and vertical lines (1px or 2px) to define zones rather than background color changes.\n- **Asymmetry:** Elements like buttons or images should often be offset from the grid by one spacing unit (`base` or `xs`) to create a sense of forward momentum.\n\n## Elevation & Depth\n\nIn this design system, depth is achieved through **Hard Layering** and **Tonal Shifts** rather than soft shadows.\n\n1.  **Level 0 (The Road):** Pure black/Deep Asphalt background.\n2.  **Level 1 (The Bay):** Surface blocks using `#1E1E1F` with a 1px border of `#8E8E93`.\n3.  **Level 2 (The Tool):** High-contrast Neon blocks that sit flush against the level below.\n\n**Shadows:** When shadows are necessary for focus, use \"Hard Shadows\"—100% opacity, 4px-8px offset, with no blur, in the color of the primary neon or pure black. This maintains the \"Brutalist\" mechanical feel.\n\n## Components\n\n### Buttons\n- **Primary:** Neon yellow background, black Anton text, uppercase. No border. On hover, a hard black offset shadow appears.\n- **Secondary:** Transparent background, white text, 2px neon yellow border. \n- **Shape:** Rectangular, sharp corners.\n\n### Cards\n- Avoid container-heavy cards. Instead, use a top-border (2px, gray) and a large, bold Anton title to define a section. \n- Content within sections should be separated by thin 1px horizontal rules.\n\n### Input Fields\n- Underline style only. A 2px gray bottom border that turns Neon Yellow on focus. \n- Labels sit above the input in `label-caps` (JetBrains Mono).\n\n### Status Chips\n- Rectangular blocks. \"Active\" states use Neon Yellow with black text. \"Pending\" or \"In-Route\" uses Industrial Gray.\n\n### Navigation\n- Vertical navigation is preferred on desktop to mimic a sidebar menu or a technical manual.\n- Use heavy dividers (4px) to separate the logo/brand area from the navigation links.\n\n### Special Component: The \"Speed-Gauge\" Progress Bar\n- Instead of a smooth bar, use a series of vertical blocks that fill up to indicate progress (ETA or service completion), reminiscent of a tachometer.",
+        "theme": {
+          "bodyFont": "GEIST",
+          "bodyFontFamily": "Geist",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#e2ff00",
+          "designMd": "---\nname: Asphalt & Neon\ncolors:\n  surface: '#131408'\n  surface-dim: '#131408'\n  surface-bright: '#393a2b'\n  surface-container-lowest: '#0d0f04'\n  surface-container-low: '#1b1d0f'\n  surface-container: '#1f2113'\n  surface-container-high: '#292b1d'\n  surface-container-highest: '#343627'\n  on-surface: '#e4e4ce'\n  on-surface-variant: '#c6c9ab'\n  inverse-surface: '#e4e4ce'\n  inverse-on-surface: '#303223'\n  outline: '#909378'\n  outline-variant: '#464932'\n  surface-tint: '#bad200'\n  primary: '#ffffff'\n  on-primary: '#2d3400'\n  primary-container: '#d4f000'\n  on-primary-container: '#5e6b00'\n  inverse-primary: '#586400'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#ffffff'\n  on-tertiary: '#2f3034'\n  tertiary-container: '#e3e2e7'\n  on-tertiary-container: '#636469'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#d4f000'\n  primary-fixed-dim: '#bad200'\n  on-primary-fixed: '#191e00'\n  on-primary-fixed-variant: '#424b00'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e3e2e7'\n  tertiary-fixed-dim: '#c6c6cb'\n  on-tertiary-fixed: '#1a1b1f'\n  on-tertiary-fixed-variant: '#46464b'\n  background: '#131408'\n  on-background: '#e4e4ce'\n  surface-variant: '#343627'\ntypography:\n  display-xl:\n    fontFamily: anton\n    fontSize: 80px\n    fontWeight: '400'\n    lineHeight: 80px\n    letterSpacing: 0.02em\n  headline-lg:\n    fontFamily: anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n    letterSpacing: 0.02em\n  headline-lg-mobile:\n    fontFamily: anton\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: 40px\n  title-md:\n    fontFamily: geist\n    fontSize: 20px\n    fontWeight: '700'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-lg:\n    fontFamily: geist\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-sm:\n    fontFamily: geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  label-caps:\n    fontFamily: jetbrainsMono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  data-mono:\n    fontFamily: jetbrainsMono\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 24px\nspacing:\n  base: 4px\n  xs: 8px\n  sm: 16px\n  md: 24px\n  lg: 40px\n  xl: 64px\n  gutter: 20px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe visual identity of the design system is rooted in the \"Hazard Neon & Asphalt\" aesthetic—a high-contrast, editorial take on industrial utility. It evokes the urgency and reliability of professional roadside assistance through a blend of **Brutalism** and **Modern Editorial** design. \n\nThe personality is unapologetically rugged and precise. It moves away from the \"soft\" friendliness of consumer apps toward a \"mechanical excellence\" vibe. Key visual motifs include:\n- **Kinetic Energy:** Subtle 15-degree slants and \"speed lines\" used as decorative dividers or background motifs.\n- **Structural Integrity:** Heavy rule lines (2px - 4px) that mimic road markings and technical blueprints.\n- **Asymmetric Tension:** Layouts that avoid standard centered grids in favor of purposeful, heavy-left or staggered compositions to suggest movement.\n- **Precision:** Zero-radius corners to reflect the sharp, calculated nature of mechanical repair.\n\n## Colors\n\nThe palette is designed for maximum legibility in high-stress, \"on-the-move\" environments.\n\n- **Primary (Hazard Neon):** `#E2FF00`. A high-visibility yellow used for critical actions, status indicators, and branding accents. It must always be paired with dark text for accessibility.\n- **Secondary (Deep Asphalt):** `#1A1A1B`. The foundation of the UI, providing a heavy, grounded feel that reduces glare during night-time roadside emergencies.\n- **Tertiary (Industrial Gray):** `#8E8E93`. Used for secondary information, borders, and inactive states to maintain a metallic, mechanical texture.\n- **Accent (Oil & Grit):** Deep blacks and varying shades of cool grays are used to create depth without relying on traditional shadows.\n\n## Typography\n\nTypography is treated as a structural element. \n\n- **Headlines:** We use **Anton** for its condensed, high-impact presence. It mimics the urgency of highway signage. Headlines should almost always be uppercase and tightly tracked.\n- **Body:** **Geist** provides a technical, clean, and highly readable experience. Its monospace-influenced widths feel precise and modern.\n- **Data/Technical:** **JetBrains Mono** is reserved for ETA timers, coordinates, pricing, and VIN numbers, emphasizing the mechanical and data-driven nature of the service.\n\n**Styling Note:** Large display type should often overlap or sit very close to structural borders to create an \"editorial\" density.\n\n## Layout & Spacing\n\nThe design system utilizes a **Fixed Grid** with an aggressive spacing rhythm based on a 4px baseline.\n\n- **Desktop:** 12-column grid with wide 64px margins. Content is often pushed to the far edges of the container to create tension.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rule Lines:** Use horizontal and vertical lines (1px or 2px) to define zones rather than background color changes.\n- **Asymmetry:** Elements like buttons or images should often be offset from the grid by one spacing unit (`base` or `xs`) to create a sense of forward momentum.\n\n## Elevation & Depth\n\nIn this design system, depth is achieved through **Hard Layering** and **Tonal Shifts** rather than soft shadows.\n\n1.  **Level 0 (The Road):** Pure black/Deep Asphalt background.\n2.  **Level 1 (The Bay):** Surface blocks using `#1E1E1F` with a 1px border of `#8E8E93`.\n3.  **Level 2 (The Tool):** High-contrast Neon blocks that sit flush against the level below.\n\n**Shadows:** When shadows are necessary for focus, use \"Hard Shadows\"—100% opacity, 4px-8px offset, with no blur, in the color of the primary neon or pure black. This maintains the \"Brutalist\" mechanical feel.\n\n## Shapes\n\nThe shape language is strictly **geometric and sharp**.\n\n- **Corners:** 0px radius for all elements (buttons, cards, inputs). This reflects the cold, hard nature of steel and tools.\n- **Diagonal Accents:** Use a `clip-path` or SVG mask to create 45-degree chamfered corners on primary call-to-action buttons to suggest \"clipped\" metal or industrial tags.\n- **Indicators:** Use triangles and chevrons instead of circles for icons to maintain the angular theme.\n\n## Components\n\n### Buttons\n- **Primary:** Neon yellow background, black Anton text, uppercase. No border. On hover, a hard black offset shadow appears.\n- **Secondary:** Transparent background, white text, 2px neon yellow border. \n- **Shape:** Rectangular, sharp corners.\n\n### Cards\n- Avoid container-heavy cards. Instead, use a top-border (2px, gray) and a large, bold Anton title to define a section. \n- Content within sections should be separated by thin 1px horizontal rules.\n\n### Input Fields\n- Underline style only. A 2px gray bottom border that turns Neon Yellow on focus. \n- Labels sit above the input in `label-caps` (JetBrains Mono).\n\n### Status Chips\n- Rectangular blocks. \"Active\" states use Neon Yellow with black text. \"Pending\" or \"In-Route\" uses Industrial Gray.\n\n### Navigation\n- Vertical navigation is preferred on desktop to mimic a sidebar menu or a technical manual.\n- Use heavy dividers (4px) to separate the logo/brand area from the navigation links.\n\n### Special Component: The \"Speed-Gauge\" Progress Bar\n- Instead of a smooth bar, use a series of vertical blocks that fill up to indicate progress (ETA or service completion), reminiscent of a tachometer.",
+          "font": "ANTON",
+          "headlineFont": "ANTON",
+          "headlineFontFamily": "Anton",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#131408",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#303223",
+            "inverse_primary": "#586400",
+            "inverse_surface": "#e4e4ce",
+            "on_background": "#e4e4ce",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#2d3400",
+            "on_primary_container": "#5e6b00",
+            "on_primary_fixed": "#191e00",
+            "on_primary_fixed_variant": "#424b00",
+            "on_secondary": "#303031",
+            "on_secondary_container": "#bab8b9",
+            "on_secondary_fixed": "#1b1b1c",
+            "on_secondary_fixed_variant": "#474647",
+            "on_surface": "#e4e4ce",
+            "on_surface_variant": "#c6c9ab",
+            "on_tertiary": "#2f3034",
+            "on_tertiary_container": "#636469",
+            "on_tertiary_fixed": "#1a1b1f",
+            "on_tertiary_fixed_variant": "#46464b",
+            "outline": "#909378",
+            "outline_variant": "#464932",
+            "primary": "#ffffff",
+            "primary_container": "#d4f000",
+            "primary_fixed": "#d4f000",
+            "primary_fixed_dim": "#bad200",
+            "secondary": "#c8c6c7",
+            "secondary_container": "#49494a",
+            "secondary_fixed": "#e5e2e3",
+            "secondary_fixed_dim": "#c8c6c7",
+            "surface": "#131408",
+            "surface_bright": "#393a2b",
+            "surface_container": "#1f2113",
+            "surface_container_high": "#292b1d",
+            "surface_container_highest": "#343627",
+            "surface_container_low": "#1b1d0f",
+            "surface_container_lowest": "#0d0f04",
+            "surface_dim": "#131408",
+            "surface_tint": "#bad200",
+            "surface_variant": "#343627",
+            "tertiary": "#ffffff",
+            "tertiary_container": "#e3e2e7",
+            "tertiary_fixed": "#e3e2e7",
+            "tertiary_fixed_dim": "#c6c6cb"
+          },
+          "overridePrimaryColor": "#e2ff00",
+          "overrideSecondaryColor": "#1a1a1b",
+          "overrideTertiaryColor": "#8e8e93",
+          "spacing": {
+            "base": "4px",
+            "gutter": "20px",
+            "lg": "40px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px",
+            "md": "24px",
+            "sm": "16px",
+            "xl": "64px",
+            "xs": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "geist",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-sm": {
+              "fontFamily": "geist",
+              "fontSize": "14px",
+              "fontWeight": "400",
+              "lineHeight": "20px"
+            },
+            "data-mono": {
+              "fontFamily": "jetbrainsMono",
+              "fontSize": "16px",
+              "fontWeight": "500",
+              "lineHeight": "24px"
+            },
+            "display-xl": {
+              "fontFamily": "anton",
+              "fontSize": "80px",
+              "fontWeight": "400",
+              "letterSpacing": "0.02em",
+              "lineHeight": "80px"
+            },
+            "headline-lg": {
+              "fontFamily": "anton",
+              "fontSize": "48px",
+              "fontWeight": "400",
+              "letterSpacing": "0.02em",
+              "lineHeight": "52px"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "anton",
+              "fontSize": "36px",
+              "fontWeight": "400",
+              "lineHeight": "40px"
+            },
+            "label-caps": {
+              "fontFamily": "jetbrainsMono",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.1em",
+              "lineHeight": "16px"
+            },
+            "title-md": {
+              "fontFamily": "geist",
+              "fontSize": "20px",
+              "fontWeight": "700",
+              "letterSpacing": "0.01em",
+              "lineHeight": "28px"
+            }
+          }
+        }
+      },
+      "name": "assets/164c84f0dd1f49ccb70b55b694cb056b",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Asphalt & Neon",
+              "styleGuidelines": "## Brand & Style\n\nThe visual identity of the design system is rooted in the \"Hazard Neon & Asphalt\" aesthetic—a high-contrast, editorial take on industrial utility. It evokes the urgency and reliability of professional roadside assistance through a blend of **Brutalism** and **Modern Editorial** design. \n\nThe personality is unapologetically rugged and precise. It moves away from the \"soft\" friendliness of consumer apps toward a \"mechanical excellence\" vibe. Key visual motifs include:\n- **Kinetic Energy:** Subtle 15-degree slants and \"speed lines\" used as decorative dividers or background motifs.\n- **Structural Integrity:** Heavy rule lines (2px - 4px) that mimic road markings and technical blueprints.\n- **Asymmetric Tension:** Layouts that avoid standard centered grids in favor of purposeful, heavy-left or staggered compositions to suggest movement.\n- **Precision:** Zero-radius corners to reflect the sharp, calculated nature of mechanical repair.\n\n## Layout & Spacing\n\nThe design system utilizes a **Fixed Grid** with an aggressive spacing rhythm based on a 4px baseline.\n\n- **Desktop:** 12-column grid with wide 64px margins. Content is often pushed to the far edges of the container to create tension.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rule Lines:** Use horizontal and vertical lines (1px or 2px) to define zones rather than background color changes.\n- **Asymmetry:** Elements like buttons or images should often be offset from the grid by one spacing unit (`base` or `xs`) to create a sense of forward momentum.\n\n## Elevation & Depth\n\nIn this design system, depth is achieved through **Hard Layering** and **Tonal Shifts** rather than soft shadows.\n\n1.  **Level 0 (The Road):** Pure black/Deep Asphalt background.\n2.  **Level 1 (The Bay):** Surface blocks using `#1E1E1F` with a 1px border of `#8E8E93`.\n3.  **Level 2 (The Tool):** High-contrast Neon blocks that sit flush against the level below.\n\n**Shadows:** When shadows are necessary for focus, use \"Hard Shadows\"—100% opacity, 4px-8px offset, with no blur, in the color of the primary neon or pure black. This maintains the \"Brutalist\" mechanical feel.\n\n## Components\n\n### Buttons\n- **Primary:** Neon yellow background, black Anton text, uppercase. No border. On hover, a hard black offset shadow appears.\n- **Secondary:** Transparent background, white text, 2px neon yellow border. \n- **Shape:** Rectangular, sharp corners.\n\n### Cards\n- Avoid container-heavy cards. Instead, use a top-border (2px, gray) and a large, bold Anton title to define a section. \n- Content within sections should be separated by thin 1px horizontal rules.\n\n### Input Fields\n- Underline style only. A 2px gray bottom border that turns Neon Yellow on focus. \n- Labels sit above the input in `label-caps` (JetBrains Mono).\n\n### Status Chips\n- Rectangular blocks. \"Active\" states use Neon Yellow with black text. \"Pending\" or \"In-Route\" uses Industrial Gray.\n\n### Navigation\n- Vertical navigation is preferred on desktop to mimic a sidebar menu or a technical manual.\n- Use heavy dividers (4px) to separate the logo/brand area from the navigation links.\n\n### Special Component: The \"Speed-Gauge\" Progress Bar\n- Instead of a smooth bar, use a series of vertical blocks that fill up to indicate progress (ETA or service completion), reminiscent of a tachometer.",
+              "theme": {
+                "bodyFont": "GEIST",
+                "bodyFontFamily": "Geist",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#e2ff00",
+                "designMd": "---\nname: Asphalt & Neon\ncolors:\n  surface: '#131408'\n  surface-dim: '#131408'\n  surface-bright: '#393a2b'\n  surface-container-lowest: '#0d0f04'\n  surface-container-low: '#1b1d0f'\n  surface-container: '#1f2113'\n  surface-container-high: '#292b1d'\n  surface-container-highest: '#343627'\n  on-surface: '#e4e4ce'\n  on-surface-variant: '#c6c9ab'\n  inverse-surface: '#e4e4ce'\n  inverse-on-surface: '#303223'\n  outline: '#909378'\n  outline-variant: '#464932'\n  surface-tint: '#bad200'\n  primary: '#ffffff'\n  on-primary: '#2d3400'\n  primary-container: '#d4f000'\n  on-primary-container: '#5e6b00'\n  inverse-primary: '#586400'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#ffffff'\n  on-tertiary: '#2f3034'\n  tertiary-container: '#e3e2e7'\n  on-tertiary-container: '#636469'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#d4f000'\n  primary-fixed-dim: '#bad200'\n  on-primary-fixed: '#191e00'\n  on-primary-fixed-variant: '#424b00'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e3e2e7'\n  tertiary-fixed-dim: '#c6c6cb'\n  on-tertiary-fixed: '#1a1b1f'\n  on-tertiary-fixed-variant: '#46464b'\n  background: '#131408'\n  on-background: '#e4e4ce'\n  surface-variant: '#343627'\ntypography:\n  display-xl:\n    fontFamily: anton\n    fontSize: 80px\n    fontWeight: '400'\n    lineHeight: 80px\n    letterSpacing: 0.02em\n  headline-lg:\n    fontFamily: anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n    letterSpacing: 0.02em\n  headline-lg-mobile:\n    fontFamily: anton\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: 40px\n  title-md:\n    fontFamily: geist\n    fontSize: 20px\n    fontWeight: '700'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-lg:\n    fontFamily: geist\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-sm:\n    fontFamily: geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  label-caps:\n    fontFamily: jetbrainsMono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  data-mono:\n    fontFamily: jetbrainsMono\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 24px\nspacing:\n  base: 4px\n  xs: 8px\n  sm: 16px\n  md: 24px\n  lg: 40px\n  xl: 64px\n  gutter: 20px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe visual identity of the design system is rooted in the \"Hazard Neon & Asphalt\" aesthetic—a high-contrast, editorial take on industrial utility. It evokes the urgency and reliability of professional roadside assistance through a blend of **Brutalism** and **Modern Editorial** design. \n\nThe personality is unapologetically rugged and precise. It moves away from the \"soft\" friendliness of consumer apps toward a \"mechanical excellence\" vibe. Key visual motifs include:\n- **Kinetic Energy:** Subtle 15-degree slants and \"speed lines\" used as decorative dividers or background motifs.\n- **Structural Integrity:** Heavy rule lines (2px - 4px) that mimic road markings and technical blueprints.\n- **Asymmetric Tension:** Layouts that avoid standard centered grids in favor of purposeful, heavy-left or staggered compositions to suggest movement.\n- **Precision:** Zero-radius corners to reflect the sharp, calculated nature of mechanical repair.\n\n## Colors\n\nThe palette is designed for maximum legibility in high-stress, \"on-the-move\" environments.\n\n- **Primary (Hazard Neon):** `#E2FF00`. A high-visibility yellow used for critical actions, status indicators, and branding accents. It must always be paired with dark text for accessibility.\n- **Secondary (Deep Asphalt):** `#1A1A1B`. The foundation of the UI, providing a heavy, grounded feel that reduces glare during night-time roadside emergencies.\n- **Tertiary (Industrial Gray):** `#8E8E93`. Used for secondary information, borders, and inactive states to maintain a metallic, mechanical texture.\n- **Accent (Oil & Grit):** Deep blacks and varying shades of cool grays are used to create depth without relying on traditional shadows.\n\n## Typography\n\nTypography is treated as a structural element. \n\n- **Headlines:** We use **Anton** for its condensed, high-impact presence. It mimics the urgency of highway signage. Headlines should almost always be uppercase and tightly tracked.\n- **Body:** **Geist** provides a technical, clean, and highly readable experience. Its monospace-influenced widths feel precise and modern.\n- **Data/Technical:** **JetBrains Mono** is reserved for ETA timers, coordinates, pricing, and VIN numbers, emphasizing the mechanical and data-driven nature of the service.\n\n**Styling Note:** Large display type should often overlap or sit very close to structural borders to create an \"editorial\" density.\n\n## Layout & Spacing\n\nThe design system utilizes a **Fixed Grid** with an aggressive spacing rhythm based on a 4px baseline.\n\n- **Desktop:** 12-column grid with wide 64px margins. Content is often pushed to the far edges of the container to create tension.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rule Lines:** Use horizontal and vertical lines (1px or 2px) to define zones rather than background color changes.\n- **Asymmetry:** Elements like buttons or images should often be offset from the grid by one spacing unit (`base` or `xs`) to create a sense of forward momentum.\n\n## Elevation & Depth\n\nIn this design system, depth is achieved through **Hard Layering** and **Tonal Shifts** rather than soft shadows.\n\n1.  **Level 0 (The Road):** Pure black/Deep Asphalt background.\n2.  **Level 1 (The Bay):** Surface blocks using `#1E1E1F` with a 1px border of `#8E8E93`.\n3.  **Level 2 (The Tool):** High-contrast Neon blocks that sit flush against the level below.\n\n**Shadows:** When shadows are necessary for focus, use \"Hard Shadows\"—100% opacity, 4px-8px offset, with no blur, in the color of the primary neon or pure black. This maintains the \"Brutalist\" mechanical feel.\n\n## Shapes\n\nThe shape language is strictly **geometric and sharp**.\n\n- **Corners:** 0px radius for all elements (buttons, cards, inputs). This reflects the cold, hard nature of steel and tools.\n- **Diagonal Accents:** Use a `clip-path` or SVG mask to create 45-degree chamfered corners on primary call-to-action buttons to suggest \"clipped\" metal or industrial tags.\n- **Indicators:** Use triangles and chevrons instead of circles for icons to maintain the angular theme.\n\n## Components\n\n### Buttons\n- **Primary:** Neon yellow background, black Anton text, uppercase. No border. On hover, a hard black offset shadow appears.\n- **Secondary:** Transparent background, white text, 2px neon yellow border. \n- **Shape:** Rectangular, sharp corners.\n\n### Cards\n- Avoid container-heavy cards. Instead, use a top-border (2px, gray) and a large, bold Anton title to define a section. \n- Content within sections should be separated by thin 1px horizontal rules.\n\n### Input Fields\n- Underline style only. A 2px gray bottom border that turns Neon Yellow on focus. \n- Labels sit above the input in `label-caps` (JetBrains Mono).\n\n### Status Chips\n- Rectangular blocks. \"Active\" states use Neon Yellow with black text. \"Pending\" or \"In-Route\" uses Industrial Gray.\n\n### Navigation\n- Vertical navigation is preferred on desktop to mimic a sidebar menu or a technical manual.\n- Use heavy dividers (4px) to separate the logo/brand area from the navigation links.\n\n### Special Component: The \"Speed-Gauge\" Progress Bar\n- Instead of a smooth bar, use a series of vertical blocks that fill up to indicate progress (ETA or service completion), reminiscent of a tachometer.",
+                "font": "ANTON",
+                "headlineFont": "ANTON",
+                "headlineFontFamily": "Anton",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#131408",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#303223",
+                  "inverse_primary": "#586400",
+                  "inverse_surface": "#e4e4ce",
+                  "on_background": "#e4e4ce",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#2d3400",
+                  "on_primary_container": "#5e6b00",
+                  "on_primary_fixed": "#191e00",
+                  "on_primary_fixed_variant": "#424b00",
+                  "on_secondary": "#303031",
+                  "on_secondary_container": "#bab8b9",
+                  "on_secondary_fixed": "#1b1b1c",
+                  "on_secondary_fixed_variant": "#474647",
+                  "on_surface": "#e4e4ce",
+                  "on_surface_variant": "#c6c9ab",
+                  "on_tertiary": "#2f3034",
+                  "on_tertiary_container": "#636469",
+                  "on_tertiary_fixed": "#1a1b1f",
+                  "on_tertiary_fixed_variant": "#46464b",
+                  "outline": "#909378",
+                  "outline_variant": "#464932",
+                  "primary": "#ffffff",
+                  "primary_container": "#d4f000",
+                  "primary_fixed": "#d4f000",
+                  "primary_fixed_dim": "#bad200",
+                  "secondary": "#c8c6c7",
+                  "secondary_container": "#49494a",
+                  "secondary_fixed": "#e5e2e3",
+                  "secondary_fixed_dim": "#c8c6c7",
+                  "surface": "#131408",
+                  "surface_bright": "#393a2b",
+                  "surface_container": "#1f2113",
+                  "surface_container_high": "#292b1d",
+                  "surface_container_highest": "#343627",
+                  "surface_container_low": "#1b1d0f",
+                  "surface_container_lowest": "#0d0f04",
+                  "surface_dim": "#131408",
+                  "surface_tint": "#bad200",
+                  "surface_variant": "#343627",
+                  "tertiary": "#ffffff",
+                  "tertiary_container": "#e3e2e7",
+                  "tertiary_fixed": "#e3e2e7",
+                  "tertiary_fixed_dim": "#c6c6cb"
+                },
+                "overridePrimaryColor": "#e2ff00",
+                "overrideSecondaryColor": "#1a1a1b",
+                "overrideTertiaryColor": "#8e8e93",
+                "spacing": {
+                  "base": "4px",
+                  "gutter": "20px",
+                  "lg": "40px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "16px",
+                  "md": "24px",
+                  "sm": "16px",
+                  "xl": "64px",
+                  "xs": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "geist",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "28px"
+                  },
+                  "body-sm": {
+                    "fontFamily": "geist",
+                    "fontSize": "14px",
+                    "fontWeight": "400",
+                    "lineHeight": "20px"
+                  },
+                  "data-mono": {
+                    "fontFamily": "jetbrainsMono",
+                    "fontSize": "16px",
+                    "fontWeight": "500",
+                    "lineHeight": "24px"
+                  },
+                  "display-xl": {
+                    "fontFamily": "anton",
+                    "fontSize": "80px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "80px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "anton",
+                    "fontSize": "48px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "52px"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "anton",
+                    "fontSize": "36px",
+                    "fontWeight": "400",
+                    "lineHeight": "40px"
+                  },
+                  "label-caps": {
+                    "fontFamily": "jetbrainsMono",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "16px"
+                  },
+                  "title-md": {
+                    "fontFamily": "geist",
+                    "fontSize": "20px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "28px"
+                  }
+                }
+              }
+            },
+            "name": "assets/164c84f0dd1f49ccb70b55b694cb056b",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "8160",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzU1MjhkNzk1ZjUxMjQwY2U4NzFiNmVlMTFlNTI0NmM2EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDIxMjIxODk2NDQ0Mzc4Mzg2NA&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/14212218964443783864/files/137b4206cc7744cc8a7672ef749d9609"
+          },
+          "id": "e757482c05b44948b6b87a08d671e613",
+          "name": "projects/14212218964443783864/screens/e757482c05b44948b6b87a08d671e613",
+          "prompt": "Build the complete DESKTOP landing page for Pull-Up Roadside. \n\nDesign Requirements:\n- Style: Industrial, high-contrast, editorial. Use the \"Asphalt & Neon\" palette.\n- Sections:\n    1. Header: (use Predicted TopNavBar) with logo \"PULL-UP ROADSIDE\" and phone (512) 572-2219.\n    2. Hero: Massive typography: \"WE DON'T JUST PULL OVER. WE PULL YOU THROUGH.\" Background should feel like a blurred road at night with neon light trails.\n    3. Credibility: A horizontal marquee \"NOW SERVICING: AUSTIN · KILLEEN · ROUND ROCK · CEDAR PARK · GEORGETOWN\".\n    4. Services: An asymmetric layout. Each service (Tire Change, Fuel Delivery, Jumpstarts, Lockouts) should have a large mechanical number (01, 02, etc.) and bold, all-caps labels.\n    5. About: \"BUILT ON THE ROADS OF CENTRAL TEXAS.\" Emphasize speed and reliability.\n    6. Visit/Map: A section titled \"LOCAL REACH\" featuring the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n    7. Contact: A bold form with the email pullroadside@gmail.com visible.\n    8. Footer: (use Predicted Footer).\n\nTechnical:\n- Use CSS custom properties for the Asphalt & Neon palette.\n- Implement a mobile-responsive menu (even on desktop design).\n- Use bold rule lines (4px+) to separate sections.\n- No rounded corners.\n- Font: Anton (from design system) for all headings.\n- Animation: Smooth scroll and hover states that swap colors (Neon to Asphalt).",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsKBUy99-ut-r9EZ-uFbDj__DrNB0Xd0v8IjLxyqs6QuV9sL4erTRYmonvdPKB94yT5Sp3DFU2HE4xSiO8vw1-92N-SRGbViqc2Bj07xYPKqULnEPq0Bylx5nBojQ-whud8v25z--J_YgBYLTwdveWEjwMp4tltmUPEGG1RCwhPwp4abye1-lRK2jUMA-hblWFvwmvzReOzLtkl_IKohM1OmGwc1ktymzF3DAl19qA8opNXARtJNoEXF4oQ",
+            "name": "projects/14212218964443783864/files/c4434bf4c17c43b495788d36b2987f29"
+          },
+          "theme": {
+            "bodyFont": "GEIST",
+            "bodyFontFamily": "Geist",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#e2ff00",
+            "designMd": "---\nname: Asphalt & Neon\ncolors:\n  surface: '#131408'\n  surface-dim: '#131408'\n  surface-bright: '#393a2b'\n  surface-container-lowest: '#0d0f04'\n  surface-container-low: '#1b1d0f'\n  surface-container: '#1f2113'\n  surface-container-high: '#292b1d'\n  surface-container-highest: '#343627'\n  on-surface: '#e4e4ce'\n  on-surface-variant: '#c6c9ab'\n  inverse-surface: '#e4e4ce'\n  inverse-on-surface: '#303223'\n  outline: '#909378'\n  outline-variant: '#464932'\n  surface-tint: '#bad200'\n  primary: '#ffffff'\n  on-primary: '#2d3400'\n  primary-container: '#d4f000'\n  on-primary-container: '#5e6b00'\n  inverse-primary: '#586400'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#ffffff'\n  on-tertiary: '#2f3034'\n  tertiary-container: '#e3e2e7'\n  on-tertiary-container: '#636469'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#d4f000'\n  primary-fixed-dim: '#bad200'\n  on-primary-fixed: '#191e00'\n  on-primary-fixed-variant: '#424b00'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e3e2e7'\n  tertiary-fixed-dim: '#c6c6cb'\n  on-tertiary-fixed: '#1a1b1f'\n  on-tertiary-fixed-variant: '#46464b'\n  background: '#131408'\n  on-background: '#e4e4ce'\n  surface-variant: '#343627'\ntypography:\n  display-xl:\n    fontFamily: anton\n    fontSize: 80px\n    fontWeight: '400'\n    lineHeight: 80px\n    letterSpacing: 0.02em\n  headline-lg:\n    fontFamily: anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n    letterSpacing: 0.02em\n  headline-lg-mobile:\n    fontFamily: anton\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: 40px\n  title-md:\n    fontFamily: geist\n    fontSize: 20px\n    fontWeight: '700'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-lg:\n    fontFamily: geist\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-sm:\n    fontFamily: geist\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\n  label-caps:\n    fontFamily: jetbrainsMono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  data-mono:\n    fontFamily: jetbrainsMono\n    fontSize: 16px\n    fontWeight: '500'\n    lineHeight: 24px\nspacing:\n  base: 4px\n  xs: 8px\n  sm: 16px\n  md: 24px\n  lg: 40px\n  xl: 64px\n  gutter: 20px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe visual identity of the design system is rooted in the \"Hazard Neon & Asphalt\" aesthetic—a high-contrast, editorial take on industrial utility. It evokes the urgency and reliability of professional roadside assistance through a blend of **Brutalism** and **Modern Editorial** design. \n\nThe personality is unapologetically rugged and precise. It moves away from the \"soft\" friendliness of consumer apps toward a \"mechanical excellence\" vibe. Key visual motifs include:\n- **Kinetic Energy:** Subtle 15-degree slants and \"speed lines\" used as decorative dividers or background motifs.\n- **Structural Integrity:** Heavy rule lines (2px - 4px) that mimic road markings and technical blueprints.\n- **Asymmetric Tension:** Layouts that avoid standard centered grids in favor of purposeful, heavy-left or staggered compositions to suggest movement.\n- **Precision:** Zero-radius corners to reflect the sharp, calculated nature of mechanical repair.\n\n## Colors\n\nThe palette is designed for maximum legibility in high-stress, \"on-the-move\" environments.\n\n- **Primary (Hazard Neon):** `#E2FF00`. A high-visibility yellow used for critical actions, status indicators, and branding accents. It must always be paired with dark text for accessibility.\n- **Secondary (Deep Asphalt):** `#1A1A1B`. The foundation of the UI, providing a heavy, grounded feel that reduces glare during night-time roadside emergencies.\n- **Tertiary (Industrial Gray):** `#8E8E93`. Used for secondary information, borders, and inactive states to maintain a metallic, mechanical texture.\n- **Accent (Oil & Grit):** Deep blacks and varying shades of cool grays are used to create depth without relying on traditional shadows.\n\n## Typography\n\nTypography is treated as a structural element. \n\n- **Headlines:** We use **Anton** for its condensed, high-impact presence. It mimics the urgency of highway signage. Headlines should almost always be uppercase and tightly tracked.\n- **Body:** **Geist** provides a technical, clean, and highly readable experience. Its monospace-influenced widths feel precise and modern.\n- **Data/Technical:** **JetBrains Mono** is reserved for ETA timers, coordinates, pricing, and VIN numbers, emphasizing the mechanical and data-driven nature of the service.\n\n**Styling Note:** Large display type should often overlap or sit very close to structural borders to create an \"editorial\" density.\n\n## Layout & Spacing\n\nThe design system utilizes a **Fixed Grid** with an aggressive spacing rhythm based on a 4px baseline.\n\n- **Desktop:** 12-column grid with wide 64px margins. Content is often pushed to the far edges of the container to create tension.\n- **Mobile:** 4-column grid with 16px margins. \n- **Rule Lines:** Use horizontal and vertical lines (1px or 2px) to define zones rather than background color changes.\n- **Asymmetry:** Elements like buttons or images should often be offset from the grid by one spacing unit (`base` or `xs`) to create a sense of forward momentum.\n\n## Elevation & Depth\n\nIn this design system, depth is achieved through **Hard Layering** and **Tonal Shifts** rather than soft shadows.\n\n1.  **Level 0 (The Road):** Pure black/Deep Asphalt background.\n2.  **Level 1 (The Bay):** Surface blocks using `#1E1E1F` with a 1px border of `#8E8E93`.\n3.  **Level 2 (The Tool):** High-contrast Neon blocks that sit flush against the level below.\n\n**Shadows:** When shadows are necessary for focus, use \"Hard Shadows\"—100% opacity, 4px-8px offset, with no blur, in the color of the primary neon or pure black. This maintains the \"Brutalist\" mechanical feel.\n\n## Shapes\n\nThe shape language is strictly **geometric and sharp**.\n\n- **Corners:** 0px radius for all elements (buttons, cards, inputs). This reflects the cold, hard nature of steel and tools.\n- **Diagonal Accents:** Use a `clip-path` or SVG mask to create 45-degree chamfered corners on primary call-to-action buttons to suggest \"clipped\" metal or industrial tags.\n- **Indicators:** Use triangles and chevrons instead of circles for icons to maintain the angular theme.\n\n## Components\n\n### Buttons\n- **Primary:** Neon yellow background, black Anton text, uppercase. No border. On hover, a hard black offset shadow appears.\n- **Secondary:** Transparent background, white text, 2px neon yellow border. \n- **Shape:** Rectangular, sharp corners.\n\n### Cards\n- Avoid container-heavy cards. Instead, use a top-border (2px, gray) and a large, bold Anton title to define a section. \n- Content within sections should be separated by thin 1px horizontal rules.\n\n### Input Fields\n- Underline style only. A 2px gray bottom border that turns Neon Yellow on focus. \n- Labels sit above the input in `label-caps` (JetBrains Mono).\n\n### Status Chips\n- Rectangular blocks. \"Active\" states use Neon Yellow with black text. \"Pending\" or \"In-Route\" uses Industrial Gray.\n\n### Navigation\n- Vertical navigation is preferred on desktop to mimic a sidebar menu or a technical manual.\n- Use heavy dividers (4px) to separate the logo/brand area from the navigation links.\n\n### Special Component: The \"Speed-Gauge\" Progress Bar\n- Instead of a smooth bar, use a series of vertical blocks that fill up to indicate progress (ETA or service completion), reminiscent of a tachometer.",
+            "font": "ANTON",
+            "headlineFont": "ANTON",
+            "headlineFontFamily": "Anton",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#131408",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303223",
+              "inverse_primary": "#586400",
+              "inverse_surface": "#e4e4ce",
+              "on_background": "#e4e4ce",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#2d3400",
+              "on_primary_container": "#5e6b00",
+              "on_primary_fixed": "#191e00",
+              "on_primary_fixed_variant": "#424b00",
+              "on_secondary": "#303031",
+              "on_secondary_container": "#bab8b9",
+              "on_secondary_fixed": "#1b1b1c",
+              "on_secondary_fixed_variant": "#474647",
+              "on_surface": "#e4e4ce",
+              "on_surface_variant": "#c6c9ab",
+              "on_tertiary": "#2f3034",
+              "on_tertiary_container": "#636469",
+              "on_tertiary_fixed": "#1a1b1f",
+              "on_tertiary_fixed_variant": "#46464b",
+              "outline": "#909378",
+              "outline_variant": "#464932",
+              "primary": "#ffffff",
+              "primary_container": "#d4f000",
+              "primary_fixed": "#d4f000",
+              "primary_fixed_dim": "#bad200",
+              "secondary": "#c8c6c7",
+              "secondary_container": "#49494a",
+              "secondary_fixed": "#e5e2e3",
+              "secondary_fixed_dim": "#c8c6c7",
+              "surface": "#131408",
+              "surface_bright": "#393a2b",
+              "surface_container": "#1f2113",
+              "surface_container_high": "#292b1d",
+              "surface_container_highest": "#343627",
+              "surface_container_low": "#1b1d0f",
+              "surface_container_lowest": "#0d0f04",
+              "surface_dim": "#131408",
+              "surface_tint": "#bad200",
+              "surface_variant": "#343627",
+              "tertiary": "#ffffff",
+              "tertiary_container": "#e3e2e7",
+              "tertiary_fixed": "#e3e2e7",
+              "tertiary_fixed_dim": "#c6c6cb"
+            },
+            "overridePrimaryColor": "#e2ff00",
+            "overrideSecondaryColor": "#1a1a1b",
+            "overrideTertiaryColor": "#8e8e93",
+            "spacing": {
+              "base": "4px",
+              "gutter": "20px",
+              "lg": "40px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "md": "24px",
+              "sm": "16px",
+              "xl": "64px",
+              "xs": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "geist",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-sm": {
+                "fontFamily": "geist",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "20px"
+              },
+              "data-mono": {
+                "fontFamily": "jetbrainsMono",
+                "fontSize": "16px",
+                "fontWeight": "500",
+                "lineHeight": "24px"
+              },
+              "display-xl": {
+                "fontFamily": "anton",
+                "fontSize": "80px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "80px"
+              },
+              "headline-lg": {
+                "fontFamily": "anton",
+                "fontSize": "48px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "52px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "anton",
+                "fontSize": "36px",
+                "fontWeight": "400",
+                "lineHeight": "40px"
+              },
+              "label-caps": {
+                "fontFamily": "jetbrainsMono",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "16px"
+              },
+              "title-md": {
+                "fontFamily": "geist",
+                "fontSize": "20px",
+                "fontWeight": "700",
+                "letterSpacing": "0.01em",
+                "lineHeight": "28px"
+              }
+            }
+          },
+          "title": "Pull-Up Roadside Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed and built a bespoke, high-fidelity homepage for **Pull-Up Roadside**. \n\n### Design Highlights:\n*   **Industrial Visual Identity:** Moved away from generic \"local business\" templates in favor of a high-contrast **\"Asphalt & Neon\"** theme. This uses a deep charcoal base with vibrant safety-yellow accents to evoke high-speed mechanical response and road safety.\n*   **Editorial Typography:** Leveraged the bold, condensed weight of the **Anton** typeface for massive, impactful headlines that mirror road signage and industrial branding.\n*   **Bespoke Layout:** \n    *   The **Hero section** features a high-motion concept with light-trail imagery and a powerful \"We pull you through\" brand promise.\n    *   The **Services section** utilizes an asymmetric design with large numeric indicators rather than a standard grid, reinforcing the premium, \"mechanical response unit\" positioning.\n    *   A **Live Service Marquee** provides instant credibility by highlighting key service areas in Central Texas.\n*   **Production-Ready Features:** \n    *   Full semantic HTML/CSS structure with CSS variables for easy theme management.\n    *   Fixed-position navigation for constant access to the emergency dispatch number.\n    *   The required **Map Slot** and **Dispatch Form** are integrated with industrial styling.\n\nIs there a specific section you'd like to refine, or would you like to see how this translates to a mobile view?"
+  },
+  {
+    "suggestion": "Make the service numbers even bigger and more aggressive"
+  },
+  {
+    "suggestion": "Can we add a \"Fleet\" section with photos of tow trucks?"
+  },
+  {
+    "suggestion": "Show me the mobile version of this design"
+  }
+]
