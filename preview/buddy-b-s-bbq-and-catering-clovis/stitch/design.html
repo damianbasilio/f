@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Buddy B's BBQ | The Art of the Pit</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#eae8e7",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "surface-dim": "#dbd9d9",
+                        "secondary": "#5f5e5e",
+                        "tertiary-container": "#747571",
+                        "on-primary-container": "#fffbff",
+                        "inverse-on-surface": "#f2f0f0",
+                        "secondary-fixed": "#e5e2e1",
+                        "primary-fixed": "#ffdbcf",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#ffb59a",
+                        "on-primary-fixed-variant": "#802a00",
+                        "surface-tint": "#a83900",
+                        "surface": "#fbf9f8",
+                        "on-secondary-container": "#656464",
+                        "primary-fixed-dim": "#ffb59a",
+                        "surface-container-highest": "#e4e2e2",
+                        "primary-container": "#cd4700",
+                        "on-tertiary-container": "#fefdf7",
+                        "primary": "#a43700",
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#5b5c59",
+                        "outline": "#8f7066",
+                        "surface-bright": "#fbf9f8",
+                        "on-primary-fixed": "#380d00",
+                        "on-secondary-fixed-variant": "#474646",
+                        "on-tertiary-fixed-variant": "#464744",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary-fixed-dim": "#c7c7c2",
+                        "background": "#fbf9f8",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface": "#1b1c1c",
+                        "on-tertiary": "#ffffff",
+                        "on-background": "#1b1c1c",
+                        "inverse-surface": "#303030",
+                        "surface-container": "#efeded",
+                        "surface-container-low": "#f5f3f3",
+                        "surface-variant": "#e4e2e2",
+                        "secondary-container": "#e5e2e1",
+                        "error-container": "#ffdad6",
+                        "tertiary-fixed": "#e3e3de",
+                        "outline-variant": "#e3bfb2",
+                        "on-surface-variant": "#5a4138"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "8px",
+                        "gutter": "32px",
+                        "margin-desktop": "64px",
+                        "margin-mobile": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Newsreader"],
+                        "body-lg": ["Work Sans"],
+                        "body-md": ["Work Sans"],
+                        "display-lg": ["Newsreader"],
+                        "headline-md": ["Newsreader"],
+                        "headline-lg": ["Newsreader"],
+                        "label-sm": ["Work Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .topographic-watermark {
+            background-image: radial-gradient(circle at 2px 2px, rgba(143, 112, 102, 0.05) 1px, transparent 0);
+            background-size: 40px 40px;
+        }
+        .smoke-overlay {
+            background: linear-gradient(0deg, rgba(27,28,28,0.8) 0%, rgba(27,28,28,0) 50%);
+        }
+        .editorial-shadow {
+            box-shadow: 20px 20px 0px 0px rgba(95, 94, 94, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-on-surface font-bold tracking-tighter">Buddy B's</div>
+<!-- Desktop Nav -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-primary font-bold border-b-2 border-primary pb-1 font-label-sm text-label-sm uppercase tracking-widest" href="#">The Craft</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">Menu</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">Catering</a>
+<a class="text-secondary hover:text-primary transition-colors font-label-sm text-label-sm uppercase tracking-widest" href="#">Contact</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 font-label-sm text-label-sm uppercase tracking-widest hover:opacity-90 active:scale-95 transition-all">
+                Book Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center overflow-hidden bg-on-surface pt-16">
+<div class="absolute inset-0 z-0">
+<img alt="The Pit Master's Craft" class="w-full h-full object-cover opacity-60 mix-blend-luminosity scale-105" data-alt="A moody, cinematic close-up of a slow-smoked brisket with a deep black crust and vibrant pink smoke ring. Wisps of real white smoke drift across the dark, textured surface of the meat in a high-contrast culinary setting. The lighting is low-key and dramatic, emphasizing the glistening fat and coarse pepper rub, evoking a premium modern smokehouse atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCepSe4AYH0vi11kWrW_ZQ0X9PTWfftwoYquAZrwzLl_bteSn3TYfsdkcpyWxq3Xn6F2oVbY65-LN6KUPfUrOBzkjtRf4hpTjoLxe0KL3N-fguVXABvb4SC3MHVZUeiHma3T0Osse3ogvfis0D53VXaPK37qs7gSeLG7bvB2esbG-U7KWjFhNk3JPiDvxI1J_fIndEqVAsZvnmOJuIqseUP2mK2VxibFKrx6QCn3ekYW-QJvkXX8R88KD6tP0ud-TMO6hGE0tufLCc"/>
+<div class="absolute inset-0 smoke-overlay"></div>
+</div>
+<div class="relative z-10 w-full px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-12">
+<div class="col-span-12 md:col-span-10 lg:col-span-8 flex flex-col items-start gap-4">
+<span class="inline-block bg-primary text-on-primary font-label-sm text-label-sm uppercase tracking-widest px-4 py-1">Est. 2012</span>
+<h1 class="font-display-lg text-white leading-none -mt-4 text-[60px] md:text-display-lg">
+                    THE ART <br/> <span class="italic text-primary-fixed">OF THE PIT</span>
+</h1>
+<p class="font-body-lg text-surface-variant/80 max-w-md mt-6">
+                    Where the raw intensity of the fire meets the surgical precision of the craft. We don't just cook; we curate a sensory journey through smoke and time.
+                </p>
+</div>
+</div>
+</header>
+<!-- The Process Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto topographic-watermark">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative">
+<div class="absolute -top-12 -left-12 w-32 h-32 border-t border-l border-outline/30 hidden lg:block"></div>
+<img alt="The Oak Foundation" class="w-full h-[600px] object-cover grayscale editorial-shadow" data-alt="A high-quality editorial photograph of premium post oak logs stacked meticulously against a minimalist concrete wall. The lighting is sharp and architectural, highlighting the rugged textures of the bark and the concentric rings of the wood. The composition is clean and expansive, utilizing whitespace to convey the patient, artisanal nature of traditional barbecue preparation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTwgvr6FZTeyf4ckS-dNuDrXX53ogxFjbUrxcpoqvjtc6-5QsCVop0iirDsWF_JsAuJj1RPqgtDwuS1lD0oCxbyOP_WV2NVxRg9xvkVrR6Okut5X5mJ7t7ZwFo6phAjFksaueP1i3Zo7KVrGga-RzOcMm28GnOLMBysz01Oe_cqMtubSIDsJUSDPkNcC7_xUPTVKVAX46DWVyI9gm7pS1PLTZj17ie17i_lLroymuHxFjCu0h3dm6qs3PoMIa80i_YWvN5fNE2AWU"/>
+</div>
+<div class="md:col-span-6 md:col-start-7 flex flex-col gap-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">The Wood</h2>
+<p class="font-body-md text-on-surface-variant max-w-sm">
+                        We exclusively burn seasoned Post Oak. It provides a clean, consistent heat and a subtle sweetness that respects the integrity of the protein rather than masking it.
+                    </p>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">The Smoke</h2>
+<p class="font-body-md text-on-surface-variant max-w-sm">
+                        Our smoke is blue and nearly invisible. It is a vapor, not a particulate, ensuring a delicate infusion that develops a profound depth of flavor over sixteen grueling hours.
+                    </p>
+</div>
+<div>
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4">The Patience</h2>
+<p class="font-body-md text-on-surface-variant max-w-sm">
+                        There are no shortcuts in the pit. Every cut is monitored by hand, rested for hours, and served only when the collagen has fully surrendered to the heat.
+                    </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Signature Menu Section -->
+<section class="bg-surface py-32 px-margin-mobile md:px-margin-desktop border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row gap-gutter items-end mb-20">
+<h2 class="font-display-lg text-on-surface-variant/20 uppercase leading-none md:-mb-4 select-none">Menu</h2>
+<div class="flex-1">
+<h3 class="font-headline-lg text-on-surface">THE SIGNATURES</h3>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+<div class="lg:col-span-7 group relative">
+<img alt="Pitmaster Plate" class="w-full h-[500px] object-cover rounded-sm transition-transform duration-700 group-hover:scale-[1.02]" data-alt="A stunning, overhead editorial shot of a 'Pitmaster Plate' featuring sliced brisket, pulled pork, and a house-made hot link on a heavy stoneware platter. The plate is arranged with geometric precision, accompanied by pickled red onions and house-made mustard. The lighting is soft and natural, emphasizing the rich textures and deep burnt-orange hues of the meat against a neutral, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7-8dv5uyxPDKVYcEh_tuNQQ8dGWF0-yavg67nJMDFAqCdIukKurGiNdcJe_ZgY4A8iMLczFgTt3mJDdF5bo7oI1xAqhlrVg1QpsDJDOy9zJlpgzUg3fopGRTe5all-vWqkc6LvCAeCXjpcbE8YV8iuZdvQW3n98f9KjuqN4MWmpkPCFJhnNWUdHyAfmy7RIQss39SerMPUIj04aoHWfuY84_ISdqyJFP7FqJmQZpYJ9ZN_mvSl3CS2lTz3kAXgL7K2hnKZChPbCw"/>
+<div class="mt-8">
+<h4 class="font-headline-md text-on-surface mb-2 italic">The Pitmaster Plate</h4>
+<p class="font-body-md text-on-secondary-fixed-variant max-w-xl">
+                            A curated selection of our finest cuts. Includes 1/2 lb of Prime Brisket, 1/4 lb of Pulled Pork, and one House-Linked Jalapeño Sausage. Served with pickled aromatics and charred sourdough.
+                        </p>
+</div>
+</div>
+<div class="lg:col-span-5">
+<ul class="flex flex-col border-t border-outline">
+<li class="py-8 border-b border-outline-variant/30 flex justify-between items-baseline group hover:pl-4 transition-all duration-300">
+<div>
+<h5 class="font-headline-md text-headline-md leading-none">Prime Sliced Brisket</h5>
+<p class="font-label-sm text-label-sm text-secondary uppercase mt-2">16-hour smoke / salt &amp; pepper rub</p>
+</div>
+<span class="font-headline-md text-primary">$32</span>
+</li>
+<li class="py-8 border-b border-outline-variant/30 flex justify-between items-baseline group hover:pl-4 transition-all duration-300">
+<div>
+<h5 class="font-headline-md text-headline-md leading-none">Berkshire Pork Ribs</h5>
+<p class="font-label-sm text-label-sm text-secondary uppercase mt-2">St. Louis Cut / honey-chili glaze</p>
+</div>
+<span class="font-headline-md text-primary">$28</span>
+</li>
+<li class="py-8 border-b border-outline-variant/30 flex justify-between items-baseline group hover:pl-4 transition-all duration-300">
+<div>
+<h5 class="font-headline-md text-headline-md leading-none">Wagyu Beef Rib</h5>
+<p class="font-label-sm text-label-sm text-secondary uppercase mt-2">Limited daily / dinosaur cut</p>
+</div>
+<span class="font-headline-md text-primary">$54</span>
+</li>
+<li class="py-8 border-b border-outline-variant/30 flex justify-between items-baseline group hover:pl-4 transition-all duration-300">
+<div>
+<h5 class="font-headline-md text-headline-md leading-none">House Hot Link</h5>
+<p class="font-label-sm text-label-sm text-secondary uppercase mt-2">Hand-tied / habanero &amp; cheddar</p>
+</div>
+<span class="font-headline-md text-primary">$12</span>
+</li>
+</ul>
+<a class="mt-12 inline-flex items-center gap-4 text-primary font-bold uppercase tracking-widest text-label-sm hover:gap-6 transition-all" href="#">
+                        View Full Gallery Menu <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Catering Section -->
+<section class="bg-secondary dark:bg-inverse-surface py-32 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="relative z-10">
+<span class="text-primary-fixed font-label-sm text-label-sm uppercase tracking-[0.3em] mb-6 block">Private Services</span>
+<h2 class="text-white font-headline-lg text-[40px] md:text-[64px] leading-tight mb-8">
+                    EVENTS <br/> SCALED WITH <br/> <span class="italic opacity-50">CHARACTER</span>
+</h2>
+<p class="text-secondary-fixed-dim font-body-lg max-w-md mb-12">
+                    From intimate board meetings to grand celebrations, we bring the pit to your venue. Bespoke menus crafted for the discerning palate.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:brightness-110 transition-all">
+                        Inquire Now
+                    
+</button><button class="border border-outline-variant text-white px-8 py-4 font-label-sm text-label-sm uppercase tracking-widest hover:bg-white/5 transition-all">
+                        Download PDF Menu
+                    </button>
+</div>
+</div>
+<div class="hidden lg:block relative h-[600px]">
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply rounded-sm"></div>
+<img alt="Bespoke Events" class="w-full h-full object-cover grayscale brightness-50" data-alt="A professional catering setup in a modern industrial event space. Long wooden tables are set with minimalist white ceramics and crystal glassware, punctuated by large trays of perfectly presented barbecue. The atmosphere is sophisticated and high-end, featuring warm ambient lighting and a clean, spacious layout that represents 'Events Scaled with Character' for a premium BBQ brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkFkmNQ7QxCXLY8Wq8geZWt1nt5-W4XxITIoKttudfkMSR-xKkFZ--R6WRoy32tHxNI_AxTzzmGaFh2WyMAroaEJg7yOZunE2QpM0ZGnozg6Bpx7YWv5Ij6S_bdKPtpCnz9UPZN5sZmgQtEmTHK3nBuCDeE6XG1YtwyY4KHAlCOLj2KZX1FFat3tnh4PiWUw7Wz-8-WY17qHWXVJxPohZy8SwKPbzEWx9oJERQGrH7BqgtoFg1nr64fU8Lq0VHeeS04Qbr7eby2po"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-secondary dark:bg-inverse-surface text-on-secondary dark:text-on-surface pt-20 pb-12 px-margin-mobile md:px-margin-desktop border-t border-white/5">
+<div class="grid grid-cols-12 gap-gutter max-w-container-max mx-auto items-start">
+<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+<div class="font-headline-lg text-headline-lg text-on-secondary uppercase mb-8">Buddy B's</div>
+<p class="text-secondary-fixed-dim/70 font-body-md max-w-xs">
+                    Crafting smokehouse excellence in the heart of the city since 2012. Authenticity is our only ingredient.
+                </p>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h6 class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mb-6">Explore</h6>
+<ul class="flex flex-col gap-4">
+<li><a class="text-secondary-fixed-dim/70 hover:text-on-secondary transition-colors font-label-sm text-label-sm" href="#">The Craft</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-on-secondary transition-colors font-label-sm text-label-sm" href="#">Signature Menu</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-on-secondary transition-colors font-label-sm text-label-sm" href="#">Catering</a></li>
+</ul>
+</div>
+<div class="col-span-6 md:col-span-2">
+<h6 class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mb-6">Company</h6>
+<ul class="flex flex-col gap-4">
+<li><a class="text-secondary-fixed-dim/70 hover:text-on-secondary transition-colors font-label-sm text-label-sm" href="#">Contact</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-on-secondary transition-colors font-label-sm text-label-sm" href="#">Careers</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-on-secondary transition-colors font-label-sm text-label-sm" href="#">Privacy</a></li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-4 mt-12 md:mt-0">
+<h6 class="font-label-sm text-label-sm uppercase tracking-widest text-primary-fixed mb-6">The Journal</h6>
+<form class="flex border-b border-outline-variant/30 pb-2">
+<input class="bg-transparent border-none text-white focus:ring-0 w-full placeholder:text-secondary-fixed-dim/30 text-label-sm font-label-sm" placeholder="JOIN THE CIRCLE" type="email"/>
+<button class="material-symbols-outlined text-primary-fixed" type="submit">arrow_forward</button>
+</form>
+</div>
+<div class="col-span-12 pt-20 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="text-secondary-fixed-dim/50 text-[10px] uppercase tracking-widest">© 2024 Buddy B's BBQ. The Art of the Pit.</p>
+<div class="flex gap-8">
+<a class="text-secondary-fixed-dim/50 hover:text-on-secondary transition-colors text-[10px] uppercase tracking-widest" href="#">Instagram</a>
+<a class="text-secondary-fixed-dim/50 hover:text-on-secondary transition-colors text-[10px] uppercase tracking-widest" href="#">Vimeo</a>
+<a class="text-secondary-fixed-dim/50 hover:text-on-secondary transition-colors text-[10px] uppercase tracking-widest" href="#">Facebook</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll interaction for navbar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2');
+            }
+        });
+
+        // Horizontal reveal on scroll for some elements
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
