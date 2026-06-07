@@ -1,0 +1,90 @@
+# Gabby Nails & Spa Studio — brief
+
+## Email verification
+
+- **Email:** gabbynailsAC@gmail.com
+- **Source:** http://www.facebook.com/gabbynailsAC
+- **Gate:** PASS
+
+## Activity verification
+
+- **Gate:** PASS
+- **Evidence:** Active Facebook page with content and 1 post caption(s) scraped
+- **Checked:** 2026-06-07 — Facebook profile scrape
+
+## Human approval
+
+- **Reviewed by:** auto (Facebook-only verified lead)
+- **Date:** 2026-06-07
+- **Website bad enough to proceed:** yes — no owned website on Facebook profile
+- **Gate:** PASS
+
+## Site quality gate
+
+- **Gate:** PASS
+- **Live URL:** http://www.facebook.com/gabbynailsAC
+- **Why this site hurts sales:** Business relies on Facebook only; Google searchers cannot reach a dedicated homepage with phone and services above the fold.
+
+## Business copy
+
+- **Name:** Gabby Nails & Spa Studio
+- **Owner:** —
+- **Location:** 4213 Ventnor Avenue, Atlantic City, NJ 08401
+- **Phone:** (609) 340-8557
+- **Email:** gabbynailsAC@gmail.com
+- **Tagline:** Gabby Nails & Spa Studio, Atlantic City. 50 likes · 7 were here. Nail Salon
+- **Hours:** See Facebook page
+- **Focus:** Gabby Nails & Spa Studio, Atlantic City. 50 likes · 7 were here. Nail Salon
+- **Full profile (scraped):**
+
+Gabby Nails & Spa Studio, Atlantic City. 50 likes · 7 were here. Nail Salon
+Address: 4213 Ventnor Ave, Atlantic City, NJ, United States, 08401
+Phone: 609-340-8557
+Email: gabbynailsAC@gmail.com
+
+Recent posts from their Facebook page:
+1. Gabby Nails & Spa Studio's Photo
+- **Category:** Salon / spa / personal care
+- **Vertical:** Salon / spa / personal care
+
+## Core functionalities
+
+- **Primary action:** Book appointment
+- **Secondary action:** View services
+- **Must surface above fold:** Phone number, primary CTA, business name, city
+- **Service highlights:** Cut & color; Special occasion styling; Walk-ins when available
+- **Trust signals available:** 4.8 review score from listings
+
+## Three verifiable issues
+
+1. Facebook-only presence — customers searching Google land on directories instead of the business
+2. No dedicated homepage for hours, services, and click-to-call from search results
+3. Social feed requires scrolling — key info (phone, location, services) is not one tap away
+
+## Mockup angle
+
+- **H1:** Gabby Nails & Spa Studio's Photo
+- **Primary CTA:** Book appointment
+- **Secondary CTA:** View services
+- **Sections:** hero, credibility, services, gallery, about, visit, contact
+- **Tone:** Polished, relaxing, appointment-ready
+- **Layout archetype:** split-editorial
+- **Colors / typography:** Stitch decides (no website to extract from)
+
+## Stitch generation brief
+
+- **Vertical:** Salon / spa / personal care
+- **Mood:** Polished, relaxing, appointment-ready
+- **Typography direction:** Libre Baskerville + Figtree
+- **Layout archetype:** split-editorial
+- **Design dials:** DESIGN_VARIANCE 9 | MOTION_INTENSITY 4 | VISUAL_DENSITY 6
+- **Colors / typography:** Stitch decides (no website to extract from)
+
+## Facebook source (no brand colors to extract)
+
+- **Source:** http://www.facebook.com/gabbynailsAC
+- **Platform:** Facebook (no dedicated website)
+- **Scraped:** 2026-06-07T20:19:25.975Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at http://www.facebook.com/gabbynailsAC. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
+
