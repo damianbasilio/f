@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CRUZ N CUTZ | Nampa's Premier Barbershop</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#c8c6c5",
+                    "surface-container-high": "#282a2b",
+                    "on-tertiary-fixed": "#1a1b1f",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "surface-container-low": "#1a1c1c",
+                    "primary-fixed": "#e5e2e1",
+                    "on-secondary": "#412d00",
+                    "on-tertiary-fixed-variant": "#46464b",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-primary-container": "#7e7d7d",
+                    "surface-dim": "#121414",
+                    "on-secondary-fixed": "#261900",
+                    "outline": "#8e9192",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-surface": "#e2e2e2",
+                    "primary-container": "#121212",
+                    "inverse-surface": "#e2e2e2",
+                    "outline-variant": "#444748",
+                    "tertiary": "#c7c6cb",
+                    "tertiary-fixed": "#e3e2e7",
+                    "on-tertiary-container": "#7d7d82",
+                    "surface-container": "#1e2020",
+                    "inverse-primary": "#5f5e5e",
+                    "surface-container-highest": "#333535",
+                    "surface-bright": "#38393a",
+                    "secondary": "#e9c176",
+                    "surface-container-lowest": "#0c0f0f",
+                    "on-surface-variant": "#c4c7c7",
+                    "tertiary-fixed-dim": "#c7c6cb",
+                    "surface-tint": "#c8c6c5",
+                    "on-primary": "#313030",
+                    "error-container": "#93000a",
+                    "secondary-fixed": "#ffdea5",
+                    "surface-variant": "#333535",
+                    "background": "#121414",
+                    "on-background": "#e2e2e2",
+                    "on-secondary-container": "#dab36a",
+                    "on-tertiary": "#2f3034",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-error-container": "#ffdad6",
+                    "secondary-container": "#604403",
+                    "inverse-on-surface": "#2f3131",
+                    "on-primary-fixed-variant": "#474646",
+                    "tertiary-container": "#111216",
+                    "error": "#ffb4ab",
+                    "on-error": "#690005",
+                    "surface": "#121414"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1280px",
+                    "section-gap": "120px",
+                    "unit": "8px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "label-lg": ["Montserrat"],
+                    "label-sm": ["Montserrat"],
+                    "display-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e2e2e2;
+            -webkit-font-smoothing: antialiased;
+        }
+        .rule-x { height: 1px; background-color: #444748; width: 100%; }
+        .rule-y { width: 1px; background-color: #444748; height: 100%; }
+        .grain {
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.03;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        ::selection {
+            background-color: #e9c176;
+            color: #121414;
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="font-body-md text-on-surface">
+<div class="grain"></div>
+<!-- Navigation Header -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant">
+<nav class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter">CRUZ N CUTZ</span>
+<span class="text-[10px] uppercase tracking-[0.3em] text-secondary font-semibold">(208) 695-9007</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface hover:text-secondary transition-colors duration-300" href="#services">SERVICES</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface hover:text-secondary transition-colors duration-300" href="#story">STORY</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface hover:text-secondary transition-colors duration-300" href="#visit">LOCATION</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface hover:text-secondary transition-colors duration-300" href="#contact">CONTACT</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-3 font-label-lg text-label-lg uppercase transition-all duration-300 hover:opacity-90 active:scale-95">
+                BOOK NOW
+            </button>
+</nav>
+</header>
+<main class="pt-[80px]">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden border-b border-outline-variant">
+<!-- Architectural Rule Lines -->
+<div class="absolute inset-0 pointer-events-none">
+<div class="rule-y absolute left-margin-desktop hidden md:block opacity-30"></div>
+<div class="rule-y absolute right-margin-desktop hidden md:block opacity-30"></div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<div class="md:col-span-7 flex flex-col justify-center">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-none mb-8">
+                        Crafted <span class="text-secondary">Precision.</span><br/>
+                        Nampa's Premier Barbershop.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">
+                        Experience the intersection of traditional craft and modern style. Our master barbers define the standard of excellence in grooming.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-secondary text-on-secondary px-10 py-5 font-label-lg text-label-lg uppercase tracking-[0.2em]">RESERVE AN APPOINTMENT</button>
+<a class="border border-outline-variant px-10 py-5 font-label-lg text-label-lg uppercase tracking-[0.2em] flex items-center justify-center hover:border-secondary transition-colors duration-300" href="#services">VIEW SERVICES</a>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="aspect-[4/5] w-full bg-surface-container-high relative overflow-hidden group">
+<img alt="Luxury Barbershop Interior" class="w-full h-full object-cover grayscale brightness-75 group-hover:scale-105 transition-transform duration-700" data-alt="A cinematic, high-contrast photograph of a luxury modern-industrial barbershop interior in Nampa, Idaho. The image features vintage black leather barber chairs with chrome accents, set against a backdrop of dark exposed brick and warm glowing pendant lights. The atmosphere is sophisticated and moody, using a palette of charcoal greys, deep blacks, and burnished gold highlights, reflecting a premium grooming experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLjFj_aCJcugXKzot8d12H5RW0wN4XKarV9uKOmTT3nxoSW77-AbN-XZUGz8ioLzpKzAkp-2sr4AUcvvHQESfsQqjn2j8AtsYXAqvGZaOGL4YI2wPV_ylk5oL_hznFVLpH2wN5zWtj_Cc4VpypGcKfGIO5g8sRlt1-Jh96bi0IJREUlNg3I2rCgco6mEC3cEs5RgWQDg7NHnS3PmSBRE--XepGVVn5YEjFDFyNDj5Bhyj8mPqXg-zxlm9kbuGExFF4NuC4avLm8wM"/>
+<div class="absolute inset-0 border border-secondary/20 m-4"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-16 border-b border-outline-variant bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div class="flex flex-col items-center text-center p-4">
+<span class="font-headline-lg text-secondary mb-2">Master</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">BARBERS</span>
+</div>
+<div class="flex flex-col items-center text-center p-4 border-l border-outline-variant">
+<span class="font-headline-lg text-secondary mb-2">Award</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">WINNING</span>
+</div>
+<div class="flex flex-col items-center text-center p-4 md:border-l border-outline-variant">
+<span class="font-headline-lg text-secondary mb-2">Est.</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">2023</span>
+</div>
+<div class="flex flex-col items-center text-center p-4 border-l border-outline-variant">
+<span class="font-headline-lg text-secondary mb-2">Nampa</span>
+<span class="font-label-sm text-on-surface-variant uppercase tracking-widest">LOCAL FAVORITE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap relative" id="services">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 rule-y opacity-20"></div>
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<span class="text-secondary font-label-lg tracking-[0.3em] uppercase block mb-4">The Selection</span>
+<h2 class="font-headline-lg text-headline-lg">REFINED SERVICES</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-sm">Every service includes a consultation, premium products, and our signature attention to detail.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border border-outline-variant">
+<!-- Service Card 1 -->
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant group hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-8">
+<span class="font-label-lg text-secondary tracking-widest">01</span>
+<span class="font-headline-md text-on-surface">$35+</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase group-hover:text-secondary transition-colors">Signature Cut</h3>
+<p class="font-body-md text-on-surface-variant mb-12">A precision haircut tailored to your head shape and style, finished with a straight razor neck shave.</p>
+<button class="flex items-center gap-4 text-label-lg uppercase tracking-widest group-hover:gap-6 transition-all">
+                            BOOK SERVICE <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<!-- Service Card 2 -->
+<div class="p-12 border-b md:border-b-0 md:border-r border-outline-variant group hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-8">
+<span class="font-label-lg text-secondary tracking-widest">02</span>
+<span class="font-headline-md text-on-surface">$25+</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase group-hover:text-secondary transition-colors">Beard Sculpting</h3>
+<p class="font-body-md text-on-surface-variant mb-12">Expert shaping and maintenance for your facial hair. Includes hot towel and premium oils.</p>
+<button class="flex items-center gap-4 text-label-lg uppercase tracking-widest group-hover:gap-6 transition-all">
+                            BOOK SERVICE <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+<!-- Service Card 3 -->
+<div class="p-12 group hover:bg-surface-container-low transition-colors duration-500">
+<div class="flex justify-between items-start mb-8">
+<span class="font-label-lg text-secondary tracking-widest">03</span>
+<span class="font-headline-md text-on-surface">$65+</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase group-hover:text-secondary transition-colors">The Full Cruz</h3>
+<p class="font-body-md text-on-surface-variant mb-12">The ultimate grooming experience: Signature Cut, Hot Towel Shave, and rejuvenating scalp massage.</p>
+<button class="flex items-center gap-4 text-label-lg uppercase tracking-widest group-hover:gap-6 transition-all">
+                            BOOK SERVICE <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap bg-surface-container-low relative overflow-hidden" id="story">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 relative">
+<div class="rule-x absolute top-0 -left-margin-desktop opacity-30"></div>
+<div class="rule-y absolute left-0 -top-16 bottom-0 opacity-30"></div>
+<div class="aspect-square bg-surface-container-highest overflow-hidden relative">
+<img alt="Barber Hands" class="w-full h-full object-cover grayscale brightness-50" data-alt="A focused, artistic close-up photograph of a master barber's hands expertly handling a silver straight razor during a professional grooming session. The lighting is low-key and dramatic, highlighting the fine metallic texture of the tool and the meticulous grip. The scene is set in a modern industrial barbershop in Nampa, with a dark charcoal and slate grey color palette and a subtle burnished gold glow in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF7nBf8unrUPbtRkPkiDVSqvKeUETzTfGI03ntUI2lTS4o3BDxqe7EZXH1Fl5fcljag2Y3RlKzohCpgmagc--OIjNGYKwX6l-O1hLfKiHuu3HKC0QEvAtLfPfOcGa4ZV21VxNZZZvYEKSmyjEBuhJhRN34u1XC8HZqLYo4oRtomTBCzEwWu3KtlEmugOPPSFnWvdNWORfYYbgGgr7jiiSwtYSdKORxEQ4uTbkDuB8YWX7JYT9wliJ61QSiPgJGGADGe5FYcjHVVc4"/>
+<div class="absolute bottom-8 right-8 bg-secondary p-8 hidden md:block">
+<p class="font-display-lg text-on-secondary leading-none">Est.<br/>2023</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8">
+<span class="text-secondary font-label-lg tracking-[0.3em] uppercase block mb-6">Our Philosophy</span>
+<h2 class="font-display-lg-mobile md:font-headline-lg text-display-lg-mobile md:text-headline-lg mb-8">THE ART OF THE CUT</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Founded on the principles of architectural precision and heritage craftsmanship, CRUZ N CUTZ was established to provide the modern gentleman with more than just a haircut. 
+                    </p>
+<p class="font-body-md text-on-surface mb-12">
+                        We believe that every cut is a conversation between tradition and individuality. Our Nampa studio is designed to be a sanctuary of style, where detail is paramount and the experience is as refined as the result.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="h-[2px] w-12 bg-secondary"></div>
+<span class="font-label-lg text-label-lg uppercase tracking-widest">Mastering the craft daily</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap" id="visit">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-0 border border-outline-variant">
+<div class="p-16 flex flex-col justify-center border-b md:border-b-0 md:border-r border-outline-variant">
+<h2 class="font-headline-lg text-headline-lg mb-8 uppercase">Visit The Shop</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<div>
+<h4 class="font-label-lg text-on-surface uppercase mb-2">Location</h4>
+<p class="text-on-surface-variant">920 12th Avenue South<br/>Nampa, ID 83651</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div>
+<h4 class="font-label-lg text-on-surface uppercase mb-2">Hours</h4>
+<p class="text-on-surface-variant">Tues - Fri: 9am - 7pm<br/>Sat: 9am - 4pm<br/>Sun - Mon: Closed</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-secondary">call</span>
+<div>
+<h4 class="font-label-lg text-on-surface uppercase mb-2">Connect</h4>
+<p class="text-on-surface-variant">(208) 695-9007<br/>Cruzncutz1023@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container-low" data-location="Nampa, Idaho" data-map-slot="" style="">
+<!-- Simulated Map Element -->
+<div class="absolute inset-0 opacity-40 grayscale contrast-125">
+<img alt="Map View" class="w-full h-full object-cover" data-alt="A stylized, high-contrast monochrome map rendering of a downtown urban grid, emphasizing geometric street patterns in charcoal and light grey. The visual style is architectural and minimalist, matching the modern-industrial aesthetic of Cruz N Cutz Barbershop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdrqIg5Pl6XUOQYPlNSDbHWdbVOLL4vmC7xARdoMiFZBLHqowLxMQsTKxJoTf5H2-2y5hQfSk67ShF6yZtlzr53PRMbLhze3V5bfFJwzhIrlowpFhw1-gBpQpOJsnJfqNAWB4RozRzUY2ppplSjFLSDBeYFwP_PWu9oC7Ccx5oSUob6sElwnowV_jp4A71NdzSNj8M3pik90fOKI_RQLBY0tK4ZjqSnjumks-Ybk9IK_LYdwk-HKOtrSZ0BNgZnGsELXeabCx0HnQ"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center animate-pulse">
+<span class="material-symbols-outlined text-on-secondary">content_cut</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap bg-surface-container-lowest border-t border-outline-variant" id="contact">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-16">
+<span class="text-secondary font-label-lg tracking-[0.3em] uppercase block mb-4">Get In Touch</span>
+<h2 class="font-headline-lg text-headline-lg uppercase">Contact Us</h2>
+</div>
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-12" id="contactForm" onsubmit="event.preventDefault(); handleFormSubmit()">
+<div class="relative">
+<label class="font-label-sm text-secondary uppercase tracking-widest absolute -top-3 left-0">Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary outline-none py-4 font-body-md text-on-surface placeholder:text-on-surface-variant/30 uppercase transition-all" placeholder="YOUR FULL NAME" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-sm text-secondary uppercase tracking-widest absolute -top-3 left-0">Email</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary outline-none py-4 font-body-md text-on-surface placeholder:text-on-surface-variant/30 uppercase transition-all" placeholder="EMAIL@ADDRESS.COM" required="" type="email"/>
+</div>
+<div class="md:col-span-2 relative">
+<label class="font-label-sm text-secondary uppercase tracking-widest absolute -top-3 left-0">Message</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant focus:border-secondary outline-none py-4 font-body-md text-on-surface placeholder:text-on-surface-variant/30 uppercase transition-all resize-none" placeholder="HOW CAN WE HELP YOU?" required="" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 flex justify-center mt-8">
+<button class="bg-secondary text-on-secondary px-16 py-5 font-label-lg text-label-lg uppercase tracking-[0.2em] transition-all hover:scale-[1.02] active:scale-95 group" id="submitBtn" type="submit">
+                            SEND MESSAGE
+                        </button>
+</div>
+<div class="md:col-span-2 text-center h-6 font-label-sm uppercase tracking-widest transition-all opacity-0" id="formStatus"></div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap border-t border-outline-variant bg-surface-container-lowest dark:bg-surface-container-lowest">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-8 w-full">
+<div class="flex flex-col items-center md:items-start">
+<span class="font-headline-lg text-headline-lg text-primary dark:text-primary mb-4">CRUZ N CUTZ</span>
+<p class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-widest">© 2024 CRUZ N CUTZ. CRAFTED FOR THE MODERN GENTLEMAN.</p>
+</div>
+<div class="flex gap-8">
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">INSTAGRAM</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">FACEBOOK</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">TERMS</a>
+<a class="font-label-sm text-label-sm uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors duration-300" href="#">PRIVACY</a>
+</div>
+</div>
+</footer>
+<script>
+        function handleFormSubmit() {
+            const btn = document.getElementById('submitBtn');
+            const status = document.getElementById('formStatus');
+            
+            btn.disabled = true;
+            btn.innerHTML = 'SENDING...';
+            
+            setTimeout(() => {
+                btn.innerHTML = 'MESSAGE SENT';
+                btn.classList.remove('bg-secondary');
+                btn.classList.add('bg-green-600', 'text-white');
+                
+                status.innerHTML = 'We will get back to you shortly.';
+                status.classList.remove('opacity-0');
+                status.classList.add('text-secondary');
+                
+                document.getElementById('contactForm').reset();
+                
+                setTimeout(() => {
+                    btn.disabled = false;
+                    btn.innerHTML = 'SEND MESSAGE';
+                    btn.classList.add('bg-secondary');
+                    btn.classList.remove('bg-green-600', 'text-white');
+                    status.classList.add('opacity-0');
+                }, 5000);
+            }, 1500);
+        }
+
+        // Reveal animations on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'translate-y-8', 'opacity-0');
+            observer.observe(section);
+        });
+
+        // Initialize first section
+        const firstSection = document.querySelector('section');
+        if(firstSection) {
+            firstSection.classList.remove('opacity-0', 'translate-y-8');
+        }
+    </script>
+</body></html>
