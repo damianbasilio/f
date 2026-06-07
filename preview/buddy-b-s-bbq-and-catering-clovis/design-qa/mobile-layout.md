@@ -6,8 +6,7 @@
 - refreshed map layout CSS
 - injected mobile safety CSS
 - bumped 10px label text
-- section overflow-hidden for decorative layers
-- responsive horizontal margins (1 blocks)
+- body overflow-x-clip
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

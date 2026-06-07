@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/p/Buddy-Bs-BBQ-Catering-61578650822653/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T05:56:14.674Z
+- **Scraped:** 2026-06-07T06:27:40.361Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/p/Buddy-Bs-BBQ-Catering-61578650822653/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
