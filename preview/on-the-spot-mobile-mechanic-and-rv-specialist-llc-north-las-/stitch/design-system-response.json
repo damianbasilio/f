@@ -1,0 +1,491 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Pro-Service Industrial",
+        "styleGuidelines": "## Brand & Style\nThe brand personality for this design system is rooted in reliability, grit, and technical expertise. It is designed to evoke a sense of \"job well done\" through a rugged yet highly professional aesthetic. The target audience includes vehicle owners and RV travelers who require urgent, dependable assistance.\n\nThe design style merges **Corporate / Modern** precision with **Brutalism-lite** elements—specifically through the use of heavy structural borders and high-contrast layouts. This approach communicates stability and the \"heavy-duty\" nature of mechanical work. Visuals are grounded and utilitarian, avoiding unnecessary fluff in favor of clarity and directness.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** on desktop (12 columns, 1200px max-width) and a **Fluid Grid** on mobile (4 columns). \n\nThe spacing rhythm is based on a 4px baseline, but defaults to larger increments (16, 24, 32) to maintain an open, professional feel. \n- **Mobile:** Margins are tight (16px) to maximize content space for users in \"emergency\" contexts.\n- **Desktop:** Generous section gaps (80px+) ensure the content feels organized and not cramped, reflecting a premium service.\n- **Gutters:** Standardized at 24px to provide clear breathing room between service cards and grid items.\n\n## Elevation & Depth\nIn line with the \"rugged\" brand, this design system avoids soft shadows and ethereal blurs. Instead, it uses **Bold Borders** and **Tonal Layers** to create depth.\n\n- **Surface Levels:** The base is light slate. Cards and containers use a white background with a 2px solid slate-800 border.\n- **Hard Shadows:** When elevation is required (e.g., a hovered card), use a \"hard\" 4px offset shadow in the primary blue or slate color, rather than a soft blur. This mimics the look of industrial schematics.\n- **Overlays:** Use semi-opaque Navy (#1E40AF at 90%) for modals to keep the brand color present even when focus is shifted.\n\n## Components\n- **Buttons:** Primary buttons are Caution Yellow with black text, featuring a 2px bottom \"border-shadow\" for a tactile, pressable look. Secondary buttons are Navy with white text.\n- **Input Fields:** Thick 2px borders (Slate-300). On focus, the border shifts to Mechanic Blue. Labels are always JetBrains Mono caps.\n- **Service Cards:** White background, 2px Slate-800 border. Use a small Caution Yellow \"tag\" in the corner for pricing or categories.\n- **Emergency CTA:** A persistent floating action button (FAB) or fixed footer bar in Caution Yellow with a \"Call Now\" icon, ensuring it is the most visible element on any page.\n- **Status Indicators:** For \"Mechanic En Route\" or \"Service Complete\" tracking, use heavy block-style progress bars with diagonal \"hazard\" stripes in the background.\n- **Lists:** Bullet points are replaced with small hex-nut icons or heavy square pips to reinforce the mechanical theme.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1e40af",
+          "designMd": "---\nname: Pro-Service Industrial\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#444653'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#757684'\n  outline-variant: '#c4c5d5'\n  surface-tint: '#3755c3'\n  primary: '#00288e'\n  on-primary: '#ffffff'\n  primary-container: '#1e40af'\n  on-primary-container: '#a8b8ff'\n  inverse-primary: '#b8c4ff'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed01b'\n  on-secondary-container: '#6f5900'\n  tertiary: '#273549'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3e4c60'\n  on-tertiary-container: '#aebcd5'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dde1ff'\n  primary-fixed-dim: '#b8c4ff'\n  on-primary-fixed: '#001453'\n  on-primary-fixed-variant: '#173bab'\n  secondary-fixed: '#ffe083'\n  secondary-fixed-dim: '#eec200'\n  on-secondary-fixed: '#231b00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#d5e3fd'\n  tertiary-fixed-dim: '#b9c7e0'\n  on-tertiary-fixed: '#0d1c2f'\n  on-tertiary-fixed-variant: '#3a485c'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  headline-xl:\n    fontFamily: Montserrat\n    fontSize: 48px\n    fontWeight: '800'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Montserrat\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Montserrat\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 34px\n  headline-md:\n    fontFamily: Montserrat\n    fontSize: 24px\n    fontWeight: '700'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n  button:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 80px\n---\n\n## Brand & Style\nThe brand personality for this design system is rooted in reliability, grit, and technical expertise. It is designed to evoke a sense of \"job well done\" through a rugged yet highly professional aesthetic. The target audience includes vehicle owners and RV travelers who require urgent, dependable assistance.\n\nThe design style merges **Corporate / Modern** precision with **Brutalism-lite** elements—specifically through the use of heavy structural borders and high-contrast layouts. This approach communicates stability and the \"heavy-duty\" nature of mechanical work. Visuals are grounded and utilitarian, avoiding unnecessary fluff in favor of clarity and directness.\n\n## Colors\nThe palette is built on \"Mechanic Blue\" to establish immediate trust and authority. \"Caution Yellow\" is used sparingly but high-impactfully for calls to action and critical status indicators, mimicking roadside safety signage.\n\n- **Primary (Mechanic Blue):** Used for headers, primary buttons, and brand-heavy sections.\n- **Secondary (Caution Yellow):** Reserved for \"Book Now\" buttons, emergency alerts, and accent underlines.\n- **Neutral (Slate Grays):** A range of cool grays from `#0F172A` (Text) to `#F8FAFC` (Backgrounds) provides a clean, industrial canvas.\n- **Success/Error:** Traditional green and red are muted to match the slate tonal range, ensuring they don't clash with the vibrant primary yellow.\n\n## Typography\nThe typography system prioritizes legibility under various lighting conditions, such as a driver looking at a phone on a bright roadside. \n\n**Montserrat** is used for headlines in heavy weights (700-800) to project strength. **Inter** provides a highly readable, neutral base for all body copy and technical descriptions. **JetBrains Mono** is introduced for labels and \"Technical Specs\" to lean into the mechanical, precise nature of the service. All caps should be used for labels to enhance the industrial feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** on desktop (12 columns, 1200px max-width) and a **Fluid Grid** on mobile (4 columns). \n\nThe spacing rhythm is based on a 4px baseline, but defaults to larger increments (16, 24, 32) to maintain an open, professional feel. \n- **Mobile:** Margins are tight (16px) to maximize content space for users in \"emergency\" contexts.\n- **Desktop:** Generous section gaps (80px+) ensure the content feels organized and not cramped, reflecting a premium service.\n- **Gutters:** Standardized at 24px to provide clear breathing room between service cards and grid items.\n\n## Elevation & Depth\nIn line with the \"rugged\" brand, this design system avoids soft shadows and ethereal blurs. Instead, it uses **Bold Borders** and **Tonal Layers** to create depth.\n\n- **Surface Levels:** The base is light slate. Cards and containers use a white background with a 2px solid slate-800 border.\n- **Hard Shadows:** When elevation is required (e.g., a hovered card), use a \"hard\" 4px offset shadow in the primary blue or slate color, rather than a soft blur. This mimics the look of industrial schematics.\n- **Overlays:** Use semi-opaque Navy (#1E40AF at 90%) for modals to keep the brand color present even when focus is shifted.\n\n## Shapes\nShapes are functional and structural. A **Soft (0.25rem)** corner radius is used globally to prevent the UI from feeling dangerously \"sharp\" while maintaining a precise, engineered look. \n\n- **Standard Elements:** 4px (0.25rem) radius.\n- **Large Containers:** 8px (0.5rem) radius for sections or large cards.\n- **Icons:** Use \"Regular\" or \"Bold\" stroke weights with squared ends to match the typography.\n\n## Components\n- **Buttons:** Primary buttons are Caution Yellow with black text, featuring a 2px bottom \"border-shadow\" for a tactile, pressable look. Secondary buttons are Navy with white text.\n- **Input Fields:** Thick 2px borders (Slate-300). On focus, the border shifts to Mechanic Blue. Labels are always JetBrains Mono caps.\n- **Service Cards:** White background, 2px Slate-800 border. Use a small Caution Yellow \"tag\" in the corner for pricing or categories.\n- **Emergency CTA:** A persistent floating action button (FAB) or fixed footer bar in Caution Yellow with a \"Call Now\" icon, ensuring it is the most visible element on any page.\n- **Status Indicators:** For \"Mechanic En Route\" or \"Service Complete\" tracking, use heavy block-style progress bars with diagonal \"hazard\" stripes in the background.\n- **Lists:** Bullet points are replaced with small hex-nut icons or heavy square pips to reinforce the mechanical theme.",
+          "font": "MONTSERRAT",
+          "headlineFont": "MONTSERRAT",
+          "headlineFontFamily": "Montserrat",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#f7f9fb",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#eff1f3",
+            "inverse_primary": "#b8c4ff",
+            "inverse_surface": "#2d3133",
+            "on_background": "#191c1e",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#a8b8ff",
+            "on_primary_fixed": "#001453",
+            "on_primary_fixed_variant": "#173bab",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#6f5900",
+            "on_secondary_fixed": "#231b00",
+            "on_secondary_fixed_variant": "#574500",
+            "on_surface": "#191c1e",
+            "on_surface_variant": "#444653",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#aebcd5",
+            "on_tertiary_fixed": "#0d1c2f",
+            "on_tertiary_fixed_variant": "#3a485c",
+            "outline": "#757684",
+            "outline_variant": "#c4c5d5",
+            "primary": "#00288e",
+            "primary_container": "#1e40af",
+            "primary_fixed": "#dde1ff",
+            "primary_fixed_dim": "#b8c4ff",
+            "secondary": "#735c00",
+            "secondary_container": "#fed01b",
+            "secondary_fixed": "#ffe083",
+            "secondary_fixed_dim": "#eec200",
+            "surface": "#f7f9fb",
+            "surface_bright": "#f7f9fb",
+            "surface_container": "#eceef0",
+            "surface_container_high": "#e6e8ea",
+            "surface_container_highest": "#e0e3e5",
+            "surface_container_low": "#f2f4f6",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#d8dadc",
+            "surface_tint": "#3755c3",
+            "surface_variant": "#e0e3e5",
+            "tertiary": "#273549",
+            "tertiary_container": "#3e4c60",
+            "tertiary_fixed": "#d5e3fd",
+            "tertiary_fixed_dim": "#b9c7e0"
+          },
+          "overrideNeutralColor": "#f8fafc",
+          "overridePrimaryColor": "#1e40af",
+          "overrideSecondaryColor": "#facc15",
+          "overrideTertiaryColor": "#334155",
+          "roundness": "ROUND_FOUR",
+          "spacing": {
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px",
+            "section-gap": "80px",
+            "unit": "4px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "button": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "700",
+              "letterSpacing": "0.05em",
+              "lineHeight": "20px"
+            },
+            "headline-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "40px"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Montserrat",
+              "fontSize": "28px",
+              "fontWeight": "700",
+              "lineHeight": "34px"
+            },
+            "headline-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "24px",
+              "fontWeight": "700",
+              "lineHeight": "32px"
+            },
+            "headline-xl": {
+              "fontFamily": "Montserrat",
+              "fontSize": "48px",
+              "fontWeight": "800",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "56px"
+            },
+            "label-caps": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "lineHeight": "20px"
+            }
+          }
+        }
+      },
+      "name": "assets/ff1369f5c216436593d3f54983b068f0",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "c30a31f4ef0f43fdb4fe66bec427578d",
+          "name": "projects/16006939446506229642/screens/c30a31f4ef0f43fdb4fe66bec427578d",
+          "prompt": "A high-quality, professional photograph of a modern RV being serviced by a mechanic in a sunny Las Vegas environment. The mechanic is focused and wearing professional work gear. Clean, bright, and trustworthy atmosphere. No text.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLulzHHy2LTWR3OXw87y86_8icaC6pO8oETRFL6NUQYbnsE_P3wABL7aPUT6_01Rela6YWcwdD8rqK33eSfH_n5620PRUHoV5X-RUj_eO5VC1eLKRDlpZPoaQ6GsjpJhYkLpIja73qsZv6gUw7DDidC_VImyEhrL_1TLia3yBwhpy2DnMNwLhsi3hAJ9mju5SoF1Y2v8YV_m9ETLaBanJg5BsEKxDAXDszQPqE8KUiJ0WPLfDW31bRcA-1x_",
+            "name": "projects/16006939446506229642/files/88ff15b2719a45a3a935b61c2adf9800"
+          },
+          "theme": {},
+          "title": "A high-quality, professional photograph of a modern RV being serviced by a mechanic in a sunny Las Vegas environment. The mechanic is focused and wearing professional work gear. Clean, bright, and trustworthy atmosphere. No text.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "512",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI0MzcyMzE3NThhMTRhZjg4NDRhNTFkMDhjOTk4MTgzEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNjAwNjkzOTQ0NjUwNjIyOTY0Mg&filename=&opi=96797242",
+            "mimeType": "image/svg+xml",
+            "name": "projects/16006939446506229642/files/a695b81215ae4439a24194e085cbff1a"
+          },
+          "id": "1e67a106bd5d47b38245eb3a150c1330",
+          "name": "projects/16006939446506229642/screens/1e67a106bd5d47b38245eb3a150c1330",
+          "prompt": "Brand logo. - Primary color: #1e40af\n- Font: montserrat\n- Mode: light\n- Roundness: rounded-sm\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "displayMode": "SVG",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtyzhg2m-kMDKEuLva9SBiEtluspUGLq6PPMul641EbfhjL6Rm4EaSIPbd_6VgMiRHK2ALQrJk4NH1yUoFPRFROVZ4vCOU3ch_Grmn2JBtPXPgJjnsaCGoGL94H33vfJH5l8hwhJGJlXygAkXiMPUVDre6BVWNy4yS6Q6Cx46dIBLbE06FI0pUa9uuGGFzyWBEv5PP-htKNfH_uUDKMND8BahRIqlmZImWrVHETVgNpf5-GTT4qWrrHZAhx",
+            "name": "projects/16006939446506229642/files/89c1e8baa5f6446daf6f598e5625843d"
+          },
+          "theme": {},
+          "title": "On the Spot Logo",
+          "width": "512"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Pro-Service Industrial",
+              "styleGuidelines": "## Brand & Style\nThe brand personality for this design system is rooted in reliability, grit, and technical expertise. It is designed to evoke a sense of \"job well done\" through a rugged yet highly professional aesthetic. The target audience includes vehicle owners and RV travelers who require urgent, dependable assistance.\n\nThe design style merges **Corporate / Modern** precision with **Brutalism-lite** elements—specifically through the use of heavy structural borders and high-contrast layouts. This approach communicates stability and the \"heavy-duty\" nature of mechanical work. Visuals are grounded and utilitarian, avoiding unnecessary fluff in favor of clarity and directness.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** on desktop (12 columns, 1200px max-width) and a **Fluid Grid** on mobile (4 columns). \n\nThe spacing rhythm is based on a 4px baseline, but defaults to larger increments (16, 24, 32) to maintain an open, professional feel. \n- **Mobile:** Margins are tight (16px) to maximize content space for users in \"emergency\" contexts.\n- **Desktop:** Generous section gaps (80px+) ensure the content feels organized and not cramped, reflecting a premium service.\n- **Gutters:** Standardized at 24px to provide clear breathing room between service cards and grid items.\n\n## Elevation & Depth\nIn line with the \"rugged\" brand, this design system avoids soft shadows and ethereal blurs. Instead, it uses **Bold Borders** and **Tonal Layers** to create depth.\n\n- **Surface Levels:** The base is light slate. Cards and containers use a white background with a 2px solid slate-800 border.\n- **Hard Shadows:** When elevation is required (e.g., a hovered card), use a \"hard\" 4px offset shadow in the primary blue or slate color, rather than a soft blur. This mimics the look of industrial schematics.\n- **Overlays:** Use semi-opaque Navy (#1E40AF at 90%) for modals to keep the brand color present even when focus is shifted.\n\n## Components\n- **Buttons:** Primary buttons are Caution Yellow with black text, featuring a 2px bottom \"border-shadow\" for a tactile, pressable look. Secondary buttons are Navy with white text.\n- **Input Fields:** Thick 2px borders (Slate-300). On focus, the border shifts to Mechanic Blue. Labels are always JetBrains Mono caps.\n- **Service Cards:** White background, 2px Slate-800 border. Use a small Caution Yellow \"tag\" in the corner for pricing or categories.\n- **Emergency CTA:** A persistent floating action button (FAB) or fixed footer bar in Caution Yellow with a \"Call Now\" icon, ensuring it is the most visible element on any page.\n- **Status Indicators:** For \"Mechanic En Route\" or \"Service Complete\" tracking, use heavy block-style progress bars with diagonal \"hazard\" stripes in the background.\n- **Lists:** Bullet points are replaced with small hex-nut icons or heavy square pips to reinforce the mechanical theme.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1e40af",
+                "designMd": "---\nname: Pro-Service Industrial\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#444653'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#757684'\n  outline-variant: '#c4c5d5'\n  surface-tint: '#3755c3'\n  primary: '#00288e'\n  on-primary: '#ffffff'\n  primary-container: '#1e40af'\n  on-primary-container: '#a8b8ff'\n  inverse-primary: '#b8c4ff'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed01b'\n  on-secondary-container: '#6f5900'\n  tertiary: '#273549'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3e4c60'\n  on-tertiary-container: '#aebcd5'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dde1ff'\n  primary-fixed-dim: '#b8c4ff'\n  on-primary-fixed: '#001453'\n  on-primary-fixed-variant: '#173bab'\n  secondary-fixed: '#ffe083'\n  secondary-fixed-dim: '#eec200'\n  on-secondary-fixed: '#231b00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#d5e3fd'\n  tertiary-fixed-dim: '#b9c7e0'\n  on-tertiary-fixed: '#0d1c2f'\n  on-tertiary-fixed-variant: '#3a485c'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  headline-xl:\n    fontFamily: Montserrat\n    fontSize: 48px\n    fontWeight: '800'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Montserrat\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Montserrat\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 34px\n  headline-md:\n    fontFamily: Montserrat\n    fontSize: 24px\n    fontWeight: '700'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n  button:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 80px\n---\n\n## Brand & Style\nThe brand personality for this design system is rooted in reliability, grit, and technical expertise. It is designed to evoke a sense of \"job well done\" through a rugged yet highly professional aesthetic. The target audience includes vehicle owners and RV travelers who require urgent, dependable assistance.\n\nThe design style merges **Corporate / Modern** precision with **Brutalism-lite** elements—specifically through the use of heavy structural borders and high-contrast layouts. This approach communicates stability and the \"heavy-duty\" nature of mechanical work. Visuals are grounded and utilitarian, avoiding unnecessary fluff in favor of clarity and directness.\n\n## Colors\nThe palette is built on \"Mechanic Blue\" to establish immediate trust and authority. \"Caution Yellow\" is used sparingly but high-impactfully for calls to action and critical status indicators, mimicking roadside safety signage.\n\n- **Primary (Mechanic Blue):** Used for headers, primary buttons, and brand-heavy sections.\n- **Secondary (Caution Yellow):** Reserved for \"Book Now\" buttons, emergency alerts, and accent underlines.\n- **Neutral (Slate Grays):** A range of cool grays from `#0F172A` (Text) to `#F8FAFC` (Backgrounds) provides a clean, industrial canvas.\n- **Success/Error:** Traditional green and red are muted to match the slate tonal range, ensuring they don't clash with the vibrant primary yellow.\n\n## Typography\nThe typography system prioritizes legibility under various lighting conditions, such as a driver looking at a phone on a bright roadside. \n\n**Montserrat** is used for headlines in heavy weights (700-800) to project strength. **Inter** provides a highly readable, neutral base for all body copy and technical descriptions. **JetBrains Mono** is introduced for labels and \"Technical Specs\" to lean into the mechanical, precise nature of the service. All caps should be used for labels to enhance the industrial feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** on desktop (12 columns, 1200px max-width) and a **Fluid Grid** on mobile (4 columns). \n\nThe spacing rhythm is based on a 4px baseline, but defaults to larger increments (16, 24, 32) to maintain an open, professional feel. \n- **Mobile:** Margins are tight (16px) to maximize content space for users in \"emergency\" contexts.\n- **Desktop:** Generous section gaps (80px+) ensure the content feels organized and not cramped, reflecting a premium service.\n- **Gutters:** Standardized at 24px to provide clear breathing room between service cards and grid items.\n\n## Elevation & Depth\nIn line with the \"rugged\" brand, this design system avoids soft shadows and ethereal blurs. Instead, it uses **Bold Borders** and **Tonal Layers** to create depth.\n\n- **Surface Levels:** The base is light slate. Cards and containers use a white background with a 2px solid slate-800 border.\n- **Hard Shadows:** When elevation is required (e.g., a hovered card), use a \"hard\" 4px offset shadow in the primary blue or slate color, rather than a soft blur. This mimics the look of industrial schematics.\n- **Overlays:** Use semi-opaque Navy (#1E40AF at 90%) for modals to keep the brand color present even when focus is shifted.\n\n## Shapes\nShapes are functional and structural. A **Soft (0.25rem)** corner radius is used globally to prevent the UI from feeling dangerously \"sharp\" while maintaining a precise, engineered look. \n\n- **Standard Elements:** 4px (0.25rem) radius.\n- **Large Containers:** 8px (0.5rem) radius for sections or large cards.\n- **Icons:** Use \"Regular\" or \"Bold\" stroke weights with squared ends to match the typography.\n\n## Components\n- **Buttons:** Primary buttons are Caution Yellow with black text, featuring a 2px bottom \"border-shadow\" for a tactile, pressable look. Secondary buttons are Navy with white text.\n- **Input Fields:** Thick 2px borders (Slate-300). On focus, the border shifts to Mechanic Blue. Labels are always JetBrains Mono caps.\n- **Service Cards:** White background, 2px Slate-800 border. Use a small Caution Yellow \"tag\" in the corner for pricing or categories.\n- **Emergency CTA:** A persistent floating action button (FAB) or fixed footer bar in Caution Yellow with a \"Call Now\" icon, ensuring it is the most visible element on any page.\n- **Status Indicators:** For \"Mechanic En Route\" or \"Service Complete\" tracking, use heavy block-style progress bars with diagonal \"hazard\" stripes in the background.\n- **Lists:** Bullet points are replaced with small hex-nut icons or heavy square pips to reinforce the mechanical theme.",
+                "font": "MONTSERRAT",
+                "headlineFont": "MONTSERRAT",
+                "headlineFontFamily": "Montserrat",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#f7f9fb",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#eff1f3",
+                  "inverse_primary": "#b8c4ff",
+                  "inverse_surface": "#2d3133",
+                  "on_background": "#191c1e",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#a8b8ff",
+                  "on_primary_fixed": "#001453",
+                  "on_primary_fixed_variant": "#173bab",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#6f5900",
+                  "on_secondary_fixed": "#231b00",
+                  "on_secondary_fixed_variant": "#574500",
+                  "on_surface": "#191c1e",
+                  "on_surface_variant": "#444653",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#aebcd5",
+                  "on_tertiary_fixed": "#0d1c2f",
+                  "on_tertiary_fixed_variant": "#3a485c",
+                  "outline": "#757684",
+                  "outline_variant": "#c4c5d5",
+                  "primary": "#00288e",
+                  "primary_container": "#1e40af",
+                  "primary_fixed": "#dde1ff",
+                  "primary_fixed_dim": "#b8c4ff",
+                  "secondary": "#735c00",
+                  "secondary_container": "#fed01b",
+                  "secondary_fixed": "#ffe083",
+                  "secondary_fixed_dim": "#eec200",
+                  "surface": "#f7f9fb",
+                  "surface_bright": "#f7f9fb",
+                  "surface_container": "#eceef0",
+                  "surface_container_high": "#e6e8ea",
+                  "surface_container_highest": "#e0e3e5",
+                  "surface_container_low": "#f2f4f6",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#d8dadc",
+                  "surface_tint": "#3755c3",
+                  "surface_variant": "#e0e3e5",
+                  "tertiary": "#273549",
+                  "tertiary_container": "#3e4c60",
+                  "tertiary_fixed": "#d5e3fd",
+                  "tertiary_fixed_dim": "#b9c7e0"
+                },
+                "overrideNeutralColor": "#f8fafc",
+                "overridePrimaryColor": "#1e40af",
+                "overrideSecondaryColor": "#facc15",
+                "overrideTertiaryColor": "#334155",
+                "roundness": "ROUND_FOUR",
+                "spacing": {
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "16px",
+                  "section-gap": "80px",
+                  "unit": "4px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "24px"
+                  },
+                  "button": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "20px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "32px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "40px"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "28px",
+                    "fontWeight": "700",
+                    "lineHeight": "34px"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "24px",
+                    "fontWeight": "700",
+                    "lineHeight": "32px"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "48px",
+                    "fontWeight": "800",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "56px"
+                  },
+                  "label-caps": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "lineHeight": "20px"
+                  }
+                }
+              }
+            },
+            "name": "assets/ff1369f5c216436593d3f54983b068f0",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "8460",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzcxYzQ2ZjY1MjhjMDQwNmI5NTk5MGZkMmRmNDZmODEzEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNjAwNjkzOTQ0NjUwNjIyOTY0Mg&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/16006939446506229642/files/d5aabde91031425fb12df3827e13125d"
+          },
+          "id": "8e563170882b496faf9396a2e24aec5f",
+          "name": "projects/16006939446506229642/screens/8e563170882b496faf9396a2e24aec5f",
+          "prompt": "Create a production-ready homepage for \"On the Spot Mobile Mechanic and RV Specialist, LLC\". \n\n- Brand: Use {{DATA:IMAGE:IMAGE_2}} for the logo.\n- Hero: Use {{DATA:IMAGE:IMAGE_4}} as the full-width background. Headline: \"Reliable Mobile Mechanic Service Specializing in RVs & Travel Trailers\". Subheadline: \"Professional, on-site service in North Las Vegas and the greater Las Vegas area.\" Primary CTA: \"Call (702) 913-4985\".\n- Credibility Section: Highlighting \"5-Star Service\", \"Locally Owned\", and \"RV Specialists\".\n- Services Section: \n    - RV Repair & Maintenance: Engine service, electrical, and systems check.\n    - Travel Trailer Specialist: Expert care for your home on wheels.\n    - General Mobile Mechanic: Reliable roadside and driveway repairs for all vehicles.\n- About Section: Focus on their expertise in North Las Vegas. \"Reliable Mobile Mechanic Service specializing in RV’s and Travel Trailers\".\n- Visit Section (#visit): Include the address \"2842 East Reynolds Avenue, North Las Vegas, NV 89030\" and the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: Form with name, email, vehicle type, and message.\n- Footer: Include phone, email (onthespotmmrv@gmail.com), and the full address.\n\nTechnical: Responsive, Montserrat font from design system, smooth scroll, blue/yellow brand colors. No lorem ipsum. Use real contact info from the prompt.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Alt Text: On the Spot Logo\n  Description: Brand logo. - Primary color: #1e40af\n- Font: montserrat\n- Mode: light\n- Roundness: rounded-sm\n\n  Dimensions: 512x512\n  Aspect Ratio: 1.00\n  Colors: #1E40AF, #64748B, #FACC15\n- {{DATA:IMAGE:IMAGE_4}}\n  Alt Text: A high-quality, professional photograph of a modern RV being serviced by a mechanic in a sunny Las Vegas environment. The mechanic is focused and wearing professional work gear. Clean, bright, and trustworthy atmosphere. No text.\n  Description: A high-quality, professional photograph of a modern RV being serviced by a mechanic in a sunny Las Vegas environment. The mechanic is focused and wearing professional work gear. Clean, bright, and trustworthy atmosphere. No text.\n  Dimensions: 1376x768\n  Aspect Ratio: 1.79\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLst8CAvatxdJD4m-1rLd4235IhJr72Ihb1Vo2k_pN-ufzk1Xis_k6XkaWEvAmhgpobbV_zKki4m3Q5UHKdTDl2SbD9kvj1NKVYj3BBH0eUlHv_biYydfkp-wIFOhbY_-FuEoX10yCcCNkk-B1gvOpmovZsAabg6RRvhImmhfwwdHHXXs2i4A_ta1P4Mrlyqb0GdrHKKdViS8smRYc-K6gYL1WxuZB_7EJMQ7S2YgpMJB_6AbYzD_SzbMTtJ",
+            "name": "projects/16006939446506229642/files/b392480d99cd4595a63c0f64421d37a3"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1e40af",
+            "designMd": "---\nname: Pro-Service Industrial\ncolors:\n  surface: '#f7f9fb'\n  surface-dim: '#d8dadc'\n  surface-bright: '#f7f9fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f2f4f6'\n  surface-container: '#eceef0'\n  surface-container-high: '#e6e8ea'\n  surface-container-highest: '#e0e3e5'\n  on-surface: '#191c1e'\n  on-surface-variant: '#444653'\n  inverse-surface: '#2d3133'\n  inverse-on-surface: '#eff1f3'\n  outline: '#757684'\n  outline-variant: '#c4c5d5'\n  surface-tint: '#3755c3'\n  primary: '#00288e'\n  on-primary: '#ffffff'\n  primary-container: '#1e40af'\n  on-primary-container: '#a8b8ff'\n  inverse-primary: '#b8c4ff'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed01b'\n  on-secondary-container: '#6f5900'\n  tertiary: '#273549'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3e4c60'\n  on-tertiary-container: '#aebcd5'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dde1ff'\n  primary-fixed-dim: '#b8c4ff'\n  on-primary-fixed: '#001453'\n  on-primary-fixed-variant: '#173bab'\n  secondary-fixed: '#ffe083'\n  secondary-fixed-dim: '#eec200'\n  on-secondary-fixed: '#231b00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#d5e3fd'\n  tertiary-fixed-dim: '#b9c7e0'\n  on-tertiary-fixed: '#0d1c2f'\n  on-tertiary-fixed-variant: '#3a485c'\n  background: '#f7f9fb'\n  on-background: '#191c1e'\n  surface-variant: '#e0e3e5'\ntypography:\n  headline-xl:\n    fontFamily: Montserrat\n    fontSize: 48px\n    fontWeight: '800'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Montserrat\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 40px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Montserrat\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 34px\n  headline-md:\n    fontFamily: Montserrat\n    fontSize: 24px\n    fontWeight: '700'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n  button:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 80px\n---\n\n## Brand & Style\nThe brand personality for this design system is rooted in reliability, grit, and technical expertise. It is designed to evoke a sense of \"job well done\" through a rugged yet highly professional aesthetic. The target audience includes vehicle owners and RV travelers who require urgent, dependable assistance.\n\nThe design style merges **Corporate / Modern** precision with **Brutalism-lite** elements—specifically through the use of heavy structural borders and high-contrast layouts. This approach communicates stability and the \"heavy-duty\" nature of mechanical work. Visuals are grounded and utilitarian, avoiding unnecessary fluff in favor of clarity and directness.\n\n## Colors\nThe palette is built on \"Mechanic Blue\" to establish immediate trust and authority. \"Caution Yellow\" is used sparingly but high-impactfully for calls to action and critical status indicators, mimicking roadside safety signage.\n\n- **Primary (Mechanic Blue):** Used for headers, primary buttons, and brand-heavy sections.\n- **Secondary (Caution Yellow):** Reserved for \"Book Now\" buttons, emergency alerts, and accent underlines.\n- **Neutral (Slate Grays):** A range of cool grays from `#0F172A` (Text) to `#F8FAFC` (Backgrounds) provides a clean, industrial canvas.\n- **Success/Error:** Traditional green and red are muted to match the slate tonal range, ensuring they don't clash with the vibrant primary yellow.\n\n## Typography\nThe typography system prioritizes legibility under various lighting conditions, such as a driver looking at a phone on a bright roadside. \n\n**Montserrat** is used for headlines in heavy weights (700-800) to project strength. **Inter** provides a highly readable, neutral base for all body copy and technical descriptions. **JetBrains Mono** is introduced for labels and \"Technical Specs\" to lean into the mechanical, precise nature of the service. All caps should be used for labels to enhance the industrial feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** on desktop (12 columns, 1200px max-width) and a **Fluid Grid** on mobile (4 columns). \n\nThe spacing rhythm is based on a 4px baseline, but defaults to larger increments (16, 24, 32) to maintain an open, professional feel. \n- **Mobile:** Margins are tight (16px) to maximize content space for users in \"emergency\" contexts.\n- **Desktop:** Generous section gaps (80px+) ensure the content feels organized and not cramped, reflecting a premium service.\n- **Gutters:** Standardized at 24px to provide clear breathing room between service cards and grid items.\n\n## Elevation & Depth\nIn line with the \"rugged\" brand, this design system avoids soft shadows and ethereal blurs. Instead, it uses **Bold Borders** and **Tonal Layers** to create depth.\n\n- **Surface Levels:** The base is light slate. Cards and containers use a white background with a 2px solid slate-800 border.\n- **Hard Shadows:** When elevation is required (e.g., a hovered card), use a \"hard\" 4px offset shadow in the primary blue or slate color, rather than a soft blur. This mimics the look of industrial schematics.\n- **Overlays:** Use semi-opaque Navy (#1E40AF at 90%) for modals to keep the brand color present even when focus is shifted.\n\n## Shapes\nShapes are functional and structural. A **Soft (0.25rem)** corner radius is used globally to prevent the UI from feeling dangerously \"sharp\" while maintaining a precise, engineered look. \n\n- **Standard Elements:** 4px (0.25rem) radius.\n- **Large Containers:** 8px (0.5rem) radius for sections or large cards.\n- **Icons:** Use \"Regular\" or \"Bold\" stroke weights with squared ends to match the typography.\n\n## Components\n- **Buttons:** Primary buttons are Caution Yellow with black text, featuring a 2px bottom \"border-shadow\" for a tactile, pressable look. Secondary buttons are Navy with white text.\n- **Input Fields:** Thick 2px borders (Slate-300). On focus, the border shifts to Mechanic Blue. Labels are always JetBrains Mono caps.\n- **Service Cards:** White background, 2px Slate-800 border. Use a small Caution Yellow \"tag\" in the corner for pricing or categories.\n- **Emergency CTA:** A persistent floating action button (FAB) or fixed footer bar in Caution Yellow with a \"Call Now\" icon, ensuring it is the most visible element on any page.\n- **Status Indicators:** For \"Mechanic En Route\" or \"Service Complete\" tracking, use heavy block-style progress bars with diagonal \"hazard\" stripes in the background.\n- **Lists:** Bullet points are replaced with small hex-nut icons or heavy square pips to reinforce the mechanical theme.",
+            "font": "MONTSERRAT",
+            "headlineFont": "MONTSERRAT",
+            "headlineFontFamily": "Montserrat",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#f7f9fb",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#eff1f3",
+              "inverse_primary": "#b8c4ff",
+              "inverse_surface": "#2d3133",
+              "on_background": "#191c1e",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#a8b8ff",
+              "on_primary_fixed": "#001453",
+              "on_primary_fixed_variant": "#173bab",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#6f5900",
+              "on_secondary_fixed": "#231b00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#191c1e",
+              "on_surface_variant": "#444653",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#aebcd5",
+              "on_tertiary_fixed": "#0d1c2f",
+              "on_tertiary_fixed_variant": "#3a485c",
+              "outline": "#757684",
+              "outline_variant": "#c4c5d5",
+              "primary": "#00288e",
+              "primary_container": "#1e40af",
+              "primary_fixed": "#dde1ff",
+              "primary_fixed_dim": "#b8c4ff",
+              "secondary": "#735c00",
+              "secondary_container": "#fed01b",
+              "secondary_fixed": "#ffe083",
+              "secondary_fixed_dim": "#eec200",
+              "surface": "#f7f9fb",
+              "surface_bright": "#f7f9fb",
+              "surface_container": "#eceef0",
+              "surface_container_high": "#e6e8ea",
+              "surface_container_highest": "#e0e3e5",
+              "surface_container_low": "#f2f4f6",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#d8dadc",
+              "surface_tint": "#3755c3",
+              "surface_variant": "#e0e3e5",
+              "tertiary": "#273549",
+              "tertiary_container": "#3e4c60",
+              "tertiary_fixed": "#d5e3fd",
+              "tertiary_fixed_dim": "#b9c7e0"
+            },
+            "overrideNeutralColor": "#f8fafc",
+            "overridePrimaryColor": "#1e40af",
+            "overrideSecondaryColor": "#facc15",
+            "overrideTertiaryColor": "#334155",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "section-gap": "80px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "button": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "700",
+                "letterSpacing": "0.05em",
+                "lineHeight": "20px"
+              },
+              "headline-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "40px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Montserrat",
+                "fontSize": "28px",
+                "fontWeight": "700",
+                "lineHeight": "34px"
+              },
+              "headline-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "24px",
+                "fontWeight": "700",
+                "lineHeight": "32px"
+              },
+              "headline-xl": {
+                "fontFamily": "Montserrat",
+                "fontSize": "48px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "56px"
+              },
+              "label-caps": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "20px"
+              }
+            }
+          },
+          "title": "On the Spot - Official Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have built the professional homepage for **On the Spot Mobile Mechanic and RV Specialist, LLC**. \n\nThis design was created specifically using the content and tone from their Facebook presence to ensure a tailor-made feel rather than a generic template.\n\n### Key Design Decisions:\n- **High-Impact Hero:** I used a custom-generated image of an RV being serviced in a Las Vegas setting to immediately establish the specialized nature of the business and its local context.\n- **Trust-First Layout:** Given the trade industry, I prioritized the phone number and \"Emergency Call\" buttons, ensuring they are always accessible.\n- **Brand Consistency:** I created a custom logo and applied a \"Pro-Service Industrial\" design system featuring deep navy blues and caution yellows to evoke professionalism and reliability.\n- **Content Accuracy:** Every piece of information, from the address in North Las Vegas to the specialized services for travel trailers, was pulled directly from the provided source.\n- **Interactive Elements:** The site includes a semantic structure with smooth scrolling, a functional map slot, and a validation-ready contact form.\n\nThe site is now ready for your review on the canvas!"
+  },
+  {
+    "suggestion": "Add a 'Recent Work' photo gallery section"
+  },
+  {
+    "suggestion": "Make the header sticky on scroll"
+  },
+  {
+    "suggestion": "Create a mobile-optimized version of this page"
+  }
+]
