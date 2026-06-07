@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jake's Auto Repair | Masterful Maintenance</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e4e2e2",
+                    "on-primary": "#ffffff",
+                    "secondary-fixed-dim": "#c8c6c3",
+                    "on-tertiary-fixed": "#1c1b1a",
+                    "primary": "#191919",
+                    "inverse-surface": "#303030",
+                    "tertiary-container": "#2f2e2c",
+                    "on-tertiary-fixed-variant": "#484644",
+                    "inverse-primary": "#c8c6c6",
+                    "tertiary": "#1a1918",
+                    "secondary-container": "#e1dfdc",
+                    "on-background": "#1b1c1c",
+                    "on-primary-fixed-variant": "#474747",
+                    "tertiary-fixed": "#e6e2de",
+                    "on-secondary-fixed": "#1b1c1a",
+                    "primary-container": "#2e2e2e",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-bright": "#fbf9f8",
+                    "secondary": "#5e5e5c",
+                    "surface-dim": "#dbd9d9",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed-variant": "#474745",
+                    "primary-fixed-dim": "#c8c6c6",
+                    "surface-container-high": "#eae8e7",
+                    "tertiary-fixed-dim": "#c9c6c3",
+                    "background": "#fbf9f8",
+                    "on-tertiary-container": "#989592",
+                    "on-secondary-container": "#636360",
+                    "outline-variant": "#c4c7c7",
+                    "inverse-on-surface": "#f2f0f0",
+                    "secondary-fixed": "#e4e2df",
+                    "on-primary-container": "#979595",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e4e2e2",
+                    "surface-container": "#efeded",
+                    "on-primary-fixed": "#1b1c1c",
+                    "on-surface": "#1b1c1c",
+                    "on-surface-variant": "#444748",
+                    "primary-fixed": "#e4e2e1",
+                    "outline": "#747878",
+                    "on-tertiary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#f5f3f3",
+                    "on-secondary": "#ffffff",
+                    "surface": "#fbf9f8",
+                    "surface-tint": "#5f5e5e",
+                    "mechanic-orange": "#E67E22",
+                    "sage-green": "#8BA888"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "lg": "48px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "base": "8px",
+                    "xs": "4px",
+                    "gutter": "24px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "headline-sm": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "body-md": ["Plus Jakarta Sans"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "label-sm": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "display-lg": ["56px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+        }
+        
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .custom-shadow {
+            box-shadow: 0 32px 64px -12px rgba(25, 25, 25, 0.04);
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- Header Section -->
+<header class="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-container-max z-50">
+<nav class="bg-surface/80 backdrop-blur-xl rounded-full shadow-sm flex justify-between items-center px-lg py-sm w-full border border-outline-variant/20">
+<div class="font-display-lg text-headline-sm tracking-tighter text-primary">
+                Jake's Auto Repair
+            </div>
+<ul class="hidden md:flex gap-lg items-center">
+<li><a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#about">Expertise</a></li>
+<li><a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#visit">Process</a></li>
+<li><a class="text-on-surface-variant font-label-md text-label-md hover:text-primary transition-colors" href="#contact">Contact</a></li>
+</ul>
+<div class="flex items-center gap-md">
+<a class="hidden lg:block text-primary font-label-md text-label-md" href="tel:265.6637265">265.663 7265</a>
+<a class="bg-primary text-on-primary font-label-md text-label-md px-lg py-sm rounded-full hover:opacity-80 transition-all scale-95 active:scale-90" href="#contact">
+                    Call Now
+                </a>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-[140px] pb-xl px-gutter max-w-container-max mx-auto overflow-hidden" id="hero">
+<div class="flex flex-col items-center text-center mb-xl">
+<span class="text-mechanic-orange font-label-md text-label-md tracking-widest mb-md uppercase">The Art of the Engine</span>
+<h1 class="font-display-lg text-display-lg max-w-[800px] mb-lg">
+                    Masterful Maintenance for Your Daily Drive
+                </h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-[600px]">
+                    Blending rugged reliability with boutique care. We treat every vehicle like a masterpiece in progress.
+                </p>
+</div>
+<!-- Gallery Strip -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-md h-[500px]">
+<div class="col-span-1 md:col-span-2 rounded-xl overflow-hidden relative group">
+<img alt="Engine Close-up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A cinematic, high-contrast close-up of a vintage engine bay where polished silver components gleam under soft studio lighting. The aesthetic is clean and modern with a boutique feel, emphasizing precision and mechanical mastery. Warm greige tones and deep charcoal shadows create a luxurious, professional atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZxspZrVfjwTT0z1o3W3M7vwChud8V_2eKJoDm4i08j-hL9UdjkwL1UpnzY6Gj1pG21kKIRPX4hHP0VqfLE897-L-iMCY9gUTwpZOBnIet9DPCykzlj4yQ9hWP44iCMEN5hgxPtCkzyLETRfLHFVP4S6kKQAGE_RiH0tSu3dctpsOplTaJYasPtz6aQFEWzZkURLDw4xEiJb6ojLG8bb4fP6Nb7y1aLOzkhHLvDwqoSNzcVNxktISLQxA6eSNnULElmWmB4x2nppxl"/>
+<div class="absolute inset-0 bg-black/10"></div>
+</div>
+<div class="rounded-xl overflow-hidden relative group">
+<img alt="Brake Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A detail shot of a high-performance brake caliper behind a clean, multi-spoke alloy wheel. The lighting is soft and ambient, highlighting the metallic textures and the boutique garage environment. The color palette is composed of muted greys, soft whites, and a hint of warm orange light reflecting on the rim." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9pHuYCg73_H-UaUxteAYG8NGuLpixgTza7gVhsZTPLHKTvvSSO7LbmtRXFn_QVcmhVtQbiGqhFCT14KiLQEz5K4PBjn_ahxAd8Y339V07RVNS5rNt5oNYWEfTpgfZIiC-Vni30LVWtB-ivWtoui6zEtKbICVNb4KUsT0-OBVuu3Z2DuvViNQH34HTlEqpiDaqWeDX1Pqn3JvZeHO3yq_DpbRgONisnOYF6XteCycW3osOINqLdSc_gkfg9Ie-cY0YfUuS3nbtgvIN"/>
+</div>
+<div class="rounded-xl overflow-hidden relative group">
+<img alt="Expert Hands" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A master mechanic's hands wearing clean black gloves, carefully inspecting a complex engine component with specialized tools. The scene is lit with warm, professional lighting that emphasizes a sense of expertise and personal touch. The background is a clean, organized workshop with soft-focus greige walls." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCf8cBIQJGrrDRIQgiA_T_PUD6x_HW2CZC_BSkwD3ggXiTkm0p76APMQkbIAcdCddgtwF9Ujb88STEYL840ri4S4h_nMfbAiJwIhywrMGVURUyTrA82kApFSIo1y6CZTPVV2b7WcA-YQajSPjNeDXXIQbf1HYBF8INOUyWKV0TMVa93uIIP5CUzkHDpEIxAS7a7Esz9ISqfSLxuw2GG-sufeYUQHYJKjhFvaPGpDyKqLBIMzYggIoGdOb69NHiJMsvVRTp95pEYcV6x"/>
+</div>
+</div>
+</section>
+<!-- Trust Bar -->
+<section class="bg-surface-container-low py-lg overflow-hidden whitespace-nowrap border-y border-outline-variant/10">
+<div class="flex animate-marquee gap-xl items-center text-secondary-container opacity-60">
+<div class="flex items-center gap-md font-display-lg text-headline-sm text-on-surface-variant italic">
+<span>Killeen's Most Trusted</span>
+<span class="w-2 h-2 rounded-full bg-mechanic-orange"></span>
+<span>Premium Service for Every Make</span>
+<span class="w-2 h-2 rounded-full bg-mechanic-orange"></span>
+<span>15+ Years of Mastery</span>
+<span class="w-2 h-2 rounded-full bg-mechanic-orange"></span>
+<span>Killeen's Most Trusted</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto" id="services">
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h2 class="font-headline-md text-headline-md mb-sm">Our Specialties</h2>
+<p class="text-on-surface-variant max-w-md">Precision-focused care delivered with the attention to detail your vehicle deserves.</p>
+</div>
+<div class="hidden md:block">
+<a class="text-primary font-label-md border-b-2 border-primary pb-1 hover:opacity-70 transition-opacity" href="#contact">Explore All Services</a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-md">
+<!-- Service Card 1 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl custom-shadow hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-full mb-lg text-mechanic-orange">
+<span class="material-symbols-outlined">settings_input_component</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md">Engine Diagnostics</h3>
+<p class="text-on-surface-variant text-body-md mb-lg leading-relaxed">Using state-of-the-art telemetry to decode your engine's health with clinical precision.</p>
+<span class="bg-sage-green/10 text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm">In-depth Analysis</span>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl custom-shadow hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-full mb-lg text-mechanic-orange">
+<span class="material-symbols-outlined">tire_repair</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md">Precision Brake Work</h3>
+<p class="text-on-surface-variant text-body-md mb-lg leading-relaxed">Superior stopping power through meticulous component selection and expert installation.</p>
+<span class="bg-sage-green/10 text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm">Safety Priority</span>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl custom-shadow hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-full mb-lg text-mechanic-orange">
+<span class="material-symbols-outlined">oil_barrel</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md">Oil &amp; Filter</h3>
+<p class="text-on-surface-variant text-body-md mb-lg leading-relaxed">The lifeblood of your engine, refreshed with premium synthetics and high-flow filtration.</p>
+<span class="bg-sage-green/10 text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm">Routine Mastery</span>
+</div>
+<!-- Service Card 4 -->
+<div class="bg-surface-container-lowest p-lg rounded-xl custom-shadow hover:-translate-y-2 transition-transform duration-300 border border-outline-variant/10">
+<div class="w-12 h-12 bg-surface-container flex items-center justify-center rounded-full mb-lg text-mechanic-orange">
+<span class="material-symbols-outlined">tune</span>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-md">Suspension Tuning</h3>
+<p class="text-on-surface-variant text-body-md mb-lg leading-relaxed">Refining your ride quality to achieve the perfect balance of comfort and road feedback.</p>
+<span class="bg-sage-green/10 text-on-secondary-container px-sm py-xs rounded-full font-label-sm text-label-sm">Performance Feel</span>
+</div>
+</div>
+</section>
+<!-- About Section: Meet Jake -->
+<section class="py-xl bg-surface-container-low overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row gap-xl items-center">
+<div class="w-full lg:w-1/2 relative">
+<div class="w-full aspect-[4/5] rounded-xl overflow-hidden shadow-xl">
+<img alt="Jake" class="w-full h-full object-cover" data-alt="A portrait of a confident, middle-aged master mechanic standing in a high-end, clean automotive workshop. He is dressed in a professional charcoal apron over a clean shirt, looking at the camera with a warm, expert smile. The lighting is soft and golden, highlighting the clean greige environment and suggesting a personal, boutique hospitality experience." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNEugYEGM2CpndigvjyHDke6J4I-DwI3l35VcGCXGL_O_tuKpcfZ_kPplT5CyD4-nEaeaRQmmlhgFyGBEwCGFRJhpYNr2JvVyjQ_JdVTRw7Oa4IQiyGg5zoXBLLVjVLSD271c-MPcWjeNX8yWvbWxcqNebqhvRaOWdvUb_wZ3s2kUjDSd6OJE_WBWhSyeH-LVh4o7iSzyQ5l5D9bpKHJL1Fy8CXwnUl91Jg0XAIPaERhcsgWgaOLbnLSz8_M68fz0QqZuTc2riKUc-"/>
+</div>
+<div class="absolute -bottom-lg -right-lg bg-surface p-lg rounded-xl custom-shadow hidden md:block max-w-[280px]">
+<div class="flex items-center gap-md mb-sm">
+<div class="w-10 h-10 rounded-full bg-mechanic-orange flex items-center justify-center text-white">
+<span class="material-symbols-outlined">workspace_premium</span>
+</div>
+<span class="font-label-md text-label-md">Certified Master</span>
+</div>
+<p class="text-on-surface-variant font-label-sm text-label-sm italic">"I believe the way we treat your car says everything about how we value your safety."</p>
+</div>
+</div>
+<div class="w-full lg:w-1/2 lg:pl-xl">
+<span class="text-mechanic-orange font-label-md text-label-md tracking-widest uppercase mb-md inline-block">The Mechanic's Ethos</span>
+<h2 class="font-display-lg text-headline-md mb-lg">Meet Jake: Repairing with Intent</h2>
+<div class="space-y-md text-on-surface-variant text-body-lg">
+<p>Auto repair has long been a source of stress. My goal was to create a space where mechanical expertise meets the hospitality of a boutique hotel. At Jake’s, we don’t just fix parts; we preserve the integrity of your drive.</p>
+<p>With over two decades in high-performance engineering, I’ve refined a process that prioritizes transparency above all else. Every client receives a detailed visual report, a clear timeline, and the peace of mind that comes from knowing exactly who is under the hood.</p>
+</div>
+<div class="mt-xl flex flex-wrap gap-md">
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-sage-green">check_circle</span>
+<span class="font-label-md">Certified ASE Master</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-sage-green">check_circle</span>
+<span class="font-label-md">European &amp; Domestic Expert</span>
+</div>
+<div class="flex items-center gap-sm">
+<span class="material-symbols-outlined text-sage-green">check_circle</span>
+<span class="font-label-md">Boutique Service Model</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-xl px-gutter max-w-container-max mx-auto" id="visit">
+<div class="text-center mb-xl">
+<h2 class="font-headline-md text-headline-md mb-sm">Visit the Workshop</h2>
+<p class="text-on-surface-variant">A clean, welcoming environment for you and your vehicle.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<div class="lg:col-span-2">
+<div aria-label="Map" class="map-slot relative overflow-hidden h-[500px] rounded-xl bg-surface-container border border-outline-variant/10 shadow-inner" data-location="Killeen, TX" data-map-slot="" style="">
+<!-- Placeholder for map visual -->
+<div class="absolute inset-0 flex items-center justify-center flex-col gap-md opacity-40">
+<span class="material-symbols-outlined text-[48px]">location_on</span>
+<span class="font-label-md">4702 Ronald Drive, Killeen, TX 76542</span>
+</div>
+</div>
+</div>
+<div class="flex flex-col justify-center bg-surface-container-low p-xl rounded-xl">
+<h3 class="font-headline-sm text-headline-sm mb-lg">Location &amp; Hours</h3>
+<div class="space-y-lg">
+<div>
+<span class="font-label-md text-mechanic-orange block mb-xs uppercase tracking-tighter">Address</span>
+<p class="text-body-lg">4702 Ronald Drive<br/>Killeen, TX 76542</p>
+</div>
+<div>
+<span class="font-label-md text-mechanic-orange block mb-xs uppercase tracking-tighter">Availability</span>
+<ul class="space-y-sm text-body-md">
+<li class="flex justify-between border-b border-outline-variant/10 pb-xs"><span>Mon — Fri</span> <span>8:00am - 6:00pm</span></li>
+<li class="flex justify-between border-b border-outline-variant/10 pb-xs"><span>Saturday</span> <span>9:00am - 2:00pm</span></li>
+<li class="flex justify-between text-on-surface-variant"><span>Sunday</span> <span>Closed</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-xl bg-primary text-on-primary" id="contact">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-display-lg text-headline-md mb-lg text-on-primary">Reserve Your Appointment</h2>
+<p class="text-on-primary/70 text-body-lg mb-xl max-w-md">
+                            Whether it's a routine check-up or a complex diagnostic, we're ready to provide the care your vehicle deserves.
+                        </p>
+<div class="space-y-lg">
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full border border-on-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined">call</span>
+</div>
+<span class="text-headline-sm">265.663 7265</span>
+</div>
+<div class="flex items-center gap-md">
+<div class="w-12 h-12 rounded-full border border-on-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined">mail</span>
+</div>
+<span class="text-headline-sm">care@jakesauto.repair</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-highest/10 backdrop-blur-md p-xl rounded-xl border border-on-primary/10">
+<form class="space-y-lg">
+<div class="grid grid-cols-2 gap-md">
+<div class="relative">
+<input class="peer w-full bg-transparent border-b-2 border-on-primary/20 pt-lg pb-sm focus:border-mechanic-orange focus:ring-0 outline-none transition-all placeholder-transparent" id="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-md text-on-primary/40 font-label-md transition-all peer-placeholder-shown:top-lg peer-placeholder-shown:text-on-primary/60 peer-focus:top-0 peer-focus:text-mechanic-orange" for="name">Full Name</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-b-2 border-on-primary/20 pt-lg pb-sm focus:border-mechanic-orange focus:ring-0 outline-none transition-all placeholder-transparent" id="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-md text-on-primary/40 font-label-md transition-all peer-placeholder-shown:top-lg peer-placeholder-shown:text-on-primary/60 peer-focus:top-0 peer-focus:text-mechanic-orange" for="email">Email Address</label>
+</div>
+</div>
+<div class="relative">
+<select class="peer w-full bg-transparent border-b-2 border-on-primary/20 pt-lg pb-sm focus:border-mechanic-orange focus:ring-0 outline-none transition-all appearance-none" id="service">
+<option class="text-primary">Engine Diagnostics</option>
+<option class="text-primary">Brake Work</option>
+<option class="text-primary">Oil &amp; Filter</option>
+<option class="text-primary">General Maintenance</option>
+</select>
+<label class="absolute left-0 top-0 text-mechanic-orange font-label-md" for="service">Desired Service</label>
+</div>
+<div class="relative">
+<textarea class="peer w-full bg-transparent border-b-2 border-on-primary/20 pt-lg pb-sm focus:border-mechanic-orange focus:ring-0 outline-none transition-all placeholder-transparent" id="message" placeholder=" " rows="3"></textarea>
+<label class="absolute left-0 top-md text-on-primary/40 font-label-md transition-all peer-placeholder-shown:top-lg peer-placeholder-shown:text-on-primary/60 peer-focus:top-0 peer-focus:text-mechanic-orange" for="message">Tell us about your vehicle</label>
+</div>
+<button class="w-full bg-mechanic-orange text-primary font-label-md py-lg rounded-full hover:opacity-90 transition-all active:scale-[0.98]" type="submit">
+                                Request Appointment
+                            </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary pt-xl pb-lg border-t border-on-primary/10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-md mb-xl">
+<div class="font-display-lg text-headline-md text-on-primary">
+                    Jake's Auto Repair
+                </div>
+<div class="flex gap-lg flex-wrap">
+<a class="text-on-primary/60 hover:text-on-primary transition-colors font-body-md text-body-md" href="#">Privacy Policy</a>
+<a class="text-on-primary/60 hover:text-on-primary transition-colors font-body-md text-body-md" href="#">Terms of Service</a>
+<a class="text-on-primary/60 hover:text-on-primary transition-colors font-body-md text-body-md" href="#">Careers</a>
+</div>
+</div>
+<div class="pt-lg border-t border-on-primary/5 flex flex-col md:flex-row justify-between items-center gap-md text-on-primary/40 font-label-sm">
+<span>© 2024 Jake's Auto Repair. Masterfully Maintained.</span>
+<div class="flex gap-md">
+<span>Designed for Excellence</span>
+<span class="w-1 h-1 rounded-full bg-on-primary/20"></span>
+<span>Built for Killeen</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('scroll-reveal');
+            observer.observe(section);
+        });
+
+        // Sticky Navbar subtle effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-md');
+                nav.classList.remove('shadow-sm');
+            } else {
+                nav.classList.remove('shadow-md');
+                nav.classList.add('shadow-sm');
+            }
+        });
+    </script>
+</body></html>
