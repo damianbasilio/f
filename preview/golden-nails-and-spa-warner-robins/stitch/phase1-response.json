@@ -1,0 +1,511 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Oyster & Champagne",
+          "styleGuidelines": "## Brand & Style\nThe design system is anchored in a high-end, editorial aesthetic inspired by boutique fashion magazines. It targets a discerning clientele seeking serenity and exclusivity. The brand personality is sophisticated, calm, and meticulously curated.\n\nThe style is **Minimalist-Luxury**, characterized by:\n- **Asymmetrical Compositions:** Moving away from standard grid-locked salon templates toward a more dynamic, editorial layout.\n- **Airy Whitespace:** Using \"negative space\" as a luxury asset to give content room to breathe.\n- **Refined Accents:** Utilizing ultra-thin gold hairlines and subtle layering to create a sense of depth without clutter.\n- **Cinematic Photography focus:** UI elements are designed to frame high-quality imagery rather than compete with it.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model for desktop, but encourages \"breaking the grid\" through asymmetrical positioning.\n- **Large Margins:** Desktop views utilize 64px outer margins to push content toward the center, creating a gallery-like focus.\n- **Section Gaps:** Vertical spacing between major sections is intentionally large (120px+) to maintain the sense of \"luxury through space.\"\n- **Asymmetry:** Content blocks (images and text) should often be offset from one another. For example, a heading might start at column 2 while the supporting image starts at column 4, creating an overlapping visual rhythm.\n\n## Elevation & Depth\nThis design system avoids traditional shadows in favor of **Tonal Layering and Borders**.\n- **The \"Layered Sheet\" Effect:** Depth is created by placing Rose Quartz or Onyx containers slightly offset behind primary Oyster surfaces.\n- **Hairline Borders:** Use 1px borders in Champagne Gold or low-opacity Onyx (10%) to define containers.\n- **Translucency:** For overlays (like mobile menus or booking modals), use a high-density background blur (30px) with a subtle Creamy Oyster tint, mimicking frosted glass.\n- **No Heavy Shadows:** If elevation is required, use a very large, soft, 2% opacity black shadow that is barely perceptible, acting more as a glow than a shadow.\n\n## Components\n- **Buttons:** Primary buttons are solid Deep Onyx with Creamy Oyster text, using all-caps and sharp corners. Secondary buttons use a 1px Champagne Gold border with no fill.\n- **Inputs:** Minimalist bottom-border only (\"ghost\" style). The label floats above in small-caps Inter when the field is active.\n- **Cards:** No shadows. Cards are defined by thin 1px borders or subtle background color shifts (Oyster to Rose Quartz). Images within cards should have a slight zoom effect on hover.\n- **Chips/Categories:** Small-caps text with a 1px Gold border, highly tracked.\n- **Service Menu:** A list-based component using Playfair Display for service names and Inter for prices, separated by a wide gap or a very faint horizontal line.\n- **The \"Signature\" Element:** An asymmetrical \"Image + Text\" component where the text box overlaps the corner of a large vertical image, creating a high-fashion editorial layout.",
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1a1a",
+            "designMd": "---\nname: Oyster & Champagne\ncolors:\n  surface: '#fafaf5'\n  surface-dim: '#dadad5'\n  surface-bright: '#fafaf5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4ef'\n  surface-container: '#eeeee9'\n  surface-container-high: '#e8e8e3'\n  surface-container-highest: '#e3e3de'\n  on-surface: '#1a1c19'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f1f1ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#231919'\n  on-tertiary-container: '#908080'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#f1dede'\n  tertiary-fixed-dim: '#d5c2c2'\n  on-tertiary-fixed: '#231919'\n  on-tertiary-fixed-variant: '#504444'\n  background: '#fafaf5'\n  on-background: '#1a1c19'\n  surface-variant: '#e3e3de'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is anchored in a high-end, editorial aesthetic inspired by boutique fashion magazines. It targets a discerning clientele seeking serenity and exclusivity. The brand personality is sophisticated, calm, and meticulously curated.\n\nThe style is **Minimalist-Luxury**, characterized by:\n- **Asymmetrical Compositions:** Moving away from standard grid-locked salon templates toward a more dynamic, editorial layout.\n- **Airy Whitespace:** Using \"negative space\" as a luxury asset to give content room to breathe.\n- **Refined Accents:** Utilizing ultra-thin gold hairlines and subtle layering to create a sense of depth without clutter.\n- **Cinematic Photography focus:** UI elements are designed to frame high-quality imagery rather than compete with it.\n\n## Colors\nThe palette is a study in contrast and soft transitions. \n- **Deep Onyx (#1A1A1A):** Used for primary typography and high-impact structural elements to provide a grounded, authoritative presence.\n- **Champagne Gold (#D4AF37):** Reserved for delicate accents, hair-line borders, and primary calls to action to signify prestige.\n- **Creamy Oyster (#F5F5F0):** The primary canvas color. It is softer and more premium than pure white, reducing eye strain and evoking a spa-like atmosphere.\n- **Rose Quartz (#E8D5D5):** A secondary soft-fill color used for backgrounds of secondary containers or subtle interactive states.\n\n## Typography\nTypography is the primary vehicle for the brand’s \"editorial\" feel. \n- **Headlines:** Playfair Display is used with generous leading. Display sizes should occasionally use italic styles for specific keywords to mimic luxury mastheads.\n- **Body:** Inter is used with a light weight (300) and increased letter spacing to maintain a \"spaced-out\" and airy feel, ensuring it doesn't feel overly technical.\n- **Labels:** Small caps with significant tracking (letter-spacing) are used for category headers and navigation items to evoke a high-fashion aesthetic.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model for desktop, but encourages \"breaking the grid\" through asymmetrical positioning.\n- **Large Margins:** Desktop views utilize 64px outer margins to push content toward the center, creating a gallery-like focus.\n- **Section Gaps:** Vertical spacing between major sections is intentionally large (120px+) to maintain the sense of \"luxury through space.\"\n- **Asymmetry:** Content blocks (images and text) should often be offset from one another. For example, a heading might start at column 2 while the supporting image starts at column 4, creating an overlapping visual rhythm.\n\n## Elevation & Depth\nThis design system avoids traditional shadows in favor of **Tonal Layering and Borders**.\n- **The \"Layered Sheet\" Effect:** Depth is created by placing Rose Quartz or Onyx containers slightly offset behind primary Oyster surfaces.\n- **Hairline Borders:** Use 1px borders in Champagne Gold or low-opacity Onyx (10%) to define containers.\n- **Translucency:** For overlays (like mobile menus or booking modals), use a high-density background blur (30px) with a subtle Creamy Oyster tint, mimicking frosted glass.\n- **No Heavy Shadows:** If elevation is required, use a very large, soft, 2% opacity black shadow that is barely perceptible, acting more as a glow than a shadow.\n\n## Shapes\nTo maintain the \"boutique magazine\" aesthetic, this design system uses **Sharp (0px) edges**. \n- Sharp corners convey precision, modernism, and high-end architecture.\n- All buttons, input fields, and image containers must have 0px border-radius.\n- The only exception is for circular elements used in specific decorative motifs (e.g., a \"Service selection\" radio dot).\n\n## Components\n- **Buttons:** Primary buttons are solid Deep Onyx with Creamy Oyster text, using all-caps and sharp corners. Secondary buttons use a 1px Champagne Gold border with no fill.\n- **Inputs:** Minimalist bottom-border only (\"ghost\" style). The label floats above in small-caps Inter when the field is active.\n- **Cards:** No shadows. Cards are defined by thin 1px borders or subtle background color shifts (Oyster to Rose Quartz). Images within cards should have a slight zoom effect on hover.\n- **Chips/Categories:** Small-caps text with a 1px Gold border, highly tracked.\n- **Service Menu:** A list-based component using Playfair Display for service names and Inter for prices, separated by a wide gap or a very faint horizontal line.\n- **The \"Signature\" Element:** An asymmetrical \"Image + Text\" component where the text box overlaps the corner of a large vertical image, creating a high-fashion editorial layout.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
+            "namedColors": {
+              "background": "#fafaf5",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f1f1ec",
+              "inverse_primary": "#c8c6c5",
+              "inverse_surface": "#2f312e",
+              "on_background": "#1a1c19",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#858383",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474746",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#745c00",
+              "on_secondary_fixed": "#241a00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#1a1c19",
+              "on_surface_variant": "#444748",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#908080",
+              "on_tertiary_fixed": "#231919",
+              "on_tertiary_fixed_variant": "#504444",
+              "outline": "#747878",
+              "outline_variant": "#c4c7c7",
+              "primary": "#000000",
+              "primary_container": "#1c1b1b",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#735c00",
+              "secondary_container": "#fed65b",
+              "secondary_fixed": "#ffe088",
+              "secondary_fixed_dim": "#e9c349",
+              "surface": "#fafaf5",
+              "surface_bright": "#fafaf5",
+              "surface_container": "#eeeee9",
+              "surface_container_high": "#e8e8e3",
+              "surface_container_highest": "#e3e3de",
+              "surface_container_low": "#f4f4ef",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dadad5",
+              "surface_tint": "#5f5e5e",
+              "surface_variant": "#e3e3de",
+              "tertiary": "#000000",
+              "tertiary_container": "#231919",
+              "tertiary_fixed": "#f1dede",
+              "tertiary_fixed_dim": "#d5c2c2"
+            },
+            "overrideNeutralColor": "#f5f5f0",
+            "overridePrimaryColor": "#1a1a1a",
+            "overrideSecondaryColor": "#d4af37",
+            "overrideTertiaryColor": "#e8d5d5",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "300",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "button": {
+                "fontFamily": "Inter",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.0"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "400",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "400",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "1.4"
+              },
+              "label-caps": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/2e368b474dda408c8bbf458c15cc1c35",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "14ee96eaf4b04d0b86458f342791a015",
+            "name": "projects/10740228761024745253/screens/14ee96eaf4b04d0b86458f342791a015",
+            "prompt": "Ultra-luxurious, editorial-style interior of a high-end nail spa. Minimalist aesthetic, soft cream and gold lighting, elegant furniture, architectural details, high-end marble textures, champagne and oyster color palette, professional photography, 8k resolution.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtkzHYyYdDMKxEcMjFUK77BD_3TGlon0O7bYoFt-l-dnOxvWX97rOBHIoVdpT-i3OeYDKiNaRFz5PbjeroXkdffVWU8pUdUcibxXwGSualsQ4taWbpqoK5fVBRY1LieWEnhVRaksUt8H2RkV-XUxyVmfsnpUT_dH7_GHVjlAhORVw0zIIHxb3tU7AiRUQAvdKX8o2k7aW_1TijYGiDQY_5I9_CANkAkiodYkjGT0qSh82IeYorJ7DEhlz4",
+              "name": "projects/10740228761024745253/files/a05fcf7242774b69820effdaf5bb5823"
+            },
+            "theme": {},
+            "title": "Ultra-luxurious, editorial-style interior of a high-end nail spa. Minimalist aesthetic, soft cream and gold lighting, elegant furniture, architectural details, high-end marble textures, champagne and oyster color palette, professional photography, 8k resolution.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "1200",
+            "id": "62fc6d21ab7d4694bfa21ab056529bc8",
+            "name": "projects/10740228761024745253/screens/62fc6d21ab7d4694bfa21ab056529bc8",
+            "prompt": "Close-up professional macro photography of a minimalist, high-end manicure. Neutral champagne tones, elegant hand pose, soft lighting, luxury skincare aesthetic, editorial style.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvilix_jirHbRzsgzjm74MWK9I_RM39ox2jOPRiGmGeCM_R2MoF0Z6LgAoFf9Yh3LZUHqfuVza83geNssVVkCXhmCUz6JBbsv7uWLB7633IM5AGQ_DkF20QVFwn3C3MgtlYrEt7qP3JXG6tbp2NOtnCK04ViUUPsrR5co78uOzk3qh2Okl4HkUkD1fwFXc-St5jpSAlPuZQ9RJgtMrjuAaDf18usZRqx-xAQljSjTORi_uhNKGUmQB4zvsA",
+              "name": "projects/10740228761024745253/files/1aa2cbdf32b34a47a8e5b5f348af3180"
+            },
+            "theme": {},
+            "title": "Close-up professional macro photography of a minimalist, high-end manicure. Neutral champagne tones, elegant hand pose, soft lighting, luxury skincare aesthetic, editorial style.",
+            "width": "896"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "cbafb0a7f84641bd88d16fd5db811e80",
+            "name": "projects/10740228761024745253/screens/cbafb0a7f84641bd88d16fd5db811e80",
+            "prompt": "Close-up of a luxury spa treatment, warm stones or aromatic oils, serene atmosphere, high-end spa aesthetic, muted neutral colors.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuEawA-aMDFZwcBZesPlDWdOtSYu1NwkWsUTXZ2Tp6Yf4eKgVGsAiP9gHwL0b92ihlEKHj7Gm0BvUJk4_A7aUrFoEou3JFJZ07qQuv14UgxLVa2MocXOTVTNs_lyrr6UAOxmujSP8UcjO_PMGemQCMNQqk580RexMVcK_l8SHveVurhGR7F_RdlW-1xCcqek_cjfyCH4Ey5WP3VmUt5wGA6dRCVY3fqsgfKY1w-0RZzEusJAalweXKBDhjs",
+              "name": "projects/10740228761024745253/files/0c8f9744cc3345d4aea0d7e7bf69fd38"
+            },
+            "theme": {},
+            "title": "Close-up of a luxury spa treatment, warm stones or aromatic oils, serene atmosphere, high-end spa aesthetic, muted neutral colors.",
+            "width": "1200"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Oyster & Champagne",
+                "styleGuidelines": "## Brand & Style\nThe design system is anchored in a high-end, editorial aesthetic inspired by boutique fashion magazines. It targets a discerning clientele seeking serenity and exclusivity. The brand personality is sophisticated, calm, and meticulously curated.\n\nThe style is **Minimalist-Luxury**, characterized by:\n- **Asymmetrical Compositions:** Moving away from standard grid-locked salon templates toward a more dynamic, editorial layout.\n- **Airy Whitespace:** Using \"negative space\" as a luxury asset to give content room to breathe.\n- **Refined Accents:** Utilizing ultra-thin gold hairlines and subtle layering to create a sense of depth without clutter.\n- **Cinematic Photography focus:** UI elements are designed to frame high-quality imagery rather than compete with it.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model for desktop, but encourages \"breaking the grid\" through asymmetrical positioning.\n- **Large Margins:** Desktop views utilize 64px outer margins to push content toward the center, creating a gallery-like focus.\n- **Section Gaps:** Vertical spacing between major sections is intentionally large (120px+) to maintain the sense of \"luxury through space.\"\n- **Asymmetry:** Content blocks (images and text) should often be offset from one another. For example, a heading might start at column 2 while the supporting image starts at column 4, creating an overlapping visual rhythm.\n\n## Elevation & Depth\nThis design system avoids traditional shadows in favor of **Tonal Layering and Borders**.\n- **The \"Layered Sheet\" Effect:** Depth is created by placing Rose Quartz or Onyx containers slightly offset behind primary Oyster surfaces.\n- **Hairline Borders:** Use 1px borders in Champagne Gold or low-opacity Onyx (10%) to define containers.\n- **Translucency:** For overlays (like mobile menus or booking modals), use a high-density background blur (30px) with a subtle Creamy Oyster tint, mimicking frosted glass.\n- **No Heavy Shadows:** If elevation is required, use a very large, soft, 2% opacity black shadow that is barely perceptible, acting more as a glow than a shadow.\n\n## Components\n- **Buttons:** Primary buttons are solid Deep Onyx with Creamy Oyster text, using all-caps and sharp corners. Secondary buttons use a 1px Champagne Gold border with no fill.\n- **Inputs:** Minimalist bottom-border only (\"ghost\" style). The label floats above in small-caps Inter when the field is active.\n- **Cards:** No shadows. Cards are defined by thin 1px borders or subtle background color shifts (Oyster to Rose Quartz). Images within cards should have a slight zoom effect on hover.\n- **Chips/Categories:** Small-caps text with a 1px Gold border, highly tracked.\n- **Service Menu:** A list-based component using Playfair Display for service names and Inter for prices, separated by a wide gap or a very faint horizontal line.\n- **The \"Signature\" Element:** An asymmetrical \"Image + Text\" component where the text box overlaps the corner of a large vertical image, creating a high-fashion editorial layout.",
+                "theme": {
+                  "bodyFont": "INTER",
+                  "bodyFontFamily": "Inter",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#1a1a1a",
+                  "designMd": "---\nname: Oyster & Champagne\ncolors:\n  surface: '#fafaf5'\n  surface-dim: '#dadad5'\n  surface-bright: '#fafaf5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4ef'\n  surface-container: '#eeeee9'\n  surface-container-high: '#e8e8e3'\n  surface-container-highest: '#e3e3de'\n  on-surface: '#1a1c19'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f1f1ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#231919'\n  on-tertiary-container: '#908080'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#f1dede'\n  tertiary-fixed-dim: '#d5c2c2'\n  on-tertiary-fixed: '#231919'\n  on-tertiary-fixed-variant: '#504444'\n  background: '#fafaf5'\n  on-background: '#1a1c19'\n  surface-variant: '#e3e3de'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is anchored in a high-end, editorial aesthetic inspired by boutique fashion magazines. It targets a discerning clientele seeking serenity and exclusivity. The brand personality is sophisticated, calm, and meticulously curated.\n\nThe style is **Minimalist-Luxury**, characterized by:\n- **Asymmetrical Compositions:** Moving away from standard grid-locked salon templates toward a more dynamic, editorial layout.\n- **Airy Whitespace:** Using \"negative space\" as a luxury asset to give content room to breathe.\n- **Refined Accents:** Utilizing ultra-thin gold hairlines and subtle layering to create a sense of depth without clutter.\n- **Cinematic Photography focus:** UI elements are designed to frame high-quality imagery rather than compete with it.\n\n## Colors\nThe palette is a study in contrast and soft transitions. \n- **Deep Onyx (#1A1A1A):** Used for primary typography and high-impact structural elements to provide a grounded, authoritative presence.\n- **Champagne Gold (#D4AF37):** Reserved for delicate accents, hair-line borders, and primary calls to action to signify prestige.\n- **Creamy Oyster (#F5F5F0):** The primary canvas color. It is softer and more premium than pure white, reducing eye strain and evoking a spa-like atmosphere.\n- **Rose Quartz (#E8D5D5):** A secondary soft-fill color used for backgrounds of secondary containers or subtle interactive states.\n\n## Typography\nTypography is the primary vehicle for the brand’s \"editorial\" feel. \n- **Headlines:** Playfair Display is used with generous leading. Display sizes should occasionally use italic styles for specific keywords to mimic luxury mastheads.\n- **Body:** Inter is used with a light weight (300) and increased letter spacing to maintain a \"spaced-out\" and airy feel, ensuring it doesn't feel overly technical.\n- **Labels:** Small caps with significant tracking (letter-spacing) are used for category headers and navigation items to evoke a high-fashion aesthetic.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model for desktop, but encourages \"breaking the grid\" through asymmetrical positioning.\n- **Large Margins:** Desktop views utilize 64px outer margins to push content toward the center, creating a gallery-like focus.\n- **Section Gaps:** Vertical spacing between major sections is intentionally large (120px+) to maintain the sense of \"luxury through space.\"\n- **Asymmetry:** Content blocks (images and text) should often be offset from one another. For example, a heading might start at column 2 while the supporting image starts at column 4, creating an overlapping visual rhythm.\n\n## Elevation & Depth\nThis design system avoids traditional shadows in favor of **Tonal Layering and Borders**.\n- **The \"Layered Sheet\" Effect:** Depth is created by placing Rose Quartz or Onyx containers slightly offset behind primary Oyster surfaces.\n- **Hairline Borders:** Use 1px borders in Champagne Gold or low-opacity Onyx (10%) to define containers.\n- **Translucency:** For overlays (like mobile menus or booking modals), use a high-density background blur (30px) with a subtle Creamy Oyster tint, mimicking frosted glass.\n- **No Heavy Shadows:** If elevation is required, use a very large, soft, 2% opacity black shadow that is barely perceptible, acting more as a glow than a shadow.\n\n## Shapes\nTo maintain the \"boutique magazine\" aesthetic, this design system uses **Sharp (0px) edges**. \n- Sharp corners convey precision, modernism, and high-end architecture.\n- All buttons, input fields, and image containers must have 0px border-radius.\n- The only exception is for circular elements used in specific decorative motifs (e.g., a \"Service selection\" radio dot).\n\n## Components\n- **Buttons:** Primary buttons are solid Deep Onyx with Creamy Oyster text, using all-caps and sharp corners. Secondary buttons use a 1px Champagne Gold border with no fill.\n- **Inputs:** Minimalist bottom-border only (\"ghost\" style). The label floats above in small-caps Inter when the field is active.\n- **Cards:** No shadows. Cards are defined by thin 1px borders or subtle background color shifts (Oyster to Rose Quartz). Images within cards should have a slight zoom effect on hover.\n- **Chips/Categories:** Small-caps text with a 1px Gold border, highly tracked.\n- **Service Menu:** A list-based component using Playfair Display for service names and Inter for prices, separated by a wide gap or a very faint horizontal line.\n- **The \"Signature\" Element:** An asymmetrical \"Image + Text\" component where the text box overlaps the corner of a large vertical image, creating a high-fashion editorial layout.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "INTER",
+                  "labelFontFamily": "Inter",
+                  "namedColors": {
+                    "background": "#fafaf5",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f1f1ec",
+                    "inverse_primary": "#c8c6c5",
+                    "inverse_surface": "#2f312e",
+                    "on_background": "#1a1c19",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#858383",
+                    "on_primary_fixed": "#1c1b1b",
+                    "on_primary_fixed_variant": "#474746",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#745c00",
+                    "on_secondary_fixed": "#241a00",
+                    "on_secondary_fixed_variant": "#574500",
+                    "on_surface": "#1a1c19",
+                    "on_surface_variant": "#444748",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#908080",
+                    "on_tertiary_fixed": "#231919",
+                    "on_tertiary_fixed_variant": "#504444",
+                    "outline": "#747878",
+                    "outline_variant": "#c4c7c7",
+                    "primary": "#000000",
+                    "primary_container": "#1c1b1b",
+                    "primary_fixed": "#e5e2e1",
+                    "primary_fixed_dim": "#c8c6c5",
+                    "secondary": "#735c00",
+                    "secondary_container": "#fed65b",
+                    "secondary_fixed": "#ffe088",
+                    "secondary_fixed_dim": "#e9c349",
+                    "surface": "#fafaf5",
+                    "surface_bright": "#fafaf5",
+                    "surface_container": "#eeeee9",
+                    "surface_container_high": "#e8e8e3",
+                    "surface_container_highest": "#e3e3de",
+                    "surface_container_low": "#f4f4ef",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dadad5",
+                    "surface_tint": "#5f5e5e",
+                    "surface_variant": "#e3e3de",
+                    "tertiary": "#000000",
+                    "tertiary_container": "#231919",
+                    "tertiary_fixed": "#f1dede",
+                    "tertiary_fixed_dim": "#d5c2c2"
+                  },
+                  "overrideNeutralColor": "#f5f5f0",
+                  "overridePrimaryColor": "#1a1a1a",
+                  "overrideSecondaryColor": "#d4af37",
+                  "overrideTertiaryColor": "#e8d5d5",
+                  "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "section-gap": "120px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "300",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "button": {
+                      "fontFamily": "Inter",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.0"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "400",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.4"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Inter",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/2e368b474dda408c8bbf458c15cc1c35",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "14598",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFiZTRmOTYwY2Y3NDQ0Njk5NzFkNDBmYzY0MGI4NmY0EgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDc0MDIyODc2MTAyNDc0NTI1Mw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/10740228761024745253/files/f1a5af5d1506434dbccdacaec95e7e74"
+            },
+            "id": "0b529d9ed6c6496ea9ffa5419a8f40d7",
+            "name": "projects/10740228761024745253/screens/0b529d9ed6c6496ea9ffa5419a8f40d7",
+            "prompt": "Create the complete DESKTOP landing page for Golden Nails and Spa. \nDesign Style: Editorial Luxury. Use an asymmetrical layout with overlapping elements.\nColor Palette: Oyster, Champagne, Onyx.\nSections:\n1. Header: Navigation links, Business Logo 'GOLDEN', and Phone Number (478) 225-2131.\n2. Hero: Large serif headline 'The Art of the Manicure.' using {{DATA:IMAGE:IMAGE_5}} as a background or large featured image.\n3. Credibility: Understated text row: 'Warner Robins' Premier Destination for Hand & Foot Artistry.'\n4. Services: 3 asymmetrical cards using {{DATA:IMAGE:IMAGE_4}} for 'The Signature Manicure' and {{DATA:IMAGE:IMAGE_3}} for 'The Stone Therapy Pedicure'. Include 'Gel Enhancements' as a text-focused card.\n5. About: High-contrast section with a large quote: 'Beauty is in the detail.' and copy about their philosophy.\n6. Visit: Section with address (2197 Watson Boulevard) and the required map slot: <div class='map-slot relative overflow-hidden min-h-[400px]' data-map-slot aria-label='Map'></div>.\n7. Contact: Elegant form with gold borders.\n8. Footer: Copyright and contact details.\nTechnical: Full production-ready HTML/CSS. Responsive. Use Playfair Display for headers. Smooth scroll. Form validation UI. No lorem ipsum.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLszi1qTzGoYSMnxttj-K6rJVIx_pMrfadvcWuM20hHns_MWQwZT0-DDi3-pIWGYCDJkkGktyLHd7yNOzG2R9RbX0sn3Cy1nFxxVV3W8W9wcYz_QsQQfD2StvRJx-C-ws_64TRrojEA1jL3wIWRbIkbfwPoSOYjNOGEuW_a_vUx4Pw0tpykbfeo9dIiXAxvER8DVbXc7hVBVmlpY4pxyeZzbpj3nRR9Rvu67j8K3D2I_7WWjNgtCL2OcSjDa",
+              "name": "projects/10740228761024745253/files/4fec04b4926a4b74b1b937752ed9f110"
+            },
+            "theme": {
+              "bodyFont": "INTER",
+              "bodyFontFamily": "Inter",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#1a1a1a",
+              "designMd": "---\nname: Oyster & Champagne\ncolors:\n  surface: '#fafaf5'\n  surface-dim: '#dadad5'\n  surface-bright: '#fafaf5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4ef'\n  surface-container: '#eeeee9'\n  surface-container-high: '#e8e8e3'\n  surface-container-highest: '#e3e3de'\n  on-surface: '#1a1c19'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f1f1ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#231919'\n  on-tertiary-container: '#908080'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#f1dede'\n  tertiary-fixed-dim: '#d5c2c2'\n  on-tertiary-fixed: '#231919'\n  on-tertiary-fixed-variant: '#504444'\n  background: '#fafaf5'\n  on-background: '#1a1c19'\n  surface-variant: '#e3e3de'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is anchored in a high-end, editorial aesthetic inspired by boutique fashion magazines. It targets a discerning clientele seeking serenity and exclusivity. The brand personality is sophisticated, calm, and meticulously curated.\n\nThe style is **Minimalist-Luxury**, characterized by:\n- **Asymmetrical Compositions:** Moving away from standard grid-locked salon templates toward a more dynamic, editorial layout.\n- **Airy Whitespace:** Using \"negative space\" as a luxury asset to give content room to breathe.\n- **Refined Accents:** Utilizing ultra-thin gold hairlines and subtle layering to create a sense of depth without clutter.\n- **Cinematic Photography focus:** UI elements are designed to frame high-quality imagery rather than compete with it.\n\n## Colors\nThe palette is a study in contrast and soft transitions. \n- **Deep Onyx (#1A1A1A):** Used for primary typography and high-impact structural elements to provide a grounded, authoritative presence.\n- **Champagne Gold (#D4AF37):** Reserved for delicate accents, hair-line borders, and primary calls to action to signify prestige.\n- **Creamy Oyster (#F5F5F0):** The primary canvas color. It is softer and more premium than pure white, reducing eye strain and evoking a spa-like atmosphere.\n- **Rose Quartz (#E8D5D5):** A secondary soft-fill color used for backgrounds of secondary containers or subtle interactive states.\n\n## Typography\nTypography is the primary vehicle for the brand’s \"editorial\" feel. \n- **Headlines:** Playfair Display is used with generous leading. Display sizes should occasionally use italic styles for specific keywords to mimic luxury mastheads.\n- **Body:** Inter is used with a light weight (300) and increased letter spacing to maintain a \"spaced-out\" and airy feel, ensuring it doesn't feel overly technical.\n- **Labels:** Small caps with significant tracking (letter-spacing) are used for category headers and navigation items to evoke a high-fashion aesthetic.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model for desktop, but encourages \"breaking the grid\" through asymmetrical positioning.\n- **Large Margins:** Desktop views utilize 64px outer margins to push content toward the center, creating a gallery-like focus.\n- **Section Gaps:** Vertical spacing between major sections is intentionally large (120px+) to maintain the sense of \"luxury through space.\"\n- **Asymmetry:** Content blocks (images and text) should often be offset from one another. For example, a heading might start at column 2 while the supporting image starts at column 4, creating an overlapping visual rhythm.\n\n## Elevation & Depth\nThis design system avoids traditional shadows in favor of **Tonal Layering and Borders**.\n- **The \"Layered Sheet\" Effect:** Depth is created by placing Rose Quartz or Onyx containers slightly offset behind primary Oyster surfaces.\n- **Hairline Borders:** Use 1px borders in Champagne Gold or low-opacity Onyx (10%) to define containers.\n- **Translucency:** For overlays (like mobile menus or booking modals), use a high-density background blur (30px) with a subtle Creamy Oyster tint, mimicking frosted glass.\n- **No Heavy Shadows:** If elevation is required, use a very large, soft, 2% opacity black shadow that is barely perceptible, acting more as a glow than a shadow.\n\n## Shapes\nTo maintain the \"boutique magazine\" aesthetic, this design system uses **Sharp (0px) edges**. \n- Sharp corners convey precision, modernism, and high-end architecture.\n- All buttons, input fields, and image containers must have 0px border-radius.\n- The only exception is for circular elements used in specific decorative motifs (e.g., a \"Service selection\" radio dot).\n\n## Components\n- **Buttons:** Primary buttons are solid Deep Onyx with Creamy Oyster text, using all-caps and sharp corners. Secondary buttons use a 1px Champagne Gold border with no fill.\n- **Inputs:** Minimalist bottom-border only (\"ghost\" style). The label floats above in small-caps Inter when the field is active.\n- **Cards:** No shadows. Cards are defined by thin 1px borders or subtle background color shifts (Oyster to Rose Quartz). Images within cards should have a slight zoom effect on hover.\n- **Chips/Categories:** Small-caps text with a 1px Gold border, highly tracked.\n- **Service Menu:** A list-based component using Playfair Display for service names and Inter for prices, separated by a wide gap or a very faint horizontal line.\n- **The \"Signature\" Element:** An asymmetrical \"Image + Text\" component where the text box overlaps the corner of a large vertical image, creating a high-fashion editorial layout.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "INTER",
+              "labelFontFamily": "Inter",
+              "namedColors": {
+                "background": "#fafaf5",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f1f1ec",
+                "inverse_primary": "#c8c6c5",
+                "inverse_surface": "#2f312e",
+                "on_background": "#1a1c19",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#858383",
+                "on_primary_fixed": "#1c1b1b",
+                "on_primary_fixed_variant": "#474746",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#745c00",
+                "on_secondary_fixed": "#241a00",
+                "on_secondary_fixed_variant": "#574500",
+                "on_surface": "#1a1c19",
+                "on_surface_variant": "#444748",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#908080",
+                "on_tertiary_fixed": "#231919",
+                "on_tertiary_fixed_variant": "#504444",
+                "outline": "#747878",
+                "outline_variant": "#c4c7c7",
+                "primary": "#000000",
+                "primary_container": "#1c1b1b",
+                "primary_fixed": "#e5e2e1",
+                "primary_fixed_dim": "#c8c6c5",
+                "secondary": "#735c00",
+                "secondary_container": "#fed65b",
+                "secondary_fixed": "#ffe088",
+                "secondary_fixed_dim": "#e9c349",
+                "surface": "#fafaf5",
+                "surface_bright": "#fafaf5",
+                "surface_container": "#eeeee9",
+                "surface_container_high": "#e8e8e3",
+                "surface_container_highest": "#e3e3de",
+                "surface_container_low": "#f4f4ef",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dadad5",
+                "surface_tint": "#5f5e5e",
+                "surface_variant": "#e3e3de",
+                "tertiary": "#000000",
+                "tertiary_container": "#231919",
+                "tertiary_fixed": "#f1dede",
+                "tertiary_fixed_dim": "#d5c2c2"
+              },
+              "overrideNeutralColor": "#f5f5f0",
+              "overridePrimaryColor": "#1a1a1a",
+              "overrideSecondaryColor": "#d4af37",
+              "overrideTertiaryColor": "#e8d5d5",
+              "spacing": {
+                "container-max": "1280px",
+                "gutter": "32px",
+                "margin-desktop": "64px",
+                "margin-mobile": "24px",
+                "section-gap": "120px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "300",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "button": {
+                  "fontFamily": "Inter",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.0"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "400",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.3"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.4"
+                },
+                "label-caps": {
+                  "fontFamily": "Inter",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "Golden Nails & Spa | The Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've completed the bespoke homepage for **Golden Nails and Spa**, moving away from standard templates to create a high-end, editorial experience.\n\n### Design Highlights:\n*   **Visual Identity**: Established an \"Oyster & Champagne\" color story using creamy neutrals, deep onyx for contrast, and champagne gold accents to reflect a premium salon atmosphere.\n*   **Editorial Layout**: Utilized an asymmetrical grid with overlapping elements and generous whitespace to give the site a custom-designed, boutique magazine feel.\n*   **Premium Typography**: Paired the sophisticated *Playfair Display* serif for headlines with a clean, widely-spaced sans-serif for a modern, luxurious hierarchy.\n*   **Bespoke Imagery**: Integrated high-fidelity, macro-photography assets that highlight the artistry and serenity of the services, from minimalist manicures to stone therapy.\n*   **Production-Ready Structure**: The design includes all required sections—from a credibility-building philosophy block to a functional concierge inquiry form and the specified map slot for the Warner Robins location.\n\nThe code is fully responsive and optimized for a seamless desktop-to-mobile transition. How does this visual direction feel for the brand?"
+    },
+    {
+      "suggestion": "Make the gold accents more prominent"
+    },
+    {
+      "suggestion": "Add a subtle scroll animation to the service cards"
+    },
+    {
+      "suggestion": "Try a dark mode version of this editorial layout"
+    }
+  ],
+  "projectId": "10740228761024745253",
+  "sessionId": "7515283032695946144"
+}
