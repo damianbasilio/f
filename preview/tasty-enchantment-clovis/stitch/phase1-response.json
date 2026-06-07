@@ -1,0 +1,460 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Enchanted Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is built upon the \"Enchanted Editorial\" narrative—a sophisticated fusion of high-end culinary artistry and whimsical, magical charm. The visual language balances the structured elegance of a luxury lifestyle magazine with the organic, ethereal qualities of a boutique bakery.\n\nThe aesthetic leans into **Minimalism** with an **Editorial** twist. It prioritizes heavy whitespace to allow high-fidelity food photography to breathe, while utilizing **Glassmorphism** for subtle, frosted-parchment overlays that evoke a sense of layering and depth. The emotional response should be one of \"accessible luxury\"—expert and premium, yet warm, inviting, and slightly mysterious.\n\nKey stylistic markers include:\n- **Asymmetric Balance:** Intentional offset of imagery and text to create a rhythmic, curated feel.\n- **Layered Composition:** Text and decorative elements overlapping imagery to mimic physical paper layouts.\n- **Delicate Motifs:** Micro-interactions and decorative borders featuring thin, gold line-work.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop, transitioning to a fluid layout for mobile devices. The layout philosophy is \"curated density,\" mimicking the grid of a premium magazine.\n\n- **Desktop (12 Columns):** 64px margins and 24px gutters. Use the `overlap-offset` to allow images to bleed into neighboring columns or overlap text containers, creating depth.\n- **Mobile (4 Columns):** 20px margins. Overlaps should be reduced or simplified to a vertical stack to ensure a seamless ordering experience.\n\nSpacing should be generous between sections (using multiples of 8px, typically 80px or 120px) to maintain the minimalist, high-end feel. Use \"asymmetric white space\" where one side of the layout has significantly more margin than the other to guide the eye toward featured products.\n\n## Elevation & Depth\n\nVisual hierarchy is established through **Tonal Layering** and **Glassmorphism**, rather than heavy shadows.\n\n- **Surfaces:** Use \"Soft Parchment\" as the base. Elevated cards or drawers should use a semi-transparent version of \"Soft Parchment\" (80-90% opacity) with a `16px` backdrop blur to create a frosted glass effect.\n- **Outlines:** Use \"Champagne Gold\" as a `1px` low-contrast outline for interactive elements. \n- **Shadows:** When necessary for floating elements (like modals), use an **Ambient Shadow**: a very large blur (32px), low opacity (10%), tinted with \"Midnight Plum\" to keep the shadow \"warm\" and integrated with the brand colors.\n- **Depth Motifs:** Use \"Watercolor Bleed\" assets as the lowest layer, appearing to sit *under* the parchment surface, visible only through the glassmorphic overlays.\n\n## Components\n\n- **Buttons:** Primary buttons use a \"Midnight Plum\" fill with \"Soft Parchment\" text. Secondary buttons are \"ghost\" style with a `1px` \"Champagne Gold\" border. Hover states should include a subtle gold glow (box-shadow) rather than a color shift.\n- **Input Fields:** Bottom-border only or very light \"Champagne Gold\" outlines. Labels should use the `label-caps` typography style.\n- **Cards:** Product cards use the glassmorphic style. Imagery should be the focus, with the product name in \"Midnight Plum\" Serif and price in \"Champagne Gold\" Sans-Serif.\n- **Gold Line-work:** Use horizontal and vertical `1px` gold lines to separate sections, mimicking a newspaper or luxury ledger.\n- **Chips/Tags:** Used for dietary labels (e.g., \"Gluten Free\"). These use a \"Sage Mist\" background with 20% opacity and dark green text.\n- **Specialty Component - \"The Scroll\":** A vertical navigation element on the side of the page that uses delicate gold line-work to show progress, reinforcing the \"Enchanted\" narrative.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#2d1b33",
+            "designMd": "---\nname: Enchanted Editorial\ncolors:\n  surface: '#fdf9f5'\n  surface-dim: '#ddd9d6'\n  surface-bright: '#fdf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3ef'\n  surface-container: '#f1ede9'\n  surface-container-high: '#ebe7e4'\n  surface-container-highest: '#e6e2de'\n  on-surface: '#1c1c19'\n  on-surface-variant: '#4b454b'\n  inverse-surface: '#31302e'\n  inverse-on-surface: '#f4f0ec'\n  outline: '#7d757c'\n  outline-variant: '#cec4cc'\n  surface-tint: '#6d5772'\n  primary: '#15051b'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b33'\n  on-primary-container: '#99819f'\n  inverse-primary: '#d9bede'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000f04'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#0d2715'\n  on-tertiary-container: '#749077'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#f6d9fa'\n  primary-fixed-dim: '#d9bede'\n  on-primary-fixed: '#26152c'\n  on-primary-fixed-variant: '#54405a'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#cceace'\n  tertiary-fixed-dim: '#b0ceb2'\n  on-tertiary-fixed: '#07200f'\n  on-tertiary-fixed-variant: '#334d38'\n  background: '#fdf9f5'\n  on-background: '#1c1c19'\n  surface-variant: '#e6e2de'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  utility-sm:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  overlap-offset: -32px\n---\n\n## Brand & Style\n\nThe design system is built upon the \"Enchanted Editorial\" narrative—a sophisticated fusion of high-end culinary artistry and whimsical, magical charm. The visual language balances the structured elegance of a luxury lifestyle magazine with the organic, ethereal qualities of a boutique bakery.\n\nThe aesthetic leans into **Minimalism** with an **Editorial** twist. It prioritizes heavy whitespace to allow high-fidelity food photography to breathe, while utilizing **Glassmorphism** for subtle, frosted-parchment overlays that evoke a sense of layering and depth. The emotional response should be one of \"accessible luxury\"—expert and premium, yet warm, inviting, and slightly mysterious.\n\nKey stylistic markers include:\n- **Asymmetric Balance:** Intentional offset of imagery and text to create a rhythmic, curated feel.\n- **Layered Composition:** Text and decorative elements overlapping imagery to mimic physical paper layouts.\n- **Delicate Motifs:** Micro-interactions and decorative borders featuring thin, gold line-work.\n\n## Colors\n\nThe palette is rooted in deep, cinematic tones contrasted against soft, tactile neutrals.\n\n- **Primary (Midnight Plum):** Used for typography, deep backgrounds, and high-impact structural elements. It provides the \"midnight\" anchor for the enchanted theme.\n- **Secondary (Champagne Gold):** Reserved for accents, borders, interactive states, and delicate line-work. It adds the \"premium\" shimmer.\n- **Tertiary (Sage Mist):** An organic, grounding green used for success states, secondary buttons, and nature-inspired accents.\n- **Neutral (Soft Parchment):** The primary canvas color. It should be used for all page backgrounds to provide a warmer, more historic feel than pure white.\n\nImplement a subtle **Paper Grain** texture as a fixed background overlay (opacity: 3-5%) on the Soft Parchment surface to enhance the tactile editorial feel.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing that reflects the \"Enchanted Editorial\" theme. \n\n**Playfair Display** is used for headlines and display text. Its high stroke contrast and elegant serifs provide the \"Editorial\" authority. Use it with slightly tighter tracking for larger displays to emphasize its elegant forms.\n\n**Montserrat** handles all functional and body text. It is intentionally wide-tracked (0.01em to 0.02em) to provide a modern, airy contrast to the dense serif headings. \n\nFor navigation and small labels, use the `label-caps` style. The increased letter spacing is critical here to maintain the premium, boutique feel. Ensure \"watercolor bleed\" accents are never placed directly behind small body text to maintain legibility.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop, transitioning to a fluid layout for mobile devices. The layout philosophy is \"curated density,\" mimicking the grid of a premium magazine.\n\n- **Desktop (12 Columns):** 64px margins and 24px gutters. Use the `overlap-offset` to allow images to bleed into neighboring columns or overlap text containers, creating depth.\n- **Mobile (4 Columns):** 20px margins. Overlaps should be reduced or simplified to a vertical stack to ensure a seamless ordering experience.\n\nSpacing should be generous between sections (using multiples of 8px, typically 80px or 120px) to maintain the minimalist, high-end feel. Use \"asymmetric white space\" where one side of the layout has significantly more margin than the other to guide the eye toward featured products.\n\n## Elevation & Depth\n\nVisual hierarchy is established through **Tonal Layering** and **Glassmorphism**, rather than heavy shadows.\n\n- **Surfaces:** Use \"Soft Parchment\" as the base. Elevated cards or drawers should use a semi-transparent version of \"Soft Parchment\" (80-90% opacity) with a `16px` backdrop blur to create a frosted glass effect.\n- **Outlines:** Use \"Champagne Gold\" as a `1px` low-contrast outline for interactive elements. \n- **Shadows:** When necessary for floating elements (like modals), use an **Ambient Shadow**: a very large blur (32px), low opacity (10%), tinted with \"Midnight Plum\" to keep the shadow \"warm\" and integrated with the brand colors.\n- **Depth Motifs:** Use \"Watercolor Bleed\" assets as the lowest layer, appearing to sit *under* the parchment surface, visible only through the glassmorphic overlays.\n\n## Shapes\n\nThe shape language is **Soft** and architectural. \n\nStandard components like input fields and buttons use a `0.25rem` radius to maintain a clean, professional structure. For featured imagery or \"hero\" buttons, use `rounded-lg` (0.5rem) to soften the aesthetic. \n\nAvoid fully rounded/pill shapes (except for very small tags), as they appear too casual for a premium boutique brand. Use sharp corners (0px) specifically for large decorative gold borders and divider lines to maintain the editorial structure.\n\n## Components\n\n- **Buttons:** Primary buttons use a \"Midnight Plum\" fill with \"Soft Parchment\" text. Secondary buttons are \"ghost\" style with a `1px` \"Champagne Gold\" border. Hover states should include a subtle gold glow (box-shadow) rather than a color shift.\n- **Input Fields:** Bottom-border only or very light \"Champagne Gold\" outlines. Labels should use the `label-caps` typography style.\n- **Cards:** Product cards use the glassmorphic style. Imagery should be the focus, with the product name in \"Midnight Plum\" Serif and price in \"Champagne Gold\" Sans-Serif.\n- **Gold Line-work:** Use horizontal and vertical `1px` gold lines to separate sections, mimicking a newspaper or luxury ledger.\n- **Chips/Tags:** Used for dietary labels (e.g., \"Gluten Free\"). These use a \"Sage Mist\" background with 20% opacity and dark green text.\n- **Specialty Component - \"The Scroll\":** A vertical navigation element on the side of the page that uses delicate gold line-work to show progress, reinforcing the \"Enchanted\" narrative.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fdf9f5",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f4f0ec",
+              "inverse_primary": "#d9bede",
+              "inverse_surface": "#31302e",
+              "on_background": "#1c1c19",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#99819f",
+              "on_primary_fixed": "#26152c",
+              "on_primary_fixed_variant": "#54405a",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#745c00",
+              "on_secondary_fixed": "#241a00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#1c1c19",
+              "on_surface_variant": "#4b454b",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#749077",
+              "on_tertiary_fixed": "#07200f",
+              "on_tertiary_fixed_variant": "#334d38",
+              "outline": "#7d757c",
+              "outline_variant": "#cec4cc",
+              "primary": "#15051b",
+              "primary_container": "#2d1b33",
+              "primary_fixed": "#f6d9fa",
+              "primary_fixed_dim": "#d9bede",
+              "secondary": "#735c00",
+              "secondary_container": "#fed65b",
+              "secondary_fixed": "#ffe088",
+              "secondary_fixed_dim": "#e9c349",
+              "surface": "#fdf9f5",
+              "surface_bright": "#fdf9f5",
+              "surface_container": "#f1ede9",
+              "surface_container_high": "#ebe7e4",
+              "surface_container_highest": "#e6e2de",
+              "surface_container_low": "#f7f3ef",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#ddd9d6",
+              "surface_tint": "#6d5772",
+              "surface_variant": "#e6e2de",
+              "tertiary": "#000f04",
+              "tertiary_container": "#0d2715",
+              "tertiary_fixed": "#cceace",
+              "tertiary_fixed_dim": "#b0ceb2"
+            },
+            "overrideNeutralColor": "#f9f5f1",
+            "overridePrimaryColor": "#2d1b33",
+            "overrideSecondaryColor": "#d4af37",
+            "overrideTertiaryColor": "#8ba88e",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "overlap-offset": "-32px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "24px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "72px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "48px"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "32px"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "16px"
+              },
+              "utility-sm": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "lineHeight": "20px"
+              }
+            }
+          }
+        },
+        "name": "assets/f321c28c66bc4edf8b4fedd0b3efc591",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Enchanted Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is built upon the \"Enchanted Editorial\" narrative—a sophisticated fusion of high-end culinary artistry and whimsical, magical charm. The visual language balances the structured elegance of a luxury lifestyle magazine with the organic, ethereal qualities of a boutique bakery.\n\nThe aesthetic leans into **Minimalism** with an **Editorial** twist. It prioritizes heavy whitespace to allow high-fidelity food photography to breathe, while utilizing **Glassmorphism** for subtle, frosted-parchment overlays that evoke a sense of layering and depth. The emotional response should be one of \"accessible luxury\"—expert and premium, yet warm, inviting, and slightly mysterious.\n\nKey stylistic markers include:\n- **Asymmetric Balance:** Intentional offset of imagery and text to create a rhythmic, curated feel.\n- **Layered Composition:** Text and decorative elements overlapping imagery to mimic physical paper layouts.\n- **Delicate Motifs:** Micro-interactions and decorative borders featuring thin, gold line-work.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop, transitioning to a fluid layout for mobile devices. The layout philosophy is \"curated density,\" mimicking the grid of a premium magazine.\n\n- **Desktop (12 Columns):** 64px margins and 24px gutters. Use the `overlap-offset` to allow images to bleed into neighboring columns or overlap text containers, creating depth.\n- **Mobile (4 Columns):** 20px margins. Overlaps should be reduced or simplified to a vertical stack to ensure a seamless ordering experience.\n\nSpacing should be generous between sections (using multiples of 8px, typically 80px or 120px) to maintain the minimalist, high-end feel. Use \"asymmetric white space\" where one side of the layout has significantly more margin than the other to guide the eye toward featured products.\n\n## Elevation & Depth\n\nVisual hierarchy is established through **Tonal Layering** and **Glassmorphism**, rather than heavy shadows.\n\n- **Surfaces:** Use \"Soft Parchment\" as the base. Elevated cards or drawers should use a semi-transparent version of \"Soft Parchment\" (80-90% opacity) with a `16px` backdrop blur to create a frosted glass effect.\n- **Outlines:** Use \"Champagne Gold\" as a `1px` low-contrast outline for interactive elements. \n- **Shadows:** When necessary for floating elements (like modals), use an **Ambient Shadow**: a very large blur (32px), low opacity (10%), tinted with \"Midnight Plum\" to keep the shadow \"warm\" and integrated with the brand colors.\n- **Depth Motifs:** Use \"Watercolor Bleed\" assets as the lowest layer, appearing to sit *under* the parchment surface, visible only through the glassmorphic overlays.\n\n## Components\n\n- **Buttons:** Primary buttons use a \"Midnight Plum\" fill with \"Soft Parchment\" text. Secondary buttons are \"ghost\" style with a `1px` \"Champagne Gold\" border. Hover states should include a subtle gold glow (box-shadow) rather than a color shift.\n- **Input Fields:** Bottom-border only or very light \"Champagne Gold\" outlines. Labels should use the `label-caps` typography style.\n- **Cards:** Product cards use the glassmorphic style. Imagery should be the focus, with the product name in \"Midnight Plum\" Serif and price in \"Champagne Gold\" Sans-Serif.\n- **Gold Line-work:** Use horizontal and vertical `1px` gold lines to separate sections, mimicking a newspaper or luxury ledger.\n- **Chips/Tags:** Used for dietary labels (e.g., \"Gluten Free\"). These use a \"Sage Mist\" background with 20% opacity and dark green text.\n- **Specialty Component - \"The Scroll\":** A vertical navigation element on the side of the page that uses delicate gold line-work to show progress, reinforcing the \"Enchanted\" narrative.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#2d1b33",
+                  "designMd": "---\nname: Enchanted Editorial\ncolors:\n  surface: '#fdf9f5'\n  surface-dim: '#ddd9d6'\n  surface-bright: '#fdf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3ef'\n  surface-container: '#f1ede9'\n  surface-container-high: '#ebe7e4'\n  surface-container-highest: '#e6e2de'\n  on-surface: '#1c1c19'\n  on-surface-variant: '#4b454b'\n  inverse-surface: '#31302e'\n  inverse-on-surface: '#f4f0ec'\n  outline: '#7d757c'\n  outline-variant: '#cec4cc'\n  surface-tint: '#6d5772'\n  primary: '#15051b'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b33'\n  on-primary-container: '#99819f'\n  inverse-primary: '#d9bede'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000f04'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#0d2715'\n  on-tertiary-container: '#749077'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#f6d9fa'\n  primary-fixed-dim: '#d9bede'\n  on-primary-fixed: '#26152c'\n  on-primary-fixed-variant: '#54405a'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#cceace'\n  tertiary-fixed-dim: '#b0ceb2'\n  on-tertiary-fixed: '#07200f'\n  on-tertiary-fixed-variant: '#334d38'\n  background: '#fdf9f5'\n  on-background: '#1c1c19'\n  surface-variant: '#e6e2de'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  utility-sm:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  overlap-offset: -32px\n---\n\n## Brand & Style\n\nThe design system is built upon the \"Enchanted Editorial\" narrative—a sophisticated fusion of high-end culinary artistry and whimsical, magical charm. The visual language balances the structured elegance of a luxury lifestyle magazine with the organic, ethereal qualities of a boutique bakery.\n\nThe aesthetic leans into **Minimalism** with an **Editorial** twist. It prioritizes heavy whitespace to allow high-fidelity food photography to breathe, while utilizing **Glassmorphism** for subtle, frosted-parchment overlays that evoke a sense of layering and depth. The emotional response should be one of \"accessible luxury\"—expert and premium, yet warm, inviting, and slightly mysterious.\n\nKey stylistic markers include:\n- **Asymmetric Balance:** Intentional offset of imagery and text to create a rhythmic, curated feel.\n- **Layered Composition:** Text and decorative elements overlapping imagery to mimic physical paper layouts.\n- **Delicate Motifs:** Micro-interactions and decorative borders featuring thin, gold line-work.\n\n## Colors\n\nThe palette is rooted in deep, cinematic tones contrasted against soft, tactile neutrals.\n\n- **Primary (Midnight Plum):** Used for typography, deep backgrounds, and high-impact structural elements. It provides the \"midnight\" anchor for the enchanted theme.\n- **Secondary (Champagne Gold):** Reserved for accents, borders, interactive states, and delicate line-work. It adds the \"premium\" shimmer.\n- **Tertiary (Sage Mist):** An organic, grounding green used for success states, secondary buttons, and nature-inspired accents.\n- **Neutral (Soft Parchment):** The primary canvas color. It should be used for all page backgrounds to provide a warmer, more historic feel than pure white.\n\nImplement a subtle **Paper Grain** texture as a fixed background overlay (opacity: 3-5%) on the Soft Parchment surface to enhance the tactile editorial feel.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing that reflects the \"Enchanted Editorial\" theme. \n\n**Playfair Display** is used for headlines and display text. Its high stroke contrast and elegant serifs provide the \"Editorial\" authority. Use it with slightly tighter tracking for larger displays to emphasize its elegant forms.\n\n**Montserrat** handles all functional and body text. It is intentionally wide-tracked (0.01em to 0.02em) to provide a modern, airy contrast to the dense serif headings. \n\nFor navigation and small labels, use the `label-caps` style. The increased letter spacing is critical here to maintain the premium, boutique feel. Ensure \"watercolor bleed\" accents are never placed directly behind small body text to maintain legibility.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop, transitioning to a fluid layout for mobile devices. The layout philosophy is \"curated density,\" mimicking the grid of a premium magazine.\n\n- **Desktop (12 Columns):** 64px margins and 24px gutters. Use the `overlap-offset` to allow images to bleed into neighboring columns or overlap text containers, creating depth.\n- **Mobile (4 Columns):** 20px margins. Overlaps should be reduced or simplified to a vertical stack to ensure a seamless ordering experience.\n\nSpacing should be generous between sections (using multiples of 8px, typically 80px or 120px) to maintain the minimalist, high-end feel. Use \"asymmetric white space\" where one side of the layout has significantly more margin than the other to guide the eye toward featured products.\n\n## Elevation & Depth\n\nVisual hierarchy is established through **Tonal Layering** and **Glassmorphism**, rather than heavy shadows.\n\n- **Surfaces:** Use \"Soft Parchment\" as the base. Elevated cards or drawers should use a semi-transparent version of \"Soft Parchment\" (80-90% opacity) with a `16px` backdrop blur to create a frosted glass effect.\n- **Outlines:** Use \"Champagne Gold\" as a `1px` low-contrast outline for interactive elements. \n- **Shadows:** When necessary for floating elements (like modals), use an **Ambient Shadow**: a very large blur (32px), low opacity (10%), tinted with \"Midnight Plum\" to keep the shadow \"warm\" and integrated with the brand colors.\n- **Depth Motifs:** Use \"Watercolor Bleed\" assets as the lowest layer, appearing to sit *under* the parchment surface, visible only through the glassmorphic overlays.\n\n## Shapes\n\nThe shape language is **Soft** and architectural. \n\nStandard components like input fields and buttons use a `0.25rem` radius to maintain a clean, professional structure. For featured imagery or \"hero\" buttons, use `rounded-lg` (0.5rem) to soften the aesthetic. \n\nAvoid fully rounded/pill shapes (except for very small tags), as they appear too casual for a premium boutique brand. Use sharp corners (0px) specifically for large decorative gold borders and divider lines to maintain the editorial structure.\n\n## Components\n\n- **Buttons:** Primary buttons use a \"Midnight Plum\" fill with \"Soft Parchment\" text. Secondary buttons are \"ghost\" style with a `1px` \"Champagne Gold\" border. Hover states should include a subtle gold glow (box-shadow) rather than a color shift.\n- **Input Fields:** Bottom-border only or very light \"Champagne Gold\" outlines. Labels should use the `label-caps` typography style.\n- **Cards:** Product cards use the glassmorphic style. Imagery should be the focus, with the product name in \"Midnight Plum\" Serif and price in \"Champagne Gold\" Sans-Serif.\n- **Gold Line-work:** Use horizontal and vertical `1px` gold lines to separate sections, mimicking a newspaper or luxury ledger.\n- **Chips/Tags:** Used for dietary labels (e.g., \"Gluten Free\"). These use a \"Sage Mist\" background with 20% opacity and dark green text.\n- **Specialty Component - \"The Scroll\":** A vertical navigation element on the side of the page that uses delicate gold line-work to show progress, reinforcing the \"Enchanted\" narrative.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fdf9f5",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f4f0ec",
+                    "inverse_primary": "#d9bede",
+                    "inverse_surface": "#31302e",
+                    "on_background": "#1c1c19",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#99819f",
+                    "on_primary_fixed": "#26152c",
+                    "on_primary_fixed_variant": "#54405a",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#745c00",
+                    "on_secondary_fixed": "#241a00",
+                    "on_secondary_fixed_variant": "#574500",
+                    "on_surface": "#1c1c19",
+                    "on_surface_variant": "#4b454b",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#749077",
+                    "on_tertiary_fixed": "#07200f",
+                    "on_tertiary_fixed_variant": "#334d38",
+                    "outline": "#7d757c",
+                    "outline_variant": "#cec4cc",
+                    "primary": "#15051b",
+                    "primary_container": "#2d1b33",
+                    "primary_fixed": "#f6d9fa",
+                    "primary_fixed_dim": "#d9bede",
+                    "secondary": "#735c00",
+                    "secondary_container": "#fed65b",
+                    "secondary_fixed": "#ffe088",
+                    "secondary_fixed_dim": "#e9c349",
+                    "surface": "#fdf9f5",
+                    "surface_bright": "#fdf9f5",
+                    "surface_container": "#f1ede9",
+                    "surface_container_high": "#ebe7e4",
+                    "surface_container_highest": "#e6e2de",
+                    "surface_container_low": "#f7f3ef",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#ddd9d6",
+                    "surface_tint": "#6d5772",
+                    "surface_variant": "#e6e2de",
+                    "tertiary": "#000f04",
+                    "tertiary_container": "#0d2715",
+                    "tertiary_fixed": "#cceace",
+                    "tertiary_fixed_dim": "#b0ceb2"
+                  },
+                  "overrideNeutralColor": "#f9f5f1",
+                  "overridePrimaryColor": "#2d1b33",
+                  "overrideSecondaryColor": "#d4af37",
+                  "overrideTertiaryColor": "#8ba88e",
+                  "roundness": "ROUND_FOUR",
+                  "spacing": {
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "overlap-offset": "-32px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "28px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "24px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "72px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "48px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "40px"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "32px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "16px"
+                    },
+                    "utility-sm": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "lineHeight": "20px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/f321c28c66bc4edf8b4fedd0b3efc591",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9908",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA5MGYxZWU2NjQ0MjQyMTFhZTVhYTE2MDYyYjhiMTNmEgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQ4NTM3Mjg3NTA0NTk2MDM4Mw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/17485372875045960383/files/2ca5b0f327a14146ab7cf3290a2ebad7"
+            },
+            "id": "23bcaba2a2ad494bb7ab8545e6099b60",
+            "name": "projects/17485372875045960383/screens/23bcaba2a2ad494bb7ab8545e6099b60",
+            "prompt": "Create a complete, bespoke, production-ready desktop homepage for 'Tasty Enchantment' in Clovis, NM. \n\nStyle: 'Enchanted Editorial'. \nPalette: Midnight Plum (#2D1B33), Champagne Gold (#D4AF37), Soft Parchment (#F9F5F1). \n\nRequired Layout/Sections:\n- Semantic HTML5, CSS using the design system tokens, and vanilla JS for mobile nav and form validation.\n- Custom Header: High-end, floating navigation with phone (575) 760-9229.\n- Hero Section: An asymmetric editorial layout. Use large, elegant serif typography for 'Where Every Bite is a Spell Cast in Flour.' Include a delicate gold line-work motif.\n- Credibility Section: A 'Recognized Excellence' bar with subtle, minimal icons and text for local awards/affiliations.\n- Offerings: 'The Boutique Collection'. Use a non-standard grid (offset cards) for Custom Cakes, Event Catering, and Seasonal Pastries. Each card should have a gold border hover effect.\n- About: 'The Artistry Behind the Magic' - storytelling section with a large background watermark of the brand initial.\n- Visit: Clear address (Clovis, NM 88101) and business hours. MUST include the map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: A refined consultation form (tastyenchantment@gmail.com) with custom CSS validation states (focus/error/success).\n- Footer: Sophisticated layout with deep colors and elegant typography.\n\nTechnical: Responsive (375px+), smooth scroll, no lorem ipsum. Every section must feel designed and unique, not like a template. Use generous whitespace and strong typographic hierarchy.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtBS304M2ZfGNtwP9pgrCIHja6ENGHdFbhaDcqhPg3Id9Q7i1v_4gEaKcFPc_kJiuD8fHd4q4E8G8vs0Dili4NhpplKh9GxnIvda4kn7tIop5X4QmgEkv2DDjHSxe9tGgdC5swkShKYfnTIR7Be8mlSdUQwwCPaisDpqQKoAhTIQzrLFraVq-f14uhhK5TmMhBINCsSxxgwAzJy1MNag7t_atFgNkqCSjXGOsL0Pa2j8gpeWOdIYxyl5wMW",
+              "name": "projects/17485372875045960383/files/d6ecb930cb4f43a1956ee70524beca9d"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#2d1b33",
+              "designMd": "---\nname: Enchanted Editorial\ncolors:\n  surface: '#fdf9f5'\n  surface-dim: '#ddd9d6'\n  surface-bright: '#fdf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3ef'\n  surface-container: '#f1ede9'\n  surface-container-high: '#ebe7e4'\n  surface-container-highest: '#e6e2de'\n  on-surface: '#1c1c19'\n  on-surface-variant: '#4b454b'\n  inverse-surface: '#31302e'\n  inverse-on-surface: '#f4f0ec'\n  outline: '#7d757c'\n  outline-variant: '#cec4cc'\n  surface-tint: '#6d5772'\n  primary: '#15051b'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b33'\n  on-primary-container: '#99819f'\n  inverse-primary: '#d9bede'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000f04'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#0d2715'\n  on-tertiary-container: '#749077'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#f6d9fa'\n  primary-fixed-dim: '#d9bede'\n  on-primary-fixed: '#26152c'\n  on-primary-fixed-variant: '#54405a'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#cceace'\n  tertiary-fixed-dim: '#b0ceb2'\n  on-tertiary-fixed: '#07200f'\n  on-tertiary-fixed-variant: '#334d38'\n  background: '#fdf9f5'\n  on-background: '#1c1c19'\n  surface-variant: '#e6e2de'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  utility-sm:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  overlap-offset: -32px\n---\n\n## Brand & Style\n\nThe design system is built upon the \"Enchanted Editorial\" narrative—a sophisticated fusion of high-end culinary artistry and whimsical, magical charm. The visual language balances the structured elegance of a luxury lifestyle magazine with the organic, ethereal qualities of a boutique bakery.\n\nThe aesthetic leans into **Minimalism** with an **Editorial** twist. It prioritizes heavy whitespace to allow high-fidelity food photography to breathe, while utilizing **Glassmorphism** for subtle, frosted-parchment overlays that evoke a sense of layering and depth. The emotional response should be one of \"accessible luxury\"—expert and premium, yet warm, inviting, and slightly mysterious.\n\nKey stylistic markers include:\n- **Asymmetric Balance:** Intentional offset of imagery and text to create a rhythmic, curated feel.\n- **Layered Composition:** Text and decorative elements overlapping imagery to mimic physical paper layouts.\n- **Delicate Motifs:** Micro-interactions and decorative borders featuring thin, gold line-work.\n\n## Colors\n\nThe palette is rooted in deep, cinematic tones contrasted against soft, tactile neutrals.\n\n- **Primary (Midnight Plum):** Used for typography, deep backgrounds, and high-impact structural elements. It provides the \"midnight\" anchor for the enchanted theme.\n- **Secondary (Champagne Gold):** Reserved for accents, borders, interactive states, and delicate line-work. It adds the \"premium\" shimmer.\n- **Tertiary (Sage Mist):** An organic, grounding green used for success states, secondary buttons, and nature-inspired accents.\n- **Neutral (Soft Parchment):** The primary canvas color. It should be used for all page backgrounds to provide a warmer, more historic feel than pure white.\n\nImplement a subtle **Paper Grain** texture as a fixed background overlay (opacity: 3-5%) on the Soft Parchment surface to enhance the tactile editorial feel.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing that reflects the \"Enchanted Editorial\" theme. \n\n**Playfair Display** is used for headlines and display text. Its high stroke contrast and elegant serifs provide the \"Editorial\" authority. Use it with slightly tighter tracking for larger displays to emphasize its elegant forms.\n\n**Montserrat** handles all functional and body text. It is intentionally wide-tracked (0.01em to 0.02em) to provide a modern, airy contrast to the dense serif headings. \n\nFor navigation and small labels, use the `label-caps` style. The increased letter spacing is critical here to maintain the premium, boutique feel. Ensure \"watercolor bleed\" accents are never placed directly behind small body text to maintain legibility.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop, transitioning to a fluid layout for mobile devices. The layout philosophy is \"curated density,\" mimicking the grid of a premium magazine.\n\n- **Desktop (12 Columns):** 64px margins and 24px gutters. Use the `overlap-offset` to allow images to bleed into neighboring columns or overlap text containers, creating depth.\n- **Mobile (4 Columns):** 20px margins. Overlaps should be reduced or simplified to a vertical stack to ensure a seamless ordering experience.\n\nSpacing should be generous between sections (using multiples of 8px, typically 80px or 120px) to maintain the minimalist, high-end feel. Use \"asymmetric white space\" where one side of the layout has significantly more margin than the other to guide the eye toward featured products.\n\n## Elevation & Depth\n\nVisual hierarchy is established through **Tonal Layering** and **Glassmorphism**, rather than heavy shadows.\n\n- **Surfaces:** Use \"Soft Parchment\" as the base. Elevated cards or drawers should use a semi-transparent version of \"Soft Parchment\" (80-90% opacity) with a `16px` backdrop blur to create a frosted glass effect.\n- **Outlines:** Use \"Champagne Gold\" as a `1px` low-contrast outline for interactive elements. \n- **Shadows:** When necessary for floating elements (like modals), use an **Ambient Shadow**: a very large blur (32px), low opacity (10%), tinted with \"Midnight Plum\" to keep the shadow \"warm\" and integrated with the brand colors.\n- **Depth Motifs:** Use \"Watercolor Bleed\" assets as the lowest layer, appearing to sit *under* the parchment surface, visible only through the glassmorphic overlays.\n\n## Shapes\n\nThe shape language is **Soft** and architectural. \n\nStandard components like input fields and buttons use a `0.25rem` radius to maintain a clean, professional structure. For featured imagery or \"hero\" buttons, use `rounded-lg` (0.5rem) to soften the aesthetic. \n\nAvoid fully rounded/pill shapes (except for very small tags), as they appear too casual for a premium boutique brand. Use sharp corners (0px) specifically for large decorative gold borders and divider lines to maintain the editorial structure.\n\n## Components\n\n- **Buttons:** Primary buttons use a \"Midnight Plum\" fill with \"Soft Parchment\" text. Secondary buttons are \"ghost\" style with a `1px` \"Champagne Gold\" border. Hover states should include a subtle gold glow (box-shadow) rather than a color shift.\n- **Input Fields:** Bottom-border only or very light \"Champagne Gold\" outlines. Labels should use the `label-caps` typography style.\n- **Cards:** Product cards use the glassmorphic style. Imagery should be the focus, with the product name in \"Midnight Plum\" Serif and price in \"Champagne Gold\" Sans-Serif.\n- **Gold Line-work:** Use horizontal and vertical `1px` gold lines to separate sections, mimicking a newspaper or luxury ledger.\n- **Chips/Tags:** Used for dietary labels (e.g., \"Gluten Free\"). These use a \"Sage Mist\" background with 20% opacity and dark green text.\n- **Specialty Component - \"The Scroll\":** A vertical navigation element on the side of the page that uses delicate gold line-work to show progress, reinforcing the \"Enchanted\" narrative.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fdf9f5",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f4f0ec",
+                "inverse_primary": "#d9bede",
+                "inverse_surface": "#31302e",
+                "on_background": "#1c1c19",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#99819f",
+                "on_primary_fixed": "#26152c",
+                "on_primary_fixed_variant": "#54405a",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#745c00",
+                "on_secondary_fixed": "#241a00",
+                "on_secondary_fixed_variant": "#574500",
+                "on_surface": "#1c1c19",
+                "on_surface_variant": "#4b454b",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#749077",
+                "on_tertiary_fixed": "#07200f",
+                "on_tertiary_fixed_variant": "#334d38",
+                "outline": "#7d757c",
+                "outline_variant": "#cec4cc",
+                "primary": "#15051b",
+                "primary_container": "#2d1b33",
+                "primary_fixed": "#f6d9fa",
+                "primary_fixed_dim": "#d9bede",
+                "secondary": "#735c00",
+                "secondary_container": "#fed65b",
+                "secondary_fixed": "#ffe088",
+                "secondary_fixed_dim": "#e9c349",
+                "surface": "#fdf9f5",
+                "surface_bright": "#fdf9f5",
+                "surface_container": "#f1ede9",
+                "surface_container_high": "#ebe7e4",
+                "surface_container_highest": "#e6e2de",
+                "surface_container_low": "#f7f3ef",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#ddd9d6",
+                "surface_tint": "#6d5772",
+                "surface_variant": "#e6e2de",
+                "tertiary": "#000f04",
+                "tertiary_container": "#0d2715",
+                "tertiary_fixed": "#cceace",
+                "tertiary_fixed_dim": "#b0ceb2"
+              },
+              "overrideNeutralColor": "#f9f5f1",
+              "overridePrimaryColor": "#2d1b33",
+              "overrideSecondaryColor": "#d4af37",
+              "overrideTertiaryColor": "#8ba88e",
+              "roundness": "ROUND_FOUR",
+              "spacing": {
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "overlap-offset": "-32px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "28px"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "24px"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "72px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "48px"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "40px"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "32px"
+                },
+                "label-caps": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "16px"
+                },
+                "utility-sm": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "lineHeight": "20px"
+                }
+              }
+            },
+            "title": "Tasty Enchantment | Bespoke Culinary Artistry",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed a bespoke, editorial-grade homepage for **Tasty Enchantment**. \n\nThis design, titled \"Enchanted Editorial,\" moves away from standard business templates to create a truly unique, premium digital presence.\n\n### Key Design Decisions:\n*   **Visual Identity**: I established a sophisticated palette of **Midnight Plum**, **Champagne Gold**, and **Soft Parchment**. This combination communicates both luxury and the \"magical\" artisanal nature of the bakery.\n*   **Editorial Layout**: The site uses intentional asymmetry and generous whitespace. The hero section features overlapping elements and a gold leaf motif to immediately signal high-end craft.\n*   **The Boutique Collection**: Instead of a standard grid, the offerings are presented in an offset layout with elegant hover interactions, making the menu feel like a curated gallery.\n*   **Artisanal Credibility**: A refined \"Recognized Excellence\" section highlights local authority without cluttering the aesthetic.\n*   **Technical Excellence**: The code is semantic, fully responsive, and includes the specific map-slot requirements and custom-styled form validation UI.\n\nThe result is a memorable first impression that positions Tasty Enchantment as the premier culinary artist in Clovis."
+    },
+    {
+      "suggestion": "Add a scroll-triggered fade-in animation to the sections"
+    },
+    {
+      "suggestion": "Create a mobile-optimized version of this layout"
+    },
+    {
+      "suggestion": "Design a dedicated 'Gallery' page for the cake portfolio"
+    }
+  ],
+  "projectId": "17485372875045960383",
+  "sessionId": "6050307029339538856"
+}
