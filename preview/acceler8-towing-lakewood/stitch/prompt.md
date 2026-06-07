@@ -6,11 +6,21 @@ Use with: `npm run stitch:prompt -- acceler8-towing-lakewood` then `npm run stit
 
 ## Prompt (paste into Stitch)
 
-You are building **one specific local business website** from their **Facebook page content only**. This is NOT a generic template. The business has **no dedicated website** — you are creating their first professional homepage using real Facebook photos and scraped copy.
+You are an award-winning local-brand web designer building **one bespoke homepage** for **Acceler8 towing**. This business has **no dedicated website** — only a Facebook page. You are not filling a template. You are designing a **unique, premium, memorable first impression** that could only belong to this business.
 
-### Facebook source context (use this copy — do not invent a different brand)
+### Non-negotiable: uniqueness
 
-**Facebook page:** https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/
+- This site must **not** look like other local-business mockups, Webflow templates, or AI landing pages.
+- **Do not** reuse the same hero layout, section order, card grid, or color story you used on other projects.
+- **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
+- Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
+- Every section should feel **designed**, not assembled from a component library.
+
+---
+
+### Facebook source (copy only — do not copy Facebook's UI)
+
+**Page:** https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/
 **Business:** Acceler8 towing
 **Category:** Trades / towing / home services
 **Location:** Denver, Lakewood, United States
@@ -20,11 +30,11 @@ You are building **one specific local business website** from their **Facebook p
 **Page description:** Acceler8 Towing Colorado, Denver. 133 likes · 1 talking about this. We provide affordable, reliable, efficient, and professional towing services to get you back on track
 **Hours:** Always open
 
-**About / profile details (from Facebook About tab):**
+**About / profile details:**
 - **Hours:** Always open
 - **Address:** Denver, CO, United States
 
-**Full scraped profile (use this for About section, services, and copy voice — do not invent details):**
+**Full scraped profile (About, services, voice — use for copy, do not invent facts):**
 Acceler8 Towing Colorado, Denver. 133 likes · 1 talking about this. We provide affordable, reliable, efficient, and professional towing services to get you back on track
 Hours: Always open
 Address: Denver, CO, United States
@@ -36,74 +46,84 @@ Recent posts from their Facebook page:
 2. We provide affordable, reliable, efficient, and professional towing services to get you back on track
 3. Denver, CO, United States, Colorado
 
-**Recent post captions (3 useful — echo voice in headlines; skip registry/SKU/listing lines):**
+**Recent post captions (3 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "Continue to pray. Continue to heal. Continue to grow. Continue to trust God."
 2. "We provide affordable, reliable, efficient, and professional towing services to get you back on track"
 3. "Denver, CO, United States, Colorado"
 
-**Design read:** Reading this as: a first homepage for Acceler8 towing in Lakewood (Trades / towing / home services), Reliable, local, ready when you need us tone, full-bleed-photo layout — must feel tailor-made for this business, not a generic AI landing template.
-
-**What to preserve:** The business name, location, services, and warm local tone from the Facebook page above.
-**What to fix:** No dedicated website — build a clean homepage with phone/CTA above fold, services, gallery, map slot, and contact form (preview only).
+**Preserve:** real business name, city, services, phone, and the warm local tone from their page.
+**Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).
 
 ---
 
 ### Design read (follow this)
-Reading this as: a first homepage for Acceler8 towing in Lakewood (Trades / towing / home services), Reliable, local, ready when you need us tone, full-bleed-photo layout — must feel tailor-made for this business, not a generic AI landing template.
+Reading this as: a first homepage for Acceler8 towing in Lakewood (Trades / towing / home services), Reliable, local, ready when you need us — competent and direct tone, **story-column** archetype — must feel like a one-off commission, not a reused template.
 
-### Tailor-made (this business only)
-- Every headline, service name, and CTA must come from the Facebook scrape above — not generic "Quality Service" filler.
-- Write like a local designer who visited their page: use Acceler8 towing, Lakewood, and real service bullets.
-- Layout family **full-bleed-photo**: Full-bleed photo hero with dark gradient overlay; headline and primary CTA centered; sticky mobile call bar.
-- Primary CTA label: **"Call now"** (verb + object). Phone must be `tel:` in header and hero.
-- No menu or reservation language. Phone must be tel: link in header and hero. Sticky mobile call bar required.
+### Uniqueness mandate
+- This homepage is for **Acceler8 towing** only — it must not resemble other local-business sites or AI templates.
+- **Invent** layout rhythm, section names, color story, and typographic personality for this business.
+- Layout archetype **story-column**: Single-column story scroll: hero type-first (minimal photo), sections separated by generous padding and subtle background shifts; gallery as horizontal scroll strip.
+- Primary CTA: **"Call now"**. Phone as `tel:` in header and hero.
+- No menu or reservation language. Phone must be tel: in header and hero. Sticky mobile call bar required. Industrial clarity beats decoration.
 
-### Layout discipline (design-taste-frontend)
-- Hero MUST fit the initial viewport: H1 max 2 lines, subhead max 20 words, primary CTA visible without scrolling.
-- Hero top padding: modest — content should not float halfway down the screen.
-- NO identical 3-column icon-card feature rows. Vary section structure: split hero → services (list or staggered grid) → photo gallery → visit → contact.
-- Use section layout variety — do not repeat the same card grid pattern in 3+ sections.
-- Max 1 small uppercase eyebrow label per 3 sections (no "01 · SERVICES" numbering).
-- Navigation: single line on desktop, height ~64–72px, phone or CTA visible.
-- Cards only when elevation adds hierarchy; prefer spacing and typography otherwise.
+### Layout discipline
+- Hero fits initial viewport: H1 max 2 lines, subhead max 20 words, primary CTA visible without scrolling.
+- **No** repeated identical 3-column icon-card rows across sections.
+- Vary structure: split hero → offerings (list, staggered grid, or bento) → gallery → visit → contact.
+- Max 1 small uppercase eyebrow per 3 sections. Nav ~64–72px, phone or CTA visible on desktop.
+- Cards only when elevation adds hierarchy; prefer spacing, rules, and type otherwise.
 
-### Typography & color
-- Display: **Barlow Condensed**. Body: **Barlow**. Load from Google Fonts URL in brief — never default to Inter or Roboto.
-- Use brand hex from brief only: primary #000010, secondary #000080, accent #00f000.
-- No purple/indigo SaaS gradients. No generic cream/beige page background unless the brand is genuinely warm heritage — prefer tinted neutrals from the extracted palette.
-- No em dashes (—) in any copy. Use commas, periods, or hyphens.
-- No emojis anywhere — not in headings, buttons, labels, or body copy.
-- No marketing buzzwords: elevate, seamless, world-class, game-changer, leverage, transform.
+### Color & typography (you decide)
+**Stitch decides all colors.** There is no brand manual, no website, and nothing to extract.
+Derive a cohesive 4–5 color system from business type, name, location, and post voice.
+Define `--brand-primary`, `--brand-secondary`, `--brand-accent`, and neutrals in `:root`.
+Each business must look visually distinct — do not reuse the same palette across mockups.
+Avoid Facebook platform grays (#333, #666, #ddd) and generic SaaS purple/indigo.
+
+Choose typography that matches **Trades / towing / home services** — premium and readable.
+Suggested pairing (you may adapt if a better fit exists): **DM Serif Display** (headlines) + **DM Sans** (body).
+Load from Google Fonts. Never default to Inter, Roboto, or Arial as the primary personality.
+Establish a clear type scale (display, h2, body, small) with intentional letter-spacing on labels.
+
+- No purple/indigo SaaS gradients. No generic cream/beige page background unless the business genuinely calls for it.
+- No em dashes (—) in copy. No emojis. No buzzwords: elevate, seamless, world-class, game-changer.
 
 ### Motion & interaction (emil-design-eng)
-- Dials: variance 6/10 · motion 3/10 · density 5/10
-- UI transitions: 150–250ms, **ease-out** (`cubic-bezier(0.23, 1, 0.32, 1)`). Never `transition: all`.
-- Buttons: `:active { transform: scale(0.97) }` for press feedback.
-- Entrances: never animate from `scale(0)`; use opacity + scale(0.95) if needed.
-- Include `@media (prefers-reduced-motion: reduce)` — disable motion, keep opacity/color only.
-- Animate **transform** and **opacity** only — not width, height, margin, padding.
+- Dials: variance 7/10 · motion 3/10 · density 5/10
+- UI transitions: 150–250ms, **ease-out**. Never `transition: all`.
+- Buttons: `:active { transform: scale(0.97) }`. Include `prefers-reduced-motion`.
+- Animate **transform** and **opacity** only.
 
-### Anti-slop checklist (impeccable + taste)
-- No fake star ratings or unverifiable "#1 rated" claims unless review score is in the brief.
-- No side-stripe accent borders on cards. No glassmorphism as default decoration.
-- No gradient text on headlines. No decorative uppercase eyebrows on every section.
-- No lorem ipsum. No stock photo URLs. Real photo regions for Facebook images.
-- Gallery and hero photos should feel like **their** business (storefront, work, products) — not a template stock grid.
-- Form is preview-only with visible notice — never simulate "Message sent".
+### Anti-slop checklist
+- No fake star ratings unless review score is in the brief.
+- No side-stripe accent borders on cards. No gradient text on headlines.
+- No lorem ipsum. No stock URLs. Gallery and hero sized for **their** Facebook photos.
+- Form is preview-only — never simulate "Message sent".
 
 ---
 
-### Business identity
+### Creative direction (this business only)
 
-- **Name:** Acceler8 towing
-- **Type:** Trades / towing / home services
-- **Location:** Denver, Lakewood, United States
-- **Hero H1 (use or adapt closely):** Acceler8 towing — trusted Lakewood service
-- **Hero subhead:** Acceler8 Towing Colorado, Denver. 133 likes · 1 talking about this. We provide affordab…
-- **Primary CTA button:** Call now
+**Acceler8 towing** is a Trades / towing / home services in Lakewood.
+Design as if you won a paid branding project: distinctive hero, memorable section rhythm, premium polish.
+Layout seed: **story-column** — interpret literally but creatively.
+You choose the full color palette and typography — there is nothing to extract from a website.
+They have 12 real Facebook photos — design hero and gallery for authentic local imagery.
+
+**Layout archetype:** story-column
+Single-column story scroll: hero type-first (minimal photo), sections separated by generous padding and subtle background shifts; gallery as horizontal scroll strip.
+**Mobile:** Include sticky bottom call bar with tel: link for emergency/trades vertical.
+
+**Signature sections to include (rename, reorder, and style them — do not use generic labels like "Our Services" unless it fits the voice):**
+hero → credibility → services → service-area → about → visit → contact
+
+**Hero direction:**
+- **H1 (adapt closely):** Acceler8 towing — trusted Lakewood service
+- **Subhead:** Acceler8 Towing Colorado, Denver. 133 likes · 1 talking about this. We provide affordab…
+- **Primary CTA:** Call now
 - **Secondary CTA:** Request a quote
 
-**Service bullets (feature these prominently):**
+**Services / offerings (feature prominently with business-specific language):**
 - We provide affordable, reliable, efficient, and professional towing services to get you back on track
 - 24/7 availability
 - Licensed & insured
@@ -111,13 +131,22 @@ Reading this as: a first homepage for Acceler8 towing in Lakewood (Trades / towi
 
 ---
 
-### Layout brief
+### Visual identity — Stitch decides (no extracted colors)
 
-**Layout family:** full-bleed-photo
-**Wireframe:** Full-bleed photo hero with dark gradient overlay; headline and primary CTA centered; sticky mobile call bar.
-**Mobile:** Include sticky bottom call bar with tel: link for emergency/trades vertical.
+**Stitch decides all colors.** There is no brand manual, no website, and nothing to extract.
+Derive a cohesive 4–5 color system from business type, name, location, and post voice.
+Define `--brand-primary`, `--brand-secondary`, `--brand-accent`, and neutrals in `:root`.
+Each business must look visually distinct — do not reuse the same palette across mockups.
+Avoid Facebook platform grays (#333, #666, #ddd) and generic SaaS purple/indigo.
 
-**Sections (in this order):** hero → credibility → services → service-area → about → visit → contact
+Choose typography that matches **Trades / towing / home services** — premium and readable.
+Suggested pairing (you may adapt if a better fit exists): **DM Serif Display** (headlines) + **DM Sans** (body).
+Load from Google Fonts. Never default to Inter, Roboto, or Arial as the primary personality.
+Establish a clear type scale (display, h2, body, small) with intentional letter-spacing on labels.
+
+**Mood target:** Reliable, local, ready when you need us — competent and direct
+
+There is **no existing website** and **nothing to extract**. Choose palette and typography from business type (Trades / towing / home services), name, location (Lakewood), and post voice. Document colors as CSS custom properties in `styles.css`.
 
 ---
 
@@ -125,79 +154,56 @@ Reading this as: a first homepage for Acceler8 towing in Lakewood (Trades / towi
 
 You will receive 12 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
 
-Use `<img>` tags with descriptive `alt` attributes. Real photos will replace placeholder areas via manifest — design generous photo regions, not tiny thumbnails.
+Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
 ---
 
-### Brand — mandatory (from Facebook imagery)
+### Anti-template rules
 
-**Use these exact hex values in `styles.css`:**
-
-:root {
-  --brand-primary: #000010;
-  --brand-secondary: #000080;
-  --brand-accent: #00f000;
-  --font-display: 'Barlow Condensed', serif;
-  --font-body: 'Barlow', sans-serif;
-}
-
-| Role | Hex |
-| ---- | --- |
-| Primary | #000010 |
-| Secondary | #000080 |
-| Accent | #00f000 |
-
-- **Typography:** Load Google Fonts: https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600&display=swap
-- **Display font:** Barlow Condensed
-- **Body font:** Barlow
-- **Mood:** Reliable, local, ready when you need us
-
----
-
-### Anti-slop rules (non-negotiable)
-
-- Do NOT use Tailwind CDN, utility-class-only pages, or Material Symbols as primary UI.
-- Do NOT use generic AI landing templates (3-column icon cards, purple/indigo SaaS gradients, Inter/Roboto defaults).
-- Do NOT use `transition: all` — animate specific properties with purpose; include `:active` scale on buttons.
-- Do NOT invent fake awards, star rating widgets, or "#1 rated" unless review score is provided above.
-- Do NOT use stock photo URLs or AI placeholder image services.
-- Do NOT use emojis anywhere — no emoji in headings, buttons, body copy, or labels.
-- Layout must feel specific to **Trades / towing / home services** — not a Webflow clone or startup landing page.
-- Respect `prefers-reduced-motion`.
+- **No** Tailwind CDN, utility-only pages, or Material Symbols as the primary UI system.
+- **No** identical 3-column icon-card rows repeated across sections.
+- **No** purple/indigo SaaS gradients, Inter/Roboto defaults, or cream-beige "AI landing" backgrounds unless the business genuinely calls for it (heritage bakery, ranch, etc.).
+- **No** `transition: all` — animate transform and opacity with purpose; `:active` scale on buttons.
+- **No** fake star widgets, "#1 rated", or unverifiable awards unless review score is provided above.
+- **No** stock URLs or AI placeholder image services.
+- **No emojis** in headings, buttons, or body copy.
+- **No** em dashes (—) in copy — use commas, periods, or hyphens.
 - Phone must be a visible `tel:` link in header and hero.
-- No menu or reservation language. Phone must be tel: link in header and hero. Sticky mobile call bar required.
+- No menu or reservation language. Phone must be tel: in header and hero. Sticky mobile call bar required. Industrial clarity beats decoration.
 
-**Design dials:** variance 6/10 · motion 3/10 · density 5/10
+**Design dials for this build:** variance 7/10 · motion 3/10 · density 5/10
 
 ---
 
-### Deliverable requirements
+### Deliverable
 
-- **Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`
-- **Responsive:** mobile (390px), tablet (768px), desktop (1280px) — no horizontal scroll; hero + primary CTA visible on first mobile screen
-- **Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (preview only)
-- **Copy:** Use post caption voice and service bullets above — no lorem ipsum
-- **Unique layout:** full-bleed-photo — avoid default 3-column card grids
+**Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`.
 
-### Page structure
+**Responsive:** 390px mobile, 768px tablet, 1280px desktop — no horizontal scroll; hero + primary CTA visible on first mobile screen.
 
-1. **Header** — wordmark, nav, phone CTA visible on desktop
-2. **Hero** — Acceler8 towing — trusted Lakewood service, subhead, primary CTA (Call now), brand colors dominant
-3. **Credibility** — `#credibility` — verifiable trust only (local, review score if provided, years serving community)
-4. **Services** — - We provide affordable, reliable, efficient, and professional towing services to get you back on track
-- 24/7 availability
-- Licensed & insured
-- Local service area
-5. **About** — pull from full scraped profile above; use specific details from their posts (names, offers, community ties)
-6. **Gallery** — photo grid for Facebook images
+**Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (**preview only** — show notice, never fake "sent").
+
+**Copy:** from Facebook scrape and post captions — no lorem ipsum.
+
+**Layout:** follow archetype **story-column** but interpret it boldly; vary section rhythm (full-bleed band → narrow column → split → gallery mosaic, etc.).
+
+### Required capabilities (implement with unique structure and naming)
+
+1. **Header** — wordmark or logotype treatment, nav, phone visible on desktop
+2. **Hero** — Acceler8 towing — trusted Lakewood service, subhead, Call now, your invented palette dominant
+3. **Credibility** — `#credibility` — only verifiable trust (local, years serving, review score if provided)
+4. **Offerings** — services from bullets above, not generic filler
+5. **About** — specific details from scraped profile and posts
+6. **Gallery** — photo grid sized for Facebook images
 7. **Visit** — `#visit` — address, hours; map panel: `<div class="map-slot" data-map-slot aria-label="Map"></div>` (empty — map injected at build)
-8. **Contact** — form + phone + email (preview-only form notice)
-9. **Footer** — hours, address, disclaimer space for mockup banner
+8. **Contact** — form + phone + email
+9. **Footer** — hours, address, space for mockup disclaimer
 
 ### Technical
 
-- CSS custom properties with brand hex values above
-- Accessible: contrast, focus rings, landmarks
+- CSS custom properties for your invented palette and type scale
+- Accessible contrast, focus rings, landmarks
+- `@media (prefers-reduced-motion: reduce)` — disable motion, keep opacity/color
 - Mockup banner placeholder at top: "Concept preview — not affiliated with Acceler8 towing"
 
 ---

@@ -70,36 +70,24 @@ Recent posts from their Facebook page:
 - **Primary CTA:** Call now
 - **Secondary CTA:** Request a quote
 - **Sections:** hero, credibility, services, service-area, about, visit, contact
-- **Tone:** Reliable, local, ready when you need us
-- **Palette:** #000010, #000080, #00f000
+- **Tone:** Reliable, local, ready when you need us — competent and direct
+- **Layout archetype:** story-column
+- **Colors / typography:** Stitch decides (no website to extract from)
 
 ## Stitch generation brief
 
 - **Vertical:** Trades / towing / home services
-- **Mood:** Reliable, local, ready when you need us
-- **Typography direction:** Barlow Condensed + Barlow
-- **Layout family:** full-bleed-photo
-- **Design dials:** DESIGN_VARIANCE 6 | MOTION_INTENSITY 3 | VISUAL_DENSITY 5
+- **Mood:** Reliable, local, ready when you need us — competent and direct
+- **Typography direction:** DM Serif Display + DM Sans
+- **Layout archetype:** story-column
+- **Design dials:** DESIGN_VARIANCE 7 | MOTION_INTENSITY 3 | VISUAL_DENSITY 5
+- **Colors / typography:** Stitch decides (no website to extract from)
 
-## Brand from live site (auto-extracted)
+## Facebook source (no brand colors to extract)
 
-- **Extracted:** 2026-06-07T01:09:20.689Z
 - **Source:** https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/
 - **Platform:** Facebook (no dedicated website)
-- **Primary / secondary / accent:** #333333 / #dddddd / #777777
-- **All business colors:** #333333, #dddddd, #777777, #003399, #116699, #118833
-- **Fonts detected:** system-ui, Segoe UI, Helvetica Neue
-- **Palette direction:** Facebook page imagery — #333333, #dddddd, #777777
-- **Typography direction:** Clean sans-serif — professional local business
-- **Stitch guidance:** Facebook-only business at https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/. Use scraped post photos (0) for hero and gallery slots — no stock imagery. Match palette to food/brand photos: #333333, #dddddd, #777777.
-
-```css
-/* Facebook-derived palette */
-:root {
-  --brand-primary: #333333;
-  --brand-secondary: #dddddd;
-  --brand-accent: #777777;
-  --font-primary: system-ui, sans-serif;
-}
-```
+- **Scraped:** 2026-06-07T01:38:50.564Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

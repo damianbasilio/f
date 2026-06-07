@@ -1,31 +1,24 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            document.getElementById('successModal').classList.remove('hidden');
-            this.reset();
-        });
-
-        // Simple sticky nav highlight logic
-        window.addEventListener('scroll', () => {
-            const sections = ['services', 'about', 'visit', 'contact'];
-            let current = '';
-            
-            sections.forEach(section => {
-                const element = document.getElementById(section);
-                if (element) {
-                    const sectionTop = element.offsetTop;
-                    if (pageYOffset >= sectionTop - 150) {
-                        current = section;
-                    }
-                }
+document.addEventListener('DOMContentLoaded', () => {
+            // Hover effect for service cards
+            const serviceCards = document.querySelectorAll('.vector-accent');
+            serviceCards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    card.style.transform = 'translateY(-4px)';
+                    card.style.transition = 'transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1)';
+                });
+                card.addEventListener('mouseleave', () => {
+                    card.style.transform = 'translateY(0)';
+                });
             });
 
-            document.querySelectorAll('nav a').forEach(a => {
-                a.classList.remove('text-primary', 'border-b-2', 'border-primary', 'font-bold');
-                a.classList.add('text-on-surface-variant');
-                if (a.getAttribute('href') === `#${current}`) {
-                    a.classList.remove('text-on-surface-variant');
-                    a.classList.add('text-primary', 'border-b-2', 'border-primary', 'font-bold');
-                }
+            // Smooth scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
             });
         });
 

@@ -1,109 +1,113 @@
-I've completed the production-ready homepage for **Acceler8 Towing**, built specifically around their local Denver/Lakewood presence and Facebook content.
+I've designed a bespoke, editorial-grade homepage for **Acceler8 Towing** that moves away from standard local-business templates to create a premium, high-performance brand identity.
 
-### Design Rationale:
-*   **Rugged Reliability:** Established a "Heavy Duty Service System" design language using high-contrast charcoal and emergency orange to convey professional authority and visibility.
-*   **Local Trust:** Integrated verbatim copy from their Facebook page—including their "Continue to pray..." mission statement—to maintain their authentic local voice and community focus.
-*   **Action-Oriented:** The header and hero sections prioritize their phone number **(720) 938-1779** with high-visibility CTA buttons, essential for an "Always Open" emergency service.
-*   **Professional Structure:** Included dedicated sections for services, a credibility bar, a contact form, and the requested map slot for their Denver/Lakewood service area.
+### Design Highlights:
+- **Visual Identity**: Established a "Midnight & Electric" theme using deep charcoal, electric cobalt, and safety orange accents to signal speed and reliability.
+- **"The Vector" Motif**: Integrated sharp diagonal lines and geometric layouts to reinforce the concept of rapid forward movement and technical precision.
+- **Strong Typographic Hierarchy**: Used bold, wide sans-serif headings (Plus Jakarta Sans) to give the brand an authoritative, premium automotive feel.
+- **Industrial Layout**: Created a dense, data-driven "Credibility" section to highlight Denver's 15-minute standard, followed by a staggered service grid.
+- **Production-Ready Structure**: Included a semantic contact section with a dedicated map slot and a high-visibility dispatch form designed for conversion.
 
-The site is fully responsive, semantic, and ready for deployment. You can view the complete desktop layout on the canvas.
+The site is fully responsive and built with custom CSS properties for easy brand scaling. How does this visual direction feel for the Denver market?
 
 ---
 
 ---
-name: Heavy Duty Service System
+name: Industrial Editorial
 colors:
-  surface: '#fcf9f8'
-  surface-dim: '#dcd9d9'
-  surface-bright: '#fcf9f8'
-  surface-container-lowest: '#ffffff'
-  surface-container-low: '#f6f3f2'
-  surface-container: '#f0eded'
-  surface-container-high: '#eae7e7'
-  surface-container-highest: '#e5e2e1'
-  on-surface: '#1c1b1b'
-  on-surface-variant: '#564334'
-  inverse-surface: '#313030'
-  inverse-on-surface: '#f3f0ef'
-  outline: '#897362'
-  outline-variant: '#ddc1ae'
-  surface-tint: '#904d00'
-  primary: '#904d00'
-  on-primary: '#ffffff'
-  primary-container: '#ff8c00'
-  on-primary-container: '#623200'
-  inverse-primary: '#ffb77d'
-  secondary: '#705d00'
-  on-secondary: '#ffffff'
-  secondary-container: '#fcd400'
-  on-secondary-container: '#6e5c00'
-  tertiary: '#00658f'
-  on-tertiary: '#ffffff'
-  tertiary-container: '#00b5fc'
-  on-tertiary-container: '#004360'
-  error: '#ba1a1a'
-  on-error: '#ffffff'
-  error-container: '#ffdad6'
-  on-error-container: '#93000a'
-  primary-fixed: '#ffdcc3'
-  primary-fixed-dim: '#ffb77d'
-  on-primary-fixed: '#2f1500'
-  on-primary-fixed-variant: '#6e3900'
-  secondary-fixed: '#ffe16d'
-  secondary-fixed-dim: '#e9c400'
-  on-secondary-fixed: '#221b00'
-  on-secondary-fixed-variant: '#544600'
-  tertiary-fixed: '#c7e7ff'
-  tertiary-fixed-dim: '#85cfff'
-  on-tertiary-fixed: '#001e2e'
-  on-tertiary-fixed-variant: '#004c6c'
-  background: '#fcf9f8'
-  on-background: '#1c1b1b'
-  surface-variant: '#e5e2e1'
+  surface: '#121317'
+  surface-dim: '#121317'
+  surface-bright: '#38393d'
+  surface-container-lowest: '#0d0e12'
+  surface-container-low: '#1a1b1f'
+  surface-container: '#1e1f23'
+  surface-container-high: '#292a2e'
+  surface-container-highest: '#343539'
+  on-surface: '#e3e2e7'
+  on-surface-variant: '#c4c5d9'
+  inverse-surface: '#e3e2e7'
+  inverse-on-surface: '#2f3034'
+  outline: '#8e90a2'
+  outline-variant: '#434656'
+  surface-tint: '#b8c3ff'
+  primary: '#b8c3ff'
+  on-primary: '#002388'
+  primary-container: '#2e5bff'
+  on-primary-container: '#efefff'
+  inverse-primary: '#124af0'
+  secondary: '#c8c6c5'
+  on-secondary: '#313030'
+  secondary-container: '#4a4949'
+  on-secondary-container: '#bab8b7'
+  tertiary: '#ffb59a'
+  on-tertiary: '#5a1b00'
+  tertiary-container: '#c04300'
+  on-tertiary-container: '#ffece6'
+  error: '#ffb4ab'
+  on-error: '#690005'
+  error-container: '#93000a'
+  on-error-container: '#ffdad6'
+  primary-fixed: '#dde1ff'
+  primary-fixed-dim: '#b8c3ff'
+  on-primary-fixed: '#001356'
+  on-primary-fixed-variant: '#0035be'
+  secondary-fixed: '#e5e2e1'
+  secondary-fixed-dim: '#c8c6c5'
+  on-secondary-fixed: '#1c1b1b'
+  on-secondary-fixed-variant: '#474646'
+  tertiary-fixed: '#ffdbce'
+  tertiary-fixed-dim: '#ffb59a'
+  on-tertiary-fixed: '#370e00'
+  on-tertiary-fixed-variant: '#802a00'
+  background: '#121317'
+  on-background: '#e3e2e7'
+  surface-variant: '#343539'
 typography:
-  headline-xl:
-    fontFamily: Montserrat
-    fontSize: 48px
+  display-lg:
+    fontFamily: Plus Jakarta Sans
+    fontSize: 64px
     fontWeight: '800'
-    lineHeight: 56px
-    letterSpacing: -0.02em
-  headline-xl-mobile:
-    fontFamily: Montserrat
-    fontSize: 34px
-    fontWeight: '800'
-    lineHeight: 40px
-    letterSpacing: -0.01em
+    lineHeight: '1.1'
+    letterSpacing: 0.04em
   headline-lg:
-    fontFamily: Montserrat
+    fontFamily: Plus Jakarta Sans
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
+    letterSpacing: 0.02em
+  headline-lg-mobile:
+    fontFamily: Plus Jakarta Sans
     fontSize: 32px
     fontWeight: '700'
-    lineHeight: 40px
+    lineHeight: '1.2'
+    letterSpacing: 0.02em
   headline-md:
-    fontFamily: Montserrat
+    fontFamily: Plus Jakarta Sans
     fontSize: 24px
-    fontWeight: '700'
-    lineHeight: 32px
+    fontWeight: '600'
+    lineHeight: '1.3'
+    letterSpacing: 0.02em
   body-lg:
     fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: 28px
+    lineHeight: '1.6'
   body-md:
     fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: 24px
-  label-bold:
+    lineHeight: '1.5'
+  data-mono:
     fontFamily: Inter
     fontSize: 14px
-    fontWeight: '700'
-    lineHeight: 20px
+    fontWeight: '600'
+    lineHeight: '1'
     letterSpacing: 0.05em
-  button-text:
-    fontFamily: Montserrat
-    fontSize: 16px
-    fontWeight: '800'
-    lineHeight: 20px
+  label-sm:
+    fontFamily: Inter
+    fontSize: 12px
+    fontWeight: '700'
+    lineHeight: '1'
+    letterSpacing: 0.08em
 rounded:
   sm: 0.125rem
   DEFAULT: 0.25rem
@@ -112,61 +116,65 @@ rounded:
   xl: 0.75rem
   full: 9999px
 spacing:
-  unit: 4px
-  xs: 4px
-  sm: 8px
-  md: 16px
-  lg: 24px
-  xl: 48px
+  unit: 8px
   gutter: 16px
-  margin-mobile: 16px
+  margin-mobile: 20px
   margin-desktop: 64px
-  max-width: 1280px
+  stack-tight: 4px
+  stack-dense: 12px
+  section-gap: 80px
 ---
 
 ## Brand & Style
-The brand personality is authoritative, dependable, and intensely local. It evokes the feeling of a heavy-duty fleet ready to mobilize in any weather. The UI prioritizes high-trust signals and immediate utility, ensuring users in stressful roadside situations feel a sense of calm and professional rescue.
 
-The design style is a hybrid of **Industrial Minimalism** and **Bold High-Contrast**. It utilizes heavy structural lines, high-visibility signaling colors, and a utilitarian layout. The aesthetic draws inspiration from industrial machinery and emergency vehicle liveries—clean, functional, and built to withstand pressure. Whitespace is used not just for elegance, but for extreme legibility under harsh lighting or on small mobile devices during emergencies.
+The design system is built on an **Industrial-Editorial** aesthetic, blending the rugged reliability of heavy machinery with the sophisticated precision of a premium rescue service. The brand personality is elite and authoritative, positioning the product as the high-tier alternative to standard roadside assistance.
+
+The visual narrative centers on **"The Vector"**—a motif of sharp, 45-degree diagonal lines and clipping paths that suggest velocity and forward momentum. The interface should feel intentional, dense in technical data to build trust, yet expansive in narrative sections to convey a sense of calm under pressure. Use heavy borders and a dark-mode-first approach to create a "Midnight" environment where high-visibility accents pop with emergency-level clarity.
 
 ## Colors
-The palette is engineered for maximum visibility and "emergency-first" response. 
 
-- **Emergency Orange (#FF8C00)**: The primary action color, used for critical buttons (Request a Tow) and primary branding. It demands attention without the "stop" connotation of red.
-- **Rescue Yellow (#FFD700)**: A secondary accent used for warning banners, highlights, and secondary status indicators.
-- **Deep Charcoal (#1A1A1A)**: The "Asphalt" base. Used for typography and heavy structural elements to provide a grounded, rugged feel.
-- **Surface & Backgrounds**: A cool gray-white (#F4F4F4) reduces glare compared to pure white while maintaining high contrast against charcoal text.
+The palette is anchored in **Deep Charcoal (#121212)** to provide a premium, nocturnal backdrop that reduces eye strain and emphasizes technical professionalism. 
+
+- **Electric Cobalt (#2E5BFF):** Used for primary actions, navigational cues, and brand-critical signals. It represents technology and precision.
+- **Safety Orange (#FF5C00):** Reserved strictly for high-visibility accents—status indicators, emergency buttons, and active "on-the-way" tracking.
+- **Surface Neutrals:** Use varying shades of charcoal (e.g., #1C1C1E and #2C2C2E) to differentiate between background layers and interactive cards.
 
 ## Typography
-Typography is bold and utilitarian. **Montserrat** provides the authoritative "Heavy Duty" look for headlines, using extra-bold weights to mimic the lettering found on commercial trucks. **Inter** is used for body text to ensure maximum readability in low-light or high-stress environments.
 
-- **Scale**: Use large, impactful headers for immediate messaging.
-- **Hierarchy**: Use uppercase labels for metadata and section headers to reinforce the industrial aesthetic.
-- **Line Height**: Generous line heights for body text to ensure ease of reading on mobile devices.
+Typography in this design system is aggressive and structured. **Plus Jakarta Sans** is used for headlines with wide tracking (0.02em to 0.04em) and uppercase styling to evoke an automotive, premium feel. 
+
+**Inter** provides a utilitarian contrast for body copy and technical data. Use the `data-mono` style for credibility stats (e.g., "ETA: 12 MIN") to mimic industrial readouts. High contrast between weights is encouraged—heavy headlines paired with light, airy body text ensures the "Editorial" half of the brand personality is preserved.
 
 ## Layout & Spacing
-The layout follows a **Tight, Focused Grid** based on 4px increments. It is designed to feel dense and "packed" rather than airy, communicating efficiency and strength.
 
-- **Desktop**: A 12-column fluid grid with 24px gutters. Use large margins (64px) to keep content centered and readable.
-- **Mobile**: A 4-column grid with 16px margins. Critical "Emergency Call" buttons should be pinned to the bottom or span the full width of the viewport.
-- **Stacking**: Use a vertical rhythm that favors 16px and 24px increments between related components.
+This design system utilizes a **12-column fluid grid** for desktop and a **4-column grid** for mobile. 
+
+The layout philosophy balances **intentional density** with **expansive whitespace**:
+- **Data Clusters:** Information like truck specs or location coordinates should use "stack-tight" spacing to feel like a high-tech dashboard.
+- **Narrative Sections:** Hero areas and brand storytelling should use the "section-gap" to allow the "Vector" motifs to breathe.
+- **The 45-Degree Break:** Use diagonal padding and clipping paths on container backgrounds to create a sense of mechanical movement across the horizontal plane.
 
 ## Elevation & Depth
-This design system avoids soft ambient shadows in favor of **Structural Depth** and **Bold Borders**.
 
-- **Borders**: UI elements like cards and buttons use thick (2px - 3px) solid borders in Charcoal (#1A1A1A).
-- **Hard Shadows**: Use 0-blur "hard" shadows offset by 4px or 6px to create a tactile, physical feel—as if the UI elements are metal plates bolted to the screen.
-- **Tonal Layers**: Use subtle shifts in gray (#E0E0E0 to #F4F4F4) to differentiate container backgrounds without relying on transparency or blurs.
+In line with the Industrial style, depth is conveyed through **Bold Borders** and **Tonal Layers** rather than soft shadows.
+
+- **Borders:** Use 2px solid borders in Cobalt (#2E5BFF) or a semi-transparent white (10% opacity) to define container boundaries.
+- **Surface Stacking:** The base background is the deepest charcoal. Elements "above" it use slightly lighter charcoal surfaces. 
+- **The Glow Effect:** To signify extreme urgency or "Active State," use a subtle outer glow of Safety Orange (#FF5C00) with a 0% spread and 20px blur, simulating the amber lights of a recovery vehicle.
+- **Backdrop Blurs:** Use heavy blurs (20px+) on overlays to maintain the "Midnight" atmosphere while keeping the focused content legible.
 
 ## Shapes
-Shapes are "Soft" but leaning toward "Sharp" (4px radius). This mimics the slightly rounded corners of machined metal parts. Avoid large pills or circular buttons; stick to rectangles with slight corner radii to maintain the professional, rugged aesthetic. 
 
-Structural elements like service area maps or photo uploads should be framed with the same 2px Charcoal border used for buttons.
+The shape language is primarily sharp and geometric to reflect industrial precision. A **Soft (0.25rem)** roundedness is applied to buttons and primary cards to ensure the UI feels modern and tactile rather than purely brutalist.
+
+- **The Vector Cut:** Larger containers should feature a single clipped corner at a 45-degree angle, typically in the top-right or bottom-left, to reinforce the "Forward Movement" motif.
+- **Iconography:** Use thick-stroke (2pt) icons with square terminals. Avoid rounded icon sets.
 
 ## Components
-- **Buttons**: Every button should feel like a physical switch. Primary buttons use Emergency Orange with a 2px Charcoal border and a 4px hard bottom-right shadow. Typography is Montserrat Bold, Uppercase.
-- **High-Visibility Contact Section**: A sticky or prominent footer section with a large phone number in Rescue Yellow on a Charcoal background. This is the most critical component.
-- **Cards**: Use a white background with a 2px Charcoal border. Headers within cards should have a thin horizontal line separating them from the body.
-- **Inputs**: Clean, rectangular fields with 2px borders that thicken or change color to Emergency Orange when focused.
-- **Status Chips**: For "Truck En Route" or "Service Completed," use high-contrast badges with Montserrat Bold text.
-- **Iconography**: Use "Thick" or "Bold" stroke icons. Avoid thin, delicate lines. Icons should feel like the symbols found on a dashboard or industrial equipment.
+
+- **Buttons:** Primary buttons use a solid Cobalt fill with uppercase white text and wide tracking. Use a "Vector" arrow icon in the trailing position. Secondary buttons use heavy 2px borders with no fill.
+- **Data Chips:** Small, rectangular labels with the `label-sm` text style. Use Safety Orange backgrounds for "Live" or "Urgent" status updates.
+- **Input Fields:** Deep charcoal backgrounds with 2px bottom-only borders that turn Cobalt on focus. Labels should be small and uppercase, positioned above the field.
+- **Service Cards:** Use heavy borders and dense technical info (e.g., "Max Load: 10k lbs"). The card header should feature a diagonal "Vector" accent in the corner.
+- **The "Rescue" Trigger:** A specialized floating action button (FAB) or prominent header button using Safety Orange, featuring high-contrast black text for immediate visibility.
+- **Progress Trackers:** Linear, segmented bars rather than smooth fills, mimicking an industrial gauge or charging meter.
