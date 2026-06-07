@@ -2,7 +2,7 @@
 
 **Result:** PASS
 
-**Craft warnings:** 1 (see craft section)
+**Craft warnings:** 3 (see craft section)
 
 ## Skills run
 
@@ -28,10 +28,10 @@
 - OK: No AI purple gradient
 - OK: No fake ratings/hype
 - OK: No obvious buzzwords
-- OK: Layout: no excessive 3-col grids
+- WARN: Repeated 3-column grid pattern (4 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 1
+- WARN: 12 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,8 +43,9 @@
 
 ### taste
 
-- Eyebrow discipline: 1 uppercase-tracked labels
+- WARN: 12 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 

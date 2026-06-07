@@ -1,40 +1,57 @@
-// Smooth scroll for internal links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+// Mobile menu logic
+        const toggle = document.getElementById('mobile-menu-toggle');
+        const close = document.getElementById('close-mobile-menu');
+        const menu = document.getElementById('mobile-menu');
+        const links = menu.querySelectorAll('a');
+
+        toggle.addEventListener('click', () => {
+            menu.classList.remove('translate-x-full');
         });
 
-        // Simple form validation & feedback preview
-        const contactForm = document.getElementById('contact-form');
-        const feedback = document.getElementById('form-feedback');
+        const closeMenu = () => {
+            menu.classList.add('translate-x-full');
+        };
 
-        if (contactForm) {
-            contactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                contactForm.classList.add('opacity-50', 'pointer-events-none');
-                feedback.classList.remove('hidden');
-                
-                // Simulate success
-                setTimeout(() => {
-                    contactForm.reset();
-                    contactForm.classList.remove('opacity-50', 'pointer-events-none');
-                }, 3000);
+        close.addEventListener('click', closeMenu);
+        links.forEach(l => l.addEventListener('click', closeMenu));
+
+        // Scroll reveal animation
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
             });
-        }
+        }, observerOptions);
 
-        // Header scroll behavior
+        document.querySelectorAll('.stagger-item').forEach(el => observer.observe(el));
+
+        // Contact form simple feedback
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<span class="relative z-10">THANK YOU</span>';
+            btn.classList.replace('bg-on-background', 'bg-tertiary');
+            form.reset();
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.replace('bg-tertiary', 'bg-on-background');
+            }, 3000);
+        });
+
+        // Atmospheric parallax on hero
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('h-16', 'shadow-md');
-                header.classList.remove('h-20');
-            } else {
-                header.classList.add('h-20');
-                header.classList.remove('h-16', 'shadow-md');
+            const scroll = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `scale(1.05) translateY(${scroll * 0.05}px)`;
             }
         });
 

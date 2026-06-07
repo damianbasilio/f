@@ -70,36 +70,24 @@ Recent posts from their Facebook page:
 - **Primary CTA:** Book grooming
 - **Secondary CTA:** Call us
 - **Sections:** hero, credibility, services, gallery, about, visit, contact
-- **Tone:** Friendly, caring, trustworthy with pets
-- **Palette:** #000000, #303030, #101010
+- **Tone:** Friendly, caring, trustworthy — pets are family
+- **Layout archetype:** boutique-window
+- **Colors / typography:** Stitch decides (no website to extract from)
 
 ## Stitch generation brief
 
 - **Vertical:** Pet grooming / pet services
-- **Mood:** Friendly, caring, trustworthy with pets
-- **Typography direction:** Source Serif 4 + Nunito
-- **Layout family:** asymmetric-grid
-- **Design dials:** DESIGN_VARIANCE 7 | MOTION_INTENSITY 4 | VISUAL_DENSITY 6
+- **Mood:** Friendly, caring, trustworthy — pets are family
+- **Typography direction:** Barlow Condensed + Barlow
+- **Layout archetype:** boutique-window
+- **Design dials:** DESIGN_VARIANCE 8 | MOTION_INTENSITY 4 | VISUAL_DENSITY 6
+- **Colors / typography:** Stitch decides (no website to extract from)
 
-## Brand from live site (auto-extracted)
+## Facebook source (no brand colors to extract)
 
-- **Extracted:** 2026-06-07T01:07:44.340Z
 - **Source:** https://www.facebook.com/ElegantDogGrooming/
 - **Platform:** Facebook (no dedicated website)
-- **Primary / secondary / accent:** #333333 / #dddddd / #777777
-- **All business colors:** #333333, #dddddd, #777777, #003399, #116699, #118833
-- **Fonts detected:** system-ui, Segoe UI, Helvetica Neue
-- **Palette direction:** Facebook page imagery — #333333, #dddddd, #777777
-- **Typography direction:** Clean sans-serif — professional local business
-- **Stitch guidance:** Facebook-only business at https://www.facebook.com/ElegantDogGrooming/. Use scraped post photos (0) for hero and gallery slots — no stock imagery. Match palette to food/brand photos: #333333, #dddddd, #777777.
-
-```css
-/* Facebook-derived palette */
-:root {
-  --brand-primary: #333333;
-  --brand-secondary: #dddddd;
-  --brand-accent: #777777;
-  --font-primary: system-ui, sans-serif;
-}
-```
+- **Scraped:** 2026-06-07T01:37:10.769Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at https://www.facebook.com/ElegantDogGrooming/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

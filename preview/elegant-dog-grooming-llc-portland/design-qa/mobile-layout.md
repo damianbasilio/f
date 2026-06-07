@@ -5,10 +5,11 @@
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
-- body overflow-x-clip
+- bumped 10px label text
 - section overflow-hidden for decorative layers
-- map-slot: removed h-full (use aspect-ratio fill)
-- map-shell: removed tall min-height wrapper
+- nav min-width + tighter mobile gap
+- nav brand truncate on mobile
+- nav toggle aria-label
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

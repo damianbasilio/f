@@ -6,291 +6,275 @@
           {
             "designSystem": {
               "designSystem": {
-                "displayName": "Golden Sage Grooming",
-                "styleGuidelines": "## Brand & Style\n\nThe brand identity centers on the intersection of high-end boutique aesthetics and the warmth of a local pet care provider. It is designed to evoke a sense of calm, precision, and deep affection for animals. The target audience consists of discerning pet owners who view their dogs as family members and seek a stress-free, premium experience.\n\nThe design style is **Modern Minimalist with Tactile Softness**. It utilizes generous whitespace to mimic the cleanliness of a professional studio, while employing soft-focus imagery and organic shapes to maintain a welcoming atmosphere. The interface should feel spacious and rhythmic, avoiding cluttered layouts in favor of \"breathing room\" that mirrors a relaxed grooming environment.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model for desktop to maintain an editorial, magazine-like feel, while transitioning to a **Fluid Grid** for mobile devices.\n\n*   **Desktop:** 12-column grid, 1200px max width, 24px gutters.\n*   **Mobile:** 4-column grid, 16px margins.\n*   **Vertical Rhythm:** Spacing is applied in increments of 8px. Use `lg` (48px) and `xl` (80px) for section padding to maintain the \"Generous Whitespace\" principle. Elements within cards should use `md` (24px) padding to ensure content never feels cramped.\n\n## Elevation & Depth\n\nTo maintain a clean and professional look, this design system avoids heavy shadows. Instead, it utilizes **Tonal Layers** and **Soft Ambient Shadows**.\n\n*   **Surface Level 0:** The main page background (`#FAFAFA`).\n*   **Surface Level 1:** White cards or sections with a very subtle 1px border in a soft grey.\n*   **Elevation:** For floating elements like \"Book Now\" buttons or active service cards, use an ambient shadow: `0px 4px 20px rgba(44, 49, 49, 0.08)`. The goal is for the element to feel like it is gently resting on a cushion of air, not hovering high above the page.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid Sage or Gold background with white text. High-contrast, 8px radius.\n*   **Secondary:** Ghost style with Charcoal border and text. Used for \"Learn More\" or secondary actions.\n*   **CTA:** Large, centered buttons for phone calls or booking should use the Gold color to stand out as the \"Premier\" action.\n\n### Cards\nService cards should feature a high-quality photo at the top with a 16px corner radius. Content below should be left-aligned with a clear price point in the Charcoal Neutral color.\n\n### Input Fields\nInputs are minimal: 1px soft grey border, 8px radius. On focus, the border shifts to Sage green to provide a calming, non-aggressive feedback loop.\n\n### Lists\nService lists (e.g., \"What's included in a Full Groom\") should use a small Sage-colored checkmark icon instead of standard bullets to reinforce the \"Caring\" brand attribute.\n\n### Booking Widget\nA specialized component that uses a calendar interface. It should be high-contrast, utilizing the primary Gold color for the selected date to ensure the user feels confident in their selection.",
+                "displayName": "Editorial Canine",
+                "styleGuidelines": "## Brand & Style\n\nThe brand personality is **Sophisticated, Bespoke, and Gentle**, catering to a discerning clientele who view dog grooming as a refined wellness ritual rather than a chore. This design system adopts an **Editorial / Minimalist** style, drawing inspiration from high-end fashion journals and architectural digests. \n\nThe UI prioritizes quiet luxury through vast whitespace, asymmetrical compositions, and delicate visual weight. It avoids typical \"pet industry\" tropes (bright colors, heavy rounded corners, playful illustrations) in favor of a mature, calm, and curated aesthetic that emphasizes the \"Bespoke\" nature of the service.\n\n## Layout & Spacing\n\nThis design system rejects rigid, symmetric grids in favor of an **Asymmetrical Editorial Layout**. \n\n- **The Baseline:** All spacing is derived from an 8px base unit. \n- **Sectioning:** Use large vertical gaps (128px+) between content blocks to create a feeling of luxury and \"breathing room.\"\n- **Grid Strategy:** Use a 12-column grid but intentionally offset elements. For example, an image might span columns 2-7 while the corresponding text sits in columns 8-11, leaving column 1 and 12 empty for a framed effect.\n- **Overlays:** Images and text blocks should occasionally overlap by 40-80px to create depth without using shadows.\n- **Aspect Ratios:** Mix vertical (3:4) and wide (21:9) aspect ratios for imagery to mimic a magazine spread.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering and Hairline Strokes** rather than shadows.\n\n- **Hairline Strokes:** Use 0.5pt or 1pt solid lines in Deep Charcoal (#1A1A1A) to separate sections or frame content. These should be delicate and never feel heavy.\n- **Flat Depth:** Use subtle shifts in background color (e.g., a Sage block over a Cream background) to define hierarchy.\n- **No Shadows:** Avoid drop shadows entirely. The \"elevation\" comes from the physical layering of elements (text over images) and high-contrast color blocks.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Charcoal background with Heirloom Cream text. Rectangular, no radius. Hover state: Dusty Sage background.\n- **Ghost:** 1px Deep Charcoal border, no background. Label-caps typography style.\n\n### Input Fields\n- Underline style only. A 1px Deep Charcoal bottom border with the label floating in Montserrat 12px caps above the line. No box container.\n\n### Cards (The \"Editorial Fragment\")\n- Discard the standard box-shadow card. Instead, a \"card\" is a grouping of a sharp-edged image with a caption placed asymmetrically below or slightly overlapping the corner.\n\n### Lists\n- Separated by full-bleed 0.5pt hairline strokes. Use Playfair Display for list item titles and Montserrat for descriptions.\n\n### Chips/Tags\n- Small, rectangular borders with label-caps text. No background fill unless active (then fill with Dusty Sage).\n\n### Navigation\n- Minimalist top-bar. Navigation items are centered with wide spacing. Use a very thin horizontal line to separate the navigation from the hero content.",
                 "theme": {
-                  "bodyFont": "INTER",
-                  "bodyFontFamily": "Inter",
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
                   "colorMode": "LIGHT",
                   "colorVariant": "FIDELITY",
-                  "customColor": "#d4af37",
-                  "designMd": "---\nname: Golden Sage Grooming\ncolors:\n  surface: '#f6fafa'\n  surface-dim: '#d6dbda'\n  surface-bright: '#f6fafa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f0f4f4'\n  surface-container: '#eaefee'\n  surface-container-high: '#e5e9e8'\n  surface-container-highest: '#dfe3e3'\n  on-surface: '#181c1d'\n  on-surface-variant: '#4d4635'\n  inverse-surface: '#2c3131'\n  inverse-on-surface: '#edf2f1'\n  outline: '#7f7663'\n  outline-variant: '#d0c5af'\n  surface-tint: '#735c00'\n  primary: '#735c00'\n  on-primary: '#ffffff'\n  primary-container: '#d4af37'\n  on-primary-container: '#554300'\n  inverse-primary: '#e9c349'\n  secondary: '#4f6350'\n  on-secondary: '#ffffff'\n  secondary-container: '#d2e9d0'\n  on-secondary-container: '#556956'\n  tertiary: '#415ba4'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#97b0ff'\n  on-tertiary-container: '#254188'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffe088'\n  primary-fixed-dim: '#e9c349'\n  on-primary-fixed: '#241a00'\n  on-primary-fixed-variant: '#574500'\n  secondary-fixed: '#d2e9d0'\n  secondary-fixed-dim: '#b6ccb5'\n  on-secondary-fixed: '#0d1f11'\n  on-secondary-fixed-variant: '#384b3a'\n  tertiary-fixed: '#dbe1ff'\n  tertiary-fixed-dim: '#b4c5ff'\n  on-tertiary-fixed: '#00174b'\n  on-tertiary-fixed-variant: '#27438a'\n  background: '#f6fafa'\n  on-background: '#181c1d'\n  surface-variant: '#dfe3e3'\ntypography:\n  display:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  container-max: 1200px\n  gutter: 24px\n---\n\n## Brand & Style\n\nThe brand identity centers on the intersection of high-end boutique aesthetics and the warmth of a local pet care provider. It is designed to evoke a sense of calm, precision, and deep affection for animals. The target audience consists of discerning pet owners who view their dogs as family members and seek a stress-free, premium experience.\n\nThe design style is **Modern Minimalist with Tactile Softness**. It utilizes generous whitespace to mimic the cleanliness of a professional studio, while employing soft-focus imagery and organic shapes to maintain a welcoming atmosphere. The interface should feel spacious and rhythmic, avoiding cluttered layouts in favor of \"breathing room\" that mirrors a relaxed grooming environment.\n\n## Colors\n\nThe palette is anchored by **Golden Sage**, a sophisticated pairing of a warm metallic gold and a muted, earthy green.\n\n*   **Primary (Gold):** Used sparingly for key calls to action and heritage branding elements. It represents excellence and the warmth of a healthy coat.\n*   **Secondary (Sage):** Used for supporting UI elements, success states, and backgrounds. This color promotes tranquility and trust.\n*   **Neutral (Charcoal):** Reserved for high-contrast typography and structural borders. It ensures legibility and professional weight.\n*   **Surface:** A palette of \"Clean Whites\" (Off-white and soft greys) creates a layered, sterile-yet-soft environment, avoiding the harshness of pure #FFFFFF.\n\n## Typography\n\nThis design system uses a classic Serif/Sans-Serif pairing to balance \"Elegant\" with \"Accessible.\"\n\n*   **Playfair Display** handles all editorial headings. Its high contrast and refined terminals communicate a premium service level.\n*   **Inter** is the functional workhorse. It is used for service descriptions, pricing tables, and form inputs to ensure maximum readability for users of all ages.\n*   **Labels** use Inter with increased letter-spacing and uppercase styling to provide a modern, organized feel for categories like \"Service Type\" or \"Pet Size.\"\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model for desktop to maintain an editorial, magazine-like feel, while transitioning to a **Fluid Grid** for mobile devices.\n\n*   **Desktop:** 12-column grid, 1200px max width, 24px gutters.\n*   **Mobile:** 4-column grid, 16px margins.\n*   **Vertical Rhythm:** Spacing is applied in increments of 8px. Use `lg` (48px) and `xl` (80px) for section padding to maintain the \"Generous Whitespace\" principle. Elements within cards should use `md` (24px) padding to ensure content never feels cramped.\n\n## Elevation & Depth\n\nTo maintain a clean and professional look, this design system avoids heavy shadows. Instead, it utilizes **Tonal Layers** and **Soft Ambient Shadows**.\n\n*   **Surface Level 0:** The main page background (`#FAFAFA`).\n*   **Surface Level 1:** White cards or sections with a very subtle 1px border in a soft grey.\n*   **Elevation:** For floating elements like \"Book Now\" buttons or active service cards, use an ambient shadow: `0px 4px 20px rgba(44, 49, 49, 0.08)`. The goal is for the element to feel like it is gently resting on a cushion of air, not hovering high above the page.\n\n## Shapes\n\nThe shape language is defined by **Soft Roundedness**. All interactive elements and containers utilize a radius that suggests friendliness and safety.\n\n*   **Buttons & Inputs:** Use the standard `rounded` (8px) setting.\n*   **Cards & Image Wrappers:** Use `rounded-lg` (16px) to create a soft frame for photography.\n*   **Avatars:** Circular (Full rounded) for pet profiles and staff photos to emphasize the personal touch.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid Sage or Gold background with white text. High-contrast, 8px radius.\n*   **Secondary:** Ghost style with Charcoal border and text. Used for \"Learn More\" or secondary actions.\n*   **CTA:** Large, centered buttons for phone calls or booking should use the Gold color to stand out as the \"Premier\" action.\n\n### Cards\nService cards should feature a high-quality photo at the top with a 16px corner radius. Content below should be left-aligned with a clear price point in the Charcoal Neutral color.\n\n### Input Fields\nInputs are minimal: 1px soft grey border, 8px radius. On focus, the border shifts to Sage green to provide a calming, non-aggressive feedback loop.\n\n### Lists\nService lists (e.g., \"What's included in a Full Groom\") should use a small Sage-colored checkmark icon instead of standard bullets to reinforce the \"Caring\" brand attribute.\n\n### Booking Widget\nA specialized component that uses a calendar interface. It should be high-contrast, utilizing the primary Gold color for the selected date to ensure the user feels confident in their selection.",
+                  "customColor": "#f9f7f2",
+                  "designMd": "---\nname: Editorial Canine\ncolors:\n  surface: '#fcf8f7'\n  surface-dim: '#ddd9d8'\n  surface-bright: '#fcf8f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3f1'\n  surface-container: '#f1edec'\n  surface-container-high: '#ebe7e6'\n  surface-container-highest: '#e5e2e0'\n  on-surface: '#1c1b1b'\n  on-surface-variant: '#464742'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f4f0ef'\n  outline: '#777871'\n  outline-variant: '#c7c7bf'\n  surface-tint: '#5e5e5b'\n  primary: '#5e5e5b'\n  on-primary: '#ffffff'\n  primary-container: '#f9f7f2'\n  on-primary-container: '#71716d'\n  inverse-primary: '#c8c6c2'\n  secondary: '#5f5e5e'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2dfde'\n  on-secondary-container: '#636262'\n  tertiary: '#536254'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#ebfce9'\n  on-tertiary-container: '#667566'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e4e2dd'\n  primary-fixed-dim: '#c8c6c2'\n  on-primary-fixed: '#1b1c19'\n  on-primary-fixed-variant: '#474744'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#d6e7d5'\n  tertiary-fixed-dim: '#bacbba'\n  on-tertiary-fixed: '#111f14'\n  on-tertiary-fixed-variant: '#3c4a3d'\n  background: '#fcf8f7'\n  on-background: '#1c1b1b'\n  surface-variant: '#e5e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  margin-page: 64px\n  margin-mobile: 24px\n  gutter: 32px\n  section-gap: 128px\n---\n\n## Brand & Style\n\nThe brand personality is **Sophisticated, Bespoke, and Gentle**, catering to a discerning clientele who view dog grooming as a refined wellness ritual rather than a chore. This design system adopts an **Editorial / Minimalist** style, drawing inspiration from high-end fashion journals and architectural digests. \n\nThe UI prioritizes quiet luxury through vast whitespace, asymmetrical compositions, and delicate visual weight. It avoids typical \"pet industry\" tropes (bright colors, heavy rounded corners, playful illustrations) in favor of a mature, calm, and curated aesthetic that emphasizes the \"Bespoke\" nature of the service.\n\n## Colors\n\nThe palette is anchored in **Heirloom Cream**, providing a warm, parchment-like foundation that feels more intentional and premium than pure white. \n\n- **Heirloom Cream (#F9F7F2):** The primary background color for all surfaces to maintain a soft, \"gentle\" environment.\n- **Deep Charcoal (#1A1A1A):** Used for all primary typography and hairline strokes to create a high-contrast, editorial feel.\n- **Dusty Sage (#8A9A8A):** Applied to UI states, subtle backgrounds, or secondary action indicators to evoke nature and tranquility.\n- **Champagne Gold (#D4AF37):** Reserved for singular highlights, premium badges, or very small decorative elements. It should be used sparingly to maintain its value.\n\n## Typography\n\nThe typography strategy relies on the tension between the classical elegance of **Playfair Display** and the modern, airy structure of **Montserrat**.\n\n- **Headlines:** Use Playfair Display with standard or slightly tight letter-spacing. For display sizes, use italics sparingly to emphasize \"Bespoke\" services.\n- **Body Text:** Montserrat is set with light weights (300/400) and generous line heights to ensure the \"Airy\" feel requested.\n- **Labels:** Small labels should use all-caps with increased letter-spacing to act as architectural markers within the layout.\n\n## Layout & Spacing\n\nThis design system rejects rigid, symmetric grids in favor of an **Asymmetrical Editorial Layout**. \n\n- **The Baseline:** All spacing is derived from an 8px base unit. \n- **Sectioning:** Use large vertical gaps (128px+) between content blocks to create a feeling of luxury and \"breathing room.\"\n- **Grid Strategy:** Use a 12-column grid but intentionally offset elements. For example, an image might span columns 2-7 while the corresponding text sits in columns 8-11, leaving column 1 and 12 empty for a framed effect.\n- **Overlays:** Images and text blocks should occasionally overlap by 40-80px to create depth without using shadows.\n- **Aspect Ratios:** Mix vertical (3:4) and wide (21:9) aspect ratios for imagery to mimic a magazine spread.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering and Hairline Strokes** rather than shadows.\n\n- **Hairline Strokes:** Use 0.5pt or 1pt solid lines in Deep Charcoal (#1A1A1A) to separate sections or frame content. These should be delicate and never feel heavy.\n- **Flat Depth:** Use subtle shifts in background color (e.g., a Sage block over a Cream background) to define hierarchy.\n- **No Shadows:** Avoid drop shadows entirely. The \"elevation\" comes from the physical layering of elements (text over images) and high-contrast color blocks.\n\n## Shapes\n\nTo maintain the architectural and editorial integrity, the shape language is **Strictly Sharp**. \n\n- **Corners:** 0px radius for all buttons, input fields, and image containers. \n- **Framing:** Use \"The Frame\" motif—thin borders surrounding containers with generous internal padding (32px+) to keep content away from the edges.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Charcoal background with Heirloom Cream text. Rectangular, no radius. Hover state: Dusty Sage background.\n- **Ghost:** 1px Deep Charcoal border, no background. Label-caps typography style.\n\n### Input Fields\n- Underline style only. A 1px Deep Charcoal bottom border with the label floating in Montserrat 12px caps above the line. No box container.\n\n### Cards (The \"Editorial Fragment\")\n- Discard the standard box-shadow card. Instead, a \"card\" is a grouping of a sharp-edged image with a caption placed asymmetrically below or slightly overlapping the corner.\n\n### Lists\n- Separated by full-bleed 0.5pt hairline strokes. Use Playfair Display for list item titles and Montserrat for descriptions.\n\n### Chips/Tags\n- Small, rectangular borders with label-caps text. No background fill unless active (then fill with Dusty Sage).\n\n### Navigation\n- Minimalist top-bar. Navigation items are centered with wide spacing. Use a very thin horizontal line to separate the navigation from the hero content.",
                   "font": "PLAYFAIR_DISPLAY",
                   "headlineFont": "PLAYFAIR_DISPLAY",
                   "headlineFontFamily": "Playfair Display",
-                  "labelFont": "INTER",
-                  "labelFontFamily": "Inter",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
                   "namedColors": {
-                    "background": "#f6fafa",
+                    "background": "#fcf8f7",
                     "error": "#ba1a1a",
                     "error_container": "#ffdad6",
-                    "inverse_on_surface": "#edf2f1",
-                    "inverse_primary": "#e9c349",
-                    "inverse_surface": "#2c3131",
-                    "on_background": "#181c1d",
+                    "inverse_on_surface": "#f4f0ef",
+                    "inverse_primary": "#c8c6c2",
+                    "inverse_surface": "#313030",
+                    "on_background": "#1c1b1b",
                     "on_error": "#ffffff",
                     "on_error_container": "#93000a",
                     "on_primary": "#ffffff",
-                    "on_primary_container": "#554300",
-                    "on_primary_fixed": "#241a00",
-                    "on_primary_fixed_variant": "#574500",
+                    "on_primary_container": "#71716d",
+                    "on_primary_fixed": "#1b1c19",
+                    "on_primary_fixed_variant": "#474744",
                     "on_secondary": "#ffffff",
-                    "on_secondary_container": "#556956",
-                    "on_secondary_fixed": "#0d1f11",
-                    "on_secondary_fixed_variant": "#384b3a",
-                    "on_surface": "#181c1d",
-                    "on_surface_variant": "#4d4635",
+                    "on_secondary_container": "#636262",
+                    "on_secondary_fixed": "#1c1b1b",
+                    "on_secondary_fixed_variant": "#474746",
+                    "on_surface": "#1c1b1b",
+                    "on_surface_variant": "#464742",
                     "on_tertiary": "#ffffff",
-                    "on_tertiary_container": "#254188",
-                    "on_tertiary_fixed": "#00174b",
-                    "on_tertiary_fixed_variant": "#27438a",
-                    "outline": "#7f7663",
-                    "outline_variant": "#d0c5af",
-                    "primary": "#735c00",
-                    "primary_container": "#d4af37",
-                    "primary_fixed": "#ffe088",
-                    "primary_fixed_dim": "#e9c349",
-                    "secondary": "#4f6350",
-                    "secondary_container": "#d2e9d0",
-                    "secondary_fixed": "#d2e9d0",
-                    "secondary_fixed_dim": "#b6ccb5",
-                    "surface": "#f6fafa",
-                    "surface_bright": "#f6fafa",
-                    "surface_container": "#eaefee",
-                    "surface_container_high": "#e5e9e8",
-                    "surface_container_highest": "#dfe3e3",
-                    "surface_container_low": "#f0f4f4",
+                    "on_tertiary_container": "#667566",
+                    "on_tertiary_fixed": "#111f14",
+                    "on_tertiary_fixed_variant": "#3c4a3d",
+                    "outline": "#777871",
+                    "outline_variant": "#c7c7bf",
+                    "primary": "#5e5e5b",
+                    "primary_container": "#f9f7f2",
+                    "primary_fixed": "#e4e2dd",
+                    "primary_fixed_dim": "#c8c6c2",
+                    "secondary": "#5f5e5e",
+                    "secondary_container": "#e2dfde",
+                    "secondary_fixed": "#e5e2e1",
+                    "secondary_fixed_dim": "#c8c6c5",
+                    "surface": "#fcf8f7",
+                    "surface_bright": "#fcf8f7",
+                    "surface_container": "#f1edec",
+                    "surface_container_high": "#ebe7e6",
+                    "surface_container_highest": "#e5e2e0",
+                    "surface_container_low": "#f7f3f1",
                     "surface_container_lowest": "#ffffff",
-                    "surface_dim": "#d6dbda",
-                    "surface_tint": "#735c00",
-                    "surface_variant": "#dfe3e3",
-                    "tertiary": "#415ba4",
-                    "tertiary_container": "#97b0ff",
-                    "tertiary_fixed": "#dbe1ff",
-                    "tertiary_fixed_dim": "#b4c5ff"
+                    "surface_dim": "#ddd9d8",
+                    "surface_tint": "#5e5e5b",
+                    "surface_variant": "#e5e2e0",
+                    "tertiary": "#536254",
+                    "tertiary_container": "#ebfce9",
+                    "tertiary_fixed": "#d6e7d5",
+                    "tertiary_fixed_dim": "#bacbba"
                   },
-                  "overrideNeutralColor": "#2c3131",
-                  "overridePrimaryColor": "#d4af37",
-                  "overrideSecondaryColor": "#7d927d",
-                  "roundness": "ROUND_EIGHT",
+                  "overridePrimaryColor": "#f9f7f2",
+                  "overrideSecondaryColor": "#1a1a1a",
+                  "overrideTertiaryColor": "#8a9a8a",
                   "spacing": {
-                    "base": "8px",
-                    "container-max": "1200px",
-                    "gutter": "24px",
-                    "lg": "48px",
-                    "md": "24px",
-                    "sm": "12px",
-                    "xl": "80px",
-                    "xs": "4px"
+                    "gutter": "32px",
+                    "margin-mobile": "24px",
+                    "margin-page": "64px",
+                    "section-gap": "128px",
+                    "unit": "8px"
                   },
                   "spacingScale": 2,
                   "typography": {
                     "body-lg": {
-                      "fontFamily": "Inter",
+                      "fontFamily": "Montserrat",
                       "fontSize": "18px",
-                      "fontWeight": "400",
-                      "lineHeight": "28px"
+                      "fontWeight": "300",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
                     },
                     "body-md": {
-                      "fontFamily": "Inter",
+                      "fontFamily": "Montserrat",
                       "fontSize": "16px",
                       "fontWeight": "400",
-                      "lineHeight": "24px"
+                      "lineHeight": "1.6"
                     },
-                    "display": {
+                    "display-lg": {
                       "fontFamily": "Playfair Display",
-                      "fontSize": "48px",
-                      "fontWeight": "700",
+                      "fontSize": "64px",
+                      "fontWeight": "400",
                       "letterSpacing": "-0.02em",
-                      "lineHeight": "56px"
+                      "lineHeight": "1.1"
                     },
-                    "headline-lg": {
+                    "display-lg-mobile": {
                       "fontFamily": "Playfair Display",
-                      "fontSize": "32px",
-                      "fontWeight": "600",
-                      "lineHeight": "40px"
-                    },
-                    "headline-lg-mobile": {
-                      "fontFamily": "Playfair Display",
-                      "fontSize": "28px",
-                      "fontWeight": "600",
-                      "lineHeight": "36px"
+                      "fontSize": "40px",
+                      "fontWeight": "400",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "1.2"
                     },
                     "headline-md": {
                       "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
                       "fontSize": "24px",
-                      "fontWeight": "600",
-                      "lineHeight": "32px"
+                      "fontWeight": "400",
+                      "lineHeight": "1.4"
                     },
-                    "label-md": {
-                      "fontFamily": "Inter",
-                      "fontSize": "14px",
-                      "fontWeight": "600",
-                      "letterSpacing": "0.05em",
-                      "lineHeight": "20px"
-                    },
-                    "label-sm": {
-                      "fontFamily": "Inter",
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
                       "fontSize": "12px",
-                      "fontWeight": "500",
-                      "lineHeight": "16px"
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "1"
                     }
                   }
                 }
               },
-              "name": "assets/4f3a1ff0546c4bfd82375e174fbb4828",
+              "name": "assets/e569caee22f94faa9ff55e00a674ea4e",
               "version": "1"
             },
             "deviceType": "DESKTOP",
             "generatedBy": "figaro_agent",
-            "height": "9094",
+            "height": "11104",
             "htmlCode": {
-              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzhlZGE3YmEzNTVlZjQ4ZTZhODQ1NjE3ODBkNzYyMTU4EgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhMzNDE3Mjc2NTE1NzM5ODE5MzA2&filename=&opi=96797242",
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFkNDI5YWUwMWY2MDQ0NjRhMjFkNGVkZGExOTYyNDZjEgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMTYyNjExNzMyMTg1NDI4ODU0Mw&filename=&opi=96797242",
               "mimeType": "text/html",
-              "name": "projects/3417276515739819306/files/0e07fc77c19147cb8d72c162e904ed14"
+              "name": "projects/11626117321854288543/files/b29782411708475caf39bd540da12b70"
             },
-            "id": "fc3928dc9c1449d9930263114a1c2467",
-            "name": "projects/3417276515739819306/screens/fc3928dc9c1449d9930263114a1c2467",
-            "prompt": "A complete, production-ready desktop landing page for Elegant Dog Grooming LLC. \n\nSections:\n1. Header: Include phone number (503) 617-1467, \"Call Now\" CTA, and mobile navigation support.\n2. Hero: High-end, warm Portland-style grooming studio aesthetic using {{DATA:IMAGE:IMAGE_4}}. Headline: \"Your Best Friend Deserves the Best Care.\" Primary CTA: \"Book an Appointment\", Secondary: \"View Services\".\n3. Credibility: 4.3-star review score, \"Portland's Trusted Groomers\", and \"Premium Organic Products\".\n4. Services: \"Our Signature Services\" - Full Grooming (starts at $65), Bath & Brush (starts at $45), and Self-Wash Stations ($25 flat fee).\n5. About: \"Committed to Excellence\" - local Portland story, certified master groomers, stress-free environment, eco-friendly products.\n6. Visit: \"Visit Our Studio\" section (#visit) featuring the address 5340 Northwest 185th Avenue, Portland, OR 97229 and hours (Mon-Sat 8am-6pm). Must include the specific map placeholder: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A professional form with validation UI (preview) for Name, Email, and Message.\n8. Footer: Copyright 2024 Elegant Dog Grooming LLC, social links (Instagram), and contact info (elegantdog1@gmail.com).\n\nTechnical constraints:\n- Apply Golden Sage Design System {{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}.\n- Full semantic HTML/CSS.\n- Responsive design.\n- No placeholder text/lorem ipsum.\n- Use descriptive alt tags for images.\n- Smooth scroll navigation.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_4}}\n  Description: A professional and warm hero image for a dog grooming business. A happy, clean Golden Retriever or Poodle sitting calmly on a grooming table in a bright, modern, and clean Portland-style studio. Soft natural light, professional grooming tools visible in the background but out of focus. High-end, 'Elegant' aesthetic. Photography style.\n  Dimensions: 1376x768\n  Aspect Ratio: 1.79\n",
+            "id": "610eefdfdcd5494eab48970eda07844c",
+            "name": "projects/11626117321854288543/screens/610eefdfdcd5494eab48970eda07844c",
+            "prompt": "Build a complete, high-fidelity landing page for 'Elegant Dog Grooming LLC' following an 'Editorial Atelier' aesthetic. \n\nLayout Requirements:\n- Use an asymmetrical, editorial hierarchy with generous whitespace, mirroring high-end lifestyle magazines.\n- Incorporate {{DATA:IMAGE:IMAGE_3}} as the primary wordmark.\n- Include a header with the phone number (503) 617-1467 and navigation links from {{DATA:COMPONENTS:COMPONENTS_6}}.\n- Hero Section: Large-format serif typography (\"The Art of the Groom\") paired with {{DATA:IMAGE:IMAGE_2}}.\n- Credibility Section (#credibility): Highlight the bespoke nature of the service, using delicate gold hairline dividers.\n- Services/Rituals Section: Detail offerings like \"The Silk Bath\" and \"The Sculpted Clip\" using high-fashion imagery like {{DATA:IMAGE:IMAGE_4}} and existing content from {{DATA:SCREEN:SCREEN_5}}.\n- About Section: Describe the sanctuary-like environment and meticulous care.\n- Visit Section (#visit): Include the address '5340 Northwest 185th Avenue, Portland, OR 97229' and exactly one empty map panel: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n- Contact Section: A minimalist contact form with validation UI and the email 'elegantdog1@gmail.com'.\n- Footer: Include copyright, social links, and brand wordmark as defined in {{DATA:COMPONENTS:COMPONENTS_6}}.\n\nVisual Direction:\n- Colors: Heirloom Cream, Dusty Sage, and Champagne Gold (as defined in {{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}).\n- Typography: Playfair Display for headlines and labels.\n- Details: Smooth scroll, mobile-responsive navigation (hamburger for mobile view), and descriptive alt tags. No lorem ipsum—use the evocative, editorial copy provided in the Atelier concept.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Description: Editorial photography of a perfectly groomed, white Standard Poodle sitting regally in a high-end, minimalist interior. Warm, natural afternoon light, soft shadows. The dog's coat is impeccably fluffy and clean. Composition is clean and professional, suitable for a luxury brand hero image. Soft cream and sage color palette.\n  Dimensions: 1264x848\n  Aspect Ratio: 1.49\n- {{DATA:IMAGE:IMAGE_3}}\n  Description: Brand logo. - Primary color: #f9f7f2\n- Font: playfairDisplay\n- Mode: light\n- Roundness: rounded-lg\n\n  Dimensions: 600x160\n  Aspect Ratio: 3.75\n  Colors: #1A1A1A, #8A9A8A, #D4AF37\n- {{DATA:IMAGE:IMAGE_4}}\n  Description: Close-up, high-fashion style shot of a dog groomer's hands gently brushing a Golden Retriever's ear. Focus on the gentle touch and professional tools. Soft, blurred background of a modern, clean grooming studio. Elegant, high-end atmosphere. High-contrast lighting.\n  Dimensions: 848x1264\n  Aspect Ratio: 0.67\n",
             "screenMetadata": {
               "agentType": "PRO_AGENT",
               "status": "COMPLETE"
             },
             "screenType": "DESIGN",
             "screenshot": {
-              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv_PDPboIB-MZgn3V7t3lMFzxDcNToOMuQh7dAlUHEFfdcYGrmlH6RrmJwK5hI_784UZ8ug_qHYKFqu6Vyp_6jX7y5ibecYWe60tS5xTXnFmCtlePhzsZazghkmmzj_mMwo3V9UzDifjMLBb7wNSZH3b2d1vK0hWM43SM4rQKbormYKELcbVjChQ7JwdQFtJqpt0W2k_Xa1YzHnKFYnk6x_2C5b2qDJCWFMUxFQvTq0onrM0iRGcZcjUoQ",
-              "name": "projects/3417276515739819306/files/0e07b336399346da94e4807ec2d2248b"
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs2mn_fiYhP0r7WD2-6Hp-H8Wm-XBnwg_509bLT-0TZjPFc0txOofIAdD289KoCZj9UkOcEp_trAXJaVRlBjUUHWiO42HRaB0OJF1UKLlPjcOPIE_BPyLALxpHrbQ0qphakRcj5os5ZJldCVXiZ88Bgjy8iIhJKdaO9ZGnC96xGWsa5nbY_3LrJTEuhLkMPSIXWCh4n5BhWcrlC50G2-tJEXyNDDynfV_pMCYTr99Cpd1OxahKzTHSXUObY",
+              "name": "projects/11626117321854288543/files/c2feb771fe364ec08a9c764024f486dc"
             },
             "theme": {
-              "bodyFont": "INTER",
-              "bodyFontFamily": "Inter",
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
               "colorMode": "LIGHT",
               "colorVariant": "FIDELITY",
-              "customColor": "#d4af37",
-              "designMd": "---\nname: Golden Sage Grooming\ncolors:\n  surface: '#f6fafa'\n  surface-dim: '#d6dbda'\n  surface-bright: '#f6fafa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f0f4f4'\n  surface-container: '#eaefee'\n  surface-container-high: '#e5e9e8'\n  surface-container-highest: '#dfe3e3'\n  on-surface: '#181c1d'\n  on-surface-variant: '#4d4635'\n  inverse-surface: '#2c3131'\n  inverse-on-surface: '#edf2f1'\n  outline: '#7f7663'\n  outline-variant: '#d0c5af'\n  surface-tint: '#735c00'\n  primary: '#735c00'\n  on-primary: '#ffffff'\n  primary-container: '#d4af37'\n  on-primary-container: '#554300'\n  inverse-primary: '#e9c349'\n  secondary: '#4f6350'\n  on-secondary: '#ffffff'\n  secondary-container: '#d2e9d0'\n  on-secondary-container: '#556956'\n  tertiary: '#415ba4'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#97b0ff'\n  on-tertiary-container: '#254188'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffe088'\n  primary-fixed-dim: '#e9c349'\n  on-primary-fixed: '#241a00'\n  on-primary-fixed-variant: '#574500'\n  secondary-fixed: '#d2e9d0'\n  secondary-fixed-dim: '#b6ccb5'\n  on-secondary-fixed: '#0d1f11'\n  on-secondary-fixed-variant: '#384b3a'\n  tertiary-fixed: '#dbe1ff'\n  tertiary-fixed-dim: '#b4c5ff'\n  on-tertiary-fixed: '#00174b'\n  on-tertiary-fixed-variant: '#27438a'\n  background: '#f6fafa'\n  on-background: '#181c1d'\n  surface-variant: '#dfe3e3'\ntypography:\n  display:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  container-max: 1200px\n  gutter: 24px\n---\n\n## Brand & Style\n\nThe brand identity centers on the intersection of high-end boutique aesthetics and the warmth of a local pet care provider. It is designed to evoke a sense of calm, precision, and deep affection for animals. The target audience consists of discerning pet owners who view their dogs as family members and seek a stress-free, premium experience.\n\nThe design style is **Modern Minimalist with Tactile Softness**. It utilizes generous whitespace to mimic the cleanliness of a professional studio, while employing soft-focus imagery and organic shapes to maintain a welcoming atmosphere. The interface should feel spacious and rhythmic, avoiding cluttered layouts in favor of \"breathing room\" that mirrors a relaxed grooming environment.\n\n## Colors\n\nThe palette is anchored by **Golden Sage**, a sophisticated pairing of a warm metallic gold and a muted, earthy green.\n\n*   **Primary (Gold):** Used sparingly for key calls to action and heritage branding elements. It represents excellence and the warmth of a healthy coat.\n*   **Secondary (Sage):** Used for supporting UI elements, success states, and backgrounds. This color promotes tranquility and trust.\n*   **Neutral (Charcoal):** Reserved for high-contrast typography and structural borders. It ensures legibility and professional weight.\n*   **Surface:** A palette of \"Clean Whites\" (Off-white and soft greys) creates a layered, sterile-yet-soft environment, avoiding the harshness of pure #FFFFFF.\n\n## Typography\n\nThis design system uses a classic Serif/Sans-Serif pairing to balance \"Elegant\" with \"Accessible.\"\n\n*   **Playfair Display** handles all editorial headings. Its high contrast and refined terminals communicate a premium service level.\n*   **Inter** is the functional workhorse. It is used for service descriptions, pricing tables, and form inputs to ensure maximum readability for users of all ages.\n*   **Labels** use Inter with increased letter-spacing and uppercase styling to provide a modern, organized feel for categories like \"Service Type\" or \"Pet Size.\"\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model for desktop to maintain an editorial, magazine-like feel, while transitioning to a **Fluid Grid** for mobile devices.\n\n*   **Desktop:** 12-column grid, 1200px max width, 24px gutters.\n*   **Mobile:** 4-column grid, 16px margins.\n*   **Vertical Rhythm:** Spacing is applied in increments of 8px. Use `lg` (48px) and `xl` (80px) for section padding to maintain the \"Generous Whitespace\" principle. Elements within cards should use `md` (24px) padding to ensure content never feels cramped.\n\n## Elevation & Depth\n\nTo maintain a clean and professional look, this design system avoids heavy shadows. Instead, it utilizes **Tonal Layers** and **Soft Ambient Shadows**.\n\n*   **Surface Level 0:** The main page background (`#FAFAFA`).\n*   **Surface Level 1:** White cards or sections with a very subtle 1px border in a soft grey.\n*   **Elevation:** For floating elements like \"Book Now\" buttons or active service cards, use an ambient shadow: `0px 4px 20px rgba(44, 49, 49, 0.08)`. The goal is for the element to feel like it is gently resting on a cushion of air, not hovering high above the page.\n\n## Shapes\n\nThe shape language is defined by **Soft Roundedness**. All interactive elements and containers utilize a radius that suggests friendliness and safety.\n\n*   **Buttons & Inputs:** Use the standard `rounded` (8px) setting.\n*   **Cards & Image Wrappers:** Use `rounded-lg` (16px) to create a soft frame for photography.\n*   **Avatars:** Circular (Full rounded) for pet profiles and staff photos to emphasize the personal touch.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid Sage or Gold background with white text. High-contrast, 8px radius.\n*   **Secondary:** Ghost style with Charcoal border and text. Used for \"Learn More\" or secondary actions.\n*   **CTA:** Large, centered buttons for phone calls or booking should use the Gold color to stand out as the \"Premier\" action.\n\n### Cards\nService cards should feature a high-quality photo at the top with a 16px corner radius. Content below should be left-aligned with a clear price point in the Charcoal Neutral color.\n\n### Input Fields\nInputs are minimal: 1px soft grey border, 8px radius. On focus, the border shifts to Sage green to provide a calming, non-aggressive feedback loop.\n\n### Lists\nService lists (e.g., \"What's included in a Full Groom\") should use a small Sage-colored checkmark icon instead of standard bullets to reinforce the \"Caring\" brand attribute.\n\n### Booking Widget\nA specialized component that uses a calendar interface. It should be high-contrast, utilizing the primary Gold color for the selected date to ensure the user feels confident in their selection.",
+              "customColor": "#f9f7f2",
+              "designMd": "---\nname: Editorial Canine\ncolors:\n  surface: '#fcf8f7'\n  surface-dim: '#ddd9d8'\n  surface-bright: '#fcf8f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3f1'\n  surface-container: '#f1edec'\n  surface-container-high: '#ebe7e6'\n  surface-container-highest: '#e5e2e0'\n  on-surface: '#1c1b1b'\n  on-surface-variant: '#464742'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f4f0ef'\n  outline: '#777871'\n  outline-variant: '#c7c7bf'\n  surface-tint: '#5e5e5b'\n  primary: '#5e5e5b'\n  on-primary: '#ffffff'\n  primary-container: '#f9f7f2'\n  on-primary-container: '#71716d'\n  inverse-primary: '#c8c6c2'\n  secondary: '#5f5e5e'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2dfde'\n  on-secondary-container: '#636262'\n  tertiary: '#536254'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#ebfce9'\n  on-tertiary-container: '#667566'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e4e2dd'\n  primary-fixed-dim: '#c8c6c2'\n  on-primary-fixed: '#1b1c19'\n  on-primary-fixed-variant: '#474744'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#d6e7d5'\n  tertiary-fixed-dim: '#bacbba'\n  on-tertiary-fixed: '#111f14'\n  on-tertiary-fixed-variant: '#3c4a3d'\n  background: '#fcf8f7'\n  on-background: '#1c1b1b'\n  surface-variant: '#e5e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  margin-page: 64px\n  margin-mobile: 24px\n  gutter: 32px\n  section-gap: 128px\n---\n\n## Brand & Style\n\nThe brand personality is **Sophisticated, Bespoke, and Gentle**, catering to a discerning clientele who view dog grooming as a refined wellness ritual rather than a chore. This design system adopts an **Editorial / Minimalist** style, drawing inspiration from high-end fashion journals and architectural digests. \n\nThe UI prioritizes quiet luxury through vast whitespace, asymmetrical compositions, and delicate visual weight. It avoids typical \"pet industry\" tropes (bright colors, heavy rounded corners, playful illustrations) in favor of a mature, calm, and curated aesthetic that emphasizes the \"Bespoke\" nature of the service.\n\n## Colors\n\nThe palette is anchored in **Heirloom Cream**, providing a warm, parchment-like foundation that feels more intentional and premium than pure white. \n\n- **Heirloom Cream (#F9F7F2):** The primary background color for all surfaces to maintain a soft, \"gentle\" environment.\n- **Deep Charcoal (#1A1A1A):** Used for all primary typography and hairline strokes to create a high-contrast, editorial feel.\n- **Dusty Sage (#8A9A8A):** Applied to UI states, subtle backgrounds, or secondary action indicators to evoke nature and tranquility.\n- **Champagne Gold (#D4AF37):** Reserved for singular highlights, premium badges, or very small decorative elements. It should be used sparingly to maintain its value.\n\n## Typography\n\nThe typography strategy relies on the tension between the classical elegance of **Playfair Display** and the modern, airy structure of **Montserrat**.\n\n- **Headlines:** Use Playfair Display with standard or slightly tight letter-spacing. For display sizes, use italics sparingly to emphasize \"Bespoke\" services.\n- **Body Text:** Montserrat is set with light weights (300/400) and generous line heights to ensure the \"Airy\" feel requested.\n- **Labels:** Small labels should use all-caps with increased letter-spacing to act as architectural markers within the layout.\n\n## Layout & Spacing\n\nThis design system rejects rigid, symmetric grids in favor of an **Asymmetrical Editorial Layout**. \n\n- **The Baseline:** All spacing is derived from an 8px base unit. \n- **Sectioning:** Use large vertical gaps (128px+) between content blocks to create a feeling of luxury and \"breathing room.\"\n- **Grid Strategy:** Use a 12-column grid but intentionally offset elements. For example, an image might span columns 2-7 while the corresponding text sits in columns 8-11, leaving column 1 and 12 empty for a framed effect.\n- **Overlays:** Images and text blocks should occasionally overlap by 40-80px to create depth without using shadows.\n- **Aspect Ratios:** Mix vertical (3:4) and wide (21:9) aspect ratios for imagery to mimic a magazine spread.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering and Hairline Strokes** rather than shadows.\n\n- **Hairline Strokes:** Use 0.5pt or 1pt solid lines in Deep Charcoal (#1A1A1A) to separate sections or frame content. These should be delicate and never feel heavy.\n- **Flat Depth:** Use subtle shifts in background color (e.g., a Sage block over a Cream background) to define hierarchy.\n- **No Shadows:** Avoid drop shadows entirely. The \"elevation\" comes from the physical layering of elements (text over images) and high-contrast color blocks.\n\n## Shapes\n\nTo maintain the architectural and editorial integrity, the shape language is **Strictly Sharp**. \n\n- **Corners:** 0px radius for all buttons, input fields, and image containers. \n- **Framing:** Use \"The Frame\" motif—thin borders surrounding containers with generous internal padding (32px+) to keep content away from the edges.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Charcoal background with Heirloom Cream text. Rectangular, no radius. Hover state: Dusty Sage background.\n- **Ghost:** 1px Deep Charcoal border, no background. Label-caps typography style.\n\n### Input Fields\n- Underline style only. A 1px Deep Charcoal bottom border with the label floating in Montserrat 12px caps above the line. No box container.\n\n### Cards (The \"Editorial Fragment\")\n- Discard the standard box-shadow card. Instead, a \"card\" is a grouping of a sharp-edged image with a caption placed asymmetrically below or slightly overlapping the corner.\n\n### Lists\n- Separated by full-bleed 0.5pt hairline strokes. Use Playfair Display for list item titles and Montserrat for descriptions.\n\n### Chips/Tags\n- Small, rectangular borders with label-caps text. No background fill unless active (then fill with Dusty Sage).\n\n### Navigation\n- Minimalist top-bar. Navigation items are centered with wide spacing. Use a very thin horizontal line to separate the navigation from the hero content.",
               "font": "PLAYFAIR_DISPLAY",
               "headlineFont": "PLAYFAIR_DISPLAY",
               "headlineFontFamily": "Playfair Display",
-              "labelFont": "INTER",
-              "labelFontFamily": "Inter",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
               "namedColors": {
-                "background": "#f6fafa",
+                "background": "#fcf8f7",
                 "error": "#ba1a1a",
                 "error_container": "#ffdad6",
-                "inverse_on_surface": "#edf2f1",
-                "inverse_primary": "#e9c349",
-                "inverse_surface": "#2c3131",
-                "on_background": "#181c1d",
+                "inverse_on_surface": "#f4f0ef",
+                "inverse_primary": "#c8c6c2",
+                "inverse_surface": "#313030",
+                "on_background": "#1c1b1b",
                 "on_error": "#ffffff",
                 "on_error_container": "#93000a",
                 "on_primary": "#ffffff",
-                "on_primary_container": "#554300",
-                "on_primary_fixed": "#241a00",
-                "on_primary_fixed_variant": "#574500",
+                "on_primary_container": "#71716d",
+                "on_primary_fixed": "#1b1c19",
+                "on_primary_fixed_variant": "#474744",
                 "on_secondary": "#ffffff",
-                "on_secondary_container": "#556956",
-                "on_secondary_fixed": "#0d1f11",
-                "on_secondary_fixed_variant": "#384b3a",
-                "on_surface": "#181c1d",
-                "on_surface_variant": "#4d4635",
+                "on_secondary_container": "#636262",
+                "on_secondary_fixed": "#1c1b1b",
+                "on_secondary_fixed_variant": "#474746",
+                "on_surface": "#1c1b1b",
+                "on_surface_variant": "#464742",
                 "on_tertiary": "#ffffff",
-                "on_tertiary_container": "#254188",
-                "on_tertiary_fixed": "#00174b",
-                "on_tertiary_fixed_variant": "#27438a",
-                "outline": "#7f7663",
-                "outline_variant": "#d0c5af",
-                "primary": "#735c00",
-                "primary_container": "#d4af37",
-                "primary_fixed": "#ffe088",
-                "primary_fixed_dim": "#e9c349",
-                "secondary": "#4f6350",
-                "secondary_container": "#d2e9d0",
-                "secondary_fixed": "#d2e9d0",
-                "secondary_fixed_dim": "#b6ccb5",
-                "surface": "#f6fafa",
-                "surface_bright": "#f6fafa",
-                "surface_container": "#eaefee",
-                "surface_container_high": "#e5e9e8",
-                "surface_container_highest": "#dfe3e3",
-                "surface_container_low": "#f0f4f4",
+                "on_tertiary_container": "#667566",
+                "on_tertiary_fixed": "#111f14",
+                "on_tertiary_fixed_variant": "#3c4a3d",
+                "outline": "#777871",
+                "outline_variant": "#c7c7bf",
+                "primary": "#5e5e5b",
+                "primary_container": "#f9f7f2",
+                "primary_fixed": "#e4e2dd",
+                "primary_fixed_dim": "#c8c6c2",
+                "secondary": "#5f5e5e",
+                "secondary_container": "#e2dfde",
+                "secondary_fixed": "#e5e2e1",
+                "secondary_fixed_dim": "#c8c6c5",
+                "surface": "#fcf8f7",
+                "surface_bright": "#fcf8f7",
+                "surface_container": "#f1edec",
+                "surface_container_high": "#ebe7e6",
+                "surface_container_highest": "#e5e2e0",
+                "surface_container_low": "#f7f3f1",
                 "surface_container_lowest": "#ffffff",
-                "surface_dim": "#d6dbda",
-                "surface_tint": "#735c00",
-                "surface_variant": "#dfe3e3",
-                "tertiary": "#415ba4",
-                "tertiary_container": "#97b0ff",
-                "tertiary_fixed": "#dbe1ff",
-                "tertiary_fixed_dim": "#b4c5ff"
+                "surface_dim": "#ddd9d8",
+                "surface_tint": "#5e5e5b",
+                "surface_variant": "#e5e2e0",
+                "tertiary": "#536254",
+                "tertiary_container": "#ebfce9",
+                "tertiary_fixed": "#d6e7d5",
+                "tertiary_fixed_dim": "#bacbba"
               },
-              "overrideNeutralColor": "#2c3131",
-              "overridePrimaryColor": "#d4af37",
-              "overrideSecondaryColor": "#7d927d",
-              "roundness": "ROUND_EIGHT",
+              "overridePrimaryColor": "#f9f7f2",
+              "overrideSecondaryColor": "#1a1a1a",
+              "overrideTertiaryColor": "#8a9a8a",
               "spacing": {
-                "base": "8px",
-                "container-max": "1200px",
-                "gutter": "24px",
-                "lg": "48px",
-                "md": "24px",
-                "sm": "12px",
-                "xl": "80px",
-                "xs": "4px"
+                "gutter": "32px",
+                "margin-mobile": "24px",
+                "margin-page": "64px",
+                "section-gap": "128px",
+                "unit": "8px"
               },
               "spacingScale": 2,
               "typography": {
                 "body-lg": {
-                  "fontFamily": "Inter",
+                  "fontFamily": "Montserrat",
                   "fontSize": "18px",
-                  "fontWeight": "400",
-                  "lineHeight": "28px"
+                  "fontWeight": "300",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
                 },
                 "body-md": {
-                  "fontFamily": "Inter",
+                  "fontFamily": "Montserrat",
                   "fontSize": "16px",
                   "fontWeight": "400",
-                  "lineHeight": "24px"
+                  "lineHeight": "1.6"
                 },
-                "display": {
+                "display-lg": {
                   "fontFamily": "Playfair Display",
-                  "fontSize": "48px",
-                  "fontWeight": "700",
+                  "fontSize": "64px",
+                  "fontWeight": "400",
                   "letterSpacing": "-0.02em",
-                  "lineHeight": "56px"
+                  "lineHeight": "1.1"
                 },
-                "headline-lg": {
+                "display-lg-mobile": {
                   "fontFamily": "Playfair Display",
-                  "fontSize": "32px",
-                  "fontWeight": "600",
-                  "lineHeight": "40px"
-                },
-                "headline-lg-mobile": {
-                  "fontFamily": "Playfair Display",
-                  "fontSize": "28px",
-                  "fontWeight": "600",
-                  "lineHeight": "36px"
+                  "fontSize": "40px",
+                  "fontWeight": "400",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "1.2"
                 },
                 "headline-md": {
                   "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.3"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
                   "fontSize": "24px",
-                  "fontWeight": "600",
-                  "lineHeight": "32px"
+                  "fontWeight": "400",
+                  "lineHeight": "1.4"
                 },
-                "label-md": {
-                  "fontFamily": "Inter",
-                  "fontSize": "14px",
-                  "fontWeight": "600",
-                  "letterSpacing": "0.05em",
-                  "lineHeight": "20px"
-                },
-                "label-sm": {
-                  "fontFamily": "Inter",
+                "label-caps": {
+                  "fontFamily": "Montserrat",
                   "fontSize": "12px",
-                  "fontWeight": "500",
-                  "lineHeight": "16px"
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "1"
                 }
               }
             },
-            "title": "Elegant Dog Grooming | Portland's Premier Pet Care",
+            "title": "Elegant Dog Grooming Atelier - Landing Page",
             "width": "2560"
           }
         ],
@@ -298,18 +282,18 @@
       }
     },
     {
-      "text": "I have built the production-ready homepage for **Elegant Dog Grooming LLC**, specifically tailored to their Portland location and brand identity.\n\n### Design Highlights:\n- **Tailored Branding:** Integrated the 'Golden Sage' design system to evoke a warm, professional, and \"Elegant\" feel that matches the business name.\n- **Conversion Focused:** Placed the phone number and \"Call Now\" CTA prominently in the header and hero sections to drive local bookings.\n- **Real Business Context:** Used the exact address, contact info, and 4.3-star review score from their Facebook page to establish immediate trust.\n- **Service Clarity:** Dedicated sections for Full Grooming, Bath & Brush, and their popular Self-Wash stations with realistic \"Starts at\" pricing.\n- **Portland Identity:** The layout and copy emphasize their commitment to the Portland community, including a dedicated \"Visit Our Studio\" section with a clean map placeholder.\n\nThe site is fully responsive, semantically structured, and ready for deployment."
+      "text": "I have completed the full desktop landing page for the **Elegant Dog Grooming Atelier**. \n\nThis design translates your \"Atelier\" editorial direction into a production-ready digital experience. Key features include:\n\n- **Editorial Hierarchy**: An asymmetrical layout that breaks away from standard business templates, utilizing generous whitespace and delicate gold hairline dividers to create a sense of heritage luxury.\n- **Visual Storytelling**: The design prominently features your high-fidelity photography—including the regally groomed Poodle in the hero and the intimate grooming close-up—to emphasize the \"Art of the Groom.\"\n- **Bespoke Components**: I've integrated the existing wordmark and a custom-built rituals section that details services like *The Silk Bath* and *The Sculpted Clip* with poetic, professional copy.\n- **Production-Ready Structure**: The page includes a responsive navigation header with phone contact, a dedicated `#credibility` section, a `#visit` section with a placeholder for your map, and a refined contact form.\n- **Brand Continuity**: The palette of Heirloom Cream, Dusty Sage, and Champagne Gold is applied consistently throughout via CSS custom properties, ensuring a cohesive look that matches the established design system.\n\nThe result is a sophisticated sanctuary for companions that positions the business as a premium, meticulous service provider. \n\nWould you like to explore a mobile-optimized version of this page, or shall we refine the interaction details for the \"Rituals\" section?"
     },
     {
-      "suggestion": "Make it dark mode"
+      "suggestion": "Create a mobile version of this landing page"
     },
     {
-      "suggestion": "Add more testimonials"
+      "suggestion": "Refine the \"Rituals\" section with more detail"
     },
     {
-      "suggestion": "Change the hero image style"
+      "suggestion": "Try the \"Midnight Atelier\" dark mode variant"
     }
   ],
-  "projectId": "3417276515739819306",
-  "sessionId": "2190172063528191160"
+  "projectId": "11626117321854288543",
+  "sessionId": "9423426783290922859"
 }
