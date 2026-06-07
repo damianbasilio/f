@@ -15,4 +15,6 @@
 | design-qa/polish | done |
 | site-eval | done |
 | outreach | pending |
-| outreach-sent | pending |
+| outreach-sent | done |
+
+**Sent at:** 2026-06-07T01:27:10.721Z

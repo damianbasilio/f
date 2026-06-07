@@ -1,35 +1,35 @@
-// Smooth scroll implementation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+// Simple micro-interactions
+        document.getElementById('consultation-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'Preview only';
+            btn.style.opacity = '0.7';
+            
+            setTimeout(() => {
+                btn.textContent = 'Preview only';
+                btn.classList.replace('bg-primary', 'bg-secondary');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.replace('bg-secondary', 'bg-primary');
+                    btn.style.opacity = '1';
+                }, 3000);
+            }, 1500);
         });
 
-        // Simple parallax-like micro-interaction for images
+        // Sticky nav scroll behavior
+        let lastScroll = 0;
         window.addEventListener('scroll', () => {
-            const scroll = window.pageYOffset;
-            document.querySelectorAll('img').forEach(img => {
-                const speed = 0.05;
-                const rect = img.getBoundingClientRect();
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    img.style.transform = `translateY(${(rect.top - window.innerHeight/2) * speed}px)`;
-                }
-            });
-        });
-
-        // Form placeholder interaction logic (simulation)
-        const inputs = document.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('blur', () => {
-                if (input.value !== "") {
-                    input.classList.add('not-empty');
-                } else {
-                    input.classList.remove('not-empty');
-                }
-            });
+            const currentScroll = window.pageYOffset;
+            const header = document.querySelector('header');
+            
+            if (currentScroll > 50) {
+                header.classList.add('editorial-shadow');
+            } else {
+                header.classList.remove('editorial-shadow');
+            }
+            lastScroll = currentScroll;
         });
 
 (() => {

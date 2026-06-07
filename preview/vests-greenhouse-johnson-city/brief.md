@@ -67,36 +67,24 @@ Recent posts from their Facebook page:
 - **Primary CTA:** View menu & call
 - **Secondary CTA:** Get directions
 - **Sections:** hero, credibility, menu-highlights, about, gallery, visit, contact
-- **Tone:** Warm, appetizing, neighborhood favorite
-- **Palette:** #000000, #303030, #101010
+- **Tone:** Warm, appetizing, neighborhood favorite — invite hunger and comfort
+- **Layout archetype:** asymmetric-overlap
+- **Colors / typography:** Stitch decides (no website to extract from)
 
 ## Stitch generation brief
 
 - **Vertical:** Restaurant / food service
-- **Mood:** Warm, appetizing, neighborhood favorite
-- **Typography direction:** DM Serif Display + DM Sans
-- **Layout family:** asymmetric-grid
-- **Design dials:** DESIGN_VARIANCE 8 | MOTION_INTENSITY 5 | VISUAL_DENSITY 7
+- **Mood:** Warm, appetizing, neighborhood favorite — invite hunger and comfort
+- **Typography direction:** Playfair Display + Source Sans 3
+- **Layout archetype:** asymmetric-overlap
+- **Design dials:** DESIGN_VARIANCE 9 | MOTION_INTENSITY 5 | VISUAL_DENSITY 7
+- **Colors / typography:** Stitch decides (no website to extract from)
 
-## Brand from live site (auto-extracted)
+## Facebook source (no brand colors to extract)
 
-- **Extracted:** 2026-06-07T01:07:44.609Z
 - **Source:** https://www.facebook.com/p/Vest-Greenhouse-100069923730533/
 - **Platform:** Facebook (no dedicated website)
-- **Primary / secondary / accent:** #333333 / #dddddd / #777777
-- **All business colors:** #333333, #dddddd, #777777, #003399, #116699, #118833
-- **Fonts detected:** system-ui, Segoe UI, Helvetica Neue
-- **Palette direction:** Facebook page imagery — #333333, #dddddd, #777777
-- **Typography direction:** Clean sans-serif — professional local business
-- **Stitch guidance:** Facebook-only business at https://www.facebook.com/p/Vest-Greenhouse-100069923730533/. Use scraped post photos (0) for hero and gallery slots — no stock imagery. Match palette to food/brand photos: #333333, #dddddd, #777777.
-
-```css
-/* Facebook-derived palette */
-:root {
-  --brand-primary: #333333;
-  --brand-secondary: #dddddd;
-  --brand-accent: #777777;
-  --font-primary: system-ui, sans-serif;
-}
-```
+- **Scraped:** 2026-06-07T01:37:10.673Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at https://www.facebook.com/p/Vest-Greenhouse-100069923730533/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
