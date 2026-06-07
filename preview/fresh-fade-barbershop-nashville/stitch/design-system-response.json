@@ -1,0 +1,511 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Nashville Noir",
+        "styleGuidelines": "## Brand & Style\nThe design system for Fresh Fade Barbershop embodies a \"Nashville Noir\" aesthetic—a sophisticated blend of Southern grit and high-end editorial refinement. The brand personality is local and expert, catering to a clientele that values craftsmanship and a curated atmosphere. \n\nThe visual style is **High-Contrast Editorial**, characterized by:\n- **Minimalism & Precision:** Large areas of negative space allow the typography and photography to breathe.\n- **Architectural Line Work:** Use of 1px vertical and horizontal hair-lines to separate content, echoing the precision of a barber's blade.\n- **Offset Grids:** A non-traditional layout structure that breaks the standard symmetrical mold to create a modern, rhythmic flow.\n- **Premium Textures:** While the UI is digital, it evokes the physical presence of heavy-weight paper and cold steel.\n\n## Layout & Spacing\nThe layout philosophy is based on a **Fixed Grid with Intentional Offsets**.\n\n- **The 12-Column Grid:** All content aligns to a 12-column structure on desktop. However, \"Noir\" elements (like images or specific text blocks) should be offset by 1 or 2 columns to create an asymmetrical, editorial rhythm.\n- **Vertical Rule Motif:** Use 1px Bone (#F9F6F2) rules at 10% opacity to define the vertical gutters of the grid visually in certain sections, reinforcing the \"industrial\" feel.\n- **Whitespace:** Use generous vertical padding (80px - 120px) between sections to signify a premium experience that isn't rushed.\n- **Mobile:** Transition to a single-column fluid layout with 24px side margins. Maintain the vertical line motif as a left-border accent for blockquotes or section headers.\n\n## Elevation & Depth\nIn this design system, depth is conveyed through **Tonal Layering and Borders** rather than shadows.\n\n- **Flat Depth:** Avoid drop shadows entirely. Instead, use different shades of Charcoal and Steel Gray to denote stacking. A modal or pop-over should have a 1px Bone border to separate it from the background.\n- **Backdrop Blurs:** For navigation bars or overlays, use a subtle background blur (8px) over a semi-transparent Charcoal to maintain the \"noir\" atmosphere while ensuring content remains legible.\n- **Hard Lines:** Use 1px rules as the primary method of defining hierarchy. A \"contained\" element is simply a box with a 1px border, not a shadowed card.\n\n## Components\n- **Buttons:** Primary buttons are Solid Bone with Charcoal text. Secondary buttons are Ghost-style with a 1px Bone border. Hover states should transition the background to Warm Ochre.\n- **Inputs:** Standardized as a bottom-border only (1px Bone) with Archivo Narrow placeholder text. Focus state changes the border to Warm Ochre.\n- **Cards:** No background fill or shadows. Cards are defined by a 1px border or by the content’s alignment to the offset grid.\n- **Chips/Badges:** Small, rectangular boxes with Archivo Narrow caps. Used for \"Available Now\" or \"Expert\" tags.\n- **The \"Blade\" Divider:** A specific component consisting of a 1px vertical line that starts at the top of a section and \"cuts\" down into the content, often used to separate a headline from body text.\n- **Booking Bar:** A persistent, minimal bar at the bottom of the screen (or top on desktop) using a Deep Charcoal background and a single Warm Ochre CTA.",
+        "theme": {
+          "bodyFont": "ARCHIVO_NARROW",
+          "bodyFontFamily": "Archivo Narrow",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#121212",
+          "designMd": "---\nname: Nashville Noir\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c8c6c5'\n  primary: '#c8c6c5'\n  on-primary: '#313030'\n  primary-container: '#121212'\n  on-primary-container: '#7e7d7d'\n  inverse-primary: '#5f5e5e'\n  secondary: '#f7bd48'\n  on-secondary: '#412d00'\n  secondary-container: '#ba880f'\n  on-secondary-container: '#392700'\n  tertiary: '#c8c6c2'\n  on-tertiary: '#31302e'\n  tertiary-container: '#121210'\n  on-tertiary-container: '#7e7d7a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474646'\n  secondary-fixed: '#ffdea6'\n  secondary-fixed-dim: '#f7bd48'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5d4200'\n  tertiary-fixed: '#e5e2de'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1c1c1a'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Archivo Narrow\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Archivo Narrow\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  offset-step: 32px\n---\n\n## Brand & Style\nThe design system for Fresh Fade Barbershop embodies a \"Nashville Noir\" aesthetic—a sophisticated blend of Southern grit and high-end editorial refinement. The brand personality is local and expert, catering to a clientele that values craftsmanship and a curated atmosphere. \n\nThe visual style is **High-Contrast Editorial**, characterized by:\n- **Minimalism & Precision:** Large areas of negative space allow the typography and photography to breathe.\n- **Architectural Line Work:** Use of 1px vertical and horizontal hair-lines to separate content, echoing the precision of a barber's blade.\n- **Offset Grids:** A non-traditional layout structure that breaks the standard symmetrical mold to create a modern, rhythmic flow.\n- **Premium Textures:** While the UI is digital, it evokes the physical presence of heavy-weight paper and cold steel.\n\n## Colors\nThe palette is deeply rooted in the materials of a luxury barbershop: worn leather, polished wood, and clean linen.\n\n- **Deep Charcoal (#121212):** Used as the primary background color. It provides a moody, \"noir\" canvas that feels private and exclusive.\n- **Warm Ochre (#B8860B):** The accent color, used sparingly for calls-to-action, highlights, and secondary brand elements. It represents the \"Gold Standard\" of service.\n- **Bone (#F9F6F2):** The primary typography and surface-on-dark color. It is softer than pure white, providing an aged, premium feel that is easier on the eyes.\n- **Steel Gray (#2A2A2A):** Used for subtle dividers and input backgrounds to maintain hierarchy without breaking the dark mode immersion.\n\n## Typography\nThe typography system relies on the tension between the classic, high-contrast serif and the utilitarian, industrial sans-serif.\n\n- **Headlines:** Use **Playfair Display**. It should be set with tight leading. For large display moments, use italic styles to emphasize the \"Noir\" editorial feel.\n- **Body & UI:** Use **Archivo Narrow**. Its condensed nature feels technical and efficient, reminiscent of vintage shop manuals or ledger entries.\n- **Labels:** Small labels and navigational elements should always be in uppercase with increased letter spacing to ensure legibility and a refined architectural look.\n\n## Layout & Spacing\nThe layout philosophy is based on a **Fixed Grid with Intentional Offsets**.\n\n- **The 12-Column Grid:** All content aligns to a 12-column structure on desktop. However, \"Noir\" elements (like images or specific text blocks) should be offset by 1 or 2 columns to create an asymmetrical, editorial rhythm.\n- **Vertical Rule Motif:** Use 1px Bone (#F9F6F2) rules at 10% opacity to define the vertical gutters of the grid visually in certain sections, reinforcing the \"industrial\" feel.\n- **Whitespace:** Use generous vertical padding (80px - 120px) between sections to signify a premium experience that isn't rushed.\n- **Mobile:** Transition to a single-column fluid layout with 24px side margins. Maintain the vertical line motif as a left-border accent for blockquotes or section headers.\n\n## Elevation & Depth\nIn this design system, depth is conveyed through **Tonal Layering and Borders** rather than shadows.\n\n- **Flat Depth:** Avoid drop shadows entirely. Instead, use different shades of Charcoal and Steel Gray to denote stacking. A modal or pop-over should have a 1px Bone border to separate it from the background.\n- **Backdrop Blurs:** For navigation bars or overlays, use a subtle background blur (8px) over a semi-transparent Charcoal to maintain the \"noir\" atmosphere while ensuring content remains legible.\n- **Hard Lines:** Use 1px rules as the primary method of defining hierarchy. A \"contained\" element is simply a box with a 1px border, not a shadowed card.\n\n## Shapes\nThe shape language is strictly **Sharp**. \n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. This reinforces the \"gritty\" and \"industrial\" nature of the barbershop environment.\n- **Geometric Rigidity:** Every element should feel like it was cut from steel or stone. Use sharp corners to maintain the high-end, editorial aesthetic.\n\n## Components\n- **Buttons:** Primary buttons are Solid Bone with Charcoal text. Secondary buttons are Ghost-style with a 1px Bone border. Hover states should transition the background to Warm Ochre.\n- **Inputs:** Standardized as a bottom-border only (1px Bone) with Archivo Narrow placeholder text. Focus state changes the border to Warm Ochre.\n- **Cards:** No background fill or shadows. Cards are defined by a 1px border or by the content’s alignment to the offset grid.\n- **Chips/Badges:** Small, rectangular boxes with Archivo Narrow caps. Used for \"Available Now\" or \"Expert\" tags.\n- **The \"Blade\" Divider:** A specific component consisting of a 1px vertical line that starts at the top of a section and \"cuts\" down into the content, often used to separate a headline from body text.\n- **Booking Bar:** A persistent, minimal bar at the bottom of the screen (or top on desktop) using a Deep Charcoal background and a single Warm Ochre CTA.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "ARCHIVO_NARROW",
+          "labelFontFamily": "Archivo Narrow",
+          "namedColors": {
+            "background": "#131313",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#303030",
+            "inverse_primary": "#5f5e5e",
+            "inverse_surface": "#e4e2e1",
+            "on_background": "#e4e2e1",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#313030",
+            "on_primary_container": "#7e7d7d",
+            "on_primary_fixed": "#1c1b1b",
+            "on_primary_fixed_variant": "#474646",
+            "on_secondary": "#412d00",
+            "on_secondary_container": "#392700",
+            "on_secondary_fixed": "#271900",
+            "on_secondary_fixed_variant": "#5d4200",
+            "on_surface": "#e4e2e1",
+            "on_surface_variant": "#c4c7c7",
+            "on_tertiary": "#31302e",
+            "on_tertiary_container": "#7e7d7a",
+            "on_tertiary_fixed": "#1c1c1a",
+            "on_tertiary_fixed_variant": "#474744",
+            "outline": "#8e9192",
+            "outline_variant": "#444748",
+            "primary": "#c8c6c5",
+            "primary_container": "#121212",
+            "primary_fixed": "#e5e2e1",
+            "primary_fixed_dim": "#c8c6c5",
+            "secondary": "#f7bd48",
+            "secondary_container": "#ba880f",
+            "secondary_fixed": "#ffdea6",
+            "secondary_fixed_dim": "#f7bd48",
+            "surface": "#131313",
+            "surface_bright": "#393939",
+            "surface_container": "#1f2020",
+            "surface_container_high": "#2a2a2a",
+            "surface_container_highest": "#353535",
+            "surface_container_low": "#1b1c1c",
+            "surface_container_lowest": "#0e0e0e",
+            "surface_dim": "#131313",
+            "surface_tint": "#c8c6c5",
+            "surface_variant": "#353535",
+            "tertiary": "#c8c6c2",
+            "tertiary_container": "#121210",
+            "tertiary_fixed": "#e5e2de",
+            "tertiary_fixed_dim": "#c8c6c2"
+          },
+          "overrideNeutralColor": "#2a2a2a",
+          "overridePrimaryColor": "#121212",
+          "overrideSecondaryColor": "#b8860b",
+          "overrideTertiaryColor": "#f9f6f2",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "24px",
+            "offset-step": "32px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "72px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.15em",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/019c8bf441304451aae761c50751f330",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1200",
+          "id": "a5ec4c3bb11c41c4905f9b5083ff7c1d",
+          "name": "projects/3628559535317657680/screens/a5ec4c3bb11c41c4905f9b5083ff7c1d",
+          "prompt": "Close-up, editorial portrait of a sharp, modern haircut with a clean fade. Dramatic side lighting, dark moody background, high contrast black and white with a subtle warm tint. Professional, stylish, Nashville urban vibe.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs9bFhGWdeyx6R1CIN06DRAOl-cvzxJOd8pYNJPaA0T8APab-Gl4XpX0hxy0w76u2vAXH6UYW6wdCt0NQ6OX1Im7DZlYrpyLqKY0HdNnPjvh5OZqWTjZNXb9Ul3gpARTi9n_Lw6cnC4VCkHQ88PRXbMCrDwOrhrHfXDbZdyeE53xMEDxX__Ff-QmMK6HcdJpZpx7oLJXeBE2daogJDImouAfzEI1fNyL5tGV_41u-a1dI3p5P_WoLRiWhU",
+            "name": "projects/3628559535317657680/files/922baf7bd4334a959c59b88689504be8"
+          },
+          "theme": {},
+          "title": "Close-up, editorial portrait of a sharp, modern haircut with a clean fade. Dramatic side lighting, dark moody background, high contrast black and white with a subtle warm tint. Professional, stylish, Nashville urban vibe.",
+          "width": "896"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "c42d016dcf954389aaf6a59e68f27ace",
+          "name": "projects/3628559535317657680/screens/c42d016dcf954389aaf6a59e68f27ace",
+          "prompt": "Cinematic, high-contrast photograph of a professional barber's tools (clippers, straight razor, comb) laid out on a dark marble countertop. Atmospheric lighting with deep shadows and warm ochre highlights. Nashville Noir aesthetic, premium, sharp focus.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvjUg0ZLPqkbmtgkgMgGDDL5dMP74wuwAPK7t9P9Ma769KgWp2wINC1aiz27tNVJ4F2rt-J9W8QN1boQSFxDwR0cjoAPvnBCfb0aJjvCbK9Qusy9EGE2a9KJ3vDSfAeQu2tc_xiuQPFQHPzMymxrMpe-1lAcufucwY_3JxJ8AxUYGQlzoAvn7Nw3ewTrvdDgg_Ti6WQTevpbQ-9tEtCia1v2AYWNlPzqJq9Z-fIcGWuolmh4oegHg7fHA",
+            "name": "projects/3628559535317657680/files/70d15f565284470982404b769973fe93"
+          },
+          "theme": {},
+          "title": "Cinematic, high-contrast photograph of a professional barber's tools (clippers, straight razor, comb) laid out on a dark marble countertop. Atmospheric lighting with deep shadows and warm ochre highlights. Nashville Noir aesthetic, premium, sharp focus.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "2bca180d146c4acb8fe3b3700ee4b2eb",
+          "name": "projects/3628559535317657680/screens/2bca180d146c4acb8fe3b3700ee4b2eb",
+          "prompt": "Interior shot of a high-end, vintage-inspired barbershop in Nashville. Leather chairs, dark wood accents, industrial lighting, large mirrors reflecting a moody atmosphere. Wide angle, architectural photography style, Nashville Noir.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtghdLFj6btMfUrlgkbeFXUULW7hU_J3tHQeJegBwyU_hhKah9QzWzdczHY-XyCPKGH62jhHFZwf0-oQxYP1aH022z8kxtvoCgBkwtfv-SXnHE3cTr2aGFnS2kkDN9m9HmX3uplx2vZB7AyuCS00ghIlm-9a9W6ZFMvAqIyIQ-yNJPwyZ1-RYl73AIQYmFFmNNLtb5rhDq8pZmq4SgJdi2JeIQzt3DPYspnsxLFJpJ_zi9VZwwgJV48Vg",
+            "name": "projects/3628559535317657680/files/55254105e4014bc496839e215deb08b8"
+          },
+          "theme": {},
+          "title": "Interior shot of a high-end, vintage-inspired barbershop in Nashville. Leather chairs, dark wood accents, industrial lighting, large mirrors reflecting a moody atmosphere. Wide angle, architectural photography style, Nashville Noir.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "512",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ExNmVkYWIzOGQ2ZTRlNjM4ZTVjZTE0ODQyMjBiYTc4EgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhMzNjI4NTU5NTM1MzE3NjU3Njgw&filename=&opi=96797242",
+            "mimeType": "image/svg+xml",
+            "name": "projects/3628559535317657680/files/a34fe549911042b29e71e476200f6371"
+          },
+          "id": "a757c754db36495f9d5e3e393820685e",
+          "name": "projects/3628559535317657680/screens/a757c754db36495f9d5e3e393820685e",
+          "prompt": "Brand logo. - Primary color: #121212\n- Font: playfairDisplay\n- Mode: dark\n- Roundness: rounded-lg\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "displayMode": "SVG",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuFyxWdN6KMZtNhgoizaFYLd7JxJte0MvFkTgxVsgnT6RedTNpbod4RDaZUejwyJJXD7nIjGHV-aeNTKsvgRFb2tZ2VZBPoGN-amWgIzOL4y-puYxazwwtAvNGA96WeD3-s9RLB010dUwpVd27AShKvCcdM80sMxxlRJxr8St6x5cadVBTrwuwoxh_Q7-JHiHn1APwCshO9JPJoHxbOOdGzj_9g_rvu5XKNQvA1CeYjH7F37HZocBJlHdU",
+            "name": "projects/3628559535317657680/files/cbdec2ca82914b7cac61b861ef1485f9"
+          },
+          "theme": {},
+          "title": "Fresh Fade Barbershop Logo",
+          "width": "512"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Nashville Noir",
+              "styleGuidelines": "## Brand & Style\nThe design system for Fresh Fade Barbershop embodies a \"Nashville Noir\" aesthetic—a sophisticated blend of Southern grit and high-end editorial refinement. The brand personality is local and expert, catering to a clientele that values craftsmanship and a curated atmosphere. \n\nThe visual style is **High-Contrast Editorial**, characterized by:\n- **Minimalism & Precision:** Large areas of negative space allow the typography and photography to breathe.\n- **Architectural Line Work:** Use of 1px vertical and horizontal hair-lines to separate content, echoing the precision of a barber's blade.\n- **Offset Grids:** A non-traditional layout structure that breaks the standard symmetrical mold to create a modern, rhythmic flow.\n- **Premium Textures:** While the UI is digital, it evokes the physical presence of heavy-weight paper and cold steel.\n\n## Layout & Spacing\nThe layout philosophy is based on a **Fixed Grid with Intentional Offsets**.\n\n- **The 12-Column Grid:** All content aligns to a 12-column structure on desktop. However, \"Noir\" elements (like images or specific text blocks) should be offset by 1 or 2 columns to create an asymmetrical, editorial rhythm.\n- **Vertical Rule Motif:** Use 1px Bone (#F9F6F2) rules at 10% opacity to define the vertical gutters of the grid visually in certain sections, reinforcing the \"industrial\" feel.\n- **Whitespace:** Use generous vertical padding (80px - 120px) between sections to signify a premium experience that isn't rushed.\n- **Mobile:** Transition to a single-column fluid layout with 24px side margins. Maintain the vertical line motif as a left-border accent for blockquotes or section headers.\n\n## Elevation & Depth\nIn this design system, depth is conveyed through **Tonal Layering and Borders** rather than shadows.\n\n- **Flat Depth:** Avoid drop shadows entirely. Instead, use different shades of Charcoal and Steel Gray to denote stacking. A modal or pop-over should have a 1px Bone border to separate it from the background.\n- **Backdrop Blurs:** For navigation bars or overlays, use a subtle background blur (8px) over a semi-transparent Charcoal to maintain the \"noir\" atmosphere while ensuring content remains legible.\n- **Hard Lines:** Use 1px rules as the primary method of defining hierarchy. A \"contained\" element is simply a box with a 1px border, not a shadowed card.\n\n## Components\n- **Buttons:** Primary buttons are Solid Bone with Charcoal text. Secondary buttons are Ghost-style with a 1px Bone border. Hover states should transition the background to Warm Ochre.\n- **Inputs:** Standardized as a bottom-border only (1px Bone) with Archivo Narrow placeholder text. Focus state changes the border to Warm Ochre.\n- **Cards:** No background fill or shadows. Cards are defined by a 1px border or by the content’s alignment to the offset grid.\n- **Chips/Badges:** Small, rectangular boxes with Archivo Narrow caps. Used for \"Available Now\" or \"Expert\" tags.\n- **The \"Blade\" Divider:** A specific component consisting of a 1px vertical line that starts at the top of a section and \"cuts\" down into the content, often used to separate a headline from body text.\n- **Booking Bar:** A persistent, minimal bar at the bottom of the screen (or top on desktop) using a Deep Charcoal background and a single Warm Ochre CTA.",
+              "theme": {
+                "bodyFont": "ARCHIVO_NARROW",
+                "bodyFontFamily": "Archivo Narrow",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#121212",
+                "designMd": "---\nname: Nashville Noir\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c8c6c5'\n  primary: '#c8c6c5'\n  on-primary: '#313030'\n  primary-container: '#121212'\n  on-primary-container: '#7e7d7d'\n  inverse-primary: '#5f5e5e'\n  secondary: '#f7bd48'\n  on-secondary: '#412d00'\n  secondary-container: '#ba880f'\n  on-secondary-container: '#392700'\n  tertiary: '#c8c6c2'\n  on-tertiary: '#31302e'\n  tertiary-container: '#121210'\n  on-tertiary-container: '#7e7d7a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474646'\n  secondary-fixed: '#ffdea6'\n  secondary-fixed-dim: '#f7bd48'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5d4200'\n  tertiary-fixed: '#e5e2de'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1c1c1a'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Archivo Narrow\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Archivo Narrow\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  offset-step: 32px\n---\n\n## Brand & Style\nThe design system for Fresh Fade Barbershop embodies a \"Nashville Noir\" aesthetic—a sophisticated blend of Southern grit and high-end editorial refinement. The brand personality is local and expert, catering to a clientele that values craftsmanship and a curated atmosphere. \n\nThe visual style is **High-Contrast Editorial**, characterized by:\n- **Minimalism & Precision:** Large areas of negative space allow the typography and photography to breathe.\n- **Architectural Line Work:** Use of 1px vertical and horizontal hair-lines to separate content, echoing the precision of a barber's blade.\n- **Offset Grids:** A non-traditional layout structure that breaks the standard symmetrical mold to create a modern, rhythmic flow.\n- **Premium Textures:** While the UI is digital, it evokes the physical presence of heavy-weight paper and cold steel.\n\n## Colors\nThe palette is deeply rooted in the materials of a luxury barbershop: worn leather, polished wood, and clean linen.\n\n- **Deep Charcoal (#121212):** Used as the primary background color. It provides a moody, \"noir\" canvas that feels private and exclusive.\n- **Warm Ochre (#B8860B):** The accent color, used sparingly for calls-to-action, highlights, and secondary brand elements. It represents the \"Gold Standard\" of service.\n- **Bone (#F9F6F2):** The primary typography and surface-on-dark color. It is softer than pure white, providing an aged, premium feel that is easier on the eyes.\n- **Steel Gray (#2A2A2A):** Used for subtle dividers and input backgrounds to maintain hierarchy without breaking the dark mode immersion.\n\n## Typography\nThe typography system relies on the tension between the classic, high-contrast serif and the utilitarian, industrial sans-serif.\n\n- **Headlines:** Use **Playfair Display**. It should be set with tight leading. For large display moments, use italic styles to emphasize the \"Noir\" editorial feel.\n- **Body & UI:** Use **Archivo Narrow**. Its condensed nature feels technical and efficient, reminiscent of vintage shop manuals or ledger entries.\n- **Labels:** Small labels and navigational elements should always be in uppercase with increased letter spacing to ensure legibility and a refined architectural look.\n\n## Layout & Spacing\nThe layout philosophy is based on a **Fixed Grid with Intentional Offsets**.\n\n- **The 12-Column Grid:** All content aligns to a 12-column structure on desktop. However, \"Noir\" elements (like images or specific text blocks) should be offset by 1 or 2 columns to create an asymmetrical, editorial rhythm.\n- **Vertical Rule Motif:** Use 1px Bone (#F9F6F2) rules at 10% opacity to define the vertical gutters of the grid visually in certain sections, reinforcing the \"industrial\" feel.\n- **Whitespace:** Use generous vertical padding (80px - 120px) between sections to signify a premium experience that isn't rushed.\n- **Mobile:** Transition to a single-column fluid layout with 24px side margins. Maintain the vertical line motif as a left-border accent for blockquotes or section headers.\n\n## Elevation & Depth\nIn this design system, depth is conveyed through **Tonal Layering and Borders** rather than shadows.\n\n- **Flat Depth:** Avoid drop shadows entirely. Instead, use different shades of Charcoal and Steel Gray to denote stacking. A modal or pop-over should have a 1px Bone border to separate it from the background.\n- **Backdrop Blurs:** For navigation bars or overlays, use a subtle background blur (8px) over a semi-transparent Charcoal to maintain the \"noir\" atmosphere while ensuring content remains legible.\n- **Hard Lines:** Use 1px rules as the primary method of defining hierarchy. A \"contained\" element is simply a box with a 1px border, not a shadowed card.\n\n## Shapes\nThe shape language is strictly **Sharp**. \n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. This reinforces the \"gritty\" and \"industrial\" nature of the barbershop environment.\n- **Geometric Rigidity:** Every element should feel like it was cut from steel or stone. Use sharp corners to maintain the high-end, editorial aesthetic.\n\n## Components\n- **Buttons:** Primary buttons are Solid Bone with Charcoal text. Secondary buttons are Ghost-style with a 1px Bone border. Hover states should transition the background to Warm Ochre.\n- **Inputs:** Standardized as a bottom-border only (1px Bone) with Archivo Narrow placeholder text. Focus state changes the border to Warm Ochre.\n- **Cards:** No background fill or shadows. Cards are defined by a 1px border or by the content’s alignment to the offset grid.\n- **Chips/Badges:** Small, rectangular boxes with Archivo Narrow caps. Used for \"Available Now\" or \"Expert\" tags.\n- **The \"Blade\" Divider:** A specific component consisting of a 1px vertical line that starts at the top of a section and \"cuts\" down into the content, often used to separate a headline from body text.\n- **Booking Bar:** A persistent, minimal bar at the bottom of the screen (or top on desktop) using a Deep Charcoal background and a single Warm Ochre CTA.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "ARCHIVO_NARROW",
+                "labelFontFamily": "Archivo Narrow",
+                "namedColors": {
+                  "background": "#131313",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#303030",
+                  "inverse_primary": "#5f5e5e",
+                  "inverse_surface": "#e4e2e1",
+                  "on_background": "#e4e2e1",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#313030",
+                  "on_primary_container": "#7e7d7d",
+                  "on_primary_fixed": "#1c1b1b",
+                  "on_primary_fixed_variant": "#474646",
+                  "on_secondary": "#412d00",
+                  "on_secondary_container": "#392700",
+                  "on_secondary_fixed": "#271900",
+                  "on_secondary_fixed_variant": "#5d4200",
+                  "on_surface": "#e4e2e1",
+                  "on_surface_variant": "#c4c7c7",
+                  "on_tertiary": "#31302e",
+                  "on_tertiary_container": "#7e7d7a",
+                  "on_tertiary_fixed": "#1c1c1a",
+                  "on_tertiary_fixed_variant": "#474744",
+                  "outline": "#8e9192",
+                  "outline_variant": "#444748",
+                  "primary": "#c8c6c5",
+                  "primary_container": "#121212",
+                  "primary_fixed": "#e5e2e1",
+                  "primary_fixed_dim": "#c8c6c5",
+                  "secondary": "#f7bd48",
+                  "secondary_container": "#ba880f",
+                  "secondary_fixed": "#ffdea6",
+                  "secondary_fixed_dim": "#f7bd48",
+                  "surface": "#131313",
+                  "surface_bright": "#393939",
+                  "surface_container": "#1f2020",
+                  "surface_container_high": "#2a2a2a",
+                  "surface_container_highest": "#353535",
+                  "surface_container_low": "#1b1c1c",
+                  "surface_container_lowest": "#0e0e0e",
+                  "surface_dim": "#131313",
+                  "surface_tint": "#c8c6c5",
+                  "surface_variant": "#353535",
+                  "tertiary": "#c8c6c2",
+                  "tertiary_container": "#121210",
+                  "tertiary_fixed": "#e5e2de",
+                  "tertiary_fixed_dim": "#c8c6c2"
+                },
+                "overrideNeutralColor": "#2a2a2a",
+                "overridePrimaryColor": "#121212",
+                "overrideSecondaryColor": "#b8860b",
+                "overrideTertiaryColor": "#f9f6f2",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "24px",
+                  "offset-step": "32px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "72px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/019c8bf441304451aae761c50751f330",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "9504",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2FlZTczYTU2ODM1NTQ3MjE4YWNkNGI5NjljNjkyMzNjEgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhMzNjI4NTU5NTM1MzE3NjU3Njgw&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/3628559535317657680/files/feed2f0b28a64c639951645ce17235ec"
+          },
+          "id": "ecc29c98e6964623a86b13afed22a594",
+          "name": "projects/3628559535317657680/screens/ecc29c98e6964623a86b13afed22a594",
+          "prompt": "Create a premium, bespoke editorial homepage for Fresh Fade Barbershop in Nashville. \nKey Elements:\n- Header: Logo {{DATA:IMAGE:IMAGE_2}}, phone (629) 277-7761, and minimalist navigation.\n- Hero: Asymmetrical layout using {{DATA:IMAGE:IMAGE_4}}. Headline: \"Precision. Character. Nashville.\" Subheadline: \"The intersection of vintage craft and modern style on Clarksville Pike.\" Primary CTA: \"Book an Appointment.\"\n- Credibility: A minimalist \"By the Numbers\" section with 1px rules. \"15+ Years Experience,\" \"Nashville Born,\" \"Award-Winning Service.\"\n- Services: Editorial-style menu with prices. Haircuts ($35+), Beard Trim ($20+), Hot Towel Shave ($30+), The Full Experience ($75). Use {{DATA:IMAGE:IMAGE_5}} as a side-car image.\n- About: Gritty, high-contrast section with {{DATA:IMAGE:IMAGE_6}}. Focus on the \"Nashville Noir\" aesthetic and local expertise.\n- Visit: Two-column layout. Column 1: \"Location & Hours\" (3715 Clarksville Pike, Nashville, TN 37218). Column 2: The required `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n- Contact: A clean, industrial contact form with validation UI. Email: Peterfarg90@gmail.com.\n- Footer: Copyright, social links, and the Nashville address.\nStyle: Use the Nashville Noir design system {{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}. High contrast, dark surfaces (#121212), ochre accents (#B8860B), and bone-colored text (#F9F6F2). Implement smooth scrolling and a mobile-responsive navigation.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Alt Text: Fresh Fade Barbershop Logo\n  Description: Brand logo. - Primary color: #121212\n- Font: playfairDisplay\n- Mode: dark\n- Roundness: rounded-lg\n\n  Dimensions: 512x512\n  Aspect Ratio: 1.00\n  Colors: #B8860B, #F9F6F2\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLteGfaZRQ1SyP1IFheJUNphLxYoud3jnSwoUPKwOnYFQGMmlBLtth8FSxdJBHDfvI1-6YETWcz6B0y52oJGDZg2xgYcpLEPc_WV37NX5uni1FmSWlJK3RLlR31p_imcvOzfOQHxoPYnYfKXwIlB5LXojkISpIlYIth1JSDcVHykJfretfgy81F8IFayqP7E1nrWLYchrsEFTyggqpolFGMjrVng0ap9Spt6WEcBlMNsb9yOdFEJqDt8hA",
+            "name": "projects/3628559535317657680/files/549d666f039247deb3d088cf26cbaea9"
+          },
+          "theme": {
+            "bodyFont": "ARCHIVO_NARROW",
+            "bodyFontFamily": "Archivo Narrow",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#121212",
+            "designMd": "---\nname: Nashville Noir\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c8c6c5'\n  primary: '#c8c6c5'\n  on-primary: '#313030'\n  primary-container: '#121212'\n  on-primary-container: '#7e7d7d'\n  inverse-primary: '#5f5e5e'\n  secondary: '#f7bd48'\n  on-secondary: '#412d00'\n  secondary-container: '#ba880f'\n  on-secondary-container: '#392700'\n  tertiary: '#c8c6c2'\n  on-tertiary: '#31302e'\n  tertiary-container: '#121210'\n  on-tertiary-container: '#7e7d7a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474646'\n  secondary-fixed: '#ffdea6'\n  secondary-fixed-dim: '#f7bd48'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5d4200'\n  tertiary-fixed: '#e5e2de'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1c1c1a'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Archivo Narrow\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Archivo Narrow\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  offset-step: 32px\n---\n\n## Brand & Style\nThe design system for Fresh Fade Barbershop embodies a \"Nashville Noir\" aesthetic—a sophisticated blend of Southern grit and high-end editorial refinement. The brand personality is local and expert, catering to a clientele that values craftsmanship and a curated atmosphere. \n\nThe visual style is **High-Contrast Editorial**, characterized by:\n- **Minimalism & Precision:** Large areas of negative space allow the typography and photography to breathe.\n- **Architectural Line Work:** Use of 1px vertical and horizontal hair-lines to separate content, echoing the precision of a barber's blade.\n- **Offset Grids:** A non-traditional layout structure that breaks the standard symmetrical mold to create a modern, rhythmic flow.\n- **Premium Textures:** While the UI is digital, it evokes the physical presence of heavy-weight paper and cold steel.\n\n## Colors\nThe palette is deeply rooted in the materials of a luxury barbershop: worn leather, polished wood, and clean linen.\n\n- **Deep Charcoal (#121212):** Used as the primary background color. It provides a moody, \"noir\" canvas that feels private and exclusive.\n- **Warm Ochre (#B8860B):** The accent color, used sparingly for calls-to-action, highlights, and secondary brand elements. It represents the \"Gold Standard\" of service.\n- **Bone (#F9F6F2):** The primary typography and surface-on-dark color. It is softer than pure white, providing an aged, premium feel that is easier on the eyes.\n- **Steel Gray (#2A2A2A):** Used for subtle dividers and input backgrounds to maintain hierarchy without breaking the dark mode immersion.\n\n## Typography\nThe typography system relies on the tension between the classic, high-contrast serif and the utilitarian, industrial sans-serif.\n\n- **Headlines:** Use **Playfair Display**. It should be set with tight leading. For large display moments, use italic styles to emphasize the \"Noir\" editorial feel.\n- **Body & UI:** Use **Archivo Narrow**. Its condensed nature feels technical and efficient, reminiscent of vintage shop manuals or ledger entries.\n- **Labels:** Small labels and navigational elements should always be in uppercase with increased letter spacing to ensure legibility and a refined architectural look.\n\n## Layout & Spacing\nThe layout philosophy is based on a **Fixed Grid with Intentional Offsets**.\n\n- **The 12-Column Grid:** All content aligns to a 12-column structure on desktop. However, \"Noir\" elements (like images or specific text blocks) should be offset by 1 or 2 columns to create an asymmetrical, editorial rhythm.\n- **Vertical Rule Motif:** Use 1px Bone (#F9F6F2) rules at 10% opacity to define the vertical gutters of the grid visually in certain sections, reinforcing the \"industrial\" feel.\n- **Whitespace:** Use generous vertical padding (80px - 120px) between sections to signify a premium experience that isn't rushed.\n- **Mobile:** Transition to a single-column fluid layout with 24px side margins. Maintain the vertical line motif as a left-border accent for blockquotes or section headers.\n\n## Elevation & Depth\nIn this design system, depth is conveyed through **Tonal Layering and Borders** rather than shadows.\n\n- **Flat Depth:** Avoid drop shadows entirely. Instead, use different shades of Charcoal and Steel Gray to denote stacking. A modal or pop-over should have a 1px Bone border to separate it from the background.\n- **Backdrop Blurs:** For navigation bars or overlays, use a subtle background blur (8px) over a semi-transparent Charcoal to maintain the \"noir\" atmosphere while ensuring content remains legible.\n- **Hard Lines:** Use 1px rules as the primary method of defining hierarchy. A \"contained\" element is simply a box with a 1px border, not a shadowed card.\n\n## Shapes\nThe shape language is strictly **Sharp**. \n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. This reinforces the \"gritty\" and \"industrial\" nature of the barbershop environment.\n- **Geometric Rigidity:** Every element should feel like it was cut from steel or stone. Use sharp corners to maintain the high-end, editorial aesthetic.\n\n## Components\n- **Buttons:** Primary buttons are Solid Bone with Charcoal text. Secondary buttons are Ghost-style with a 1px Bone border. Hover states should transition the background to Warm Ochre.\n- **Inputs:** Standardized as a bottom-border only (1px Bone) with Archivo Narrow placeholder text. Focus state changes the border to Warm Ochre.\n- **Cards:** No background fill or shadows. Cards are defined by a 1px border or by the content’s alignment to the offset grid.\n- **Chips/Badges:** Small, rectangular boxes with Archivo Narrow caps. Used for \"Available Now\" or \"Expert\" tags.\n- **The \"Blade\" Divider:** A specific component consisting of a 1px vertical line that starts at the top of a section and \"cuts\" down into the content, often used to separate a headline from body text.\n- **Booking Bar:** A persistent, minimal bar at the bottom of the screen (or top on desktop) using a Deep Charcoal background and a single Warm Ochre CTA.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "ARCHIVO_NARROW",
+            "labelFontFamily": "Archivo Narrow",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303030",
+              "inverse_primary": "#5f5e5e",
+              "inverse_surface": "#e4e2e1",
+              "on_background": "#e4e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#313030",
+              "on_primary_container": "#7e7d7d",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474646",
+              "on_secondary": "#412d00",
+              "on_secondary_container": "#392700",
+              "on_secondary_fixed": "#271900",
+              "on_secondary_fixed_variant": "#5d4200",
+              "on_surface": "#e4e2e1",
+              "on_surface_variant": "#c4c7c7",
+              "on_tertiary": "#31302e",
+              "on_tertiary_container": "#7e7d7a",
+              "on_tertiary_fixed": "#1c1c1a",
+              "on_tertiary_fixed_variant": "#474744",
+              "outline": "#8e9192",
+              "outline_variant": "#444748",
+              "primary": "#c8c6c5",
+              "primary_container": "#121212",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#f7bd48",
+              "secondary_container": "#ba880f",
+              "secondary_fixed": "#ffdea6",
+              "secondary_fixed_dim": "#f7bd48",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#1f2020",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353535",
+              "surface_container_low": "#1b1c1c",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#c8c6c5",
+              "surface_variant": "#353535",
+              "tertiary": "#c8c6c2",
+              "tertiary_container": "#121210",
+              "tertiary_fixed": "#e5e2de",
+              "tertiary_fixed_dim": "#c8c6c2"
+            },
+            "overrideNeutralColor": "#2a2a2a",
+            "overridePrimaryColor": "#121212",
+            "overrideSecondaryColor": "#b8860b",
+            "overrideTertiaryColor": "#f9f6f2",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "offset-step": "32px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "Fresh Fade Barbershop - Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've completed the bespoke homepage for **Fresh Fade Barbershop**, delivering a \"Nashville Noir\" editorial experience that balances vintage grit with modern refinement.\n\n### Design Highlights:\n- **Nashville Noir Aesthetic**: A custom high-contrast palette of Deep Charcoal, Warm Ochre, and Bone creates a premium, moody atmosphere that stands out from generic local business templates.\n- **Editorial Layout**: I implemented an asymmetrical grid with generous whitespace and 1px border motifs, ensuring the site feels like a high-end magazine feature rather than a standard landing page.\n- **Custom Visuals**:\n    - **Hero & Services**: Integrated architectural photography of the Nashville interior and editorial-style portraiture to showcase the craft.\n    - **Shared Components**: A custom-built navigation bar and footer ensure consistency and easy access to the **\"Book Now\"** action.\n- **Interactive Elements**:\n    - **Visit Section**: Includes the required `map-slot` for your future map integration alongside clear location and hours.\n    - **Contact Form**: A minimalist, industrial-style form at the base of the page for direct inquiries.\n    - **Technical Excellence**: Full semantic HTML, responsive design for desktop and mobile, and smooth-scroll navigation.\n\nThe site is production-ready and designed to leave a memorable first impression for every Nashville client."
+  },
+  {
+    "suggestion": "Add scroll-triggered animations to the service menu"
+  },
+  {
+    "suggestion": "Create a dedicated 'Lookbook' gallery page"
+  },
+  {
+    "suggestion": "Try a version with more 'Ochre' brand accents"
+  }
+]
