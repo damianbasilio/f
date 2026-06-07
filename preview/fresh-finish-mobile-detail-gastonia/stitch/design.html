@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fresh Finish | Precision Mobile Detailing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .precision-line {
+            background-color: #45474b;
+            opacity: 0.3;
+        }
+        .teal-glow:hover {
+            box-shadow: 0 0 15px 2px rgba(0, 241, 254, 0.4);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0c10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #45474b;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #00f1fe;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#00f1fe",
+                      "surface-container-lowest": "#0b0f10",
+                      "on-tertiary-container": "#707b8f",
+                      "on-secondary-fixed": "#002022",
+                      "on-primary-fixed-variant": "#45474b",
+                      "tertiary": "#bcc7dd",
+                      "on-primary-fixed": "#1a1c20",
+                      "on-secondary-container": "#006a70",
+                      "outline-variant": "#45474b",
+                      "surface-bright": "#363a3b",
+                      "outline": "#909095",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "surface-container": "#1d2022",
+                      "on-error": "#690005",
+                      "on-surface-variant": "#c6c6cb",
+                      "on-secondary": "#00363a",
+                      "on-surface": "#e0e3e5",
+                      "secondary-fixed-dim": "#00dbe7",
+                      "surface": "#101415",
+                      "on-background": "#e0e3e5",
+                      "background": "#101415",
+                      "inverse-primary": "#5d5e63",
+                      "surface-variant": "#323537",
+                      "surface-container-high": "#272a2c",
+                      "inverse-surface": "#e0e3e5",
+                      "on-error-container": "#ffdad6",
+                      "secondary-fixed": "#74f5ff",
+                      "primary-fixed": "#e2e2e8",
+                      "on-secondary-fixed-variant": "#004f54",
+                      "on-tertiary-fixed": "#111c2c",
+                      "surface-dim": "#101415",
+                      "on-primary": "#2f3035",
+                      "primary-container": "#0a0c10",
+                      "error-container": "#93000a",
+                      "primary": "#c6c6cc",
+                      "on-tertiary": "#263142",
+                      "error": "#ffb4ab",
+                      "primary-fixed-dim": "#c6c6cc",
+                      "tertiary-fixed": "#d8e3fa",
+                      "tertiary-fixed-dim": "#bcc7dd",
+                      "surface-container-low": "#191c1e",
+                      "secondary": "#ddfcff",
+                      "on-primary-container": "#797a7f",
+                      "inverse-on-surface": "#2d3133",
+                      "surface-container-highest": "#323537",
+                      "tertiary-container": "#020c1c",
+                      "surface-tint": "#c6c6cc"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0rem",
+                      "lg": "0rem",
+                      "xl": "0rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "120px",
+                      "gutter": "24px",
+                      "unit": "4px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "80px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Space Grotesk"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Space Grotesk"],
+                      "body-md": ["Inter"],
+                      "headline-sm": ["Space Grotesk"],
+                      "headline-md": ["Space Grotesk"],
+                      "display-lg-mobile": ["Space Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-container selection:text-on-secondary-fixed">
+<!-- TopNavBar -->
+<nav class="bg-surface/95 dark:bg-surface/95 docked full-width top-0 sticky border-b border-outline-variant/30 flex justify-between items-center w-full px-margin-desktop py-6 z-50 backdrop-blur-md">
+<div class="font-display-lg text-headline-sm uppercase tracking-tighter text-on-surface dark:text-on-surface">Fresh Finish</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#offerings">Offerings</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#experience">Experience</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary-container transition-colors duration-300" href="#visit">Visit</a>
+</div>
+<div class="flex items-center gap-8">
+<span class="hidden lg:block font-label-caps text-label-caps text-on-surface-variant">(704) 772-6396</span>
+<button class="bg-secondary-container text-on-secondary-fixed font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest transition-all duration-300 hover:bg-transparent hover:outline hover:outline-1 hover:outline-secondary-container hover:text-secondary-container active:opacity-80">Request Quote</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-margin-desktop">
+<div class="absolute inset-0 z-0">
+<img alt="Precision Detailing Hero" class="w-full h-full object-cover opacity-60 grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A close-up, high-contrast shot of a sleek black luxury sports car being polished in a minimalist, dimly lit studio. A single LED beam highlights the liquid-like reflection on the hood, revealing surgical-grade paint correction. The atmosphere is clinical and high-end, utilizing a palette of deep obsidian and crisp cool whites. The scene evokes a sense of technical mastery and elite automotive care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC45WVtgZe0QtGSaiwMb6MNPO0C9pwXZWqtvJtsvE3BO_A_5OOnHqZ_ocKU9q1YW9cKsT6ZA68IJ2OpxJhWmndq9MH-KGBtNmoS0La55eAAyhrG062yuqGPnV3UufJdFRE_PgEfJidgCyCfnF18P8v9D8NOkAlOlgrhlk7TNChKSfi-gkdSwo5tqeq1kumGkGSL4lpcG_eeOTC9WayE8DobNUmbBBjUuFRjHWwUH1Y8dqHZy8ct1Esl7NgGclI4X8ZWyTdcG-rbI3Zx"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 w-full max-w-4xl reveal">
+<div class="flex items-center gap-4 mb-8">
+<div class="h-[0.5px] w-12 precision-line"></div>
+<span class="font-label-caps text-label-caps text-secondary-container uppercase tracking-[0.2em]">Automotive Masterclass</span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-12">Precision in<br/><span class="text-secondary-container">Every Pass.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">
+                    Bespoke mobile detailing for the discerning collector. We bring clinical precision and surgical-grade paint correction to your private garage in Gastonia and beyond.
+                </p>
+<div class="flex gap-6">
+<a class="px-10 py-5 bg-secondary-container text-on-secondary-fixed font-label-caps text-label-caps uppercase tracking-[0.15em] teal-glow transition-all" href="#contact">Secure a Slot</a>
+<a class="px-10 py-5 border border-outline-variant/50 text-on-surface font-label-caps text-label-caps uppercase tracking-[0.15em] hover:border-secondary-container transition-all" href="#offerings">Our Services</a>
+</div>
+</div>
+<!-- Abstract Precision Line -->
+<div class="absolute right-0 bottom-0 w-1/3 h-[0.5px] precision-line hidden md:block"></div>
+</section>
+<!-- The Gastonia Standard (Stats) -->
+<section class="py-20 px-margin-desktop border-y border-outline-variant/20 bg-surface-container-lowest">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter items-center">
+<div class="text-center md:text-left border-r border-outline-variant/10">
+<div class="font-display-lg text-headline-md text-secondary-container">500+</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Exotics Detailed</div>
+</div>
+<div class="text-center md:text-left md:pl-10 border-r border-outline-variant/10">
+<div class="font-display-lg text-headline-md text-secondary-container">100%</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Client Retention</div>
+</div>
+<div class="text-center md:text-left md:pl-10 border-r border-outline-variant/10">
+<div class="font-display-lg text-headline-md text-secondary-container">0.5μ</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">Polishing Precision</div>
+</div>
+<div class="text-center md:text-left md:pl-10">
+<div class="font-display-lg text-headline-md text-secondary-container">Gastonia</div>
+<div class="font-label-caps text-label-caps uppercase text-on-surface-variant">The Local Standard</div>
+</div>
+</div>
+</section>
+<!-- Offerings Section -->
+<section class="py-section-gap px-margin-desktop bg-background overflow-hidden" id="offerings">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 reveal">
+<div class="max-w-xl">
+<div class="flex items-center gap-4 mb-4">
+<span class="font-label-caps text-label-caps text-secondary-container uppercase">01 / Offerings</span>
+<div class="h-[0.5px] flex-grow precision-line"></div>
+</div>
+<h2 class="font-display-lg text-headline-md md:text-display-lg">Technical Service Architecture</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-xs text-right hidden md:block">
+                    Every service is executed using pH-neutral chemicals and multi-stage filtration systems.
+                </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Signature Full Detail -->
+<div class="md:col-span-8 group relative overflow-hidden h-[600px] border border-outline-variant/20 reveal">
+<img alt="Signature Detail" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40" data-alt="A professional detailer in a dark clinical uniform carefully applying a ceramic coating to a vintage silver Porsche in a perfectly lit garage. The lighting is focused, with sharp shadows and bright highlights on the chrome. The image emphasizes surgical focus, with fine tools and microfiber cloths. The color palette is muted, focusing on metallic textures and cool teal reflections." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEBED6IhHdWez1yjOZdX_aqXawa07sGN7Vd1AZKk_teU8QOskPi49FFNZPjq3FhJaWf93pN-2WikH5K7DBF0Gn6eaXenxuZoQSU79_IwLwQd7iX_sNxex9l5Si3iI6OETJMs2E8Z4Ac0Tb9zeOpp6MFnG4xcp1XcEFqKIH8z-AnISqxAFTwLPpub2qrxE1CcGDew-7Iy9r5jSaZ6l-Bbw8GmMXBv-MbVdGQooFj_uQkrYRP2o5gQlq4G6TLTbI_FQtwWrSPVkRCky8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12">
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block">PREMIUM TIER</span>
+<h3 class="font-display-lg text-headline-md mb-6">The Signature Full Detail</h3>
+<p class="font-body-md text-on-surface-variant max-w-md mb-8">Our most comprehensive treatment. A 12-hour surgical restoration covering every square millimeter of your asset.</p>
+<ul class="flex flex-wrap gap-4 mb-8">
+<li class="px-4 py-2 border border-outline-variant/30 font-label-caps text-[10px] uppercase">Engine Bay</li>
+<li class="px-4 py-2 border border-outline-variant/30 font-label-caps text-[10px] uppercase">Steam Sanitization</li>
+<li class="px-4 py-2 border border-outline-variant/30 font-label-caps text-[10px] uppercase">Ceramic Sealant</li>
+</ul>
+<button class="text-secondary-container font-label-caps text-label-caps uppercase flex items-center gap-2 group-hover:gap-4 transition-all">View Protocol <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<!-- Interior Rejuvenation -->
+<div class="md:col-span-4 group relative overflow-hidden h-[600px] border border-outline-variant/20 reveal">
+<img alt="Interior Detailing" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40" data-alt="A macro shot of a luxury car's leather interior, showing the intricate stitching and pristine grain after a professional cleaning. The lighting is soft and directional, highlighting the matte finish of high-grade leather. Tiny surgical brushes and specialized cleaning agents are visible in the shallow depth of field. The aesthetic is clean, sophisticated, and focused on luxury textures." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbpSRdo8CZrdYt6T2Hw4kNF6hM8NjI5uxPDKZ1wzc9ClQTUj9a-hpgBGkY1slAXbilwPl1uckU94LKW2KH0kfuObN_n9Bfv70mPVS9Mdw7y-RnGIXx8b7edTAeo0ly7CAyjiD3OekIUOlnCDjcLSkGEeeGoXbAFRXQB266JTLc49tDii8cupc0k5QsVdIHq3blBd_Y10u7nV7hfRjyq_n8iznNNUb6Nf2Avww7DJo3yQbiC92FH3PYrzoRW_oqNn1OsT_q-VTGup3U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="absolute bottom-0 left-0 p-12">
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block">INTERIOR FOCUS</span>
+<h3 class="font-display-lg text-headline-md mb-6">Interior Rejuvenation</h3>
+<p class="font-body-md text-on-surface-variant mb-8">Deep extraction, pH-balanced leather conditioning, and total scent neutralization.</p>
+<button class="text-secondary-container font-label-caps text-label-caps uppercase flex items-center gap-2 group-hover:gap-4 transition-all">Explore <span class="material-symbols-outlined">arrow_forward</span></button>
+</div>
+</div>
+<!-- Paint Correction -->
+<div class="md:col-span-12 group relative overflow-hidden h-[400px] border border-outline-variant/20 reveal">
+<img alt="Paint Correction" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 opacity-40" data-alt="A high-intensity studio lamp shining on a dark blue automotive panel, revealing the dramatic contrast between a swirled, scratched surface and a perfectly corrected, mirror-like finish. The lighting is designed to show every imperfection, emphasizing the technical mastery of the paint correction process. The style is industrial-chic with high-intensity LED highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnttt4lCOoYbgwePw-amA0gAlWB4k_JZjdRx3LvVUue42KWxMFE4BUmhjvbzWAZss6ZF6s7xtZthkCsqxmRpltmcsmGAcd6N-odUTjupP2HNccVTIXoDYOayLoulGD9lf-DPCRYmcRVfldpzGbnv1p0LdKb1rhlsE5iBpJ6C2WboeWYc00sPrItWdXZdBdk3PkmUhs7FzuKBhK0sd5QNgYY-P5N2OnZ13DX4q7lvIuzakd7QTOzM_hGZ8AqZ-um44x_Ap3H50m8fX_"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+<div class="absolute inset-y-0 left-0 p-12 flex flex-col justify-center">
+<span class="font-label-caps text-label-caps text-secondary-container mb-4 block">TECHNICAL MASTERY</span>
+<h3 class="font-display-lg text-headline-md mb-4">Exterior Paint Correction</h3>
+<p class="font-body-md text-on-surface-variant max-w-lg mb-8">We remove 99% of surface defects, swirls, and light scratches to reveal the true depth of your paintwork.</p>
+<button class="w-fit px-8 py-4 border border-secondary-container text-secondary-container font-label-caps text-label-caps uppercase hover:bg-secondary-container hover:text-on-secondary-fixed transition-all">Learn About Our 3-Step Process</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low relative overflow-hidden" id="experience">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="reveal">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label-caps text-label-caps text-secondary-container uppercase">02 / The Obsession</span>
+<div class="h-[0.5px] w-20 precision-line"></div>
+</div>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">The Obsession<br/>with Detail</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>At Fresh Finish, we don't believe in "clean." We believe in restoration to a molecular level. Our mobile unit is a fully self-contained laboratory, equipped with deionized water systems and a curated selection of the world's finest abrasives.</p>
+<p>Founded on the principle that automotive care should be as precise as the engineering under the hood, we've spent years perfecting our protocols to serve the Gastonia community's most valuable vehicles.</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8">
+<div class="border-l-2 border-secondary-container pl-6">
+<span class="block font-display-lg text-headline-sm text-on-surface">Precision</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Every crevice addressed</span>
+</div>
+<div class="border-l-2 border-outline-variant pl-6">
+<span class="block font-display-lg text-headline-sm text-on-surface">Integrity</span>
+<span class="font-label-caps text-[10px] text-on-surface-variant uppercase">Honest local service</span>
+</div>
+</div>
+</div>
+<div class="relative reveal delay-200">
+<div class="aspect-[4/5] relative z-10 border border-outline-variant/30 p-4">
+<img alt="Professional Workshop" class="w-full h-full object-cover" data-alt="A portrait-style shot of a high-end mobile detailing van, perfectly organized with clinical neatness. Rows of color-coded chemicals in clear bottles, professionally coiled hoses, and stacks of pristine white microfiber towels are visible. The van is parked in a modern driveway with a clean, architectural background. The mood is professional, elite, and highly organized." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDy_sXvSSa_bYFeo6Ct71k9ngWIvU5D0zCazmFJ1SlOIVh18k9-GAF33A4BiPb5AKpy-MTNJ-NL4deJeis8t4GPWqDXqDioLcDYMFYYJ939_DmuAk9RuEPLM-GCAZ1mP33AQbW_xBGCzXIiGpSDNiphuYB6QOcGKTtgfZA-9q1CSAmRY0lYaXEaNcV3tn3z-A-pFYls70SyVskAbjhzenHgn3-bopoNLSJKpP8yI5-5OM6PvDkhhaFhPElFQJrqxJzANt3I31wA-vEZ"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -right-10 w-full h-full border border-secondary-container/20 -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="py-section-gap px-margin-desktop bg-background" id="visit">
+<div class="flex items-center gap-8 mb-12 reveal">
+<h2 class="font-display-lg text-headline-md uppercase tracking-tighter whitespace-nowrap">Local Presence</h2>
+<div class="h-[0.5px] w-full precision-line"></div>
+<span class="font-label-caps text-label-caps text-on-surface-variant whitespace-nowrap uppercase">Gastonia, NC</span>
+</div>
+<div class="reveal">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border border-outline-variant/30" data-location="Gastonia, NC" data-map-slot="" style="">
+<!-- Map Placeholder Overlay -->
+<div class="absolute inset-0 bg-surface-container-highest flex flex-col items-center justify-center p-12 text-center">
+<span class="material-symbols-outlined text-secondary-container text-6xl mb-6">distance</span>
+<h3 class="font-display-lg text-headline-sm mb-4">Mobile Service Radius</h3>
+<p class="font-body-md text-on-surface-variant max-w-sm">We provide on-site detailing within a 30-mile radius of Gastonia, North Carolina.</p>
+<div class="mt-8 px-6 py-2 border border-outline-variant/50 font-label-caps text-label-caps uppercase">Service Area: Gaston &amp; Mecklenburg Counties</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-lowest" id="contact">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-5 reveal">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8">Initiate<br/>Consultation</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Due to our rigorous standards, we accept a limited number of clients per week. Contact us to reserve your appointment.</p>
+<div class="space-y-8">
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-secondary-container">call</span>
+<div>
+<span class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Direct Dial</span>
+<span class="font-body-lg text-on-surface">(704) 772-6396</span>
+</div>
+</div>
+<div class="flex items-start gap-6">
+<span class="material-symbols-outlined text-secondary-container">mail</span>
+<div>
+<span class="block font-label-caps text-label-caps uppercase text-on-surface-variant mb-1">Electronic Mail</span>
+<span class="font-body-lg text-on-surface">freshfinishwash25@gmail.com</span>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 reveal delay-200">
+<form class="bg-surface p-12 border border-outline-variant/20 space-y-10">
+<div class="relative">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface focus:ring-0 focus:border-secondary-container transition-all placeholder:text-on-surface-variant/20" placeholder="Johnathan Doe" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="relative">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2 block">Vehicle Year / Make / Model</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface focus:ring-0 focus:border-secondary-container transition-all placeholder:text-on-surface-variant/20" placeholder="2023 Porsche 911 GT3" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2 block">Requested Service</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface focus:ring-0 focus:border-secondary-container transition-all appearance-none">
+<option class="bg-surface">The Signature Full Detail</option>
+<option class="bg-surface">Exterior Paint Correction</option>
+<option class="bg-surface">Interior Rejuvenation</option>
+</select>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps uppercase text-on-surface-variant mb-2 block">Special Requirements</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant/30 py-3 px-0 text-on-surface focus:ring-0 focus:border-secondary-container transition-all placeholder:text-on-surface-variant/20" placeholder="e.g., Ceramic coating interest, specific stains, etc." rows="3"></textarea>
+</div>
+<button class="w-full py-6 bg-secondary-container text-on-secondary-fixed font-label-caps text-label-caps uppercase tracking-[0.2em] transition-all hover:bg-transparent hover:outline hover:outline-1 hover:outline-secondary-container hover:text-secondary-container teal-glow" type="submit">Transmit Request</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest w-full px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between items-center gap-gutter border-t border-outline-variant/30">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="font-display-lg text-headline-sm text-on-surface">Fresh Finish</div>
+<p class="font-body-md text-on-tertiary-container text-center md:text-left max-w-xs">© 2024 Fresh Finish Mobile Detail. Precision in every pass. Gastonia, NC.</p>
+</div>
+<div class="flex gap-12 font-body-md text-on-tertiary-container">
+<a class="hover:text-secondary-container transition-colors duration-200" href="#">Privacy</a>
+<a class="hover:text-secondary-container transition-colors duration-200" href="#">Terms</a>
+<a class="hover:text-secondary-container transition-colors duration-200" href="#visit">Gastonia, NC</a>
+</div>
+<div class="flex gap-6">
+<a class="p-3 border border-outline-variant/30 hover:border-secondary-container group transition-all" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-container">share</span>
+</a>
+<a class="p-3 border border-outline-variant/30 hover:border-secondary-container group transition-all" href="#">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary-container">camera_alt</span>
+</a>
+</div>
+</footer>
+<script>
+        // Simple reveal animation on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
