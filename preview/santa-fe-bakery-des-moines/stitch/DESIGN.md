@@ -1,111 +1,106 @@
-I've built the complete homepage for **Santa Fe Bakery**, specifically tailored to their "Casa de las conchas" identity using the real content from their Facebook page.
+I have designed a bespoke, editorial-grade homepage for Santa Fe Bakery that moves far beyond a standard template. 
 
-### Key Design Decisions:
-*   **Artisanal Aesthetic**: I used a warm, appetizing palette (terra cotta, honey, and cream) to reflect the bakery's traditional roots and artisanal quality.
-*   **Direct-to-Action**: The phone number is prominent in the header and hero section, ensuring customers can easily reach the business for orders or questions.
-*   **Local Credibility**: Included a dedicated section highlighting their 4.4-star rating and large Facebook following to build trust with new visitors.
-*   **Asymmetric Layout**: The hero and gallery sections use a non-standard grid to avoid a generic "template" look and feel more handcrafted.
-*   **Interactive Features**: The page includes a mobile-responsive navigation, smooth-scrolling anchors, and a functional-looking contact form UI.
+### Design Decisions:
+- **Visual Identity**: I've crafted a "Adobe & Flour" theme—a palette of warm terra cotta, almond, and charcoal that reflects both the southwestern roots of the bakery's name and the rustic warmth of freshly baked bread.
+- **Editorial Layout**: The design uses intentional asymmetry and generous whitespace to create a premium, "magazine-style" feel. The use of arched image frames serves as a recurring visual motif, mirroring artisanal loaves and architectural heritage.
+- **Typography**: A sophisticated high-contrast serif (Playfair Display) for headings provides an authoritative, premium tone, balanced by a clean sans-serif for body copy.
+- **Bespoke Sections**: Every section is custom-designed, from the split-layout hero to the grid-defying offerings section. I've integrated the specific contact details and requirements, including the requested semantic map slot.
 
-The design is production-ready and fully responsive. You can now preview the **#visit** section with its dedicated map slot and the **Services** section featuring their signature offerings.
+The site is production-ready, featuring a responsive mobile menu, smooth scrolling, and a custom-styled contact form.
 
-What would you like to refine next? We could add a dynamic image gallery or expand on the "Casa de las conchas" story.
-
----
+How does this new visual identity feel for the Santa Fe brand?
 
 ---
-name: Santa Fe Panadería
+
+---
+name: Adobe & Flour
 colors:
-  surface: '#fbf9f1'
-  surface-dim: '#dcdad2'
-  surface-bright: '#fbf9f1'
+  surface: '#fcf9f3'
+  surface-dim: '#dcdad4'
+  surface-bright: '#fcf9f3'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f4ec'
-  surface-container: '#f0eee6'
-  surface-container-high: '#eae8e0'
-  surface-container-highest: '#e4e3db'
-  on-surface: '#1b1c17'
-  on-surface-variant: '#57423a'
-  inverse-surface: '#30312c'
-  inverse-on-surface: '#f3f1e9'
-  outline: '#8a7268'
-  outline-variant: '#dec0b5'
-  surface-tint: '#a14009'
-  primary: '#9f3e07'
+  surface-container-low: '#f6f3ed'
+  surface-container: '#f0eee8'
+  surface-container-high: '#ebe8e2'
+  surface-container-highest: '#e5e2dc'
+  on-surface: '#1c1c18'
+  on-surface-variant: '#54433d'
+  inverse-surface: '#31312d'
+  inverse-on-surface: '#f3f0ea'
+  outline: '#87736c'
+  outline-variant: '#dac1b9'
+  surface-tint: '#94492c'
+  primary: '#91472a'
   on-primary: '#ffffff'
-  primary-container: '#c05621'
-  on-primary-container: '#fffeff'
-  inverse-primary: '#ffb596'
-  secondary: '#7d5700'
+  primary-container: '#af5e3f'
+  on-primary-container: '#fffbff'
+  inverse-primary: '#ffb59b'
+  secondary: '#675d4d'
   on-secondary: '#ffffff'
-  secondary-container: '#ffc250'
-  on-secondary-container: '#725000'
-  tertiary: '#7e5339'
+  secondary-container: '#f0e0cc'
+  on-secondary-container: '#6e6353'
+  tertiary: '#5c5c5c'
   on-tertiary: '#ffffff'
-  tertiary-container: '#9a6b50'
-  on-tertiary-container: '#fffeff'
+  tertiary-container: '#757474'
+  on-tertiary-container: '#fffcfb'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#ffdbcd'
-  primary-fixed-dim: '#ffb596'
-  on-primary-fixed: '#360f00'
-  on-primary-fixed-variant: '#7d2d00'
-  secondary-fixed: '#ffdeaa'
-  secondary-fixed-dim: '#f8bc4b'
-  on-secondary-fixed: '#271900'
-  on-secondary-fixed-variant: '#5f4100'
-  tertiary-fixed: '#ffdbc9'
-  tertiary-fixed-dim: '#f4ba9b'
-  on-tertiary-fixed: '#311302'
-  on-tertiary-fixed-variant: '#653d25'
-  background: '#fbf9f1'
-  on-background: '#1b1c17'
-  surface-variant: '#e4e3db'
+  primary-fixed: '#ffdbcf'
+  primary-fixed-dim: '#ffb59b'
+  on-primary-fixed: '#380d00'
+  on-primary-fixed-variant: '#763217'
+  secondary-fixed: '#f0e0cc'
+  secondary-fixed-dim: '#d3c4b1'
+  on-secondary-fixed: '#221a0e'
+  on-secondary-fixed-variant: '#4f4537'
+  tertiary-fixed: '#e4e2e1'
+  tertiary-fixed-dim: '#c8c6c6'
+  on-tertiary-fixed: '#1b1c1c'
+  on-tertiary-fixed-variant: '#474747'
+  background: '#fcf9f3'
+  on-background: '#1c1c18'
+  surface-variant: '#e5e2dc'
 typography:
-  display:
-    fontFamily: Literata
-    fontSize: 48px
+  display-lg:
+    fontFamily: Playfair Display
+    fontSize: 64px
     fontWeight: '700'
-    lineHeight: 56px
+    lineHeight: '1.1'
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Literata
+  display-lg-mobile:
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
+    letterSpacing: -0.01em
+  headline-md:
+    fontFamily: Playfair Display
     fontSize: 32px
     fontWeight: '600'
-    lineHeight: 40px
-  headline-lg-mobile:
-    fontFamily: Literata
-    fontSize: 28px
-    fontWeight: '600'
-    lineHeight: 36px
-  headline-md:
-    fontFamily: Literata
+    lineHeight: '1.3'
+  headline-sm:
+    fontFamily: Playfair Display
     fontSize: 24px
     fontWeight: '600'
-    lineHeight: 32px
+    lineHeight: '1.4'
   body-lg:
     fontFamily: Plus Jakarta Sans
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: 28px
+    lineHeight: '1.6'
   body-md:
     fontFamily: Plus Jakarta Sans
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: 24px
-  label-lg:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 14px
-    fontWeight: '600'
-    lineHeight: 20px
-    letterSpacing: 0.05em
-  label-md:
+    lineHeight: '1.6'
+  label-caps:
     fontFamily: Plus Jakarta Sans
     fontSize: 12px
-    fontWeight: '500'
-    lineHeight: 16px
+    fontWeight: '700'
+    lineHeight: '1.0'
+    letterSpacing: 0.1em
 rounded:
   sm: 0.25rem
   DEFAULT: 0.5rem
@@ -115,64 +110,65 @@ rounded:
   full: 9999px
 spacing:
   unit: 8px
+  container-max: 1280px
   gutter: 24px
-  margin-mobile: 20px
   margin-desktop: 64px
-  stack-sm: 12px
-  stack-md: 24px
-  stack-lg: 48px
+  margin-mobile: 20px
 ---
 
 ## Brand & Style
-The design system is built on the concept of "Handcrafted Heritage." It avoids the sterile, clinical feel of modern corporate bakeries in favor of a warm, artisanal, and neighborhood-centric aesthetic. The UI should evoke the sensory experience of a Mexican *panadería*—the smell of cinnamon, the warmth of an oven, and the tactile texture of sugar-dusted conchas.
 
-The style is a blend of **Warm Minimalism** and **Tactile Design**. It uses heavy whitespace to let high-resolution photography of pastries breathe, while employing asymmetric layouts to suggest the organic, non-uniform nature of handmade baked goods. The emotional response should be one of comfort, appetite, and local trust.
+The design system is built upon the "Adobe & Flour" aesthetic—a fusion of Southwestern architectural heritage and the tactile, artisanal nature of high-end baking. The brand personality is warm, authentic, and premium, avoiding the generic polish of corporate chains in favor of an editorial, "slow-living" feel.
+
+The design style leverages **Minimalism** with a **Tactile** edge. It utilizes generous whitespace to allow product photography to breathe, paired with intentional asymmetrical layouts that suggest the hand-crafted, non-uniform nature of artisanal bread. Subtle organic textures, reminiscent of floured surfaces or sundried clay, should be applied to backgrounds to provide depth without clutter.
 
 ## Colors
-The palette is rooted in the "Casa de las conchas" identity, pulling directly from the oven-fired colors of traditional Mexican baking.
 
-*   **Primary (Terra Cotta):** Used for key actions and branding to reflect traditional pottery and toasted crusts.
-*   **Secondary (Amber/Cinnamon):** Used for accents, highlights, and secondary buttons, evoking warmth and sweetness.
-*   **Tertiary (Dark Chocolate):** Used for primary typography and deep contrast elements to ensure legibility and a grounded feel.
-*   **Neutral (Cream):** The base background color (not pure white), mimicking flour and light dough, providing a softer, more inviting canvas than a standard digital white.
-*   **Success/Accent:** A muted sage green may be used sparingly for "In Stock" or "Freshly Baked" indicators to contrast the warm tones.
+The palette is derived from the raw ingredients of the bakery and the landscape of Santa Fe.
+
+*   **Primary (Terra Cotta):** Used for calls to action, accents, and brand motifs. It represents warmth and the heat of the oven.
+*   **Secondary (Dusted Almond):** A soft, mid-tone neutral used for secondary surfaces, dividers, and subtle UI backgrounds.
+*   **Tertiary (Deep Charcoal):** Used primarily for typography and high-contrast structural elements. It provides the "editorial" weight necessary for a premium feel.
+*   **Neutral (Sun-bleached Cream):** The primary canvas color. It is warmer than pure white, evoking the color of unbleached flour and natural light.
 
 ## Typography
-Typography balances the "Artisanal" (Literata) with the "Professional" (Plus Jakarta Sans).
 
-*   **Headlines:** Literata provides a bookish, traditional, and high-end feel. It should be used for all storytelling elements and product names.
-*   **Body & UI:** Plus Jakarta Sans offers a soft, rounded, and highly legible counterpoint. It keeps the interface feeling modern and accessible.
-*   **Scale:** Large display type should use tighter letter spacing to feel more like a printed editorial piece. Labels use slight tracking (letter spacing) to improve readability in navigation menus and tags.
+This design system employs a high-contrast typographic pairing to establish an editorial hierarchy.
+
+**Headlines (Playfair Display):** These should be treated as hero elements. Use high-waisted serif scales for titles and section headers. Larger display sizes should use tighter letter spacing to emphasize the "editorial magazine" look.
+
+**Body & Labels (Plus Jakarta Sans):** A clean, modern sans-serif provides a functional counterpoint to the serif. It should be set with generous line-height to ensure maximum readability and a sense of "airiness" within the layout. Labels should frequently use uppercase with increased tracking to denote metadata or small categories.
 
 ## Layout & Spacing
-The layout follows an **asymmetric fluid grid** to avoid a "templated" look.
 
-*   **Asymmetry:** Images of pastries should frequently "break" the grid or be offset from text blocks to create a sense of movement and hand-placement.
-*   **Rhythm:** Use a baseline of 8px. Large sections should be separated by `stack-lg` (48px) to maintain a premium, uncluttered feel.
-*   **Grid:** On desktop, use a 12-column grid. Components like product cards should vary in width (e.g., some spanning 4 columns, some 6) to create visual interest in the "panadería" gallery.
-*   **Responsive:** On mobile, transition to a single-column stack with generous side margins (`margin-mobile`) to ensure the photography remains the focus.
+The layout philosophy follows a **Fixed Grid** for content but allows for "broken" elements that bleed off-edge to create visual interest.
+
+*   **Grid:** A 12-column system on desktop with a wide 24px gutter. 
+*   **Asymmetry:** Avoid perfect symmetry in image-and-text blocks. For example, a 7-column image paired with a 4-column text block with a 1-column offset creates a more sophisticated, editorial rhythm.
+*   **Whitespace:** Use vertical margins of at least 80px-120px between major sections to emphasize a premium, unhurried brand experience.
+*   **Mobile:** Transition to a 4-column grid with reduced margins (20px). Focus on single-column stacks but maintain the large serif typography for impact.
 
 ## Elevation & Depth
-This design system utilizes **Ambient Shadows** and **Tonal Layering** to create a soft, tactile feel.
 
-*   **Shadows:** Avoid harsh, black shadows. Use soft, diffused shadows tinted with the primary terra cotta color (e.g., `rgba(192, 86, 33, 0.08)`) to make elements like cards feel like they are resting on a wooden countertop.
-*   **Depth Levels:** 
-    *   *Level 0 (Base):* The Cream neutral background.
-    *   *Level 1 (Cards):* Elevated with a very soft, wide blur shadow.
-    *   *Level 2 (Interactive):* Hover states on buttons or cards increase shadow spread and slightly scale the element (1.02x) to mimic "picking up" a pastry.
-*   **Overlays:** Use semi-transparent cream overlays for text on images to maintain legibility while preserving the warmth of the photography.
+The design system avoids traditional heavy drop shadows. Depth is communicated through:
+
+1.  **Tonal Layers:** Using the "Dusted Almond" color on top of the "Sun-bleached Cream" background to define separate functional areas.
+2.  **Organic Overlaps:** Elements like images or text blocks should slightly overlap one another or span across grid lines to create a sense of physical layers.
+3.  **Low-Contrast Outlines:** Where separation is required (e.g., input fields or cards), use 1px borders in a slightly darker shade of the background color rather than shadows.
+4.  **Soft Transitions:** Interactive elements use subtle color shifts rather than elevation changes to maintain a "flat but tactile" feel.
 
 ## Shapes
-Shapes are intentionally soft to mirror the organic forms of bread and pastries.
 
-*   **Corners:** A `rounded-lg` (1rem/16px) setting is the standard for cards and image containers.
-*   **Buttons:** Should use `rounded-xl` or full pill shapes to feel friendly and "squishy."
-*   **Decorative Elements:** Use circular frames or "scalloped" edges (reminiscent of concha patterns) for secondary decorative elements or badges.
+The shape language is the core visual motif of this design system, mirroring the "arch" of a bread oven and the traditional curves of Southwestern adobe architecture.
+
+*   **The Arch:** Use a full-radius top-rounding on primary imagery or featured content blocks.
+*   **Baked-in Corners:** Buttons and cards use `rounded-lg` (1rem) or `rounded-xl` (1.5rem) to reflect the soft, organic edges of a handmade loaf of bread. Avoid sharp 90-degree angles in major UI components.
 
 ## Components
-*   **Buttons:** Primary buttons are Solid Terra Cotta with White or Cream text. Secondary buttons are outlined in Cinnamon. Use generous internal padding to create a "puffy" appearance.
-*   **Product Cards:** Cards have no visible borders; depth is defined by soft ambient shadows. The product name (Literata) should be prominent, with the price in a subtle Plus Jakarta Sans label.
-*   **Chips/Tags:** Use these for flavor profiles (e.g., "Dulce de Leche," "Spicy," "Vegan"). These should have a light amber background and dark chocolate text.
-*   **Input Fields:** Use a subtle cream-tinted fill with a bottom-only border or a very light 1px stroke in terra cotta on focus.
-*   **Lists:** Use custom concha-patterned bullets for unordered lists to reinforce the "Casa de las conchas" identity.
-*   **Image Gallery:** Implement an "asymmetric masonry" layout for pastry photos, allowing for different aspect ratios to reflect the variety of the bakery's daily offerings.
+
+*   **Buttons:** Primary buttons are solid "Terra Cotta" with white or cream text. They should have a slightly larger corner radius (rounded-lg) and generous horizontal padding. Secondary buttons should be "Deep Charcoal" outlines.
+*   **Cards:** Product cards should use the "arch" motif for the image container at the top. The card body uses "Sun-bleached Cream" with a 1px "Dusted Almond" border.
+*   **Inputs:** Text fields are minimal, with a bottom-only border or a very soft-rounded container. Use the "Plus Jakarta Sans" font for labels in the `label-caps` style.
+*   **Chips/Tags:** Used for ingredient callouts (e.g., "Sourdough," "Vegan"). These are pill-shaped, using "Dusted Almond" with "Deep Charcoal" text.
+*   **Lists:** Menu items should be separated by thin, low-contrast horizontal rules with the price set in "Playfair Display" to give them an elegant, menu-like feel.
+*   **Signature Element:** An "Order Now" floating action button (FAB) that utilizes a perfect circle shape, referencing a circular proofing basket.

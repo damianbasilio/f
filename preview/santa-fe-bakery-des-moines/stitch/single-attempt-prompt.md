@@ -1,40 +1,12 @@
-You are building **one specific local business website** from their **Facebook page content only**. This is NOT a generic template. The business has **no dedicated website** — you are creating their first professional homepage using real Facebook photos and scraped copy.
+You are an award-winning local-brand web designer building **one bespoke homepage** for **Santa Fe Bakery**. This business has **no dedicated website** — only a Facebook page. You are not filling a template. You are designing a **unique, premium, memorable first impression** that could only belong to this business.
 
-### Facebook source context (use this copy — do not invent a different brand)
+### Non-negotiable: uniqueness
 
-**Facebook page:** https://www.facebook.com/SANTAFEBAKERYLLC/
-**Business:** Santa Fe Bakery
-**Category:** Restaurant / food service
-**Location:** 1320 East Euclid Avenue, Des Moines, IA 50316
-**Phone:** (515) 447-9217
-**Email:** santafebakery@outlook.com
-**Review score:** 4.4
-**Page description:** Santa Fe Bakery, Des Moines. 2,381 likes · 22 talking about this · 42 were here. .𝐂𝐚𝐬𝐚 𝐝𝐞 𝐥𝐚𝐬 𝐜𝐨𝐧𝐜𝐡𝐚𝐬 . 𝐏𝐚𝐧𝐚𝐝𝐞𝐫𝐢́𝐚 𝐲 𝐑𝐞𝐩𝐨𝐬𝐭𝐞𝐫𝐢́𝐚
-**Hours:** Open now
-
-**About / profile details (from Facebook About tab):**
-- **Hours:** Open now
-- **Address:** 1320 E Euclid Ave, Des Moines, IA, United States, 50316
-
-**Full scraped profile (use this for About section, services, and copy voice — do not invent details):**
-Santa Fe Bakery, Des Moines. 2,381 likes · 22 talking about this · 42 were here. .𝐂𝐚𝐬𝐚 𝐝𝐞 𝐥𝐚𝐬 𝐜𝐨𝐧𝐜𝐡𝐚𝐬 . 𝐏𝐚𝐧𝐚𝐝𝐞𝐫𝐢́𝐚 𝐲 𝐑𝐞𝐩𝐨𝐬𝐭𝐞𝐫𝐢́𝐚
-Hours: Open now
-Address: 1320 E Euclid Ave, Des Moines, IA, United States, 50316
-Phone: 515-447-9217
-Email: santafebakery@outlook.com
-
-Recent posts from their Facebook page:
-1. ✨ ¡Pasa por tu pan dulce! ✨ Tenemos deliciosas donas 🍩, empanadas de todos los sabores! 🥟 ¡Y mucha más variedad para que disfrutes! 🤩 Te esperamos 🤎
-2. .𝐂𝐚𝐬𝐚 𝐝𝐞 𝐥𝐚𝐬 𝐜𝐨𝐧𝐜𝐡𝐚𝐬 . 𝐏𝐚𝐧𝐚𝐝𝐞𝐫𝐢́𝐚 𝐲 𝐑𝐞𝐩𝐨𝐬𝐭𝐞𝐫𝐢́𝐚
-
-**Recent post captions (2 useful — echo voice in headlines; skip registry/SKU/listing lines):**
-1. "✨ ¡Pasa por tu pan dulce! ✨ Tenemos deliciosas donas 🍩, empanadas de todos los sabores! 🥟 ¡Y mucha más variedad para que disfrutes! 🤩 Te esperamos 🤎"
-2. ".𝐂𝐚𝐬𝐚 𝐝𝐞 𝐥𝐚𝐬 𝐜𝐨𝐧𝐜𝐡𝐚𝐬 . 𝐏𝐚𝐧𝐚𝐝𝐞𝐫𝐢́𝐚 𝐲 𝐑𝐞𝐩𝐨𝐬𝐭𝐞𝐫𝐢́𝐚"
-
-**Design read:** Reading this as: a first homepage for Santa Fe Bakery in Des Moines (Restaurant / food service), Warm, appetizing, neighborhood favorite tone, asymmetric-grid layout — must feel tailor-made for this business, not a generic AI landing template.
-
-**What to preserve:** The business name, location, services, and warm local tone from the Facebook page above.
-**What to fix:** No dedicated website — build a clean homepage with phone/CTA above fold, services, gallery, map slot, and contact form (preview only).
+- This site must **not** look like other local-business mockups, Webflow templates, or AI landing pages.
+- **Do not** reuse the same hero layout, section order, card grid, or color story you used on other projects.
+- **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
+- Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
+- Every section should feel **designed**, not assembled from a component library.
 
 ---
 
@@ -49,10 +21,10 @@ This must be production-ready frontend code — a full semantic HTML document wi
 Do NOT output a DESIGN.md file, design system document, or markdown summary.
 Do NOT scrape or copy the business's existing website — create a new mockup layout.
 
-Required sections: header with phone, hero, #credibility, services/offerings, about, visit (#visit with empty map panel: `<div class="map-slot relative overflow-hidden min-h-[400px]" data-map-slot aria-label="Map"></div>` — no fake map image, no second map block), contact form, footer.
+Required sections: header with phone, hero, #credibility, services/offerings, about, visit (#visit with empty map panel: `<div class="map-slot relative overflow-hidden min-h-[400px]" data-map-slot aria-label="Map"></div>` — no fake map image, no second map block), contact form, footer. **Vary layout, section order, and visual style** — do not reuse a generic local-business template.
 
 Contact: (515) 447-9217 · santafebakery@outlook.com · 1320 East Euclid Avenue, Des Moines, IA 50316
 
-Technical: responsive at 375px, mobile nav, smooth scroll, form validation UI (preview only), brand colors from project design system, descriptive img alt tags, no lorem ipsum.
+Technical: responsive at 375px, mobile nav, smooth scroll, form validation UI (preview only), invent a distinctive color palette in styles.css (CSS custom properties), descriptive img alt tags, no lorem ipsum.
 
 Do NOT respond with only DESIGN.md or a design-system markdown summary. If you establish tokens first, you must still include the full htmlCode landing page in this same response.

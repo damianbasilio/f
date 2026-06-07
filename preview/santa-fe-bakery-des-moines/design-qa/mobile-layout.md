@@ -6,10 +6,8 @@
 - refreshed map layout CSS
 - injected mobile safety CSS
 - pulled in decorative absolute offsets
-- body overflow-x-clip
-- nav min-width + tighter mobile gap
-- nav brand truncate on mobile
-- map-slot: removed h-full (use aspect-ratio fill)
+- section overflow-hidden for decorative layers
+- responsive horizontal margins (8 blocks)
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

@@ -1,57 +1,24 @@
-// Mobile Menu Logic
-        const menuBtn = document.getElementById('mobile-menu-btn');
-        const closeBtn = document.getElementById('close-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const links = document.querySelectorAll('.mobile-nav-link');
-
-        const toggleMenu = (show) => {
-            menu.style.transform = show ? 'translateX(0)' : 'translateX(100%)';
-            document.body.style.overflow = show ? 'hidden' : '';
-        };
-
-        menuBtn.addEventListener('click', () => toggleMenu(true));
-        closeBtn.addEventListener('click', () => toggleMenu(false));
-        links.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
-
-        // Form Submission Logic
-        const form = document.getElementById('contact-form');
-        const successMsg = document.getElementById('form-success');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Simple UI feedback
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Enviando...';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                form.reset();
-                btn.innerText = originalText;
-                btn.disabled = false;
-                successMsg.classList.remove('hidden');
-                setTimeout(() => successMsg.classList.add('hidden'), 5000);
-            }, 1500);
-        });
-
-        // Sticky Header Active State
-        window.addEventListener('scroll', () => {
-            const sections = ['services', 'about', 'visit'];
-            let current = '';
-
-            sections.forEach(section => {
-                const element = document.getElementById(section);
-                const rect = element.getBoundingClientRect();
-                if (rect.top <= 100 && rect.bottom >= 100) {
-                    current = section;
+// Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
                 }
             });
+        }, { threshold: 0.1 });
 
-            const navLinks = document.querySelectorAll('nav a');
-            navLinks.forEach(link => {
-                link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
                 }
             });
         });
