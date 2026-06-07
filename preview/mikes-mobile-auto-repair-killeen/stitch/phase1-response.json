@@ -1,0 +1,491 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Industrial Concierge",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is built upon a philosophy of **Industrial Chic**, blending the rugged reliability of heavy-duty machinery with the precision and exclusivity of a high-end concierge service. It avoids the cluttered, bright-red tropes of the automotive industry in favor of a sophisticated \"blueprint\" aesthetic.\n\nThe visual direction is characterized by:\n*   **Precision Engineering:** Intentional use of technical grids, monospaced data points, and heavy rule lines that evoke the feeling of a well-maintained service manual.\n*   **Asymmetric Sophistication:** Layouts lean into unbalanced but harmonious compositions to feel bespoke rather than templated.\n*   **High-End Utility:** The interface feels like a premium tool—functional and dense in data when necessary, but framed by generous, airy whitespace that signals a premium, unhurried service experience.\n\n## Layout & Spacing\n\nThe layout is governed by a strict **8px grid system**, ensuring that even \"asymmetric\" layouts feel mathematically grounded.\n\n*   **Rhythm:** Use \"Generous vs. Dense\" logic. Marketing sections and headers use `xl` (80px) padding to feel premium. Technical data blocks and form groups use `sm` (12px) spacing to feel efficient and information-rich.\n*   **Grid:** A 12-column grid is standard for desktop. Elements should frequently \"break\" the grid by 1 column to create asymmetry, or use heavy vertical rules to separate content blocks.\n*   **Rules:** Instead of whitespace alone, use `rule-thick` lines to separate distinct sections, mimicking the layout of a technical schematic.\n\n## Elevation & Depth\n\nThis design system avoids soft shadows and \"fuzzy\" depth. Instead, it uses **Structural Tiering**:\n\n*   **Hard Borders:** Depth is communicated through `rule-thick` borders. Surfaces do not \"float\" with shadows; they are \"bolted\" to the grid with 2px High-Vis Silver frames.\n*   **Tonal Layering:** The primary background is `neutral_color_hex`. Secondary containers use `tertiary_color_hex`. This 1-step shift in charcoal provides enough contrast to indicate hierarchy without breaking the flat, industrial aesthetic.\n*   **Grid Overlays:** A subtle, repeating dot or line grid texture can be applied to background layers to reinforce the \"blueprint\" motif.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Cautionary Amber` fill with `Oil & Asphalt` text (Bebas Neue). No rounded corners. 2px black inner-border for a \"pressed\" look.\n*   **Secondary:** Ghost style with a `rule-thick` High-Vis Silver border and matching text.\n*   **States:** Hover states should invert colors or increase the stroke weight to 4px.\n\n### Cards\n*   **Visual Style:** Border-led, not shadow-led. Every card must have a 2px stroke in `High-Vis Silver`.\n*   **Header:** Cards should feature a \"Technical Header\"—a small `Space Mono` label in the top-left corner (e.g., \"SECTION_04 // ENGINE_DIAG\").\n\n### Input Fields\n*   **Style:** Rectangular, sharp-edged boxes with a 1px `High-Vis Silver` border. Labels should use `tech-detail` (Space Mono) and sit directly above the field or be integrated into the top border line.\n*   **Focus:** Border thickens to 2px and changes to `Cautionary Amber`.\n\n### Chips & Tags\n*   **Style:** Monospaced text inside a thin border. Use for status (e.g., [ PENDING ], [ COMPLETE ]). Tags should look like stamped metal labels.\n\n### Dividers\n*   **Heavy Rules:** Use horizontal and vertical lines (2px) to compartmentalize the UI. These rules should often extend to the very edge of the viewport or container to maintain the \"blueprint\" grid.",
+          "theme": {
+            "bodyFont": "WORK_SANS",
+            "bodyFontFamily": "Work Sans",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ffb800",
+            "designMd": "---\nname: Industrial Concierge\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1c1b1c'\n  surface-container: '#201f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#d5c4ab'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#313031'\n  outline: '#9e8f78'\n  outline-variant: '#514532'\n  surface-tint: '#ffba20'\n  primary: '#ffdca1'\n  on-primary: '#412d00'\n  primary-container: '#ffb800'\n  on-primary-container: '#6b4c00'\n  inverse-primary: '#7c5800'\n  secondary: '#c1c7cf'\n  on-secondary: '#2b3137'\n  secondary-container: '#41474e'\n  on-secondary-container: '#afb6bd'\n  tertiary: '#e3e0e1'\n  on-tertiary: '#303031'\n  tertiary-container: '#c6c4c5'\n  on-tertiary-container: '#525152'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea8'\n  primary-fixed-dim: '#ffba20'\n  on-primary-fixed: '#271900'\n  on-primary-fixed-variant: '#5e4200'\n  secondary-fixed: '#dde3eb'\n  secondary-fixed-dim: '#c1c7cf'\n  on-secondary-fixed: '#161c22'\n  on-secondary-fixed-variant: '#41474e'\n  tertiary-fixed: '#e5e2e3'\n  tertiary-fixed-dim: '#c8c6c7'\n  on-tertiary-fixed: '#1b1b1c'\n  on-tertiary-fixed-variant: '#474647'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-lg:\n    fontFamily: Bebas Neue\n    fontSize: 72px\n    fontWeight: '400'\n    lineHeight: '1.0'\n    letterSpacing: 0.02em\n  headline-h1:\n    fontFamily: Bebas Neue\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: '1.1'\n  headline-h2:\n    fontFamily: Bebas Neue\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-h3:\n    fontFamily: Bebas Neue\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  ui-label:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  tech-detail:\n    fontFamily: Space Mono\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: -0.01em\n  headline-h1-mobile:\n    fontFamily: Bebas Neue\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: '1.1'\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  rule-thick: 2px\n  rule-heavy: 4px\n---\n\n## Brand & Style\n\nThe design system is built upon a philosophy of **Industrial Chic**, blending the rugged reliability of heavy-duty machinery with the precision and exclusivity of a high-end concierge service. It avoids the cluttered, bright-red tropes of the automotive industry in favor of a sophisticated \"blueprint\" aesthetic.\n\nThe visual direction is characterized by:\n*   **Precision Engineering:** Intentional use of technical grids, monospaced data points, and heavy rule lines that evoke the feeling of a well-maintained service manual.\n*   **Asymmetric Sophistication:** Layouts lean into unbalanced but harmonious compositions to feel bespoke rather than templated.\n*   **High-End Utility:** The interface feels like a premium tool—functional and dense in data when necessary, but framed by generous, airy whitespace that signals a premium, unhurried service experience.\n\n## Colors\n\nThe palette, titled **\"Oil & Asphalt,\"** moves away from generic primary colors to embrace a high-contrast, technical atmosphere.\n\n*   **Cautionary Amber (#FFB800):** Used sparingly as a functional accent for primary actions, status indicators, and critical alerts. It represents the \"active\" state of a workshop.\n*   **Oil & Asphalt (#1A1A1B & #0F0F10):** Deep, matte charcoals form the primary surfaces and backgrounds, providing a sophisticated, low-glare environment.\n*   **High-Vis Silver (#E2E8F0):** Acts as the primary ink color for text and heavy rule lines, ensuring crisp legibility against dark backgrounds.\n*   **Blueprint Contrast:** Occasional use of light-mode sections (using the Background Alt) provides a \"whitepaper\" feel for invoices, quotes, and technical specs, mimicking physical documentation.\n\n## Typography\n\nThis design system utilizes a three-tier typographic hierarchy to balance impact with technical clarity.\n\n*   **Headlines (Bebas Neue):** Bold, condensed, and unapologetic. Headlines should be used in all-caps to reinforce the \"industrial\" strength of the brand.\n*   **Body (Work Sans):** Chosen for its exceptional legibility and neutral, professional tone. It balances the aggression of the display type with an approachable, reliable feel.\n*   **Technical Detail (Space Mono):** Used for VIN numbers, timestamps, mechanical specs, and small UI labels. It signals precision and the \"behind-the-scenes\" nature of auto repair.\n\n## Layout & Spacing\n\nThe layout is governed by a strict **8px grid system**, ensuring that even \"asymmetric\" layouts feel mathematically grounded.\n\n*   **Rhythm:** Use \"Generous vs. Dense\" logic. Marketing sections and headers use `xl` (80px) padding to feel premium. Technical data blocks and form groups use `sm` (12px) spacing to feel efficient and information-rich.\n*   **Grid:** A 12-column grid is standard for desktop. Elements should frequently \"break\" the grid by 1 column to create asymmetry, or use heavy vertical rules to separate content blocks.\n*   **Rules:** Instead of whitespace alone, use `rule-thick` lines to separate distinct sections, mimicking the layout of a technical schematic.\n\n## Elevation & Depth\n\nThis design system avoids soft shadows and \"fuzzy\" depth. Instead, it uses **Structural Tiering**:\n\n*   **Hard Borders:** Depth is communicated through `rule-thick` borders. Surfaces do not \"float\" with shadows; they are \"bolted\" to the grid with 2px High-Vis Silver frames.\n*   **Tonal Layering:** The primary background is `neutral_color_hex`. Secondary containers use `tertiary_color_hex`. This 1-step shift in charcoal provides enough contrast to indicate hierarchy without breaking the flat, industrial aesthetic.\n*   **Grid Overlays:** A subtle, repeating dot or line grid texture can be applied to background layers to reinforce the \"blueprint\" motif.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\nTo evoke heavy-duty machinery and precision tools, every element—from buttons and input fields to cards and images—uses 90-degree corners. This lack of \"softness\" reinforces the brand's reliability and no-nonsense approach to high-end service.\n\n*   **In-sets:** Use \"cut-out\" corners (45-degree chamfers) sparingly for special call-to-action buttons to add a \"military-grade\" or custom-machined feel.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Cautionary Amber` fill with `Oil & Asphalt` text (Bebas Neue). No rounded corners. 2px black inner-border for a \"pressed\" look.\n*   **Secondary:** Ghost style with a `rule-thick` High-Vis Silver border and matching text.\n*   **States:** Hover states should invert colors or increase the stroke weight to 4px.\n\n### Cards\n*   **Visual Style:** Border-led, not shadow-led. Every card must have a 2px stroke in `High-Vis Silver`.\n*   **Header:** Cards should feature a \"Technical Header\"—a small `Space Mono` label in the top-left corner (e.g., \"SECTION_04 // ENGINE_DIAG\").\n\n### Input Fields\n*   **Style:** Rectangular, sharp-edged boxes with a 1px `High-Vis Silver` border. Labels should use `tech-detail` (Space Mono) and sit directly above the field or be integrated into the top border line.\n*   **Focus:** Border thickens to 2px and changes to `Cautionary Amber`.\n\n### Chips & Tags\n*   **Style:** Monospaced text inside a thin border. Use for status (e.g., [ PENDING ], [ COMPLETE ]). Tags should look like stamped metal labels.\n\n### Dividers\n*   **Heavy Rules:** Use horizontal and vertical lines (2px) to compartmentalize the UI. These rules should often extend to the very edge of the viewport or container to maintain the \"blueprint\" grid.",
+            "font": "BEBAS_NEUE",
+            "headlineFont": "BEBAS_NEUE",
+            "headlineFontFamily": "Bebas Neue",
+            "labelFont": "SPACE_MONO",
+            "labelFontFamily": "Space Mono",
+            "namedColors": {
+              "background": "#131314",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313031",
+              "inverse_primary": "#7c5800",
+              "inverse_surface": "#e5e2e3",
+              "on_background": "#e5e2e3",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#412d00",
+              "on_primary_container": "#6b4c00",
+              "on_primary_fixed": "#271900",
+              "on_primary_fixed_variant": "#5e4200",
+              "on_secondary": "#2b3137",
+              "on_secondary_container": "#afb6bd",
+              "on_secondary_fixed": "#161c22",
+              "on_secondary_fixed_variant": "#41474e",
+              "on_surface": "#e5e2e3",
+              "on_surface_variant": "#d5c4ab",
+              "on_tertiary": "#303031",
+              "on_tertiary_container": "#525152",
+              "on_tertiary_fixed": "#1b1b1c",
+              "on_tertiary_fixed_variant": "#474647",
+              "outline": "#9e8f78",
+              "outline_variant": "#514532",
+              "primary": "#ffdca1",
+              "primary_container": "#ffb800",
+              "primary_fixed": "#ffdea8",
+              "primary_fixed_dim": "#ffba20",
+              "secondary": "#c1c7cf",
+              "secondary_container": "#41474e",
+              "secondary_fixed": "#dde3eb",
+              "secondary_fixed_dim": "#c1c7cf",
+              "surface": "#131314",
+              "surface_bright": "#39393a",
+              "surface_container": "#201f20",
+              "surface_container_high": "#2a2a2b",
+              "surface_container_highest": "#353436",
+              "surface_container_low": "#1c1b1c",
+              "surface_container_lowest": "#0e0e0f",
+              "surface_dim": "#131314",
+              "surface_tint": "#ffba20",
+              "surface_variant": "#353436",
+              "tertiary": "#e3e0e1",
+              "tertiary_container": "#c6c4c5",
+              "tertiary_fixed": "#e5e2e3",
+              "tertiary_fixed_dim": "#c8c6c7"
+            },
+            "overrideNeutralColor": "#0f0f10",
+            "overridePrimaryColor": "#ffb800",
+            "overrideSecondaryColor": "#e2e8f0",
+            "overrideTertiaryColor": "#1a1a1b",
+            "spacing": {
+              "base": "8px",
+              "lg": "48px",
+              "md": "24px",
+              "rule-heavy": "4px",
+              "rule-thick": "2px",
+              "sm": "12px",
+              "xl": "80px",
+              "xs": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Work Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Work Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "display-lg": {
+                "fontFamily": "Bebas Neue",
+                "fontSize": "72px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.0"
+              },
+              "headline-h1": {
+                "fontFamily": "Bebas Neue",
+                "fontSize": "48px",
+                "fontWeight": "400",
+                "lineHeight": "1.1"
+              },
+              "headline-h1-mobile": {
+                "fontFamily": "Bebas Neue",
+                "fontSize": "36px",
+                "fontWeight": "400",
+                "lineHeight": "1.1"
+              },
+              "headline-h2": {
+                "fontFamily": "Bebas Neue",
+                "fontSize": "32px",
+                "fontWeight": "400",
+                "lineHeight": "1.2"
+              },
+              "headline-h3": {
+                "fontFamily": "Bebas Neue",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "1.2"
+              },
+              "tech-detail": {
+                "fontFamily": "Space Mono",
+                "fontSize": "13px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.4"
+              },
+              "ui-label": {
+                "fontFamily": "Work Sans",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              }
+            }
+          }
+        },
+        "name": "assets/cf310233cb734e49be37998ef1f282cb",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "1024",
+            "id": "21b3bd14214e4a9a89824ade080e126d",
+            "name": "projects/14059596430369837619/screens/21b3bd14214e4a9a89824ade080e126d",
+            "prompt": "Minimalist geometric logo for Mike's Mobile Auto Repair. A bold 'M' monogram constructed from industrial tool shapes (like a wrench or gear tooth). Professional, premium, heavy-duty aesthetic. Colors: Amber and Deep Charcoal. Flat design, no gradients. White background.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvciL-u3dUTIQGskeu0y7VLUmiwn7uNBqXU3f7aUB8wr2C0h2U9x_ANJ0E_ikqcjmvqmkGMaW23ddoQyBJYAJQi0_tQeIEzPNJ7pAGcpYK7259tuEIpmxib87HWGUZHjBc7zKE-i4IqS7A-wE1vHDf1raEZCjM9toOVsxYaKj88cX_qBLlfUSjimNt45PMMBYVhukYy9J_Sk0weeqfzI-Ao5Vx_KOPpvwtczZSUUx0LJOwwyLGWLXXMSZpV",
+              "name": "projects/14059596430369837619/files/deeef1973dad419281446cb18ac7c47b"
+            },
+            "theme": {},
+            "title": "Mike's Mobile Auto Repair Logo",
+            "width": "1024"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Industrial Concierge",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is built upon a philosophy of **Industrial Chic**, blending the rugged reliability of heavy-duty machinery with the precision and exclusivity of a high-end concierge service. It avoids the cluttered, bright-red tropes of the automotive industry in favor of a sophisticated \"blueprint\" aesthetic.\n\nThe visual direction is characterized by:\n*   **Precision Engineering:** Intentional use of technical grids, monospaced data points, and heavy rule lines that evoke the feeling of a well-maintained service manual.\n*   **Asymmetric Sophistication:** Layouts lean into unbalanced but harmonious compositions to feel bespoke rather than templated.\n*   **High-End Utility:** The interface feels like a premium tool—functional and dense in data when necessary, but framed by generous, airy whitespace that signals a premium, unhurried service experience.\n\n## Layout & Spacing\n\nThe layout is governed by a strict **8px grid system**, ensuring that even \"asymmetric\" layouts feel mathematically grounded.\n\n*   **Rhythm:** Use \"Generous vs. Dense\" logic. Marketing sections and headers use `xl` (80px) padding to feel premium. Technical data blocks and form groups use `sm` (12px) spacing to feel efficient and information-rich.\n*   **Grid:** A 12-column grid is standard for desktop. Elements should frequently \"break\" the grid by 1 column to create asymmetry, or use heavy vertical rules to separate content blocks.\n*   **Rules:** Instead of whitespace alone, use `rule-thick` lines to separate distinct sections, mimicking the layout of a technical schematic.\n\n## Elevation & Depth\n\nThis design system avoids soft shadows and \"fuzzy\" depth. Instead, it uses **Structural Tiering**:\n\n*   **Hard Borders:** Depth is communicated through `rule-thick` borders. Surfaces do not \"float\" with shadows; they are \"bolted\" to the grid with 2px High-Vis Silver frames.\n*   **Tonal Layering:** The primary background is `neutral_color_hex`. Secondary containers use `tertiary_color_hex`. This 1-step shift in charcoal provides enough contrast to indicate hierarchy without breaking the flat, industrial aesthetic.\n*   **Grid Overlays:** A subtle, repeating dot or line grid texture can be applied to background layers to reinforce the \"blueprint\" motif.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Cautionary Amber` fill with `Oil & Asphalt` text (Bebas Neue). No rounded corners. 2px black inner-border for a \"pressed\" look.\n*   **Secondary:** Ghost style with a `rule-thick` High-Vis Silver border and matching text.\n*   **States:** Hover states should invert colors or increase the stroke weight to 4px.\n\n### Cards\n*   **Visual Style:** Border-led, not shadow-led. Every card must have a 2px stroke in `High-Vis Silver`.\n*   **Header:** Cards should feature a \"Technical Header\"—a small `Space Mono` label in the top-left corner (e.g., \"SECTION_04 // ENGINE_DIAG\").\n\n### Input Fields\n*   **Style:** Rectangular, sharp-edged boxes with a 1px `High-Vis Silver` border. Labels should use `tech-detail` (Space Mono) and sit directly above the field or be integrated into the top border line.\n*   **Focus:** Border thickens to 2px and changes to `Cautionary Amber`.\n\n### Chips & Tags\n*   **Style:** Monospaced text inside a thin border. Use for status (e.g., [ PENDING ], [ COMPLETE ]). Tags should look like stamped metal labels.\n\n### Dividers\n*   **Heavy Rules:** Use horizontal and vertical lines (2px) to compartmentalize the UI. These rules should often extend to the very edge of the viewport or container to maintain the \"blueprint\" grid.",
+                "theme": {
+                  "bodyFont": "WORK_SANS",
+                  "bodyFontFamily": "Work Sans",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#ffb800",
+                  "designMd": "---\nname: Industrial Concierge\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1c1b1c'\n  surface-container: '#201f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#d5c4ab'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#313031'\n  outline: '#9e8f78'\n  outline-variant: '#514532'\n  surface-tint: '#ffba20'\n  primary: '#ffdca1'\n  on-primary: '#412d00'\n  primary-container: '#ffb800'\n  on-primary-container: '#6b4c00'\n  inverse-primary: '#7c5800'\n  secondary: '#c1c7cf'\n  on-secondary: '#2b3137'\n  secondary-container: '#41474e'\n  on-secondary-container: '#afb6bd'\n  tertiary: '#e3e0e1'\n  on-tertiary: '#303031'\n  tertiary-container: '#c6c4c5'\n  on-tertiary-container: '#525152'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea8'\n  primary-fixed-dim: '#ffba20'\n  on-primary-fixed: '#271900'\n  on-primary-fixed-variant: '#5e4200'\n  secondary-fixed: '#dde3eb'\n  secondary-fixed-dim: '#c1c7cf'\n  on-secondary-fixed: '#161c22'\n  on-secondary-fixed-variant: '#41474e'\n  tertiary-fixed: '#e5e2e3'\n  tertiary-fixed-dim: '#c8c6c7'\n  on-tertiary-fixed: '#1b1b1c'\n  on-tertiary-fixed-variant: '#474647'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-lg:\n    fontFamily: Bebas Neue\n    fontSize: 72px\n    fontWeight: '400'\n    lineHeight: '1.0'\n    letterSpacing: 0.02em\n  headline-h1:\n    fontFamily: Bebas Neue\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: '1.1'\n  headline-h2:\n    fontFamily: Bebas Neue\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-h3:\n    fontFamily: Bebas Neue\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  ui-label:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  tech-detail:\n    fontFamily: Space Mono\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: -0.01em\n  headline-h1-mobile:\n    fontFamily: Bebas Neue\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: '1.1'\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  rule-thick: 2px\n  rule-heavy: 4px\n---\n\n## Brand & Style\n\nThe design system is built upon a philosophy of **Industrial Chic**, blending the rugged reliability of heavy-duty machinery with the precision and exclusivity of a high-end concierge service. It avoids the cluttered, bright-red tropes of the automotive industry in favor of a sophisticated \"blueprint\" aesthetic.\n\nThe visual direction is characterized by:\n*   **Precision Engineering:** Intentional use of technical grids, monospaced data points, and heavy rule lines that evoke the feeling of a well-maintained service manual.\n*   **Asymmetric Sophistication:** Layouts lean into unbalanced but harmonious compositions to feel bespoke rather than templated.\n*   **High-End Utility:** The interface feels like a premium tool—functional and dense in data when necessary, but framed by generous, airy whitespace that signals a premium, unhurried service experience.\n\n## Colors\n\nThe palette, titled **\"Oil & Asphalt,\"** moves away from generic primary colors to embrace a high-contrast, technical atmosphere.\n\n*   **Cautionary Amber (#FFB800):** Used sparingly as a functional accent for primary actions, status indicators, and critical alerts. It represents the \"active\" state of a workshop.\n*   **Oil & Asphalt (#1A1A1B & #0F0F10):** Deep, matte charcoals form the primary surfaces and backgrounds, providing a sophisticated, low-glare environment.\n*   **High-Vis Silver (#E2E8F0):** Acts as the primary ink color for text and heavy rule lines, ensuring crisp legibility against dark backgrounds.\n*   **Blueprint Contrast:** Occasional use of light-mode sections (using the Background Alt) provides a \"whitepaper\" feel for invoices, quotes, and technical specs, mimicking physical documentation.\n\n## Typography\n\nThis design system utilizes a three-tier typographic hierarchy to balance impact with technical clarity.\n\n*   **Headlines (Bebas Neue):** Bold, condensed, and unapologetic. Headlines should be used in all-caps to reinforce the \"industrial\" strength of the brand.\n*   **Body (Work Sans):** Chosen for its exceptional legibility and neutral, professional tone. It balances the aggression of the display type with an approachable, reliable feel.\n*   **Technical Detail (Space Mono):** Used for VIN numbers, timestamps, mechanical specs, and small UI labels. It signals precision and the \"behind-the-scenes\" nature of auto repair.\n\n## Layout & Spacing\n\nThe layout is governed by a strict **8px grid system**, ensuring that even \"asymmetric\" layouts feel mathematically grounded.\n\n*   **Rhythm:** Use \"Generous vs. Dense\" logic. Marketing sections and headers use `xl` (80px) padding to feel premium. Technical data blocks and form groups use `sm` (12px) spacing to feel efficient and information-rich.\n*   **Grid:** A 12-column grid is standard for desktop. Elements should frequently \"break\" the grid by 1 column to create asymmetry, or use heavy vertical rules to separate content blocks.\n*   **Rules:** Instead of whitespace alone, use `rule-thick` lines to separate distinct sections, mimicking the layout of a technical schematic.\n\n## Elevation & Depth\n\nThis design system avoids soft shadows and \"fuzzy\" depth. Instead, it uses **Structural Tiering**:\n\n*   **Hard Borders:** Depth is communicated through `rule-thick` borders. Surfaces do not \"float\" with shadows; they are \"bolted\" to the grid with 2px High-Vis Silver frames.\n*   **Tonal Layering:** The primary background is `neutral_color_hex`. Secondary containers use `tertiary_color_hex`. This 1-step shift in charcoal provides enough contrast to indicate hierarchy without breaking the flat, industrial aesthetic.\n*   **Grid Overlays:** A subtle, repeating dot or line grid texture can be applied to background layers to reinforce the \"blueprint\" motif.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\nTo evoke heavy-duty machinery and precision tools, every element—from buttons and input fields to cards and images—uses 90-degree corners. This lack of \"softness\" reinforces the brand's reliability and no-nonsense approach to high-end service.\n\n*   **In-sets:** Use \"cut-out\" corners (45-degree chamfers) sparingly for special call-to-action buttons to add a \"military-grade\" or custom-machined feel.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Cautionary Amber` fill with `Oil & Asphalt` text (Bebas Neue). No rounded corners. 2px black inner-border for a \"pressed\" look.\n*   **Secondary:** Ghost style with a `rule-thick` High-Vis Silver border and matching text.\n*   **States:** Hover states should invert colors or increase the stroke weight to 4px.\n\n### Cards\n*   **Visual Style:** Border-led, not shadow-led. Every card must have a 2px stroke in `High-Vis Silver`.\n*   **Header:** Cards should feature a \"Technical Header\"—a small `Space Mono` label in the top-left corner (e.g., \"SECTION_04 // ENGINE_DIAG\").\n\n### Input Fields\n*   **Style:** Rectangular, sharp-edged boxes with a 1px `High-Vis Silver` border. Labels should use `tech-detail` (Space Mono) and sit directly above the field or be integrated into the top border line.\n*   **Focus:** Border thickens to 2px and changes to `Cautionary Amber`.\n\n### Chips & Tags\n*   **Style:** Monospaced text inside a thin border. Use for status (e.g., [ PENDING ], [ COMPLETE ]). Tags should look like stamped metal labels.\n\n### Dividers\n*   **Heavy Rules:** Use horizontal and vertical lines (2px) to compartmentalize the UI. These rules should often extend to the very edge of the viewport or container to maintain the \"blueprint\" grid.",
+                  "font": "BEBAS_NEUE",
+                  "headlineFont": "BEBAS_NEUE",
+                  "headlineFontFamily": "Bebas Neue",
+                  "labelFont": "SPACE_MONO",
+                  "labelFontFamily": "Space Mono",
+                  "namedColors": {
+                    "background": "#131314",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#313031",
+                    "inverse_primary": "#7c5800",
+                    "inverse_surface": "#e5e2e3",
+                    "on_background": "#e5e2e3",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#412d00",
+                    "on_primary_container": "#6b4c00",
+                    "on_primary_fixed": "#271900",
+                    "on_primary_fixed_variant": "#5e4200",
+                    "on_secondary": "#2b3137",
+                    "on_secondary_container": "#afb6bd",
+                    "on_secondary_fixed": "#161c22",
+                    "on_secondary_fixed_variant": "#41474e",
+                    "on_surface": "#e5e2e3",
+                    "on_surface_variant": "#d5c4ab",
+                    "on_tertiary": "#303031",
+                    "on_tertiary_container": "#525152",
+                    "on_tertiary_fixed": "#1b1b1c",
+                    "on_tertiary_fixed_variant": "#474647",
+                    "outline": "#9e8f78",
+                    "outline_variant": "#514532",
+                    "primary": "#ffdca1",
+                    "primary_container": "#ffb800",
+                    "primary_fixed": "#ffdea8",
+                    "primary_fixed_dim": "#ffba20",
+                    "secondary": "#c1c7cf",
+                    "secondary_container": "#41474e",
+                    "secondary_fixed": "#dde3eb",
+                    "secondary_fixed_dim": "#c1c7cf",
+                    "surface": "#131314",
+                    "surface_bright": "#39393a",
+                    "surface_container": "#201f20",
+                    "surface_container_high": "#2a2a2b",
+                    "surface_container_highest": "#353436",
+                    "surface_container_low": "#1c1b1c",
+                    "surface_container_lowest": "#0e0e0f",
+                    "surface_dim": "#131314",
+                    "surface_tint": "#ffba20",
+                    "surface_variant": "#353436",
+                    "tertiary": "#e3e0e1",
+                    "tertiary_container": "#c6c4c5",
+                    "tertiary_fixed": "#e5e2e3",
+                    "tertiary_fixed_dim": "#c8c6c7"
+                  },
+                  "overrideNeutralColor": "#0f0f10",
+                  "overridePrimaryColor": "#ffb800",
+                  "overrideSecondaryColor": "#e2e8f0",
+                  "overrideTertiaryColor": "#1a1a1b",
+                  "spacing": {
+                    "base": "8px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "rule-heavy": "4px",
+                    "rule-thick": "2px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "xs": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.5"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Bebas Neue",
+                      "fontSize": "72px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "1.0"
+                    },
+                    "headline-h1": {
+                      "fontFamily": "Bebas Neue",
+                      "fontSize": "48px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-h1-mobile": {
+                      "fontFamily": "Bebas Neue",
+                      "fontSize": "36px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-h2": {
+                      "fontFamily": "Bebas Neue",
+                      "fontSize": "32px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-h3": {
+                      "fontFamily": "Bebas Neue",
+                      "fontSize": "24px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.2"
+                    },
+                    "tech-detail": {
+                      "fontFamily": "Space Mono",
+                      "fontSize": "13px",
+                      "fontWeight": "400",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "1.4"
+                    },
+                    "ui-label": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    }
+                  }
+                }
+              },
+              "name": "assets/cf310233cb734e49be37998ef1f282cb",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "8636",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI5ODczY2E4NWQ4YjRkYmE4ZTg2ODI0ZmVjMzkyYjc1EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDA1OTU5NjQzMDM2OTgzNzYxOQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/14059596430369837619/files/bf81fe18083b4158a5a5fbe1b28dfed7"
+            },
+            "id": "79169615620c49a49c5b440398474893",
+            "name": "projects/14059596430369837619/screens/79169615620c49a49c5b440398474893",
+            "prompt": "Build a bespoke, editorial-grade desktop landing page for Mike's Mobile Auto Repair. \n\nVisual Style: \n- 'Industrial Chic' aesthetic: Deep charcoal (#131314) surfaces, cautionary amber (#FFB800) accents, and heavy rule lines (2px-4px borders).\n- Typography: Use 'Bebas Neue' for massive, high-impact headlines. Pair with a technical monospace font for labels.\n- Layout: Asymmetric and intentional. Avoid standard card grids. Use 'rule-heavy' containers and large whitespace gaps.\n\nSections (In order):\n1. TopNavBar: Logo ({{DATA:IMAGE:IMAGE_1}}), nav links, and (254) 371-6178 in a bold, amber button.\n2. Hero: Massive H1 \"MECHANICAL MASTERY, WHEREVER YOU ARE.\" with a subheadline emphasizing mobile convenience. Use an asymmetric layout with a high-quality placeholder for a mechanic at work.\n3. #credibility: A 'Service Stats' bar using technical-manual styling (e.g., 'EST. 2009', '5000+ REPAIRS', 'CERTIFIED MASTER TECH').\n4. Services/Offerings: A 'Technical Manual' style list. Not cards. Use large numbers (01, 02, 03) and thick dividers. Include: Engine Diagnostics, Brake Systems, Fleet Maintenance, and Emergency Roadside.\n5. About: A split-screen layout. Left: \"THE MIKE STANDARD\" text. Right: Narrative about mobile concierge service in Cuyahoga Falls & Killeen.\n6. #visit: Section titled \"LOCATIONS\" with the specific map slot: `<div class=\"map-slot relative overflow-hidden min-h-[400px] border-2 border-outline\" data-map-slot aria-label=\"Map\"></div>`.\n7. Contact Form: A 'Repair Request' portal. Clean, bold labels, amber primary button. Technical look.\n8. Footer: Predicted Footer component with all brand info and copyright.\n\nTechnical: Smooth scroll, responsive design, no lorem ipsum. Ensure all text matches the provided contact info.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_1}}\n  Alt Text: Mike's Mobile Auto Repair Logo\n  Description: Minimalist geometric logo for Mike's Mobile Auto Repair. A bold 'M' monogram constructed from industrial tool shapes (like a wrench or gear tooth). Professional, premium, heavy-duty aesthetic. Colors: Amber and Deep Charcoal. Flat design, no gradients. White background.\n  Dimensions: 1024x1024\n  Aspect Ratio: 1.00\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtMDxOkJih8Dag1ki283FXPZ5h_a5pd8yazMspR1h35khzzxiQRN2_Nd-nVRgwr2veET7esNFhMNvk_3S9TfW9RQvrDUmuDpBFLsafIGRLi0v90Qj5CYznSNlppWw0TvvaQRtkLknnDEs6J6c6zrMH3IRY5FQeMWBCfpjWchP0LUiI7M7MoocRwnE3JevadT_uRVr8Lf7SecdqzfqV-FBzy3kcJZRp95Wtr99znqcoqrBmO7UTnroWJ1s32",
+              "name": "projects/14059596430369837619/files/79810dead86841458b3a8fd2b8b2bfad"
+            },
+            "theme": {
+              "bodyFont": "WORK_SANS",
+              "bodyFontFamily": "Work Sans",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#ffb800",
+              "designMd": "---\nname: Industrial Concierge\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1c1b1c'\n  surface-container: '#201f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#d5c4ab'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#313031'\n  outline: '#9e8f78'\n  outline-variant: '#514532'\n  surface-tint: '#ffba20'\n  primary: '#ffdca1'\n  on-primary: '#412d00'\n  primary-container: '#ffb800'\n  on-primary-container: '#6b4c00'\n  inverse-primary: '#7c5800'\n  secondary: '#c1c7cf'\n  on-secondary: '#2b3137'\n  secondary-container: '#41474e'\n  on-secondary-container: '#afb6bd'\n  tertiary: '#e3e0e1'\n  on-tertiary: '#303031'\n  tertiary-container: '#c6c4c5'\n  on-tertiary-container: '#525152'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea8'\n  primary-fixed-dim: '#ffba20'\n  on-primary-fixed: '#271900'\n  on-primary-fixed-variant: '#5e4200'\n  secondary-fixed: '#dde3eb'\n  secondary-fixed-dim: '#c1c7cf'\n  on-secondary-fixed: '#161c22'\n  on-secondary-fixed-variant: '#41474e'\n  tertiary-fixed: '#e5e2e3'\n  tertiary-fixed-dim: '#c8c6c7'\n  on-tertiary-fixed: '#1b1b1c'\n  on-tertiary-fixed-variant: '#474647'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-lg:\n    fontFamily: Bebas Neue\n    fontSize: 72px\n    fontWeight: '400'\n    lineHeight: '1.0'\n    letterSpacing: 0.02em\n  headline-h1:\n    fontFamily: Bebas Neue\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: '1.1'\n  headline-h2:\n    fontFamily: Bebas Neue\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-h3:\n    fontFamily: Bebas Neue\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  ui-label:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  tech-detail:\n    fontFamily: Space Mono\n    fontSize: 13px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: -0.01em\n  headline-h1-mobile:\n    fontFamily: Bebas Neue\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: '1.1'\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  rule-thick: 2px\n  rule-heavy: 4px\n---\n\n## Brand & Style\n\nThe design system is built upon a philosophy of **Industrial Chic**, blending the rugged reliability of heavy-duty machinery with the precision and exclusivity of a high-end concierge service. It avoids the cluttered, bright-red tropes of the automotive industry in favor of a sophisticated \"blueprint\" aesthetic.\n\nThe visual direction is characterized by:\n*   **Precision Engineering:** Intentional use of technical grids, monospaced data points, and heavy rule lines that evoke the feeling of a well-maintained service manual.\n*   **Asymmetric Sophistication:** Layouts lean into unbalanced but harmonious compositions to feel bespoke rather than templated.\n*   **High-End Utility:** The interface feels like a premium tool—functional and dense in data when necessary, but framed by generous, airy whitespace that signals a premium, unhurried service experience.\n\n## Colors\n\nThe palette, titled **\"Oil & Asphalt,\"** moves away from generic primary colors to embrace a high-contrast, technical atmosphere.\n\n*   **Cautionary Amber (#FFB800):** Used sparingly as a functional accent for primary actions, status indicators, and critical alerts. It represents the \"active\" state of a workshop.\n*   **Oil & Asphalt (#1A1A1B & #0F0F10):** Deep, matte charcoals form the primary surfaces and backgrounds, providing a sophisticated, low-glare environment.\n*   **High-Vis Silver (#E2E8F0):** Acts as the primary ink color for text and heavy rule lines, ensuring crisp legibility against dark backgrounds.\n*   **Blueprint Contrast:** Occasional use of light-mode sections (using the Background Alt) provides a \"whitepaper\" feel for invoices, quotes, and technical specs, mimicking physical documentation.\n\n## Typography\n\nThis design system utilizes a three-tier typographic hierarchy to balance impact with technical clarity.\n\n*   **Headlines (Bebas Neue):** Bold, condensed, and unapologetic. Headlines should be used in all-caps to reinforce the \"industrial\" strength of the brand.\n*   **Body (Work Sans):** Chosen for its exceptional legibility and neutral, professional tone. It balances the aggression of the display type with an approachable, reliable feel.\n*   **Technical Detail (Space Mono):** Used for VIN numbers, timestamps, mechanical specs, and small UI labels. It signals precision and the \"behind-the-scenes\" nature of auto repair.\n\n## Layout & Spacing\n\nThe layout is governed by a strict **8px grid system**, ensuring that even \"asymmetric\" layouts feel mathematically grounded.\n\n*   **Rhythm:** Use \"Generous vs. Dense\" logic. Marketing sections and headers use `xl` (80px) padding to feel premium. Technical data blocks and form groups use `sm` (12px) spacing to feel efficient and information-rich.\n*   **Grid:** A 12-column grid is standard for desktop. Elements should frequently \"break\" the grid by 1 column to create asymmetry, or use heavy vertical rules to separate content blocks.\n*   **Rules:** Instead of whitespace alone, use `rule-thick` lines to separate distinct sections, mimicking the layout of a technical schematic.\n\n## Elevation & Depth\n\nThis design system avoids soft shadows and \"fuzzy\" depth. Instead, it uses **Structural Tiering**:\n\n*   **Hard Borders:** Depth is communicated through `rule-thick` borders. Surfaces do not \"float\" with shadows; they are \"bolted\" to the grid with 2px High-Vis Silver frames.\n*   **Tonal Layering:** The primary background is `neutral_color_hex`. Secondary containers use `tertiary_color_hex`. This 1-step shift in charcoal provides enough contrast to indicate hierarchy without breaking the flat, industrial aesthetic.\n*   **Grid Overlays:** A subtle, repeating dot or line grid texture can be applied to background layers to reinforce the \"blueprint\" motif.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\nTo evoke heavy-duty machinery and precision tools, every element—from buttons and input fields to cards and images—uses 90-degree corners. This lack of \"softness\" reinforces the brand's reliability and no-nonsense approach to high-end service.\n\n*   **In-sets:** Use \"cut-out\" corners (45-degree chamfers) sparingly for special call-to-action buttons to add a \"military-grade\" or custom-machined feel.\n\n## Components\n\n### Buttons\n*   **Primary:** Solid `Cautionary Amber` fill with `Oil & Asphalt` text (Bebas Neue). No rounded corners. 2px black inner-border for a \"pressed\" look.\n*   **Secondary:** Ghost style with a `rule-thick` High-Vis Silver border and matching text.\n*   **States:** Hover states should invert colors or increase the stroke weight to 4px.\n\n### Cards\n*   **Visual Style:** Border-led, not shadow-led. Every card must have a 2px stroke in `High-Vis Silver`.\n*   **Header:** Cards should feature a \"Technical Header\"—a small `Space Mono` label in the top-left corner (e.g., \"SECTION_04 // ENGINE_DIAG\").\n\n### Input Fields\n*   **Style:** Rectangular, sharp-edged boxes with a 1px `High-Vis Silver` border. Labels should use `tech-detail` (Space Mono) and sit directly above the field or be integrated into the top border line.\n*   **Focus:** Border thickens to 2px and changes to `Cautionary Amber`.\n\n### Chips & Tags\n*   **Style:** Monospaced text inside a thin border. Use for status (e.g., [ PENDING ], [ COMPLETE ]). Tags should look like stamped metal labels.\n\n### Dividers\n*   **Heavy Rules:** Use horizontal and vertical lines (2px) to compartmentalize the UI. These rules should often extend to the very edge of the viewport or container to maintain the \"blueprint\" grid.",
+              "font": "BEBAS_NEUE",
+              "headlineFont": "BEBAS_NEUE",
+              "headlineFontFamily": "Bebas Neue",
+              "labelFont": "SPACE_MONO",
+              "labelFontFamily": "Space Mono",
+              "namedColors": {
+                "background": "#131314",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#313031",
+                "inverse_primary": "#7c5800",
+                "inverse_surface": "#e5e2e3",
+                "on_background": "#e5e2e3",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#412d00",
+                "on_primary_container": "#6b4c00",
+                "on_primary_fixed": "#271900",
+                "on_primary_fixed_variant": "#5e4200",
+                "on_secondary": "#2b3137",
+                "on_secondary_container": "#afb6bd",
+                "on_secondary_fixed": "#161c22",
+                "on_secondary_fixed_variant": "#41474e",
+                "on_surface": "#e5e2e3",
+                "on_surface_variant": "#d5c4ab",
+                "on_tertiary": "#303031",
+                "on_tertiary_container": "#525152",
+                "on_tertiary_fixed": "#1b1b1c",
+                "on_tertiary_fixed_variant": "#474647",
+                "outline": "#9e8f78",
+                "outline_variant": "#514532",
+                "primary": "#ffdca1",
+                "primary_container": "#ffb800",
+                "primary_fixed": "#ffdea8",
+                "primary_fixed_dim": "#ffba20",
+                "secondary": "#c1c7cf",
+                "secondary_container": "#41474e",
+                "secondary_fixed": "#dde3eb",
+                "secondary_fixed_dim": "#c1c7cf",
+                "surface": "#131314",
+                "surface_bright": "#39393a",
+                "surface_container": "#201f20",
+                "surface_container_high": "#2a2a2b",
+                "surface_container_highest": "#353436",
+                "surface_container_low": "#1c1b1c",
+                "surface_container_lowest": "#0e0e0f",
+                "surface_dim": "#131314",
+                "surface_tint": "#ffba20",
+                "surface_variant": "#353436",
+                "tertiary": "#e3e0e1",
+                "tertiary_container": "#c6c4c5",
+                "tertiary_fixed": "#e5e2e3",
+                "tertiary_fixed_dim": "#c8c6c7"
+              },
+              "overrideNeutralColor": "#0f0f10",
+              "overridePrimaryColor": "#ffb800",
+              "overrideSecondaryColor": "#e2e8f0",
+              "overrideTertiaryColor": "#1a1a1b",
+              "spacing": {
+                "base": "8px",
+                "lg": "48px",
+                "md": "24px",
+                "rule-heavy": "4px",
+                "rule-thick": "2px",
+                "sm": "12px",
+                "xl": "80px",
+                "xs": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.5"
+                },
+                "display-lg": {
+                  "fontFamily": "Bebas Neue",
+                  "fontSize": "72px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "1.0"
+                },
+                "headline-h1": {
+                  "fontFamily": "Bebas Neue",
+                  "fontSize": "48px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.1"
+                },
+                "headline-h1-mobile": {
+                  "fontFamily": "Bebas Neue",
+                  "fontSize": "36px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.1"
+                },
+                "headline-h2": {
+                  "fontFamily": "Bebas Neue",
+                  "fontSize": "32px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.2"
+                },
+                "headline-h3": {
+                  "fontFamily": "Bebas Neue",
+                  "fontSize": "24px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.2"
+                },
+                "tech-detail": {
+                  "fontFamily": "Space Mono",
+                  "fontSize": "13px",
+                  "fontWeight": "400",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "1.4"
+                },
+                "ui-label": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                }
+              }
+            },
+            "title": "Mike's Mobile Auto Repair - Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Mike's Mobile Auto Repair** that moves away from typical local business templates in favor of a high-end \"Industrial Chic\" aesthetic.\n\n### Key Design Decisions:\n*   **Visual Identity**: Established a \"Oil & Asphalt\" theme using deep charcoal surfaces, heavy rule lines, and cautionary amber accents to convey reliability and premium service.\n*   **Typography**: Leveraged **Bebas Neue** for massive, high-impact headlines that command attention, paired with technical monospaced details for a \"master tech\" feel.\n*   **Editorial Layout**: Swapped generic card grids for an asymmetric, technical-manual style layout. The services section uses bold numbering and thick dividers to emphasize precision.\n*   **Mobile Concierge Focus**: The copy and structure prioritize the convenience of on-site repair, highlighting Mike's service areas in Cuyahoga Falls and Killeen.\n*   **Production-Ready Components**: Included a custom repair request portal, an interactive location section with the required map slot, and a comprehensive technical footer.\n\nThe site is fully responsive and built with semantic HTML/CSS to ensure a fast, memorable first impression."
+    },
+    {
+      "suggestion": "Can we add a customer testimonial slider?"
+    },
+    {
+      "suggestion": "Make the amber accents more subtle."
+    },
+    {
+      "suggestion": "Change the 'About' section layout to be more text-heavy."
+    }
+  ],
+  "projectId": "14059596430369837619",
+  "sessionId": "12718544039321733034"
+}
