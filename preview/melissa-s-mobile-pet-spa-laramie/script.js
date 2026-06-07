@@ -1,21 +1,22 @@
-// Smooth scroll implementation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+// Subtle animation for bento cells on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-        // Sticky header transition
-        const header = document.querySelector('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-sm');
-            } else {
-                header.classList.remove('shadow-sm');
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.bento-cell').forEach(cell => {
+            cell.style.opacity = '0';
+            cell.style.transform = 'translateY(20px)';
+            cell.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            observer.observe(cell);
         });
 
 (() => {

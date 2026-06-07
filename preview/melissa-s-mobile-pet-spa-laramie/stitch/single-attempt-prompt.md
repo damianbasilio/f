@@ -14,9 +14,9 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 
 This is a **complete redesign**, not a polish pass. Do **not** reuse the previous homepage layout, hero structure, section order, or navigation pattern.
 
-**Layout archetype for this attempt:** bold single-column stack — full-bleed color bands, minimal top nav, strong vertical rhythm
+**Layout archetype for this attempt:** bento grid landing — modular service cards, compact logo lockup, dense mid-page
 
-Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780819015719
+Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780819262889
 
 ---
 

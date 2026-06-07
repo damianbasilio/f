@@ -2,7 +2,7 @@
 
 **Result:** PASS
 
-**Craft warnings:** 2 (see craft section)
+**Craft warnings:** 1 (see craft section)
 
 ## Skills run
 
@@ -31,7 +31,7 @@
 - OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- WARN: 7 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
+- OK: Eyebrow count: 2
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,7 +43,7 @@
 
 ### taste
 
-- WARN: 7 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
+- Eyebrow discipline: 2 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
 
 ### audit
