@@ -1,0 +1,299 @@
+{
+  "outputComponents": [
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Industrial Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThis design system targets a premium audience requiring dependable, high-strength roadside assistance. The personality is authoritative, precise, and uncompromisingly industrial. It eschews the \"friendly\" tropes of the service industry in favor of a high-end editorial aesthetic that mirrors architectural blueprints and premium automotive engineering.\n\nThe visual style is a fusion of **Industrial Brutalism** and **Modern Editorial**. It utilizes high-contrast color blocking, massive typographic scales, and a rigid structural grid. Visual interest is generated through asymmetric layouts, thin technical hairlines, and overlapping content blocks that suggest structural layering rather than traditional UI depth.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid 12-Column Fixed Grid** for desktop and a **4-Column Fluid Grid** for mobile. \n\nKey layout principles:\n- **Asymmetric Balance:** Instead of centering content, align elements to the far left or right of the grid, leaving large \"dead zones\" of whitespace to create an editorial feel.\n- **Overlapping Sections:** Use negative margins to pull secondary content blocks over the edges of primary containers.\n- **Technical Hairlines:** Separate major sections with 1px lines in Steel Grey (20% opacity). These lines should extend to the edges of the viewport, regardless of the container width.\n- **The \"Blueprint\" Margin:** Maintain a generous 48px outer margin on all devices to ensure the UI feels framed and intentional.\n\n## Elevation & Depth\n\nThis design system rejects traditional shadows and soft blurs. Depth is achieved through **Tonal Layering** and **Z-axis Overlaps**:\n\n- **Tier 1 (Base):** Asphalt Black (#0F1115).\n- **Tier 2 (Plates):** Slightly lighter charcoal shades or \"Caution Amber\" blocks that sit directly on top of the base.\n- **Hairline Outlines:** Use 1px solid borders instead of shadows to define the boundaries of interactive elements.\n- **No Blurs:** Backgrounds should be 100% opaque. Avoid glassmorphism; favor solid, \"heavy\" material blocks.\n- **Interaction Depth:** When an element is active or hovered, it doesn't \"lift\" with a shadow. Instead, it should change fill color or gain a secondary 1px offset border (a \"ghost\" frame) to indicate state change.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Caution Amber with Black text, using the Display font in all caps. They are large, blocky, and span the full width of their column on mobile. Secondary buttons are \"Ghost\" style: transparent background with a 2px Steel Grey border.\n\n### Cards\nCards are not treated as independent floating units. Instead, they are \"Sections\" defined by technical hairlines. A card is often just a header, a body, and a mono-spaced ID tag separated by 1px dividers.\n\n### Inputs\nInput fields are \"Underline-only\" or \"Full-box\" with no rounded corners. The label is always in JetBrains Mono above the field. Focus states use a 2px Caution Amber bottom border.\n\n### Status Indicators\nInstead of soft green/red dots, use heavy rectangular blocks. A \"Active\" status is a solid Amber block; \"Inactive\" is a hollow Steel Grey frame.\n\n### Technical Tags\nSmall, rectangular chips using JetBrains Mono. They should look like stamped metal VIN plates or industrial equipment tags, often featuring a small 1px border.",
+                "theme": {
+                  "bodyFont": "INTER",
+                  "bodyFontFamily": "Inter",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#ffb800",
+                  "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#101319'\n  surface-dim: '#101319'\n  surface-bright: '#363940'\n  surface-container-lowest: '#0b0e14'\n  surface-container-low: '#181c22'\n  surface-container: '#1c2026'\n  surface-container-high: '#272a30'\n  surface-container-highest: '#32353b'\n  on-surface: '#e0e2eb'\n  on-surface-variant: '#d5c4ab'\n  inverse-surface: '#e0e2eb'\n  inverse-on-surface: '#2d3037'\n  outline: '#9e8f78'\n  outline-variant: '#514532'\n  surface-tint: '#ffba20'\n  primary: '#ffdca1'\n  on-primary: '#412d00'\n  primary-container: '#ffb800'\n  on-primary-container: '#6b4c00'\n  inverse-primary: '#7c5800'\n  secondary: '#c6c6cc'\n  on-secondary: '#2f3035'\n  secondary-container: '#47494e'\n  on-secondary-container: '#b7b8be'\n  tertiary: '#dfe1e4'\n  on-tertiary: '#2d3133'\n  tertiary-container: '#c2c5c8'\n  on-tertiary-container: '#4e5254'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea8'\n  primary-fixed-dim: '#ffba20'\n  on-primary-fixed: '#271900'\n  on-primary-fixed-variant: '#5e4200'\n  secondary-fixed: '#e2e2e8'\n  secondary-fixed-dim: '#c6c6cc'\n  on-secondary-fixed: '#1a1c20'\n  on-secondary-fixed-variant: '#45474b'\n  tertiary-fixed: '#e0e3e6'\n  tertiary-fixed-dim: '#c4c7ca'\n  on-tertiary-fixed: '#191c1e'\n  on-tertiary-fixed-variant: '#44474a'\n  background: '#101319'\n  on-background: '#e0e2eb'\n  surface-variant: '#32353b'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: 110px\n    letterSpacing: -0.04em\n  display-sm:\n    fontFamily: Archivo Narrow\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 60px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin: 48px\n  section-gap: 120px\n  container-max: 1440px\n---\n\n## Brand & Style\n\nThis design system targets a premium audience requiring dependable, high-strength roadside assistance. The personality is authoritative, precise, and uncompromisingly industrial. It eschews the \"friendly\" tropes of the service industry in favor of a high-end editorial aesthetic that mirrors architectural blueprints and premium automotive engineering.\n\nThe visual style is a fusion of **Industrial Brutalism** and **Modern Editorial**. It utilizes high-contrast color blocking, massive typographic scales, and a rigid structural grid. Visual interest is generated through asymmetric layouts, thin technical hairlines, and overlapping content blocks that suggest structural layering rather than traditional UI depth.\n\n## Colors\n\nThe palette is rooted in functional visibility and high-contrast legibility. \n\n- **Asphalt Black (#0F1115):** The foundational surface color. It provides a deep, matte backdrop that allows technical lines and amber highlights to pop.\n- **Caution Amber (#FFB800):** Used exclusively for primary actions, critical status indicators, and branding accents. It signifies urgency and mechanical precision.\n- **Steel Grey (#F2F4F7):** The primary color for typography and high-frequency UI elements. It provides a clean, technical contrast against the dark background.\n- **Support Tones:** Use semi-transparent variants of Steel Grey (10-20% opacity) for grid lines and structural dividers to maintain a \"blueprint\" feel without cluttering the hierarchy.\n\n## Typography\n\nThe typographic system is built on strength and technical clarity. \n\n**Archivo Narrow** (Bold/700) serves as the display face. Its condensed nature allows for massive, impactful headlines that evoke industrial signage and heavy machinery labeling. \n\n**Inter** provides a neutral, highly readable foundation for body copy and descriptions, ensuring that technical details are easy to parse under stress. \n\n**JetBrains Mono** is utilized for metadata, coordinates, and \"technical specs\" (labels, timestamps, IDs) to reinforce the architectural/engineering aesthetic. \n\nTypography should often be treated as a graphical element—don't be afraid to let display text bleed off the edge of the container or overlap structural lines.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid 12-Column Fixed Grid** for desktop and a **4-Column Fluid Grid** for mobile. \n\nKey layout principles:\n- **Asymmetric Balance:** Instead of centering content, align elements to the far left or right of the grid, leaving large \"dead zones\" of whitespace to create an editorial feel.\n- **Overlapping Sections:** Use negative margins to pull secondary content blocks over the edges of primary containers.\n- **Technical Hairlines:** Separate major sections with 1px lines in Steel Grey (20% opacity). These lines should extend to the edges of the viewport, regardless of the container width.\n- **The \"Blueprint\" Margin:** Maintain a generous 48px outer margin on all devices to ensure the UI feels framed and intentional.\n\n## Elevation & Depth\n\nThis design system rejects traditional shadows and soft blurs. Depth is achieved through **Tonal Layering** and **Z-axis Overlaps**:\n\n- **Tier 1 (Base):** Asphalt Black (#0F1115).\n- **Tier 2 (Plates):** Slightly lighter charcoal shades or \"Caution Amber\" blocks that sit directly on top of the base.\n- **Hairline Outlines:** Use 1px solid borders instead of shadows to define the boundaries of interactive elements.\n- **No Blurs:** Backgrounds should be 100% opaque. Avoid glassmorphism; favor solid, \"heavy\" material blocks.\n- **Interaction Depth:** When an element is active or hovered, it doesn't \"lift\" with a shadow. Instead, it should change fill color or gain a secondary 1px offset border (a \"ghost\" frame) to indicate state change.\n\n## Shapes\n\nThe shape language is **strictly geometric and sharp**. \n\n- **Corners:** Every element (buttons, cards, inputs) must have a 0px border radius. Sharp corners communicate the \"industrial/steel\" nature of the brand.\n- **Dividers:** Use 1px vertical and horizontal lines to create \"cells\" for data.\n- **Accent Shapes:** Use 45-degree chamfered corners or \"caution stripe\" patterns (diagonal 45-degree Amber/Black lines) sparingly for high-importance callouts or loading states.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Caution Amber with Black text, using the Display font in all caps. They are large, blocky, and span the full width of their column on mobile. Secondary buttons are \"Ghost\" style: transparent background with a 2px Steel Grey border.\n\n### Cards\nCards are not treated as independent floating units. Instead, they are \"Sections\" defined by technical hairlines. A card is often just a header, a body, and a mono-spaced ID tag separated by 1px dividers.\n\n### Inputs\nInput fields are \"Underline-only\" or \"Full-box\" with no rounded corners. The label is always in JetBrains Mono above the field. Focus states use a 2px Caution Amber bottom border.\n\n### Status Indicators\nInstead of soft green/red dots, use heavy rectangular blocks. A \"Active\" status is a solid Amber block; \"Inactive\" is a hollow Steel Grey frame.\n\n### Technical Tags\nSmall, rectangular chips using JetBrains Mono. They should look like stamped metal VIN plates or industrial equipment tags, often featuring a small 1px border.",
+                  "font": "ARCHIVO_NARROW",
+                  "headlineFont": "ARCHIVO_NARROW",
+                  "headlineFontFamily": "Archivo Narrow",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#101319",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2d3037",
+                    "inverse_primary": "#7c5800",
+                    "inverse_surface": "#e0e2eb",
+                    "on_background": "#e0e2eb",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#412d00",
+                    "on_primary_container": "#6b4c00",
+                    "on_primary_fixed": "#271900",
+                    "on_primary_fixed_variant": "#5e4200",
+                    "on_secondary": "#2f3035",
+                    "on_secondary_container": "#b7b8be",
+                    "on_secondary_fixed": "#1a1c20",
+                    "on_secondary_fixed_variant": "#45474b",
+                    "on_surface": "#e0e2eb",
+                    "on_surface_variant": "#d5c4ab",
+                    "on_tertiary": "#2d3133",
+                    "on_tertiary_container": "#4e5254",
+                    "on_tertiary_fixed": "#191c1e",
+                    "on_tertiary_fixed_variant": "#44474a",
+                    "outline": "#9e8f78",
+                    "outline_variant": "#514532",
+                    "primary": "#ffdca1",
+                    "primary_container": "#ffb800",
+                    "primary_fixed": "#ffdea8",
+                    "primary_fixed_dim": "#ffba20",
+                    "secondary": "#c6c6cc",
+                    "secondary_container": "#47494e",
+                    "secondary_fixed": "#e2e2e8",
+                    "secondary_fixed_dim": "#c6c6cc",
+                    "surface": "#101319",
+                    "surface_bright": "#363940",
+                    "surface_container": "#1c2026",
+                    "surface_container_high": "#272a30",
+                    "surface_container_highest": "#32353b",
+                    "surface_container_low": "#181c22",
+                    "surface_container_lowest": "#0b0e14",
+                    "surface_dim": "#101319",
+                    "surface_tint": "#ffba20",
+                    "surface_variant": "#32353b",
+                    "tertiary": "#dfe1e4",
+                    "tertiary_container": "#c2c5c8",
+                    "tertiary_fixed": "#e0e3e6",
+                    "tertiary_fixed_dim": "#c4c7ca"
+                  },
+                  "overrideNeutralColor": "#4a4d54",
+                  "overridePrimaryColor": "#ffb800",
+                  "overrideSecondaryColor": "#0f1115",
+                  "overrideTertiaryColor": "#f2f4f7",
+                  "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "margin": "48px",
+                    "section-gap": "120px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "28px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "120px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "110px"
+                    },
+                    "display-sm": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "60px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "lineHeight": "52px"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "36px"
+                    },
+                    "label-mono": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/e29a8696db6645f6bf6b67f236b29ec7",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "8652",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2E3NGZjYjVmMWMwZTRkNGNhNzBhZGEzNDY4Nzg5YmIyEgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDc5MTcyNjUzMDk5NTM1NTE0Mw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/14791726530995355143/files/3e6b217d45564ab6831a019695e71ed4"
+            },
+            "id": "067f738a15a04826a332e442ef33c6c9",
+            "name": "projects/14791726530995355143/screens/067f738a15a04826a332e442ef33c6c9",
+            "prompt": "Build a full desktop landing page for Roadside Towing using the \"Industrial Editorial\" design system. \n\nDesign Rationale:\n- \"Technical Blueprint\" aesthetic: High-contrast Asphalt Black (#101319) and Caution Amber (#ffb800) palette.\n- Bold, oversized headings using Archivo Narrow.\n- Asymmetric sections, thin technical rules, and generous whitespace.\n- Use macro industrial textures and cinematic fleet photography.\n\nRequired Sections & Content:\n- Header: Sticky, includes the emergency line (580) 351-6567 prominently in amber.\n- Hero: \"RECOVERY REDEFINED\". Use the cinematic tow truck image {{DATA:IMAGE:IMAGE_2}}. Subtext: Stationed in Lawton, OK.\n- #credibility: Deployment status (24/7 Active) and Certification (Heavy-Duty Veteran).\n- Services/Offerings: \"SYSTEM SERVICES\". Present as technical capabilities. Include 24-Hour Towing, Flatbed Service, Heavy Winching, Tire Changes, Fuel & Battery, and Fleet Logistics.\n- About: \"BUILT FOR THE OKLAHOMA GRIT.\" Highlight Lawton local expertise. Use {{DATA:IMAGE:IMAGE_3}} (the steel hook close-up).\n- #visit: \"HQ_COORDINATES\". Include 528 Southwest 11th Street, Lawton, OK 73501. MUST include the specific map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact Form: \"SECURE RECOVERY\". Fields for Name, Phone, Location, and Service Requirement. \n- Footer: Full copyright, navigation links, and contact info (Roadsidetowing65@gmail.com).\n\nTechnical Requirements:\n- Full semantic HTML document with CSS and JavaScript.\n- Smooth scroll, mobile nav, and form validation UI.\n- No placeholder text; use the provided business details.\n- Descriptive alt tags for all images.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv4Eiw39yBfgw-ZPXzYw8Zrguos3v7PyqpgddJMZpDpSZDX30vbmS-h5fvkiJ2hcVvbL4HiCnKarUO1fy4eoON_dkbrcwYWF_QPqNePC1NEZuwTU1KMwLFQ8y9BY0A7mrMtPFH6c8ojG9frnQSNH5V9l3FKYbf-P1wyvUQGG56uhNyD_XHnsYQrNUkZoY7vTiuzKi33EX4g6CcvR2LIQKvQ3pz5IGK90LDrdzTh75v9CJUl3CFn4NA-XXml",
+              "name": "projects/14791726530995355143/files/d588c6e761cd47c18e94de30867177dd"
+            },
+            "theme": {
+              "bodyFont": "INTER",
+              "bodyFontFamily": "Inter",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#ffb800",
+              "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#101319'\n  surface-dim: '#101319'\n  surface-bright: '#363940'\n  surface-container-lowest: '#0b0e14'\n  surface-container-low: '#181c22'\n  surface-container: '#1c2026'\n  surface-container-high: '#272a30'\n  surface-container-highest: '#32353b'\n  on-surface: '#e0e2eb'\n  on-surface-variant: '#d5c4ab'\n  inverse-surface: '#e0e2eb'\n  inverse-on-surface: '#2d3037'\n  outline: '#9e8f78'\n  outline-variant: '#514532'\n  surface-tint: '#ffba20'\n  primary: '#ffdca1'\n  on-primary: '#412d00'\n  primary-container: '#ffb800'\n  on-primary-container: '#6b4c00'\n  inverse-primary: '#7c5800'\n  secondary: '#c6c6cc'\n  on-secondary: '#2f3035'\n  secondary-container: '#47494e'\n  on-secondary-container: '#b7b8be'\n  tertiary: '#dfe1e4'\n  on-tertiary: '#2d3133'\n  tertiary-container: '#c2c5c8'\n  on-tertiary-container: '#4e5254'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdea8'\n  primary-fixed-dim: '#ffba20'\n  on-primary-fixed: '#271900'\n  on-primary-fixed-variant: '#5e4200'\n  secondary-fixed: '#e2e2e8'\n  secondary-fixed-dim: '#c6c6cc'\n  on-secondary-fixed: '#1a1c20'\n  on-secondary-fixed-variant: '#45474b'\n  tertiary-fixed: '#e0e3e6'\n  tertiary-fixed-dim: '#c4c7ca'\n  on-tertiary-fixed: '#191c1e'\n  on-tertiary-fixed-variant: '#44474a'\n  background: '#101319'\n  on-background: '#e0e2eb'\n  surface-variant: '#32353b'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: 110px\n    letterSpacing: -0.04em\n  display-sm:\n    fontFamily: Archivo Narrow\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 60px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin: 48px\n  section-gap: 120px\n  container-max: 1440px\n---\n\n## Brand & Style\n\nThis design system targets a premium audience requiring dependable, high-strength roadside assistance. The personality is authoritative, precise, and uncompromisingly industrial. It eschews the \"friendly\" tropes of the service industry in favor of a high-end editorial aesthetic that mirrors architectural blueprints and premium automotive engineering.\n\nThe visual style is a fusion of **Industrial Brutalism** and **Modern Editorial**. It utilizes high-contrast color blocking, massive typographic scales, and a rigid structural grid. Visual interest is generated through asymmetric layouts, thin technical hairlines, and overlapping content blocks that suggest structural layering rather than traditional UI depth.\n\n## Colors\n\nThe palette is rooted in functional visibility and high-contrast legibility. \n\n- **Asphalt Black (#0F1115):** The foundational surface color. It provides a deep, matte backdrop that allows technical lines and amber highlights to pop.\n- **Caution Amber (#FFB800):** Used exclusively for primary actions, critical status indicators, and branding accents. It signifies urgency and mechanical precision.\n- **Steel Grey (#F2F4F7):** The primary color for typography and high-frequency UI elements. It provides a clean, technical contrast against the dark background.\n- **Support Tones:** Use semi-transparent variants of Steel Grey (10-20% opacity) for grid lines and structural dividers to maintain a \"blueprint\" feel without cluttering the hierarchy.\n\n## Typography\n\nThe typographic system is built on strength and technical clarity. \n\n**Archivo Narrow** (Bold/700) serves as the display face. Its condensed nature allows for massive, impactful headlines that evoke industrial signage and heavy machinery labeling. \n\n**Inter** provides a neutral, highly readable foundation for body copy and descriptions, ensuring that technical details are easy to parse under stress. \n\n**JetBrains Mono** is utilized for metadata, coordinates, and \"technical specs\" (labels, timestamps, IDs) to reinforce the architectural/engineering aesthetic. \n\nTypography should often be treated as a graphical element—don't be afraid to let display text bleed off the edge of the container or overlap structural lines.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid 12-Column Fixed Grid** for desktop and a **4-Column Fluid Grid** for mobile. \n\nKey layout principles:\n- **Asymmetric Balance:** Instead of centering content, align elements to the far left or right of the grid, leaving large \"dead zones\" of whitespace to create an editorial feel.\n- **Overlapping Sections:** Use negative margins to pull secondary content blocks over the edges of primary containers.\n- **Technical Hairlines:** Separate major sections with 1px lines in Steel Grey (20% opacity). These lines should extend to the edges of the viewport, regardless of the container width.\n- **The \"Blueprint\" Margin:** Maintain a generous 48px outer margin on all devices to ensure the UI feels framed and intentional.\n\n## Elevation & Depth\n\nThis design system rejects traditional shadows and soft blurs. Depth is achieved through **Tonal Layering** and **Z-axis Overlaps**:\n\n- **Tier 1 (Base):** Asphalt Black (#0F1115).\n- **Tier 2 (Plates):** Slightly lighter charcoal shades or \"Caution Amber\" blocks that sit directly on top of the base.\n- **Hairline Outlines:** Use 1px solid borders instead of shadows to define the boundaries of interactive elements.\n- **No Blurs:** Backgrounds should be 100% opaque. Avoid glassmorphism; favor solid, \"heavy\" material blocks.\n- **Interaction Depth:** When an element is active or hovered, it doesn't \"lift\" with a shadow. Instead, it should change fill color or gain a secondary 1px offset border (a \"ghost\" frame) to indicate state change.\n\n## Shapes\n\nThe shape language is **strictly geometric and sharp**. \n\n- **Corners:** Every element (buttons, cards, inputs) must have a 0px border radius. Sharp corners communicate the \"industrial/steel\" nature of the brand.\n- **Dividers:** Use 1px vertical and horizontal lines to create \"cells\" for data.\n- **Accent Shapes:** Use 45-degree chamfered corners or \"caution stripe\" patterns (diagonal 45-degree Amber/Black lines) sparingly for high-importance callouts or loading states.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Caution Amber with Black text, using the Display font in all caps. They are large, blocky, and span the full width of their column on mobile. Secondary buttons are \"Ghost\" style: transparent background with a 2px Steel Grey border.\n\n### Cards\nCards are not treated as independent floating units. Instead, they are \"Sections\" defined by technical hairlines. A card is often just a header, a body, and a mono-spaced ID tag separated by 1px dividers.\n\n### Inputs\nInput fields are \"Underline-only\" or \"Full-box\" with no rounded corners. The label is always in JetBrains Mono above the field. Focus states use a 2px Caution Amber bottom border.\n\n### Status Indicators\nInstead of soft green/red dots, use heavy rectangular blocks. A \"Active\" status is a solid Amber block; \"Inactive\" is a hollow Steel Grey frame.\n\n### Technical Tags\nSmall, rectangular chips using JetBrains Mono. They should look like stamped metal VIN plates or industrial equipment tags, often featuring a small 1px border.",
+              "font": "ARCHIVO_NARROW",
+              "headlineFont": "ARCHIVO_NARROW",
+              "headlineFontFamily": "Archivo Narrow",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#101319",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2d3037",
+                "inverse_primary": "#7c5800",
+                "inverse_surface": "#e0e2eb",
+                "on_background": "#e0e2eb",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#412d00",
+                "on_primary_container": "#6b4c00",
+                "on_primary_fixed": "#271900",
+                "on_primary_fixed_variant": "#5e4200",
+                "on_secondary": "#2f3035",
+                "on_secondary_container": "#b7b8be",
+                "on_secondary_fixed": "#1a1c20",
+                "on_secondary_fixed_variant": "#45474b",
+                "on_surface": "#e0e2eb",
+                "on_surface_variant": "#d5c4ab",
+                "on_tertiary": "#2d3133",
+                "on_tertiary_container": "#4e5254",
+                "on_tertiary_fixed": "#191c1e",
+                "on_tertiary_fixed_variant": "#44474a",
+                "outline": "#9e8f78",
+                "outline_variant": "#514532",
+                "primary": "#ffdca1",
+                "primary_container": "#ffb800",
+                "primary_fixed": "#ffdea8",
+                "primary_fixed_dim": "#ffba20",
+                "secondary": "#c6c6cc",
+                "secondary_container": "#47494e",
+                "secondary_fixed": "#e2e2e8",
+                "secondary_fixed_dim": "#c6c6cc",
+                "surface": "#101319",
+                "surface_bright": "#363940",
+                "surface_container": "#1c2026",
+                "surface_container_high": "#272a30",
+                "surface_container_highest": "#32353b",
+                "surface_container_low": "#181c22",
+                "surface_container_lowest": "#0b0e14",
+                "surface_dim": "#101319",
+                "surface_tint": "#ffba20",
+                "surface_variant": "#32353b",
+                "tertiary": "#dfe1e4",
+                "tertiary_container": "#c2c5c8",
+                "tertiary_fixed": "#e0e3e6",
+                "tertiary_fixed_dim": "#c4c7ca"
+              },
+              "overrideNeutralColor": "#4a4d54",
+              "overridePrimaryColor": "#ffb800",
+              "overrideSecondaryColor": "#0f1115",
+              "overrideTertiaryColor": "#f2f4f7",
+              "spacing": {
+                "container-max": "1440px",
+                "gutter": "24px",
+                "margin": "48px",
+                "section-gap": "120px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "28px"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px"
+                },
+                "display-lg": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "120px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "110px"
+                },
+                "display-sm": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "60px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "lineHeight": "52px"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "36px"
+                },
+                "label-mono": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Roadside Towing Landing Page",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have completed the production-ready landing page for **Roadside Towing**, strictly adhering to the \"Technical Blueprint\" aesthetic we established.\n\n### Key Design Implementations:\n*   **Industrial Editorial Aesthetic**: The layout uses a high-contrast palette of **Asphalt Black** and **Caution Amber** to communicate authority and safety. I've utilized thin technical rules and asymmetric spacing to create an editorial, premium feel that stands out from typical local service templates.\n*   **Visual Continuity**: The design integrates your cinematic fleet photography (Cinematic, high-end photography of a heavy-duty flatbed tow truck parked on a modern asphalt road at twilight. Mood is professional, reliable, and powerful. Lighting is dramatic with amber highlights from the truck's safety lights reflecting on the wet pavement. High resolution, professional automotive photography style. Deep blacks and vibrant orange accents.) and macro industrial textures (Close-up, detailed shot of industrial towing equipment, steel cables, and hooks. Macro photography style with a shallow depth of field. Cold steel textures with warm amber light reflections. Minimalist and technical.) to ground the high-end typography in real-world grit.\n*   **Technical Information Architecture**: Services are presented as \"System Services\" with technical numbering, emphasizing precision and professional expertise rather than just \"towing.\"\n*   **Production Standards**: The code includes the required `data-map-slot` for Lawton HQ, a sticky high-visibility contact header, and a secure recovery dispatch form.\n\nThe landing page is now ready for your final review. Would you like to adjust the weight of the technical rules or refine the hover states for the service capabilities?"
+    },
+    {
+      "suggestion": "Refine the service icons style"
+    },
+    {
+      "suggestion": "Adjust typographic scale for headings"
+    },
+    {
+      "suggestion": "Add scroll animations to the technical grid"
+    }
+  ],
+  "projectId": "14791726530995355143",
+  "sessionId": "3946743138876537774"
+}
