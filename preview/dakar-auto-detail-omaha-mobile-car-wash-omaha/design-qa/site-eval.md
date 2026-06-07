@@ -6,10 +6,8 @@
 
 - none
 
-## Warnings (3)
+## Warnings (1)
 
-- Broken anchor: #gallery
-- Broken anchor: #gallery
-- Duplicate image URLs on page
+- Broken anchor: #process
 
 _Run after every build. Fix errors before images/outreach._

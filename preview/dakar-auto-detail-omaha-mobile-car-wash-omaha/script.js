@@ -1,4 +1,4 @@
-// Smooth scroll implementation
+// Smooth scroll for anchor links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -8,22 +8,33 @@
             });
         });
 
-        // Simple animation on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
+        // Simple Nav Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-xl');
+                nav.classList.remove('bg-background/80');
+                nav.classList.add('bg-background');
+            } else {
+                nav.classList.remove('shadow-xl');
+                nav.classList.remove('bg-background');
+                nav.classList.add('bg-background/80');
+            }
+        });
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'ease-out');
+        // Form Validation Feedback
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "REQUEST RECEIVED";
+            btn.classList.add('bg-green-800');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('bg-green-800');
+                form.reset();
+            }, 3000);
         });
 
 (() => {
