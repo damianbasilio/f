@@ -1,0 +1,472 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Coastal Noir",
+          "styleGuidelines": "## Brand & Style\n\nThe brand identity captures the intersection of high-fashion editorial aesthetics and the atmospheric tranquility of the Myrtle Beach coastline. The personality is exclusive, mysterious, and sophisticated—moving away from typical bright beach tropes toward a \"Coastal Noir\" mood. \n\nThe design style utilizes a **Minimalist-Editorial** hybrid. It features expansive whitespace (the \"Sand\"), sharp typographic hierarchy, and intentional asymmetry. The visual narrative is driven by \"The Flow\"—a concept translated through overlapping translucent layers, staggered content blocks, and hairline-thin gold accents that mimic the precision of a stylist's shears. \n\nThe UI should feel like a premium digital lookbook. Every interaction is measured and calm, prioritizing high-resolution imagery and bold, evocative statements over dense information clusters.\n\n## Layout & Spacing\n\nThis design system rejects rigid symmetry in favor of a **Staggered Editorial Grid**.\n- **The 12-Column Base:** While built on a 12-column foundation, elements rarely span simple predictable widths. \n- **Asymmetric Overlaps:** Images and color blocks should use negative margins (`overlap-offset`) to stack over one another. For example, a portrait image might sit on the right 6 columns while a Teal color block sits on the left 7 columns, creating a 1-column overlap.\n- **Whitespace:** Use 80px or 120px vertical sections to allow the brand to breathe.\n- **Mobile Reflow:** On mobile, the \"overlap\" motif is simplified to a vertical stack, but maintaining the staggered alignment (e.g., alternating left and right alignment for headers).\n\n## Elevation & Depth\n\nDepth in the \"Coastal Noir\" system is achieved through **Tonal Layering** rather than shadows.\n- **Planes of Color:** Instead of shadows, depth is indicated by the stacking order of Sun-Bleached Sand, Deep Ocean Teal, and photography.\n- **Hairline Rules:** Use 0.5px or 1px Gold (#C5A059) lines to separate content or frame staggered images. These represent precision and structure.\n- **Grainy Texture:** Apply a subtle noise/film-grain overlay to the Deep Ocean Teal blocks to simulate the texture of \"flowing hair\" and organic coastal elements.\n- **Opacity:** Use 90-95% opacity on overlapping Teal containers to let the underlying imagery \"ghost\" through, creating the \"Noir\" atmosphere.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Ocean Teal (#0A2A2A) with white or Sand text. Sharp corners. Wide letter spacing.\n- **Secondary:** Transparent with a 1px Muted Gold (#C5A059) border. \n- **Ghost:** Text-only with a gold underline that grows from the center on hover.\n\n### Cards (The \"Lookbook\" Block)\n- No traditional card containers. Instead, use a \"Block\" approach: a sharp-edged image with a floating typography label that overlaps the bottom-left edge.\n\n### Inputs & Fields\n- Bottom-border only (1px Soft Charcoal). Labels use the `label-caps` style sitting above the line. Focus state shifts the border color to Muted Gold.\n\n### Lists\n- Service menus should use a \"Price List\" format: Item name in Montserrat (Regular), a dotted Gold leader line, and the price in Bodoni Moda (Italic).\n\n### The \"Signature\" Rule\n- A decorative component consisting of a thin vertical or horizontal gold line exactly 1px thick, used to lead the eye between staggered sections.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0a2a2a",
+            "designMd": "---\nname: Coastal Noir\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#414848'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#717878'\n  outline-variant: '#c1c8c7'\n  surface-tint: '#466463'\n  primary: '#001414'\n  on-primary: '#ffffff'\n  primary-container: '#0a2a2a'\n  on-primary-container: '#749292'\n  inverse-primary: '#adcdcc'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#190f00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#332300'\n  on-tertiary-container: '#aa8843'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c8e9e8'\n  primary-fixed-dim: '#adcdcc'\n  on-primary-fixed: '#002020'\n  on-primary-fixed-variant: '#2e4c4c'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#ffdea5'\n  tertiary-fixed-dim: '#e9c176'\n  on-tertiary-fixed: '#261900'\n  on-tertiary-fixed-variant: '#5d4201'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '500'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.1em\nspacing:\n  unit: 8px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  gutter: 32px\n  overlap-offset: -40px\n---\n\n## Brand & Style\n\nThe brand identity captures the intersection of high-fashion editorial aesthetics and the atmospheric tranquility of the Myrtle Beach coastline. The personality is exclusive, mysterious, and sophisticated—moving away from typical bright beach tropes toward a \"Coastal Noir\" mood. \n\nThe design style utilizes a **Minimalist-Editorial** hybrid. It features expansive whitespace (the \"Sand\"), sharp typographic hierarchy, and intentional asymmetry. The visual narrative is driven by \"The Flow\"—a concept translated through overlapping translucent layers, staggered content blocks, and hairline-thin gold accents that mimic the precision of a stylist's shears. \n\nThe UI should feel like a premium digital lookbook. Every interaction is measured and calm, prioritizing high-resolution imagery and bold, evocative statements over dense information clusters.\n\n## Colors\n\nThe palette is rooted in the depth of the Atlantic at dusk. \n- **Deep Ocean Teal (#0A2A2A):** Used for immersive backgrounds, primary buttons, and heavy \"Noir\" accents.\n- **Sun-Bleached Sand (#F5F2ED):** The primary canvas color. It provides a warm, organic alternative to pure white, reducing eye strain and feeling more \"boutique.\"\n- **Muted Gold (#C5A059):** Reserved for interactive cues, thin rule lines (dividers), and rare, high-impact highlights.\n- **Soft Charcoal (#2D2D2D):** The primary color for long-form body text to ensure legibility without the harshness of pure black.\n\n## Typography\n\nThe typographic strategy pairs high-contrast elegance with wide-tracked utility.\n- **Headlines:** Use Bodoni Moda for all editorial titles. It should be used at large scales, often overlapping images or color blocks to create a layered depth.\n- **Body Text:** Montserrat provides a clean, modern counterpoint. For body copy, keep line lengths short to maintain the editorial feel.\n- **Labels & Navigation:** Use uppercase Montserrat with generous letter spacing (0.1em to 0.2em) to evoke a sense of luxury and airiness.\n\n## Layout & Spacing\n\nThis design system rejects rigid symmetry in favor of a **Staggered Editorial Grid**.\n- **The 12-Column Base:** While built on a 12-column foundation, elements rarely span simple predictable widths. \n- **Asymmetric Overlaps:** Images and color blocks should use negative margins (`overlap-offset`) to stack over one another. For example, a portrait image might sit on the right 6 columns while a Teal color block sits on the left 7 columns, creating a 1-column overlap.\n- **Whitespace:** Use 80px or 120px vertical sections to allow the brand to breathe.\n- **Mobile Reflow:** On mobile, the \"overlap\" motif is simplified to a vertical stack, but maintaining the staggered alignment (e.g., alternating left and right alignment for headers).\n\n## Elevation & Depth\n\nDepth in the \"Coastal Noir\" system is achieved through **Tonal Layering** rather than shadows.\n- **Planes of Color:** Instead of shadows, depth is indicated by the stacking order of Sun-Bleached Sand, Deep Ocean Teal, and photography.\n- **Hairline Rules:** Use 0.5px or 1px Gold (#C5A059) lines to separate content or frame staggered images. These represent precision and structure.\n- **Grainy Texture:** Apply a subtle noise/film-grain overlay to the Deep Ocean Teal blocks to simulate the texture of \"flowing hair\" and organic coastal elements.\n- **Opacity:** Use 90-95% opacity on overlapping Teal containers to let the underlying imagery \"ghost\" through, creating the \"Noir\" atmosphere.\n\n## Shapes\n\nThe design system uses a **Sharp (0)** roundedness philosophy. \n- All buttons, images, and containers must have 90-degree corners to maintain a high-fashion, architectural feel. \n- The only exception to the \"sharp\" rule is the use of circular \"Floating Action\" style elements for decorative gold seals or specialized call-to-actions, providing a singular point of organic contrast.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Ocean Teal (#0A2A2A) with white or Sand text. Sharp corners. Wide letter spacing.\n- **Secondary:** Transparent with a 1px Muted Gold (#C5A059) border. \n- **Ghost:** Text-only with a gold underline that grows from the center on hover.\n\n### Cards (The \"Lookbook\" Block)\n- No traditional card containers. Instead, use a \"Block\" approach: a sharp-edged image with a floating typography label that overlaps the bottom-left edge.\n\n### Inputs & Fields\n- Bottom-border only (1px Soft Charcoal). Labels use the `label-caps` style sitting above the line. Focus state shifts the border color to Muted Gold.\n\n### Lists\n- Service menus should use a \"Price List\" format: Item name in Montserrat (Regular), a dotted Gold leader line, and the price in Bodoni Moda (Italic).\n\n### The \"Signature\" Rule\n- A decorative component consisting of a thin vertical or horizontal gold line exactly 1px thick, used to lead the eye between staggered sections.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fcf9f8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0f0",
+              "inverse_primary": "#adcdcc",
+              "inverse_surface": "#303030",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#749292",
+              "on_primary_fixed": "#002020",
+              "on_primary_fixed_variant": "#2e4c4c",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#656461",
+              "on_secondary_fixed": "#1c1c19",
+              "on_secondary_fixed_variant": "#474743",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#414848",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#aa8843",
+              "on_tertiary_fixed": "#261900",
+              "on_tertiary_fixed_variant": "#5d4201",
+              "outline": "#717878",
+              "outline_variant": "#c1c8c7",
+              "primary": "#001414",
+              "primary_container": "#0a2a2a",
+              "primary_fixed": "#c8e9e8",
+              "primary_fixed_dim": "#adcdcc",
+              "secondary": "#5f5e5b",
+              "secondary_container": "#e5e2dd",
+              "secondary_fixed": "#e5e2dd",
+              "secondary_fixed_dim": "#c9c6c2",
+              "surface": "#fcf9f8",
+              "surface_bright": "#fcf9f8",
+              "surface_container": "#f0eded",
+              "surface_container_high": "#eae7e7",
+              "surface_container_highest": "#e4e2e1",
+              "surface_container_low": "#f6f3f2",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9d9",
+              "surface_tint": "#466463",
+              "surface_variant": "#e4e2e1",
+              "tertiary": "#190f00",
+              "tertiary_container": "#332300",
+              "tertiary_fixed": "#ffdea5",
+              "tertiary_fixed_dim": "#e9c176"
+            },
+            "overrideNeutralColor": "#2d2d2d",
+            "overridePrimaryColor": "#0a2a2a",
+            "overrideSecondaryColor": "#f5f2ed",
+            "overrideTertiaryColor": "#c5a059",
+            "spacing": {
+              "gutter": "32px",
+              "margin-desktop": "80px",
+              "margin-mobile": "24px",
+              "overlap-offset": "-40px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "32px"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "button": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "20px"
+              },
+              "display-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "84px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "92px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "52px"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "500",
+                "lineHeight": "56px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "40px"
+              },
+              "headline-md": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "400",
+                "lineHeight": "40px"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.2em",
+                "lineHeight": "16px"
+              }
+            }
+          }
+        },
+        "name": "assets/59ae6b466ff74a0b9ba16b068c68104f",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Coastal Noir",
+                "styleGuidelines": "## Brand & Style\n\nThe brand identity captures the intersection of high-fashion editorial aesthetics and the atmospheric tranquility of the Myrtle Beach coastline. The personality is exclusive, mysterious, and sophisticated—moving away from typical bright beach tropes toward a \"Coastal Noir\" mood. \n\nThe design style utilizes a **Minimalist-Editorial** hybrid. It features expansive whitespace (the \"Sand\"), sharp typographic hierarchy, and intentional asymmetry. The visual narrative is driven by \"The Flow\"—a concept translated through overlapping translucent layers, staggered content blocks, and hairline-thin gold accents that mimic the precision of a stylist's shears. \n\nThe UI should feel like a premium digital lookbook. Every interaction is measured and calm, prioritizing high-resolution imagery and bold, evocative statements over dense information clusters.\n\n## Layout & Spacing\n\nThis design system rejects rigid symmetry in favor of a **Staggered Editorial Grid**.\n- **The 12-Column Base:** While built on a 12-column foundation, elements rarely span simple predictable widths. \n- **Asymmetric Overlaps:** Images and color blocks should use negative margins (`overlap-offset`) to stack over one another. For example, a portrait image might sit on the right 6 columns while a Teal color block sits on the left 7 columns, creating a 1-column overlap.\n- **Whitespace:** Use 80px or 120px vertical sections to allow the brand to breathe.\n- **Mobile Reflow:** On mobile, the \"overlap\" motif is simplified to a vertical stack, but maintaining the staggered alignment (e.g., alternating left and right alignment for headers).\n\n## Elevation & Depth\n\nDepth in the \"Coastal Noir\" system is achieved through **Tonal Layering** rather than shadows.\n- **Planes of Color:** Instead of shadows, depth is indicated by the stacking order of Sun-Bleached Sand, Deep Ocean Teal, and photography.\n- **Hairline Rules:** Use 0.5px or 1px Gold (#C5A059) lines to separate content or frame staggered images. These represent precision and structure.\n- **Grainy Texture:** Apply a subtle noise/film-grain overlay to the Deep Ocean Teal blocks to simulate the texture of \"flowing hair\" and organic coastal elements.\n- **Opacity:** Use 90-95% opacity on overlapping Teal containers to let the underlying imagery \"ghost\" through, creating the \"Noir\" atmosphere.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Ocean Teal (#0A2A2A) with white or Sand text. Sharp corners. Wide letter spacing.\n- **Secondary:** Transparent with a 1px Muted Gold (#C5A059) border. \n- **Ghost:** Text-only with a gold underline that grows from the center on hover.\n\n### Cards (The \"Lookbook\" Block)\n- No traditional card containers. Instead, use a \"Block\" approach: a sharp-edged image with a floating typography label that overlaps the bottom-left edge.\n\n### Inputs & Fields\n- Bottom-border only (1px Soft Charcoal). Labels use the `label-caps` style sitting above the line. Focus state shifts the border color to Muted Gold.\n\n### Lists\n- Service menus should use a \"Price List\" format: Item name in Montserrat (Regular), a dotted Gold leader line, and the price in Bodoni Moda (Italic).\n\n### The \"Signature\" Rule\n- A decorative component consisting of a thin vertical or horizontal gold line exactly 1px thick, used to lead the eye between staggered sections.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#0a2a2a",
+                  "designMd": "---\nname: Coastal Noir\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#414848'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#717878'\n  outline-variant: '#c1c8c7'\n  surface-tint: '#466463'\n  primary: '#001414'\n  on-primary: '#ffffff'\n  primary-container: '#0a2a2a'\n  on-primary-container: '#749292'\n  inverse-primary: '#adcdcc'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#190f00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#332300'\n  on-tertiary-container: '#aa8843'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c8e9e8'\n  primary-fixed-dim: '#adcdcc'\n  on-primary-fixed: '#002020'\n  on-primary-fixed-variant: '#2e4c4c'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#ffdea5'\n  tertiary-fixed-dim: '#e9c176'\n  on-tertiary-fixed: '#261900'\n  on-tertiary-fixed-variant: '#5d4201'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '500'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.1em\nspacing:\n  unit: 8px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  gutter: 32px\n  overlap-offset: -40px\n---\n\n## Brand & Style\n\nThe brand identity captures the intersection of high-fashion editorial aesthetics and the atmospheric tranquility of the Myrtle Beach coastline. The personality is exclusive, mysterious, and sophisticated—moving away from typical bright beach tropes toward a \"Coastal Noir\" mood. \n\nThe design style utilizes a **Minimalist-Editorial** hybrid. It features expansive whitespace (the \"Sand\"), sharp typographic hierarchy, and intentional asymmetry. The visual narrative is driven by \"The Flow\"—a concept translated through overlapping translucent layers, staggered content blocks, and hairline-thin gold accents that mimic the precision of a stylist's shears. \n\nThe UI should feel like a premium digital lookbook. Every interaction is measured and calm, prioritizing high-resolution imagery and bold, evocative statements over dense information clusters.\n\n## Colors\n\nThe palette is rooted in the depth of the Atlantic at dusk. \n- **Deep Ocean Teal (#0A2A2A):** Used for immersive backgrounds, primary buttons, and heavy \"Noir\" accents.\n- **Sun-Bleached Sand (#F5F2ED):** The primary canvas color. It provides a warm, organic alternative to pure white, reducing eye strain and feeling more \"boutique.\"\n- **Muted Gold (#C5A059):** Reserved for interactive cues, thin rule lines (dividers), and rare, high-impact highlights.\n- **Soft Charcoal (#2D2D2D):** The primary color for long-form body text to ensure legibility without the harshness of pure black.\n\n## Typography\n\nThe typographic strategy pairs high-contrast elegance with wide-tracked utility.\n- **Headlines:** Use Bodoni Moda for all editorial titles. It should be used at large scales, often overlapping images or color blocks to create a layered depth.\n- **Body Text:** Montserrat provides a clean, modern counterpoint. For body copy, keep line lengths short to maintain the editorial feel.\n- **Labels & Navigation:** Use uppercase Montserrat with generous letter spacing (0.1em to 0.2em) to evoke a sense of luxury and airiness.\n\n## Layout & Spacing\n\nThis design system rejects rigid symmetry in favor of a **Staggered Editorial Grid**.\n- **The 12-Column Base:** While built on a 12-column foundation, elements rarely span simple predictable widths. \n- **Asymmetric Overlaps:** Images and color blocks should use negative margins (`overlap-offset`) to stack over one another. For example, a portrait image might sit on the right 6 columns while a Teal color block sits on the left 7 columns, creating a 1-column overlap.\n- **Whitespace:** Use 80px or 120px vertical sections to allow the brand to breathe.\n- **Mobile Reflow:** On mobile, the \"overlap\" motif is simplified to a vertical stack, but maintaining the staggered alignment (e.g., alternating left and right alignment for headers).\n\n## Elevation & Depth\n\nDepth in the \"Coastal Noir\" system is achieved through **Tonal Layering** rather than shadows.\n- **Planes of Color:** Instead of shadows, depth is indicated by the stacking order of Sun-Bleached Sand, Deep Ocean Teal, and photography.\n- **Hairline Rules:** Use 0.5px or 1px Gold (#C5A059) lines to separate content or frame staggered images. These represent precision and structure.\n- **Grainy Texture:** Apply a subtle noise/film-grain overlay to the Deep Ocean Teal blocks to simulate the texture of \"flowing hair\" and organic coastal elements.\n- **Opacity:** Use 90-95% opacity on overlapping Teal containers to let the underlying imagery \"ghost\" through, creating the \"Noir\" atmosphere.\n\n## Shapes\n\nThe design system uses a **Sharp (0)** roundedness philosophy. \n- All buttons, images, and containers must have 90-degree corners to maintain a high-fashion, architectural feel. \n- The only exception to the \"sharp\" rule is the use of circular \"Floating Action\" style elements for decorative gold seals or specialized call-to-actions, providing a singular point of organic contrast.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Ocean Teal (#0A2A2A) with white or Sand text. Sharp corners. Wide letter spacing.\n- **Secondary:** Transparent with a 1px Muted Gold (#C5A059) border. \n- **Ghost:** Text-only with a gold underline that grows from the center on hover.\n\n### Cards (The \"Lookbook\" Block)\n- No traditional card containers. Instead, use a \"Block\" approach: a sharp-edged image with a floating typography label that overlaps the bottom-left edge.\n\n### Inputs & Fields\n- Bottom-border only (1px Soft Charcoal). Labels use the `label-caps` style sitting above the line. Focus state shifts the border color to Muted Gold.\n\n### Lists\n- Service menus should use a \"Price List\" format: Item name in Montserrat (Regular), a dotted Gold leader line, and the price in Bodoni Moda (Italic).\n\n### The \"Signature\" Rule\n- A decorative component consisting of a thin vertical or horizontal gold line exactly 1px thick, used to lead the eye between staggered sections.",
+                  "font": "BODONI_MODA",
+                  "headlineFont": "BODONI_MODA",
+                  "headlineFontFamily": "Bodoni Moda",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f3f0f0",
+                    "inverse_primary": "#adcdcc",
+                    "inverse_surface": "#303030",
+                    "on_background": "#1b1c1c",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#749292",
+                    "on_primary_fixed": "#002020",
+                    "on_primary_fixed_variant": "#2e4c4c",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#656461",
+                    "on_secondary_fixed": "#1c1c19",
+                    "on_secondary_fixed_variant": "#474743",
+                    "on_surface": "#1b1c1c",
+                    "on_surface_variant": "#414848",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#aa8843",
+                    "on_tertiary_fixed": "#261900",
+                    "on_tertiary_fixed_variant": "#5d4201",
+                    "outline": "#717878",
+                    "outline_variant": "#c1c8c7",
+                    "primary": "#001414",
+                    "primary_container": "#0a2a2a",
+                    "primary_fixed": "#c8e9e8",
+                    "primary_fixed_dim": "#adcdcc",
+                    "secondary": "#5f5e5b",
+                    "secondary_container": "#e5e2dd",
+                    "secondary_fixed": "#e5e2dd",
+                    "secondary_fixed_dim": "#c9c6c2",
+                    "surface": "#fcf9f8",
+                    "surface_bright": "#fcf9f8",
+                    "surface_container": "#f0eded",
+                    "surface_container_high": "#eae7e7",
+                    "surface_container_highest": "#e4e2e1",
+                    "surface_container_low": "#f6f3f2",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dcd9d9",
+                    "surface_tint": "#466463",
+                    "surface_variant": "#e4e2e1",
+                    "tertiary": "#190f00",
+                    "tertiary_container": "#332300",
+                    "tertiary_fixed": "#ffdea5",
+                    "tertiary_fixed_dim": "#e9c176"
+                  },
+                  "overrideNeutralColor": "#2d2d2d",
+                  "overridePrimaryColor": "#0a2a2a",
+                  "overrideSecondaryColor": "#f5f2ed",
+                  "overrideTertiaryColor": "#c5a059",
+                  "spacing": {
+                    "gutter": "32px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "overlap-offset": "-40px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "32px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "28px"
+                    },
+                    "button": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "20px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "84px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "92px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "52px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "48px",
+                      "fontWeight": "500",
+                      "lineHeight": "56px"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "32px",
+                      "fontWeight": "500",
+                      "lineHeight": "40px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "32px",
+                      "fontWeight": "400",
+                      "lineHeight": "40px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.2em",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/59ae6b466ff74a0b9ba16b068c68104f",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "11638",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2RkNDJhYzBiNWIzNDQ5ODE4MjdhNTFiYjI5YjMxNjY2EgsSBxCq7_ih7hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzY2OTg5NTQwNTg0NDI0OTI5OQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/17669895405844249299/files/69e2db0ca8c84da2984f21d80fc6ab17"
+            },
+            "id": "19e02e0b24a54088a1222407d9b33121",
+            "name": "projects/17669895405844249299/screens/19e02e0b24a54088a1222407d9b33121",
+            "prompt": "Create a complete, bespoke desktop landing page for Infinity Hair Salon. \nStyle: Coastal Noir (Deep Teal, Sand, Gold). High-end editorial magazine feel.\nLayout Requirements:\n- Header: Phone (843) 839-1211, minimal logo 'INFINITY', and elegant nav.\n- Hero: Large high-contrast serif headline \"Beyond Beauty, Into Infinity.\" Staggered layout with a sun-bleached sand background and a deep teal color block.\n- #credibility: A sophisticated typographic section highlighting \"Master Colorists\" and \"Editorial Precision\" — no icons, just beautiful type.\n- Services: Staggered, oversized typography for 'COLLECTIONS', 'SERVICES', 'ARTISANS'. Each service item should feel like a magazine spread entry.\n- About: A deeply personal section about the \"Ritual of Transformation\" at Myrtle Beach.\n- #visit: Minimalist section with business info and the required empty map panel: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>\n- Contact: A \"Request an Invitation\" style form with custom validation UI.\n- Footer: Bold brand name 'INFINITY' in large display type.\nTechnical: Full semantic HTML, production-ready CSS (Tailwind allowed), smooth scroll JS, and form validation. No lorem ipsum. Use the provided contact details: (843) 839-1211, ctstyle73@yahoo.com, 3630 Walton Drive, Myrtle Beach, SC 29577.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuyg-bVH2YW9PVlnVaMDl8SEahAnJBP8NedtprHvOFbhIyOuHskfkoURbnOV38cawJlpsO-nfbgUZElpOmpq3yyuO74QaPJ7Y47a6FxRmNdQmhjid_lW1baz4HzDvHv4vJAUvtHQZpoELyyWTdJ51_lYP8tJbgCBjxjLZdqY_0aBk1EL2iBjSLRMP8_6V7Uu8vY-h1ilK5R5vq6LoIbseiTqkw44v4zW9Sr_hGU5XYFarjA9lzseFc5F3p1",
+              "name": "projects/17669895405844249299/files/104c79c6a1a74c42a812010becfdffe7"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#0a2a2a",
+              "designMd": "---\nname: Coastal Noir\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#414848'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#717878'\n  outline-variant: '#c1c8c7'\n  surface-tint: '#466463'\n  primary: '#001414'\n  on-primary: '#ffffff'\n  primary-container: '#0a2a2a'\n  on-primary-container: '#749292'\n  inverse-primary: '#adcdcc'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#190f00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#332300'\n  on-tertiary-container: '#aa8843'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c8e9e8'\n  primary-fixed-dim: '#adcdcc'\n  on-primary-fixed: '#002020'\n  on-primary-fixed-variant: '#2e4c4c'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#ffdea5'\n  tertiary-fixed-dim: '#e9c176'\n  on-tertiary-fixed: '#261900'\n  on-tertiary-fixed-variant: '#5d4201'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '500'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.1em\nspacing:\n  unit: 8px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  gutter: 32px\n  overlap-offset: -40px\n---\n\n## Brand & Style\n\nThe brand identity captures the intersection of high-fashion editorial aesthetics and the atmospheric tranquility of the Myrtle Beach coastline. The personality is exclusive, mysterious, and sophisticated—moving away from typical bright beach tropes toward a \"Coastal Noir\" mood. \n\nThe design style utilizes a **Minimalist-Editorial** hybrid. It features expansive whitespace (the \"Sand\"), sharp typographic hierarchy, and intentional asymmetry. The visual narrative is driven by \"The Flow\"—a concept translated through overlapping translucent layers, staggered content blocks, and hairline-thin gold accents that mimic the precision of a stylist's shears. \n\nThe UI should feel like a premium digital lookbook. Every interaction is measured and calm, prioritizing high-resolution imagery and bold, evocative statements over dense information clusters.\n\n## Colors\n\nThe palette is rooted in the depth of the Atlantic at dusk. \n- **Deep Ocean Teal (#0A2A2A):** Used for immersive backgrounds, primary buttons, and heavy \"Noir\" accents.\n- **Sun-Bleached Sand (#F5F2ED):** The primary canvas color. It provides a warm, organic alternative to pure white, reducing eye strain and feeling more \"boutique.\"\n- **Muted Gold (#C5A059):** Reserved for interactive cues, thin rule lines (dividers), and rare, high-impact highlights.\n- **Soft Charcoal (#2D2D2D):** The primary color for long-form body text to ensure legibility without the harshness of pure black.\n\n## Typography\n\nThe typographic strategy pairs high-contrast elegance with wide-tracked utility.\n- **Headlines:** Use Bodoni Moda for all editorial titles. It should be used at large scales, often overlapping images or color blocks to create a layered depth.\n- **Body Text:** Montserrat provides a clean, modern counterpoint. For body copy, keep line lengths short to maintain the editorial feel.\n- **Labels & Navigation:** Use uppercase Montserrat with generous letter spacing (0.1em to 0.2em) to evoke a sense of luxury and airiness.\n\n## Layout & Spacing\n\nThis design system rejects rigid symmetry in favor of a **Staggered Editorial Grid**.\n- **The 12-Column Base:** While built on a 12-column foundation, elements rarely span simple predictable widths. \n- **Asymmetric Overlaps:** Images and color blocks should use negative margins (`overlap-offset`) to stack over one another. For example, a portrait image might sit on the right 6 columns while a Teal color block sits on the left 7 columns, creating a 1-column overlap.\n- **Whitespace:** Use 80px or 120px vertical sections to allow the brand to breathe.\n- **Mobile Reflow:** On mobile, the \"overlap\" motif is simplified to a vertical stack, but maintaining the staggered alignment (e.g., alternating left and right alignment for headers).\n\n## Elevation & Depth\n\nDepth in the \"Coastal Noir\" system is achieved through **Tonal Layering** rather than shadows.\n- **Planes of Color:** Instead of shadows, depth is indicated by the stacking order of Sun-Bleached Sand, Deep Ocean Teal, and photography.\n- **Hairline Rules:** Use 0.5px or 1px Gold (#C5A059) lines to separate content or frame staggered images. These represent precision and structure.\n- **Grainy Texture:** Apply a subtle noise/film-grain overlay to the Deep Ocean Teal blocks to simulate the texture of \"flowing hair\" and organic coastal elements.\n- **Opacity:** Use 90-95% opacity on overlapping Teal containers to let the underlying imagery \"ghost\" through, creating the \"Noir\" atmosphere.\n\n## Shapes\n\nThe design system uses a **Sharp (0)** roundedness philosophy. \n- All buttons, images, and containers must have 90-degree corners to maintain a high-fashion, architectural feel. \n- The only exception to the \"sharp\" rule is the use of circular \"Floating Action\" style elements for decorative gold seals or specialized call-to-actions, providing a singular point of organic contrast.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Ocean Teal (#0A2A2A) with white or Sand text. Sharp corners. Wide letter spacing.\n- **Secondary:** Transparent with a 1px Muted Gold (#C5A059) border. \n- **Ghost:** Text-only with a gold underline that grows from the center on hover.\n\n### Cards (The \"Lookbook\" Block)\n- No traditional card containers. Instead, use a \"Block\" approach: a sharp-edged image with a floating typography label that overlaps the bottom-left edge.\n\n### Inputs & Fields\n- Bottom-border only (1px Soft Charcoal). Labels use the `label-caps` style sitting above the line. Focus state shifts the border color to Muted Gold.\n\n### Lists\n- Service menus should use a \"Price List\" format: Item name in Montserrat (Regular), a dotted Gold leader line, and the price in Bodoni Moda (Italic).\n\n### The \"Signature\" Rule\n- A decorative component consisting of a thin vertical or horizontal gold line exactly 1px thick, used to lead the eye between staggered sections.",
+              "font": "BODONI_MODA",
+              "headlineFont": "BODONI_MODA",
+              "headlineFontFamily": "Bodoni Moda",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fcf9f8",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f3f0f0",
+                "inverse_primary": "#adcdcc",
+                "inverse_surface": "#303030",
+                "on_background": "#1b1c1c",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#749292",
+                "on_primary_fixed": "#002020",
+                "on_primary_fixed_variant": "#2e4c4c",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#656461",
+                "on_secondary_fixed": "#1c1c19",
+                "on_secondary_fixed_variant": "#474743",
+                "on_surface": "#1b1c1c",
+                "on_surface_variant": "#414848",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#aa8843",
+                "on_tertiary_fixed": "#261900",
+                "on_tertiary_fixed_variant": "#5d4201",
+                "outline": "#717878",
+                "outline_variant": "#c1c8c7",
+                "primary": "#001414",
+                "primary_container": "#0a2a2a",
+                "primary_fixed": "#c8e9e8",
+                "primary_fixed_dim": "#adcdcc",
+                "secondary": "#5f5e5b",
+                "secondary_container": "#e5e2dd",
+                "secondary_fixed": "#e5e2dd",
+                "secondary_fixed_dim": "#c9c6c2",
+                "surface": "#fcf9f8",
+                "surface_bright": "#fcf9f8",
+                "surface_container": "#f0eded",
+                "surface_container_high": "#eae7e7",
+                "surface_container_highest": "#e4e2e1",
+                "surface_container_low": "#f6f3f2",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dcd9d9",
+                "surface_tint": "#466463",
+                "surface_variant": "#e4e2e1",
+                "tertiary": "#190f00",
+                "tertiary_container": "#332300",
+                "tertiary_fixed": "#ffdea5",
+                "tertiary_fixed_dim": "#e9c176"
+              },
+              "overrideNeutralColor": "#2d2d2d",
+              "overridePrimaryColor": "#0a2a2a",
+              "overrideSecondaryColor": "#f5f2ed",
+              "overrideTertiaryColor": "#c5a059",
+              "spacing": {
+                "gutter": "32px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px",
+                "overlap-offset": "-40px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "32px"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "28px"
+                },
+                "button": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "20px"
+                },
+                "display-lg": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "84px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "92px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "52px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "48px",
+                  "fontWeight": "500",
+                  "lineHeight": "56px"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "32px",
+                  "fontWeight": "500",
+                  "lineHeight": "40px"
+                },
+                "headline-md": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "32px",
+                  "fontWeight": "400",
+                  "lineHeight": "40px"
+                },
+                "label-caps": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.2em",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Infinity Hair Salon - Home",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Infinity Hair Salon** that moves far beyond a standard local business template. \n\n### Design Decisions:\n*   **Visual Identity (Coastal Noir):** I established a premium brand identity using a palette of Deep Ocean Teal, Sun-Bleached Sand, and Muted Gold accents. This reflects the salon's Myrtle Beach location through a lens of high-fashion editorial.\n*   **Typography:** I utilized **Bodoni Moda** for high-contrast, magazine-style headlines paired with minimalist sans-serif for clarity. This hierarchy emphasizes the \"Master Colorists\" and \"Editorial Precision\" of the salon.\n*   **Asymmetric Layout:** I intentionally broke the standard \"card grid\" layout. Sections like the Service Collections and The Ritual use staggered, overlapping elements and generous whitespace to feel like a custom-designed digital lookbook.\n*   **The Ritual of Transformation:** Instead of a generic \"About Us,\" I framed the brand story around a \"Ritual,\" creating a more exclusive and sanctuary-like invitation for the client.\n*   **Production-Ready:** The code includes the required map visualization slot, a custom-validated \"Request Invitation\" form, and a mobile-responsive navigation system.\n\nHow does this editorial direction feel for the brand? Would you like to adjust the weight of the gold accents or perhaps explore a different layout for the service menu?"
+    },
+    {
+      "suggestion": "Add more gold accents to the section headers"
+    },
+    {
+      "suggestion": "Show me how this looks on mobile"
+    },
+    {
+      "suggestion": "Make the service prices more prominent"
+    }
+  ],
+  "projectId": "17669895405844249299",
+  "sessionId": "12815163048028662302"
+}
