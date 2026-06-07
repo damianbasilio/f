@@ -1,20 +1,35 @@
-// Form Submission Interactivity
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
+// Micro-interactions and Form Validation
+        document.getElementById('contactForm')?.addEventListener('submit', function(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'RESERVATION REQUESTED...';
-            btn.classList.add('bg-white', 'text-black');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> Preview only';
+            btn.disabled = true;
             
             setTimeout(() => {
-                alert('Thank you for your request. T.C. will contact you shortly to confirm your slot.');
-                btn.innerText = originalText;
-                btn.classList.remove('bg-white', 'text-black');
+                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> Preview only';
+                btn.classList.replace('bg-primary', 'bg-tertiary');
                 e.target.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-tertiary', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
             }, 1500);
         });
 
-        // Smooth reveal scroll animation helper (Micro-interaction)
+        // Simple Parallax Effect for blobs
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.querySelectorAll('.water-blob').forEach(blob => {
+                const speed = 0.2;
+                blob.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Intersection Observer for fade-in effects
         const observerOptions = {
             threshold: 0.1
         };
@@ -23,13 +38,14 @@
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'ease-out');
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
         });
 
 (() => {
