@@ -1,0 +1,481 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Bayou Modernist",
+          "styleGuidelines": "## Brand & Style\nThe brand personality is **Bold, Rustic-Modern, and High-Energy**. It captures the soul of Southern hospitality through a sophisticated editorial lens. The design system balances the raw, unrefined textures of a roadside food truck with the elevated precision of a premium culinary publication.\n\nThe visual style is a hybrid of **High-Contrast Bold** and **Tactile Minimalism**. It utilizes massive typography and a punchy color palette, grounded by \"weathered\" digital surfaces that evoke the feeling of cast iron and cypress wood. The emotional response should be one of immediate appetite, reliability, and cultural authenticity.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\nIntentional density is achieved through \"staggered\" content blocks that mimic the organic flow of a river. Use generous vertical whitespace (`xl`) between major sections to allow the bold typography to breathe, while keeping internal component spacing tight (`sm` to `md`) to maintain a \"packed\" food-truck-menu energy. \n\n**Reflow Rules:**\n- Desktop: 64px outer margins, 24px gutters.\n- Tablet: 32px outer margins, 16px gutters.\n- Mobile: 16px outer margins, 12px gutters. Headlines scale down significantly to prevent awkward line breaks.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Subtle Textures** rather than traditional drop shadows.\n\n- **Base Layer:** Deep Bayou (#0A192F) with a subtle grain texture overlay (3% opacity) to mimic cast iron.\n- **Surface Layer:** A slightly lighter tint of Deep Bayou for cards and containers, defined by 1px solid borders in Weathered Cypress (#E0E0E0) at 15% opacity.\n- **Interactive Depth:** Elements do not \"lift\" with shadows; instead, they \"illuminate.\" Hovering over a card should increase the border opacity or change the border color to Cornmeal Gold.\n- **Overlays:** Use semi-transparent Deep Bayou (80% opacity) with a background blur (12px) for navigation bars and modals to maintain the premium feel.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spicy Cayenne fill with Weathered Cypress text (Work Sans Bold). Secondary buttons use a Weathered Cypress outline with no fill. Transitions should be instant and snappy.\n- **Cards:** Product cards use a \"Full-Bleed\" image top with the bottom half in a slightly lifted Deep Bayou tint. Use a 1px border.\n- **Chips/Badges:** Use for \"Spicy Level\" or \"Sold Out\" status. High-contrast: Cornmeal Gold background with Deep Bayou text.\n- **Input Fields:** Bottom-border only (1px Weathered Cypress) to keep the look minimal and editorial. Labels sit above in `label-bold`.\n- **Lists:** Menu lists use a \"Dot Leader\" style (Item .......... $Price) to evoke classic Southern diner menus, but rendered in modern typography.\n- **Specialty Component - \"The River Divider\":** A horizontal separator that uses an organic, hand-drawn wave shape rather than a straight line, appearing at the end of long scrolling sections.",
+          "theme": {
+            "bodyFont": "WORK_SANS",
+            "bodyFontFamily": "Work Sans",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#d32f2f",
+            "designMd": "---\nname: Bayou Modernist\ncolors:\n  surface: '#121414'\n  surface-dim: '#121414'\n  surface-bright: '#38393a'\n  surface-container-lowest: '#0d0e0f'\n  surface-container-low: '#1a1c1c'\n  surface-container: '#1e2020'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#333535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#e4beba'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#2f3131'\n  outline: '#ab8985'\n  outline-variant: '#5b403d'\n  surface-tint: '#ffb3ac'\n  primary: '#ffb3ac'\n  on-primary: '#680008'\n  primary-container: '#d32f2f'\n  on-primary-container: '#fff2f0'\n  inverse-primary: '#ba1a20'\n  secondary: '#ffdf9e'\n  on-secondary: '#3f2e00'\n  secondary-container: '#fabd00'\n  on-secondary-container: '#6a4e00'\n  tertiary: '#b9c7e4'\n  on-tertiary: '#233148'\n  tertiary-container: '#62708a'\n  on-tertiary-container: '#f1f4ff'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad6'\n  primary-fixed-dim: '#ffb3ac'\n  on-primary-fixed: '#410003'\n  on-primary-fixed-variant: '#930010'\n  secondary-fixed: '#ffdf9e'\n  secondary-fixed-dim: '#fabd00'\n  on-secondary-fixed: '#261a00'\n  on-secondary-fixed-variant: '#5b4300'\n  tertiary-fixed: '#d6e3ff'\n  tertiary-fixed-dim: '#b9c7e4'\n  on-tertiary-fixed: '#0d1c32'\n  on-tertiary-fixed-variant: '#39475f'\n  background: '#121414'\n  on-background: '#e2e2e2'\n  surface-variant: '#333535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '900'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '900'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Work Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\nThe brand personality is **Bold, Rustic-Modern, and High-Energy**. It captures the soul of Southern hospitality through a sophisticated editorial lens. The design system balances the raw, unrefined textures of a roadside food truck with the elevated precision of a premium culinary publication.\n\nThe visual style is a hybrid of **High-Contrast Bold** and **Tactile Minimalism**. It utilizes massive typography and a punchy color palette, grounded by \"weathered\" digital surfaces that evoke the feeling of cast iron and cypress wood. The emotional response should be one of immediate appetite, reliability, and cultural authenticity.\n\n## Colors\nThis design system utilizes a high-impact, dark-mode-first palette to evoke the atmosphere of a Southern twilight.\n\n- **Deep Bayou (#0A192F):** The foundational surface color. Use this for deep backgrounds to make food imagery and gold accents pop.\n- **Spicy Cayenne (#D32F2F):** The primary action color. Used for critical CTAs, price points, and high-energy accents.\n- **Cornmeal Gold (#FFC107):** The secondary highlight. Used for ratings, special offers, and icons to provide a \"warm glow\" against the dark base.\n- **Weathered Cypress (#E0E0E0):** The primary typography and border color. It provides a crisp, legible contrast without the harshness of pure white.\n\n## Typography\nThe typographic strategy relies on a dramatic contrast between the high-fashion elegance of **Playfair Display** and the industrial clarity of **Work Sans**.\n\nHeadlines should be treated as editorial elements—large, tight-leaded, and authoritative. Use `display-lg` for hero sections and menu categories. Use `label-bold` with increased letter spacing for navigation and metadata to provide a \"structured\" feel that balances the flowing serif headers. All body copy is set in Work Sans to ensure maximum readability against dark, textured backgrounds.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\nIntentional density is achieved through \"staggered\" content blocks that mimic the organic flow of a river. Use generous vertical whitespace (`xl`) between major sections to allow the bold typography to breathe, while keeping internal component spacing tight (`sm` to `md`) to maintain a \"packed\" food-truck-menu energy. \n\n**Reflow Rules:**\n- Desktop: 64px outer margins, 24px gutters.\n- Tablet: 32px outer margins, 16px gutters.\n- Mobile: 16px outer margins, 12px gutters. Headlines scale down significantly to prevent awkward line breaks.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Subtle Textures** rather than traditional drop shadows.\n\n- **Base Layer:** Deep Bayou (#0A192F) with a subtle grain texture overlay (3% opacity) to mimic cast iron.\n- **Surface Layer:** A slightly lighter tint of Deep Bayou for cards and containers, defined by 1px solid borders in Weathered Cypress (#E0E0E0) at 15% opacity.\n- **Interactive Depth:** Elements do not \"lift\" with shadows; instead, they \"illuminate.\" Hovering over a card should increase the border opacity or change the border color to Cornmeal Gold.\n- **Overlays:** Use semi-transparent Deep Bayou (80% opacity) with a background blur (12px) for navigation bars and modals to maintain the premium feel.\n\n## Shapes\nThe shape language is primarily **Soft (0.25rem)**, leaning towards a structured, architectural feel. \n\nTo contrast the rigid grid, incorporate \"Riverine\" motifs: organic, wavy SVG dividers that separate major sections. Buttons and input fields should remain strictly rectangular or minimally rounded (`rounded-sm`) to reflect the sturdy, \"built\" nature of a food truck. Photography should use sharp corners or very subtle rounding to maintain the editorial aesthetic.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spicy Cayenne fill with Weathered Cypress text (Work Sans Bold). Secondary buttons use a Weathered Cypress outline with no fill. Transitions should be instant and snappy.\n- **Cards:** Product cards use a \"Full-Bleed\" image top with the bottom half in a slightly lifted Deep Bayou tint. Use a 1px border.\n- **Chips/Badges:** Use for \"Spicy Level\" or \"Sold Out\" status. High-contrast: Cornmeal Gold background with Deep Bayou text.\n- **Input Fields:** Bottom-border only (1px Weathered Cypress) to keep the look minimal and editorial. Labels sit above in `label-bold`.\n- **Lists:** Menu lists use a \"Dot Leader\" style (Item .......... $Price) to evoke classic Southern diner menus, but rendered in modern typography.\n- **Specialty Component - \"The River Divider\":** A horizontal separator that uses an organic, hand-drawn wave shape rather than a straight line, appearing at the end of long scrolling sections.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "WORK_SANS",
+            "labelFontFamily": "Work Sans",
+            "namedColors": {
+              "background": "#121414",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2f3131",
+              "inverse_primary": "#ba1a20",
+              "inverse_surface": "#e2e2e2",
+              "on_background": "#e2e2e2",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#680008",
+              "on_primary_container": "#fff2f0",
+              "on_primary_fixed": "#410003",
+              "on_primary_fixed_variant": "#930010",
+              "on_secondary": "#3f2e00",
+              "on_secondary_container": "#6a4e00",
+              "on_secondary_fixed": "#261a00",
+              "on_secondary_fixed_variant": "#5b4300",
+              "on_surface": "#e2e2e2",
+              "on_surface_variant": "#e4beba",
+              "on_tertiary": "#233148",
+              "on_tertiary_container": "#f1f4ff",
+              "on_tertiary_fixed": "#0d1c32",
+              "on_tertiary_fixed_variant": "#39475f",
+              "outline": "#ab8985",
+              "outline_variant": "#5b403d",
+              "primary": "#ffb3ac",
+              "primary_container": "#d32f2f",
+              "primary_fixed": "#ffdad6",
+              "primary_fixed_dim": "#ffb3ac",
+              "secondary": "#ffdf9e",
+              "secondary_container": "#fabd00",
+              "secondary_fixed": "#ffdf9e",
+              "secondary_fixed_dim": "#fabd00",
+              "surface": "#121414",
+              "surface_bright": "#38393a",
+              "surface_container": "#1e2020",
+              "surface_container_high": "#282a2b",
+              "surface_container_highest": "#333535",
+              "surface_container_low": "#1a1c1c",
+              "surface_container_lowest": "#0d0e0f",
+              "surface_dim": "#121414",
+              "surface_tint": "#ffb3ac",
+              "surface_variant": "#333535",
+              "tertiary": "#b9c7e4",
+              "tertiary_container": "#62708a",
+              "tertiary_fixed": "#d6e3ff",
+              "tertiary_fixed_dim": "#b9c7e4"
+            },
+            "overrideNeutralColor": "#e0e0e0",
+            "overridePrimaryColor": "#d32f2f",
+            "overrideSecondaryColor": "#ffc107",
+            "overrideTertiaryColor": "#0a192f",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "base": "8px",
+              "gutter": "24px",
+              "lg": "48px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "md": "24px",
+              "sm": "12px",
+              "xl": "80px",
+              "xs": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Work Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Work Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
+                "fontWeight": "900",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "80px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "900",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "52px"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "48px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "36px"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "28px",
+                "fontWeight": "700",
+                "lineHeight": "32px"
+              },
+              "label-bold": {
+                "fontFamily": "Work Sans",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.1em",
+                "lineHeight": "20px"
+              },
+              "label-sm": {
+                "fontFamily": "Work Sans",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "lineHeight": "16px"
+              }
+            }
+          }
+        },
+        "name": "assets/214303d612964660a343c31786a757f4",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Bayou Modernist",
+                "styleGuidelines": "## Brand & Style\nThe brand personality is **Bold, Rustic-Modern, and High-Energy**. It captures the soul of Southern hospitality through a sophisticated editorial lens. The design system balances the raw, unrefined textures of a roadside food truck with the elevated precision of a premium culinary publication.\n\nThe visual style is a hybrid of **High-Contrast Bold** and **Tactile Minimalism**. It utilizes massive typography and a punchy color palette, grounded by \"weathered\" digital surfaces that evoke the feeling of cast iron and cypress wood. The emotional response should be one of immediate appetite, reliability, and cultural authenticity.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\nIntentional density is achieved through \"staggered\" content blocks that mimic the organic flow of a river. Use generous vertical whitespace (`xl`) between major sections to allow the bold typography to breathe, while keeping internal component spacing tight (`sm` to `md`) to maintain a \"packed\" food-truck-menu energy. \n\n**Reflow Rules:**\n- Desktop: 64px outer margins, 24px gutters.\n- Tablet: 32px outer margins, 16px gutters.\n- Mobile: 16px outer margins, 12px gutters. Headlines scale down significantly to prevent awkward line breaks.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Subtle Textures** rather than traditional drop shadows.\n\n- **Base Layer:** Deep Bayou (#0A192F) with a subtle grain texture overlay (3% opacity) to mimic cast iron.\n- **Surface Layer:** A slightly lighter tint of Deep Bayou for cards and containers, defined by 1px solid borders in Weathered Cypress (#E0E0E0) at 15% opacity.\n- **Interactive Depth:** Elements do not \"lift\" with shadows; instead, they \"illuminate.\" Hovering over a card should increase the border opacity or change the border color to Cornmeal Gold.\n- **Overlays:** Use semi-transparent Deep Bayou (80% opacity) with a background blur (12px) for navigation bars and modals to maintain the premium feel.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spicy Cayenne fill with Weathered Cypress text (Work Sans Bold). Secondary buttons use a Weathered Cypress outline with no fill. Transitions should be instant and snappy.\n- **Cards:** Product cards use a \"Full-Bleed\" image top with the bottom half in a slightly lifted Deep Bayou tint. Use a 1px border.\n- **Chips/Badges:** Use for \"Spicy Level\" or \"Sold Out\" status. High-contrast: Cornmeal Gold background with Deep Bayou text.\n- **Input Fields:** Bottom-border only (1px Weathered Cypress) to keep the look minimal and editorial. Labels sit above in `label-bold`.\n- **Lists:** Menu lists use a \"Dot Leader\" style (Item .......... $Price) to evoke classic Southern diner menus, but rendered in modern typography.\n- **Specialty Component - \"The River Divider\":** A horizontal separator that uses an organic, hand-drawn wave shape rather than a straight line, appearing at the end of long scrolling sections.",
+                "theme": {
+                  "bodyFont": "WORK_SANS",
+                  "bodyFontFamily": "Work Sans",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#d32f2f",
+                  "designMd": "---\nname: Bayou Modernist\ncolors:\n  surface: '#121414'\n  surface-dim: '#121414'\n  surface-bright: '#38393a'\n  surface-container-lowest: '#0d0e0f'\n  surface-container-low: '#1a1c1c'\n  surface-container: '#1e2020'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#333535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#e4beba'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#2f3131'\n  outline: '#ab8985'\n  outline-variant: '#5b403d'\n  surface-tint: '#ffb3ac'\n  primary: '#ffb3ac'\n  on-primary: '#680008'\n  primary-container: '#d32f2f'\n  on-primary-container: '#fff2f0'\n  inverse-primary: '#ba1a20'\n  secondary: '#ffdf9e'\n  on-secondary: '#3f2e00'\n  secondary-container: '#fabd00'\n  on-secondary-container: '#6a4e00'\n  tertiary: '#b9c7e4'\n  on-tertiary: '#233148'\n  tertiary-container: '#62708a'\n  on-tertiary-container: '#f1f4ff'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad6'\n  primary-fixed-dim: '#ffb3ac'\n  on-primary-fixed: '#410003'\n  on-primary-fixed-variant: '#930010'\n  secondary-fixed: '#ffdf9e'\n  secondary-fixed-dim: '#fabd00'\n  on-secondary-fixed: '#261a00'\n  on-secondary-fixed-variant: '#5b4300'\n  tertiary-fixed: '#d6e3ff'\n  tertiary-fixed-dim: '#b9c7e4'\n  on-tertiary-fixed: '#0d1c32'\n  on-tertiary-fixed-variant: '#39475f'\n  background: '#121414'\n  on-background: '#e2e2e2'\n  surface-variant: '#333535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '900'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '900'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Work Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\nThe brand personality is **Bold, Rustic-Modern, and High-Energy**. It captures the soul of Southern hospitality through a sophisticated editorial lens. The design system balances the raw, unrefined textures of a roadside food truck with the elevated precision of a premium culinary publication.\n\nThe visual style is a hybrid of **High-Contrast Bold** and **Tactile Minimalism**. It utilizes massive typography and a punchy color palette, grounded by \"weathered\" digital surfaces that evoke the feeling of cast iron and cypress wood. The emotional response should be one of immediate appetite, reliability, and cultural authenticity.\n\n## Colors\nThis design system utilizes a high-impact, dark-mode-first palette to evoke the atmosphere of a Southern twilight.\n\n- **Deep Bayou (#0A192F):** The foundational surface color. Use this for deep backgrounds to make food imagery and gold accents pop.\n- **Spicy Cayenne (#D32F2F):** The primary action color. Used for critical CTAs, price points, and high-energy accents.\n- **Cornmeal Gold (#FFC107):** The secondary highlight. Used for ratings, special offers, and icons to provide a \"warm glow\" against the dark base.\n- **Weathered Cypress (#E0E0E0):** The primary typography and border color. It provides a crisp, legible contrast without the harshness of pure white.\n\n## Typography\nThe typographic strategy relies on a dramatic contrast between the high-fashion elegance of **Playfair Display** and the industrial clarity of **Work Sans**.\n\nHeadlines should be treated as editorial elements—large, tight-leaded, and authoritative. Use `display-lg` for hero sections and menu categories. Use `label-bold` with increased letter spacing for navigation and metadata to provide a \"structured\" feel that balances the flowing serif headers. All body copy is set in Work Sans to ensure maximum readability against dark, textured backgrounds.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\nIntentional density is achieved through \"staggered\" content blocks that mimic the organic flow of a river. Use generous vertical whitespace (`xl`) between major sections to allow the bold typography to breathe, while keeping internal component spacing tight (`sm` to `md`) to maintain a \"packed\" food-truck-menu energy. \n\n**Reflow Rules:**\n- Desktop: 64px outer margins, 24px gutters.\n- Tablet: 32px outer margins, 16px gutters.\n- Mobile: 16px outer margins, 12px gutters. Headlines scale down significantly to prevent awkward line breaks.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Subtle Textures** rather than traditional drop shadows.\n\n- **Base Layer:** Deep Bayou (#0A192F) with a subtle grain texture overlay (3% opacity) to mimic cast iron.\n- **Surface Layer:** A slightly lighter tint of Deep Bayou for cards and containers, defined by 1px solid borders in Weathered Cypress (#E0E0E0) at 15% opacity.\n- **Interactive Depth:** Elements do not \"lift\" with shadows; instead, they \"illuminate.\" Hovering over a card should increase the border opacity or change the border color to Cornmeal Gold.\n- **Overlays:** Use semi-transparent Deep Bayou (80% opacity) with a background blur (12px) for navigation bars and modals to maintain the premium feel.\n\n## Shapes\nThe shape language is primarily **Soft (0.25rem)**, leaning towards a structured, architectural feel. \n\nTo contrast the rigid grid, incorporate \"Riverine\" motifs: organic, wavy SVG dividers that separate major sections. Buttons and input fields should remain strictly rectangular or minimally rounded (`rounded-sm`) to reflect the sturdy, \"built\" nature of a food truck. Photography should use sharp corners or very subtle rounding to maintain the editorial aesthetic.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spicy Cayenne fill with Weathered Cypress text (Work Sans Bold). Secondary buttons use a Weathered Cypress outline with no fill. Transitions should be instant and snappy.\n- **Cards:** Product cards use a \"Full-Bleed\" image top with the bottom half in a slightly lifted Deep Bayou tint. Use a 1px border.\n- **Chips/Badges:** Use for \"Spicy Level\" or \"Sold Out\" status. High-contrast: Cornmeal Gold background with Deep Bayou text.\n- **Input Fields:** Bottom-border only (1px Weathered Cypress) to keep the look minimal and editorial. Labels sit above in `label-bold`.\n- **Lists:** Menu lists use a \"Dot Leader\" style (Item .......... $Price) to evoke classic Southern diner menus, but rendered in modern typography.\n- **Specialty Component - \"The River Divider\":** A horizontal separator that uses an organic, hand-drawn wave shape rather than a straight line, appearing at the end of long scrolling sections.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "WORK_SANS",
+                  "labelFontFamily": "Work Sans",
+                  "namedColors": {
+                    "background": "#121414",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2f3131",
+                    "inverse_primary": "#ba1a20",
+                    "inverse_surface": "#e2e2e2",
+                    "on_background": "#e2e2e2",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#680008",
+                    "on_primary_container": "#fff2f0",
+                    "on_primary_fixed": "#410003",
+                    "on_primary_fixed_variant": "#930010",
+                    "on_secondary": "#3f2e00",
+                    "on_secondary_container": "#6a4e00",
+                    "on_secondary_fixed": "#261a00",
+                    "on_secondary_fixed_variant": "#5b4300",
+                    "on_surface": "#e2e2e2",
+                    "on_surface_variant": "#e4beba",
+                    "on_tertiary": "#233148",
+                    "on_tertiary_container": "#f1f4ff",
+                    "on_tertiary_fixed": "#0d1c32",
+                    "on_tertiary_fixed_variant": "#39475f",
+                    "outline": "#ab8985",
+                    "outline_variant": "#5b403d",
+                    "primary": "#ffb3ac",
+                    "primary_container": "#d32f2f",
+                    "primary_fixed": "#ffdad6",
+                    "primary_fixed_dim": "#ffb3ac",
+                    "secondary": "#ffdf9e",
+                    "secondary_container": "#fabd00",
+                    "secondary_fixed": "#ffdf9e",
+                    "secondary_fixed_dim": "#fabd00",
+                    "surface": "#121414",
+                    "surface_bright": "#38393a",
+                    "surface_container": "#1e2020",
+                    "surface_container_high": "#282a2b",
+                    "surface_container_highest": "#333535",
+                    "surface_container_low": "#1a1c1c",
+                    "surface_container_lowest": "#0d0e0f",
+                    "surface_dim": "#121414",
+                    "surface_tint": "#ffb3ac",
+                    "surface_variant": "#333535",
+                    "tertiary": "#b9c7e4",
+                    "tertiary_container": "#62708a",
+                    "tertiary_fixed": "#d6e3ff",
+                    "tertiary_fixed_dim": "#b9c7e4"
+                  },
+                  "overrideNeutralColor": "#e0e0e0",
+                  "overridePrimaryColor": "#d32f2f",
+                  "overrideSecondaryColor": "#ffc107",
+                  "overrideTertiaryColor": "#0a192f",
+                  "roundness": "ROUND_FOUR",
+                  "spacing": {
+                    "base": "8px",
+                    "gutter": "24px",
+                    "lg": "48px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "xs": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "28px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "72px",
+                      "fontWeight": "900",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "80px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "900",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "52px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "48px"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "36px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "28px",
+                      "fontWeight": "700",
+                      "lineHeight": "32px"
+                    },
+                    "label-bold": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "20px"
+                    },
+                    "label-sm": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/214303d612964660a343c31786a757f4",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "12094",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzA1NDRkNzA3NGRmNDQxMTc5YzZhMWQxZjYxNTg1Mjc0EgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDYyNjQ1MTMyNjI5MDc3MjY4NA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/14626451326290772684/files/1feaa207a6af4cde800921c333087e66"
+            },
+            "id": "1327621ad0594587a6fde205a8dc1c3e",
+            "name": "projects/14626451326290772684/screens/1327621ad0594587a6fde205a8dc1c3e",
+            "prompt": "Build a bespoke, editorial-grade desktop landing page for 'Cajun Catfish House - Food Truck'. \n\nVisual Direction: High-impact, dark swamp-inspired palette (Deep Bayou, Cayenne, Cornmeal Gold). Use a 'Weathered Cypress' wood texture motif. Commit to 'Intentional Density'—rich layouts with layered elements.\n\nSections & Layout:\n- Header: Use predicted 'TopNavBar'. Include phone: (573) 291-6480.\n- Hero: A high-impact vertical layout. Large, overlapping serif typography for 'THE BEST CATFISH WEST OF THE BAYOU'. Background features a atmospheric image of a modern food truck in a twilight setting.\n- #credibility: 'The Wall of Flavor'. A horizontal scrolling or masonry section with snippets from Facebook fans and local food critics.\n- Services/Offerings: 'Today's Catch'. An asymmetrical grid of signature items (Catfish Fillet, Jumbo Shrimp, Red Beans & Rice). Use large, bold numbers (01, 02, 03) and high-contrast labels.\n- About: 'Heritage & Heat'. A two-column section. Left: Distressed typography and a brief story about bringing authentic Cajun flavor to Jefferson City. Right: A layered image composition of cast iron and fresh ingredients.\n- Visit: '#FindTheTruck'. A dark section with a primary focus on the map. Include the map panel: <div class=\"map-slot relative overflow-hidden min-h-[400px] bg-surface-container-low border border-surface-variant/20 rounded-2xl\" data-map-slot aria-label=\"Map\"></div>. Text should list Jefferson City, MO as the primary hub.\n- Contact Form: 'Book the Bayou'. A minimal, dark-mode form with 'Spicy Cayenne' accents for validation and buttons.\n- Footer: Use predicted 'Footer'.\n\nTechnical: Full semantic HTML, production-ready CSS with custom properties. Smooth scroll and responsive layout. No lorem ipsum. Use authentic, punchy copy.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuYitTT_8Q2drJrVCaoKzbKTYUAJNKVDsWuNEPhU-uc6rWFacDjVLhbsCUtVjghOH4rO8E56nYVzH6OlqlpmiN1nmMAbXCB9awCvAct9yZz6e2f0Z-imhOxL200YRa9gg9BH4VrQq71ckrJWGqzNcPx4o1c89aEecRaNqjADH08uYErDQjymSVvHoa0vTHrLzT5JD6_dGMh6bi5mTKI_HrOReHz7uUscDCtdkQVvVFOeRv4ry4-mU0J5dI",
+              "name": "projects/14626451326290772684/files/ac6ee4a61316424eb17017b088828660"
+            },
+            "theme": {
+              "bodyFont": "WORK_SANS",
+              "bodyFontFamily": "Work Sans",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#d32f2f",
+              "designMd": "---\nname: Bayou Modernist\ncolors:\n  surface: '#121414'\n  surface-dim: '#121414'\n  surface-bright: '#38393a'\n  surface-container-lowest: '#0d0e0f'\n  surface-container-low: '#1a1c1c'\n  surface-container: '#1e2020'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#333535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#e4beba'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#2f3131'\n  outline: '#ab8985'\n  outline-variant: '#5b403d'\n  surface-tint: '#ffb3ac'\n  primary: '#ffb3ac'\n  on-primary: '#680008'\n  primary-container: '#d32f2f'\n  on-primary-container: '#fff2f0'\n  inverse-primary: '#ba1a20'\n  secondary: '#ffdf9e'\n  on-secondary: '#3f2e00'\n  secondary-container: '#fabd00'\n  on-secondary-container: '#6a4e00'\n  tertiary: '#b9c7e4'\n  on-tertiary: '#233148'\n  tertiary-container: '#62708a'\n  on-tertiary-container: '#f1f4ff'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad6'\n  primary-fixed-dim: '#ffb3ac'\n  on-primary-fixed: '#410003'\n  on-primary-fixed-variant: '#930010'\n  secondary-fixed: '#ffdf9e'\n  secondary-fixed-dim: '#fabd00'\n  on-secondary-fixed: '#261a00'\n  on-secondary-fixed-variant: '#5b4300'\n  tertiary-fixed: '#d6e3ff'\n  tertiary-fixed-dim: '#b9c7e4'\n  on-tertiary-fixed: '#0d1c32'\n  on-tertiary-fixed-variant: '#39475f'\n  background: '#121414'\n  on-background: '#e2e2e2'\n  surface-variant: '#333535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '900'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '900'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '700'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Work Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Work Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\nThe brand personality is **Bold, Rustic-Modern, and High-Energy**. It captures the soul of Southern hospitality through a sophisticated editorial lens. The design system balances the raw, unrefined textures of a roadside food truck with the elevated precision of a premium culinary publication.\n\nThe visual style is a hybrid of **High-Contrast Bold** and **Tactile Minimalism**. It utilizes massive typography and a punchy color palette, grounded by \"weathered\" digital surfaces that evoke the feeling of cast iron and cypress wood. The emotional response should be one of immediate appetite, reliability, and cultural authenticity.\n\n## Colors\nThis design system utilizes a high-impact, dark-mode-first palette to evoke the atmosphere of a Southern twilight.\n\n- **Deep Bayou (#0A192F):** The foundational surface color. Use this for deep backgrounds to make food imagery and gold accents pop.\n- **Spicy Cayenne (#D32F2F):** The primary action color. Used for critical CTAs, price points, and high-energy accents.\n- **Cornmeal Gold (#FFC107):** The secondary highlight. Used for ratings, special offers, and icons to provide a \"warm glow\" against the dark base.\n- **Weathered Cypress (#E0E0E0):** The primary typography and border color. It provides a crisp, legible contrast without the harshness of pure white.\n\n## Typography\nThe typographic strategy relies on a dramatic contrast between the high-fashion elegance of **Playfair Display** and the industrial clarity of **Work Sans**.\n\nHeadlines should be treated as editorial elements—large, tight-leaded, and authoritative. Use `display-lg` for hero sections and menu categories. Use `label-bold` with increased letter spacing for navigation and metadata to provide a \"structured\" feel that balances the flowing serif headers. All body copy is set in Work Sans to ensure maximum readability against dark, textured backgrounds.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\nIntentional density is achieved through \"staggered\" content blocks that mimic the organic flow of a river. Use generous vertical whitespace (`xl`) between major sections to allow the bold typography to breathe, while keeping internal component spacing tight (`sm` to `md`) to maintain a \"packed\" food-truck-menu energy. \n\n**Reflow Rules:**\n- Desktop: 64px outer margins, 24px gutters.\n- Tablet: 32px outer margins, 16px gutters.\n- Mobile: 16px outer margins, 12px gutters. Headlines scale down significantly to prevent awkward line breaks.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** and **Subtle Textures** rather than traditional drop shadows.\n\n- **Base Layer:** Deep Bayou (#0A192F) with a subtle grain texture overlay (3% opacity) to mimic cast iron.\n- **Surface Layer:** A slightly lighter tint of Deep Bayou for cards and containers, defined by 1px solid borders in Weathered Cypress (#E0E0E0) at 15% opacity.\n- **Interactive Depth:** Elements do not \"lift\" with shadows; instead, they \"illuminate.\" Hovering over a card should increase the border opacity or change the border color to Cornmeal Gold.\n- **Overlays:** Use semi-transparent Deep Bayou (80% opacity) with a background blur (12px) for navigation bars and modals to maintain the premium feel.\n\n## Shapes\nThe shape language is primarily **Soft (0.25rem)**, leaning towards a structured, architectural feel. \n\nTo contrast the rigid grid, incorporate \"Riverine\" motifs: organic, wavy SVG dividers that separate major sections. Buttons and input fields should remain strictly rectangular or minimally rounded (`rounded-sm`) to reflect the sturdy, \"built\" nature of a food truck. Photography should use sharp corners or very subtle rounding to maintain the editorial aesthetic.\n\n## Components\n- **Buttons:** Primary buttons use a solid Spicy Cayenne fill with Weathered Cypress text (Work Sans Bold). Secondary buttons use a Weathered Cypress outline with no fill. Transitions should be instant and snappy.\n- **Cards:** Product cards use a \"Full-Bleed\" image top with the bottom half in a slightly lifted Deep Bayou tint. Use a 1px border.\n- **Chips/Badges:** Use for \"Spicy Level\" or \"Sold Out\" status. High-contrast: Cornmeal Gold background with Deep Bayou text.\n- **Input Fields:** Bottom-border only (1px Weathered Cypress) to keep the look minimal and editorial. Labels sit above in `label-bold`.\n- **Lists:** Menu lists use a \"Dot Leader\" style (Item .......... $Price) to evoke classic Southern diner menus, but rendered in modern typography.\n- **Specialty Component - \"The River Divider\":** A horizontal separator that uses an organic, hand-drawn wave shape rather than a straight line, appearing at the end of long scrolling sections.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "WORK_SANS",
+              "labelFontFamily": "Work Sans",
+              "namedColors": {
+                "background": "#121414",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2f3131",
+                "inverse_primary": "#ba1a20",
+                "inverse_surface": "#e2e2e2",
+                "on_background": "#e2e2e2",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#680008",
+                "on_primary_container": "#fff2f0",
+                "on_primary_fixed": "#410003",
+                "on_primary_fixed_variant": "#930010",
+                "on_secondary": "#3f2e00",
+                "on_secondary_container": "#6a4e00",
+                "on_secondary_fixed": "#261a00",
+                "on_secondary_fixed_variant": "#5b4300",
+                "on_surface": "#e2e2e2",
+                "on_surface_variant": "#e4beba",
+                "on_tertiary": "#233148",
+                "on_tertiary_container": "#f1f4ff",
+                "on_tertiary_fixed": "#0d1c32",
+                "on_tertiary_fixed_variant": "#39475f",
+                "outline": "#ab8985",
+                "outline_variant": "#5b403d",
+                "primary": "#ffb3ac",
+                "primary_container": "#d32f2f",
+                "primary_fixed": "#ffdad6",
+                "primary_fixed_dim": "#ffb3ac",
+                "secondary": "#ffdf9e",
+                "secondary_container": "#fabd00",
+                "secondary_fixed": "#ffdf9e",
+                "secondary_fixed_dim": "#fabd00",
+                "surface": "#121414",
+                "surface_bright": "#38393a",
+                "surface_container": "#1e2020",
+                "surface_container_high": "#282a2b",
+                "surface_container_highest": "#333535",
+                "surface_container_low": "#1a1c1c",
+                "surface_container_lowest": "#0d0e0f",
+                "surface_dim": "#121414",
+                "surface_tint": "#ffb3ac",
+                "surface_variant": "#333535",
+                "tertiary": "#b9c7e4",
+                "tertiary_container": "#62708a",
+                "tertiary_fixed": "#d6e3ff",
+                "tertiary_fixed_dim": "#b9c7e4"
+              },
+              "overrideNeutralColor": "#e0e0e0",
+              "overridePrimaryColor": "#d32f2f",
+              "overrideSecondaryColor": "#ffc107",
+              "overrideTertiaryColor": "#0a192f",
+              "roundness": "ROUND_FOUR",
+              "spacing": {
+                "base": "8px",
+                "gutter": "24px",
+                "lg": "48px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "md": "24px",
+                "sm": "12px",
+                "xl": "80px",
+                "xs": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "28px"
+                },
+                "body-md": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "72px",
+                  "fontWeight": "900",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "80px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "900",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "52px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "48px"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "36px"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "28px",
+                  "fontWeight": "700",
+                  "lineHeight": "32px"
+                },
+                "label-bold": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "20px"
+                },
+                "label-sm": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Cajun Catfish House - Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed and built a bespoke, editorial-grade homepage for **Cajun Catfish House**. \n\n### Design Decisions & Rationale:\n*   **Visual Identity**: I moved away from generic food truck templates to create a \"Bayou Modernist\" aesthetic. This uses a deep, atmospheric palette of midnight blues and spicy reds, paired with high-contrast typography (Playfair Display) to evoke the heritage and heat of Cajun cooking.\n*   **Layout & Density**: The \"Today's Catch\" section uses an asymmetrical grid to feel curated and professional, while the \"Wall of Flavor\" credibility section uses dense, layered typography to create a sense of local community and excitement.\n*   **Unique Motifs**: I've integrated subtle \"Weathered Cypress\" textures and custom wavy dividers to subtly reinforce the river/bayou connection throughout the scroll.\n*   **Find The Truck**: The map section is designed as a focal point, emphasizing the mobile nature of the business with a high-impact placeholder ready for live integration.\n\nThe site is fully responsive, uses semantic HTML5, and is styled with a robust CSS variable system for easy maintenance.\n\nWould you like to explore a lighter \"Daytime\" variant for the site, or should we add some subtle hover animations to the menu items?"
+    },
+    {
+      "suggestion": "Create a light mode 'Daytime' variant"
+    },
+    {
+      "suggestion": "Add scroll-reveal animations to the menu items"
+    },
+    {
+      "suggestion": "Design a mobile-specific 'Find the Truck' screen"
+    }
+  ],
+  "projectId": "14626451326290772684",
+  "sessionId": "1558728057507355854"
+}
