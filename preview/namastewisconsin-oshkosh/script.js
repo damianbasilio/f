@@ -1,8 +1,28 @@
-// Micro-interaction for the grid background parallax effect
-        document.addEventListener('mousemove', (e) => {
-            const moveX = (e.clientX / window.innerWidth) * 20;
-            const moveY = (e.clientY / window.innerHeight) * 20;
-            document.querySelector('.grid-bg').style.backgroundPosition = `${moveX}px ${moveY}px`;
+// Reveal on scroll logic
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealOnScroll = () => {
+            const triggerBottom = window.innerHeight * 0.85;
+            revealElements.forEach(el => {
+                const elTop = el.getBoundingClientRect().top;
+                if (elTop < triggerBottom) {
+                    el.classList.add('active');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Smooth header scroll behavior
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm');
+                nav.style.height = '80px';
+            } else {
+                nav.classList.remove('shadow-sm');
+                nav.style.height = '96px';
+            }
         });
 
 (() => {
