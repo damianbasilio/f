@@ -1,0 +1,529 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Serene Zen Editorial",
+          "styleGuidelines": "## Brand & Style\nThe brand personality is rooted in high-end serenity and editorial sophistication, intentionally distancing itself from common spa tropes. This design system focuses on the intersection of modern minimalism and organic warmth, targeting a discerning audience that values silence, space, and tactile quality.\n\nThe visual direction follows a **Minimalist-Editorial** style. It utilizes heavy whitespace as a structural element rather than a void, allowing content to breathe and emphasizing the premium nature of the services. Asymmetrical layouts and intentional typographic scaling create a rhythmic, magazine-like experience. Subtle organic textures, such as linen and fine paper grain, are applied to digital surfaces to provide a grounded, physical feel that mimics a luxury hospitality brochure.\n\n## Layout & Spacing\nThis design system utilizes an **asymmetrical grid** inspired by modernist architecture and print journals. While built on a 12-column foundation for consistency, content should frequently \"break\" the grid—for example, images may span 7 columns while text spans 4, leaving a 1-column gap between them.\n\nSpacing is generous. Section gaps are intentionally large to create a sense of transition and mental \"pause.\" Use the `section-gap` to separate primary services or narrative blocks. Margins are wide on desktop to focus the user's attention on the central content, while mobile layouts collapse into a elegant single-column flow with consistent 24px side padding.\n\n## Elevation & Depth\nDepth is communicated through **tonal layers and texture** rather than shadows. \n- **The Base:** The primary surface is the \"Warm Stone\" color with a subtle noise/paper grain texture.\n- **Overlays:** Secondary containers use a 50% opacity of \"Panda Slate\" with a backdrop blur (glassmorphism) to feel like vellum paper.\n- **Outlines:** Use thin, 1px borders in \"Panda Slate\" at 20% opacity for structural definition.\n- **Interactive Depth:** When an item is hovered, it should not lift with a shadow. Instead, apply a scale-up (e.g., 1.02x) and a subtle opacity shift or a reveal of an organic circular motif behind the content.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Midnight Bamboo\" with \"Warm Stone\" text, rectangular with no border radius. Hover states should swap the colors or introduce a \"Muted Mint\" underline.\n- **Cards:** Avoid standard box-shadow cards. Instead, use \"Editorial Blocks\"—content grouped by whitespace and thin dividers, or framed by the subtle circular motifs.\n- **Inputs:** Simple bottom-border only fields using \"Panda Slate.\" Labels should be in `label-caps` sitting above the line.\n- **Lists:** Service menus should use a \"dotted-leader\" style (Service Name ...... Price) reminiscent of vintage spa menus but updated with modern serif typography.\n- **Monogram/Logo:** The \"P&S\" monogram should be rendered as a single-weight line-art mark, resembling a stone-carved chop or a brush stroke, placed with significant whitespace around it.\n- **Chips/Tags:** Small, outlined rectangles with `label-caps` text, used sparingly for category filtering.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0f1711",
+            "designMd": "---\nname: Serene Zen Editorial\ncolors:\n  surface: '#fcf9f7'\n  surface-dim: '#dcd9d8'\n  surface-bright: '#fcf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f1'\n  surface-container: '#f0edec'\n  surface-container-high: '#eae8e6'\n  surface-container-highest: '#e5e2e0'\n  on-surface: '#1b1c1b'\n  on-surface-variant: '#444843'\n  inverse-surface: '#30302f'\n  inverse-on-surface: '#f3f0ee'\n  outline: '#747873'\n  outline-variant: '#c4c8c2'\n  surface-tint: '#586159'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#151d17'\n  on-primary-container: '#7d867d'\n  inverse-primary: '#c0c9bf'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#111c2c'\n  on-tertiary-container: '#798499'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dce5db'\n  primary-fixed-dim: '#c0c9bf'\n  on-primary-fixed: '#151d17'\n  on-primary-fixed-variant: '#404941'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#d8e3fa'\n  tertiary-fixed-dim: '#bcc7dd'\n  on-tertiary-fixed: '#111c2c'\n  on-tertiary-fixed-variant: '#3c475a'\n  background: '#fcf9f7'\n  on-background: '#1b1c1b'\n  surface-variant: '#e5e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 84px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 38px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 160px\n---\n\n## Brand & Style\nThe brand personality is rooted in high-end serenity and editorial sophistication, intentionally distancing itself from common spa tropes. This design system focuses on the intersection of modern minimalism and organic warmth, targeting a discerning audience that values silence, space, and tactile quality.\n\nThe visual direction follows a **Minimalist-Editorial** style. It utilizes heavy whitespace as a structural element rather than a void, allowing content to breathe and emphasizing the premium nature of the services. Asymmetrical layouts and intentional typographic scaling create a rhythmic, magazine-like experience. Subtle organic textures, such as linen and fine paper grain, are applied to digital surfaces to provide a grounded, physical feel that mimics a luxury hospitality brochure.\n\n## Colors\nThe palette is centered on the \"Midnight Bamboo\" (#0F1711), a deep, desaturated green-black that serves as the anchor for primary typography and high-contrast backgrounds. \"Warm Stone\" (#F5F2ED) acts as the primary canvas color, replacing harsh whites with a softer, more natural tone that reduces eye strain and feels more premium.\n\n\"Panda Slate\" (#4A5568) provides a bridge between the dark and light tones, used primarily for secondary information and borders. \"Muted Mint\" (#94A3B8) is reserved for micro-interactions and subtle accents, such as successful state indications or active tab markers, ensuring the \"Zen\" atmosphere remains undisturbed by loud colors.\n\n## Typography\nThe typography system relies on a high-contrast pairing. **Playfair Display** provides an authoritative, editorial elegance for all headlines. Large display sizes utilize tighter tracking for a bespoke, curated look.\n\n**Montserrat** is used for body copy and labels, featuring wider tracking (letter spacing) to enhance legibility and reinforce the \"open\" feel of the brand. All navigational and utility labels should be set in `label-caps` to distinguish them from editorial content. On mobile, headlines scale aggressively to maintain a single-column editorial impact without overwhelming the viewport.\n\n## Layout & Spacing\nThis design system utilizes an **asymmetrical grid** inspired by modernist architecture and print journals. While built on a 12-column foundation for consistency, content should frequently \"break\" the grid—for example, images may span 7 columns while text spans 4, leaving a 1-column gap between them.\n\nSpacing is generous. Section gaps are intentionally large to create a sense of transition and mental \"pause.\" Use the `section-gap` to separate primary services or narrative blocks. Margins are wide on desktop to focus the user's attention on the central content, while mobile layouts collapse into a elegant single-column flow with consistent 24px side padding.\n\n## Elevation & Depth\nDepth is communicated through **tonal layers and texture** rather than shadows. \n- **The Base:** The primary surface is the \"Warm Stone\" color with a subtle noise/paper grain texture.\n- **Overlays:** Secondary containers use a 50% opacity of \"Panda Slate\" with a backdrop blur (glassmorphism) to feel like vellum paper.\n- **Outlines:** Use thin, 1px borders in \"Panda Slate\" at 20% opacity for structural definition.\n- **Interactive Depth:** When an item is hovered, it should not lift with a shadow. Instead, apply a scale-up (e.g., 1.02x) and a subtle opacity shift or a reveal of an organic circular motif behind the content.\n\n## Shapes\nThe primary shape language is **Sharp (0px)**, utilizing crisp 90-degree angles to maintain a modern, architectural feel. This structure is balanced by the **Zen Motif**: perfect circles used exclusively as decorative elements, mask containers for imagery, or as subtle background watermarks. These circles represent the \"Panda\" and \"Zen\" influence without resorting to literal illustrations.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Midnight Bamboo\" with \"Warm Stone\" text, rectangular with no border radius. Hover states should swap the colors or introduce a \"Muted Mint\" underline.\n- **Cards:** Avoid standard box-shadow cards. Instead, use \"Editorial Blocks\"—content grouped by whitespace and thin dividers, or framed by the subtle circular motifs.\n- **Inputs:** Simple bottom-border only fields using \"Panda Slate.\" Labels should be in `label-caps` sitting above the line.\n- **Lists:** Service menus should use a \"dotted-leader\" style (Service Name ...... Price) reminiscent of vintage spa menus but updated with modern serif typography.\n- **Monogram/Logo:** The \"P&S\" monogram should be rendered as a single-weight line-art mark, resembling a stone-carved chop or a brush stroke, placed with significant whitespace around it.\n- **Chips/Tags:** Small, outlined rectangles with `label-caps` text, used sparingly for category filtering.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fcf9f7",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0ee",
+              "inverse_primary": "#c0c9bf",
+              "inverse_surface": "#30302f",
+              "on_background": "#1b1c1b",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#7d867d",
+              "on_primary_fixed": "#151d17",
+              "on_primary_fixed_variant": "#404941",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#656461",
+              "on_secondary_fixed": "#1c1c19",
+              "on_secondary_fixed_variant": "#474743",
+              "on_surface": "#1b1c1b",
+              "on_surface_variant": "#444843",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#798499",
+              "on_tertiary_fixed": "#111c2c",
+              "on_tertiary_fixed_variant": "#3c475a",
+              "outline": "#747873",
+              "outline_variant": "#c4c8c2",
+              "primary": "#000000",
+              "primary_container": "#151d17",
+              "primary_fixed": "#dce5db",
+              "primary_fixed_dim": "#c0c9bf",
+              "secondary": "#5f5e5b",
+              "secondary_container": "#e5e2dd",
+              "secondary_fixed": "#e5e2dd",
+              "secondary_fixed_dim": "#c9c6c2",
+              "surface": "#fcf9f7",
+              "surface_bright": "#fcf9f7",
+              "surface_container": "#f0edec",
+              "surface_container_high": "#eae8e6",
+              "surface_container_highest": "#e5e2e0",
+              "surface_container_low": "#f6f3f1",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9d8",
+              "surface_tint": "#586159",
+              "surface_variant": "#e5e2e0",
+              "tertiary": "#000000",
+              "tertiary_container": "#111c2c",
+              "tertiary_fixed": "#d8e3fa",
+              "tertiary_fixed_dim": "#bcc7dd"
+            },
+            "overridePrimaryColor": "#0f1711",
+            "overrideSecondaryColor": "#f5f2ed",
+            "overrideTertiaryColor": "#4a5568",
+            "spacing": {
+              "container-max": "1440px",
+              "gutter": "32px",
+              "margin-desktop": "80px",
+              "margin-mobile": "24px",
+              "section-gap": "160px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.03em",
+                "lineHeight": "32px"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "28px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "84px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "52px"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "56px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "38px"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "40px"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.2em",
+                "lineHeight": "16px"
+              },
+              "label-sm": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "lineHeight": "20px"
+              }
+            }
+          }
+        },
+        "name": "assets/33a59021f6934bf091da22dc47211624",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "cd48bb0f06974998b82c08c6312a8772",
+            "name": "projects/2232926384815958407/screens/cd48bb0f06974998b82c08c6312a8772",
+            "prompt": "High-end, editorial photography of a luxury spa interior. Soft, natural morning light, minimalist aesthetic with natural materials like stone and dark wood. A glimpse of a serene treatment area with folded linen and a single bamboo branch. Deep, desaturated greens and warm neutrals. 8k resolution, professional architectural photography.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv-ytr250eGjN2p5-rPxdTATnq8UTMZ6BGrGbE4Zfup5QwWX9GLbR7QgahCU6mXZqGnvSy39beF3WvpDsNAgPAE2DGatnqym605ZobGbRpvxsm0xyv21J4glqUSsUk-bMecSQxfl8jDsMnWEYJJkz_I8IIqwKXrWI1vRtQFdZaYIpC-8AHFjZEhL5_91ECn1N0hfKrmnZeXE1sfvn-pgl2HC9uYYGb1-mqJeZaC_xziS6W7lwsQtmyE-ss",
+              "name": "projects/2232926384815958407/files/df0ab47deafc461aa73b371a0f30ed32"
+            },
+            "theme": {},
+            "title": "High-end, editorial photography of a luxury spa interior. Soft, natural morning light, minimalist aesthetic with natural materials like stone and dark wood. A glimpse of a serene treatment area with folded linen and a single bamboo branch. Deep, desaturated greens and warm neutrals. 8k resolution, professional architectural photography.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "1200",
+            "id": "4c467aaf779e421a81393927bbdac4d6",
+            "name": "projects/2232926384815958407/screens/4c467aaf779e421a81393927bbdac4d6",
+            "prompt": "Close-up, artistic shot of smooth black river stones (hot stones) on a textured linen surface. Soft shadows, moody lighting, professional product photography for a high-end wellness brand. Neutral tones.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsYAOxEhQ3vIWqmNa0mYwKMiQWd7mmXVCqvPTwPrqgCyIwF-eE1Jzzv8VkiVblKdW3aJtABOdchv9obXUZTCf8lmCLezHWSuMAF5iGpoCWohrGRp8KRgvnfyZr-YOB6_Rj5P5ThLbn-ueHgAhDj_MyHt53oEG3wcjSsh-lBkSXXwqMqtYkUzKXJa6WOjV00uztX-reRJOfDjHB8pJEubsi88yH6JQ-3IUEbHXLsNfEvwZ6ZcAGmbSaTS_c",
+              "name": "projects/2232926384815958407/files/e93e86e8bd324c80b532e19eb2176764"
+            },
+            "theme": {},
+            "title": "Close-up, artistic shot of smooth black river stones (hot stones) on a textured linen surface. Soft shadows, moody lighting, professional product photography for a high-end wellness brand. Neutral tones.",
+            "width": "896"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "d99f81f0418c46f18714c25390c44006",
+            "name": "projects/2232926384815958407/screens/d99f81f0418c46f18714c25390c44006",
+            "prompt": "A minimalist, serene image of a foot reflexology treatment in progress. Only hands and feet visible, soft focused background, high-end spa setting. Clean, airy, professional photography.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuYctxXtaS102nbIApeKl_mPgJSjvu7tzSf-u-7Ry6Cw0_sx59ksjRnNda-S8R9q7pdumLj6q3eCtT_SR2O9mGxAZ0TmqfLj3x0DMBje7wPGHAaM2jcE7sGsv0nhnIxIAiApr9OwYgtOtwS1CwYQ8cF6OXefXaGQ-1K7Dn0bPOawU67-pBqfiXzPPUSOkkT4xMojh5A0OwBZC1nvmpsXHJb61RRuJkkYr3cLzoXy9Ao2qXiAush_-SLe_c",
+              "name": "projects/2232926384815958407/files/4469dca74b1e4928ba1afdd986cd6655"
+            },
+            "theme": {},
+            "title": "A minimalist, serene image of a foot reflexology treatment in progress. Only hands and feet visible, soft focused background, high-end spa setting. Clean, airy, professional photography.",
+            "width": "1200"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Serene Zen Editorial",
+                "styleGuidelines": "## Brand & Style\nThe brand personality is rooted in high-end serenity and editorial sophistication, intentionally distancing itself from common spa tropes. This design system focuses on the intersection of modern minimalism and organic warmth, targeting a discerning audience that values silence, space, and tactile quality.\n\nThe visual direction follows a **Minimalist-Editorial** style. It utilizes heavy whitespace as a structural element rather than a void, allowing content to breathe and emphasizing the premium nature of the services. Asymmetrical layouts and intentional typographic scaling create a rhythmic, magazine-like experience. Subtle organic textures, such as linen and fine paper grain, are applied to digital surfaces to provide a grounded, physical feel that mimics a luxury hospitality brochure.\n\n## Layout & Spacing\nThis design system utilizes an **asymmetrical grid** inspired by modernist architecture and print journals. While built on a 12-column foundation for consistency, content should frequently \"break\" the grid—for example, images may span 7 columns while text spans 4, leaving a 1-column gap between them.\n\nSpacing is generous. Section gaps are intentionally large to create a sense of transition and mental \"pause.\" Use the `section-gap` to separate primary services or narrative blocks. Margins are wide on desktop to focus the user's attention on the central content, while mobile layouts collapse into a elegant single-column flow with consistent 24px side padding.\n\n## Elevation & Depth\nDepth is communicated through **tonal layers and texture** rather than shadows. \n- **The Base:** The primary surface is the \"Warm Stone\" color with a subtle noise/paper grain texture.\n- **Overlays:** Secondary containers use a 50% opacity of \"Panda Slate\" with a backdrop blur (glassmorphism) to feel like vellum paper.\n- **Outlines:** Use thin, 1px borders in \"Panda Slate\" at 20% opacity for structural definition.\n- **Interactive Depth:** When an item is hovered, it should not lift with a shadow. Instead, apply a scale-up (e.g., 1.02x) and a subtle opacity shift or a reveal of an organic circular motif behind the content.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Midnight Bamboo\" with \"Warm Stone\" text, rectangular with no border radius. Hover states should swap the colors or introduce a \"Muted Mint\" underline.\n- **Cards:** Avoid standard box-shadow cards. Instead, use \"Editorial Blocks\"—content grouped by whitespace and thin dividers, or framed by the subtle circular motifs.\n- **Inputs:** Simple bottom-border only fields using \"Panda Slate.\" Labels should be in `label-caps` sitting above the line.\n- **Lists:** Service menus should use a \"dotted-leader\" style (Service Name ...... Price) reminiscent of vintage spa menus but updated with modern serif typography.\n- **Monogram/Logo:** The \"P&S\" monogram should be rendered as a single-weight line-art mark, resembling a stone-carved chop or a brush stroke, placed with significant whitespace around it.\n- **Chips/Tags:** Small, outlined rectangles with `label-caps` text, used sparingly for category filtering.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#0f1711",
+                  "designMd": "---\nname: Serene Zen Editorial\ncolors:\n  surface: '#fcf9f7'\n  surface-dim: '#dcd9d8'\n  surface-bright: '#fcf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f1'\n  surface-container: '#f0edec'\n  surface-container-high: '#eae8e6'\n  surface-container-highest: '#e5e2e0'\n  on-surface: '#1b1c1b'\n  on-surface-variant: '#444843'\n  inverse-surface: '#30302f'\n  inverse-on-surface: '#f3f0ee'\n  outline: '#747873'\n  outline-variant: '#c4c8c2'\n  surface-tint: '#586159'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#151d17'\n  on-primary-container: '#7d867d'\n  inverse-primary: '#c0c9bf'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#111c2c'\n  on-tertiary-container: '#798499'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dce5db'\n  primary-fixed-dim: '#c0c9bf'\n  on-primary-fixed: '#151d17'\n  on-primary-fixed-variant: '#404941'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#d8e3fa'\n  tertiary-fixed-dim: '#bcc7dd'\n  on-tertiary-fixed: '#111c2c'\n  on-tertiary-fixed-variant: '#3c475a'\n  background: '#fcf9f7'\n  on-background: '#1b1c1b'\n  surface-variant: '#e5e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 84px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 38px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 160px\n---\n\n## Brand & Style\nThe brand personality is rooted in high-end serenity and editorial sophistication, intentionally distancing itself from common spa tropes. This design system focuses on the intersection of modern minimalism and organic warmth, targeting a discerning audience that values silence, space, and tactile quality.\n\nThe visual direction follows a **Minimalist-Editorial** style. It utilizes heavy whitespace as a structural element rather than a void, allowing content to breathe and emphasizing the premium nature of the services. Asymmetrical layouts and intentional typographic scaling create a rhythmic, magazine-like experience. Subtle organic textures, such as linen and fine paper grain, are applied to digital surfaces to provide a grounded, physical feel that mimics a luxury hospitality brochure.\n\n## Colors\nThe palette is centered on the \"Midnight Bamboo\" (#0F1711), a deep, desaturated green-black that serves as the anchor for primary typography and high-contrast backgrounds. \"Warm Stone\" (#F5F2ED) acts as the primary canvas color, replacing harsh whites with a softer, more natural tone that reduces eye strain and feels more premium.\n\n\"Panda Slate\" (#4A5568) provides a bridge between the dark and light tones, used primarily for secondary information and borders. \"Muted Mint\" (#94A3B8) is reserved for micro-interactions and subtle accents, such as successful state indications or active tab markers, ensuring the \"Zen\" atmosphere remains undisturbed by loud colors.\n\n## Typography\nThe typography system relies on a high-contrast pairing. **Playfair Display** provides an authoritative, editorial elegance for all headlines. Large display sizes utilize tighter tracking for a bespoke, curated look.\n\n**Montserrat** is used for body copy and labels, featuring wider tracking (letter spacing) to enhance legibility and reinforce the \"open\" feel of the brand. All navigational and utility labels should be set in `label-caps` to distinguish them from editorial content. On mobile, headlines scale aggressively to maintain a single-column editorial impact without overwhelming the viewport.\n\n## Layout & Spacing\nThis design system utilizes an **asymmetrical grid** inspired by modernist architecture and print journals. While built on a 12-column foundation for consistency, content should frequently \"break\" the grid—for example, images may span 7 columns while text spans 4, leaving a 1-column gap between them.\n\nSpacing is generous. Section gaps are intentionally large to create a sense of transition and mental \"pause.\" Use the `section-gap` to separate primary services or narrative blocks. Margins are wide on desktop to focus the user's attention on the central content, while mobile layouts collapse into a elegant single-column flow with consistent 24px side padding.\n\n## Elevation & Depth\nDepth is communicated through **tonal layers and texture** rather than shadows. \n- **The Base:** The primary surface is the \"Warm Stone\" color with a subtle noise/paper grain texture.\n- **Overlays:** Secondary containers use a 50% opacity of \"Panda Slate\" with a backdrop blur (glassmorphism) to feel like vellum paper.\n- **Outlines:** Use thin, 1px borders in \"Panda Slate\" at 20% opacity for structural definition.\n- **Interactive Depth:** When an item is hovered, it should not lift with a shadow. Instead, apply a scale-up (e.g., 1.02x) and a subtle opacity shift or a reveal of an organic circular motif behind the content.\n\n## Shapes\nThe primary shape language is **Sharp (0px)**, utilizing crisp 90-degree angles to maintain a modern, architectural feel. This structure is balanced by the **Zen Motif**: perfect circles used exclusively as decorative elements, mask containers for imagery, or as subtle background watermarks. These circles represent the \"Panda\" and \"Zen\" influence without resorting to literal illustrations.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Midnight Bamboo\" with \"Warm Stone\" text, rectangular with no border radius. Hover states should swap the colors or introduce a \"Muted Mint\" underline.\n- **Cards:** Avoid standard box-shadow cards. Instead, use \"Editorial Blocks\"—content grouped by whitespace and thin dividers, or framed by the subtle circular motifs.\n- **Inputs:** Simple bottom-border only fields using \"Panda Slate.\" Labels should be in `label-caps` sitting above the line.\n- **Lists:** Service menus should use a \"dotted-leader\" style (Service Name ...... Price) reminiscent of vintage spa menus but updated with modern serif typography.\n- **Monogram/Logo:** The \"P&S\" monogram should be rendered as a single-weight line-art mark, resembling a stone-carved chop or a brush stroke, placed with significant whitespace around it.\n- **Chips/Tags:** Small, outlined rectangles with `label-caps` text, used sparingly for category filtering.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fcf9f7",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f3f0ee",
+                    "inverse_primary": "#c0c9bf",
+                    "inverse_surface": "#30302f",
+                    "on_background": "#1b1c1b",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#7d867d",
+                    "on_primary_fixed": "#151d17",
+                    "on_primary_fixed_variant": "#404941",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#656461",
+                    "on_secondary_fixed": "#1c1c19",
+                    "on_secondary_fixed_variant": "#474743",
+                    "on_surface": "#1b1c1b",
+                    "on_surface_variant": "#444843",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#798499",
+                    "on_tertiary_fixed": "#111c2c",
+                    "on_tertiary_fixed_variant": "#3c475a",
+                    "outline": "#747873",
+                    "outline_variant": "#c4c8c2",
+                    "primary": "#000000",
+                    "primary_container": "#151d17",
+                    "primary_fixed": "#dce5db",
+                    "primary_fixed_dim": "#c0c9bf",
+                    "secondary": "#5f5e5b",
+                    "secondary_container": "#e5e2dd",
+                    "secondary_fixed": "#e5e2dd",
+                    "secondary_fixed_dim": "#c9c6c2",
+                    "surface": "#fcf9f7",
+                    "surface_bright": "#fcf9f7",
+                    "surface_container": "#f0edec",
+                    "surface_container_high": "#eae8e6",
+                    "surface_container_highest": "#e5e2e0",
+                    "surface_container_low": "#f6f3f1",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dcd9d8",
+                    "surface_tint": "#586159",
+                    "surface_variant": "#e5e2e0",
+                    "tertiary": "#000000",
+                    "tertiary_container": "#111c2c",
+                    "tertiary_fixed": "#d8e3fa",
+                    "tertiary_fixed_dim": "#bcc7dd"
+                  },
+                  "overridePrimaryColor": "#0f1711",
+                  "overrideSecondaryColor": "#f5f2ed",
+                  "overrideTertiaryColor": "#4a5568",
+                  "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "32px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.03em",
+                      "lineHeight": "32px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "28px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "72px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "84px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "52px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "56px"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "38px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "500",
+                      "lineHeight": "40px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.2em",
+                      "lineHeight": "16px"
+                    },
+                    "label-sm": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "lineHeight": "20px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/33a59021f6934bf091da22dc47211624",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "12188",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2U5NmRiMTZmMGQ2ZDQxODZiYTc0MWM4MjY1MWRjMGY2EgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhMyMjMyOTI2Mzg0ODE1OTU4NDA3&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/2232926384815958407/files/a1e5ecdcf1854f5cb713f1b214186993"
+            },
+            "id": "b05fda222ef343f2af049f7eac151dc5",
+            "name": "projects/2232926384815958407/screens/b05fda222ef343f2af049f7eac151dc5",
+            "prompt": "Design a bespoke, production-ready desktop homepage for Panda Foot & Spa. \n\n### Core Aesthetic:\nUse an editorial, high-end layout that feels unique and premium. \n- Use 'Midnight Bamboo' (#0F1711) for high-contrast sections and text.\n- Use 'Warm Stone' (#F5F2ED) as the primary background.\n- Typography: Large, elegant Serif headings (Playfair Display) paired with minimalist Sans-Serif (Inter) for body.\n- Visual Motif: Incorporate subtle circular 'Zen' motifs and asymmetrical spacing.\n\n### Sections & Content:\n1. Header: Use the predicted TopNavBar component. Include the phone (270) 314-4788.\n2. Hero: A bold, asymmetrical layout. Heading: \"The Art of Stillness.\" Subheading: \"Bespoke foot and body therapies in the heart of Owensboro.\" Use {{DATA:IMAGE:IMAGE_3}} as a large, partially cropped hero image.\n3. Credibility (#credibility): \"Refining the Spa Experience.\" Focus on three pillars: 'Bespoke Care', 'Ancestral Wisdom', 'Modern Serenity'.\n4. Services: A non-generic list layout. \n   - 'The Signature Foot Reflexology' featuring {{DATA:IMAGE:IMAGE_4}}.\n   - 'Deep Tissue & Hot Stone' featuring {{DATA:IMAGE:IMAGE_5}}.\n   - 'Body Wellness'.\n5. About: \"A Sanctuary in Owensboro.\" Narrative copy about the location at 3600 Frederica Street.\n6. Visit (#visit): Use the required empty map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. \n7. Contact: A minimal, elegant contact form with validation UI styles.\n8. Footer: Use the predicted Footer component.\n\n### Technical:\n- Full semantic HTML document.\n- Custom CSS properties for the palette.\n- Smooth scroll and responsive desktop layout.\n- Descriptive alt tags for images.\n- No lorem ipsum.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_3}}\n  Alt Text: High-end, editorial photography of a luxury spa interior. Soft, natural morning light, minimalist aesthetic with natural materials like stone and dark wood. A glimpse of a serene treatment area with folded linen and a single bamboo branch. Deep, desaturated greens and warm neutrals. 8k resolution, professional architectural photography.\n  Description: High-end, editorial photography of a luxury spa interior. Soft, natural morning light, minimalist aesthetic with natural materials like stone and dark wood. A glimpse of a serene treatment area with folded linen and a single bamboo branch. Deep, desaturated greens and warm neutrals. 8k resolution, professional architectural photography.\n  Dimensions: 1376x768\n  Aspect Ratio: 1.79\n- {{DATA:IMAGE:IMAGE_4}}\n  Alt Text: A minimalist, serene image of a foot reflexology treatment in progress. Only hands and feet visible, soft focused background, high-end spa setting. Clean, airy, professional photography.\n  Description: A minimalist, serene image of a foot reflexology treatment in progress. Only hands and feet visible, soft focused background, high-end spa setting. Clean, airy, professional photography.\n  Dimensions: 1200x896\n  Aspect Ratio: 1.34\n- {{DATA:IMAGE:IMAGE_5}}\n  Alt Text: Close-up, artistic shot of smooth black river stones (hot stones) on a textured linen surface. Soft shadows, moody lighting, professional product photography for a high-end wellness brand. Neutral tones.\n  Description: Close-up, artistic shot of smooth black river stones (hot stones) on a textured linen surface. Soft shadows, moody lighting, professional product photography for a high-end wellness brand. Neutral tones.\n  Dimensions: 896x1200\n  Aspect Ratio: 0.75\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt2ReiSB80olz9yCbWmEm6UPeRfBx__u0PDvNaAI8QaTrjzshLgDgctdy6kc94b3YunIH0mIKd3gJtkWgEshsr4clIYMMPBewvERv9lr74xCNC0CFd6IipvGVrKOsmT323hi3rx9bU88mNLXLXL8ZKF4GpIQ5bmmdPXgjULu5b6AprS04zClBTdqeZSCC0ZhVhMmndhAhPP0Ok7zMwfvNU-6huTq34IUyG9H-_55y2fxea9jltBGMJyTS0",
+              "name": "projects/2232926384815958407/files/e71a1085dc284a19bc163d560882e357"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#0f1711",
+              "designMd": "---\nname: Serene Zen Editorial\ncolors:\n  surface: '#fcf9f7'\n  surface-dim: '#dcd9d8'\n  surface-bright: '#fcf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f1'\n  surface-container: '#f0edec'\n  surface-container-high: '#eae8e6'\n  surface-container-highest: '#e5e2e0'\n  on-surface: '#1b1c1b'\n  on-surface-variant: '#444843'\n  inverse-surface: '#30302f'\n  inverse-on-surface: '#f3f0ee'\n  outline: '#747873'\n  outline-variant: '#c4c8c2'\n  surface-tint: '#586159'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#151d17'\n  on-primary-container: '#7d867d'\n  inverse-primary: '#c0c9bf'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#111c2c'\n  on-tertiary-container: '#798499'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dce5db'\n  primary-fixed-dim: '#c0c9bf'\n  on-primary-fixed: '#151d17'\n  on-primary-fixed-variant: '#404941'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#d8e3fa'\n  tertiary-fixed-dim: '#bcc7dd'\n  on-tertiary-fixed: '#111c2c'\n  on-tertiary-fixed-variant: '#3c475a'\n  background: '#fcf9f7'\n  on-background: '#1b1c1b'\n  surface-variant: '#e5e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 84px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 38px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 160px\n---\n\n## Brand & Style\nThe brand personality is rooted in high-end serenity and editorial sophistication, intentionally distancing itself from common spa tropes. This design system focuses on the intersection of modern minimalism and organic warmth, targeting a discerning audience that values silence, space, and tactile quality.\n\nThe visual direction follows a **Minimalist-Editorial** style. It utilizes heavy whitespace as a structural element rather than a void, allowing content to breathe and emphasizing the premium nature of the services. Asymmetrical layouts and intentional typographic scaling create a rhythmic, magazine-like experience. Subtle organic textures, such as linen and fine paper grain, are applied to digital surfaces to provide a grounded, physical feel that mimics a luxury hospitality brochure.\n\n## Colors\nThe palette is centered on the \"Midnight Bamboo\" (#0F1711), a deep, desaturated green-black that serves as the anchor for primary typography and high-contrast backgrounds. \"Warm Stone\" (#F5F2ED) acts as the primary canvas color, replacing harsh whites with a softer, more natural tone that reduces eye strain and feels more premium.\n\n\"Panda Slate\" (#4A5568) provides a bridge between the dark and light tones, used primarily for secondary information and borders. \"Muted Mint\" (#94A3B8) is reserved for micro-interactions and subtle accents, such as successful state indications or active tab markers, ensuring the \"Zen\" atmosphere remains undisturbed by loud colors.\n\n## Typography\nThe typography system relies on a high-contrast pairing. **Playfair Display** provides an authoritative, editorial elegance for all headlines. Large display sizes utilize tighter tracking for a bespoke, curated look.\n\n**Montserrat** is used for body copy and labels, featuring wider tracking (letter spacing) to enhance legibility and reinforce the \"open\" feel of the brand. All navigational and utility labels should be set in `label-caps` to distinguish them from editorial content. On mobile, headlines scale aggressively to maintain a single-column editorial impact without overwhelming the viewport.\n\n## Layout & Spacing\nThis design system utilizes an **asymmetrical grid** inspired by modernist architecture and print journals. While built on a 12-column foundation for consistency, content should frequently \"break\" the grid—for example, images may span 7 columns while text spans 4, leaving a 1-column gap between them.\n\nSpacing is generous. Section gaps are intentionally large to create a sense of transition and mental \"pause.\" Use the `section-gap` to separate primary services or narrative blocks. Margins are wide on desktop to focus the user's attention on the central content, while mobile layouts collapse into a elegant single-column flow with consistent 24px side padding.\n\n## Elevation & Depth\nDepth is communicated through **tonal layers and texture** rather than shadows. \n- **The Base:** The primary surface is the \"Warm Stone\" color with a subtle noise/paper grain texture.\n- **Overlays:** Secondary containers use a 50% opacity of \"Panda Slate\" with a backdrop blur (glassmorphism) to feel like vellum paper.\n- **Outlines:** Use thin, 1px borders in \"Panda Slate\" at 20% opacity for structural definition.\n- **Interactive Depth:** When an item is hovered, it should not lift with a shadow. Instead, apply a scale-up (e.g., 1.02x) and a subtle opacity shift or a reveal of an organic circular motif behind the content.\n\n## Shapes\nThe primary shape language is **Sharp (0px)**, utilizing crisp 90-degree angles to maintain a modern, architectural feel. This structure is balanced by the **Zen Motif**: perfect circles used exclusively as decorative elements, mask containers for imagery, or as subtle background watermarks. These circles represent the \"Panda\" and \"Zen\" influence without resorting to literal illustrations.\n\n## Components\n- **Buttons:** Primary buttons are solid \"Midnight Bamboo\" with \"Warm Stone\" text, rectangular with no border radius. Hover states should swap the colors or introduce a \"Muted Mint\" underline.\n- **Cards:** Avoid standard box-shadow cards. Instead, use \"Editorial Blocks\"—content grouped by whitespace and thin dividers, or framed by the subtle circular motifs.\n- **Inputs:** Simple bottom-border only fields using \"Panda Slate.\" Labels should be in `label-caps` sitting above the line.\n- **Lists:** Service menus should use a \"dotted-leader\" style (Service Name ...... Price) reminiscent of vintage spa menus but updated with modern serif typography.\n- **Monogram/Logo:** The \"P&S\" monogram should be rendered as a single-weight line-art mark, resembling a stone-carved chop or a brush stroke, placed with significant whitespace around it.\n- **Chips/Tags:** Small, outlined rectangles with `label-caps` text, used sparingly for category filtering.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fcf9f7",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f3f0ee",
+                "inverse_primary": "#c0c9bf",
+                "inverse_surface": "#30302f",
+                "on_background": "#1b1c1b",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#7d867d",
+                "on_primary_fixed": "#151d17",
+                "on_primary_fixed_variant": "#404941",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#656461",
+                "on_secondary_fixed": "#1c1c19",
+                "on_secondary_fixed_variant": "#474743",
+                "on_surface": "#1b1c1b",
+                "on_surface_variant": "#444843",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#798499",
+                "on_tertiary_fixed": "#111c2c",
+                "on_tertiary_fixed_variant": "#3c475a",
+                "outline": "#747873",
+                "outline_variant": "#c4c8c2",
+                "primary": "#000000",
+                "primary_container": "#151d17",
+                "primary_fixed": "#dce5db",
+                "primary_fixed_dim": "#c0c9bf",
+                "secondary": "#5f5e5b",
+                "secondary_container": "#e5e2dd",
+                "secondary_fixed": "#e5e2dd",
+                "secondary_fixed_dim": "#c9c6c2",
+                "surface": "#fcf9f7",
+                "surface_bright": "#fcf9f7",
+                "surface_container": "#f0edec",
+                "surface_container_high": "#eae8e6",
+                "surface_container_highest": "#e5e2e0",
+                "surface_container_low": "#f6f3f1",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dcd9d8",
+                "surface_tint": "#586159",
+                "surface_variant": "#e5e2e0",
+                "tertiary": "#000000",
+                "tertiary_container": "#111c2c",
+                "tertiary_fixed": "#d8e3fa",
+                "tertiary_fixed_dim": "#bcc7dd"
+              },
+              "overridePrimaryColor": "#0f1711",
+              "overrideSecondaryColor": "#f5f2ed",
+              "overrideTertiaryColor": "#4a5568",
+              "spacing": {
+                "container-max": "1440px",
+                "gutter": "32px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px",
+                "section-gap": "160px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.03em",
+                  "lineHeight": "32px"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "28px"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "72px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "84px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "52px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "56px"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "38px"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "500",
+                  "lineHeight": "40px"
+                },
+                "label-caps": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.2em",
+                  "lineHeight": "16px"
+                },
+                "label-sm": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "lineHeight": "20px"
+                }
+              }
+            },
+            "title": "Panda Foot & Spa | Bespoke Wellness",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed and built a bespoke, editorial-grade homepage for Panda Foot & Spa. This design departs from standard local-business templates to create a premium, memorable first impression that reflects the brand's unique identity.\n\n### Design Highlights:\n*   **Editorial Visual Identity**: I established a \"Serene Zen\" aesthetic using a palette of Midnight Bamboo and Warm Stone, paired with a high-contrast typographic hierarchy (Playfair Display and Inter).\n*   **Bespoke Layout**: The page features an asymmetrical, grid-breaking hero section and a custom service display that prioritizes visual storytelling over standard card grids.\n*   **Signature Visual Motif**: Subtle circular motifs and intentional whitespace are used throughout to reinforce the theme of balance and stillness.\n*   **Production-Ready Features**: \n    *   **High-End Imagery**: I generated custom, editorial-quality photography specifically for the spa's services.\n    *   **Technical Compliance**: The code includes semantic HTML, custom CSS properties for easy brand management, and the required `#visit` map slot for your future integration.\n    *   **Memorable Credibility**: A dedicated section highlights the brand's philosophy, positioning Panda Foot & Spa as Owensboro's premier wellness destination.\n\nThe site is fully responsive and ready for production, providing a professional and tranquil digital experience for your clients."
+    },
+    {
+      "suggestion": "Add a booking popup animation"
+    },
+    {
+      "suggestion": "Create a dedicated services menu page"
+    },
+    {
+      "suggestion": "Update the color palette to a darker theme"
+    }
+  ],
+  "projectId": "2232926384815958407",
+  "sessionId": "13792450978740894381"
+}
