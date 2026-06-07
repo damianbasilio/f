@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>KING'S MECHANIC | TEXAS HOSPITALITY. SURGICAL PRECISION.</title>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-secondary-container": "#342800",
+                        "primary-fixed": "#e5e2e1",
+                        "outline-variant": "#444748",
+                        "outline": "#8e9192",
+                        "on-tertiary-fixed": "#191c1f",
+                        "surface-tint": "#c8c6c5",
+                        "surface": "#141313",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "secondary-fixed-dim": "#e9c349",
+                        "primary-container": "#1a1a1a",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-fixed": "#ffe088",
+                        "secondary-container": "#af8d11",
+                        "secondary": "#e9c349",
+                        "on-secondary": "#3c2f00",
+                        "on-tertiary": "#2d3134",
+                        "on-primary-fixed": "#1c1b1b",
+                        "surface-variant": "#353434",
+                        "background": "#141313",
+                        "tertiary": "#c4c7ca",
+                        "surface-container": "#201f1f",
+                        "on-tertiary-fixed-variant": "#44474a",
+                        "surface-dim": "#141313",
+                        "surface-container-lowest": "#0e0e0e",
+                        "on-tertiary-container": "#808386",
+                        "surface-bright": "#3a3939",
+                        "surface-container-low": "#1c1b1b",
+                        "on-error": "#690005",
+                        "inverse-primary": "#5f5e5e",
+                        "surface-container-high": "#2b2a2a",
+                        "tertiary-container": "#171a1d",
+                        "on-background": "#e5e2e1",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "on-primary-fixed-variant": "#474746",
+                        "error-container": "#93000a",
+                        "surface-container-highest": "#353434",
+                        "on-error-container": "#ffdad6",
+                        "on-primary-container": "#848282",
+                        "tertiary-fixed-dim": "#c4c7ca",
+                        "tertiary-fixed": "#e0e2e6",
+                        "on-primary": "#313030",
+                        "inverse-on-surface": "#313030",
+                        "error": "#ffb4ab",
+                        "primary": "#c8c6c5",
+                        "on-surface-variant": "#c4c7c7"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Hanken Grotesk"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "display-lg": ["Archivo Narrow"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "display-sm": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "headline-lg": ["32px", { "lineHeight": "36px", "fontWeight": "600" }],
+                        "display-lg": ["84px", { "lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["24px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "display-sm": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .noise-bg {
+            position: relative;
+        }
+        .noise-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+            pointer-events: none;
+            z-index: 1;
+        }
+        .brutalist-border {
+            border: 1px solid #444748;
+        }
+        .brutalist-border-thick {
+            border: 2px solid #8e9192;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(20, 19, 19, 0.9) 0%, rgba(20, 19, 19, 0.4) 50%, rgba(20, 19, 19, 0) 100%);
+        }
+        .hover-invert:hover {
+            background-color: #e9c349;
+            color: #141313;
+        }
+        .scroll-mt-header {
+            scroll-margin-top: 80px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md noise-bg antialiased selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<nav class="sticky top-0 z-50 flex justify-between items-center w-full px-margin-desktop py-4 bg-background/95 backdrop-blur-sm border-b-2 border-outline-variant">
+<div class="flex items-center gap-8">
+<span class="font-headline-lg text-headline-lg font-bold tracking-tighter text-on-background">KING'S MECHANIC</span>
+<div class="hidden md:flex gap-6">
+<a class="font-label-caps text-label-caps text-on-background font-medium hover:text-secondary transition-colors duration-300" href="#services">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-background font-medium hover:text-secondary transition-colors duration-300" href="#about">ABOUT</a>
+<a class="font-label-caps text-label-caps text-on-background font-medium hover:text-secondary transition-colors duration-300" href="#visit">VISIT</a>
+<a class="font-label-caps text-label-caps text-on-background font-medium hover:text-secondary transition-colors duration-300" href="#contact">CONTACT</a>
+</div>
+</div>
+<a class="font-label-caps text-label-caps text-secondary font-bold hover:scale-95 transition-transform duration-150" href="tel:2542458020">
+            EMERGENCY: (254) 245-8020
+        </a>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[90vh] overflow-hidden flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury performance engine close up" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtTHFoyAzKmoS2YOD6yClJd8LXC1vP7DGpb94VUaQUZZ8gaZrsHyDqj0nhFgm9xC-ot7nPEdo4xDwk6vK4lQZYGVzxhX0bBOxeIaqzFU3l3enlWD-b5K8QZ3E-d7N7SdVAAkE2AePDs35tlR5wkkIiVKpoOiXaqAMI6_T73sRUiGsgyVN2fANdn7etnO2WiwKF8mLfggnlX_aZBQ6y7tWwIePfq6QWLotx72deAHfs1LdrK0wxfFMlZp-0W"/>
+<div class="absolute inset-0 hero-gradient"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-5xl">
+<div class="inline-block px-4 py-1 brutalist-border border-secondary mb-6">
+<span class="font-label-caps text-label-caps text-secondary">KILLEEN, TEXAS | EST. 2009</span>
+</div>
+<h1 class="font-display-lg text-display-lg uppercase mb-8 leading-none">
+                TEXAS HOSPITALITY.<br/>
+<span class="text-secondary">SURGICAL PRECISION.</span>
+</h1>
+<p class="font-body-lg text-body-lg max-w-xl text-on-surface-variant mb-12">
+                We bridge the gap between heritage mechanical expertise and modern diagnostic technology. Every bolt turned is a testament to our commitment to grit and perfection.
+            </p>
+<div class="flex gap-gutter">
+<a class="px-10 py-4 bg-secondary text-background font-label-caps text-label-caps brutalist-border border-secondary transition-all hover:bg-background hover:text-secondary active:scale-95" href="#contact">
+                    BOOK AN INSPECTION
+                </a>
+<a class="px-10 py-4 brutalist-border border-outline text-on-background font-label-caps text-label-caps transition-all hover:border-secondary hover:text-secondary active:scale-95" href="#services">
+                    VIEW OUR CAPABILITIES
+                </a>
+</div>
+</div>
+</header>
+<!-- Credibility Stat Bar -->
+<section class="w-full py-16 bg-surface-container-lowest border-y-2 border-outline-variant relative overflow-hidden">
+<div class="px-margin-desktop flex flex-wrap justify-between items-center gap-12">
+<div class="flex flex-col">
+<span class="font-display-sm text-display-sm text-on-background">15+</span>
+<span class="font-label-caps text-label-caps text-secondary">YEARS OF GRIT</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col">
+<span class="font-display-sm text-display-sm text-on-background">10k+</span>
+<span class="font-label-caps text-label-caps text-secondary">ENGINES REVIVED</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col">
+<span class="font-display-sm text-display-sm text-on-background">0.02%</span>
+<span class="font-label-caps text-label-caps text-secondary">RETURN RATE</span>
+</div>
+<div class="w-px h-12 bg-outline-variant hidden md:block"></div>
+<div class="flex flex-col">
+<span class="font-display-sm text-display-sm text-on-background">100%</span>
+<span class="font-label-caps text-label-caps text-secondary">TEXAS OWNED</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-desktop scroll-mt-header" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-label-caps text-label-caps text-secondary mb-4">OUR CAPABILITIES</h2>
+<h3 class="font-display-sm text-display-sm uppercase leading-tight">MASTER CRAFTSMANSHIP FOR <br/>MODERN &amp; VINTAGE MACHINES</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-2">
+                Specializing in high-performance rebuilds, deep diagnostics, and heritage restorations that demand more than just a computer scan.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Service Card 1 -->
+<div class="md:col-span-8 group relative overflow-hidden brutalist-border aspect-[16/9]">
+<img alt="Mechanical hand tool on engine block" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLtU0N2MKMVEfs4qDpaik1dUbor3h26Np3avb3573n6XJOewtWe1qHNig3SeP99eW04E5VgqBK1TxtligCKSapeZELA7SMZj5zzEkORlpUVlavnYh1PolewzqAUB-w-B_EBgptnvuwdMhHimNIc43-TtLJoN4bcNmMe6VONL2WO_XBiBgAcuuAbZCv86UDtFyPbr4CPLwTcB3AbWQIqiDPMV4LdI4fQxPRSWy-NmzAym6H3CmIEJRx0tfNne"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-90"></div>
+<div class="absolute bottom-0 left-0 p-10 w-full">
+<span class="font-label-caps text-label-caps text-secondary mb-2 block">HEAVY-DUTY OVERHAUL</span>
+<h4 class="font-headline-lg text-headline-lg mb-4">TRANSMISSION SURGERY</h4>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Precision teardown and rebuild of complex automatic and manual gearboxes with race-grade tolerances.</p>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="md:col-span-4 brutalist-border bg-surface-container p-10 flex flex-col justify-between border-t-4 border-secondary">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">biotech</span>
+<h4 class="font-headline-lg text-headline-lg mb-4">EXPERT DIAGNOSTICS</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">We find the gremlins others miss. Deep-system analysis for European, Domestic, and Exotic performance platforms.</p>
+</div>
+<ul class="mt-12 space-y-4">
+<li class="flex items-center gap-3 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="font-label-caps text-label-caps">ECU MAPPING</span>
+</li>
+<li class="flex items-center gap-3 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="font-label-caps text-label-caps">DRIVABILITY ANALYSIS</span>
+</li>
+<li class="flex items-center gap-3 border-b border-outline-variant pb-2">
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+<span class="font-label-caps text-label-caps">SENSOR CALIBRATION</span>
+</li>
+</ul>
+</div>
+<!-- Service Card 3 -->
+<div class="md:col-span-4 brutalist-border bg-surface-container-low p-10 flex flex-col justify-between">
+<div>
+<span class="material-symbols-outlined text-secondary text-4xl mb-6">history</span>
+<h4 class="font-headline-lg text-headline-lg mb-4">VINTAGE RESTORATION</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Breathing life back into legends. Period-correct restorations with modern reliability upgrades where they matter most.</p>
+</div>
+<div class="mt-8">
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-secondary hover:underline transition-all" href="#">
+                        EXPLORE RECENT PROJECTS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Service Card 4 -->
+<div class="md:col-span-8 bg-surface-container-highest p-10 brutalist-border flex flex-col md:flex-row gap-8 items-center">
+<div class="flex-1">
+<h4 class="font-headline-lg text-headline-lg mb-4">PREVENTATIVE PERFORMANCE</h4>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Don't wait for the failure. Our comprehensive maintenance programs are designed for owners who demand peak efficiency and longevity from their investment.</p>
+<button class="px-8 py-3 bg-secondary text-background font-label-caps text-label-caps hover-invert transition-all">SCHEDULE SERVICE</button>
+</div>
+<div class="grid grid-cols-2 gap-4 w-full md:w-auto">
+<div class="p-4 brutalist-border text-center">
+<span class="material-symbols-outlined text-secondary block mb-2">oil_barrel</span>
+<span class="font-label-caps text-label-caps text-[10px]">LUBRICATION</span>
+</div>
+<div class="p-4 brutalist-border text-center">
+<span class="material-symbols-outlined text-secondary block mb-2">settings_input_component</span>
+<span class="font-label-caps text-label-caps text-[10px]">FILTRATION</span>
+<div class="p-4 brutalist-border text-center">
+<span class="material-symbols-outlined text-secondary block mb-2">speed</span>
+<span class="font-label-caps text-label-caps text-[10px]">TUNING</span>
+</div>
+<div class="p-4 brutalist-border text-center">
+<span class="material-symbols-outlined text-secondary block mb-2">tire_repair</span>
+<span class="font-label-caps text-label-caps text-[10px]">ALIGNMENT</span>
+</div>
+</div>
+</div>
+</div>
+</div></section>
+<!-- About Section -->
+<section class="bg-surface-container-lowest py-section-gap border-y-2 border-outline-variant scroll-mt-header" id="about">
+<div class="px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-32 items-center">
+<div class="relative order-2 md:order-1">
+<div class="absolute -top-12 -left-12 w-64 h-64 border-2 border-secondary/20 -z-10"></div>
+<div class="brutalist-border-thick p-2">
+<img alt="Architectural steel structure detailing" class="w-full h-auto grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLtqy0Kb8d1QoNM8fmzzrYkz8-wOSIoPeZb2bxAQiHGe7BBK-TlYLvbcTi6cfMGsjC2EcWDyNHsxmaz-X2RZouOyH_dMEe_-hooDkycznwnCJ2pWOuYQW6yW8C2COlQQrjwqrtilI2Vgq-JA-2-6220hJbJT7JqXAu5YwSgxp-vyqUjzIZlP0H6N8JJEMjU93CB0D6fQ27oekAY7XsYUjM7tPjliAQLHDy_xecvL3ku7fD5E-gsQpQ-A9zAs"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-secondary text-background p-8 brutalist-border border-background hidden lg:block">
+<p class="font-headline-lg text-[48px] leading-none mb-0">98%</p>
+<p class="font-label-caps text-label-caps">CLIENT RETENTION</p>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<h2 class="font-label-caps text-label-caps text-secondary mb-6">BEYOND THE WRENCH</h2>
+<h3 class="font-display-sm text-display-sm uppercase mb-8 leading-tight">WE DON'T JUST FIX CARS.<br/>WE ENGINEER RELIABILITY.</h3>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface">
+                        At King's Mechanic Shop, we view every vehicle as a masterwork of engineering. Our shop was founded on the belief that automotive service should be as precise as the machines it maintains.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our master technicians are more than mechanics; they are technical diagnosticians who understand the physics of the drive. Based in Killeen, Texas, we have built a reputation for tackling the technical challenges that dealerships refuse to touch. From meticulous carbon cleaning to complete engine restorations, our grit is matched only by our surgical attention to detail.
+                    </p>
+<div class="pt-8 flex gap-12 border-t border-outline-variant">
+<div>
+<span class="block font-headline-lg text-headline-lg">ISAAC KING</span>
+<span class="block font-label-caps text-label-caps text-secondary">MASTER TECHNICIAN / FOUNDER</span>
+</div>
+<div class="flex items-center">
+<img alt="ASE Certification Logo" class="h-12 w-auto opacity-50 grayscale hover:grayscale-0 hover:opacity-100 transition-all" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRUuml98_BXm39gqenX0qJroZtnO6g7jimLusDpnxzVFHizp51ruy7NiJnVKsEALysnaysjEqGZh-dkkYBzple2IdS5Mxvm2FySvMVoBZHcHXHeBLv7-cdlcoToyChAAtmuK65p4F1075v00iWbiPW05XSwHmjl5Tz-y5f4r5kdaeaK7oatt3nkxuspDahQtfgxpshuU141_AnX-OaYCltdsMcMFlJr1L0D15WpKS9ebWOsrc3ckphWqQ-vu2vT4P-5vjm7UsO5UgI" style="filter: invert(1);"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit / Contact Section -->
+<section class="py-section-gap px-margin-desktop scroll-mt-header" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Map and Location -->
+<div class="lg:col-span-7 flex flex-col gap-gutter">
+<div class="brutalist-border overflow-hidden">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[450px] bg-surface-container" data-location="Killeen, Texas" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-outline-variant">MAP INTERFACE LOADING...</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="brutalist-border p-8 bg-surface-container-low">
+<h4 class="font-label-caps text-label-caps text-secondary mb-4">THE WORKSHOP</h4>
+<p class="font-body-lg text-body-lg mb-2">3281 Chaparral Road</p>
+<p class="font-body-lg text-body-lg mb-6">Killeen, TX 76542</p>
+<a class="font-label-caps text-label-caps flex items-center gap-2 hover:text-secondary transition-colors" href="https://maps.google.com" target="_blank">
+                            GET DIRECTIONS <span class="material-symbols-outlined text-sm">directions</span>
+</a>
+</div>
+<div class="brutalist-border p-8 bg-surface-container-low">
+<h4 class="font-label-caps text-label-caps text-secondary mb-4">OPERATIONS</h4>
+<div class="flex justify-between mb-2">
+<span class="font-body-md text-body-md">MON – FRI</span>
+<span class="font-body-md text-body-md text-on-surface">08:00 – 18:00</span>
+</div>
+<div class="flex justify-between mb-2">
+<span class="font-body-md text-body-md">SATURDAY</span>
+<span class="font-body-md text-body-md text-on-surface">09:00 – 14:00</span>
+</div>
+<div class="flex justify-between">
+<span class="font-body-md text-body-md">SUNDAY</span>
+<span class="font-body-md text-body-md text-error">CLOSED</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-5 brutalist-border p-12 bg-surface border-t-8 border-secondary scroll-mt-header" id="contact">
+<h3 class="font-headline-lg text-headline-lg mb-2">REQUEST SERVICE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-10">Briefly describe your vehicle's condition. A specialist will contact you within 2 business hours.</p>
+<form class="space-y-8" onsubmit="return false;">
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-secondary mb-2">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all font-body-md text-on-surface uppercase py-2" placeholder="WADE WILSON" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-secondary mb-2">CONTACT NUMBER</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all font-body-md text-on-surface py-2" placeholder="(254) 555-0100" type="tel"/>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-secondary mb-2">VIN / MODEL</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all font-body-md text-on-surface uppercase py-2" placeholder="2022 F-150" type="text"/>
+</div>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-secondary mb-2">SERVICE TYPE</label>
+<select class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all font-body-md text-on-surface py-2 appearance-none">
+<option class="bg-background">DIAGNOSTICS &amp; TESTING</option>
+<option class="bg-background">TRANSMISSION SERVICE</option>
+<option class="bg-background">ENGINE OVERHAUL</option>
+<option class="bg-background">ROUTINE MAINTENANCE</option>
+</select>
+</div>
+<div class="relative">
+<label class="block font-label-caps text-label-caps text-secondary mb-2">SYMPTOMS / NOTES</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all font-body-md text-on-surface py-2 resize-none" placeholder="DESCRIBE THE ISSUE..." rows="3"></textarea>
+</div>
+<button class="w-full py-5 bg-secondary text-background font-label-caps text-label-caps brutalist-border border-secondary hover:bg-background hover:text-secondary transition-all active:scale-[0.98]">
+                        INITIALIZE SERVICE REQUEST
+                    </button>
+<p class="text-[10px] font-label-caps text-outline text-center">BY CLICKING, YOU AGREE TO OUR TECHNICAL SERVICE TERMS.</p>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-desktop py-section-gap grid grid-cols-1 md:grid-cols-4 gap-gutter bg-surface-container-lowest border-t-2 border-outline">
+<div class="flex flex-col gap-6">
+<span class="font-headline-lg text-headline-lg text-on-surface font-bold tracking-tighter">KING'S MECHANIC</span>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                Mastering the mechanical arts since 2009. We believe in high-contrast integrity and surgical execution.
+            </p>
+<div class="flex gap-4">
+<a class="material-symbols-outlined p-2 brutalist-border text-on-surface-variant hover:text-secondary hover:border-secondary transition-all" href="#">share</a>
+<a class="material-symbols-outlined p-2 brutalist-border text-on-surface-variant hover:text-secondary hover:border-secondary transition-all" href="#">mail</a>
+<a class="material-symbols-outlined p-2 brutalist-border text-on-surface-variant hover:text-secondary hover:border-secondary transition-all" href="#">location_on</a>
+</div>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-caps text-label-caps text-secondary">NAVIGATION</h5>
+<ul class="space-y-3">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#services">SERVICES</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#about">ABOUT</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#visit">VISIT</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#contact">CONTACT</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-caps text-label-caps text-secondary">LEGAL</h5>
+<ul class="space-y-3">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#">PRIVACY POLICY</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#">TERMS OF SERVICE</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#">CAREERS</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:underline transition-all" href="#">LOCATIONS</a></li>
+</ul>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-caps text-label-caps text-secondary">SUPPORT THE GRIT</h5>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                Join our technical bulletin for performance insights and restoration updates.
+            </p>
+<div class="flex brutalist-border overflow-hidden">
+<input class="flex-1 bg-transparent border-0 font-label-caps text-[10px] text-on-surface px-4 focus:ring-0" placeholder="EMAIL ADDRESS" type="email"/>
+<button class="bg-secondary text-background px-4 py-3 font-label-caps text-[10px] hover:invert transition-all">JOIN</button>
+</div>
+</div>
+<div class="col-span-1 md:col-span-4 pt-16 mt-16 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant">© 2024 KING'S MECHANIC SHOP. PRECISION &amp; GRIT.</span>
+<span class="font-label-caps text-label-caps text-secondary">BUILT IN KILLEEN, TX</span>
+</div>
+</footer>
+<script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Applying initial state to sections for scroll animations
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
