@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Santa Fe Bakery | Casa de las conchas</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#ffdbc9",
+                      "outline-variant": "#dec0b5",
+                      "surface": "#fbf9f1",
+                      "on-tertiary": "#ffffff",
+                      "secondary-container": "#ffc250",
+                      "on-primary-fixed-variant": "#7d2d00",
+                      "on-primary-fixed": "#360f00",
+                      "on-secondary": "#ffffff",
+                      "on-primary-container": "#fffeff",
+                      "surface-bright": "#fbf9f1",
+                      "surface-container-low": "#f5f4ec",
+                      "on-tertiary-fixed-variant": "#653d25",
+                      "surface-container": "#f0eee6",
+                      "inverse-on-surface": "#f3f1e9",
+                      "on-surface": "#1b1c17",
+                      "inverse-primary": "#ffb596",
+                      "tertiary-fixed-dim": "#f4ba9b",
+                      "on-tertiary-container": "#fffeff",
+                      "secondary": "#7d5700",
+                      "on-secondary-fixed-variant": "#5f4100",
+                      "primary-fixed-dim": "#ffb596",
+                      "on-secondary-container": "#725000",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary-fixed": "#271900",
+                      "primary-container": "#c05621",
+                      "secondary-fixed": "#ffdeaa",
+                      "tertiary-container": "#9a6b50",
+                      "surface-container-high": "#eae8e0",
+                      "inverse-surface": "#30312c",
+                      "on-error-container": "#93000a",
+                      "on-primary": "#ffffff",
+                      "on-surface-variant": "#57423a",
+                      "surface-variant": "#e4e3db",
+                      "surface-tint": "#a14009",
+                      "error": "#ba1a1a",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dcdad2",
+                      "surface-container-highest": "#e4e3db",
+                      "on-tertiary-fixed": "#311302",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#ffdbcd",
+                      "secondary-fixed-dim": "#f8bc4b",
+                      "outline": "#8a7268",
+                      "tertiary": "#7e5339",
+                      "primary": "#9f3e07",
+                      "background": "#fbf9f1",
+                      "on-background": "#1b1c17"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "stack-lg": "48px",
+                      "margin-desktop": "64px",
+                      "stack-sm": "12px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "stack-md": "24px",
+                      "margin-mobile": "20px"
+              },
+              "fontFamily": {
+                      "headline-lg-mobile": ["Literata"],
+                      "label-lg": ["Plus Jakarta Sans"],
+                      "headline-md": ["Literata"],
+                      "body-md": ["Plus Jakarta Sans"],
+                      "headline-lg": ["Literata"],
+                      "body-lg": ["Plus Jakarta Sans"],
+                      "display": ["Literata"],
+                      "label-md": ["Plus Jakarta Sans"]
+              },
+              "fontSize": {
+                      "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                      "label-lg": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                      "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "label-md": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .concha-bullet::before {
+            content: '';
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            background-color: #c05621;
+            border-radius: 50%;
+            margin-right: 12px;
+            box-shadow: 2px 2px 0px #ffdbc9;
+        }
+        .custom-shadow {
+            box-shadow: 0 4px 20px rgba(192, 86, 33, 0.08);
+        }
+        .transition-soft {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- Header Section -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md shadow-[0_4px_20px_rgba(192,86,33,0.08)]">
+<nav class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="font-headline-md text-headline-md font-semibold text-primary">
+                Santa Fe Bakery
+            </div>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-lg text-label-lg text-on-surface-variant hover:text-primary transition-colors" href="#visit">Visit</a>
+<a class="bg-primary-container text-on-primary-container px-6 py-2 rounded-full font-label-lg text-label-lg hover:scale-105 active:scale-95 transition-transform" href="tel:5154479217">
+                    (515) 447-9217
+                </a>
+</div>
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-20 overflow-hidden">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="relative z-10 space-y-stack-md">
+<h1 class="font-display text-display text-primary leading-tight">
+                    .𝐂𝐚𝐬𝐚 𝐝𝐞 𝐥𝐚𝐬 𝐜𝐨𝐧𝐜𝐡𝐚𝐬 . <br/>𝐏𝐚𝐧𝐚𝐝𝐞𝐫𝐢́𝐚 𝐲 𝐑𝐞𝐩𝐨𝐬𝐭𝐞𝐫𝐢́𝐚
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    ✨ ¡Pasa por tu pan dulce! ✨ Tenemos deliciosas donas 🍩, empanadas de todos los sabores! 🥟 ¡Y mucha más variedad para que disfrutes! 🤩 Te esperamos 🤎
+                </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-lg text-label-lg hover:shadow-lg transition-soft flex items-center gap-2" href="tel:5154479217">
+<span class="material-symbols-outlined">call</span>
+                        Llamar ahora
+                    </a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-full font-label-lg text-label-lg hover:bg-primary-fixed transition-soft" href="#visit">
+                        Visítanos
+                    </a>
+</div>
+<!-- Credibility -->
+<div class="flex items-center gap-8 pt-8">
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline-md text-headline-md">4.4</span>
+</div>
+<span class="font-label-md text-label-md text-outline">Reviews Google</span>
+</div>
+<div class="h-10 w-[1px] bg-outline-variant"></div>
+<div class="flex flex-col">
+<div class="flex items-center gap-1 text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-headline-md text-headline-md">2,300+</span>
+</div>
+<span class="font-label-md text-label-md text-outline">Facebook Likes</span>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="absolute -top-10 -right-10 w-64 h-64 bg-tertiary-fixed rounded-full blur-3xl opacity-30"></div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<img class="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover hover:scale-[1.02] transition-transform duration-500" data-alt="A close-up shot of golden, artisan Mexican conchas with intricate white sugar crust patterns, resting on a rustic wooden table in a warm, sunlit bakery setting. The lighting is soft and golden, highlighting the texture of the bread and the dusting of sugar. The background is slightly blurred, showing the cozy interior of Santa Fe Bakery with warm terra cotta and cream tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtYk_JrQtVSTWXILDvrizBYSYgtQiO99K8obcBMMFt1GyViGbvUNoz_V0sJZRne0AiJYUGiyPrt6MrEejWRu0BdIgauGYcynacZvZ4ZueRP9qaHKbp3suxjxN-NzZGfEHWD2EZgvm2IA332trACZuKwTShTmricnFbTTnZNxy2LFU6bbBaNDK775GW3tpbywBEkSxHU3n8W7s37rbrLh-BqvEuzkzqKRu-V0UHbzWi4Z0pGTePUmUcJwEcsweP7EYf5z2SWfsrE3kw"/>
+<img class="rounded-2xl shadow-xl w-full aspect-square object-cover hover:scale-[1.02] transition-transform duration-500" data-alt="A variety of freshly baked Mexican pastries, including colorful pan dulce and fruit-filled empanadas, arranged on a cooling rack inside a traditional panadería. The image captures the vibrant colors and handmade textures of the baked goods. The atmosphere is warm and inviting, using a palette of deep oranges, ambers, and soft creams to evoke a sense of handcrafted heritage." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKZIIbXrWvlXURi__A7nvAivZxBinA1Omuo1GVklWUe_0FyPTd3-andJFr3YCA8oMzhSIKoxAv0bCN0ZUsHirvjnu3nt02DwDvtrXTKWT1jdTYD1_nCK_SeC5Vb2L3z3hFL_wXYVWmdQvEqAAg_uDiT7qpDd7omOtZL-B-4Paqh1oGKYe1uuRj0hZzlDWK3-PefyvfGwn_5p2XgM86ZfYRfXIOx7ArUrod4YohdSdQNS595_RjEPNLuRXC7kfUbp_M0y6qROk9i6vj"/>
+</div>
+<div class="space-y-4">
+<img class="rounded-2xl shadow-xl w-full aspect-square object-cover hover:scale-[1.02] transition-transform duration-500" data-alt="A decadent display of glazed donuts and artisan chocolate pastries at Santa Fe Bakery. The lighting is bright yet warm, emphasizing the glossy glazes and rich textures. The composition is slightly asymmetric, creating a modern and appetizing visual rhythm. The soft ambient shadows tinted with terra cotta give the image a tactile, premium feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDUrzoGoAtgg1d-26DqfHG5R_OarcLVb5iST4-8tpWL9BTumzwHVj2_Nci2nVUf-gTlz2L6LmXYKHmhpF-WU8AZF28U4LYDa7YAn0F9QXZHBwgGL-TkvVUsJQYQBAPC3J7S5W5xzJX5gwe_BJAHaYZCfaG5MMeroQwuIUFMRuEshj7yg4iNzl_XdP7kpOJq1sOvM13fAB-kBFdMIG9BNxPPhWNqK3qBfa2eQ41tQcqx2lfQR5KFz1wVp30b622y76QdxDwBMgFNFVb"/>
+<img class="rounded-2xl shadow-xl w-full aspect-[3/4] object-cover hover:scale-[1.02] transition-transform duration-500" data-alt="Freshly baked empanadas with golden-brown crusts and sugar dusting, shown in a rustic basket lined with checkered parchment paper. The scene suggests a local neighborhood bakery in Des Moines, with a focus on handcrafted quality and sensory comfort. The warm color palette and soft-focus background reinforce the artisanal brand identity of Santa Fe Bakery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUkeLFEeyalEWd2VJigUW32GlV8QjGIOFm_3qqsk3NOPKFJxXNV2CL85NXR_FpBQzWJnnXLOttRCMfcHpLoSSQfizdZJ56_1DvKzUmLMBYc5mEawTuf5JoDhR-5yZh_kbZTZdk2vxNHZVq5xrfsH0SIzkyEYVUPqq5fX_nMCP-bAaQNyXpb2mve9XhC7Xa8zx58mufaUbwbvA3rEItYxZ7OXZxA938skULtJkACrvx7Yhvl7CzEtCVDULS32PXlJeIkj5V99zajs0z"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Offerings Section -->
+<section class="py-20 bg-surface-container-low" id="services">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="mb-12 text-center md:text-left">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Nuestras Especialidades</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-2">Delicias Hechas a Mano</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Donas -->
+<div class="group bg-surface rounded-2xl p-6 custom-shadow transition-soft hover:-translate-y-2">
+<div class="w-12 h-12 bg-tertiary-fixed rounded-xl flex items-center justify-center text-tertiary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">bakery_dining</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Donas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Suaves, esponjosas y decoradas diariamente con los mejores ingredientes.</p>
+</div>
+<!-- Empanadas -->
+<div class="group bg-surface rounded-2xl p-6 custom-shadow transition-soft hover:-translate-y-2">
+<div class="w-12 h-12 bg-secondary-fixed rounded-xl flex items-center justify-center text-secondary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">restaurant</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Empanadas</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">De todos los sabores, dulces y saladas, con nuestra receta tradicional.</p>
+</div>
+<!-- Pan Dulce -->
+<div class="group bg-surface rounded-2xl p-6 custom-shadow transition-soft hover:-translate-y-2">
+<div class="w-12 h-12 bg-primary-fixed rounded-xl flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">cookie</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Pan Dulce</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">La clásica concha y una gran variedad de pan tradicional mexicano.</p>
+</div>
+<!-- Repostería -->
+<div class="group bg-surface rounded-2xl p-6 custom-shadow transition-soft hover:-translate-y-2">
+<div class="w-12 h-12 bg-tertiary-fixed-dim rounded-xl flex items-center justify-center text-tertiary-container mb-6 group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined">cake</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Repostería</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Pasteles y postres finos para celebrar tus momentos más especiales.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-1/2 relative">
+<div class="absolute -bottom-10 -left-10 w-full h-full border-2 border-primary-fixed rounded-2xl -z-10"></div>
+<img class="rounded-2xl shadow-2xl w-full object-cover" data-alt="A warm, atmospheric interior shot of Santa Fe Bakery, focusing on a display of freshly baked breads and cakes. The lighting is low-key and inviting, creating long soft shadows on the wooden surfaces. The design reflects a 'Handcrafted Heritage' aesthetic with a palette of warm terra cotta and cream. The scene evokes a sense of local trust and artisanal passion in the heart of Des Moines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4cOy6Ykey2NcfP4AUxYgusn3FeUhgq-9w_C-H4CefE7gPP225DPz-Fl_ryfdeMPGTihzse7m5opxvpkX3KEC1naDnAmRPq8AOJvqylHq7wMdfngdOpa23USNd628NMXe9sNU1KNS1YW3yEIk_FNF00E-f30uaC4kWix_Li44W2GKlJtalahjShKZvryJL-wDrNpFrG-gzhHPdEwuX7l5ZdmchvFikM1TeLKSV5Du1MaBUF-YM2OpY4QX2A0oShxtrzJ8cnyX8zLte"/>
+</div>
+<div class="w-full md:w-1/2 space-y-stack-md">
+<span class="font-label-lg text-label-lg text-secondary uppercase tracking-widest">Nuestra Historia</span>
+<h2 class="font-display text-headline-lg text-primary">La Casa de las Conchas</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        En Santa Fe Bakery, cada pieza de pan cuenta una historia de tradición y pasión. Conocidos como la verdadera <strong>Casa de las conchas</strong> en Des Moines, nos dedicamos a preservar el arte de la panadería artesanal.
+                    </p>
+<ul class="space-y-4">
+<li class="concha-bullet font-body-md text-body-md">Ingredientes de la más alta calidad y frescura diaria.</li>
+<li class="concha-bullet font-body-md text-body-md">Recetas familiares transmitidas por generaciones.</li>
+<li class="concha-bullet font-body-md text-body-md">Un pedacito de tradición en cada mordida.</li>
+</ul>
+<div class="pt-6">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-4 rounded-full font-label-lg text-label-lg hover:shadow-lg transition-soft">
+                            Conoce más
+                        </button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-20 bg-surface-container" id="visit">
+<div class="max-w-7xl mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-stretch">
+<div class="bg-surface rounded-3xl p-margin-mobile md:p-12 custom-shadow flex flex-col justify-between">
+<div class="space-y-6">
+<h2 class="font-display text-headline-lg text-primary">Visítanos Hoy</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Dirección</p>
+<p class="font-body-md text-body-md text-on-surface-variant">1320 East Euclid Avenue,<br/>Des Moines, IA 50313</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">schedule</span>
+<div>
+<p class="font-label-lg text-label-lg text-on-surface">Horarios</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Lunes - Sábado: 7:00 AM - 8:00 PM<br/>Domingo: 7:00 AM - 7:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-8">
+<a class="w-full inline-block text-center bg-primary text-on-primary px-8 py-4 rounded-xl font-label-lg text-label-lg hover:bg-primary-container transition-soft" href="https://www.google.com/maps/dir/?api=1&amp;destination=1320+East+Euclid+Avenue+Des+Moines" target="_blank">
+                            Obtener Direcciones
+                        </a>
+</div>
+</div>
+<div class="rounded-3xl overflow-hidden custom-shadow min-h-[400px] relative">
+<div aria-label="Map of Santa Fe Bakery location" class="map-slot w-full h-full absolute inset-0" data-location="Des Moines, Iowa" data-map-slot="" style=""></div>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-24">
+<div class="max-w-3xl mx-auto px-margin-mobile md:px-margin-desktop text-center">
+<h2 class="font-display text-headline-lg text-primary mb-4">¿Tienes un pedido especial?</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">Déjanos tus datos y nos pondremos en contacto contigo para ayudarte con tu orden.</p>
+<form class="space-y-6 text-left bg-surface-container-low p-8 md:p-12 rounded-3xl custom-shadow" id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1" for="name">Nombre Completo</label>
+<input class="w-full bg-surface border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-colors py-3 px-4 rounded-t-lg" id="name" required="" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1" for="email">Correo Electrónico</label>
+<input class="w-full bg-surface border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-colors py-3 px-4 rounded-t-lg" id="email" required="" type="email"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-md text-label-md text-on-surface-variant ml-1" for="message">Tu Mensaje</label>
+<textarea class="w-full bg-surface border-0 border-b-2 border-outline-variant focus:border-primary focus:ring-0 transition-colors py-3 px-4 rounded-t-lg" id="message" required="" rows="4"></textarea>
+</div>
+<div class="pt-4">
+<button class="w-full bg-primary-container text-on-primary-container py-4 rounded-full font-label-lg text-label-lg hover:shadow-lg transition-soft active:scale-95" type="submit">
+                        Enviar Mensaje
+                    </button>
+</div>
+<div class="hidden text-center text-secondary font-label-lg mt-4 animate-bounce" id="form-success">
+                    ¡Gracias! Mensaje enviado con éxito. ✨
+                </div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-low w-full py-stack-lg px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="space-y-6">
+<div class="font-headline-lg text-headline-lg text-primary">Santa Fe Bakery</div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                © 2024 Santa Fe Bakery. 1320 East Euclid Avenue, Des Moines. (515) 447-9217. santafebakery@outlook.com
+            </p>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-label-lg text-tertiary">Enlaces Rápidos</h4>
+<ul class="space-y-2">
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#services">Services</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#about">About</a></li>
+<li><a class="font-label-md text-label-md text-on-surface-variant hover:text-secondary transition-all" href="#visit">Visit</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-label-lg text-label-lg text-tertiary">Social Media</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant hover:bg-secondary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+<p class="font-label-md text-label-md text-on-tertiary-fixed-variant mt-4">
+                Casa de las conchas. Tradición en cada bocado.
+            </p>
+</div>
+</footer>
+<!-- Mobile Nav Overlay -->
+<div class="fixed inset-0 z-[60] bg-surface translate-x-full transition-transform duration-300 md:hidden" id="mobile-menu">
+<div class="flex justify-end p-margin-mobile">
+<button class="text-primary" id="close-menu-btn">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<div class="flex flex-col items-center justify-center h-full gap-8">
+<a class="font-headline-md text-headline-md text-primary mobile-nav-link" href="#services">Services</a>
+<a class="font-headline-md text-headline-md text-primary mobile-nav-link" href="#about">About</a>
+<a class="font-headline-md text-headline-md text-primary mobile-nav-link" href="#visit">Visit</a>
+<a class="bg-primary-container text-on-primary-container px-8 py-4 rounded-full font-label-lg text-label-lg" href="tel:5154479217">
+                (515) 447-9217
+            </a>
+</div>
+</div>
+<script>
+        // Mobile Menu Logic
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+        const links = document.querySelectorAll('.mobile-nav-link');
+
+        const toggleMenu = (show) => {
+            menu.style.transform = show ? 'translateX(0)' : 'translateX(100%)';
+            document.body.style.overflow = show ? 'hidden' : '';
+        };
+
+        menuBtn.addEventListener('click', () => toggleMenu(true));
+        closeBtn.addEventListener('click', () => toggleMenu(false));
+        links.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+
+        // Form Submission Logic
+        const form = document.getElementById('contact-form');
+        const successMsg = document.getElementById('form-success');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simple UI feedback
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Enviando...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                form.reset();
+                btn.innerText = originalText;
+                btn.disabled = false;
+                successMsg.classList.remove('hidden');
+                setTimeout(() => successMsg.classList.add('hidden'), 5000);
+            }, 1500);
+        });
+
+        // Sticky Header Active State
+        window.addEventListener('scroll', () => {
+            const sections = ['services', 'about', 'visit'];
+            let current = '';
+
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 100 && rect.bottom >= 100) {
+                    current = section;
+                }
+            });
+
+            const navLinks = document.querySelectorAll('nav a');
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+        });
+    </script>
+</body></html>

@@ -1,0 +1,450 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Santa Fe Panadería",
+        "styleGuidelines": "## Brand & Style\nThe design system is built on the concept of \"Handcrafted Heritage.\" It avoids the sterile, clinical feel of modern corporate bakeries in favor of a warm, artisanal, and neighborhood-centric aesthetic. The UI should evoke the sensory experience of a Mexican *panadería*—the smell of cinnamon, the warmth of an oven, and the tactile texture of sugar-dusted conchas.\n\nThe style is a blend of **Warm Minimalism** and **Tactile Design**. It uses heavy whitespace to let high-resolution photography of pastries breathe, while employing asymmetric layouts to suggest the organic, non-uniform nature of handmade baked goods. The emotional response should be one of comfort, appetite, and local trust.\n\n## Layout & Spacing\nThe layout follows an **asymmetric fluid grid** to avoid a \"templated\" look.\n\n*   **Asymmetry:** Images of pastries should frequently \"break\" the grid or be offset from text blocks to create a sense of movement and hand-placement.\n*   **Rhythm:** Use a baseline of 8px. Large sections should be separated by `stack-lg` (48px) to maintain a premium, uncluttered feel.\n*   **Grid:** On desktop, use a 12-column grid. Components like product cards should vary in width (e.g., some spanning 4 columns, some 6) to create visual interest in the \"panadería\" gallery.\n*   **Responsive:** On mobile, transition to a single-column stack with generous side margins (`margin-mobile`) to ensure the photography remains the focus.\n\n## Elevation & Depth\nThis design system utilizes **Ambient Shadows** and **Tonal Layering** to create a soft, tactile feel.\n\n*   **Shadows:** Avoid harsh, black shadows. Use soft, diffused shadows tinted with the primary terra cotta color (e.g., `rgba(192, 86, 33, 0.08)`) to make elements like cards feel like they are resting on a wooden countertop.\n*   **Depth Levels:** \n    *   *Level 0 (Base):* The Cream neutral background.\n    *   *Level 1 (Cards):* Elevated with a very soft, wide blur shadow.\n    *   *Level 2 (Interactive):* Hover states on buttons or cards increase shadow spread and slightly scale the element (1.02x) to mimic \"picking up\" a pastry.\n*   **Overlays:** Use semi-transparent cream overlays for text on images to maintain legibility while preserving the warmth of the photography.\n\n## Components\n*   **Buttons:** Primary buttons are Solid Terra Cotta with White or Cream text. Secondary buttons are outlined in Cinnamon. Use generous internal padding to create a \"puffy\" appearance.\n*   **Product Cards:** Cards have no visible borders; depth is defined by soft ambient shadows. The product name (Literata) should be prominent, with the price in a subtle Plus Jakarta Sans label.\n*   **Chips/Tags:** Use these for flavor profiles (e.g., \"Dulce de Leche,\" \"Spicy,\" \"Vegan\"). These should have a light amber background and dark chocolate text.\n*   **Input Fields:** Use a subtle cream-tinted fill with a bottom-only border or a very light 1px stroke in terra cotta on focus.\n*   **Lists:** Use custom concha-patterned bullets for unordered lists to reinforce the \"Casa de las conchas\" identity.\n*   **Image Gallery:** Implement an \"asymmetric masonry\" layout for pastry photos, allowing for different aspect ratios to reflect the variety of the bakery's daily offerings.",
+        "theme": {
+          "bodyFont": "PLUS_JAKARTA_SANS",
+          "bodyFontFamily": "Plus Jakarta Sans",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#c05621",
+          "designMd": "---\nname: Santa Fe Panadería\ncolors:\n  surface: '#fbf9f1'\n  surface-dim: '#dcdad2'\n  surface-bright: '#fbf9f1'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f4ec'\n  surface-container: '#f0eee6'\n  surface-container-high: '#eae8e0'\n  surface-container-highest: '#e4e3db'\n  on-surface: '#1b1c17'\n  on-surface-variant: '#57423a'\n  inverse-surface: '#30312c'\n  inverse-on-surface: '#f3f1e9'\n  outline: '#8a7268'\n  outline-variant: '#dec0b5'\n  surface-tint: '#a14009'\n  primary: '#9f3e07'\n  on-primary: '#ffffff'\n  primary-container: '#c05621'\n  on-primary-container: '#fffeff'\n  inverse-primary: '#ffb596'\n  secondary: '#7d5700'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffc250'\n  on-secondary-container: '#725000'\n  tertiary: '#7e5339'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#9a6b50'\n  on-tertiary-container: '#fffeff'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb596'\n  on-primary-fixed: '#360f00'\n  on-primary-fixed-variant: '#7d2d00'\n  secondary-fixed: '#ffdeaa'\n  secondary-fixed-dim: '#f8bc4b'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5f4100'\n  tertiary-fixed: '#ffdbc9'\n  tertiary-fixed-dim: '#f4ba9b'\n  on-tertiary-fixed: '#311302'\n  on-tertiary-fixed-variant: '#653d25'\n  background: '#fbf9f1'\n  on-background: '#1b1c17'\n  surface-variant: '#e4e3db'\ntypography:\n  display:\n    fontFamily: Literata\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Literata\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Literata\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stack-sm: 12px\n  stack-md: 24px\n  stack-lg: 48px\n---\n\n## Brand & Style\nThe design system is built on the concept of \"Handcrafted Heritage.\" It avoids the sterile, clinical feel of modern corporate bakeries in favor of a warm, artisanal, and neighborhood-centric aesthetic. The UI should evoke the sensory experience of a Mexican *panadería*—the smell of cinnamon, the warmth of an oven, and the tactile texture of sugar-dusted conchas.\n\nThe style is a blend of **Warm Minimalism** and **Tactile Design**. It uses heavy whitespace to let high-resolution photography of pastries breathe, while employing asymmetric layouts to suggest the organic, non-uniform nature of handmade baked goods. The emotional response should be one of comfort, appetite, and local trust.\n\n## Colors\nThe palette is rooted in the \"Casa de las conchas\" identity, pulling directly from the oven-fired colors of traditional Mexican baking.\n\n*   **Primary (Terra Cotta):** Used for key actions and branding to reflect traditional pottery and toasted crusts.\n*   **Secondary (Amber/Cinnamon):** Used for accents, highlights, and secondary buttons, evoking warmth and sweetness.\n*   **Tertiary (Dark Chocolate):** Used for primary typography and deep contrast elements to ensure legibility and a grounded feel.\n*   **Neutral (Cream):** The base background color (not pure white), mimicking flour and light dough, providing a softer, more inviting canvas than a standard digital white.\n*   **Success/Accent:** A muted sage green may be used sparingly for \"In Stock\" or \"Freshly Baked\" indicators to contrast the warm tones.\n\n## Typography\nTypography balances the \"Artisanal\" (Literata) with the \"Professional\" (Plus Jakarta Sans).\n\n*   **Headlines:** Literata provides a bookish, traditional, and high-end feel. It should be used for all storytelling elements and product names.\n*   **Body & UI:** Plus Jakarta Sans offers a soft, rounded, and highly legible counterpoint. It keeps the interface feeling modern and accessible.\n*   **Scale:** Large display type should use tighter letter spacing to feel more like a printed editorial piece. Labels use slight tracking (letter spacing) to improve readability in navigation menus and tags.\n\n## Layout & Spacing\nThe layout follows an **asymmetric fluid grid** to avoid a \"templated\" look.\n\n*   **Asymmetry:** Images of pastries should frequently \"break\" the grid or be offset from text blocks to create a sense of movement and hand-placement.\n*   **Rhythm:** Use a baseline of 8px. Large sections should be separated by `stack-lg` (48px) to maintain a premium, uncluttered feel.\n*   **Grid:** On desktop, use a 12-column grid. Components like product cards should vary in width (e.g., some spanning 4 columns, some 6) to create visual interest in the \"panadería\" gallery.\n*   **Responsive:** On mobile, transition to a single-column stack with generous side margins (`margin-mobile`) to ensure the photography remains the focus.\n\n## Elevation & Depth\nThis design system utilizes **Ambient Shadows** and **Tonal Layering** to create a soft, tactile feel.\n\n*   **Shadows:** Avoid harsh, black shadows. Use soft, diffused shadows tinted with the primary terra cotta color (e.g., `rgba(192, 86, 33, 0.08)`) to make elements like cards feel like they are resting on a wooden countertop.\n*   **Depth Levels:** \n    *   *Level 0 (Base):* The Cream neutral background.\n    *   *Level 1 (Cards):* Elevated with a very soft, wide blur shadow.\n    *   *Level 2 (Interactive):* Hover states on buttons or cards increase shadow spread and slightly scale the element (1.02x) to mimic \"picking up\" a pastry.\n*   **Overlays:** Use semi-transparent cream overlays for text on images to maintain legibility while preserving the warmth of the photography.\n\n## Shapes\nShapes are intentionally soft to mirror the organic forms of bread and pastries.\n\n*   **Corners:** A `rounded-lg` (1rem/16px) setting is the standard for cards and image containers.\n*   **Buttons:** Should use `rounded-xl` or full pill shapes to feel friendly and \"squishy.\"\n*   **Decorative Elements:** Use circular frames or \"scalloped\" edges (reminiscent of concha patterns) for secondary decorative elements or badges.\n\n## Components\n*   **Buttons:** Primary buttons are Solid Terra Cotta with White or Cream text. Secondary buttons are outlined in Cinnamon. Use generous internal padding to create a \"puffy\" appearance.\n*   **Product Cards:** Cards have no visible borders; depth is defined by soft ambient shadows. The product name (Literata) should be prominent, with the price in a subtle Plus Jakarta Sans label.\n*   **Chips/Tags:** Use these for flavor profiles (e.g., \"Dulce de Leche,\" \"Spicy,\" \"Vegan\"). These should have a light amber background and dark chocolate text.\n*   **Input Fields:** Use a subtle cream-tinted fill with a bottom-only border or a very light 1px stroke in terra cotta on focus.\n*   **Lists:** Use custom concha-patterned bullets for unordered lists to reinforce the \"Casa de las conchas\" identity.\n*   **Image Gallery:** Implement an \"asymmetric masonry\" layout for pastry photos, allowing for different aspect ratios to reflect the variety of the bakery's daily offerings.",
+          "font": "LITERATA",
+          "headlineFont": "LITERATA",
+          "headlineFontFamily": "Literata",
+          "labelFont": "PLUS_JAKARTA_SANS",
+          "labelFontFamily": "Plus Jakarta Sans",
+          "namedColors": {
+            "background": "#fbf9f1",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f3f1e9",
+            "inverse_primary": "#ffb596",
+            "inverse_surface": "#30312c",
+            "on_background": "#1b1c17",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#fffeff",
+            "on_primary_fixed": "#360f00",
+            "on_primary_fixed_variant": "#7d2d00",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#725000",
+            "on_secondary_fixed": "#271900",
+            "on_secondary_fixed_variant": "#5f4100",
+            "on_surface": "#1b1c17",
+            "on_surface_variant": "#57423a",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#fffeff",
+            "on_tertiary_fixed": "#311302",
+            "on_tertiary_fixed_variant": "#653d25",
+            "outline": "#8a7268",
+            "outline_variant": "#dec0b5",
+            "primary": "#9f3e07",
+            "primary_container": "#c05621",
+            "primary_fixed": "#ffdbcd",
+            "primary_fixed_dim": "#ffb596",
+            "secondary": "#7d5700",
+            "secondary_container": "#ffc250",
+            "secondary_fixed": "#ffdeaa",
+            "secondary_fixed_dim": "#f8bc4b",
+            "surface": "#fbf9f1",
+            "surface_bright": "#fbf9f1",
+            "surface_container": "#f0eee6",
+            "surface_container_high": "#eae8e0",
+            "surface_container_highest": "#e4e3db",
+            "surface_container_low": "#f5f4ec",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcdad2",
+            "surface_tint": "#a14009",
+            "surface_variant": "#e4e3db",
+            "tertiary": "#7e5339",
+            "tertiary_container": "#9a6b50",
+            "tertiary_fixed": "#ffdbc9",
+            "tertiary_fixed_dim": "#f4ba9b"
+          },
+          "overrideNeutralColor": "#fffdf5",
+          "overridePrimaryColor": "#c05621",
+          "overrideSecondaryColor": "#d69e2e",
+          "overrideTertiaryColor": "#4a2711",
+          "roundness": "ROUND_EIGHT",
+          "spacing": {
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "stack-lg": "48px",
+            "stack-md": "24px",
+            "stack-sm": "12px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "display": {
+              "fontFamily": "Literata",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "56px"
+            },
+            "headline-lg": {
+              "fontFamily": "Literata",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "40px"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Literata",
+              "fontSize": "28px",
+              "fontWeight": "600",
+              "lineHeight": "36px"
+            },
+            "headline-md": {
+              "fontFamily": "Literata",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "32px"
+            },
+            "label-lg": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "letterSpacing": "0.05em",
+              "lineHeight": "20px"
+            },
+            "label-md": {
+              "fontFamily": "Plus Jakarta Sans",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "lineHeight": "16px"
+            }
+          }
+        }
+      },
+      "name": "assets/0508c4bb78974999a4d69d02c482b602",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Santa Fe Panadería",
+              "styleGuidelines": "## Brand & Style\nThe design system is built on the concept of \"Handcrafted Heritage.\" It avoids the sterile, clinical feel of modern corporate bakeries in favor of a warm, artisanal, and neighborhood-centric aesthetic. The UI should evoke the sensory experience of a Mexican *panadería*—the smell of cinnamon, the warmth of an oven, and the tactile texture of sugar-dusted conchas.\n\nThe style is a blend of **Warm Minimalism** and **Tactile Design**. It uses heavy whitespace to let high-resolution photography of pastries breathe, while employing asymmetric layouts to suggest the organic, non-uniform nature of handmade baked goods. The emotional response should be one of comfort, appetite, and local trust.\n\n## Layout & Spacing\nThe layout follows an **asymmetric fluid grid** to avoid a \"templated\" look.\n\n*   **Asymmetry:** Images of pastries should frequently \"break\" the grid or be offset from text blocks to create a sense of movement and hand-placement.\n*   **Rhythm:** Use a baseline of 8px. Large sections should be separated by `stack-lg` (48px) to maintain a premium, uncluttered feel.\n*   **Grid:** On desktop, use a 12-column grid. Components like product cards should vary in width (e.g., some spanning 4 columns, some 6) to create visual interest in the \"panadería\" gallery.\n*   **Responsive:** On mobile, transition to a single-column stack with generous side margins (`margin-mobile`) to ensure the photography remains the focus.\n\n## Elevation & Depth\nThis design system utilizes **Ambient Shadows** and **Tonal Layering** to create a soft, tactile feel.\n\n*   **Shadows:** Avoid harsh, black shadows. Use soft, diffused shadows tinted with the primary terra cotta color (e.g., `rgba(192, 86, 33, 0.08)`) to make elements like cards feel like they are resting on a wooden countertop.\n*   **Depth Levels:** \n    *   *Level 0 (Base):* The Cream neutral background.\n    *   *Level 1 (Cards):* Elevated with a very soft, wide blur shadow.\n    *   *Level 2 (Interactive):* Hover states on buttons or cards increase shadow spread and slightly scale the element (1.02x) to mimic \"picking up\" a pastry.\n*   **Overlays:** Use semi-transparent cream overlays for text on images to maintain legibility while preserving the warmth of the photography.\n\n## Components\n*   **Buttons:** Primary buttons are Solid Terra Cotta with White or Cream text. Secondary buttons are outlined in Cinnamon. Use generous internal padding to create a \"puffy\" appearance.\n*   **Product Cards:** Cards have no visible borders; depth is defined by soft ambient shadows. The product name (Literata) should be prominent, with the price in a subtle Plus Jakarta Sans label.\n*   **Chips/Tags:** Use these for flavor profiles (e.g., \"Dulce de Leche,\" \"Spicy,\" \"Vegan\"). These should have a light amber background and dark chocolate text.\n*   **Input Fields:** Use a subtle cream-tinted fill with a bottom-only border or a very light 1px stroke in terra cotta on focus.\n*   **Lists:** Use custom concha-patterned bullets for unordered lists to reinforce the \"Casa de las conchas\" identity.\n*   **Image Gallery:** Implement an \"asymmetric masonry\" layout for pastry photos, allowing for different aspect ratios to reflect the variety of the bakery's daily offerings.",
+              "theme": {
+                "bodyFont": "PLUS_JAKARTA_SANS",
+                "bodyFontFamily": "Plus Jakarta Sans",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#c05621",
+                "designMd": "---\nname: Santa Fe Panadería\ncolors:\n  surface: '#fbf9f1'\n  surface-dim: '#dcdad2'\n  surface-bright: '#fbf9f1'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f4ec'\n  surface-container: '#f0eee6'\n  surface-container-high: '#eae8e0'\n  surface-container-highest: '#e4e3db'\n  on-surface: '#1b1c17'\n  on-surface-variant: '#57423a'\n  inverse-surface: '#30312c'\n  inverse-on-surface: '#f3f1e9'\n  outline: '#8a7268'\n  outline-variant: '#dec0b5'\n  surface-tint: '#a14009'\n  primary: '#9f3e07'\n  on-primary: '#ffffff'\n  primary-container: '#c05621'\n  on-primary-container: '#fffeff'\n  inverse-primary: '#ffb596'\n  secondary: '#7d5700'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffc250'\n  on-secondary-container: '#725000'\n  tertiary: '#7e5339'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#9a6b50'\n  on-tertiary-container: '#fffeff'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb596'\n  on-primary-fixed: '#360f00'\n  on-primary-fixed-variant: '#7d2d00'\n  secondary-fixed: '#ffdeaa'\n  secondary-fixed-dim: '#f8bc4b'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5f4100'\n  tertiary-fixed: '#ffdbc9'\n  tertiary-fixed-dim: '#f4ba9b'\n  on-tertiary-fixed: '#311302'\n  on-tertiary-fixed-variant: '#653d25'\n  background: '#fbf9f1'\n  on-background: '#1b1c17'\n  surface-variant: '#e4e3db'\ntypography:\n  display:\n    fontFamily: Literata\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Literata\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Literata\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stack-sm: 12px\n  stack-md: 24px\n  stack-lg: 48px\n---\n\n## Brand & Style\nThe design system is built on the concept of \"Handcrafted Heritage.\" It avoids the sterile, clinical feel of modern corporate bakeries in favor of a warm, artisanal, and neighborhood-centric aesthetic. The UI should evoke the sensory experience of a Mexican *panadería*—the smell of cinnamon, the warmth of an oven, and the tactile texture of sugar-dusted conchas.\n\nThe style is a blend of **Warm Minimalism** and **Tactile Design**. It uses heavy whitespace to let high-resolution photography of pastries breathe, while employing asymmetric layouts to suggest the organic, non-uniform nature of handmade baked goods. The emotional response should be one of comfort, appetite, and local trust.\n\n## Colors\nThe palette is rooted in the \"Casa de las conchas\" identity, pulling directly from the oven-fired colors of traditional Mexican baking.\n\n*   **Primary (Terra Cotta):** Used for key actions and branding to reflect traditional pottery and toasted crusts.\n*   **Secondary (Amber/Cinnamon):** Used for accents, highlights, and secondary buttons, evoking warmth and sweetness.\n*   **Tertiary (Dark Chocolate):** Used for primary typography and deep contrast elements to ensure legibility and a grounded feel.\n*   **Neutral (Cream):** The base background color (not pure white), mimicking flour and light dough, providing a softer, more inviting canvas than a standard digital white.\n*   **Success/Accent:** A muted sage green may be used sparingly for \"In Stock\" or \"Freshly Baked\" indicators to contrast the warm tones.\n\n## Typography\nTypography balances the \"Artisanal\" (Literata) with the \"Professional\" (Plus Jakarta Sans).\n\n*   **Headlines:** Literata provides a bookish, traditional, and high-end feel. It should be used for all storytelling elements and product names.\n*   **Body & UI:** Plus Jakarta Sans offers a soft, rounded, and highly legible counterpoint. It keeps the interface feeling modern and accessible.\n*   **Scale:** Large display type should use tighter letter spacing to feel more like a printed editorial piece. Labels use slight tracking (letter spacing) to improve readability in navigation menus and tags.\n\n## Layout & Spacing\nThe layout follows an **asymmetric fluid grid** to avoid a \"templated\" look.\n\n*   **Asymmetry:** Images of pastries should frequently \"break\" the grid or be offset from text blocks to create a sense of movement and hand-placement.\n*   **Rhythm:** Use a baseline of 8px. Large sections should be separated by `stack-lg` (48px) to maintain a premium, uncluttered feel.\n*   **Grid:** On desktop, use a 12-column grid. Components like product cards should vary in width (e.g., some spanning 4 columns, some 6) to create visual interest in the \"panadería\" gallery.\n*   **Responsive:** On mobile, transition to a single-column stack with generous side margins (`margin-mobile`) to ensure the photography remains the focus.\n\n## Elevation & Depth\nThis design system utilizes **Ambient Shadows** and **Tonal Layering** to create a soft, tactile feel.\n\n*   **Shadows:** Avoid harsh, black shadows. Use soft, diffused shadows tinted with the primary terra cotta color (e.g., `rgba(192, 86, 33, 0.08)`) to make elements like cards feel like they are resting on a wooden countertop.\n*   **Depth Levels:** \n    *   *Level 0 (Base):* The Cream neutral background.\n    *   *Level 1 (Cards):* Elevated with a very soft, wide blur shadow.\n    *   *Level 2 (Interactive):* Hover states on buttons or cards increase shadow spread and slightly scale the element (1.02x) to mimic \"picking up\" a pastry.\n*   **Overlays:** Use semi-transparent cream overlays for text on images to maintain legibility while preserving the warmth of the photography.\n\n## Shapes\nShapes are intentionally soft to mirror the organic forms of bread and pastries.\n\n*   **Corners:** A `rounded-lg` (1rem/16px) setting is the standard for cards and image containers.\n*   **Buttons:** Should use `rounded-xl` or full pill shapes to feel friendly and \"squishy.\"\n*   **Decorative Elements:** Use circular frames or \"scalloped\" edges (reminiscent of concha patterns) for secondary decorative elements or badges.\n\n## Components\n*   **Buttons:** Primary buttons are Solid Terra Cotta with White or Cream text. Secondary buttons are outlined in Cinnamon. Use generous internal padding to create a \"puffy\" appearance.\n*   **Product Cards:** Cards have no visible borders; depth is defined by soft ambient shadows. The product name (Literata) should be prominent, with the price in a subtle Plus Jakarta Sans label.\n*   **Chips/Tags:** Use these for flavor profiles (e.g., \"Dulce de Leche,\" \"Spicy,\" \"Vegan\"). These should have a light amber background and dark chocolate text.\n*   **Input Fields:** Use a subtle cream-tinted fill with a bottom-only border or a very light 1px stroke in terra cotta on focus.\n*   **Lists:** Use custom concha-patterned bullets for unordered lists to reinforce the \"Casa de las conchas\" identity.\n*   **Image Gallery:** Implement an \"asymmetric masonry\" layout for pastry photos, allowing for different aspect ratios to reflect the variety of the bakery's daily offerings.",
+                "font": "LITERATA",
+                "headlineFont": "LITERATA",
+                "headlineFontFamily": "Literata",
+                "labelFont": "PLUS_JAKARTA_SANS",
+                "labelFontFamily": "Plus Jakarta Sans",
+                "namedColors": {
+                  "background": "#fbf9f1",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f3f1e9",
+                  "inverse_primary": "#ffb596",
+                  "inverse_surface": "#30312c",
+                  "on_background": "#1b1c17",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#fffeff",
+                  "on_primary_fixed": "#360f00",
+                  "on_primary_fixed_variant": "#7d2d00",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#725000",
+                  "on_secondary_fixed": "#271900",
+                  "on_secondary_fixed_variant": "#5f4100",
+                  "on_surface": "#1b1c17",
+                  "on_surface_variant": "#57423a",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#fffeff",
+                  "on_tertiary_fixed": "#311302",
+                  "on_tertiary_fixed_variant": "#653d25",
+                  "outline": "#8a7268",
+                  "outline_variant": "#dec0b5",
+                  "primary": "#9f3e07",
+                  "primary_container": "#c05621",
+                  "primary_fixed": "#ffdbcd",
+                  "primary_fixed_dim": "#ffb596",
+                  "secondary": "#7d5700",
+                  "secondary_container": "#ffc250",
+                  "secondary_fixed": "#ffdeaa",
+                  "secondary_fixed_dim": "#f8bc4b",
+                  "surface": "#fbf9f1",
+                  "surface_bright": "#fbf9f1",
+                  "surface_container": "#f0eee6",
+                  "surface_container_high": "#eae8e0",
+                  "surface_container_highest": "#e4e3db",
+                  "surface_container_low": "#f5f4ec",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dcdad2",
+                  "surface_tint": "#a14009",
+                  "surface_variant": "#e4e3db",
+                  "tertiary": "#7e5339",
+                  "tertiary_container": "#9a6b50",
+                  "tertiary_fixed": "#ffdbc9",
+                  "tertiary_fixed_dim": "#f4ba9b"
+                },
+                "overrideNeutralColor": "#fffdf5",
+                "overridePrimaryColor": "#c05621",
+                "overrideSecondaryColor": "#d69e2e",
+                "overrideTertiaryColor": "#4a2711",
+                "roundness": "ROUND_EIGHT",
+                "spacing": {
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "stack-lg": "48px",
+                  "stack-md": "24px",
+                  "stack-sm": "12px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Plus Jakarta Sans",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Plus Jakarta Sans",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "24px"
+                  },
+                  "display": {
+                    "fontFamily": "Literata",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "56px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Literata",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "40px"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Literata",
+                    "fontSize": "28px",
+                    "fontWeight": "600",
+                    "lineHeight": "36px"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Literata",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "32px"
+                  },
+                  "label-lg": {
+                    "fontFamily": "Plus Jakarta Sans",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "20px"
+                  },
+                  "label-md": {
+                    "fontFamily": "Plus Jakarta Sans",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "lineHeight": "16px"
+                  }
+                }
+              }
+            },
+            "name": "assets/0508c4bb78974999a4d69d02c482b602",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "7406",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Y4OTM2NWFkZWZiOTQwNjRhNzdjZmExOGRmYTk4MDJkEgsSBxDBloTL-h4YAZIBJAoKcHJvamVjdF9pZBIWQhQxMzEwMTU0MTg5NjA3MDc1ODc4Mg&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/13101541896070758782/files/7c6053658c364298b1d1f83c25cf6d61"
+          },
+          "id": "53d117e14f744c3abeed7fac9e8f0161",
+          "name": "projects/13101541896070758782/screens/53d117e14f744c3abeed7fac9e8f0161",
+          "prompt": "Generate a full, production-ready desktop landing page for Santa Fe Bakery. \n\nContent requirements:\n- Use the business name: Santa Fe Bakery. \n- Headline: .𝐂𝐚𝐬𝐚 𝐝𝐞 𝐥𝐚𝐬 𝐜𝐨𝐧𝐜𝐡𝐚𝐬 . 𝐏𝐚𝐧𝐚𝐝𝐞𝐫𝐢́𝐚 𝐲 𝐑𝐞𝐩𝐨𝐬𝐭𝐞𝐫𝐢́𝐚\n- Sub-headline/Hero text: ✨ ¡Pasa por tu pan dulce! ✨ Tenemos deliciosas donas 🍩, empanadas de todos los sabores! 🥟 ¡Y mucha más variedad para que disfrutes! 🤩 Te esperamos 🤎\n- Primary CTA: Call (515) 447-9217.\n- Sections: \n  1. Header (with phone and nav).\n  2. Hero (high-fidelity bakery imagery, warm tones).\n  3. #credibility (mentioning 4.4 review score and 2,300+ likes on Facebook).\n  4. Services/Offerings: Donas, Empanadas, Pan Dulce, Repostería.\n  5. About: Use the \"Casa de las conchas\" story.\n  6. #visit: Include the address (1320 East Euclid Avenue, Des Moines) and the mandatory map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n  7. Contact Form: Simple form with name, email, and message.\n  8. Footer: Complete contact info and hours.\n\nTechnical requirements:\n- Full semantic HTML document.\n- Responsive at 375px.\n- Use Tailwind CSS for styling.\n- Smooth scrolling for nav links.\n- Interactive form validation (UI only).\n- Brand colors from the design system.\n- Professional, non-generic layout.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsl0VYIjQsE2rWpowqsUPfikAUHV-ostSkm3vc2hDH1g_CHYSG9mMfYt9oO6vSWrxSL20FG_DBBCqa8xWh1iIQWMJpjQeCCmizRCQlOa1oCIWV498GRiVOf0CWdaNlbaGPi-ByqUbWIKdA_BSJiDGWIjjYh6j70UC0VPWnUjA8f3wrkOyjw7ozyemFDFQbD42AqP80i6Qr9pzaRepCWJEJzPC9Xx_AKTrnDPUfHnNg2W_qDIA-GxbdreYY",
+            "name": "projects/13101541896070758782/files/0df1468e8f9341edba82a26b7817f33a"
+          },
+          "theme": {
+            "bodyFont": "PLUS_JAKARTA_SANS",
+            "bodyFontFamily": "Plus Jakarta Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#c05621",
+            "designMd": "---\nname: Santa Fe Panadería\ncolors:\n  surface: '#fbf9f1'\n  surface-dim: '#dcdad2'\n  surface-bright: '#fbf9f1'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f4ec'\n  surface-container: '#f0eee6'\n  surface-container-high: '#eae8e0'\n  surface-container-highest: '#e4e3db'\n  on-surface: '#1b1c17'\n  on-surface-variant: '#57423a'\n  inverse-surface: '#30312c'\n  inverse-on-surface: '#f3f1e9'\n  outline: '#8a7268'\n  outline-variant: '#dec0b5'\n  surface-tint: '#a14009'\n  primary: '#9f3e07'\n  on-primary: '#ffffff'\n  primary-container: '#c05621'\n  on-primary-container: '#fffeff'\n  inverse-primary: '#ffb596'\n  secondary: '#7d5700'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffc250'\n  on-secondary-container: '#725000'\n  tertiary: '#7e5339'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#9a6b50'\n  on-tertiary-container: '#fffeff'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb596'\n  on-primary-fixed: '#360f00'\n  on-primary-fixed-variant: '#7d2d00'\n  secondary-fixed: '#ffdeaa'\n  secondary-fixed-dim: '#f8bc4b'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5f4100'\n  tertiary-fixed: '#ffdbc9'\n  tertiary-fixed-dim: '#f4ba9b'\n  on-tertiary-fixed: '#311302'\n  on-tertiary-fixed-variant: '#653d25'\n  background: '#fbf9f1'\n  on-background: '#1b1c17'\n  surface-variant: '#e4e3db'\ntypography:\n  display:\n    fontFamily: Literata\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Literata\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Literata\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  headline-md:\n    fontFamily: Literata\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stack-sm: 12px\n  stack-md: 24px\n  stack-lg: 48px\n---\n\n## Brand & Style\nThe design system is built on the concept of \"Handcrafted Heritage.\" It avoids the sterile, clinical feel of modern corporate bakeries in favor of a warm, artisanal, and neighborhood-centric aesthetic. The UI should evoke the sensory experience of a Mexican *panadería*—the smell of cinnamon, the warmth of an oven, and the tactile texture of sugar-dusted conchas.\n\nThe style is a blend of **Warm Minimalism** and **Tactile Design**. It uses heavy whitespace to let high-resolution photography of pastries breathe, while employing asymmetric layouts to suggest the organic, non-uniform nature of handmade baked goods. The emotional response should be one of comfort, appetite, and local trust.\n\n## Colors\nThe palette is rooted in the \"Casa de las conchas\" identity, pulling directly from the oven-fired colors of traditional Mexican baking.\n\n*   **Primary (Terra Cotta):** Used for key actions and branding to reflect traditional pottery and toasted crusts.\n*   **Secondary (Amber/Cinnamon):** Used for accents, highlights, and secondary buttons, evoking warmth and sweetness.\n*   **Tertiary (Dark Chocolate):** Used for primary typography and deep contrast elements to ensure legibility and a grounded feel.\n*   **Neutral (Cream):** The base background color (not pure white), mimicking flour and light dough, providing a softer, more inviting canvas than a standard digital white.\n*   **Success/Accent:** A muted sage green may be used sparingly for \"In Stock\" or \"Freshly Baked\" indicators to contrast the warm tones.\n\n## Typography\nTypography balances the \"Artisanal\" (Literata) with the \"Professional\" (Plus Jakarta Sans).\n\n*   **Headlines:** Literata provides a bookish, traditional, and high-end feel. It should be used for all storytelling elements and product names.\n*   **Body & UI:** Plus Jakarta Sans offers a soft, rounded, and highly legible counterpoint. It keeps the interface feeling modern and accessible.\n*   **Scale:** Large display type should use tighter letter spacing to feel more like a printed editorial piece. Labels use slight tracking (letter spacing) to improve readability in navigation menus and tags.\n\n## Layout & Spacing\nThe layout follows an **asymmetric fluid grid** to avoid a \"templated\" look.\n\n*   **Asymmetry:** Images of pastries should frequently \"break\" the grid or be offset from text blocks to create a sense of movement and hand-placement.\n*   **Rhythm:** Use a baseline of 8px. Large sections should be separated by `stack-lg` (48px) to maintain a premium, uncluttered feel.\n*   **Grid:** On desktop, use a 12-column grid. Components like product cards should vary in width (e.g., some spanning 4 columns, some 6) to create visual interest in the \"panadería\" gallery.\n*   **Responsive:** On mobile, transition to a single-column stack with generous side margins (`margin-mobile`) to ensure the photography remains the focus.\n\n## Elevation & Depth\nThis design system utilizes **Ambient Shadows** and **Tonal Layering** to create a soft, tactile feel.\n\n*   **Shadows:** Avoid harsh, black shadows. Use soft, diffused shadows tinted with the primary terra cotta color (e.g., `rgba(192, 86, 33, 0.08)`) to make elements like cards feel like they are resting on a wooden countertop.\n*   **Depth Levels:** \n    *   *Level 0 (Base):* The Cream neutral background.\n    *   *Level 1 (Cards):* Elevated with a very soft, wide blur shadow.\n    *   *Level 2 (Interactive):* Hover states on buttons or cards increase shadow spread and slightly scale the element (1.02x) to mimic \"picking up\" a pastry.\n*   **Overlays:** Use semi-transparent cream overlays for text on images to maintain legibility while preserving the warmth of the photography.\n\n## Shapes\nShapes are intentionally soft to mirror the organic forms of bread and pastries.\n\n*   **Corners:** A `rounded-lg` (1rem/16px) setting is the standard for cards and image containers.\n*   **Buttons:** Should use `rounded-xl` or full pill shapes to feel friendly and \"squishy.\"\n*   **Decorative Elements:** Use circular frames or \"scalloped\" edges (reminiscent of concha patterns) for secondary decorative elements or badges.\n\n## Components\n*   **Buttons:** Primary buttons are Solid Terra Cotta with White or Cream text. Secondary buttons are outlined in Cinnamon. Use generous internal padding to create a \"puffy\" appearance.\n*   **Product Cards:** Cards have no visible borders; depth is defined by soft ambient shadows. The product name (Literata) should be prominent, with the price in a subtle Plus Jakarta Sans label.\n*   **Chips/Tags:** Use these for flavor profiles (e.g., \"Dulce de Leche,\" \"Spicy,\" \"Vegan\"). These should have a light amber background and dark chocolate text.\n*   **Input Fields:** Use a subtle cream-tinted fill with a bottom-only border or a very light 1px stroke in terra cotta on focus.\n*   **Lists:** Use custom concha-patterned bullets for unordered lists to reinforce the \"Casa de las conchas\" identity.\n*   **Image Gallery:** Implement an \"asymmetric masonry\" layout for pastry photos, allowing for different aspect ratios to reflect the variety of the bakery's daily offerings.",
+            "font": "LITERATA",
+            "headlineFont": "LITERATA",
+            "headlineFontFamily": "Literata",
+            "labelFont": "PLUS_JAKARTA_SANS",
+            "labelFontFamily": "Plus Jakarta Sans",
+            "namedColors": {
+              "background": "#fbf9f1",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f1e9",
+              "inverse_primary": "#ffb596",
+              "inverse_surface": "#30312c",
+              "on_background": "#1b1c17",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#fffeff",
+              "on_primary_fixed": "#360f00",
+              "on_primary_fixed_variant": "#7d2d00",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#725000",
+              "on_secondary_fixed": "#271900",
+              "on_secondary_fixed_variant": "#5f4100",
+              "on_surface": "#1b1c17",
+              "on_surface_variant": "#57423a",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#fffeff",
+              "on_tertiary_fixed": "#311302",
+              "on_tertiary_fixed_variant": "#653d25",
+              "outline": "#8a7268",
+              "outline_variant": "#dec0b5",
+              "primary": "#9f3e07",
+              "primary_container": "#c05621",
+              "primary_fixed": "#ffdbcd",
+              "primary_fixed_dim": "#ffb596",
+              "secondary": "#7d5700",
+              "secondary_container": "#ffc250",
+              "secondary_fixed": "#ffdeaa",
+              "secondary_fixed_dim": "#f8bc4b",
+              "surface": "#fbf9f1",
+              "surface_bright": "#fbf9f1",
+              "surface_container": "#f0eee6",
+              "surface_container_high": "#eae8e0",
+              "surface_container_highest": "#e4e3db",
+              "surface_container_low": "#f5f4ec",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcdad2",
+              "surface_tint": "#a14009",
+              "surface_variant": "#e4e3db",
+              "tertiary": "#7e5339",
+              "tertiary_container": "#9a6b50",
+              "tertiary_fixed": "#ffdbc9",
+              "tertiary_fixed_dim": "#f4ba9b"
+            },
+            "overrideNeutralColor": "#fffdf5",
+            "overridePrimaryColor": "#c05621",
+            "overrideSecondaryColor": "#d69e2e",
+            "overrideTertiaryColor": "#4a2711",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "stack-lg": "48px",
+              "stack-md": "24px",
+              "stack-sm": "12px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "display": {
+                "fontFamily": "Literata",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "56px"
+              },
+              "headline-lg": {
+                "fontFamily": "Literata",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Literata",
+                "fontSize": "28px",
+                "fontWeight": "600",
+                "lineHeight": "36px"
+              },
+              "headline-md": {
+                "fontFamily": "Literata",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "32px"
+              },
+              "label-lg": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.05em",
+                "lineHeight": "20px"
+              },
+              "label-md": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "lineHeight": "16px"
+              }
+            }
+          },
+          "title": "Santa Fe Bakery - Official Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've built the complete homepage for **Santa Fe Bakery**, specifically tailored to their \"Casa de las conchas\" identity using the real content from their Facebook page.\n\n### Key Design Decisions:\n*   **Artisanal Aesthetic**: I used a warm, appetizing palette (terra cotta, honey, and cream) to reflect the bakery's traditional roots and artisanal quality.\n*   **Direct-to-Action**: The phone number is prominent in the header and hero section, ensuring customers can easily reach the business for orders or questions.\n*   **Local Credibility**: Included a dedicated section highlighting their 4.4-star rating and large Facebook following to build trust with new visitors.\n*   **Asymmetric Layout**: The hero and gallery sections use a non-standard grid to avoid a generic \"template\" look and feel more handcrafted.\n*   **Interactive Features**: The page includes a mobile-responsive navigation, smooth-scrolling anchors, and a functional-looking contact form UI.\n\nThe design is production-ready and fully responsive. You can now preview the **#visit** section with its dedicated map slot and the **Services** section featuring their signature offerings.\n\nWhat would you like to refine next? We could add a dynamic image gallery or expand on the \"Casa de las conchas\" story."
+  },
+  {
+    "suggestion": "Add a photo gallery section"
+  },
+  {
+    "suggestion": "Change the brand colors to be brighter"
+  },
+  {
+    "suggestion": "Update the 'About' section copy"
+  }
+]
