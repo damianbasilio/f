@@ -1,11 +1,54 @@
-// Simple parallax or micro-interaction script
-        document.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroImages = document.querySelectorAll('.h-\\[500px\\] > div');
-            heroImages.forEach((img, index) => {
-                const speed = 0.05 * (index + 1);
-                img.style.transform = `translateY(${scrolled * speed}px)`;
+function validateForm(event) {
+            event.preventDefault();
+            const form = event.target;
+            const successMsg = document.getElementById('formSuccess');
+            
+            // Simple visual feedback
+            const button = form.querySelector('button');
+            button.disabled = true;
+            button.innerHTML = '<span class="relative z-10">Preview only</span>';
+            
+            setTimeout(() => {
+                form.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    form.classList.add('hidden');
+                    successMsg.classList.remove('hidden');
+                    successMsg.classList.add('block');
+                }, 500);
+            }, 1500);
+            
+            return false;
+        }
+
+        // Atmosphere Micro-interactions: Fade in sections on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-4', 'shadow-sm');
+                header.classList.remove('py-6');
+            } else {
+                header.classList.add('py-6');
+                header.classList.remove('py-4', 'shadow-sm');
+            }
         });
 
 (() => {
