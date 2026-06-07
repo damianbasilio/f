@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cory's Canine Cove | A Sanctuary for the Discerning Canine</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500&amp;family=Space+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;family=Space+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#c6c6cd",
+                        "on-primary-container": "#7c839b",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "on-surface-variant": "#45464d",
+                        "surface-bright": "#fcf8fa",
+                        "background": "#fcf8fa",
+                        "tertiary": "#000000",
+                        "on-secondary-fixed": "#1c1c19",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#768599",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#e5e2dd",
+                        "primary-fixed": "#dae2fd",
+                        "on-secondary-container": "#656461",
+                        "inverse-primary": "#bec6e0",
+                        "inverse-surface": "#303032",
+                        "on-tertiary-fixed": "#0d1c2d",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "secondary": "#5f5e5b",
+                        "on-tertiary": "#ffffff",
+                        "on-error": "#ffffff",
+                        "surface-variant": "#e4e2e4",
+                        "primary-fixed-dim": "#bec6e0",
+                        "inverse-on-surface": "#f3f0f2",
+                        "tertiary-fixed": "#d4e4fa",
+                        "tertiary-container": "#0d1c2d",
+                        "surface": "#fcf8fa",
+                        "outline": "#76777d",
+                        "surface-dim": "#dcd9db",
+                        "primary": "#000000",
+                        "on-primary-fixed": "#131b2e",
+                        "on-background": "#1b1b1d",
+                        "on-surface": "#1b1b1d",
+                        "error": "#ba1a1a",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary-container": "#e5e2dd",
+                        "on-tertiary-fixed-variant": "#39485a",
+                        "primary-container": "#131b2e",
+                        "on-secondary-fixed-variant": "#474743",
+                        "surface-container": "#f0edef",
+                        "error-container": "#ffdad6",
+                        "surface-container-high": "#eae7e9",
+                        "tertiary-fixed-dim": "#b9c8de",
+                        "surface-tint": "#565e74",
+                        "surface-container-highest": "#e4e2e4",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#f6f3f5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px",
+                        "unit": "8px",
+                        "gutter": "24px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["DM Sans"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-md": ["Space Mono"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-md": ["12px", {"lineHeight": "1.5", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .nautical-line {
+            height: 1px;
+            background-color: #0f172a;
+            width: 100%;
+        }
+        .rescue-button {
+            background-color: #f97316;
+            color: white;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+            position: relative;
+        }
+        .rescue-button:hover {
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0px 0px #0f172a;
+        }
+        .matted-frame {
+            border: 1px solid #0f172a;
+            padding: 4px;
+            background: white;
+        }
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- Navigation Shell -->
+<nav class="sticky top-0 w-full z-50 border-b border-primary dark:border-primary-fixed-dim bg-background/95 backdrop-blur-sm flex justify-between items-center px-margin-desktop py-4 max-w-full">
+<div class="flex items-center gap-4">
+<img alt="Cory's Canine Cove Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLtM4_Rv6t2-Hg3A11yRsPJ9VZP76ejfT46OgPB2UZY6jzBwQCT4XkvVFVF-iHr-4K8kFdFz1KjRu6G9uH9lOBkYUeljlbk8tngII0_YckzhrcClAbIh9ftCq7PkM6sDnOVWdkyi1t_KYuuoBstX0hyxDHOX8YyM1NMVddvDRgnEiWlKAYN9WdKRAdH5JN6xEnGVejcEBrdwj7YdZHy6Pj40jJd3nbc78OVz9xEy_npKEXEGKiLwENgn6WY"/>
+<span class="font-display-lg text-headline-lg uppercase tracking-tighter text-primary dark:text-primary-fixed hidden lg:block">Cory's Canine Cove</span>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase" href="#gallery">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors uppercase" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden xl:block font-label-md text-label-md text-primary font-bold" href="tel:3158024366">(315) 802-4366</a>
+<button class="rescue-button px-6 py-3 font-label-md text-label-md uppercase font-bold border border-primary">Book Now</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/20 z-10"></div>
+<img alt="Golden Retriever on dock" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtxyvBzgxAcQBxZU7_YiSCPv437zwzs30FUqQ_DsgqbxOOFR6btk-QmXcvuYbdiiHv4vDX4dFKalo_x3vSc2cBsjVKqRQJ2IPcgeWP57dURbfLdItV37nSkfU5K9tMWRfZ6Y6JR7Mbzk7RGffqipMuCzaon-LtNybWXfz1mdXDCMXm-wt3OijEV5F0JicYeSKUfFqSWEWhhwLH4bN6INI8yES6oBntHk8_P6apV5jzbZ-lUwywQMPcRy78"/>
+</div>
+<div class="relative z-20 px-margin-desktop max-w-5xl">
+<div class="bg-background/90 p-12 backdrop-blur-sm border-l-4 border-primary">
+<p class="font-label-md text-label-md uppercase tracking-widest text-primary mb-4">Established 2009 — Liverpool, NY</p>
+<h1 class="font-display-lg text-display-lg text-primary mb-6">A Sanctuary for the <br/>Discerning Canine.</h1>
+<p class="font-body-md text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Bespoke daycare and boarding in the heart of Liverpool, NY. Where luxury meets the rugged reliability of a nautical retreat.
+                    </p>
+<div class="flex gap-4">
+<button class="rescue-button px-8 py-4 font-label-md text-label-md uppercase font-bold border border-primary">Explore Suites</button>
+<button class="border border-primary px-8 py-4 font-label-md text-label-md uppercase font-bold hover:bg-primary hover:text-white transition-all">View Services</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Bar -->
+<section class="bg-primary-container text-on-primary-fixed-variant py-8 border-y border-primary">
+<div class="px-margin-desktop grid grid-cols-2 md:grid-cols-4 gap-gutter text-center">
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-white/60">EXPERIENCE</span>
+<span class="font-display-lg text-headline-lg text-white">15+ Years</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-white/60">EXPERTISE</span>
+<span class="font-display-lg text-headline-lg text-white">Certified Pro</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-white/60">SECURITY</span>
+<span class="font-display-lg text-headline-lg text-white">24/7 Care</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-white/60">RATING</span>
+<span class="font-display-lg text-headline-lg text-white">5-Star Local</span>
+</div>
+</div>
+</section>
+<!-- Services Section (Asymmetrical Layout) -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low" id="services">
+<div class="grid grid-cols-12 gap-gutter mb-20">
+<div class="col-span-12 md:col-span-5">
+<h2 class="font-display-lg text-display-lg text-primary mb-8">Bespoke <br/>Care Offerings</h2>
+<div class="nautical-line mb-8"></div>
+<p class="font-body-md text-body-lg text-on-surface-variant">We don't do "one size fits all." Every stay at the Cove is tailored to your dog's temperament, diet, and social needs.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-start">
+<!-- Premier Daycare -->
+<div class="group border border-primary p-8 bg-white hover:bg-primary transition-colors duration-500">
+<div class="mb-12 flex justify-between items-start">
+<span class="font-label-md text-label-md text-primary group-hover:text-white">01</span>
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white">pets</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary group-hover:text-white">Premier Daycare</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-white/80">Structured social play designed to stimulate mind and body in a safe, controlled environment.</p>
+<div class="nautical-line group-hover:bg-white opacity-20"></div>
+</div>
+<!-- Luxury Boarding -->
+<div class="group border border-primary p-8 bg-white lg:mt-16 hover:bg-primary transition-colors duration-500">
+<div class="mb-12 flex justify-between items-start">
+<span class="font-label-md text-label-md text-primary group-hover:text-white">02</span>
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white">night_shelter</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary group-hover:text-white">Luxury Boarding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-white/80">Private suites and custom meal prep for the dog who appreciates the finer things in life.</p>
+<div class="nautical-line group-hover:bg-white opacity-20"></div>
+</div>
+<!-- Personalized Training -->
+<div class="group border border-primary p-8 bg-white lg:mt-32 hover:bg-primary transition-colors duration-500">
+<div class="mb-12 flex justify-between items-start">
+<span class="font-label-md text-label-md text-primary group-hover:text-white">03</span>
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white">psychology</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary group-hover:text-white">Pro Training</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-white/80">From puppy foundations to behavioral modification. We speak their language.</p>
+<div class="nautical-line group-hover:bg-white opacity-20"></div>
+</div>
+<!-- The Cove Spa -->
+<div class="group border border-primary p-8 bg-white lg:mt-8 hover:bg-primary transition-colors duration-500">
+<div class="mb-12 flex justify-between items-start">
+<span class="font-label-md text-label-md text-primary group-hover:text-white">04</span>
+<span class="material-symbols-outlined text-4xl text-primary group-hover:text-white">water_drop</span>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-4 text-primary group-hover:text-white">The Cove Spa</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6 group-hover:text-white/80">Bespoke grooming services to keep them looking sharp and feeling refreshed.</p>
+<div class="nautical-line group-hover:bg-white opacity-20"></div>
+</div>
+</div>
+</section>
+<!-- About Section (The Cove Story) -->
+<section class="py-section-gap px-margin-desktop relative" id="about">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-6 relative z-10">
+<div class="matted-frame">
+<img alt="Cory Burke" class="w-full grayscale hover:grayscale-0 transition-all duration-700" data-alt="A sophisticated black and white portrait of Cory Burke, a professional dog trainer with a calm and confident expression, standing outdoors in a rugged nautical setting. The lighting is dramatic and editorial, highlighting the textures of his canvas jacket and the natural environment. The overall tone is one of authority and genuine passion for canine care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCSO37P3BPkDRsK-tsxNcMocMjxfbUZ5wltXCWOiNGL8nH3cUPGJ1IGk8hNX9er_uLJ1zQsi0GyTL9FReOy5p0BNPK_nuL3p47ZzUHs3TV4jK80NJ_fumSMWihVV6JogATCr-RisJLjz9qcaBbXNy9QP4vbUBjI_2XVIUpPI_R3_K9fl-OHtR4MN5bM7-efrxIH8MHmCIUWujoArK8gyGlNGH19wZoMqm7UamGaQyExv0vyMNsIY6U5gb-QESPVBGYitdtp-3wh084"/>
+</div>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-primary-container -z-10 hidden md:block"></div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8">
+<h2 class="font-display-lg text-headline-lg text-primary mb-6">From Kennel <br/>to Retreat</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Founded by Cory Burke, The Cove was born from a simple realization: dogs don't just need a place to stay—they need a place to thrive. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 opacity-80">
+                        We transitioned from the traditional "kennel" model to a full-service retreat that emphasizes the mental and physical well-being of every guest. Our facility is designed to feel like a high-end coastal lodge, providing comfort for the pups and peace of mind for their humans.
+                    </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-1 bg-primary"></div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">Cory Burke, Founder</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section (Map & Hours) -->
+<section class="py-section-gap bg-primary-container text-white overflow-hidden" id="visit">
+<div class="px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-0">
+<div class="p-16 flex flex-col justify-center border border-white/10">
+<h2 class="font-display-lg text-headline-lg mb-10">Chart a Course</h2>
+<div class="space-y-8">
+<div>
+<span class="font-label-md text-label-md uppercase opacity-50 block mb-2">Location</span>
+<p class="font-headline-lg text-2xl">604 Old Liverpool Road<br/>Liverpool, NY 13088</p>
+</div>
+<div>
+<span class="font-label-md text-label-md uppercase opacity-50 block mb-2">Hours of Operation</span>
+<p class="font-body-md text-body-lg">Mon – Fri: 7:00 AM – 7:00 PM<br/>Sat – Sun: 8:00 AM – 6:00 PM</p>
+</div>
+<div class="pt-8">
+<button class="rescue-button px-8 py-4 font-label-md text-label-md uppercase font-bold border border-white">Get Directions</button>
+</div>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border border-white/10" data-location="Liverpool, New York" data-map-slot="" style="">
+<!-- Map Placeholder Integrated -->
+<div class="absolute inset-0 bg-zinc-900/50 flex items-center justify-center">
+<span class="font-label-md text-label-md uppercase tracking-widest">Interactive Chart Loading...</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section (Inquiry Form) -->
+<section class="py-section-gap px-margin-desktop" id="contact">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Send a Signal</h2>
+<p class="font-body-md text-body-lg text-on-surface-variant">Inquire about our bespoke boarding and daycare availability.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10" id="contactForm">
+<div class="flex flex-col space-y-2">
+<label class="font-label-md text-label-md uppercase text-primary">Your Name</label>
+<input class="bg-transparent border-0 border-b border-primary focus:ring-0 focus:border-rescue-orange py-4 transition-all" placeholder="Entry name..." required="" type="text"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-md text-label-md uppercase text-primary">Vessel (Email)</label>
+<input class="bg-transparent border-0 border-b border-primary focus:ring-0 focus:border-rescue-orange py-4 transition-all" placeholder="email@address.com" required="" type="email"/>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-md text-label-md uppercase text-primary">Service Interest</label>
+<select class="bg-transparent border-0 border-b border-primary focus:ring-0 focus:border-rescue-orange py-4 transition-all">
+<option>Luxury Boarding</option>
+<option>Premier Daycare</option>
+<option>Pro Training</option>
+<option>Cove Spa</option>
+</select>
+</div>
+<div class="flex flex-col space-y-2">
+<label class="font-label-md text-label-md uppercase text-primary">Breed &amp; Age</label>
+<input class="bg-transparent border-0 border-b border-primary focus:ring-0 focus:border-rescue-orange py-4 transition-all" placeholder="e.g. Golden Retriever, 3yrs" type="text"/>
+</div>
+<div class="md:col-span-2 flex flex-col space-y-2">
+<label class="font-label-md text-label-md uppercase text-primary">Message</label>
+<textarea class="bg-transparent border-0 border-b border-primary focus:ring-0 focus:border-rescue-orange py-4 transition-all resize-none" placeholder="How can we accommodate your companion?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 flex justify-center mt-8">
+<button class="rescue-button px-12 py-5 font-label-md text-label-md uppercase font-bold border border-primary w-full md:w-auto" type="submit">Transmit Inquiry</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-tertiary-container w-full py-section-gap px-margin-desktop border-t border-outline-variant dark:border-outline">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter max-w-full">
+<div class="col-span-1 md:col-span-1">
+<img alt="Logo" class="h-16 w-auto mb-6 brightness-0 invert opacity-80" src="https://lh3.googleusercontent.com/aida/AP1WRLtM4_Rv6t2-Hg3A11yRsPJ9VZP76ejfT46OgPB2UZY6jzBwQCT4XkvVFVF-iHr-4K8kFdFz1KjRu6G9uH9lOBkYUeljlbk8tngII0_YckzhrcClAbIh9ftCq7PkM6sDnOVWdkyi1t_KYuuoBstX0hyxDHOX8YyM1NMVddvDRgnEiWlKAYN9WdKRAdH5JN6xEnGVejcEBrdwj7YdZHy6Pj40jJd3nbc78OVz9xEy_npKEXEGKiLwENgn6WY"/>
+<p class="font-body-md text-body-md text-on-primary-container dark:text-on-tertiary-container leading-relaxed">
+                    Crafting bespoke experiences for the discerning canine since 2009. Reliable care, premium amenities.
+                </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-white uppercase mb-2">Navigation</h4>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#services">Services</a>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#about">About</a>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#gallery">Gallery</a>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#contact">Contact</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-white uppercase mb-2">Legal</h4>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#">Terms of Service</a>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#">FAQ</a>
+<a class="text-on-primary-container hover:text-white transition-opacity font-body-md" href="#">Careers</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h4 class="font-label-md text-label-md text-white uppercase mb-2">Reach Us</h4>
+<p class="text-on-primary-container font-body-md">604 Old Liverpool Road<br/>Liverpool, NY 13088</p>
+<a class="text-white font-headline-lg text-xl hover:text-rescue-orange transition-colors" href="tel:3158024366">(315) 802-4366</a>
+<div class="flex gap-4 mt-4">
+<span class="material-symbols-outlined text-white/50 cursor-pointer hover:text-white">face_nod</span>
+<span class="material-symbols-outlined text-white/50 cursor-pointer hover:text-white">photo_camera</span>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-md text-label-md text-on-primary-container/60">© 2024 Cory's Canine Cove. Crafted for the Discerning Canine.</p>
+<div class="nautical-line w-24 bg-white/10 hidden md:block"></div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and smooth revealing effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('contactForm');
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const btn = form.querySelector('button');
+                const originalText = btn.innerText;
+                btn.innerText = 'TRANSMITTING...';
+                btn.classList.add('opacity-50', 'pointer-events-none');
+                
+                setTimeout(() => {
+                    btn.innerText = 'SIGNAL RECEIVED';
+                    btn.classList.remove('bg-rescue-orange');
+                    btn.classList.add('bg-green-600');
+                    form.reset();
+                    setTimeout(() => {
+                        btn.innerText = originalText;
+                        btn.classList.remove('bg-green-600', 'opacity-50', 'pointer-events-none');
+                        btn.classList.add('bg-rescue-orange');
+                    }, 3000);
+                }, 1500);
+            });
+
+            // Smooth Scroll
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body></html>
