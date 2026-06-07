@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Spa for Paws | Editorial Pet Sanctuary</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Montserrat:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "on-primary-container": "#819790",
+                        "surface-variant": "#dce4e0",
+                        "on-primary": "#ffffff",
+                        "background": "#f3fbf7",
+                        "on-tertiary-container": "#95928c",
+                        "on-surface": "#161d1b",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4e635d",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed-variant": "#364b45",
+                        "secondary-fixed": "#d6e7db",
+                        "primary-fixed-dim": "#b5cbc4",
+                        "primary-container": "#1b2f2a",
+                        "outline": "#727876",
+                        "primary": "#061a16",
+                        "tertiary-container": "#2d2b27",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#e8f0eb",
+                        "surface": "#f3fbf7",
+                        "on-tertiary-fixed-variant": "#484742",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#b5cbc4",
+                        "on-secondary-container": "#59685f",
+                        "on-secondary-fixed-variant": "#3c4a41",
+                        "on-primary-fixed": "#0b1f1a",
+                        "primary-fixed": "#d0e8e0",
+                        "tertiary": "#181713",
+                        "surface-container-highest": "#dce4e0",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed-dim": "#cac6bf",
+                        "on-tertiary-fixed": "#1d1c18",
+                        "surface-dim": "#d4dcd8",
+                        "outline-variant": "#c2c8c5",
+                        "on-secondary-fixed": "#111e17",
+                        "on-error-container": "#93000a",
+                        "inverse-surface": "#2a322f",
+                        "secondary-container": "#d6e7db",
+                        "on-background": "#161d1b",
+                        "on-surface-variant": "#424846",
+                        "secondary": "#536259",
+                        "surface-container-high": "#e2eae6",
+                        "surface-container-low": "#edf5f1",
+                        "surface-bright": "#f3fbf7",
+                        "inverse-on-surface": "#ebf3ee",
+                        "tertiary-fixed": "#e6e2db",
+                        "secondary-fixed-dim": "#bacabf"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "overlap-offset": "-40px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Montserrat"],
+                        "display-lg": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "nav-link": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "600" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "nav-link": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .reveal-pill {
+            clip-path: ellipse(50% 100% at 50% 50%);
+            transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+        .reveal-pill:hover {
+            clip-path: ellipse(100% 100% at 50% 50%);
+        }
+        .organic-shape-1 {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-8">
+<a class="font-display-lg-mobile text-display-lg-mobile tracking-tighter text-primary" href="#">Spa for Paws</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-nav-link text-nav-link text-primary font-bold relative after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-1 after:h-1 after:bg-primary after:rounded-full" href="#philosophy">Philosophy</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors" href="#treatments">Treatments</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-nav-link text-nav-link text-on-surface-variant hover:text-primary transition-colors" href="#visit">Location</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:inline font-nav-link text-nav-link text-on-surface-variant">(217) 706-5252</span>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-full font-nav-link text-nav-link hover:opacity-90 active:scale-95 transition-all">
+                    Book Now
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-gutter overflow-hidden">
+<div class="max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 z-10" data-aos="fade-right">
+<span class="font-label-caps text-label-caps text-on-primary-container block mb-4">ESTABLISHED IN DECATUR</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-none">The Calm Within</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-md">
+                        A bespoke grooming experience where serenity meets sophistication. We curate a tranquil environment for your companion's absolute comfort.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary px-8 py-4 rounded-full font-nav-link text-nav-link uppercase tracking-widest hover:bg-opacity-90 transition-all">View Menu</button>
+<button class="border border-primary text-primary px-8 py-4 rounded-full font-nav-link text-nav-link uppercase tracking-widest hover:bg-primary/5 transition-all">Our Story</button>
+</div>
+</div>
+<div class="lg:col-span-7 relative">
+<div class="aspect-[1.79] w-full rounded-xl overflow-hidden shadow-2xl relative">
+<img alt="Serene Golden Retriever in high-end spa" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtUey8lT02rHRrG79DvFUqPCYEmKLaWu6MmXnCkBrcC6SOTi7s6vAmyoBbRCKQJw8_GVlJzvMjr53XBnlCMjesJ8XkWG8BHBmGbt6_eOx-eNAIeXfVyqNUwXqPsgTkEmuXWr_PhIJ2Dooq6aoreaGDe97nN2Sr7Yqpv-_CqBzWB-ncR3AsTwJw8DAkP_pXRy8SGLszJ1gyUeXAZhxQqNw9ze_JP8V-45skZtoDytmXGAhq1Ryd6jwFVeBoa"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Decorative Floating Element -->
+<div class="absolute -bottom-10 -left-10 w-48 h-48 bg-secondary-container organic-shape-1 opacity-50 -z-10 animate-pulse"></div>
+</div>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-32 bg-surface-container-low px-gutter" id="credibility">
+<div class="max-w-container-max mx-auto text-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-16">Decatur's premier sanctuary for the discerning pet.</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-6 text-on-primary-container" style="font-variation-settings: 'wght' 200;">spa</span>
+<h3 class="font-headline-md text-headline-md mb-4">Holistic Care</h3>
+<p class="text-on-surface-variant">We treat the whole animal, focusing on emotional well-being as much as physical cleanliness.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-6 text-on-primary-container" style="font-variation-settings: 'wght' 200;">content_cut</span>
+<h3 class="font-headline-md text-headline-md mb-4">Bespoke Styling</h3>
+<p class="text-on-surface-variant">Precision techniques tailored to breed standards and your personal aesthetic preferences.</p>
+</div>
+<div class="flex flex-col items-center">
+<span class="material-symbols-outlined text-4xl mb-6 text-on-primary-container" style="font-variation-settings: 'wght' 200;">verified_user</span>
+<h3 class="font-headline-md text-headline-md mb-4">Safety First</h3>
+<p class="text-on-surface-variant">A strictly professional environment featuring state-of-the-art equipment and hospital-grade sanitation.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services/Offerings -->
+<section class="py-32 px-gutter overflow-hidden" id="treatments">
+<div class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-20">
+<div class="lg:w-5/12 order-2 lg:order-1">
+<div class="sticky top-32">
+<span class="font-label-caps text-label-caps text-on-primary-container block mb-4 uppercase">The Menu</span>
+<h2 class="font-display-lg text-display-lg text-primary mb-12">Signature Rituals</h2>
+<div class="space-y-12">
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group-hover:border-primary transition-colors">
+<h4 class="font-headline-md text-headline-md">The Full Sanctuary Groom</h4>
+<span class="font-label-caps text-label-caps">From $85</span>
+</div>
+<p class="mt-4 text-on-surface-variant group-hover:text-on-surface transition-colors">A complete transformation including bath, designer cut, ear cleaning, and gland expression.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group-hover:border-primary transition-colors">
+<h4 class="font-headline-md text-headline-md">Puppy's First Spa Day</h4>
+<span class="font-label-caps text-label-caps">From $55</span>
+</div>
+<p class="mt-4 text-on-surface-variant group-hover:text-on-surface transition-colors">A gentle introduction to grooming for companions under 6 months. Focus on positive association.</p>
+</div>
+<div class="group cursor-pointer">
+<div class="flex justify-between items-end border-b border-outline-variant/30 pb-4 group-hover:border-primary transition-colors">
+<h4 class="font-headline-md text-headline-md">Medicated Spa Treatments</h4>
+<span class="font-label-caps text-label-caps">+$25</span>
+</div>
+<p class="mt-4 text-on-surface-variant group-hover:text-on-surface transition-colors">Specialized dermatological baths for sensitive skin, allergies, or seasonal itch relief.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-7/12 order-1 lg:order-2">
+<div class="relative">
+<div class="aspect-[0.75] rounded-full overflow-hidden reveal-pill border-8 border-surface-container-high">
+<img alt="Close-up of luxury grooming tools" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt4pjad9mQUPuJQ6dYfBaZnJW58DHLD890RK-gQ78ZAv4l1ALTtegXDnaQviM-LOp90PLy2rcapGNovqPM_7mePZESyvONzsGjJrYGx8PKhjBOHyout7dVFsZneDlDfLSuKaya5ZTmpBhtF36u0Cz5QMKUlPMhzNmYhgtYDPWVkB4GOKs2D8HoTWpaH00RlEiOM6dUegZFzyWGfyx8l8jcKM0_emdi7khUkS7UI9zB2_Z5HahbZcyxzAyRB"/>
+</div>
+<div class="absolute -top-10 -right-10 hidden md:block w-64 h-64 bg-secondary-fixed organic-shape-1 -z-10 opacity-30"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-primary text-on-primary" id="about">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[1.49] rounded-xl overflow-hidden shadow-2xl rotate-2">
+<img alt="Luxury pet boutique interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuulf3jEjgYJyzIoNMg2dtmOT5VcMTYVJigiTP_21Zo__wyDljzRfFAZKJwa42TQNHdaeMnQyU_ZqNkUa7ClcJjSqW6HO1mtJAJhn-MgpLRuJQI2HhK3YScmqGM_hy8ynDzgkvv5e6VYSsyc-uQTmSPON_Fch1f2wWuUptfIJVPg4PopQgMhiuX3JXHFY-Hc08SeXOzL-OOX_Ct__BGg8LLsMQp5GMIaUIyGPC8-H2YfoPugS5b5lmrRgTt"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-lowest p-8 rounded-lg text-primary shadow-xl hidden lg:block">
+<p class="font-display-lg text-[40px] leading-tight mb-2 italic">“Pets are family, and family deserves the finest.”</p>
+<p class="font-label-caps text-label-caps">— JULIE HARLESS</p>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim block mb-6">THE FOUNDER</span>
+<h2 class="font-display-lg text-display-lg mb-8">Bespoke Mastery</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-8">
+                        Julie Harless founded Spa for Paws with a singular vision: to redefine pet care as a luxury wellness journey. With over 15 years of mastery in grooming and animal psychology, Julie ensures every session is conducted with patience and artistry.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-12">
+                        Our philosophy is rooted in the "Quiet Grooming" method—no loud crates, no rushed schedules, just the calm, rhythmic sounds of expert care.
+                    </p>
+<button class="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-label-caps text-label-caps hover:bg-secondary-fixed transition-all">Read the Philosophy</button>
+</div>
+</div>
+</section>
+<!-- Visit & Contact -->
+<section class="py-32 px-gutter bg-surface" id="visit">
+<div class="max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<!-- Form -->
+<div class="bg-white p-12 rounded-xl shadow-sm border border-outline-variant/20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Inquiry for Sanctuary</h2>
+<form class="space-y-8">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">FULL NAME</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 bg-transparent transition-all" placeholder="Enter your name" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">PET BREED</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 bg-transparent transition-all" placeholder="e.g. Toy Poodle" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">EMAIL</label>
+<input class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 bg-transparent transition-all" placeholder="your@email.com" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2">DESIRED TREATMENT</label>
+<select class="w-full border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-2 bg-transparent transition-all">
+<option>Select a service...</option>
+<option>The Full Sanctuary Groom</option>
+<option>Puppy's First Spa Day</option>
+<option>Medicated Spa Treatment</option>
+</select>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 rounded-full font-label-caps text-label-caps hover:bg-primary-container transition-all" type="submit">Send Inquiry</button>
+</form>
+</div>
+<!-- Visit Info -->
+<div class="flex flex-col justify-center">
+<div class="mb-12">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-6">Visit Our Boutique</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-4">3668 East William Street Road<br/>Decatur, IL 62521</p>
+<div class="space-y-2 font-body-md text-on-surface">
+<p><strong class="font-label-caps text-label-caps mr-4">MON – FRI</strong> 8:00 AM — 5:00 PM</p>
+<p><strong class="font-label-caps text-label-caps mr-4">SATURDAY</strong> 9:00 AM — 3:00 PM</p>
+<p><strong class="font-label-caps text-label-caps mr-4">SUNDAY</strong> Closed</p>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] rounded-lg shadow-inner bg-surface-container" data-location="Decatur, Illinois" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-outline-variant text-6xl">map</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-16 px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="space-y-6 max-w-sm">
+<h2 class="font-display-lg text-display-lg text-surface-container-lowest">Spa for Paws</h2>
+<p class="text-secondary-fixed-dim/70 font-body-md">Creating an atmosphere of total serenity for the companions you love most. Editorial grooming services in the heart of Illinois.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 rounded-full border border-secondary-fixed-dim/30 flex items-center justify-center hover:bg-secondary-fixed-dim hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-secondary-fixed-dim/30 flex items-center justify-center hover:bg-secondary-fixed-dim hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-20">
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps text-surface-container-lowest">NAVIGATION</p>
+<ul class="space-y-2">
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Philosophy</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Treatments</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">About</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Location</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="font-label-caps text-label-caps text-surface-container-lowest">LEGAL</p>
+<ul class="space-y-2">
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Careers</a></li>
+<li><a class="text-secondary-fixed-dim/70 hover:text-surface-bright transition-colors" href="#">Grooming FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-on-primary-fixed-variant/30 flex flex-col md:flex-row justify-between items-center text-secondary-fixed-dim/50 font-label-caps text-label-caps">
+<p>© 2024 Spa for Paws. Curated by Julie Harless.</p>
+<p>DESIGNED IN DECATUR</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for map slot
+        const mapSlot = document.querySelector('[data-map-slot]');
+        if (mapSlot) {
+            mapSlot.addEventListener('mouseenter', () => {
+                mapSlot.style.cursor = 'crosshair';
+            });
+        }
+
+        // Handle active nav state on scroll
+        window.addEventListener('scroll', () => {
+            const sections = ['philosophy', 'treatments', 'about', 'visit'];
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold', 'after:content-[\'\']', 'after:absolute', 'after:-bottom-1', 'after:left-1/2', 'after:-translate-x-1/2', 'after:w-1', 'after:h-1', 'after:bg-primary', 'after:rounded-full');
+                link.classList.add('text-on-surface-variant');
+                
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.remove('text-on-surface-variant');
+                    link.classList.add('text-primary', 'font-bold', 'relative', 'after:content-[\'\']', 'after:absolute', 'after:-bottom-1', 'after:left-1/2', 'after:-translate-x-1/2', 'after:w-1', 'after:h-1', 'after:bg-primary', 'after:rounded-full');
+                }
+            });
+        });
+    </script>
+</body></html>
