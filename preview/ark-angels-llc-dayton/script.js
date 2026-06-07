@@ -1,0 +1,114 @@
+// Simple Form Interaction
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const status = document.getElementById('formStatus');
+            const submitBtn = this.querySelector('button[type="submit"]');
+            
+            // Interaction feedback
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'TRANSMITTING...';
+            
+            setTimeout(() => {
+                status.classList.remove('hidden', 'text-error');
+                status.classList.add('text-green-600', 'block');
+                status.textContent = 'PROTOCOL INITIATED. STAND BY.';
+                submitBtn.textContent = 'REQUEST SENT';
+                this.reset();
+            }, 1500);
+        });
+
+        // Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-unit-sm', 'shadow-sm');
+                header.classList.remove('py-unit-md');
+            } else {
+                header.classList.add('py-unit-md');
+                header.classList.remove('py-unit-sm', 'shadow-sm');
+            }
+        });
+
+        // Asymmetric Intersection Observer (Fade in effects)
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+
+(() => {
+  function initMockupNotice() {
+  const dialog = document.getElementById("mockup-notice");
+  if (!dialog) return;
+
+  const nameEl = dialog.querySelector("[data-business-name]");
+  const title = document.querySelector("meta[name='x-business-name']");
+  if (nameEl && title) nameEl.textContent = title.content;
+
+  const ack = dialog.querySelector(".mockup-notice__ack");
+  const ackWrap = dialog.querySelector(".mockup-notice__ack-wrap");
+  const ackRing = dialog.querySelector(".mockup-notice__ack-ring");
+  let closed = false;
+
+  function closeNotice() {
+    if (closed) return;
+    closed = true;
+    ackWrap?.classList.remove("is-timing");
+    dialog.classList.add("is-closing");
+    document.body.classList.remove("mockup-notice-open");
+    window.setTimeout(() => dialog.remove(), 280);
+  }
+
+  document.body.classList.add("mockup-notice-open");
+  ack?.addEventListener("click", closeNotice);
+  ack?.focus();
+  ackWrap?.classList.add("is-timing");
+  ackRing?.addEventListener("animationend", closeNotice, { once: true });
+  window.setTimeout(closeNotice, 3100);
+}
+
+initMockupNotice();
+
+  document.querySelectorAll('a[href^="#"]').forEach((link) => {
+    link.addEventListener("click", (e) => {
+      const id = link.getAttribute("href");
+      if (!id || id === "#") return;
+      const target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+
+  const navToggle = document.querySelector("[data-nav-toggle]");
+  const navPanel = document.querySelector("[data-nav-panel]");
+  if (navToggle && navPanel) {
+    navToggle.addEventListener("click", () => {
+      const open = navPanel.classList.toggle("is-open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    });
+  }
+
+  document.querySelectorAll("form").forEach((form) => {
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const notice = document.getElementById("form-notice");
+      if (notice) {
+        notice.textContent = "Preview only. This form does not send messages.";
+        notice.hidden = false;
+      }
+    });
+  });
+})();
