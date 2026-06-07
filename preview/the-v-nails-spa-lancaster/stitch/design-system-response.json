@@ -1,0 +1,507 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Obsidian & Silk",
+        "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in the \"Editorial Boutique\" aesthetic, blending the authoritative elegance of high-fashion print media with the tactile serenity of a premium spa experience. It targets a discerning clientele seeking luxury, precision, and a moment of calm.\n\nThe visual language is characterized by:\n- **Sophisticated Minimalism:** Utilizing expansive whitespace (negative space) to frame content as if it were a gallery piece.\n- **Intentional Asymmetry:** Breaking traditional grid patterns to create a sense of bespoke, hand-crafted design.\n- **Tactile Modernism:** Mixing the sharp precision of high-contrast typography with soft, atmospheric imagery and delicate gold accents.\n- **Emotional Response:** The UI should feel quiet, expensive, and restorative. It avoids \"digital noise\" in favor of rhythmic, vertical compositions.\n\n## Layout & Spacing\n\nThe layout philosophy is \"The Breathable Grid.\" \n\n- **Vertical Rhythm:** Use exaggerated vertical padding between sections (120px+) to force a slower scroll speed, encouraging the user to linger on imagery.\n- **The 12-Column Editorial Grid:** While built on a 12-column foundation, content should often be offset. For example, a text block might occupy 5 columns starting at column 2, while its accompanying image occupies 6 columns starting at column 7.\n- **Vertical Accents:** Use 1px vertical lines (in Rose Gold or Muted Mauve) to guide the eye and separate content, mimicking a luxury magazine layout.\n- **Mobile Reflow:** On mobile, shift from asymmetrical offsets to a single centered column, but maintain the generous top/bottom margins to preserve the feeling of \"luxury space.\"\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Atmospheric Depth**.\n\n- **Flat Surfaces:** Most elements sit directly on the Champagne Silk background. Depth is created through overlapping elements rather than shadows.\n- **Soft Focus Blurs:** Use background blurs (15px-30px) behind navigation bars to create a \"frosted glass\" effect that allows the warm colors of photography to bleed through.\n- **The \"Sticker\" Effect:** Where elevation is necessary (e.g., a booking modal), use a very thin 1px border of #2D1B2D at 10% opacity combined with a soft, tinted shadow (Plum-tinted, 5% opacity) to make it feel like a heavy card resting on a table.\n- **Image Treatment:** Photography should use a \"soft-focus\" or \"film grain\" overlay to maintain the dreamy, boutique atmosphere.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Obsidian Plum with white/champagne text in tracked-out uppercase. Secondary buttons use a \"Ghost\" style: 1px border in #D4AF37 with no fill.\n- **Input Fields:** Minimalist design—only a 1px bottom border in Muted Mauve. The label floats above in small uppercase Montserrat. Focus state changes the bottom border to Rose Gold.\n- **Cards:** Cards should have no borders or shadows. They are defined by their content alignment and the use of the Champagne Silk background. For service menus, use a \"Leader\" line (dotted or solid) between the service name and the price.\n- **Chips/Categories:** Small, rectangular boxes with a 1px border, using the Label-Caps typography style.\n- **Lists:** Use vertical lines or large Serif numbers (Bodoni) for ordered lists to maintain the editorial vibe.\n- **Booking Modal:** A full-screen overlay in Champagne Silk, utilizing the large Serif watermark of a 'V' in the background to anchor the brand.",
+        "theme": {
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#2d1b2d",
+          "designMd": "---\nname: Obsidian & Silk\ncolors:\n  surface: '#fff7fb'\n  surface-dim: '#e6d5e4'\n  surface-bright: '#fff7fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#ffeffc'\n  surface-container: '#fae9f8'\n  surface-container-high: '#f4e3f2'\n  surface-container-highest: '#efdded'\n  on-surface: '#221823'\n  on-surface-variant: '#4c454a'\n  inverse-surface: '#372d38'\n  inverse-on-surface: '#fdecfb'\n  outline: '#7d747b'\n  outline-variant: '#cfc3ca'\n  surface-tint: '#6e576c'\n  primary: '#140515'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b2d'\n  on-primary-container: '#9a8197'\n  inverse-primary: '#dabed6'\n  secondary: '#625e56'\n  on-secondary: '#ffffff'\n  secondary-container: '#e6dfd5'\n  on-secondary-container: '#67625a'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cca730'\n  on-tertiary-container: '#4f3e00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#f7daf3'\n  primary-fixed-dim: '#dabed6'\n  on-primary-fixed: '#271527'\n  on-primary-fixed-variant: '#554054'\n  secondary-fixed: '#e9e1d8'\n  secondary-fixed-dim: '#cdc5bc'\n  on-secondary-fixed: '#1e1b15'\n  on-secondary-fixed-variant: '#4a463f'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fff7fb'\n  on-background: '#221823'\n  surface-variant: '#efdded'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\n  watermark:\n    fontFamily: Bodoni Moda\n    fontSize: 240px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  section-gap: 120px\n  container-max-width: 1200px\n  gutter: 32px\n  margin-mobile: 24px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"Editorial Boutique\" aesthetic, blending the authoritative elegance of high-fashion print media with the tactile serenity of a premium spa experience. It targets a discerning clientele seeking luxury, precision, and a moment of calm.\n\nThe visual language is characterized by:\n- **Sophisticated Minimalism:** Utilizing expansive whitespace (negative space) to frame content as if it were a gallery piece.\n- **Intentional Asymmetry:** Breaking traditional grid patterns to create a sense of bespoke, hand-crafted design.\n- **Tactile Modernism:** Mixing the sharp precision of high-contrast typography with soft, atmospheric imagery and delicate gold accents.\n- **Emotional Response:** The UI should feel quiet, expensive, and restorative. It avoids \"digital noise\" in favor of rhythmic, vertical compositions.\n\n## Colors\n\nThe palette is designed to mimic high-end materials: heavy cardstock, metallic foil, and deep velvets.\n\n- **Obsidian Plum (#2D1B2D):** Used for primary text, deep backgrounds, and high-impact structural elements. It provides better legibility and more depth than pure black.\n- **Champagne Silk (#F7EFE5):** The primary surface color. It reduces eye strain compared to pure white and reinforces the \"premium paper\" feel.\n- **Rose Gold Dust (#D4AF37):** Reserved for interactive accents, subtle dividers, and decorative motifs. Use sparingly to maintain its value.\n- **Muted Mauve (#726572):** A neutral bridge used for secondary text and borders to ensure the Obsidian Plum doesn't feel too harsh against the Champagne.\n\n## Typography\n\nTypography is the primary decorative element of this design system. It relies on the interplay between a dramatic Serif and a clean, airy Sans-Serif.\n\n- **Serif (Bodoni Moda):** Used for all headlines and display text. Its high contrast between thick and thin strokes conveys luxury. Large initials should be used as background watermarks (3-5% opacity) to create depth.\n- **Sans-Serif (Montserrat):** Used for body copy and UI labels. To maintain the \"wide-spaced\" editorial feel, increase letter spacing (tracking) for body text and use generous line heights.\n- **Labeling:** All small labels and buttons should use uppercase Montserrat with significantly increased letter spacing (0.15em - 0.2em) to mimic luxury brand labeling.\n\n## Layout & Spacing\n\nThe layout philosophy is \"The Breathable Grid.\" \n\n- **Vertical Rhythm:** Use exaggerated vertical padding between sections (120px+) to force a slower scroll speed, encouraging the user to linger on imagery.\n- **The 12-Column Editorial Grid:** While built on a 12-column foundation, content should often be offset. For example, a text block might occupy 5 columns starting at column 2, while its accompanying image occupies 6 columns starting at column 7.\n- **Vertical Accents:** Use 1px vertical lines (in Rose Gold or Muted Mauve) to guide the eye and separate content, mimicking a luxury magazine layout.\n- **Mobile Reflow:** On mobile, shift from asymmetrical offsets to a single centered column, but maintain the generous top/bottom margins to preserve the feeling of \"luxury space.\"\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Atmospheric Depth**.\n\n- **Flat Surfaces:** Most elements sit directly on the Champagne Silk background. Depth is created through overlapping elements rather than shadows.\n- **Soft Focus Blurs:** Use background blurs (15px-30px) behind navigation bars to create a \"frosted glass\" effect that allows the warm colors of photography to bleed through.\n- **The \"Sticker\" Effect:** Where elevation is necessary (e.g., a booking modal), use a very thin 1px border of #2D1B2D at 10% opacity combined with a soft, tinted shadow (Plum-tinted, 5% opacity) to make it feel like a heavy card resting on a table.\n- **Image Treatment:** Photography should use a \"soft-focus\" or \"film grain\" overlay to maintain the dreamy, boutique atmosphere.\n\n## Shapes\n\nThe design system utilizes **Sharp (0px)** geometry to reflect the precision of a professional manicure and the architectural nature of high-end boutiques.\n\n- **Square Edges:** Buttons, input fields, and image containers should have strictly 0px border radii.\n- **Geometric Accents:** Small 8px x 8px squares or thin diamonds (Rose Gold) can be used as bullet points or decorative breaks.\n- **Circular Exceptions:** Only use perfect circles for specific decorative elements like \"scroll-down\" indicators or high-fashion profile avatars to contrast against the sharp grid.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Obsidian Plum with white/champagne text in tracked-out uppercase. Secondary buttons use a \"Ghost\" style: 1px border in #D4AF37 with no fill.\n- **Input Fields:** Minimalist design—only a 1px bottom border in Muted Mauve. The label floats above in small uppercase Montserrat. Focus state changes the bottom border to Rose Gold.\n- **Cards:** Cards should have no borders or shadows. They are defined by their content alignment and the use of the Champagne Silk background. For service menus, use a \"Leader\" line (dotted or solid) between the service name and the price.\n- **Chips/Categories:** Small, rectangular boxes with a 1px border, using the Label-Caps typography style.\n- **Lists:** Use vertical lines or large Serif numbers (Bodoni) for ordered lists to maintain the editorial vibe.\n- **Booking Modal:** A full-screen overlay in Champagne Silk, utilizing the large Serif watermark of a 'V' in the background to anchor the brand.",
+          "font": "BODONI_MODA",
+          "headlineFont": "BODONI_MODA",
+          "headlineFontFamily": "Bodoni Moda",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
+          "namedColors": {
+            "background": "#fff7fb",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#fdecfb",
+            "inverse_primary": "#dabed6",
+            "inverse_surface": "#372d38",
+            "on_background": "#221823",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#9a8197",
+            "on_primary_fixed": "#271527",
+            "on_primary_fixed_variant": "#554054",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#67625a",
+            "on_secondary_fixed": "#1e1b15",
+            "on_secondary_fixed_variant": "#4a463f",
+            "on_surface": "#221823",
+            "on_surface_variant": "#4c454a",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#4f3e00",
+            "on_tertiary_fixed": "#241a00",
+            "on_tertiary_fixed_variant": "#574500",
+            "outline": "#7d747b",
+            "outline_variant": "#cfc3ca",
+            "primary": "#140515",
+            "primary_container": "#2d1b2d",
+            "primary_fixed": "#f7daf3",
+            "primary_fixed_dim": "#dabed6",
+            "secondary": "#625e56",
+            "secondary_container": "#e6dfd5",
+            "secondary_fixed": "#e9e1d8",
+            "secondary_fixed_dim": "#cdc5bc",
+            "surface": "#fff7fb",
+            "surface_bright": "#fff7fb",
+            "surface_container": "#fae9f8",
+            "surface_container_high": "#f4e3f2",
+            "surface_container_highest": "#efdded",
+            "surface_container_low": "#ffeffc",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#e6d5e4",
+            "surface_tint": "#6e576c",
+            "surface_variant": "#efdded",
+            "tertiary": "#735c00",
+            "tertiary_container": "#cca730",
+            "tertiary_fixed": "#ffe088",
+            "tertiary_fixed_dim": "#e9c349"
+          },
+          "overrideNeutralColor": "#726572",
+          "overridePrimaryColor": "#2d1b2d",
+          "overrideSecondaryColor": "#f7efe5",
+          "overrideTertiaryColor": "#d4af37",
+          "spacing": {
+            "container-max-width": "1200px",
+            "gutter": "32px",
+            "margin-desktop": "64px",
+            "margin-mobile": "24px",
+            "section-gap": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.8"
+            },
+            "body-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "letterSpacing": "0.02em",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "64px",
+              "fontWeight": "600",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "40px",
+              "fontWeight": "600",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "48px",
+              "fontWeight": "500",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "32px",
+              "fontWeight": "500",
+              "lineHeight": "1.2"
+            },
+            "label-caps": {
+              "fontFamily": "Montserrat",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.2em",
+              "lineHeight": "1.0"
+            },
+            "watermark": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "240px",
+              "fontWeight": "700",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/52753b81687c4550bf24aa6fe2bc42da",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "fe2deb5ed845408dbb3ee81eb963ed97",
+          "name": "projects/15461561066415389904/screens/fe2deb5ed845408dbb3ee81eb963ed97",
+          "prompt": "High-end, editorial photography of a luxury nail salon interior. Soft, warm lighting, minimal decor, elegant furniture in champagne and deep plum tones. Focus on texture and atmosphere. Shallow depth of field. Professional architectural photography style.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv2tm3lkEpCn-XvEmVfJ0MDuVhoCxiWunHVNxVRCAB4-upks-YxiN72TNe-fDiY_YgUdOFbfJEmXuFJdBYGgEAaY_mFn2c3yZvgjpZwJ_JG0ehj06DIRm4cEjLmVKbhdj4ouxhf2dcxB25_oiMlhdYVn524m7mmWLXxwtwniQS2I-9ErjO0FgAtnV2L55VgRLZPLlAO4k9pajYSxCmWI_84oexuiygrUEYup0r6kcNjyt1ySOueSWYvFX0",
+            "name": "projects/15461561066415389904/files/82ef91264a08443f91eb38d2922ffa4a"
+          },
+          "theme": {},
+          "title": "High-end, editorial photography of a luxury nail salon interior. Soft, warm lighting, minimal decor, elegant furniture in champagne and deep plum tones. Focus on texture and atmosphere. Shallow depth of field. Professional architectural photography style.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1200",
+          "id": "49bebacbe3bb423ea2b9174e950d9d09",
+          "name": "projects/15461561066415389904/screens/49bebacbe3bb423ea2b9174e950d9d09",
+          "prompt": "Close-up, high-fashion photography of a hand with a minimalist, elegant manicure. Neutral tones, soft skin texture, diamond ring accent. Artistic, editorial lighting. Neutral background.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLumDCK2gMuSww-atvZ03A6xmhmEjPnyoFx-24zobpOIhpgReVzGWUyN7oRAuDmCsyYzu09Z3fJV2jIKwnMUsrLSgEC_6C7EFORwdv80YBLs6Y-GIWcMiL7vA-DaxurPcVG6cwLIleMAKe-CL0DxJIXvCllrPhoV3f_HoCJTsR1wBkqTzLwkoqye27Etp-iVLw888NsmODpoqOxu3g3Buem7YvtzWkDSUHLz87wGJ28QyRojp5-KgbEUw0jM",
+            "name": "projects/15461561066415389904/files/7abded2e654047ebb594beec71a0f312"
+          },
+          "theme": {},
+          "title": "Close-up, high-fashion photography of a hand with a minimalist, elegant manicure. Neutral tones, soft skin texture, diamond ring accent. Artistic, editorial lighting. Neutral background.",
+          "width": "896"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "41db2979f6554b8186c8d793e8f39b13",
+          "name": "projects/15461561066415389904/screens/41db2979f6554b8186c8d793e8f39b13",
+          "prompt": "A luxury pedicure setup in a boutique spa. A copper basin with flower petals, plush seating, and a serene, minimalist environment. High-end lifestyle photography.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvRqwxLEeug7i8TJwwgfgbCKquUXmSESSkbxyklqgs8R-bj5Gc_LK02gcXkEMMoruHW6hlq-IikQQWUa-jQu5ag4zB_kc5X5XBj6ysZSQ8oBRIm6aTQEXgIdrWH5uHo3yWDKPKCZd2RyYJGwr2cdhAL-PUIqtSKh51VjHXcnRAVKwIo7cB57syb7APWzMnYC4xX5845TjYsWOZ6DroUccNsd_SbIu0HVF5-rHj14aq6xlzQ2lQJYDx6AKH5",
+            "name": "projects/15461561066415389904/files/d9a733b66b6f4a1fa944f04814302a27"
+          },
+          "theme": {},
+          "title": "A luxury pedicure setup in a boutique spa. A copper basin with flower petals, plush seating, and a serene, minimalist environment. High-end lifestyle photography.",
+          "width": "1024"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Obsidian & Silk",
+              "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in the \"Editorial Boutique\" aesthetic, blending the authoritative elegance of high-fashion print media with the tactile serenity of a premium spa experience. It targets a discerning clientele seeking luxury, precision, and a moment of calm.\n\nThe visual language is characterized by:\n- **Sophisticated Minimalism:** Utilizing expansive whitespace (negative space) to frame content as if it were a gallery piece.\n- **Intentional Asymmetry:** Breaking traditional grid patterns to create a sense of bespoke, hand-crafted design.\n- **Tactile Modernism:** Mixing the sharp precision of high-contrast typography with soft, atmospheric imagery and delicate gold accents.\n- **Emotional Response:** The UI should feel quiet, expensive, and restorative. It avoids \"digital noise\" in favor of rhythmic, vertical compositions.\n\n## Layout & Spacing\n\nThe layout philosophy is \"The Breathable Grid.\" \n\n- **Vertical Rhythm:** Use exaggerated vertical padding between sections (120px+) to force a slower scroll speed, encouraging the user to linger on imagery.\n- **The 12-Column Editorial Grid:** While built on a 12-column foundation, content should often be offset. For example, a text block might occupy 5 columns starting at column 2, while its accompanying image occupies 6 columns starting at column 7.\n- **Vertical Accents:** Use 1px vertical lines (in Rose Gold or Muted Mauve) to guide the eye and separate content, mimicking a luxury magazine layout.\n- **Mobile Reflow:** On mobile, shift from asymmetrical offsets to a single centered column, but maintain the generous top/bottom margins to preserve the feeling of \"luxury space.\"\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Atmospheric Depth**.\n\n- **Flat Surfaces:** Most elements sit directly on the Champagne Silk background. Depth is created through overlapping elements rather than shadows.\n- **Soft Focus Blurs:** Use background blurs (15px-30px) behind navigation bars to create a \"frosted glass\" effect that allows the warm colors of photography to bleed through.\n- **The \"Sticker\" Effect:** Where elevation is necessary (e.g., a booking modal), use a very thin 1px border of #2D1B2D at 10% opacity combined with a soft, tinted shadow (Plum-tinted, 5% opacity) to make it feel like a heavy card resting on a table.\n- **Image Treatment:** Photography should use a \"soft-focus\" or \"film grain\" overlay to maintain the dreamy, boutique atmosphere.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Obsidian Plum with white/champagne text in tracked-out uppercase. Secondary buttons use a \"Ghost\" style: 1px border in #D4AF37 with no fill.\n- **Input Fields:** Minimalist design—only a 1px bottom border in Muted Mauve. The label floats above in small uppercase Montserrat. Focus state changes the bottom border to Rose Gold.\n- **Cards:** Cards should have no borders or shadows. They are defined by their content alignment and the use of the Champagne Silk background. For service menus, use a \"Leader\" line (dotted or solid) between the service name and the price.\n- **Chips/Categories:** Small, rectangular boxes with a 1px border, using the Label-Caps typography style.\n- **Lists:** Use vertical lines or large Serif numbers (Bodoni) for ordered lists to maintain the editorial vibe.\n- **Booking Modal:** A full-screen overlay in Champagne Silk, utilizing the large Serif watermark of a 'V' in the background to anchor the brand.",
+              "theme": {
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#2d1b2d",
+                "designMd": "---\nname: Obsidian & Silk\ncolors:\n  surface: '#fff7fb'\n  surface-dim: '#e6d5e4'\n  surface-bright: '#fff7fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#ffeffc'\n  surface-container: '#fae9f8'\n  surface-container-high: '#f4e3f2'\n  surface-container-highest: '#efdded'\n  on-surface: '#221823'\n  on-surface-variant: '#4c454a'\n  inverse-surface: '#372d38'\n  inverse-on-surface: '#fdecfb'\n  outline: '#7d747b'\n  outline-variant: '#cfc3ca'\n  surface-tint: '#6e576c'\n  primary: '#140515'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b2d'\n  on-primary-container: '#9a8197'\n  inverse-primary: '#dabed6'\n  secondary: '#625e56'\n  on-secondary: '#ffffff'\n  secondary-container: '#e6dfd5'\n  on-secondary-container: '#67625a'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cca730'\n  on-tertiary-container: '#4f3e00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#f7daf3'\n  primary-fixed-dim: '#dabed6'\n  on-primary-fixed: '#271527'\n  on-primary-fixed-variant: '#554054'\n  secondary-fixed: '#e9e1d8'\n  secondary-fixed-dim: '#cdc5bc'\n  on-secondary-fixed: '#1e1b15'\n  on-secondary-fixed-variant: '#4a463f'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fff7fb'\n  on-background: '#221823'\n  surface-variant: '#efdded'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\n  watermark:\n    fontFamily: Bodoni Moda\n    fontSize: 240px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  section-gap: 120px\n  container-max-width: 1200px\n  gutter: 32px\n  margin-mobile: 24px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"Editorial Boutique\" aesthetic, blending the authoritative elegance of high-fashion print media with the tactile serenity of a premium spa experience. It targets a discerning clientele seeking luxury, precision, and a moment of calm.\n\nThe visual language is characterized by:\n- **Sophisticated Minimalism:** Utilizing expansive whitespace (negative space) to frame content as if it were a gallery piece.\n- **Intentional Asymmetry:** Breaking traditional grid patterns to create a sense of bespoke, hand-crafted design.\n- **Tactile Modernism:** Mixing the sharp precision of high-contrast typography with soft, atmospheric imagery and delicate gold accents.\n- **Emotional Response:** The UI should feel quiet, expensive, and restorative. It avoids \"digital noise\" in favor of rhythmic, vertical compositions.\n\n## Colors\n\nThe palette is designed to mimic high-end materials: heavy cardstock, metallic foil, and deep velvets.\n\n- **Obsidian Plum (#2D1B2D):** Used for primary text, deep backgrounds, and high-impact structural elements. It provides better legibility and more depth than pure black.\n- **Champagne Silk (#F7EFE5):** The primary surface color. It reduces eye strain compared to pure white and reinforces the \"premium paper\" feel.\n- **Rose Gold Dust (#D4AF37):** Reserved for interactive accents, subtle dividers, and decorative motifs. Use sparingly to maintain its value.\n- **Muted Mauve (#726572):** A neutral bridge used for secondary text and borders to ensure the Obsidian Plum doesn't feel too harsh against the Champagne.\n\n## Typography\n\nTypography is the primary decorative element of this design system. It relies on the interplay between a dramatic Serif and a clean, airy Sans-Serif.\n\n- **Serif (Bodoni Moda):** Used for all headlines and display text. Its high contrast between thick and thin strokes conveys luxury. Large initials should be used as background watermarks (3-5% opacity) to create depth.\n- **Sans-Serif (Montserrat):** Used for body copy and UI labels. To maintain the \"wide-spaced\" editorial feel, increase letter spacing (tracking) for body text and use generous line heights.\n- **Labeling:** All small labels and buttons should use uppercase Montserrat with significantly increased letter spacing (0.15em - 0.2em) to mimic luxury brand labeling.\n\n## Layout & Spacing\n\nThe layout philosophy is \"The Breathable Grid.\" \n\n- **Vertical Rhythm:** Use exaggerated vertical padding between sections (120px+) to force a slower scroll speed, encouraging the user to linger on imagery.\n- **The 12-Column Editorial Grid:** While built on a 12-column foundation, content should often be offset. For example, a text block might occupy 5 columns starting at column 2, while its accompanying image occupies 6 columns starting at column 7.\n- **Vertical Accents:** Use 1px vertical lines (in Rose Gold or Muted Mauve) to guide the eye and separate content, mimicking a luxury magazine layout.\n- **Mobile Reflow:** On mobile, shift from asymmetrical offsets to a single centered column, but maintain the generous top/bottom margins to preserve the feeling of \"luxury space.\"\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Atmospheric Depth**.\n\n- **Flat Surfaces:** Most elements sit directly on the Champagne Silk background. Depth is created through overlapping elements rather than shadows.\n- **Soft Focus Blurs:** Use background blurs (15px-30px) behind navigation bars to create a \"frosted glass\" effect that allows the warm colors of photography to bleed through.\n- **The \"Sticker\" Effect:** Where elevation is necessary (e.g., a booking modal), use a very thin 1px border of #2D1B2D at 10% opacity combined with a soft, tinted shadow (Plum-tinted, 5% opacity) to make it feel like a heavy card resting on a table.\n- **Image Treatment:** Photography should use a \"soft-focus\" or \"film grain\" overlay to maintain the dreamy, boutique atmosphere.\n\n## Shapes\n\nThe design system utilizes **Sharp (0px)** geometry to reflect the precision of a professional manicure and the architectural nature of high-end boutiques.\n\n- **Square Edges:** Buttons, input fields, and image containers should have strictly 0px border radii.\n- **Geometric Accents:** Small 8px x 8px squares or thin diamonds (Rose Gold) can be used as bullet points or decorative breaks.\n- **Circular Exceptions:** Only use perfect circles for specific decorative elements like \"scroll-down\" indicators or high-fashion profile avatars to contrast against the sharp grid.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Obsidian Plum with white/champagne text in tracked-out uppercase. Secondary buttons use a \"Ghost\" style: 1px border in #D4AF37 with no fill.\n- **Input Fields:** Minimalist design—only a 1px bottom border in Muted Mauve. The label floats above in small uppercase Montserrat. Focus state changes the bottom border to Rose Gold.\n- **Cards:** Cards should have no borders or shadows. They are defined by their content alignment and the use of the Champagne Silk background. For service menus, use a \"Leader\" line (dotted or solid) between the service name and the price.\n- **Chips/Categories:** Small, rectangular boxes with a 1px border, using the Label-Caps typography style.\n- **Lists:** Use vertical lines or large Serif numbers (Bodoni) for ordered lists to maintain the editorial vibe.\n- **Booking Modal:** A full-screen overlay in Champagne Silk, utilizing the large Serif watermark of a 'V' in the background to anchor the brand.",
+                "font": "BODONI_MODA",
+                "headlineFont": "BODONI_MODA",
+                "headlineFontFamily": "Bodoni Moda",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
+                "namedColors": {
+                  "background": "#fff7fb",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#fdecfb",
+                  "inverse_primary": "#dabed6",
+                  "inverse_surface": "#372d38",
+                  "on_background": "#221823",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#9a8197",
+                  "on_primary_fixed": "#271527",
+                  "on_primary_fixed_variant": "#554054",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#67625a",
+                  "on_secondary_fixed": "#1e1b15",
+                  "on_secondary_fixed_variant": "#4a463f",
+                  "on_surface": "#221823",
+                  "on_surface_variant": "#4c454a",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#4f3e00",
+                  "on_tertiary_fixed": "#241a00",
+                  "on_tertiary_fixed_variant": "#574500",
+                  "outline": "#7d747b",
+                  "outline_variant": "#cfc3ca",
+                  "primary": "#140515",
+                  "primary_container": "#2d1b2d",
+                  "primary_fixed": "#f7daf3",
+                  "primary_fixed_dim": "#dabed6",
+                  "secondary": "#625e56",
+                  "secondary_container": "#e6dfd5",
+                  "secondary_fixed": "#e9e1d8",
+                  "secondary_fixed_dim": "#cdc5bc",
+                  "surface": "#fff7fb",
+                  "surface_bright": "#fff7fb",
+                  "surface_container": "#fae9f8",
+                  "surface_container_high": "#f4e3f2",
+                  "surface_container_highest": "#efdded",
+                  "surface_container_low": "#ffeffc",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#e6d5e4",
+                  "surface_tint": "#6e576c",
+                  "surface_variant": "#efdded",
+                  "tertiary": "#735c00",
+                  "tertiary_container": "#cca730",
+                  "tertiary_fixed": "#ffe088",
+                  "tertiary_fixed_dim": "#e9c349"
+                },
+                "overrideNeutralColor": "#726572",
+                "overridePrimaryColor": "#2d1b2d",
+                "overrideSecondaryColor": "#f7efe5",
+                "overrideTertiaryColor": "#d4af37",
+                "spacing": {
+                  "container-max-width": "1200px",
+                  "gutter": "32px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "24px",
+                  "section-gap": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.8"
+                  },
+                  "body-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "64px",
+                    "fontWeight": "600",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "40px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "48px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "32px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.2em",
+                    "lineHeight": "1.0"
+                  },
+                  "watermark": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "240px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/52753b81687c4550bf24aa6fe2bc42da",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10604",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzY5ZGRkM2RjM2RiZDQ3NTI4MzZjYTRlMDY1NDM0NzY1EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTQ2MTU2MTA2NjQxNTM4OTkwNA&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/15461561066415389904/files/883dec8d9f004a20bd7f1c9bce333198"
+          },
+          "id": "a93bd7525a3f4e00af181dbfd0e6ef28",
+          "name": "projects/15461561066415389904/screens/a93bd7525a3f4e00af181dbfd0e6ef28",
+          "prompt": "Build the complete DESKTOP landing page for The V Nails Spa. \nUse an editorial, high-fashion layout with generous whitespace and a sophisticated color palette of Obsidian Plum and Champagne Silk.\nInclude the following sections:\n- Header: Minimalist, includes (717) 517-8248 and a 'Book Now' button.\n- Hero: Uses {{DATA:IMAGE:IMAGE_3}} as a background, featuring bold, elegant typography: 'The V Nails: Artistry in Every Detail'.\n- #credibility: A curated selection of high-end features: 'Bespoke Artistry', 'Premium Products', 'Serene Sanctuary'.\n- Services: An asymmetrical grid featuring 'Manicure Excellence', 'Pedicure Rituals', and 'Signature Nail Art' using {{DATA:IMAGE:IMAGE_4}} and {{DATA:IMAGE:IMAGE_5}}.\n- About: A storytelling section about the salon's dedication to luxury and care, located in Lancaster, PA.\n- #visit: Contains the contact form and the specific map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Footer: Professional details including 2405 Covered Bridge Drive, Lancaster, PA 17602 and ivytran185@yahoo.com.\nIncorporate smooth scroll, mobile navigation (responsive at 375px), and a custom color palette in CSS variables. No lorem ipsum.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvjKW_ulVDDykCz42XR2i0ltp65BYdSaaH6upzekxs32puxfViTj3-guit20G6kzfky10CnNUCfD14z6hjdrAstCsY0J4VuFH2uGPDbJmkP5nFiskUvKPCqKksZW5N0LdLlquBaa1YDKDGytq5RtjltLwsNCLACuLqkDneznSpqkAhifST5z34UjVqHhVFmxHphsfOS_FDUgHqfVM7aEZtGFTSPR8P6CbgC_CYcQRoovw5mZ_41WdtJBIB9",
+            "name": "projects/15461561066415389904/files/d9ee610569ae4439bd80c841371b8fa1"
+          },
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#2d1b2d",
+            "designMd": "---\nname: Obsidian & Silk\ncolors:\n  surface: '#fff7fb'\n  surface-dim: '#e6d5e4'\n  surface-bright: '#fff7fb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#ffeffc'\n  surface-container: '#fae9f8'\n  surface-container-high: '#f4e3f2'\n  surface-container-highest: '#efdded'\n  on-surface: '#221823'\n  on-surface-variant: '#4c454a'\n  inverse-surface: '#372d38'\n  inverse-on-surface: '#fdecfb'\n  outline: '#7d747b'\n  outline-variant: '#cfc3ca'\n  surface-tint: '#6e576c'\n  primary: '#140515'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b2d'\n  on-primary-container: '#9a8197'\n  inverse-primary: '#dabed6'\n  secondary: '#625e56'\n  on-secondary: '#ffffff'\n  secondary-container: '#e6dfd5'\n  on-secondary-container: '#67625a'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cca730'\n  on-tertiary-container: '#4f3e00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#f7daf3'\n  primary-fixed-dim: '#dabed6'\n  on-primary-fixed: '#271527'\n  on-primary-fixed-variant: '#554054'\n  secondary-fixed: '#e9e1d8'\n  secondary-fixed-dim: '#cdc5bc'\n  on-secondary-fixed: '#1e1b15'\n  on-secondary-fixed-variant: '#4a463f'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fff7fb'\n  on-background: '#221823'\n  surface-variant: '#efdded'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\n  watermark:\n    fontFamily: Bodoni Moda\n    fontSize: 240px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  section-gap: 120px\n  container-max-width: 1200px\n  gutter: 32px\n  margin-mobile: 24px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"Editorial Boutique\" aesthetic, blending the authoritative elegance of high-fashion print media with the tactile serenity of a premium spa experience. It targets a discerning clientele seeking luxury, precision, and a moment of calm.\n\nThe visual language is characterized by:\n- **Sophisticated Minimalism:** Utilizing expansive whitespace (negative space) to frame content as if it were a gallery piece.\n- **Intentional Asymmetry:** Breaking traditional grid patterns to create a sense of bespoke, hand-crafted design.\n- **Tactile Modernism:** Mixing the sharp precision of high-contrast typography with soft, atmospheric imagery and delicate gold accents.\n- **Emotional Response:** The UI should feel quiet, expensive, and restorative. It avoids \"digital noise\" in favor of rhythmic, vertical compositions.\n\n## Colors\n\nThe palette is designed to mimic high-end materials: heavy cardstock, metallic foil, and deep velvets.\n\n- **Obsidian Plum (#2D1B2D):** Used for primary text, deep backgrounds, and high-impact structural elements. It provides better legibility and more depth than pure black.\n- **Champagne Silk (#F7EFE5):** The primary surface color. It reduces eye strain compared to pure white and reinforces the \"premium paper\" feel.\n- **Rose Gold Dust (#D4AF37):** Reserved for interactive accents, subtle dividers, and decorative motifs. Use sparingly to maintain its value.\n- **Muted Mauve (#726572):** A neutral bridge used for secondary text and borders to ensure the Obsidian Plum doesn't feel too harsh against the Champagne.\n\n## Typography\n\nTypography is the primary decorative element of this design system. It relies on the interplay between a dramatic Serif and a clean, airy Sans-Serif.\n\n- **Serif (Bodoni Moda):** Used for all headlines and display text. Its high contrast between thick and thin strokes conveys luxury. Large initials should be used as background watermarks (3-5% opacity) to create depth.\n- **Sans-Serif (Montserrat):** Used for body copy and UI labels. To maintain the \"wide-spaced\" editorial feel, increase letter spacing (tracking) for body text and use generous line heights.\n- **Labeling:** All small labels and buttons should use uppercase Montserrat with significantly increased letter spacing (0.15em - 0.2em) to mimic luxury brand labeling.\n\n## Layout & Spacing\n\nThe layout philosophy is \"The Breathable Grid.\" \n\n- **Vertical Rhythm:** Use exaggerated vertical padding between sections (120px+) to force a slower scroll speed, encouraging the user to linger on imagery.\n- **The 12-Column Editorial Grid:** While built on a 12-column foundation, content should often be offset. For example, a text block might occupy 5 columns starting at column 2, while its accompanying image occupies 6 columns starting at column 7.\n- **Vertical Accents:** Use 1px vertical lines (in Rose Gold or Muted Mauve) to guide the eye and separate content, mimicking a luxury magazine layout.\n- **Mobile Reflow:** On mobile, shift from asymmetrical offsets to a single centered column, but maintain the generous top/bottom margins to preserve the feeling of \"luxury space.\"\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Atmospheric Depth**.\n\n- **Flat Surfaces:** Most elements sit directly on the Champagne Silk background. Depth is created through overlapping elements rather than shadows.\n- **Soft Focus Blurs:** Use background blurs (15px-30px) behind navigation bars to create a \"frosted glass\" effect that allows the warm colors of photography to bleed through.\n- **The \"Sticker\" Effect:** Where elevation is necessary (e.g., a booking modal), use a very thin 1px border of #2D1B2D at 10% opacity combined with a soft, tinted shadow (Plum-tinted, 5% opacity) to make it feel like a heavy card resting on a table.\n- **Image Treatment:** Photography should use a \"soft-focus\" or \"film grain\" overlay to maintain the dreamy, boutique atmosphere.\n\n## Shapes\n\nThe design system utilizes **Sharp (0px)** geometry to reflect the precision of a professional manicure and the architectural nature of high-end boutiques.\n\n- **Square Edges:** Buttons, input fields, and image containers should have strictly 0px border radii.\n- **Geometric Accents:** Small 8px x 8px squares or thin diamonds (Rose Gold) can be used as bullet points or decorative breaks.\n- **Circular Exceptions:** Only use perfect circles for specific decorative elements like \"scroll-down\" indicators or high-fashion profile avatars to contrast against the sharp grid.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Obsidian Plum with white/champagne text in tracked-out uppercase. Secondary buttons use a \"Ghost\" style: 1px border in #D4AF37 with no fill.\n- **Input Fields:** Minimalist design—only a 1px bottom border in Muted Mauve. The label floats above in small uppercase Montserrat. Focus state changes the bottom border to Rose Gold.\n- **Cards:** Cards should have no borders or shadows. They are defined by their content alignment and the use of the Champagne Silk background. For service menus, use a \"Leader\" line (dotted or solid) between the service name and the price.\n- **Chips/Categories:** Small, rectangular boxes with a 1px border, using the Label-Caps typography style.\n- **Lists:** Use vertical lines or large Serif numbers (Bodoni) for ordered lists to maintain the editorial vibe.\n- **Booking Modal:** A full-screen overlay in Champagne Silk, utilizing the large Serif watermark of a 'V' in the background to anchor the brand.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fff7fb",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#fdecfb",
+              "inverse_primary": "#dabed6",
+              "inverse_surface": "#372d38",
+              "on_background": "#221823",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#9a8197",
+              "on_primary_fixed": "#271527",
+              "on_primary_fixed_variant": "#554054",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#67625a",
+              "on_secondary_fixed": "#1e1b15",
+              "on_secondary_fixed_variant": "#4a463f",
+              "on_surface": "#221823",
+              "on_surface_variant": "#4c454a",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#4f3e00",
+              "on_tertiary_fixed": "#241a00",
+              "on_tertiary_fixed_variant": "#574500",
+              "outline": "#7d747b",
+              "outline_variant": "#cfc3ca",
+              "primary": "#140515",
+              "primary_container": "#2d1b2d",
+              "primary_fixed": "#f7daf3",
+              "primary_fixed_dim": "#dabed6",
+              "secondary": "#625e56",
+              "secondary_container": "#e6dfd5",
+              "secondary_fixed": "#e9e1d8",
+              "secondary_fixed_dim": "#cdc5bc",
+              "surface": "#fff7fb",
+              "surface_bright": "#fff7fb",
+              "surface_container": "#fae9f8",
+              "surface_container_high": "#f4e3f2",
+              "surface_container_highest": "#efdded",
+              "surface_container_low": "#ffeffc",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#e6d5e4",
+              "surface_tint": "#6e576c",
+              "surface_variant": "#efdded",
+              "tertiary": "#735c00",
+              "tertiary_container": "#cca730",
+              "tertiary_fixed": "#ffe088",
+              "tertiary_fixed_dim": "#e9c349"
+            },
+            "overrideNeutralColor": "#726572",
+            "overridePrimaryColor": "#2d1b2d",
+            "overrideSecondaryColor": "#f7efe5",
+            "overrideTertiaryColor": "#d4af37",
+            "spacing": {
+              "container-max-width": "1200px",
+              "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.8"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "64px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "500",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.2"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.2em",
+                "lineHeight": "1.0"
+              },
+              "watermark": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "240px",
+                "fontWeight": "700",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "The V Nails Spa - Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, editorial-inspired landing page for **The V Nails Spa**, focusing on a premium and memorable first impression.\n\n### Key Design Decisions:\n- **Visual Identity:** I established a sophisticated \"Obsidian & Silk\" palette—deep plum tones paired with champagne and rose gold—to convey luxury and exclusivity.\n- **Editorial Layout:** The design uses an asymmetrical grid and generous whitespace, moving away from generic templates to create a high-fashion, boutique feel.\n- **Typography:** A high-contrast serif font (Bodoni Moda) was chosen for headlines to provide an authoritative yet elegant voice, complemented by a clean sans-serif for readability.\n- **Immersive Imagery:** I integrated high-fidelity, architectural and fashion-focused photography that highlights the atmosphere of the salon and the precision of the artistry.\n- **Functional Luxury:** The header and footer are streamlined to prioritize contact and booking, while the \"Rituals & Treatments\" section uses a curated layout to showcase services as experiences rather than just menu items.\n\nThe site is fully responsive, featuring a custom mobile navigation and smooth scroll interactions to ensure the premium experience translates across all devices."
+  },
+  {
+    "suggestion": "Change the primary color to a softer sage green palette."
+  },
+  {
+    "suggestion": "Add a gallery section to showcase more nail art."
+  },
+  {
+    "suggestion": "Update the services section with specific pricing."
+  }
+]
