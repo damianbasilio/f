@@ -1,51 +1,46 @@
-// Simple Form Interaction
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const status = document.getElementById('formStatus');
-            const submitBtn = this.querySelector('button[type="submit"]');
-            
-            // Interaction feedback
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'TRANSMITTING...';
-            
-            setTimeout(() => {
-                status.classList.remove('hidden', 'text-error');
-                status.classList.add('text-green-600', 'block');
-                status.textContent = 'PROTOCOL INITIATED. STAND BY.';
-                submitBtn.textContent = 'REQUEST SENT';
-                this.reset();
-            }, 1500);
-        });
+// Micro-interactions and subtle scroll effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
 
-        // Sticky Header Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-unit-sm', 'shadow-sm');
-                header.classList.remove('py-unit-md');
-            } else {
-                header.classList.add('py-unit-md');
-                header.classList.remove('py-unit-sm', 'shadow-sm');
-            }
-        });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    }
+                });
+            }, observerOptions);
 
-        // Asymmetric Intersection Observer (Fade in effects)
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                }
+            // Apply fade-in to major sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+                observer.observe(section);
             });
-        }, observerOptions);
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
-            observer.observe(el);
+            // Handle smooth navigation active states
+            const navLinks = document.querySelectorAll('nav a');
+            window.addEventListener('scroll', () => {
+                let current = "";
+                const sections = document.querySelectorAll('section');
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.clientHeight;
+                    if (pageYOffset >= (sectionTop - 200)) {
+                        current = section.getAttribute('id');
+                    }
+                });
+
+                navLinks.forEach(link => {
+                    link.classList.remove('text-primary', 'border-b', 'border-primary', 'pb-1');
+                    link.classList.add('text-on-surface-variant');
+                    if (link.getAttribute('href').substring(1) === current) {
+                        link.classList.remove('text-on-surface-variant');
+                        link.classList.add('text-primary', 'border-b', 'border-primary', 'pb-1');
+                    }
+                });
+            });
         });
 
 (() => {

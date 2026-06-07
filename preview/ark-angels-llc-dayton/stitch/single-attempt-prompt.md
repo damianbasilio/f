@@ -10,6 +10,16 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 
 ---
 
+## REBUILD — fresh creative direction (required)
+
+This is a **complete redesign**, not a polish pass. Do **not** reuse the previous homepage layout, hero structure, section order, or navigation pattern.
+
+**Layout archetype for this attempt:** classic centered hero — wide banner image, symmetrical sections, elegant whitespace
+
+Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780819815212
+
+---
+
 ## Output requirement (this request)
 
 Deliver the **complete production-ready website** in this response — semantic HTML, CSS, and JS as specified above.

@@ -1,70 +1,67 @@
-I've designed a bespoke, editorial-grade landing page for **ARK Angels, LLC**, moving far beyond a standard local business template.
+I've completed the bespoke redesign for ARK Angels, LLC, creating a high-fidelity, editorial-grade homepage that emphasizes their local heritage and professional integrity.
 
 ### Design Highlights:
-*   **Visual Identity**: I've established a 'Warm Modernism' aesthetic using a sophisticated palette of River Stone Charcoal, Slate Blue, and a warm Parchment background, accented with 'Angel Gold' for high-impact actions.
-*   **Editorial Layout**: Eschewing generic grids, I used an asymmetrical, staggered layout with generous whitespace and intentional rule lines to guide the eye through the service offerings.
-*   **Strong Typography**: High-contrast serif headlines provide a sense of heritage and authority, while clean geometric sans-serif body text ensures modern professionalism.
-*   **Functional Excellence**:
-    *   **Architectural Hero**: A striking first impression focused on the "Protection by Design" philosophy.
-    *   **Credibility & Heritage**: Dedicated sections that ground the brand in its Dayton, OH roots.
-    *   **Interactive Readiness**: Includes a custom map slot, a production-ready contact form with validation UI, and a smooth, responsive navigation experience.
+- **Visual Identity**: Established a "Slate & Gold" palette paired with high-contrast serif typography to create a premium, authoritative first impression.
+- **Classic Centered Layout**: The hero and core sections use a symmetrical, centered composition that feels balanced and timeless.
+- **Editorial Flair**: I used large serif numerals for the services section and fine hairline dividers throughout to give the site a sophisticated magazine-like quality.
+- **Local Context**: Focused the copy on Dayton, OH, and the business's community roots to differentiate it from generic national competitors.
 
-The site is built with semantic HTML and modern CSS, ensuring it is as robust as it is visually distinct.
+The code is fully production-ready, featuring a mobile-responsive navigation system, smooth scrolling, and the specific map slot you requested.
 
-How does this visual direction feel for the brand? We can refine the specific imagery or adjust the "Angel Gold" accent balance if you'd like.
+How does this new direction feel for the brand? We can refine the color balance or adjust the visual weight of the services section if you'd like.
 
 ---
 
 ---
-name: Warm Modernism Editorial
+name: ARK Angels Editorial System
 colors:
-  surface: '#f6fafc'
-  surface-dim: '#d6dbdd'
-  surface-bright: '#f6fafc'
+  surface: '#fbf9fa'
+  surface-dim: '#dbd9da'
+  surface-bright: '#fbf9fa'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f0f4f6'
-  surface-container: '#eaeef1'
-  surface-container-high: '#e4e9eb'
-  surface-container-highest: '#dfe3e5'
-  on-surface: '#171c1e'
-  on-surface-variant: '#434748'
-  inverse-surface: '#2c3133'
-  inverse-on-surface: '#edf1f3'
-  outline: '#747879'
-  outline-variant: '#c4c7c8'
-  surface-tint: '#5b5f60'
-  primary: '#181c1d'
+  surface-container-low: '#f5f3f4'
+  surface-container: '#efedee'
+  surface-container-high: '#eae7e8'
+  surface-container-highest: '#e4e2e3'
+  on-surface: '#1b1c1c'
+  on-surface-variant: '#46474a'
+  inverse-surface: '#303031'
+  inverse-on-surface: '#f2f0f1'
+  outline: '#76777b'
+  outline-variant: '#c7c6ca'
+  surface-tint: '#5f5e5f'
+  primary: '#000000'
   on-primary: '#ffffff'
-  primary-container: '#2d3132'
-  on-primary-container: '#95999a'
-  inverse-primary: '#c4c7c8'
-  secondary: '#456271'
+  primary-container: '#1b1b1c'
+  on-primary-container: '#858384'
+  inverse-primary: '#c8c6c7'
+  secondary: '#775a19'
   on-secondary: '#ffffff'
-  secondary-container: '#c5e4f5'
-  on-secondary-container: '#496775'
-  tertiary: '#735c00'
+  secondary-container: '#fed488'
+  on-secondary-container: '#785a1a'
+  tertiary: '#000000'
   on-tertiary: '#ffffff'
-  tertiary-container: '#cca730'
-  on-tertiary-container: '#4f3e00'
+  tertiary-container: '#1b1c19'
+  on-tertiary-container: '#848480'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#e0e3e4'
-  primary-fixed-dim: '#c4c7c8'
-  on-primary-fixed: '#181c1d'
-  on-primary-fixed-variant: '#434748'
-  secondary-fixed: '#c8e7f8'
-  secondary-fixed-dim: '#accbdc'
-  on-secondary-fixed: '#001f2a'
-  on-secondary-fixed-variant: '#2d4b58'
-  tertiary-fixed: '#ffe088'
-  tertiary-fixed-dim: '#e9c349'
-  on-tertiary-fixed: '#241a00'
-  on-tertiary-fixed-variant: '#574500'
-  background: '#f6fafc'
-  on-background: '#171c1e'
-  surface-variant: '#dfe3e5'
+  primary-fixed: '#e5e2e3'
+  primary-fixed-dim: '#c8c6c7'
+  on-primary-fixed: '#1b1b1c'
+  on-primary-fixed-variant: '#474647'
+  secondary-fixed: '#ffdea5'
+  secondary-fixed-dim: '#e9c176'
+  on-secondary-fixed: '#261900'
+  on-secondary-fixed-variant: '#5d4201'
+  tertiary-fixed: '#e4e2dd'
+  tertiary-fixed-dim: '#c8c6c2'
+  on-tertiary-fixed: '#1b1c19'
+  on-tertiary-fixed-variant: '#474744'
+  background: '#fbf9fa'
+  on-background: '#1b1c1c'
+  surface-variant: '#e4e2e3'
 typography:
   display-lg:
     fontFamily: Playfair Display
@@ -77,121 +74,87 @@ typography:
     fontSize: 40px
     fontWeight: '700'
     lineHeight: '1.2'
-    letterSpacing: -0.01em
   headline-lg:
     fontFamily: Playfair Display
     fontSize: 48px
     fontWeight: '600'
     lineHeight: '1.2'
-  headline-lg-mobile:
-    fontFamily: Playfair Display
-    fontSize: 32px
-    fontWeight: '600'
-    lineHeight: '1.3'
   headline-md:
     fontFamily: Playfair Display
     fontSize: 32px
     fontWeight: '600'
     lineHeight: '1.3'
   body-lg:
-    fontFamily: Montserrat
+    fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.6'
+    lineHeight: '1.8'
     letterSpacing: 0.01em
   body-md:
-    fontFamily: Montserrat
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-  label-lg:
-    fontFamily: Montserrat
-    fontSize: 14px
-    fontWeight: '600'
-    lineHeight: '1.2'
-    letterSpacing: 0.1em
-  label-md:
-    fontFamily: Montserrat
+  label-caps:
+    fontFamily: Inter
     fontSize: 12px
-    fontWeight: '500'
-    lineHeight: '1.2'
-    letterSpacing: 0.05em
+    fontWeight: '600'
+    lineHeight: '1.0'
+    letterSpacing: 0.15em
 spacing:
+  unit: 8px
   container-max: 1280px
   gutter: 32px
   margin-desktop: 64px
-  margin-tablet: 32px
-  margin-mobile: 20px
-  unit-xs: 4px
-  unit-sm: 8px
-  unit-md: 16px
-  unit-lg: 24px
-  unit-xl: 48px
-  unit-xxl: 80px
+  margin-mobile: 24px
+  section-gap: 128px
 ---
 
 ## Brand & Style
+The design system for this brand is rooted in **Modern Editorialism**. It prioritizes a bespoke, high-end experience that feels more like a curated monograph than a standard service website. The brand personality is authoritative yet approachable, evoking the quiet confidence of a heritage institution.
 
-This design system embodies "Warm Modernism"—a philosophy that balances architectural precision with human warmth. It is designed for an audience that values heritage, protection, and sophisticated clarity. The visual language moves away from the generic "tech-startup" aesthetic toward a premium editorial experience.
-
-The core of the identity is the "Interlocking Protection" motif. This is expressed through the intentional use of thin rule lines (0.5pt to 1pt) and overlapping layout planes that suggest structural stability and woven security. The aesthetic is intentional and bespoke, prioritizing generous whitespace to allow content to breathe, conveying a sense of calm authority and high-value service.
+The design style utilizes **Minimalism** combined with **Tactile** elements. We employ generous whitespace (macro-gestures) to create a sense of luxury and breathing room. To differentiate from "tech" minimalism, we introduce subtle parchment textures and hairline rules—referencing traditional lithography and premium stationery. The goal is to evoke an emotional response of absolute trust and meticulous attention to detail.
 
 ## Colors
+The palette, "Slate & Gold," is designed for high-contrast legibility and a sense of "quiet luxury."
 
-The palette, "River Stone & Sky," is grounded in the natural landscape of Dayton, utilizing organic but structured tones.
-
-- **Warm Parchment (#F9F7F2):** The primary canvas. It provides a softer, more premium feel than pure white, reducing eye strain and evoking high-quality stationery.
-- **Deep Charcoal (#2D3132):** Used for primary typography and structural elements. It provides the "Stone" foundation and ensures high-contrast readability.
-- **Muted Slate Blue (#5D7B8A):** The "Sky" element. Used for secondary actions, accents, and decorative "interlocking" shapes to provide a professional, calm depth.
-- **Angel Gold (#D4AF37):** Reserved exclusively for high-impact calls to action and critical highlights. Its use must be sparse and intentional to maintain its "signature" status.
+- **Slate (#1A1A1B):** Used for primary typography and deep-toned backgrounds. It is a soft black that feels more natural and expensive than pure hex #000.
+- **Gold (#C5A059):** A muted metallic used sparingly for accents, key CTAs, and decorative hairline flourishes. It should never be used for large blocks of text.
+- **Parchment (#F9F7F2):** The primary canvas color. This off-white reduces eye strain and provides a tactile, paper-like quality compared to stark white.
+- **Neutral (#4A4A4B):** Used for secondary body text and metadata to maintain a clear hierarchy without competing with the primary slate headings.
 
 ## Typography
+The typographic strategy relies on a high-contrast pairing:
 
-The typographic scale relies on high contrast between the serif and sans-serif families. 
-
-**Playfair Display** serves as the voice of authority. It should be used for all major headlines and "editorial moments." Note the tight letter-spacing on display sizes to create a dense, premium feel.
-
-**Montserrat** provides the functional engine. As a geometric sans-serif, it offers an architectural cleanliness that balances the romanticism of the serif. For body text, leading (line height) is intentionally generous to facilitate long-form reading and reinforce the "whitespace" brand pillar. Labels and small navigational elements should utilize Montserrat in uppercase with increased letter-spacing for a refined, modern touch.
+- **Headlines:** Playfair Display provides the "editorial voice." Use it with tight tracking for large displays and slightly more air for subheads. It should feel authoritative and graceful.
+- **Body:** Inter is chosen for its utilitarian clarity, providing a modern counterweight to the serif. Increased line-height (1.8) for `body-lg` is essential to maintain the magazine-style readability.
+- **Labels:** Use `label-caps` for eyebrows, small descriptors, and navigation items. The wide letter-spacing is a key "high-end" brand signifier.
 
 ## Layout & Spacing
+This design system uses a **Fixed Grid** model for desktop to ensure the "editorial" compositions remain perfectly balanced. 
 
-The layout follows a disciplined 12-column fixed grid for desktop, transitioning to a 6-column grid for tablet and a 2-column grid for mobile. 
-
-The "Interlocking Protection" motif is achieved through:
-1. **Rule Lines:** Use 1px Deep Charcoal lines to separate sections horizontally and vertically, often extending to the edge of the viewport.
-2. **Asymmetrical Balance:** Avoid perfectly centered layouts. Place content in 4-column or 8-column blocks to create dynamic tension and whitespace "pockets."
-3. **Overlapping Planes:** Elements like images or pull-quotes should occasionally "break" the grid or overlap subtle Slate Blue background shapes to visualize the concept of interlocking layers.
+- **Grid:** 12-columns with wide 32px gutters to prevent content density.
+- **Symmetry:** Center-aligned layouts should be used for high-impact landing sections. Asymmetric layouts (e.g., text in 5 columns, image in 7) should be used for narrative sections to keep the eye moving.
+- **The "Editorial Gap":** Use the `section-gap` (128px) between major content blocks. This intentional "over-spacing" is what separates this system from a generic business template.
+- **Mobile:** On mobile, collapse to a single column with 24px margins, but maintain the vertical whitespace to preserve the premium feel.
 
 ## Elevation & Depth
+Depth is created through **Tonal Layers** and **Hairline Outlines** rather than heavy shadows.
 
-In keeping with the "Modernism" style, this system avoids traditional drop shadows. Depth is communicated through **Tonal Layering** and **Line Work**.
-
-- **Level 0 (Base):** Warm Parchment background.
-- **Level 1 (Surface):** White (#FFFFFF) surfaces used for cards or content blocks, defined by a 1px Deep Charcoal border rather than a shadow.
-- **Level 2 (Overlay):** Interaction states (like hovered buttons) utilize a slight tonal shift or a solid Deep Charcoal fill.
-- **Backdrop Blurs:** If an overlay is required (e.g., a modal), use a high-density blur (20px+) over the Parchment background with a Slate Blue tint at 10% opacity.
+- **Flat Surfaces:** Elements should generally appear to exist on the same physical plane as the parchment background.
+- **Hairlines:** Use 0.5pt or 1pt solid rules in Slate (#1A1A1B) at 15% opacity to separate sections or frame content. This mimics the look of a printed newspaper or journal.
+- **Depth:** When elevation is required (e.g., a modal or dropdown), use a sharp, zero-blur shadow with a very low opacity, or a "ghost" border. Avoid soft, blurry "Material" style shadows.
 
 ## Shapes
+The shape language is **Sharp (0px)**. 
 
-The primary shape language is **Sharp (0px)**. All buttons, input fields, images, and containers must have strictly square corners to reflect architectural precision and institutional strength.
+To maintain the sophisticated, architectural feel of a professional services firm, all containers, buttons, and form fields must have hard 90-degree corners. Rounded corners are perceived as "friendly" or "tech-oriented," whereas sharp corners evoke precision, heritage, and structure. 
 
-The only exception is the "Organic Motif": Very large, pill-like radii (100px+) may be used for decorative background elements or specific image masks that represent the "Angel" aspect of the brand—softening the rigidity of the grid without resorting to the "bubbly" feel of standard rounded UI.
+Images should follow this rule strictly, often framed by a thin gold or slate border with a 4px-8px inset to create a "matted print" effect.
 
 ## Components
-
-### Buttons
-- **Primary:** Solid Angel Gold (#D4AF37) with Deep Charcoal text. Sharp edges. No shadow.
-- **Secondary:** Transparent background with a 1px Deep Charcoal border. Sharp edges.
-- **Ghost:** Deep Charcoal text with a 1px underline that expands on hover.
-
-### Input Fields
-- **Style:** Minimalist. Only a 1px bottom border in Muted Slate Blue. Labels use the `label-md` style, floating above the input. On focus, the bottom border changes to Deep Charcoal and thickens to 2px.
-
-### Cards
-- **Construction:** Cards should not have shadows. Use a 1px border (#2D3132 at 20% opacity) or a subtle background fill change. The "interlocking" motif can be applied here by allowing an image to bleed off the top and left edges of the card container.
-
-### Chips & Tags
-- **Style:** Rectangular, sharp edges, Slate Blue background with White text. Small font size (10px - 12px) with 0.1em letter spacing.
-
-### Lists
-- **Style:** Separated by horizontal rule lines. Bullet points are replaced by small, sharp Angel Gold squares (4px x 4px).
+- **Buttons:** Primary buttons are solid Slate (#1A1A1B) with white Inter text in all caps. Secondary buttons are Slate hairlines (1px) with no fill. Interaction states should be a subtle shift to the Gold (#C5A059) color.
+- **Input Fields:** Bottom-border only (1px Slate). No background fill unless focused. Placeholder text should be in italics (Playfair Display) to feel bespoke.
+- **Cards:** Cards should not have shadows. Use a subtle parchment-on-white contrast or a simple 1px hairline border. Headers within cards should be center-aligned.
+- **Rules/Dividers:** Horizontal rules are a signature element. Use them to lead the eye between headlines and body copy.
+- **The "Signature" Component:** A decorative gold serif "A" or a small crest should be used as a divider or "end-of-article" mark to reinforce the bespoke nature of the services.
