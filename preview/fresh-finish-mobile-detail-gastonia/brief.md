@@ -89,7 +89,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/p/Fresh-Finish-Auto-Spa-61574194392800/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T03:18:19.855Z
+- **Scraped:** 2026-06-07T03:21:00.326Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/p/Fresh-Finish-Auto-Spa-61574194392800/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

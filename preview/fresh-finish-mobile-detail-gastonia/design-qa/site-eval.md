@@ -6,8 +6,8 @@
 
 - none
 
-## Warnings (0)
+## Warnings (1)
 
-- none
+- Broken anchor: #portfolio
 
 _Run after every build. Fix errors before images/outreach._

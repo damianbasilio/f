@@ -18,6 +18,7 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
+- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -28,10 +29,10 @@
 - OK: No AI purple gradient
 - OK: No fake ratings/hype
 - OK: No obvious buzzwords
-- OK: Layout: no excessive 3-col grids
+- WARN: Repeated 3-column grid pattern (4 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- WARN: 7 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
+- OK: Eyebrow count: 1
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,8 +44,9 @@
 
 ### taste
 
-- WARN: 7 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
+- Eyebrow discipline: 1 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 
