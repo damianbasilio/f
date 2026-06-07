@@ -1,0 +1,343 @@
+{
+  "outputComponents": [
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Modern Heritage Gastronomy",
+                "styleGuidelines": "## Brand & Style\n\nThe brand personality of this design system is a sophisticated dialogue between artisanal heritage and contemporary culinary precision. It targets a discerning clientele that values provenance, craft, and the intentionality of high-end gastronomy. \n\nThe visual style is **Editorial Minimalism**. It draws heavily from luxury print journalism, utilizing expansive whitespace, high-contrast typography, and asymmetrical compositions. The goal is to evoke the feeling of a bespoke tasting menu: intentional, uncluttered, and premium. The UI avoids standard web patterns in favor of a \"magazine-style\" layout where elements often overlap, and thin hairlines act as structural anchors rather than heavy containers.\n\n## Layout & Spacing\n\nThis design system rejects the standard centered-column grid. It uses a **12-column fluid grid** as a guide but encourages **asymmetrical offsets** and **overlapping layers**.\n\n- **Asymmetry:** Rather than centering content, align elements to the far left or far right, leaving large \"holes\" of white space (Bone background) to guide the eye.\n- **Overlapping:** Images should frequently overlap text containers or other images by 1-2 columns to create a sense of depth and curated \"scrapbook\" elegance.\n- **Hairlines:** Use 0.5px or 1px vertical and horizontal lines in Charcoal (at 20-30% opacity) to separate sections. These lines should often extend to the edge of the viewport, reinforcing the editorial grid.\n- **Breakpoints:** On mobile, collapse the 12-column grid into a single-column layout, but maintain the high-contrast typography and ensure image treatments remain large and immersive.\n\n## Elevation & Depth\n\nIn keeping with a premium editorial feel, depth is achieved through **Tonal Layering** and **Subtle Shadows** rather than physical extrusion.\n\n- **Surface Levels:** The primary canvas is 'Bone'. Secondary surfaces (like pull-out quotes or menu highlights) should use 'Smoked Sage' at very low opacities (5-10%) to create a subtle shift in tone.\n- **Photography Shadows:** High-quality food photography should feature very soft, extra-diffused ambient shadows (e.g., `blur: 40px, spread: -10px, opacity: 0.1`). This makes images appear as if they are floating slightly above the paper.\n- **Hairlines:** Use \"Low-contrast outlines\" (0.5px Charcoal) to define areas without adding visual bulk.\n\n## Components\n\n### Buttons\nPrimary buttons are solid **Charcoal** with **Bone** text, using the `label-caps` typography. They are rectangular and wide. Secondary buttons are \"Ghost\" style: a 1px Charcoal outline or a simple text link with a thin hairline underline that appears on hover.\n\n### Photography\nFood photography is the hero. Images should never be contained in generic cards. They should be large-scale, sometimes spanning 7 of 12 columns, with text overlapping the edge of the photo. Apply a subtle 1px **Bone** border inside the image frame to act as a \"matte\" for the photo.\n\n### Cards & Content Blocks\nAvoid standard card grids. Instead, use \"Article Blocks.\" These consist of a large image, followed by a `label-caps` category, a `headline-lg` title, and a short `body-md` description. These blocks should vary in width and vertical alignment to create a dynamic flow.\n\n### Inputs & Forms\nInput fields are simple 1px Charcoal bottom-borders only. Labels use `label-caps` and sit above the line. Focus states are indicated by the line becoming thicker (2px) or changing to **Smoked Sage**.\n\n### Menu Lists\nCulinary menus should be styled with the dish name in `headline-lg` (at a smaller scale) on the left, and the price on the right, connected by a very faint dotted hairline. Descriptions sit immediately below in `body-sm`.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#4a5d4e",
+                  "designMd": "---\nname: Modern Heritage Gastronomy\ncolors:\n  surface: '#fff9e8'\n  surface-dim: '#e0dac6'\n  surface-bright: '#fff9e8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#faf4df'\n  surface-container: '#f4eeda'\n  surface-container-high: '#eee8d4'\n  surface-container-highest: '#e8e2cf'\n  on-surface: '#1e1c10'\n  on-surface-variant: '#434843'\n  inverse-surface: '#333123'\n  inverse-on-surface: '#f7f1dc'\n  outline: '#737872'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#506354'\n  primary: '#334537'\n  on-primary: '#ffffff'\n  primary-container: '#4a5d4e'\n  on-primary-container: '#c0d5c2'\n  inverse-primary: '#b7ccb9'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#414141'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#595858'\n  on-tertiary-container: '#d1cece'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d3e8d5'\n  primary-fixed-dim: '#b7ccb9'\n  on-primary-fixed: '#0e1f13'\n  on-primary-fixed-variant: '#394b3d'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#e5e2e1'\n  tertiary-fixed-dim: '#c8c6c5'\n  on-tertiary-fixed: '#1c1b1b'\n  on-tertiary-fixed-variant: '#474746'\n  background: '#fff9e8'\n  on-background: '#1e1c10'\n  surface-variant: '#e8e2cf'\ntypography:\n  display-xl:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-xl:\n    fontFamily: Montserrat\n    fontSize: 20px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  caption:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  unit: 4px\n  xs: 0.5rem\n  sm: 1rem\n  md: 2rem\n  lg: 4rem\n  xl: 8rem\n  gutter: 1.5rem\n  margin: max(5vw, 2rem)\n---\n\n## Brand & Style\n\nThe brand personality of this design system is a sophisticated dialogue between artisanal heritage and contemporary culinary precision. It targets a discerning clientele that values provenance, craft, and the intentionality of high-end gastronomy. \n\nThe visual style is **Editorial Minimalism**. It draws heavily from luxury print journalism, utilizing expansive whitespace, high-contrast typography, and asymmetrical compositions. The goal is to evoke the feeling of a bespoke tasting menu: intentional, uncluttered, and premium. The UI avoids standard web patterns in favor of a \"magazine-style\" layout where elements often overlap, and thin hairlines act as structural anchors rather than heavy containers.\n\n## Colors\n\nThis design system uses a palette inspired by the kitchen and the hearth. \n\n- **Primary (Smoked Sage):** Used for primary actions, subtle accents, and key brand moments. It represents the organic, herbal core of the business.\n- **Secondary (Burnt Saffron):** A warm, high-energy accent color used sparingly for highlights, small call-to-actions, or to draw attention to seasonal offerings.\n- **Tertiary (Charcoal):** The foundation for all high-contrast typography and deep structural elements. It provides the \"ink\" on the page.\n- **Neutral (Bone):** The primary background color. It is warmer and more luxurious than pure white, providing a soft, matte paper-like surface for all content.\n\nColor application should follow a 70/20/10 distribution, with **Bone** dominating the canvas, **Charcoal** providing the structure, and **Smoked Sage/Burnt Saffron** acting as sophisticated highlights.\n\n## Typography\n\nThe typographic hierarchy is designed for maximum contrast. \n\n- **Headlines:** Utilize *Playfair Display* in heavy weights. These should be treated as graphic elements. For display sizes, use tight leading and slight negative letter spacing to create a dense, authoritative \"masthead\" feel.\n- **Body:** Use *Montserrat* with light or regular weights and generous line height. This creates an airy, breathable reading experience that balances the weight of the headlines.\n- **Accents:** Use *Montserrat* in uppercase with wide letter spacing for labels, navigation items, and sub-headers to create a rhythmic, structural feel.\n\nAlways prioritize legibility by maintaining wide margins around large blocks of body text.\n\n## Layout & Spacing\n\nThis design system rejects the standard centered-column grid. It uses a **12-column fluid grid** as a guide but encourages **asymmetrical offsets** and **overlapping layers**.\n\n- **Asymmetry:** Rather than centering content, align elements to the far left or far right, leaving large \"holes\" of white space (Bone background) to guide the eye.\n- **Overlapping:** Images should frequently overlap text containers or other images by 1-2 columns to create a sense of depth and curated \"scrapbook\" elegance.\n- **Hairlines:** Use 0.5px or 1px vertical and horizontal lines in Charcoal (at 20-30% opacity) to separate sections. These lines should often extend to the edge of the viewport, reinforcing the editorial grid.\n- **Breakpoints:** On mobile, collapse the 12-column grid into a single-column layout, but maintain the high-contrast typography and ensure image treatments remain large and immersive.\n\n## Elevation & Depth\n\nIn keeping with a premium editorial feel, depth is achieved through **Tonal Layering** and **Subtle Shadows** rather than physical extrusion.\n\n- **Surface Levels:** The primary canvas is 'Bone'. Secondary surfaces (like pull-out quotes or menu highlights) should use 'Smoked Sage' at very low opacities (5-10%) to create a subtle shift in tone.\n- **Photography Shadows:** High-quality food photography should feature very soft, extra-diffused ambient shadows (e.g., `blur: 40px, spread: -10px, opacity: 0.1`). This makes images appear as if they are floating slightly above the paper.\n- **Hairlines:** Use \"Low-contrast outlines\" (0.5px Charcoal) to define areas without adding visual bulk.\n\n## Shapes\n\nThe shape language of this design system is **Sharp (0px)**. \n\nEvery element—buttons, image containers, input fields, and dividers—should have crisp, right-angled corners. This mirrors the precision of professional plating and the formal structure of luxury print media. Avoid any rounding, as it diminishes the \"Modern Gastronomy\" architectural feel. \n\nImage masks may occasionally use unconventional asymmetrical crops (e.g., a tall, thin vertical rectangle next to a wide, short landscape rectangle) to further the magazine aesthetic.\n\n## Components\n\n### Buttons\nPrimary buttons are solid **Charcoal** with **Bone** text, using the `label-caps` typography. They are rectangular and wide. Secondary buttons are \"Ghost\" style: a 1px Charcoal outline or a simple text link with a thin hairline underline that appears on hover.\n\n### Photography\nFood photography is the hero. Images should never be contained in generic cards. They should be large-scale, sometimes spanning 7 of 12 columns, with text overlapping the edge of the photo. Apply a subtle 1px **Bone** border inside the image frame to act as a \"matte\" for the photo.\n\n### Cards & Content Blocks\nAvoid standard card grids. Instead, use \"Article Blocks.\" These consist of a large image, followed by a `label-caps` category, a `headline-lg` title, and a short `body-md` description. These blocks should vary in width and vertical alignment to create a dynamic flow.\n\n### Inputs & Forms\nInput fields are simple 1px Charcoal bottom-borders only. Labels use `label-caps` and sit above the line. Focus states are indicated by the line becoming thicker (2px) or changing to **Smoked Sage**.\n\n### Menu Lists\nCulinary menus should be styled with the dish name in `headline-lg` (at a smaller scale) on the left, and the price on the right, connected by a very faint dotted hairline. Descriptions sit immediately below in `body-sm`.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fff9e8",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f7f1dc",
+                    "inverse_primary": "#b7ccb9",
+                    "inverse_surface": "#333123",
+                    "on_background": "#1e1c10",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#c0d5c2",
+                    "on_primary_fixed": "#0e1f13",
+                    "on_primary_fixed_variant": "#394b3d",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#7a532a",
+                    "on_secondary_fixed": "#2c1600",
+                    "on_secondary_fixed_variant": "#623f18",
+                    "on_surface": "#1e1c10",
+                    "on_surface_variant": "#434843",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#d1cece",
+                    "on_tertiary_fixed": "#1c1b1b",
+                    "on_tertiary_fixed_variant": "#474746",
+                    "outline": "#737872",
+                    "outline_variant": "#c3c8c1",
+                    "primary": "#334537",
+                    "primary_container": "#4a5d4e",
+                    "primary_fixed": "#d3e8d5",
+                    "primary_fixed_dim": "#b7ccb9",
+                    "secondary": "#7d562d",
+                    "secondary_container": "#ffca98",
+                    "secondary_fixed": "#ffdcbd",
+                    "secondary_fixed_dim": "#f0bd8b",
+                    "surface": "#fff9e8",
+                    "surface_bright": "#fff9e8",
+                    "surface_container": "#f4eeda",
+                    "surface_container_high": "#eee8d4",
+                    "surface_container_highest": "#e8e2cf",
+                    "surface_container_low": "#faf4df",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#e0dac6",
+                    "surface_tint": "#506354",
+                    "surface_variant": "#e8e2cf",
+                    "tertiary": "#414141",
+                    "tertiary_container": "#595858",
+                    "tertiary_fixed": "#e5e2e1",
+                    "tertiary_fixed_dim": "#c8c6c5"
+                  },
+                  "overrideNeutralColor": "#f0ead6",
+                  "overridePrimaryColor": "#4a5d4e",
+                  "overrideSecondaryColor": "#d4a373",
+                  "overrideTertiaryColor": "#1a1a1a",
+                  "spacing": {
+                    "gutter": "1.5rem",
+                    "lg": "4rem",
+                    "margin": "max(5vw, 2rem)",
+                    "md": "2rem",
+                    "sm": "1rem",
+                    "unit": "4px",
+                    "xl": "8rem",
+                    "xs": "0.5rem"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-xl": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "20px",
+                      "fontWeight": "300",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "caption": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.4"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-xl": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "80px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "28px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "1"
+                    }
+                  }
+                }
+              },
+              "name": "assets/eb3a402af0e848baaa3a57b781e58f37",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10502",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzZkYzA1NWEwZTdjMTQ5MmVhMzgyYTQ0YjEzNzFlMWMyEgsSBxCq7_ih7hkYAZIBIwoKcHJvamVjdF9pZBIVQhM5OTY3Njk4ODQ3OTY1MTkwOTIw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/9967698847965190920/files/c2157a3c2b8d4b21ae09e75dd3a8321b"
+            },
+            "id": "ac56921ca96e44b18474922a1c2f2ac8",
+            "name": "projects/9967698847965190920/screens/ac56921ca96e44b18474922a1c2f2ac8",
+            "prompt": "Build a complete, high-fidelity DESKTOP landing page for Hall's Kitchen. \n\nApply the 'Modern Heritage' visual identity:\n- Color Palette: Smoked Sage (#4a5d4e), Bone (#fff9e8), and Burnt Saffron accents.\n- Typography: High-contrast serif (Playfair Display) for headlines, clean sans-serif for body.\n- Layout: Editorial, asymmetrical grid with generous whitespace and thin rules.\n\nSections to include:\n1. Header: Use the TopAppBar component {{DATA:COMPONENTS:COMPONENTS_4}}.\n2. Hero: Title 'The Art of the Table', subtitle about heritage ingredients and modern precision. Use {{DATA:IMAGE:IMAGE_2}}.\n3. Credibility: Highlights like '40+ Years of Heritage', 'Estate Sourced Produce', and 'Bespoke Private Catering'.\n4. Services/Offerings: Showcase 'Culinary Precision' with {{DATA:IMAGE:IMAGE_6}} and 'An Intimate Escape' with {{DATA:IMAGE:IMAGE_5}}.\n5. About: 'Founded in Tradition' section telling the brand story of Missouri roots and metropolitan dining.\n6. Visit: Section ID #visit. Include the minimalist map container: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: Refined inquiry form 'How can we serve you?' with fields for Name, Email, Interest, and Message. Use the provided contact info: 265.663 7265, hallskitchen573@gmail.com, Jefferson City, Missouri.\n8. Footer: Use the Footer component {{DATA:COMPONENTS:COMPONENTS_4}}.\n\nTechnical requirements:\n- Full semantic HTML document with CSS and JS.\n- Responsive design.\n- Smooth scroll and form validation UI.\n- No placeholder text; use the provided brand narrative.\n- Use CSS custom properties for the color palette.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Description: Editorial food photography for a premium restaurant called Hall's Kitchen. A close-up, artistically plated gourmet dish on a ceramic plate, soft natural lighting, moody atmosphere with a dark sage green and bone color palette. High-end gastronomy style. 8k resolution, professional lighting.\n  Dimensions: 1376x768\n  Aspect Ratio: 1.79\n- {{DATA:IMAGE:IMAGE_5}}\n  Description: A cozy, upscale restaurant interior with minimalist wooden tables, soft ambient lighting, and elegant decor. A mix of modern and heritage styles. Bone and smoked sage color accents. Empty, peaceful atmosphere.\n  Dimensions: 1200x896\n  Aspect Ratio: 1.34\n- {{DATA:IMAGE:IMAGE_6}}\n  Description: A chef's hands carefully garnishing a plate in a professional kitchen. High contrast, warm lighting, elegant and focused. Soft bokeh background. Burnt saffron and charcoal tones. Editorial style.\n  Dimensions: 896x1200\n  Aspect Ratio: 0.75\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuT2wCNafttmjFH2rZBI9Z6DdWliufZ_BYllau5wPiMrCWgziPCJKXED1kSA1R9_OU9-A45Vvo-g4b9MqZMj4ahTu7zSsw5LJ1J6WrZ5LOfEcOcMeIdXt3vrNuublW35u-wd2jtJao81uk-F1Jsz4APc3-BacLWquDhaoJ4obsNq4SL6T1A19abwlVcsyGz4g97b3uKYQFjn2KcvH8hMkHxJbZ-hkKOutetDaZrMpiuzbtN-GSq7YNHVMA",
+              "name": "projects/9967698847965190920/files/3d2895e1d990418c84c81af73e56bcc1"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#4a5d4e",
+              "designMd": "---\nname: Modern Heritage Gastronomy\ncolors:\n  surface: '#fff9e8'\n  surface-dim: '#e0dac6'\n  surface-bright: '#fff9e8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#faf4df'\n  surface-container: '#f4eeda'\n  surface-container-high: '#eee8d4'\n  surface-container-highest: '#e8e2cf'\n  on-surface: '#1e1c10'\n  on-surface-variant: '#434843'\n  inverse-surface: '#333123'\n  inverse-on-surface: '#f7f1dc'\n  outline: '#737872'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#506354'\n  primary: '#334537'\n  on-primary: '#ffffff'\n  primary-container: '#4a5d4e'\n  on-primary-container: '#c0d5c2'\n  inverse-primary: '#b7ccb9'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#414141'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#595858'\n  on-tertiary-container: '#d1cece'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d3e8d5'\n  primary-fixed-dim: '#b7ccb9'\n  on-primary-fixed: '#0e1f13'\n  on-primary-fixed-variant: '#394b3d'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#e5e2e1'\n  tertiary-fixed-dim: '#c8c6c5'\n  on-tertiary-fixed: '#1c1b1b'\n  on-tertiary-fixed-variant: '#474746'\n  background: '#fff9e8'\n  on-background: '#1e1c10'\n  surface-variant: '#e8e2cf'\ntypography:\n  display-xl:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-xl:\n    fontFamily: Montserrat\n    fontSize: 20px\n    fontWeight: '300'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  caption:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  unit: 4px\n  xs: 0.5rem\n  sm: 1rem\n  md: 2rem\n  lg: 4rem\n  xl: 8rem\n  gutter: 1.5rem\n  margin: max(5vw, 2rem)\n---\n\n## Brand & Style\n\nThe brand personality of this design system is a sophisticated dialogue between artisanal heritage and contemporary culinary precision. It targets a discerning clientele that values provenance, craft, and the intentionality of high-end gastronomy. \n\nThe visual style is **Editorial Minimalism**. It draws heavily from luxury print journalism, utilizing expansive whitespace, high-contrast typography, and asymmetrical compositions. The goal is to evoke the feeling of a bespoke tasting menu: intentional, uncluttered, and premium. The UI avoids standard web patterns in favor of a \"magazine-style\" layout where elements often overlap, and thin hairlines act as structural anchors rather than heavy containers.\n\n## Colors\n\nThis design system uses a palette inspired by the kitchen and the hearth. \n\n- **Primary (Smoked Sage):** Used for primary actions, subtle accents, and key brand moments. It represents the organic, herbal core of the business.\n- **Secondary (Burnt Saffron):** A warm, high-energy accent color used sparingly for highlights, small call-to-actions, or to draw attention to seasonal offerings.\n- **Tertiary (Charcoal):** The foundation for all high-contrast typography and deep structural elements. It provides the \"ink\" on the page.\n- **Neutral (Bone):** The primary background color. It is warmer and more luxurious than pure white, providing a soft, matte paper-like surface for all content.\n\nColor application should follow a 70/20/10 distribution, with **Bone** dominating the canvas, **Charcoal** providing the structure, and **Smoked Sage/Burnt Saffron** acting as sophisticated highlights.\n\n## Typography\n\nThe typographic hierarchy is designed for maximum contrast. \n\n- **Headlines:** Utilize *Playfair Display* in heavy weights. These should be treated as graphic elements. For display sizes, use tight leading and slight negative letter spacing to create a dense, authoritative \"masthead\" feel.\n- **Body:** Use *Montserrat* with light or regular weights and generous line height. This creates an airy, breathable reading experience that balances the weight of the headlines.\n- **Accents:** Use *Montserrat* in uppercase with wide letter spacing for labels, navigation items, and sub-headers to create a rhythmic, structural feel.\n\nAlways prioritize legibility by maintaining wide margins around large blocks of body text.\n\n## Layout & Spacing\n\nThis design system rejects the standard centered-column grid. It uses a **12-column fluid grid** as a guide but encourages **asymmetrical offsets** and **overlapping layers**.\n\n- **Asymmetry:** Rather than centering content, align elements to the far left or far right, leaving large \"holes\" of white space (Bone background) to guide the eye.\n- **Overlapping:** Images should frequently overlap text containers or other images by 1-2 columns to create a sense of depth and curated \"scrapbook\" elegance.\n- **Hairlines:** Use 0.5px or 1px vertical and horizontal lines in Charcoal (at 20-30% opacity) to separate sections. These lines should often extend to the edge of the viewport, reinforcing the editorial grid.\n- **Breakpoints:** On mobile, collapse the 12-column grid into a single-column layout, but maintain the high-contrast typography and ensure image treatments remain large and immersive.\n\n## Elevation & Depth\n\nIn keeping with a premium editorial feel, depth is achieved through **Tonal Layering** and **Subtle Shadows** rather than physical extrusion.\n\n- **Surface Levels:** The primary canvas is 'Bone'. Secondary surfaces (like pull-out quotes or menu highlights) should use 'Smoked Sage' at very low opacities (5-10%) to create a subtle shift in tone.\n- **Photography Shadows:** High-quality food photography should feature very soft, extra-diffused ambient shadows (e.g., `blur: 40px, spread: -10px, opacity: 0.1`). This makes images appear as if they are floating slightly above the paper.\n- **Hairlines:** Use \"Low-contrast outlines\" (0.5px Charcoal) to define areas without adding visual bulk.\n\n## Shapes\n\nThe shape language of this design system is **Sharp (0px)**. \n\nEvery element—buttons, image containers, input fields, and dividers—should have crisp, right-angled corners. This mirrors the precision of professional plating and the formal structure of luxury print media. Avoid any rounding, as it diminishes the \"Modern Gastronomy\" architectural feel. \n\nImage masks may occasionally use unconventional asymmetrical crops (e.g., a tall, thin vertical rectangle next to a wide, short landscape rectangle) to further the magazine aesthetic.\n\n## Components\n\n### Buttons\nPrimary buttons are solid **Charcoal** with **Bone** text, using the `label-caps` typography. They are rectangular and wide. Secondary buttons are \"Ghost\" style: a 1px Charcoal outline or a simple text link with a thin hairline underline that appears on hover.\n\n### Photography\nFood photography is the hero. Images should never be contained in generic cards. They should be large-scale, sometimes spanning 7 of 12 columns, with text overlapping the edge of the photo. Apply a subtle 1px **Bone** border inside the image frame to act as a \"matte\" for the photo.\n\n### Cards & Content Blocks\nAvoid standard card grids. Instead, use \"Article Blocks.\" These consist of a large image, followed by a `label-caps` category, a `headline-lg` title, and a short `body-md` description. These blocks should vary in width and vertical alignment to create a dynamic flow.\n\n### Inputs & Forms\nInput fields are simple 1px Charcoal bottom-borders only. Labels use `label-caps` and sit above the line. Focus states are indicated by the line becoming thicker (2px) or changing to **Smoked Sage**.\n\n### Menu Lists\nCulinary menus should be styled with the dish name in `headline-lg` (at a smaller scale) on the left, and the price on the right, connected by a very faint dotted hairline. Descriptions sit immediately below in `body-sm`.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fff9e8",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f7f1dc",
+                "inverse_primary": "#b7ccb9",
+                "inverse_surface": "#333123",
+                "on_background": "#1e1c10",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#c0d5c2",
+                "on_primary_fixed": "#0e1f13",
+                "on_primary_fixed_variant": "#394b3d",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#7a532a",
+                "on_secondary_fixed": "#2c1600",
+                "on_secondary_fixed_variant": "#623f18",
+                "on_surface": "#1e1c10",
+                "on_surface_variant": "#434843",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#d1cece",
+                "on_tertiary_fixed": "#1c1b1b",
+                "on_tertiary_fixed_variant": "#474746",
+                "outline": "#737872",
+                "outline_variant": "#c3c8c1",
+                "primary": "#334537",
+                "primary_container": "#4a5d4e",
+                "primary_fixed": "#d3e8d5",
+                "primary_fixed_dim": "#b7ccb9",
+                "secondary": "#7d562d",
+                "secondary_container": "#ffca98",
+                "secondary_fixed": "#ffdcbd",
+                "secondary_fixed_dim": "#f0bd8b",
+                "surface": "#fff9e8",
+                "surface_bright": "#fff9e8",
+                "surface_container": "#f4eeda",
+                "surface_container_high": "#eee8d4",
+                "surface_container_highest": "#e8e2cf",
+                "surface_container_low": "#faf4df",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#e0dac6",
+                "surface_tint": "#506354",
+                "surface_variant": "#e8e2cf",
+                "tertiary": "#414141",
+                "tertiary_container": "#595858",
+                "tertiary_fixed": "#e5e2e1",
+                "tertiary_fixed_dim": "#c8c6c5"
+              },
+              "overrideNeutralColor": "#f0ead6",
+              "overridePrimaryColor": "#4a5d4e",
+              "overrideSecondaryColor": "#d4a373",
+              "overrideTertiaryColor": "#1a1a1a",
+              "spacing": {
+                "gutter": "1.5rem",
+                "lg": "4rem",
+                "margin": "max(5vw, 2rem)",
+                "md": "2rem",
+                "sm": "1rem",
+                "unit": "4px",
+                "xl": "8rem",
+                "xs": "0.5rem"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-xl": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "20px",
+                  "fontWeight": "300",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "caption": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.4"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "1.1"
+                },
+                "display-xl": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "80px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "28px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-xl": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "label-caps": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "1"
+                }
+              }
+            },
+            "title": "Hall's Kitchen | Modern Heritage Gastronomy",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've completed the full desktop landing page for Hall's Kitchen, translating your \"Modern Heritage\" vision into a high-fidelity, editorial-grade digital experience.\n\n### Design Highlights:\n*   **Asymmetrical Narrative:** The layout breaks away from standard templates, using an editorial grid with deliberate whitespace and thin rules to weave Hall's Kitchen's Missouri roots into a premium culinary story.\n*   **Visual Storytelling:** I've integrated the high-impact imagery of artisan plating, the chef's precise garnishing, and the intimate dining room to create an immediate emotional connection.\n*   **Functional Elegance:** The \"Visit\" section features the requested minimalist map container, while the inquiry form and contact details are presented with the same sophisticated restraint as the rest of the site.\n*   **Design System Integrity:** The \"Smoked Sage\" and \"Bone\" palette is implemented via CSS custom properties, ensuring the visual identity is consistent and production-ready.\n\nThe result is a responsive, semantic, and fully-realized landing page that honors the brand's tradition while meeting modern metropolitan standards. How do you feel about the flow and visual weight of the sections?"
+    },
+    {
+      "suggestion": "Add a \"Journal\" section for seasonal stories"
+    },
+    {
+      "suggestion": "Refine the contact form interactions"
+    },
+    {
+      "suggestion": "Mobile responsiveness check"
+    }
+  ],
+  "projectId": "9967698847965190920",
+  "sessionId": "16971798851436674054"
+}
