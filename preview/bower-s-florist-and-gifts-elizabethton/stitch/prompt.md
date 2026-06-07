@@ -6,11 +6,21 @@ Use with: `npm run stitch:prompt -- bower-s-florist-and-gifts-elizabethton` then
 
 ## Prompt (paste into Stitch)
 
-You are building **one specific local business website** from their **Facebook page content only**. This is NOT a generic template. The business has **no dedicated website** — you are creating their first professional homepage using real Facebook photos and scraped copy.
+You are an award-winning local-brand web designer building **one bespoke homepage** for **Bower's Florist and Gifts**. This business has **no dedicated website** — only a Facebook page. You are not filling a template. You are designing a **unique, premium, memorable first impression** that could only belong to this business.
 
-### Facebook source context (use this copy — do not invent a different brand)
+### Non-negotiable: uniqueness
 
-**Facebook page:** https://m.facebook.com/Bowers.Florist.Gifts.Elz/
+- This site must **not** look like other local-business mockups, Webflow templates, or AI landing pages.
+- **Do not** reuse the same hero layout, section order, card grid, or color story you used on other projects.
+- **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
+- Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
+- Every section should feel **designed**, not assembled from a component library.
+
+---
+
+### Facebook source (copy only — do not copy Facebook's UI)
+
+**Page:** https://m.facebook.com/Bowers.Florist.Gifts.Elz/
 **Business:** Bower's Florist and Gifts
 **Category:** Local business
 **Location:** 1518 West G Street, Elizabethton, TN 37643
@@ -21,11 +31,11 @@ You are building **one specific local business website** from their **Facebook p
 Phone orders instead of email orders are better for our customer needs &...
 **Hours:** Closed now
 
-**About / profile details (from Facebook About tab):**
+**About / profile details:**
 - **Hours:** Closed now
 - **Address:** 1518 West G Street, Elizabethton, TN, United States, 37643
 
-**Full scraped profile (use this for About section, services, and copy voice — do not invent details):**
+**Full scraped profile (About, services, voice — use for copy, do not invent facts):**
 Bowers Florist and Gifts, Elizabethton. 638 likes · 2 talking about this · 20 were here. Phone orders only please!
 Phone orders instead of email orders are better for our customer needs &...
 Hours: Closed now
@@ -37,86 +47,105 @@ Recent posts from their Facebook page:
 1. Plus size clothing~~new w/ tags & gently used, Jrs. ~American Eagle, Old Navy, boys ~6mos.-14 boys~~shoes , home decor & sooo much more!! Furniture too!!
 2. Phone orders only please! Phone orders instead of email orders are better for our customer needs & specifications...Thank you!
 
-**Recent post captions (2 useful — echo voice in headlines; skip registry/SKU/listing lines):**
+**Recent post captions (2 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "Plus size clothing~~new w/ tags & gently used, Jrs. ~American Eagle, Old Navy, boys ~6mos.-14 boys~~shoes , home decor & sooo much more!! Furniture too!!"
 2. "Phone orders only please! Phone orders instead of email orders are better for our customer needs & specifications...Thank you!"
 
-**Design read:** Reading this as: a first homepage for Bower's Florist and Gifts in Elizabethton (Local business), Professional, welcoming, community-rooted tone, asymmetric-grid layout — must feel tailor-made for this business, not a generic AI landing template.
-
-**What to preserve:** The business name, location, services, and warm local tone from the Facebook page above.
-**What to fix:** No dedicated website — build a clean homepage with phone/CTA above fold, services, gallery, map slot, and contact form (preview only).
+**Preserve:** real business name, city, services, phone, and the warm local tone from their page.
+**Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).
 
 ---
 
 ### Design read (follow this)
-Reading this as: a first homepage for Bower's Florist and Gifts in Elizabethton (Local business), Professional, welcoming, community-rooted tone, asymmetric-grid layout — must feel tailor-made for this business, not a generic AI landing template.
+Reading this as: a first homepage for Bower's Florist and Gifts in Elizabethton (Local business), Professional, welcoming, community-rooted tone, **boutique-window** archetype — must feel like a one-off commission, not a reused template.
 
-### Tailor-made (this business only)
-- Every headline, service name, and CTA must come from the Facebook scrape above — not generic "Quality Service" filler.
-- Write like a local designer who visited their page: use Bower's Florist and Gifts, Elizabethton, and real service bullets.
-- Layout family **asymmetric-grid**: Asymmetric grid: offset hero image, overlapping credibility strip, services in staggered two-column layout.
-- Primary CTA label: **"Contact us"** (verb + object). Phone must be `tel:` in header and hero.
-- Avoid generic 3-column icon cards. Use business-specific copy from Facebook scrape.
+### Uniqueness mandate
+- This homepage is for **Bower's Florist and Gifts** only — it must not resemble other local-business sites or AI templates.
+- **Invent** layout rhythm, section names, color story, and typographic personality for this business.
+- Layout archetype **boutique-window**: Boutique storefront feel: framed hero like a shop window, soft shadow, gallery as masonry; warm or refined palette depending on vertical.
+- Primary CTA: **"Contact us"**. Phone as `tel:` in header and hero.
+- Avoid generic 3-column icon cards. Copy must be specific to this Facebook page.
 
-### Layout discipline (design-taste-frontend)
-- Hero MUST fit the initial viewport: H1 max 2 lines, subhead max 20 words, primary CTA visible without scrolling.
-- Hero top padding: modest — content should not float halfway down the screen.
-- NO identical 3-column icon-card feature rows. Vary section structure: split hero → services (list or staggered grid) → photo gallery → visit → contact.
-- Use section layout variety — do not repeat the same card grid pattern in 3+ sections.
-- Max 1 small uppercase eyebrow label per 3 sections (no "01 · SERVICES" numbering).
-- Navigation: single line on desktop, height ~64–72px, phone or CTA visible.
-- Cards only when elevation adds hierarchy; prefer spacing and typography otherwise.
+### Layout discipline
+- Hero fits initial viewport: H1 max 2 lines, subhead max 20 words, primary CTA visible without scrolling.
+- **No** repeated identical 3-column icon-card rows across sections.
+- Vary structure: split hero → offerings (list, staggered grid, or bento) → gallery → visit → contact.
+- Max 1 small uppercase eyebrow per 3 sections. Nav ~64–72px, phone or CTA visible on desktop.
+- Cards only when elevation adds hierarchy; prefer spacing, rules, and type otherwise.
 
-### Typography & color
-- Display: **Playfair Display**. Body: **Work Sans**. Load from Google Fonts URL in brief — never default to Inter or Roboto.
-- Use brand hex from brief only: primary #2060d0, secondary #603030, accent #000000.
-- No purple/indigo SaaS gradients. No generic cream/beige page background unless the brand is genuinely warm heritage — prefer tinted neutrals from the extracted palette.
-- No em dashes (—) in any copy. Use commas, periods, or hyphens.
-- No emojis anywhere — not in headings, buttons, labels, or body copy.
-- No marketing buzzwords: elevate, seamless, world-class, game-changer, leverage, transform.
+### Color & typography (you decide)
+**Stitch decides all colors.** There is no brand manual, no website, and nothing to extract.
+Derive a cohesive 4–5 color system from business type, name, location, and post voice.
+Define `--brand-primary`, `--brand-secondary`, `--brand-accent`, and neutrals in `:root`.
+Each business must look visually distinct — do not reuse the same palette across mockups.
+Avoid Facebook platform grays (#333, #666, #ddd) and generic SaaS purple/indigo.
+
+Choose typography that matches **Local business** — premium and readable.
+Suggested pairing (you may adapt if a better fit exists): **Playfair Display** (headlines) + **Source Sans 3** (body).
+Load from Google Fonts. Never default to Inter, Roboto, or Arial as the primary personality.
+Establish a clear type scale (display, h2, body, small) with intentional letter-spacing on labels.
+
+- No purple/indigo SaaS gradients. No generic cream/beige page background unless the business genuinely calls for it.
+- No em dashes (—) in copy. No emojis. No buzzwords: elevate, seamless, world-class, game-changer.
 
 ### Motion & interaction (emil-design-eng)
-- Dials: variance 7/10 · motion 4/10 · density 5/10
-- UI transitions: 150–250ms, **ease-out** (`cubic-bezier(0.23, 1, 0.32, 1)`). Never `transition: all`.
-- Buttons: `:active { transform: scale(0.97) }` for press feedback.
-- Entrances: never animate from `scale(0)`; use opacity + scale(0.95) if needed.
-- Include `@media (prefers-reduced-motion: reduce)` — disable motion, keep opacity/color only.
-- Animate **transform** and **opacity** only — not width, height, margin, padding.
+- Dials: variance 8/10 · motion 4/10 · density 5/10
+- UI transitions: 150–250ms, **ease-out**. Never `transition: all`.
+- Buttons: `:active { transform: scale(0.97) }`. Include `prefers-reduced-motion`.
+- Animate **transform** and **opacity** only.
 
-### Anti-slop checklist (impeccable + taste)
-- No fake star ratings or unverifiable "#1 rated" claims unless review score is in the brief.
-- No side-stripe accent borders on cards. No glassmorphism as default decoration.
-- No gradient text on headlines. No decorative uppercase eyebrows on every section.
-- No lorem ipsum. No stock photo URLs. Real photo regions for Facebook images.
-- Gallery and hero photos should feel like **their** business (storefront, work, products) — not a template stock grid.
-- Form is preview-only with visible notice — never simulate "Message sent".
+### Anti-slop checklist
+- No fake star ratings unless review score is in the brief.
+- No side-stripe accent borders on cards. No gradient text on headlines.
+- No lorem ipsum. No stock URLs. Gallery and hero sized for **their** Facebook photos.
+- Form is preview-only — never simulate "Message sent".
 
 ---
 
-### Business identity
+### Creative direction (this business only)
 
-- **Name:** Bower's Florist and Gifts
-- **Type:** Local business
-- **Location:** 1518 West G Street, Elizabethton, TN 37643
-- **Hero H1 (use or adapt closely):** Bower's Florist and Gifts — serving Elizabethton
-- **Hero subhead:** Bowers Florist and Gifts, Elizabethton. 638 likes · 2 talking about this · 20 were here…
-- **Primary CTA button:** Contact us
+**Bower's Florist and Gifts** is a Local business in Elizabethton.
+Design as if you won a paid branding project: distinctive hero, memorable section rhythm, premium polish.
+Layout seed: **boutique-window** — interpret literally but creatively.
+You choose the full color palette and typography — there is nothing to extract from a website.
+They have 12 real Facebook photos — design hero and gallery for authentic local imagery.
+
+**Layout archetype:** boutique-window
+Boutique storefront feel: framed hero like a shop window, soft shadow, gallery as masonry; warm or refined palette depending on vertical.
+
+
+**Signature sections to include (rename, reorder, and style them — do not use generic labels like "Our Services" unless it fits the voice):**
+hero → credibility → services → about → gallery → visit → contact
+
+**Hero direction:**
+- **H1 (adapt closely):** Bower's Florist and Gifts — serving Elizabethton
+- **Subhead:** Bowers Florist and Gifts, Elizabethton. 638 likes · 2 talking about this · 20 were here…
+- **Primary CTA:** Contact us
 - **Secondary CTA:** Learn more
 
-**Service bullets (feature these prominently):**
+**Services / offerings (feature prominently with business-specific language):**
 - Quality service
 - Local & trusted
 - Easy to reach
 
 ---
 
-### Layout brief
+### Visual identity — Stitch decides (no extracted colors)
 
-**Layout family:** asymmetric-grid
-**Wireframe:** Asymmetric grid: offset hero image, overlapping credibility strip, services in staggered two-column layout.
+**Stitch decides all colors.** There is no brand manual, no website, and nothing to extract.
+Derive a cohesive 4–5 color system from business type, name, location, and post voice.
+Define `--brand-primary`, `--brand-secondary`, `--brand-accent`, and neutrals in `:root`.
+Each business must look visually distinct — do not reuse the same palette across mockups.
+Avoid Facebook platform grays (#333, #666, #ddd) and generic SaaS purple/indigo.
 
+Choose typography that matches **Local business** — premium and readable.
+Suggested pairing (you may adapt if a better fit exists): **Playfair Display** (headlines) + **Source Sans 3** (body).
+Load from Google Fonts. Never default to Inter, Roboto, or Arial as the primary personality.
+Establish a clear type scale (display, h2, body, small) with intentional letter-spacing on labels.
 
-**Sections (in this order):** hero → credibility → services → about → gallery → visit → contact
+**Mood target:** Professional, welcoming, community-rooted
+
+There is **no existing website** and **nothing to extract**. Choose palette and typography from business type (Local business), name, location (Elizabethton), and post voice. Document colors as CSS custom properties in `styles.css`.
 
 ---
 
@@ -124,78 +153,56 @@ Reading this as: a first homepage for Bower's Florist and Gifts in Elizabethton 
 
 You will receive 12 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
 
-Use `<img>` tags with descriptive `alt` attributes. Real photos will replace placeholder areas via manifest — design generous photo regions, not tiny thumbnails.
+Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
 ---
 
-### Brand — mandatory (from Facebook imagery)
+### Anti-template rules
 
-**Use these exact hex values in `styles.css`:**
-
-:root {
-  --brand-primary: #2060d0;
-  --brand-secondary: #603030;
-  --brand-accent: #000000;
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Work Sans', sans-serif;
-}
-
-| Role | Hex |
-| ---- | --- |
-| Primary | #2060d0 |
-| Secondary | #603030 |
-| Accent | #000000 |
-
-- **Typography:** Load Google Fonts: https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Work+Sans:wght@400;500;600&display=swap
-- **Display font:** Playfair Display
-- **Body font:** Work Sans
-- **Mood:** Professional, welcoming, community-rooted
-
----
-
-### Anti-slop rules (non-negotiable)
-
-- Do NOT use Tailwind CDN, utility-class-only pages, or Material Symbols as primary UI.
-- Do NOT use generic AI landing templates (3-column icon cards, purple/indigo SaaS gradients, Inter/Roboto defaults).
-- Do NOT use `transition: all` — animate specific properties with purpose; include `:active` scale on buttons.
-- Do NOT invent fake awards, star rating widgets, or "#1 rated" unless review score is provided above.
-- Do NOT use stock photo URLs or AI placeholder image services.
-- Do NOT use emojis anywhere — no emoji in headings, buttons, body copy, or labels.
-- Layout must feel specific to **Local business** — not a Webflow clone or startup landing page.
-- Respect `prefers-reduced-motion`.
+- **No** Tailwind CDN, utility-only pages, or Material Symbols as the primary UI system.
+- **No** identical 3-column icon-card rows repeated across sections.
+- **No** purple/indigo SaaS gradients, Inter/Roboto defaults, or cream-beige "AI landing" backgrounds unless the business genuinely calls for it (heritage bakery, ranch, etc.).
+- **No** `transition: all` — animate transform and opacity with purpose; `:active` scale on buttons.
+- **No** fake star widgets, "#1 rated", or unverifiable awards unless review score is provided above.
+- **No** stock URLs or AI placeholder image services.
+- **No emojis** in headings, buttons, or body copy.
+- **No** em dashes (—) in copy — use commas, periods, or hyphens.
 - Phone must be a visible `tel:` link in header and hero.
-- Avoid generic 3-column icon cards. Use business-specific copy from Facebook scrape.
+- Avoid generic 3-column icon cards. Copy must be specific to this Facebook page.
 
-**Design dials:** variance 7/10 · motion 4/10 · density 5/10
+**Design dials for this build:** variance 8/10 · motion 4/10 · density 5/10
 
 ---
 
-### Deliverable requirements
+### Deliverable
 
-- **Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`
-- **Responsive:** mobile (390px), tablet (768px), desktop (1280px) — no horizontal scroll; hero + primary CTA visible on first mobile screen
-- **Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (preview only)
-- **Copy:** Use post caption voice and service bullets above — no lorem ipsum
-- **Unique layout:** asymmetric-grid — avoid default 3-column card grids
+**Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`.
 
-### Page structure
+**Responsive:** 390px mobile, 768px tablet, 1280px desktop — no horizontal scroll; hero + primary CTA visible on first mobile screen.
 
-1. **Header** — wordmark, nav, phone CTA visible on desktop
-2. **Hero** — Bower's Florist and Gifts — serving Elizabethton, subhead, primary CTA (Contact us), brand colors dominant
-3. **Credibility** — `#credibility` — verifiable trust only (local, review score if provided, years serving community)
-4. **Services** — - Quality service
-- Local & trusted
-- Easy to reach
-5. **About** — pull from full scraped profile above; use specific details from their posts (names, offers, community ties)
-6. **Gallery** — photo grid for Facebook images
+**Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (**preview only** — show notice, never fake "sent").
+
+**Copy:** from Facebook scrape and post captions — no lorem ipsum.
+
+**Layout:** follow archetype **boutique-window** but interpret it boldly; vary section rhythm (full-bleed band → narrow column → split → gallery mosaic, etc.).
+
+### Required capabilities (implement with unique structure and naming)
+
+1. **Header** — wordmark or logotype treatment, nav, phone visible on desktop
+2. **Hero** — Bower's Florist and Gifts — serving Elizabethton, subhead, Contact us, your invented palette dominant
+3. **Credibility** — `#credibility` — only verifiable trust (local, years serving, review score if provided)
+4. **Offerings** — services from bullets above, not generic filler
+5. **About** — specific details from scraped profile and posts
+6. **Gallery** — photo grid sized for Facebook images
 7. **Visit** — `#visit` — address, hours; map panel: `<div class="map-slot" data-map-slot aria-label="Map"></div>` (empty — map injected at build)
-8. **Contact** — form + phone + email (preview-only form notice)
-9. **Footer** — hours, address, disclaimer space for mockup banner
+8. **Contact** — form + phone + email
+9. **Footer** — hours, address, space for mockup disclaimer
 
 ### Technical
 
-- CSS custom properties with brand hex values above
-- Accessible: contrast, focus rings, landmarks
+- CSS custom properties for your invented palette and type scale
+- Accessible contrast, focus rings, landmarks
+- `@media (prefers-reduced-motion: reduce)` — disable motion, keep opacity/color
 - Mockup banner placeholder at top: "Concept preview — not affiliated with Bower's Florist and Gifts"
 
 ---

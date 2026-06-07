@@ -1,22 +1,40 @@
-// Simple micro-interaction for active nav state and scroll reveal
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-md');
-            } else {
-                nav.classList.remove('shadow-md');
-            }
-        });
+function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('translate-x-full');
+        }
 
-        // Hover effect for product cards (simulated interactive depth)
-        const cards = document.querySelectorAll('.group');
-        cards.forEach(card => {
-            card.addEventListener('mouseenter', () => {
-                card.style.transform = 'translateY(-4px)';
+        function handleForm(e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = "Preview only";
+            
+            setTimeout(() => {
+                status.classList.remove('opacity-0');
+                submitBtn.textContent = "Inquiry Sent";
+                e.target.reset();
+            }, 1500);
+        }
+
+        // Simple Fade-in intersection observer for staggered cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
             });
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'translateY(0)';
-            });
+        }, observerOptions);
+
+        document.querySelectorAll('.staggered-card').forEach(card => {
+            card.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            observer.observe(card);
         });
 
 (() => {

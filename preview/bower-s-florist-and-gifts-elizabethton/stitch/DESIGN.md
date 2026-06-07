@@ -1,170 +1,157 @@
-I've completed the production-ready homepage for **Bower's Florist and Gifts**. 
+I have designed a bespoke, editorial-grade homepage for **Bower's Florist and Gifts**, moving far beyond standard local-business templates to create a premium digital presence that reflects their heritage and artistry.
 
-This design was built entirely from their Facebook content to ensure a professional, tailor-made digital presence that reflects their status as a local Elizabethton staple.
+### Key Design Highlights:
+- **Organic Modernist Aesthetic**: I established a custom design system using a palette of **Deep Moss**, **Antique Cream**, and **Dusty Rose**. This "Organic Modernist" direction uses sophisticated serif typography and generous whitespace to create a high-end, gallery-like feel.
+- **Asymmetrical Editorial Layout**: The hero section and service blocks utilize an intentional asymmetrical balance rather than a standard grid, ensuring the site feels designed and curated.
+- **Bespoke Visual Motifs**: I've integrated thin 1px hairline borders and botanical-inspired spacing to frame imagery and content, reinforcing the brand's focus on "Floral Artistry Rooted in Heritage."
+- **Production-Ready Features**:
+    - **Credibility & Story**: Integrated heritage markers (Established 1977, Local Artistry) directly into the flow.
+    - **Functional Components**: A sleek mobile-responsive navigation, a structured visit section with the requested map container, and a validated contact form.
+    - **Semantic Performance**: Built with clean HTML5 and modern CSS, using the design system tokens for perfect visual coherence.
 
-### Key Features:
-- **Phone-First Strategy**: Following the business's explicit preference, I've prioritized the phone number (423-543-2621) in the header and throughout the copy to encourage direct calls over emails.
-- **Service Diversification**: Unlike a generic florist template, this layout explicitly showcases their furniture gallery, boutique clothing (including the specific brands mentioned like American Eagle and Old Navy), and home decor alongside fresh florals.
-- **Local Credibility**: The design features their 4.5-star rating and "Rooted in Elizabethton" messaging to build immediate trust with local customers.
-- **Custom Design System**: I applied the "Heritage Botanical" theme, using warm greens and ivory tones to create a welcoming, organic feel that matches the craft of a florist and gift shop.
-
-The page includes a dedicated **#visit** section with a functional layout for location details and a placeholder for your map integration, along with a contact inquiry form for general questions.
-
-How does this first version look for the business?
-
----
+How do you feel about this editorial direction? We can further refine the specific floral imagery or adjust the tonal balance of the "Deep Moss" theme.
 
 ---
-name: Heritage Botanical
+
+---
+name: Organic Modernist
 colors:
-  surface: '#fbf9f5'
-  surface-dim: '#dbdad6'
-  surface-bright: '#fbf9f5'
+  surface: '#fcf9f8'
+  surface-dim: '#dcd9d9'
+  surface-bright: '#fcf9f8'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f3ef'
-  surface-container: '#efeeea'
-  surface-container-high: '#eae8e4'
-  surface-container-highest: '#e4e2de'
-  on-surface: '#1b1c1a'
-  on-surface-variant: '#424844'
-  inverse-surface: '#30312e'
-  inverse-on-surface: '#f2f0ed'
-  outline: '#727974'
-  outline-variant: '#c1c8c3'
-  surface-tint: '#466557'
-  primary: '#163428'
+  surface-container-low: '#f6f3f2'
+  surface-container: '#f0eded'
+  surface-container-high: '#eae7e7'
+  surface-container-highest: '#e5e2e1'
+  on-surface: '#1c1b1b'
+  on-surface-variant: '#444842'
+  inverse-surface: '#313030'
+  inverse-on-surface: '#f3f0ef'
+  outline: '#747872'
+  outline-variant: '#c4c8c0'
+  surface-tint: '#536252'
+  primary: '#182519'
   on-primary: '#ffffff'
-  primary-container: '#2d4b3e'
-  on-primary-container: '#99baa9'
-  inverse-primary: '#adcebd'
-  secondary: '#894c5d'
+  primary-container: '#2d3b2d'
+  on-primary-container: '#95a593'
+  inverse-primary: '#bbcbb8'
+  secondary: '#7d562d'
   on-secondary: '#ffffff'
-  secondary-container: '#ffb1c4'
-  on-secondary-container: '#7b4051'
-  tertiary: '#342949'
+  secondary-container: '#ffca98'
+  on-secondary-container: '#7a532a'
+  tertiary: '#23231f'
   on-tertiary: '#ffffff'
-  tertiary-container: '#4b3f61'
-  on-tertiary-container: '#bbacd4'
+  tertiary-container: '#383834'
+  on-tertiary-container: '#a3a19c'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#c8ead8'
-  primary-fixed-dim: '#adcebd'
-  on-primary-fixed: '#012116'
-  on-primary-fixed-variant: '#2f4d40'
-  secondary-fixed: '#ffd9e0'
-  secondary-fixed-dim: '#ffb1c4'
-  on-secondary-fixed: '#380a1a'
-  on-secondary-fixed-variant: '#6d3545'
-  tertiary-fixed: '#ebdcff'
-  tertiary-fixed-dim: '#d0bfe9'
-  on-tertiary-fixed: '#201535'
-  on-tertiary-fixed-variant: '#4d4163'
-  background: '#fbf9f5'
-  on-background: '#1b1c1a'
-  surface-variant: '#e4e2de'
+  primary-fixed: '#d7e7d3'
+  primary-fixed-dim: '#bbcbb8'
+  on-primary-fixed: '#111f12'
+  on-primary-fixed-variant: '#3c4a3c'
+  secondary-fixed: '#ffdcbd'
+  secondary-fixed-dim: '#f0bd8b'
+  on-secondary-fixed: '#2c1600'
+  on-secondary-fixed-variant: '#623f18'
+  tertiary-fixed: '#e5e2dc'
+  tertiary-fixed-dim: '#c9c6c1'
+  on-tertiary-fixed: '#1c1c18'
+  on-tertiary-fixed-variant: '#474743'
+  background: '#fcf9f8'
+  on-background: '#1c1b1b'
+  surface-variant: '#e5e2e1'
 typography:
-  headline-xl:
-    fontFamily: Libre Caslon Text
-    fontSize: 48px
-    fontWeight: '700'
-    lineHeight: 56px
-    letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Libre Caslon Text
-    fontSize: 32px
-    fontWeight: '700'
-    lineHeight: 40px
-  headline-lg-mobile:
-    fontFamily: Libre Caslon Text
-    fontSize: 28px
-    fontWeight: '700'
-    lineHeight: 36px
-  headline-md:
-    fontFamily: Libre Caslon Text
-    fontSize: 24px
+  display-lg:
+    fontFamily: Playfair Display
+    fontSize: 64px
     fontWeight: '600'
-    lineHeight: 32px
+    lineHeight: '1.1'
+    letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '600'
+    lineHeight: '1.2'
+  headline-md:
+    fontFamily: Playfair Display
+    fontSize: 32px
+    fontWeight: '500'
+    lineHeight: '1.3'
+  headline-sm:
+    fontFamily: Playfair Display
+    fontSize: 24px
+    fontWeight: '500'
+    lineHeight: '1.4'
   body-lg:
-    fontFamily: Plus Jakarta Sans
+    fontFamily: Hanken Grotesk
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: 28px
+    lineHeight: '1.6'
   body-md:
-    fontFamily: Plus Jakarta Sans
+    fontFamily: Hanken Grotesk
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: 24px
-  label-md:
-    fontFamily: Plus Jakarta Sans
-    fontSize: 14px
-    fontWeight: '600'
-    lineHeight: 20px
-    letterSpacing: 0.05em
-  label-sm:
-    fontFamily: Plus Jakarta Sans
+    lineHeight: '1.6'
+  label-caps:
+    fontFamily: Hanken Grotesk
     fontSize: 12px
-    fontWeight: '500'
-    lineHeight: 16px
-rounded:
-  sm: 0.25rem
-  DEFAULT: 0.5rem
-  md: 0.75rem
-  lg: 1rem
-  xl: 1.5rem
-  full: 9999px
+    fontWeight: '600'
+    lineHeight: '1.5'
+    letterSpacing: 0.1em
 spacing:
   unit: 8px
   container-max: 1280px
   gutter: 24px
-  margin-mobile: 16px
-  margin-desktop: 48px
+  margin-desktop: 64px
+  margin-mobile: 20px
 ---
 
 ## Brand & Style
-The brand personality is rooted in communal trust and the timeless art of floristry. This design system bridges the gap between a traditional brick-and-mortar florist and a modern lifestyle boutique. It evokes an emotional response of warmth, reliability, and artisanal quality.
+The design system is rooted in the concept of "The Curated Greenhouse"—blending the raw, textural beauty of floristry with the structured elegance of high-end editorial design. It targets a discerning clientele who values heritage and artisanal craftsmanship over mass-market convenience.
 
-The design style is **Modern Corporate with Tactile accents**. It avoids the sterility of modern SaaS by utilizing organic textures and a soft, "Paper-like" UI feel. It prioritizes clarity for local customers while incorporating high-end editorial layouts to showcase home decor and furniture collections. High-quality whitespace and intentional asymmetry prevent the interface from feeling like a generic template, reflecting the bespoke nature of floral arrangements.
+The UI style is **Minimalist Editorial**. It prioritizes high-quality, full-bleed botanical photography and uses generous white space to evoke a sense of calm and premium quality. The interface acts as a quiet frame for the vibrant colors of the floral arrangements, utilizing thin 1px lines and asymmetrical compositions to create a bespoke, gallery-like experience. The emotional response should be one of "quiet luxury" and "timeless artistry."
 
 ## Colors
-The palette is inspired by a thriving greenhouse and the delicate hues of a seasonal bouquet. 
+The palette is inspired by natural transitions: from deep foliage to sun-dried petals. 
 
-- **Primary (Evergreen):** A deep, botanical green used for navigation, primary buttons, and authoritative text. It represents growth and reliability.
-- **Secondary (Blossom Pink):** A muted, warm floral pink used for highlights, celebratory accents, and soft calls to action.
-- **Tertiary (Lavender Mist):** A dusty purple used for subtle categorization and secondary interactive elements, particularly for lifestyle or gift sections.
-- **Neutral (Ivory Parchment):** The foundation of the UI. This soft cream background is more approachable and organic than pure white, reducing eye strain and feeling more "physical."
+- **Antique Cream (#F9F6F0):** This is the primary canvas color. Avoid pure white (#FFFFFF) to maintain a soft, tactile, paper-like quality.
+- **Deep Moss (#2D3B2D):** Used for primary actions, navigation headers, and grounding elements. It represents the brand's botanical core.
+- **Charcoal (#1A1A1A):** Reserved for high-contrast typography and hair-line borders to ensure maximum legibility and an editorial edge.
+- **Dusty Rose (#D4A373):** An accent color for highlights, special categories, or subtle "shop now" indicators. It provides a warm, organic contrast to the cool Deep Moss.
 
 ## Typography
-The typography strategy utilizes a "High-Low" pairing. **Libre Caslon Text** provides an editorial, sophisticated air for headings, grounding the brand in tradition and craft. **Plus Jakarta Sans** is used for all functional and body text; its soft, rounded terminals echo the friendly, community-oriented nature of the business while remaining highly legible for all age groups.
+The typography pairing establishes a tension between tradition and modernity. 
 
-Use wide line-heights for body text to maintain a relaxed, premium reading experience. Labels should use slight tracking (letter-spacing) and uppercase styling to provide a clear hierarchy against the serif headlines.
+**Playfair Display** serves as the primary voice for headlines. It should be used with tight tracking in larger sizes to emphasize its elegant serifs. For hero sections, use "display-lg" with intentional line breaks to create asymmetrical visual interest.
+
+**Hanken Grotesk** provides a clean, high-contrast counterpoint. It is the workhorse for body copy and UI labels. To maintain the editorial feel, use "label-caps" for category headers and small metadata, ensuring a generous letter-spacing of 0.1em.
 
 ## Layout & Spacing
-The layout follows a **Fluid Grid** model with a 12-column structure for desktop and a 4-column structure for mobile. 
+The layout follows a **fluid grid** model but breaks it intentionally to avoid a "template" look. Use a 12-column grid for desktop with wide 64px margins to "frame" the content.
 
-To reflect the organic nature of floristry, this design system encourages **Asymmetric Composition**. Gallery sections should utilize varying column spans (e.g., a 7-column image adjacent to a 5-column image) rather than a perfectly symmetrical grid. 
-
-Margins are generous to provide a "boutique" feel. On desktop, use a 48px outer margin to frame the content. For product lists, use an alternating offset pattern—shifting every second card down by 32px—to create visual rhythm.
+- **Asymmetry:** Align text blocks to the left while placing images in staggered positions (e.g., an image spanning columns 7-12 while the headline sits on columns 2-5).
+- **Vertical Rhythm:** Use large vertical gaps (80px to 120px) between sections to allow the design to "breathe."
+- **The Frame:** Every page should feel like a spread in a high-end magazine. Use the 1px Charcoal border as a structural element to group related content or to define the edges of the "viewport."
 
 ## Elevation & Depth
-Depth is created through **Tonal Layering** and **Ambient Shadows** rather than heavy borders. 
+This design system rejects heavy shadows in favor of **Tonal Layers and Fine Lines**.
 
-- **Surfaces:** Use subtle shifts in background color (e.g., Ivory to a very pale Sage) to distinguish sections.
-- **Shadows:** Use a "Botanical Glow"—a soft, diffused shadow with a hint of the primary green tint (`rgba(45, 75, 62, 0.08)`). This keeps the UI feeling light and airy.
-- **Interactive Depth:** When a user hovers over a product card, the elevation should increase slightly with a larger blur radius, simulating the object being lifted toward the viewer.
+- **Depth through Overlap:** Instead of shadows, create depth by slightly overlapping typography onto image containers.
+- **Hairline Borders:** Use 1px borders in `Charcoal` (at 20% opacity) or `Deep Moss` to define sections. These lines should be used sparingly but consistently, resembling the thin rules found in architectural drawings.
+- **Glassmorphism:** For mobile navigation or product overlays, use a very subtle backdrop blur (12px) with a semi-transparent `Antique Cream` fill to maintain context without clutter.
 
 ## Shapes
-The shape language is **Rounded**, reflecting the soft curves of petals and organic forms. 
+The shape language is strictly **Sharp (0)**. 
 
-- Standard containers and buttons use a 0.5rem (8px) radius.
-- "Special" display elements, like featured category images, may use a "Leaf-cut" radius (top-left and bottom-right corners rounded at 2rem, others at 0.5rem) to reinforce the florist theme.
-- Interactive icons should be contained within circular or soft-squircle backdrops.
+To reinforce the premium, "bespoke" aesthetic, every element—from buttons to image frames—uses hard 90-degree corners. This evokes the feeling of framed art and high-end stationery. Avoid any rounding, as it contradicts the sophisticated, architectural nature of the brand.
 
 ## Components
-- **Buttons:** Primary buttons are solid `Evergreen` with white text. Secondary buttons use an `Evergreen` outline with a transparent background. Call-to-action buttons for phone orders should include a leading handset icon and use a subtle "Pulse" animation to draw attention.
-- **Cards:** Product and service cards should have no visible border. Instead, use a soft background fill slightly darker than the page background and an ambient shadow. Images in cards must have a slight zoom-on-hover effect.
-- **Chips:** Used for filtering (e.g., "Sympathy," "Weddings," "Home Decor"). These should be pill-shaped with `Lavender Mist` backgrounds and dark text.
-- **Input Fields:** Use a "Material-style" bottom border only, or a very light fill with a 0.5rem radius. Focus states must use the `Blossom Pink` for the border color to feel welcoming.
-- **Lists:** Floral menu or service lists should use a custom "dot" separator—ideally a small, stylized leaf or petal icon—instead of standard bullets.
-- **Gallery Grid:** A specialized component that allows for mixed aspect ratios (portrait and landscape) to showcase the diverse inventory of flowers, clothing, and furniture.
+- **Buttons:** Primary buttons are solid `Deep Moss` with white `label-caps` text. Secondary buttons are transparent with a 1px `Charcoal` border. No rounded corners. Hover states involve a subtle color shift to `Dusty Rose`.
+- **Botanical Rules:** A signature element. A horizontal 1px line that terminates in a small "plus" or "dot" symbol, used to separate major sections or lead the eye to a call-to-action.
+- **Product Cards:** Images should have a 1:1 or 4:5 aspect ratio. The product title (Serif) and price (Sans-Serif) sit below the image, aligned left, with no enclosing box—only white space and perhaps a single hairline separator.
+- **Input Fields:** Minimalist underlines rather than boxed containers. The label sits above in `label-caps`. 
+- **Chips/Filters:** Simple text links with a 1px underline for the active state. Avoid "pill" shapes entirely.
+- **Gallery Spacing:** When displaying floral arrangements, use varying sizes (e.g., one large "Hero" arrangement next to two smaller "Detail" shots) to mimic a scrapbook or editorial layout.
