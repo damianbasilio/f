@@ -1,0 +1,94 @@
+# Essential Sweets — brief
+
+## Email verification
+
+- **Email:** essentialsweetscakeshop@gmail.com
+- **Source:** https://www.facebook.com/p/Essential-Sweets-100064656747152/
+- **Gate:** PASS
+
+## Activity verification
+
+- **Gate:** PASS
+- **Evidence:** Active Facebook page with content and 4 post caption(s) scraped
+- **Checked:** 2026-06-07 — Facebook profile scrape
+
+## Human approval
+
+- **Reviewed by:** auto (Facebook-only verified lead)
+- **Date:** 2026-06-07
+- **Website bad enough to proceed:** yes — no owned website on Facebook profile
+- **Gate:** PASS
+
+## Site quality gate
+
+- **Gate:** PASS
+- **Live URL:** https://www.facebook.com/p/Essential-Sweets-100064656747152/
+- **Why this site hurts sales:** Business relies on Facebook only; Google searchers cannot reach a dedicated homepage with phone and services above the fold.
+
+## Business copy
+
+- **Name:** Essential Sweets
+- **Owner:** —
+- **Location:** 2405 North Marine Boulevard, Jacksonville, NC 28546
+- **Phone:** (910) 939-3456
+- **Email:** essentialsweetscakeshop@gmail.com
+- **Tagline:** We are Essential Sweets, Family Owned and Operated! A bakery that specializes in Cheesecakes, Custom Cakes, Wedding Cakes, Cupcakes, and Cookie Decorating, as well as many other Ba
+- **Hours:** Closed now
+- **Focus:** We are Essential Sweets, Family Owned and Operated! A bakery that specializes in Cheesecakes, Custom Cakes, Wedding Cakes, Cupcakes, and Cookie Decorating, as well as many other Baked goods all baked fresh daily.
+- **Full profile (scraped):**
+
+We are Essential Sweets, Family Owned and Operated! A bakery that specializes in Cheesecakes, Custom Cakes, Wedding Cakes, Cupcakes, and Cookie Decorating, as well as many other Baked goods all baked fresh daily.
+Hours: Closed now
+Address: 2405 North Marine Boulevard , Jacksonville, NC, United States, 28546
+Phone: 910-939-3456
+Email: essentialsweetscakeshop@gmail.com
+
+Recent posts from their Facebook page:
+1. Good morning everyone! We still have some Banana Pudding and Candy Bar Cheesecakes, Lemon Meringue Cupcakes, Strawberry Tres Leches Cake Slices, and Snickerdoodle Bars!
+2. We are Essential Sweets, Family Owned and Operated! A bakery that specializes in Cheesecakes, Custom Cakes, Wedding Cakes, Cupcakes, and Cookie Decorating, as well as many other Baked goods all baked fresh daily.
+3. 2405 North Marine Boulevard , Jacksonville, NC, United States, North Carolina
+4. Nicolas Williams 👀Can you get me a piece of one of those cheesecakes?🙏🏾
+- **Category:** Restaurant / food service
+- **Vertical:** Restaurant / food service
+
+## Core functionalities
+
+- **Primary action:** View menu & call
+- **Secondary action:** Get directions
+- **Must surface above fold:** Phone number, primary CTA, business name, city
+- **Service highlights:** Daily specials; Catering & events; Dine-in & takeout
+- **Trust signals available:** 4.7 review score from listings
+
+## Three verifiable issues
+
+1. Facebook-only presence — customers searching Google land on directories instead of the business
+2. No dedicated homepage for hours, services, and click-to-call from search results
+3. Social feed requires scrolling — key info (phone, location, services) is not one tap away
+
+## Mockup angle
+
+- **H1:** Essential Sweets — Jacksonville's local favorite
+- **Primary CTA:** View menu & call
+- **Secondary CTA:** Get directions
+- **Sections:** hero, credibility, menu-highlights, about, gallery, visit, contact
+- **Tone:** Warm, appetizing, neighborhood favorite — invite hunger and comfort
+- **Layout archetype:** diagonal-cut
+- **Colors / typography:** Stitch decides (no website to extract from)
+
+## Stitch generation brief
+
+- **Vertical:** Restaurant / food service
+- **Mood:** Warm, appetizing, neighborhood favorite — invite hunger and comfort
+- **Typography direction:** Cormorant Garamond + Montserrat
+- **Layout archetype:** diagonal-cut
+- **Design dials:** DESIGN_VARIANCE 9 | MOTION_INTENSITY 5 | VISUAL_DENSITY 7
+- **Colors / typography:** Stitch decides (no website to extract from)
+
+## Facebook source (no brand colors to extract)
+
+- **Source:** https://www.facebook.com/p/Essential-Sweets-100064656747152/
+- **Platform:** Facebook (no dedicated website)
+- **Scraped:** 2026-06-07T03:56:14.910Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at https://www.facebook.com/p/Essential-Sweets-100064656747152/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
+

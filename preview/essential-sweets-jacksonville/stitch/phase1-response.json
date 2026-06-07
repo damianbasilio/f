@@ -1,0 +1,436 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Artisan Elegance",
+          "styleGuidelines": "## Brand & Style\nThe brand personality is high-end, handcrafted, and intimate, positioning \"Essential Sweets\" as a boutique atelier rather than a commercial bakery. The design system adopts an **Editorial Minimalism** style, utilizing generous whitespace and a sophisticated hierarchy to evoke the feeling of a luxury lifestyle magazine.\n\nThe UI should feel bespoke and deliberate, avoiding standard \"shop\" templates. By blending high-contrast classical elements with modern structural layouts, the system communicates precision and artistry. Every interaction should feel calm and curated, mirroring the experience of walking into a high-end pastry shop.\n\n## Layout & Spacing\nThe layout philosophy follows an **Asymmetric Grid** model. Rather than a standard centered 12-column grid, content is often offset to one side or staggered to create a dynamic, editorial rhythm.\n\n- **Editorial Whitespace:** Use large `section-gap` (120px+) between major content blocks to allow the photography to \"breathe.\"\n- **Thin Gold Rules:** Use 0.5px horizontal lines in Antique Gold (#B5945F) to separate sections where whitespace alone is insufficient.\n- **Mobile Reflow:** On mobile devices, the asymmetry collapses into a single-column stacked layout, but maintains large vertical padding to preserve the \"high-end\" feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** rather than traditional shadows.\n- **Surfaces:** Use shifts between Clotted Cream and Toasted Almond to define different functional areas.\n- **Glassmorphism:** Navigation bars and specific overlay modals should use a high-blur (20px+) backdrop with a low-opacity Clotted Cream tint.\n- **Shadows:** Avoid heavy dropshadows. If elevation is required for a floating element, use a very soft, highly diffused #2D1B14 shadow at 5% opacity.\n\n## Components\n- **Buttons:** Primary buttons are solid Cocoa Noir with Clotted Cream text. They are rectangular with a 4px radius. Secondary buttons are \"Ghost\" style with a 1px Antique Gold border.\n- **Thin Gold Rules:** A signature element. Used sparingly as a horizontal separator (0.5px height) or as a vertical \"connector\" between staggered text and images.\n- **Cards:** Product cards should have no border or shadow. They rely on high-quality photography with a soft-focus background. The text (product name) is placed below the image in Playfair Display.\n- **Input Fields:** Minimalist design with only a bottom border in Antique Gold. Labels are always in `label-caps`.\n- **Photo Treatment:** All photography must be soft-focus, utilizing natural light and high-contrast styling. Images should be treated as part of the architecture, sometimes bleeding off the edge of the screen.\n- **Menu/Lists:** Use wide spacing between list items, separated by 0.5px gold lines.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#2d1b14",
+            "designMd": "---\nname: Artisan Elegance\ncolors:\n  surface: '#fff8f6'\n  surface-dim: '#dfd9d7'\n  surface-bright: '#fff8f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f9f2f0'\n  surface-container: '#f4ecea'\n  surface-container-high: '#eee7e5'\n  surface-container-highest: '#e8e1df'\n  on-surface: '#1e1b1a'\n  on-surface-variant: '#4f4441'\n  inverse-surface: '#33302f'\n  inverse-on-surface: '#f6efed'\n  outline: '#817470'\n  outline-variant: '#d3c3be'\n  surface-tint: '#725950'\n  primary: '#110402'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b14'\n  on-primary-container: '#9d8177'\n  inverse-primary: '#e0c0b4'\n  secondary: '#605e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e6e2dd'\n  on-secondary-container: '#666460'\n  tertiary: '#160102'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#361516'\n  on-tertiary-container: '#ad7a7a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fddbd0'\n  primary-fixed-dim: '#e0c0b4'\n  on-primary-fixed: '#291710'\n  on-primary-fixed-variant: '#584239'\n  secondary-fixed: '#e6e2dd'\n  secondary-fixed-dim: '#c9c6c1'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#484743'\n  tertiary-fixed: '#ffdad9'\n  tertiary-fixed-dim: '#f2b8b8'\n  on-tertiary-fixed: '#321113'\n  on-tertiary-fixed-variant: '#653b3c'\n  background: '#fff8f6'\n  on-background: '#1e1b1a'\n  surface-variant: '#e8e1df'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality is high-end, handcrafted, and intimate, positioning \"Essential Sweets\" as a boutique atelier rather than a commercial bakery. The design system adopts an **Editorial Minimalism** style, utilizing generous whitespace and a sophisticated hierarchy to evoke the feeling of a luxury lifestyle magazine.\n\nThe UI should feel bespoke and deliberate, avoiding standard \"shop\" templates. By blending high-contrast classical elements with modern structural layouts, the system communicates precision and artistry. Every interaction should feel calm and curated, mirroring the experience of walking into a high-end pastry shop.\n\n## Colors\nThe palette is anchored by **Cocoa Noir** (#2D1B14) for all primary text and structural elements, providing a deep, grounded contrast. **Clotted Cream** (#F9F5F0) serves as the primary canvas, offering a warmer, more sophisticated alternative to pure white.\n\n**Toasted Almond** (#F0E6DB) is used for subtle section shifts and background layering to provide depth without introducing heavy borders. **Antique Gold** (#B5945F) is reserved for \"thin gold rules,\" iconography, and small call-to-action highlights. **Dusty Rose** (#C18C8C) acts as a soft secondary accent for interactive hover states or subtle UI feedback.\n\n## Typography\nTypography is the cornerstone of this design system. We use **Playfair Display** for headlines to convey heritage and elegance. For display sizes, negative letter-spacing is used to create a \"tight,\" editorial look.\n\n**Montserrat** provides a clean, modern counterpoint for body copy and UI labels. To maintain the premium feel, body text uses generous line-height and increased letter-spacing. All labels and secondary metadata should be set in uppercase with significant tracking to ensure a sophisticated, organized appearance.\n\n## Layout & Spacing\nThe layout philosophy follows an **Asymmetric Grid** model. Rather than a standard centered 12-column grid, content is often offset to one side or staggered to create a dynamic, editorial rhythm.\n\n- **Editorial Whitespace:** Use large `section-gap` (120px+) between major content blocks to allow the photography to \"breathe.\"\n- **Thin Gold Rules:** Use 0.5px horizontal lines in Antique Gold (#B5945F) to separate sections where whitespace alone is insufficient.\n- **Mobile Reflow:** On mobile devices, the asymmetry collapses into a single-column stacked layout, but maintains large vertical padding to preserve the \"high-end\" feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** rather than traditional shadows.\n- **Surfaces:** Use shifts between Clotted Cream and Toasted Almond to define different functional areas.\n- **Glassmorphism:** Navigation bars and specific overlay modals should use a high-blur (20px+) backdrop with a low-opacity Clotted Cream tint.\n- **Shadows:** Avoid heavy dropshadows. If elevation is required for a floating element, use a very soft, highly diffused #2D1B14 shadow at 5% opacity.\n\n## Shapes\nThe shape language is defined by **Soft Geometricity**. While most UI elements like buttons and containers use a subtle \"Soft\" radius (4px) to feel modern and precise, the brand's visual motif introduces \"Organic Curves\" through image masking and background decorative shapes.\n\nInteractive elements (buttons, inputs) remain structured with minimal roundedness, while lifestyle imagery may feature one or two rounded corners (e.g., top-left and bottom-right at 120px radius) to evoke the artisan nature of the cakes.\n\n## Components\n- **Buttons:** Primary buttons are solid Cocoa Noir with Clotted Cream text. They are rectangular with a 4px radius. Secondary buttons are \"Ghost\" style with a 1px Antique Gold border.\n- **Thin Gold Rules:** A signature element. Used sparingly as a horizontal separator (0.5px height) or as a vertical \"connector\" between staggered text and images.\n- **Cards:** Product cards should have no border or shadow. They rely on high-quality photography with a soft-focus background. The text (product name) is placed below the image in Playfair Display.\n- **Input Fields:** Minimalist design with only a bottom border in Antique Gold. Labels are always in `label-caps`.\n- **Photo Treatment:** All photography must be soft-focus, utilizing natural light and high-contrast styling. Images should be treated as part of the architecture, sometimes bleeding off the edge of the screen.\n- **Menu/Lists:** Use wide spacing between list items, separated by 0.5px gold lines.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fff8f6",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f6efed",
+              "inverse_primary": "#e0c0b4",
+              "inverse_surface": "#33302f",
+              "on_background": "#1e1b1a",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#9d8177",
+              "on_primary_fixed": "#291710",
+              "on_primary_fixed_variant": "#584239",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#666460",
+              "on_secondary_fixed": "#1c1c19",
+              "on_secondary_fixed_variant": "#484743",
+              "on_surface": "#1e1b1a",
+              "on_surface_variant": "#4f4441",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#ad7a7a",
+              "on_tertiary_fixed": "#321113",
+              "on_tertiary_fixed_variant": "#653b3c",
+              "outline": "#817470",
+              "outline_variant": "#d3c3be",
+              "primary": "#110402",
+              "primary_container": "#2d1b14",
+              "primary_fixed": "#fddbd0",
+              "primary_fixed_dim": "#e0c0b4",
+              "secondary": "#605e5b",
+              "secondary_container": "#e6e2dd",
+              "secondary_fixed": "#e6e2dd",
+              "secondary_fixed_dim": "#c9c6c1",
+              "surface": "#fff8f6",
+              "surface_bright": "#fff8f6",
+              "surface_container": "#f4ecea",
+              "surface_container_high": "#eee7e5",
+              "surface_container_highest": "#e8e1df",
+              "surface_container_low": "#f9f2f0",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dfd9d7",
+              "surface_tint": "#725950",
+              "surface_variant": "#e8e1df",
+              "tertiary": "#160102",
+              "tertiary_container": "#361516",
+              "tertiary_fixed": "#ffdad9",
+              "tertiary_fixed_dim": "#f2b8b8"
+            },
+            "overridePrimaryColor": "#2d1b14",
+            "overrideSecondaryColor": "#f9f5f0",
+            "overrideTertiaryColor": "#c18c8c",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "gutter": "32px",
+              "margin-desktop": "80px",
+              "margin-mobile": "24px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.03em",
+                "lineHeight": "32px"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "28px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "72px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "48px"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "500",
+                "lineHeight": "32px"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "16px"
+              }
+            }
+          }
+        },
+        "name": "assets/dc3471f5a2a74cf3897faa2b3aa36552",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Artisan Elegance",
+                "styleGuidelines": "## Brand & Style\nThe brand personality is high-end, handcrafted, and intimate, positioning \"Essential Sweets\" as a boutique atelier rather than a commercial bakery. The design system adopts an **Editorial Minimalism** style, utilizing generous whitespace and a sophisticated hierarchy to evoke the feeling of a luxury lifestyle magazine.\n\nThe UI should feel bespoke and deliberate, avoiding standard \"shop\" templates. By blending high-contrast classical elements with modern structural layouts, the system communicates precision and artistry. Every interaction should feel calm and curated, mirroring the experience of walking into a high-end pastry shop.\n\n## Layout & Spacing\nThe layout philosophy follows an **Asymmetric Grid** model. Rather than a standard centered 12-column grid, content is often offset to one side or staggered to create a dynamic, editorial rhythm.\n\n- **Editorial Whitespace:** Use large `section-gap` (120px+) between major content blocks to allow the photography to \"breathe.\"\n- **Thin Gold Rules:** Use 0.5px horizontal lines in Antique Gold (#B5945F) to separate sections where whitespace alone is insufficient.\n- **Mobile Reflow:** On mobile devices, the asymmetry collapses into a single-column stacked layout, but maintains large vertical padding to preserve the \"high-end\" feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** rather than traditional shadows.\n- **Surfaces:** Use shifts between Clotted Cream and Toasted Almond to define different functional areas.\n- **Glassmorphism:** Navigation bars and specific overlay modals should use a high-blur (20px+) backdrop with a low-opacity Clotted Cream tint.\n- **Shadows:** Avoid heavy dropshadows. If elevation is required for a floating element, use a very soft, highly diffused #2D1B14 shadow at 5% opacity.\n\n## Components\n- **Buttons:** Primary buttons are solid Cocoa Noir with Clotted Cream text. They are rectangular with a 4px radius. Secondary buttons are \"Ghost\" style with a 1px Antique Gold border.\n- **Thin Gold Rules:** A signature element. Used sparingly as a horizontal separator (0.5px height) or as a vertical \"connector\" between staggered text and images.\n- **Cards:** Product cards should have no border or shadow. They rely on high-quality photography with a soft-focus background. The text (product name) is placed below the image in Playfair Display.\n- **Input Fields:** Minimalist design with only a bottom border in Antique Gold. Labels are always in `label-caps`.\n- **Photo Treatment:** All photography must be soft-focus, utilizing natural light and high-contrast styling. Images should be treated as part of the architecture, sometimes bleeding off the edge of the screen.\n- **Menu/Lists:** Use wide spacing between list items, separated by 0.5px gold lines.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#2d1b14",
+                  "designMd": "---\nname: Artisan Elegance\ncolors:\n  surface: '#fff8f6'\n  surface-dim: '#dfd9d7'\n  surface-bright: '#fff8f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f9f2f0'\n  surface-container: '#f4ecea'\n  surface-container-high: '#eee7e5'\n  surface-container-highest: '#e8e1df'\n  on-surface: '#1e1b1a'\n  on-surface-variant: '#4f4441'\n  inverse-surface: '#33302f'\n  inverse-on-surface: '#f6efed'\n  outline: '#817470'\n  outline-variant: '#d3c3be'\n  surface-tint: '#725950'\n  primary: '#110402'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b14'\n  on-primary-container: '#9d8177'\n  inverse-primary: '#e0c0b4'\n  secondary: '#605e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e6e2dd'\n  on-secondary-container: '#666460'\n  tertiary: '#160102'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#361516'\n  on-tertiary-container: '#ad7a7a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fddbd0'\n  primary-fixed-dim: '#e0c0b4'\n  on-primary-fixed: '#291710'\n  on-primary-fixed-variant: '#584239'\n  secondary-fixed: '#e6e2dd'\n  secondary-fixed-dim: '#c9c6c1'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#484743'\n  tertiary-fixed: '#ffdad9'\n  tertiary-fixed-dim: '#f2b8b8'\n  on-tertiary-fixed: '#321113'\n  on-tertiary-fixed-variant: '#653b3c'\n  background: '#fff8f6'\n  on-background: '#1e1b1a'\n  surface-variant: '#e8e1df'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality is high-end, handcrafted, and intimate, positioning \"Essential Sweets\" as a boutique atelier rather than a commercial bakery. The design system adopts an **Editorial Minimalism** style, utilizing generous whitespace and a sophisticated hierarchy to evoke the feeling of a luxury lifestyle magazine.\n\nThe UI should feel bespoke and deliberate, avoiding standard \"shop\" templates. By blending high-contrast classical elements with modern structural layouts, the system communicates precision and artistry. Every interaction should feel calm and curated, mirroring the experience of walking into a high-end pastry shop.\n\n## Colors\nThe palette is anchored by **Cocoa Noir** (#2D1B14) for all primary text and structural elements, providing a deep, grounded contrast. **Clotted Cream** (#F9F5F0) serves as the primary canvas, offering a warmer, more sophisticated alternative to pure white.\n\n**Toasted Almond** (#F0E6DB) is used for subtle section shifts and background layering to provide depth without introducing heavy borders. **Antique Gold** (#B5945F) is reserved for \"thin gold rules,\" iconography, and small call-to-action highlights. **Dusty Rose** (#C18C8C) acts as a soft secondary accent for interactive hover states or subtle UI feedback.\n\n## Typography\nTypography is the cornerstone of this design system. We use **Playfair Display** for headlines to convey heritage and elegance. For display sizes, negative letter-spacing is used to create a \"tight,\" editorial look.\n\n**Montserrat** provides a clean, modern counterpoint for body copy and UI labels. To maintain the premium feel, body text uses generous line-height and increased letter-spacing. All labels and secondary metadata should be set in uppercase with significant tracking to ensure a sophisticated, organized appearance.\n\n## Layout & Spacing\nThe layout philosophy follows an **Asymmetric Grid** model. Rather than a standard centered 12-column grid, content is often offset to one side or staggered to create a dynamic, editorial rhythm.\n\n- **Editorial Whitespace:** Use large `section-gap` (120px+) between major content blocks to allow the photography to \"breathe.\"\n- **Thin Gold Rules:** Use 0.5px horizontal lines in Antique Gold (#B5945F) to separate sections where whitespace alone is insufficient.\n- **Mobile Reflow:** On mobile devices, the asymmetry collapses into a single-column stacked layout, but maintains large vertical padding to preserve the \"high-end\" feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** rather than traditional shadows.\n- **Surfaces:** Use shifts between Clotted Cream and Toasted Almond to define different functional areas.\n- **Glassmorphism:** Navigation bars and specific overlay modals should use a high-blur (20px+) backdrop with a low-opacity Clotted Cream tint.\n- **Shadows:** Avoid heavy dropshadows. If elevation is required for a floating element, use a very soft, highly diffused #2D1B14 shadow at 5% opacity.\n\n## Shapes\nThe shape language is defined by **Soft Geometricity**. While most UI elements like buttons and containers use a subtle \"Soft\" radius (4px) to feel modern and precise, the brand's visual motif introduces \"Organic Curves\" through image masking and background decorative shapes.\n\nInteractive elements (buttons, inputs) remain structured with minimal roundedness, while lifestyle imagery may feature one or two rounded corners (e.g., top-left and bottom-right at 120px radius) to evoke the artisan nature of the cakes.\n\n## Components\n- **Buttons:** Primary buttons are solid Cocoa Noir with Clotted Cream text. They are rectangular with a 4px radius. Secondary buttons are \"Ghost\" style with a 1px Antique Gold border.\n- **Thin Gold Rules:** A signature element. Used sparingly as a horizontal separator (0.5px height) or as a vertical \"connector\" between staggered text and images.\n- **Cards:** Product cards should have no border or shadow. They rely on high-quality photography with a soft-focus background. The text (product name) is placed below the image in Playfair Display.\n- **Input Fields:** Minimalist design with only a bottom border in Antique Gold. Labels are always in `label-caps`.\n- **Photo Treatment:** All photography must be soft-focus, utilizing natural light and high-contrast styling. Images should be treated as part of the architecture, sometimes bleeding off the edge of the screen.\n- **Menu/Lists:** Use wide spacing between list items, separated by 0.5px gold lines.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fff8f6",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f6efed",
+                    "inverse_primary": "#e0c0b4",
+                    "inverse_surface": "#33302f",
+                    "on_background": "#1e1b1a",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#9d8177",
+                    "on_primary_fixed": "#291710",
+                    "on_primary_fixed_variant": "#584239",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#666460",
+                    "on_secondary_fixed": "#1c1c19",
+                    "on_secondary_fixed_variant": "#484743",
+                    "on_surface": "#1e1b1a",
+                    "on_surface_variant": "#4f4441",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#ad7a7a",
+                    "on_tertiary_fixed": "#321113",
+                    "on_tertiary_fixed_variant": "#653b3c",
+                    "outline": "#817470",
+                    "outline_variant": "#d3c3be",
+                    "primary": "#110402",
+                    "primary_container": "#2d1b14",
+                    "primary_fixed": "#fddbd0",
+                    "primary_fixed_dim": "#e0c0b4",
+                    "secondary": "#605e5b",
+                    "secondary_container": "#e6e2dd",
+                    "secondary_fixed": "#e6e2dd",
+                    "secondary_fixed_dim": "#c9c6c1",
+                    "surface": "#fff8f6",
+                    "surface_bright": "#fff8f6",
+                    "surface_container": "#f4ecea",
+                    "surface_container_high": "#eee7e5",
+                    "surface_container_highest": "#e8e1df",
+                    "surface_container_low": "#f9f2f0",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dfd9d7",
+                    "surface_tint": "#725950",
+                    "surface_variant": "#e8e1df",
+                    "tertiary": "#160102",
+                    "tertiary_container": "#361516",
+                    "tertiary_fixed": "#ffdad9",
+                    "tertiary_fixed_dim": "#f2b8b8"
+                  },
+                  "overridePrimaryColor": "#2d1b14",
+                  "overrideSecondaryColor": "#f9f5f0",
+                  "overrideTertiaryColor": "#c18c8c",
+                  "roundness": "ROUND_FOUR",
+                  "spacing": {
+                    "gutter": "32px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "section-gap": "120px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.03em",
+                      "lineHeight": "32px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "28px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "72px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "48px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "40px"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "500",
+                      "lineHeight": "32px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/dc3471f5a2a74cf3897faa2b3aa36552",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "8980",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzMzMDM3NmFlMmY0ZjQ4MWJhZmUzMTA4OThmNDU2YjZlEgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzE5NjYwOTczMDUzNzUxMzE1Nw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/17196609730537513157/files/951f69df13f14a409735d62881734f3e"
+            },
+            "id": "eb9e8d2550604bf987304d8bebc8a714",
+            "name": "projects/17196609730537513157/screens/eb9e8d2550604bf987304d8bebc8a714",
+            "prompt": "Create a bespoke, editorial-grade DESKTOP landing page for Essential Sweets. \n\nLayout Requirements:\n- Use an asymmetric, magazine-style grid. Avoid standard 'box' sections.\n- Large, high-contrast serif typography for headlines (Playfair Display style).\n- Incorporate a custom \"Golden Rule\" motif (thin 1px gold lines) as dividers.\n- Section 1: Header (floating) with (910) 939-3456.\n- Section 2: Hero. Asymmetric. Large headline: \"Bespoke Confections for Life's Grandest Moments.\" Use a high-end cake image placeholder.\n- Section 3: #Credibility. A subtle, sophisticated list of \"As Seen In\" or \"Trusted By\" using elegant typography.\n- Section 4: Services. Titled \"Couture Collections.\" Showcase 'Wedding Artistry', 'Special Occasions', and 'Signature Tastings' in a staggered grid.\n- Section 5: About. \"The Artisan's Hand.\" Text-heavy editorial layout with a signature-style font for the owner's name.\n- Section 6: Visit (#visit). Split screen. Left: Contact details and a minimalist form. Right: The required map slot `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n- Section 7: Footer. Clean, minimal, with address: 2405 North Marine Boulevard, Jacksonville, NC 28546.\n\nTechnical:\n- Production-ready HTML/CSS/JS.\n- Responsive design.\n- Smooth scrolling.\n- Form validation UI states.\n- Color palette: Cocoa Noir (#2D1B14), Clotted Cream (#F9F5F0), and Antique Gold accents.\n- NO LOREM IPSUM. Use evocative brand copy.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuMIYX3GXUbxken5-o575itFq_efK-bZn2K54qAP9bIYfHw3vmq4jIgg1Ix5XsfQb2bqgUQIfb0BOlugA68Xh8AsZ98cTvU_s4CPhf_NIGOdn9PEzKeKYwuXfoqLJoMtU0c2EfeUJNSWy3uyAzH0fLt-C3gnXcpHmO98SUqHrqJrsmZZiuhK0uyZs98nznEx0wezHD_a0wVTyk4yNBZgexWGfu2CqxU_TvzE328C3iH1OCOHSqj6AjggbZo",
+              "name": "projects/17196609730537513157/files/0a4d48b3e7a64c0fa795a5789a0ce420"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#2d1b14",
+              "designMd": "---\nname: Artisan Elegance\ncolors:\n  surface: '#fff8f6'\n  surface-dim: '#dfd9d7'\n  surface-bright: '#fff8f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f9f2f0'\n  surface-container: '#f4ecea'\n  surface-container-high: '#eee7e5'\n  surface-container-highest: '#e8e1df'\n  on-surface: '#1e1b1a'\n  on-surface-variant: '#4f4441'\n  inverse-surface: '#33302f'\n  inverse-on-surface: '#f6efed'\n  outline: '#817470'\n  outline-variant: '#d3c3be'\n  surface-tint: '#725950'\n  primary: '#110402'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b14'\n  on-primary-container: '#9d8177'\n  inverse-primary: '#e0c0b4'\n  secondary: '#605e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e6e2dd'\n  on-secondary-container: '#666460'\n  tertiary: '#160102'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#361516'\n  on-tertiary-container: '#ad7a7a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fddbd0'\n  primary-fixed-dim: '#e0c0b4'\n  on-primary-fixed: '#291710'\n  on-primary-fixed-variant: '#584239'\n  secondary-fixed: '#e6e2dd'\n  secondary-fixed-dim: '#c9c6c1'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#484743'\n  tertiary-fixed: '#ffdad9'\n  tertiary-fixed-dim: '#f2b8b8'\n  on-tertiary-fixed: '#321113'\n  on-tertiary-fixed-variant: '#653b3c'\n  background: '#fff8f6'\n  on-background: '#1e1b1a'\n  surface-variant: '#e8e1df'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality is high-end, handcrafted, and intimate, positioning \"Essential Sweets\" as a boutique atelier rather than a commercial bakery. The design system adopts an **Editorial Minimalism** style, utilizing generous whitespace and a sophisticated hierarchy to evoke the feeling of a luxury lifestyle magazine.\n\nThe UI should feel bespoke and deliberate, avoiding standard \"shop\" templates. By blending high-contrast classical elements with modern structural layouts, the system communicates precision and artistry. Every interaction should feel calm and curated, mirroring the experience of walking into a high-end pastry shop.\n\n## Colors\nThe palette is anchored by **Cocoa Noir** (#2D1B14) for all primary text and structural elements, providing a deep, grounded contrast. **Clotted Cream** (#F9F5F0) serves as the primary canvas, offering a warmer, more sophisticated alternative to pure white.\n\n**Toasted Almond** (#F0E6DB) is used for subtle section shifts and background layering to provide depth without introducing heavy borders. **Antique Gold** (#B5945F) is reserved for \"thin gold rules,\" iconography, and small call-to-action highlights. **Dusty Rose** (#C18C8C) acts as a soft secondary accent for interactive hover states or subtle UI feedback.\n\n## Typography\nTypography is the cornerstone of this design system. We use **Playfair Display** for headlines to convey heritage and elegance. For display sizes, negative letter-spacing is used to create a \"tight,\" editorial look.\n\n**Montserrat** provides a clean, modern counterpoint for body copy and UI labels. To maintain the premium feel, body text uses generous line-height and increased letter-spacing. All labels and secondary metadata should be set in uppercase with significant tracking to ensure a sophisticated, organized appearance.\n\n## Layout & Spacing\nThe layout philosophy follows an **Asymmetric Grid** model. Rather than a standard centered 12-column grid, content is often offset to one side or staggered to create a dynamic, editorial rhythm.\n\n- **Editorial Whitespace:** Use large `section-gap` (120px+) between major content blocks to allow the photography to \"breathe.\"\n- **Thin Gold Rules:** Use 0.5px horizontal lines in Antique Gold (#B5945F) to separate sections where whitespace alone is insufficient.\n- **Mobile Reflow:** On mobile devices, the asymmetry collapses into a single-column stacked layout, but maintains large vertical padding to preserve the \"high-end\" feel.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** rather than traditional shadows.\n- **Surfaces:** Use shifts between Clotted Cream and Toasted Almond to define different functional areas.\n- **Glassmorphism:** Navigation bars and specific overlay modals should use a high-blur (20px+) backdrop with a low-opacity Clotted Cream tint.\n- **Shadows:** Avoid heavy dropshadows. If elevation is required for a floating element, use a very soft, highly diffused #2D1B14 shadow at 5% opacity.\n\n## Shapes\nThe shape language is defined by **Soft Geometricity**. While most UI elements like buttons and containers use a subtle \"Soft\" radius (4px) to feel modern and precise, the brand's visual motif introduces \"Organic Curves\" through image masking and background decorative shapes.\n\nInteractive elements (buttons, inputs) remain structured with minimal roundedness, while lifestyle imagery may feature one or two rounded corners (e.g., top-left and bottom-right at 120px radius) to evoke the artisan nature of the cakes.\n\n## Components\n- **Buttons:** Primary buttons are solid Cocoa Noir with Clotted Cream text. They are rectangular with a 4px radius. Secondary buttons are \"Ghost\" style with a 1px Antique Gold border.\n- **Thin Gold Rules:** A signature element. Used sparingly as a horizontal separator (0.5px height) or as a vertical \"connector\" between staggered text and images.\n- **Cards:** Product cards should have no border or shadow. They rely on high-quality photography with a soft-focus background. The text (product name) is placed below the image in Playfair Display.\n- **Input Fields:** Minimalist design with only a bottom border in Antique Gold. Labels are always in `label-caps`.\n- **Photo Treatment:** All photography must be soft-focus, utilizing natural light and high-contrast styling. Images should be treated as part of the architecture, sometimes bleeding off the edge of the screen.\n- **Menu/Lists:** Use wide spacing between list items, separated by 0.5px gold lines.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fff8f6",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f6efed",
+                "inverse_primary": "#e0c0b4",
+                "inverse_surface": "#33302f",
+                "on_background": "#1e1b1a",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#9d8177",
+                "on_primary_fixed": "#291710",
+                "on_primary_fixed_variant": "#584239",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#666460",
+                "on_secondary_fixed": "#1c1c19",
+                "on_secondary_fixed_variant": "#484743",
+                "on_surface": "#1e1b1a",
+                "on_surface_variant": "#4f4441",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#ad7a7a",
+                "on_tertiary_fixed": "#321113",
+                "on_tertiary_fixed_variant": "#653b3c",
+                "outline": "#817470",
+                "outline_variant": "#d3c3be",
+                "primary": "#110402",
+                "primary_container": "#2d1b14",
+                "primary_fixed": "#fddbd0",
+                "primary_fixed_dim": "#e0c0b4",
+                "secondary": "#605e5b",
+                "secondary_container": "#e6e2dd",
+                "secondary_fixed": "#e6e2dd",
+                "secondary_fixed_dim": "#c9c6c1",
+                "surface": "#fff8f6",
+                "surface_bright": "#fff8f6",
+                "surface_container": "#f4ecea",
+                "surface_container_high": "#eee7e5",
+                "surface_container_highest": "#e8e1df",
+                "surface_container_low": "#f9f2f0",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dfd9d7",
+                "surface_tint": "#725950",
+                "surface_variant": "#e8e1df",
+                "tertiary": "#160102",
+                "tertiary_container": "#361516",
+                "tertiary_fixed": "#ffdad9",
+                "tertiary_fixed_dim": "#f2b8b8"
+              },
+              "overridePrimaryColor": "#2d1b14",
+              "overrideSecondaryColor": "#f9f5f0",
+              "overrideTertiaryColor": "#c18c8c",
+              "roundness": "ROUND_FOUR",
+              "spacing": {
+                "gutter": "32px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px",
+                "section-gap": "120px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.03em",
+                  "lineHeight": "32px"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "28px"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "72px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "48px"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "40px"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "500",
+                  "lineHeight": "32px"
+                },
+                "label-caps": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Essential Sweets | Bespoke Artisan Confections",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Essential Sweets** that moves far beyond a standard local business template. \n\n### Design Highlights:\n*   **Artisan Elegance Aesthetic**: The design uses a sophisticated palette of **Cocoa Noir** and **Clotted Cream**, punctuated by **Antique Gold** accents to reflect the premium, handcrafted nature of your confections.\n*   **Editorial Layout**: Instead of a traditional block-based grid, I utilized an **asymmetric magazine-style layout**. This creates a more dynamic, high-end browsing experience that feels curated rather than assembled.\n*   **Typographic Hierarchy**: High-contrast serif headlines provide a \"couture\" feel, while clean sans-serif body text ensures modern readability and whitespace balance.\n*   **Signature Visual Motif**: Thin gold rules and staggered image placements serve as a recurring visual thread, reinforcing the brand's attention to detail.\n*   **Conversion-Focused sections**: \n    *   A high-impact **Hero** section focused on \"Grand Moments.\"\n    *   **Couture Collections** staggered grid to showcase your range.\n    *   A minimalist, integrated **Consultation Form** paired with the required map interface.\n\nThe site is fully responsive, semantic, and built with production-ready code. How does this look to you, or would you like to explore a different layout for one of the sections?"
+    },
+    {
+      "suggestion": "Can we make the 'Couture Collections' section more interactive?"
+    },
+    {
+      "suggestion": "Let's try a different accent color, maybe a sage green?"
+    },
+    {
+      "suggestion": "Can you add a 'Process' section with a timeline?"
+    }
+  ],
+  "projectId": "17196609730537513157",
+  "sessionId": "13627908451065087027"
+}
