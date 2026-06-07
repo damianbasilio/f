@@ -1,34 +1,26 @@
-// Micro-interactions & Validation
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerHTML;
-            
-            btn.innerHTML = '<span class="font-utility-label text-utility-label uppercase tracking-widest">Transmitting...</span>';
-            btn.classList.add('opacity-50', 'pointer-events-none');
+// Micro-interactions and industrial "loading" effect
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                threshold: 0.1
+            };
 
-            setTimeout(() => {
-                btn.innerHTML = '<span class="font-utility-label text-utility-label uppercase tracking-widest">Received.</span>';
-                btn.classList.remove('bg-on-background');
-                btn.classList.add('bg-primary');
-                
-                setTimeout(() => {
-                    e.target.reset();
-                    btn.innerHTML = originalText;
-                    btn.classList.remove('bg-primary', 'opacity-50', 'pointer-events-none');
-                    btn.classList.add('bg-on-background');
-                }, 3000);
-            }, 1500);
-        });
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('translate-y-4');
+                    }
+                });
+            }, observerOptions);
 
-        // Hover effect for service rows to reveal pricing details
-        const serviceRows = document.querySelectorAll('.grid-cols-12.border-technical-b');
-        serviceRows.forEach(row => {
-            row.addEventListener('mouseenter', () => {
-                row.querySelector('.text-primary-container').classList.replace('text-primary-container', 'text-primary');
-            });
-            row.addEventListener('mouseleave', () => {
-                row.querySelector('.text-primary').classList.replace('text-primary', 'text-primary-container');
+            // Subtle parallax for the hero image
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroImg = document.querySelector('section img');
+                if (heroImg) {
+                    heroImg.style.transform = `translateY(${scrolled * 0.1}px)`;
+                }
             });
         });
 

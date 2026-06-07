@@ -85,7 +85,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/thefluffypuppygrooming/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T07:32:54.554Z
+- **Scraped:** 2026-06-07T07:36:31.811Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/thefluffypuppygrooming/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

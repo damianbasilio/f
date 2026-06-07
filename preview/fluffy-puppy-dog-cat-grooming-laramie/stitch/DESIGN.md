@@ -1,169 +1,191 @@
-I have designed a bespoke, industrial-inspired homepage for Fluffy Puppy Dog & Cat Grooming. 
+I've designed a bespoke, industrial-utilitarian homepage for **Fluffy Puppy Dog & Cat Grooming**. 
 
 ### Design Rationale:
-- **Visual Identity**: To differentiate Fluffy Puppy from the typical "soft and cuddly" local pet shop aesthetic, I’ve implemented an **industrial/utilitarian archetype**. This uses strong 2px borders, horizontal rules, and modular blocks to communicate precision, craftsmanship, and professionalism.
-- **Typography**: I paired a high-contrast **Playfair Display serif** for an editorial, premium feel with a **functional Monospace** for labels, data, and utility navigation. This "blueprint" typographic approach reinforces the idea of grooming as a technical craft.
-- **Color Palette**: A strict high-contrast palette of **Charcoal and Crisp White** is accented by a singular **'Chrome Blue' (#0055FF)**. This keeps the focus on the photography and the information while feeling modern and high-end.
-- **Layout**: The grid-based, tabular structure allows for clear information hierarchy, making services and contact details easy to parse while maintaining a unique, non-template look.
+- **Visual Identity:** Moving away from typical "cute" pet aesthetics, I've implemented a high-contrast "industrial-standard" look. This uses strong 1px/2px borders, monospace accents, and a grid-based tabular layout to communicate precision, meticulous hygiene, and premium care.
+- **Typography:** I paired a bold, elegant Serif for headings with a functional Monospace for labels and data. This "technical spec" approach makes the service details feel authoritative and high-end.
+- **Layout:** The site is structured as a series of "manifestos" and "logs," breaking the standard landing page flow. The services are presented in a tabular grid that feels like a professional menu of procedures rather than a generic card list.
+- **Interactivity:** Included smooth scrolling and a clean, validated contact form to streamline the booking process for Laramie residents.
 
-The site is fully responsive, uses semantic HTML, and includes the requested map placeholder and industrial form styling.
-
----
+The design is fully responsive and adheres to the technical requirements, including the specific map slot and contact details.
 
 ---
-name: Chrome & Canine
+
+---
+name: Industrial Grooming Standard
 colors:
-  surface: '#f9f9f9'
-  surface-dim: '#dadada'
-  surface-bright: '#f9f9f9'
+  surface: '#fbf9f5'
+  surface-dim: '#dbdad6'
+  surface-bright: '#fbf9f5'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f3f3f4'
-  surface-container: '#eeeeee'
-  surface-container-high: '#e8e8e8'
-  surface-container-highest: '#e2e2e2'
-  on-surface: '#1a1c1c'
-  on-surface-variant: '#434656'
-  inverse-surface: '#2f3131'
-  inverse-on-surface: '#f0f1f1'
-  outline: '#737688'
-  outline-variant: '#c3c5d9'
-  surface-tint: '#004dea'
-  primary: '#0041c8'
+  surface-container-low: '#f5f3ef'
+  surface-container: '#efeeea'
+  surface-container-high: '#e9e8e4'
+  surface-container-highest: '#e3e2de'
+  on-surface: '#1b1c1a'
+  on-surface-variant: '#444748'
+  inverse-surface: '#30312e'
+  inverse-on-surface: '#f2f1ed'
+  outline: '#747878'
+  outline-variant: '#c4c7c7'
+  surface-tint: '#5f5e5e'
+  primary: '#000000'
   on-primary: '#ffffff'
-  primary-container: '#0055ff'
-  on-primary-container: '#e3e6ff'
-  inverse-primary: '#b6c4ff'
-  secondary: '#5f5e5e'
+  primary-container: '#1c1b1b'
+  on-primary-container: '#858383'
+  inverse-primary: '#c8c6c5'
+  secondary: '#5e5f5c'
   on-secondary: '#ffffff'
-  secondary-container: '#e2dfde'
-  on-secondary-container: '#636262'
-  tertiary: '#4e5050'
+  secondary-container: '#e0e0dc'
+  on-secondary-container: '#626360'
+  tertiary: '#000000'
   on-tertiary: '#ffffff'
-  tertiary-container: '#666868'
-  on-tertiary-container: '#e7e7e7'
+  tertiary-container: '#261a00'
+  on-tertiary-container: '#a87d00'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#dce1ff'
-  primary-fixed-dim: '#b6c4ff'
-  on-primary-fixed: '#001551'
-  on-primary-fixed-variant: '#0039b3'
-  secondary-fixed: '#e5e2e1'
-  secondary-fixed-dim: '#c8c6c5'
-  on-secondary-fixed: '#1c1b1b'
-  on-secondary-fixed-variant: '#474746'
-  tertiary-fixed: '#e2e2e2'
-  tertiary-fixed-dim: '#c6c6c7'
-  on-tertiary-fixed: '#1a1c1c'
-  on-tertiary-fixed-variant: '#454747'
-  background: '#f9f9f9'
-  on-background: '#1a1c1c'
-  surface-variant: '#e2e2e2'
+  primary-fixed: '#e5e2e1'
+  primary-fixed-dim: '#c8c6c5'
+  on-primary-fixed: '#1c1b1b'
+  on-primary-fixed-variant: '#474746'
+  secondary-fixed: '#e3e2df'
+  secondary-fixed-dim: '#c7c7c3'
+  on-secondary-fixed: '#1b1c1a'
+  on-secondary-fixed-variant: '#464744'
+  tertiary-fixed: '#ffdfa0'
+  tertiary-fixed-dim: '#f6be39'
+  on-tertiary-fixed: '#261a00'
+  on-tertiary-fixed-variant: '#5c4300'
+  background: '#fbf9f5'
+  on-background: '#1b1c1a'
+  surface-variant: '#e3e2de'
 typography:
-  headline-xl:
-    fontFamily: Playfair Display
-    fontSize: 64px
-    fontWeight: '700'
-    lineHeight: '1.1'
-    letterSpacing: -0.02em
   headline-lg:
     fontFamily: Playfair Display
     fontSize: 48px
     fontWeight: '700'
-    lineHeight: '1.2'
+    lineHeight: 56px
+    letterSpacing: -0.02em
   headline-lg-mobile:
     fontFamily: Playfair Display
     fontSize: 32px
     fontWeight: '700'
-    lineHeight: '1.2'
+    lineHeight: 40px
+    letterSpacing: -0.01em
   headline-md:
     fontFamily: Playfair Display
-    fontSize: 32px
+    fontSize: 24px
     fontWeight: '600'
-    lineHeight: '1.3'
+    lineHeight: 32px
   body-lg:
     fontFamily: Work Sans
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.6'
+    lineHeight: 28px
   body-md:
     fontFamily: Work Sans
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.5'
-  utility-label:
+    lineHeight: 24px
+  label-mono:
     fontFamily: JetBrains Mono
     fontSize: 12px
     fontWeight: '500'
-    lineHeight: '1.2'
+    lineHeight: 16px
     letterSpacing: 0.05em
-  utility-data:
+  label-mono-bold:
     fontFamily: JetBrains Mono
     fontSize: 14px
-    fontWeight: '400'
-    lineHeight: '1.4'
+    fontWeight: '700'
+    lineHeight: 18px
 spacing:
-  base: 8px
+  unit: 4px
   gutter: 24px
   margin-mobile: 16px
   margin-desktop: 64px
-  stack-sm: 8px
-  stack-md: 24px
-  stack-lg: 48px
-  border-width-standard: 2px
-  border-width-heavy: 4px
+  rule-width: 1px
+  rule-width-heavy: 2px
 ---
 
 ## Brand & Style
-This design system establishes a premium, utilitarian aesthetic for "Fluffy Puppy Dog & Cat Grooming." It departs from traditional, soft pet care tropes in favor of an industrial-editorial hybrid that emphasizes precision, craftsmanship, and professional-grade hygiene. The visual narrative treats pet grooming with the same technical rigor as a high-end atelier or a specialized laboratory.
 
-The style is characterized by **Refined Industrialism**:
-- **High-End Utility:** Functional elements like borders and monospaced data points are elevated through generous whitespace and strict alignment.
-- **Editorial Contrast:** The juxtaposition of classical serif typography against technical monospaced labels creates a sophisticated, boutique feel.
-- **Architectural Rigor:** UI elements are treated as structured "blocks" or "containers," using thick strokes and clear division of information to evoke a sense of reliability and expert care.
+The design system is built upon a philosophy of **Industrial Utilitarianism** applied to a premium service context. It rejects the typical "cute" tropes of pet grooming in favor of a meticulous, expert-led aesthetic that evokes the precision of a master craftsperson.
+
+The visual narrative is driven by an editorial high-contrast approach, blending the heritage and sophistication of high-end fashion with the functional rigidity of technical specifications. The emotional response is one of absolute trust, cleanliness, and clinical excellence.
+
+**Core Principles:**
+- **Meticulous Precision:** Every element is aligned to a rigorous grid, using "rules" (borders) to frame information as if it were a technical data sheet.
+- **Utilitarian Elegance:** Functionality is celebrated. Monospaced accents suggest a "work-order" efficiency, while bold serifs provide the premium "concierge" feel.
+- **Purposeful Density:** Information is organized into distinct tabular blocks, contrasting large areas of empty space with concentrated, highly legible data points.
 
 ## Colors
-The palette is rooted in high-contrast neutrality with a singular, high-performance accent.
 
-- **Surface & Foundation:** A pristine **Crisp White (#FFFFFF)** serves as the primary canvas, ensuring a look of clinical cleanliness. **Deep Charcoal (#1A1A1A)** is used for structural framing, typography, and heavy-weight borders.
-- **Interaction Accent:** **Chrome Blue (#0055FF)** is the sole interactive trigger. It is used sparingly for primary buttons, active states, and critical highlights to maintain a focused, utilitarian atmosphere.
-- **Utility Tones:** A soft **Cool Gray (#F5F5F5)** is used for subtle backgrounds in tabular data or secondary surface tiers, preventing visual fatigue without sacrificing the high-contrast ethos.
+The palette is limited and deliberate, prioritizing high-contrast legibility and a sense of "archival" quality.
+
+- **Primary (Deep Charcoal - #1A1A1A):** Used for all structural elements, primary text, and heavy borders. It represents the "ink" on the page.
+- **Secondary (Cream - #FDFCF8):** The canvas. This off-white provides a softer, more premium feel than pure white, reducing eye strain while maintaining high contrast.
+- **Tertiary (Golden Amber - #D4A017):** A surgical accent. Use this sparingly for interactive highlights, status indicators (e.g., "In Progress"), or specific call-to-action focuses.
+- **Neutral (#E5E4E0):** Used for secondary rules, background fills in dense data tables, and disabled states.
 
 ## Typography
-The typographic hierarchy is designed to balance editorial elegance with functional data display.
 
-- **Headlines:** Use **Playfair Display**. Large-scale headlines should utilize the boldest weights to create a "magazine" feel. Keep tracking tight for impact.
-- **Body Copy:** Use **Work Sans**. This ensures high legibility for service descriptions and care instructions. It provides a grounded, professional contrast to the expressive serif.
-- **Utility & Data:** Use **JetBrains Mono**. This is the workhorse for technical details (e.g., "WEIGHT: 12KG", "APPOINTMENT ID: #00812"). All labels should be uppercase with slightly increased letter spacing to reinforce the industrial aesthetic.
+This system utilizes a high-contrast typographic pairing to distinguish between "brand" and "utility."
+
+- **The Serif (Playfair Display):** Used for large headlines and editorial storytelling. It should feel authoritative and luxurious.
+- **The Sans (Work Sans):** Used for primary body copy where legibility is paramount. It provides a grounded, professional bridge between the serif and the mono.
+- **The Mono (JetBrains Mono):** The workhorse of the UI. Used for all labels, metadata, "technical specs" of the pet, and navigation items. It should always be used for tabular data or status indicators to reinforce the industrial aesthetic.
 
 ## Layout & Spacing
-The layout follows a **Fixed-Fluid Hybrid** model. On desktop, content is contained within a 12-column grid (max-width 1440px) with generous 64px outer margins to evoke a luxury editorial layout. 
 
-- **Grid Logic:** Use 24px gutters. Content blocks should align strictly to the grid, often enclosed in 2px charcoal borders.
-- **Vertical Rhythm:** Spacing is oversized. Use `stack-lg` (48px) between major sections to allow the design to "breathe."
-- **Tabular Alignment:** Data should be organized in rows and columns that mimic technical spec sheets, with horizontal dividers separating line items.
-- **Mobile Adaptivity:** Collapse to a single column with 16px margins. Borders remain 2px to maintain the "heavy" industrial feel even on smaller screens.
+The layout is governed by a **Rigid Grid System** that mimics technical blueprints or high-end archival catalogs.
+
+- **The Rule-Based Grid:** Instead of using soft shadows to separate content, use 1px or 2px solid Deep Charcoal lines. 
+- **Tabular Blocks:** Group related information (e.g., Pet Breed, Age, Coat Condition) into blocks with internal dividers.
+- **Desktop:** A 12-column fluid grid with wide 64px margins to allow the content to breathe. Use "asymmetric balance"—heavy information blocks offset by large empty Cream areas.
+- **Mobile:** A 4-column grid. Borders should extend to the edge of the viewport to create a "containerized" feel. 
+- **Spacing Rhythm:** All spacing should be multiples of 4px, but maintain generous vertical rhythm (padding-top/bottom) to ensure the industrial look doesn't feel cramped or "cheap."
 
 ## Elevation & Depth
-This design system rejects shadows and blurs in favor of **Structural Layering** and **Bold Outlines**.
 
-- **Flat Depth:** Depth is communicated through overlapping containers and heavy 2px borders. There are no ambient shadows. 
-- **Tonal Stepping:** Use the Cool Gray (#F5F5F5) surface to indicate a secondary "well" or "inset" area, such as a technical sidebar or a background for a photo gallery.
-- **Stroke-based Hierarchy:** The most important containers use a 2px Deep Charcoal border. Interactive elements in a "hover" state may transition to a 4px border or fill with Chrome Blue.
-- **The "Punch-Out" Effect:** For active states or selected cards, use a solid Chrome Blue background with white or inverted text, creating a high-impact visual shift.
+This design system avoids traditional depth. There are no blurs, no frosted glass, and no ambient shadows.
+
+- **Flat Layering:** Hierarchy is achieved through **Tonal Stacking** and **Line Weight**.
+- **The "Blueprint" Stack:** A primary surface (Cream) can have a secondary container (Neutral fill) with a 1px Charcoal border.
+- **Active States:** Instead of "lifting" an element with a shadow, use a solid color fill (Golden Amber) or a weight change in the border (1px to 2px).
+- **Physical Metaphor:** Think of a clipboard or a printed technical manual. Depth is represented by overlapping "sheets" of content, strictly defined by their borders.
 
 ## Shapes
-The shape language is strictly **Geometric and Sharp**. 
 
-- **Zero Radius:** All buttons, cards, input fields, and containers must have 0px corner radius. This reinforces the industrial, utilitarian "blueprint" feel.
-- **Line Work:** Use vertical and horizontal lines as primary separators. Avoid diagonal lines or organic shapes. 
-- **The "Tag" Motif:** Use small rectangular blocks (monospaced text inside a 1px or 2px border) for status indicators like "IN PROGRESS" or "COMPLETED."
+The shape language is **Strictly Geometric and Sharp**. 
+
+- **Corners:** All corners are 0px (Sharp). This reinforces the industrial, utilitarian nature of the brand and ensures that the 1px/2px rules meet at clean, 90-degree angles.
+- **Buttons:** Rectangular with no radius.
+- **Input Fields:** Hard-edged boxes.
+- **Visual Motif:** Use vertical and horizontal lines that intersect to create "crosshair" effects at the corners of major content sections.
 
 ## Components
-- **Buttons:** Rectangular with 2px Charcoal borders. The primary button has a Chrome Blue background with White text. Secondary buttons are White with a Charcoal border and text. All text in buttons uses the `utility-label` style.
-- **Input Fields:** 2px Charcoal border bottom only, or a full box. Labels sit above the input in `utility-label` (Monospace, Uppercase).
-- **Cards:** White background, 2px Charcoal border. No shadow. Used for service packages (e.g., "Full Grooming") or pet profiles.
-- **Lists & Tables:** Use horizontal rules (1px or 2px) between items. The left column typically holds a `utility-label` and the right column holds the `body-md` or `utility-data`.
-- **Chips/Status Tags:** Small rectangular boxes with 1px borders. Use Chrome Blue for "Active" and Charcoal for "Draft" or "Inactive."
-- **Editorial Blocks:** A combination of a large `headline-xl` serif over a technical `utility-data` monospaced caption, separated by a 4px heavy horizontal rule.
+
+### Buttons
+- **Primary:** Deep Charcoal background, Cream text (Work Sans Bold). Sharp corners. 2px border.
+- **Secondary:** Transparent background, Deep Charcoal 1px border.
+- **Tertiary/Accent:** Golden Amber background, Deep Charcoal text for high-urgency actions (e.g., "Book Now").
+
+### Technical Info-Blocks (Cards)
+- No shadows. 1px Deep Charcoal border. 
+- Header section of the card should be separated by a 1px horizontal rule.
+- Use JetBrains Mono for all "Key: Value" pairs within the card (e.g., BREED: POODLE).
+
+### Input Fields
+- 1px Deep Charcoal border. Labels must be placed *above* the field in JetBrains Mono (Label-Mono-Bold).
+- Active state: Border increases to 2px or changes to Golden Amber.
+
+### Lists & Tables
+- Every list item should be separated by a 1px rule. 
+- Use "Zebra-striping" with the Neutral color (#E5E4E0) for complex data tables.
+- All numerical data must use JetBrains Mono for perfect vertical alignment.
+
+### Status Chips
+- Rectangular boxes with 1px borders. 
+- Text in JetBrains Mono. 
+- Use a small solid circle (4px) in Golden Amber next to the text to indicate "Active" or "Important" status.

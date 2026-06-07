@@ -16,7 +16,7 @@ This is a **complete redesign**, not a polish pass. Do **not** reuse the previou
 
 **Layout archetype for this attempt:** industrial/utilitarian — strong borders, monospace accents, tabular info blocks
 
-Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780817575757
+Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780817793766
 
 ---
 
