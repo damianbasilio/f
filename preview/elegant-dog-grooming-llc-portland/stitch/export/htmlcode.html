@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Elegant Dog Grooming | Portland's Premier Pet Spa</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed-dim": "#b6ccb5",
+                    "on-background": "#181c1d",
+                    "tertiary": "#415ba4",
+                    "inverse-primary": "#e9c349",
+                    "primary-fixed": "#ffe088",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#97b0ff",
+                    "secondary": "#4f6350",
+                    "outline": "#7f7663",
+                    "on-tertiary-fixed-variant": "#27438a",
+                    "secondary-fixed": "#d2e9d0",
+                    "on-primary-container": "#554300",
+                    "tertiary-fixed-dim": "#b4c5ff",
+                    "primary": "#735c00",
+                    "primary-container": "#d4af37",
+                    "outline-variant": "#d0c5af",
+                    "surface": "#f6fafa",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary-fixed-variant": "#384b3a",
+                    "inverse-on-surface": "#edf2f1",
+                    "on-surface-variant": "#4d4635",
+                    "error-container": "#ffdad6",
+                    "on-primary-fixed": "#241a00",
+                    "background": "#f6fafa",
+                    "surface-container": "#eaefee",
+                    "on-tertiary-fixed": "#00174b",
+                    "secondary-container": "#d2e9d0",
+                    "surface-container-low": "#f0f4f4",
+                    "inverse-surface": "#2c3131",
+                    "surface-bright": "#f6fafa",
+                    "surface-container-highest": "#dfe3e3",
+                    "on-secondary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed": "#0d1f11",
+                    "tertiary-fixed": "#dbe1ff",
+                    "surface-dim": "#d6dbda",
+                    "surface-tint": "#735c00",
+                    "primary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#254188",
+                    "error": "#ba1a1a",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#556956",
+                    "on-primary-fixed-variant": "#574500",
+                    "surface-variant": "#dfe3e3",
+                    "on-surface": "#181c1d",
+                    "on-primary": "#ffffff",
+                    "surface-container-high": "#e5e9e8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "md": "24px",
+                    "container-max": "1200px",
+                    "xl": "80px",
+                    "lg": "48px",
+                    "base": "8px",
+                    "sm": "12px",
+                    "xs": "4px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "label-md": ["Inter"],
+                    "headline-lg": ["Playfair Display"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "display": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "16px", "fontWeight": "500"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .soft-shadow {
+            box-shadow: 0px 4px 20px rgba(44, 49, 49, 0.08);
+        }
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 h-20 shadow-sm transition-all duration-300">
+<div class="flex justify-between items-center w-full px-gutter max-w-container-max mx-auto h-full">
+<div class="flex items-center gap-2">
+<span class="font-display text-headline-md text-primary">Elegant Dog Grooming</span>
+</div>
+<nav class="hidden md:flex items-center gap-lg">
+<a class="font-label-md text-label-md text-primary border-b-2 border-primary pb-1 transition-colors duration-200" href="#">Home</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors duration-200" href="#visit">Visit</a>
+</nav>
+<div class="flex items-center gap-md">
+<a class="hidden lg:flex items-center gap-2 text-primary font-label-md hover:opacity-80 transition-opacity" href="tel:5036171467">
+<span class="material-symbols-outlined">call</span>
+                    (503) 617-1467
+                </a>
+<button class="bg-primary text-on-primary px-6 py-2.5 rounded-lg font-label-md hover:bg-primary/90 transition-all active:scale-95 shadow-sm">
+                    Call Now
+                </button>
+<button class="md:hidden text-on-surface" id="mobile-menu-trigger">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/80 to-transparent z-10"></div>
+<img alt="Elegant Dog Grooming Studio" class="w-full h-full object-cover object-center" src="https://lh3.googleusercontent.com/aida/AP1WRLt2Z_LYVkY9lB6JCX2We1b3iyIqF-AX9b4wESjAJCbgdTs16w3Q6Xhjob_y6oXJoKS3SJh_EhX4BFwUphJvcjTOCMV2hnzpUr0ICPrDX34NZvOiGjr0qcwYF2JnyXex17d2ZDqd3IpALKuG72twefypoRizoVHhv9ewqb_D1Wo8M9qusBiYr5LwMiwqj-xvLOgwIKOSX8OoSDbue09cs3xggdQdsW9lCWmXUyEkwRSW0Jb3xtA3HOCslGQ"/>
+</div>
+<div class="relative z-20 w-full max-w-container-max mx-auto px-gutter py-xl">
+<div class="max-w-2xl">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm mb-md uppercase tracking-wider">Portland's Boutique Pet Spa</span>
+<h1 class="font-display text-display text-on-background mb-md leading-tight">Your Best Friend Deserves the <span class="text-primary italic">Best Care.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">Experience precision grooming in a serene, stress-free environment designed specifically for your dog's comfort and well-being.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 rounded-xl font-label-md text-lg hover:brightness-110 transition-all soft-shadow">
+                            Book an Appointment
+                        </button>
+<a class="border border-outline px-8 py-4 rounded-xl font-label-md text-lg text-on-surface hover:bg-surface-container transition-all text-center" href="#services">
+                            View Services
+                        </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Bar -->
+<section class="bg-surface-container py-lg border-y border-outline-variant/30">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg text-center">
+<div class="flex flex-col items-center gap-xs">
+<div class="flex items-center text-primary mb-1">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">star_half</span>
+<span class="ml-2 font-headline-md text-headline-md">4.3</span>
+</div>
+<p class="font-label-md text-on-surface-variant">Top Rated Locally</p>
+</div>
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-4xl mb-1">location_on</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Portland's Trusted Groomers</h3>
+<p class="font-label-md text-on-surface-variant">Serving NW 185th Ave</p>
+</div>
+<div class="flex flex-col items-center gap-xs">
+<span class="material-symbols-outlined text-primary text-4xl mb-1">spa</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Premium Organic Products</h3>
+<p class="font-label-md text-on-surface-variant">Eco-friendly &amp; Hypoallergenic</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl bg-surface" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="text-center mb-xl">
+<h2 class="font-display text-display text-on-background mb-4">Our Signature Services</h2>
+<p class="text-on-surface-variant font-body-lg max-w-2xl mx-auto">Tailored grooming packages designed to leave your pup feeling refreshed and looking their absolute best.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md">
+<!-- Service 1 -->
+<div class="group bg-surface-container-low p-md rounded-xl border border-outline-variant/50 hover:border-primary transition-all soft-shadow">
+<div class="mb-lg h-48 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A small white dog being carefully trimmed by a professional groomer in a bright studio. The groomer is using scissors for precision detailing around the dog's ears. The lighting is soft and golden, highlighting the cleanliness and gentle nature of the grooming process." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATaXzY2vkBTiq6dZx1KcNTIXXq9ycq7dlhp4N5wOcL3A5uF5r7g9QBGy17heeRhD9PcOUZz2jqK6Gutf2AdEJ724aNClSfZht6TsZymzjeNlYvFdSSqb-fktbW1lIDzm-0E2czrfFEZna-shhJnEOgnoWusXg12ykJfpHaeycOeaoQDTxbLCfTsP5MTEyY6Jf05GEAgbSySneEXSV7sm60kVzLpnuuc8JR5ChsIhQH8MxZjxpaRFCJKW4-2Y7n213hDLbql5G-4G0"/>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-2">Full Grooming</h3>
+<p class="text-on-surface-variant mb-md leading-relaxed">Haircut, bath, blow-dry, nail trimming, and ear cleaning. The ultimate spa day.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-headline-md">Starts at $65</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group bg-surface-container-low p-md rounded-xl border border-outline-variant/50 hover:border-primary transition-all soft-shadow">
+<div class="mb-lg h-48 overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="A golden retriever enjoying a bubbly bath with a high-end organic shampoo. The dog is looking at the camera with a playful expression. The scene is filled with soft natural light and the water appears warm and inviting, emphasizing a stress-free environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfU-3y9RErv7JLK91brxaiMQREapqBWVt4UgzlOvUhv6Rd5CSQnhfMKA4KVZMOgMh3RPvpFzb1FIyysBLqrTn57oEVoT-WvPw-c4U04UkhJD6wyazu4Hq6LViJOjhukmUcCm4DwMR-VibcZTp-vGcX0D10qsmRtOOwseO6jpTB0khR3rMN0bRdBA9aVJ3V4hm9PLVafpn6nkxm6IoTZrKf640xRCoYAfAIDUId36JdnSOixsCPmIOYZfnAjK_uHUOllefS0GytwAk"/>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-2">Bath &amp; Brush</h3>
+<p class="text-on-surface-variant mb-md leading-relaxed">Deep cleaning shampoo, brush out, blow-dry, and nail trimming. Perfect for between grooms.</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-headline-md">Starts at $45</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group bg-surface-container-low p-md rounded-xl border border-outline-variant/50 hover:border-primary transition-all soft-shadow">
+<div class="mb-lg h-48 overflow-hidden rounded-lg">
+<div class="w-full h-full bg-secondary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-on-secondary-fixed-variant">bathtub</span>
+</div>
+</div>
+<h3 class="font-headline-lg text-headline-lg mb-2">Self-Wash Stations</h3>
+<p class="text-on-surface-variant mb-md leading-relaxed">Use our professional tubs and products to wash your pup. We handle the cleanup!</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="text-primary font-headline-md">$25 Flat Fee</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-xl bg-surface-container-high" id="about">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row items-center gap-xl">
+<div class="lg:w-1/2 relative">
+<div class="absolute -top-4 -left-4 w-24 h-24 bg-primary-fixed rounded-full -z-10 opacity-50"></div>
+<img class="rounded-2xl soft-shadow w-full aspect-[4/3] object-cover" data-alt="The exterior of a modern, clean pet grooming studio in Portland. The storefront features large glass windows, minimalist signage, and potted greenery outside. The overall vibe is welcoming and upscale, reflecting a premium boutique experience in a quiet neighborhood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDt5K-ruK4BOivr-sGagJW-DIXXqI8VRUrLzV2Um3z38jzlzASXmWZ5TUtPUDbqoAvuTkh1Yg1zYQFIqqCBLRvoAprvC5gM3E2gjRTXPgPlfoNfHCDFwXSsuxa8KsDsygMh4HrYlUW-wQ0obpq5vLQY0FPN-Tq6pKHAwRVDmnNKzB7al5-IuWCFopoww-yEuItACC-lO2_d73sCUmBkIuEV7EzVE1H8Nzf3g6AUZ-KJqGbd06B6qOeGpXSgsQXmxN1tyttyUvoXCns"/>
+<div class="absolute -bottom-6 -right-6 bg-white p-md rounded-xl soft-shadow hidden md:block">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full bg-secondary flex items-center justify-center text-on-secondary">
+<span class="material-symbols-outlined">verified</span>
+</div>
+<div>
+<p class="font-label-md text-on-surface">Certified Master</p>
+<p class="text-sm text-on-surface-variant">Grooming Experts</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<h2 class="font-display text-display text-on-background mb-md">Committed to Excellence</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                            Born from a love for Portland's canine community, Elegant Dog Grooming LLC provides a sanctuary for pets and their owners. Our studio is more than just a grooming salon; it's a wellness-focused environment where your dog's psychological comfort is prioritized alongside their physical appearance.
+                        </p>
+<ul class="space-y-4 mb-xl">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-label-md text-lg text-on-surface">Stress-Free Environment</p>
+<p class="text-on-surface-variant">Low-volume, calm studio atmosphere to reduce anxiety.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-label-md text-lg text-on-surface">Certified Master Groomers</p>
+<p class="text-on-surface-variant">Years of experience with all breeds and temperaments.</p>
+</div>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-primary mt-1">check_circle</span>
+<div>
+<p class="font-label-md text-lg text-on-surface">Eco-Friendly Products</p>
+<p class="text-on-surface-variant">We use only high-end, organic, and biodegradable shampoos.</p>
+</div>
+</li>
+</ul>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-label-md hover:bg-secondary/90 transition-all">
+                            Learn Our Story
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-xl" id="visit">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col lg:flex-row gap-lg">
+<div class="lg:w-1/3 space-y-lg">
+<h2 class="font-display text-display text-on-background">Visit Our Studio</h2>
+<div class="space-y-md">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-md text-lg">Our Location</p>
+<p class="text-on-surface-variant">5340 Northwest 185th Avenue<br/>Portland, OR 97229</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-label-md text-lg">Studio Hours</p>
+<p class="text-on-surface-variant">Mon-Sat: 8am - 6pm<br/>Sunday: Closed</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">contact_support</span>
+<div>
+<p class="font-label-md text-lg">Contact</p>
+<p class="text-on-surface-variant">(503) 617-1467<br/>elegantdog1@gmail.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-2/3">
+<div class="rounded-2xl overflow-hidden soft-shadow bg-surface-container-highest border border-outline-variant h-full min-h-[400px]">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] h-full" data-location="5340 Northwest 185th Avenue, Portland, OR 97229" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center bg-secondary-container/10">
+<div class="text-center p-md">
+<span class="material-symbols-outlined text-6xl text-primary mb-md">map</span>
+<p class="font-headline-md">Interactive Map View</p>
+<p class="text-on-surface-variant">Located in the heart of NW Portland</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-xl bg-surface-container-low border-t border-outline-variant/30">
+<div class="max-w-3xl mx-auto px-gutter">
+<div class="bg-surface p-xl rounded-2xl soft-shadow">
+<div class="text-center mb-xl">
+<h2 class="font-display text-display mb-2">Get in Touch</h2>
+<p class="text-on-surface-variant font-body-md">Have questions about our services or want to check availability?</p>
+</div>
+<form class="space-y-md" id="contact-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+<div>
+<label class="block font-label-md text-on-surface mb-2" for="name">Name</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all bg-surface" id="name" placeholder="Your name" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2" for="email">Email</label>
+<input class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all bg-surface" id="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-on-surface mb-2" for="message">Message</label>
+<textarea class="w-full px-4 py-3 rounded-lg border border-outline-variant focus:border-secondary focus:ring-1 focus:ring-secondary outline-none transition-all bg-surface" id="message" placeholder="How can we help you and your pup?" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-4 rounded-lg font-label-md text-lg hover:bg-primary/90 transition-all active:scale-[0.98]" type="submit">
+                            Send Message
+                        </button>
+</form>
+<div class="hidden mt-md p-md rounded-lg bg-secondary-container text-on-secondary-container text-center font-label-md" id="form-feedback">
+                        Thank you! Your message has been sent. We'll get back to you shortly.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-inverse-surface border-t border-outline-variant/30">
+<div class="w-full py-xl px-gutter flex flex-col md:flex-row justify-between items-start gap-md max-w-container-max mx-auto">
+<div class="flex flex-col gap-4 max-w-sm">
+<span class="font-display text-headline-sm text-primary">Elegant Dog Grooming</span>
+<p class="font-body-md text-on-surface-variant">Professional grooming in Portland since 2012. We treat every dog like our own.</p>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="#">
+<span class="material-symbols-outlined">social_distance</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:text-primary transition-colors" href="https://instagram.com">
+<span class="material-symbols-outlined">camera_enhance</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-xl">
+<div>
+<h4 class="font-label-md text-on-surface mb-4">Quick Links</h4>
+<ul class="space-y-2">
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#">Home</a></li>
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#services">Services</a></li>
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#about">About</a></li>
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#visit">Visit</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-on-surface mb-4">Support</h4>
+<ul class="space-y-2">
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#">Privacy Policy</a></li>
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#">Terms of Service</a></li>
+<li><a class="text-label-sm text-on-surface-variant hover:text-primary" href="#">FAQ</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="w-full border-t border-outline-variant/30 py-md px-gutter">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+<p class="text-label-sm text-on-surface-variant">
+                    © 2024 Elegant Dog Grooming LLC. 5340 Northwest 185th Avenue, Portland, OR 97229. Open Mon-Sat 8am-6pm.
+                </p>
+<p class="text-label-sm text-on-surface-variant italic">
+                    Contact: <a class="hover:text-primary" href="mailto:elegantdog1@gmail.com">elegantdog1@gmail.com</a>
+</p>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple form validation & feedback preview
+        const contactForm = document.getElementById('contact-form');
+        const feedback = document.getElementById('form-feedback');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                contactForm.classList.add('opacity-50', 'pointer-events-none');
+                feedback.classList.remove('hidden');
+                
+                // Simulate success
+                setTimeout(() => {
+                    contactForm.reset();
+                    contactForm.classList.remove('opacity-50', 'pointer-events-none');
+                }, 3000);
+            });
+        }
+
+        // Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('h-16', 'shadow-md');
+                header.classList.remove('h-20');
+            } else {
+                header.classList.add('h-20');
+                header.classList.remove('h-16', 'shadow-md');
+            }
+        });
+    </script>
+</body></html>
