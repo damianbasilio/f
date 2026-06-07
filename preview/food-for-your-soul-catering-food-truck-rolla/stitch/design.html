@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Food For Your Soul | Bespoke Catering &amp; Missouri's Premier Food Truck</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary": "#000000", // Charcoal/Black base
+                        "on-primary": "#ffffff",
+                        "secondary": "#735c00", // Gold accent
+                        "secondary-container": "#fed65b", // Bright gold
+                        "on-secondary-container": "#745c00",
+                        "surface": "#fbf9f4", // Off-white/Cream
+                        "on-surface": "#1b1c19",
+                        "surface-variant": "#e4e2dd",
+                        "outline": "#747878",
+                        "background": "#fbf9f4"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "container-max": "1280px",
+                        "base": "8px",
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Playfair Display", "serif"],
+                        "body-main": ["Montserrat", "sans-serif"],
+                        "display-lg": ["Playfair Display", "serif"],
+                        "subheading": ["Montserrat", "sans-serif"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain {
+            position: relative;
+        }
+        .grain::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            opacity: 0.03;
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/cardboard-flat.png");
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-main selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Header / Sticky Nav -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 bg-surface/90 backdrop-blur-md border-b border-primary/5 transition-all duration-300" id="main-nav">
+<div class="flex items-center">
+<span class="text-xl md:text-2xl font-headline-md font-bold text-primary uppercase tracking-tighter">Food For Your Soul</span>
+</div>
+<!-- Desktop Menu -->
+<div class="hidden lg:flex items-center gap-10">
+<a class="text-[12px] font-semibold uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="#hero">Experience</a>
+<a class="text-[12px] font-semibold uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-[12px] font-semibold uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="#about">Our Story</a>
+<a class="text-[12px] font-semibold uppercase tracking-widest text-on-surface/70 hover:text-primary transition-colors" href="#visit">Visit</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden sm:block text-[13px] font-bold text-primary border-b border-primary pb-0.5 hover:opacity-70 transition-opacity" href="tel:5736470956">(573) 647-0956</a>
+<button class="bg-primary text-on-primary px-6 py-3 text-[11px] font-bold uppercase tracking-widest active:scale-95 transition-all hover:bg-secondary">Book the Truck</button>
+<button class="lg:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 bg-primary z-[60] flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-opacity duration-300" id="mobile-menu">
+<button class="absolute top-6 right-6 text-on-primary" id="close-menu-btn">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="text-2xl font-headline-md text-on-primary italic" href="#hero">Experience</a>
+<a class="text-2xl font-headline-md text-on-primary italic" href="#services">Services</a>
+<a class="text-2xl font-headline-md text-on-primary italic" href="#about">Our Story</a>
+<a class="text-2xl font-headline-md text-on-primary italic" href="#visit">Visit</a>
+<a class="mt-8 bg-secondary-container text-on-secondary-container px-10 py-4 font-bold uppercase tracking-widest" href="tel:5736470956">Call Now</a>
+</div>
+<!-- Hero Section -->
+<header class="relative h-screen min-h-[700px] flex items-center justify-center overflow-hidden bg-primary" id="hero">
+<div class="absolute inset-0 z-0">
+<img alt="Food For Your Soul Food Truck" class="w-full h-full object-cover opacity-60 grayscale-[15%]" src="https://lh3.googleusercontent.com/aida/AP1WRLuQ9rDt66SThfbf54EdeyVPwBw1iSVJO3ry5pEeeIAxz-327-y8kfZWxLVvivm__hibUZ3J6P7guAmWg9-2pjecloM5QVuh7pGn8LA_JCPWy-Vwl7BhFmPxXZprd4ExHk39sYf--FwNr9X0WkJ6262O9H8ttL5WuShbNd7ixkVat0NRkT9maRgdZXZMs7MIjSeflsIY3AJauQqHI5NVSIrE7n2A1xnyc_1K7GdaHbbnLI0enn-yN099KP9w"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/60 via-transparent to-primary/80"></div>
+</div>
+<div class="relative z-10 max-w-5xl text-center px-margin-mobile">
+<p class="text-[12px] font-semibold text-secondary-container mb-6 tracking-[0.4em] uppercase reveal">Missouri's Premier Experience</p>
+<h1 class="text-5xl md:text-8xl font-display-lg text-on-primary italic mb-4 reveal" style="transition-delay: 200ms;">Food For Your Soul</h1>
+<p class="text-xl md:text-3xl font-headline-md text-on-primary/80 mb-12 font-light reveal" style="transition-delay: 400ms;">Bespoke Catering &amp; Missouri's Premier Food Truck Experience</p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center reveal" style="transition-delay: 600ms;">
+<button class="bg-secondary-container text-on-secondary-container px-10 py-5 text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-white hover:text-primary transition-colors">Book the Truck</button>
+<button class="border border-on-primary/30 text-on-primary px-10 py-5 text-[12px] font-bold uppercase tracking-[0.2em] hover:bg-on-primary hover:text-primary transition-colors">View the Menu</button>
+</div>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-on-primary/40 text-4xl">expand_more</span>
+</div>
+</header>
+<!-- Credibility Section -->
+<section class="py-section-gap bg-surface grain px-margin-mobile md:px-margin-desktop border-b border-primary/5" id="credibility">
+<div class="max-w-4xl mx-auto text-center reveal">
+<span class="text-[11px] font-bold text-secondary tracking-widest uppercase mb-4 block">Handcrafted Excellence</span>
+<h2 class="text-4xl md:text-5xl font-headline-md text-primary mb-8 italic">The Art of the Soul</h2>
+<div class="w-20 h-px bg-secondary mx-auto mb-10 opacity-30"></div>
+<p class="text-lg md:text-xl text-on-surface-variant leading-relaxed font-light">
+                Celebrating five-star service and handcrafted recipes that bridge the gap between soulful tradition and modern bistro elegance. Every dish is a narrative of Missouri's rich culinary roots.
+            </p>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-variant/30" id="services">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 reveal">
+<div>
+<span class="text-[11px] font-bold text-secondary tracking-widest uppercase mb-2 block">Our Offerings</span>
+<h2 class="text-4xl md:text-5xl font-headline-md text-primary italic">Soulful Experiences</h2>
+</div>
+<p class="max-w-md text-on-surface-variant mt-4 md:mt-0 font-light">From intimate private dinners to large-scale festivals, we bring premium Missouri flavors to your table.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-stretch">
+<!-- Service 1: The Truck -->
+<div class="md:col-span-4 reveal">
+<div class="group relative h-full bg-white p-4 border border-primary/5 hover:border-secondary/20 transition-all">
+<div class="aspect-[3/4] overflow-hidden mb-8">
+<img alt="Our signature food truck" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLuQ9rDt66SThfbf54EdeyVPwBw1iSVJO3ry5pEeeIAxz-327-y8kfZWxLVvivm__hibUZ3J6P7guAmWg9-2pjecloM5QVuh7pGn8LA_JCPWy-Vwl7BhFmPxXZprd4ExHk39sYf--FwNr9X0WkJ6262O9H8ttL5WuShbNd7ixkVat0NRkT9maRgdZXZMs7MIjSeflsIY3AJauQqHI5NVSIrE7n2A1xnyc_1K7GdaHbbnLI0enn-yN099KP9w"/>
+</div>
+<h3 class="text-2xl font-headline-md mb-3 italic">The Truck</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Catch us at festivals, street pop-ups, and community gatherings across Missouri. Premium street food defined.</p>
+<a class="inline-block text-[11px] font-bold uppercase tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-all" href="#">Location Schedule</a>
+</div>
+</div>
+<!-- Service 2: Private Events -->
+<div class="md:col-span-4 reveal" style="transition-delay: 150ms;">
+<div class="group relative h-full bg-white p-4 border border-primary/5 hover:border-secondary/20 transition-all md:-translate-y-8">
+<div class="aspect-[3/5] overflow-hidden mb-8">
+<img alt="Signature platter for events" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsa-flmTsnuzXnAJMugNbxOLwTd10lhuOBXHHQYGGAXvo1G2zYUP6ZOQEbOqOGhVQevF48l6IoeCOygbCTP1_AbUkG51zvXmki8gs-8EY6wQ_l2OjrnVwf6jY33E7KTzhy1F37-Oif-TxwThcV-A4RM1_p27xrTLLjcWRJVUpvdi412nCEYjZSOY5HAu-VIkbJajeFwh1RdHxbPLiB5uh4_cMUQmrjHgUzV9zeAfxFshZTBZZCkDISL0PgL"/>
+</div>
+<h3 class="text-2xl font-headline-md mb-3 italic">Private Events</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Tailored menus for weddings, galas, and corporate retreats. We craft a bespoke narrative for every guest.</p>
+<a class="inline-block text-[11px] font-bold uppercase tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-all" href="#visit">Inquire Today</a>
+</div>
+</div>
+<!-- Service 3: Signature Platters -->
+<div class="md:col-span-4 reveal" style="transition-delay: 300ms;">
+<div class="group relative h-full bg-white p-4 border border-primary/5 hover:border-secondary/20 transition-all">
+<div class="aspect-[3/4] overflow-hidden mb-8">
+<img alt="Catering platter close up" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0e-POfcuvpoG5x_O6WqOKI64EEMmGoLXKlXdyUAg5ioUWYw_PtSMW_ESKR0-3IMzR4ml4ms10tjn1USXXjRFZiAB82omYzNrQNyvU4rq7uvXO_MQK3EduVTqc2q6iWjyLHIQb2W9W34ore2KSwzZQA-nl_fPX87APJxzva6ZaUS_aDv6_sC64O8LNpWtxIUIglfM8IyfVL4GEonYY48BnsNp4uRHNqPIfYV-QOiIg6Hl6iurRAhhhI67YeGyu3-1B5vF5QJDaYs1e"/>
+</div>
+<h3 class="text-2xl font-headline-md mb-3 italic">Signature Platters</h3>
+<p class="text-sm text-on-surface-variant mb-6 leading-relaxed">Effortless pick-up and drop-off catering for home gatherings and office luncheons. Quality without compromise.</p>
+<a class="inline-block text-[11px] font-bold uppercase tracking-widest text-primary border-b border-primary/20 hover:border-primary transition-all" href="#">Order Now</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap bg-primary text-on-primary grain overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid lg:grid-cols-2 gap-20 items-center">
+<div class="relative reveal">
+<div class="absolute -top-6 -left-6 w-full h-full border border-secondary-container/20 -z-10 translate-x-4 translate-y-4"></div>
+<img alt="Chef Catherine in the kitchen" class="w-full aspect-[4/5] object-cover grayscale-[20%]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtiDIRZgR64EjXFrKEKNgQzVQEg57-bbCTIdlIAAvLU_LFxy-6L7i86twW2OVbdnWTi9OLS9kFz27egXvLf2O3Lc6dBwWWg6uuhCXCq22fQqQd7FJiT0n7gbD_QF0XJij1gn86sbH8m4Mfdyqt2ciX6w-QLP3W4F37-OoKhOZK00EdNcZLddAtKadEtLzZGSEmlXDCb42eZ0sP2mSmmfzpfByKDW87Veks5alb7gvZdVUwijTtTHMpM0GjOIbVmTII5pwn_H59G0Qo"/>
+</div>
+<div class="reveal" style="transition-delay: 200ms;">
+<span class="text-[11px] font-bold text-secondary-container tracking-widest uppercase mb-4 block">The Visionary</span>
+<h2 class="text-4xl md:text-5xl font-headline-md italic mb-10">Chef Catherine's Vision</h2>
+<div class="w-16 h-px bg-secondary-container mb-10 opacity-40"></div>
+<div class="space-y-6 text-on-primary/70 font-light leading-relaxed text-lg">
+<p>Rooted in Rolla, Missouri, Food For Your Soul was born from Catherine Crump's passion for hospitality that nourishes both body and spirit.</p>
+<p>What began as a local kitchen dream has evolved into the state's premier food truck and catering destination, blending traditional Missouri flavors with a sophisticated bistro edge. We don't just serve food; we craft experiences that linger in the memory.</p>
+</div>
+<a class="mt-12 inline-block border border-on-primary/30 px-12 py-5 text-[11px] font-bold uppercase tracking-widest hover:bg-on-primary hover:text-primary transition-all" href="#visit">Our Story</a>
+</div>
+</div>
+</section>
+<!-- Contact & Visit Section -->
+<section class="py-section-gap bg-surface px-margin-mobile md:px-margin-desktop" id="visit">
+<div class="max-w-container-max mx-auto grid lg:grid-cols-2 gap-24">
+<!-- Contact Form -->
+<div class="reveal">
+<h2 class="text-4xl font-headline-md mb-4 italic">Let's Create Together</h2>
+<p class="text-on-surface-variant mb-12 font-light">Inquire about catering for your next milestone event.</p>
+<form class="space-y-8" id="contact-form">
+<div class="relative">
+<label class="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-2 block">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-primary/10 py-4 focus:ring-0 focus:border-secondary transition-colors placeholder:text-primary/20" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<label class="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-2 block">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-primary/10 py-4 focus:ring-0 focus:border-secondary transition-colors placeholder:text-primary/20" placeholder="hello@example.com" required="" type="email"/>
+</div>
+<div>
+<label class="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-2 block">Event Date</label>
+<input class="w-full bg-transparent border-0 border-b border-primary/10 py-4 focus:ring-0 focus:border-secondary transition-colors" required="" type="date"/>
+</div>
+</div>
+<div>
+<label class="text-[11px] font-bold uppercase tracking-widest text-primary/50 mb-2 block">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-primary/10 py-4 focus:ring-0 focus:border-secondary transition-colors placeholder:text-primary/20" placeholder="Tell us about your event vision..." required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-6 text-[12px] font-bold uppercase tracking-[0.3em] hover:bg-secondary transition-colors group" type="submit">
+                        Send Inquiry 
+                        <span class="inline-block translate-x-2 group-hover:translate-x-4 transition-transform">→</span>
+</button>
+</form>
+</div>
+<!-- Visit Info & Map -->
+<div class="space-y-12 reveal" style="transition-delay: 200ms;">
+<div>
+<h2 class="text-4xl font-headline-md mb-8 italic">Find Us</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">location_on</span>
+<div>
+<p class="text-lg font-semibold">HQ &amp; Kitchen</p>
+<p class="text-on-surface-variant font-light">1605 Martin Spring Drive<br/>Rolla, MO 65401</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">call</span>
+<div>
+<p class="text-lg font-semibold">Speak with Us</p>
+<a class="text-on-surface-variant font-light hover:text-secondary transition-colors" href="tel:5736470956">(573) 647-0956</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary mt-1">mail</span>
+<div>
+<p class="text-lg font-semibold">Email</p>
+<a class="text-on-surface-variant font-light hover:text-secondary transition-colors" href="mailto:Catherinecrump@rocketmail.com">Catherinecrump@rocketmail.com</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Slot -->
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-variant border border-primary/5 grayscale opacity-80" data-map-slot="">
+<!-- Map placeholder UI -->
+<div class="absolute inset-0 flex items-center justify-center flex-col gap-4">
+<span class="material-symbols-outlined text-5xl text-primary/20">map</span>
+<p class="text-[11px] font-bold uppercase tracking-widest text-primary/30">Rolla, Missouri</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary pt-20 pb-10 px-margin-mobile md:px-margin-desktop border-t border-white/5">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12 mb-20">
+<div class="max-w-sm">
+<span class="text-3xl font-headline-md font-bold uppercase tracking-tighter mb-6 block">Food For Your Soul</span>
+<p class="text-on-primary/50 font-light leading-relaxed">Missouri's premier destination for high-end soul food experiences. Elevating traditions through craftsmanship and hospitality.</p>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-12">
+<div>
+<p class="text-[11px] font-bold uppercase tracking-widest text-secondary-container mb-6">Explore</p>
+<ul class="space-y-4 text-sm font-light text-on-primary/60">
+<li><a class="hover:text-on-primary transition-colors" href="#hero">Experience</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#about">Our Story</a></li>
+</ul>
+</div>
+<div>
+<p class="text-[11px] font-bold uppercase tracking-widest text-secondary-container mb-6">Connect</p>
+<ul class="space-y-4 text-sm font-light text-on-primary/60">
+<li><a class="hover:text-on-primary transition-colors" href="#">Instagram</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#">Facebook</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="tel:5736470956">Call Now</a></li>
+</ul>
+</div>
+<div class="col-span-2 sm:col-span-1">
+<p class="text-[11px] font-bold uppercase tracking-widest text-secondary-container mb-6">Legal</p>
+<ul class="space-y-4 text-sm font-light text-on-primary/60">
+<li><a class="hover:text-on-primary transition-colors" href="#">Privacy</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#">Terms</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-4 text-[11px] text-on-primary/30 uppercase tracking-[0.2em]">
+<p>© 2024 Food For Your Soul Catering. All Rights Reserved.</p>
+<p>1605 Martin Spring Drive, Rolla, MO 65401</p>
+</div>
+</div>
+</footer>
+<script>
+        // Reveal on Scroll Logic
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            reveals.forEach(element => {
+                const windowHeight = window.innerHeight;
+                const elementTop = element.getBoundingClientRect().top;
+                const elementVisible = 120;
+                if (elementTop < windowHeight - elementVisible) {
+                    element.classList.add("active");
+                }
+            });
+        }
+        window.addEventListener("scroll", reveal);
+        reveal(); // Initial check
+
+        // Mobile Menu Logic
+        const mobileMenu = document.getElementById('mobile-menu');
+        const openBtn = document.getElementById('mobile-menu-btn');
+        const closeBtn = document.getElementById('close-menu-btn');
+        const navLinks = mobileMenu.querySelectorAll('a');
+
+        function toggleMenu() {
+            const isOpen = mobileMenu.classList.contains('opacity-100');
+            if (isOpen) {
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                document.body.classList.remove('overflow-hidden');
+            } else {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.classList.add('overflow-hidden');
+            }
+        }
+
+        openBtn.addEventListener('click', toggleMenu);
+        closeBtn.addEventListener('click', toggleMenu);
+        navLinks.forEach(link => link.addEventListener('click', toggleMenu));
+
+        // Navbar Scroll Effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'bg-surface/95', 'shadow-sm');
+                nav.classList.remove('py-4', 'bg-surface/90');
+            } else {
+                nav.classList.remove('py-2', 'bg-surface/95', 'shadow-sm');
+                nav.classList.add('py-4', 'bg-surface/90');
+            }
+        });
+
+        // Contact Form Submission (Mock)
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.disabled = true;
+            btn.innerHTML = 'Sending...';
+            
+            setTimeout(() => {
+                btn.innerHTML = 'Thank You! Message Sent';
+                btn.classList.replace('bg-primary', 'bg-secondary');
+                this.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-secondary', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+    </script>
+</body></html>
