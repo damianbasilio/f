@@ -87,7 +87,7 @@ Recent posts from their Facebook page:
 
 - **Source:** http://www.facebook.com/4-Paws-Sitting-518124105034925/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T03:54:11.493Z
+- **Scraped:** 2026-06-07T04:05:19.332Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at http://www.facebook.com/4-Paws-Sitting-518124105034925/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

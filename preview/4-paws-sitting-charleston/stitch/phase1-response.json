@@ -3,81 +3,80 @@
     {
       "designSystem": {
         "designSystem": {
-          "displayName": "Heritage Pet Collective",
-          "styleGuidelines": "## Brand & Style\nThe design system is rooted in the \"Heritage Editorial\" aesthetic—a blend of high-end lifestyle publishing and warm, organic hospitality. The target audience consists of discerning pet owners in Charleston who view their pets as family and value professional, boutique service over mass-market apps.\n\nThe visual narrative avoids the frenetic energy typical of the pet industry, instead opting for a \"Calm & Collected\" atmosphere. The design style leverages **Minimalism** with a **Tactile** edge, using subtle grain overlays and soft-touch UI elements to evoke the feeling of a premium physical brochure. The goal is to instill an immediate sense of reliability and quiet luxury.\n\n## Layout & Spacing\nThe layout philosophy follows a **Fixed Grid** model on desktop to maintain a curated, boutique feel, transitioning to a fluid model on mobile.\n\n- **Rhythm:** All spacing is based on an 8px baseline grid.\n- **Whitespace:** Emphasize \"negative space\" between sections (using `section-gap`) to allow the high-quality pet photography and typography to breathe. \n- **Mobile:** Margins are reduced to 20px, but internal padding within cards should remain generous (24px+) to maintain the premium feel.\n- **Grid:** A 12-column grid for desktop, 6-column for tablet, and 2-column for mobile.\n\n## Elevation & Depth\nThis design system avoids heavy drop shadows in favor of **Tonal Layers** and **Low-Contrast Outlines**.\n\n- **Surface Levels:** \n  - Level 0: Tertiary (Cream) background.\n  - Level 1: White or slightly lighter cream surfaces for cards.\n- **Shadows:** When necessary, use extremely diffused, low-opacity (5-8%) shadows tinted with the Primary Forest Green color (#1B3022) to ground the elements naturally.\n- **Borders:** Use 1px solid borders in a slightly darker shade of the background color (e.g., #E8E2D6) to define structure without adding visual noise.\n- **Texture:** Apply a subtle 3% opacity grain/noise overlay to the entire UI to break the digital \"flatness\" and add a tactile, paper-like quality.\n\n## Components\nConsistent component styling reinforces the premium editorial narrative.\n\n- **Buttons:** \n  - *Primary:* Solid Forest Green with White text. Rectangular with a slight 8px radius. No gradients.\n  - *Secondary:* Outline Forest Green or Solid Terracotta for high-action \"Book Now\" triggers.\n  - *Interaction:* Subtle lift on hover (2px) rather than color shifts.\n- **Input Fields:** \n  - Use a \"Floating Label\" style or clear labels in `label-caps`. \n  - Backgrounds should be a shade lighter than the page background to create a \"recessed\" look.\n- **Cards:** \n  - Avoid heavy borders. Use tonal shifts and generous internal padding (32px).\n  - Images within cards should always have a soft 8px corner radius.\n- **Chips/Tags:** \n  - Used for service types (e.g., \"Dog Walking\", \"Overnight\"). \n  - Soft, pill-shaped backgrounds with `label-caps` typography.\n- **Lists:** \n  - Use custom icons (e.g., a small leaf or paw) instead of standard bullets to maintain the boutique theme.\n- **Pet Profiles:** \n  - A signature component featuring circular or \"squircle\" avatars for pets, framed with a thin Terracotta border.",
+          "displayName": "Signature Pet Editorial",
+          "styleGuidelines": "## Brand & Style\nThe design system is rooted in the \"Premium Editorial\" aesthetic, positioning pet care as a bespoke, high-end service rather than a utility. The brand personality is sophisticated and authoritative, yet deeply caring. The UI draws heavily from high-fashion journalism and architectural catalogs, utilizing intentional whitespace to create a \"gallery\" feel for pet photography. \n\nThe style combines **Minimalism** with **Modern Editorial** influences. It rejects the playful, rounded tropes of the pet industry in favor of sharp lines, high-contrast color blocks, and oversized typographic anchors. A key motif is the use of \"offset\" elements—where typography or images break the standard grid alignment to create a rhythmic, curated pace.\n\n## Layout & Spacing\nThe system uses a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile. \n\n- **Vertical Rhythm:** A strict 8px baseline grid is enforced. Section gaps are intentionally large (128px) to separate distinct services or narratives, preventing the UI from feeling cluttered.\n- **The Offset Motif:** Elements (like images or floating text blocks) should frequently be offset by half a column width or overlap grid boundaries to create an editorial, non-standardized appearance.\n- **Responsive Behavior:** On tablet, gutters reduce to 24px. On mobile, the layout collapses to a single column with increased vertical padding between elements to maintain the \"airy\" aesthetic.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Sharp Shadows** rather than soft blurs.\n\n- **Surfaces:** We avoid heavy drop shadows. Instead, we use a 1px solid border in a faint version of Nightfall Navy (10% opacity) to define cards.\n- **Premium Shadow:** When depth is required for modals or \"floating\" elements, use a \"Hard Shadow\" style: a crisp, low-offset shadow (4px 4px 0px) using a semi-transparent Navy. This mimics the look of stacked paper or physical editorial boards.\n- **Z-Index Strategy:** Images often sit at a lower Z-index than text blocks, allowing typography to overlap photography, a hallmark of high-end print design.\n\n## Components\n- **Buttons:** Primary buttons are solid Nightfall Navy with white Inter Medium text, 0px radius, and no shadow. Hover states should transition to Terracotta or involve a slight \"shift\" in the label position.\n- **Input Fields:** Bottom-border only or a very thin 1px Navy outline. Labels should use the `label-caps` style and sit above the field.\n- **Cards:** Cards should not have background fills that differ from the Parchment page color. Instead, use a 1px Navy border or a slight \"Hard Shadow\" to define the area.\n- **Lists:** Use custom icons—specifically thin-line geometric shapes or stylized paw prints in Navy—rather than standard bullets.\n- **Editorial Pull-Quotes:** Large italicized Playfair Display text, centered or dramatically offset to the left, used to highlight testimonials from pet owners.\n- **The \"Service Badge\":** A small, square Terracotta block containing a white icon, used to denote specific service types (e.g., Overnight, Grooming).",
           "theme": {
             "bodyFont": "INTER",
             "bodyFontFamily": "Inter",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
-            "customColor": "#1b3022",
-            "designMd": "---\nname: Heritage Pet Collective\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e1d8d4'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2ed'\n  surface-container: '#f5ece7'\n  surface-container-high: '#efe6e2'\n  surface-container-highest: '#e9e1dc'\n  on-surface: '#1e1b18'\n  on-surface-variant: '#434843'\n  inverse-surface: '#34302c'\n  inverse-on-surface: '#f8efea'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#97472c'\n  on-secondary: '#ffffff'\n  secondary-container: '#fe9978'\n  on-secondary-container: '#772f16'\n  tertiary: '#171814'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2c2c28'\n  on-tertiary-container: '#95938e'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdbd0'\n  secondary-fixed-dim: '#ffb59d'\n  on-secondary-fixed: '#390b00'\n  on-secondary-fixed-variant: '#793017'\n  tertiary-fixed: '#e5e2dc'\n  tertiary-fixed-dim: '#c9c6c1'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474743'\n  background: '#fff8f5'\n  on-background: '#1e1b18'\n  surface-variant: '#e9e1dc'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is rooted in the \"Heritage Editorial\" aesthetic—a blend of high-end lifestyle publishing and warm, organic hospitality. The target audience consists of discerning pet owners in Charleston who view their pets as family and value professional, boutique service over mass-market apps.\n\nThe visual narrative avoids the frenetic energy typical of the pet industry, instead opting for a \"Calm & Collected\" atmosphere. The design style leverages **Minimalism** with a **Tactile** edge, using subtle grain overlays and soft-touch UI elements to evoke the feeling of a premium physical brochure. The goal is to instill an immediate sense of reliability and quiet luxury.\n\n## Colors\nThis palette is inspired by the natural Lowcountry landscape of Charleston.\n\n- **Primary (Forest Green):** Used for primary actions, headers, and brand-heavy backgrounds to signify stability and growth.\n- **Secondary (Terracotta):** An accent color used sparingly for high-priority call-to-actions, notifications, and subtle decorative elements. It adds warmth and human touch.\n- **Tertiary (Cream):** The primary surface color. It replaces stark white to reduce eye strain and provide a \"paper-like\" editorial feel.\n- **Neutral (Charcoal):** Reserved for high-contrast typography and iconography, ensuring maximum legibility without the harshness of pure black.\n\n**Functional Colors:**\n- Use a desaturated Sage Green for success states.\n- Use a muted Ochre for warnings.\n- Use a deep Burgundy for errors, maintaining the earthy aesthetic.\n\n## Typography\nThe typographic hierarchy relies on the contrast between the expressive, high-contrast strokes of **Playfair Display** and the functional, geometric clarity of **Inter**.\n\n- **Headlines:** Use Playfair Display for all narrative headings. For large display sizes, use tighter letter spacing to emphasize the editorial look.\n- **Body Text:** Use Inter for all long-form content. The line height is intentionally generous (1.6) to facilitate a relaxed reading experience.\n- **Micro-copy:** Use `label-caps` for category tags, small captions, and \"Overlines\" above headlines to provide structure without clutter.\n\n## Layout & Spacing\nThe layout philosophy follows a **Fixed Grid** model on desktop to maintain a curated, boutique feel, transitioning to a fluid model on mobile.\n\n- **Rhythm:** All spacing is based on an 8px baseline grid.\n- **Whitespace:** Emphasize \"negative space\" between sections (using `section-gap`) to allow the high-quality pet photography and typography to breathe. \n- **Mobile:** Margins are reduced to 20px, but internal padding within cards should remain generous (24px+) to maintain the premium feel.\n- **Grid:** A 12-column grid for desktop, 6-column for tablet, and 2-column for mobile.\n\n## Elevation & Depth\nThis design system avoids heavy drop shadows in favor of **Tonal Layers** and **Low-Contrast Outlines**.\n\n- **Surface Levels:** \n  - Level 0: Tertiary (Cream) background.\n  - Level 1: White or slightly lighter cream surfaces for cards.\n- **Shadows:** When necessary, use extremely diffused, low-opacity (5-8%) shadows tinted with the Primary Forest Green color (#1B3022) to ground the elements naturally.\n- **Borders:** Use 1px solid borders in a slightly darker shade of the background color (e.g., #E8E2D6) to define structure without adding visual noise.\n- **Texture:** Apply a subtle 3% opacity grain/noise overlay to the entire UI to break the digital \"flatness\" and add a tactile, paper-like quality.\n\n## Shapes\nThe shape language is **Organic and Soft**. While the grid is structured, individual components use rounded corners to reflect the friendliness of the brand and the softness of the pets being cared for.\n\n- **Standard Elements:** Buttons, inputs, and small cards use a 0.5rem (8px) radius.\n- **Large Containers:** Image carousels and large content sections use a 1.5rem (24px) radius.\n- **Icons:** Should be illustrative or rounded-line style, avoiding sharp 90-degree angles.\n\n## Components\nConsistent component styling reinforces the premium editorial narrative.\n\n- **Buttons:** \n  - *Primary:* Solid Forest Green with White text. Rectangular with a slight 8px radius. No gradients.\n  - *Secondary:* Outline Forest Green or Solid Terracotta for high-action \"Book Now\" triggers.\n  - *Interaction:* Subtle lift on hover (2px) rather than color shifts.\n- **Input Fields:** \n  - Use a \"Floating Label\" style or clear labels in `label-caps`. \n  - Backgrounds should be a shade lighter than the page background to create a \"recessed\" look.\n- **Cards:** \n  - Avoid heavy borders. Use tonal shifts and generous internal padding (32px).\n  - Images within cards should always have a soft 8px corner radius.\n- **Chips/Tags:** \n  - Used for service types (e.g., \"Dog Walking\", \"Overnight\"). \n  - Soft, pill-shaped backgrounds with `label-caps` typography.\n- **Lists:** \n  - Use custom icons (e.g., a small leaf or paw) instead of standard bullets to maintain the boutique theme.\n- **Pet Profiles:** \n  - A signature component featuring circular or \"squircle\" avatars for pets, framed with a thin Terracotta border.",
+            "customColor": "#1a2238",
+            "designMd": "---\nname: Signature Pet Editorial\ncolors:\n  surface: '#fff9ed'\n  surface-dim: '#e0d9cc'\n  surface-bright: '#fff9ed'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#faf3e5'\n  surface-container: '#f4eddf'\n  surface-container-high: '#eee8da'\n  surface-container-highest: '#e8e2d4'\n  on-surface: '#1e1c13'\n  on-surface-variant: '#45464d'\n  inverse-surface: '#333027'\n  inverse-on-surface: '#f7f0e2'\n  outline: '#76777e'\n  outline-variant: '#c6c6cd'\n  surface-tint: '#565e77'\n  primary: '#040c21'\n  on-primary: '#ffffff'\n  primary-container: '#1a2238'\n  on-primary-container: '#8189a4'\n  inverse-primary: '#bec6e3'\n  secondary: '#5f5e5c'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2dfdc'\n  on-secondary-container: '#636260'\n  tertiary: '#200300'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#470d00'\n  on-tertiary-container: '#e1633e'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae2ff'\n  primary-fixed-dim: '#bec6e3'\n  on-primary-fixed: '#131b30'\n  on-primary-fixed-variant: '#3e465e'\n  secondary-fixed: '#e5e2df'\n  secondary-fixed-dim: '#c8c6c3'\n  on-secondary-fixed: '#1c1c1a'\n  on-secondary-fixed-variant: '#474745'\n  tertiary-fixed: '#ffdbd1'\n  tertiary-fixed-dim: '#ffb5a0'\n  on-tertiary-fixed: '#3b0900'\n  on-tertiary-fixed-variant: '#862201'\n  background: '#fff9ed'\n  on-background: '#1e1c13'\n  surface-variant: '#e8e2d4'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 88px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: 42px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  quote:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 36px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system is rooted in the \"Premium Editorial\" aesthetic, positioning pet care as a bespoke, high-end service rather than a utility. The brand personality is sophisticated and authoritative, yet deeply caring. The UI draws heavily from high-fashion journalism and architectural catalogs, utilizing intentional whitespace to create a \"gallery\" feel for pet photography. \n\nThe style combines **Minimalism** with **Modern Editorial** influences. It rejects the playful, rounded tropes of the pet industry in favor of sharp lines, high-contrast color blocks, and oversized typographic anchors. A key motif is the use of \"offset\" elements—where typography or images break the standard grid alignment to create a rhythmic, curated pace.\n\n## Colors\nThe palette is built on a foundation of \"Parchment\" (#F8F5F2), which serves as the primary canvas color to reduce eye strain and provide a warmer, more premium feel than pure white. \n\n- **Nightfall Navy (#1A2238):** Used for primary typography, navigation backgrounds, and structural borders. It provides the \"anchor\" of trust and professionalism.\n- **Parchment Cream (#F8F5F2):** The default background for all surfaces, creating a soft, paper-like texture.\n- **Terracotta (#D95D39):** Reserved strictly for calls-to-action, alerts, and small decorative geometric accents. It provides a warm, organic contrast to the cool navy.\n- **Deep Slate (#706C61):** Used for secondary body text and metadata to maintain legibility while reducing visual weight.\n\n## Typography\nTypography is the cornerstone of this design system. We use **Playfair Display** for all editorial moments, headings, and pull-quotes to convey a sense of heritage and luxury. **Inter** is utilized for functional interface elements and long-form body copy to ensure maximum readability and a modern technical edge.\n\n- **Contrast:** Large display sizes should use a tighter letter-spacing to feel more cohesive.\n- **Hierarchy:** Use `label-caps` for section overlines (e.g., \"OUR SERVICES\") to provide a clear entry point into the content.\n- **Rhythm:** Line heights for body text are generous (1.5x - 1.8x) to enhance the feeling of \"breathable\" luxury.\n\n## Layout & Spacing\nThe system uses a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile. \n\n- **Vertical Rhythm:** A strict 8px baseline grid is enforced. Section gaps are intentionally large (128px) to separate distinct services or narratives, preventing the UI from feeling cluttered.\n- **The Offset Motif:** Elements (like images or floating text blocks) should frequently be offset by half a column width or overlap grid boundaries to create an editorial, non-standardized appearance.\n- **Responsive Behavior:** On tablet, gutters reduce to 24px. On mobile, the layout collapses to a single column with increased vertical padding between elements to maintain the \"airy\" aesthetic.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Sharp Shadows** rather than soft blurs.\n\n- **Surfaces:** We avoid heavy drop shadows. Instead, we use a 1px solid border in a faint version of Nightfall Navy (10% opacity) to define cards.\n- **Premium Shadow:** When depth is required for modals or \"floating\" elements, use a \"Hard Shadow\" style: a crisp, low-offset shadow (4px 4px 0px) using a semi-transparent Navy. This mimics the look of stacked paper or physical editorial boards.\n- **Z-Index Strategy:** Images often sit at a lower Z-index than text blocks, allowing typography to overlap photography, a hallmark of high-end print design.\n\n## Shapes\nThis design system utilizes **Sharp (0px)** roundedness. Every button, input field, and image container should have hard 90-degree corners. This evokes a sense of precision, architectural rigor, and professional reliability. \n\nGeometric accents—such as thin 1px horizontal lines (Rules) and small solid Terracotta squares—should be used to punctuate the end of articles or separate header content.\n\n## Components\n- **Buttons:** Primary buttons are solid Nightfall Navy with white Inter Medium text, 0px radius, and no shadow. Hover states should transition to Terracotta or involve a slight \"shift\" in the label position.\n- **Input Fields:** Bottom-border only or a very thin 1px Navy outline. Labels should use the `label-caps` style and sit above the field.\n- **Cards:** Cards should not have background fills that differ from the Parchment page color. Instead, use a 1px Navy border or a slight \"Hard Shadow\" to define the area.\n- **Lists:** Use custom icons—specifically thin-line geometric shapes or stylized paw prints in Navy—rather than standard bullets.\n- **Editorial Pull-Quotes:** Large italicized Playfair Display text, centered or dramatically offset to the left, used to highlight testimonials from pet owners.\n- **The \"Service Badge\":** A small, square Terracotta block containing a white icon, used to denote specific service types (e.g., Overnight, Grooming).",
             "font": "PLAYFAIR_DISPLAY",
             "headlineFont": "PLAYFAIR_DISPLAY",
             "headlineFontFamily": "Playfair Display",
             "labelFont": "INTER",
             "labelFontFamily": "Inter",
             "namedColors": {
-              "background": "#fff8f5",
+              "background": "#fff9ed",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f8efea",
-              "inverse_primary": "#b4cdb8",
-              "inverse_surface": "#34302c",
-              "on_background": "#1e1b18",
+              "inverse_on_surface": "#f7f0e2",
+              "inverse_primary": "#bec6e3",
+              "inverse_surface": "#333027",
+              "on_background": "#1e1c13",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
-              "on_primary_container": "#819986",
-              "on_primary_fixed": "#0b2013",
-              "on_primary_fixed_variant": "#364c3c",
+              "on_primary_container": "#8189a4",
+              "on_primary_fixed": "#131b30",
+              "on_primary_fixed_variant": "#3e465e",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#772f16",
-              "on_secondary_fixed": "#390b00",
-              "on_secondary_fixed_variant": "#793017",
-              "on_surface": "#1e1b18",
-              "on_surface_variant": "#434843",
+              "on_secondary_container": "#636260",
+              "on_secondary_fixed": "#1c1c1a",
+              "on_secondary_fixed_variant": "#474745",
+              "on_surface": "#1e1c13",
+              "on_surface_variant": "#45464d",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#95938e",
-              "on_tertiary_fixed": "#1c1c18",
-              "on_tertiary_fixed_variant": "#474743",
-              "outline": "#737973",
-              "outline_variant": "#c3c8c1",
-              "primary": "#061b0e",
-              "primary_container": "#1b3022",
-              "primary_fixed": "#d0e9d4",
-              "primary_fixed_dim": "#b4cdb8",
-              "secondary": "#97472c",
-              "secondary_container": "#fe9978",
-              "secondary_fixed": "#ffdbd0",
-              "secondary_fixed_dim": "#ffb59d",
-              "surface": "#fff8f5",
-              "surface_bright": "#fff8f5",
-              "surface_container": "#f5ece7",
-              "surface_container_high": "#efe6e2",
-              "surface_container_highest": "#e9e1dc",
-              "surface_container_low": "#fbf2ed",
+              "on_tertiary_container": "#e1633e",
+              "on_tertiary_fixed": "#3b0900",
+              "on_tertiary_fixed_variant": "#862201",
+              "outline": "#76777e",
+              "outline_variant": "#c6c6cd",
+              "primary": "#040c21",
+              "primary_container": "#1a2238",
+              "primary_fixed": "#dae2ff",
+              "primary_fixed_dim": "#bec6e3",
+              "secondary": "#5f5e5c",
+              "secondary_container": "#e2dfdc",
+              "secondary_fixed": "#e5e2df",
+              "secondary_fixed_dim": "#c8c6c3",
+              "surface": "#fff9ed",
+              "surface_bright": "#fff9ed",
+              "surface_container": "#f4eddf",
+              "surface_container_high": "#eee8da",
+              "surface_container_highest": "#e8e2d4",
+              "surface_container_low": "#faf3e5",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#e1d8d4",
-              "surface_tint": "#4d6453",
-              "surface_variant": "#e9e1dc",
-              "tertiary": "#171814",
-              "tertiary_container": "#2c2c28",
-              "tertiary_fixed": "#e5e2dc",
-              "tertiary_fixed_dim": "#c9c6c1"
+              "surface_dim": "#e0d9cc",
+              "surface_tint": "#565e77",
+              "surface_variant": "#e8e2d4",
+              "tertiary": "#200300",
+              "tertiary_container": "#470d00",
+              "tertiary_fixed": "#ffdbd1",
+              "tertiary_fixed_dim": "#ffb5a0"
             },
-            "overrideNeutralColor": "#2d2926",
-            "overridePrimaryColor": "#1b3022",
-            "overrideSecondaryColor": "#c96e50",
-            "overrideTertiaryColor": "#f9f6f0",
-            "roundness": "ROUND_EIGHT",
+            "overrideNeutralColor": "#706c61",
+            "overridePrimaryColor": "#1a2238",
+            "overrideSecondaryColor": "#f8f5f2",
+            "overrideTertiaryColor": "#d95d39",
             "spacing": {
-              "base": "8px",
-              "container-max": "1200px",
-              "gutter": "24px",
+              "container-max": "1280px",
+              "gutter": "32px",
               "margin-desktop": "64px",
               "margin-mobile": "20px",
-              "section-gap": "120px"
+              "section-gap": "128px",
+              "unit": "8px"
             },
             "spacingScale": 2,
             "typography": {
@@ -85,51 +84,56 @@
                 "fontFamily": "Inter",
                 "fontSize": "18px",
                 "fontWeight": "400",
-                "lineHeight": "1.6"
+                "lineHeight": "32px"
               },
               "body-md": {
                 "fontFamily": "Inter",
                 "fontSize": "16px",
                 "fontWeight": "400",
-                "lineHeight": "1.6"
+                "lineHeight": "24px"
               },
               "display-lg": {
                 "fontFamily": "Playfair Display",
-                "fontSize": "48px",
+                "fontSize": "80px",
                 "fontWeight": "700",
                 "letterSpacing": "-0.02em",
-                "lineHeight": "1.1"
+                "lineHeight": "88px"
               },
-              "display-lg-mobile": {
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "56px"
+              },
+              "headline-lg-mobile": {
                 "fontFamily": "Playfair Display",
                 "fontSize": "36px",
-                "fontWeight": "700",
-                "letterSpacing": "-0.01em",
-                "lineHeight": "1.2"
+                "fontWeight": "600",
+                "lineHeight": "42px"
               },
               "headline-md": {
                 "fontFamily": "Playfair Display",
                 "fontSize": "32px",
-                "fontWeight": "600",
-                "lineHeight": "1.3"
-              },
-              "headline-sm": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "24px",
-                "fontWeight": "600",
-                "lineHeight": "1.4"
+                "fontWeight": "500",
+                "lineHeight": "40px"
               },
               "label-caps": {
                 "fontFamily": "Inter",
                 "fontSize": "12px",
                 "fontWeight": "600",
                 "letterSpacing": "0.1em",
-                "lineHeight": "1"
+                "lineHeight": "16px"
+              },
+              "quote": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "36px"
               }
             }
           }
         },
-        "name": "assets/5172af60f90b485ba330ecbb422f179c",
+        "name": "assets/c656839e5c7741d9b517d6c5479c12e8",
         "version": "1"
       }
     },
@@ -139,138 +143,99 @@
           {
             "generatedBy": "interactive_ui_controller",
             "height": "768",
-            "id": "785b9a2eb6b240d4a7537e108d51a24e",
-            "name": "projects/12232153599695547608/screens/785b9a2eb6b240d4a7537e108d51a24e",
-            "prompt": "Editorial photography for a premium pet sitting brand. A high-quality, warm-toned image of a golden retriever sitting calmly in a sunlit, modern living room next to a professional pet sitter. The lighting is soft and natural. The aesthetic is clean, sophisticated, and trustworthy. High resolution, shallow depth of field.",
+            "id": "b20d5064cb57460286807ece2dd530f2",
+            "name": "projects/4237240356347985410/screens/b20d5064cb57460286807ece2dd530f2",
+            "prompt": "High-end, editorial photography of a happy Golden Retriever sitting gracefully in a sun-drenched, modern living room with clean lines and minimalist decor. Warm, natural lighting, shallow depth of field, professional architectural photography style. Soft textures, premium feel.",
             "screenMetadata": {
               "agentType": "PRO_AGENT",
               "status": "COMPLETE"
             },
             "screenType": "IMAGE",
             "screenshot": {
-              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsw5z7278UE_ZbwycNaWZNR-DjuhsEvSqVf3_HCod66Fqog_UHQcYe3xR0OHLdvsQ7JhOSAnmGclLer8-dCWU_wXBrzHGNInHmwBqRlyCRQCSk9ZGOpNcRj3UZA6yaA-7w_TI7yX6JBX6ETJlbAQY3Fx7FDUIuEHR5pn7r_7nvFlrryPX4Sm26kFSjr9aoRmRzDe8vZdxn9TdNhRWivQALfb5sZds6KFlHFZmOQoZNLMUphk0d7B0c2C5o",
-              "name": "projects/12232153599695547608/files/4ee443bc8d084123ae48efdf500674bd"
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvvdUKB9r2DPgqA95Wl_u_l-FZTDfPkJtcaBhUgaf7EllrsmXlSMH_fM9dCBRd7VVyoyP8C4SVC6hhefgahkxWOslXBGHoRr3pzkMvX0twsQkW8rphuws0ZSlWQIjemw1NbfrnE_q5CxySvk5MMXSgI3110KQZ5F0qfvfZrdNlDcYR2WKlmoPoWm4bEvPLD90g9_jHuKNNRW3ISvjKpQ-tH2Cg06XzvnoDOqBbpYkSWhdJsrTH9hpNkR0M",
+              "name": "projects/4237240356347985410/files/6306c138810a460d93bba4102e6335ce"
             },
             "theme": {},
-            "title": "Editorial photography for a premium pet sitting brand. A high-quality, warm-toned image of a golden retriever sitting calmly in a sunlit, modern living room next to a professional pet sitter. The lighting is soft and natural. The aesthetic is clean, sophisticated, and trustworthy. High resolution, shallow depth of field.",
+            "title": "High-end, editorial photography of a happy Golden Retriever sitting gracefully in a sun-drenched, modern living room with clean lines and minimalist decor. Warm, natural lighting, shallow depth of field, professional architectural photography style. Soft textures, premium feel.",
             "width": "1376"
-          },
-          {
-            "generatedBy": "interactive_ui_controller",
-            "height": "1024",
-            "id": "fdf92fcf1f86433c82cdd6f9cdcc7ff1",
-            "name": "projects/12232153599695547608/screens/fdf92fcf1f86433c82cdd6f9cdcc7ff1",
-            "prompt": "A close-up, heartwarming photo of a cat being gently brushed by a professional caregiver. Soft focus, warm indoor lighting, premium feel. High-end lifestyle photography.",
-            "screenMetadata": {
-              "agentType": "PRO_AGENT",
-              "status": "COMPLETE"
-            },
-            "screenType": "IMAGE",
-            "screenshot": {
-              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsMUINcXHwtdSSWDmjI822YQyqJdS7R3bK7N1McOBzDtJEyWZYR5dRmKf1Mh1JbbWEaLGco2LUeBASXnLI-FFLpioNHMBJ6CT5mcPUv15DNNyUkwStgzJPDtO0Z0MGSBrcv_aZBcx_5HFxkG3U5GUFOzIWwXOpVbULKtxHRvIdizRXyzEfHT4F_2bAJkKVBn1t2GmFOejGwG4Lt07czppeNlPMyg6gKnFc6cafvG9cdgC4TlnX4tG16AlzZ",
-              "name": "projects/12232153599695547608/files/ec922649633f4f95be270723e6290ccf"
-            },
-            "theme": {},
-            "title": "A close-up, heartwarming photo of a cat being gently brushed by a professional caregiver. Soft focus, warm indoor lighting, premium feel. High-end lifestyle photography.",
-            "width": "1024"
-          },
-          {
-            "generatedBy": "interactive_ui_controller",
-            "height": "848",
-            "id": "526f25dbb72c4788b88e33ec98857de6",
-            "name": "projects/12232153599695547608/screens/526f25dbb72c4788b88e33ec98857de6",
-            "prompt": "A professional pet sitter walking two well-behaved dogs on a clean, upscale suburban street during the golden hour. The focus is on the bond and the professional care. High-end, editorial style.",
-            "screenMetadata": {
-              "agentType": "PRO_AGENT",
-              "status": "COMPLETE"
-            },
-            "screenType": "IMAGE",
-            "screenshot": {
-              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsfSrCuAPhEjPIfTaY2ywvn1uMbW9_NGN6mVFF6a-Eb_OKqYAgU4VgcucMNowClioYD2nsiCKgCV3e1Xosf_mGAWcA-MBbrKij-82Ockhr5Z6LD3avuxNY9eWB6VI8-hkwP0OIb-iM3LLSKTTRVJMHZD442541noPXdaks-ujqDOVdYG1QXDqX8d6Yz8hDpSPvxdF6q2uUm1khCxd32-p8tdr2_nSPQYINmPaO53oEmxQAzoD1R_7kwgUop",
-              "name": "projects/12232153599695547608/files/419dd5542e224b3d951e632fcc61d02d"
-            },
-            "theme": {},
-            "title": "A professional pet sitter walking two well-behaved dogs on a clean, upscale suburban street during the golden hour. The focus is on the bond and the professional care. High-end, editorial style.",
-            "width": "1264"
           },
           {
             "designSystem": {
               "designSystem": {
-                "displayName": "Heritage Pet Collective",
-                "styleGuidelines": "## Brand & Style\nThe design system is rooted in the \"Heritage Editorial\" aesthetic—a blend of high-end lifestyle publishing and warm, organic hospitality. The target audience consists of discerning pet owners in Charleston who view their pets as family and value professional, boutique service over mass-market apps.\n\nThe visual narrative avoids the frenetic energy typical of the pet industry, instead opting for a \"Calm & Collected\" atmosphere. The design style leverages **Minimalism** with a **Tactile** edge, using subtle grain overlays and soft-touch UI elements to evoke the feeling of a premium physical brochure. The goal is to instill an immediate sense of reliability and quiet luxury.\n\n## Layout & Spacing\nThe layout philosophy follows a **Fixed Grid** model on desktop to maintain a curated, boutique feel, transitioning to a fluid model on mobile.\n\n- **Rhythm:** All spacing is based on an 8px baseline grid.\n- **Whitespace:** Emphasize \"negative space\" between sections (using `section-gap`) to allow the high-quality pet photography and typography to breathe. \n- **Mobile:** Margins are reduced to 20px, but internal padding within cards should remain generous (24px+) to maintain the premium feel.\n- **Grid:** A 12-column grid for desktop, 6-column for tablet, and 2-column for mobile.\n\n## Elevation & Depth\nThis design system avoids heavy drop shadows in favor of **Tonal Layers** and **Low-Contrast Outlines**.\n\n- **Surface Levels:** \n  - Level 0: Tertiary (Cream) background.\n  - Level 1: White or slightly lighter cream surfaces for cards.\n- **Shadows:** When necessary, use extremely diffused, low-opacity (5-8%) shadows tinted with the Primary Forest Green color (#1B3022) to ground the elements naturally.\n- **Borders:** Use 1px solid borders in a slightly darker shade of the background color (e.g., #E8E2D6) to define structure without adding visual noise.\n- **Texture:** Apply a subtle 3% opacity grain/noise overlay to the entire UI to break the digital \"flatness\" and add a tactile, paper-like quality.\n\n## Components\nConsistent component styling reinforces the premium editorial narrative.\n\n- **Buttons:** \n  - *Primary:* Solid Forest Green with White text. Rectangular with a slight 8px radius. No gradients.\n  - *Secondary:* Outline Forest Green or Solid Terracotta for high-action \"Book Now\" triggers.\n  - *Interaction:* Subtle lift on hover (2px) rather than color shifts.\n- **Input Fields:** \n  - Use a \"Floating Label\" style or clear labels in `label-caps`. \n  - Backgrounds should be a shade lighter than the page background to create a \"recessed\" look.\n- **Cards:** \n  - Avoid heavy borders. Use tonal shifts and generous internal padding (32px).\n  - Images within cards should always have a soft 8px corner radius.\n- **Chips/Tags:** \n  - Used for service types (e.g., \"Dog Walking\", \"Overnight\"). \n  - Soft, pill-shaped backgrounds with `label-caps` typography.\n- **Lists:** \n  - Use custom icons (e.g., a small leaf or paw) instead of standard bullets to maintain the boutique theme.\n- **Pet Profiles:** \n  - A signature component featuring circular or \"squircle\" avatars for pets, framed with a thin Terracotta border.",
+                "displayName": "Signature Pet Editorial",
+                "styleGuidelines": "## Brand & Style\nThe design system is rooted in the \"Premium Editorial\" aesthetic, positioning pet care as a bespoke, high-end service rather than a utility. The brand personality is sophisticated and authoritative, yet deeply caring. The UI draws heavily from high-fashion journalism and architectural catalogs, utilizing intentional whitespace to create a \"gallery\" feel for pet photography. \n\nThe style combines **Minimalism** with **Modern Editorial** influences. It rejects the playful, rounded tropes of the pet industry in favor of sharp lines, high-contrast color blocks, and oversized typographic anchors. A key motif is the use of \"offset\" elements—where typography or images break the standard grid alignment to create a rhythmic, curated pace.\n\n## Layout & Spacing\nThe system uses a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile. \n\n- **Vertical Rhythm:** A strict 8px baseline grid is enforced. Section gaps are intentionally large (128px) to separate distinct services or narratives, preventing the UI from feeling cluttered.\n- **The Offset Motif:** Elements (like images or floating text blocks) should frequently be offset by half a column width or overlap grid boundaries to create an editorial, non-standardized appearance.\n- **Responsive Behavior:** On tablet, gutters reduce to 24px. On mobile, the layout collapses to a single column with increased vertical padding between elements to maintain the \"airy\" aesthetic.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Sharp Shadows** rather than soft blurs.\n\n- **Surfaces:** We avoid heavy drop shadows. Instead, we use a 1px solid border in a faint version of Nightfall Navy (10% opacity) to define cards.\n- **Premium Shadow:** When depth is required for modals or \"floating\" elements, use a \"Hard Shadow\" style: a crisp, low-offset shadow (4px 4px 0px) using a semi-transparent Navy. This mimics the look of stacked paper or physical editorial boards.\n- **Z-Index Strategy:** Images often sit at a lower Z-index than text blocks, allowing typography to overlap photography, a hallmark of high-end print design.\n\n## Components\n- **Buttons:** Primary buttons are solid Nightfall Navy with white Inter Medium text, 0px radius, and no shadow. Hover states should transition to Terracotta or involve a slight \"shift\" in the label position.\n- **Input Fields:** Bottom-border only or a very thin 1px Navy outline. Labels should use the `label-caps` style and sit above the field.\n- **Cards:** Cards should not have background fills that differ from the Parchment page color. Instead, use a 1px Navy border or a slight \"Hard Shadow\" to define the area.\n- **Lists:** Use custom icons—specifically thin-line geometric shapes or stylized paw prints in Navy—rather than standard bullets.\n- **Editorial Pull-Quotes:** Large italicized Playfair Display text, centered or dramatically offset to the left, used to highlight testimonials from pet owners.\n- **The \"Service Badge\":** A small, square Terracotta block containing a white icon, used to denote specific service types (e.g., Overnight, Grooming).",
                 "theme": {
                   "bodyFont": "INTER",
                   "bodyFontFamily": "Inter",
                   "colorMode": "LIGHT",
                   "colorVariant": "FIDELITY",
-                  "customColor": "#1b3022",
-                  "designMd": "---\nname: Heritage Pet Collective\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e1d8d4'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2ed'\n  surface-container: '#f5ece7'\n  surface-container-high: '#efe6e2'\n  surface-container-highest: '#e9e1dc'\n  on-surface: '#1e1b18'\n  on-surface-variant: '#434843'\n  inverse-surface: '#34302c'\n  inverse-on-surface: '#f8efea'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#97472c'\n  on-secondary: '#ffffff'\n  secondary-container: '#fe9978'\n  on-secondary-container: '#772f16'\n  tertiary: '#171814'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2c2c28'\n  on-tertiary-container: '#95938e'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdbd0'\n  secondary-fixed-dim: '#ffb59d'\n  on-secondary-fixed: '#390b00'\n  on-secondary-fixed-variant: '#793017'\n  tertiary-fixed: '#e5e2dc'\n  tertiary-fixed-dim: '#c9c6c1'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474743'\n  background: '#fff8f5'\n  on-background: '#1e1b18'\n  surface-variant: '#e9e1dc'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is rooted in the \"Heritage Editorial\" aesthetic—a blend of high-end lifestyle publishing and warm, organic hospitality. The target audience consists of discerning pet owners in Charleston who view their pets as family and value professional, boutique service over mass-market apps.\n\nThe visual narrative avoids the frenetic energy typical of the pet industry, instead opting for a \"Calm & Collected\" atmosphere. The design style leverages **Minimalism** with a **Tactile** edge, using subtle grain overlays and soft-touch UI elements to evoke the feeling of a premium physical brochure. The goal is to instill an immediate sense of reliability and quiet luxury.\n\n## Colors\nThis palette is inspired by the natural Lowcountry landscape of Charleston.\n\n- **Primary (Forest Green):** Used for primary actions, headers, and brand-heavy backgrounds to signify stability and growth.\n- **Secondary (Terracotta):** An accent color used sparingly for high-priority call-to-actions, notifications, and subtle decorative elements. It adds warmth and human touch.\n- **Tertiary (Cream):** The primary surface color. It replaces stark white to reduce eye strain and provide a \"paper-like\" editorial feel.\n- **Neutral (Charcoal):** Reserved for high-contrast typography and iconography, ensuring maximum legibility without the harshness of pure black.\n\n**Functional Colors:**\n- Use a desaturated Sage Green for success states.\n- Use a muted Ochre for warnings.\n- Use a deep Burgundy for errors, maintaining the earthy aesthetic.\n\n## Typography\nThe typographic hierarchy relies on the contrast between the expressive, high-contrast strokes of **Playfair Display** and the functional, geometric clarity of **Inter**.\n\n- **Headlines:** Use Playfair Display for all narrative headings. For large display sizes, use tighter letter spacing to emphasize the editorial look.\n- **Body Text:** Use Inter for all long-form content. The line height is intentionally generous (1.6) to facilitate a relaxed reading experience.\n- **Micro-copy:** Use `label-caps` for category tags, small captions, and \"Overlines\" above headlines to provide structure without clutter.\n\n## Layout & Spacing\nThe layout philosophy follows a **Fixed Grid** model on desktop to maintain a curated, boutique feel, transitioning to a fluid model on mobile.\n\n- **Rhythm:** All spacing is based on an 8px baseline grid.\n- **Whitespace:** Emphasize \"negative space\" between sections (using `section-gap`) to allow the high-quality pet photography and typography to breathe. \n- **Mobile:** Margins are reduced to 20px, but internal padding within cards should remain generous (24px+) to maintain the premium feel.\n- **Grid:** A 12-column grid for desktop, 6-column for tablet, and 2-column for mobile.\n\n## Elevation & Depth\nThis design system avoids heavy drop shadows in favor of **Tonal Layers** and **Low-Contrast Outlines**.\n\n- **Surface Levels:** \n  - Level 0: Tertiary (Cream) background.\n  - Level 1: White or slightly lighter cream surfaces for cards.\n- **Shadows:** When necessary, use extremely diffused, low-opacity (5-8%) shadows tinted with the Primary Forest Green color (#1B3022) to ground the elements naturally.\n- **Borders:** Use 1px solid borders in a slightly darker shade of the background color (e.g., #E8E2D6) to define structure without adding visual noise.\n- **Texture:** Apply a subtle 3% opacity grain/noise overlay to the entire UI to break the digital \"flatness\" and add a tactile, paper-like quality.\n\n## Shapes\nThe shape language is **Organic and Soft**. While the grid is structured, individual components use rounded corners to reflect the friendliness of the brand and the softness of the pets being cared for.\n\n- **Standard Elements:** Buttons, inputs, and small cards use a 0.5rem (8px) radius.\n- **Large Containers:** Image carousels and large content sections use a 1.5rem (24px) radius.\n- **Icons:** Should be illustrative or rounded-line style, avoiding sharp 90-degree angles.\n\n## Components\nConsistent component styling reinforces the premium editorial narrative.\n\n- **Buttons:** \n  - *Primary:* Solid Forest Green with White text. Rectangular with a slight 8px radius. No gradients.\n  - *Secondary:* Outline Forest Green or Solid Terracotta for high-action \"Book Now\" triggers.\n  - *Interaction:* Subtle lift on hover (2px) rather than color shifts.\n- **Input Fields:** \n  - Use a \"Floating Label\" style or clear labels in `label-caps`. \n  - Backgrounds should be a shade lighter than the page background to create a \"recessed\" look.\n- **Cards:** \n  - Avoid heavy borders. Use tonal shifts and generous internal padding (32px).\n  - Images within cards should always have a soft 8px corner radius.\n- **Chips/Tags:** \n  - Used for service types (e.g., \"Dog Walking\", \"Overnight\"). \n  - Soft, pill-shaped backgrounds with `label-caps` typography.\n- **Lists:** \n  - Use custom icons (e.g., a small leaf or paw) instead of standard bullets to maintain the boutique theme.\n- **Pet Profiles:** \n  - A signature component featuring circular or \"squircle\" avatars for pets, framed with a thin Terracotta border.",
+                  "customColor": "#1a2238",
+                  "designMd": "---\nname: Signature Pet Editorial\ncolors:\n  surface: '#fff9ed'\n  surface-dim: '#e0d9cc'\n  surface-bright: '#fff9ed'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#faf3e5'\n  surface-container: '#f4eddf'\n  surface-container-high: '#eee8da'\n  surface-container-highest: '#e8e2d4'\n  on-surface: '#1e1c13'\n  on-surface-variant: '#45464d'\n  inverse-surface: '#333027'\n  inverse-on-surface: '#f7f0e2'\n  outline: '#76777e'\n  outline-variant: '#c6c6cd'\n  surface-tint: '#565e77'\n  primary: '#040c21'\n  on-primary: '#ffffff'\n  primary-container: '#1a2238'\n  on-primary-container: '#8189a4'\n  inverse-primary: '#bec6e3'\n  secondary: '#5f5e5c'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2dfdc'\n  on-secondary-container: '#636260'\n  tertiary: '#200300'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#470d00'\n  on-tertiary-container: '#e1633e'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae2ff'\n  primary-fixed-dim: '#bec6e3'\n  on-primary-fixed: '#131b30'\n  on-primary-fixed-variant: '#3e465e'\n  secondary-fixed: '#e5e2df'\n  secondary-fixed-dim: '#c8c6c3'\n  on-secondary-fixed: '#1c1c1a'\n  on-secondary-fixed-variant: '#474745'\n  tertiary-fixed: '#ffdbd1'\n  tertiary-fixed-dim: '#ffb5a0'\n  on-tertiary-fixed: '#3b0900'\n  on-tertiary-fixed-variant: '#862201'\n  background: '#fff9ed'\n  on-background: '#1e1c13'\n  surface-variant: '#e8e2d4'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 88px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: 42px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  quote:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 36px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system is rooted in the \"Premium Editorial\" aesthetic, positioning pet care as a bespoke, high-end service rather than a utility. The brand personality is sophisticated and authoritative, yet deeply caring. The UI draws heavily from high-fashion journalism and architectural catalogs, utilizing intentional whitespace to create a \"gallery\" feel for pet photography. \n\nThe style combines **Minimalism** with **Modern Editorial** influences. It rejects the playful, rounded tropes of the pet industry in favor of sharp lines, high-contrast color blocks, and oversized typographic anchors. A key motif is the use of \"offset\" elements—where typography or images break the standard grid alignment to create a rhythmic, curated pace.\n\n## Colors\nThe palette is built on a foundation of \"Parchment\" (#F8F5F2), which serves as the primary canvas color to reduce eye strain and provide a warmer, more premium feel than pure white. \n\n- **Nightfall Navy (#1A2238):** Used for primary typography, navigation backgrounds, and structural borders. It provides the \"anchor\" of trust and professionalism.\n- **Parchment Cream (#F8F5F2):** The default background for all surfaces, creating a soft, paper-like texture.\n- **Terracotta (#D95D39):** Reserved strictly for calls-to-action, alerts, and small decorative geometric accents. It provides a warm, organic contrast to the cool navy.\n- **Deep Slate (#706C61):** Used for secondary body text and metadata to maintain legibility while reducing visual weight.\n\n## Typography\nTypography is the cornerstone of this design system. We use **Playfair Display** for all editorial moments, headings, and pull-quotes to convey a sense of heritage and luxury. **Inter** is utilized for functional interface elements and long-form body copy to ensure maximum readability and a modern technical edge.\n\n- **Contrast:** Large display sizes should use a tighter letter-spacing to feel more cohesive.\n- **Hierarchy:** Use `label-caps` for section overlines (e.g., \"OUR SERVICES\") to provide a clear entry point into the content.\n- **Rhythm:** Line heights for body text are generous (1.5x - 1.8x) to enhance the feeling of \"breathable\" luxury.\n\n## Layout & Spacing\nThe system uses a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile. \n\n- **Vertical Rhythm:** A strict 8px baseline grid is enforced. Section gaps are intentionally large (128px) to separate distinct services or narratives, preventing the UI from feeling cluttered.\n- **The Offset Motif:** Elements (like images or floating text blocks) should frequently be offset by half a column width or overlap grid boundaries to create an editorial, non-standardized appearance.\n- **Responsive Behavior:** On tablet, gutters reduce to 24px. On mobile, the layout collapses to a single column with increased vertical padding between elements to maintain the \"airy\" aesthetic.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Sharp Shadows** rather than soft blurs.\n\n- **Surfaces:** We avoid heavy drop shadows. Instead, we use a 1px solid border in a faint version of Nightfall Navy (10% opacity) to define cards.\n- **Premium Shadow:** When depth is required for modals or \"floating\" elements, use a \"Hard Shadow\" style: a crisp, low-offset shadow (4px 4px 0px) using a semi-transparent Navy. This mimics the look of stacked paper or physical editorial boards.\n- **Z-Index Strategy:** Images often sit at a lower Z-index than text blocks, allowing typography to overlap photography, a hallmark of high-end print design.\n\n## Shapes\nThis design system utilizes **Sharp (0px)** roundedness. Every button, input field, and image container should have hard 90-degree corners. This evokes a sense of precision, architectural rigor, and professional reliability. \n\nGeometric accents—such as thin 1px horizontal lines (Rules) and small solid Terracotta squares—should be used to punctuate the end of articles or separate header content.\n\n## Components\n- **Buttons:** Primary buttons are solid Nightfall Navy with white Inter Medium text, 0px radius, and no shadow. Hover states should transition to Terracotta or involve a slight \"shift\" in the label position.\n- **Input Fields:** Bottom-border only or a very thin 1px Navy outline. Labels should use the `label-caps` style and sit above the field.\n- **Cards:** Cards should not have background fills that differ from the Parchment page color. Instead, use a 1px Navy border or a slight \"Hard Shadow\" to define the area.\n- **Lists:** Use custom icons—specifically thin-line geometric shapes or stylized paw prints in Navy—rather than standard bullets.\n- **Editorial Pull-Quotes:** Large italicized Playfair Display text, centered or dramatically offset to the left, used to highlight testimonials from pet owners.\n- **The \"Service Badge\":** A small, square Terracotta block containing a white icon, used to denote specific service types (e.g., Overnight, Grooming).",
                   "font": "PLAYFAIR_DISPLAY",
                   "headlineFont": "PLAYFAIR_DISPLAY",
                   "headlineFontFamily": "Playfair Display",
                   "labelFont": "INTER",
                   "labelFontFamily": "Inter",
                   "namedColors": {
-                    "background": "#fff8f5",
+                    "background": "#fff9ed",
                     "error": "#ba1a1a",
                     "error_container": "#ffdad6",
-                    "inverse_on_surface": "#f8efea",
-                    "inverse_primary": "#b4cdb8",
-                    "inverse_surface": "#34302c",
-                    "on_background": "#1e1b18",
+                    "inverse_on_surface": "#f7f0e2",
+                    "inverse_primary": "#bec6e3",
+                    "inverse_surface": "#333027",
+                    "on_background": "#1e1c13",
                     "on_error": "#ffffff",
                     "on_error_container": "#93000a",
                     "on_primary": "#ffffff",
-                    "on_primary_container": "#819986",
-                    "on_primary_fixed": "#0b2013",
-                    "on_primary_fixed_variant": "#364c3c",
+                    "on_primary_container": "#8189a4",
+                    "on_primary_fixed": "#131b30",
+                    "on_primary_fixed_variant": "#3e465e",
                     "on_secondary": "#ffffff",
-                    "on_secondary_container": "#772f16",
-                    "on_secondary_fixed": "#390b00",
-                    "on_secondary_fixed_variant": "#793017",
-                    "on_surface": "#1e1b18",
-                    "on_surface_variant": "#434843",
+                    "on_secondary_container": "#636260",
+                    "on_secondary_fixed": "#1c1c1a",
+                    "on_secondary_fixed_variant": "#474745",
+                    "on_surface": "#1e1c13",
+                    "on_surface_variant": "#45464d",
                     "on_tertiary": "#ffffff",
-                    "on_tertiary_container": "#95938e",
-                    "on_tertiary_fixed": "#1c1c18",
-                    "on_tertiary_fixed_variant": "#474743",
-                    "outline": "#737973",
-                    "outline_variant": "#c3c8c1",
-                    "primary": "#061b0e",
-                    "primary_container": "#1b3022",
-                    "primary_fixed": "#d0e9d4",
-                    "primary_fixed_dim": "#b4cdb8",
-                    "secondary": "#97472c",
-                    "secondary_container": "#fe9978",
-                    "secondary_fixed": "#ffdbd0",
-                    "secondary_fixed_dim": "#ffb59d",
-                    "surface": "#fff8f5",
-                    "surface_bright": "#fff8f5",
-                    "surface_container": "#f5ece7",
-                    "surface_container_high": "#efe6e2",
-                    "surface_container_highest": "#e9e1dc",
-                    "surface_container_low": "#fbf2ed",
+                    "on_tertiary_container": "#e1633e",
+                    "on_tertiary_fixed": "#3b0900",
+                    "on_tertiary_fixed_variant": "#862201",
+                    "outline": "#76777e",
+                    "outline_variant": "#c6c6cd",
+                    "primary": "#040c21",
+                    "primary_container": "#1a2238",
+                    "primary_fixed": "#dae2ff",
+                    "primary_fixed_dim": "#bec6e3",
+                    "secondary": "#5f5e5c",
+                    "secondary_container": "#e2dfdc",
+                    "secondary_fixed": "#e5e2df",
+                    "secondary_fixed_dim": "#c8c6c3",
+                    "surface": "#fff9ed",
+                    "surface_bright": "#fff9ed",
+                    "surface_container": "#f4eddf",
+                    "surface_container_high": "#eee8da",
+                    "surface_container_highest": "#e8e2d4",
+                    "surface_container_low": "#faf3e5",
                     "surface_container_lowest": "#ffffff",
-                    "surface_dim": "#e1d8d4",
-                    "surface_tint": "#4d6453",
-                    "surface_variant": "#e9e1dc",
-                    "tertiary": "#171814",
-                    "tertiary_container": "#2c2c28",
-                    "tertiary_fixed": "#e5e2dc",
-                    "tertiary_fixed_dim": "#c9c6c1"
+                    "surface_dim": "#e0d9cc",
+                    "surface_tint": "#565e77",
+                    "surface_variant": "#e8e2d4",
+                    "tertiary": "#200300",
+                    "tertiary_container": "#470d00",
+                    "tertiary_fixed": "#ffdbd1",
+                    "tertiary_fixed_dim": "#ffb5a0"
                   },
-                  "overrideNeutralColor": "#2d2926",
-                  "overridePrimaryColor": "#1b3022",
-                  "overrideSecondaryColor": "#c96e50",
-                  "overrideTertiaryColor": "#f9f6f0",
-                  "roundness": "ROUND_EIGHT",
+                  "overrideNeutralColor": "#706c61",
+                  "overridePrimaryColor": "#1a2238",
+                  "overrideSecondaryColor": "#f8f5f2",
+                  "overrideTertiaryColor": "#d95d39",
                   "spacing": {
-                    "base": "8px",
-                    "container-max": "1200px",
-                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "gutter": "32px",
                     "margin-desktop": "64px",
                     "margin-mobile": "20px",
-                    "section-gap": "120px"
+                    "section-gap": "128px",
+                    "unit": "8px"
                   },
                   "spacingScale": 2,
                   "typography": {
@@ -278,146 +243,150 @@
                       "fontFamily": "Inter",
                       "fontSize": "18px",
                       "fontWeight": "400",
-                      "lineHeight": "1.6"
+                      "lineHeight": "32px"
                     },
                     "body-md": {
                       "fontFamily": "Inter",
                       "fontSize": "16px",
                       "fontWeight": "400",
-                      "lineHeight": "1.6"
+                      "lineHeight": "24px"
                     },
                     "display-lg": {
                       "fontFamily": "Playfair Display",
-                      "fontSize": "48px",
+                      "fontSize": "80px",
                       "fontWeight": "700",
                       "letterSpacing": "-0.02em",
-                      "lineHeight": "1.1"
+                      "lineHeight": "88px"
                     },
-                    "display-lg-mobile": {
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "56px"
+                    },
+                    "headline-lg-mobile": {
                       "fontFamily": "Playfair Display",
                       "fontSize": "36px",
-                      "fontWeight": "700",
-                      "letterSpacing": "-0.01em",
-                      "lineHeight": "1.2"
+                      "fontWeight": "600",
+                      "lineHeight": "42px"
                     },
                     "headline-md": {
                       "fontFamily": "Playfair Display",
                       "fontSize": "32px",
-                      "fontWeight": "600",
-                      "lineHeight": "1.3"
-                    },
-                    "headline-sm": {
-                      "fontFamily": "Playfair Display",
-                      "fontSize": "24px",
-                      "fontWeight": "600",
-                      "lineHeight": "1.4"
+                      "fontWeight": "500",
+                      "lineHeight": "40px"
                     },
                     "label-caps": {
                       "fontFamily": "Inter",
                       "fontSize": "12px",
                       "fontWeight": "600",
                       "letterSpacing": "0.1em",
-                      "lineHeight": "1"
+                      "lineHeight": "16px"
+                    },
+                    "quote": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "400",
+                      "lineHeight": "36px"
                     }
                   }
                 }
               },
-              "name": "assets/5172af60f90b485ba330ecbb422f179c",
+              "name": "assets/c656839e5c7741d9b517d6c5479c12e8",
               "version": "1"
             },
             "deviceType": "DESKTOP",
             "generatedBy": "figaro_agent",
-            "height": "10030",
+            "height": "11658",
             "htmlCode": {
-              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Q0ZDQwZDc4ZTkzNzQ4MTJiNGEzY2RiMjdmNWFjNzQ4EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjIzMjE1MzU5OTY5NTU0NzYwOA&filename=&opi=96797242",
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2I0MzQwYmU1NDEzNDQ5NWRhYTE5MmM0Mzg1OTE0OWI0EgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhM0MjM3MjQwMzU2MzQ3OTg1NDEw&filename=&opi=96797242",
               "mimeType": "text/html",
-              "name": "projects/12232153599695547608/files/489af8a0100746888b9fc91e7b6b2073"
+              "name": "projects/4237240356347985410/files/8a427354c2844abaab0eb4c651c2c9f5"
             },
-            "id": "e17d2fe1bb5e433aad8b6e0319fd326d",
-            "name": "projects/12232153599695547608/screens/e17d2fe1bb5e433aad8b6e0319fd326d",
-            "prompt": "Create a bespoke, editorial-quality desktop homepage for '4 Paws Sitting'. \n\nStructure & Content:\n- Header: Elegant navigation with the brand name '4 Paws Sitting' and a clear phone number: (304) 444-0821.\n- Hero Section: Use {{DATA:IMAGE:IMAGE_4}} as a large-scale, asymmetric background element. Headline: 'Unconditional care when you're not there.' Sub-headline: 'Charleston's premier professional pet sitting service, dedicated to the comfort of your companions and the peace of your mind.' Primary CTA: 'Book a Consultation'.\n- Credibility Section: A subtle, clean row of highlights: 'Bonded & Insured', 'Pet CPR & First Aid Certified', 'Charleston Native'. Use small, elegant icons or typography-led design.\n- Services Section: An intentional grid with varied card sizes. \n    1. 'In-Home Visits': Brief drop-ins for feeding and playtime. \n    2. 'Dog Walking': Active 30 or 60-minute neighborhood excursions (Use {{DATA:IMAGE:IMAGE_3}} here). \n    3. 'Overnight Stays': Professional house sitting and overnight companionship.\n- About Section: A warm, text-focused section with {{DATA:IMAGE:IMAGE_5}} as a supporting visual. Tell the story of a Charleston-based sitter who treats every pet like family.\n- Visit Section (#visit): Include the required empty map panel: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. Surround it with the business address: Charleston, WV.\n- Contact Section: A minimal, sophisticated form with validation UI (Name, Email, Message).\n- Footer: Full details: (304) 444-0821, phoenixwv2015@gmail.com, social links, and copyright.\n\nVisual Style:\n- Use the 'Heritage Pet Collective' design system ({{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}).\n- Commit to generous whitespace and strong typographic hierarchy using Playfair Display.\n- Use a repeat visual motif: thin vertical lines or 'rule' elements to separate sections or guide the eye.\n- Smooth scrolling and a mobile-responsive navigation (hamburger for mobile view).\n- Color Palette: Deep forest green, cream, and warm charcoal as per the design system.",
+            "id": "49aa0556e65b4f67bf052be67831fb21",
+            "name": "projects/4237240356347985410/screens/49aa0556e65b4f67bf052be67831fb21",
+            "prompt": "Create a complete, bespoke, editorial-grade desktop landing page for 4 Paws Sitting.\n\nUnique Visual Identity:\n- Theme: Sophisticated Editorial.\n- Color Palette: Deep Nightfall Navy (#1A2238), Parchment Cream (#F8F5F2), and Terracotta (#D95D39).\n- Typography: Large, elegant Serif headings (Playfair Display) and clean Sans-Serif body (Inter).\n- Motif: Use vertical lines and large, offset typography. Generous whitespace.\n\nSections:\n1. Header: Use the TopNavBar component. Product name: 4 Paws Sitting. Link: (304) 444-0821.\n2. Hero: A split-screen or asymmetrical layout featuring {{DATA:IMAGE:IMAGE_2}}. Headline: 'Bespoke Care for Your Most Loyal Companions.' Subheadline: 'Professional pet sitting in Charleston, West Virginia, tailored to the unique rhythms of your home.'\n3. Credibility: 'The Charleston Standard.' Highlight: '9+ Years of Trusted Local Service.' Use a minimalist layout with plenty of room to breathe.\n4. Services: 'Our Services.' Three distinct sections: 'In-Home Sitting', 'Daily Canine Walks', and 'Overnight Stays'. Each should have a premium, descriptive feel without being a standard card.\n5. About: 'Rooted in Charleston.' A personal section about the care and commitment of 4 Paws Sitting. Mention phoenixwv2015@gmail.com as a touchpoint.\n6. Visit: 'Visit Us.' Include the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: 'Inquire for Availability.' A minimalist form with fields for Name, Email, and Message. Ensure form validation UI (preview style).\n8. Footer: Use the Footer component.\n\nTechnical:\n- Responsive at 375px.\n- Smooth scroll navigation.\n- No placeholder text (lorem ipsum). Use real, professional copy.",
             "screenMetadata": {
               "agentType": "PRO_AGENT",
               "status": "COMPLETE"
             },
             "screenType": "DESIGN",
             "screenshot": {
-              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvkO1hkNxsVfaYoq2pXBt1AqXVJeVa24jxv7toVeAy547zRyYApt5X6ZRGA0y05myVU6ykpSczq_6qqfJocWhFGzq6TTc-vKTSvCgQyiBGjI4RaUOmnhco-H1l7UcJyB3LJS0IZUYfoM6hi0AXM5nFBheKoQKw-Sz9fMCnroS6uX-FotP9uK0fVZApHnVcrvIm0Vv-745Fp0TX31Q5mmQAFM5yUZWmG8WfG5XLqpaqi2cb2R0Tu_nNSXoIi",
-              "name": "projects/12232153599695547608/files/7a0a47d3111c4d73ad0e84522722a162"
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsXoj7Niuq-JnTa9eJTZPDc3os173X3HwKfdbzt6weZzZot36AwiWTFYLQkwa_zNThpISfCER6XDFPWRIwZJcrwNM_R-Dv7DuFaxfbnB72G0FmYF5VSse40qrjXl8r0xre0t1DcTlskyQHnm_EMe6_dutGv36rWV8jIc9QAkKTTy4Vu8oNPRmDkFyjZxSIg1woZc7WjBI2iQdTi0YTVEFYl85V-wnnoTa9PFDYbdg_lUZqlZv9-_lUqZSE",
+              "name": "projects/4237240356347985410/files/183e4a43e9f84ee49bad79f92375b479"
             },
             "theme": {
               "bodyFont": "INTER",
               "bodyFontFamily": "Inter",
               "colorMode": "LIGHT",
               "colorVariant": "FIDELITY",
-              "customColor": "#1b3022",
-              "designMd": "---\nname: Heritage Pet Collective\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e1d8d4'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2ed'\n  surface-container: '#f5ece7'\n  surface-container-high: '#efe6e2'\n  surface-container-highest: '#e9e1dc'\n  on-surface: '#1e1b18'\n  on-surface-variant: '#434843'\n  inverse-surface: '#34302c'\n  inverse-on-surface: '#f8efea'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#97472c'\n  on-secondary: '#ffffff'\n  secondary-container: '#fe9978'\n  on-secondary-container: '#772f16'\n  tertiary: '#171814'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2c2c28'\n  on-tertiary-container: '#95938e'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdbd0'\n  secondary-fixed-dim: '#ffb59d'\n  on-secondary-fixed: '#390b00'\n  on-secondary-fixed-variant: '#793017'\n  tertiary-fixed: '#e5e2dc'\n  tertiary-fixed-dim: '#c9c6c1'\n  on-tertiary-fixed: '#1c1c18'\n  on-tertiary-fixed-variant: '#474743'\n  background: '#fff8f5'\n  on-background: '#1e1b18'\n  surface-variant: '#e9e1dc'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is rooted in the \"Heritage Editorial\" aesthetic—a blend of high-end lifestyle publishing and warm, organic hospitality. The target audience consists of discerning pet owners in Charleston who view their pets as family and value professional, boutique service over mass-market apps.\n\nThe visual narrative avoids the frenetic energy typical of the pet industry, instead opting for a \"Calm & Collected\" atmosphere. The design style leverages **Minimalism** with a **Tactile** edge, using subtle grain overlays and soft-touch UI elements to evoke the feeling of a premium physical brochure. The goal is to instill an immediate sense of reliability and quiet luxury.\n\n## Colors\nThis palette is inspired by the natural Lowcountry landscape of Charleston.\n\n- **Primary (Forest Green):** Used for primary actions, headers, and brand-heavy backgrounds to signify stability and growth.\n- **Secondary (Terracotta):** An accent color used sparingly for high-priority call-to-actions, notifications, and subtle decorative elements. It adds warmth and human touch.\n- **Tertiary (Cream):** The primary surface color. It replaces stark white to reduce eye strain and provide a \"paper-like\" editorial feel.\n- **Neutral (Charcoal):** Reserved for high-contrast typography and iconography, ensuring maximum legibility without the harshness of pure black.\n\n**Functional Colors:**\n- Use a desaturated Sage Green for success states.\n- Use a muted Ochre for warnings.\n- Use a deep Burgundy for errors, maintaining the earthy aesthetic.\n\n## Typography\nThe typographic hierarchy relies on the contrast between the expressive, high-contrast strokes of **Playfair Display** and the functional, geometric clarity of **Inter**.\n\n- **Headlines:** Use Playfair Display for all narrative headings. For large display sizes, use tighter letter spacing to emphasize the editorial look.\n- **Body Text:** Use Inter for all long-form content. The line height is intentionally generous (1.6) to facilitate a relaxed reading experience.\n- **Micro-copy:** Use `label-caps` for category tags, small captions, and \"Overlines\" above headlines to provide structure without clutter.\n\n## Layout & Spacing\nThe layout philosophy follows a **Fixed Grid** model on desktop to maintain a curated, boutique feel, transitioning to a fluid model on mobile.\n\n- **Rhythm:** All spacing is based on an 8px baseline grid.\n- **Whitespace:** Emphasize \"negative space\" between sections (using `section-gap`) to allow the high-quality pet photography and typography to breathe. \n- **Mobile:** Margins are reduced to 20px, but internal padding within cards should remain generous (24px+) to maintain the premium feel.\n- **Grid:** A 12-column grid for desktop, 6-column for tablet, and 2-column for mobile.\n\n## Elevation & Depth\nThis design system avoids heavy drop shadows in favor of **Tonal Layers** and **Low-Contrast Outlines**.\n\n- **Surface Levels:** \n  - Level 0: Tertiary (Cream) background.\n  - Level 1: White or slightly lighter cream surfaces for cards.\n- **Shadows:** When necessary, use extremely diffused, low-opacity (5-8%) shadows tinted with the Primary Forest Green color (#1B3022) to ground the elements naturally.\n- **Borders:** Use 1px solid borders in a slightly darker shade of the background color (e.g., #E8E2D6) to define structure without adding visual noise.\n- **Texture:** Apply a subtle 3% opacity grain/noise overlay to the entire UI to break the digital \"flatness\" and add a tactile, paper-like quality.\n\n## Shapes\nThe shape language is **Organic and Soft**. While the grid is structured, individual components use rounded corners to reflect the friendliness of the brand and the softness of the pets being cared for.\n\n- **Standard Elements:** Buttons, inputs, and small cards use a 0.5rem (8px) radius.\n- **Large Containers:** Image carousels and large content sections use a 1.5rem (24px) radius.\n- **Icons:** Should be illustrative or rounded-line style, avoiding sharp 90-degree angles.\n\n## Components\nConsistent component styling reinforces the premium editorial narrative.\n\n- **Buttons:** \n  - *Primary:* Solid Forest Green with White text. Rectangular with a slight 8px radius. No gradients.\n  - *Secondary:* Outline Forest Green or Solid Terracotta for high-action \"Book Now\" triggers.\n  - *Interaction:* Subtle lift on hover (2px) rather than color shifts.\n- **Input Fields:** \n  - Use a \"Floating Label\" style or clear labels in `label-caps`. \n  - Backgrounds should be a shade lighter than the page background to create a \"recessed\" look.\n- **Cards:** \n  - Avoid heavy borders. Use tonal shifts and generous internal padding (32px).\n  - Images within cards should always have a soft 8px corner radius.\n- **Chips/Tags:** \n  - Used for service types (e.g., \"Dog Walking\", \"Overnight\"). \n  - Soft, pill-shaped backgrounds with `label-caps` typography.\n- **Lists:** \n  - Use custom icons (e.g., a small leaf or paw) instead of standard bullets to maintain the boutique theme.\n- **Pet Profiles:** \n  - A signature component featuring circular or \"squircle\" avatars for pets, framed with a thin Terracotta border.",
+              "customColor": "#1a2238",
+              "designMd": "---\nname: Signature Pet Editorial\ncolors:\n  surface: '#fff9ed'\n  surface-dim: '#e0d9cc'\n  surface-bright: '#fff9ed'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#faf3e5'\n  surface-container: '#f4eddf'\n  surface-container-high: '#eee8da'\n  surface-container-highest: '#e8e2d4'\n  on-surface: '#1e1c13'\n  on-surface-variant: '#45464d'\n  inverse-surface: '#333027'\n  inverse-on-surface: '#f7f0e2'\n  outline: '#76777e'\n  outline-variant: '#c6c6cd'\n  surface-tint: '#565e77'\n  primary: '#040c21'\n  on-primary: '#ffffff'\n  primary-container: '#1a2238'\n  on-primary-container: '#8189a4'\n  inverse-primary: '#bec6e3'\n  secondary: '#5f5e5c'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2dfdc'\n  on-secondary-container: '#636260'\n  tertiary: '#200300'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#470d00'\n  on-tertiary-container: '#e1633e'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae2ff'\n  primary-fixed-dim: '#bec6e3'\n  on-primary-fixed: '#131b30'\n  on-primary-fixed-variant: '#3e465e'\n  secondary-fixed: '#e5e2df'\n  secondary-fixed-dim: '#c8c6c3'\n  on-secondary-fixed: '#1c1c1a'\n  on-secondary-fixed-variant: '#474745'\n  tertiary-fixed: '#ffdbd1'\n  tertiary-fixed-dim: '#ffb5a0'\n  on-tertiary-fixed: '#3b0900'\n  on-tertiary-fixed-variant: '#862201'\n  background: '#fff9ed'\n  on-background: '#1e1c13'\n  surface-variant: '#e8e2d4'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 88px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: 42px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  quote:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 36px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system is rooted in the \"Premium Editorial\" aesthetic, positioning pet care as a bespoke, high-end service rather than a utility. The brand personality is sophisticated and authoritative, yet deeply caring. The UI draws heavily from high-fashion journalism and architectural catalogs, utilizing intentional whitespace to create a \"gallery\" feel for pet photography. \n\nThe style combines **Minimalism** with **Modern Editorial** influences. It rejects the playful, rounded tropes of the pet industry in favor of sharp lines, high-contrast color blocks, and oversized typographic anchors. A key motif is the use of \"offset\" elements—where typography or images break the standard grid alignment to create a rhythmic, curated pace.\n\n## Colors\nThe palette is built on a foundation of \"Parchment\" (#F8F5F2), which serves as the primary canvas color to reduce eye strain and provide a warmer, more premium feel than pure white. \n\n- **Nightfall Navy (#1A2238):** Used for primary typography, navigation backgrounds, and structural borders. It provides the \"anchor\" of trust and professionalism.\n- **Parchment Cream (#F8F5F2):** The default background for all surfaces, creating a soft, paper-like texture.\n- **Terracotta (#D95D39):** Reserved strictly for calls-to-action, alerts, and small decorative geometric accents. It provides a warm, organic contrast to the cool navy.\n- **Deep Slate (#706C61):** Used for secondary body text and metadata to maintain legibility while reducing visual weight.\n\n## Typography\nTypography is the cornerstone of this design system. We use **Playfair Display** for all editorial moments, headings, and pull-quotes to convey a sense of heritage and luxury. **Inter** is utilized for functional interface elements and long-form body copy to ensure maximum readability and a modern technical edge.\n\n- **Contrast:** Large display sizes should use a tighter letter-spacing to feel more cohesive.\n- **Hierarchy:** Use `label-caps` for section overlines (e.g., \"OUR SERVICES\") to provide a clear entry point into the content.\n- **Rhythm:** Line heights for body text are generous (1.5x - 1.8x) to enhance the feeling of \"breathable\" luxury.\n\n## Layout & Spacing\nThe system uses a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile. \n\n- **Vertical Rhythm:** A strict 8px baseline grid is enforced. Section gaps are intentionally large (128px) to separate distinct services or narratives, preventing the UI from feeling cluttered.\n- **The Offset Motif:** Elements (like images or floating text blocks) should frequently be offset by half a column width or overlap grid boundaries to create an editorial, non-standardized appearance.\n- **Responsive Behavior:** On tablet, gutters reduce to 24px. On mobile, the layout collapses to a single column with increased vertical padding between elements to maintain the \"airy\" aesthetic.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Sharp Shadows** rather than soft blurs.\n\n- **Surfaces:** We avoid heavy drop shadows. Instead, we use a 1px solid border in a faint version of Nightfall Navy (10% opacity) to define cards.\n- **Premium Shadow:** When depth is required for modals or \"floating\" elements, use a \"Hard Shadow\" style: a crisp, low-offset shadow (4px 4px 0px) using a semi-transparent Navy. This mimics the look of stacked paper or physical editorial boards.\n- **Z-Index Strategy:** Images often sit at a lower Z-index than text blocks, allowing typography to overlap photography, a hallmark of high-end print design.\n\n## Shapes\nThis design system utilizes **Sharp (0px)** roundedness. Every button, input field, and image container should have hard 90-degree corners. This evokes a sense of precision, architectural rigor, and professional reliability. \n\nGeometric accents—such as thin 1px horizontal lines (Rules) and small solid Terracotta squares—should be used to punctuate the end of articles or separate header content.\n\n## Components\n- **Buttons:** Primary buttons are solid Nightfall Navy with white Inter Medium text, 0px radius, and no shadow. Hover states should transition to Terracotta or involve a slight \"shift\" in the label position.\n- **Input Fields:** Bottom-border only or a very thin 1px Navy outline. Labels should use the `label-caps` style and sit above the field.\n- **Cards:** Cards should not have background fills that differ from the Parchment page color. Instead, use a 1px Navy border or a slight \"Hard Shadow\" to define the area.\n- **Lists:** Use custom icons—specifically thin-line geometric shapes or stylized paw prints in Navy—rather than standard bullets.\n- **Editorial Pull-Quotes:** Large italicized Playfair Display text, centered or dramatically offset to the left, used to highlight testimonials from pet owners.\n- **The \"Service Badge\":** A small, square Terracotta block containing a white icon, used to denote specific service types (e.g., Overnight, Grooming).",
               "font": "PLAYFAIR_DISPLAY",
               "headlineFont": "PLAYFAIR_DISPLAY",
               "headlineFontFamily": "Playfair Display",
               "labelFont": "INTER",
               "labelFontFamily": "Inter",
               "namedColors": {
-                "background": "#fff8f5",
+                "background": "#fff9ed",
                 "error": "#ba1a1a",
                 "error_container": "#ffdad6",
-                "inverse_on_surface": "#f8efea",
-                "inverse_primary": "#b4cdb8",
-                "inverse_surface": "#34302c",
-                "on_background": "#1e1b18",
+                "inverse_on_surface": "#f7f0e2",
+                "inverse_primary": "#bec6e3",
+                "inverse_surface": "#333027",
+                "on_background": "#1e1c13",
                 "on_error": "#ffffff",
                 "on_error_container": "#93000a",
                 "on_primary": "#ffffff",
-                "on_primary_container": "#819986",
-                "on_primary_fixed": "#0b2013",
-                "on_primary_fixed_variant": "#364c3c",
+                "on_primary_container": "#8189a4",
+                "on_primary_fixed": "#131b30",
+                "on_primary_fixed_variant": "#3e465e",
                 "on_secondary": "#ffffff",
-                "on_secondary_container": "#772f16",
-                "on_secondary_fixed": "#390b00",
-                "on_secondary_fixed_variant": "#793017",
-                "on_surface": "#1e1b18",
-                "on_surface_variant": "#434843",
+                "on_secondary_container": "#636260",
+                "on_secondary_fixed": "#1c1c1a",
+                "on_secondary_fixed_variant": "#474745",
+                "on_surface": "#1e1c13",
+                "on_surface_variant": "#45464d",
                 "on_tertiary": "#ffffff",
-                "on_tertiary_container": "#95938e",
-                "on_tertiary_fixed": "#1c1c18",
-                "on_tertiary_fixed_variant": "#474743",
-                "outline": "#737973",
-                "outline_variant": "#c3c8c1",
-                "primary": "#061b0e",
-                "primary_container": "#1b3022",
-                "primary_fixed": "#d0e9d4",
-                "primary_fixed_dim": "#b4cdb8",
-                "secondary": "#97472c",
-                "secondary_container": "#fe9978",
-                "secondary_fixed": "#ffdbd0",
-                "secondary_fixed_dim": "#ffb59d",
-                "surface": "#fff8f5",
-                "surface_bright": "#fff8f5",
-                "surface_container": "#f5ece7",
-                "surface_container_high": "#efe6e2",
-                "surface_container_highest": "#e9e1dc",
-                "surface_container_low": "#fbf2ed",
+                "on_tertiary_container": "#e1633e",
+                "on_tertiary_fixed": "#3b0900",
+                "on_tertiary_fixed_variant": "#862201",
+                "outline": "#76777e",
+                "outline_variant": "#c6c6cd",
+                "primary": "#040c21",
+                "primary_container": "#1a2238",
+                "primary_fixed": "#dae2ff",
+                "primary_fixed_dim": "#bec6e3",
+                "secondary": "#5f5e5c",
+                "secondary_container": "#e2dfdc",
+                "secondary_fixed": "#e5e2df",
+                "secondary_fixed_dim": "#c8c6c3",
+                "surface": "#fff9ed",
+                "surface_bright": "#fff9ed",
+                "surface_container": "#f4eddf",
+                "surface_container_high": "#eee8da",
+                "surface_container_highest": "#e8e2d4",
+                "surface_container_low": "#faf3e5",
                 "surface_container_lowest": "#ffffff",
-                "surface_dim": "#e1d8d4",
-                "surface_tint": "#4d6453",
-                "surface_variant": "#e9e1dc",
-                "tertiary": "#171814",
-                "tertiary_container": "#2c2c28",
-                "tertiary_fixed": "#e5e2dc",
-                "tertiary_fixed_dim": "#c9c6c1"
+                "surface_dim": "#e0d9cc",
+                "surface_tint": "#565e77",
+                "surface_variant": "#e8e2d4",
+                "tertiary": "#200300",
+                "tertiary_container": "#470d00",
+                "tertiary_fixed": "#ffdbd1",
+                "tertiary_fixed_dim": "#ffb5a0"
               },
-              "overrideNeutralColor": "#2d2926",
-              "overridePrimaryColor": "#1b3022",
-              "overrideSecondaryColor": "#c96e50",
-              "overrideTertiaryColor": "#f9f6f0",
-              "roundness": "ROUND_EIGHT",
+              "overrideNeutralColor": "#706c61",
+              "overridePrimaryColor": "#1a2238",
+              "overrideSecondaryColor": "#f8f5f2",
+              "overrideTertiaryColor": "#d95d39",
               "spacing": {
-                "base": "8px",
-                "container-max": "1200px",
-                "gutter": "24px",
+                "container-max": "1280px",
+                "gutter": "32px",
                 "margin-desktop": "64px",
                 "margin-mobile": "20px",
-                "section-gap": "120px"
+                "section-gap": "128px",
+                "unit": "8px"
               },
               "spacingScale": 2,
               "typography": {
@@ -425,50 +394,55 @@
                   "fontFamily": "Inter",
                   "fontSize": "18px",
                   "fontWeight": "400",
-                  "lineHeight": "1.6"
+                  "lineHeight": "32px"
                 },
                 "body-md": {
                   "fontFamily": "Inter",
                   "fontSize": "16px",
                   "fontWeight": "400",
-                  "lineHeight": "1.6"
+                  "lineHeight": "24px"
                 },
                 "display-lg": {
                   "fontFamily": "Playfair Display",
-                  "fontSize": "48px",
+                  "fontSize": "80px",
                   "fontWeight": "700",
                   "letterSpacing": "-0.02em",
-                  "lineHeight": "1.1"
+                  "lineHeight": "88px"
                 },
-                "display-lg-mobile": {
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "56px"
+                },
+                "headline-lg-mobile": {
                   "fontFamily": "Playfair Display",
                   "fontSize": "36px",
-                  "fontWeight": "700",
-                  "letterSpacing": "-0.01em",
-                  "lineHeight": "1.2"
+                  "fontWeight": "600",
+                  "lineHeight": "42px"
                 },
                 "headline-md": {
                   "fontFamily": "Playfair Display",
                   "fontSize": "32px",
-                  "fontWeight": "600",
-                  "lineHeight": "1.3"
-                },
-                "headline-sm": {
-                  "fontFamily": "Playfair Display",
-                  "fontSize": "24px",
-                  "fontWeight": "600",
-                  "lineHeight": "1.4"
+                  "fontWeight": "500",
+                  "lineHeight": "40px"
                 },
                 "label-caps": {
                   "fontFamily": "Inter",
                   "fontSize": "12px",
                   "fontWeight": "600",
                   "letterSpacing": "0.1em",
-                  "lineHeight": "1"
+                  "lineHeight": "16px"
+                },
+                "quote": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "400",
+                  "lineHeight": "36px"
                 }
               }
             },
-            "title": "4 Paws Sitting - Home",
+            "title": "4 Paws Sitting | Bespoke Pet Care",
             "width": "2560"
           }
         ],
@@ -476,18 +450,18 @@
       }
     },
     {
-      "text": "I've designed a bespoke, editorial-quality homepage for **4 Paws Sitting**. This design moves away from generic templates to create a premium, trustworthy digital presence that feels deeply rooted in Charleston.\n\n### Key Design Features:\n- **Editorial Typography**: I utilized **Playfair Display** for high-impact, sophisticated headlines, paired with a clean sans-serif for professional readability.\n- **Warm & Earthy Palette**: A custom scheme of **Forest Green, Terracotta, and Cream** creates an atmosphere of warmth, reliability, and organic care.\n- **Intentional Layout**: The hero section uses asymmetric imagery (Editorial photography for a premium pet sitting brand. A high-quality, warm-toned image of a golden retriever sitting calmly in a sunlit, modern living room next to a professional pet sitter. The lighting is soft and natural. The aesthetic is clean, sophisticated, and trustworthy. High resolution, shallow depth of field.) to feel modern and high-end, while the services grid alternates between photographic and text-based blocks to maintain visual interest.\n- **Repeat Visual Motifs**: Subtle vertical rule lines and generous whitespace are used throughout to guide the user's eye and reinforce a sense of calm and organization.\n- **Production-Ready Foundation**: The code includes a semantic HTML structure, a responsive mobile navigation, and a dedicated map slot for your future location integration.\n\nThe entire site is responsive and optimized for desktop, with smooth transitions and form validation UI ready for use."
+      "text": "I've designed a bespoke, editorial-grade homepage for **4 Paws Sitting** that captures the premium essence of your brand. \n\n### Design Rationale:\n- **Visual Identity:** I moved away from common templates by establishing a sophisticated \"Nightfall & Parchment\" palette. This high-contrast, warm-toned aesthetic immediately signals professional, high-end service.\n- **Typography:** I utilized a bold, high-contrast Serif (Playfair Display) for headings to evoke a sense of heritage and trust, paired with a clean, functional Sans-Serif for readability.\n- **Layout:** The design features an asymmetrical hero section using the professional photography of the Golden Retriever, immediately creating a warm, emotional connection. I employed generous whitespace and vertical rules to maintain an editorial, \"lifestyle magazine\" feel throughout.\n- **Memorable Motif:** Subtle typographic offsets and large, ghosted dates (like \"Est. 2015\") are used as recurring visual elements to reinforce the brand's local roots and longevity.\n\nThe site is fully responsive, including the custom map slot and a minimalist contact form, ready for a production-grade first impression.\n\nHow do you feel about this visual direction? I can refine the services section with more detailed icons or adjust the color story if you'd like to explore a different mood."
     },
     {
-      "suggestion": "Make the font more modern and minimalist"
+      "suggestion": "Make it feel even more local to Charleston"
     },
     {
-      "suggestion": "Add a testimonials section with client reviews"
+      "suggestion": "Try a darker, more moody theme"
     },
     {
-      "suggestion": "Change the color palette to be more bright and playful"
+      "suggestion": "Add more detail to the services section"
     }
   ],
-  "projectId": "12232153599695547608",
-  "sessionId": "10172178236305345175"
+  "projectId": "4237240356347985410",
+  "sessionId": "15547252918538707563"
 }

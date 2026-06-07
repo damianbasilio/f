@@ -1,45 +1,40 @@
-// Form Validation UI micro-interaction
-        const contactForm = document.getElementById('contactForm');
-        contactForm.addEventListener('submit', (e) => {
+// Simple form interaction
+        document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = contactForm.querySelector('button');
-            const originalText = btn.innerHTML;
-            
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Preview only';
             btn.disabled = true;
-            btn.innerHTML = '<span class="flex items-center justify-center gap-2">Preview only <span class="animate-spin material-symbols-outlined" data-icon="progress_activity">progress_activity</span></span>';
             
-            // Simulating API call
             setTimeout(() => {
-                btn.classList.replace('bg-secondary', 'bg-green-600');
-                btn.innerHTML = '<span class="flex items-center justify-center gap-2">Sent Successfully! <span class="material-symbols-outlined" data-icon="check_circle">check_circle</span></span>';
-                contactForm.reset();
-                
+                btn.innerText = 'INQUIRY SENT';
+                btn.classList.replace('bg-primary', 'bg-on-tertiary-container');
+                this.reset();
                 setTimeout(() => {
-                    btn.classList.replace('bg-green-600', 'bg-secondary');
-                    btn.innerHTML = originalText;
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-on-tertiary-container', 'bg-primary');
                     btn.disabled = false;
                 }, 3000);
             }, 1500);
         });
 
-        // Smooth Scroll for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+        // Intersection Observer for scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-        // Sticky header background shift on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
-            } else {
-                header.classList.remove('shadow-md', 'bg-white/95', 'backdrop-blur-sm');
-            }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
 
 (() => {
