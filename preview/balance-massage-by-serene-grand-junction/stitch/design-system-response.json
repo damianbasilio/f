@@ -1,0 +1,468 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Serene Earth",
+        "styleGuidelines": "## Brand & Style\nThe design system is built upon the \"Serene Earth\" aesthetic—a fusion of clinical expertise and high-end editorial grace. It avoids traditional spa tropes in favor of an architectural, minimalist approach that prioritizes negative space and organic motion.\n\nThe visual motif, **Fluid Balance**, is characterized by a deliberate tension between structured, fixed-grid typography and soft, flowing background elements. The emotional response should be one of immediate decompression, signaling to the user that they are in the hands of a refined, intuitive expert. The interface acts as a digital sanctuary: quiet, grounded, and unapologetically premium.\n\n## Layout & Spacing\nThis design system employs a **Fixed Grid** model for desktop to maintain a controlled, gallery-like experience. The layout is centered with significant outer margins to emphasize the premium nature of the brand.\n\n- **Desktop (1440px+):** 12-column grid with 32px gutters and 64px margins.\n- **Tablet (768px - 1439px):** 8-column grid with 24px gutters and 40px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 24px margins.\n\nSpacing follows an 8px base unit, but horizontal \"Section Gaps\" are intentionally oversized (120px+) to force a slower, more intentional scrolling pace. Layouts should utilize asymmetrical compositions—placing text in a 6-column span while leaving adjacent columns empty to create \"architectural whitespace.\"\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layering** and **Organic Overlays** rather than traditional drop shadows.\n\n- **Surface Tiers:** Use the Mist (#E9EDC9) color to create secondary containers that sit \"on\" the Warm Sand background.\n- **Glassmorphism:** For navigation bars or mobile overlays, use a backdrop blur (20px) with 80% opacity of the Secondary color to maintain a sense of lightness.\n- **Shadows:** If a shadow is required for functional clarity (e.g., a floating booking button), use an ultra-diffused, low-opacity shadow tinted with Deep Forest (Hex: #1B3022, Alpha: 0.05, Blur: 40px).\n- **Organic Shapes:** Subtle, large-scale SVGs of abstract \"fluid\" shapes should be placed in the background with a 'multiply' or 'soft light' blend mode to create a sense of natural depth.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped, using Deep Forest background with Warm Sand text. Hover states should transition to Soft Clay. Secondary buttons are \"ghost\" style with a 1px Deep Forest border.\n- **Cards:** Cards should have no borders and no shadows. Instead, use a subtle Mist (#E9EDC9) background fill to define the container boundaries.\n- **Inputs:** Text fields are \"Underlined\" style rather than boxed, using a 1px Ink border on the bottom only to maintain the minimalist, editorial look.\n- **Chips/Tags:** Used for service categories (e.g., \"Deep Tissue,\" \"Swedish\"). These use Soft Clay backgrounds with Ink text to stand out against the Sand background.\n- **Fluid Dividers:** Custom SVG dividers that create a gentle \"wave\" transition between the Warm Sand and Mist sections, avoiding any sharp geometric breaks in the user journey.\n- **Service Lists:** Large, serif headlines for service names with Inter-based body text descriptions, separated by wide vertical margins to give each offering \"room to breathe.\"",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1b3022",
+          "designMd": "---\nname: Serene Earth\ncolors:\n  surface: '#f9fcd8'\n  surface-dim: '#d9ddba'\n  surface-bright: '#f9fcd8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f7d2'\n  surface-container: '#edf1cd'\n  surface-container-high: '#e7ebc7'\n  surface-container-highest: '#e1e6c2'\n  on-surface: '#1a1d07'\n  on-surface-variant: '#434843'\n  inverse-surface: '#2e321a'\n  inverse-on-surface: '#f0f4d0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#5f5e59'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2db'\n  on-secondary-container: '#65645f'\n  tertiary: '#271013'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3f2427'\n  on-tertiary-container: '#b0898c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#e5e2db'\n  secondary-fixed-dim: '#c9c6c0'\n  on-secondary-fixed: '#1c1c18'\n  on-secondary-fixed-variant: '#474742'\n  tertiary-fixed: '#ffd9dc'\n  tertiary-fixed-dim: '#e7bcbf'\n  on-tertiary-fixed: '#2d1417'\n  on-tertiary-fixed-variant: '#5d3f42'\n  background: '#f9fcd8'\n  on-background: '#1a1d07'\n  surface-variant: '#e1e6c2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  caption:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.02em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is built upon the \"Serene Earth\" aesthetic—a fusion of clinical expertise and high-end editorial grace. It avoids traditional spa tropes in favor of an architectural, minimalist approach that prioritizes negative space and organic motion.\n\nThe visual motif, **Fluid Balance**, is characterized by a deliberate tension between structured, fixed-grid typography and soft, flowing background elements. The emotional response should be one of immediate decompression, signaling to the user that they are in the hands of a refined, intuitive expert. The interface acts as a digital sanctuary: quiet, grounded, and unapologetically premium.\n\n## Colors\nThis design system utilizes a palette inspired by the high-desert landscapes and lush forests of Colorado. \n\n- **Warm Sand (#F4F1EA)** serves as the primary canvas color for almost all surfaces, replacing pure white to reduce eye strain and evoke the feel of premium heavyweight paper.\n- **Deep Forest (#1B3022)** provides the grounding force, used for primary actions and structural elements.\n- **Soft Clay (#D4A373)** acts as the humanizing accent, used sparingly for highlights or to draw attention to specific \"intuitive\" touchpoints.\n- **Mist (#E9EDC9)** is used for subtle background differentiations or secondary containers.\n- **Ink (#0A120C)** ensures high-contrast legibility for all editorial content.\n\n## Typography\nThe typography strategy mirrors the \"Fluid Balance\" motif. **Playfair Display** provides a sophisticated, high-contrast serif for headings, evoking the authority of an editorial publication. **Inter** offers a clean, utilitarian counterpoint for body text and labels, ensuring the clinical expertise of the brand is communicated clearly.\n\nGenerous line heights (up to 1.8x for body text) are mandatory to maintain an \"airy\" and \"breathable\" feel. Display sizes use tight tracking to emphasize the elegance of the letterforms, while labels use expanded tracking and uppercase styling for a modern, architectural look.\n\n## Layout & Spacing\nThis design system employs a **Fixed Grid** model for desktop to maintain a controlled, gallery-like experience. The layout is centered with significant outer margins to emphasize the premium nature of the brand.\n\n- **Desktop (1440px+):** 12-column grid with 32px gutters and 64px margins.\n- **Tablet (768px - 1439px):** 8-column grid with 24px gutters and 40px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 24px margins.\n\nSpacing follows an 8px base unit, but horizontal \"Section Gaps\" are intentionally oversized (120px+) to force a slower, more intentional scrolling pace. Layouts should utilize asymmetrical compositions—placing text in a 6-column span while leaving adjacent columns empty to create \"architectural whitespace.\"\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layering** and **Organic Overlays** rather than traditional drop shadows.\n\n- **Surface Tiers:** Use the Mist (#E9EDC9) color to create secondary containers that sit \"on\" the Warm Sand background.\n- **Glassmorphism:** For navigation bars or mobile overlays, use a backdrop blur (20px) with 80% opacity of the Secondary color to maintain a sense of lightness.\n- **Shadows:** If a shadow is required for functional clarity (e.g., a floating booking button), use an ultra-diffused, low-opacity shadow tinted with Deep Forest (Hex: #1B3022, Alpha: 0.05, Blur: 40px).\n- **Organic Shapes:** Subtle, large-scale SVGs of abstract \"fluid\" shapes should be placed in the background with a 'multiply' or 'soft light' blend mode to create a sense of natural depth.\n\n## Shapes\nThe shape language is primarily defined by **The Softened Edge**. Standard components like cards and input fields use a 0.5rem (8px) radius to feel approachable yet professional.\n\nHowever, to support the \"Fluid Balance\" motif:\n- **Dividers:** Use subtle, large-radius bezier curves rather than straight lines to separate major sections.\n- **Images:** Photography should occasionally use asymmetrical rounding (e.g., top-left and bottom-right at 100px, others at 8px) to mimic organic stones or water droplets.\n- **Buttons:** Primary call-to-actions utilize a full pill-shape (rounded-xl) to feel soft and inviting to the touch.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped, using Deep Forest background with Warm Sand text. Hover states should transition to Soft Clay. Secondary buttons are \"ghost\" style with a 1px Deep Forest border.\n- **Cards:** Cards should have no borders and no shadows. Instead, use a subtle Mist (#E9EDC9) background fill to define the container boundaries.\n- **Inputs:** Text fields are \"Underlined\" style rather than boxed, using a 1px Ink border on the bottom only to maintain the minimalist, editorial look.\n- **Chips/Tags:** Used for service categories (e.g., \"Deep Tissue,\" \"Swedish\"). These use Soft Clay backgrounds with Ink text to stand out against the Sand background.\n- **Fluid Dividers:** Custom SVG dividers that create a gentle \"wave\" transition between the Warm Sand and Mist sections, avoiding any sharp geometric breaks in the user journey.\n- **Service Lists:** Large, serif headlines for service names with Inter-based body text descriptions, separated by wide vertical margins to give each offering \"room to breathe.\"",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "INTER",
+          "labelFontFamily": "Inter",
+          "namedColors": {
+            "background": "#f9fcd8",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f0f4d0",
+            "inverse_primary": "#b4cdb8",
+            "inverse_surface": "#2e321a",
+            "on_background": "#1a1d07",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#819986",
+            "on_primary_fixed": "#0b2013",
+            "on_primary_fixed_variant": "#364c3c",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#65645f",
+            "on_secondary_fixed": "#1c1c18",
+            "on_secondary_fixed_variant": "#474742",
+            "on_surface": "#1a1d07",
+            "on_surface_variant": "#434843",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#b0898c",
+            "on_tertiary_fixed": "#2d1417",
+            "on_tertiary_fixed_variant": "#5d3f42",
+            "outline": "#737973",
+            "outline_variant": "#c3c8c1",
+            "primary": "#061b0e",
+            "primary_container": "#1b3022",
+            "primary_fixed": "#d0e9d4",
+            "primary_fixed_dim": "#b4cdb8",
+            "secondary": "#5f5e59",
+            "secondary_container": "#e5e2db",
+            "secondary_fixed": "#e5e2db",
+            "secondary_fixed_dim": "#c9c6c0",
+            "surface": "#f9fcd8",
+            "surface_bright": "#f9fcd8",
+            "surface_container": "#edf1cd",
+            "surface_container_high": "#e7ebc7",
+            "surface_container_highest": "#e1e6c2",
+            "surface_container_low": "#f3f7d2",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#d9ddba",
+            "surface_tint": "#4d6453",
+            "surface_variant": "#e1e6c2",
+            "tertiary": "#271013",
+            "tertiary_container": "#3f2427",
+            "tertiary_fixed": "#ffd9dc",
+            "tertiary_fixed_dim": "#e7bcbf"
+          },
+          "overrideNeutralColor": "#e9edc9",
+          "overridePrimaryColor": "#1b3022",
+          "overrideSecondaryColor": "#f4f1ea",
+          "roundness": "ROUND_EIGHT",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "32px",
+            "margin-desktop": "64px",
+            "margin-mobile": "24px",
+            "section-gap": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.8"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "caption": {
+              "fontFamily": "Inter",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "letterSpacing": "0.02em",
+              "lineHeight": "1.4"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "64px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "500",
+              "lineHeight": "1.4"
+            },
+            "label-md": {
+              "fontFamily": "Inter",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.2"
+            }
+          }
+        }
+      },
+      "name": "assets/d2c92014545e4f0ca3f7372af2bb0685",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Serene Earth",
+              "styleGuidelines": "## Brand & Style\nThe design system is built upon the \"Serene Earth\" aesthetic—a fusion of clinical expertise and high-end editorial grace. It avoids traditional spa tropes in favor of an architectural, minimalist approach that prioritizes negative space and organic motion.\n\nThe visual motif, **Fluid Balance**, is characterized by a deliberate tension between structured, fixed-grid typography and soft, flowing background elements. The emotional response should be one of immediate decompression, signaling to the user that they are in the hands of a refined, intuitive expert. The interface acts as a digital sanctuary: quiet, grounded, and unapologetically premium.\n\n## Layout & Spacing\nThis design system employs a **Fixed Grid** model for desktop to maintain a controlled, gallery-like experience. The layout is centered with significant outer margins to emphasize the premium nature of the brand.\n\n- **Desktop (1440px+):** 12-column grid with 32px gutters and 64px margins.\n- **Tablet (768px - 1439px):** 8-column grid with 24px gutters and 40px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 24px margins.\n\nSpacing follows an 8px base unit, but horizontal \"Section Gaps\" are intentionally oversized (120px+) to force a slower, more intentional scrolling pace. Layouts should utilize asymmetrical compositions—placing text in a 6-column span while leaving adjacent columns empty to create \"architectural whitespace.\"\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layering** and **Organic Overlays** rather than traditional drop shadows.\n\n- **Surface Tiers:** Use the Mist (#E9EDC9) color to create secondary containers that sit \"on\" the Warm Sand background.\n- **Glassmorphism:** For navigation bars or mobile overlays, use a backdrop blur (20px) with 80% opacity of the Secondary color to maintain a sense of lightness.\n- **Shadows:** If a shadow is required for functional clarity (e.g., a floating booking button), use an ultra-diffused, low-opacity shadow tinted with Deep Forest (Hex: #1B3022, Alpha: 0.05, Blur: 40px).\n- **Organic Shapes:** Subtle, large-scale SVGs of abstract \"fluid\" shapes should be placed in the background with a 'multiply' or 'soft light' blend mode to create a sense of natural depth.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped, using Deep Forest background with Warm Sand text. Hover states should transition to Soft Clay. Secondary buttons are \"ghost\" style with a 1px Deep Forest border.\n- **Cards:** Cards should have no borders and no shadows. Instead, use a subtle Mist (#E9EDC9) background fill to define the container boundaries.\n- **Inputs:** Text fields are \"Underlined\" style rather than boxed, using a 1px Ink border on the bottom only to maintain the minimalist, editorial look.\n- **Chips/Tags:** Used for service categories (e.g., \"Deep Tissue,\" \"Swedish\"). These use Soft Clay backgrounds with Ink text to stand out against the Sand background.\n- **Fluid Dividers:** Custom SVG dividers that create a gentle \"wave\" transition between the Warm Sand and Mist sections, avoiding any sharp geometric breaks in the user journey.\n- **Service Lists:** Large, serif headlines for service names with Inter-based body text descriptions, separated by wide vertical margins to give each offering \"room to breathe.\"",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1b3022",
+                "designMd": "---\nname: Serene Earth\ncolors:\n  surface: '#f9fcd8'\n  surface-dim: '#d9ddba'\n  surface-bright: '#f9fcd8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f7d2'\n  surface-container: '#edf1cd'\n  surface-container-high: '#e7ebc7'\n  surface-container-highest: '#e1e6c2'\n  on-surface: '#1a1d07'\n  on-surface-variant: '#434843'\n  inverse-surface: '#2e321a'\n  inverse-on-surface: '#f0f4d0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#5f5e59'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2db'\n  on-secondary-container: '#65645f'\n  tertiary: '#271013'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3f2427'\n  on-tertiary-container: '#b0898c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#e5e2db'\n  secondary-fixed-dim: '#c9c6c0'\n  on-secondary-fixed: '#1c1c18'\n  on-secondary-fixed-variant: '#474742'\n  tertiary-fixed: '#ffd9dc'\n  tertiary-fixed-dim: '#e7bcbf'\n  on-tertiary-fixed: '#2d1417'\n  on-tertiary-fixed-variant: '#5d3f42'\n  background: '#f9fcd8'\n  on-background: '#1a1d07'\n  surface-variant: '#e1e6c2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  caption:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.02em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is built upon the \"Serene Earth\" aesthetic—a fusion of clinical expertise and high-end editorial grace. It avoids traditional spa tropes in favor of an architectural, minimalist approach that prioritizes negative space and organic motion.\n\nThe visual motif, **Fluid Balance**, is characterized by a deliberate tension between structured, fixed-grid typography and soft, flowing background elements. The emotional response should be one of immediate decompression, signaling to the user that they are in the hands of a refined, intuitive expert. The interface acts as a digital sanctuary: quiet, grounded, and unapologetically premium.\n\n## Colors\nThis design system utilizes a palette inspired by the high-desert landscapes and lush forests of Colorado. \n\n- **Warm Sand (#F4F1EA)** serves as the primary canvas color for almost all surfaces, replacing pure white to reduce eye strain and evoke the feel of premium heavyweight paper.\n- **Deep Forest (#1B3022)** provides the grounding force, used for primary actions and structural elements.\n- **Soft Clay (#D4A373)** acts as the humanizing accent, used sparingly for highlights or to draw attention to specific \"intuitive\" touchpoints.\n- **Mist (#E9EDC9)** is used for subtle background differentiations or secondary containers.\n- **Ink (#0A120C)** ensures high-contrast legibility for all editorial content.\n\n## Typography\nThe typography strategy mirrors the \"Fluid Balance\" motif. **Playfair Display** provides a sophisticated, high-contrast serif for headings, evoking the authority of an editorial publication. **Inter** offers a clean, utilitarian counterpoint for body text and labels, ensuring the clinical expertise of the brand is communicated clearly.\n\nGenerous line heights (up to 1.8x for body text) are mandatory to maintain an \"airy\" and \"breathable\" feel. Display sizes use tight tracking to emphasize the elegance of the letterforms, while labels use expanded tracking and uppercase styling for a modern, architectural look.\n\n## Layout & Spacing\nThis design system employs a **Fixed Grid** model for desktop to maintain a controlled, gallery-like experience. The layout is centered with significant outer margins to emphasize the premium nature of the brand.\n\n- **Desktop (1440px+):** 12-column grid with 32px gutters and 64px margins.\n- **Tablet (768px - 1439px):** 8-column grid with 24px gutters and 40px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 24px margins.\n\nSpacing follows an 8px base unit, but horizontal \"Section Gaps\" are intentionally oversized (120px+) to force a slower, more intentional scrolling pace. Layouts should utilize asymmetrical compositions—placing text in a 6-column span while leaving adjacent columns empty to create \"architectural whitespace.\"\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layering** and **Organic Overlays** rather than traditional drop shadows.\n\n- **Surface Tiers:** Use the Mist (#E9EDC9) color to create secondary containers that sit \"on\" the Warm Sand background.\n- **Glassmorphism:** For navigation bars or mobile overlays, use a backdrop blur (20px) with 80% opacity of the Secondary color to maintain a sense of lightness.\n- **Shadows:** If a shadow is required for functional clarity (e.g., a floating booking button), use an ultra-diffused, low-opacity shadow tinted with Deep Forest (Hex: #1B3022, Alpha: 0.05, Blur: 40px).\n- **Organic Shapes:** Subtle, large-scale SVGs of abstract \"fluid\" shapes should be placed in the background with a 'multiply' or 'soft light' blend mode to create a sense of natural depth.\n\n## Shapes\nThe shape language is primarily defined by **The Softened Edge**. Standard components like cards and input fields use a 0.5rem (8px) radius to feel approachable yet professional.\n\nHowever, to support the \"Fluid Balance\" motif:\n- **Dividers:** Use subtle, large-radius bezier curves rather than straight lines to separate major sections.\n- **Images:** Photography should occasionally use asymmetrical rounding (e.g., top-left and bottom-right at 100px, others at 8px) to mimic organic stones or water droplets.\n- **Buttons:** Primary call-to-actions utilize a full pill-shape (rounded-xl) to feel soft and inviting to the touch.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped, using Deep Forest background with Warm Sand text. Hover states should transition to Soft Clay. Secondary buttons are \"ghost\" style with a 1px Deep Forest border.\n- **Cards:** Cards should have no borders and no shadows. Instead, use a subtle Mist (#E9EDC9) background fill to define the container boundaries.\n- **Inputs:** Text fields are \"Underlined\" style rather than boxed, using a 1px Ink border on the bottom only to maintain the minimalist, editorial look.\n- **Chips/Tags:** Used for service categories (e.g., \"Deep Tissue,\" \"Swedish\"). These use Soft Clay backgrounds with Ink text to stand out against the Sand background.\n- **Fluid Dividers:** Custom SVG dividers that create a gentle \"wave\" transition between the Warm Sand and Mist sections, avoiding any sharp geometric breaks in the user journey.\n- **Service Lists:** Large, serif headlines for service names with Inter-based body text descriptions, separated by wide vertical margins to give each offering \"room to breathe.\"",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "INTER",
+                "labelFontFamily": "Inter",
+                "namedColors": {
+                  "background": "#f9fcd8",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f0f4d0",
+                  "inverse_primary": "#b4cdb8",
+                  "inverse_surface": "#2e321a",
+                  "on_background": "#1a1d07",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#819986",
+                  "on_primary_fixed": "#0b2013",
+                  "on_primary_fixed_variant": "#364c3c",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#65645f",
+                  "on_secondary_fixed": "#1c1c18",
+                  "on_secondary_fixed_variant": "#474742",
+                  "on_surface": "#1a1d07",
+                  "on_surface_variant": "#434843",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#b0898c",
+                  "on_tertiary_fixed": "#2d1417",
+                  "on_tertiary_fixed_variant": "#5d3f42",
+                  "outline": "#737973",
+                  "outline_variant": "#c3c8c1",
+                  "primary": "#061b0e",
+                  "primary_container": "#1b3022",
+                  "primary_fixed": "#d0e9d4",
+                  "primary_fixed_dim": "#b4cdb8",
+                  "secondary": "#5f5e59",
+                  "secondary_container": "#e5e2db",
+                  "secondary_fixed": "#e5e2db",
+                  "secondary_fixed_dim": "#c9c6c0",
+                  "surface": "#f9fcd8",
+                  "surface_bright": "#f9fcd8",
+                  "surface_container": "#edf1cd",
+                  "surface_container_high": "#e7ebc7",
+                  "surface_container_highest": "#e1e6c2",
+                  "surface_container_low": "#f3f7d2",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#d9ddba",
+                  "surface_tint": "#4d6453",
+                  "surface_variant": "#e1e6c2",
+                  "tertiary": "#271013",
+                  "tertiary_container": "#3f2427",
+                  "tertiary_fixed": "#ffd9dc",
+                  "tertiary_fixed_dim": "#e7bcbf"
+                },
+                "overrideNeutralColor": "#e9edc9",
+                "overridePrimaryColor": "#1b3022",
+                "overrideSecondaryColor": "#f4f1ea",
+                "roundness": "ROUND_EIGHT",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "32px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "24px",
+                  "section-gap": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.8"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "caption": {
+                    "fontFamily": "Inter",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "1.4"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "64px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "40px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.4"
+                  },
+                  "label-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.2"
+                  }
+                }
+              }
+            },
+            "name": "assets/d2c92014545e4f0ca3f7372af2bb0685",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "9890",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzg0YmZiOWU2NjNmNzRiMjY4YjU0NDhmNTQ0MjFhNzFiEgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhM4NjA0NjIzMDkxNTgzNjU1ODY3&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/8604623091583655867/files/70314abb962a4572bba23eea58e4894a"
+          },
+          "id": "488ab1450dda446bb7aa438ad769597b",
+          "name": "projects/8604623091583655867/screens/488ab1450dda446bb7aa438ad769597b",
+          "prompt": "Create a bespoke, production-ready desktop landing page for 'Balance Massage By Serene'. \n\nLayout Requirements:\n- Header: Sticky, minimalist navigation with phone (970) 234-0416 and a 'Book Now' primary action.\n- Hero: Use an asymmetric, editorial layout. Headline: \"The Art of Restoration.\" Subheadline: \"Bespoke therapeutic massage tailored to the rhythm of your body.\" Use a large organic background shape or texture behind a high-quality placeholder image of a serene studio environment.\n- Credibility Section (#credibility): \"Guided by Intuition, Informed by Science.\" Brief text about 15+ years of expertise and the healing power of touch. \n- Services: A 'Service Menu' styled like an editorial magazine page. \n    - 'Integrative Therapeutic' (Custom pressure, focused relief)\n    - 'Nurturing Prenatal' (Gentle support for mother and child)\n    - 'Focused Deep Tissue' (Structural alignment and chronic pain release)\n- About: \"Meet Serene.\" A warm, professional bio section focusing on the Grand Junction local community.\n- Visit Section (#visit): Include the address: 2232 North 7th Street, Grand Junction, CO 81501. MUST include exactly: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n- Contact Form: A minimalist form with fields for Name, Email, and Message. Include custom CSS-based validation UI (e.g., subtle ring colors on focus/error).\n- Footer: Use the predicted Footer component, ensuring it contains the email (serenestouch@gmail.com) and phone.\n\nVisual Style: \n- Use the 'Serene Earth' palette (Deep Forest #1B3022, Warm Sand #F4F1EA, Soft Clay #D4A373).\n- Implement 'Fluid Balance' motifs: organic SVG dividers between sections and rounded corners (8px).\n- Typography: Use Playfair Display for headings and a clean sans-serif for body text. \n- whitespace: Use generous margins and padding to create a high-end, breathable feel.\n- Interactive: Smooth scroll for all anchor links. Mobile navigation toggle for responsive states.\n\nTechnical: Full semantic HTML, Tailwind CSS, and vanilla JS for the mobile nav and smooth scroll. No lorem ipsum. Responsive down to 375px.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLstkfXyr1zjGn5fwL5eiDJJ_bUEKB0uBUhf-QuVAL7e7lLd8x59KvAflFgnYgLpJxQQEnJo9sRqFVydUyNfHMJUCoSlDaMaihcsBL9wH44DN6UTxna75SqN3ZDQyQHUPHrZ7sDJZqqR2P8nCbRPza_F-PTVc3LC6R6_p7XqTpJJL3FPpqylpfIxIUjjRFot48sFaab_PvkLC19J6R7PPygyL-E5mVJb8amNd7m3UpPOAgP9US6PrKJ3o6k",
+            "name": "projects/8604623091583655867/files/f6eaccdaf0554005bc68612826b6a897"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1b3022",
+            "designMd": "---\nname: Serene Earth\ncolors:\n  surface: '#f9fcd8'\n  surface-dim: '#d9ddba'\n  surface-bright: '#f9fcd8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f7d2'\n  surface-container: '#edf1cd'\n  surface-container-high: '#e7ebc7'\n  surface-container-highest: '#e1e6c2'\n  on-surface: '#1a1d07'\n  on-surface-variant: '#434843'\n  inverse-surface: '#2e321a'\n  inverse-on-surface: '#f0f4d0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#5f5e59'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2db'\n  on-secondary-container: '#65645f'\n  tertiary: '#271013'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3f2427'\n  on-tertiary-container: '#b0898c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#e5e2db'\n  secondary-fixed-dim: '#c9c6c0'\n  on-secondary-fixed: '#1c1c18'\n  on-secondary-fixed-variant: '#474742'\n  tertiary-fixed: '#ffd9dc'\n  tertiary-fixed-dim: '#e7bcbf'\n  on-tertiary-fixed: '#2d1417'\n  on-tertiary-fixed-variant: '#5d3f42'\n  background: '#f9fcd8'\n  on-background: '#1a1d07'\n  surface-variant: '#e1e6c2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  caption:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.02em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system is built upon the \"Serene Earth\" aesthetic—a fusion of clinical expertise and high-end editorial grace. It avoids traditional spa tropes in favor of an architectural, minimalist approach that prioritizes negative space and organic motion.\n\nThe visual motif, **Fluid Balance**, is characterized by a deliberate tension between structured, fixed-grid typography and soft, flowing background elements. The emotional response should be one of immediate decompression, signaling to the user that they are in the hands of a refined, intuitive expert. The interface acts as a digital sanctuary: quiet, grounded, and unapologetically premium.\n\n## Colors\nThis design system utilizes a palette inspired by the high-desert landscapes and lush forests of Colorado. \n\n- **Warm Sand (#F4F1EA)** serves as the primary canvas color for almost all surfaces, replacing pure white to reduce eye strain and evoke the feel of premium heavyweight paper.\n- **Deep Forest (#1B3022)** provides the grounding force, used for primary actions and structural elements.\n- **Soft Clay (#D4A373)** acts as the humanizing accent, used sparingly for highlights or to draw attention to specific \"intuitive\" touchpoints.\n- **Mist (#E9EDC9)** is used for subtle background differentiations or secondary containers.\n- **Ink (#0A120C)** ensures high-contrast legibility for all editorial content.\n\n## Typography\nThe typography strategy mirrors the \"Fluid Balance\" motif. **Playfair Display** provides a sophisticated, high-contrast serif for headings, evoking the authority of an editorial publication. **Inter** offers a clean, utilitarian counterpoint for body text and labels, ensuring the clinical expertise of the brand is communicated clearly.\n\nGenerous line heights (up to 1.8x for body text) are mandatory to maintain an \"airy\" and \"breathable\" feel. Display sizes use tight tracking to emphasize the elegance of the letterforms, while labels use expanded tracking and uppercase styling for a modern, architectural look.\n\n## Layout & Spacing\nThis design system employs a **Fixed Grid** model for desktop to maintain a controlled, gallery-like experience. The layout is centered with significant outer margins to emphasize the premium nature of the brand.\n\n- **Desktop (1440px+):** 12-column grid with 32px gutters and 64px margins.\n- **Tablet (768px - 1439px):** 8-column grid with 24px gutters and 40px margins.\n- **Mobile (Up to 767px):** 4-column grid with 16px gutters and 24px margins.\n\nSpacing follows an 8px base unit, but horizontal \"Section Gaps\" are intentionally oversized (120px+) to force a slower, more intentional scrolling pace. Layouts should utilize asymmetrical compositions—placing text in a 6-column span while leaving adjacent columns empty to create \"architectural whitespace.\"\n\n## Elevation & Depth\nDepth in the design system is achieved through **Tonal Layering** and **Organic Overlays** rather than traditional drop shadows.\n\n- **Surface Tiers:** Use the Mist (#E9EDC9) color to create secondary containers that sit \"on\" the Warm Sand background.\n- **Glassmorphism:** For navigation bars or mobile overlays, use a backdrop blur (20px) with 80% opacity of the Secondary color to maintain a sense of lightness.\n- **Shadows:** If a shadow is required for functional clarity (e.g., a floating booking button), use an ultra-diffused, low-opacity shadow tinted with Deep Forest (Hex: #1B3022, Alpha: 0.05, Blur: 40px).\n- **Organic Shapes:** Subtle, large-scale SVGs of abstract \"fluid\" shapes should be placed in the background with a 'multiply' or 'soft light' blend mode to create a sense of natural depth.\n\n## Shapes\nThe shape language is primarily defined by **The Softened Edge**. Standard components like cards and input fields use a 0.5rem (8px) radius to feel approachable yet professional.\n\nHowever, to support the \"Fluid Balance\" motif:\n- **Dividers:** Use subtle, large-radius bezier curves rather than straight lines to separate major sections.\n- **Images:** Photography should occasionally use asymmetrical rounding (e.g., top-left and bottom-right at 100px, others at 8px) to mimic organic stones or water droplets.\n- **Buttons:** Primary call-to-actions utilize a full pill-shape (rounded-xl) to feel soft and inviting to the touch.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped, using Deep Forest background with Warm Sand text. Hover states should transition to Soft Clay. Secondary buttons are \"ghost\" style with a 1px Deep Forest border.\n- **Cards:** Cards should have no borders and no shadows. Instead, use a subtle Mist (#E9EDC9) background fill to define the container boundaries.\n- **Inputs:** Text fields are \"Underlined\" style rather than boxed, using a 1px Ink border on the bottom only to maintain the minimalist, editorial look.\n- **Chips/Tags:** Used for service categories (e.g., \"Deep Tissue,\" \"Swedish\"). These use Soft Clay backgrounds with Ink text to stand out against the Sand background.\n- **Fluid Dividers:** Custom SVG dividers that create a gentle \"wave\" transition between the Warm Sand and Mist sections, avoiding any sharp geometric breaks in the user journey.\n- **Service Lists:** Large, serif headlines for service names with Inter-based body text descriptions, separated by wide vertical margins to give each offering \"room to breathe.\"",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
+            "namedColors": {
+              "background": "#f9fcd8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f0f4d0",
+              "inverse_primary": "#b4cdb8",
+              "inverse_surface": "#2e321a",
+              "on_background": "#1a1d07",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#819986",
+              "on_primary_fixed": "#0b2013",
+              "on_primary_fixed_variant": "#364c3c",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#65645f",
+              "on_secondary_fixed": "#1c1c18",
+              "on_secondary_fixed_variant": "#474742",
+              "on_surface": "#1a1d07",
+              "on_surface_variant": "#434843",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#b0898c",
+              "on_tertiary_fixed": "#2d1417",
+              "on_tertiary_fixed_variant": "#5d3f42",
+              "outline": "#737973",
+              "outline_variant": "#c3c8c1",
+              "primary": "#061b0e",
+              "primary_container": "#1b3022",
+              "primary_fixed": "#d0e9d4",
+              "primary_fixed_dim": "#b4cdb8",
+              "secondary": "#5f5e59",
+              "secondary_container": "#e5e2db",
+              "secondary_fixed": "#e5e2db",
+              "secondary_fixed_dim": "#c9c6c0",
+              "surface": "#f9fcd8",
+              "surface_bright": "#f9fcd8",
+              "surface_container": "#edf1cd",
+              "surface_container_high": "#e7ebc7",
+              "surface_container_highest": "#e1e6c2",
+              "surface_container_low": "#f3f7d2",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#d9ddba",
+              "surface_tint": "#4d6453",
+              "surface_variant": "#e1e6c2",
+              "tertiary": "#271013",
+              "tertiary_container": "#3f2427",
+              "tertiary_fixed": "#ffd9dc",
+              "tertiary_fixed_dim": "#e7bcbf"
+            },
+            "overrideNeutralColor": "#e9edc9",
+            "overridePrimaryColor": "#1b3022",
+            "overrideSecondaryColor": "#f4f1ea",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.8"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "caption": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.4"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.4"
+              },
+              "label-md": {
+                "fontFamily": "Inter",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.2"
+              }
+            }
+          },
+          "title": "Balance Massage By Serene - Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, production-ready homepage for **Balance Massage By Serene** that establishes a premium, editorial digital presence.\n\n### Design Highlights:\n*   **Visual Identity**: I created the \"Serene Earth\" theme, utilizing a deep forest green (#1B3022) paired with warm sand and clay accents to evoke a sense of grounded professionalism and tranquility.\n*   **Editorial Layout**: The design breaks away from standard templates with asymmetric hero elements, organic \"Fluid Balance\" SVG section dividers, and a sophisticated typographic hierarchy using Playfair Display.\n*   **Bespoke Sections**: \n    *   **The Art of Restoration**: A high-impact hero section that positions the service as a refined craft.\n    *   **Service Menu**: Styled like a curated editorial list rather than a generic grid.\n    *   **The Sanctuary**: A dedicated visit section with a placeholder for your future map integration, framed with clean, architectural lines.\n*   **Production Quality**: The code includes smooth scrolling, a responsive mobile navigation system, and refined form validation UI, all wrapped in semantic HTML and modern CSS.\n\nHow does this new visual direction feel for the brand? We can refine the service descriptions or adjust the organic motifs if you'd like."
+  },
+  {
+    "suggestion": "Change the primary color to something lighter"
+  },
+  {
+    "suggestion": "Add a testimonials section below services"
+  },
+  {
+    "suggestion": "Make the hero image full-width"
+  }
+]
