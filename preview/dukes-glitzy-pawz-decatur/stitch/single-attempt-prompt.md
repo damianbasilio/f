@@ -14,9 +14,9 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 
 This is a **complete redesign**, not a polish pass. Do **not** reuse the previous homepage layout, hero structure, section order, or navigation pattern.
 
-**Layout archetype for this attempt:** classic centered hero — wide banner image, symmetrical sections, elegant whitespace
+**Layout archetype for this attempt:** bold single-column stack — full-bleed color bands, minimal top nav, strong vertical rhythm
 
-Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780814306814
+Pick a new typography pairing and color emphasis. Vary section order and visual density. Creative seed: 1780815126895
 
 ---
 

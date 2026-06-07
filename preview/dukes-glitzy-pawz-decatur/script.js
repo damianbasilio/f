@@ -1,19 +1,29 @@
-// Smooth scroll for nav links (simplistic)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+// Micro-interaction for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Preview only';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'SENT SUCCESSFULLY';
+                btn.classList.add('bg-green-600', 'text-white');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.classList.remove('bg-green-600', 'text-white');
+                }, 3000);
+            }, 1500);
         });
 
-        // Atmospheric parallax for floating items
+        // Atmospheric parallax on scroll for hero image
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const heroImage = document.querySelector('.editorial-image-offset');
-            if (heroImage) {
-                heroImage.style.transform = `translate(24px, ${-40 + (scrolled * 0.1)}px)`;
+            const heroImg = document.querySelector('section img');
+            if(heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.15}px) scale(${1 + scrolled * 0.0005})`;
             }
         });
 

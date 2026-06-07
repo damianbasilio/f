@@ -35,7 +35,7 @@ Use location and phone from above.
 
 **Full scraped profile (About, services, voice — use for copy, do not invent facts):**
 🌟 Welcome to Duke's Glitzy Pawz – where every pup sparkles! 🐾 I specialize in stylish cuts, luxurious baths, and comforting grooms. Follow me for services, adorable pics, and fun facts. Let’s make your furry friend shine like a star! ✂️🐶✨
-Phone: 217-615-9245
+Phone: 265.663 7265
 Email: dukesglitzypawz1@gmail.com
 
 Recent posts from their Facebook page:
