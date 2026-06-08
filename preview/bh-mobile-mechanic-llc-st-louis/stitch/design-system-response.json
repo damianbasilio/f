@@ -1,0 +1,498 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Industrial Precision",
+        "styleGuidelines": "## Brand & Style\nThe design system is engineered to project the authority of mobile engineering rather than a traditional neighborhood garage. The brand personality is clinical, rugged, and uncompromisingly professional. It targets high-end vehicle owners and commercial fleets who value technical expertise and efficiency.\n\nThe visual style is **Industrial Minimalism** mixed with **Blueprint Aesthetics**. It utilizes a structured, technical layout inspired by automotive schematics. Key characteristics include:\n- **Asymmetrical Balance:** Breaking standard centered layouts to create a sense of forward motion and mechanical complexity.\n- **Technical Precision:** Use of fine lines (0.5pt to 1pt) to mimic technical drawings and engineering plans.\n- **High Contrast:** A \"Dark Mode First\" approach that emphasizes the \"St. Louis Asphalt\" and \"High-Vis Amber\" relationship to ensure critical information is impossible to miss.\n\n## Layout & Spacing\nThe layout follows a **Rigid Blueprint Grid**.\n- **Grid Model:** A 12-column fixed grid for desktop, but with intentionally \"broken\" alignment. Elements may start on Column 2 and end on Column 11 to create whitespace \"gutters\" that feel like technical margins.\n- **Section Dividers:** Instead of background color changes, use thin `Tool Steel` lines with `label-mono` annotations (e.g., \"SEC_01 // DIAGNOSTICS\") in the top left corner of the border.\n- **Vertical Rhythm:** Large vertical gaps (80px–120px) between sections to create a premium, editorial feel.\n\n## Elevation & Depth\nDepth is created through **Layered Outlines** rather than soft shadows.\n- **Flat Depth:** Avoid blurred shadows. Use \"1px Solid\" borders for cards.\n- **The \"Blueprint\" Stack:** Overlap images and text boxes with a 2px offset. For example, a card might have a secondary \"ghost\" border behind it offset by 4px to the bottom-right.\n- **Glassmorphism:** Use sparingly for overlays (like \"Engine Status\" popups). Apply a heavy background blur (20px) with a subtle `Tool Steel` tint at 10% opacity.\n\n## Components\n- **Primary Buttons:** High-Vis Amber background with Black text. Sharp corners. On hover, the button should \"fill\" with a Tool Steel border or shift 2px for a tactile \"click\" effect.\n- **Input Fields:** Thick bottom border (2px) in Tool Steel. Labels use the `label-mono` style floating strictly above the field.\n- **Cards:** No background (transparent) with a 1px Tool Steel border. Header areas of cards should have a subtle texture or a \"crosshair\" icon in the corners.\n- **Status Chips:** Small, rectangular, with monochromatic backgrounds (High-Vis Amber for active, Tool Steel for pending).\n- **The \"Diagnostic\" List:** List items separated by dotted lines (blueprint style) with monospaced data on the right.\n- **Specialty Component - \"The Schematic View\":** An image container that features thin leader lines pointing to specific parts of a vehicle, using `label-mono` for callouts.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1a1c1e",
+          "designMd": "---\nname: Industrial Precision\ncolors:\n  surface: '#101415'\n  surface-dim: '#101415'\n  surface-bright: '#363a3b'\n  surface-container-lowest: '#0b0f10'\n  surface-container-low: '#191c1e'\n  surface-container: '#1d2022'\n  surface-container-high: '#272a2c'\n  surface-container-highest: '#323537'\n  on-surface: '#e0e3e5'\n  on-surface-variant: '#c5c6ca'\n  inverse-surface: '#e0e3e5'\n  inverse-on-surface: '#2d3133'\n  outline: '#8f9194'\n  outline-variant: '#44474a'\n  surface-tint: '#c6c6c9'\n  primary: '#c6c6c9'\n  on-primary: '#2f3133'\n  primary-container: '#1a1c1e'\n  on-primary-container: '#838486'\n  inverse-primary: '#5d5e61'\n  secondary: '#ffc640'\n  on-secondary: '#402d00'\n  secondary-container: '#e3aa00'\n  on-secondary-container: '#5a4100'\n  tertiary: '#b9c7df'\n  on-tertiary: '#233144'\n  tertiary-container: '#0e1d2e'\n  on-tertiary-container: '#77859b'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e2e2e5'\n  primary-fixed-dim: '#c6c6c9'\n  on-primary-fixed: '#1a1c1e'\n  on-primary-fixed-variant: '#454749'\n  secondary-fixed: '#ffdf9f'\n  secondary-fixed-dim: '#f9bd22'\n  on-secondary-fixed: '#261a00'\n  on-secondary-fixed-variant: '#5c4300'\n  tertiary-fixed: '#d5e3fc'\n  tertiary-fixed-dim: '#b9c7df'\n  on-tertiary-fixed: '#0d1c2e'\n  on-tertiary-fixed-variant: '#3a485b'\n  background: '#101415'\n  on-background: '#e0e3e5'\n  surface-variant: '#323537'\ntypography:\n  headline-xl:\n    fontFamily: Oswald\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Oswald\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Oswald\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Oswald\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  stats-number:\n    fontFamily: Oswald\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  blueprint-grid: 40px\n---\n\n## Brand & Style\nThe design system is engineered to project the authority of mobile engineering rather than a traditional neighborhood garage. The brand personality is clinical, rugged, and uncompromisingly professional. It targets high-end vehicle owners and commercial fleets who value technical expertise and efficiency.\n\nThe visual style is **Industrial Minimalism** mixed with **Blueprint Aesthetics**. It utilizes a structured, technical layout inspired by automotive schematics. Key characteristics include:\n- **Asymmetrical Balance:** Breaking standard centered layouts to create a sense of forward motion and mechanical complexity.\n- **Technical Precision:** Use of fine lines (0.5pt to 1pt) to mimic technical drawings and engineering plans.\n- **High Contrast:** A \"Dark Mode First\" approach that emphasizes the \"St. Louis Asphalt\" and \"High-Vis Amber\" relationship to ensure critical information is impossible to miss.\n\n## Colors\nThe palette is rooted in the materials of the trade.\n- **St. Louis Asphalt (#1A1C1E):** The primary foundation. Used for backgrounds and heavy structural elements to evoke the road and durability.\n- **High-Vis Amber (#FBBF24):** The action color. Reserved for primary CTAs, critical status indicators, and highlights. It demands attention against the dark base.\n- **Tool Steel (#475569):** Used for secondary information, icons, and schematic lines. It provides a cool, metallic contrast.\n- **Pure White (#FFFFFF / #F8FAFC):** Used exclusively for high-readability body text and essential labels.\n\n## Typography\nTypography reflects mechanical marking and editorial hierarchy.\n- **Headlines:** Oswald is utilized for its condensed, vertical stature, reminiscent of vintage automotive badges and industrial signage. Always uppercase for primary headings.\n- **Body:** Inter provides a neutral, high-legibility counterpart to the aggressive headlines, ensuring technical descriptions are easy to digest.\n- **Data/Labels:** JetBrains Mono (monospaced) is used for technical specs, serial numbers, and \"blueprint\" annotations to reinforce the engineering vibe.\n\n## Layout & Spacing\nThe layout follows a **Rigid Blueprint Grid**.\n- **Grid Model:** A 12-column fixed grid for desktop, but with intentionally \"broken\" alignment. Elements may start on Column 2 and end on Column 11 to create whitespace \"gutters\" that feel like technical margins.\n- **Section Dividers:** Instead of background color changes, use thin `Tool Steel` lines with `label-mono` annotations (e.g., \"SEC_01 // DIAGNOSTICS\") in the top left corner of the border.\n- **Vertical Rhythm:** Large vertical gaps (80px–120px) between sections to create a premium, editorial feel.\n\n## Elevation & Depth\nDepth is created through **Layered Outlines** rather than soft shadows.\n- **Flat Depth:** Avoid blurred shadows. Use \"1px Solid\" borders for cards.\n- **The \"Blueprint\" Stack:** Overlap images and text boxes with a 2px offset. For example, a card might have a secondary \"ghost\" border behind it offset by 4px to the bottom-right.\n- **Glassmorphism:** Use sparingly for overlays (like \"Engine Status\" popups). Apply a heavy background blur (20px) with a subtle `Tool Steel` tint at 10% opacity.\n\n## Shapes\nThe design system uses a **Strict Zero-Radius** policy. \n- **Sharp Corners:** Every button, input field, and card must have 90-degree sharp corners to evoke the precision of machined steel.\n- **Diagonal Shears:** Use 45-degree clipped corners for primary buttons or status chips to mimic industrial warning plates.\n\n## Components\n- **Primary Buttons:** High-Vis Amber background with Black text. Sharp corners. On hover, the button should \"fill\" with a Tool Steel border or shift 2px for a tactile \"click\" effect.\n- **Input Fields:** Thick bottom border (2px) in Tool Steel. Labels use the `label-mono` style floating strictly above the field.\n- **Cards:** No background (transparent) with a 1px Tool Steel border. Header areas of cards should have a subtle texture or a \"crosshair\" icon in the corners.\n- **Status Chips:** Small, rectangular, with monochromatic backgrounds (High-Vis Amber for active, Tool Steel for pending).\n- **The \"Diagnostic\" List:** List items separated by dotted lines (blueprint style) with monospaced data on the right.\n- **Specialty Component - \"The Schematic View\":** An image container that features thin leader lines pointing to specific parts of a vehicle, using `label-mono` for callouts.",
+          "font": "OSWALD",
+          "headlineFont": "OSWALD",
+          "headlineFontFamily": "Oswald",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#101415",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#2d3133",
+            "inverse_primary": "#5d5e61",
+            "inverse_surface": "#e0e3e5",
+            "on_background": "#e0e3e5",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#2f3133",
+            "on_primary_container": "#838486",
+            "on_primary_fixed": "#1a1c1e",
+            "on_primary_fixed_variant": "#454749",
+            "on_secondary": "#402d00",
+            "on_secondary_container": "#5a4100",
+            "on_secondary_fixed": "#261a00",
+            "on_secondary_fixed_variant": "#5c4300",
+            "on_surface": "#e0e3e5",
+            "on_surface_variant": "#c5c6ca",
+            "on_tertiary": "#233144",
+            "on_tertiary_container": "#77859b",
+            "on_tertiary_fixed": "#0d1c2e",
+            "on_tertiary_fixed_variant": "#3a485b",
+            "outline": "#8f9194",
+            "outline_variant": "#44474a",
+            "primary": "#c6c6c9",
+            "primary_container": "#1a1c1e",
+            "primary_fixed": "#e2e2e5",
+            "primary_fixed_dim": "#c6c6c9",
+            "secondary": "#ffc640",
+            "secondary_container": "#e3aa00",
+            "secondary_fixed": "#ffdf9f",
+            "secondary_fixed_dim": "#f9bd22",
+            "surface": "#101415",
+            "surface_bright": "#363a3b",
+            "surface_container": "#1d2022",
+            "surface_container_high": "#272a2c",
+            "surface_container_highest": "#323537",
+            "surface_container_low": "#191c1e",
+            "surface_container_lowest": "#0b0f10",
+            "surface_dim": "#101415",
+            "surface_tint": "#c6c6c9",
+            "surface_variant": "#323537",
+            "tertiary": "#b9c7df",
+            "tertiary_container": "#0e1d2e",
+            "tertiary_fixed": "#d5e3fc",
+            "tertiary_fixed_dim": "#b9c7df"
+          },
+          "overrideNeutralColor": "#f8fafc",
+          "overridePrimaryColor": "#1a1c1e",
+          "overrideSecondaryColor": "#fbbf24",
+          "overrideTertiaryColor": "#475569",
+          "spacing": {
+            "blueprint-grid": "40px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "headline-lg": {
+              "fontFamily": "Oswald",
+              "fontSize": "40px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Oswald",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Oswald",
+              "fontSize": "24px",
+              "fontWeight": "500",
+              "lineHeight": "1.3"
+            },
+            "headline-xl": {
+              "fontFamily": "Oswald",
+              "fontSize": "64px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "label-mono": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.0"
+            },
+            "stats-number": {
+              "fontFamily": "Oswald",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/af332f7b27084152b864a7d48f511153",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "3bb63a3603f740eaad1c09992e14db3c",
+          "name": "projects/5470218556025389168/screens/3bb63a3603f740eaad1c09992e14db3c",
+          "prompt": "A gritty, industrial portrait of a St. Louis street corner with brick warehouses in the background, desaturated colors, high contrast. A slight motion blur suggesting speed and reliability. Moody, cinematic atmosphere. 8k resolution.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLurzM_zNPleqf2BacMtv1L58WX_dBq2DVKK9FNQwlV9BtEvh_t-ir1G1AeGgMD5areaZWB1iM-8LGxxw2lcNKZgCI_Ruy-7ZxfUFFgB6KTroNIXbPmsBptgx2I3mo2zVkP5cJ1pZ2f1_oxt-NAOBDumFvlIp5_kwPk3oGa8Epip_1pKafv0jYv_-kXixVLUg8BI0Wnhhg3D6HhI0SX4PZgv1h5Fn5c3BebyCiRfsfBHy236MsaLOUPR-jg",
+            "name": "projects/5470218556025389168/files/3d56d70ba7fc4dde831c63ec25136e6f"
+          },
+          "theme": {},
+          "title": "A gritty, industrial portrait of a St. Louis street corner with brick warehouses in the background, desaturated colors, high contrast. A slight motion blur suggesting speed and reliability. Moody, cinematic atmosphere. 8k resolution.",
+          "width": "1200"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "dd647157bb374b809e1b1fd39df7691d",
+          "name": "projects/5470218556025389168/screens/dd647157bb374b809e1b1fd39df7691d",
+          "prompt": "Close-up, high-detail macro shot of professional mechanical tools (wrenches, diagnostic tablet) laid out with clinical precision on a clean, dark industrial workbench. The lighting is crisp, cold, and professional. Deep shadows, high-vis amber accents in the tool grips. Industrial precision aesthetic. 8k resolution.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLszOpCvkMoVW4hxeitUAtM91pgGrEh6YDF51me62r46gklFFuvfQgvIPjg_nMzL_c2RTeQDyRUR8kFN_GSmG78sj2CfajuXpuj0lKYBxpqf36x3S6KDG1lqpxFSOfjlIJ8GKIazfzVmrsug6Hkay3WiyURPt-X-2T65L61WBqzsPPH2NBnadPFFpKlGURLMGQIOqJYELXtqxwmS-XCq4e8NLqJkKsuwFPLs2dQOjUjKJGDx0wM5BY0U-Ec",
+            "name": "projects/5470218556025389168/files/1a3a938d36b44bdcab0060331a651d8d"
+          },
+          "theme": {},
+          "title": "Close-up, high-detail macro shot of professional mechanical tools (wrenches, diagnostic tablet) laid out with clinical precision on a clean, dark industrial workbench. The lighting is crisp, cold, and professional. Deep shadows, high-vis amber accents in the tool grips. Industrial precision aesthetic. 8k resolution.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "4b1c2ae7ff17409c9b9855e28556d2a2",
+          "name": "projects/5470218556025389168/screens/4b1c2ae7ff17409c9b9855e28556d2a2",
+          "prompt": "A high-end, editorial hero image for a mobile mechanic brand. A clean, matte-black mobile service van parked in a gritty but cinematic St. Louis industrial area at dusk. The lighting is dramatic, highlighting the 'BH Mobile Mechanic' branding on the van. The style is professional photography, moody, with high contrast and a cool, desaturated color grade. High-vis amber light reflects off the wet asphalt. No people. 8k resolution, cinematic composition.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuQL8STuMmDOldKYuGoBbqe3mZxWtlGMg_vcj5P6E3JSPNLkdXGnq97lVMk2_BZI4-8c64T-xSSYidCJ8gqo9_EpB5Kp_iHO-S8xDQyfkcIsfXMSbgVzMTgjpzHX45s_ZK4Q8h1Gl9W7Wl9ag768el_RrTuWHmnudhNHWgJdtCS8BIocwvgP76DMaRY6GMmTroYQhIaAF1Fo4wP3mg_SBXJM5ur8Me1SQQBrjfd9eL-NRIKVLVvzHAnVw",
+            "name": "projects/5470218556025389168/files/df58a1b7d3cc43ef9970786c4e3f9266"
+          },
+          "theme": {},
+          "title": "A high-end, editorial hero image for a mobile mechanic brand. A clean, matte-black mobile service van parked in a gritty but cinematic St. Louis industrial area at dusk. The lighting is dramatic, highlighting the 'BH Mobile Mechanic' branding on the van. The style is professional photography, moody, with high contrast and a cool, desaturated color grade. High-vis amber light reflects off the wet asphalt. No people. 8k resolution, cinematic composition.",
+          "width": "1376"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Industrial Precision",
+              "styleGuidelines": "## Brand & Style\nThe design system is engineered to project the authority of mobile engineering rather than a traditional neighborhood garage. The brand personality is clinical, rugged, and uncompromisingly professional. It targets high-end vehicle owners and commercial fleets who value technical expertise and efficiency.\n\nThe visual style is **Industrial Minimalism** mixed with **Blueprint Aesthetics**. It utilizes a structured, technical layout inspired by automotive schematics. Key characteristics include:\n- **Asymmetrical Balance:** Breaking standard centered layouts to create a sense of forward motion and mechanical complexity.\n- **Technical Precision:** Use of fine lines (0.5pt to 1pt) to mimic technical drawings and engineering plans.\n- **High Contrast:** A \"Dark Mode First\" approach that emphasizes the \"St. Louis Asphalt\" and \"High-Vis Amber\" relationship to ensure critical information is impossible to miss.\n\n## Layout & Spacing\nThe layout follows a **Rigid Blueprint Grid**.\n- **Grid Model:** A 12-column fixed grid for desktop, but with intentionally \"broken\" alignment. Elements may start on Column 2 and end on Column 11 to create whitespace \"gutters\" that feel like technical margins.\n- **Section Dividers:** Instead of background color changes, use thin `Tool Steel` lines with `label-mono` annotations (e.g., \"SEC_01 // DIAGNOSTICS\") in the top left corner of the border.\n- **Vertical Rhythm:** Large vertical gaps (80px–120px) between sections to create a premium, editorial feel.\n\n## Elevation & Depth\nDepth is created through **Layered Outlines** rather than soft shadows.\n- **Flat Depth:** Avoid blurred shadows. Use \"1px Solid\" borders for cards.\n- **The \"Blueprint\" Stack:** Overlap images and text boxes with a 2px offset. For example, a card might have a secondary \"ghost\" border behind it offset by 4px to the bottom-right.\n- **Glassmorphism:** Use sparingly for overlays (like \"Engine Status\" popups). Apply a heavy background blur (20px) with a subtle `Tool Steel` tint at 10% opacity.\n\n## Components\n- **Primary Buttons:** High-Vis Amber background with Black text. Sharp corners. On hover, the button should \"fill\" with a Tool Steel border or shift 2px for a tactile \"click\" effect.\n- **Input Fields:** Thick bottom border (2px) in Tool Steel. Labels use the `label-mono` style floating strictly above the field.\n- **Cards:** No background (transparent) with a 1px Tool Steel border. Header areas of cards should have a subtle texture or a \"crosshair\" icon in the corners.\n- **Status Chips:** Small, rectangular, with monochromatic backgrounds (High-Vis Amber for active, Tool Steel for pending).\n- **The \"Diagnostic\" List:** List items separated by dotted lines (blueprint style) with monospaced data on the right.\n- **Specialty Component - \"The Schematic View\":** An image container that features thin leader lines pointing to specific parts of a vehicle, using `label-mono` for callouts.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1a1c1e",
+                "designMd": "---\nname: Industrial Precision\ncolors:\n  surface: '#101415'\n  surface-dim: '#101415'\n  surface-bright: '#363a3b'\n  surface-container-lowest: '#0b0f10'\n  surface-container-low: '#191c1e'\n  surface-container: '#1d2022'\n  surface-container-high: '#272a2c'\n  surface-container-highest: '#323537'\n  on-surface: '#e0e3e5'\n  on-surface-variant: '#c5c6ca'\n  inverse-surface: '#e0e3e5'\n  inverse-on-surface: '#2d3133'\n  outline: '#8f9194'\n  outline-variant: '#44474a'\n  surface-tint: '#c6c6c9'\n  primary: '#c6c6c9'\n  on-primary: '#2f3133'\n  primary-container: '#1a1c1e'\n  on-primary-container: '#838486'\n  inverse-primary: '#5d5e61'\n  secondary: '#ffc640'\n  on-secondary: '#402d00'\n  secondary-container: '#e3aa00'\n  on-secondary-container: '#5a4100'\n  tertiary: '#b9c7df'\n  on-tertiary: '#233144'\n  tertiary-container: '#0e1d2e'\n  on-tertiary-container: '#77859b'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e2e2e5'\n  primary-fixed-dim: '#c6c6c9'\n  on-primary-fixed: '#1a1c1e'\n  on-primary-fixed-variant: '#454749'\n  secondary-fixed: '#ffdf9f'\n  secondary-fixed-dim: '#f9bd22'\n  on-secondary-fixed: '#261a00'\n  on-secondary-fixed-variant: '#5c4300'\n  tertiary-fixed: '#d5e3fc'\n  tertiary-fixed-dim: '#b9c7df'\n  on-tertiary-fixed: '#0d1c2e'\n  on-tertiary-fixed-variant: '#3a485b'\n  background: '#101415'\n  on-background: '#e0e3e5'\n  surface-variant: '#323537'\ntypography:\n  headline-xl:\n    fontFamily: Oswald\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Oswald\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Oswald\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Oswald\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  stats-number:\n    fontFamily: Oswald\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  blueprint-grid: 40px\n---\n\n## Brand & Style\nThe design system is engineered to project the authority of mobile engineering rather than a traditional neighborhood garage. The brand personality is clinical, rugged, and uncompromisingly professional. It targets high-end vehicle owners and commercial fleets who value technical expertise and efficiency.\n\nThe visual style is **Industrial Minimalism** mixed with **Blueprint Aesthetics**. It utilizes a structured, technical layout inspired by automotive schematics. Key characteristics include:\n- **Asymmetrical Balance:** Breaking standard centered layouts to create a sense of forward motion and mechanical complexity.\n- **Technical Precision:** Use of fine lines (0.5pt to 1pt) to mimic technical drawings and engineering plans.\n- **High Contrast:** A \"Dark Mode First\" approach that emphasizes the \"St. Louis Asphalt\" and \"High-Vis Amber\" relationship to ensure critical information is impossible to miss.\n\n## Colors\nThe palette is rooted in the materials of the trade.\n- **St. Louis Asphalt (#1A1C1E):** The primary foundation. Used for backgrounds and heavy structural elements to evoke the road and durability.\n- **High-Vis Amber (#FBBF24):** The action color. Reserved for primary CTAs, critical status indicators, and highlights. It demands attention against the dark base.\n- **Tool Steel (#475569):** Used for secondary information, icons, and schematic lines. It provides a cool, metallic contrast.\n- **Pure White (#FFFFFF / #F8FAFC):** Used exclusively for high-readability body text and essential labels.\n\n## Typography\nTypography reflects mechanical marking and editorial hierarchy.\n- **Headlines:** Oswald is utilized for its condensed, vertical stature, reminiscent of vintage automotive badges and industrial signage. Always uppercase for primary headings.\n- **Body:** Inter provides a neutral, high-legibility counterpart to the aggressive headlines, ensuring technical descriptions are easy to digest.\n- **Data/Labels:** JetBrains Mono (monospaced) is used for technical specs, serial numbers, and \"blueprint\" annotations to reinforce the engineering vibe.\n\n## Layout & Spacing\nThe layout follows a **Rigid Blueprint Grid**.\n- **Grid Model:** A 12-column fixed grid for desktop, but with intentionally \"broken\" alignment. Elements may start on Column 2 and end on Column 11 to create whitespace \"gutters\" that feel like technical margins.\n- **Section Dividers:** Instead of background color changes, use thin `Tool Steel` lines with `label-mono` annotations (e.g., \"SEC_01 // DIAGNOSTICS\") in the top left corner of the border.\n- **Vertical Rhythm:** Large vertical gaps (80px–120px) between sections to create a premium, editorial feel.\n\n## Elevation & Depth\nDepth is created through **Layered Outlines** rather than soft shadows.\n- **Flat Depth:** Avoid blurred shadows. Use \"1px Solid\" borders for cards.\n- **The \"Blueprint\" Stack:** Overlap images and text boxes with a 2px offset. For example, a card might have a secondary \"ghost\" border behind it offset by 4px to the bottom-right.\n- **Glassmorphism:** Use sparingly for overlays (like \"Engine Status\" popups). Apply a heavy background blur (20px) with a subtle `Tool Steel` tint at 10% opacity.\n\n## Shapes\nThe design system uses a **Strict Zero-Radius** policy. \n- **Sharp Corners:** Every button, input field, and card must have 90-degree sharp corners to evoke the precision of machined steel.\n- **Diagonal Shears:** Use 45-degree clipped corners for primary buttons or status chips to mimic industrial warning plates.\n\n## Components\n- **Primary Buttons:** High-Vis Amber background with Black text. Sharp corners. On hover, the button should \"fill\" with a Tool Steel border or shift 2px for a tactile \"click\" effect.\n- **Input Fields:** Thick bottom border (2px) in Tool Steel. Labels use the `label-mono` style floating strictly above the field.\n- **Cards:** No background (transparent) with a 1px Tool Steel border. Header areas of cards should have a subtle texture or a \"crosshair\" icon in the corners.\n- **Status Chips:** Small, rectangular, with monochromatic backgrounds (High-Vis Amber for active, Tool Steel for pending).\n- **The \"Diagnostic\" List:** List items separated by dotted lines (blueprint style) with monospaced data on the right.\n- **Specialty Component - \"The Schematic View\":** An image container that features thin leader lines pointing to specific parts of a vehicle, using `label-mono` for callouts.",
+                "font": "OSWALD",
+                "headlineFont": "OSWALD",
+                "headlineFontFamily": "Oswald",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#101415",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#2d3133",
+                  "inverse_primary": "#5d5e61",
+                  "inverse_surface": "#e0e3e5",
+                  "on_background": "#e0e3e5",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#2f3133",
+                  "on_primary_container": "#838486",
+                  "on_primary_fixed": "#1a1c1e",
+                  "on_primary_fixed_variant": "#454749",
+                  "on_secondary": "#402d00",
+                  "on_secondary_container": "#5a4100",
+                  "on_secondary_fixed": "#261a00",
+                  "on_secondary_fixed_variant": "#5c4300",
+                  "on_surface": "#e0e3e5",
+                  "on_surface_variant": "#c5c6ca",
+                  "on_tertiary": "#233144",
+                  "on_tertiary_container": "#77859b",
+                  "on_tertiary_fixed": "#0d1c2e",
+                  "on_tertiary_fixed_variant": "#3a485b",
+                  "outline": "#8f9194",
+                  "outline_variant": "#44474a",
+                  "primary": "#c6c6c9",
+                  "primary_container": "#1a1c1e",
+                  "primary_fixed": "#e2e2e5",
+                  "primary_fixed_dim": "#c6c6c9",
+                  "secondary": "#ffc640",
+                  "secondary_container": "#e3aa00",
+                  "secondary_fixed": "#ffdf9f",
+                  "secondary_fixed_dim": "#f9bd22",
+                  "surface": "#101415",
+                  "surface_bright": "#363a3b",
+                  "surface_container": "#1d2022",
+                  "surface_container_high": "#272a2c",
+                  "surface_container_highest": "#323537",
+                  "surface_container_low": "#191c1e",
+                  "surface_container_lowest": "#0b0f10",
+                  "surface_dim": "#101415",
+                  "surface_tint": "#c6c6c9",
+                  "surface_variant": "#323537",
+                  "tertiary": "#b9c7df",
+                  "tertiary_container": "#0e1d2e",
+                  "tertiary_fixed": "#d5e3fc",
+                  "tertiary_fixed_dim": "#b9c7df"
+                },
+                "overrideNeutralColor": "#f8fafc",
+                "overridePrimaryColor": "#1a1c1e",
+                "overrideSecondaryColor": "#fbbf24",
+                "overrideTertiaryColor": "#475569",
+                "spacing": {
+                  "blueprint-grid": "40px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "40px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "24px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "64px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "label-mono": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.0"
+                  },
+                  "stats-number": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/af332f7b27084152b864a7d48f511153",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10006",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzUwMWE2NDRjNGU1MTQwZTJiZWI4ZjRkNzIzZWViMjIxEgsSBxCbzKqCsBkYAZIBIwoKcHJvamVjdF9pZBIVQhM1NDcwMjE4NTU2MDI1Mzg5MTY4&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/5470218556025389168/files/43750bc20e44408ca180eace9e20c97d"
+          },
+          "id": "b60aa0bc1c10421f87ed071791317b35",
+          "name": "projects/5470218556025389168/screens/b60aa0bc1c10421f87ed071791317b35",
+          "prompt": "Create a bespoke, high-end editorial landing page for BH MOBILE MECHANIC LLC. \n\nLayout Design:\n- Use an asymmetrical, grid-based 'Industrial Precision' layout. \n- High contrast: Dark mode base (#101415) with Amber (#FBBF24) accents and Tool Steel (#475569) borders.\n- Typography: Bold, oversized condensed headings for a 'blueprint' feel.\n\nSections:\n1. Header: Minimal nav with a large, fixed-width phone number CTA '314-224-2945' and a technical menu icon.\n2. Hero: Features {{DATA:IMAGE:IMAGE_3}} with a massive headline 'MECHANICAL SUPERIORITY. DELIVERED ONSITE.' and a primary CTA 'REQUEST DISPATCH'.\n3. Credibility: A horizontal strip with mono-spaced stats: 'EST. 2024 STL', '045 MIN AVG RESPONSE', '100% MOBILE OPERATION'.\n4. Services: A non-traditional grid using {{DATA:IMAGE:IMAGE_4}} as a background element for a 'Technical Services' list: Diagnostics, Roadside Repair, Fleet Maintenance, and Engine Optimization. Use large numerical indices (01, 02, etc.).\n5. About: 'The Mechanic's Manifesto' — a text-heavy section using high-quality editorial typography, paired with {{DATA:IMAGE:IMAGE_5}}. Focus on the St. Louis industrial heritage.\n6. Visit: A dark panel with the address '4057 Meramec Street' and the required map-slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A 'Service Log' style form with validation UI. Clear, technical labels.\n8. Footer: Densely packed footer with links and legal text: '© 2024 BH MOBILE MECHANIC LLC // STL_ENGINEERING_DIVISION'.\n\nTechnical: Full semantic HTML, CSS custom properties, smooth scrolling, and mobile-responsive at 375px.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvPUep85XLcAjZF8URLuGpWYLWYLZJbyhpzV4HgmtSrxCtnJHFaYQAXZii7V7L_3Toe6v7XqS0sBlfSjdfGapsTQkiiJURvQRGL0N88w2ZVI0EURHSQ-rV1cyg6nHFQTVNhW_PC1ECVS7qVhAoPYTOPxW1ulpScTRP8tsaIK5T8oDSBWzai7subuqEWWz6SmmxuEFlXGKrYVr8a8CNracPxvjhGDrjZIYxDlO_mg9eW2Cud4DjR2jk5cgw",
+            "name": "projects/5470218556025389168/files/6e75cbaed7514f4fb6d5009b5a97cc0d"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1c1e",
+            "designMd": "---\nname: Industrial Precision\ncolors:\n  surface: '#101415'\n  surface-dim: '#101415'\n  surface-bright: '#363a3b'\n  surface-container-lowest: '#0b0f10'\n  surface-container-low: '#191c1e'\n  surface-container: '#1d2022'\n  surface-container-high: '#272a2c'\n  surface-container-highest: '#323537'\n  on-surface: '#e0e3e5'\n  on-surface-variant: '#c5c6ca'\n  inverse-surface: '#e0e3e5'\n  inverse-on-surface: '#2d3133'\n  outline: '#8f9194'\n  outline-variant: '#44474a'\n  surface-tint: '#c6c6c9'\n  primary: '#c6c6c9'\n  on-primary: '#2f3133'\n  primary-container: '#1a1c1e'\n  on-primary-container: '#838486'\n  inverse-primary: '#5d5e61'\n  secondary: '#ffc640'\n  on-secondary: '#402d00'\n  secondary-container: '#e3aa00'\n  on-secondary-container: '#5a4100'\n  tertiary: '#b9c7df'\n  on-tertiary: '#233144'\n  tertiary-container: '#0e1d2e'\n  on-tertiary-container: '#77859b'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e2e2e5'\n  primary-fixed-dim: '#c6c6c9'\n  on-primary-fixed: '#1a1c1e'\n  on-primary-fixed-variant: '#454749'\n  secondary-fixed: '#ffdf9f'\n  secondary-fixed-dim: '#f9bd22'\n  on-secondary-fixed: '#261a00'\n  on-secondary-fixed-variant: '#5c4300'\n  tertiary-fixed: '#d5e3fc'\n  tertiary-fixed-dim: '#b9c7df'\n  on-tertiary-fixed: '#0d1c2e'\n  on-tertiary-fixed-variant: '#3a485b'\n  background: '#101415'\n  on-background: '#e0e3e5'\n  surface-variant: '#323537'\ntypography:\n  headline-xl:\n    fontFamily: Oswald\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Oswald\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Oswald\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Oswald\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  stats-number:\n    fontFamily: Oswald\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  blueprint-grid: 40px\n---\n\n## Brand & Style\nThe design system is engineered to project the authority of mobile engineering rather than a traditional neighborhood garage. The brand personality is clinical, rugged, and uncompromisingly professional. It targets high-end vehicle owners and commercial fleets who value technical expertise and efficiency.\n\nThe visual style is **Industrial Minimalism** mixed with **Blueprint Aesthetics**. It utilizes a structured, technical layout inspired by automotive schematics. Key characteristics include:\n- **Asymmetrical Balance:** Breaking standard centered layouts to create a sense of forward motion and mechanical complexity.\n- **Technical Precision:** Use of fine lines (0.5pt to 1pt) to mimic technical drawings and engineering plans.\n- **High Contrast:** A \"Dark Mode First\" approach that emphasizes the \"St. Louis Asphalt\" and \"High-Vis Amber\" relationship to ensure critical information is impossible to miss.\n\n## Colors\nThe palette is rooted in the materials of the trade.\n- **St. Louis Asphalt (#1A1C1E):** The primary foundation. Used for backgrounds and heavy structural elements to evoke the road and durability.\n- **High-Vis Amber (#FBBF24):** The action color. Reserved for primary CTAs, critical status indicators, and highlights. It demands attention against the dark base.\n- **Tool Steel (#475569):** Used for secondary information, icons, and schematic lines. It provides a cool, metallic contrast.\n- **Pure White (#FFFFFF / #F8FAFC):** Used exclusively for high-readability body text and essential labels.\n\n## Typography\nTypography reflects mechanical marking and editorial hierarchy.\n- **Headlines:** Oswald is utilized for its condensed, vertical stature, reminiscent of vintage automotive badges and industrial signage. Always uppercase for primary headings.\n- **Body:** Inter provides a neutral, high-legibility counterpart to the aggressive headlines, ensuring technical descriptions are easy to digest.\n- **Data/Labels:** JetBrains Mono (monospaced) is used for technical specs, serial numbers, and \"blueprint\" annotations to reinforce the engineering vibe.\n\n## Layout & Spacing\nThe layout follows a **Rigid Blueprint Grid**.\n- **Grid Model:** A 12-column fixed grid for desktop, but with intentionally \"broken\" alignment. Elements may start on Column 2 and end on Column 11 to create whitespace \"gutters\" that feel like technical margins.\n- **Section Dividers:** Instead of background color changes, use thin `Tool Steel` lines with `label-mono` annotations (e.g., \"SEC_01 // DIAGNOSTICS\") in the top left corner of the border.\n- **Vertical Rhythm:** Large vertical gaps (80px–120px) between sections to create a premium, editorial feel.\n\n## Elevation & Depth\nDepth is created through **Layered Outlines** rather than soft shadows.\n- **Flat Depth:** Avoid blurred shadows. Use \"1px Solid\" borders for cards.\n- **The \"Blueprint\" Stack:** Overlap images and text boxes with a 2px offset. For example, a card might have a secondary \"ghost\" border behind it offset by 4px to the bottom-right.\n- **Glassmorphism:** Use sparingly for overlays (like \"Engine Status\" popups). Apply a heavy background blur (20px) with a subtle `Tool Steel` tint at 10% opacity.\n\n## Shapes\nThe design system uses a **Strict Zero-Radius** policy. \n- **Sharp Corners:** Every button, input field, and card must have 90-degree sharp corners to evoke the precision of machined steel.\n- **Diagonal Shears:** Use 45-degree clipped corners for primary buttons or status chips to mimic industrial warning plates.\n\n## Components\n- **Primary Buttons:** High-Vis Amber background with Black text. Sharp corners. On hover, the button should \"fill\" with a Tool Steel border or shift 2px for a tactile \"click\" effect.\n- **Input Fields:** Thick bottom border (2px) in Tool Steel. Labels use the `label-mono` style floating strictly above the field.\n- **Cards:** No background (transparent) with a 1px Tool Steel border. Header areas of cards should have a subtle texture or a \"crosshair\" icon in the corners.\n- **Status Chips:** Small, rectangular, with monochromatic backgrounds (High-Vis Amber for active, Tool Steel for pending).\n- **The \"Diagnostic\" List:** List items separated by dotted lines (blueprint style) with monospaced data on the right.\n- **Specialty Component - \"The Schematic View\":** An image container that features thin leader lines pointing to specific parts of a vehicle, using `label-mono` for callouts.",
+            "font": "OSWALD",
+            "headlineFont": "OSWALD",
+            "headlineFontFamily": "Oswald",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#101415",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2d3133",
+              "inverse_primary": "#5d5e61",
+              "inverse_surface": "#e0e3e5",
+              "on_background": "#e0e3e5",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#2f3133",
+              "on_primary_container": "#838486",
+              "on_primary_fixed": "#1a1c1e",
+              "on_primary_fixed_variant": "#454749",
+              "on_secondary": "#402d00",
+              "on_secondary_container": "#5a4100",
+              "on_secondary_fixed": "#261a00",
+              "on_secondary_fixed_variant": "#5c4300",
+              "on_surface": "#e0e3e5",
+              "on_surface_variant": "#c5c6ca",
+              "on_tertiary": "#233144",
+              "on_tertiary_container": "#77859b",
+              "on_tertiary_fixed": "#0d1c2e",
+              "on_tertiary_fixed_variant": "#3a485b",
+              "outline": "#8f9194",
+              "outline_variant": "#44474a",
+              "primary": "#c6c6c9",
+              "primary_container": "#1a1c1e",
+              "primary_fixed": "#e2e2e5",
+              "primary_fixed_dim": "#c6c6c9",
+              "secondary": "#ffc640",
+              "secondary_container": "#e3aa00",
+              "secondary_fixed": "#ffdf9f",
+              "secondary_fixed_dim": "#f9bd22",
+              "surface": "#101415",
+              "surface_bright": "#363a3b",
+              "surface_container": "#1d2022",
+              "surface_container_high": "#272a2c",
+              "surface_container_highest": "#323537",
+              "surface_container_low": "#191c1e",
+              "surface_container_lowest": "#0b0f10",
+              "surface_dim": "#101415",
+              "surface_tint": "#c6c6c9",
+              "surface_variant": "#323537",
+              "tertiary": "#b9c7df",
+              "tertiary_container": "#0e1d2e",
+              "tertiary_fixed": "#d5e3fc",
+              "tertiary_fixed_dim": "#b9c7df"
+            },
+            "overrideNeutralColor": "#f8fafc",
+            "overridePrimaryColor": "#1a1c1e",
+            "overrideSecondaryColor": "#fbbf24",
+            "overrideTertiaryColor": "#475569",
+            "spacing": {
+              "blueprint-grid": "40px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "headline-lg": {
+                "fontFamily": "Oswald",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Oswald",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Oswald",
+                "fontSize": "24px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Oswald",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "label-mono": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              },
+              "stats-number": {
+                "fontFamily": "Oswald",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "BH Mobile Mechanic - Editorial Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have designed a bespoke, editorial-grade homepage for **BH Mobile Mechanic LLC** that departs from standard local-business templates in favor of a high-end \"Industrial Precision\" aesthetic.\n\n### Design Rationale:\n- **Visual Identity**: I established a \"blueprint\" motif using a dark, high-contrast palette (St. Louis Asphalt and High-Vis Amber) paired with a technical grid and oversized condensed typography. This positions the brand as a premium engineering service rather than just a local garage.\n- **Asymmetrical Layout**: The layout uses intentional whitespace and non-traditional alignment to create a memorable, editorial feel that stands out from competitors.\n- **Custom Imagery**: I generated three high-fidelity editorial assets: a cinematic hero shot of the service van in an industrial St. Louis setting, a macro precision shot of tools for technical services, and a gritty warehouse portrait for the brand manifesto.\n- **Technical Integrity**: The page is built with semantic HTML, CSS custom properties for scalability, and includes the specific map-slot requirements and St. Louis-based content.\n\nThe result is a production-ready, mobile-responsive landing page that makes a powerful and unique first impression."
+  },
+  {
+    "suggestion": "Add a 'Fleet Protocol' section for commercial clients"
+  },
+  {
+    "suggestion": "Make the 'High-Vis Amber' accents more prominent throughout the site"
+  },
+  {
+    "suggestion": "Animate the 'Technical Services' grid on scroll"
+  }
+]
