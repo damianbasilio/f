@@ -1,0 +1,479 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Ritz Hair Design System",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in **Editorial Luxury**, drawing inspiration from high-fashion print media and architectural minimalism. It targets a discerning clientele seeking sophistication, confidence, and a timeless aesthetic. The UI should evoke the feeling of a premium physical atelier—quiet, spacious, and meticulously curated.\n\nKey stylistic pillars include:\n- **Minimalism & Space:** Generous whitespace (macro-spacing) to allow imagery and typography to breathe.\n- **High Contrast:** A stark juxtaposition between deep onyx backgrounds and champagne gold accents.\n- **Architectural Precision:** Use of thin 1px lines, overlapping grid elements, and asymmetrical layouts that mimic a magazine spread.\n- **Tactile Accents:** Subtle gold-foil gradients and soft grain textures to provide a sense of physical luxury.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain precise editorial control, shifting to a fluid model on mobile.\n\n- **Grid:** A 12-column grid with wide 24px gutters. Use asymmetrical offsets (e.g., content spanning columns 2-10) to create a curated, non-standard look.\n- **Section Gaps:** Use `section-gap` (120px) between major content blocks to enforce the luxury of \"wasted\" space.\n- **Overlaps:** Images should occasionally overlap background containers or text blocks by 20-40px to create depth without using shadows.\n- **Mobile:** Scale margins down to 20px. Stack all asymmetrical elements vertically, maintaining the `stack-lg` spacing between different content types.\n\n## Elevation & Depth\n\nThis design system avoids traditional shadows in favor of **Tonal Layering** and **Architectural Lines**.\n\n- **Flat Depth:** Use the `onyx` color for \"containers\" that sit on top of the `off-white` base.\n- **Hairline Borders:** Define boundaries using 1px solid lines in `silver-taupe` or `champagne-gold`. These lines should often extend beyond the content area to act as structural guides.\n- **Backdrop Blurs:** For navigation overlays, use a heavy backdrop blur (20px+) with a 90% opaque `off-white` or `onyx` fill to maintain a sophisticated glass-like effect that doesn't feel \"techy.\"\n- **Z-Index Overlaps:** Depth is created by physically placing elements (like a small label or gold line) partially over an image.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `onyx` background, `off-white` text, uppercase `button` typography. 1px gold border on hover.\n- **Secondary:** Transparent background, 1px `onyx` border. Inverts to solid `onyx` on hover.\n- **Ghost/Tertiary:** `champagne-gold` text with a 1px gold underline that expands from the center on hover.\n\n### Input Fields\n- Underline-only style. A 1px `silver-taupe` bottom border that turns `champagne-gold` on focus. Labels use `label-caps` and sit above the line.\n\n### Cards\n- No borders or shadows. Cards are defined by their internal spacing and the alignment of the `Playfair Display` headlines within them. Use high-quality photography as the primary card element.\n\n### Chips & Tags\n- Small, rectangular with 1px `silver-taupe` borders. Text is `label-caps` in `onyx`.\n\n### Stylist Lists\n- Use a \"Table-style\" layout with thin `silver-taupe` horizontal dividers. The stylist name appears on the left in `body-lg`, with their specialty on the right in `label-caps`.",
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1a1a",
+            "designMd": "---\nname: Ritz Hair Design System\ncolors:\n  surface: '#fbf9f9'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f9'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1b'\n  on-tertiary-container: '#838483'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#e2e3e1'\n  tertiary-fixed-dim: '#c6c7c5'\n  on-tertiary-fixed: '#1a1c1b'\n  on-tertiary-fixed-variant: '#454746'\n  background: '#fbf9f9'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 88px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  button:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  stack-sm: 12px\n  stack-md: 24px\n  stack-lg: 48px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is rooted in **Editorial Luxury**, drawing inspiration from high-fashion print media and architectural minimalism. It targets a discerning clientele seeking sophistication, confidence, and a timeless aesthetic. The UI should evoke the feeling of a premium physical atelier—quiet, spacious, and meticulously curated.\n\nKey stylistic pillars include:\n- **Minimalism & Space:** Generous whitespace (macro-spacing) to allow imagery and typography to breathe.\n- **High Contrast:** A stark juxtaposition between deep onyx backgrounds and champagne gold accents.\n- **Architectural Precision:** Use of thin 1px lines, overlapping grid elements, and asymmetrical layouts that mimic a magazine spread.\n- **Tactile Accents:** Subtle gold-foil gradients and soft grain textures to provide a sense of physical luxury.\n\n## Colors\n\nThe palette is defined by \"Onyx & Champagne Gold.\" \n\n- **Onyx (#1A1A1A):** Used for primary backgrounds in high-impact sections and for secondary UI text. It provides the \"anchor\" for the editorial feel.\n- **Champagne Gold (#D4AF37):** Used sparingly for call-to-actions, active states, and decorative architectural lines. It should feel like a \"foil accent\" rather than a fill color.\n- **Off-White (#F9F9F7):** The primary canvas color. It is softer than pure white, reducing eye strain and adding a \"paper\" quality to the design.\n- **Silver Taupe (#C0C0BA):** Used for borders, dividers, and secondary labels to maintain a low-noise environment.\n\n## Typography\n\nThis design system employs a classic serif/sans-serif pairing to establish hierarchy.\n\n- **Playfair Display:** Used for dramatic headlines. Leverage the \"Italic\" variant for emphasis within headers to mimic editorial pull-quotes.\n- **Inter:** Used for all functional UI, body copy, and labels. Its neutrality balances the decorative nature of Playfair.\n- **Uppercase Styling:** Use `label-caps` for eyebrows and small navigation elements to reinforce the high-end boutique aesthetic.\n- **Line Height:** Maintain generous line heights for body copy (1.5x - 1.6x) to ensure maximum legibility and \"breathability.\"\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain precise editorial control, shifting to a fluid model on mobile.\n\n- **Grid:** A 12-column grid with wide 24px gutters. Use asymmetrical offsets (e.g., content spanning columns 2-10) to create a curated, non-standard look.\n- **Section Gaps:** Use `section-gap` (120px) between major content blocks to enforce the luxury of \"wasted\" space.\n- **Overlaps:** Images should occasionally overlap background containers or text blocks by 20-40px to create depth without using shadows.\n- **Mobile:** Scale margins down to 20px. Stack all asymmetrical elements vertically, maintaining the `stack-lg` spacing between different content types.\n\n## Elevation & Depth\n\nThis design system avoids traditional shadows in favor of **Tonal Layering** and **Architectural Lines**.\n\n- **Flat Depth:** Use the `onyx` color for \"containers\" that sit on top of the `off-white` base.\n- **Hairline Borders:** Define boundaries using 1px solid lines in `silver-taupe` or `champagne-gold`. These lines should often extend beyond the content area to act as structural guides.\n- **Backdrop Blurs:** For navigation overlays, use a heavy backdrop blur (20px+) with a 90% opaque `off-white` or `onyx` fill to maintain a sophisticated glass-like effect that doesn't feel \"techy.\"\n- **Z-Index Overlaps:** Depth is created by physically placing elements (like a small label or gold line) partially over an image.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\n- All buttons, input fields, images, and cards must have square corners. \n- The absence of rounded corners communicates a more formal, architectural, and serious luxury tone. \n- Rare exception: Full circular crops may be used for \"stylist\" profile photos to provide a singular point of organic contrast against the rigid grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `onyx` background, `off-white` text, uppercase `button` typography. 1px gold border on hover.\n- **Secondary:** Transparent background, 1px `onyx` border. Inverts to solid `onyx` on hover.\n- **Ghost/Tertiary:** `champagne-gold` text with a 1px gold underline that expands from the center on hover.\n\n### Input Fields\n- Underline-only style. A 1px `silver-taupe` bottom border that turns `champagne-gold` on focus. Labels use `label-caps` and sit above the line.\n\n### Cards\n- No borders or shadows. Cards are defined by their internal spacing and the alignment of the `Playfair Display` headlines within them. Use high-quality photography as the primary card element.\n\n### Chips & Tags\n- Small, rectangular with 1px `silver-taupe` borders. Text is `label-caps` in `onyx`.\n\n### Stylist Lists\n- Use a \"Table-style\" layout with thin `silver-taupe` horizontal dividers. The stylist name appears on the left in `body-lg`, with their specialty on the right in `label-caps`.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
+            "namedColors": {
+              "background": "#fbf9f9",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f0f0",
+              "inverse_primary": "#c8c6c5",
+              "inverse_surface": "#303031",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#858383",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474746",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#745c00",
+              "on_secondary_fixed": "#241a00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#444748",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#838483",
+              "on_tertiary_fixed": "#1a1c1b",
+              "on_tertiary_fixed_variant": "#454746",
+              "outline": "#747878",
+              "outline_variant": "#c4c7c7",
+              "primary": "#000000",
+              "primary_container": "#1c1b1b",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#735c00",
+              "secondary_container": "#fed65b",
+              "secondary_fixed": "#ffe088",
+              "secondary_fixed_dim": "#e9c349",
+              "surface": "#fbf9f9",
+              "surface_bright": "#fbf9f9",
+              "surface_container": "#efeded",
+              "surface_container_high": "#e9e8e7",
+              "surface_container_highest": "#e4e2e2",
+              "surface_container_low": "#f5f3f3",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbdad9",
+              "surface_tint": "#5f5e5e",
+              "surface_variant": "#e4e2e2",
+              "tertiary": "#000000",
+              "tertiary_container": "#1a1c1b",
+              "tertiary_fixed": "#e2e3e1",
+              "tertiary_fixed_dim": "#c6c7c5"
+            },
+            "overrideNeutralColor": "#707070",
+            "overridePrimaryColor": "#1a1a1a",
+            "overrideSecondaryColor": "#d4af37",
+            "overrideTertiaryColor": "#f9f9f7",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+              "stack-lg": "48px",
+              "stack-md": "24px",
+              "stack-sm": "12px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "button": {
+                "fontFamily": "Inter",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "20px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "80px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "88px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "52px"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-xl": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "56px"
+              },
+              "label-caps": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "16px"
+              }
+            }
+          }
+        },
+        "name": "assets/eeb0a5191e4d42e2be7e36cf929b6b27",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "c4fe9be13dc94c99ab6221c3317932c3",
+            "name": "projects/8609293265429753348/screens/c4fe9be13dc94c99ab6221c3317932c3",
+            "prompt": "Professional editorial photography of a high-end, modern hair salon interior. Minimalist aesthetic, warm lighting, champagne gold accents, large mirrors, architectural lines, sleek black styling chairs. Soft focus on the background, premium atmosphere. High-end lifestyle vibe.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsJkroIeXvbjP39JZqOMssl3zQNJ0cukecGUyIBTvfd9boKQ97ruxT-R8b-TQ8GrYBU_ZQ46Vh2fRU6eEY-yh86imnE6TCzCqLMfVFne5BC5K-z0_-8jiqjIe2M71TJiQ7XYbVcdvEr58x9ZJ2yVk2p3vp8oM9Yd1RtgrL2KL72n1ER3LXLJvreWNo1kkO1LQ14Ls08BJ15q6a9zjJH2a1yorqbplB2CsMFCYK0JPISJSQ_MwqNB4y-Qg",
+              "name": "projects/8609293265429753348/files/e8f4ce563c5d4c12b20ac807e946ff9d"
+            },
+            "theme": {},
+            "title": "Professional editorial photography of a high-end, modern hair salon interior. Minimalist aesthetic, warm lighting, champagne gold accents, large mirrors, architectural lines, sleek black styling chairs. Soft focus on the background, premium atmosphere. High-end lifestyle vibe.",
+            "width": "1376"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Ritz Hair Design System",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in **Editorial Luxury**, drawing inspiration from high-fashion print media and architectural minimalism. It targets a discerning clientele seeking sophistication, confidence, and a timeless aesthetic. The UI should evoke the feeling of a premium physical atelier—quiet, spacious, and meticulously curated.\n\nKey stylistic pillars include:\n- **Minimalism & Space:** Generous whitespace (macro-spacing) to allow imagery and typography to breathe.\n- **High Contrast:** A stark juxtaposition between deep onyx backgrounds and champagne gold accents.\n- **Architectural Precision:** Use of thin 1px lines, overlapping grid elements, and asymmetrical layouts that mimic a magazine spread.\n- **Tactile Accents:** Subtle gold-foil gradients and soft grain textures to provide a sense of physical luxury.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain precise editorial control, shifting to a fluid model on mobile.\n\n- **Grid:** A 12-column grid with wide 24px gutters. Use asymmetrical offsets (e.g., content spanning columns 2-10) to create a curated, non-standard look.\n- **Section Gaps:** Use `section-gap` (120px) between major content blocks to enforce the luxury of \"wasted\" space.\n- **Overlaps:** Images should occasionally overlap background containers or text blocks by 20-40px to create depth without using shadows.\n- **Mobile:** Scale margins down to 20px. Stack all asymmetrical elements vertically, maintaining the `stack-lg` spacing between different content types.\n\n## Elevation & Depth\n\nThis design system avoids traditional shadows in favor of **Tonal Layering** and **Architectural Lines**.\n\n- **Flat Depth:** Use the `onyx` color for \"containers\" that sit on top of the `off-white` base.\n- **Hairline Borders:** Define boundaries using 1px solid lines in `silver-taupe` or `champagne-gold`. These lines should often extend beyond the content area to act as structural guides.\n- **Backdrop Blurs:** For navigation overlays, use a heavy backdrop blur (20px+) with a 90% opaque `off-white` or `onyx` fill to maintain a sophisticated glass-like effect that doesn't feel \"techy.\"\n- **Z-Index Overlaps:** Depth is created by physically placing elements (like a small label or gold line) partially over an image.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `onyx` background, `off-white` text, uppercase `button` typography. 1px gold border on hover.\n- **Secondary:** Transparent background, 1px `onyx` border. Inverts to solid `onyx` on hover.\n- **Ghost/Tertiary:** `champagne-gold` text with a 1px gold underline that expands from the center on hover.\n\n### Input Fields\n- Underline-only style. A 1px `silver-taupe` bottom border that turns `champagne-gold` on focus. Labels use `label-caps` and sit above the line.\n\n### Cards\n- No borders or shadows. Cards are defined by their internal spacing and the alignment of the `Playfair Display` headlines within them. Use high-quality photography as the primary card element.\n\n### Chips & Tags\n- Small, rectangular with 1px `silver-taupe` borders. Text is `label-caps` in `onyx`.\n\n### Stylist Lists\n- Use a \"Table-style\" layout with thin `silver-taupe` horizontal dividers. The stylist name appears on the left in `body-lg`, with their specialty on the right in `label-caps`.",
+                "theme": {
+                  "bodyFont": "INTER",
+                  "bodyFontFamily": "Inter",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#1a1a1a",
+                  "designMd": "---\nname: Ritz Hair Design System\ncolors:\n  surface: '#fbf9f9'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f9'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1b'\n  on-tertiary-container: '#838483'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#e2e3e1'\n  tertiary-fixed-dim: '#c6c7c5'\n  on-tertiary-fixed: '#1a1c1b'\n  on-tertiary-fixed-variant: '#454746'\n  background: '#fbf9f9'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 88px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  button:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  stack-sm: 12px\n  stack-md: 24px\n  stack-lg: 48px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is rooted in **Editorial Luxury**, drawing inspiration from high-fashion print media and architectural minimalism. It targets a discerning clientele seeking sophistication, confidence, and a timeless aesthetic. The UI should evoke the feeling of a premium physical atelier—quiet, spacious, and meticulously curated.\n\nKey stylistic pillars include:\n- **Minimalism & Space:** Generous whitespace (macro-spacing) to allow imagery and typography to breathe.\n- **High Contrast:** A stark juxtaposition between deep onyx backgrounds and champagne gold accents.\n- **Architectural Precision:** Use of thin 1px lines, overlapping grid elements, and asymmetrical layouts that mimic a magazine spread.\n- **Tactile Accents:** Subtle gold-foil gradients and soft grain textures to provide a sense of physical luxury.\n\n## Colors\n\nThe palette is defined by \"Onyx & Champagne Gold.\" \n\n- **Onyx (#1A1A1A):** Used for primary backgrounds in high-impact sections and for secondary UI text. It provides the \"anchor\" for the editorial feel.\n- **Champagne Gold (#D4AF37):** Used sparingly for call-to-actions, active states, and decorative architectural lines. It should feel like a \"foil accent\" rather than a fill color.\n- **Off-White (#F9F9F7):** The primary canvas color. It is softer than pure white, reducing eye strain and adding a \"paper\" quality to the design.\n- **Silver Taupe (#C0C0BA):** Used for borders, dividers, and secondary labels to maintain a low-noise environment.\n\n## Typography\n\nThis design system employs a classic serif/sans-serif pairing to establish hierarchy.\n\n- **Playfair Display:** Used for dramatic headlines. Leverage the \"Italic\" variant for emphasis within headers to mimic editorial pull-quotes.\n- **Inter:** Used for all functional UI, body copy, and labels. Its neutrality balances the decorative nature of Playfair.\n- **Uppercase Styling:** Use `label-caps` for eyebrows and small navigation elements to reinforce the high-end boutique aesthetic.\n- **Line Height:** Maintain generous line heights for body copy (1.5x - 1.6x) to ensure maximum legibility and \"breathability.\"\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain precise editorial control, shifting to a fluid model on mobile.\n\n- **Grid:** A 12-column grid with wide 24px gutters. Use asymmetrical offsets (e.g., content spanning columns 2-10) to create a curated, non-standard look.\n- **Section Gaps:** Use `section-gap` (120px) between major content blocks to enforce the luxury of \"wasted\" space.\n- **Overlaps:** Images should occasionally overlap background containers or text blocks by 20-40px to create depth without using shadows.\n- **Mobile:** Scale margins down to 20px. Stack all asymmetrical elements vertically, maintaining the `stack-lg` spacing between different content types.\n\n## Elevation & Depth\n\nThis design system avoids traditional shadows in favor of **Tonal Layering** and **Architectural Lines**.\n\n- **Flat Depth:** Use the `onyx` color for \"containers\" that sit on top of the `off-white` base.\n- **Hairline Borders:** Define boundaries using 1px solid lines in `silver-taupe` or `champagne-gold`. These lines should often extend beyond the content area to act as structural guides.\n- **Backdrop Blurs:** For navigation overlays, use a heavy backdrop blur (20px+) with a 90% opaque `off-white` or `onyx` fill to maintain a sophisticated glass-like effect that doesn't feel \"techy.\"\n- **Z-Index Overlaps:** Depth is created by physically placing elements (like a small label or gold line) partially over an image.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\n- All buttons, input fields, images, and cards must have square corners. \n- The absence of rounded corners communicates a more formal, architectural, and serious luxury tone. \n- Rare exception: Full circular crops may be used for \"stylist\" profile photos to provide a singular point of organic contrast against the rigid grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `onyx` background, `off-white` text, uppercase `button` typography. 1px gold border on hover.\n- **Secondary:** Transparent background, 1px `onyx` border. Inverts to solid `onyx` on hover.\n- **Ghost/Tertiary:** `champagne-gold` text with a 1px gold underline that expands from the center on hover.\n\n### Input Fields\n- Underline-only style. A 1px `silver-taupe` bottom border that turns `champagne-gold` on focus. Labels use `label-caps` and sit above the line.\n\n### Cards\n- No borders or shadows. Cards are defined by their internal spacing and the alignment of the `Playfair Display` headlines within them. Use high-quality photography as the primary card element.\n\n### Chips & Tags\n- Small, rectangular with 1px `silver-taupe` borders. Text is `label-caps` in `onyx`.\n\n### Stylist Lists\n- Use a \"Table-style\" layout with thin `silver-taupe` horizontal dividers. The stylist name appears on the left in `body-lg`, with their specialty on the right in `label-caps`.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "INTER",
+                  "labelFontFamily": "Inter",
+                  "namedColors": {
+                    "background": "#fbf9f9",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f2f0f0",
+                    "inverse_primary": "#c8c6c5",
+                    "inverse_surface": "#303031",
+                    "on_background": "#1b1c1c",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#858383",
+                    "on_primary_fixed": "#1c1b1b",
+                    "on_primary_fixed_variant": "#474746",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#745c00",
+                    "on_secondary_fixed": "#241a00",
+                    "on_secondary_fixed_variant": "#574500",
+                    "on_surface": "#1b1c1c",
+                    "on_surface_variant": "#444748",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#838483",
+                    "on_tertiary_fixed": "#1a1c1b",
+                    "on_tertiary_fixed_variant": "#454746",
+                    "outline": "#747878",
+                    "outline_variant": "#c4c7c7",
+                    "primary": "#000000",
+                    "primary_container": "#1c1b1b",
+                    "primary_fixed": "#e5e2e1",
+                    "primary_fixed_dim": "#c8c6c5",
+                    "secondary": "#735c00",
+                    "secondary_container": "#fed65b",
+                    "secondary_fixed": "#ffe088",
+                    "secondary_fixed_dim": "#e9c349",
+                    "surface": "#fbf9f9",
+                    "surface_bright": "#fbf9f9",
+                    "surface_container": "#efeded",
+                    "surface_container_high": "#e9e8e7",
+                    "surface_container_highest": "#e4e2e2",
+                    "surface_container_low": "#f5f3f3",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dbdad9",
+                    "surface_tint": "#5f5e5e",
+                    "surface_variant": "#e4e2e2",
+                    "tertiary": "#000000",
+                    "tertiary_container": "#1a1c1b",
+                    "tertiary_fixed": "#e2e3e1",
+                    "tertiary_fixed_dim": "#c6c7c5"
+                  },
+                  "overrideNeutralColor": "#707070",
+                  "overridePrimaryColor": "#1a1a1a",
+                  "overrideSecondaryColor": "#d4af37",
+                  "overrideTertiaryColor": "#f9f9f7",
+                  "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "section-gap": "120px",
+                    "stack-lg": "48px",
+                    "stack-md": "24px",
+                    "stack-sm": "12px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "28px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px"
+                    },
+                    "button": {
+                      "fontFamily": "Inter",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "20px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "80px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "88px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "52px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "40px"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "56px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Inter",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/eeb0a5191e4d42e2be7e36cf929b6b27",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "11686",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzNhOTI4ZjExMTU4NjQzZDRhMjkzNjhlMjQ2YTU2NDFlEgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM4NjA5MjkzMjY1NDI5NzUzMzQ4&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/8609293265429753348/files/0aa7c588116b4900a0825f78e89ce5e1"
+            },
+            "id": "40adfb9b033642838fe407a60db2e432",
+            "name": "projects/8609293265429753348/screens/40adfb9b033642838fe407a60db2e432",
+            "prompt": "Build the complete production-ready desktop homepage for Ritz Hair Design. \n\nVisual Style: \n- \"Gold & Onyx\" palette: Deep charcoal (#1A1A1A), Champagne Gold (#D4AF37), and Chalk White (#F9F9F7).\n- Editorial layout: Use an asymmetrical, curated grid. Avoid generic boxes.\n- Typography: Playfair Display for massive, statement headlines; Inter for body.\n- Key Image: Use {{DATA:IMAGE:IMAGE_2}} as the primary hero image, perhaps partially masked or with overlapping text.\n\nSections (in order):\n1. TopNavBar (from components).\n2. Hero: \"The Art of the Cut\" - large typography, background {{DATA:IMAGE:IMAGE_2}}.\n3. Credibility: \"Award-Winning Stylists in the Heart of Modesto.\" High-contrast, typography-focused.\n4. Services: An asymmetrical grid showcasing \"Precision Cutting,\" \"Couture Color,\" and \"Ritual Treatments.\"\n5. About: \"The Ritz Atelier\" - a narrative about premium hair care.\n6. Visit: \"Visit the Atelier\" - Contact details: (209) 571-3377, 2001 McHenry Avenue, Modesto, CA. Include the specific map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A sophisticated, minimal appointment request form.\n8. Footer (from components).\n\nTechnical: Responsive, smooth scroll, form validation UI, semantic HTML. Use the phone and email: (209) 571-3377, johnsonyoukana@att.net. No placeholder images for the map — just the slot.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvsR6WgwFM03pXkljIqT3ept5wEm8B8iXelnsMazCAroNuphCn37or-AomHnaZkeqBDm6uaWDea5jiNxJSjvm85c3mVn7Qsk0ByCxc2sbkKdEo94ZbNBL9aQDu_zfW5F7026NRUUgM_IQ7GGJFyRdgjxxdqMg3Vvjz9PmEOA3_DFK5Sjckz-oxgqRB3gyAgn07GroXSe1AJLia37oln2krrIHNfL2LBmDN5tzMQQeR_-0GVQwrFaxVOEGk",
+              "name": "projects/8609293265429753348/files/080aef17deb0431ebd20bdd71385d4a6"
+            },
+            "theme": {
+              "bodyFont": "INTER",
+              "bodyFontFamily": "Inter",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#1a1a1a",
+              "designMd": "---\nname: Ritz Hair Design System\ncolors:\n  surface: '#fbf9f9'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f9'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1b'\n  on-tertiary-container: '#838483'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#e2e3e1'\n  tertiary-fixed-dim: '#c6c7c5'\n  on-tertiary-fixed: '#1a1c1b'\n  on-tertiary-fixed-variant: '#454746'\n  background: '#fbf9f9'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 88px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  button:\n    fontFamily: Inter\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  stack-sm: 12px\n  stack-md: 24px\n  stack-lg: 48px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is rooted in **Editorial Luxury**, drawing inspiration from high-fashion print media and architectural minimalism. It targets a discerning clientele seeking sophistication, confidence, and a timeless aesthetic. The UI should evoke the feeling of a premium physical atelier—quiet, spacious, and meticulously curated.\n\nKey stylistic pillars include:\n- **Minimalism & Space:** Generous whitespace (macro-spacing) to allow imagery and typography to breathe.\n- **High Contrast:** A stark juxtaposition between deep onyx backgrounds and champagne gold accents.\n- **Architectural Precision:** Use of thin 1px lines, overlapping grid elements, and asymmetrical layouts that mimic a magazine spread.\n- **Tactile Accents:** Subtle gold-foil gradients and soft grain textures to provide a sense of physical luxury.\n\n## Colors\n\nThe palette is defined by \"Onyx & Champagne Gold.\" \n\n- **Onyx (#1A1A1A):** Used for primary backgrounds in high-impact sections and for secondary UI text. It provides the \"anchor\" for the editorial feel.\n- **Champagne Gold (#D4AF37):** Used sparingly for call-to-actions, active states, and decorative architectural lines. It should feel like a \"foil accent\" rather than a fill color.\n- **Off-White (#F9F9F7):** The primary canvas color. It is softer than pure white, reducing eye strain and adding a \"paper\" quality to the design.\n- **Silver Taupe (#C0C0BA):** Used for borders, dividers, and secondary labels to maintain a low-noise environment.\n\n## Typography\n\nThis design system employs a classic serif/sans-serif pairing to establish hierarchy.\n\n- **Playfair Display:** Used for dramatic headlines. Leverage the \"Italic\" variant for emphasis within headers to mimic editorial pull-quotes.\n- **Inter:** Used for all functional UI, body copy, and labels. Its neutrality balances the decorative nature of Playfair.\n- **Uppercase Styling:** Use `label-caps` for eyebrows and small navigation elements to reinforce the high-end boutique aesthetic.\n- **Line Height:** Maintain generous line heights for body copy (1.5x - 1.6x) to ensure maximum legibility and \"breathability.\"\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain precise editorial control, shifting to a fluid model on mobile.\n\n- **Grid:** A 12-column grid with wide 24px gutters. Use asymmetrical offsets (e.g., content spanning columns 2-10) to create a curated, non-standard look.\n- **Section Gaps:** Use `section-gap` (120px) between major content blocks to enforce the luxury of \"wasted\" space.\n- **Overlaps:** Images should occasionally overlap background containers or text blocks by 20-40px to create depth without using shadows.\n- **Mobile:** Scale margins down to 20px. Stack all asymmetrical elements vertically, maintaining the `stack-lg` spacing between different content types.\n\n## Elevation & Depth\n\nThis design system avoids traditional shadows in favor of **Tonal Layering** and **Architectural Lines**.\n\n- **Flat Depth:** Use the `onyx` color for \"containers\" that sit on top of the `off-white` base.\n- **Hairline Borders:** Define boundaries using 1px solid lines in `silver-taupe` or `champagne-gold`. These lines should often extend beyond the content area to act as structural guides.\n- **Backdrop Blurs:** For navigation overlays, use a heavy backdrop blur (20px+) with a 90% opaque `off-white` or `onyx` fill to maintain a sophisticated glass-like effect that doesn't feel \"techy.\"\n- **Z-Index Overlaps:** Depth is created by physically placing elements (like a small label or gold line) partially over an image.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\n- All buttons, input fields, images, and cards must have square corners. \n- The absence of rounded corners communicates a more formal, architectural, and serious luxury tone. \n- Rare exception: Full circular crops may be used for \"stylist\" profile photos to provide a singular point of organic contrast against the rigid grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `onyx` background, `off-white` text, uppercase `button` typography. 1px gold border on hover.\n- **Secondary:** Transparent background, 1px `onyx` border. Inverts to solid `onyx` on hover.\n- **Ghost/Tertiary:** `champagne-gold` text with a 1px gold underline that expands from the center on hover.\n\n### Input Fields\n- Underline-only style. A 1px `silver-taupe` bottom border that turns `champagne-gold` on focus. Labels use `label-caps` and sit above the line.\n\n### Cards\n- No borders or shadows. Cards are defined by their internal spacing and the alignment of the `Playfair Display` headlines within them. Use high-quality photography as the primary card element.\n\n### Chips & Tags\n- Small, rectangular with 1px `silver-taupe` borders. Text is `label-caps` in `onyx`.\n\n### Stylist Lists\n- Use a \"Table-style\" layout with thin `silver-taupe` horizontal dividers. The stylist name appears on the left in `body-lg`, with their specialty on the right in `label-caps`.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "INTER",
+              "labelFontFamily": "Inter",
+              "namedColors": {
+                "background": "#fbf9f9",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f2f0f0",
+                "inverse_primary": "#c8c6c5",
+                "inverse_surface": "#303031",
+                "on_background": "#1b1c1c",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#858383",
+                "on_primary_fixed": "#1c1b1b",
+                "on_primary_fixed_variant": "#474746",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#745c00",
+                "on_secondary_fixed": "#241a00",
+                "on_secondary_fixed_variant": "#574500",
+                "on_surface": "#1b1c1c",
+                "on_surface_variant": "#444748",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#838483",
+                "on_tertiary_fixed": "#1a1c1b",
+                "on_tertiary_fixed_variant": "#454746",
+                "outline": "#747878",
+                "outline_variant": "#c4c7c7",
+                "primary": "#000000",
+                "primary_container": "#1c1b1b",
+                "primary_fixed": "#e5e2e1",
+                "primary_fixed_dim": "#c8c6c5",
+                "secondary": "#735c00",
+                "secondary_container": "#fed65b",
+                "secondary_fixed": "#ffe088",
+                "secondary_fixed_dim": "#e9c349",
+                "surface": "#fbf9f9",
+                "surface_bright": "#fbf9f9",
+                "surface_container": "#efeded",
+                "surface_container_high": "#e9e8e7",
+                "surface_container_highest": "#e4e2e2",
+                "surface_container_low": "#f5f3f3",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dbdad9",
+                "surface_tint": "#5f5e5e",
+                "surface_variant": "#e4e2e2",
+                "tertiary": "#000000",
+                "tertiary_container": "#1a1c1b",
+                "tertiary_fixed": "#e2e3e1",
+                "tertiary_fixed_dim": "#c6c7c5"
+              },
+              "overrideNeutralColor": "#707070",
+              "overridePrimaryColor": "#1a1a1a",
+              "overrideSecondaryColor": "#d4af37",
+              "overrideTertiaryColor": "#f9f9f7",
+              "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "margin-mobile": "20px",
+                "section-gap": "120px",
+                "stack-lg": "48px",
+                "stack-md": "24px",
+                "stack-sm": "12px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "28px"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px"
+                },
+                "button": {
+                  "fontFamily": "Inter",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "20px"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "80px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "88px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "52px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "40px"
+                },
+                "headline-xl": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "56px"
+                },
+                "label-caps": {
+                  "fontFamily": "Inter",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Ritz Hair Design - Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Ritz Hair Design**, moving away from standard templates to create a unique visual identity that reflects the premium nature of the Modesto atelier.\n\n### Design Highlights:\n*   **Gold & Onyx Palette:** A sophisticated color story using deep charcoal, champagne gold, and chalk white to evoke immediate luxury.\n*   **The Curated Grid:** I utilized an asymmetrical layout for the services section, creating a more dynamic, \"high-fashion\" feel than a standard 3-column row.\n*   **Editorial Typography:** Large-scale Playfair Display headings establish a confident, authoritative voice for the brand.\n*   **Signature Motif:** Subtle architectural lines and gold-accented UI elements are woven throughout to unify the experience.\n\nThe site is fully responsive and includes a custom appointment form, a dedicated service atelier section, and the requested semantic structure for the map slot.\n\nHow does this new visual direction feel for the brand? We can refine the service descriptions or explore a different tonal balance for the colors if you'd like."
+    },
+    {
+      "suggestion": "Adjust the gold tones to be more subtle"
+    },
+    {
+      "suggestion": "Add a \"Meet the Stylists\" gallery section"
+    },
+    {
+      "suggestion": "Make the typography even more bold and dramatic"
+    }
+  ],
+  "projectId": "8609293265429753348",
+  "sessionId": "2336901221709512103"
+}
