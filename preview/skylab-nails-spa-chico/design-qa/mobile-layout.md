@@ -8,7 +8,6 @@
 - pulled in decorative absolute offsets
 - body overflow-x-clip
 - section overflow-hidden for decorative layers
-- responsive horizontal margins (1 blocks)
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

@@ -1,25 +1,45 @@
-// Navbar behavior on scroll
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('main-nav');
+// Scroll Reveal Animation
+        function reveal() {
+            const reveals = document.querySelectorAll(".reveal");
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        window.addEventListener("load", reveal);
+
+        // Header transparency on scroll
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                nav.classList.add('bg-[#0A0E1A]/80', 'backdrop-blur-md', 'py-4');
-                nav.classList.remove('py-8');
+                header.classList.add('glass');
+                header.classList.remove('bg-white/10');
             } else {
-                nav.classList.remove('bg-[#0A0E1A]/80', 'backdrop-blur-md', 'py-4');
-                nav.classList.add('py-8');
+                header.classList.remove('glass');
+                header.classList.add('bg-white/10');
             }
         });
 
-        // Simple Parallax for floating elements
-        document.addEventListener('mousemove', (e) => {
-            const cards = document.querySelectorAll('.glass-card');
-            const x = e.clientX / window.innerWidth;
-            const y = e.clientY / window.innerHeight;
-            
-            cards.forEach((card, index) => {
-                const speed = (index + 1) * 10;
-                card.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
-            });
+        // Simple Form Interactivity
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "SIGNAL SENT";
+            btn.classList.replace('bg-primary', 'bg-tertiary-container');
+            form.reset();
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-tertiary-container', 'bg-primary');
+            }, 3000);
         });
 
 (() => {

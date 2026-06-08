@@ -1,104 +1,112 @@
-I've designed a bespoke homepage for SkyLab Nails & Spa that intentionally avoids the typical local-business template.
+I have designed a bespoke, editorial-grade homepage for **SkyLab Nails & Spa**, moving away from standard templates to create a unique "Atmospheric Luxury" identity.
 
-**Design Rationale:**
-*   **The "Celestial" Visual Motif:** I used thin gold "orbital" curves and circular masks to create a unique brand identity that feels both high-fashion and ethereal.
-*   **Editorial Layout:** By utilizing an asymmetrical grid and floating "constellation" service cards, the site breaks away from standard blocky layouts, giving it a premium, custom-coded feel.
-*   **High-Contrast Palette:** The deep navy background paired with shimmering champagne gold and generous whitespace creates a sophisticated, "Zenith" experience that feels like a luxury atelier rather than a standard spa.
+### Key Design Decisions:
+*   **Visual Motif:** I introduced an "Orbital" design language, using thin-line celestial motifs and asymmetrical layouts to reflect the "Sky" in SkyLab.
+*   **Editorial Typography:** High-contrast serif headings (Bodoni Moda) are paired with generous whitespace to create a premium, boutique feel that prioritizes brand story over generic service lists.
+*   **Atmospheric Palette:** The "Midnight Velvet" and "Nebula White" palette provides a sophisticated backdrop that makes the nail artistry (represented in the curated offerings section) feel like high-fashion photography.
+*   **Interaction:** The design features a glassmorphic navigation bar and subtle, motion-ready sections that evoke a sense of weightless tranquility.
 
-Does this direction capture the premium atmosphere you were looking for, or should we adjust the visual weight of the "orbital" elements?
+The code is production-ready, featuring semantic HTML5, custom CSS variables for easy brand management, and the specific functional requirements like the custom map slot and form validation UI.
+
+Would you like to refine the color story or explore more specific service-level animations?
 
 ---
 
 ---
-name: Celestial Premium
+name: Atmospheric Luxury
 colors:
-  surface: '#111415'
-  surface-dim: '#111415'
-  surface-bright: '#373a3b'
-  surface-container-lowest: '#0c0f10'
-  surface-container-low: '#191c1d'
-  surface-container: '#1d2021'
-  surface-container-high: '#282a2b'
-  surface-container-highest: '#323536'
-  on-surface: '#e1e3e4'
-  on-surface-variant: '#c7c6cc'
-  inverse-surface: '#e1e3e4'
-  inverse-on-surface: '#2e3132'
-  outline: '#909096'
-  outline-variant: '#46464c'
-  surface-tint: '#c3c6d7'
-  primary: '#c3c6d7'
-  on-primary: '#2c303d'
-  primary-container: '#0a0e1a'
-  on-primary-container: '#777b8a'
-  inverse-primary: '#5a5e6d'
-  secondary: '#e9c349'
-  on-secondary: '#3c2f00'
-  secondary-container: '#af8d11'
-  on-secondary-container: '#342800'
-  tertiary: '#c5c5d8'
-  on-tertiary: '#2e2f3e'
-  tertiary-container: '#0c0e1b'
-  on-tertiary-container: '#797a8c'
-  error: '#ffb4ab'
-  on-error: '#690005'
-  error-container: '#93000a'
-  on-error-container: '#ffdad6'
-  primary-fixed: '#dfe2f3'
-  primary-fixed-dim: '#c3c6d7'
-  on-primary-fixed: '#171b28'
-  on-primary-fixed-variant: '#434654'
-  secondary-fixed: '#ffe088'
-  secondary-fixed-dim: '#e9c349'
-  on-secondary-fixed: '#241a00'
-  on-secondary-fixed-variant: '#574500'
-  tertiary-fixed: '#e1e1f5'
-  tertiary-fixed-dim: '#c5c5d8'
-  on-tertiary-fixed: '#191b29'
-  on-tertiary-fixed-variant: '#444655'
-  background: '#111415'
-  on-background: '#e1e3e4'
-  surface-variant: '#323536'
+  surface: '#f9f9fb'
+  surface-dim: '#d9dadc'
+  surface-bright: '#f9f9fb'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f3f3f5'
+  surface-container: '#edeef0'
+  surface-container-high: '#e8e8ea'
+  surface-container-highest: '#e2e2e4'
+  on-surface: '#1a1c1d'
+  on-surface-variant: '#47464b'
+  inverse-surface: '#2f3132'
+  inverse-on-surface: '#f0f0f2'
+  outline: '#78767b'
+  outline-variant: '#c8c5cb'
+  surface-tint: '#5f5e64'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#1b1b20'
+  on-primary-container: '#848389'
+  inverse-primary: '#c8c5cc'
+  secondary: '#5d5e66'
+  on-secondary: '#ffffff'
+  secondary-container: '#e2e2eb'
+  on-secondary-container: '#63646c'
+  tertiary: '#735c00'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#cca730'
+  on-tertiary-container: '#4f3e00'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#e4e1e8'
+  primary-fixed-dim: '#c8c5cc'
+  on-primary-fixed: '#1b1b20'
+  on-primary-fixed-variant: '#47464c'
+  secondary-fixed: '#e2e2eb'
+  secondary-fixed-dim: '#c5c6cf'
+  on-secondary-fixed: '#191b22'
+  on-secondary-fixed-variant: '#45464e'
+  tertiary-fixed: '#ffe088'
+  tertiary-fixed-dim: '#e9c349'
+  on-tertiary-fixed: '#241a00'
+  on-tertiary-fixed-variant: '#574500'
+  background: '#f9f9fb'
+  on-background: '#1a1c1d'
+  surface-variant: '#e2e2e4'
 typography:
-  headline-xl:
-    fontFamily: Playfair Display
+  display-lg:
+    fontFamily: Bodoni Moda
     fontSize: 64px
-    fontWeight: '700'
+    fontWeight: '600'
     lineHeight: '1.1'
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Playfair Display
-    fontSize: 48px
+  display-lg-mobile:
+    fontFamily: Bodoni Moda
+    fontSize: 40px
     fontWeight: '600'
+    lineHeight: '1.2'
+  headline-lg:
+    fontFamily: Bodoni Moda
+    fontSize: 48px
+    fontWeight: '500'
     lineHeight: '1.2'
   headline-lg-mobile:
-    fontFamily: Playfair Display
+    fontFamily: Bodoni Moda
     fontSize: 32px
-    fontWeight: '600'
-    lineHeight: '1.2'
+    fontWeight: '500'
+    lineHeight: '1.3'
   headline-md:
-    fontFamily: Playfair Display
+    fontFamily: Bodoni Moda
     fontSize: 32px
     fontWeight: '500'
     lineHeight: '1.3'
   body-lg:
     fontFamily: Montserrat
     fontSize: 18px
-    fontWeight: '400'
-    lineHeight: '1.6'
-    letterSpacing: 0.03em
+    fontWeight: '300'
+    lineHeight: '1.8'
+    letterSpacing: 0.05em
   body-md:
     fontFamily: Montserrat
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-    letterSpacing: 0.02em
-  label-sm:
+    letterSpacing: 0.03em
+  label-md:
     fontFamily: Montserrat
     fontSize: 12px
     fontWeight: '600'
     lineHeight: '1'
-    letterSpacing: 0.1em
+    letterSpacing: 0.15em
 rounded:
   sm: 0.25rem
   DEFAULT: 0.5rem
@@ -107,61 +115,58 @@ rounded:
   xl: 1.5rem
   full: 9999px
 spacing:
-  unit: 8px
-  container-max: 1440px
-  gutter: 24px
-  margin-desktop: 80px
-  margin-mobile: 24px
-  asymmetric-offset: 64px
+  space-unit: 8px
+  safe-margin-desktop: 80px
+  safe-margin-mobile: 24px
+  gutter: 32px
+  overlap-offset: -40px
 ---
 
 ## Brand & Style
-The design system embodies "Celestial Premium," a narrative that bridges the technical precision of high-end nail artistry with the infinite serenity of the night sky. The brand personality is professional and avant-garde, positioning the salon as a destination for artistic discovery rather than just a service provider.
+The design system is built upon the concept of "Atmospheric Luxury," merging the vast, quiet depth of the cosmos with the tactile serenity of a premium spa experience. The target audience is a discerning clientele seeking exclusivity and a modern, high-fashion approach to self-care.
 
-The visual style is a sophisticated blend of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace—or more accurately, "darkspace"—to let editorial imagery breathe. Translucent layers and shimmering gold accents create a sense of depth, mimicking the layering of gels and polishes. The overall emotional response should be one of profound calm and curated luxury.
+The aesthetic is characterized by **Minimalism infused with Glassmorphism**. We utilize heavy whitespace to represent the vacuum of space, creating a "breathable" interface that reduces cognitive load. High-fashion editorial layouts provide a sense of prestige, while translucent, frosted surfaces (Glassmorphism) mimic the ethereal quality of clouds and nebulae. The emotional response should be one of profound calm, sophisticated mystery, and unwavering quality.
 
 ## Colors
-The palette, "Deep Dusk to Starlight," relies on extreme contrast to establish a premium feel. 
-
-- **Primary (Midnight Navy):** The foundational canvas. It should be used for large surfaces and backgrounds to evoke the depths of the cosmos.
-- **Secondary (Champagne Gold):** Used sparingly for "orbital" lines, primary call-to-actions, and interactive highlights. It represents precision and luxury.
-- **Tertiary (Cloud Lavender):** A soft, ethereal counter-balance used for secondary information, subtle gradients, and background blurs.
-- **Neutral:** A high-clarity off-white used exclusively for body text and functional icons to ensure maximum legibility against the dark primary base.
+This design system utilizes a high-contrast palette to establish depth and hierarchy.
+- **Midnight Velvet (#1A1A1F):** Used primarily for deep backgrounds in immersive sections, high-contrast headings, and primary call-to-action buttons. It provides the "gravitational pull" of the brand.
+- **Nebula White (#F8F8FA):** The standard background color. It is a cool-toned off-white that prevents the starkness of pure white, maintaining a soft, atmospheric feel.
+- **Ethereal Cloud (#E2E2EB):** A functional accent used for glassmorphic borders, secondary containers, and subtle UI backgrounds.
+- **Stellar Gold (#D4AF37):** Used sparingly as a highlight for interactive states, luxury tiering, and celestial decorative elements. It adds a metallic, premium "spark" to the matte environment.
 
 ## Typography
-The typography system pairs high-contrast editorial elegance with modern utilitarian clarity. 
+The typography system relies on a dramatic contrast between the authoritative **Bodoni Moda** and the airy, geometric **Montserrat**.
 
-**Playfair Display** is reserved for headlines. It should be typeset with tight tracking in larger sizes to emphasize its dramatic stroke contrast. For "Celestial" effects, use italic styles for specific keywords within headlines to break the rhythm.
-
-**Montserrat** provides the functional balance. It is set with generous letter spacing (tracking) to evoke a sense of openness and luxury. All labels and navigation items should use Montserrat in uppercase with increased letter spacing to maintain the avant-garde aesthetic.
+- **Headlines:** Use Bodoni Moda for all major headings. The high-contrast strokes evoke luxury editorial print. Tighten letter-spacing slightly for display sizes to emphasize the verticality of the letterforms.
+- **Body & UI:** Montserrat is used for readability and a modern, technical edge. Use light weights (300/400) for body copy with generous line heights (1.6 - 1.8) and increased letter spacing to create an "airy" feel.
+- **Labels:** Use uppercase Montserrat with heavy tracking (0.15em) for small labels, buttons, and navigation items to mimic the branding of high-end cosmetic products.
 
 ## Layout & Spacing
-The layout rejects standard block-based web design in favor of **Editorial Asymmetry**. 
+This design system moves away from rigid, predictable grids in favor of an **Asymmetrical Editorial Layout**. 
 
-- **Grid:** Use a 12-column fluid grid, but frequently break the grid by overlapping images and text blocks. 
-- **Overlaps:** Elements (like a high-res photo of nail art) should overlap background shapes or text containers by the `asymmetric-offset` value to create depth.
-- **Negative Space:** Use intentionally large vertical gaps (up to 160px on desktop) between sections to create a serene, unhurried browsing experience.
-- **Mobile Adaption:** On mobile, revert to a single-column flow but maintain the overlapping "orbital" line decorations to preserve the brand's visual motif.
+- **Composition:** Use overlapping elements (e.g., an image overlapping a text container) to create a sense of three-dimensional space.
+- **The "Orbit" Rule:** Align secondary elements along invisible circular arcs rather than straight vertical lines where possible to reinforce the celestial theme.
+- **Spacing:** Use a base 8px unit, but prioritize large "hero" margins (80px+) to isolate content and suggest exclusivity. 
+- **Reflow:** On mobile, transition to a single-column layout but maintain the overlap effect by using negative margins on card elements to break the container edge.
 
 ## Elevation & Depth
-Depth is created through **Glassmorphism** and layered "Orbital" elements rather than traditional shadows.
+Depth is created through **Glassmorphism and Tonal Layering** rather than traditional drop shadows.
 
-1.  **Base Layer:** Solid Midnight Navy (#0A0E1A).
-2.  **Decorative Layer:** Thin, 1px Champagne Gold lines drawn in large, sweeping arcs that disappear off the edge of the viewport.
-3.  **Surface Layer:** Semi-transparent containers (Background: #E6E6FA at 5-10% opacity) with a 20px backdrop blur. This creates a "frosted glass" effect that feels like polished acrylic or top-coat gel.
-4.  **Accent Elevation:** High-contrast Gold borders (1px) are used only for active states or primary call-outs, making them "glow" against the dark background.
+- **Surface Tiers:** The base layer is Nebula White. Elevated containers use a semi-transparent Ethereal Cloud background with a `backdrop-filter: blur(20px)`.
+- **Borders:** Instead of shadows, use "Inner Glow" borders: 1px solid lines with low opacity (e.g., White at 20% or Stellar Gold at 15%) to define the edges of glass elements.
+- **Ambient Light:** Use large, soft radial gradients in the background (faint Lavender or Deep Navy) to simulate "nebula" light sources, which provide a natural sense of depth to the layers floating above them.
 
 ## Shapes
-The shape language mimics the curvature of a perfectly manicured nail. 
+The shape language is defined by **perfect circles and soft rectangles**. 
 
-Standard containers and cards use the **Rounded** (0.5rem) setting. However, interactive elements like buttons and chips must follow a **Pill-shaped** convention to mirror the organic, soft-edged aesthetic of the brand. 
-
-Circular masks should be applied to 30% of editorial imagery to reinforce the "Orbital" motif. These circles should often be positioned off-center within their parent containers.
+- **UI Elements:** Buttons and cards use a `0.5rem` (8px) radius for a modern, architectural feel. 
+- **Cosmic Accents:** Use 1px "Orbit" lines (large, stroked circles) that bleed off the edge of the screen to serve as dividers. 
+- **Imagery:** Photography should either be full-bleed or contained within "Capsule" shapes (pill-shaped) to maintain the organic yet structured aesthetic.
 
 ## Components
-- **Buttons:** Primary buttons are pill-shaped with a solid Champagne Gold fill and Navy text. Secondary buttons are "Ghost" style with a 1px Gold border and shimmering hover effects.
-- **Cards:** Use the glassmorphism style—translucent background with a heavy backdrop blur and a very subtle 0.5px border in Cloud Lavender.
-- **Inputs:** Minimalist bottom-border only. On focus, the border transitions from Lavender to Gold with a soft glow effect.
-- **Chips/Labels:** Small, pill-shaped elements with Cloud Lavender text and a low-opacity Lavender fill.
-- **Orbital Dividers:** Instead of horizontal rules, use large-radius arcs (SVG) in Gold to separate major page sections.
-- **Nail Art Gallery:** A custom component using an asymmetrical masonry grid where items have varying corner radii to feel more organic.
+- **Buttons:** Primary buttons are Midnight Velvet with white text. Secondary buttons are glassmorphic with a thin Stellar Gold border. All buttons use high letter-spacing and uppercase labels.
+- **Cards:** Use a glass effect (`blur`) with a very subtle 1px border. Do not use shadows. Content inside cards should have generous internal padding (min 32px).
+- **Inputs:** Minimalist bottom-border only, or a very light Ethereal Cloud fill. The focus state uses a Stellar Gold bottom border.
+- **Chips/Labels:** Pill-shaped with a light lavender-grey tint. Use for service categories (e.g., "Manicure," "Aromatherapy").
+- **Dividers:** Replace standard horizontal lines with "Stellar Lines"—extremely thin, long lines that end in a small 4px solid circle (the "star" at the end of the path).
+- **Navigation:** A floating glassmorphic bar at the top of the screen or a minimal side-drawer that slides in like a curtain.
