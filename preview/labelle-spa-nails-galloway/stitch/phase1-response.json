@@ -3,78 +3,79 @@
     {
       "designSystem": {
         "designSystem": {
-          "displayName": "Serene Boutique Editorial",
-          "styleGuidelines": "## Brand & Style\n\nThe design system is centered on an **Editorial Boutique** aesthetic, designed to evoke the tranquility and exclusivity of a high-end wellness sanctuary. The personality is serene, authoritative, and intentionally paced—mimicking the slow, restorative experience of a luxury spa.\n\nThe style blends **Minimalism** with **Tactile Editorial** elements. It prioritizes expansive whitespace (breathing room) to lower cognitive load while utilizing dense, structured content blocks to convey expertise. Key visual signatures include asymmetrical layouts, thin vertical dividers that act as \"anchor threads,\" and a sophisticated play between organic color tones and sharp, architectural lines.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Dynamic Fixed Grid** that embraces asymmetry. While content resides within a 12-column structure on desktop, the placement is intentionally offset to avoid a standard \"blocky\" feel.\n\n- **Asymmetry:** Content blocks (e.g., text vs. image) should rarely be 50/50. Use a 7:5 or 8:4 column split to create visual tension and interest.\n- **Vertical Rules:** Use 1px thin lines (`Mist`) to separate content vertically. These lines should often be longer than the content they accompany to suggest continuity.\n- **Whitespace:** Use a `block-gap` of 120px between major sections to ensure the user never feels overwhelmed.\n- **Image Frames:** Images should use \"floating\" frames—offset from their containers by 16-24px with a subtle, very soft drop shadow to create a sense of physical layering.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering** and **Soft Shadows** rather than aggressive elevation. \n\n- **Surfaces:** Use `Alabaster` as the base. Use `Mist` for secondary surface containers (like cards or side panels) to create a subtle shift in plane.\n- **Shadows:** Only applied to \"floating\" image frames and primary cards. Shadows must be extremely diffused: `0px 20px 40px rgba(0, 0, 0, 0.04)`. The goal is to make elements look like they are gently resting on a surface, not hovering high above it.\n- **Dividers:** 1px lines in `Mist` or `Sage Leaf` (at 30% opacity) are used to define boundaries without adding visual weight.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `Sage Leaf` background, white text. No border. Sharp corners. High letter-spacing (0.1em).\n- **Secondary:** Outlined `Onyx` 1px border. Deep Charcoal text. \n- **Ghost:** Text-only with a 1px `Deep Charcoal` underline that expands on hover.\n\n### Forms\n- **Inputs:** Minimalist style. No background. Bottom border only (1px `Onyx`). \n- **Labels:** Small caps `DM Sans` positioned above the input field with wide tracking.\n- **Focus State:** The bottom border thickens to 2px in `Sage Leaf`.\n\n### Cards\n- **Editorial Card:** Large image top, followed by a `label-caps` category, then a `headline-sm`. No borders or heavy backgrounds; the depth is created by the \"floating\" shadow on the image portion.\n\n### Chips/Tags\n- Small, rectangular boxes with a 1px `Mist` border. Text in `label-caps`. \n\n### Vertical Dividers\n- A unique component used to separate textual content from imagery. A 1px vertical line that often starts 40px above the content and ends 40px below, creating a \"thread\" through the page.",
+          "displayName": "Serene Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is crafted to evoke the atmosphere of a high-end, boutique sanctuary. It moves away from traditional functionalist UI toward an **Editorial Minimalism** style, mimicking the layout of a luxury print magazine. The brand personality is serene, authoritative, and unapologetically premium.\n\nThe aesthetic leans on high-contrast typography, asymmetrical balance, and significant negative space to signal exclusivity. Unlike mass-market spa platforms, this design system treats every screen as a curated canvas, utilizing \"quiet\" interfaces that prioritize photography and sophisticated type treatments over dense utility.\n\n## Layout & Spacing\n\nThis design system employs an **Asymmetrical Fixed Grid** model. Rather than standard centered containers, the layout utilizes 12 columns with intentional \"dead zones\" or empty columns to create an editorial cadence.\n\n- **Asymmetry:** Content should rarely be perfectly centered. Instead, align text to the left 4 columns while placing a related image across columns 6 through 11, with a vertical offset to create overlap.\n- **The Hairline Motif:** Use 0.5pt Slate borders to separate sections or frame images. These lines should often extend to the edge of the viewport, breaking the grid to create a sense of infinite space.\n- **Generous Whitespace:** Section gaps are intentionally large (160px+) to ensure each service or brand pillar feels like its own \"chapter.\"\n\n## Elevation & Depth\n\nTo maintain the flat, printed-matter aesthetic, this design system avoids traditional shadows and neomorphism.\n\n- **Tonal Layering:** Depth is achieved through the overlapping of elements. An image might be placed on a Pale Leaf (#E5E9E2) background block, with a text element partially overlapping the image's edge.\n- **Glassmorphism (Minimal):** Use only for floating navigation bars. A very light blur (10px) with 80% Alabaster opacity keeps the navigation present but unobtrusive.\n- **Outline Sophistication:** Instead of elevation, use \"Ghost\" borders—hairline strokes in Slate at 20% opacity—to define interactive areas without adding visual weight.\n\n## Components\n\n### Buttons\nPrimary buttons are text-only with a \"Label Caps\" style and a 0.5pt bottom border (underline). On hover, the Sage (#A8B5A2) background fills the area behind the text with a soft fade. There are no boxed buttons.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Facials\"). These are small, uppercase labels in Slate, contained within a Slate hairline border with 0px radius.\n\n### Input Fields\nMinimalist underlines. The label sits above the line in \"Label Caps\" style. Upon focus, the bottom border transitions from 0.5pt to 1.5pt in Sage.\n\n### Cards\nCards do not have backgrounds or shadows. They consist of a high-aspect-ratio image (e.g., 4:5), a Headline-MD title, and a small Body-MD description. The entire card is framed by a thin Slate border that is slightly offset from the image to create a \"framed art\" effect.\n\n### Image Carousels\nAvoid dots or arrows. Use a simple \"1 / 5\" text counter in the corner with a slow, cinematic cross-fade transition between images.",
           "theme": {
             "bodyFont": "DM_SANS",
             "bodyFontFamily": "Dm Sans",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
-            "customColor": "#4a5d4e",
-            "designMd": "---\nname: Serene Boutique Editorial\ncolors:\n  surface: '#fbf9f6'\n  surface-dim: '#dbdad7'\n  surface-bright: '#fbf9f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f1'\n  surface-container: '#efeeeb'\n  surface-container-high: '#e9e8e5'\n  surface-container-highest: '#e4e2e0'\n  on-surface: '#1b1c1a'\n  on-surface-variant: '#434843'\n  inverse-surface: '#30312f'\n  inverse-on-surface: '#f2f0ee'\n  outline: '#737872'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#506354'\n  primary: '#334537'\n  on-primary: '#ffffff'\n  primary-container: '#4a5d4e'\n  on-primary-container: '#c0d5c2'\n  inverse-primary: '#b7ccb9'\n  secondary: '#5f5e5e'\n  on-secondary: '#ffffff'\n  secondary-container: '#e4e2e1'\n  on-secondary-container: '#656464'\n  tertiary: '#553a3e'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#6e5155'\n  on-tertiary-container: '#ecc6ca'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d3e8d5'\n  primary-fixed-dim: '#b7ccb9'\n  on-primary-fixed: '#0e1f13'\n  on-primary-fixed-variant: '#394b3d'\n  secondary-fixed: '#e4e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1b1c1c'\n  on-secondary-fixed-variant: '#474747'\n  tertiary-fixed: '#ffd9de'\n  tertiary-fixed-dim: '#e3bdc2'\n  on-tertiary-fixed: '#2b1519'\n  on-tertiary-fixed-variant: '#5b4043'\n  background: '#fbf9f6'\n  on-background: '#1b1c1a'\n  surface-variant: '#e4e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-tablet: 40px\n  margin-mobile: 20px\n  block-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is centered on an **Editorial Boutique** aesthetic, designed to evoke the tranquility and exclusivity of a high-end wellness sanctuary. The personality is serene, authoritative, and intentionally paced—mimicking the slow, restorative experience of a luxury spa.\n\nThe style blends **Minimalism** with **Tactile Editorial** elements. It prioritizes expansive whitespace (breathing room) to lower cognitive load while utilizing dense, structured content blocks to convey expertise. Key visual signatures include asymmetrical layouts, thin vertical dividers that act as \"anchor threads,\" and a sophisticated play between organic color tones and sharp, architectural lines.\n\n## Colors\n\nThe palette is rooted in a natural, grounded spectrum. \n- **Sage Leaf (#4A5D4E)** serves as the primary brand anchor, used for key CTAs and structural motifs to promote a sense of growth and calm.\n- **Onyx (#2C2C2C)** provides the high-contrast \"editorial\" edge, used for secondary buttons and deep-toned sections to ground the lighter elements.\n- **Mist (#D9E0D7)** acts as a soft textural layer for backgrounds, dividers, and subtle hover states.\n- **Alabaster (#FAF9F6)** is the canvas; its warmth prevents the interface from feeling clinical or cold.\n- **Deep Charcoal (#1A1A1A)** is reserved for maximum legibility in typography.\n\n## Typography\n\nThis design system utilizes a high-contrast pairing to distinguish between narrative storytelling and functional utility.\n\n- **Playfair Display** (Headlines): Used for emotive storytelling and section headers. Its high stroke contrast brings a fashion-forward, editorial quality. Headlines should often be used with \"sentence case\" to maintain an approachable luxury feel.\n- **DM Sans** (Body & UI): A clean, geometric sans-serif that ensures clarity. By applying wide tracking (letter spacing) to UI labels and buttons, we reinforce the \"breathable\" luxury aesthetic and improve readability on smaller screens.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Dynamic Fixed Grid** that embraces asymmetry. While content resides within a 12-column structure on desktop, the placement is intentionally offset to avoid a standard \"blocky\" feel.\n\n- **Asymmetry:** Content blocks (e.g., text vs. image) should rarely be 50/50. Use a 7:5 or 8:4 column split to create visual tension and interest.\n- **Vertical Rules:** Use 1px thin lines (`Mist`) to separate content vertically. These lines should often be longer than the content they accompany to suggest continuity.\n- **Whitespace:** Use a `block-gap` of 120px between major sections to ensure the user never feels overwhelmed.\n- **Image Frames:** Images should use \"floating\" frames—offset from their containers by 16-24px with a subtle, very soft drop shadow to create a sense of physical layering.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering** and **Soft Shadows** rather than aggressive elevation. \n\n- **Surfaces:** Use `Alabaster` as the base. Use `Mist` for secondary surface containers (like cards or side panels) to create a subtle shift in plane.\n- **Shadows:** Only applied to \"floating\" image frames and primary cards. Shadows must be extremely diffused: `0px 20px 40px rgba(0, 0, 0, 0.04)`. The goal is to make elements look like they are gently resting on a surface, not hovering high above it.\n- **Dividers:** 1px lines in `Mist` or `Sage Leaf` (at 30% opacity) are used to define boundaries without adding visual weight.\n\n## Shapes\n\nThe design system adopts a **Sharp (0px)** edge profile for all primary structural elements, buttons, and form fields. This architectural precision reinforces the high-end, boutique nature of the brand.\n\n**Exception:** Photography may occasionally use a \"soft-corner\" effect (4px) only when the subject matter is exceptionally organic, but UI components remain strictly rectangular to maintain the editorial grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `Sage Leaf` background, white text. No border. Sharp corners. High letter-spacing (0.1em).\n- **Secondary:** Outlined `Onyx` 1px border. Deep Charcoal text. \n- **Ghost:** Text-only with a 1px `Deep Charcoal` underline that expands on hover.\n\n### Forms\n- **Inputs:** Minimalist style. No background. Bottom border only (1px `Onyx`). \n- **Labels:** Small caps `DM Sans` positioned above the input field with wide tracking.\n- **Focus State:** The bottom border thickens to 2px in `Sage Leaf`.\n\n### Cards\n- **Editorial Card:** Large image top, followed by a `label-caps` category, then a `headline-sm`. No borders or heavy backgrounds; the depth is created by the \"floating\" shadow on the image portion.\n\n### Chips/Tags\n- Small, rectangular boxes with a 1px `Mist` border. Text in `label-caps`. \n\n### Vertical Dividers\n- A unique component used to separate textual content from imagery. A 1px vertical line that often starts 40px above the content and ends 40px below, creating a \"thread\" through the page.",
+            "customColor": "#2d3132",
+            "designMd": "---\nname: Serene Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#434748'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#747879'\n  outline-variant: '#c4c7c8'\n  surface-tint: '#5b5f60'\n  primary: '#181c1d'\n  on-primary: '#ffffff'\n  primary-container: '#2d3132'\n  on-primary-container: '#95999a'\n  inverse-primary: '#c4c7c8'\n  secondary: '#566252'\n  on-secondary: '#ffffff'\n  secondary-container: '#d4e1cd'\n  on-secondary-container: '#586454'\n  tertiary: '#181d19'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2d322d'\n  on-tertiary-container: '#959a94'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e0e3e4'\n  primary-fixed-dim: '#c4c7c8'\n  on-primary-fixed: '#181c1d'\n  on-primary-fixed-variant: '#434748'\n  secondary-fixed: '#d9e6d2'\n  secondary-fixed-dim: '#bdcab7'\n  on-secondary-fixed: '#141e12'\n  on-secondary-fixed-variant: '#3e4a3b'\n  tertiary-fixed: '#e0e4dd'\n  tertiary-fixed-dim: '#c3c8c1'\n  on-tertiary-fixed: '#181d19'\n  on-tertiary-fixed-variant: '#434843'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\nspacing:\n  unit: 8px\n  margin-page: 80px\n  gutter-grid: 32px\n  section-gap: 160px\n  editorial-offset: 64px\n---\n\n## Brand & Style\n\nThe design system is crafted to evoke the atmosphere of a high-end, boutique sanctuary. It moves away from traditional functionalist UI toward an **Editorial Minimalism** style, mimicking the layout of a luxury print magazine. The brand personality is serene, authoritative, and unapologetically premium.\n\nThe aesthetic leans on high-contrast typography, asymmetrical balance, and significant negative space to signal exclusivity. Unlike mass-market spa platforms, this design system treats every screen as a curated canvas, utilizing \"quiet\" interfaces that prioritize photography and sophisticated type treatments over dense utility.\n\n## Colors\n\nThe palette, \"Serene Sage & Slate,\" is grounded in natural, muted tones that reduce visual cognitive load and promote a sense of calm.\n\n- **Warm Alabaster (#F9F7F2):** The primary canvas color. It is softer than pure white, providing a gallery-like backdrop that feels organic and high-end.\n- **Deep Charcoal Slate (#2D3132):** Used for primary typography and hairline borders. It provides a sharp, authoritative contrast against the alabaster.\n- **Muted Sage (#A8B5A2):** A sophisticated accent used for subtle highlights, active states, and secondary decorative elements.\n- **Pale Leaf (#E5E9E2):** A tint of the sage used for large background blocks or subtle section separation without breaking the editorial flow.\n\n## Typography\n\nThe typographic hierarchy is the core of this design system's editorial identity. It relies on a stark contrast between a romantic, high-contrast serif and a functional, wide-tracked sans-serif.\n\n- **Headlines:** Set in *Playfair Display*. Large display sizes should use tight letter spacing and optical kerning to emphasize the elegant thick-and-thin strokes of the font.\n- **Body & Utility:** Set in *DM Sans*. This provides a clean, modern counterpoint to the serif. For labels and navigation, use uppercase with generous tracking (0.2em) to maintain a boutique, architectural feel.\n- **Editorial Flourish:** Italicize key words in headlines to create rhythm and draw the eye to specific adjectives (e.g., *Serene* Wellness).\n\n## Layout & Spacing\n\nThis design system employs an **Asymmetrical Fixed Grid** model. Rather than standard centered containers, the layout utilizes 12 columns with intentional \"dead zones\" or empty columns to create an editorial cadence.\n\n- **Asymmetry:** Content should rarely be perfectly centered. Instead, align text to the left 4 columns while placing a related image across columns 6 through 11, with a vertical offset to create overlap.\n- **The Hairline Motif:** Use 0.5pt Slate borders to separate sections or frame images. These lines should often extend to the edge of the viewport, breaking the grid to create a sense of infinite space.\n- **Generous Whitespace:** Section gaps are intentionally large (160px+) to ensure each service or brand pillar feels like its own \"chapter.\"\n\n## Elevation & Depth\n\nTo maintain the flat, printed-matter aesthetic, this design system avoids traditional shadows and neomorphism.\n\n- **Tonal Layering:** Depth is achieved through the overlapping of elements. An image might be placed on a Pale Leaf (#E5E9E2) background block, with a text element partially overlapping the image's edge.\n- **Glassmorphism (Minimal):** Use only for floating navigation bars. A very light blur (10px) with 80% Alabaster opacity keeps the navigation present but unobtrusive.\n- **Outline Sophistication:** Instead of elevation, use \"Ghost\" borders—hairline strokes in Slate at 20% opacity—to define interactive areas without adding visual weight.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. To maintain a high-end, architectural, and editorial feel, all containers, buttons, and image masks use 90-degree corners. \n\nRounded corners are strictly forbidden as they lean toward \"friendly/tech\" aesthetics, whereas sharp edges communicate \"precision/luxury.\" The only exception is the natural, organic shapes found within the photography itself (e.g., flower petals, smooth stones).\n\n## Components\n\n### Buttons\nPrimary buttons are text-only with a \"Label Caps\" style and a 0.5pt bottom border (underline). On hover, the Sage (#A8B5A2) background fills the area behind the text with a soft fade. There are no boxed buttons.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Facials\"). These are small, uppercase labels in Slate, contained within a Slate hairline border with 0px radius.\n\n### Input Fields\nMinimalist underlines. The label sits above the line in \"Label Caps\" style. Upon focus, the bottom border transitions from 0.5pt to 1.5pt in Sage.\n\n### Cards\nCards do not have backgrounds or shadows. They consist of a high-aspect-ratio image (e.g., 4:5), a Headline-MD title, and a small Body-MD description. The entire card is framed by a thin Slate border that is slightly offset from the image to create a \"framed art\" effect.\n\n### Image Carousels\nAvoid dots or arrows. Use a simple \"1 / 5\" text counter in the corner with a slow, cinematic cross-fade transition between images.",
             "font": "PLAYFAIR_DISPLAY",
             "headlineFont": "PLAYFAIR_DISPLAY",
             "headlineFontFamily": "Playfair Display",
             "labelFont": "DM_SANS",
             "labelFontFamily": "Dm Sans",
             "namedColors": {
-              "background": "#fbf9f6",
+              "background": "#fbf9f4",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f2f0ee",
-              "inverse_primary": "#b7ccb9",
-              "inverse_surface": "#30312f",
-              "on_background": "#1b1c1a",
+              "inverse_on_surface": "#f2f1ec",
+              "inverse_primary": "#c4c7c8",
+              "inverse_surface": "#30312e",
+              "on_background": "#1b1c19",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
-              "on_primary_container": "#c0d5c2",
-              "on_primary_fixed": "#0e1f13",
-              "on_primary_fixed_variant": "#394b3d",
+              "on_primary_container": "#95999a",
+              "on_primary_fixed": "#181c1d",
+              "on_primary_fixed_variant": "#434748",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#656464",
-              "on_secondary_fixed": "#1b1c1c",
-              "on_secondary_fixed_variant": "#474747",
-              "on_surface": "#1b1c1a",
-              "on_surface_variant": "#434843",
+              "on_secondary_container": "#586454",
+              "on_secondary_fixed": "#141e12",
+              "on_secondary_fixed_variant": "#3e4a3b",
+              "on_surface": "#1b1c19",
+              "on_surface_variant": "#434748",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#ecc6ca",
-              "on_tertiary_fixed": "#2b1519",
-              "on_tertiary_fixed_variant": "#5b4043",
-              "outline": "#737872",
-              "outline_variant": "#c3c8c1",
-              "primary": "#334537",
-              "primary_container": "#4a5d4e",
-              "primary_fixed": "#d3e8d5",
-              "primary_fixed_dim": "#b7ccb9",
-              "secondary": "#5f5e5e",
-              "secondary_container": "#e4e2e1",
-              "secondary_fixed": "#e4e2e1",
-              "secondary_fixed_dim": "#c8c6c5",
-              "surface": "#fbf9f6",
-              "surface_bright": "#fbf9f6",
-              "surface_container": "#efeeeb",
-              "surface_container_high": "#e9e8e5",
-              "surface_container_highest": "#e4e2e0",
-              "surface_container_low": "#f5f3f1",
+              "on_tertiary_container": "#959a94",
+              "on_tertiary_fixed": "#181d19",
+              "on_tertiary_fixed_variant": "#434843",
+              "outline": "#747879",
+              "outline_variant": "#c4c7c8",
+              "primary": "#181c1d",
+              "primary_container": "#2d3132",
+              "primary_fixed": "#e0e3e4",
+              "primary_fixed_dim": "#c4c7c8",
+              "secondary": "#566252",
+              "secondary_container": "#d4e1cd",
+              "secondary_fixed": "#d9e6d2",
+              "secondary_fixed_dim": "#bdcab7",
+              "surface": "#fbf9f4",
+              "surface_bright": "#fbf9f4",
+              "surface_container": "#f0eee9",
+              "surface_container_high": "#eae8e3",
+              "surface_container_highest": "#e4e2dd",
+              "surface_container_low": "#f5f3ee",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#dbdad7",
-              "surface_tint": "#506354",
-              "surface_variant": "#e4e2e0",
-              "tertiary": "#553a3e",
-              "tertiary_container": "#6e5155",
-              "tertiary_fixed": "#ffd9de",
-              "tertiary_fixed_dim": "#e3bdc2"
+              "surface_dim": "#dbdad5",
+              "surface_tint": "#5b5f60",
+              "surface_variant": "#e4e2dd",
+              "tertiary": "#181d19",
+              "tertiary_container": "#2d322d",
+              "tertiary_fixed": "#e0e4dd",
+              "tertiary_fixed_dim": "#c3c8c1"
             },
-            "overridePrimaryColor": "#4a5d4e",
-            "overrideSecondaryColor": "#2c2c2c",
+            "overrideNeutralColor": "#f9f7f2",
+            "overridePrimaryColor": "#2d3132",
+            "overrideSecondaryColor": "#a8b5a2",
+            "overrideTertiaryColor": "#e5e9e2",
             "spacing": {
-              "block-gap": "120px",
-              "gutter": "32px",
-              "margin-desktop": "80px",
-              "margin-mobile": "20px",
-              "margin-tablet": "40px",
-              "unit": "4px"
+              "editorial-offset": "64px",
+              "gutter-grid": "32px",
+              "margin-page": "80px",
+              "section-gap": "160px",
+              "unit": "8px"
             },
             "spacingScale": 2,
             "typography": {
@@ -83,57 +84,50 @@
                 "fontSize": "18px",
                 "fontWeight": "400",
                 "letterSpacing": "0.01em",
-                "lineHeight": "1.7"
+                "lineHeight": "32px"
               },
               "body-md": {
                 "fontFamily": "DM Sans",
                 "fontSize": "16px",
                 "fontWeight": "400",
-                "lineHeight": "1.6"
-              },
-              "button": {
-                "fontFamily": "DM Sans",
-                "fontSize": "14px",
-                "fontWeight": "500",
-                "letterSpacing": "0.1em",
-                "lineHeight": "1.0"
+                "lineHeight": "28px"
               },
               "display-lg": {
                 "fontFamily": "Playfair Display",
-                "fontSize": "64px",
+                "fontSize": "84px",
                 "fontWeight": "400",
                 "letterSpacing": "-0.02em",
-                "lineHeight": "1.1"
+                "lineHeight": "92px"
               },
-              "display-lg-mobile": {
+              "headline-lg": {
                 "fontFamily": "Playfair Display",
-                "fontSize": "40px",
+                "fontSize": "48px",
                 "fontWeight": "400",
-                "lineHeight": "1.2"
+                "lineHeight": "56px"
               },
               "headline-md": {
                 "fontFamily": "Playfair Display",
                 "fontSize": "32px",
                 "fontWeight": "400",
-                "lineHeight": "1.3"
-              },
-              "headline-sm": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "24px",
-                "fontWeight": "500",
-                "lineHeight": "1.4"
+                "lineHeight": "40px"
               },
               "label-caps": {
                 "fontFamily": "DM Sans",
                 "fontSize": "12px",
                 "fontWeight": "500",
-                "letterSpacing": "0.15em",
-                "lineHeight": "1.0"
+                "letterSpacing": "0.2em",
+                "lineHeight": "16px"
+              },
+              "label-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "20px"
               }
             }
           }
         },
-        "name": "assets/442bda5d015e422e9fa787b8a9ffd3f1",
+        "name": "assets/7376c3fd1197451eb73d59aab1afea12",
         "version": "1"
       }
     },
@@ -143,78 +137,79 @@
           {
             "designSystem": {
               "designSystem": {
-                "displayName": "Serene Boutique Editorial",
-                "styleGuidelines": "## Brand & Style\n\nThe design system is centered on an **Editorial Boutique** aesthetic, designed to evoke the tranquility and exclusivity of a high-end wellness sanctuary. The personality is serene, authoritative, and intentionally paced—mimicking the slow, restorative experience of a luxury spa.\n\nThe style blends **Minimalism** with **Tactile Editorial** elements. It prioritizes expansive whitespace (breathing room) to lower cognitive load while utilizing dense, structured content blocks to convey expertise. Key visual signatures include asymmetrical layouts, thin vertical dividers that act as \"anchor threads,\" and a sophisticated play between organic color tones and sharp, architectural lines.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Dynamic Fixed Grid** that embraces asymmetry. While content resides within a 12-column structure on desktop, the placement is intentionally offset to avoid a standard \"blocky\" feel.\n\n- **Asymmetry:** Content blocks (e.g., text vs. image) should rarely be 50/50. Use a 7:5 or 8:4 column split to create visual tension and interest.\n- **Vertical Rules:** Use 1px thin lines (`Mist`) to separate content vertically. These lines should often be longer than the content they accompany to suggest continuity.\n- **Whitespace:** Use a `block-gap` of 120px between major sections to ensure the user never feels overwhelmed.\n- **Image Frames:** Images should use \"floating\" frames—offset from their containers by 16-24px with a subtle, very soft drop shadow to create a sense of physical layering.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering** and **Soft Shadows** rather than aggressive elevation. \n\n- **Surfaces:** Use `Alabaster` as the base. Use `Mist` for secondary surface containers (like cards or side panels) to create a subtle shift in plane.\n- **Shadows:** Only applied to \"floating\" image frames and primary cards. Shadows must be extremely diffused: `0px 20px 40px rgba(0, 0, 0, 0.04)`. The goal is to make elements look like they are gently resting on a surface, not hovering high above it.\n- **Dividers:** 1px lines in `Mist` or `Sage Leaf` (at 30% opacity) are used to define boundaries without adding visual weight.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `Sage Leaf` background, white text. No border. Sharp corners. High letter-spacing (0.1em).\n- **Secondary:** Outlined `Onyx` 1px border. Deep Charcoal text. \n- **Ghost:** Text-only with a 1px `Deep Charcoal` underline that expands on hover.\n\n### Forms\n- **Inputs:** Minimalist style. No background. Bottom border only (1px `Onyx`). \n- **Labels:** Small caps `DM Sans` positioned above the input field with wide tracking.\n- **Focus State:** The bottom border thickens to 2px in `Sage Leaf`.\n\n### Cards\n- **Editorial Card:** Large image top, followed by a `label-caps` category, then a `headline-sm`. No borders or heavy backgrounds; the depth is created by the \"floating\" shadow on the image portion.\n\n### Chips/Tags\n- Small, rectangular boxes with a 1px `Mist` border. Text in `label-caps`. \n\n### Vertical Dividers\n- A unique component used to separate textual content from imagery. A 1px vertical line that often starts 40px above the content and ends 40px below, creating a \"thread\" through the page.",
+                "displayName": "Serene Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is crafted to evoke the atmosphere of a high-end, boutique sanctuary. It moves away from traditional functionalist UI toward an **Editorial Minimalism** style, mimicking the layout of a luxury print magazine. The brand personality is serene, authoritative, and unapologetically premium.\n\nThe aesthetic leans on high-contrast typography, asymmetrical balance, and significant negative space to signal exclusivity. Unlike mass-market spa platforms, this design system treats every screen as a curated canvas, utilizing \"quiet\" interfaces that prioritize photography and sophisticated type treatments over dense utility.\n\n## Layout & Spacing\n\nThis design system employs an **Asymmetrical Fixed Grid** model. Rather than standard centered containers, the layout utilizes 12 columns with intentional \"dead zones\" or empty columns to create an editorial cadence.\n\n- **Asymmetry:** Content should rarely be perfectly centered. Instead, align text to the left 4 columns while placing a related image across columns 6 through 11, with a vertical offset to create overlap.\n- **The Hairline Motif:** Use 0.5pt Slate borders to separate sections or frame images. These lines should often extend to the edge of the viewport, breaking the grid to create a sense of infinite space.\n- **Generous Whitespace:** Section gaps are intentionally large (160px+) to ensure each service or brand pillar feels like its own \"chapter.\"\n\n## Elevation & Depth\n\nTo maintain the flat, printed-matter aesthetic, this design system avoids traditional shadows and neomorphism.\n\n- **Tonal Layering:** Depth is achieved through the overlapping of elements. An image might be placed on a Pale Leaf (#E5E9E2) background block, with a text element partially overlapping the image's edge.\n- **Glassmorphism (Minimal):** Use only for floating navigation bars. A very light blur (10px) with 80% Alabaster opacity keeps the navigation present but unobtrusive.\n- **Outline Sophistication:** Instead of elevation, use \"Ghost\" borders—hairline strokes in Slate at 20% opacity—to define interactive areas without adding visual weight.\n\n## Components\n\n### Buttons\nPrimary buttons are text-only with a \"Label Caps\" style and a 0.5pt bottom border (underline). On hover, the Sage (#A8B5A2) background fills the area behind the text with a soft fade. There are no boxed buttons.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Facials\"). These are small, uppercase labels in Slate, contained within a Slate hairline border with 0px radius.\n\n### Input Fields\nMinimalist underlines. The label sits above the line in \"Label Caps\" style. Upon focus, the bottom border transitions from 0.5pt to 1.5pt in Sage.\n\n### Cards\nCards do not have backgrounds or shadows. They consist of a high-aspect-ratio image (e.g., 4:5), a Headline-MD title, and a small Body-MD description. The entire card is framed by a thin Slate border that is slightly offset from the image to create a \"framed art\" effect.\n\n### Image Carousels\nAvoid dots or arrows. Use a simple \"1 / 5\" text counter in the corner with a slow, cinematic cross-fade transition between images.",
                 "theme": {
                   "bodyFont": "DM_SANS",
                   "bodyFontFamily": "Dm Sans",
                   "colorMode": "LIGHT",
                   "colorVariant": "FIDELITY",
-                  "customColor": "#4a5d4e",
-                  "designMd": "---\nname: Serene Boutique Editorial\ncolors:\n  surface: '#fbf9f6'\n  surface-dim: '#dbdad7'\n  surface-bright: '#fbf9f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f1'\n  surface-container: '#efeeeb'\n  surface-container-high: '#e9e8e5'\n  surface-container-highest: '#e4e2e0'\n  on-surface: '#1b1c1a'\n  on-surface-variant: '#434843'\n  inverse-surface: '#30312f'\n  inverse-on-surface: '#f2f0ee'\n  outline: '#737872'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#506354'\n  primary: '#334537'\n  on-primary: '#ffffff'\n  primary-container: '#4a5d4e'\n  on-primary-container: '#c0d5c2'\n  inverse-primary: '#b7ccb9'\n  secondary: '#5f5e5e'\n  on-secondary: '#ffffff'\n  secondary-container: '#e4e2e1'\n  on-secondary-container: '#656464'\n  tertiary: '#553a3e'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#6e5155'\n  on-tertiary-container: '#ecc6ca'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d3e8d5'\n  primary-fixed-dim: '#b7ccb9'\n  on-primary-fixed: '#0e1f13'\n  on-primary-fixed-variant: '#394b3d'\n  secondary-fixed: '#e4e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1b1c1c'\n  on-secondary-fixed-variant: '#474747'\n  tertiary-fixed: '#ffd9de'\n  tertiary-fixed-dim: '#e3bdc2'\n  on-tertiary-fixed: '#2b1519'\n  on-tertiary-fixed-variant: '#5b4043'\n  background: '#fbf9f6'\n  on-background: '#1b1c1a'\n  surface-variant: '#e4e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-tablet: 40px\n  margin-mobile: 20px\n  block-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is centered on an **Editorial Boutique** aesthetic, designed to evoke the tranquility and exclusivity of a high-end wellness sanctuary. The personality is serene, authoritative, and intentionally paced—mimicking the slow, restorative experience of a luxury spa.\n\nThe style blends **Minimalism** with **Tactile Editorial** elements. It prioritizes expansive whitespace (breathing room) to lower cognitive load while utilizing dense, structured content blocks to convey expertise. Key visual signatures include asymmetrical layouts, thin vertical dividers that act as \"anchor threads,\" and a sophisticated play between organic color tones and sharp, architectural lines.\n\n## Colors\n\nThe palette is rooted in a natural, grounded spectrum. \n- **Sage Leaf (#4A5D4E)** serves as the primary brand anchor, used for key CTAs and structural motifs to promote a sense of growth and calm.\n- **Onyx (#2C2C2C)** provides the high-contrast \"editorial\" edge, used for secondary buttons and deep-toned sections to ground the lighter elements.\n- **Mist (#D9E0D7)** acts as a soft textural layer for backgrounds, dividers, and subtle hover states.\n- **Alabaster (#FAF9F6)** is the canvas; its warmth prevents the interface from feeling clinical or cold.\n- **Deep Charcoal (#1A1A1A)** is reserved for maximum legibility in typography.\n\n## Typography\n\nThis design system utilizes a high-contrast pairing to distinguish between narrative storytelling and functional utility.\n\n- **Playfair Display** (Headlines): Used for emotive storytelling and section headers. Its high stroke contrast brings a fashion-forward, editorial quality. Headlines should often be used with \"sentence case\" to maintain an approachable luxury feel.\n- **DM Sans** (Body & UI): A clean, geometric sans-serif that ensures clarity. By applying wide tracking (letter spacing) to UI labels and buttons, we reinforce the \"breathable\" luxury aesthetic and improve readability on smaller screens.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Dynamic Fixed Grid** that embraces asymmetry. While content resides within a 12-column structure on desktop, the placement is intentionally offset to avoid a standard \"blocky\" feel.\n\n- **Asymmetry:** Content blocks (e.g., text vs. image) should rarely be 50/50. Use a 7:5 or 8:4 column split to create visual tension and interest.\n- **Vertical Rules:** Use 1px thin lines (`Mist`) to separate content vertically. These lines should often be longer than the content they accompany to suggest continuity.\n- **Whitespace:** Use a `block-gap` of 120px between major sections to ensure the user never feels overwhelmed.\n- **Image Frames:** Images should use \"floating\" frames—offset from their containers by 16-24px with a subtle, very soft drop shadow to create a sense of physical layering.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering** and **Soft Shadows** rather than aggressive elevation. \n\n- **Surfaces:** Use `Alabaster` as the base. Use `Mist` for secondary surface containers (like cards or side panels) to create a subtle shift in plane.\n- **Shadows:** Only applied to \"floating\" image frames and primary cards. Shadows must be extremely diffused: `0px 20px 40px rgba(0, 0, 0, 0.04)`. The goal is to make elements look like they are gently resting on a surface, not hovering high above it.\n- **Dividers:** 1px lines in `Mist` or `Sage Leaf` (at 30% opacity) are used to define boundaries without adding visual weight.\n\n## Shapes\n\nThe design system adopts a **Sharp (0px)** edge profile for all primary structural elements, buttons, and form fields. This architectural precision reinforces the high-end, boutique nature of the brand.\n\n**Exception:** Photography may occasionally use a \"soft-corner\" effect (4px) only when the subject matter is exceptionally organic, but UI components remain strictly rectangular to maintain the editorial grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `Sage Leaf` background, white text. No border. Sharp corners. High letter-spacing (0.1em).\n- **Secondary:** Outlined `Onyx` 1px border. Deep Charcoal text. \n- **Ghost:** Text-only with a 1px `Deep Charcoal` underline that expands on hover.\n\n### Forms\n- **Inputs:** Minimalist style. No background. Bottom border only (1px `Onyx`). \n- **Labels:** Small caps `DM Sans` positioned above the input field with wide tracking.\n- **Focus State:** The bottom border thickens to 2px in `Sage Leaf`.\n\n### Cards\n- **Editorial Card:** Large image top, followed by a `label-caps` category, then a `headline-sm`. No borders or heavy backgrounds; the depth is created by the \"floating\" shadow on the image portion.\n\n### Chips/Tags\n- Small, rectangular boxes with a 1px `Mist` border. Text in `label-caps`. \n\n### Vertical Dividers\n- A unique component used to separate textual content from imagery. A 1px vertical line that often starts 40px above the content and ends 40px below, creating a \"thread\" through the page.",
+                  "customColor": "#2d3132",
+                  "designMd": "---\nname: Serene Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#434748'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#747879'\n  outline-variant: '#c4c7c8'\n  surface-tint: '#5b5f60'\n  primary: '#181c1d'\n  on-primary: '#ffffff'\n  primary-container: '#2d3132'\n  on-primary-container: '#95999a'\n  inverse-primary: '#c4c7c8'\n  secondary: '#566252'\n  on-secondary: '#ffffff'\n  secondary-container: '#d4e1cd'\n  on-secondary-container: '#586454'\n  tertiary: '#181d19'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2d322d'\n  on-tertiary-container: '#959a94'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e0e3e4'\n  primary-fixed-dim: '#c4c7c8'\n  on-primary-fixed: '#181c1d'\n  on-primary-fixed-variant: '#434748'\n  secondary-fixed: '#d9e6d2'\n  secondary-fixed-dim: '#bdcab7'\n  on-secondary-fixed: '#141e12'\n  on-secondary-fixed-variant: '#3e4a3b'\n  tertiary-fixed: '#e0e4dd'\n  tertiary-fixed-dim: '#c3c8c1'\n  on-tertiary-fixed: '#181d19'\n  on-tertiary-fixed-variant: '#434843'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\nspacing:\n  unit: 8px\n  margin-page: 80px\n  gutter-grid: 32px\n  section-gap: 160px\n  editorial-offset: 64px\n---\n\n## Brand & Style\n\nThe design system is crafted to evoke the atmosphere of a high-end, boutique sanctuary. It moves away from traditional functionalist UI toward an **Editorial Minimalism** style, mimicking the layout of a luxury print magazine. The brand personality is serene, authoritative, and unapologetically premium.\n\nThe aesthetic leans on high-contrast typography, asymmetrical balance, and significant negative space to signal exclusivity. Unlike mass-market spa platforms, this design system treats every screen as a curated canvas, utilizing \"quiet\" interfaces that prioritize photography and sophisticated type treatments over dense utility.\n\n## Colors\n\nThe palette, \"Serene Sage & Slate,\" is grounded in natural, muted tones that reduce visual cognitive load and promote a sense of calm.\n\n- **Warm Alabaster (#F9F7F2):** The primary canvas color. It is softer than pure white, providing a gallery-like backdrop that feels organic and high-end.\n- **Deep Charcoal Slate (#2D3132):** Used for primary typography and hairline borders. It provides a sharp, authoritative contrast against the alabaster.\n- **Muted Sage (#A8B5A2):** A sophisticated accent used for subtle highlights, active states, and secondary decorative elements.\n- **Pale Leaf (#E5E9E2):** A tint of the sage used for large background blocks or subtle section separation without breaking the editorial flow.\n\n## Typography\n\nThe typographic hierarchy is the core of this design system's editorial identity. It relies on a stark contrast between a romantic, high-contrast serif and a functional, wide-tracked sans-serif.\n\n- **Headlines:** Set in *Playfair Display*. Large display sizes should use tight letter spacing and optical kerning to emphasize the elegant thick-and-thin strokes of the font.\n- **Body & Utility:** Set in *DM Sans*. This provides a clean, modern counterpoint to the serif. For labels and navigation, use uppercase with generous tracking (0.2em) to maintain a boutique, architectural feel.\n- **Editorial Flourish:** Italicize key words in headlines to create rhythm and draw the eye to specific adjectives (e.g., *Serene* Wellness).\n\n## Layout & Spacing\n\nThis design system employs an **Asymmetrical Fixed Grid** model. Rather than standard centered containers, the layout utilizes 12 columns with intentional \"dead zones\" or empty columns to create an editorial cadence.\n\n- **Asymmetry:** Content should rarely be perfectly centered. Instead, align text to the left 4 columns while placing a related image across columns 6 through 11, with a vertical offset to create overlap.\n- **The Hairline Motif:** Use 0.5pt Slate borders to separate sections or frame images. These lines should often extend to the edge of the viewport, breaking the grid to create a sense of infinite space.\n- **Generous Whitespace:** Section gaps are intentionally large (160px+) to ensure each service or brand pillar feels like its own \"chapter.\"\n\n## Elevation & Depth\n\nTo maintain the flat, printed-matter aesthetic, this design system avoids traditional shadows and neomorphism.\n\n- **Tonal Layering:** Depth is achieved through the overlapping of elements. An image might be placed on a Pale Leaf (#E5E9E2) background block, with a text element partially overlapping the image's edge.\n- **Glassmorphism (Minimal):** Use only for floating navigation bars. A very light blur (10px) with 80% Alabaster opacity keeps the navigation present but unobtrusive.\n- **Outline Sophistication:** Instead of elevation, use \"Ghost\" borders—hairline strokes in Slate at 20% opacity—to define interactive areas without adding visual weight.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. To maintain a high-end, architectural, and editorial feel, all containers, buttons, and image masks use 90-degree corners. \n\nRounded corners are strictly forbidden as they lean toward \"friendly/tech\" aesthetics, whereas sharp edges communicate \"precision/luxury.\" The only exception is the natural, organic shapes found within the photography itself (e.g., flower petals, smooth stones).\n\n## Components\n\n### Buttons\nPrimary buttons are text-only with a \"Label Caps\" style and a 0.5pt bottom border (underline). On hover, the Sage (#A8B5A2) background fills the area behind the text with a soft fade. There are no boxed buttons.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Facials\"). These are small, uppercase labels in Slate, contained within a Slate hairline border with 0px radius.\n\n### Input Fields\nMinimalist underlines. The label sits above the line in \"Label Caps\" style. Upon focus, the bottom border transitions from 0.5pt to 1.5pt in Sage.\n\n### Cards\nCards do not have backgrounds or shadows. They consist of a high-aspect-ratio image (e.g., 4:5), a Headline-MD title, and a small Body-MD description. The entire card is framed by a thin Slate border that is slightly offset from the image to create a \"framed art\" effect.\n\n### Image Carousels\nAvoid dots or arrows. Use a simple \"1 / 5\" text counter in the corner with a slow, cinematic cross-fade transition between images.",
                   "font": "PLAYFAIR_DISPLAY",
                   "headlineFont": "PLAYFAIR_DISPLAY",
                   "headlineFontFamily": "Playfair Display",
                   "labelFont": "DM_SANS",
                   "labelFontFamily": "Dm Sans",
                   "namedColors": {
-                    "background": "#fbf9f6",
+                    "background": "#fbf9f4",
                     "error": "#ba1a1a",
                     "error_container": "#ffdad6",
-                    "inverse_on_surface": "#f2f0ee",
-                    "inverse_primary": "#b7ccb9",
-                    "inverse_surface": "#30312f",
-                    "on_background": "#1b1c1a",
+                    "inverse_on_surface": "#f2f1ec",
+                    "inverse_primary": "#c4c7c8",
+                    "inverse_surface": "#30312e",
+                    "on_background": "#1b1c19",
                     "on_error": "#ffffff",
                     "on_error_container": "#93000a",
                     "on_primary": "#ffffff",
-                    "on_primary_container": "#c0d5c2",
-                    "on_primary_fixed": "#0e1f13",
-                    "on_primary_fixed_variant": "#394b3d",
+                    "on_primary_container": "#95999a",
+                    "on_primary_fixed": "#181c1d",
+                    "on_primary_fixed_variant": "#434748",
                     "on_secondary": "#ffffff",
-                    "on_secondary_container": "#656464",
-                    "on_secondary_fixed": "#1b1c1c",
-                    "on_secondary_fixed_variant": "#474747",
-                    "on_surface": "#1b1c1a",
-                    "on_surface_variant": "#434843",
+                    "on_secondary_container": "#586454",
+                    "on_secondary_fixed": "#141e12",
+                    "on_secondary_fixed_variant": "#3e4a3b",
+                    "on_surface": "#1b1c19",
+                    "on_surface_variant": "#434748",
                     "on_tertiary": "#ffffff",
-                    "on_tertiary_container": "#ecc6ca",
-                    "on_tertiary_fixed": "#2b1519",
-                    "on_tertiary_fixed_variant": "#5b4043",
-                    "outline": "#737872",
-                    "outline_variant": "#c3c8c1",
-                    "primary": "#334537",
-                    "primary_container": "#4a5d4e",
-                    "primary_fixed": "#d3e8d5",
-                    "primary_fixed_dim": "#b7ccb9",
-                    "secondary": "#5f5e5e",
-                    "secondary_container": "#e4e2e1",
-                    "secondary_fixed": "#e4e2e1",
-                    "secondary_fixed_dim": "#c8c6c5",
-                    "surface": "#fbf9f6",
-                    "surface_bright": "#fbf9f6",
-                    "surface_container": "#efeeeb",
-                    "surface_container_high": "#e9e8e5",
-                    "surface_container_highest": "#e4e2e0",
-                    "surface_container_low": "#f5f3f1",
+                    "on_tertiary_container": "#959a94",
+                    "on_tertiary_fixed": "#181d19",
+                    "on_tertiary_fixed_variant": "#434843",
+                    "outline": "#747879",
+                    "outline_variant": "#c4c7c8",
+                    "primary": "#181c1d",
+                    "primary_container": "#2d3132",
+                    "primary_fixed": "#e0e3e4",
+                    "primary_fixed_dim": "#c4c7c8",
+                    "secondary": "#566252",
+                    "secondary_container": "#d4e1cd",
+                    "secondary_fixed": "#d9e6d2",
+                    "secondary_fixed_dim": "#bdcab7",
+                    "surface": "#fbf9f4",
+                    "surface_bright": "#fbf9f4",
+                    "surface_container": "#f0eee9",
+                    "surface_container_high": "#eae8e3",
+                    "surface_container_highest": "#e4e2dd",
+                    "surface_container_low": "#f5f3ee",
                     "surface_container_lowest": "#ffffff",
-                    "surface_dim": "#dbdad7",
-                    "surface_tint": "#506354",
-                    "surface_variant": "#e4e2e0",
-                    "tertiary": "#553a3e",
-                    "tertiary_container": "#6e5155",
-                    "tertiary_fixed": "#ffd9de",
-                    "tertiary_fixed_dim": "#e3bdc2"
+                    "surface_dim": "#dbdad5",
+                    "surface_tint": "#5b5f60",
+                    "surface_variant": "#e4e2dd",
+                    "tertiary": "#181d19",
+                    "tertiary_container": "#2d322d",
+                    "tertiary_fixed": "#e0e4dd",
+                    "tertiary_fixed_dim": "#c3c8c1"
                   },
-                  "overridePrimaryColor": "#4a5d4e",
-                  "overrideSecondaryColor": "#2c2c2c",
+                  "overrideNeutralColor": "#f9f7f2",
+                  "overridePrimaryColor": "#2d3132",
+                  "overrideSecondaryColor": "#a8b5a2",
+                  "overrideTertiaryColor": "#e5e9e2",
                   "spacing": {
-                    "block-gap": "120px",
-                    "gutter": "32px",
-                    "margin-desktop": "80px",
-                    "margin-mobile": "20px",
-                    "margin-tablet": "40px",
-                    "unit": "4px"
+                    "editorial-offset": "64px",
+                    "gutter-grid": "32px",
+                    "margin-page": "80px",
+                    "section-gap": "160px",
+                    "unit": "8px"
                   },
                   "spacingScale": 2,
                   "typography": {
@@ -223,149 +218,143 @@
                       "fontSize": "18px",
                       "fontWeight": "400",
                       "letterSpacing": "0.01em",
-                      "lineHeight": "1.7"
+                      "lineHeight": "32px"
                     },
                     "body-md": {
                       "fontFamily": "DM Sans",
                       "fontSize": "16px",
                       "fontWeight": "400",
-                      "lineHeight": "1.6"
-                    },
-                    "button": {
-                      "fontFamily": "DM Sans",
-                      "fontSize": "14px",
-                      "fontWeight": "500",
-                      "letterSpacing": "0.1em",
-                      "lineHeight": "1.0"
+                      "lineHeight": "28px"
                     },
                     "display-lg": {
                       "fontFamily": "Playfair Display",
-                      "fontSize": "64px",
+                      "fontSize": "84px",
                       "fontWeight": "400",
                       "letterSpacing": "-0.02em",
-                      "lineHeight": "1.1"
+                      "lineHeight": "92px"
                     },
-                    "display-lg-mobile": {
+                    "headline-lg": {
                       "fontFamily": "Playfair Display",
-                      "fontSize": "40px",
+                      "fontSize": "48px",
                       "fontWeight": "400",
-                      "lineHeight": "1.2"
+                      "lineHeight": "56px"
                     },
                     "headline-md": {
                       "fontFamily": "Playfair Display",
                       "fontSize": "32px",
                       "fontWeight": "400",
-                      "lineHeight": "1.3"
-                    },
-                    "headline-sm": {
-                      "fontFamily": "Playfair Display",
-                      "fontSize": "24px",
-                      "fontWeight": "500",
-                      "lineHeight": "1.4"
+                      "lineHeight": "40px"
                     },
                     "label-caps": {
                       "fontFamily": "DM Sans",
                       "fontSize": "12px",
                       "fontWeight": "500",
-                      "letterSpacing": "0.15em",
-                      "lineHeight": "1.0"
+                      "letterSpacing": "0.2em",
+                      "lineHeight": "16px"
+                    },
+                    "label-md": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "lineHeight": "20px"
                     }
                   }
                 }
               },
-              "name": "assets/442bda5d015e422e9fa787b8a9ffd3f1",
+              "name": "assets/7376c3fd1197451eb73d59aab1afea12",
               "version": "1"
             },
             "deviceType": "DESKTOP",
             "generatedBy": "figaro_agent",
-            "height": "8036",
+            "height": "11762",
             "htmlCode": {
-              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzJjMDEyODZkMGVkZjQ3NmM4ZmQyN2NjZDI1ZjVmODBmEgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhM5NTc3ODk3Nzc1MTYyMTM1NTAy&filename=&opi=96797242",
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzlkZWQ2YzNiZTI1NzQ3YmNhYjhiMWQ3OGQzNmFjZDllEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNjE3NDI1NjkxNTAxMTg0MjIxNg&filename=&opi=96797242",
               "mimeType": "text/html",
-              "name": "projects/9577897775162135502/files/ab49fb27242446bf8a1211c019da2cae"
+              "name": "projects/16174256915011842216/files/1fbf5871090e47b6b17ddae902603562"
             },
-            "id": "bfed3f1dfe384278a3ac32f24c572cd6",
-            "name": "projects/9577897775162135502/screens/bfed3f1dfe384278a3ac32f24c572cd6",
-            "prompt": "Create a bespoke, editorial-grade desktop landing page for LaBelle Spa & Nails. \n\nStyle:\n- Visual Motif: Use vertical rules and floating, asymmetrical image containers. \n- Palette: Serene Sage (#4A5D4E), Onyx (#2C2C2C), Alabaster (#FAF9F6).\n- Typography: Playfair Display for headings, clean sans-serif for UI.\n- Layout: Unconventional. Avoid standard grids. Use overlapping elements and purposeful whitespace.\n\nSections:\n1. Header: Elegant navigation with phone (609) 652-8300 prominent.\n2. Hero: \"Artistry in Every Detail.\" Asymmetrical composition with a high-end spa aesthetic.\n3. Credibility Section: \"The Galloway Standard\" — sophisticated testimonials or accolades presented in an editorial layout.\n4. Services/Offerings: \"The Menu\" — detailed, dense typographic treatment for Spa & Nail services.\n5. Narrative (About): \"A Legacy of Wellness\" — brand story with large typography and thin rules.\n6. Visit: \"Find Us\" — include the required map slot `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>` and address: 168 South New York Road, Galloway, NJ 08205.\n7. Contact Form: \"Connect\" — minimal form with thin borders.\n8. Footer: Refined finish with email labellespa609@gmail.com and social links.\n\nTechnical:\n- Full semantic HTML/CSS.\n- Responsive design.\n- Smooth scroll and form validation UI.\n- No placeholder text (no lorem ipsum). Use real, brand-appropriate copy.",
+            "id": "76c0ab54240146c9af9148f90d9d4400",
+            "name": "projects/16174256915011842216/screens/76c0ab54240146c9af9148f90d9d4400",
+            "prompt": "Build a complete, bespoke desktop landing page for LaBelle Spa & Nails. \n\nDesign Strategy: \n- Editorial Layout: Use an asymmetrical grid. Break away from standard vertical stacking with overlapping elements and unexpected alignment.\n- Color: Use the 'Serene Sage & Slate' palette (#2D3132, #A8B5A2, #F9F7F2) with intentional density. Dark backgrounds for the hero, light for the service menu.\n- Typography: Large, elegant serif headings (Playfair Display) contrasted with small, all-caps sans-serif labels.\n\nSections:\n1. Header: Include (609) 652-8300 and a 'Book Now' CTA.\n2. Hero: A high-fashion aesthetic. Title: \"Artistry in Every Detail.\" \n3. #credibility: Use an understated row of testimonials like: \"The sanctuary Galloway has been waiting for.\" \n4. Service Offerings: Title: \"The Menu.\" Layout categories like a luxury magazine index. Services: Nails, Skincare, Waxing.\n5. About: Focus on the 'LaBelle Philosophy' – precision, care, and tranquility.\n6. #visit: Include the contact details (168 South New York Road, Galloway, NJ 08205) and the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: A minimalist, line-based form for inquiries.\n8. Footer: Semantic and clean.\n\nTechnical: Smooth scroll, responsive design (mobile-ready), and CSS custom properties for the palette. No lorem ipsum. Use sophisticated placeholder copy.",
             "screenMetadata": {
               "agentType": "PRO_AGENT",
               "status": "COMPLETE"
             },
             "screenType": "DESIGN",
             "screenshot": {
-              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuF9Fv3sKfpwnjgTPjRwaNmag2UaNeYOWddUyLQPWkJBbCS80TYEfqqFzdC-SilatGETQWbB6MGsGZMt3P4vvX6m_7jx5mQFWNJY2aqicySH5417yvEoZu3jrvsVATOScbgxqvPD6L0MYOqGLlN-QEvYMwi4mg5o4rry0NMg2VWR0-XEujecV4nsx4lcIWWdLb-4wMzw-6goFiiqUaQbfKQDJfp4uH68hfunX1C8NogTnLwX4ULMirL2w",
-              "name": "projects/9577897775162135502/files/0124162df39946ab9c01ec5a5a57f832"
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvNKsBwRTU_HdYXX_w_AokfR6S7X0rwYthrez9xlCFKhOpjrhG9KMmoW48886oO4Cqm7d2u0XJ988qy1qrssNm8TMqtaPxVr-BbgwAe8SVH8CpiEa8NWLT9BNp-UJcMPfnuYXYALvC1otr2mXIuaMd8vu66JXGbYNnujfe-A4kkKjHGeWpiu-jTMwts9ifDdK9TY_ejalHhpo_vigVjuF-3tG08BdT7wu61o6unidieWFzNnhQ9U-Mz-v5z",
+              "name": "projects/16174256915011842216/files/93f825407593460797763566d52acc1a"
             },
             "theme": {
               "bodyFont": "DM_SANS",
               "bodyFontFamily": "Dm Sans",
               "colorMode": "LIGHT",
               "colorVariant": "FIDELITY",
-              "customColor": "#4a5d4e",
-              "designMd": "---\nname: Serene Boutique Editorial\ncolors:\n  surface: '#fbf9f6'\n  surface-dim: '#dbdad7'\n  surface-bright: '#fbf9f6'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f1'\n  surface-container: '#efeeeb'\n  surface-container-high: '#e9e8e5'\n  surface-container-highest: '#e4e2e0'\n  on-surface: '#1b1c1a'\n  on-surface-variant: '#434843'\n  inverse-surface: '#30312f'\n  inverse-on-surface: '#f2f0ee'\n  outline: '#737872'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#506354'\n  primary: '#334537'\n  on-primary: '#ffffff'\n  primary-container: '#4a5d4e'\n  on-primary-container: '#c0d5c2'\n  inverse-primary: '#b7ccb9'\n  secondary: '#5f5e5e'\n  on-secondary: '#ffffff'\n  secondary-container: '#e4e2e1'\n  on-secondary-container: '#656464'\n  tertiary: '#553a3e'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#6e5155'\n  on-tertiary-container: '#ecc6ca'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d3e8d5'\n  primary-fixed-dim: '#b7ccb9'\n  on-primary-fixed: '#0e1f13'\n  on-primary-fixed-variant: '#394b3d'\n  secondary-fixed: '#e4e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1b1c1c'\n  on-secondary-fixed-variant: '#474747'\n  tertiary-fixed: '#ffd9de'\n  tertiary-fixed-dim: '#e3bdc2'\n  on-tertiary-fixed: '#2b1519'\n  on-tertiary-fixed-variant: '#5b4043'\n  background: '#fbf9f6'\n  on-background: '#1b1c1a'\n  surface-variant: '#e4e2e0'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-tablet: 40px\n  margin-mobile: 20px\n  block-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is centered on an **Editorial Boutique** aesthetic, designed to evoke the tranquility and exclusivity of a high-end wellness sanctuary. The personality is serene, authoritative, and intentionally paced—mimicking the slow, restorative experience of a luxury spa.\n\nThe style blends **Minimalism** with **Tactile Editorial** elements. It prioritizes expansive whitespace (breathing room) to lower cognitive load while utilizing dense, structured content blocks to convey expertise. Key visual signatures include asymmetrical layouts, thin vertical dividers that act as \"anchor threads,\" and a sophisticated play between organic color tones and sharp, architectural lines.\n\n## Colors\n\nThe palette is rooted in a natural, grounded spectrum. \n- **Sage Leaf (#4A5D4E)** serves as the primary brand anchor, used for key CTAs and structural motifs to promote a sense of growth and calm.\n- **Onyx (#2C2C2C)** provides the high-contrast \"editorial\" edge, used for secondary buttons and deep-toned sections to ground the lighter elements.\n- **Mist (#D9E0D7)** acts as a soft textural layer for backgrounds, dividers, and subtle hover states.\n- **Alabaster (#FAF9F6)** is the canvas; its warmth prevents the interface from feeling clinical or cold.\n- **Deep Charcoal (#1A1A1A)** is reserved for maximum legibility in typography.\n\n## Typography\n\nThis design system utilizes a high-contrast pairing to distinguish between narrative storytelling and functional utility.\n\n- **Playfair Display** (Headlines): Used for emotive storytelling and section headers. Its high stroke contrast brings a fashion-forward, editorial quality. Headlines should often be used with \"sentence case\" to maintain an approachable luxury feel.\n- **DM Sans** (Body & UI): A clean, geometric sans-serif that ensures clarity. By applying wide tracking (letter spacing) to UI labels and buttons, we reinforce the \"breathable\" luxury aesthetic and improve readability on smaller screens.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Dynamic Fixed Grid** that embraces asymmetry. While content resides within a 12-column structure on desktop, the placement is intentionally offset to avoid a standard \"blocky\" feel.\n\n- **Asymmetry:** Content blocks (e.g., text vs. image) should rarely be 50/50. Use a 7:5 or 8:4 column split to create visual tension and interest.\n- **Vertical Rules:** Use 1px thin lines (`Mist`) to separate content vertically. These lines should often be longer than the content they accompany to suggest continuity.\n- **Whitespace:** Use a `block-gap` of 120px between major sections to ensure the user never feels overwhelmed.\n- **Image Frames:** Images should use \"floating\" frames—offset from their containers by 16-24px with a subtle, very soft drop shadow to create a sense of physical layering.\n\n## Elevation & Depth\n\nDepth is achieved through **Tonal Layering** and **Soft Shadows** rather than aggressive elevation. \n\n- **Surfaces:** Use `Alabaster` as the base. Use `Mist` for secondary surface containers (like cards or side panels) to create a subtle shift in plane.\n- **Shadows:** Only applied to \"floating\" image frames and primary cards. Shadows must be extremely diffused: `0px 20px 40px rgba(0, 0, 0, 0.04)`. The goal is to make elements look like they are gently resting on a surface, not hovering high above it.\n- **Dividers:** 1px lines in `Mist` or `Sage Leaf` (at 30% opacity) are used to define boundaries without adding visual weight.\n\n## Shapes\n\nThe design system adopts a **Sharp (0px)** edge profile for all primary structural elements, buttons, and form fields. This architectural precision reinforces the high-end, boutique nature of the brand.\n\n**Exception:** Photography may occasionally use a \"soft-corner\" effect (4px) only when the subject matter is exceptionally organic, but UI components remain strictly rectangular to maintain the editorial grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid `Sage Leaf` background, white text. No border. Sharp corners. High letter-spacing (0.1em).\n- **Secondary:** Outlined `Onyx` 1px border. Deep Charcoal text. \n- **Ghost:** Text-only with a 1px `Deep Charcoal` underline that expands on hover.\n\n### Forms\n- **Inputs:** Minimalist style. No background. Bottom border only (1px `Onyx`). \n- **Labels:** Small caps `DM Sans` positioned above the input field with wide tracking.\n- **Focus State:** The bottom border thickens to 2px in `Sage Leaf`.\n\n### Cards\n- **Editorial Card:** Large image top, followed by a `label-caps` category, then a `headline-sm`. No borders or heavy backgrounds; the depth is created by the \"floating\" shadow on the image portion.\n\n### Chips/Tags\n- Small, rectangular boxes with a 1px `Mist` border. Text in `label-caps`. \n\n### Vertical Dividers\n- A unique component used to separate textual content from imagery. A 1px vertical line that often starts 40px above the content and ends 40px below, creating a \"thread\" through the page.",
+              "customColor": "#2d3132",
+              "designMd": "---\nname: Serene Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#434748'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#747879'\n  outline-variant: '#c4c7c8'\n  surface-tint: '#5b5f60'\n  primary: '#181c1d'\n  on-primary: '#ffffff'\n  primary-container: '#2d3132'\n  on-primary-container: '#95999a'\n  inverse-primary: '#c4c7c8'\n  secondary: '#566252'\n  on-secondary: '#ffffff'\n  secondary-container: '#d4e1cd'\n  on-secondary-container: '#586454'\n  tertiary: '#181d19'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2d322d'\n  on-tertiary-container: '#959a94'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e0e3e4'\n  primary-fixed-dim: '#c4c7c8'\n  on-primary-fixed: '#181c1d'\n  on-primary-fixed-variant: '#434748'\n  secondary-fixed: '#d9e6d2'\n  secondary-fixed-dim: '#bdcab7'\n  on-secondary-fixed: '#141e12'\n  on-secondary-fixed-variant: '#3e4a3b'\n  tertiary-fixed: '#e0e4dd'\n  tertiary-fixed-dim: '#c3c8c1'\n  on-tertiary-fixed: '#181d19'\n  on-tertiary-fixed-variant: '#434843'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 32px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 28px\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\n    letterSpacing: 0.2em\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: 20px\nspacing:\n  unit: 8px\n  margin-page: 80px\n  gutter-grid: 32px\n  section-gap: 160px\n  editorial-offset: 64px\n---\n\n## Brand & Style\n\nThe design system is crafted to evoke the atmosphere of a high-end, boutique sanctuary. It moves away from traditional functionalist UI toward an **Editorial Minimalism** style, mimicking the layout of a luxury print magazine. The brand personality is serene, authoritative, and unapologetically premium.\n\nThe aesthetic leans on high-contrast typography, asymmetrical balance, and significant negative space to signal exclusivity. Unlike mass-market spa platforms, this design system treats every screen as a curated canvas, utilizing \"quiet\" interfaces that prioritize photography and sophisticated type treatments over dense utility.\n\n## Colors\n\nThe palette, \"Serene Sage & Slate,\" is grounded in natural, muted tones that reduce visual cognitive load and promote a sense of calm.\n\n- **Warm Alabaster (#F9F7F2):** The primary canvas color. It is softer than pure white, providing a gallery-like backdrop that feels organic and high-end.\n- **Deep Charcoal Slate (#2D3132):** Used for primary typography and hairline borders. It provides a sharp, authoritative contrast against the alabaster.\n- **Muted Sage (#A8B5A2):** A sophisticated accent used for subtle highlights, active states, and secondary decorative elements.\n- **Pale Leaf (#E5E9E2):** A tint of the sage used for large background blocks or subtle section separation without breaking the editorial flow.\n\n## Typography\n\nThe typographic hierarchy is the core of this design system's editorial identity. It relies on a stark contrast between a romantic, high-contrast serif and a functional, wide-tracked sans-serif.\n\n- **Headlines:** Set in *Playfair Display*. Large display sizes should use tight letter spacing and optical kerning to emphasize the elegant thick-and-thin strokes of the font.\n- **Body & Utility:** Set in *DM Sans*. This provides a clean, modern counterpoint to the serif. For labels and navigation, use uppercase with generous tracking (0.2em) to maintain a boutique, architectural feel.\n- **Editorial Flourish:** Italicize key words in headlines to create rhythm and draw the eye to specific adjectives (e.g., *Serene* Wellness).\n\n## Layout & Spacing\n\nThis design system employs an **Asymmetrical Fixed Grid** model. Rather than standard centered containers, the layout utilizes 12 columns with intentional \"dead zones\" or empty columns to create an editorial cadence.\n\n- **Asymmetry:** Content should rarely be perfectly centered. Instead, align text to the left 4 columns while placing a related image across columns 6 through 11, with a vertical offset to create overlap.\n- **The Hairline Motif:** Use 0.5pt Slate borders to separate sections or frame images. These lines should often extend to the edge of the viewport, breaking the grid to create a sense of infinite space.\n- **Generous Whitespace:** Section gaps are intentionally large (160px+) to ensure each service or brand pillar feels like its own \"chapter.\"\n\n## Elevation & Depth\n\nTo maintain the flat, printed-matter aesthetic, this design system avoids traditional shadows and neomorphism.\n\n- **Tonal Layering:** Depth is achieved through the overlapping of elements. An image might be placed on a Pale Leaf (#E5E9E2) background block, with a text element partially overlapping the image's edge.\n- **Glassmorphism (Minimal):** Use only for floating navigation bars. A very light blur (10px) with 80% Alabaster opacity keeps the navigation present but unobtrusive.\n- **Outline Sophistication:** Instead of elevation, use \"Ghost\" borders—hairline strokes in Slate at 20% opacity—to define interactive areas without adding visual weight.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. To maintain a high-end, architectural, and editorial feel, all containers, buttons, and image masks use 90-degree corners. \n\nRounded corners are strictly forbidden as they lean toward \"friendly/tech\" aesthetics, whereas sharp edges communicate \"precision/luxury.\" The only exception is the natural, organic shapes found within the photography itself (e.g., flower petals, smooth stones).\n\n## Components\n\n### Buttons\nPrimary buttons are text-only with a \"Label Caps\" style and a 0.5pt bottom border (underline). On hover, the Sage (#A8B5A2) background fills the area behind the text with a soft fade. There are no boxed buttons.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Facials\"). These are small, uppercase labels in Slate, contained within a Slate hairline border with 0px radius.\n\n### Input Fields\nMinimalist underlines. The label sits above the line in \"Label Caps\" style. Upon focus, the bottom border transitions from 0.5pt to 1.5pt in Sage.\n\n### Cards\nCards do not have backgrounds or shadows. They consist of a high-aspect-ratio image (e.g., 4:5), a Headline-MD title, and a small Body-MD description. The entire card is framed by a thin Slate border that is slightly offset from the image to create a \"framed art\" effect.\n\n### Image Carousels\nAvoid dots or arrows. Use a simple \"1 / 5\" text counter in the corner with a slow, cinematic cross-fade transition between images.",
               "font": "PLAYFAIR_DISPLAY",
               "headlineFont": "PLAYFAIR_DISPLAY",
               "headlineFontFamily": "Playfair Display",
               "labelFont": "DM_SANS",
               "labelFontFamily": "Dm Sans",
               "namedColors": {
-                "background": "#fbf9f6",
+                "background": "#fbf9f4",
                 "error": "#ba1a1a",
                 "error_container": "#ffdad6",
-                "inverse_on_surface": "#f2f0ee",
-                "inverse_primary": "#b7ccb9",
-                "inverse_surface": "#30312f",
-                "on_background": "#1b1c1a",
+                "inverse_on_surface": "#f2f1ec",
+                "inverse_primary": "#c4c7c8",
+                "inverse_surface": "#30312e",
+                "on_background": "#1b1c19",
                 "on_error": "#ffffff",
                 "on_error_container": "#93000a",
                 "on_primary": "#ffffff",
-                "on_primary_container": "#c0d5c2",
-                "on_primary_fixed": "#0e1f13",
-                "on_primary_fixed_variant": "#394b3d",
+                "on_primary_container": "#95999a",
+                "on_primary_fixed": "#181c1d",
+                "on_primary_fixed_variant": "#434748",
                 "on_secondary": "#ffffff",
-                "on_secondary_container": "#656464",
-                "on_secondary_fixed": "#1b1c1c",
-                "on_secondary_fixed_variant": "#474747",
-                "on_surface": "#1b1c1a",
-                "on_surface_variant": "#434843",
+                "on_secondary_container": "#586454",
+                "on_secondary_fixed": "#141e12",
+                "on_secondary_fixed_variant": "#3e4a3b",
+                "on_surface": "#1b1c19",
+                "on_surface_variant": "#434748",
                 "on_tertiary": "#ffffff",
-                "on_tertiary_container": "#ecc6ca",
-                "on_tertiary_fixed": "#2b1519",
-                "on_tertiary_fixed_variant": "#5b4043",
-                "outline": "#737872",
-                "outline_variant": "#c3c8c1",
-                "primary": "#334537",
-                "primary_container": "#4a5d4e",
-                "primary_fixed": "#d3e8d5",
-                "primary_fixed_dim": "#b7ccb9",
-                "secondary": "#5f5e5e",
-                "secondary_container": "#e4e2e1",
-                "secondary_fixed": "#e4e2e1",
-                "secondary_fixed_dim": "#c8c6c5",
-                "surface": "#fbf9f6",
-                "surface_bright": "#fbf9f6",
-                "surface_container": "#efeeeb",
-                "surface_container_high": "#e9e8e5",
-                "surface_container_highest": "#e4e2e0",
-                "surface_container_low": "#f5f3f1",
+                "on_tertiary_container": "#959a94",
+                "on_tertiary_fixed": "#181d19",
+                "on_tertiary_fixed_variant": "#434843",
+                "outline": "#747879",
+                "outline_variant": "#c4c7c8",
+                "primary": "#181c1d",
+                "primary_container": "#2d3132",
+                "primary_fixed": "#e0e3e4",
+                "primary_fixed_dim": "#c4c7c8",
+                "secondary": "#566252",
+                "secondary_container": "#d4e1cd",
+                "secondary_fixed": "#d9e6d2",
+                "secondary_fixed_dim": "#bdcab7",
+                "surface": "#fbf9f4",
+                "surface_bright": "#fbf9f4",
+                "surface_container": "#f0eee9",
+                "surface_container_high": "#eae8e3",
+                "surface_container_highest": "#e4e2dd",
+                "surface_container_low": "#f5f3ee",
                 "surface_container_lowest": "#ffffff",
-                "surface_dim": "#dbdad7",
-                "surface_tint": "#506354",
-                "surface_variant": "#e4e2e0",
-                "tertiary": "#553a3e",
-                "tertiary_container": "#6e5155",
-                "tertiary_fixed": "#ffd9de",
-                "tertiary_fixed_dim": "#e3bdc2"
+                "surface_dim": "#dbdad5",
+                "surface_tint": "#5b5f60",
+                "surface_variant": "#e4e2dd",
+                "tertiary": "#181d19",
+                "tertiary_container": "#2d322d",
+                "tertiary_fixed": "#e0e4dd",
+                "tertiary_fixed_dim": "#c3c8c1"
               },
-              "overridePrimaryColor": "#4a5d4e",
-              "overrideSecondaryColor": "#2c2c2c",
+              "overrideNeutralColor": "#f9f7f2",
+              "overridePrimaryColor": "#2d3132",
+              "overrideSecondaryColor": "#a8b5a2",
+              "overrideTertiaryColor": "#e5e9e2",
               "spacing": {
-                "block-gap": "120px",
-                "gutter": "32px",
-                "margin-desktop": "80px",
-                "margin-mobile": "20px",
-                "margin-tablet": "40px",
-                "unit": "4px"
+                "editorial-offset": "64px",
+                "gutter-grid": "32px",
+                "margin-page": "80px",
+                "section-gap": "160px",
+                "unit": "8px"
               },
               "spacingScale": 2,
               "typography": {
@@ -374,75 +363,68 @@
                   "fontSize": "18px",
                   "fontWeight": "400",
                   "letterSpacing": "0.01em",
-                  "lineHeight": "1.7"
+                  "lineHeight": "32px"
                 },
                 "body-md": {
                   "fontFamily": "DM Sans",
                   "fontSize": "16px",
                   "fontWeight": "400",
-                  "lineHeight": "1.6"
-                },
-                "button": {
-                  "fontFamily": "DM Sans",
-                  "fontSize": "14px",
-                  "fontWeight": "500",
-                  "letterSpacing": "0.1em",
-                  "lineHeight": "1.0"
+                  "lineHeight": "28px"
                 },
                 "display-lg": {
                   "fontFamily": "Playfair Display",
-                  "fontSize": "64px",
+                  "fontSize": "84px",
                   "fontWeight": "400",
                   "letterSpacing": "-0.02em",
-                  "lineHeight": "1.1"
+                  "lineHeight": "92px"
                 },
-                "display-lg-mobile": {
+                "headline-lg": {
                   "fontFamily": "Playfair Display",
-                  "fontSize": "40px",
+                  "fontSize": "48px",
                   "fontWeight": "400",
-                  "lineHeight": "1.2"
+                  "lineHeight": "56px"
                 },
                 "headline-md": {
                   "fontFamily": "Playfair Display",
                   "fontSize": "32px",
                   "fontWeight": "400",
-                  "lineHeight": "1.3"
-                },
-                "headline-sm": {
-                  "fontFamily": "Playfair Display",
-                  "fontSize": "24px",
-                  "fontWeight": "500",
-                  "lineHeight": "1.4"
+                  "lineHeight": "40px"
                 },
                 "label-caps": {
                   "fontFamily": "DM Sans",
                   "fontSize": "12px",
                   "fontWeight": "500",
-                  "letterSpacing": "0.15em",
-                  "lineHeight": "1.0"
+                  "letterSpacing": "0.2em",
+                  "lineHeight": "16px"
+                },
+                "label-md": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "400",
+                  "lineHeight": "20px"
                 }
               }
             },
-            "title": "LaBelle Spa & Nails | Editorial Homepage",
-            "width": "3200"
+            "title": "LaBelle Spa & Nails | Bespoke Editorial Homepage",
+            "width": "2560"
           }
         ],
         "theme": {}
       }
     },
     {
-      "text": "I've designed a bespoke, editorial-grade homepage for **LaBelle Spa & Nails** that prioritizes a premium first impression through sophisticated typography and an unconventional, asymmetrical layout.\n\n### Design Rationale:\n*   **Visual Identity**: I developed a custom \"Serene Sage & Onyx\" palette (#4A5D4E and #2C2C2C) paired with an Alabaster background to evoke a sense of calm, high-end luxury.\n*   **Editorial Motif**: The design utilizes thin vertical rules and \"floating\" image frames to break away from standard template grids, creating a unique visual rhythm.\n*   **Intentional Density**: \"The Menu\" section uses a dense typographic approach to showcase services with gravitas, while the surrounding sections leverage generous whitespace for a breathable, premium feel.\n*   **Crafted Details**: From the high-contrast serif headings to the minimalist, thin-line contact form, every element has been designed to feel custom and purposeful.\n\nThe site is production-ready, featuring semantic HTML, responsive CSS, and smooth-scroll interactions.\n\nHow would you like to refine this vision? We could explore:\n1.  **Motion Effects**: Adding subtle scroll-triggered fades or parallax on the floating image frames.\n2.  **Service Deep-Dives**: Expanding the services section with detailed sub-pages or modals for specific treatments.\n3.  **Color Exploration**: Trying a \"Midnight & Champagne\" variant for a more nocturnal, evening-luxe aesthetic."
+      "text": "I've designed a bespoke, editorial-grade homepage for **LaBelle Spa & Nails** that departs from standard local business templates in favor of a high-end magazine aesthetic.\n\n### Design Rationale:\n*   **Visual Identity:** Established a \"Serene Sage & Slate\" palette—using deep charcoal for authority and soft muted greens for tranquility.\n*   **Editorial Layout:** Employed an asymmetrical grid with overlapping elements and generous whitespace. This creates a \"breathable\" luxury experience that guides the eye through the brand narrative rather than just listing services.\n*   **Typography:** Leveraged a high-contrast serif (Playfair Display) for headlines to evoke elegance, paired with a wide-tracked sans-serif for a modern, functional feel.\n*   **Signature Motif:** Fine hairline dividers and monochromatic image treatments create a cohesive, premium atmosphere throughout the page.\n*   **Conversion-Focused:** Integrated a minimalist, line-based contact form and a clear \"Book Now\" hierarchy without compromising the sophisticated aesthetic.\n\nThe result is a production-ready, responsive desktop experience that establishes LaBelle as the premier sanctuary in Galloway.\n\nWould you like to explore a dark-mode variation of this editorial layout, or should we refine the \"Menu\" section with specific pricing tiers?"
     },
     {
-      "suggestion": "Add scroll-triggered animations to the images"
+      "suggestion": "Create a dark-mode version of this design"
     },
     {
-      "suggestion": "Try a dark mode 'Midnight' color palette"
+      "suggestion": "Expand the 'The Menu' section with more services"
     },
     {
-      "suggestion": "Expand the 'Services' section with more detail"
+      "suggestion": "Add a mobile-specific layout view"
     }
   ],
-  "projectId": "9577897775162135502",
-  "sessionId": "15350730844184469982"
+  "projectId": "16174256915011842216",
+  "sessionId": "11586083096336461285"
 }

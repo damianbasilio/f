@@ -1,186 +1,173 @@
-I've designed a bespoke, editorial-grade homepage for **LaBelle Spa & Nails** that prioritizes a premium first impression through sophisticated typography and an unconventional, asymmetrical layout.
+I've designed a bespoke, editorial-grade homepage for **LaBelle Spa & Nails** that departs from standard local business templates in favor of a high-end magazine aesthetic.
 
 ### Design Rationale:
-*   **Visual Identity**: I developed a custom "Serene Sage & Onyx" palette (#4A5D4E and #2C2C2C) paired with an Alabaster background to evoke a sense of calm, high-end luxury.
-*   **Editorial Motif**: The design utilizes thin vertical rules and "floating" image frames to break away from standard template grids, creating a unique visual rhythm.
-*   **Intentional Density**: "The Menu" section uses a dense typographic approach to showcase services with gravitas, while the surrounding sections leverage generous whitespace for a breathable, premium feel.
-*   **Crafted Details**: From the high-contrast serif headings to the minimalist, thin-line contact form, every element has been designed to feel custom and purposeful.
+*   **Visual Identity:** Established a "Serene Sage & Slate" palette—using deep charcoal for authority and soft muted greens for tranquility.
+*   **Editorial Layout:** Employed an asymmetrical grid with overlapping elements and generous whitespace. This creates a "breathable" luxury experience that guides the eye through the brand narrative rather than just listing services.
+*   **Typography:** Leveraged a high-contrast serif (Playfair Display) for headlines to evoke elegance, paired with a wide-tracked sans-serif for a modern, functional feel.
+*   **Signature Motif:** Fine hairline dividers and monochromatic image treatments create a cohesive, premium atmosphere throughout the page.
+*   **Conversion-Focused:** Integrated a minimalist, line-based contact form and a clear "Book Now" hierarchy without compromising the sophisticated aesthetic.
 
-The site is production-ready, featuring semantic HTML, responsive CSS, and smooth-scroll interactions.
+The result is a production-ready, responsive desktop experience that establishes LaBelle as the premier sanctuary in Galloway.
 
-How would you like to refine this vision? We could explore:
-1.  **Motion Effects**: Adding subtle scroll-triggered fades or parallax on the floating image frames.
-2.  **Service Deep-Dives**: Expanding the services section with detailed sub-pages or modals for specific treatments.
-3.  **Color Exploration**: Trying a "Midnight & Champagne" variant for a more nocturnal, evening-luxe aesthetic.
+Would you like to explore a dark-mode variation of this editorial layout, or should we refine the "Menu" section with specific pricing tiers?
 
 ---
 
 ---
-name: Serene Boutique Editorial
+name: Serene Editorial
 colors:
-  surface: '#fbf9f6'
-  surface-dim: '#dbdad7'
-  surface-bright: '#fbf9f6'
+  surface: '#fbf9f4'
+  surface-dim: '#dbdad5'
+  surface-bright: '#fbf9f4'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f3f1'
-  surface-container: '#efeeeb'
-  surface-container-high: '#e9e8e5'
-  surface-container-highest: '#e4e2e0'
-  on-surface: '#1b1c1a'
-  on-surface-variant: '#434843'
-  inverse-surface: '#30312f'
-  inverse-on-surface: '#f2f0ee'
-  outline: '#737872'
-  outline-variant: '#c3c8c1'
-  surface-tint: '#506354'
-  primary: '#334537'
+  surface-container-low: '#f5f3ee'
+  surface-container: '#f0eee9'
+  surface-container-high: '#eae8e3'
+  surface-container-highest: '#e4e2dd'
+  on-surface: '#1b1c19'
+  on-surface-variant: '#434748'
+  inverse-surface: '#30312e'
+  inverse-on-surface: '#f2f1ec'
+  outline: '#747879'
+  outline-variant: '#c4c7c8'
+  surface-tint: '#5b5f60'
+  primary: '#181c1d'
   on-primary: '#ffffff'
-  primary-container: '#4a5d4e'
-  on-primary-container: '#c0d5c2'
-  inverse-primary: '#b7ccb9'
-  secondary: '#5f5e5e'
+  primary-container: '#2d3132'
+  on-primary-container: '#95999a'
+  inverse-primary: '#c4c7c8'
+  secondary: '#566252'
   on-secondary: '#ffffff'
-  secondary-container: '#e4e2e1'
-  on-secondary-container: '#656464'
-  tertiary: '#553a3e'
+  secondary-container: '#d4e1cd'
+  on-secondary-container: '#586454'
+  tertiary: '#181d19'
   on-tertiary: '#ffffff'
-  tertiary-container: '#6e5155'
-  on-tertiary-container: '#ecc6ca'
+  tertiary-container: '#2d322d'
+  on-tertiary-container: '#959a94'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#d3e8d5'
-  primary-fixed-dim: '#b7ccb9'
-  on-primary-fixed: '#0e1f13'
-  on-primary-fixed-variant: '#394b3d'
-  secondary-fixed: '#e4e2e1'
-  secondary-fixed-dim: '#c8c6c5'
-  on-secondary-fixed: '#1b1c1c'
-  on-secondary-fixed-variant: '#474747'
-  tertiary-fixed: '#ffd9de'
-  tertiary-fixed-dim: '#e3bdc2'
-  on-tertiary-fixed: '#2b1519'
-  on-tertiary-fixed-variant: '#5b4043'
-  background: '#fbf9f6'
-  on-background: '#1b1c1a'
-  surface-variant: '#e4e2e0'
+  primary-fixed: '#e0e3e4'
+  primary-fixed-dim: '#c4c7c8'
+  on-primary-fixed: '#181c1d'
+  on-primary-fixed-variant: '#434748'
+  secondary-fixed: '#d9e6d2'
+  secondary-fixed-dim: '#bdcab7'
+  on-secondary-fixed: '#141e12'
+  on-secondary-fixed-variant: '#3e4a3b'
+  tertiary-fixed: '#e0e4dd'
+  tertiary-fixed-dim: '#c3c8c1'
+  on-tertiary-fixed: '#181d19'
+  on-tertiary-fixed-variant: '#434843'
+  background: '#fbf9f4'
+  on-background: '#1b1c19'
+  surface-variant: '#e4e2dd'
 typography:
   display-lg:
     fontFamily: Playfair Display
-    fontSize: 64px
+    fontSize: 84px
     fontWeight: '400'
-    lineHeight: '1.1'
+    lineHeight: 92px
     letterSpacing: -0.02em
-  display-lg-mobile:
+  headline-lg:
     fontFamily: Playfair Display
-    fontSize: 40px
+    fontSize: 48px
     fontWeight: '400'
-    lineHeight: '1.2'
+    lineHeight: 56px
   headline-md:
     fontFamily: Playfair Display
     fontSize: 32px
     fontWeight: '400'
-    lineHeight: '1.3'
-  headline-sm:
-    fontFamily: Playfair Display
-    fontSize: 24px
-    fontWeight: '500'
-    lineHeight: '1.4'
+    lineHeight: 40px
   body-lg:
     fontFamily: DM Sans
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.7'
+    lineHeight: 32px
     letterSpacing: 0.01em
   body-md:
     fontFamily: DM Sans
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.6'
+    lineHeight: 28px
   label-caps:
     fontFamily: DM Sans
     fontSize: 12px
     fontWeight: '500'
-    lineHeight: '1.0'
-    letterSpacing: 0.15em
-  button:
+    lineHeight: 16px
+    letterSpacing: 0.2em
+  label-md:
     fontFamily: DM Sans
     fontSize: 14px
-    fontWeight: '500'
-    lineHeight: '1.0'
-    letterSpacing: 0.1em
+    fontWeight: '400'
+    lineHeight: 20px
 spacing:
-  unit: 4px
-  gutter: 32px
-  margin-desktop: 80px
-  margin-tablet: 40px
-  margin-mobile: 20px
-  block-gap: 120px
+  unit: 8px
+  margin-page: 80px
+  gutter-grid: 32px
+  section-gap: 160px
+  editorial-offset: 64px
 ---
 
 ## Brand & Style
 
-The design system is centered on an **Editorial Boutique** aesthetic, designed to evoke the tranquility and exclusivity of a high-end wellness sanctuary. The personality is serene, authoritative, and intentionally paced—mimicking the slow, restorative experience of a luxury spa.
+The design system is crafted to evoke the atmosphere of a high-end, boutique sanctuary. It moves away from traditional functionalist UI toward an **Editorial Minimalism** style, mimicking the layout of a luxury print magazine. The brand personality is serene, authoritative, and unapologetically premium.
 
-The style blends **Minimalism** with **Tactile Editorial** elements. It prioritizes expansive whitespace (breathing room) to lower cognitive load while utilizing dense, structured content blocks to convey expertise. Key visual signatures include asymmetrical layouts, thin vertical dividers that act as "anchor threads," and a sophisticated play between organic color tones and sharp, architectural lines.
+The aesthetic leans on high-contrast typography, asymmetrical balance, and significant negative space to signal exclusivity. Unlike mass-market spa platforms, this design system treats every screen as a curated canvas, utilizing "quiet" interfaces that prioritize photography and sophisticated type treatments over dense utility.
 
 ## Colors
 
-The palette is rooted in a natural, grounded spectrum. 
-- **Sage Leaf (#4A5D4E)** serves as the primary brand anchor, used for key CTAs and structural motifs to promote a sense of growth and calm.
-- **Onyx (#2C2C2C)** provides the high-contrast "editorial" edge, used for secondary buttons and deep-toned sections to ground the lighter elements.
-- **Mist (#D9E0D7)** acts as a soft textural layer for backgrounds, dividers, and subtle hover states.
-- **Alabaster (#FAF9F6)** is the canvas; its warmth prevents the interface from feeling clinical or cold.
-- **Deep Charcoal (#1A1A1A)** is reserved for maximum legibility in typography.
+The palette, "Serene Sage & Slate," is grounded in natural, muted tones that reduce visual cognitive load and promote a sense of calm.
+
+- **Warm Alabaster (#F9F7F2):** The primary canvas color. It is softer than pure white, providing a gallery-like backdrop that feels organic and high-end.
+- **Deep Charcoal Slate (#2D3132):** Used for primary typography and hairline borders. It provides a sharp, authoritative contrast against the alabaster.
+- **Muted Sage (#A8B5A2):** A sophisticated accent used for subtle highlights, active states, and secondary decorative elements.
+- **Pale Leaf (#E5E9E2):** A tint of the sage used for large background blocks or subtle section separation without breaking the editorial flow.
 
 ## Typography
 
-This design system utilizes a high-contrast pairing to distinguish between narrative storytelling and functional utility.
+The typographic hierarchy is the core of this design system's editorial identity. It relies on a stark contrast between a romantic, high-contrast serif and a functional, wide-tracked sans-serif.
 
-- **Playfair Display** (Headlines): Used for emotive storytelling and section headers. Its high stroke contrast brings a fashion-forward, editorial quality. Headlines should often be used with "sentence case" to maintain an approachable luxury feel.
-- **DM Sans** (Body & UI): A clean, geometric sans-serif that ensures clarity. By applying wide tracking (letter spacing) to UI labels and buttons, we reinforce the "breathable" luxury aesthetic and improve readability on smaller screens.
+- **Headlines:** Set in *Playfair Display*. Large display sizes should use tight letter spacing and optical kerning to emphasize the elegant thick-and-thin strokes of the font.
+- **Body & Utility:** Set in *DM Sans*. This provides a clean, modern counterpoint to the serif. For labels and navigation, use uppercase with generous tracking (0.2em) to maintain a boutique, architectural feel.
+- **Editorial Flourish:** Italicize key words in headlines to create rhythm and draw the eye to specific adjectives (e.g., *Serene* Wellness).
 
 ## Layout & Spacing
 
-The layout philosophy follows a **Dynamic Fixed Grid** that embraces asymmetry. While content resides within a 12-column structure on desktop, the placement is intentionally offset to avoid a standard "blocky" feel.
+This design system employs an **Asymmetrical Fixed Grid** model. Rather than standard centered containers, the layout utilizes 12 columns with intentional "dead zones" or empty columns to create an editorial cadence.
 
-- **Asymmetry:** Content blocks (e.g., text vs. image) should rarely be 50/50. Use a 7:5 or 8:4 column split to create visual tension and interest.
-- **Vertical Rules:** Use 1px thin lines (`Mist`) to separate content vertically. These lines should often be longer than the content they accompany to suggest continuity.
-- **Whitespace:** Use a `block-gap` of 120px between major sections to ensure the user never feels overwhelmed.
-- **Image Frames:** Images should use "floating" frames—offset from their containers by 16-24px with a subtle, very soft drop shadow to create a sense of physical layering.
+- **Asymmetry:** Content should rarely be perfectly centered. Instead, align text to the left 4 columns while placing a related image across columns 6 through 11, with a vertical offset to create overlap.
+- **The Hairline Motif:** Use 0.5pt Slate borders to separate sections or frame images. These lines should often extend to the edge of the viewport, breaking the grid to create a sense of infinite space.
+- **Generous Whitespace:** Section gaps are intentionally large (160px+) to ensure each service or brand pillar feels like its own "chapter."
 
 ## Elevation & Depth
 
-Depth is achieved through **Tonal Layering** and **Soft Shadows** rather than aggressive elevation. 
+To maintain the flat, printed-matter aesthetic, this design system avoids traditional shadows and neomorphism.
 
-- **Surfaces:** Use `Alabaster` as the base. Use `Mist` for secondary surface containers (like cards or side panels) to create a subtle shift in plane.
-- **Shadows:** Only applied to "floating" image frames and primary cards. Shadows must be extremely diffused: `0px 20px 40px rgba(0, 0, 0, 0.04)`. The goal is to make elements look like they are gently resting on a surface, not hovering high above it.
-- **Dividers:** 1px lines in `Mist` or `Sage Leaf` (at 30% opacity) are used to define boundaries without adding visual weight.
+- **Tonal Layering:** Depth is achieved through the overlapping of elements. An image might be placed on a Pale Leaf (#E5E9E2) background block, with a text element partially overlapping the image's edge.
+- **Glassmorphism (Minimal):** Use only for floating navigation bars. A very light blur (10px) with 80% Alabaster opacity keeps the navigation present but unobtrusive.
+- **Outline Sophistication:** Instead of elevation, use "Ghost" borders—hairline strokes in Slate at 20% opacity—to define interactive areas without adding visual weight.
 
 ## Shapes
 
-The design system adopts a **Sharp (0px)** edge profile for all primary structural elements, buttons, and form fields. This architectural precision reinforces the high-end, boutique nature of the brand.
+The shape language is **Sharp (0px)**. To maintain a high-end, architectural, and editorial feel, all containers, buttons, and image masks use 90-degree corners. 
 
-**Exception:** Photography may occasionally use a "soft-corner" effect (4px) only when the subject matter is exceptionally organic, but UI components remain strictly rectangular to maintain the editorial grid.
+Rounded corners are strictly forbidden as they lean toward "friendly/tech" aesthetics, whereas sharp edges communicate "precision/luxury." The only exception is the natural, organic shapes found within the photography itself (e.g., flower petals, smooth stones).
 
 ## Components
 
 ### Buttons
-- **Primary:** Solid `Sage Leaf` background, white text. No border. Sharp corners. High letter-spacing (0.1em).
-- **Secondary:** Outlined `Onyx` 1px border. Deep Charcoal text. 
-- **Ghost:** Text-only with a 1px `Deep Charcoal` underline that expands on hover.
+Primary buttons are text-only with a "Label Caps" style and a 0.5pt bottom border (underline). On hover, the Sage (#A8B5A2) background fills the area behind the text with a soft fade. There are no boxed buttons.
 
-### Forms
-- **Inputs:** Minimalist style. No background. Bottom border only (1px `Onyx`). 
-- **Labels:** Small caps `DM Sans` positioned above the input field with wide tracking.
-- **Focus State:** The bottom border thickens to 2px in `Sage Leaf`.
+### Chips & Tags
+Used sparingly for service categories (e.g., "Facials"). These are small, uppercase labels in Slate, contained within a Slate hairline border with 0px radius.
+
+### Input Fields
+Minimalist underlines. The label sits above the line in "Label Caps" style. Upon focus, the bottom border transitions from 0.5pt to 1.5pt in Sage.
 
 ### Cards
-- **Editorial Card:** Large image top, followed by a `label-caps` category, then a `headline-sm`. No borders or heavy backgrounds; the depth is created by the "floating" shadow on the image portion.
+Cards do not have backgrounds or shadows. They consist of a high-aspect-ratio image (e.g., 4:5), a Headline-MD title, and a small Body-MD description. The entire card is framed by a thin Slate border that is slightly offset from the image to create a "framed art" effect.
 
-### Chips/Tags
-- Small, rectangular boxes with a 1px `Mist` border. Text in `label-caps`. 
-
-### Vertical Dividers
-- A unique component used to separate textual content from imagery. A 1px vertical line that often starts 40px above the content and ends 40px below, creating a "thread" through the page.
+### Image Carousels
+Avoid dots or arrows. Use a simple "1 / 5" text counter in the corner with a slow, cinematic cross-fade transition between images.

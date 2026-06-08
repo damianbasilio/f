@@ -1,43 +1,49 @@
-function toggleSideNav() {
-            const sideNav = document.getElementById('sideNav');
-            sideNav.classList.toggle('translate-x-full');
-            sideNav.classList.toggle('side-nav-open');
-        }
-
-        // Form Validation UI micro-interaction
-        const form = document.getElementById('contactForm');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Preview only';
-            btn.classList.add('opacity-70');
-            
-            setTimeout(() => {
-                btn.innerText = 'MESSAGE RECEIVED';
-                btn.classList.remove('bg-primary');
-                btn.classList.add('bg-primary-container');
-                form.reset();
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.remove('bg-primary-container', 'opacity-70');
-                    btn.classList.add('bg-primary');
-                }, 3000);
-            }, 1500);
+// Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
-        // Atmospheric Scroll Effect
+        // Sticky Nav Transformation & FAB Visibility
+        const nav = document.querySelector('nav');
+        const fab = document.getElementById('fab');
         window.addEventListener('scroll', () => {
-            const frames = document.querySelectorAll('.floating-frame');
-            frames.forEach(frame => {
-                const speed = 0.05;
-                const rect = frame.getBoundingClientRect();
-                const scrollOffset = (window.innerHeight - rect.top) * speed;
-                if (rect.top < window.innerHeight && rect.bottom > 0) {
-                    frame.style.transform = `translateY(${-scrollOffset}px)`;
+            if (window.scrollY > 100) {
+                nav.classList.add('py-4');
+                nav.classList.add('h-16');
+                nav.classList.remove('h-20');
+                fab.classList.remove('scale-0');
+                fab.classList.add('scale-100');
+            } else {
+                nav.classList.remove('py-4');
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16');
+                fab.classList.add('scale-0');
+                fab.classList.remove('scale-100');
+            }
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
         });
 
 (() => {
