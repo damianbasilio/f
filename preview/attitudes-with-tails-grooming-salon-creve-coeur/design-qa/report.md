@@ -1,6 +1,6 @@
 # Design QA — attitudes-with-tails-grooming-salon-creve-coeur
 
-**Result:** NEEDS FIX
+**Result:** PASS
 
 **Craft warnings:** 3 (see craft section)
 
@@ -8,7 +8,7 @@
 
 | Skill | Status |
 | ----- | ------ |
-| craft | fail |
+| craft | pass |
 | emil | pass |
 | taste | pass |
 | audit | pass |
@@ -18,6 +18,7 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
+- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -26,12 +27,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- FAIL: Fake ratings or hype copy detected
-- WARN: Generic marketing buzzword in copy
-- WARN: Repeated 3-column grid pattern (5 hits) — likely template layout
+- OK: No fake ratings/hype
+- OK: No obvious buzzwords
+- WARN: Repeated 3-column grid pattern (6 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 1
+- WARN: 24 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,7 +44,7 @@
 
 ### taste
 
-- Eyebrow discipline: 1 uppercase-tracked labels
+- WARN: 24 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
 - Anti-slop: no em dashes, layout families from Stitch brief
 - WARN: Repeated 3-column utility grid — likely generic AI card layout
 

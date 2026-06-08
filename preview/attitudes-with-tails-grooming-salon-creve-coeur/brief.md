@@ -87,7 +87,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/loveyourgroomer/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T00:53:44.538Z
+- **Scraped:** 2026-06-08T01:00:32.389Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/loveyourgroomer/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

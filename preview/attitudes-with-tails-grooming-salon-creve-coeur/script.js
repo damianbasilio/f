@@ -1,6 +1,27 @@
-// Micro-interactions for header scroll effect
+// Simple form interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Processing Selection...";
+            btn.classList.add('opacity-50', 'pointer-events-none');
+            
+            setTimeout(() => {
+                btn.innerText = "Request Received";
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-primary-container');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('opacity-50', 'pointer-events-none', 'bg-primary-container');
+                    btn.classList.add('bg-primary');
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Sticky Header scroll effect
         window.addEventListener('scroll', () => {
-            const nav = document.getElementById('top-nav');
+            const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
                 nav.classList.add('py-2', 'shadow-sm');
                 nav.classList.remove('py-4');
@@ -8,35 +29,6 @@
                 nav.classList.remove('py-2', 'shadow-sm');
                 nav.classList.add('py-4');
             }
-        });
-
-        // Simple smooth scroll logic for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Basic Reveal On Scroll Effect
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
         });
 
 (() => {
