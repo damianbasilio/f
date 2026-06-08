@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Good &amp; Evil BBQ | Little Rock's Sacred Art of Smoke</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,700;0,800;1,400&amp;family=Hanken+Grotesk:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --divine-gold: #d4af37;
+            --charred-black: #131313;
+            --bone-white: #e4e2e1;
+            --smoke-gray: #353535;
+        }
+        
+        body {
+            background-color: var(--charred-black);
+            color: var(--bone-white);
+            scroll-behavior: smooth;
+        }
+
+        .halftone-pattern {
+            background-image: radial-gradient(var(--smoke-gray) 1px, transparent 0);
+            background-size: 8px 8px;
+            opacity: 0.15;
+        }
+
+        .dual-split {
+            display: grid;
+            grid-template-cols: 1fr 1fr;
+        }
+
+        .editorial-rule {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--divine-gold), transparent);
+        }
+
+        .mask-smoke {
+            mask-image: linear-gradient(to bottom, black 60%, transparent 100%);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .active-nav-link {
+            border-bottom: 2px solid var(--divine-gold);
+            padding-bottom: 4px;
+        }
+
+        @media (max-width: 768px) {
+            .dual-split {
+                grid-template-cols: 1fr;
+            }
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "primary-fixed": "#ffe088",
+                      "on-surface-variant": "#d0c5af",
+                      "on-error-container": "#ffdad6",
+                      "surface-tint": "#e9c349",
+                      "on-secondary": "#313030",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-primary-container": "#554300",
+                      "surface-container": "#1f2020",
+                      "inverse-surface": "#e4e2e1",
+                      "surface-dim": "#131313",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-primary-fixed": "#241a00",
+                      "on-tertiary-container": "#444546",
+                      "tertiary-fixed": "#e2e2e2",
+                      "surface-container-lowest": "#0e0e0e",
+                      "on-error": "#690005",
+                      "surface": "#131313",
+                      "surface-container-low": "#1b1c1c",
+                      "on-primary": "#3c2f00",
+                      "error-container": "#93000a",
+                      "secondary": "#c9c6c5",
+                      "error": "#ffb4ab",
+                      "surface-container-high": "#2a2a2a",
+                      "surface-container-highest": "#353535",
+                      "tertiary": "#cecece",
+                      "surface-bright": "#393939",
+                      "primary-container": "#d4af37",
+                      "primary": "#f2ca50",
+                      "on-background": "#e4e2e1",
+                      "secondary-fixed-dim": "#c9c6c5",
+                      "on-secondary-container": "#bab8b7",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "secondary-container": "#4a4949",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "inverse-primary": "#735c00",
+                      "tertiary-container": "#b2b3b3",
+                      "on-surface": "#e4e2e1",
+                      "primary-fixed-dim": "#e9c349",
+                      "background": "#131313",
+                      "surface-variant": "#353535",
+                      "outline": "#99907c",
+                      "on-tertiary": "#2f3131",
+                      "outline-variant": "#4d4635",
+                      "inverse-on-surface": "#303030",
+                      "on-primary-fixed-variant": "#574500"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "container-max": "1280px",
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-mobile": "16px"
+              },
+              "fontFamily": {
+                      "display-lg-mobile": ["Bodoni Moda"],
+                      "caption": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "label-bold": ["Hanken Grotesk"],
+                      "headline-lg": ["Bodoni Moda"],
+                      "headline-xl": ["Bodoni Moda"],
+                      "display-lg": ["Bodoni Moda"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg-mobile": ["48px", { "lineHeight": "1.1", "fontWeight": "800" }],
+                      "caption": ["12px", { "lineHeight": "1.4", "letterSpacing": "0.05em", "fontWeight": "500" }],
+                      "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                      "label-bold": ["14px", { "lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                      "headline-lg": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+                      "headline-xl": ["48px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                      "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                      "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="font-body-md text-on-surface bg-background overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant transition-all duration-300">
+<div class="flex justify-between items-center h-20 px-margin-desktop w-full mx-auto max-w-container-max">
+<div class="flex items-center gap-4">
+<img alt="Good &amp; Evil BBQ Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLvjP8a_sqhdUkmkYnssp0s-vQX2O8ez1QJt475w3aml_b9RqN9wSbi2iQhCgfQw8P-ZKvnc8VVjpC3vr1VJAINTCgQP4vn9ij6-ApYEkSDj8EjqOyF8w_9Mg83WX5oGjBUEF_rV_UrpzHbjlt6nXOtiosmspCereydh-nFZB86ezkM2Y4nidXxKWTpEEf0cOJnn329l-s3HQ14qo_jQV2mL5dbmYEki6oc_A4JPaiI1wthHrs97YVQe-jI"/>
+<span class="font-headline-lg text-headline-lg font-bold text-primary tracking-tighter">Good &amp; Evil BBQ</span>
+</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-bold text-label-bold text-primary font-bold border-b-2 border-primary pb-1" href="#hero">The Good</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors" href="#offerings">The Evil</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-bold text-label-bold text-on-surface hover:text-primary transition-colors" href="#visit">Visit</a>
+</div>
+<div class="flex items-center gap-gutter">
+<span class="hidden lg:block font-label-bold text-label-bold text-primary">(501) 214-8040</span>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-none font-label-bold text-label-bold active:scale-95 duration-200 transition-all">Order Now</button>
+</div>
+</div>
+</nav>
+<!-- Hero Section: The Sacred Art of Smoke -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
+<img alt="Sacred Art of Smoke Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLu4dVREfv2lkIjcmyFLMmx2mVvLf2hmE1F2s9-67fJLca2yjKRW0YeHgeldn3x4tGvnDbUb7-a1ACYOinnNnYX7M451BRayjulB8MDJAohnYYBcatobEOqfJJtTzBqLdTpJjjaEF47rH8ZTBzcXTZxF29BZvSaoqG6LWWGwZ1W8rgdVe1lKe4JyrRxCTFE39TYHc5VrU7dLNJLnfSVxgu_F-bVSxHcA-N5i8oLjNxxfZE4g4tFj-jJVDuE"/>
+</div>
+<div class="relative z-20 px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="max-w-2xl">
+<span class="font-label-bold text-label-bold text-primary tracking-[0.3em] block mb-4">THE RITUAL</span>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-8 leading-none">The Sacred Art <br/><span class="italic text-primary-fixed">of Smoke.</span></h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-12">
+                    In the heart of Little Rock, time dissolves into embers. We honor the "Good" in our community and the "Evil" in our intense, slow-charred techniques. This isn't just barbecue; it's transcendence through wood, fire, and twelve hours of devotion.
+                </p>
+<div class="flex gap-gutter">
+<button class="bg-primary text-on-primary px-10 py-4 font-label-bold text-label-bold tracking-widest hover:bg-primary-fixed transition-colors">EXPLORE THE MENU</button>
+<button class="border border-outline text-on-surface px-10 py-4 font-label-bold text-label-bold tracking-widest hover:bg-surface-variant transition-colors">OUR LEGACY</button>
+</div>
+</div>
+</div>
+<!-- Atmospheric Scroll Indicator -->
+<div class="absolute bottom-10 left-margin-desktop flex items-center gap-4">
+<div class="w-1 h-12 bg-outline-variant relative overflow-hidden">
+<div class="absolute inset-0 bg-primary h-1/2 animate-bounce"></div>
+</div>
+<span class="font-caption text-caption text-on-surface-variant uppercase tracking-tighter">Scroll into the haze</span>
+</div>
+</section>
+<!-- Credibility: Little Rock's Best Kept Secret -->
+<section class="py-section-gap bg-surface-container-lowest relative overflow-hidden" id="credibility">
+<div class="halftone-pattern absolute inset-0"></div>
+<div class="px-margin-desktop w-full max-w-container-max mx-auto relative z-10">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 md:col-span-5">
+<h2 class="font-headline-xl text-headline-xl mb-6">Little Rock's Best <br/><span class="italic">Kept Secret.</span></h2>
+<div class="w-20 h-1 bg-primary mb-8"></div>
+</div>
+<div class="col-span-12 md:col-span-7 grid grid-cols-2 gap-8">
+<div class="border-l border-outline-variant pl-8 py-4">
+<span class="font-display-lg text-headline-xl text-primary block mb-2 font-extrabold">26+</span>
+<p class="font-label-bold text-label-bold text-on-surface-variant uppercase">Years of Smoke</p>
+</div>
+<div class="border-l border-outline-variant pl-8 py-4">
+<span class="font-display-lg text-headline-xl text-primary block mb-2 font-extrabold">12hr</span>
+<p class="font-label-bold text-label-bold text-on-surface-variant uppercase">Oak-Fired Ritual</p>
+</div>
+<div class="border-l border-outline-variant pl-8 py-4">
+<span class="font-display-lg text-headline-xl text-primary block mb-2 font-extrabold">#1</span>
+<p class="font-label-bold text-label-bold text-on-surface-variant uppercase">Heritage Choice</p>
+</div>
+<div class="border-l border-outline-variant pl-8 py-4">
+<span class="font-display-lg text-headline-xl text-primary block mb-2 font-extrabold">∞</span>
+<p class="font-label-bold text-label-bold text-on-surface-variant uppercase">Soulful Community</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Offerings: Shared Plates, Common Ground -->
+<section class="py-section-gap bg-background" id="offerings">
+<div class="px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="text-center mb-24">
+<h2 class="font-display-lg text-headline-xl mb-4">Shared Plates, Common Ground</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto italic">From the divine golden crust to the charred edges of the pit.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group relative bg-surface-container-low p-1 border border-outline-variant hover:border-primary transition-all duration-500 overflow-hidden">
+<div class="aspect-[3/4] overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="Close up of a premium signature smoked brisket with a perfect pink smoke ring and a dark, peppery crust on a minimalist dark stone platter. The lighting is high-end and cinematic, focusing on the moist texture of the meat. Divine gold highlights reflect off the juices, creating a sophisticated and appetizing food photography shot for a luxury smokehouse brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGwD6rFfK4nQvIVXLN5Za0TajK625KqTvgYiAcIeewqaJ2TpfneAExolktOV6Wneky0GqpOZ2gbwe1LT0XaHjupmRg4NLcYq0sp18eTyyyNG_Lg06-R9hLsoXYhXziqhAuekRC2BNOMCfpF_NUXcdjzhumXHZlKdzl9aM2hedOVMH-HK744R1G-c4DXe4OfgIP9NJMYoF3jckauJ2PMnddjzbaHs4rUkX9H9oP1FG7iMgKu01-SHAIUnGkVCUp0BH9vXEVZQY8wJ0"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline-lg text-headline-lg">Signature Brisket</h3>
+<span class="font-label-bold text-label-bold text-primary">$28</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Twelve hours over white oak. Served with bone marrow butter and grilled sourdough.</p>
+<hr class="border-outline-variant mb-6"/>
+<div class="flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-caption px-3 py-1 font-label-bold uppercase">The Good</span>
+<span class="bg-surface-variant text-on-surface-variant text-caption px-3 py-1 font-label-bold uppercase">Heritage</span>
+</div>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative bg-surface-container-low p-1 border border-outline-variant hover:border-primary transition-all duration-500 overflow-hidden">
+<div class="aspect-[3/4] overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A platter of the fallen ribs, heavily charred and glazed with a dark, rich molasses-based sauce. The ribs are stacked asymmetrically on a rustic bone-white ceramic plate. Smoke swirls around the dish in a dark, atmospheric environment. High contrast lighting emphasizes the deep blacks of the char and the golden amber of the glaze, following an editorial food magazine style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBRRNtXE4_KGZvRKcDVo__wIiiQAZs-cw85TcJ5LTek6Rq-zpbYqsCXxY_NG0cCCHAtpSHJkl-Voo9tqDHvpJcVwJTYWlLDVe9r03g8q0a5oblnq9ypfY6jvgXYFLxYJKelA_crDm6jzYtgDDBxlashhPNA3SbV1_gmFG7ZcBIqL47hjNvR-_DxBQBlwWvqd5GeVoVBRmYZxmEc1bMDyUP-rD0BWU7_HGirtATM_dUnGbg6fcYA_0awYHmg33VXX_b14M8-nyMiMPo"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline-lg text-headline-lg">The Fallen Ribs</h3>
+<span class="font-label-bold text-label-bold text-primary">$24</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">St. Louis cut, coffee-rubbed and glazed with our 'Evil' dark molasses reduction.</p>
+<hr class="border-outline-variant mb-6"/>
+<div class="flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-caption px-3 py-1 font-label-bold uppercase">The Evil</span>
+<span class="bg-surface-variant text-on-surface-variant text-caption px-3 py-1 font-label-bold uppercase">Spicy</span>
+</div>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative bg-surface-container-low p-1 border border-outline-variant hover:border-primary transition-all duration-500 overflow-hidden">
+<div class="aspect-[3/4] overflow-hidden mb-6 relative">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" data-alt="A vibrant communal catering spread featuring assorted BBQ meats, gold-tinted side dishes, and fresh herbs arranged on a long wooden table. The scene is bright and airy, representing the community aspect of the brand. Soft morning light filters through, highlighting the rich textures of the food and the natural grain of the wood. A sophisticated, editorial approach to social dining." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeqMm0gjDowUyyPJS88BWVSqwAuJpVEDGl_rWm_hvVUmuNJAkTWpzcL7ArLu-HRGQ2TZydDXprMv3x62-bn1Boctkh35yy8rGuiaD_ldMOTCQU0xy1dAfG_VbiIq1HYhJ16VBH8UE1KTbla9-nUGECmeLCsLW-Ka_YJNPvP-BjsSueGenRMvb8F6seQ11fUXSAECYKHf3TyFRtGpuVsY99t8BYDUycs_kjRk5hIy3SDkNblvlE-ITVQrg1DiAz1zpVnnRpueOFXl4"/>
+<div class="absolute inset-0 bg-black/40 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline-lg text-headline-lg">Community Pit</h3>
+<span class="font-label-bold text-label-bold text-primary">Varies</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">A curated selection for the table. Whole hog options available for community gatherings.</p>
+<hr class="border-outline-variant mb-6"/>
+<div class="flex gap-2">
+<span class="bg-surface-variant text-on-surface-variant text-caption px-3 py-1 font-label-bold uppercase">The Soul</span>
+<span class="bg-surface-variant text-on-surface-variant text-caption px-3 py-1 font-label-bold uppercase">Shared</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About: Smoke Legacy -->
+<section class="dual-split min-h-[80vh]" id="about">
+<div class="relative bg-surface-container-high overflow-hidden flex items-center justify-center p-20">
+<div class="halftone-pattern absolute inset-0"></div>
+<div class="relative z-10 text-right">
+<span class="font-label-bold text-label-bold text-primary tracking-widest block mb-4">OUR FOUNDER</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 italic">Eric Love</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md ml-auto">
+                    "The smoke tells a story that the meat can only translate. We aren't just cooking; we're maintaining a dialogue with our ancestors on Springer Boulevard."
+                </p>
+</div>
+<div class="absolute left-0 top-1/2 -translate-y-1/2 w-px h-64 bg-gradient-to-b from-transparent via-primary to-transparent opacity-30"></div>
+</div>
+<div class="relative overflow-hidden">
+<img alt="Smoke Legacy Pit" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLvwkvjdh4PD-mMNsS8De0TLdlN0vYsghSy5WCn0gg71uWo6ipnbJloyYoao9b1wfrWpPMGd3kAHzXSR4UnQXouFBpvuuBEzHIeQ77IRDuH02iXXEftqasAkpUmXWb_qmQ_cubx5l4ykISWCaBxOclMPModoKlBNU4gh6MyVV8mwkinJf5ztfSLDg-JQkwolE_Zwf0VlSP7KSMdol2IQrxKFLDz9VlXwoE1bEp7ACX3vacvmumIw9PvHvQ"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap bg-surface-container-lowest" id="visit">
+<div class="px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 space-y-12">
+<div>
+<h2 class="font-headline-xl text-headline-xl mb-8">Visit The Pit</h2>
+<div class="space-y-6">
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase mb-1">Address</p>
+<p class="font-body-lg text-body-lg">2616 Springer Boulevard<br/>Little Rock, AR 72206</p>
+</div>
+</div>
+<div class="flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-label-bold text-label-bold uppercase mb-1">Ritual Hours</p>
+<p class="font-body-lg text-body-lg">Wed – Sat: 11 AM – 9 PM<br/>Sun: 11 AM – 4 PM</p>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full border border-primary text-primary py-4 font-label-bold text-label-bold tracking-widest hover:bg-primary hover:text-on-primary transition-all">GET DIRECTIONS</button>
+</div>
+<div class="col-span-12 md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] bg-surface-container-low flex items-center justify-center border border-outline-variant" data-location="Little Rock, Arkansas" data-map-slot="" style="">
+<div class="absolute inset-0 bg-[url('https://api.placeholder.com/1200/800')] bg-cover opacity-20 grayscale"></div>
+<div class="relative z-10 text-center">
+<span class="material-symbols-outlined text-display-lg text-primary opacity-50 mb-4" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="block text-on-surface-variant font-body-sm italic">Interactive Smoke Map Loading...</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Reserve/Contact Section -->
+<section class="py-section-gap bg-background relative" id="reserve">
+<div class="px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="max-w-4xl mx-auto bg-surface-container p-margin-desktop border border-outline-variant relative">
+<div class="absolute top-0 right-0 w-32 h-32 opacity-10">
+<svg class="fill-primary" viewbox="0 0 100 100">
+<rect height="10" width="100" y="20"></rect>
+<rect height="10" width="100" y="45"></rect>
+<rect height="10" width="100" y="70"></rect>
+</svg>
+</div>
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-xl mb-4">Reserve Your Table</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Intimate fireside dining and communal gatherings.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
+<div class="relative">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface placeholder:text-surface-variant" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Email</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface placeholder:text-surface-variant" placeholder="john@example.com" type="email"/>
+</div>
+<div class="relative">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Date</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface appearance-none" type="date"/>
+</div>
+<div class="relative">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Guests</label>
+<select class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface appearance-none">
+<option>2 People</option>
+<option>4 People</option>
+<option>6+ (Communal Table)</option>
+</select>
+</div>
+<div class="col-span-1 md:col-span-2 relative">
+<label class="block font-label-bold text-label-bold text-on-surface-variant uppercase mb-2">Special Requests</label>
+<textarea class="w-full bg-transparent border-b border-outline-variant focus:border-primary focus:ring-0 transition-colors py-2 text-on-surface placeholder:text-surface-variant" placeholder="Dietary notes or special occasions..." rows="3"></textarea>
+</div>
+<div class="col-span-1 md:col-span-2 text-center mt-8">
+<button class="bg-primary text-on-primary px-16 py-4 font-label-bold text-label-bold tracking-widest hover:scale-105 duration-300 transition-all" type="submit">REQUEST RESERVATION</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter px-margin-desktop py-section-gap max-w-container-max mx-auto items-center">
+<div>
+<span class="font-headline-xl text-headline-xl text-primary opacity-50 block mb-8">Good &amp; Evil BBQ</span>
+<p class="font-body-md text-body-md text-on-surface mb-8 max-w-md">
+                    © 2024 Good and Evil BBQ. 2616 Springer Boulevard, Little Rock, AR 72206
+                </p>
+<div class="flex gap-8">
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Privacy</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Terms</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Careers</a>
+<a class="font-body-md text-on-surface-variant hover:text-primary transition-colors underline" href="#">Press</a>
+</div>
+</div>
+<div class="md:text-right space-y-6">
+<div class="flex md:justify-end gap-6">
+<a class="w-12 h-12 flex items-center justify-center border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-12 h-12 flex items-center justify-center border border-outline-variant text-on-surface hover:border-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+<p class="font-label-bold text-label-bold text-primary tracking-widest">(501) 214-8040</p>
+<p class="font-caption text-caption text-on-surface-variant">DESIGNED FOR THE SOUL &amp; THE SMOKE</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Interaction logic
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Scroll shadow for TopAppBar
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-background/95', 'shadow-2xl');
+            } else {
+                nav.classList.remove('bg-background/95', 'shadow-2xl');
+            }
+        });
+
+        // Micro-interaction for form focus
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').style.color = '#d4af37';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').style.color = '';
+            });
+        });
+    </script>
+</body></html>
