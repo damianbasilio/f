@@ -1,32 +1,26 @@
-// Smooth scroll for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+// Simple micro-interaction for buttons
+        document.querySelectorAll('button, a').forEach(elem => {
+            elem.addEventListener('mousedown', () => {
+                elem.classList.add('scale-95');
+            });
+            elem.addEventListener('mouseup', () => {
+                elem.classList.remove('scale-95');
+            });
+            elem.addEventListener('mouseleave', () => {
+                elem.classList.remove('scale-95');
             });
         });
 
-        // Simple scroll reveal effect for industrial lines
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.width = entry.target.dataset.width || '100%';
-                    entry.target.style.transition = 'width 1s ease-out';
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.industrial-line').forEach(line => {
-            const currentWidth = line.style.width || '6rem';
-            line.dataset.width = currentWidth;
-            line.style.width = '0';
-            observer.observe(line);
+        // Sticky header opacity shift on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-lg');
+                header.style.backgroundColor = 'rgba(248, 249, 255, 0.95)';
+            } else {
+                header.classList.remove('shadow-lg');
+                header.style.backgroundColor = '#f8f9ff';
+            }
         });
 
 (() => {

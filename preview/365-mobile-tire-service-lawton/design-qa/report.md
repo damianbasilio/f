@@ -1,6 +1,6 @@
 # Design QA — 365-mobile-tire-service-lawton
 
-**Result:** NEEDS FIX
+**Result:** PASS
 
 **Craft warnings:** 2 (see craft section)
 
@@ -8,7 +8,7 @@
 
 | Skill | Status |
 | ----- | ------ |
-| craft | fail |
+| craft | pass |
 | emil | pass |
 | taste | pass |
 | audit | pass |
@@ -18,7 +18,6 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- craft: fixed 2 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -27,13 +26,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- FAIL: Fake ratings or hype copy detected
+- OK: No fake ratings/hype
 - OK: No obvious buzzwords
-- OK: Layout: no excessive 3-col grids
+- WARN: Repeated 3-column grid pattern (11 hits) — likely template layout
 - OK: Typography: brand fonts referenced
-- WARN: Warm cream/beige body background — common AI default; prefer brand-tinted neutrals
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 2
+- OK: Eyebrow count: 0
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -45,8 +43,9 @@
 
 ### taste
 
-- Eyebrow discipline: 2 uppercase-tracked labels
+- Eyebrow discipline: 0 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 

@@ -15,6 +15,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 - **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
 - Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
 - Every section should feel **designed**, not assembled from a component library.
+- Whole email should be 100 words or less.
 
 ---
 
@@ -120,6 +121,7 @@ No card UI: sections flow with borders, rules, and background tints only; servic
 hero → credibility → services → service-area → about → visit → contact
 
 **Hero direction:**
+
 - **H1 (adapt closely):** 365 Mobile Tire Service — trusted Lawton service
 - **Subhead:** Jimmy’s Jerk Chicken will be Today ( 5/28/26) 11a-2pm on Ft. Sill at the Exchange ( PX …
 - **Primary CTA:** Call now
@@ -209,3 +211,4 @@ Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery
 - Mockup banner placeholder at top: "Concept preview — not affiliated with 365 Mobile Tire Service"
 
 ---
+

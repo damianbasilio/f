@@ -6,8 +6,8 @@
 | brand-extract | pending |
 | stitch | done |
 | images | done |
-| copy | pending |
-| design-qa/craft | fail |
+| copy | done |
+| design-qa/craft | done |
 | design-qa/emil | done |
 | design-qa/taste | done |
 | design-qa/audit | done |
