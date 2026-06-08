@@ -4,7 +4,7 @@ module.exports = {
   apps: [
     {
       name: "outreach-pipeline",
-      script: "lib/daily-pipeline.mjs",
+      script: path.join(__dirname, "scripts/outreach-pipeline.mjs"),
       cwd: __dirname,
       watch: false,
       restart_delay: 5000,
