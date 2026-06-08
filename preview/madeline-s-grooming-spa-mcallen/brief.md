@@ -1,0 +1,96 @@
+# Madeline's Grooming Spa — brief
+
+## Email verification
+
+- **Email:** thegroomingspabymadeline@gmail.com
+- **Source:** https://www.facebook.com/madelineandfriends/
+- **Gate:** PASS
+
+## Activity verification
+
+- **Gate:** PASS
+- **Evidence:** Active Facebook page with content and 7 post caption(s) scraped
+- **Checked:** 2026-06-08 — Facebook profile scrape
+
+## Human approval
+
+- **Reviewed by:** auto (Facebook-only verified lead)
+- **Date:** 2026-06-08
+- **Website bad enough to proceed:** yes — no owned website on Facebook profile
+- **Gate:** PASS
+
+## Site quality gate
+
+- **Gate:** PASS
+- **Live URL:** https://www.facebook.com/madelineandfriends/
+- **Why this site hurts sales:** Business relies on Facebook only; Google searchers cannot reach a dedicated homepage with phone and services above the fold.
+
+## Business copy
+
+- **Name:** Madeline's Grooming Spa
+- **Owner:** —
+- **Location:** McAllen, McAllen, United States
+- **Phone:** (956) 202-7907
+- **Email:** thegroomingspabymadeline@gmail.com
+- **Tagline:** There’s something so special about gaining pups’ trust over time 💜. I’ve been grooming Daisy and Biscuit for about a year and a half now and they’ve become so comfortable with me 
+- **Hours:** Always open
+- **Focus:** There’s something so special about gaining pups’ trust over time 💜. I’ve been grooming Daisy and Biscuit for about a year and a half now and they’ve become so comfortable with me during their appointments that most of the time they’re just laying down or falling asleep while being groomed 🥺🫧. moments like these remind me why i love what i do so much. i’m beyond grateful for every client that trusts me with their babies, and i put so much love, patience, and care into every groom ✨
+- **Full profile (scraped):**
+
+There’s something so special about gaining pups’ trust over time 💜. I’ve been grooming Daisy and Biscuit for about a year and a half now and they’ve become so comfortable with me during their appointments that most of the time they’re just laying down or falling asleep while being groomed 🥺🫧. moments like these remind me why i love what i do so much. i’m beyond grateful for every client that trusts me with their babies, and i put so much love, patience, and care into every groom ✨
+Hours: Always open
+Address: McAllen, TX, United States, 78501
+Phone: 265.663 7265
+Email: thegroomingspabymadeline@gmail.com
+
+Recent posts from their Facebook page:
+1. There’s something so special about gaining pups’ trust over time 💜. I’ve been grooming Daisy and Biscuit for about a year and a half now and they’ve become so comfortable with me during their appointments that most of the time they’re just laying down or falling asleep while being groomed 🥺🫧. moments like these remind me why i love what i do so much. i’m beyond grateful for every client that trusts me with their babies, and i put so much love, patience, and care into every groom ✨
+2. All-Natural & Premium Grooming - Because We Love Your Pups 💗
+3. McAllen, TX, United States, Texas
+4. The Grooming Spa by Madeline is in Mission, TX, United States.
+5. Thank you so much Madeline! My babies love you and that makes me feel at peace.
+6. It'll be available to watch on The Grooming Spa by Madeline's profile shortly.
+- **Category:** Local business
+- **Vertical:** Local business
+
+## Core functionalities
+
+- **Primary action:** Contact us
+- **Secondary action:** Learn more
+- **Must surface above fold:** Phone number, primary CTA, business name, city
+- **Service highlights:** There’s something so special about gaining pups’ trust over time 💜; All-Natural & Premium Grooming - Because We Love Your Pups 💗; The Grooming Spa by Madeline is in Mission, TX, United States; It'll be available to watch on The Grooming Spa by Madeline's profile shortly
+- **Trust signals available:** 5 review score from listings
+
+## Three verifiable issues
+
+1. Facebook-only presence — customers searching Google land on directories instead of the business
+2. No dedicated homepage for hours, services, and click-to-call from search results
+3. Social feed requires scrolling — key info (phone, location, services) is not one tap away
+
+## Mockup angle
+
+- **H1:** All-Natural & Premium Grooming - Because We Love Your Pups 💗
+- **Primary CTA:** Contact us
+- **Secondary CTA:** Learn more
+- **Sections:** hero, credibility, services, about, gallery, visit, contact
+- **Tone:** Professional, welcoming, community-rooted
+- **Layout archetype:** minimal-luxury
+- **Colors / typography:** Stitch decides (no website to extract from)
+
+## Stitch generation brief
+
+- **Vertical:** Local business
+- **Mood:** Professional, welcoming, community-rooted
+- **Typography direction:** Lora + Work Sans
+- **Layout archetype:** minimal-luxury
+- **Design dials:** DESIGN_VARIANCE 8 | MOTION_INTENSITY 4 | VISUAL_DENSITY 5
+- **Colors / typography:** Stitch decides (no website to extract from)
+
+## Facebook source (no brand colors to extract)
+
+- **Source:** https://www.facebook.com/madelineandfriends/
+- **Platform:** Facebook (no dedicated website)
+- **Scraped:** 2026-06-08T18:18:42.863Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at https://www.facebook.com/madelineandfriends/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
+
