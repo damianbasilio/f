@@ -1,181 +1,166 @@
-I've designed a bespoke, editorial-grade homepage for **K C Nails** that moves away from generic templates to establish a truly premium brand presence.
+I have designed a bespoke, editorial-grade homepage for **K C Nails**. 
+
+The design departs from standard local-business templates by adopting a high-end magazine aesthetic. I used a custom "Desert Rose & Onyx" palette—terracotta, dusty rose, and charcoal—paired with **Bodoni Moda** for a sophisticated typographic hierarchy.
 
 ### Design Highlights:
-*   **Editorial Layout:** I used a high-contrast typographic hierarchy and generous whitespace to create a "Vogue-style" layout that feels more like a high-fashion portfolio than a standard salon site.
-*   **Sophisticated Palette:** A custom color story of **Deep Espresso**, **Soft Sand**, and **Muted Blush**, accented with **Thin Gold Rules** to symbolize the precision of their nail artistry.
-*   **Narrative Flow:** Instead of a simple service list, I framed their offerings as "Technical Excellence" and "The Narrative," emphasizing the meticulous protocol and artisan craftsmanship they offer to the Chico community.
-*   **Custom UI Elements:** The "Visit" section features a clean, minimalist map panel, and the contact form is designed with high-end, line-based inputs for a seamless user experience.
+*   **Asymmetrical Layout:** Breaking the standard grid to create a premium, curated feel.
+*   **The Menu:** A stylized services section that treats nail care as an art form rather than a utility.
+*   **Intentional Whitespace:** Using spacing to elevate the brand and allow the photography (represented via placeholders) to breathe.
+*   **Functional Visit Section:** Integrated your Chico location details with a dedicated map slot and direct contact information.
 
-The site is fully responsive, semantic, and production-ready. How does this visual direction feel for the brand?
-
----
+The site is fully responsive and built with semantic HTML and modern CSS. You can now preview the layout on the canvas.
 
 ---
-name: Editorial Luxe
+
+---
+name: Desert Rose & Onyx Editorial
 colors:
-  surface: '#fef8f7'
-  surface-dim: '#ded9d8'
-  surface-bright: '#fef8f7'
+  surface: '#fcf9f4'
+  surface-dim: '#dcdad5'
+  surface-bright: '#fcf9f4'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f8f2f2'
-  surface-container: '#f2edec'
-  surface-container-high: '#ece7e6'
-  surface-container-highest: '#e6e1e1'
-  on-surface: '#1d1b1b'
-  on-surface-variant: '#4e4544'
-  inverse-surface: '#323030'
-  inverse-on-surface: '#f5efef'
-  outline: '#807474'
-  outline-variant: '#d1c3c3'
-  surface-tint: '#675c5b'
-  primary: '#171010'
+  surface-container-low: '#f6f3ee'
+  surface-container: '#f0ede9'
+  surface-container-high: '#ebe8e3'
+  surface-container-highest: '#e5e2dd'
+  on-surface: '#1c1c19'
+  on-surface-variant: '#534340'
+  inverse-surface: '#31302d'
+  inverse-on-surface: '#f3f0eb'
+  outline: '#86736f'
+  outline-variant: '#d9c1bd'
+  surface-tint: '#8f4b3f'
+  primary: '#89453a'
   on-primary: '#ffffff'
-  primary-container: '#2d2424'
-  on-primary-container: '#988a8a'
-  inverse-primary: '#d2c3c2'
-  secondary: '#615e53'
+  primary-container: '#a65d50'
+  on-primary-container: '#fff5f3'
+  inverse-primary: '#ffb4a6'
+  secondary: '#7e544a'
   on-secondary: '#ffffff'
-  secondary-container: '#e4dfd1'
-  on-secondary-container: '#656357'
-  tertiary: '#1c0e0c'
+  secondary-container: '#ffc8bb'
+  on-secondary-container: '#7b5147'
+  tertiary: '#595958'
   on-tertiary: '#ffffff'
-  tertiary-container: '#332220'
-  on-tertiary-container: '#a08884'
+  tertiary-container: '#727171'
+  on-tertiary-container: '#faf6f6'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#efdfde'
-  primary-fixed-dim: '#d2c3c2'
-  on-primary-fixed: '#221a1a'
-  on-primary-fixed-variant: '#4f4444'
-  secondary-fixed: '#e7e2d4'
-  secondary-fixed-dim: '#cbc6b8'
-  on-secondary-fixed: '#1d1c13'
-  on-secondary-fixed-variant: '#49473c'
-  tertiary-fixed: '#f9dcd8'
-  tertiary-fixed-dim: '#dcc0bc'
-  on-tertiary-fixed: '#271816'
-  on-tertiary-fixed-variant: '#56423f'
-  background: '#fef8f7'
-  on-background: '#1d1b1b'
-  surface-variant: '#e6e1e1'
+  primary-fixed: '#ffdad4'
+  primary-fixed-dim: '#ffb4a6'
+  on-primary-fixed: '#3a0a04'
+  on-primary-fixed-variant: '#723429'
+  secondary-fixed: '#ffdad2'
+  secondary-fixed-dim: '#f0baad'
+  on-secondary-fixed: '#30130c'
+  on-secondary-fixed-variant: '#633d34'
+  tertiary-fixed: '#e5e2e1'
+  tertiary-fixed-dim: '#c8c6c5'
+  on-tertiary-fixed: '#1c1b1b'
+  on-tertiary-fixed-variant: '#474746'
+  background: '#fcf9f4'
+  on-background: '#1c1c19'
+  surface-variant: '#e5e2dd'
 typography:
   display-lg:
-    fontFamily: Playfair Display
-    fontSize: 72px
+    fontFamily: Bodoni Moda
+    fontSize: 64px
     fontWeight: '700'
     lineHeight: '1.1'
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Playfair Display
-    fontSize: 48px
+  display-lg-mobile:
+    fontFamily: Bodoni Moda
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.1'
+  headline-md:
+    fontFamily: Bodoni Moda
+    fontSize: 32px
     fontWeight: '600'
     lineHeight: '1.2'
-  headline-md:
-    fontFamily: Playfair Display
-    fontSize: 32px
-    fontWeight: '500'
-    lineHeight: '1.3'
   headline-sm:
-    fontFamily: Playfair Display
+    fontFamily: Bodoni Moda
     fontSize: 24px
     fontWeight: '500'
-    lineHeight: '1.4'
-  headline-lg-mobile:
-    fontFamily: Playfair Display
-    fontSize: 36px
-    fontWeight: '600'
-    lineHeight: '1.2'
+    lineHeight: '1.3'
   body-lg:
-    fontFamily: Montserrat
+    fontFamily: Manrope
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
-    letterSpacing: 0.03em
   body-md:
-    fontFamily: Montserrat
+    fontFamily: Manrope
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-    letterSpacing: 0.02em
   label-caps:
-    fontFamily: Montserrat
+    fontFamily: Archivo Narrow
     fontSize: 12px
     fontWeight: '600'
-    lineHeight: '1.0'
-    letterSpacing: 0.2em
-  button:
-    fontFamily: Montserrat
-    fontSize: 14px
+    lineHeight: '1'
+    letterSpacing: 0.1em
+  caption:
+    fontFamily: Manrope
+    fontSize: 13px
     fontWeight: '500'
-    lineHeight: '1.0'
-    letterSpacing: 0.15em
+    lineHeight: '1.4'
 spacing:
-  unit: 8px
-  container-max: 1440px
-  gutter: 32px
-  margin-desktop: 80px
-  margin-mobile: 24px
-  overlap-offset: 40px
+  unit: 4px
+  gutter: 24px
+  margin-mobile: 16px
+  margin-desktop: 64px
+  max-width: 1280px
 ---
 
 ## Brand & Style
-This design system is built upon the "Sophisticated Editorial Luxe" philosophy, moving away from typical service-industry aesthetics toward a high-fashion, boutique magazine experience. The brand personality is poised, quiet, and exclusive, targeting a clientele that values craftsmanship over convenience.
+The design system is rooted in the concept of "Editorial Elegance," positioning the salon as a high-end boutique rather than a generic service provider. It draws inspiration from independent fashion magazines and architectural digests.
 
-The visual style merges **Minimalism** with **Editorial Boldness**. It utilizes generous whitespace (negative space) as a luxury commodity, allowing high-resolution photography of textures and detail to breathe. Design elements should feel curated, using overlapping containers and thin architectural lines to create a sense of structural elegance. A subtle film grain texture is applied to background surfaces to evoke the tactile quality of premium matte paper.
+The visual language balances **Minimalism** with **High-Contrast** elements. It utilizes intentional density—grouping information tightly to create focus—while maintaining generous whitespace between sections to preserve a premium feel. The aesthetic is sophisticated, bespoke, and grounded in local craft, moving away from the ephemeral "beauty" trends toward a timeless, authoritative presence.
 
 ## Colors
-The palette is rooted in earthy, "skin-and-stone" tones that reflect both the organic nature of the service and the luxury of the environment.
+The palette, titled "Desert Rose & Onyx," avoids common vibrant pinks in favor of earthy, sophisticated tones that feel grounded and luxurious.
 
-- **Deep Espresso (#2D2424):** Used for primary typography and high-contrast backgrounds. It provides a softer, more sophisticated alternative to pure black.
-- **Soft Sand (#F5F0E1):** The primary surface color. It creates a warm, inviting canvas that feels more premium than stark white.
-- **Muted Blush (#E5C9C5):** A tonal accent used for soft containers, hovering states, or secondary UI elements to add a hint of warmth.
-- **Gold (#C5A059):** Used sparingly for "Gold Rule" lines, interactive icons, and subtle dividers. It represents the "jewelry" of the UI.
+- **Primary (Deep Terracotta):** Used for key actions and distinctive headings.
+- **Secondary (Dusty Rose):** A muted, soft tone for secondary elements and background surfaces.
+- **Tertiary (Onyx):** A deep charcoal black used for primary typography to provide high-contrast legibility without the harshness of pure black.
+- **Neutral (Warm Cream):** The foundational canvas. This off-white base provides a soft, paper-like quality to the UI.
+- **Borders:** A very thin, muted neutral is used for structural dividers to maintain the "grid" feel typical of editorial layouts.
 
 ## Typography
-The typography pairing is a study in contrast. **Playfair Display** provides an authoritative, high-fashion serif voice for headlines, while **Montserrat** offers a clean, architectural sans-serif counterpoint.
+The typography system relies on the high-contrast tension between a dramatic serif and a functional, modern sans-serif.
 
-Key implementation rules:
-- **Tracking:** All body and label text must utilize wide tracking (0.02em to 0.2em) to enhance the "luxe" feel.
-- **Hierarchy:** Display headers should be significantly larger than body text to create editorial drama.
-- **Case:** Use All-Caps for labels and buttons to reinforce the structured, formal nature of this design system.
+- **Headlines:** `Bodoni Moda` provides the "fashion editorial" punch. It should be used for large titles and section headers. Its high stroke contrast requires ample size to remain legible.
+- **Body:** `Manrope` is used for all long-form text and UI descriptions. It is clean and balanced, ensuring the premium feel remains accessible.
+- **Technical/Utility:** `Archivo Narrow` (in uppercase) is used for "eyebrow" text, labels, and navigation items to mimic the information-dense sidebars of print magazines.
 
 ## Layout & Spacing
-This design system utilizes a **Fixed Grid** model (12 columns) with exceptionally wide margins to drive focus to the center of the viewport. 
+The design system follows a **Fixed Grid** philosophy on desktop and a fluid system on mobile. 
 
-- **Asymmetry:** Layouts should avoid perfect symmetry. Service descriptions should be offset from their respective imagery.
-- **Overlapping Elements:** Typography or thin gold lines should frequently overlap image containers by the `overlap-offset` value to create depth without using shadows.
-- **Vertical Rhythm:** Use large vertical spacing (120px+) between sections to maintain the editorial pacing. 
-- **Mobile:** On mobile, margins compress to 24px, and overlapping elements stack vertically, maintaining the thin gold rule lines as dividers.
+- **The Grid:** A 12-column system with tight 24px gutters. Elements should often span across columns with asymmetrical placement to create visual interest.
+- **Density:** Related items (like a service name and its price) should be placed in close proximity with thin dividers, while different sections should be separated by large vertical gaps (80px–120px) to signify "breathing room."
+- **Breakpoints:** 
+  - *Mobile (< 600px):* 4-column grid, 16px margins. 
+  - *Tablet (600px - 1024px):* 8-column grid, 32px margins. 
+  - *Desktop (> 1024px):* 12-column grid, centered content with 64px+ margins.
 
 ## Elevation & Depth
-Depth is achieved through layering and texture rather than traditional shadows.
+In keeping with the editorial style, this design system rejects shadows and heavy gradients. Depth is created through **Tonal Layering** and **Line Work**.
 
-- **Tonal Layers:** High-contrast background shifts (Espresso vs. Sand) define the primary sections.
-- **Grain Texture:** A global, low-opacity SVG noise filter is applied to all `Soft Sand` surfaces to simulate high-end paper stock.
-- **Thin Rules:** Depth is suggested by `1px` gold lines (#C5A059) that act as "frames" or "anchors" for floating text.
-- **Transparency:** Floating navigation uses a 90% opacity blur (backdrop-filter: blur(10px)) of the `Soft Sand` color to feel integrated yet elevated.
+- **Flat Surfaces:** All components sit on the same physical plane. 
+- **Thin Outlines:** Hierarchy is established using 1px strokes in Onyx or Muted Rose.
+- **Layering:** "Overlapping" is used as a depth metaphor—images may slightly overlap text blocks or borders to create a collage-like, bespoke feel.
+- **Backdrop:** Use the Cream neutral as the primary background, with Dusty Rose used for "inset" sections to denote a change in content type.
 
 ## Shapes
-To maintain a sophisticated and architectural feel, this design system uses **Sharp (0px)** corners for all primary containers, buttons, and images. 
+The shape language is **Sharp (0px)**. 
 
-Avoid rounded corners entirely. The "softness" of the brand should come from the color palette (Muted Blush and Soft Sand) and the organic photography, while the UI remains disciplined, crisp, and structured.
+To maintain the architectural and sophisticated look of a high-end salon, avoid rounded corners. Every button, input field, and image container should have crisp 90-degree angles. This reinforces the "Bespoke" and "Local Craft" keywords, suggesting precision and structure.
 
 ## Components
-Consistent styling of these components is critical to maintaining the editorial narrative.
-
-### Buttons
-Primary buttons are outlined in **Deep Espresso** with a `1px` stroke. No fill. On hover, they fill with **Deep Espresso** and the text flips to **Soft Sand**. Label text is always `label-caps`.
-
-### Line-Based Inputs
-Forms do not use boxes. Inputs are defined by a single `1px` bottom border in **Deep Espresso**. Floating labels use `label-caps` and sit directly above the line. Error states change the line color to a deeper terracotta (avoid bright reds).
-
-### Floating Navigation
-The navigation bar should appear as a floating, narrow strip with a 1px Gold bottom border. It stays fixed at the top of the viewport, using centered links with high tracking.
-
-### Service Cards
-Asymmetrical layout: An image container (left or right aligned) with a text block that overlaps the corner of the image. The price is displayed in `label-caps` in **Gold** to highlight value subtly.
-
-### Thin Gold Rules
-Horizontal or vertical `1px` lines in **Gold** used to separate disparate pieces of content or to "anchor" a floating headline. They should often extend beyond the grid to the edge of the screen.
+- **Buttons:** Primary buttons are Onyx blocks with Cream text in all-caps Archivo Narrow. They use a 1px border. Hover states should involve a simple color swap (Deep Terracotta background).
+- **Service Lists:** Use a "Price List" format: Service name in Serif (Bodoni), price right-aligned, with a 1px dotted or solid line connecting them. 
+- **Cards:** Cards are defined by 1px borders rather than shadows. Image cards should have a thin border that sits 8px outside the image frame to create an "art gallery" matting effect.
+- **Inputs:** Simple bottom-border-only text fields. No background fill. Labels sit inside the field in small-caps and move up on focus.
+- **Chips/Tags:** Small, sharp-cornered boxes with 1px Onyx borders. Text is Archivo Narrow.
+- **Special Component: "The Signature Block":** A recurring design element featuring the salon's location (Chico, CA) and a brief "Established" note, styled like a footer in a magazine, anchored to the bottom left of sections.

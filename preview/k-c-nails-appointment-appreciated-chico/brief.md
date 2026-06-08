@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/KCNAILSINCHICO/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T01:16:07.073Z
+- **Scraped:** 2026-06-08T01:17:55.956Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/KCNAILSINCHICO/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

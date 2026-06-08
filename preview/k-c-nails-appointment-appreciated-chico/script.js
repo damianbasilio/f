@@ -1,27 +1,22 @@
-// Form Handling
-        const form = document.getElementById('inquiryForm');
-        const success = document.getElementById('successMessage');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            // Simple visual validation & success toggle
-            success.classList.remove('hidden');
-            setTimeout(() => {
-                success.classList.add('hidden');
-                form.reset();
-            }, 5000);
+// Simple parallax effect for hero image
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.05}px)`;
+            }
         });
 
-        // Sticky Nav Effect
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 100) {
-                header.classList.add('py-2');
-                header.classList.remove('py-5');
-            } else {
-                header.classList.add('py-5');
-                header.classList.remove('py-2');
-            }
+        // Form focus interaction
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('border-primary');
+                input.parentElement.style.transition = 'border-color 0.3s ease';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('border-primary');
+            });
         });
 
 (() => {
