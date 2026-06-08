@@ -1,0 +1,456 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Industrial Editorial",
+        "styleGuidelines": "## Brand & Style\n\nThis design system establishes an \"Industrial Editorial\" aesthetic, distancing the brand from the standard utilitarian towing tropes in favor of a premium, high-reliability recovery service. The visual language is authoritative and precise, mimicking the technical documentation of heavy machinery while maintaining the sophisticated pacing of a luxury trade publication.\n\nThe style leans into **High-Contrast / Bold** layouts with a **Brutalist** edge. It utilizes heavy borders, technical dot-grid overlays, and \"safety-tape\" inspired rules to evoke a sense of structural integrity and rapid-response readiness. The UI should feel like a specialized tool—rugged enough for the Texas roadside, yet refined enough for high-end automotive logistics.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). The layout is characterized by generous external margins and tight internal gutters to create a sense of focused, \"contained\" power.\n\n- **Grid:** Elements should align to a strict 8px baseline grid.\n- **Safety Margins:** Use 32px or 48px outer margins to create an editorial \"frame\" around content.\n- **Dot-Grid Overlays:** Apply a subtle 16px dot-grid background to \"Deep Midnight\" sections to suggest a blueprint or technical coordinate system.\n- **Rules:** Use 1px \"Sterling Silver\" horizontal and vertical rules to separate sections, mimicking the layout of a technical datasheet.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** and **Bold Borders** rather than traditional shadows. This maintains the \"Industrial\" feel by avoiding the softness of typical modern SaaS UIs.\n\n- **Level 0 (Floor):** Deep Midnight (#0F172A).\n- **Level 1 (Surface):** Slate (#1E293B) with a 1px solid Sterling Silver border at 20% opacity.\n- **Interactive:** Elements do not \"lift\" with shadows; instead, they use Hazard Orange strokes or solid color shifts to indicate focus and state changes.\n- **Safety-Tape Borders:** Use a diagonal striped pattern (Orange/Black) as a 4px bottom border for high-priority cards or headers to denote \"Active Response\" status.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Hazard Orange with black text (Archivo Narrow, Bold, Caps). Secondary buttons are ghost-style with a 2px Sterling Silver border.\n- **Input Fields:** Deep Midnight background with a 1px Sterling Silver bottom border only. On focus, the border turns Hazard Orange and expands to 2px.\n- **Cards:** Use a \"technical block\" style. Include a \"Ref No.\" or \"Serial\" label in the top right corner using JetBrains Mono to enhance the industrial feel.\n- **Chips/Status:** Use rectangular blocks. \"In-Progress\" should use the safety-tape pattern. \"Completed\" uses solid Sterling Silver with black text.\n- **Lists:** Separated by 1px rules. Use Hazard Orange chevrons for navigation cues.\n- **Specialty Component (The Dispatch Bar):** A persistent bottom or top bar containing real-time status (e.g., \"TRUCK-04 EN ROUTE\") in a monospace font with a pulsing Hazard Orange indicator.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#0f172a",
+          "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#081425'\n  surface-dim: '#081425'\n  surface-bright: '#2f3a4c'\n  surface-container-lowest: '#040e1f'\n  surface-container-low: '#111c2d'\n  surface-container: '#152031'\n  surface-container-high: '#1f2a3c'\n  surface-container-highest: '#2a3548'\n  on-surface: '#d8e3fb'\n  on-surface-variant: '#c6c6cd'\n  inverse-surface: '#d8e3fb'\n  inverse-on-surface: '#263143'\n  outline: '#909097'\n  outline-variant: '#45464d'\n  surface-tint: '#bec6e0'\n  primary: '#bec6e0'\n  on-primary: '#283044'\n  primary-container: '#0f172a'\n  on-primary-container: '#798098'\n  inverse-primary: '#565e74'\n  secondary: '#ffb690'\n  on-secondary: '#552100'\n  secondary-container: '#ec6a06'\n  on-secondary-container: '#4a1c00'\n  tertiary: '#c1c7cf'\n  on-tertiary: '#2b3137'\n  tertiary-container: '#12181e'\n  on-tertiary-container: '#7b8189'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dae2fd'\n  primary-fixed-dim: '#bec6e0'\n  on-primary-fixed: '#131b2e'\n  on-primary-fixed-variant: '#3f465c'\n  secondary-fixed: '#ffdbca'\n  secondary-fixed-dim: '#ffb690'\n  on-secondary-fixed: '#341100'\n  on-secondary-fixed-variant: '#783200'\n  tertiary-fixed: '#dde3eb'\n  tertiary-fixed-dim: '#c1c7cf'\n  on-tertiary-fixed: '#161c22'\n  on-tertiary-fixed-variant: '#41474e'\n  background: '#081425'\n  on-background: '#d8e3fb'\n  surface-variant: '#2a3548'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\nspacing:\n  base: 4px\n  xs: 8px\n  sm: 16px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin: 32px\n---\n\n## Brand & Style\n\nThis design system establishes an \"Industrial Editorial\" aesthetic, distancing the brand from the standard utilitarian towing tropes in favor of a premium, high-reliability recovery service. The visual language is authoritative and precise, mimicking the technical documentation of heavy machinery while maintaining the sophisticated pacing of a luxury trade publication.\n\nThe style leans into **High-Contrast / Bold** layouts with a **Brutalist** edge. It utilizes heavy borders, technical dot-grid overlays, and \"safety-tape\" inspired rules to evoke a sense of structural integrity and rapid-response readiness. The UI should feel like a specialized tool—rugged enough for the Texas roadside, yet refined enough for high-end automotive logistics.\n\n## Colors\n\nThe palette is anchored by **Deep Midnight**, used as the primary canvas to project authority and strength. **Sterling Silver** provides high-legibility contrast for secondary information and hairline borders. **Hazard Orange** is reserved strictly for critical actions, status indicators, and branding accents, ensuring it maintains its psychological impact as a \"signal\" color.\n\n- **Primary (Deep Midnight):** Backgrounds, deep layering, and primary containers.\n- **Secondary (Hazard Orange):** Primary CTAs, active states, and safety-rule accents.\n- **Tertiary (Sterling Silver):** Body text, icons, and subtle structural lines.\n- **Neutral (Slate):** Component backgrounds and surface elevation.\n\n## Typography\n\nThe typography strategy relies on the tension between the industrial weight of **Archivo Narrow** and the neutral precision of **Inter**. \n\nHeadlines must always be uppercase and tightly tracked to mimic heavy-duty stenciling or technical manuals. For data-heavy readouts or small technical labels, **JetBrains Mono** (or a similar monospace font) is introduced to reinforce the \"rapid-response logistics\" narrative. Large display sizes should use aggressive negative letter-spacing for a \"built-to-last\" visual density.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). The layout is characterized by generous external margins and tight internal gutters to create a sense of focused, \"contained\" power.\n\n- **Grid:** Elements should align to a strict 8px baseline grid.\n- **Safety Margins:** Use 32px or 48px outer margins to create an editorial \"frame\" around content.\n- **Dot-Grid Overlays:** Apply a subtle 16px dot-grid background to \"Deep Midnight\" sections to suggest a blueprint or technical coordinate system.\n- **Rules:** Use 1px \"Sterling Silver\" horizontal and vertical rules to separate sections, mimicking the layout of a technical datasheet.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** and **Bold Borders** rather than traditional shadows. This maintains the \"Industrial\" feel by avoiding the softness of typical modern SaaS UIs.\n\n- **Level 0 (Floor):** Deep Midnight (#0F172A).\n- **Level 1 (Surface):** Slate (#1E293B) with a 1px solid Sterling Silver border at 20% opacity.\n- **Interactive:** Elements do not \"lift\" with shadows; instead, they use Hazard Orange strokes or solid color shifts to indicate focus and state changes.\n- **Safety-Tape Borders:** Use a diagonal striped pattern (Orange/Black) as a 4px bottom border for high-priority cards or headers to denote \"Active Response\" status.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to maintain a rugged, machined-metal aesthetic. All buttons, input fields, and card containers must have 90-degree angles. \n\nSmall technical exceptions:\n- **Status Pills:** May use a 2px \"soft\" radius to distinguish them from structural elements, but sharp remains the default.\n- **Iconography:** Icons should be stroke-based, using 2px weights and square terminals to match the typography.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Hazard Orange with black text (Archivo Narrow, Bold, Caps). Secondary buttons are ghost-style with a 2px Sterling Silver border.\n- **Input Fields:** Deep Midnight background with a 1px Sterling Silver bottom border only. On focus, the border turns Hazard Orange and expands to 2px.\n- **Cards:** Use a \"technical block\" style. Include a \"Ref No.\" or \"Serial\" label in the top right corner using JetBrains Mono to enhance the industrial feel.\n- **Chips/Status:** Use rectangular blocks. \"In-Progress\" should use the safety-tape pattern. \"Completed\" uses solid Sterling Silver with black text.\n- **Lists:** Separated by 1px rules. Use Hazard Orange chevrons for navigation cues.\n- **Specialty Component (The Dispatch Bar):** A persistent bottom or top bar containing real-time status (e.g., \"TRUCK-04 EN ROUTE\") in a monospace font with a pulsing Hazard Orange indicator.",
+          "font": "ARCHIVO_NARROW",
+          "headlineFont": "ARCHIVO_NARROW",
+          "headlineFontFamily": "Archivo Narrow",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#081425",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#263143",
+            "inverse_primary": "#565e74",
+            "inverse_surface": "#d8e3fb",
+            "on_background": "#d8e3fb",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#283044",
+            "on_primary_container": "#798098",
+            "on_primary_fixed": "#131b2e",
+            "on_primary_fixed_variant": "#3f465c",
+            "on_secondary": "#552100",
+            "on_secondary_container": "#4a1c00",
+            "on_secondary_fixed": "#341100",
+            "on_secondary_fixed_variant": "#783200",
+            "on_surface": "#d8e3fb",
+            "on_surface_variant": "#c6c6cd",
+            "on_tertiary": "#2b3137",
+            "on_tertiary_container": "#7b8189",
+            "on_tertiary_fixed": "#161c22",
+            "on_tertiary_fixed_variant": "#41474e",
+            "outline": "#909097",
+            "outline_variant": "#45464d",
+            "primary": "#bec6e0",
+            "primary_container": "#0f172a",
+            "primary_fixed": "#dae2fd",
+            "primary_fixed_dim": "#bec6e0",
+            "secondary": "#ffb690",
+            "secondary_container": "#ec6a06",
+            "secondary_fixed": "#ffdbca",
+            "secondary_fixed_dim": "#ffb690",
+            "surface": "#081425",
+            "surface_bright": "#2f3a4c",
+            "surface_container": "#152031",
+            "surface_container_high": "#1f2a3c",
+            "surface_container_highest": "#2a3548",
+            "surface_container_low": "#111c2d",
+            "surface_container_lowest": "#040e1f",
+            "surface_dim": "#081425",
+            "surface_tint": "#bec6e0",
+            "surface_variant": "#2a3548",
+            "tertiary": "#c1c7cf",
+            "tertiary_container": "#12181e",
+            "tertiary_fixed": "#dde3eb",
+            "tertiary_fixed_dim": "#c1c7cf"
+          },
+          "overrideNeutralColor": "#1e293b",
+          "overridePrimaryColor": "#0f172a",
+          "overrideSecondaryColor": "#f97316",
+          "overrideTertiaryColor": "#e2e8f0",
+          "spacing": {
+            "base": "4px",
+            "gutter": "24px",
+            "lg": "48px",
+            "margin": "32px",
+            "md": "24px",
+            "sm": "16px",
+            "xl": "80px",
+            "xs": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.5"
+            },
+            "display-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "72px",
+              "fontWeight": "800",
+              "letterSpacing": "-0.04em",
+              "lineHeight": "1.0"
+            },
+            "headline-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-md": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "label-caps": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.0"
+            },
+            "label-sm": {
+              "fontFamily": "Inter",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/36b65d609d804c5fb0611a9e23b068bf",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Industrial Editorial",
+              "styleGuidelines": "## Brand & Style\n\nThis design system establishes an \"Industrial Editorial\" aesthetic, distancing the brand from the standard utilitarian towing tropes in favor of a premium, high-reliability recovery service. The visual language is authoritative and precise, mimicking the technical documentation of heavy machinery while maintaining the sophisticated pacing of a luxury trade publication.\n\nThe style leans into **High-Contrast / Bold** layouts with a **Brutalist** edge. It utilizes heavy borders, technical dot-grid overlays, and \"safety-tape\" inspired rules to evoke a sense of structural integrity and rapid-response readiness. The UI should feel like a specialized tool—rugged enough for the Texas roadside, yet refined enough for high-end automotive logistics.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). The layout is characterized by generous external margins and tight internal gutters to create a sense of focused, \"contained\" power.\n\n- **Grid:** Elements should align to a strict 8px baseline grid.\n- **Safety Margins:** Use 32px or 48px outer margins to create an editorial \"frame\" around content.\n- **Dot-Grid Overlays:** Apply a subtle 16px dot-grid background to \"Deep Midnight\" sections to suggest a blueprint or technical coordinate system.\n- **Rules:** Use 1px \"Sterling Silver\" horizontal and vertical rules to separate sections, mimicking the layout of a technical datasheet.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** and **Bold Borders** rather than traditional shadows. This maintains the \"Industrial\" feel by avoiding the softness of typical modern SaaS UIs.\n\n- **Level 0 (Floor):** Deep Midnight (#0F172A).\n- **Level 1 (Surface):** Slate (#1E293B) with a 1px solid Sterling Silver border at 20% opacity.\n- **Interactive:** Elements do not \"lift\" with shadows; instead, they use Hazard Orange strokes or solid color shifts to indicate focus and state changes.\n- **Safety-Tape Borders:** Use a diagonal striped pattern (Orange/Black) as a 4px bottom border for high-priority cards or headers to denote \"Active Response\" status.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Hazard Orange with black text (Archivo Narrow, Bold, Caps). Secondary buttons are ghost-style with a 2px Sterling Silver border.\n- **Input Fields:** Deep Midnight background with a 1px Sterling Silver bottom border only. On focus, the border turns Hazard Orange and expands to 2px.\n- **Cards:** Use a \"technical block\" style. Include a \"Ref No.\" or \"Serial\" label in the top right corner using JetBrains Mono to enhance the industrial feel.\n- **Chips/Status:** Use rectangular blocks. \"In-Progress\" should use the safety-tape pattern. \"Completed\" uses solid Sterling Silver with black text.\n- **Lists:** Separated by 1px rules. Use Hazard Orange chevrons for navigation cues.\n- **Specialty Component (The Dispatch Bar):** A persistent bottom or top bar containing real-time status (e.g., \"TRUCK-04 EN ROUTE\") in a monospace font with a pulsing Hazard Orange indicator.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#0f172a",
+                "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#081425'\n  surface-dim: '#081425'\n  surface-bright: '#2f3a4c'\n  surface-container-lowest: '#040e1f'\n  surface-container-low: '#111c2d'\n  surface-container: '#152031'\n  surface-container-high: '#1f2a3c'\n  surface-container-highest: '#2a3548'\n  on-surface: '#d8e3fb'\n  on-surface-variant: '#c6c6cd'\n  inverse-surface: '#d8e3fb'\n  inverse-on-surface: '#263143'\n  outline: '#909097'\n  outline-variant: '#45464d'\n  surface-tint: '#bec6e0'\n  primary: '#bec6e0'\n  on-primary: '#283044'\n  primary-container: '#0f172a'\n  on-primary-container: '#798098'\n  inverse-primary: '#565e74'\n  secondary: '#ffb690'\n  on-secondary: '#552100'\n  secondary-container: '#ec6a06'\n  on-secondary-container: '#4a1c00'\n  tertiary: '#c1c7cf'\n  on-tertiary: '#2b3137'\n  tertiary-container: '#12181e'\n  on-tertiary-container: '#7b8189'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dae2fd'\n  primary-fixed-dim: '#bec6e0'\n  on-primary-fixed: '#131b2e'\n  on-primary-fixed-variant: '#3f465c'\n  secondary-fixed: '#ffdbca'\n  secondary-fixed-dim: '#ffb690'\n  on-secondary-fixed: '#341100'\n  on-secondary-fixed-variant: '#783200'\n  tertiary-fixed: '#dde3eb'\n  tertiary-fixed-dim: '#c1c7cf'\n  on-tertiary-fixed: '#161c22'\n  on-tertiary-fixed-variant: '#41474e'\n  background: '#081425'\n  on-background: '#d8e3fb'\n  surface-variant: '#2a3548'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\nspacing:\n  base: 4px\n  xs: 8px\n  sm: 16px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin: 32px\n---\n\n## Brand & Style\n\nThis design system establishes an \"Industrial Editorial\" aesthetic, distancing the brand from the standard utilitarian towing tropes in favor of a premium, high-reliability recovery service. The visual language is authoritative and precise, mimicking the technical documentation of heavy machinery while maintaining the sophisticated pacing of a luxury trade publication.\n\nThe style leans into **High-Contrast / Bold** layouts with a **Brutalist** edge. It utilizes heavy borders, technical dot-grid overlays, and \"safety-tape\" inspired rules to evoke a sense of structural integrity and rapid-response readiness. The UI should feel like a specialized tool—rugged enough for the Texas roadside, yet refined enough for high-end automotive logistics.\n\n## Colors\n\nThe palette is anchored by **Deep Midnight**, used as the primary canvas to project authority and strength. **Sterling Silver** provides high-legibility contrast for secondary information and hairline borders. **Hazard Orange** is reserved strictly for critical actions, status indicators, and branding accents, ensuring it maintains its psychological impact as a \"signal\" color.\n\n- **Primary (Deep Midnight):** Backgrounds, deep layering, and primary containers.\n- **Secondary (Hazard Orange):** Primary CTAs, active states, and safety-rule accents.\n- **Tertiary (Sterling Silver):** Body text, icons, and subtle structural lines.\n- **Neutral (Slate):** Component backgrounds and surface elevation.\n\n## Typography\n\nThe typography strategy relies on the tension between the industrial weight of **Archivo Narrow** and the neutral precision of **Inter**. \n\nHeadlines must always be uppercase and tightly tracked to mimic heavy-duty stenciling or technical manuals. For data-heavy readouts or small technical labels, **JetBrains Mono** (or a similar monospace font) is introduced to reinforce the \"rapid-response logistics\" narrative. Large display sizes should use aggressive negative letter-spacing for a \"built-to-last\" visual density.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). The layout is characterized by generous external margins and tight internal gutters to create a sense of focused, \"contained\" power.\n\n- **Grid:** Elements should align to a strict 8px baseline grid.\n- **Safety Margins:** Use 32px or 48px outer margins to create an editorial \"frame\" around content.\n- **Dot-Grid Overlays:** Apply a subtle 16px dot-grid background to \"Deep Midnight\" sections to suggest a blueprint or technical coordinate system.\n- **Rules:** Use 1px \"Sterling Silver\" horizontal and vertical rules to separate sections, mimicking the layout of a technical datasheet.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** and **Bold Borders** rather than traditional shadows. This maintains the \"Industrial\" feel by avoiding the softness of typical modern SaaS UIs.\n\n- **Level 0 (Floor):** Deep Midnight (#0F172A).\n- **Level 1 (Surface):** Slate (#1E293B) with a 1px solid Sterling Silver border at 20% opacity.\n- **Interactive:** Elements do not \"lift\" with shadows; instead, they use Hazard Orange strokes or solid color shifts to indicate focus and state changes.\n- **Safety-Tape Borders:** Use a diagonal striped pattern (Orange/Black) as a 4px bottom border for high-priority cards or headers to denote \"Active Response\" status.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to maintain a rugged, machined-metal aesthetic. All buttons, input fields, and card containers must have 90-degree angles. \n\nSmall technical exceptions:\n- **Status Pills:** May use a 2px \"soft\" radius to distinguish them from structural elements, but sharp remains the default.\n- **Iconography:** Icons should be stroke-based, using 2px weights and square terminals to match the typography.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Hazard Orange with black text (Archivo Narrow, Bold, Caps). Secondary buttons are ghost-style with a 2px Sterling Silver border.\n- **Input Fields:** Deep Midnight background with a 1px Sterling Silver bottom border only. On focus, the border turns Hazard Orange and expands to 2px.\n- **Cards:** Use a \"technical block\" style. Include a \"Ref No.\" or \"Serial\" label in the top right corner using JetBrains Mono to enhance the industrial feel.\n- **Chips/Status:** Use rectangular blocks. \"In-Progress\" should use the safety-tape pattern. \"Completed\" uses solid Sterling Silver with black text.\n- **Lists:** Separated by 1px rules. Use Hazard Orange chevrons for navigation cues.\n- **Specialty Component (The Dispatch Bar):** A persistent bottom or top bar containing real-time status (e.g., \"TRUCK-04 EN ROUTE\") in a monospace font with a pulsing Hazard Orange indicator.",
+                "font": "ARCHIVO_NARROW",
+                "headlineFont": "ARCHIVO_NARROW",
+                "headlineFontFamily": "Archivo Narrow",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#081425",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#263143",
+                  "inverse_primary": "#565e74",
+                  "inverse_surface": "#d8e3fb",
+                  "on_background": "#d8e3fb",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#283044",
+                  "on_primary_container": "#798098",
+                  "on_primary_fixed": "#131b2e",
+                  "on_primary_fixed_variant": "#3f465c",
+                  "on_secondary": "#552100",
+                  "on_secondary_container": "#4a1c00",
+                  "on_secondary_fixed": "#341100",
+                  "on_secondary_fixed_variant": "#783200",
+                  "on_surface": "#d8e3fb",
+                  "on_surface_variant": "#c6c6cd",
+                  "on_tertiary": "#2b3137",
+                  "on_tertiary_container": "#7b8189",
+                  "on_tertiary_fixed": "#161c22",
+                  "on_tertiary_fixed_variant": "#41474e",
+                  "outline": "#909097",
+                  "outline_variant": "#45464d",
+                  "primary": "#bec6e0",
+                  "primary_container": "#0f172a",
+                  "primary_fixed": "#dae2fd",
+                  "primary_fixed_dim": "#bec6e0",
+                  "secondary": "#ffb690",
+                  "secondary_container": "#ec6a06",
+                  "secondary_fixed": "#ffdbca",
+                  "secondary_fixed_dim": "#ffb690",
+                  "surface": "#081425",
+                  "surface_bright": "#2f3a4c",
+                  "surface_container": "#152031",
+                  "surface_container_high": "#1f2a3c",
+                  "surface_container_highest": "#2a3548",
+                  "surface_container_low": "#111c2d",
+                  "surface_container_lowest": "#040e1f",
+                  "surface_dim": "#081425",
+                  "surface_tint": "#bec6e0",
+                  "surface_variant": "#2a3548",
+                  "tertiary": "#c1c7cf",
+                  "tertiary_container": "#12181e",
+                  "tertiary_fixed": "#dde3eb",
+                  "tertiary_fixed_dim": "#c1c7cf"
+                },
+                "overrideNeutralColor": "#1e293b",
+                "overridePrimaryColor": "#0f172a",
+                "overrideSecondaryColor": "#f97316",
+                "overrideTertiaryColor": "#e2e8f0",
+                "spacing": {
+                  "base": "4px",
+                  "gutter": "24px",
+                  "lg": "48px",
+                  "margin": "32px",
+                  "md": "24px",
+                  "sm": "16px",
+                  "xl": "80px",
+                  "xs": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "72px",
+                    "fontWeight": "800",
+                    "letterSpacing": "-0.04em",
+                    "lineHeight": "1.0"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "32px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "label-caps": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.0"
+                  },
+                  "label-sm": {
+                    "fontFamily": "Inter",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/36b65d609d804c5fb0611a9e23b068bf",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "7994",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2MyMTViMGEyNWVlNDQ1MjM5M2VmNzE2MjA1YWU3ZjI4EgsSBxDb5PK-owYYAZIBIwoKcHJvamVjdF9pZBIVQhMyNzU4NDY2Nzg5NjY3MDA4MDgx&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/2758466789667008081/files/31aa83fb66c842d09d916a4613b3c6ce"
+          },
+          "id": "016bfb839be645b5be0e873e96c00ad7",
+          "name": "projects/2758466789667008081/screens/016bfb839be645b5be0e873e96c00ad7",
+          "prompt": "Create the 'Industrial Editorial' homepage for Lone Star Towing Inc. \n\nStyle Guidelines:\n- Avoid generic local business layouts. Use an asymmetric, grid-based layout with generous whitespace.\n- Visual Motif: Use thin industrial lines (borders), Hazard Orange accents, and dot-grid backgrounds.\n- Hero: Large, bold typography. No generic truck photo; use a high-impact abstract industrial texture or a premium recovery vehicle close-up. Headline: \"RECOVERY WITHOUT COMPROMISE.\"\n- Credibility: A horizontal ticker or bold block showing \"15+ Years Experience\", \"24/7 Dispatch\", \"Heavy Haul Certified\".\n- Services: List \"Recovery\", \"Heavy Haul\", and \"Logistics\" in a vertical list with large numbers and descriptive text, rather than a standard grid.\n- Visit: Include the specific map-slot div: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n- Forms: Use 2px solid borders for inputs. No shadows. High contrast.\n- Content: Use the provided contact info: (586) 453-8913, lonestarrecovery.brad@gmail.com, 1323 Fm 1980, Sterling Heights.\n\nTechnical: Full semantic HTML, CSS custom properties for the palette, and vanilla JS for a simple 'Intersection Observer' fade-in effect on sections.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsfhv2XVTMyCdzMX_1xkJZZ7Dbdq0U4p1efYX_5cxAbT3YxhTFNUE6kziK8owLBnx2-ytVlYPE1T5pKhkVDy4C2JCPBlAIVARis2fUHTCGEfSJbY2U69PY0TRpcBXr5EoyLZXKvCZdhjDhzDfOkhFEM8llPnrPJaj1WkC8TRCamgTEuADOuO4FFDG7u5Kyes4I8RK74KjNP4rzs0g7N8YV8dCOGWchWrNwHazaFqmlZRMN3EAK4suztKhM",
+            "name": "projects/2758466789667008081/files/65aa276ec71c4f8292c76be53a03cb85"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0f172a",
+            "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#081425'\n  surface-dim: '#081425'\n  surface-bright: '#2f3a4c'\n  surface-container-lowest: '#040e1f'\n  surface-container-low: '#111c2d'\n  surface-container: '#152031'\n  surface-container-high: '#1f2a3c'\n  surface-container-highest: '#2a3548'\n  on-surface: '#d8e3fb'\n  on-surface-variant: '#c6c6cd'\n  inverse-surface: '#d8e3fb'\n  inverse-on-surface: '#263143'\n  outline: '#909097'\n  outline-variant: '#45464d'\n  surface-tint: '#bec6e0'\n  primary: '#bec6e0'\n  on-primary: '#283044'\n  primary-container: '#0f172a'\n  on-primary-container: '#798098'\n  inverse-primary: '#565e74'\n  secondary: '#ffb690'\n  on-secondary: '#552100'\n  secondary-container: '#ec6a06'\n  on-secondary-container: '#4a1c00'\n  tertiary: '#c1c7cf'\n  on-tertiary: '#2b3137'\n  tertiary-container: '#12181e'\n  on-tertiary-container: '#7b8189'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dae2fd'\n  primary-fixed-dim: '#bec6e0'\n  on-primary-fixed: '#131b2e'\n  on-primary-fixed-variant: '#3f465c'\n  secondary-fixed: '#ffdbca'\n  secondary-fixed-dim: '#ffb690'\n  on-secondary-fixed: '#341100'\n  on-secondary-fixed-variant: '#783200'\n  tertiary-fixed: '#dde3eb'\n  tertiary-fixed-dim: '#c1c7cf'\n  on-tertiary-fixed: '#161c22'\n  on-tertiary-fixed-variant: '#41474e'\n  background: '#081425'\n  on-background: '#d8e3fb'\n  surface-variant: '#2a3548'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\nspacing:\n  base: 4px\n  xs: 8px\n  sm: 16px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin: 32px\n---\n\n## Brand & Style\n\nThis design system establishes an \"Industrial Editorial\" aesthetic, distancing the brand from the standard utilitarian towing tropes in favor of a premium, high-reliability recovery service. The visual language is authoritative and precise, mimicking the technical documentation of heavy machinery while maintaining the sophisticated pacing of a luxury trade publication.\n\nThe style leans into **High-Contrast / Bold** layouts with a **Brutalist** edge. It utilizes heavy borders, technical dot-grid overlays, and \"safety-tape\" inspired rules to evoke a sense of structural integrity and rapid-response readiness. The UI should feel like a specialized tool—rugged enough for the Texas roadside, yet refined enough for high-end automotive logistics.\n\n## Colors\n\nThe palette is anchored by **Deep Midnight**, used as the primary canvas to project authority and strength. **Sterling Silver** provides high-legibility contrast for secondary information and hairline borders. **Hazard Orange** is reserved strictly for critical actions, status indicators, and branding accents, ensuring it maintains its psychological impact as a \"signal\" color.\n\n- **Primary (Deep Midnight):** Backgrounds, deep layering, and primary containers.\n- **Secondary (Hazard Orange):** Primary CTAs, active states, and safety-rule accents.\n- **Tertiary (Sterling Silver):** Body text, icons, and subtle structural lines.\n- **Neutral (Slate):** Component backgrounds and surface elevation.\n\n## Typography\n\nThe typography strategy relies on the tension between the industrial weight of **Archivo Narrow** and the neutral precision of **Inter**. \n\nHeadlines must always be uppercase and tightly tracked to mimic heavy-duty stenciling or technical manuals. For data-heavy readouts or small technical labels, **JetBrains Mono** (or a similar monospace font) is introduced to reinforce the \"rapid-response logistics\" narrative. Large display sizes should use aggressive negative letter-spacing for a \"built-to-last\" visual density.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** model on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). The layout is characterized by generous external margins and tight internal gutters to create a sense of focused, \"contained\" power.\n\n- **Grid:** Elements should align to a strict 8px baseline grid.\n- **Safety Margins:** Use 32px or 48px outer margins to create an editorial \"frame\" around content.\n- **Dot-Grid Overlays:** Apply a subtle 16px dot-grid background to \"Deep Midnight\" sections to suggest a blueprint or technical coordinate system.\n- **Rules:** Use 1px \"Sterling Silver\" horizontal and vertical rules to separate sections, mimicking the layout of a technical datasheet.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** and **Bold Borders** rather than traditional shadows. This maintains the \"Industrial\" feel by avoiding the softness of typical modern SaaS UIs.\n\n- **Level 0 (Floor):** Deep Midnight (#0F172A).\n- **Level 1 (Surface):** Slate (#1E293B) with a 1px solid Sterling Silver border at 20% opacity.\n- **Interactive:** Elements do not \"lift\" with shadows; instead, they use Hazard Orange strokes or solid color shifts to indicate focus and state changes.\n- **Safety-Tape Borders:** Use a diagonal striped pattern (Orange/Black) as a 4px bottom border for high-priority cards or headers to denote \"Active Response\" status.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to maintain a rugged, machined-metal aesthetic. All buttons, input fields, and card containers must have 90-degree angles. \n\nSmall technical exceptions:\n- **Status Pills:** May use a 2px \"soft\" radius to distinguish them from structural elements, but sharp remains the default.\n- **Iconography:** Icons should be stroke-based, using 2px weights and square terminals to match the typography.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Hazard Orange with black text (Archivo Narrow, Bold, Caps). Secondary buttons are ghost-style with a 2px Sterling Silver border.\n- **Input Fields:** Deep Midnight background with a 1px Sterling Silver bottom border only. On focus, the border turns Hazard Orange and expands to 2px.\n- **Cards:** Use a \"technical block\" style. Include a \"Ref No.\" or \"Serial\" label in the top right corner using JetBrains Mono to enhance the industrial feel.\n- **Chips/Status:** Use rectangular blocks. \"In-Progress\" should use the safety-tape pattern. \"Completed\" uses solid Sterling Silver with black text.\n- **Lists:** Separated by 1px rules. Use Hazard Orange chevrons for navigation cues.\n- **Specialty Component (The Dispatch Bar):** A persistent bottom or top bar containing real-time status (e.g., \"TRUCK-04 EN ROUTE\") in a monospace font with a pulsing Hazard Orange indicator.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#081425",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#263143",
+              "inverse_primary": "#565e74",
+              "inverse_surface": "#d8e3fb",
+              "on_background": "#d8e3fb",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#283044",
+              "on_primary_container": "#798098",
+              "on_primary_fixed": "#131b2e",
+              "on_primary_fixed_variant": "#3f465c",
+              "on_secondary": "#552100",
+              "on_secondary_container": "#4a1c00",
+              "on_secondary_fixed": "#341100",
+              "on_secondary_fixed_variant": "#783200",
+              "on_surface": "#d8e3fb",
+              "on_surface_variant": "#c6c6cd",
+              "on_tertiary": "#2b3137",
+              "on_tertiary_container": "#7b8189",
+              "on_tertiary_fixed": "#161c22",
+              "on_tertiary_fixed_variant": "#41474e",
+              "outline": "#909097",
+              "outline_variant": "#45464d",
+              "primary": "#bec6e0",
+              "primary_container": "#0f172a",
+              "primary_fixed": "#dae2fd",
+              "primary_fixed_dim": "#bec6e0",
+              "secondary": "#ffb690",
+              "secondary_container": "#ec6a06",
+              "secondary_fixed": "#ffdbca",
+              "secondary_fixed_dim": "#ffb690",
+              "surface": "#081425",
+              "surface_bright": "#2f3a4c",
+              "surface_container": "#152031",
+              "surface_container_high": "#1f2a3c",
+              "surface_container_highest": "#2a3548",
+              "surface_container_low": "#111c2d",
+              "surface_container_lowest": "#040e1f",
+              "surface_dim": "#081425",
+              "surface_tint": "#bec6e0",
+              "surface_variant": "#2a3548",
+              "tertiary": "#c1c7cf",
+              "tertiary_container": "#12181e",
+              "tertiary_fixed": "#dde3eb",
+              "tertiary_fixed_dim": "#c1c7cf"
+            },
+            "overrideNeutralColor": "#1e293b",
+            "overridePrimaryColor": "#0f172a",
+            "overrideSecondaryColor": "#f97316",
+            "overrideTertiaryColor": "#e2e8f0",
+            "spacing": {
+              "base": "4px",
+              "gutter": "24px",
+              "lg": "48px",
+              "margin": "32px",
+              "md": "24px",
+              "sm": "16px",
+              "xl": "80px",
+              "xs": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "display-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "72px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "1.0"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "label-caps": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              },
+              "label-sm": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "Lone Star Towing Inc. | Premium Recovery & Heavy Haul",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, **Industrial Editorial** homepage for **Lone Star Towing Inc.** that breaks away from typical local business templates.\n\n### Design Rationale:\n- **Visual Identity**: I established a \"Technical Premium\" aesthetic using a **Deep Midnight** and **Hazard Orange** palette, paired with high-contrast **Archivo Narrow** typography. This conveys reliability and industrial-grade authority.\n- **Memorable Motif**: The design utilizes thin industrial line-work, dot-grid overlays, and subtle hazard-stripe accents to create a cohesive, editorial feel throughout the page.\n- **Layout Innovation**: Instead of a standard card grid, I used a **numbered vertical list** for Services and an **asymmetric Hero section** to give the site a high-end, custom-built impression.\n- **Utility**: The site includes a dedicated map container, a high-visibility dispatch hotline, and a streamlined contact flow designed to convert users in high-pressure recovery situations.\n\nThe code is production-ready, fully responsive, and features smooth-scroll transitions for a premium user experience."
+  },
+  {
+    "suggestion": "Add a 'Fleet' gallery page using this style"
+  },
+  {
+    "suggestion": "Create a mobile-responsive view for this layout"
+  },
+  {
+    "suggestion": "Refine the contact form with industrial-style validation cues"
+  }
+]

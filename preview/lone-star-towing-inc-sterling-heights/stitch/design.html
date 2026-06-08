@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lone Star Towing Inc. | Industrial Recovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --hazard-orange: #ec6a06;
+            --sterling-silver: #909097;
+            --deep-midnight: #081425;
+        }
+
+        body {
+            background-color: var(--deep-midnight);
+            color: #d8e3fb;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .dot-grid {
+            background-image: radial-gradient(rgba(144, 144, 151, 0.15) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .safety-tape-border {
+            position: relative;
+        }
+        .safety-tape-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: repeating-linear-gradient(
+                45deg,
+                var(--hazard-orange),
+                var(--hazard-orange) 10px,
+                #000 10px,
+                #000 20px
+            );
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .industrial-line {
+            background-color: rgba(144, 144, 151, 0.2);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#2f3a4c",
+                        "inverse-primary": "#565e74",
+                        "surface-container-low": "#111c2d",
+                        "on-error": "#690005",
+                        "on-tertiary-container": "#7b8189",
+                        "surface-container-lowest": "#040e1f",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "error-container": "#93000a",
+                        "on-background": "#d8e3fb",
+                        "primary-fixed-dim": "#bec6e0",
+                        "tertiary-container": "#12181e",
+                        "surface-container-high": "#1f2a3c",
+                        "tertiary-fixed": "#dde3eb",
+                        "on-primary": "#283044",
+                        "tertiary-fixed-dim": "#c1c7cf",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-highest": "#2a3548",
+                        "on-primary-container": "#798098",
+                        "on-surface-variant": "#c6c6cd",
+                        "primary": "#bec6e0",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#263143",
+                        "surface": "#081425",
+                        "surface-tint": "#bec6e0",
+                        "on-tertiary-fixed": "#161c22",
+                        "outline-variant": "#45464d",
+                        "primary-fixed": "#dae2fd",
+                        "outline": "#909097",
+                        "on-secondary-container": "#4a1c00",
+                        "on-secondary-fixed-variant": "#783200",
+                        "on-surface": "#d8e3fb",
+                        "inverse-surface": "#d8e3fb",
+                        "on-secondary": "#552100",
+                        "secondary-container": "#ec6a06",
+                        "secondary": "#ffb690",
+                        "primary-container": "#0f172a",
+                        "secondary-fixed-dim": "#ffb690",
+                        "on-secondary-fixed": "#341100",
+                        "secondary-fixed": "#ffdbca",
+                        "surface-container": "#152031",
+                        "on-tertiary-fixed-variant": "#41474e",
+                        "surface-dim": "#081425",
+                        "background": "#081425",
+                        "tertiary": "#c1c7cf",
+                        "on-tertiary": "#2b3137",
+                        "on-primary-fixed": "#131b2e",
+                        "surface-variant": "#2a3548"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin": "32px",
+                        "sm": "16px",
+                        "base": "4px",
+                        "xl": "80px",
+                        "xs": "8px",
+                        "lg": "48px",
+                        "md": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "display-lg": ["Archivo Narrow"],
+                        "body-lg": ["Inter"],
+                        "label-sm": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="dot-grid">
+<!-- TopAppBar -->
+<header class="sticky top-0 z-50 flex justify-between items-center w-full px-margin py-sm bg-surface/95 backdrop-blur-md border-b border-outline-variant/20">
+<div class="font-headline-md text-headline-md font-bold text-on-surface tracking-tighter">
+            LONE STAR TOWING INC.
+        </div>
+<nav class="hidden md:flex gap-md items-center">
+<a class="text-secondary dark:text-secondary font-bold border-b-2 border-secondary pb-1 font-label-caps text-label-caps" href="#">Recovery</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps" href="#">Heavy Haul</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps" href="#">Logistics</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-medium hover:text-secondary transition-colors duration-200 font-label-caps text-label-caps" href="#">About</a>
+</nav>
+<div class="flex items-center gap-sm">
+<span class="font-label-caps text-label-caps text-secondary animate-pulse px-2 py-1 border border-secondary/30">DISPATCH: 555-0199</span>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center px-margin pt-xl border-b border-outline-variant/20">
+<div class="grid grid-cols-12 gap-gutter h-full">
+<div class="col-span-12 md:col-span-8 flex flex-col justify-center z-10 fade-in">
+<span class="font-label-caps text-label-caps text-secondary mb-base">EST. 2009 / TEXAS HEAVY RECOVERY</span>
+<h1 class="font-display-lg text-display-lg text-on-surface uppercase mb-md">
+                        RECOVERY <br/>WITHOUT <br/>COMPROMISE.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-lg">
+                        Specialized heavy-duty recovery and complex logistics for the industrial sector. We operate where standard towing reaches its limits.
+                    </p>
+<div class="flex flex-wrap gap-md">
+<button class="bg-secondary-container text-on-secondary-container px-lg py-sm font-headline-md text-headline-md uppercase tracking-widest hover:brightness-110 transition-all flex items-center gap-2">
+                            REQUEST DISPATCH <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+<button class="border-2 border-outline px-lg py-sm font-headline-md text-headline-md uppercase tracking-widest hover:bg-white/5 transition-all">
+                            FLEET SPECS
+                        </button>
+</div>
+</div>
+<div class="absolute right-0 top-0 w-1/2 h-full hidden lg:block opacity-40 mix-blend-luminosity overflow-hidden">
+<img alt="Industrial Recovery" class="w-full h-full object-cover" data-alt="A macro, low-angle shot of a massive industrial recovery winch and heavy-duty steel cables, glinting with metallic sheen under harsh warehouse lighting. The aesthetic is gritty and high-contrast, featuring deep midnight shadows and sharp silver highlights. The textures of worn metal and grease create a sense of mechanical power and industrial-grade reliability, fitting the Lone Star Towing brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxFFxSqYAYGTQBGgdXq4x2VOKk_0o1MWV6sRIXTpK2IvH9KVU7ZaPZ7B9_dyevGRYX6kfQ5EOu-XdGmPDdhzzqxBrqM9xGgfRiD5rxp3BSSiukWNQFQ5BdAqLDM8ncyHNV8_tASE80ftEF-DcWIfZBRo7xns6A7QixUWCJyayZrjkKEymSBiqzgOt-Nfl6Vi2hoj4X00XNQ6xvDzQqAYUoibJeOa-PAiuCeU80LzDj3iLPwPO1_cCTx-FajiYW644Jv-GJ9REe1Tw"/>
+</div>
+</div>
+<!-- Technical Ticker -->
+<div class="mt-xl py-md border-y border-outline-variant/20 bg-surface-container-lowest/50 backdrop-blur flex overflow-hidden whitespace-nowrap">
+<div class="flex gap-xl items-center px-margin animate-[scroll_30s_linear_infinite]">
+<span class="font-label-caps text-headline-md text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span> 15+ YEARS EXPERIENCE
+                    </span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-headline-md text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">timer</span> 24/7 DISPATCH
+                    </span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-headline-md text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">engineering</span> HEAVY HAUL CERTIFIED
+                    </span>
+<span class="w-1 h-1 bg-outline rounded-full"></span>
+<span class="font-label-caps text-headline-md text-on-surface flex items-center gap-xs">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">public</span> NATIONWIDE LOGISTICS
+                    </span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-xl px-margin">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-4 mb-lg fade-in">
+<h2 class="font-headline-lg text-headline-lg text-on-surface sticky top-32 uppercase">
+                        OUR <br/><span class="text-secondary">CAPABILITIES</span>
+</h2>
+<div class="h-2 w-24 bg-secondary mt-md"></div>
+</div>
+<div class="col-span-12 md:col-span-8 flex flex-col gap-xl">
+<!-- Service 01 -->
+<div class="service-item group fade-in border-l border-outline-variant/30 pl-lg py-sm relative">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-surface-bright border border-secondary rotate-45"></div>
+<span class="font-label-caps text-headline-md text-outline mb-base block">01</span>
+<h3 class="font-display-lg text-headline-lg uppercase mb-sm group-hover:text-secondary transition-colors">Recovery</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            Specialized winching and extraction for heavy equipment, tractor-trailers, and machinery. Our fleet is equipped with rotating wreckers and air-bag recovery systems for any terrain.
+                        </p>
+<div class="mt-md py-4 border-b border-outline-variant/10">
+<img alt="Recovery Operations" class="w-full h-[300px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="An atmospheric, cinematic photo of a heavy recovery wrecker operating at twilight on a rain-slicked Texas highway. The flashing hazard lights cast an orange glow against the deep navy blue of the sky and asphalt. The focus is on the intricate hydraulic components and industrial chains, conveying a mood of high-stakes precision and rapid response in an editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXEJHRLyur6mp0ezSG4r3A-NM3O4EFsSp_LO4VjCkBUsnrqGoJvYYRRluQym2198KSk8_XynRgCwxpZ0acs5yLJnZr9wP06louxHj73MbGtriMsFuQhNoYnRudG1HsnCqiZEBirNCUUbdAX5EKHLnJ1EV-Hiy6lkCitmfCmuwOC2RkqpFZoXv7CtUpyGMU7mtBEyMzxwi2Jx3Ks4gi6ZdVZg4jqSxmBXkF2NfDRL-MJi2QlVp-cRuMVlAlLOwoqmcsJqEXyvO_a5w"/>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="service-item group fade-in border-l border-outline-variant/30 pl-lg py-sm relative">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-surface-bright border border-secondary rotate-45"></div>
+<span class="font-label-caps text-headline-md text-outline mb-base block">02</span>
+<h3 class="font-display-lg text-headline-lg uppercase mb-sm group-hover:text-secondary transition-colors">Heavy Haul</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            Oversized load transport requiring precision permits and pilot escorts. We handle construction machinery, industrial boilers, and oil field equipment across the state.
+                        </p>
+<div class="mt-md py-4 border-b border-outline-variant/10">
+<img alt="Heavy Hauling" class="w-full h-[300px] object-cover filter grayscale hover:grayscale-0 transition-all duration-700" data-alt="A wide-angle, dramatic shot of a multi-axle lowboy trailer carrying a massive, rusted industrial component through a vast, desert-like landscape at sunrise. The lighting is warm and directional, emphasizing the scale of the machinery. The overall aesthetic is one of structural power and engineering excellence, utilizing a palette of deep blues, ochres, and Hazard Orange accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAS-51CWV35T9RfX683kumFApXagz7jhzb4g2pt6qh7gqlIlayfhhXOPccwxbui3_k8CYdb4BAfKW3aXi0YarwD6Njr_R2CDIohLSbNYV3gXs8DKDxkyQTeokZ89EyTiCdOjvaXQ8mMl6LcT28-xnMJxEiVaxNFOhdhsKuca_D6ANC7YRjxESMMpudfTfIEFY0y2yklPxYw4nyKoay4muO0nrPMh4UtSpK1ALFDoAYDLFnOqSShZq2OnghkFJ-VPqJVFinkOcX1JUU"/>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="service-item group fade-in border-l border-outline-variant/30 pl-lg py-sm relative">
+<div class="absolute -left-[9px] top-0 w-4 h-4 bg-surface-bright border border-secondary rotate-45"></div>
+<span class="font-label-caps text-headline-md text-outline mb-base block">03</span>
+<h3 class="font-display-lg text-headline-lg uppercase mb-sm group-hover:text-secondary transition-colors">Logistics</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl">
+                            End-to-end supply chain management for complex asset relocation. Real-time GPS tracking and 24/7 coordination ensures your high-value assets arrive on schedule.
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Dispatch / Contact Section -->
+<section class="bg-surface-container py-xl border-y border-outline-variant/20 relative overflow-hidden">
+<div class="absolute inset-0 dot-grid opacity-20"></div>
+<div class="px-margin relative z-10 grid grid-cols-12 gap-gutter">
+<div class="col-span-12 lg:col-span-5 fade-in">
+<h2 class="font-display-lg text-display-lg text-on-surface uppercase mb-md">GET IN <br/><span class="text-secondary">TOUCH</span></h2>
+<div class="flex flex-col gap-sm">
+<div class="p-md bg-surface border border-outline-variant/30 group hover:border-secondary transition-colors">
+<span class="font-label-caps text-label-caps text-outline block mb-xs">HOTLINE</span>
+<a class="font-headline-lg text-headline-md text-on-surface group-hover:text-secondary" href="tel:5864538913">(586) 453-8913</a>
+</div>
+<div class="p-md bg-surface border border-outline-variant/30 group hover:border-secondary transition-colors">
+<span class="font-label-caps text-label-caps text-outline block mb-xs">EMAIL</span>
+<a class="font-headline-lg text-headline-md text-on-surface group-hover:text-secondary" href="mailto:lonestarrecovery.brad@gmail.com">lonestarrecovery.brad@gmail.com</a>
+</div>
+<div class="p-md bg-surface border border-outline-variant/30 group hover:border-secondary transition-colors">
+<span class="font-label-caps text-label-caps text-outline block mb-xs">HEADQUARTERS</span>
+<p class="font-headline-lg text-headline-md text-on-surface">1323 Fm 1980, Sterling Heights</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 fade-in">
+<form class="bg-surface p-lg border border-outline-variant/50 relative">
+<div class="font-label-caps text-label-caps text-secondary mb-md tracking-[0.3em] uppercase">Service Request Form</div>
+<div class="grid grid-cols-2 gap-md">
+<div class="col-span-2 md:col-span-1">
+<label class="font-label-caps text-label-caps text-outline mb-xs block">NAME</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-xs text-on-surface outline-none placeholder:text-outline/30" placeholder="Full Name" type="text"/>
+</div>
+<div class="col-span-2 md:col-span-1">
+<label class="font-label-caps text-label-caps text-outline mb-xs block">COMPANY</label>
+<input class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-xs text-on-surface outline-none placeholder:text-outline/30" placeholder="Organization" type="text"/>
+</div>
+<div class="col-span-2">
+<label class="font-label-caps text-label-caps text-outline mb-xs block">SERVICE TYPE</label>
+<select class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-xs text-on-surface outline-none">
+<option>Emergency Recovery</option>
+<option>Heavy Haul Logistics</option>
+<option>Standard Towing</option>
+<option>Equipment Transport</option>
+</select>
+</div>
+<div class="col-span-2">
+<label class="font-label-caps text-label-caps text-outline mb-xs block">MESSAGE / SPECIFICATIONS</label>
+<textarea class="w-full bg-surface-container-low border-b-2 border-outline-variant focus:border-secondary transition-all px-0 py-xs text-on-surface outline-none placeholder:text-outline/30" placeholder="Describe the load or recovery situation..." rows="4"></textarea>
+</div>
+</div>
+<button class="mt-lg w-full bg-secondary-container text-on-secondary-container py-md font-headline-md text-headline-md uppercase tracking-widest hover:brightness-110 active:opacity-80 transition-all safety-tape-border">
+                            SEND DISPATCH REQUEST
+                        </button>
+</form>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="fade-in">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border-b-4 border-secondary" data-location="Sterling Heights, Texas" data-map-slot="" style="">
+<div class="absolute inset-0 bg-surface-bright flex items-center justify-center">
+<div class="text-center p-lg border border-outline-variant/30 backdrop-blur-md bg-surface/50">
+<span class="material-symbols-outlined text-secondary text-5xl mb-sm" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h4 class="font-headline-md text-on-surface mb-xs">OPERATIONS HUB</h4>
+<p class="font-label-caps text-outline uppercase">Serving Sterling Heights and the Greater Texas Area</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin py-lg flex flex-col md:flex-row justify-between items-center gap-md bg-surface-container-lowest border-t-4 border-secondary">
+<div class="flex flex-col gap-xs items-center md:items-start">
+<div class="font-headline-md text-headline-md font-black text-on-surface">LONE STAR TOWING INC.</div>
+<div class="font-body-md text-body-md text-on-surface-variant max-w-sm text-center md:text-left">
+                © 2024 LONE STAR TOWING INC. ALL RIGHTS RESERVED. INDUSTRIAL GRADE RECOVERY.
+            </div>
+</div>
+<div class="flex flex-wrap justify-center gap-md">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Safety Protocols</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface transition-colors" href="#">Fleet Specs</a>
+</div>
+</footer>
+<!-- Dispatch Bar -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-surface border-t border-outline-variant/30 py-2 px-margin hidden md:flex justify-between items-center">
+<div class="flex items-center gap-sm">
+<div class="w-2 h-2 rounded-full bg-secondary animate-pulse"></div>
+<span class="font-label-caps text-label-sm text-on-surface uppercase tracking-widest">System Status: <span class="text-secondary">Active Dispatch</span></span>
+</div>
+<div class="flex gap-md items-center overflow-hidden">
+<span class="font-label-caps text-label-sm text-outline animate-[scroll_20s_linear_infinite]">TRUCK-04: EN ROUTE - UNIT-12: ON SCENE - DISPATCH-B: AVAILABLE</span>
+</div>
+<div class="font-label-caps text-label-sm text-secondary">
+            TS: <span id="current-time">00:00:00</span>
+</div>
+</div>
+<script>
+        // Intersection Observer for fade-in effect
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+        // Real-time Clock for Dispatch Bar
+        function updateTime() {
+            const now = new Date();
+            const timeStr = now.getHours().toString().padStart(2, '0') + ':' + 
+                          now.getMinutes().toString().padStart(2, '0') + ':' + 
+                          now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('current-time').textContent = timeStr;
+        }
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Parallax-ish Scroll Effect for Lines
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            document.body.style.backgroundPositionY = -(scrolled * 0.1) + 'px';
+        });
+    </script>
+<style>
+        @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+    </style>
+</body></html>
