@@ -1,21 +1,22 @@
 # Mobile layout — labelle-spa-nails-galloway
 
-**Result:** FAIL
+**Result:** PASS
 
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
-- refreshed map layout CSS
+- bumped 10px label text
+- section overflow-hidden for decorative layers
+- responsive horizontal margins (1 blocks)
+- map-slot: removed h-full (use aspect-ratio fill)
 
 ## Viewports
-- mobile (390px): overflow=yes, tinyText=yes, navToggle=ok, width=ok
-- tablet (768px): overflow=yes, tinyText=no, navToggle=ok, width=ok
+- mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok
+- tablet (768px): overflow=no, tinyText=no, navToggle=ok, width=ok
 - desktop (1280px): overflow=no, tinyText=no, navToggle=ok, width=ok
 
-## Errors (3)
-- mobile: horizontal overflow at 390px
-- mobile: body text below 12px
-- tablet: horizontal overflow at 768px
+## Errors (0)
+- none
 
 
 _Auto-run in post-build. Fixes overflow-x, nav toggle, and map slot gaps._

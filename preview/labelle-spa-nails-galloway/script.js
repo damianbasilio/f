@@ -1,55 +1,44 @@
-// Editorial reveal animation on scroll
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -80px 0px'
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('active');
-            }
-        });
-    }, observerOptions);
-
-    document.querySelectorAll('.editorial-reveal').forEach(el => observer.observe(el));
-
-    // Sticky header behavior
-    let lastScroll = 0;
-    const nav = document.getElementById('main-nav');
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-        
-        if (currentScroll > 50) {
-            nav.classList.add('py-3', 'shadow-sm', 'bg-white/95');
-            nav.classList.remove('py-4', 'bg-white/80');
-        } else {
-            nav.classList.remove('py-3', 'shadow-sm', 'bg-white/95');
-            nav.classList.add('py-4', 'bg-white/80');
+function toggleSideNav() {
+            const sideNav = document.getElementById('sideNav');
+            sideNav.classList.toggle('translate-x-full');
+            sideNav.classList.toggle('side-nav-open');
         }
-        lastScroll = currentScroll;
-    });
 
-    // Simple Form Validation Feedback
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const btn = this.querySelector('button');
-        const originalText = btn.innerText;
-        btn.innerText = 'Preview only';
-        btn.disabled = true;
-        
-        setTimeout(() => {
+        // Form Validation UI micro-interaction
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
             btn.innerText = 'Preview only';
-            btn.classList.add('bg-green-600');
-            this.reset();
+            btn.classList.add('opacity-70');
+            
             setTimeout(() => {
-                btn.innerText = originalText;
-                btn.classList.remove('bg-green-600');
-                btn.disabled = false;
-            }, 3000);
-        }, 1500);
-    });
+                btn.innerText = 'MESSAGE RECEIVED';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-primary-container');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-primary-container', 'opacity-70');
+                    btn.classList.add('bg-primary');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Atmospheric Scroll Effect
+        window.addEventListener('scroll', () => {
+            const frames = document.querySelectorAll('.floating-frame');
+            frames.forEach(frame => {
+                const speed = 0.05;
+                const rect = frame.getBoundingClientRect();
+                const scrollOffset = (window.innerHeight - rect.top) * speed;
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    frame.style.transform = `translateY(${-scrollOffset}px)`;
+                }
+            });
+        });
 
 (() => {
   function initMockupNotice() {

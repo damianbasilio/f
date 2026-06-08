@@ -1,6 +1,6 @@
 # Design QA — labelle-spa-nails-galloway
 
-**Result:** PASS
+**Result:** NEEDS FIX
 
 **Craft warnings:** 2 (see craft section)
 
@@ -8,10 +8,10 @@
 
 | Skill | Status |
 | ----- | ------ |
-| craft | pass |
+| craft | fail |
 | emil | pass |
 | taste | pass |
-| audit | pass |
+| audit | fail |
 | harden | pass |
 | polish | pass |
 
@@ -26,12 +26,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- OK: No fake ratings/hype
+- FAIL: Fake ratings or hype copy detected
 - OK: No obvious buzzwords
-- OK: Layout: no excessive 3-col grids
+- WARN: Repeated 3-column grid pattern (10 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- WARN: 32 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
+- OK: Eyebrow count: 2
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,8 +43,9 @@
 
 ### taste
 
-- WARN: 32 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
+- Eyebrow discipline: 2 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 
@@ -54,6 +55,7 @@
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
+- FAIL: Fake star ratings or unverifiable superlatives
 
 ### harden
 
