@@ -1,6 +1,6 @@
 # Responsive QA — z-d-mobile-detailing-llc-gastonia
 
-**Result:** PASS
+**Result:** FAIL
 
 ## Viewports checked
 - mobile: 390×844
@@ -8,14 +8,14 @@
 - desktop: 1280×900
 
 ## Notes
-- mobile (390×844): scroll=ok, h1≈2 lines, smallTargets=6
+- mobile (390×844): scroll=ok, h1≈3 lines, smallTargets=7
 - tablet (768×1024): scroll=ok, h1≈3 lines, smallTargets=0
-- desktop (1280×900): scroll=ok, h1≈3 lines, smallTargets=0
+- desktop (1280×900): scroll=ok, h1≈2 lines, smallTargets=0
 
-## Errors (0)
-- none
+## Errors (1)
+- mobile: body text below 12px
 
 ## Warnings (1)
-- mobile: 6 tap targets under 44px
+- mobile: 7 tap targets under 44px
 
 _Auto-run after build. Fix horizontal overflow and tiny text before deploy._

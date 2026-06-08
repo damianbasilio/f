@@ -1,166 +1,181 @@
-I've designed a bespoke, "Precision Performance" landing page for Z&D Mobile Detailing, LLC. 
+I've designed a bespoke, editorial-grade landing page for **Z&D Mobile Detailing, LLC**. 
+
+The design departs from generic local business templates, adopting a **"Midnight Slate & Chrome"** visual identity that reflects the precision and luxury of high-end automotive care.
 
 ### Design Highlights:
-- **Visual Identity**: I established a "Obsidian Precision" design system, utilizing a deep charcoal palette with electric cobalt accents and sharp, geometric edges to reflect high-end craftsmanship.
-- **Editorial Layout**: Moving away from standard templates, I used a high-contrast, staggered layout with large-scale typography (Syne) and a technical grid motif to create a premium, atelier-style feel.
-- **Strategic Flow**: The page leads with a bold hero statement, followed by high-impact credibility stats and a non-standard services grid designed to showcase the detail-oriented nature of the business.
-- **Production-Ready**: The design includes a functional navigation, a dedicated map container for your Gastonia service area, and a refined inquiry form, all optimized for desktop and mobile devices.
+- **Editorial Typography**: A bold, high-contrast typographic hierarchy that positions detailing as a technical art form.
+- **Blueprint Aesthetic**: Service sections are framed with technical borders and monospace "spec" labels, emphasizing the "Restoration Suite" methodology.
+- **Intentional Whitespace**: The layout uses generous spacing and sharp, angled geometry to create a clean, premium feel that stands out from typical social media pages.
+- **Technical Credibility**: A dedicated "Specifications" bar highlights your Gastonia, NC operations and service metrics immediately upon entry.
 
-The site is now ready for your review. How would you like to proceed?
-
----
+The site is fully responsive and includes the custom map integration and contact protocols you specified. How does this visual direction feel for the brand?
 
 ---
-name: Obsidian Precision
+
+---
+name: Precision & Reflection
 colors:
-  surface: '#121414'
-  surface-dim: '#121414'
-  surface-bright: '#37393a'
-  surface-container-lowest: '#0c0f0f'
-  surface-container-low: '#1a1c1c'
-  surface-container: '#1e2020'
-  surface-container-high: '#282a2b'
-  surface-container-highest: '#333535'
-  on-surface: '#e2e2e2'
-  on-surface-variant: '#c4c5d9'
-  inverse-surface: '#e2e2e2'
-  inverse-on-surface: '#2f3131'
-  outline: '#8e90a2'
-  outline-variant: '#434656'
-  surface-tint: '#b8c3ff'
-  primary: '#b8c3ff'
-  on-primary: '#002388'
-  primary-container: '#2e5bff'
-  on-primary-container: '#efefff'
-  inverse-primary: '#124af0'
-  secondary: '#c6c6c6'
-  on-secondary: '#2f3131'
-  secondary-container: '#484949'
-  on-secondary-container: '#b8b8b8'
-  tertiary: '#c9c6c5'
-  on-tertiary: '#313030'
-  tertiary-container: '#6e6d6d'
-  on-tertiary-container: '#f3f0ef'
+  surface: '#081425'
+  surface-dim: '#081425'
+  surface-bright: '#2f3a4c'
+  surface-container-lowest: '#040e1f'
+  surface-container-low: '#111c2d'
+  surface-container: '#152031'
+  surface-container-high: '#1f2a3c'
+  surface-container-highest: '#2a3548'
+  on-surface: '#d8e3fb'
+  on-surface-variant: '#c6c6cd'
+  inverse-surface: '#d8e3fb'
+  inverse-on-surface: '#263143'
+  outline: '#909097'
+  outline-variant: '#45464d'
+  surface-tint: '#bec6e0'
+  primary: '#bec6e0'
+  on-primary: '#283044'
+  primary-container: '#0f172a'
+  on-primary-container: '#798098'
+  inverse-primary: '#565e74'
+  secondary: '#c1c7cf'
+  on-secondary: '#2b3137'
+  secondary-container: '#41474e'
+  on-secondary-container: '#afb6bd'
+  tertiary: '#b4c5ff'
+  on-tertiary: '#002a78'
+  tertiary-container: '#001443'
+  on-tertiary-container: '#4278ff'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#dde1ff'
-  primary-fixed-dim: '#b8c3ff'
-  on-primary-fixed: '#001356'
-  on-primary-fixed-variant: '#0035be'
-  secondary-fixed: '#e3e2e2'
-  secondary-fixed-dim: '#c6c6c6'
-  on-secondary-fixed: '#1a1c1c'
-  on-secondary-fixed-variant: '#464747'
-  tertiary-fixed: '#e5e2e1'
-  tertiary-fixed-dim: '#c9c6c5'
-  on-tertiary-fixed: '#1c1b1b'
-  on-tertiary-fixed-variant: '#474646'
-  background: '#121414'
-  on-background: '#e2e2e2'
-  surface-variant: '#333535'
+  primary-fixed: '#dae2fd'
+  primary-fixed-dim: '#bec6e0'
+  on-primary-fixed: '#131b2e'
+  on-primary-fixed-variant: '#3f465c'
+  secondary-fixed: '#dde3eb'
+  secondary-fixed-dim: '#c1c7cf'
+  on-secondary-fixed: '#161c22'
+  on-secondary-fixed-variant: '#41474e'
+  tertiary-fixed: '#dbe1ff'
+  tertiary-fixed-dim: '#b4c5ff'
+  on-tertiary-fixed: '#00174b'
+  on-tertiary-fixed-variant: '#003ea8'
+  background: '#081425'
+  on-background: '#d8e3fb'
+  surface-variant: '#2a3548'
 typography:
-  display-lg:
-    fontFamily: Syne
-    fontSize: 80px
+  headline-xl:
+    fontFamily: Lexend
+    fontSize: 64px
     fontWeight: '800'
-    lineHeight: 84px
-    letterSpacing: -0.04em
-  display-md:
-    fontFamily: Syne
-    fontSize: 48px
-    fontWeight: '800'
-    lineHeight: 52px
-    letterSpacing: -0.03em
+    lineHeight: '1.1'
+    letterSpacing: -0.02em
   headline-lg:
-    fontFamily: Syne
+    fontFamily: Lexend
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Lexend
     fontSize: 32px
     fontWeight: '700'
-    lineHeight: 36px
-    letterSpacing: -0.02em
-  headline-lg-mobile:
-    fontFamily: Syne
-    fontSize: 28px
-    fontWeight: '700'
-    lineHeight: 32px
+    lineHeight: '1.2'
+  headline-md:
+    fontFamily: Lexend
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: '1.3'
   body-lg:
-    fontFamily: Geist
+    fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: 28px
+    lineHeight: '1.6'
   body-md:
-    fontFamily: Geist
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: 24px
-  label-mono:
-    fontFamily: JetBrains Mono
+    lineHeight: '1.6'
+  label-tech:
+    fontFamily: Space Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: '1.0'
+    letterSpacing: 0.1em
+  label-data:
+    fontFamily: Space Mono
     fontSize: 14px
     fontWeight: '500'
-    lineHeight: 20px
-    letterSpacing: 0.05em
-  label-caps:
-    fontFamily: Geist
-    fontSize: 12px
-    fontWeight: '600'
-    lineHeight: 16px
-    letterSpacing: 0.1em
+    lineHeight: '1.4'
 spacing:
-  unit: 4px
+  base: 4px
+  xs: 8px
+  sm: 16px
+  md: 24px
+  lg: 48px
+  xl: 80px
   gutter: 24px
-  margin-mobile: 16px
-  margin-desktop: 64px
-  container-max: 1440px
+  margin: 32px
 ---
 
 ## Brand & Style
-The brand personality is authoritative, elite, and uncompromisingly precise. Designed for high-end automotive enthusiasts, the UI must evoke the feeling of a luxury garage or a premium performance tuning studio.
 
-The design style is a fusion of **High-Contrast Minimalism** and **Technical Editorial**. It rejects the friendly, rounded aesthetic of modern SaaS in favor of sharp edges, deep blacks, and a "mechanical" sophistication. The interface should feel like a high-end fashion magazine layout meets a professional telemetry dashboard.
+This design system embodies the meticulous craft of high-end automotive detailing. The brand personality is authoritative, technical, and hyper-focused on detail, mirroring the "Precision & Reflection" theme. It serves a discerning clientele who view their vehicles as investments and expressions of personal excellence.
+
+The visual style is a fusion of **Editorial Minimalism** and **Technical Brutalism**. It utilizes a "blueprint" aesthetic—dense with information, structured by rigid rules and borders—while maintaining the breathable whitespace and dramatic scale of a luxury magazine. The emotional response should be one of absolute trust in technical competence and an appreciation for the "wet-look" aesthetic of perfectly maintained paintwork.
 
 ## Colors
-This design system operates almost exclusively in **Dark Mode** to simulate the premium "Obsidian" finish of a freshly detailed vehicle.
 
-- **Deep Obsidian (#0D0D0D):** The foundation. Used for all primary backgrounds and structural surfaces.
-- **Electric Cobalt (#2E5BFF):** The high-performance accent. Reserved strictly for primary actions, progress indicators, and critical focus points.
-- **Metallic Silver (#C0C0C0):** The technical bridge. Used for borders, iconography, and secondary text to provide a cold, machined aesthetic.
-- **Pure White (#FFFFFF):** Used sparingly for high-contrast typography to ensure absolute legibility against the dark background.
+The palette is anchored in **Midnight Slate** (#0F172A) to provide a deep, infinite canvas that allows photography reflections to pop. **Chrome Silver** (#E2E8F0) acts as the primary mechanical contrast, used for typography and structural rules to mimic metallic finishes.
+
+**Electric Cobalt** (#2563EB) is used sparingly as a high-visibility accent—representing the "spark" of energy and the technical liquids used in the detailing process. **Deep Charcoal** (#1E293B) provides subtle tonal variance for container backgrounds, ensuring the UI feels layered rather than flat. 
+
+Metallic gradients should be applied to primary actions, transitioning from Chrome Silver to a slightly darker slate to simulate the luster of polished steel.
 
 ## Typography
-Typography is the primary driver of the "Precision" narrative. 
 
-- **Headlines:** Use **Syne** in its boldest weights. It provides a wide, aggressive stance that mimics automotive branding. Letter spacing should be tightened for display sizes.
-- **Body:** **Geist** provides a clean, technical, and slightly cold feel that ensures readability without losing the professional edge.
-- **Data & Labels:** **JetBrains Mono** is used for specs, pricing, and timestamps to reinforce the "performance telemetry" aesthetic. Always use uppercase for labels to maintain an industrial tone.
+Typography is used to establish a "blueprint" hierarchy. **Lexend** provides a bold, wide, and confident foundation for headings, communicating strength and stability. It should be set with tight tracking in larger sizes to maximize impact.
+
+**Inter** handles the heavy lifting of service descriptions and technical specifications, chosen for its exceptional legibility and neutral character. 
+
+**Space Mono** is the "data layer" of the design system. It is used for all technical metadata—durability ratings, price points, timestamps, and step-by-step process labels. This monospaced font reinforces the "Precision" aspect of the brand, making every piece of information feel measured and scientific.
 
 ## Layout & Spacing
-The layout follows a **Fixed Grid** philosophy with generous, editorial-style margins. 
 
-- **Grid:** A 12-column system for desktop, 4-column for mobile. Gutters are kept tight (24px) to emphasize the "machined" fit of components.
-- **Rhythm:** All spacing must be multiples of 4px. Use large vertical gaps (80px, 120px, 160px) between sections to create an expensive, airy feel.
-- **Alignment:** Content should predominantly be left-aligned or justified to a strict vertical axis, reminiscent of a technical blueprint.
+This design system utilizes a **12-column fluid grid** for desktop and a **4-column grid** for mobile. The layout philosophy is "Dense Editorial"—information is packed tightly within technical containers, separated by ample whitespace between major sections.
+
+**Angled Dividers:** To suggest speed and the aerodynamic lines of modern vehicles, use 15-degree angled masks on large image sections and background containers.
+
+**Rules & Borders:** Every major container should be bounded by a 1px Chrome Silver border. Use vertical "measurement lines" (thin 1px rules) to connect related data points, mimicking a technical drawing or a blueprint.
 
 ## Elevation & Depth
-Depth is created through **Tonal Layering** and **Glassmorphism**, never through traditional shadows.
 
-- **Surfaces:** Use 1px Metallic Silver (#C0C0C0) borders with low opacity (10-20%) to define shapes against the Deep Obsidian background.
-- **Glassmorphism:** For overlays or navigation bars, use a backdrop-blur (20px) with a 5% white tint. This creates a "frosted windshield" effect that maintains the premium vibe.
-- **Depth Hierarchy:** 
-  - Level 0: Deep Obsidian (#0D0D0D) - Background.
-  - Level 1: Surface (#1A1A1A) - Card containers.
-  - Level 2: Surface Light (#262626) - Floating elements or active states.
+In keeping with the technical aesthetic, depth is achieved through **low-contrast outlines** and **tonal layering** rather than traditional shadows. 
+
+1.  **Base Layer:** Midnight Slate (#0F172A).
+2.  **Surface Layer:** Deep Charcoal (#1E293B) with a 1px Chrome Silver border at 20% opacity.
+3.  **Accent Layer:** Electric Cobalt highlights for active states.
+
+For high-end photography, use **Backdrop Blurs** (Glassmorphism) when overlaying technical labels over "wet-look" car shots. This preserves the "Reflection" theme while ensuring the "Precision" data remains readable.
 
 ## Shapes
-This design system uses a **Strict Zero-Radius** policy. Every corner is a sharp 90-degree angle to symbolize precision, architectural strength, and a "no-nonsense" performance attitude. Do not use border-radius on buttons, inputs, images, or containers.
+
+The shape language is strictly **Sharp (0)**. To reflect precision engineering and professional-grade tools, the design system avoids rounded corners entirely. This creates a rigid, structural feel that differentiates the brand from softer, "friendly" consumer apps. 
+
+Use clipped corners (dog-ear folds) on cards and buttons at a 45-degree angle to further emphasize the technical, mechanical nature of the service.
 
 ## Components
 
-- **Buttons:** 
-  - *Primary:* Electric Cobalt background, white text, uppercase mono label, zero radius. 
-  - *Secondary:* Transparent background, 1px Metallic Silver border, sharp edges.
-- **Inputs:** Underline-only or 1px bordered boxes. Use JetBrains Mono for placeholder text to imply technical entry.
-- **Cards:** No background fill; defined by a subtle 1px #C0C0C0 border at 15% opacity. Use "ghost" headers that sit slightly outside the top border for an editorial look.
-- **Chips/Status:** Rectangular blocks with a 2px left-side accent bar in Electric Cobalt. No rounded corners.
-- **Lists:** Separated by thin, full-width Metallic Silver hairlines (0.5px).
-- **Automotive Specs Component:** A specific component for car details using JetBrains Mono, featuring a "Label: Value" layout with a dotted leader line connecting the two.
+**Buttons:** 
+Rectangular with sharp corners. Primary buttons feature a subtle vertical metallic gradient and a 1px solid border. Text is set in Space Mono for a "system command" feel.
+
+**Technical Chips:** 
+Used for detailing stages (e.g., "Decontamination," "Clay Bar," "Ceramic Coat"). These should be outlined in Chrome Silver with a small "LED" dot in Electric Cobalt to indicate status.
+
+**Cards:** 
+Package cards use high-contrast photography as the top half, with a technical "spec sheet" below. Use thin horizontal rules to separate features, mimicking a bill of materials.
+
+**Inputs:** 
+Minimalist underlines (1px Chrome Silver) rather than boxes. Labels should be floating and set in Space Mono at 10px.
+
+**Reflection Lists:** 
+For service comparisons, use a zebra-stripe layout with Deep Charcoal and Midnight Slate, separated by 1px rules to maintain the blueprint density.
