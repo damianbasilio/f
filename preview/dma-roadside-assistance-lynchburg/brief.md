@@ -91,7 +91,7 @@ Recent posts from their Facebook page:
 
 - **Source:** http://www.facebook.com/dmaroadside
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T07:19:18.004Z
+- **Scraped:** 2026-06-08T09:04:29.682Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at http://www.facebook.com/dmaroadside. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
