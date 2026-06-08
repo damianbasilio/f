@@ -1,0 +1,517 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Polished Quartz Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in a high-fashion editorial aesthetic that balances the tactile nature of wellness with the sharp precision of professional artistry. It evokes a \"quiet luxury\" atmosphere, prioritizing intentionality over flashiness. \n\nThe visual style is **Minimalist-Editorial**, characterized by:\n- **Generous Whitespace:** Utilizing negative space as a luxury element to let content breathe.\n- **High-Contrast Typography:** Creating a rhythm between bold, decorative headings and functional, understated body copy.\n- **Architectural Layouts:** Mixing fluid, organic shapes (representing the application of polish) with a rigid, geometric grid (representing the technical mastery of the technician).\n- **Tactile Minimalism:** Interfaces should feel like a high-end print magazine, using subtle textures or grain if possible, but primarily relying on layout and color to convey depth.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed-Grid System** for desktop and a **Fluid Grid** for mobile.\n\n- **The Editorial Grid:** A 12-column grid with wide margins (`64px`). On desktop, content should rarely span all 12 columns. Instead, use offset layouts (e.g., an image spanning 7 columns and text spanning 4 columns with a 1-column gap) to create visual interest.\n- **Spacing Rhythm:** Use a strict 8px base unit. Section gaps are intentionally large (`120px`) to enforce a sense of calm and prevent the user from feeling \"rushed\" through the experience.\n- **Responsive Behavior:** On mobile, margins shrink to `16px`, and the section gap reduces to `64px`. Stack elements vertically while maintaining the Bodoni display size for brand impact.\n\n## Elevation & Depth\n\nTo maintain a sophisticated, flat-yet-tactile feel, this design system avoids heavy shadows.\n\n- **Tonal Layering:** Depth is primarily created through color shifts. A \"container\" might be Ivory (`#F9F8F6`) on a Rose Petal (`#E5B8B1`) background.\n- **Low-Contrast Outlines:** Use 1px solid borders in Espresso (`#2D1B14`) at low opacity (10-15%) to define areas without creating visual clutter.\n- **The \"Glass\" Effect:** For floating navigation or modal overlays, use a backdrop blur with a semi-transparent Ivory fill. This mimics the translucent, polished nature of quartz.\n- **Sharp Lines:** Unlike soft-web designs, separators should be thin, crisp, and high-contrast (Espresso at 100%) when used for structural division.\n\n## Components\n\n### Buttons\n- **Primary:** Espresso background, Ivory text, uppercase DM Sans. High letter spacing. No shadows.\n- **Secondary:** Transparent background, Espresso 1px border.\n- **Luxury Action:** Champagne Gold text link with a 1px underline that expands on hover.\n\n### Cards & Surfaces\n- **Service Cards:** Use Ivory backgrounds with a thin 1px Espresso border at 10% opacity. Images should be aspect-ratio locked (4:5) to look like magazine photography.\n- **Hover State:** On hover, cards should subtly shift to a Rose Petal background or gain a very thin Champagne Gold inner-border.\n\n### Input Fields\n- Underline style preferred over boxed style for a more minimal, editorial feel. \n- Labels should be small, uppercase DM Sans (`label-caps`) positioned above the input field.\n\n### Chips & Tags\n- Used for service categories (e.g., \"Manicure,\" \"Nail Art\").\n- Rounded-pill shapes with a Rose Petal background and Espresso text.\n\n### Selection Controls\n- **Checkboxes/Radios:** Square for checkboxes, circles for radios. Espresso stroke, Champagne Gold fill when selected.\n\n### Navigation\n- A centered, minimalist header. Navigation links should be DM Sans `label-caps` with wide tracking. No icons unless strictly necessary.",
+          "theme": {
+            "bodyFont": "DM_SANS",
+            "bodyFontFamily": "Dm Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#2d1b14",
+            "designMd": "---\nname: Polished Quartz Editorial\ncolors:\n  surface: '#faf9f7'\n  surface-dim: '#dadad8'\n  surface-bright: '#faf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f1'\n  surface-container: '#efeeec'\n  surface-container-high: '#e9e8e6'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1b'\n  on-surface-variant: '#4f4441'\n  inverse-surface: '#2f3130'\n  inverse-on-surface: '#f1f1ef'\n  outline: '#817470'\n  outline-variant: '#d3c3be'\n  surface-tint: '#725950'\n  primary: '#110402'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b14'\n  on-primary-container: '#9d8177'\n  inverse-primary: '#e0c0b4'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#140302'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#321814'\n  on-tertiary-container: '#a57d77'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fddbd0'\n  primary-fixed-dim: '#e0c0b4'\n  on-primary-fixed: '#291710'\n  on-primary-fixed-variant: '#584239'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#ffdad4'\n  tertiary-fixed-dim: '#e9bcb5'\n  on-tertiary-fixed: '#2d1511'\n  on-tertiary-fixed-variant: '#5f3f3a'\n  background: '#faf9f7'\n  on-background: '#1a1c1b'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.03em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is anchored in a high-fashion editorial aesthetic that balances the tactile nature of wellness with the sharp precision of professional artistry. It evokes a \"quiet luxury\" atmosphere, prioritizing intentionality over flashiness. \n\nThe visual style is **Minimalist-Editorial**, characterized by:\n- **Generous Whitespace:** Utilizing negative space as a luxury element to let content breathe.\n- **High-Contrast Typography:** Creating a rhythm between bold, decorative headings and functional, understated body copy.\n- **Architectural Layouts:** Mixing fluid, organic shapes (representing the application of polish) with a rigid, geometric grid (representing the technical mastery of the technician).\n- **Tactile Minimalism:** Interfaces should feel like a high-end print magazine, using subtle textures or grain if possible, but primarily relying on layout and color to convey depth.\n\n## Colors\n\nThe \"Polished Quartz\" palette is a sophisticated blend of earthen tones and metallic accents.\n\n- **Primary (Espresso):** Used for primary text, deep borders, and high-impact backgrounds. It provides the grounding weight for the brand.\n- **Secondary (Champagne Gold):** Reserved for subtle accents, luxury markers (like price points), and interactive highlights.\n- **Tertiary (Rose Petal):** A soft, muted tone used for hover states, categorized backgrounds, and secondary interactive elements to soften the espresso's intensity.\n- **Neutral (Ivory):** The foundational canvas. All interfaces should default to an Ivory background to maintain a warm, welcoming, yet crisp appearance.\n\n## Typography\n\nThis design system uses a stark contrast between its serif and sans-serif families to mirror the \"Vogue\" influence.\n\n- **Headlines (Bodoni Moda):** A high-contrast, vertical-axis serif. Use this for all key messaging. Larger displays should use the italic variants for a more \"couture\" feel.\n- **Body & Labels (DM Sans):** A geometric sans-serif. To achieve the \"premium\" look, body text should utilize slightly increased letter-spacing (`0.03em`) to create a sense of lightness and legibility.\n- **Editorial Hierarchy:** Always pair a large Bodoni headline with a wide-tracked DM Sans label or subhead to create a clear, tiered information flow.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed-Grid System** for desktop and a **Fluid Grid** for mobile.\n\n- **The Editorial Grid:** A 12-column grid with wide margins (`64px`). On desktop, content should rarely span all 12 columns. Instead, use offset layouts (e.g., an image spanning 7 columns and text spanning 4 columns with a 1-column gap) to create visual interest.\n- **Spacing Rhythm:** Use a strict 8px base unit. Section gaps are intentionally large (`120px`) to enforce a sense of calm and prevent the user from feeling \"rushed\" through the experience.\n- **Responsive Behavior:** On mobile, margins shrink to `16px`, and the section gap reduces to `64px`. Stack elements vertically while maintaining the Bodoni display size for brand impact.\n\n## Elevation & Depth\n\nTo maintain a sophisticated, flat-yet-tactile feel, this design system avoids heavy shadows.\n\n- **Tonal Layering:** Depth is primarily created through color shifts. A \"container\" might be Ivory (`#F9F8F6`) on a Rose Petal (`#E5B8B1`) background.\n- **Low-Contrast Outlines:** Use 1px solid borders in Espresso (`#2D1B14`) at low opacity (10-15%) to define areas without creating visual clutter.\n- **The \"Glass\" Effect:** For floating navigation or modal overlays, use a backdrop blur with a semi-transparent Ivory fill. This mimics the translucent, polished nature of quartz.\n- **Sharp Lines:** Unlike soft-web designs, separators should be thin, crisp, and high-contrast (Espresso at 100%) when used for structural division.\n\n## Shapes\n\nThe shape language is a deliberate mix of **Precision** and **Fluidity**.\n\n- **Functional Elements:** Buttons, input fields, and structural containers use **Soft** (`0.25rem`) corner radii. This suggests precision and professional geometry.\n- **Expressive Elements:** Profile images, featured portfolio shots, or \"Book Now\" sections can utilize asymmetrical \"organic\" masks—one corner fully rounded (pill) while the others remain sharp—referencing the drop of a polish bottle or a shaped nail.\n- **Dividers:** Horizontal and vertical rules should be 1px thick, reflecting the needle-thin precision of nail artistry.\n\n## Components\n\n### Buttons\n- **Primary:** Espresso background, Ivory text, uppercase DM Sans. High letter spacing. No shadows.\n- **Secondary:** Transparent background, Espresso 1px border.\n- **Luxury Action:** Champagne Gold text link with a 1px underline that expands on hover.\n\n### Cards & Surfaces\n- **Service Cards:** Use Ivory backgrounds with a thin 1px Espresso border at 10% opacity. Images should be aspect-ratio locked (4:5) to look like magazine photography.\n- **Hover State:** On hover, cards should subtly shift to a Rose Petal background or gain a very thin Champagne Gold inner-border.\n\n### Input Fields\n- Underline style preferred over boxed style for a more minimal, editorial feel. \n- Labels should be small, uppercase DM Sans (`label-caps`) positioned above the input field.\n\n### Chips & Tags\n- Used for service categories (e.g., \"Manicure,\" \"Nail Art\").\n- Rounded-pill shapes with a Rose Petal background and Espresso text.\n\n### Selection Controls\n- **Checkboxes/Radios:** Square for checkboxes, circles for radios. Espresso stroke, Champagne Gold fill when selected.\n\n### Navigation\n- A centered, minimalist header. Navigation links should be DM Sans `label-caps` with wide tracking. No icons unless strictly necessary.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "DM_SANS",
+            "labelFontFamily": "Dm Sans",
+            "namedColors": {
+              "background": "#faf9f7",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f1f1ef",
+              "inverse_primary": "#e0c0b4",
+              "inverse_surface": "#2f3130",
+              "on_background": "#1a1c1b",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#9d8177",
+              "on_primary_fixed": "#291710",
+              "on_primary_fixed_variant": "#584239",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#745c00",
+              "on_secondary_fixed": "#241a00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#1a1c1b",
+              "on_surface_variant": "#4f4441",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#a57d77",
+              "on_tertiary_fixed": "#2d1511",
+              "on_tertiary_fixed_variant": "#5f3f3a",
+              "outline": "#817470",
+              "outline_variant": "#d3c3be",
+              "primary": "#110402",
+              "primary_container": "#2d1b14",
+              "primary_fixed": "#fddbd0",
+              "primary_fixed_dim": "#e0c0b4",
+              "secondary": "#735c00",
+              "secondary_container": "#fed65b",
+              "secondary_fixed": "#ffe088",
+              "secondary_fixed_dim": "#e9c349",
+              "surface": "#faf9f7",
+              "surface_bright": "#faf9f7",
+              "surface_container": "#efeeec",
+              "surface_container_high": "#e9e8e6",
+              "surface_container_highest": "#e3e2e0",
+              "surface_container_low": "#f4f3f1",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dadad8",
+              "surface_tint": "#725950",
+              "surface_variant": "#e3e2e0",
+              "tertiary": "#140302",
+              "tertiary_container": "#321814",
+              "tertiary_fixed": "#ffdad4",
+              "tertiary_fixed_dim": "#e9bcb5"
+            },
+            "overrideNeutralColor": "#f9f8f6",
+            "overridePrimaryColor": "#2d1b14",
+            "overrideSecondaryColor": "#d4af37",
+            "overrideTertiaryColor": "#e5b8b1",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "base": "8px",
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "section-gap": "120px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.03em",
+                "lineHeight": "1.6"
+              },
+              "button": {
+                "fontFamily": "DM Sans",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1"
+              },
+              "display-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "28px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "label-caps": {
+                "fontFamily": "DM Sans",
+                "fontSize": "12px",
+                "fontWeight": "700",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1"
+              }
+            }
+          }
+        },
+        "name": "assets/369371d488ed4d9dbce07539aa6ae0ec",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "05281e0e70d8425a834c65e14bb7d1a3",
+            "name": "projects/18094224985644628453/screens/05281e0e70d8425a834c65e14bb7d1a3",
+            "prompt": "An artistic, abstract macro shot of liquid nail polish in a deep espresso and gold swirl. Thick, glossy texture with subtle light reflections. Elegant and sophisticated. Minimalist composition. Color palette: deep brown, champagne gold, ivory.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv0DbDNGc5HPrf3CpGajHkYqkifCd4-kS0Qlu4ZIjE9IO4N4DRhrnKSO4h9YJwptkrO-dGC66mtM0Wwd-SwiqUqKI17psynJZfm_IZFioow0lvdaRFZ6XQSYGG2EQpgP_XvWBvg8j0llKeIZfAT9X7Qx4urtfaoemaOdAXuyjHErqdp4kF_o5aV9Q59_nOXRAW8CKixzVb4ImSF8KSAxiNN2RQX-OliZQpRyF1jjioo4wjV0syVc6DfbXWh",
+              "name": "projects/18094224985644628453/files/4781ce3af0d34c979bfb997d0d9c581c"
+            },
+            "theme": {},
+            "title": "An artistic, abstract macro shot of liquid nail polish in a deep espresso and gold swirl. Thick, glossy texture with subtle light reflections. Elegant and sophisticated. Minimalist composition. Color palette: deep brown, champagne gold, ivory.",
+            "width": "1200"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "572cd3f96bb443489ab39a147c901d05",
+            "name": "projects/18094224985644628453/screens/572cd3f96bb443489ab39a147c901d05",
+            "prompt": "A high-end, editorial close-up photograph of a professional manicure. The style is minimalist and luxury, featuring clean, healthy nails with a soft, translucent polish. The background is a textured, creamy linen. Soft, natural morning light. High-fashion aesthetic, similar to a luxury skin-care campaign. Neutral tones: ivory, beige, soft rose. 4k, professional photography.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs7971MqJvgmbJOZ1gslXnV3XQW63gk9_9HCd-oYOf2Onpdk2sVzy7sA4TlWOvlMp6noxbbF35oj9q4GMecSmL2d7JN7sr6e20ShZ3wQIhnz2o3ZK7yk-jvLtd-3RmXmISQCCrXtdH79oiu2wZtWcDJ_gFJfZ2yZgXPPY7w2xQPxlK4rUM2nWNmXx6-PdFrFVORQAySuTU_z4V9DmrUewgmDFunnCWItGLt7yB13pfX1Z4BpVN4HNHv1k6l",
+              "name": "projects/18094224985644628453/files/088598e623af4288a45749313578141b"
+            },
+            "theme": {},
+            "title": "A high-end, editorial close-up photograph of a professional manicure. The style is minimalist and luxury, featuring clean, healthy nails with a soft, translucent polish. The background is a textured, creamy linen. Soft, natural morning light. High-fashion aesthetic, similar to a luxury skin-care campaign. Neutral tones: ivory, beige, soft rose. 4k, professional photography.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "1200",
+            "id": "66a11057f4ed41b5b00152642e2331a6",
+            "name": "projects/18094224985644628453/screens/66a11057f4ed41b5b00152642e2331a6",
+            "prompt": "A sophisticated, minimalist interior shot of a high-end nail salon. Soft lighting, clean lines, marble textures, and elegant wooden accents. No people. Serene and luxurious atmosphere. Champagne and ivory tones.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvo_-9wsojLQYP7kdVksIYR9Zr5SX9x8bBeqmPizdkVflrJflZcuWCwJ941JjQDMQObbHyRyUYUCfzJ1ouPpckyJi2RL9-e-ac34vUR85Iuf93COkjv5nWWGww-EK1ASrWHhsn_VxPUskFtCuitFhxW0sxrAteKWgO8_tY0g2lPgE_CUQdhe_3isYUsIcfLA7UZUfhb_KRySgX2tsrf-_7NbwOEa8S0jM6dq0TVDQ9FTEfYKv6bngvqFCHT",
+              "name": "projects/18094224985644628453/files/6202b6c20e1846598d9be7550dc16e77"
+            },
+            "theme": {},
+            "title": "A sophisticated, minimalist interior shot of a high-end nail salon. Soft lighting, clean lines, marble textures, and elegant wooden accents. No people. Serene and luxurious atmosphere. Champagne and ivory tones.",
+            "width": "896"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Polished Quartz Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in a high-fashion editorial aesthetic that balances the tactile nature of wellness with the sharp precision of professional artistry. It evokes a \"quiet luxury\" atmosphere, prioritizing intentionality over flashiness. \n\nThe visual style is **Minimalist-Editorial**, characterized by:\n- **Generous Whitespace:** Utilizing negative space as a luxury element to let content breathe.\n- **High-Contrast Typography:** Creating a rhythm between bold, decorative headings and functional, understated body copy.\n- **Architectural Layouts:** Mixing fluid, organic shapes (representing the application of polish) with a rigid, geometric grid (representing the technical mastery of the technician).\n- **Tactile Minimalism:** Interfaces should feel like a high-end print magazine, using subtle textures or grain if possible, but primarily relying on layout and color to convey depth.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed-Grid System** for desktop and a **Fluid Grid** for mobile.\n\n- **The Editorial Grid:** A 12-column grid with wide margins (`64px`). On desktop, content should rarely span all 12 columns. Instead, use offset layouts (e.g., an image spanning 7 columns and text spanning 4 columns with a 1-column gap) to create visual interest.\n- **Spacing Rhythm:** Use a strict 8px base unit. Section gaps are intentionally large (`120px`) to enforce a sense of calm and prevent the user from feeling \"rushed\" through the experience.\n- **Responsive Behavior:** On mobile, margins shrink to `16px`, and the section gap reduces to `64px`. Stack elements vertically while maintaining the Bodoni display size for brand impact.\n\n## Elevation & Depth\n\nTo maintain a sophisticated, flat-yet-tactile feel, this design system avoids heavy shadows.\n\n- **Tonal Layering:** Depth is primarily created through color shifts. A \"container\" might be Ivory (`#F9F8F6`) on a Rose Petal (`#E5B8B1`) background.\n- **Low-Contrast Outlines:** Use 1px solid borders in Espresso (`#2D1B14`) at low opacity (10-15%) to define areas without creating visual clutter.\n- **The \"Glass\" Effect:** For floating navigation or modal overlays, use a backdrop blur with a semi-transparent Ivory fill. This mimics the translucent, polished nature of quartz.\n- **Sharp Lines:** Unlike soft-web designs, separators should be thin, crisp, and high-contrast (Espresso at 100%) when used for structural division.\n\n## Components\n\n### Buttons\n- **Primary:** Espresso background, Ivory text, uppercase DM Sans. High letter spacing. No shadows.\n- **Secondary:** Transparent background, Espresso 1px border.\n- **Luxury Action:** Champagne Gold text link with a 1px underline that expands on hover.\n\n### Cards & Surfaces\n- **Service Cards:** Use Ivory backgrounds with a thin 1px Espresso border at 10% opacity. Images should be aspect-ratio locked (4:5) to look like magazine photography.\n- **Hover State:** On hover, cards should subtly shift to a Rose Petal background or gain a very thin Champagne Gold inner-border.\n\n### Input Fields\n- Underline style preferred over boxed style for a more minimal, editorial feel. \n- Labels should be small, uppercase DM Sans (`label-caps`) positioned above the input field.\n\n### Chips & Tags\n- Used for service categories (e.g., \"Manicure,\" \"Nail Art\").\n- Rounded-pill shapes with a Rose Petal background and Espresso text.\n\n### Selection Controls\n- **Checkboxes/Radios:** Square for checkboxes, circles for radios. Espresso stroke, Champagne Gold fill when selected.\n\n### Navigation\n- A centered, minimalist header. Navigation links should be DM Sans `label-caps` with wide tracking. No icons unless strictly necessary.",
+                "theme": {
+                  "bodyFont": "DM_SANS",
+                  "bodyFontFamily": "Dm Sans",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#2d1b14",
+                  "designMd": "---\nname: Polished Quartz Editorial\ncolors:\n  surface: '#faf9f7'\n  surface-dim: '#dadad8'\n  surface-bright: '#faf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f1'\n  surface-container: '#efeeec'\n  surface-container-high: '#e9e8e6'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1b'\n  on-surface-variant: '#4f4441'\n  inverse-surface: '#2f3130'\n  inverse-on-surface: '#f1f1ef'\n  outline: '#817470'\n  outline-variant: '#d3c3be'\n  surface-tint: '#725950'\n  primary: '#110402'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b14'\n  on-primary-container: '#9d8177'\n  inverse-primary: '#e0c0b4'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#140302'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#321814'\n  on-tertiary-container: '#a57d77'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fddbd0'\n  primary-fixed-dim: '#e0c0b4'\n  on-primary-fixed: '#291710'\n  on-primary-fixed-variant: '#584239'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#ffdad4'\n  tertiary-fixed-dim: '#e9bcb5'\n  on-tertiary-fixed: '#2d1511'\n  on-tertiary-fixed-variant: '#5f3f3a'\n  background: '#faf9f7'\n  on-background: '#1a1c1b'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.03em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is anchored in a high-fashion editorial aesthetic that balances the tactile nature of wellness with the sharp precision of professional artistry. It evokes a \"quiet luxury\" atmosphere, prioritizing intentionality over flashiness. \n\nThe visual style is **Minimalist-Editorial**, characterized by:\n- **Generous Whitespace:** Utilizing negative space as a luxury element to let content breathe.\n- **High-Contrast Typography:** Creating a rhythm between bold, decorative headings and functional, understated body copy.\n- **Architectural Layouts:** Mixing fluid, organic shapes (representing the application of polish) with a rigid, geometric grid (representing the technical mastery of the technician).\n- **Tactile Minimalism:** Interfaces should feel like a high-end print magazine, using subtle textures or grain if possible, but primarily relying on layout and color to convey depth.\n\n## Colors\n\nThe \"Polished Quartz\" palette is a sophisticated blend of earthen tones and metallic accents.\n\n- **Primary (Espresso):** Used for primary text, deep borders, and high-impact backgrounds. It provides the grounding weight for the brand.\n- **Secondary (Champagne Gold):** Reserved for subtle accents, luxury markers (like price points), and interactive highlights.\n- **Tertiary (Rose Petal):** A soft, muted tone used for hover states, categorized backgrounds, and secondary interactive elements to soften the espresso's intensity.\n- **Neutral (Ivory):** The foundational canvas. All interfaces should default to an Ivory background to maintain a warm, welcoming, yet crisp appearance.\n\n## Typography\n\nThis design system uses a stark contrast between its serif and sans-serif families to mirror the \"Vogue\" influence.\n\n- **Headlines (Bodoni Moda):** A high-contrast, vertical-axis serif. Use this for all key messaging. Larger displays should use the italic variants for a more \"couture\" feel.\n- **Body & Labels (DM Sans):** A geometric sans-serif. To achieve the \"premium\" look, body text should utilize slightly increased letter-spacing (`0.03em`) to create a sense of lightness and legibility.\n- **Editorial Hierarchy:** Always pair a large Bodoni headline with a wide-tracked DM Sans label or subhead to create a clear, tiered information flow.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed-Grid System** for desktop and a **Fluid Grid** for mobile.\n\n- **The Editorial Grid:** A 12-column grid with wide margins (`64px`). On desktop, content should rarely span all 12 columns. Instead, use offset layouts (e.g., an image spanning 7 columns and text spanning 4 columns with a 1-column gap) to create visual interest.\n- **Spacing Rhythm:** Use a strict 8px base unit. Section gaps are intentionally large (`120px`) to enforce a sense of calm and prevent the user from feeling \"rushed\" through the experience.\n- **Responsive Behavior:** On mobile, margins shrink to `16px`, and the section gap reduces to `64px`. Stack elements vertically while maintaining the Bodoni display size for brand impact.\n\n## Elevation & Depth\n\nTo maintain a sophisticated, flat-yet-tactile feel, this design system avoids heavy shadows.\n\n- **Tonal Layering:** Depth is primarily created through color shifts. A \"container\" might be Ivory (`#F9F8F6`) on a Rose Petal (`#E5B8B1`) background.\n- **Low-Contrast Outlines:** Use 1px solid borders in Espresso (`#2D1B14`) at low opacity (10-15%) to define areas without creating visual clutter.\n- **The \"Glass\" Effect:** For floating navigation or modal overlays, use a backdrop blur with a semi-transparent Ivory fill. This mimics the translucent, polished nature of quartz.\n- **Sharp Lines:** Unlike soft-web designs, separators should be thin, crisp, and high-contrast (Espresso at 100%) when used for structural division.\n\n## Shapes\n\nThe shape language is a deliberate mix of **Precision** and **Fluidity**.\n\n- **Functional Elements:** Buttons, input fields, and structural containers use **Soft** (`0.25rem`) corner radii. This suggests precision and professional geometry.\n- **Expressive Elements:** Profile images, featured portfolio shots, or \"Book Now\" sections can utilize asymmetrical \"organic\" masks—one corner fully rounded (pill) while the others remain sharp—referencing the drop of a polish bottle or a shaped nail.\n- **Dividers:** Horizontal and vertical rules should be 1px thick, reflecting the needle-thin precision of nail artistry.\n\n## Components\n\n### Buttons\n- **Primary:** Espresso background, Ivory text, uppercase DM Sans. High letter spacing. No shadows.\n- **Secondary:** Transparent background, Espresso 1px border.\n- **Luxury Action:** Champagne Gold text link with a 1px underline that expands on hover.\n\n### Cards & Surfaces\n- **Service Cards:** Use Ivory backgrounds with a thin 1px Espresso border at 10% opacity. Images should be aspect-ratio locked (4:5) to look like magazine photography.\n- **Hover State:** On hover, cards should subtly shift to a Rose Petal background or gain a very thin Champagne Gold inner-border.\n\n### Input Fields\n- Underline style preferred over boxed style for a more minimal, editorial feel. \n- Labels should be small, uppercase DM Sans (`label-caps`) positioned above the input field.\n\n### Chips & Tags\n- Used for service categories (e.g., \"Manicure,\" \"Nail Art\").\n- Rounded-pill shapes with a Rose Petal background and Espresso text.\n\n### Selection Controls\n- **Checkboxes/Radios:** Square for checkboxes, circles for radios. Espresso stroke, Champagne Gold fill when selected.\n\n### Navigation\n- A centered, minimalist header. Navigation links should be DM Sans `label-caps` with wide tracking. No icons unless strictly necessary.",
+                  "font": "BODONI_MODA",
+                  "headlineFont": "BODONI_MODA",
+                  "headlineFontFamily": "Bodoni Moda",
+                  "labelFont": "DM_SANS",
+                  "labelFontFamily": "Dm Sans",
+                  "namedColors": {
+                    "background": "#faf9f7",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f1f1ef",
+                    "inverse_primary": "#e0c0b4",
+                    "inverse_surface": "#2f3130",
+                    "on_background": "#1a1c1b",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#9d8177",
+                    "on_primary_fixed": "#291710",
+                    "on_primary_fixed_variant": "#584239",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#745c00",
+                    "on_secondary_fixed": "#241a00",
+                    "on_secondary_fixed_variant": "#574500",
+                    "on_surface": "#1a1c1b",
+                    "on_surface_variant": "#4f4441",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#a57d77",
+                    "on_tertiary_fixed": "#2d1511",
+                    "on_tertiary_fixed_variant": "#5f3f3a",
+                    "outline": "#817470",
+                    "outline_variant": "#d3c3be",
+                    "primary": "#110402",
+                    "primary_container": "#2d1b14",
+                    "primary_fixed": "#fddbd0",
+                    "primary_fixed_dim": "#e0c0b4",
+                    "secondary": "#735c00",
+                    "secondary_container": "#fed65b",
+                    "secondary_fixed": "#ffe088",
+                    "secondary_fixed_dim": "#e9c349",
+                    "surface": "#faf9f7",
+                    "surface_bright": "#faf9f7",
+                    "surface_container": "#efeeec",
+                    "surface_container_high": "#e9e8e6",
+                    "surface_container_highest": "#e3e2e0",
+                    "surface_container_low": "#f4f3f1",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dadad8",
+                    "surface_tint": "#725950",
+                    "surface_variant": "#e3e2e0",
+                    "tertiary": "#140302",
+                    "tertiary_container": "#321814",
+                    "tertiary_fixed": "#ffdad4",
+                    "tertiary_fixed_dim": "#e9bcb5"
+                  },
+                  "overrideNeutralColor": "#f9f8f6",
+                  "overridePrimaryColor": "#2d1b14",
+                  "overrideSecondaryColor": "#d4af37",
+                  "overrideTertiaryColor": "#e5b8b1",
+                  "roundness": "ROUND_FOUR",
+                  "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "section-gap": "120px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.03em",
+                      "lineHeight": "1.6"
+                    },
+                    "button": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "72px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "32px",
+                      "fontWeight": "500",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "28px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "label-caps": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "12px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "1"
+                    }
+                  }
+                }
+              },
+              "name": "assets/369371d488ed4d9dbce07539aa6ae0ec",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10098",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzFlNjMxYjEzYWMxMzRiNDY4OTY1NDUxZjJkMGIyZjkwEgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxODA5NDIyNDk4NTY0NDYyODQ1Mw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/18094224985644628453/files/bed1944c54864336a16622f46322e566"
+            },
+            "id": "9d68ea11388444ceaea3e977327c3ebb",
+            "name": "projects/18094224985644628453/screens/9d68ea11388444ceaea3e977327c3ebb",
+            "prompt": "Create a bespoke, editorial landing page for K C Nails. \n\nLayout Design:\n- Hero: Use {{DATA:IMAGE:IMAGE_5}} as a full-bleed or large offset hero image. The heading \"Artistry in Every Stroke\" in a large, elegant serif. Subtext: \"A boutique nail experience in Chico, CA. Appointments appreciated.\"\n- Credibility: A minimalist \"Why K C Nails\" section featuring {{DATA:IMAGE:IMAGE_3}} as an artistic accent. Points: Precision, Wellness, Creative Artistry.\n- Services: An asymmetric grid of services. Use evocative names like 'The Minimalist Manicure', 'Architectural Extensions', and 'Luxe Pedicure Rituals'. \n- About: A section called \"The Studio\" using {{DATA:IMAGE:IMAGE_4}} to show the serene environment. Text about the owner's vision for a high-end, personal service.\n- Visit: Includes the contact info ((530) 809-1819, 175 Cohasset Road, Chico, CA) and the REQUIRED map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: A refined form with floating labels and a 'Request Appointment' button.\n\nVisual Motif: Subtle gold rule lines and deep espresso background blocks to create a high-fashion, editorial rhythm. No generic grids. High whitespace.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvTV0qGpT16Zvxh7MefOeg0ut3gYmCShPNBthQ4i_BpiKvK8BzXJ5LZvNiJbalN9oCvPx7Dwp8sx3y6XF70tRB-0GBse8q-qOq19tRIIBynMcU-czFDBQGf4OAtg1BlHaIgN8itXZI_batdZ912jAkxGQYXkryMHiQyt6b-39xsamgDnE7hXUUmTcDYDqr7KQEKFEh-ru0-1RKLx2gwQPSfZYkgfswuPJqD-1tDE2JUi4JsOQjPN7fJJXI",
+              "name": "projects/18094224985644628453/files/2eb789ce3d75410f98e576364ef4c97d"
+            },
+            "theme": {
+              "bodyFont": "DM_SANS",
+              "bodyFontFamily": "Dm Sans",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#2d1b14",
+              "designMd": "---\nname: Polished Quartz Editorial\ncolors:\n  surface: '#faf9f7'\n  surface-dim: '#dadad8'\n  surface-bright: '#faf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f1'\n  surface-container: '#efeeec'\n  surface-container-high: '#e9e8e6'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1b'\n  on-surface-variant: '#4f4441'\n  inverse-surface: '#2f3130'\n  inverse-on-surface: '#f1f1ef'\n  outline: '#817470'\n  outline-variant: '#d3c3be'\n  surface-tint: '#725950'\n  primary: '#110402'\n  on-primary: '#ffffff'\n  primary-container: '#2d1b14'\n  on-primary-container: '#9d8177'\n  inverse-primary: '#e0c0b4'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#140302'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#321814'\n  on-tertiary-container: '#a57d77'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fddbd0'\n  primary-fixed-dim: '#e0c0b4'\n  on-primary-fixed: '#291710'\n  on-primary-fixed-variant: '#584239'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#ffdad4'\n  tertiary-fixed-dim: '#e9bcb5'\n  on-tertiary-fixed: '#2d1511'\n  on-tertiary-fixed-variant: '#5f3f3a'\n  background: '#faf9f7'\n  on-background: '#1a1c1b'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.03em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is anchored in a high-fashion editorial aesthetic that balances the tactile nature of wellness with the sharp precision of professional artistry. It evokes a \"quiet luxury\" atmosphere, prioritizing intentionality over flashiness. \n\nThe visual style is **Minimalist-Editorial**, characterized by:\n- **Generous Whitespace:** Utilizing negative space as a luxury element to let content breathe.\n- **High-Contrast Typography:** Creating a rhythm between bold, decorative headings and functional, understated body copy.\n- **Architectural Layouts:** Mixing fluid, organic shapes (representing the application of polish) with a rigid, geometric grid (representing the technical mastery of the technician).\n- **Tactile Minimalism:** Interfaces should feel like a high-end print magazine, using subtle textures or grain if possible, but primarily relying on layout and color to convey depth.\n\n## Colors\n\nThe \"Polished Quartz\" palette is a sophisticated blend of earthen tones and metallic accents.\n\n- **Primary (Espresso):** Used for primary text, deep borders, and high-impact backgrounds. It provides the grounding weight for the brand.\n- **Secondary (Champagne Gold):** Reserved for subtle accents, luxury markers (like price points), and interactive highlights.\n- **Tertiary (Rose Petal):** A soft, muted tone used for hover states, categorized backgrounds, and secondary interactive elements to soften the espresso's intensity.\n- **Neutral (Ivory):** The foundational canvas. All interfaces should default to an Ivory background to maintain a warm, welcoming, yet crisp appearance.\n\n## Typography\n\nThis design system uses a stark contrast between its serif and sans-serif families to mirror the \"Vogue\" influence.\n\n- **Headlines (Bodoni Moda):** A high-contrast, vertical-axis serif. Use this for all key messaging. Larger displays should use the italic variants for a more \"couture\" feel.\n- **Body & Labels (DM Sans):** A geometric sans-serif. To achieve the \"premium\" look, body text should utilize slightly increased letter-spacing (`0.03em`) to create a sense of lightness and legibility.\n- **Editorial Hierarchy:** Always pair a large Bodoni headline with a wide-tracked DM Sans label or subhead to create a clear, tiered information flow.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed-Grid System** for desktop and a **Fluid Grid** for mobile.\n\n- **The Editorial Grid:** A 12-column grid with wide margins (`64px`). On desktop, content should rarely span all 12 columns. Instead, use offset layouts (e.g., an image spanning 7 columns and text spanning 4 columns with a 1-column gap) to create visual interest.\n- **Spacing Rhythm:** Use a strict 8px base unit. Section gaps are intentionally large (`120px`) to enforce a sense of calm and prevent the user from feeling \"rushed\" through the experience.\n- **Responsive Behavior:** On mobile, margins shrink to `16px`, and the section gap reduces to `64px`. Stack elements vertically while maintaining the Bodoni display size for brand impact.\n\n## Elevation & Depth\n\nTo maintain a sophisticated, flat-yet-tactile feel, this design system avoids heavy shadows.\n\n- **Tonal Layering:** Depth is primarily created through color shifts. A \"container\" might be Ivory (`#F9F8F6`) on a Rose Petal (`#E5B8B1`) background.\n- **Low-Contrast Outlines:** Use 1px solid borders in Espresso (`#2D1B14`) at low opacity (10-15%) to define areas without creating visual clutter.\n- **The \"Glass\" Effect:** For floating navigation or modal overlays, use a backdrop blur with a semi-transparent Ivory fill. This mimics the translucent, polished nature of quartz.\n- **Sharp Lines:** Unlike soft-web designs, separators should be thin, crisp, and high-contrast (Espresso at 100%) when used for structural division.\n\n## Shapes\n\nThe shape language is a deliberate mix of **Precision** and **Fluidity**.\n\n- **Functional Elements:** Buttons, input fields, and structural containers use **Soft** (`0.25rem`) corner radii. This suggests precision and professional geometry.\n- **Expressive Elements:** Profile images, featured portfolio shots, or \"Book Now\" sections can utilize asymmetrical \"organic\" masks—one corner fully rounded (pill) while the others remain sharp—referencing the drop of a polish bottle or a shaped nail.\n- **Dividers:** Horizontal and vertical rules should be 1px thick, reflecting the needle-thin precision of nail artistry.\n\n## Components\n\n### Buttons\n- **Primary:** Espresso background, Ivory text, uppercase DM Sans. High letter spacing. No shadows.\n- **Secondary:** Transparent background, Espresso 1px border.\n- **Luxury Action:** Champagne Gold text link with a 1px underline that expands on hover.\n\n### Cards & Surfaces\n- **Service Cards:** Use Ivory backgrounds with a thin 1px Espresso border at 10% opacity. Images should be aspect-ratio locked (4:5) to look like magazine photography.\n- **Hover State:** On hover, cards should subtly shift to a Rose Petal background or gain a very thin Champagne Gold inner-border.\n\n### Input Fields\n- Underline style preferred over boxed style for a more minimal, editorial feel. \n- Labels should be small, uppercase DM Sans (`label-caps`) positioned above the input field.\n\n### Chips & Tags\n- Used for service categories (e.g., \"Manicure,\" \"Nail Art\").\n- Rounded-pill shapes with a Rose Petal background and Espresso text.\n\n### Selection Controls\n- **Checkboxes/Radios:** Square for checkboxes, circles for radios. Espresso stroke, Champagne Gold fill when selected.\n\n### Navigation\n- A centered, minimalist header. Navigation links should be DM Sans `label-caps` with wide tracking. No icons unless strictly necessary.",
+              "font": "BODONI_MODA",
+              "headlineFont": "BODONI_MODA",
+              "headlineFontFamily": "Bodoni Moda",
+              "labelFont": "DM_SANS",
+              "labelFontFamily": "Dm Sans",
+              "namedColors": {
+                "background": "#faf9f7",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f1f1ef",
+                "inverse_primary": "#e0c0b4",
+                "inverse_surface": "#2f3130",
+                "on_background": "#1a1c1b",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#9d8177",
+                "on_primary_fixed": "#291710",
+                "on_primary_fixed_variant": "#584239",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#745c00",
+                "on_secondary_fixed": "#241a00",
+                "on_secondary_fixed_variant": "#574500",
+                "on_surface": "#1a1c1b",
+                "on_surface_variant": "#4f4441",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#a57d77",
+                "on_tertiary_fixed": "#2d1511",
+                "on_tertiary_fixed_variant": "#5f3f3a",
+                "outline": "#817470",
+                "outline_variant": "#d3c3be",
+                "primary": "#110402",
+                "primary_container": "#2d1b14",
+                "primary_fixed": "#fddbd0",
+                "primary_fixed_dim": "#e0c0b4",
+                "secondary": "#735c00",
+                "secondary_container": "#fed65b",
+                "secondary_fixed": "#ffe088",
+                "secondary_fixed_dim": "#e9c349",
+                "surface": "#faf9f7",
+                "surface_bright": "#faf9f7",
+                "surface_container": "#efeeec",
+                "surface_container_high": "#e9e8e6",
+                "surface_container_highest": "#e3e2e0",
+                "surface_container_low": "#f4f3f1",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dadad8",
+                "surface_tint": "#725950",
+                "surface_variant": "#e3e2e0",
+                "tertiary": "#140302",
+                "tertiary_container": "#321814",
+                "tertiary_fixed": "#ffdad4",
+                "tertiary_fixed_dim": "#e9bcb5"
+              },
+              "overrideNeutralColor": "#f9f8f6",
+              "overridePrimaryColor": "#2d1b14",
+              "overrideSecondaryColor": "#d4af37",
+              "overrideTertiaryColor": "#e5b8b1",
+              "roundness": "ROUND_FOUR",
+              "spacing": {
+                "base": "8px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "section-gap": "120px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.03em",
+                  "lineHeight": "1.6"
+                },
+                "button": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1"
+                },
+                "display-lg": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "72px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "32px",
+                  "fontWeight": "500",
+                  "lineHeight": "1.3"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "28px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-xl": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "label-caps": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "12px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "1"
+                }
+              }
+            },
+            "title": "K C Nails - Bespoke Editorial Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial homepage for K C Nails that moves away from generic local business templates to create a truly premium, memorable brand presence.\n\n### Design Highlights:\n- **Visual Motif**: I utilized an \"Artistry in Motion\" theme, pairing high-contrast typography with macro textures of nail polish to evoke a sense of fine art rather than just a utility service.\n- **Editorial Layout**: The design features an asymmetric grid and generous whitespace, mirroring the layout of high-end fashion magazines.\n- **Custom Palette**: I developed a 'Polished Quartz' scheme—deep espresso, champagne gold, and soft ivory—to communicate a sense of quiet luxury and professional precision.\n- **Brand Consistency**: The typography uses a high-contrast serif for an timeless feel, balanced by a modern, airy sans-serif for clarity.\n\nThe site includes all requested sections, from the artistic hero and service palette to the sanctuary-inspired about section and the visit/contact area with the integrated map slot.\n\nHow does this visual direction feel for K C Nails? We can refine the service descriptions or adjust the intensity of the color blocks if you'd like."
+    },
+    {
+      "suggestion": "Make the hero section feel more intimate"
+    },
+    {
+      "suggestion": "Try a darker version of the palette"
+    },
+    {
+      "suggestion": "Add a gallery section for nail art examples"
+    }
+  ],
+  "projectId": "18094224985644628453",
+  "sessionId": "1607415808360860078"
+}
