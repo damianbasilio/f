@@ -1,0 +1,429 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Midnight & Pearl",
+        "styleGuidelines": "## Brand & Style\n\nThe brand personality is defined by \"Midnight & Pearl\"—a study in high-contrast luxury, precision, and the fluid artistry of nail design. This design system caters to a high-end clientele who values sophistication, meticulous detail, and an editorial aesthetic over standard commercial layouts. \n\nThe visual style is **Minimalist Editorial**. It leverages generous whitespace (the \"Pearl\") against deep, authoritative foundations (the \"Midnight\") to create a sense of breathing room and exclusivity. Intentional asymmetry and overlapping elements break the rigidity of traditional web grids, mirroring the organic, flowing lines of hand-painted nail art. The emotional response should be one of calm, confidence, and bespoke care.\n\n## Layout & Spacing\n\nThis design system moves away from rigid block-based layouts in favor of a **Fluid Editorial Grid**.\n\n- **The Asymmetric Grid:** While based on a 12-column foundation, content should often be \"offset\" by 1 or 2 columns to create visual interest. For example, a heading may sit on column 2, while the body text starts on column 4.\n- **Fluid Scale:** Margins and padding use `clamp()` functions to ensure the \"breathability\" of the design translates from a 27-inch desktop to a mobile device without manual breakpoint adjustments.\n- **Overlapping Elements:** Utilize the `asymmetric-offset` for images and cards that break their container boundaries. An image might overflow into the page margin to create a sense of movement.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct \"stories\" or service categories, ensuring the user is never overwhelmed by information.\n\n## Elevation & Depth\n\nTo maintain the \"Pearl\" aesthetic, the system avoids heavy, muddy shadows. Depth is achieved through:\n\n- **Glassmorphism:** Use high-diffusion backdrop blurs (20px+) for navigation bars and modal overlays. This suggests the semi-translucent quality of high-end nail finishes.\n- **Tonal Stacking:** Instead of shadows, use slight color shifts. A \"Pearl\" surface might sit atop a \"Midnight\" background with no shadow, relying entirely on color contrast for hierarchy.\n- **The \"Champagne\" Stroke:** Low-opacity (20-30%) outlines in Champagne Gold are used for high-tier interactive cards to provide a subtle glow without the weight of a shadow.\n\n## Components\n\n### Buttons\n- **Primary:** Midnight background, Pearl text, sharp transitions. Hover state introduces a Champagne Gold bottom-border (2px).\n- **Secondary/Ghost:** Transparent background with a thin Blush Clay border. \n- **Text Link:** Label-caps style with a persistent underline that \"grows\" on hover.\n\n### Cards (The \"Editorial Card\")\nCards should not look like containers. They consist of an image with an `asymmetric-offset`, a Playfair Display headline slightly overlapping the image, and Inter body text below. No borders or shadows; the separation is created by the whitespace.\n\n### Inputs & Fields\nUltra-minimalist. Bottom-border only (1px Midnight), with labels using the `label-caps` typography style. Focus states shift the border color to Champagne Gold.\n\n### Chips & Tags\nSmall, rounded pills in Blush Clay with low-opacity. Used for service categories (e.g., \"Gel,\" \"Art,\" \"Acrylic\").\n\n### Navigation\nA fixed top-bar with a backdrop-blur. The logo is centered to maintain the editorial balance, with links split to the left and right.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#0f172a",
+          "designMd": "---\nname: Midnight & Pearl\ncolors:\n  surface: '#fcf8fa'\n  surface-dim: '#dcd9db'\n  surface-bright: '#fcf8fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f5'\n  surface-container: '#f0edef'\n  surface-container-high: '#eae7e9'\n  surface-container-highest: '#e4e2e4'\n  on-surface: '#1b1b1d'\n  on-surface-variant: '#45464d'\n  inverse-surface: '#303032'\n  inverse-on-surface: '#f3f0f2'\n  outline: '#76777d'\n  outline-variant: '#c6c6cd'\n  surface-tint: '#565e74'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#131b2e'\n  on-primary-container: '#7c839b'\n  inverse-primary: '#bec6e0'\n  secondary: '#5c5f61'\n  on-secondary: '#ffffff'\n  secondary-container: '#e0e3e5'\n  on-secondary-container: '#626567'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cba72f'\n  on-tertiary-container: '#4e3d00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae2fd'\n  primary-fixed-dim: '#bec6e0'\n  on-primary-fixed: '#131b2e'\n  on-primary-fixed-variant: '#3f465c'\n  secondary-fixed: '#e0e3e5'\n  secondary-fixed-dim: '#c4c7c9'\n  on-secondary-fixed: '#191c1e'\n  on-secondary-fixed-variant: '#444749'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fcf8fa'\n  on-background: '#1b1b1d'\n  surface-variant: '#e4e2e4'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  fluid-margin: clamp(1rem, 5vw, 6rem)\n  fluid-gutter: clamp(1rem, 3vw, 2rem)\n  asymmetric-offset: 4rem\n  section-gap: clamp(4rem, 10vh, 12rem)\n---\n\n## Brand & Style\n\nThe brand personality is defined by \"Midnight & Pearl\"—a study in high-contrast luxury, precision, and the fluid artistry of nail design. This design system caters to a high-end clientele who values sophistication, meticulous detail, and an editorial aesthetic over standard commercial layouts. \n\nThe visual style is **Minimalist Editorial**. It leverages generous whitespace (the \"Pearl\") against deep, authoritative foundations (the \"Midnight\") to create a sense of breathing room and exclusivity. Intentional asymmetry and overlapping elements break the rigidity of traditional web grids, mirroring the organic, flowing lines of hand-painted nail art. The emotional response should be one of calm, confidence, and bespoke care.\n\n## Colors\n\nThe palette is centered on a high-contrast relationship between light and dark, punctuated by soft, skin-tone adjacent accents and metallic highlights.\n\n- **Primary (Midnight Navy):** Used for primary text, deep backgrounds, and heavy structural elements to convey authority and depth.\n- **Secondary (Pearl Cream):** The primary canvas color. It provides a softer, more luxurious alternative to pure white, reducing eye strain while maintaining a clean, airy feel.\n- **Tertiary (Champagne Gold):** An accent for interactive states, borders, and \"prestige\" indicators. Use sparingly to maintain its value.\n- **Accent (Blush Clay):** A soft, organic tone used for secondary buttons, illustrative flourishes, and backgrounds for textural sections. It grounds the palette in the physical reality of the services provided.\n\n## Typography\n\nTypography is the primary vehicle for the \"Editorial\" feel. The system utilizes a classic high-contrast pairing:\n\n- **Headlines:** Use **Playfair Display**. It should be set with tight line height for display sizes and occasional italicization for emphasis on specific words to mimic luxury magazine layouts.\n- **Body & Interface:** Use **Inter**. Set body copy with generous line heights and subtle letter spacing to ensure maximum readability against the high-contrast background.\n- **Labels:** Small caps with wide letter-spacing (0.15em) should be used for section headers and eyebrow text to provide a systematic, navigable structure.\n\n## Layout & Spacing\n\nThis design system moves away from rigid block-based layouts in favor of a **Fluid Editorial Grid**.\n\n- **The Asymmetric Grid:** While based on a 12-column foundation, content should often be \"offset\" by 1 or 2 columns to create visual interest. For example, a heading may sit on column 2, while the body text starts on column 4.\n- **Fluid Scale:** Margins and padding use `clamp()` functions to ensure the \"breathability\" of the design translates from a 27-inch desktop to a mobile device without manual breakpoint adjustments.\n- **Overlapping Elements:** Utilize the `asymmetric-offset` for images and cards that break their container boundaries. An image might overflow into the page margin to create a sense of movement.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct \"stories\" or service categories, ensuring the user is never overwhelmed by information.\n\n## Elevation & Depth\n\nTo maintain the \"Pearl\" aesthetic, the system avoids heavy, muddy shadows. Depth is achieved through:\n\n- **Glassmorphism:** Use high-diffusion backdrop blurs (20px+) for navigation bars and modal overlays. This suggests the semi-translucent quality of high-end nail finishes.\n- **Tonal Stacking:** Instead of shadows, use slight color shifts. A \"Pearl\" surface might sit atop a \"Midnight\" background with no shadow, relying entirely on color contrast for hierarchy.\n- **The \"Champagne\" Stroke:** Low-opacity (20-30%) outlines in Champagne Gold are used for high-tier interactive cards to provide a subtle glow without the weight of a shadow.\n\n## Shapes\n\nThe shape language reflects \"Flowing Lines.\" While a base roundedness of `0.5rem` is used for standard components, specific \"Bespoke\" elements utilize a more organic approach:\n\n- **Standard UI:** 8px (0.5rem) corners for buttons and input fields to maintain a modern, professional structure.\n- **Editorial Images:** Use asymmetrical corner rounding (e.g., top-left and bottom-right at 100px, others at 0px) to mimic the silhouette of a manicured nail or organic liquid flow.\n- **The Flowing Motif:** Decorative SVG paths (thin 1px lines in Gold or Blush) should weave between sections, occasionally intersecting with text or images to guide the eye.\n\n## Components\n\n### Buttons\n- **Primary:** Midnight background, Pearl text, sharp transitions. Hover state introduces a Champagne Gold bottom-border (2px).\n- **Secondary/Ghost:** Transparent background with a thin Blush Clay border. \n- **Text Link:** Label-caps style with a persistent underline that \"grows\" on hover.\n\n### Cards (The \"Editorial Card\")\nCards should not look like containers. They consist of an image with an `asymmetric-offset`, a Playfair Display headline slightly overlapping the image, and Inter body text below. No borders or shadows; the separation is created by the whitespace.\n\n### Inputs & Fields\nUltra-minimalist. Bottom-border only (1px Midnight), with labels using the `label-caps` typography style. Focus states shift the border color to Champagne Gold.\n\n### Chips & Tags\nSmall, rounded pills in Blush Clay with low-opacity. Used for service categories (e.g., \"Gel,\" \"Art,\" \"Acrylic\").\n\n### Navigation\nA fixed top-bar with a backdrop-blur. The logo is centered to maintain the editorial balance, with links split to the left and right.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "INTER",
+          "labelFontFamily": "Inter",
+          "namedColors": {
+            "background": "#fcf8fa",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f3f0f2",
+            "inverse_primary": "#bec6e0",
+            "inverse_surface": "#303032",
+            "on_background": "#1b1b1d",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#7c839b",
+            "on_primary_fixed": "#131b2e",
+            "on_primary_fixed_variant": "#3f465c",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#626567",
+            "on_secondary_fixed": "#191c1e",
+            "on_secondary_fixed_variant": "#444749",
+            "on_surface": "#1b1b1d",
+            "on_surface_variant": "#45464d",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#4e3d00",
+            "on_tertiary_fixed": "#241a00",
+            "on_tertiary_fixed_variant": "#574500",
+            "outline": "#76777d",
+            "outline_variant": "#c6c6cd",
+            "primary": "#000000",
+            "primary_container": "#131b2e",
+            "primary_fixed": "#dae2fd",
+            "primary_fixed_dim": "#bec6e0",
+            "secondary": "#5c5f61",
+            "secondary_container": "#e0e3e5",
+            "secondary_fixed": "#e0e3e5",
+            "secondary_fixed_dim": "#c4c7c9",
+            "surface": "#fcf8fa",
+            "surface_bright": "#fcf8fa",
+            "surface_container": "#f0edef",
+            "surface_container_high": "#eae7e9",
+            "surface_container_highest": "#e4e2e4",
+            "surface_container_low": "#f6f3f5",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcd9db",
+            "surface_tint": "#565e74",
+            "surface_variant": "#e4e2e4",
+            "tertiary": "#735c00",
+            "tertiary_container": "#cba72f",
+            "tertiary_fixed": "#ffe088",
+            "tertiary_fixed_dim": "#e9c349"
+          },
+          "overridePrimaryColor": "#0f172a",
+          "overrideSecondaryColor": "#f8fafc",
+          "overrideTertiaryColor": "#d4af37",
+          "roundness": "ROUND_EIGHT",
+          "spacing": {
+            "asymmetric-offset": "4rem",
+            "fluid-gutter": "clamp(1rem, 3vw, 2rem)",
+            "fluid-margin": "clamp(1rem, 5vw, 6rem)",
+            "section-gap": "clamp(4rem, 10vh, 12rem)",
+            "unit": "4px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.5"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "80px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "1.2"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "headline-xl": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "label-caps": {
+              "fontFamily": "Inter",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.15em",
+              "lineHeight": "1"
+            }
+          }
+        }
+      },
+      "name": "assets/0abfa7b2b8564f839845466ece28fdba",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Midnight & Pearl",
+              "styleGuidelines": "## Brand & Style\n\nThe brand personality is defined by \"Midnight & Pearl\"—a study in high-contrast luxury, precision, and the fluid artistry of nail design. This design system caters to a high-end clientele who values sophistication, meticulous detail, and an editorial aesthetic over standard commercial layouts. \n\nThe visual style is **Minimalist Editorial**. It leverages generous whitespace (the \"Pearl\") against deep, authoritative foundations (the \"Midnight\") to create a sense of breathing room and exclusivity. Intentional asymmetry and overlapping elements break the rigidity of traditional web grids, mirroring the organic, flowing lines of hand-painted nail art. The emotional response should be one of calm, confidence, and bespoke care.\n\n## Layout & Spacing\n\nThis design system moves away from rigid block-based layouts in favor of a **Fluid Editorial Grid**.\n\n- **The Asymmetric Grid:** While based on a 12-column foundation, content should often be \"offset\" by 1 or 2 columns to create visual interest. For example, a heading may sit on column 2, while the body text starts on column 4.\n- **Fluid Scale:** Margins and padding use `clamp()` functions to ensure the \"breathability\" of the design translates from a 27-inch desktop to a mobile device without manual breakpoint adjustments.\n- **Overlapping Elements:** Utilize the `asymmetric-offset` for images and cards that break their container boundaries. An image might overflow into the page margin to create a sense of movement.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct \"stories\" or service categories, ensuring the user is never overwhelmed by information.\n\n## Elevation & Depth\n\nTo maintain the \"Pearl\" aesthetic, the system avoids heavy, muddy shadows. Depth is achieved through:\n\n- **Glassmorphism:** Use high-diffusion backdrop blurs (20px+) for navigation bars and modal overlays. This suggests the semi-translucent quality of high-end nail finishes.\n- **Tonal Stacking:** Instead of shadows, use slight color shifts. A \"Pearl\" surface might sit atop a \"Midnight\" background with no shadow, relying entirely on color contrast for hierarchy.\n- **The \"Champagne\" Stroke:** Low-opacity (20-30%) outlines in Champagne Gold are used for high-tier interactive cards to provide a subtle glow without the weight of a shadow.\n\n## Components\n\n### Buttons\n- **Primary:** Midnight background, Pearl text, sharp transitions. Hover state introduces a Champagne Gold bottom-border (2px).\n- **Secondary/Ghost:** Transparent background with a thin Blush Clay border. \n- **Text Link:** Label-caps style with a persistent underline that \"grows\" on hover.\n\n### Cards (The \"Editorial Card\")\nCards should not look like containers. They consist of an image with an `asymmetric-offset`, a Playfair Display headline slightly overlapping the image, and Inter body text below. No borders or shadows; the separation is created by the whitespace.\n\n### Inputs & Fields\nUltra-minimalist. Bottom-border only (1px Midnight), with labels using the `label-caps` typography style. Focus states shift the border color to Champagne Gold.\n\n### Chips & Tags\nSmall, rounded pills in Blush Clay with low-opacity. Used for service categories (e.g., \"Gel,\" \"Art,\" \"Acrylic\").\n\n### Navigation\nA fixed top-bar with a backdrop-blur. The logo is centered to maintain the editorial balance, with links split to the left and right.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#0f172a",
+                "designMd": "---\nname: Midnight & Pearl\ncolors:\n  surface: '#fcf8fa'\n  surface-dim: '#dcd9db'\n  surface-bright: '#fcf8fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f5'\n  surface-container: '#f0edef'\n  surface-container-high: '#eae7e9'\n  surface-container-highest: '#e4e2e4'\n  on-surface: '#1b1b1d'\n  on-surface-variant: '#45464d'\n  inverse-surface: '#303032'\n  inverse-on-surface: '#f3f0f2'\n  outline: '#76777d'\n  outline-variant: '#c6c6cd'\n  surface-tint: '#565e74'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#131b2e'\n  on-primary-container: '#7c839b'\n  inverse-primary: '#bec6e0'\n  secondary: '#5c5f61'\n  on-secondary: '#ffffff'\n  secondary-container: '#e0e3e5'\n  on-secondary-container: '#626567'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cba72f'\n  on-tertiary-container: '#4e3d00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae2fd'\n  primary-fixed-dim: '#bec6e0'\n  on-primary-fixed: '#131b2e'\n  on-primary-fixed-variant: '#3f465c'\n  secondary-fixed: '#e0e3e5'\n  secondary-fixed-dim: '#c4c7c9'\n  on-secondary-fixed: '#191c1e'\n  on-secondary-fixed-variant: '#444749'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fcf8fa'\n  on-background: '#1b1b1d'\n  surface-variant: '#e4e2e4'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  fluid-margin: clamp(1rem, 5vw, 6rem)\n  fluid-gutter: clamp(1rem, 3vw, 2rem)\n  asymmetric-offset: 4rem\n  section-gap: clamp(4rem, 10vh, 12rem)\n---\n\n## Brand & Style\n\nThe brand personality is defined by \"Midnight & Pearl\"—a study in high-contrast luxury, precision, and the fluid artistry of nail design. This design system caters to a high-end clientele who values sophistication, meticulous detail, and an editorial aesthetic over standard commercial layouts. \n\nThe visual style is **Minimalist Editorial**. It leverages generous whitespace (the \"Pearl\") against deep, authoritative foundations (the \"Midnight\") to create a sense of breathing room and exclusivity. Intentional asymmetry and overlapping elements break the rigidity of traditional web grids, mirroring the organic, flowing lines of hand-painted nail art. The emotional response should be one of calm, confidence, and bespoke care.\n\n## Colors\n\nThe palette is centered on a high-contrast relationship between light and dark, punctuated by soft, skin-tone adjacent accents and metallic highlights.\n\n- **Primary (Midnight Navy):** Used for primary text, deep backgrounds, and heavy structural elements to convey authority and depth.\n- **Secondary (Pearl Cream):** The primary canvas color. It provides a softer, more luxurious alternative to pure white, reducing eye strain while maintaining a clean, airy feel.\n- **Tertiary (Champagne Gold):** An accent for interactive states, borders, and \"prestige\" indicators. Use sparingly to maintain its value.\n- **Accent (Blush Clay):** A soft, organic tone used for secondary buttons, illustrative flourishes, and backgrounds for textural sections. It grounds the palette in the physical reality of the services provided.\n\n## Typography\n\nTypography is the primary vehicle for the \"Editorial\" feel. The system utilizes a classic high-contrast pairing:\n\n- **Headlines:** Use **Playfair Display**. It should be set with tight line height for display sizes and occasional italicization for emphasis on specific words to mimic luxury magazine layouts.\n- **Body & Interface:** Use **Inter**. Set body copy with generous line heights and subtle letter spacing to ensure maximum readability against the high-contrast background.\n- **Labels:** Small caps with wide letter-spacing (0.15em) should be used for section headers and eyebrow text to provide a systematic, navigable structure.\n\n## Layout & Spacing\n\nThis design system moves away from rigid block-based layouts in favor of a **Fluid Editorial Grid**.\n\n- **The Asymmetric Grid:** While based on a 12-column foundation, content should often be \"offset\" by 1 or 2 columns to create visual interest. For example, a heading may sit on column 2, while the body text starts on column 4.\n- **Fluid Scale:** Margins and padding use `clamp()` functions to ensure the \"breathability\" of the design translates from a 27-inch desktop to a mobile device without manual breakpoint adjustments.\n- **Overlapping Elements:** Utilize the `asymmetric-offset` for images and cards that break their container boundaries. An image might overflow into the page margin to create a sense of movement.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct \"stories\" or service categories, ensuring the user is never overwhelmed by information.\n\n## Elevation & Depth\n\nTo maintain the \"Pearl\" aesthetic, the system avoids heavy, muddy shadows. Depth is achieved through:\n\n- **Glassmorphism:** Use high-diffusion backdrop blurs (20px+) for navigation bars and modal overlays. This suggests the semi-translucent quality of high-end nail finishes.\n- **Tonal Stacking:** Instead of shadows, use slight color shifts. A \"Pearl\" surface might sit atop a \"Midnight\" background with no shadow, relying entirely on color contrast for hierarchy.\n- **The \"Champagne\" Stroke:** Low-opacity (20-30%) outlines in Champagne Gold are used for high-tier interactive cards to provide a subtle glow without the weight of a shadow.\n\n## Shapes\n\nThe shape language reflects \"Flowing Lines.\" While a base roundedness of `0.5rem` is used for standard components, specific \"Bespoke\" elements utilize a more organic approach:\n\n- **Standard UI:** 8px (0.5rem) corners for buttons and input fields to maintain a modern, professional structure.\n- **Editorial Images:** Use asymmetrical corner rounding (e.g., top-left and bottom-right at 100px, others at 0px) to mimic the silhouette of a manicured nail or organic liquid flow.\n- **The Flowing Motif:** Decorative SVG paths (thin 1px lines in Gold or Blush) should weave between sections, occasionally intersecting with text or images to guide the eye.\n\n## Components\n\n### Buttons\n- **Primary:** Midnight background, Pearl text, sharp transitions. Hover state introduces a Champagne Gold bottom-border (2px).\n- **Secondary/Ghost:** Transparent background with a thin Blush Clay border. \n- **Text Link:** Label-caps style with a persistent underline that \"grows\" on hover.\n\n### Cards (The \"Editorial Card\")\nCards should not look like containers. They consist of an image with an `asymmetric-offset`, a Playfair Display headline slightly overlapping the image, and Inter body text below. No borders or shadows; the separation is created by the whitespace.\n\n### Inputs & Fields\nUltra-minimalist. Bottom-border only (1px Midnight), with labels using the `label-caps` typography style. Focus states shift the border color to Champagne Gold.\n\n### Chips & Tags\nSmall, rounded pills in Blush Clay with low-opacity. Used for service categories (e.g., \"Gel,\" \"Art,\" \"Acrylic\").\n\n### Navigation\nA fixed top-bar with a backdrop-blur. The logo is centered to maintain the editorial balance, with links split to the left and right.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "INTER",
+                "labelFontFamily": "Inter",
+                "namedColors": {
+                  "background": "#fcf8fa",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f3f0f2",
+                  "inverse_primary": "#bec6e0",
+                  "inverse_surface": "#303032",
+                  "on_background": "#1b1b1d",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#7c839b",
+                  "on_primary_fixed": "#131b2e",
+                  "on_primary_fixed_variant": "#3f465c",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#626567",
+                  "on_secondary_fixed": "#191c1e",
+                  "on_secondary_fixed_variant": "#444749",
+                  "on_surface": "#1b1b1d",
+                  "on_surface_variant": "#45464d",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#4e3d00",
+                  "on_tertiary_fixed": "#241a00",
+                  "on_tertiary_fixed_variant": "#574500",
+                  "outline": "#76777d",
+                  "outline_variant": "#c6c6cd",
+                  "primary": "#000000",
+                  "primary_container": "#131b2e",
+                  "primary_fixed": "#dae2fd",
+                  "primary_fixed_dim": "#bec6e0",
+                  "secondary": "#5c5f61",
+                  "secondary_container": "#e0e3e5",
+                  "secondary_fixed": "#e0e3e5",
+                  "secondary_fixed_dim": "#c4c7c9",
+                  "surface": "#fcf8fa",
+                  "surface_bright": "#fcf8fa",
+                  "surface_container": "#f0edef",
+                  "surface_container_high": "#eae7e9",
+                  "surface_container_highest": "#e4e2e4",
+                  "surface_container_low": "#f6f3f5",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dcd9db",
+                  "surface_tint": "#565e74",
+                  "surface_variant": "#e4e2e4",
+                  "tertiary": "#735c00",
+                  "tertiary_container": "#cba72f",
+                  "tertiary_fixed": "#ffe088",
+                  "tertiary_fixed_dim": "#e9c349"
+                },
+                "overridePrimaryColor": "#0f172a",
+                "overrideSecondaryColor": "#f8fafc",
+                "overrideTertiaryColor": "#d4af37",
+                "roundness": "ROUND_EIGHT",
+                "spacing": {
+                  "asymmetric-offset": "4rem",
+                  "fluid-gutter": "clamp(1rem, 3vw, 2rem)",
+                  "fluid-margin": "clamp(1rem, 5vw, 6rem)",
+                  "section-gap": "clamp(4rem, 10vh, 12rem)",
+                  "unit": "4px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "80px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Inter",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "1"
+                  }
+                }
+              }
+            },
+            "name": "assets/0abfa7b2b8564f839845466ece28fdba",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10938",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzhmYTMwZTFkZDZkMzRlMzg4NTZiYmNiMjBlNDdkMmZjEgsSBxCq7_ih7hkYAZIBIwoKcHJvamVjdF9pZBIVQhMyNDYxNzQ5NDI1MDkwMzgyNjcz&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/2461749425090382673/files/ed27b0b1a49e4278adfd5dd95fe7ba2b"
+          },
+          "id": "76f0224b77d641ae8fd022d8d349b367",
+          "name": "projects/2461749425090382673/screens/76f0224b77d641ae8fd022d8d349b367",
+          "prompt": "Deliver the complete production-ready website for Unique Nails. \n\nBrand: Unique Nails\nLocation: Cave Spring, VA\nContact: (540) 268-8689 · unique.nails.va@gmail.com · 3544 Electric Road, Cave Spring, VA 24018\n\nVisual Style: \n- Editorial, asymmetrical, luxury. \n- Palette: 'Midnight & Pearl' (#0F172A, #F8FAFC, #D4AF37, #E2B4B4). \n- Typography: Playfair Display for headings, Montserrat for body. \n- Motif: 'Artistry in motion' - use curved borders, overlapping sections, and elegant whitespace.\n\nSections to include:\n1. Header: Fixed, featuring the phone number as a primary CTA.\n2. Hero: Title: \"Artistry at Your Fingertips.\" Subtitle: \"Bespoke nail care and precision artistry in the heart of Cave Spring.\" \n3. #credibility: \"The Unique Standard.\" Highlight 10+ years of excellence, premium sterilization, and custom color matching.\n4. Services: Manicures, Pedicures, Custom Nail Art, and Gel Enhancements. Layout should feel like a high-end magazine spread.\n5. About: \"The Philosophy.\" Focus on precision, hygiene, and the personalized 'Unique' experience.\n6. #visit: Include address, hours, and the mandatory map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>\n7. Contact Form: A 'Secure Your Appointment' section with custom-styled inputs.\n8. Footer: Integrated copyright and quick links.\n\nTechnical Requirements:\n- Full semantic HTML document.\n- Custom CSS using variables for the palette.\n- Vanilla JavaScript for a smooth scroll and a mobile navigation toggle.\n- Form validation UI (visual feedback only).\n- No placeholder text (no Lorem Ipsum).\n- Fully responsive at 375px.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt7BuEhVaY6EVGDFSi4kAV-azl3MjgQCxRs2MBjkV3VjXTsYYHccPJM9fhFcv34uRmcAmSE_XnYrqvXEHCsUiM-rnV7MXd1bilpgQpr_asxF5yJHxvj7eY7jiJENUH9PKq9MhXoqkmxMEvIch12vfMztjBpiiP1O6PwwPyeQJHz5ZJbtoeco5Aa-FVpjUzwY9uVFi7giiz8xR9TnoA-3kwLVxFkYiIMwgKJDx3d-g7KODwNBa_xMvMYwAM",
+            "name": "projects/2461749425090382673/files/23c1d2768d65422ba10442733115f1b2"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0f172a",
+            "designMd": "---\nname: Midnight & Pearl\ncolors:\n  surface: '#fcf8fa'\n  surface-dim: '#dcd9db'\n  surface-bright: '#fcf8fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f5'\n  surface-container: '#f0edef'\n  surface-container-high: '#eae7e9'\n  surface-container-highest: '#e4e2e4'\n  on-surface: '#1b1b1d'\n  on-surface-variant: '#45464d'\n  inverse-surface: '#303032'\n  inverse-on-surface: '#f3f0f2'\n  outline: '#76777d'\n  outline-variant: '#c6c6cd'\n  surface-tint: '#565e74'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#131b2e'\n  on-primary-container: '#7c839b'\n  inverse-primary: '#bec6e0'\n  secondary: '#5c5f61'\n  on-secondary: '#ffffff'\n  secondary-container: '#e0e3e5'\n  on-secondary-container: '#626567'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cba72f'\n  on-tertiary-container: '#4e3d00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dae2fd'\n  primary-fixed-dim: '#bec6e0'\n  on-primary-fixed: '#131b2e'\n  on-primary-fixed-variant: '#3f465c'\n  secondary-fixed: '#e0e3e5'\n  secondary-fixed-dim: '#c4c7c9'\n  on-secondary-fixed: '#191c1e'\n  on-secondary-fixed-variant: '#444749'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fcf8fa'\n  on-background: '#1b1b1d'\n  surface-variant: '#e4e2e4'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  fluid-margin: clamp(1rem, 5vw, 6rem)\n  fluid-gutter: clamp(1rem, 3vw, 2rem)\n  asymmetric-offset: 4rem\n  section-gap: clamp(4rem, 10vh, 12rem)\n---\n\n## Brand & Style\n\nThe brand personality is defined by \"Midnight & Pearl\"—a study in high-contrast luxury, precision, and the fluid artistry of nail design. This design system caters to a high-end clientele who values sophistication, meticulous detail, and an editorial aesthetic over standard commercial layouts. \n\nThe visual style is **Minimalist Editorial**. It leverages generous whitespace (the \"Pearl\") against deep, authoritative foundations (the \"Midnight\") to create a sense of breathing room and exclusivity. Intentional asymmetry and overlapping elements break the rigidity of traditional web grids, mirroring the organic, flowing lines of hand-painted nail art. The emotional response should be one of calm, confidence, and bespoke care.\n\n## Colors\n\nThe palette is centered on a high-contrast relationship between light and dark, punctuated by soft, skin-tone adjacent accents and metallic highlights.\n\n- **Primary (Midnight Navy):** Used for primary text, deep backgrounds, and heavy structural elements to convey authority and depth.\n- **Secondary (Pearl Cream):** The primary canvas color. It provides a softer, more luxurious alternative to pure white, reducing eye strain while maintaining a clean, airy feel.\n- **Tertiary (Champagne Gold):** An accent for interactive states, borders, and \"prestige\" indicators. Use sparingly to maintain its value.\n- **Accent (Blush Clay):** A soft, organic tone used for secondary buttons, illustrative flourishes, and backgrounds for textural sections. It grounds the palette in the physical reality of the services provided.\n\n## Typography\n\nTypography is the primary vehicle for the \"Editorial\" feel. The system utilizes a classic high-contrast pairing:\n\n- **Headlines:** Use **Playfair Display**. It should be set with tight line height for display sizes and occasional italicization for emphasis on specific words to mimic luxury magazine layouts.\n- **Body & Interface:** Use **Inter**. Set body copy with generous line heights and subtle letter spacing to ensure maximum readability against the high-contrast background.\n- **Labels:** Small caps with wide letter-spacing (0.15em) should be used for section headers and eyebrow text to provide a systematic, navigable structure.\n\n## Layout & Spacing\n\nThis design system moves away from rigid block-based layouts in favor of a **Fluid Editorial Grid**.\n\n- **The Asymmetric Grid:** While based on a 12-column foundation, content should often be \"offset\" by 1 or 2 columns to create visual interest. For example, a heading may sit on column 2, while the body text starts on column 4.\n- **Fluid Scale:** Margins and padding use `clamp()` functions to ensure the \"breathability\" of the design translates from a 27-inch desktop to a mobile device without manual breakpoint adjustments.\n- **Overlapping Elements:** Utilize the `asymmetric-offset` for images and cards that break their container boundaries. An image might overflow into the page margin to create a sense of movement.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct \"stories\" or service categories, ensuring the user is never overwhelmed by information.\n\n## Elevation & Depth\n\nTo maintain the \"Pearl\" aesthetic, the system avoids heavy, muddy shadows. Depth is achieved through:\n\n- **Glassmorphism:** Use high-diffusion backdrop blurs (20px+) for navigation bars and modal overlays. This suggests the semi-translucent quality of high-end nail finishes.\n- **Tonal Stacking:** Instead of shadows, use slight color shifts. A \"Pearl\" surface might sit atop a \"Midnight\" background with no shadow, relying entirely on color contrast for hierarchy.\n- **The \"Champagne\" Stroke:** Low-opacity (20-30%) outlines in Champagne Gold are used for high-tier interactive cards to provide a subtle glow without the weight of a shadow.\n\n## Shapes\n\nThe shape language reflects \"Flowing Lines.\" While a base roundedness of `0.5rem` is used for standard components, specific \"Bespoke\" elements utilize a more organic approach:\n\n- **Standard UI:** 8px (0.5rem) corners for buttons and input fields to maintain a modern, professional structure.\n- **Editorial Images:** Use asymmetrical corner rounding (e.g., top-left and bottom-right at 100px, others at 0px) to mimic the silhouette of a manicured nail or organic liquid flow.\n- **The Flowing Motif:** Decorative SVG paths (thin 1px lines in Gold or Blush) should weave between sections, occasionally intersecting with text or images to guide the eye.\n\n## Components\n\n### Buttons\n- **Primary:** Midnight background, Pearl text, sharp transitions. Hover state introduces a Champagne Gold bottom-border (2px).\n- **Secondary/Ghost:** Transparent background with a thin Blush Clay border. \n- **Text Link:** Label-caps style with a persistent underline that \"grows\" on hover.\n\n### Cards (The \"Editorial Card\")\nCards should not look like containers. They consist of an image with an `asymmetric-offset`, a Playfair Display headline slightly overlapping the image, and Inter body text below. No borders or shadows; the separation is created by the whitespace.\n\n### Inputs & Fields\nUltra-minimalist. Bottom-border only (1px Midnight), with labels using the `label-caps` typography style. Focus states shift the border color to Champagne Gold.\n\n### Chips & Tags\nSmall, rounded pills in Blush Clay with low-opacity. Used for service categories (e.g., \"Gel,\" \"Art,\" \"Acrylic\").\n\n### Navigation\nA fixed top-bar with a backdrop-blur. The logo is centered to maintain the editorial balance, with links split to the left and right.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
+            "namedColors": {
+              "background": "#fcf8fa",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0f2",
+              "inverse_primary": "#bec6e0",
+              "inverse_surface": "#303032",
+              "on_background": "#1b1b1d",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#7c839b",
+              "on_primary_fixed": "#131b2e",
+              "on_primary_fixed_variant": "#3f465c",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#626567",
+              "on_secondary_fixed": "#191c1e",
+              "on_secondary_fixed_variant": "#444749",
+              "on_surface": "#1b1b1d",
+              "on_surface_variant": "#45464d",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#4e3d00",
+              "on_tertiary_fixed": "#241a00",
+              "on_tertiary_fixed_variant": "#574500",
+              "outline": "#76777d",
+              "outline_variant": "#c6c6cd",
+              "primary": "#000000",
+              "primary_container": "#131b2e",
+              "primary_fixed": "#dae2fd",
+              "primary_fixed_dim": "#bec6e0",
+              "secondary": "#5c5f61",
+              "secondary_container": "#e0e3e5",
+              "secondary_fixed": "#e0e3e5",
+              "secondary_fixed_dim": "#c4c7c9",
+              "surface": "#fcf8fa",
+              "surface_bright": "#fcf8fa",
+              "surface_container": "#f0edef",
+              "surface_container_high": "#eae7e9",
+              "surface_container_highest": "#e4e2e4",
+              "surface_container_low": "#f6f3f5",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9db",
+              "surface_tint": "#565e74",
+              "surface_variant": "#e4e2e4",
+              "tertiary": "#735c00",
+              "tertiary_container": "#cba72f",
+              "tertiary_fixed": "#ffe088",
+              "tertiary_fixed_dim": "#e9c349"
+            },
+            "overridePrimaryColor": "#0f172a",
+            "overrideSecondaryColor": "#f8fafc",
+            "overrideTertiaryColor": "#d4af37",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "asymmetric-offset": "4rem",
+              "fluid-gutter": "clamp(1rem, 3vw, 2rem)",
+              "fluid-margin": "clamp(1rem, 5vw, 6rem)",
+              "section-gap": "clamp(4rem, 10vh, 12rem)",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "80px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "label-caps": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1"
+              }
+            }
+          },
+          "title": "Unique Nails | Bespoke Artistry Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, editorial-grade homepage for **Unique Nails**, moving far beyond the typical local business template. \n\n### Design Rationale:\n- **Visual Identity:** I established the **\"Midnight & Pearl\"** palette—a sophisticated combination of deep charcoal (#0F172A) and soft cream (#F8FAFC) accented with champagne gold. This creates an immediate sense of luxury and exclusivity.\n- **Editorial Layout:** Instead of a standard grid, I used an **asymmetrical, magazine-style composition**. This includes overlapping elements and organic, curved image treatments that mirror the fluid artistry of nail design.\n- **Typography:** I paired the high-contrast **Playfair Display** serif for headlines with an airy, wide-tracked sans-serif for body copy to emphasize a premium, boutique feel.\n- **Memorable Motif:** The \"Artistry in Motion\" theme is woven throughout, using intentional whitespace and elegant dividers to guide the eye through the salon's story, services, and studio details.\n\n### Key Features:\n- **Production-Ready Code:** Full semantic HTML, responsive CSS with custom properties, and smooth-scroll navigation.\n- **Dynamic Services Menu:** A curated layout for services like Custom Artistry and Sterilization standards.\n- **Interactive Visit Section:** Dedicated space for studio details and a placeholder for your future map integration.\n- **Conversion-Focused:** High-visibility CTAs for the studio phone number and a refined appointment request form.\n\nDoes this visual direction capture the premium feel you had in mind, or would you like to explore a different typographic pairing or color story?"
+  },
+  {
+    "suggestion": "Make the gold accents more prominent"
+  },
+  {
+    "suggestion": "Add a gallery section for nail art portfolio"
+  },
+  {
+    "suggestion": "Change the primary font to something more modern"
+  }
+]
