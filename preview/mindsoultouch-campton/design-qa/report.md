@@ -1,6 +1,6 @@
 # Design QA — mindsoultouch-campton
 
-**Result:** NEEDS FIX
+**Result:** PASS
 
 **Craft warnings:** 2 (see craft section)
 
@@ -11,16 +11,14 @@
 | craft | pass |
 | emil | pass |
 | taste | pass |
-| audit | fail |
+| audit | pass |
 | harden | pass |
 | polish | pass |
 
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- emil: added :active press feedback
-- taste: removed 2 em/en dash(es) from copy
-- craft: injected brief fonts (Barlow Condensed / Barlow)
+- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -51,13 +49,12 @@
 
 ### audit
 
-- FAIL: stock or Stitch AI image URL still present
+- Images: no stock/aida URLs in HTML
 - Mockup notice: popup present
-- WARN: missing #credibility
+- Credibility section: present
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
-- WARN: Stitch AI placeholder images — run images:apply
 
 ### harden
 

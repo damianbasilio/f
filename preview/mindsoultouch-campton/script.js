@@ -1,24 +1,14 @@
-// Micro-interactions and Form Validation
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Preview only';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerText = 'Received with Gratitude';
-                btn.classList.add('bg-on-primary-fixed-variant');
-                e.target.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.remove('bg-on-primary-fixed-variant');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
+// Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
-        // Simple scroll reveal effect for images
+        // Atmospheric fade-in effect on scroll
         const observerOptions = {
             threshold: 0.1
         };
@@ -33,9 +23,13 @@
         }, observerOptions);
 
         document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            section.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
             observer.observe(section);
         });
+
+        // Instant show for hero
+        const hero = document.querySelector('section');
+        hero.classList.remove('opacity-0', 'translate-y-10');
 
 (() => {
   function initMockupNotice() {
