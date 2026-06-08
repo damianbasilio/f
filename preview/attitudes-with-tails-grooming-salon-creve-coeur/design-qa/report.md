@@ -2,7 +2,7 @@
 
 **Result:** NEEDS FIX
 
-**Craft warnings:** 3 (see craft section)
+**Craft warnings:** 1 (see craft section)
 
 ## Skills run
 
@@ -11,7 +11,7 @@
 | craft | fail |
 | emil | pass |
 | taste | pass |
-| audit | pass |
+| audit | fail |
 | harden | pass |
 | polish | pass |
 
@@ -27,11 +27,11 @@
 
 - OK: No AI purple gradient
 - FAIL: Fake ratings or hype copy detected
-- WARN: Generic marketing buzzword in copy
-- WARN: Repeated 3-column grid pattern (6 hits) — likely template layout
+- OK: No obvious buzzwords
+- OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 0
+- OK: Eyebrow count: 4
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,9 +43,8 @@
 
 ### taste
 
-- Eyebrow discipline: 0 uppercase-tracked labels
+- Eyebrow discipline: 4 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
-- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 
@@ -55,6 +54,7 @@
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
+- FAIL: Fake star ratings or unverifiable superlatives
 
 ### harden
 

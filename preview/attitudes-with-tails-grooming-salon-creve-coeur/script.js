@@ -1,19 +1,47 @@
-document.getElementById('contactForm').addEventListener('submit', function(e) {
+// Reveal on scroll logic
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
+
+        // Form handling simulation
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            const feedback = document.getElementById('formFeedback');
-            feedback.classList.remove('hidden');
-            this.reset();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Preview only';
+            btn.disabled = true;
+
             setTimeout(() => {
-                feedback.classList.add('hidden');
-            }, 5000);
+                btn.innerHTML = 'Preview only';
+                btn.classList.replace('bg-primary', 'bg-tertiary-container');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.replace('bg-tertiary-container', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
         });
 
-        // Simple Parallax for hero image
+        // Parallax-ish effect for hero image
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const heroImg = document.querySelector('#salon img');
+            const heroImg = document.querySelector('#hero img');
             if (heroImg) {
-                heroImg.style.transform = `translateY(${scrolled * 0.05}px)`;
+                heroImg.style.transform = `translateY(${scrolled * 0.1}px) scale(${1 + scrolled * 0.0002})`;
             }
         });
 
