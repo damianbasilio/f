@@ -1,28 +1,14 @@
-// Custom cursor interaction
-        const cursor = document.querySelector('.custom-cursor');
-        document.addEventListener('mousemove', (e) => {
-            cursor.style.left = e.clientX + 'px';
-            cursor.style.top = e.clientY + 'px';
-        });
-
-        document.querySelectorAll('a, button, input, select, textarea').forEach(el => {
-            el.addEventListener('mouseenter', () => {
-                cursor.style.transform = 'scale(2.5)';
-                cursor.style.backgroundColor = 'rgba(255, 200, 128, 0.1)';
-            });
-            el.addEventListener('mouseleave', () => {
-                cursor.style.transform = 'scale(1)';
-                cursor.style.backgroundColor = 'transparent';
-            });
-        });
-
-        // Navbar Scroll Effect
+// Simple micro-interaction for scroll effects
         window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
+            const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                header.classList.add('bg-opacity-95', 'backdrop-blur-md');
+                nav.classList.add('shadow-lg');
+                nav.classList.remove('bg-surface/90');
+                nav.classList.add('bg-surface');
             } else {
-                header.classList.remove('bg-opacity-95', 'backdrop-blur-md');
+                nav.classList.remove('shadow-lg');
+                nav.classList.add('bg-surface/90');
+                nav.classList.remove('bg-surface');
             }
         });
 

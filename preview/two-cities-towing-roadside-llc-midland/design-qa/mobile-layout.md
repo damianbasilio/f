@@ -5,12 +5,7 @@
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
-- bumped 10px label text
-- pulled in decorative absolute offsets
 - section overflow-hidden for decorative layers
-- nav min-width + tighter mobile gap
-- nav brand truncate on mobile
-- nav toggle aria-label
 - map-slot: removed h-full (use aspect-ratio fill)
 
 ## Viewports

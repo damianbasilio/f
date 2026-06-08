@@ -15,6 +15,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 - **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
 - Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
 - Every section should feel **designed**, not assembled from a component library.
+- Whole email should be 100 words or less.
 
 ---
 
@@ -118,6 +119,7 @@ Boutique storefront feel: framed hero like a shop window, soft shadow, gallery a
 hero → credibility → services → gallery → about → visit → contact
 
 **Hero direction:**
+
 - **H1 (adapt closely):** Helping one of our customer with an accident
 - **Subhead:** Two Cities Towing, Odessa. 69 likes. we offer towing service in odessa Midland are best…
 - **Primary CTA:** Book appointment
@@ -207,3 +209,4 @@ Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery
 - Mockup banner placeholder at top: "Concept preview — not affiliated with Two Cities Towing & Roadside LLC"
 
 ---
+

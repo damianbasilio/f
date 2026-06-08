@@ -1,176 +1,175 @@
-I've designed a bespoke, editorial-grade homepage for **Two Cities Towing & Roadside LLC**. 
+I've designed a bespoke, high-fidelity landing page for Two Cities Towing & Roadside LLC that moves away from generic local-business templates. 
 
-### Design Rationale:
-*   **Visual Identity:** I moved away from generic "emergency" aesthetics to create the **"Urban Industrial Authority"** style. It uses a high-contrast palette of Midnight Charcoal and Industrial Amber to project premium reliability.
-*   **The "Urban Grid" Layout:** Instead of standard containers, I used a structured layout motif with thin technical rules and asymmetrical spacing. This gives the site an architectural, precise feel that mirrors the mechanical nature of their work.
-*   **Strong Typography:** I used bold, oversized grotesque headings for impact, paired with mono-accented details to emphasize their status as local experts in Midland and Odessa.
-*   **Bespoke Sections:**
-    *   **Hero:** A cinematic, high-impact introduction focusing on "The Urban Authority."
-    *   **Mechanical Solutions:** A technical services grid designed to look like an industrial catalog.
-    *   **Heritage:** An editorial section dedicated to their roots in the West Texas region.
-    *   **Production-Ready:** The site includes a fully functional responsive navigation, form validation UI, and a dedicated map slot ready for integration.
+### Design Highlights:
+- **Bespoke Visual Identity**: I've created a custom "Two Cities" motif using a split-screen hero and an interlocking grid system that subtly references the Midland and Odessa areas.
+- **Editorial Typography**: The use of heavy, condensed display faces (Archivo Narrow) creates a sense of strength, urgency, and professional reliability.
+- **Industrial Palette**: A high-contrast combination of Deep Midnight, Safety Amber, and Industrial Gray gives the site a premium, modern-logistics feel rather than a basic repair-shop look.
+- **Precision Layout**: Every section is designed with a focus on hierarchy—from the "Strength on the Grid" hero statement to the clean, numbered service cards and the integrated contact dispatch area.
 
-The code is clean, semantic, and optimized for a premium desktop experience while remaining fully responsive. How does this new visual direction feel for the brand?
+The site is fully responsive, features semantic HTML, and includes the requested map slot and functional contact form UI.
 
 ---
 
 ---
-name: Urban Industrial Authority
+name: Two Cities Industrial
 colors:
-  surface: '#131313'
-  surface-dim: '#131313'
-  surface-bright: '#393939'
-  surface-container-lowest: '#0e0e0e'
-  surface-container-low: '#1b1c1c'
-  surface-container: '#1f2020'
-  surface-container-high: '#2a2a2a'
-  surface-container-highest: '#353535'
-  on-surface: '#e4e2e1'
-  on-surface-variant: '#d7c3ae'
-  inverse-surface: '#e4e2e1'
-  inverse-on-surface: '#303030'
-  outline: '#9f8e7a'
-  outline-variant: '#524534'
-  surface-tint: '#ffb955'
-  primary: '#ffc880'
-  on-primary: '#452b00'
-  primary-container: '#f5a623'
-  on-primary-container: '#644000'
-  inverse-primary: '#835500'
-  secondary: '#c8c6c5'
-  on-secondary: '#313030'
-  secondary-container: '#474746'
-  on-secondary-container: '#b7b5b4'
-  tertiary: '#d1d1d2'
-  on-tertiary: '#2f3131'
-  tertiary-container: '#b5b6b6'
-  on-tertiary-container: '#464748'
-  error: '#ffb4ab'
-  on-error: '#690005'
-  error-container: '#93000a'
-  on-error-container: '#ffdad6'
-  primary-fixed: '#ffddb4'
-  primary-fixed-dim: '#ffb955'
-  on-primary-fixed: '#291800'
-  on-primary-fixed-variant: '#633f00'
-  secondary-fixed: '#e5e2e1'
-  secondary-fixed-dim: '#c8c6c5'
-  on-secondary-fixed: '#1c1b1b'
-  on-secondary-fixed-variant: '#474746'
-  tertiary-fixed: '#e2e2e2'
-  tertiary-fixed-dim: '#c6c6c7'
-  on-tertiary-fixed: '#1a1c1c'
-  on-tertiary-fixed-variant: '#454747'
-  background: '#131313'
-  on-background: '#e4e2e1'
-  surface-variant: '#353535'
+  surface: '#f7f9fb'
+  surface-dim: '#d8dadc'
+  surface-bright: '#f7f9fb'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#f2f4f6'
+  surface-container: '#eceef0'
+  surface-container-high: '#e6e8ea'
+  surface-container-highest: '#e0e3e5'
+  on-surface: '#191c1e'
+  on-surface-variant: '#45464d'
+  inverse-surface: '#2d3133'
+  inverse-on-surface: '#eff1f3'
+  outline: '#76777d'
+  outline-variant: '#c6c6cd'
+  surface-tint: '#565e74'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#131b2e'
+  on-primary-container: '#7c839b'
+  inverse-primary: '#bec6e0'
+  secondary: '#855300'
+  on-secondary: '#ffffff'
+  secondary-container: '#fea619'
+  on-secondary-container: '#684000'
+  tertiary: '#000000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#0d1c2f'
+  on-tertiary-container: '#76859b'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#dae2fd'
+  primary-fixed-dim: '#bec6e0'
+  on-primary-fixed: '#131b2e'
+  on-primary-fixed-variant: '#3f465c'
+  secondary-fixed: '#ffddb8'
+  secondary-fixed-dim: '#ffb95f'
+  on-secondary-fixed: '#2a1700'
+  on-secondary-fixed-variant: '#653e00'
+  tertiary-fixed: '#d5e3fd'
+  tertiary-fixed-dim: '#b9c7e0'
+  on-tertiary-fixed: '#0d1c2f'
+  on-tertiary-fixed-variant: '#3a485c'
+  background: '#f7f9fb'
+  on-background: '#191c1e'
+  surface-variant: '#e0e3e5'
 typography:
-  headline-xl:
-    fontFamily: Hanken Grotesk
-    fontSize: 64px
-    fontWeight: '800'
-    lineHeight: '1.1'
+  display-lg:
+    fontFamily: Archivo Narrow
+    fontSize: 80px
+    fontWeight: '700'
+    lineHeight: '1.0'
     letterSpacing: -0.04em
-  headline-lg:
-    fontFamily: Hanken Grotesk
+  display-md:
+    fontFamily: Archivo Narrow
     fontSize: 48px
     fontWeight: '700'
-    lineHeight: '1.2'
+    lineHeight: '1.1'
     letterSpacing: -0.02em
-  headline-lg-mobile:
-    fontFamily: Hanken Grotesk
+  headline-lg:
+    fontFamily: Archivo Narrow
     fontSize: 32px
     fontWeight: '700'
     lineHeight: '1.2'
-  headline-md:
-    fontFamily: Hanken Grotesk
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Archivo Narrow
     fontSize: 24px
-    fontWeight: '600'
-    lineHeight: '1.3'
+    fontWeight: '700'
+    lineHeight: '1.2'
   body-lg:
-    fontFamily: Work Sans
+    fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
   body-md:
-    fontFamily: Work Sans
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.6'
-  label-mono:
-    fontFamily: Space Mono
+    lineHeight: '1.5'
+  label-caps:
+    fontFamily: JetBrains Mono
     fontSize: 12px
-    fontWeight: '500'
+    fontWeight: '600'
     lineHeight: '1.0'
     letterSpacing: 0.1em
-  button-text:
-    fontFamily: Hanken Grotesk
-    fontSize: 14px
+  button:
+    fontFamily: Archivo Narrow
+    fontSize: 16px
     fontWeight: '700'
     lineHeight: '1.0'
     letterSpacing: 0.05em
 spacing:
-  base: 8px
-  xs: 4px
-  sm: 12px
-  md: 24px
-  lg: 48px
-  xl: 80px
+  unit: 4px
   container-max: 1280px
   gutter: 24px
+  margin-desktop: 64px
+  margin-mobile: 20px
+  border-heavy: 3px
+  border-thin: 1px
 ---
 
 ## Brand & Style
-The design system is built upon a "Rugged-Premium" duality. It departs from the cluttered, low-trust aesthetic of traditional towing services, instead positioning itself as a high-end urban utility. The brand personality is grounded, authoritative, and meticulously organized.
 
-The visual direction follows a **Modern-Industrial** style, characterized by:
-- **Architectural Precision:** Heavy use of thin technical lines (the "City Line" motif) to divide sections and frame content.
-- **High-Contrast Editorial:** Dramatic shifts between deep charcoal backgrounds and vibrant amber accents.
-- **Functional Brutalism:** Utilizing monospaced fonts and grid-based layouts to evoke a sense of mechanical reliability and logistical expertise.
-- **Generous Negative Space:** Creating a premium feel that suggests calmness and control, even in emergency roadside situations.
+The design system establishes a premium, industrial aesthetic for a high-end towing and roadside logistics brand. The personality is rugged yet refined, prioritizing reliability and professional urgency. The visual direction leans into a "Modern Industrial" style—utilizing structural lines, heavy borders, and a grid-based editorial layout that suggests precision and architectural stability.
+
+The target audience expects more than a local mechanic; they seek a premium logistics partner. The UI evokes a sense of "heavy-duty elegance" through generous whitespace, high-contrast color blocking, and massive, authoritative typography. This is a system built on the concept of the "city grid"—clean intersections, perpendicular lines, and a structured, reliable framework.
 
 ## Colors
-This design system utilizes a high-contrast "Midnight & Amber" palette designed for maximum legibility in both high-glare daytime and low-light roadside environments.
 
-- **Primary (Industrial Amber):** Used exclusively for calls to action, urgent status indicators, and critical branding motifs. It represents the safety and visibility of a beacon.
-- **Secondary (Midnight Charcoal):** The foundation of the UI. It provides a deep, stable backdrop that evokes the asphalt and the city at night.
-- **Tertiary (Steel Grey):** Used for typography on dark backgrounds and as a surface color for cards or containers to create subtle depth.
-- **Technical Rules:** A 10% opacity white or a 20% opacity amber is used for the "City Line" motif—thin 1px borders that define the grid.
+The palette is driven by high-contrast functionalism. 
+
+- **Deep Midnight Blue (#0F172A):** The foundation. Used for primary text, heavy borders, and structural elements to convey depth and authority.
+- **Safety Amber (#F59E0B):** The signal color. Used sparingly for high-priority CTAs, status indicators, and critical alerts. It represents the "warning lights" of the industry but is applied with premium restraint.
+- **Industrial Gray (#334155):** The bridge color. Used for secondary information, meta-data, and subtle grid lines.
+- **Backgrounds:** Clean, crisp White (#FFFFFF) and Off-White (#F8FAFC) provide a gallery-like canvas that prevents the industrial elements from feeling cluttered or "greasy."
 
 ## Typography
-The typography strategy contrasts heavy, industrial grotesque faces with precise, technical monospaced accents.
 
-- **Headlines:** Set in **Hanken Grotesk**. These should be tight, bold, and impactful. For an editorial feel, use "headline-xl" with negative letter spacing on hero sections.
-- **Body:** Set in **Work Sans**. Chosen for its exceptional readability and neutral, professional tone. 
-- **Accents & Data:** Set in **Space Mono**. Use this for "label-mono" roles: timestamps, coordinates, vehicle IDs, and small eyebrow headers above main titles. This reinforces the "mechanical" and "logistics" nature of the service.
+The typographic hierarchy is built on the tension between condensed, heavy-duty display faces and technical, monospaced accents.
+
+- **Headlines:** Archivo Narrow (Bold/700) is used in all-caps for a commanding, urgent presence. Display sizes should use tight leading and negative letter spacing to mimic industrial signage.
+- **Body Text:** Inter provides a neutral, highly readable counterpoint to the aggressive headlines, ensuring service details and terms are clear.
+- **Utility/Labels:** JetBrains Mono is introduced for technical data (VIN numbers, coordinates, timestamps), reinforcing the "logistics and machinery" theme.
 
 ## Layout & Spacing
-The layout is governed by a strict 12-column grid that mimics architectural blueprints.
 
-- **Grid Lines:** Every major section should be separated by a 1px solid line (`#F4F4F4` at 10% opacity). Vertical lines should be used sparingly to separate columns in data-heavy views.
-- **Margins:** Desktop uses a generous 80px side margin to push content toward the center, creating an "editorial" column. Mobile drops this to 24px.
-- **Rhythm:** Spacing follows a hard 8px base unit. Components should favor large, "airy" internal padding (e.g., 24px or 32px) to maintain the premium feel.
-- **The City Line:** Use a recurring horizontal rule that extends to the edge of the viewport, even if the content is contained, to suggest an infinite urban horizon.
+This design system employs a rigid **12-column fixed grid** on desktop, emphasizing the "city-grid" motif. 
+
+- **Structural Lines:** Use visible 1px Industrial Gray borders to define sections, mimicking a blueprint or a map. 
+- **The "Heavy Border":** Key containers and primary buttons utilize a 3px Deep Midnight Blue border to ground the element and provide a sense of weight.
+- **Rhythm:** Spacing follows a strict 4px baseline, but internal padding is generous (24px+) to maintain an editorial, premium feel. 
+- **Responsive Behavior:** On mobile, the layout collapses to a single column with 20px margins, but the heavy borders and large-scale typography remain to preserve brand impact.
 
 ## Elevation & Depth
-In keeping with the urban-industrial theme, this design system avoids traditional soft shadows. Depth is achieved through **Tonal Layering** and **Technical Borders**.
 
-- **Z-Axis:** Instead of shadows, use "Surface Tiers." The background is `#1A1A1A`. Cards and interactive containers use a slightly lighter `#2D2D2D`.
-- **Ghost Outlines:** Primary interaction areas should use 1px solid borders in Industrial Amber or Steel Grey rather than drop shadows.
-- **Active State:** When an element is pressed or active, it should "illuminate" (increase border opacity or gain an inner glow) rather than lift off the page.
-- **Glassmorphism:** Reserved only for mobile navigation overlays, using a heavy backdrop blur (20px) with a dark tint to maintain focus on the map or primary action.
+To maintain the "Modern Industrial" look, this design system avoids soft ambient shadows. Instead, it uses **Tonal Layering** and **Hard Offsets**.
+
+- **Depth through Borders:** Elevation is communicated by doubling borders or using 100% opaque hard shadows (offset 4px or 8px) in Deep Midnight Blue, creating a "stacked sheet metal" effect.
+- **Surface Tiers:**
+  - Level 0: Pure White (Main Canvas)
+  - Level 1: Off-White (Section Backgrounds)
+  - Level 2: Industrial Gray (Interactive Hover States)
+- **Glassmorphism:** Reserved strictly for mobile navigation overlays, using a heavy backdrop blur (20px) with a subtle Industrial Gray tint.
 
 ## Shapes
-The shape language is **unapologetically sharp**. To reflect the rugged nature of heavy machinery and urban architecture, rounded corners are strictly avoided.
 
-- **Corners:** 0px radius for all buttons, inputs, and cards. This creates a "blocked" look that feels sturdy and structural.
-- **Icons:** Use thick-stroke (2px), geometric icons. Avoid rounded terminals; prefer squared-off ends for all icon lines.
-- **Dividers:** Horizontal and vertical rules are 1px thick. Never use feathered or gradient dividers.
+The shape language is strictly **Sharp (0px)**. 
+
+Rounded corners are avoided to reinforce the rugged, architectural nature of the business. Every element—buttons, input fields, cards, and image containers—should have 90-degree angles. This lack of "softness" distinguishes the brand from friendly, consumer-grade apps and aligns it with professional tools and industrial machinery.
 
 ## Components
-- **Buttons:** Large, rectangular, and high-contrast. The primary button is Solid Amber with Black text. The "City Line" motif is used for secondary buttons as a 1px Steel Grey outline.
-- **Inputs:** Dark backgrounds with a 1px bottom-border only, mimicking a technical form. When focused, the bottom-border turns Amber.
-- **Cards:** No shadows. Defined by 1px borders and a subtle background shift to `#2D2D2D`.
-- **Chips/Status:** Use the "Space Mono" font. Statuses (e.g., "En Route") are displayed in a small box with a 1px border—no rounded corners.
-- **The "Service Grid":** A custom component for listing services (Towing, Lockout, etc.) using large-scale Hanken Grotesk numbers (e.g., 01, 02) in the background to emphasize the systematic nature of the business.
-- **Action Bar:** A persistent, pinned bottom-bar on mobile containing a "Call Now" button and "Request Service" button, ensuring the local authority is always reachable.
+
+- **Buttons:** Primary buttons feature a Safety Amber background, 3px Deep Midnight Blue border, and all-caps bold text. Hover states should shift to a hard-offset shadow.
+- **Cards:** Defined by a 1px Industrial Gray border. Headlines inside cards should be large and condensed. No shadows.
+- **Input Fields:** Heavy 2px bottom-border only (minimalist industrial), using JetBrains Mono for placeholder text to suggest data entry.
+- **Chips/Status:** Rectangular blocks with high-contrast color fills (e.g., a "Dispatched" status in a solid Midnight Blue block with White mono text).
+- **Icons:** Use thick-stroke (2px) geometric icons. Avoid rounded terminals; icons should feel like they were drafted with a ruler.
+- **The "Grid Divider":** A recurring component consisting of a thin vertical or horizontal line that extends to the edge of the container, used to separate content sections while maintaining the "city-grid" visual metaphor.

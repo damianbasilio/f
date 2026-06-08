@@ -6,7 +6,7 @@
 | brand-extract | pending |
 | stitch | done |
 | images | done |
-| copy | pending |
+| copy | done |
 | design-qa/craft | done |
 | design-qa/emil | done |
 | design-qa/taste | done |
