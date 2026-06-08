@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Southern City | Industrial Elegance Personified</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-container": "#fdad67",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "on-tertiary-container": "#798499",
+                      "tertiary-container": "#111c2c",
+                      "on-background": "#1a1c1d",
+                      "surface-container": "#eeeef0",
+                      "outline": "#747878",
+                      "surface-dim": "#d9dadc",
+                      "secondary-fixed": "#ffdcc2",
+                      "primary-fixed": "#e5e2e1",
+                      "secondary": "#8c4f10",
+                      "on-surface": "#1a1c1d",
+                      "on-tertiary-fixed": "#111c2c",
+                      "surface-container-high": "#e8e8ea",
+                      "surface-bright": "#f9f9fb",
+                      "inverse-on-surface": "#f0f0f2",
+                      "background": "#f9f9fb",
+                      "inverse-primary": "#c8c6c5",
+                      "surface": "#f9f9fb",
+                      "surface-tint": "#5f5e5e",
+                      "tertiary-fixed-dim": "#bcc7dd",
+                      "outline-variant": "#c4c7c7",
+                      "tertiary-fixed": "#d8e3fa",
+                      "tertiary": "#000000",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-error-container": "#93000a",
+                      "on-primary-fixed-variant": "#474746",
+                      "surface-variant": "#e2e2e4",
+                      "surface-container-highest": "#e2e2e4",
+                      "on-primary-container": "#858383",
+                      "primary-container": "#1c1b1b",
+                      "inverse-surface": "#2f3132",
+                      "on-primary": "#ffffff",
+                      "secondary-fixed-dim": "#ffb77b",
+                      "on-error": "#ffffff",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "on-secondary": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "on-secondary-fixed-variant": "#6d3a00",
+                      "on-tertiary": "#ffffff",
+                      "primary": "#000000",
+                      "surface-container-low": "#f3f3f5",
+                      "on-secondary-fixed": "#2e1500",
+                      "on-secondary-container": "#763f00",
+                      "error": "#ba1a1a",
+                      "error-container": "#ffdad6",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "section-padding": "120px",
+                      "margin-desktop": "64px",
+                      "unit": "4px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Bodoni Moda"],
+                      "display-xl": ["Bodoni Moda"],
+                      "headline-lg": ["Bodoni Moda"],
+                      "body-lg": ["Montserrat"],
+                      "body-md": ["Montserrat"],
+                      "headline-lg-mobile": ["Bodoni Moda"],
+                      "label-caps": ["Montserrat"]
+              },
+              "fontSize": {
+                      "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                      "display-xl": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .rule-line-h { height: 1px; background-color: theme('colors.outline-variant'); }
+        .rule-line-v { width: 1px; background-color: theme('colors.outline-variant'); }
+        .copper-accent { color: theme('colors.secondary'); }
+        .burnished-border { border: 1px solid theme('colors.secondary'); }
+        
+        /* Custom UI for inputs */
+        input:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: theme('colors.secondary') !important;
+        }
+        
+        /* Section transitions */
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="w-full top-0 sticky bg-background border-b border-outline-variant z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4">
+<div class="flex items-center gap-12">
+<a class="font-display-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-primary" href="#">Southern City</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#offerings">Offerings</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#story">Story</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#visit">Visit</a>
+<a class="font-body-md text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden sm:block font-label-caps text-secondary font-bold" href="tel:8142067646">(814) 206-7646</a>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-caps hover:bg-secondary transition-colors duration-300 cursor-pointer active:opacity-70">Call Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-[921px] flex flex-col justify-center border-b border-outline-variant">
+<div class="grid grid-cols-1 md:grid-cols-12 px-margin-mobile md:px-margin-desktop gap-gutter relative z-10">
+<div class="md:col-span-8 flex flex-col justify-center py-section-padding">
+<p class="font-label-caps text-secondary mb-4 tracking-widest">ESTABLISHED JOHNSTOWN, PA</p>
+<h1 class="font-display-xl text-display-lg md:text-display-xl text-primary leading-none mb-6">Southern City</h1>
+<h2 class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">The New Standard in Johnstown. Industrial elegance forged through craftsmanship and local heritage.</h2>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 font-label-caps hover:bg-secondary transition-colors duration-300" href="#offerings">View Offerings</a>
+<a class="border border-primary text-primary px-8 py-4 font-label-caps hover:bg-primary hover:text-white transition-all duration-300" href="#story">Our Story</a>
+</div>
+</div>
+<div class="md:col-span-4 hidden md:flex items-center justify-end relative">
+<div class="absolute -left-12 top-1/4 rule-line-v h-1/2"></div>
+<div class="w-full aspect-[3/4] overflow-hidden grayscale hover:grayscale-0 transition-all duration-700 border border-outline-variant">
+<img alt="Interior view" class="w-full h-full object-cover" data-alt="A sophisticated architectural interior in Johnstown, PA, showcasing high-end industrial design with exposed structural elements and polished concrete floors. The lighting is dramatic and editorial, casting long shadows across warm copper fixtures and deep charcoal furniture. The overall aesthetic is minimalist yet prestigious, embodying a sense of modern prestige and refined craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQ_KVwmr-Y7BMNneQMkU4K75X6f4bEIYkr3SQAP6NMhzN365HkbijO8uj56M9erWwVQdu3eNyRZpa8B-Lf6kJL8q8lW-gJzgl8wEHXa9yCJUEv9cbhulb0sFSIn_S3Z6ujDCeYg83jGKrvH_hTXRPsXOFoE5lO7AIjgh1xSiFpDt0Vu3OgyfBzU1_PuVbLSDh0EH5MHrbIpS3tewSh_UzZrjiD1yQuLrK5QOOoj8Z9rIGEPaeZ03PoT8SFXETlTePbpKsW0diX908"/>
+</div>
+</div>
+</div>
+<!-- Decorative Rule Lines -->
+<div class="absolute top-0 right-1/3 h-full rule-line-v opacity-30"></div>
+</header>
+<!-- Credibility Strip -->
+<section class="border-b border-outline-variant py-12 bg-surface-container-low">
+<div class="px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex flex-col">
+<span class="font-label-caps text-on-surface-variant">LOCALLY OWNED</span>
+<span class="font-headline-lg text-primary">Pennsylvania Roots</span>
+</div>
+<div class="hidden md:block rule-line-v h-12"></div>
+<div class="flex flex-col text-center md:text-left">
+<span class="font-label-caps text-on-surface-variant">AUTHENTICITY</span>
+<span class="font-headline-lg text-primary">Industrial Legacy</span>
+</div>
+<div class="hidden md:block rule-line-v h-12"></div>
+<div class="flex flex-col text-right">
+<span class="font-label-caps text-on-surface-variant">COMMITMENT</span>
+<span class="font-headline-lg text-primary">Bespoke Quality</span>
+</div>
+</div>
+</section>
+<!-- Offerings Section (Asymmetrical Layout) -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop overflow-hidden" id="offerings">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-24">
+<div class="md:col-span-5 reveal">
+<h3 class="font-label-caps text-secondary mb-4">OUR CRAFT</h3>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg leading-tight mb-8">Refining the Professional Experience.</h2>
+<div class="rule-line-h w-24 mb-8 bg-secondary h-[2px]"></div>
+</div>
+<div class="md:col-start-7 md:col-span-6 reveal delay-100">
+<p class="font-body-lg text-on-surface-variant">We believe that business in Johnstown deserves a higher standard. Our offerings are designed for those who appreciate the intersection of structural integrity and aesthetic refinement.</p>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Offering 1 -->
+<div class="md:col-span-7 mb-12 reveal">
+<div class="relative group">
+<div class="aspect-video overflow-hidden grayscale group-hover:grayscale-0 transition-all duration-700">
+<img alt="Premium Services" class="w-full h-full object-cover scale-105 group-hover:scale-100 transition-transform duration-700" data-alt="A close-up shot of high-quality industrial materials being used in a professional setting, featuring polished steel, deep wood textures, and burnished copper accents. The image is composed with an editorial, minimalist eye, utilizing soft overhead lighting that emphasizes the tactile quality of the surfaces. The color palette is strictly charcoal, copper, and mist gray, reflecting a high-end business brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfEgrfJ33JynUce1Qhj5xamYDUzviznVd7OLulKlYTOdJQnk7KN4uQgLD2bHooF9QQvkY5OUhzqfNFATfNCQvC0EbEcvKfUXjjfVnuWY-J6rnX-GRN9mfApqRQCT7kwfBvm609mUHnMT3SRuTJWQ_2ydkVfUidV6qz_4V7U1uZerbggIcNBoif2rov3eu-6yESrulvfmn5ZI3cYvouisS1KQ1P9RJRvGMRSZwq91zlnJjro8A8r3TuxSgAbHS2lY5gQI9CHDBT4Wo"/>
+</div>
+<div class="absolute -bottom-6 -right-6 md:right-12 bg-background border border-outline-variant p-8 md:p-12 max-w-sm">
+<span class="font-label-caps text-secondary">01 / SIGNATURE SERVICES</span>
+<h4 class="font-headline-lg text-primary mt-2 mb-4">Precision Craft</h4>
+<p class="text-on-surface-variant text-body-md">Meticulously curated business solutions that prioritize efficiency without sacrificing the soul of the work.</p>
+</div>
+</div>
+</div>
+<!-- Offering 2 -->
+<div class="md:col-start-8 md:col-span-5 mb-12 reveal delay-200 self-center">
+<div class="border-l border-outline-variant pl-8 py-12">
+<span class="font-label-caps text-secondary">02 / CONSULTATION</span>
+<h4 class="font-headline-lg text-primary mt-2 mb-4">Bespoke Strategy</h4>
+<p class="text-on-surface-variant text-body-md mb-8">Every partnership begins with a deep dive into your unique objectives, ensuring a result that is as durable as it is beautiful.</p>
+<a class="inline-flex items-center gap-2 font-label-caps text-primary group" href="#contact">
+                        Inquire Now 
+                        <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Story Section -->
+<section class="bg-surface-container-highest py-section-padding border-y border-outline-variant" id="story">
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 reveal">
+<div class="relative">
+<div class="rule-line-h absolute -top-12 left-0 w-1/2"></div>
+<h2 class="font-display-lg text-headline-lg md:text-display-lg leading-tight mb-8">Our Roots are Forged in Steel.</h2>
+<div class="font-body-lg text-on-surface space-y-6">
+<p>Southern City was founded on the belief that Johnstown’s industrial heritage is not just history—it's a blueprint for the future. From our central hub at 500 Galleria Drive, we operate at the pulse of local growth.</p>
+<p>Our story is one of evolution. We took the rugged determination of this city and polished it, creating a business standard that honors the hard-working soul of Pennsylvania while looking firmly toward global trends.</p>
+</div>
+</div>
+</div>
+<div class="md:col-start-8 md:col-span-5 mt-12 md:mt-0 reveal delay-200">
+<div class="border-8 border-background p-4 relative">
+<img alt="Our Office" class="w-full grayscale" data-alt="A modern, high-end office environment in Johnstown, PA, featuring large windows that flood the space with natural light. The room is styled with industrial furniture, including a long conference table made of reclaimed wood and steel, and chairs upholstered in dark leather. Thin black rule lines on the glass partitions and copper light fixtures above create a sophisticated, editorial atmosphere of professional stability and local pride." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABHKan-wxL6ntoScL1hlrsJogIv2QVKWIqahzzXWwX9BmobfVt3pf40N0FRKibt88bYVAbhHCDO3LBHWGva9Qomv18UxK77Ld4u0AUaH9zAR-0a__RooJlpB5uF-3fDdt7lJ115pIvPPWpP1YJPYA9JM0430DKiDJmAkvowfp9iYrQwxWmFwdiLoM2Q3yKPuKfEX1xZotClhlh-W2YODaJVYuzE8IlxB0aKvj7ZsAh-IwG1IjREK_CDXKyJqxZbA3DVJrtGNg6-bw"/>
+<div class="absolute -bottom-8 -left-8 bg-secondary p-6 text-white font-label-caps">
+                        EST. JOHNSTOWN
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-padding" id="visit">
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter mb-12">
+<div class="md:col-span-4 reveal">
+<h3 class="font-label-caps text-secondary mb-4">VISIT US</h3>
+<h2 class="font-headline-lg text-primary mb-6">Experience the Space.</h2>
+<address class="not-italic font-body-md text-on-surface-variant space-y-2">
+<p>500 Galleria Drive</p>
+<p>Johnstown, PA 15904</p>
+<p class="pt-4 font-bold text-primary">Open Monday — Friday</p>
+<p>09:00 AM — 06:00 PM</p>
+</address>
+</div>
+<div class="md:col-start-5 md:col-span-8 reveal delay-100">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border border-outline-variant grayscale" data-location="Johnstown, PA" data-map-slot="" style="">
+<!-- Map placeholder visual -->
+<div class="absolute inset-0 bg-surface-container flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4">location_on</span>
+<p class="font-label-caps">Map Loading...</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-primary text-on-primary" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-5 reveal">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg mb-8">Let's Forge Something New.</h2>
+<div class="space-y-8 mt-12">
+<div>
+<span class="font-label-caps text-on-primary-container block mb-2">EMAIL</span>
+<a class="font-headline-lg hover:text-secondary-container transition-colors" href="mailto:southerncitypa@gmail.com">southerncitypa@gmail.com</a>
+</div>
+<div>
+<span class="font-label-caps text-on-primary-container block mb-2">PHONE</span>
+<a class="font-headline-lg hover:text-secondary-container transition-colors" href="tel:8142067646">(814) 206-7646</a>
+</div>
+</div>
+</div>
+<div class="md:col-start-7 md:col-span-6 reveal delay-200">
+<form class="space-y-8" id="contactForm" novalidate="">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="border-b border-outline relative group">
+<label class="font-label-caps text-on-primary-container block mb-2" for="name">NAME</label>
+<input class="w-full bg-transparent border-none p-0 text-white font-body-lg focus:ring-0" id="name" name="name" placeholder="John Doe" required="" type="text"/>
+<span class="error-msg text-error text-xs absolute -bottom-6 left-0 opacity-0 transition-opacity">This field is required</span>
+</div>
+<div class="border-b border-outline relative group">
+<label class="font-label-caps text-on-primary-container block mb-2" for="email">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-none p-0 text-white font-body-lg focus:ring-0" id="email" name="email" placeholder="john@example.com" required="" type="email"/>
+<span class="error-msg text-error text-xs absolute -bottom-6 left-0 opacity-0 transition-opacity">Please enter a valid email</span>
+</div>
+</div>
+<div class="border-b border-outline relative group">
+<label class="font-label-caps text-on-primary-container block mb-2" for="message">MESSAGE</label>
+<textarea class="w-full bg-transparent border-none p-0 text-white font-body-lg focus:ring-0 resize-none" id="message" name="message" placeholder="Tell us about your project..." required="" rows="4"></textarea>
+<span class="error-msg text-error text-xs absolute -bottom-6 left-0 opacity-0 transition-opacity">Message cannot be empty</span>
+</div>
+<button class="bg-white text-primary px-12 py-4 font-label-caps hover:bg-secondary-container hover:text-white transition-all duration-300 w-full md:w-auto" type="submit">Send Message</button>
+<div class="hidden font-label-caps text-secondary-container pt-4" id="formStatus">Message sent successfully. We will be in touch.</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-section-padding border-t border-outline-variant">
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 mb-12 md:mb-0">
+<a class="font-display-lg text-headline-lg tracking-tighter text-primary" href="#">Southern City</a>
+<p class="font-body-md text-on-surface-variant mt-6 max-w-xs">Industrial Elegance Personified. Redefining the professional landscape of Johnstown, Pennsylvania.</p>
+</div>
+<div class="md:col-start-6 md:col-span-2">
+<h5 class="font-label-caps text-primary mb-6">NAVIGATION</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors" href="#offerings">Offerings</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#story">Story</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#visit">Location</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#contact">Contact</a></li>
+<li><a class="hover:text-secondary transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-primary mb-6">CONTACT</h5>
+<ul class="space-y-4 font-body-md text-on-surface-variant">
+<li>(814) 206-7646</li>
+<li>southerncitypa@gmail.com</li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h5 class="font-label-caps text-primary mb-6">OFFICE</h5>
+<p class="font-body-md text-on-surface-variant">
+                    500 Galleria Drive<br/>
+                    Johnstown, PA 15904
+                </p>
+<div class="flex gap-4 mt-8">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-white transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center hover:bg-secondary hover:text-white transition-colors duration-300" href="#">
+<span class="material-symbols-outlined text-sm">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop mt-24 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-on-surface-variant text-[10px]">© 2024 SOUTHERN CITY JOHNSTOWN. ALL RIGHTS RESERVED.</p>
+<p class="font-label-caps text-on-surface-variant text-[10px]">DESIGN BY INDUSTRIAL ELEGANCE STUDIO</p>
+</div>
+</footer>
+<script>
+        // Form Validation UI logic
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            let isValid = true;
+            
+            const inputs = contactForm.querySelectorAll('input[required], textarea[required]');
+            
+            inputs.forEach(input => {
+                const errorMsg = input.nextElementSibling;
+                if (!input.value.trim() || (input.type === 'email' && !input.value.includes('@'))) {
+                    errorMsg.style.opacity = '1';
+                    input.parentElement.classList.add('border-error');
+                    isValid = false;
+                } else {
+                    errorMsg.style.opacity = '0';
+                    input.parentElement.classList.remove('border-error');
+                }
+            });
+
+            if (isValid) {
+                formStatus.classList.remove('hidden');
+                contactForm.reset();
+                setTimeout(() => {
+                    formStatus.classList.add('hidden');
+                }, 5000);
+            }
+        });
+
+        // Reveal on scroll animation
+        const revealElements = document.querySelectorAll('.reveal');
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // Navigation Active State Tracking
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a[href^="#"]');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-secondary', 'font-bold', 'border-b', 'border-secondary');
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.classList.add('text-secondary', 'font-bold', 'border-b', 'border-secondary');
+                }
+            });
+        });
+    </script>
+</body></html>
