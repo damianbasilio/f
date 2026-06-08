@@ -1,0 +1,504 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "High-Contrast Industrial",
+        "styleGuidelines": "## Brand & Style\nThe brand personality centers on a \"Rugged Premium\" ethos—merging the raw, dependable nature of heavy machinery with the sophisticated precision of high-performance automotive engineering. The target audience is the discerning vehicle owner who values time and professional-grade reliability.\n\nThe design style is **High-Contrast / Bold**. It utilizes heavy visual weights, stark color shifts, and an editorial layout that feels more like a premium lifestyle magazine than a standard utility service. The UI must feel authoritative and urgent, yet meticulously organized. This is achieved through the use of aggressive typography, thick structural borders, and a focus on clarity through whitespace.\n\n## Layout & Spacing\nThe layout follows a **Fluid Grid** model with an \"Asymmetric Industrial\" twist. While the underlying structure is a 12-column grid, elements frequently break alignment to create a dynamic, editorial feel.\n\n- **Asymmetry:** Use heavy 4px rule lines to divide sections. Allow images of tread patterns or machinery to overlap these lines or extend beyond container margins.\n- **Whitespace:** Spacing is generous. Avoid cluttering the screen with multiple cards; instead, let each service or value proposition breathe with significant vertical padding (80px–120px between sections).\n- **Mobile Adaptivity:** On mobile, the grid collapses to a single column, but the heavy 4px horizontal rule lines remain to maintain the \"stacked\" industrial aesthetic.\n\n## Elevation & Depth\nDepth in this design system is created through **Tonal Layers** and **Bold Borders** rather than shadows. \n- **Layering:** Use varying shades of Deep Asphalt and Concrete Gray to create a stacked effect. Avoid drop shadows; they are too \"soft\" for this industrial brand.\n- **Outlines:** Use high-contrast 1px Concrete Gray outlines for secondary containers. Use 4px Safety Orange borders for active states or highlighted components.\n- **Tactile Patterns:** Use subtle, low-opacity geometric tread patterns (#FFFFFF at 3% opacity) as background textures to add a physical, \"greasy-engine-room\" depth without sacrificing text legibility.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are solid Safety Orange with black text (uppercase). Secondary buttons are outlined in Concrete Gray with white text.\n- **Input Fields:** Bottom-border only (2px Concrete Gray). Labels sit above the line in small, uppercase Hanken Grotesk.\n- **Chips:** Small, rectangular boxes with solid gray backgrounds and white text. Used for vehicle types (e.g., \"TRUCK,\" \"SUV,\" \"EV\").\n- **Cards:** No shadows. Cards are defined by a 1px Concrete Gray border or a slightly lighter background than the page surface. Headers within cards should be separated by a 1px rule line.\n- **Tread Progress Indicator:** A custom component for booking flows where the progress bar looks like a stylized tire track that fills with Safety Orange as the user moves forward.\n- **Urgency Banner:** A 24/7 indicator using a high-visibility Safety Orange bar at the top or bottom of the screen, featuring a scrolling \"ticker\" style text movement for a raw, news-style feel.",
+        "theme": {
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#ff5f1f",
+          "designMd": "---\nname: High-Contrast Industrial\ncolors:\n  surface: '#121414'\n  surface-dim: '#121414'\n  surface-bright: '#37393a'\n  surface-container-lowest: '#0c0f0f'\n  surface-container-low: '#1a1c1c'\n  surface-container: '#1e2020'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#333535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#2f3131'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#c6c6c6'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#939494'\n  on-tertiary-container: '#2b2d2d'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c6'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#121414'\n  on-background: '#e2e2e2'\n  surface-variant: '#333535'\ntypography:\n  headline-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stroke-thick: 4px\n  stroke-thin: 1px\n---\n\n## Brand & Style\nThe brand personality centers on a \"Rugged Premium\" ethos—merging the raw, dependable nature of heavy machinery with the sophisticated precision of high-performance automotive engineering. The target audience is the discerning vehicle owner who values time and professional-grade reliability.\n\nThe design style is **High-Contrast / Bold**. It utilizes heavy visual weights, stark color shifts, and an editorial layout that feels more like a premium lifestyle magazine than a standard utility service. The UI must feel authoritative and urgent, yet meticulously organized. This is achieved through the use of aggressive typography, thick structural borders, and a focus on clarity through whitespace.\n\n## Colors\nThe palette is built on the high-visibility aesthetic of road safety and industrial sites.\n- **Deep Asphalt (#1A1A1B):** The primary surface color. It provides a dense, sophisticated backdrop that makes other elements pop.\n- **Safety Orange (#FF5F1F):** The high-performance accent. Reserved for critical calls to action, status indicators, and branding moments.\n- **Concrete Gray (#E2E2E2):** Used for secondary text, borders, and subtle backgrounds to prevent the UI from becoming overly pitch-black.\n- **Stark White (#FFFFFF):** Used for primary body text and high-priority information to ensure maximum legibility against the asphalt.\n\n## Typography\nTypography is the cornerstone of this design system's editorial feel. \n- **Headlines:** Use *Archivo Narrow*. Its condensed, vertical nature mimics industrial signage and creates a sense of height and power. Large headlines should use negative letter-spacing and be set in all-caps to reinforce the \"24/7\" urgency.\n- **Body:** Use *Hanken Grotesk*. This font provides a clean, modern geometric balance to the aggressive headlines, ensuring that technical service details are easily digestible.\n- **Editorial Accents:** Use large, oversized type that occasionally bleeds off the edge of the container or is bisected by thick rule lines to create visual tension.\n\n## Layout & Spacing\nThe layout follows a **Fluid Grid** model with an \"Asymmetric Industrial\" twist. While the underlying structure is a 12-column grid, elements frequently break alignment to create a dynamic, editorial feel.\n\n- **Asymmetry:** Use heavy 4px rule lines to divide sections. Allow images of tread patterns or machinery to overlap these lines or extend beyond container margins.\n- **Whitespace:** Spacing is generous. Avoid cluttering the screen with multiple cards; instead, let each service or value proposition breathe with significant vertical padding (80px–120px between sections).\n- **Mobile Adaptivity:** On mobile, the grid collapses to a single column, but the heavy 4px horizontal rule lines remain to maintain the \"stacked\" industrial aesthetic.\n\n## Elevation & Depth\nDepth in this design system is created through **Tonal Layers** and **Bold Borders** rather than shadows. \n- **Layering:** Use varying shades of Deep Asphalt and Concrete Gray to create a stacked effect. Avoid drop shadows; they are too \"soft\" for this industrial brand.\n- **Outlines:** Use high-contrast 1px Concrete Gray outlines for secondary containers. Use 4px Safety Orange borders for active states or highlighted components.\n- **Tactile Patterns:** Use subtle, low-opacity geometric tread patterns (#FFFFFF at 3% opacity) as background textures to add a physical, \"greasy-engine-room\" depth without sacrificing text legibility.\n\n## Shapes\nThe shape language is **Sharp (0)**. There are no rounded corners in the design system. Every button, input field, and card uses 90-degree angles to reflect the structural integrity of steel beams and industrial equipment. This lack of \"softness\" is what distinguishes the premium industrial aesthetic from consumer-grade \"friendly\" apps.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are solid Safety Orange with black text (uppercase). Secondary buttons are outlined in Concrete Gray with white text.\n- **Input Fields:** Bottom-border only (2px Concrete Gray). Labels sit above the line in small, uppercase Hanken Grotesk.\n- **Chips:** Small, rectangular boxes with solid gray backgrounds and white text. Used for vehicle types (e.g., \"TRUCK,\" \"SUV,\" \"EV\").\n- **Cards:** No shadows. Cards are defined by a 1px Concrete Gray border or a slightly lighter background than the page surface. Headers within cards should be separated by a 1px rule line.\n- **Tread Progress Indicator:** A custom component for booking flows where the progress bar looks like a stylized tire track that fills with Safety Orange as the user moves forward.\n- **Urgency Banner:** A 24/7 indicator using a high-visibility Safety Orange bar at the top or bottom of the screen, featuring a scrolling \"ticker\" style text movement for a raw, news-style feel.",
+          "font": "ARCHIVO_NARROW",
+          "headlineFont": "ARCHIVO_NARROW",
+          "headlineFontFamily": "Archivo Narrow",
+          "labelFont": "HANKEN_GROTESK",
+          "labelFontFamily": "Hanken Grotesk",
+          "namedColors": {
+            "background": "#121414",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#2f3131",
+            "inverse_primary": "#ab3600",
+            "inverse_surface": "#e2e2e2",
+            "on_background": "#e2e2e2",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#5c1900",
+            "on_primary_container": "#561700",
+            "on_primary_fixed": "#390c00",
+            "on_primary_fixed_variant": "#832700",
+            "on_secondary": "#303031",
+            "on_secondary_container": "#bab8b9",
+            "on_secondary_fixed": "#1b1b1c",
+            "on_secondary_fixed_variant": "#474647",
+            "on_surface": "#e2e2e2",
+            "on_surface_variant": "#e3bfb3",
+            "on_tertiary": "#2f3131",
+            "on_tertiary_container": "#2b2d2d",
+            "on_tertiary_fixed": "#1a1c1c",
+            "on_tertiary_fixed_variant": "#454747",
+            "outline": "#aa897f",
+            "outline_variant": "#5b4138",
+            "primary": "#ffb59c",
+            "primary_container": "#ff5f1f",
+            "primary_fixed": "#ffdbcf",
+            "primary_fixed_dim": "#ffb59c",
+            "secondary": "#c8c6c7",
+            "secondary_container": "#49494a",
+            "secondary_fixed": "#e5e2e3",
+            "secondary_fixed_dim": "#c8c6c7",
+            "surface": "#121414",
+            "surface_bright": "#37393a",
+            "surface_container": "#1e2020",
+            "surface_container_high": "#282a2b",
+            "surface_container_highest": "#333535",
+            "surface_container_low": "#1a1c1c",
+            "surface_container_lowest": "#0c0f0f",
+            "surface_dim": "#121414",
+            "surface_tint": "#ffb59c",
+            "surface_variant": "#333535",
+            "tertiary": "#c6c6c6",
+            "tertiary_container": "#939494",
+            "tertiary_fixed": "#e2e2e2",
+            "tertiary_fixed_dim": "#c6c6c6"
+          },
+          "overrideNeutralColor": "#ffffff",
+          "overridePrimaryColor": "#ff5f1f",
+          "overrideSecondaryColor": "#1a1a1b",
+          "overrideTertiaryColor": "#e2e2e2",
+          "spacing": {
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "stroke-thick": "4px",
+            "stroke-thin": "1px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "headline-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "52px"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "36px",
+              "fontWeight": "700",
+              "lineHeight": "40px"
+            },
+            "headline-md": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "36px"
+            },
+            "headline-xl": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "84px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "80px"
+            },
+            "label-bold": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "14px",
+              "fontWeight": "700",
+              "letterSpacing": "0.05em",
+              "lineHeight": "20px"
+            },
+            "label-sm": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "lineHeight": "16px"
+            }
+          }
+        }
+      },
+      "name": "assets/a382c8eec4374008ac18a656e9b36655",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "1627216794cd482cb5c997620a5db84a",
+          "name": "projects/17705266812229007656/screens/1627216794cd482cb5c997620a5db84a",
+          "prompt": "Close-up, high-detail macro shot of a rugged tire tread on a wet asphalt road at night, illuminated by orange streetlights. The aesthetic is industrial, premium, and moody. Deep shadows and sharp highlights on the rubber texture. 16:9 aspect ratio.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuoa6r1U9VL3SW7_uuRUix7NxJlqbnoXtXesoF8ztJ4OcSUf2_2FKAbl3dFGsgTUZgQpzxMecoaze1piR-49kSqmdx4CmyJ_ZYLN-hYBhI7xM-yMVQHYYBKEHpOfNa3A_N8BEpCgtXff1eW0Hp2HV53HkSHzlQSrUc5uzBguei4fAVOsyuiURxvUGF4rcSr1Q8PlDHJBkVbjTBGnH6fKF8XUlCCF3HludjhcEIb2rg6B5tzK64IxS2jZDHR",
+            "name": "projects/17705266812229007656/files/e8a0df9d7d9846cc88832ca1e22c161f"
+          },
+          "theme": {},
+          "title": "Close-up, high-detail macro shot of a rugged tire tread on a wet asphalt road at night, illuminated by orange streetlights. The aesthetic is industrial, premium, and moody. Deep shadows and sharp highlights on the rubber texture. 16:9 aspect ratio.",
+          "width": "1024"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "09e5e1c0cfac48ed9f7e6d616d6f9d25",
+          "name": "projects/17705266812229007656/screens/09e5e1c0cfac48ed9f7e6d616d6f9d25",
+          "prompt": "A professional mobile tire service van parked on a modern suburban street during the golden hour. The van is clean, with minimalist white and orange branding. A technician is seen from the side (no face) working with professional tools. High-end lifestyle photography, shallow depth of field. 3:2 aspect ratio.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvNISC70zt_jO30vnJwYekeajGHtPJeMxyaBanrTtbCYwxpRJUEZJDML8mr4ReYICLWdOvpKboE1QoGCiZYMBqk2B-Xeq5EasusLbjTnvi-oAz7u6sgECIl6zBHMvT-Q7qdGNPm-d6CLJ6Eb7osEIaKik9bMybSkH1KeIPRMmctHWOmwDUciLxl8WI684HCVwFNbPPjdFvJA6lLGHKKj-NMw4bcY3dTOkHKHfCAjugQLy8Gf6I4Ee1EQ8eN",
+            "name": "projects/17705266812229007656/files/dd9465937ac4459db2e59c341c4a7792"
+          },
+          "theme": {},
+          "title": "A professional mobile tire service van parked on a modern suburban street during the golden hour. The van is clean, with minimalist white and orange branding. A technician is seen from the side (no face) working with professional tools. High-end lifestyle photography, shallow depth of field. 3:2 aspect ratio.",
+          "width": "1024"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "83636be3d6f640ebb637a78c2fabad95",
+          "name": "projects/17705266812229007656/screens/83636be3d6f640ebb637a78c2fabad95",
+          "prompt": "A collection of three premium tire icons (all-season, performance, heavy-duty) rendered in a minimalist, thick-stroke orange line art style on a dark asphalt-textured background. 4:3 aspect ratio.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsAdMOLEheJk7Unn31soxeidtXlSLPxB5I9nLQ9CCa1yGodCceuZAGYvys-FuEWlgmZZR_tM4LnjTkPhVMEIdJzksEp3klj6yl6FoXZE1Mbi-4hk2op3CPHy6A5ddbsWGBGaXNpG_LeVWw2upAOXQPuA5bldlpMNS3q4H2mFeIHVYRtRxf9tZ3PWM_RwuNr0u_gAe7hXN28GHGoKem-Ht8yPBMKe9NtpozXmOSaRbxeo20o9xtWMaalTBHA",
+            "name": "projects/17705266812229007656/files/a63f34b265564f7e8c2949496bbb528c"
+          },
+          "theme": {},
+          "title": "A collection of three premium tire icons (all-season, performance, heavy-duty) rendered in a minimalist, thick-stroke orange line art style on a dark asphalt-textured background. 4:3 aspect ratio.",
+          "width": "1024"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "High-Contrast Industrial",
+              "styleGuidelines": "## Brand & Style\nThe brand personality centers on a \"Rugged Premium\" ethos—merging the raw, dependable nature of heavy machinery with the sophisticated precision of high-performance automotive engineering. The target audience is the discerning vehicle owner who values time and professional-grade reliability.\n\nThe design style is **High-Contrast / Bold**. It utilizes heavy visual weights, stark color shifts, and an editorial layout that feels more like a premium lifestyle magazine than a standard utility service. The UI must feel authoritative and urgent, yet meticulously organized. This is achieved through the use of aggressive typography, thick structural borders, and a focus on clarity through whitespace.\n\n## Layout & Spacing\nThe layout follows a **Fluid Grid** model with an \"Asymmetric Industrial\" twist. While the underlying structure is a 12-column grid, elements frequently break alignment to create a dynamic, editorial feel.\n\n- **Asymmetry:** Use heavy 4px rule lines to divide sections. Allow images of tread patterns or machinery to overlap these lines or extend beyond container margins.\n- **Whitespace:** Spacing is generous. Avoid cluttering the screen with multiple cards; instead, let each service or value proposition breathe with significant vertical padding (80px–120px between sections).\n- **Mobile Adaptivity:** On mobile, the grid collapses to a single column, but the heavy 4px horizontal rule lines remain to maintain the \"stacked\" industrial aesthetic.\n\n## Elevation & Depth\nDepth in this design system is created through **Tonal Layers** and **Bold Borders** rather than shadows. \n- **Layering:** Use varying shades of Deep Asphalt and Concrete Gray to create a stacked effect. Avoid drop shadows; they are too \"soft\" for this industrial brand.\n- **Outlines:** Use high-contrast 1px Concrete Gray outlines for secondary containers. Use 4px Safety Orange borders for active states or highlighted components.\n- **Tactile Patterns:** Use subtle, low-opacity geometric tread patterns (#FFFFFF at 3% opacity) as background textures to add a physical, \"greasy-engine-room\" depth without sacrificing text legibility.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are solid Safety Orange with black text (uppercase). Secondary buttons are outlined in Concrete Gray with white text.\n- **Input Fields:** Bottom-border only (2px Concrete Gray). Labels sit above the line in small, uppercase Hanken Grotesk.\n- **Chips:** Small, rectangular boxes with solid gray backgrounds and white text. Used for vehicle types (e.g., \"TRUCK,\" \"SUV,\" \"EV\").\n- **Cards:** No shadows. Cards are defined by a 1px Concrete Gray border or a slightly lighter background than the page surface. Headers within cards should be separated by a 1px rule line.\n- **Tread Progress Indicator:** A custom component for booking flows where the progress bar looks like a stylized tire track that fills with Safety Orange as the user moves forward.\n- **Urgency Banner:** A 24/7 indicator using a high-visibility Safety Orange bar at the top or bottom of the screen, featuring a scrolling \"ticker\" style text movement for a raw, news-style feel.",
+              "theme": {
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#ff5f1f",
+                "designMd": "---\nname: High-Contrast Industrial\ncolors:\n  surface: '#121414'\n  surface-dim: '#121414'\n  surface-bright: '#37393a'\n  surface-container-lowest: '#0c0f0f'\n  surface-container-low: '#1a1c1c'\n  surface-container: '#1e2020'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#333535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#2f3131'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#c6c6c6'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#939494'\n  on-tertiary-container: '#2b2d2d'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c6'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#121414'\n  on-background: '#e2e2e2'\n  surface-variant: '#333535'\ntypography:\n  headline-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stroke-thick: 4px\n  stroke-thin: 1px\n---\n\n## Brand & Style\nThe brand personality centers on a \"Rugged Premium\" ethos—merging the raw, dependable nature of heavy machinery with the sophisticated precision of high-performance automotive engineering. The target audience is the discerning vehicle owner who values time and professional-grade reliability.\n\nThe design style is **High-Contrast / Bold**. It utilizes heavy visual weights, stark color shifts, and an editorial layout that feels more like a premium lifestyle magazine than a standard utility service. The UI must feel authoritative and urgent, yet meticulously organized. This is achieved through the use of aggressive typography, thick structural borders, and a focus on clarity through whitespace.\n\n## Colors\nThe palette is built on the high-visibility aesthetic of road safety and industrial sites.\n- **Deep Asphalt (#1A1A1B):** The primary surface color. It provides a dense, sophisticated backdrop that makes other elements pop.\n- **Safety Orange (#FF5F1F):** The high-performance accent. Reserved for critical calls to action, status indicators, and branding moments.\n- **Concrete Gray (#E2E2E2):** Used for secondary text, borders, and subtle backgrounds to prevent the UI from becoming overly pitch-black.\n- **Stark White (#FFFFFF):** Used for primary body text and high-priority information to ensure maximum legibility against the asphalt.\n\n## Typography\nTypography is the cornerstone of this design system's editorial feel. \n- **Headlines:** Use *Archivo Narrow*. Its condensed, vertical nature mimics industrial signage and creates a sense of height and power. Large headlines should use negative letter-spacing and be set in all-caps to reinforce the \"24/7\" urgency.\n- **Body:** Use *Hanken Grotesk*. This font provides a clean, modern geometric balance to the aggressive headlines, ensuring that technical service details are easily digestible.\n- **Editorial Accents:** Use large, oversized type that occasionally bleeds off the edge of the container or is bisected by thick rule lines to create visual tension.\n\n## Layout & Spacing\nThe layout follows a **Fluid Grid** model with an \"Asymmetric Industrial\" twist. While the underlying structure is a 12-column grid, elements frequently break alignment to create a dynamic, editorial feel.\n\n- **Asymmetry:** Use heavy 4px rule lines to divide sections. Allow images of tread patterns or machinery to overlap these lines or extend beyond container margins.\n- **Whitespace:** Spacing is generous. Avoid cluttering the screen with multiple cards; instead, let each service or value proposition breathe with significant vertical padding (80px–120px between sections).\n- **Mobile Adaptivity:** On mobile, the grid collapses to a single column, but the heavy 4px horizontal rule lines remain to maintain the \"stacked\" industrial aesthetic.\n\n## Elevation & Depth\nDepth in this design system is created through **Tonal Layers** and **Bold Borders** rather than shadows. \n- **Layering:** Use varying shades of Deep Asphalt and Concrete Gray to create a stacked effect. Avoid drop shadows; they are too \"soft\" for this industrial brand.\n- **Outlines:** Use high-contrast 1px Concrete Gray outlines for secondary containers. Use 4px Safety Orange borders for active states or highlighted components.\n- **Tactile Patterns:** Use subtle, low-opacity geometric tread patterns (#FFFFFF at 3% opacity) as background textures to add a physical, \"greasy-engine-room\" depth without sacrificing text legibility.\n\n## Shapes\nThe shape language is **Sharp (0)**. There are no rounded corners in the design system. Every button, input field, and card uses 90-degree angles to reflect the structural integrity of steel beams and industrial equipment. This lack of \"softness\" is what distinguishes the premium industrial aesthetic from consumer-grade \"friendly\" apps.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are solid Safety Orange with black text (uppercase). Secondary buttons are outlined in Concrete Gray with white text.\n- **Input Fields:** Bottom-border only (2px Concrete Gray). Labels sit above the line in small, uppercase Hanken Grotesk.\n- **Chips:** Small, rectangular boxes with solid gray backgrounds and white text. Used for vehicle types (e.g., \"TRUCK,\" \"SUV,\" \"EV\").\n- **Cards:** No shadows. Cards are defined by a 1px Concrete Gray border or a slightly lighter background than the page surface. Headers within cards should be separated by a 1px rule line.\n- **Tread Progress Indicator:** A custom component for booking flows where the progress bar looks like a stylized tire track that fills with Safety Orange as the user moves forward.\n- **Urgency Banner:** A 24/7 indicator using a high-visibility Safety Orange bar at the top or bottom of the screen, featuring a scrolling \"ticker\" style text movement for a raw, news-style feel.",
+                "font": "ARCHIVO_NARROW",
+                "headlineFont": "ARCHIVO_NARROW",
+                "headlineFontFamily": "Archivo Narrow",
+                "labelFont": "HANKEN_GROTESK",
+                "labelFontFamily": "Hanken Grotesk",
+                "namedColors": {
+                  "background": "#121414",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#2f3131",
+                  "inverse_primary": "#ab3600",
+                  "inverse_surface": "#e2e2e2",
+                  "on_background": "#e2e2e2",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#5c1900",
+                  "on_primary_container": "#561700",
+                  "on_primary_fixed": "#390c00",
+                  "on_primary_fixed_variant": "#832700",
+                  "on_secondary": "#303031",
+                  "on_secondary_container": "#bab8b9",
+                  "on_secondary_fixed": "#1b1b1c",
+                  "on_secondary_fixed_variant": "#474647",
+                  "on_surface": "#e2e2e2",
+                  "on_surface_variant": "#e3bfb3",
+                  "on_tertiary": "#2f3131",
+                  "on_tertiary_container": "#2b2d2d",
+                  "on_tertiary_fixed": "#1a1c1c",
+                  "on_tertiary_fixed_variant": "#454747",
+                  "outline": "#aa897f",
+                  "outline_variant": "#5b4138",
+                  "primary": "#ffb59c",
+                  "primary_container": "#ff5f1f",
+                  "primary_fixed": "#ffdbcf",
+                  "primary_fixed_dim": "#ffb59c",
+                  "secondary": "#c8c6c7",
+                  "secondary_container": "#49494a",
+                  "secondary_fixed": "#e5e2e3",
+                  "secondary_fixed_dim": "#c8c6c7",
+                  "surface": "#121414",
+                  "surface_bright": "#37393a",
+                  "surface_container": "#1e2020",
+                  "surface_container_high": "#282a2b",
+                  "surface_container_highest": "#333535",
+                  "surface_container_low": "#1a1c1c",
+                  "surface_container_lowest": "#0c0f0f",
+                  "surface_dim": "#121414",
+                  "surface_tint": "#ffb59c",
+                  "surface_variant": "#333535",
+                  "tertiary": "#c6c6c6",
+                  "tertiary_container": "#939494",
+                  "tertiary_fixed": "#e2e2e2",
+                  "tertiary_fixed_dim": "#c6c6c6"
+                },
+                "overrideNeutralColor": "#ffffff",
+                "overridePrimaryColor": "#ff5f1f",
+                "overrideSecondaryColor": "#1a1a1b",
+                "overrideTertiaryColor": "#e2e2e2",
+                "spacing": {
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "stroke-thick": "4px",
+                  "stroke-thin": "1px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "24px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "52px"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "36px",
+                    "fontWeight": "700",
+                    "lineHeight": "40px"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "36px"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "84px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "80px"
+                  },
+                  "label-bold": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "14px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "20px"
+                  },
+                  "label-sm": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "lineHeight": "16px"
+                  }
+                }
+              }
+            },
+            "name": "assets/a382c8eec4374008ac18a656e9b36655",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10060",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE0ZGU2Y2M3NDhlYjRiNTFiYWYwMjI2NWI4MTA5ZjE4EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzcwNTI2NjgxMjIyOTAwNzY1Ng&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/17705266812229007656/files/5738bff8d5064fa3b97f0f5baa0cef40"
+          },
+          "id": "1bf7b2839fa04d45b01ca50184c7e519",
+          "name": "projects/17705266812229007656/screens/1bf7b2839fa04d45b01ca50184c7e519",
+          "prompt": "Build the bespoke desktop homepage for 365 Mobile Tire Service. \nVisual Style: High-Contrast Industrial (Deep Asphalt #1A1A1B, Safety Orange #FF5F1F). Editorial typography with bold condensed headlines. Use thick orange rules and asymmetric layouts.\nSections:\n1. Header: Use the predicted TopNavBar. Ensure phone (580) 458-0143 is prominent.\n2. Hero: A high-impact section using {{DATA:IMAGE:IMAGE_3}} as a background or large element. Headline: 'ROADS NEVER SLEEP. NEITHER DO WE.' Subtext: 'Premium mobile tire solutions delivered to your location. 24/7. Lawton, Oklahoma.'\n3. Credibility: A horizontal ticker or bold block with: '24/7 EMERGENCY RESPONSE', 'ON-SITE INSTALLATION', 'ROADSIDE ASSISTANCE'.\n4. Services: An asymmetric grid featuring {{DATA:IMAGE:IMAGE_5}}. Services: Emergency Repair, Fleet Maintenance, Performance Fitting, Seasonal Swaps. Use heavy orange borders.\n5. About: Use {{DATA:IMAGE:IMAGE_4}}. Focus on the technician and professional service. 'THE 365 STANDARD: Precision tools, expert technicians, and zero downtime.'\n6. Visit: A full-width section with the required empty map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. Text: 'SERVING LAWTON & SURROUNDING AREAS.'\n7. Contact: A minimalist, dark-themed form. Fields: Name, Service Type, Phone, Location. Bold 'SEND SERVICE REQUEST' button.\n8. Footer: Use the predicted Footer component. Include contact info: (580) 458-0143, 365mobiletireservice@gmail.com, Lawton, Oklahoma.\nAdd a subtle 'tread' background pattern using CSS. Implement smooth scroll and form validation UI.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_3}}\n  Alt Text: Close-up, high-detail macro shot of a rugged tire tread on a wet asphalt road at night, illuminated by orange streetlights. The aesthetic is industrial, premium, and moody. Deep shadows and sharp highlights on the rubber texture. 16:9 aspect ratio.\n  Description: Close-up, high-detail macro shot of a rugged tire tread on a wet asphalt road at night, illuminated by orange streetlights. The aesthetic is industrial, premium, and moody. Deep shadows and sharp highlights on the rubber texture. 16:9 aspect ratio.\n  Dimensions: 1024x1024\n  Aspect Ratio: 1.00\n- {{DATA:IMAGE:IMAGE_4}}\n  Alt Text: A professional mobile tire service van parked on a modern suburban street during the golden hour. The van is clean, with minimalist white and orange branding. A technician is seen from the side (no face) working with professional tools. High-end lifestyle photography, shallow depth of field. 3:2 aspect ratio.\n  Description: A professional mobile tire service van parked on a modern suburban street during the golden hour. The van is clean, with minimalist white and orange branding. A technician is seen from the side (no face) working with professional tools. High-end lifestyle photography, shallow depth of field. 3:2 aspect ratio.\n  Dimensions: 1024x1024\n  Aspect Ratio: 1.00\n- {{DATA:IMAGE:IMAGE_5}}\n  Alt Text: A collection of three premium tire icons (all-season, performance, heavy-duty) rendered in a minimalist, thick-stroke orange line art style on a dark asphalt-textured background. 4:3 aspect ratio.\n  Description: A collection of three premium tire icons (all-season, performance, heavy-duty) rendered in a minimalist, thick-stroke orange line art style on a dark asphalt-textured background. 4:3 aspect ratio.\n  Dimensions: 1024x1024\n  Aspect Ratio: 1.00\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt-RgemTHeSgTxl0nT6eiNM_IaCZ9MOmeiJvYMzB6SAIjSl_FI2wezDJXagPbACfyUsLsclN9f2pr9TD-EWrHI4RfpQrL_g7LwX543HVrJtVMQz2EYX1vGKzGe9lHBi5sbdx-BDC0GeP8jAiLprjrkfZoZhmZiBwuSWDfTmUt1YAb7D8yYClHXkxpL2qU48tAbdhrr38fTuqubXlkHEC1rwnf9k1swaeVD5FpFYpiNZ_nVXrjhWJgHCZ9Nv",
+            "name": "projects/17705266812229007656/files/4cf3ca378cd5478094c60895ccc8fd21"
+          },
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ff5f1f",
+            "designMd": "---\nname: High-Contrast Industrial\ncolors:\n  surface: '#121414'\n  surface-dim: '#121414'\n  surface-bright: '#37393a'\n  surface-container-lowest: '#0c0f0f'\n  surface-container-low: '#1a1c1c'\n  surface-container: '#1e2020'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#333535'\n  on-surface: '#e2e2e2'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e2e2e2'\n  inverse-on-surface: '#2f3131'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#c6c6c6'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#939494'\n  on-tertiary-container: '#2b2d2d'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c6'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#121414'\n  on-background: '#e2e2e2'\n  surface-variant: '#333535'\ntypography:\n  headline-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stroke-thick: 4px\n  stroke-thin: 1px\n---\n\n## Brand & Style\nThe brand personality centers on a \"Rugged Premium\" ethos—merging the raw, dependable nature of heavy machinery with the sophisticated precision of high-performance automotive engineering. The target audience is the discerning vehicle owner who values time and professional-grade reliability.\n\nThe design style is **High-Contrast / Bold**. It utilizes heavy visual weights, stark color shifts, and an editorial layout that feels more like a premium lifestyle magazine than a standard utility service. The UI must feel authoritative and urgent, yet meticulously organized. This is achieved through the use of aggressive typography, thick structural borders, and a focus on clarity through whitespace.\n\n## Colors\nThe palette is built on the high-visibility aesthetic of road safety and industrial sites.\n- **Deep Asphalt (#1A1A1B):** The primary surface color. It provides a dense, sophisticated backdrop that makes other elements pop.\n- **Safety Orange (#FF5F1F):** The high-performance accent. Reserved for critical calls to action, status indicators, and branding moments.\n- **Concrete Gray (#E2E2E2):** Used for secondary text, borders, and subtle backgrounds to prevent the UI from becoming overly pitch-black.\n- **Stark White (#FFFFFF):** Used for primary body text and high-priority information to ensure maximum legibility against the asphalt.\n\n## Typography\nTypography is the cornerstone of this design system's editorial feel. \n- **Headlines:** Use *Archivo Narrow*. Its condensed, vertical nature mimics industrial signage and creates a sense of height and power. Large headlines should use negative letter-spacing and be set in all-caps to reinforce the \"24/7\" urgency.\n- **Body:** Use *Hanken Grotesk*. This font provides a clean, modern geometric balance to the aggressive headlines, ensuring that technical service details are easily digestible.\n- **Editorial Accents:** Use large, oversized type that occasionally bleeds off the edge of the container or is bisected by thick rule lines to create visual tension.\n\n## Layout & Spacing\nThe layout follows a **Fluid Grid** model with an \"Asymmetric Industrial\" twist. While the underlying structure is a 12-column grid, elements frequently break alignment to create a dynamic, editorial feel.\n\n- **Asymmetry:** Use heavy 4px rule lines to divide sections. Allow images of tread patterns or machinery to overlap these lines or extend beyond container margins.\n- **Whitespace:** Spacing is generous. Avoid cluttering the screen with multiple cards; instead, let each service or value proposition breathe with significant vertical padding (80px–120px between sections).\n- **Mobile Adaptivity:** On mobile, the grid collapses to a single column, but the heavy 4px horizontal rule lines remain to maintain the \"stacked\" industrial aesthetic.\n\n## Elevation & Depth\nDepth in this design system is created through **Tonal Layers** and **Bold Borders** rather than shadows. \n- **Layering:** Use varying shades of Deep Asphalt and Concrete Gray to create a stacked effect. Avoid drop shadows; they are too \"soft\" for this industrial brand.\n- **Outlines:** Use high-contrast 1px Concrete Gray outlines for secondary containers. Use 4px Safety Orange borders for active states or highlighted components.\n- **Tactile Patterns:** Use subtle, low-opacity geometric tread patterns (#FFFFFF at 3% opacity) as background textures to add a physical, \"greasy-engine-room\" depth without sacrificing text legibility.\n\n## Shapes\nThe shape language is **Sharp (0)**. There are no rounded corners in the design system. Every button, input field, and card uses 90-degree angles to reflect the structural integrity of steel beams and industrial equipment. This lack of \"softness\" is what distinguishes the premium industrial aesthetic from consumer-grade \"friendly\" apps.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are solid Safety Orange with black text (uppercase). Secondary buttons are outlined in Concrete Gray with white text.\n- **Input Fields:** Bottom-border only (2px Concrete Gray). Labels sit above the line in small, uppercase Hanken Grotesk.\n- **Chips:** Small, rectangular boxes with solid gray backgrounds and white text. Used for vehicle types (e.g., \"TRUCK,\" \"SUV,\" \"EV\").\n- **Cards:** No shadows. Cards are defined by a 1px Concrete Gray border or a slightly lighter background than the page surface. Headers within cards should be separated by a 1px rule line.\n- **Tread Progress Indicator:** A custom component for booking flows where the progress bar looks like a stylized tire track that fills with Safety Orange as the user moves forward.\n- **Urgency Banner:** A 24/7 indicator using a high-visibility Safety Orange bar at the top or bottom of the screen, featuring a scrolling \"ticker\" style text movement for a raw, news-style feel.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "HANKEN_GROTESK",
+            "labelFontFamily": "Hanken Grotesk",
+            "namedColors": {
+              "background": "#121414",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2f3131",
+              "inverse_primary": "#ab3600",
+              "inverse_surface": "#e2e2e2",
+              "on_background": "#e2e2e2",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#5c1900",
+              "on_primary_container": "#561700",
+              "on_primary_fixed": "#390c00",
+              "on_primary_fixed_variant": "#832700",
+              "on_secondary": "#303031",
+              "on_secondary_container": "#bab8b9",
+              "on_secondary_fixed": "#1b1b1c",
+              "on_secondary_fixed_variant": "#474647",
+              "on_surface": "#e2e2e2",
+              "on_surface_variant": "#e3bfb3",
+              "on_tertiary": "#2f3131",
+              "on_tertiary_container": "#2b2d2d",
+              "on_tertiary_fixed": "#1a1c1c",
+              "on_tertiary_fixed_variant": "#454747",
+              "outline": "#aa897f",
+              "outline_variant": "#5b4138",
+              "primary": "#ffb59c",
+              "primary_container": "#ff5f1f",
+              "primary_fixed": "#ffdbcf",
+              "primary_fixed_dim": "#ffb59c",
+              "secondary": "#c8c6c7",
+              "secondary_container": "#49494a",
+              "secondary_fixed": "#e5e2e3",
+              "secondary_fixed_dim": "#c8c6c7",
+              "surface": "#121414",
+              "surface_bright": "#37393a",
+              "surface_container": "#1e2020",
+              "surface_container_high": "#282a2b",
+              "surface_container_highest": "#333535",
+              "surface_container_low": "#1a1c1c",
+              "surface_container_lowest": "#0c0f0f",
+              "surface_dim": "#121414",
+              "surface_tint": "#ffb59c",
+              "surface_variant": "#333535",
+              "tertiary": "#c6c6c6",
+              "tertiary_container": "#939494",
+              "tertiary_fixed": "#e2e2e2",
+              "tertiary_fixed_dim": "#c6c6c6"
+            },
+            "overrideNeutralColor": "#ffffff",
+            "overridePrimaryColor": "#ff5f1f",
+            "overrideSecondaryColor": "#1a1a1b",
+            "overrideTertiaryColor": "#e2e2e2",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "stroke-thick": "4px",
+              "stroke-thin": "1px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "52px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "36px",
+                "fontWeight": "700",
+                "lineHeight": "40px"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "36px"
+              },
+              "headline-xl": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "84px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "80px"
+              },
+              "label-bold": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.05em",
+                "lineHeight": "20px"
+              },
+              "label-sm": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "lineHeight": "16px"
+              }
+            }
+          },
+          "title": "365 Mobile Tire Service - Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have designed a bespoke, premium homepage for **365 Mobile Tire Service** that establishes a bold \"High-Contrast Industrial\" identity. \n\n### Key Design Decisions:\n- **Visual Identity:** I moved away from generic templates to create an editorial layout using a palette of **Deep Asphalt** and **Safety Orange**. This high-contrast pairing conveys both the rugged nature of the work and the urgency of a 24/7 service.\n- **Memorable Motif:** A subtle \"tread-pattern\" motif is integrated throughout the site via background textures and industrial rule lines, reinforcing the brand's core business.\n- **Editorial Typography:** I used a bold, condensed headline font to mimic industrial signage, paired with generous whitespace to elevate the brand from a local utility to a premium service provider.\n- **Asymmetric Layouts:** The services and \"About\" sections use non-standard grid placements to create a modern, high-end feel that stands out from typical local business mockups.\n- **Contextual Imagery:** \n    - A macro shot of tire tread (Close-up, high-detail macro shot of a rugged tire tread on a wet asphalt road at night, illuminated by orange streetlights. The aesthetic is industrial, premium, and moody. Deep shadows and sharp highlights on the rubber texture. 16:9 aspect ratio.) anchors the hero section for immediate impact.\n    - Lifestyle photography (A professional mobile tire service van parked on a modern suburban street during the golden hour. The van is clean, with minimalist white and orange branding. A technician is seen from the side (no face) working with professional tools. High-end lifestyle photography, shallow depth of field. 3:2 aspect ratio.) highlights the human element and professional standard of service.\n    - Custom-styled icons (A collection of three premium tire icons (all-season, performance, heavy-duty) rendered in a minimalist, thick-stroke orange line art style on a dark asphalt-textured background. 4:3 aspect ratio.) categorize the service offerings with visual consistency.\n\nThe site includes all required sections: a high-contrast header, credibility ticker, service offerings, about section, the map placeholder for Lawton, a functional service request form, and a modular footer.\n\nHow would you like to refine this design? We could adjust the intensity of the orange accents or explore a light-mode version for comparison."
+  },
+  {
+    "suggestion": "Adjust the color palette to be slightly more muted"
+  },
+  {
+    "suggestion": "Add a section for customer testimonials"
+  },
+  {
+    "suggestion": "Create a mobile-optimized version of this page"
+  }
+]
