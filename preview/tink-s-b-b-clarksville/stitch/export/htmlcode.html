@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tink's B&amp;B | A Southern Refrain</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#1b1b1d",
+                        "primary-fixed-dim": "#bec7db",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#565f70",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#fcf8fa",
+                        "tertiary-fixed": "#ffdcc2",
+                        "surface-bright": "#fcf8fa",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#303031",
+                        "outline": "#75777d",
+                        "on-secondary-container": "#666460",
+                        "on-secondary-fixed": "#1c1c19",
+                        "tertiary-container": "#391b00",
+                        "on-tertiary": "#ffffff",
+                        "primary": "#040d1b",
+                        "inverse-primary": "#bec7db",
+                        "surface-container": "#f0edee",
+                        "outline-variant": "#c5c6cc",
+                        "primary-container": "#1a2332",
+                        "on-tertiary-fixed": "#2e1500",
+                        "background": "#fcf8fa",
+                        "on-primary-fixed": "#131c2a",
+                        "tertiary-fixed-dim": "#ffb77b",
+                        "secondary": "#605e5b",
+                        "surface-variant": "#e4e2e3",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0f1",
+                        "on-primary-fixed-variant": "#3e4758",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#45474c",
+                        "secondary-container": "#e6e2dd",
+                        "on-primary-container": "#818a9d",
+                        "tertiary": "#190900",
+                        "on-secondary-fixed-variant": "#484743",
+                        "secondary-fixed": "#e6e2dd",
+                        "on-tertiary-fixed-variant": "#6d3a00",
+                        "surface-dim": "#dcd9db",
+                        "on-tertiary-container": "#c07a39",
+                        "primary-fixed": "#dae3f7",
+                        "surface-container-high": "#eae7e9",
+                        "surface-container-highest": "#e4e2e3",
+                        "error-container": "#ffdad6",
+                        "error": "#ba1a1a",
+                        "secondary-fixed-dim": "#c9c6c1",
+                        "on-background": "#1b1b1d",
+                        "surface-container-low": "#f6f3f4",
+                        "copper": "#b87333"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px",
+                        "arch": "500px 500px 0 0"
+                    },
+                    "spacing": {
+                        "gutter": "32px",
+                        "container-padding-mobile": "24px",
+                        "rule-weight": "1px",
+                        "section-gap": "120px",
+                        "container-padding-desktop": "80px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Bodoni Moda"],
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["DM Sans"],
+                        "utility": ["DM Sans"],
+                        "label-caps": ["DM Sans"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "utility": ["14px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .arch-frame { border-radius: 500px 500px 0 0; }
+        .vertical-text { writing-mode: vertical-rl; text-orientation: mixed; }
+        .copper-rule { border-top: 1px solid #b87333; }
+        .diffusion-shadow { box-shadow: 0 30px 60px -12px rgba(26, 35, 50, 0.04); }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        input:focus { outline: none; border-bottom-color: #b87333 !important; }
+        .fade-in { animation: fadeIn 1.2s ease-out forwards; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body class="bg-surface text-primary font-body-md selection:bg-copper selection:text-surface">
+<!-- TopNavBar -->
+<header class="bg-surface/80 backdrop-blur-md text-primary fixed top-0 w-full z-50 border-b border-outline-variant/30">
+<nav class="flex justify-between items-center px-container-padding-desktop max-w-[1200px] mx-auto h-20">
+<a class="font-headline-md text-headline-md text-primary tracking-tight" href="#">Tink's B&amp;B</a>
+<div class="hidden md:flex items-center gap-gutter">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#provenance">Provenance</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#stay">The Stay</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#heart">The Heart</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#visit">Visit</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#connect">Connect</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-label-caps text-label-caps tracking-widest hidden lg:block">265.663 7265</span>
+<button class="bg-primary text-surface px-6 py-3 font-label-caps text-label-caps hover:bg-copper hover:-translate-y-0.5 transition-all duration-300">
+                    RESERVE
+                </button>
+</div>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-gap px-container-padding-desktop max-w-[1200px] mx-auto min-h-screen flex flex-col justify-center">
+<div class="grid grid-cols-12 gap-gutter items-end">
+<div class="col-span-12 lg:col-span-7 mb-12 lg:mb-0">
+<span class="font-label-caps text-label-caps text-copper mb-6 block tracking-[0.3em]">EST. IN CLARKSVILLE</span>
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-none">A Southern<br/><span class="italic">Refrain.</span></h1>
+<p class="font-body-lg text-body-lg text-secondary max-w-md border-l border-copper pl-8">
+                        Experience the quiet confidence of Tennessee heritage. A sanctuary where historical architecture meets the soft pulse of modern luxury.
+                    </p>
+</div>
+<div class="col-span-12 lg:col-span-5 relative">
+<div class="arch-frame overflow-hidden aspect-[4/5] diffusion-shadow">
+<img class="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-1000" data-alt="A grand historical Southern manor with white columns and expansive porches, captured in the soft golden hour light of a Tennessee afternoon. The architectural style is 'Modern Heirloom,' blending classical proportions with a pristine, curated garden. The atmosphere is tranquil, exclusive, and bathed in a warm parchment glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBqpGrMsYiQAMl3czF-EW8Z4npScBg3JcQ0vFTjKsocK7QjgoBceTZiK2H-c-4SWvnXT4ujecxwFEHJ6EXYbtWOHdkeLIz0y7epTDswXbWWZatRx4mXqrWYUrRGZ3EVgUEhY7myA4yK28VXayfg9eP5L7d4k4_NSlgqFwf3Hvr9Swcm2fVZTULKfzz0RivooBvEYzOh-aJ2NyKkBJMp-5kWm_3PqEr-XuKHYf1xl8c0D-tXaDS2V0eWclAYZMTpLtEFMWLU8BFRlsA"/>
+</div>
+<div class="absolute -bottom-6 -left-6 bg-surface p-8 border border-outline-variant/30 hidden md:block">
+<p class="font-label-caps text-[10px] text-secondary mb-2">LAT / LONG</p>
+<p class="font-utility text-utility">36.5298° N, 87.3595° W</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Provenance (Credibility) -->
+<section class="py-section-gap bg-surface-container-low border-y border-outline-variant/20" id="provenance">
+<div class="max-w-[1200px] mx-auto px-container-padding-desktop">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-1 hidden lg:block">
+<span class="vertical-text font-label-caps text-label-caps text-copper tracking-widest pt-4">GUEST CHRONICLES</span>
+</div>
+<div class="col-span-12 lg:col-span-10">
+<div class="mb-20">
+<h2 class="font-headline-lg text-headline-lg mb-4">The Provenance</h2>
+<div class="w-24 copper-rule"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-start">
+<div class="space-y-12">
+<blockquote class="relative">
+<span class="font-display-lg text-[120px] text-copper/10 absolute -top-16 -left-8 pointer-events-none">“</span>
+<p class="font-headline-md text-headline-md italic mb-6">"An atmosphere of curated stillness that feels like returning home to a history you never knew you had."</p>
+<cite class="font-label-caps text-label-caps text-secondary">— ELIZA V., TRAVEL &amp; LEISURE</cite>
+</blockquote>
+<div class="arch-frame h-64 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A close-up of high-end editorial interior design featuring a vintage leather armchair and a stack of antique books on a copper side table. The lighting is low and moody, highlighting the tactile textures of the leather and the aged paper. The color palette is deep indigo and burnished copper, evoking a sense of storied comfort." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMluW6NdjlsGEa-I-oyzw0UaVGa3MRdcx7RDPLHMv-efJ01586Jy4KMUWakMoUUg_lyORS7tt7oAcvI7M_w5fuWQf-T-ySSwYX35aJc7XAATRKpCJ5Fvkzs2hEnnjobCIN8pIF4-HUazM5YAGwVIoUEH14GlVJ8N-usFY07VgTsOUvMx2V60IjJdZIERnugfQzDUOPMk7HtUkUb6SdL0I0FWh35PHiPFgjbSkEwI4fT52wE6nyWFrRZCgoGngt-d-VdeAvJCZH7kY"/>
+</div>
+</div>
+<div class="pt-24">
+<div class="p-12 border border-outline-variant/30 bg-surface">
+<h3 class="font-label-caps text-label-caps text-copper mb-6">HERITAGE NOTES</h3>
+<p class="font-body-md text-body-md text-secondary mb-8 leading-relaxed">
+                                        Constructed in 1894, the residence of Tink's B&amp;B has stood as a silent witness to the evolution of Clarksville. Restored with surgical precision, we have preserved the original heart pine flooring and hand-carved crown moldings while integrating a discreet, modern technological infrastructure.
+                                    </p>
+<a class="font-label-caps text-label-caps text-primary border-b border-primary pb-1 hover:text-copper hover:border-copper transition-all" href="#">OUR FULL STORY</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Stay (Services) -->
+<section class="py-section-gap px-container-padding-desktop max-w-[1200px] mx-auto" id="stay">
+<div class="flex flex-col gap-section-gap">
+<!-- Suite 01 -->
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-6 order-2 lg:order-1">
+<span class="font-label-caps text-label-caps text-copper mb-4 block">SUITE NO. 01</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">The Gatlin Sanctuary</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-md">
+                            Featuring floor-to-ceiling arched windows overlooking the private garden, the Gatlin Sanctuary is our most sought-after retreat. Includes a wood-burning fireplace and a hand-hammered copper soaking tub.
+                        </p>
+<div class="flex flex-wrap gap-4 mb-10">
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container font-label-caps text-[10px] rounded-full">GARDEN VIEW</span>
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container font-label-caps text-[10px] rounded-full">FIREPLACE</span>
+<span class="px-4 py-2 bg-secondary-container text-on-secondary-container font-label-caps text-[10px] rounded-full">KING BED</span>
+</div>
+<button class="border border-copper px-8 py-4 font-label-caps text-label-caps text-primary hover:bg-copper/10 transition-all">VIEW DETAILS</button>
+</div>
+<div class="col-span-12 lg:col-span-6 order-1 lg:order-2 mb-12 lg:mb-0">
+<div class="arch-frame aspect-square overflow-hidden diffusion-shadow">
+<img class="w-full h-full object-cover" data-alt="A luxury bedroom suite with a minimalist yet opulent aesthetic. A large king bed with crisp white linens is centered under a soft arch. Tall windows let in diffused morning light. The decor is subtle, featuring Tennessee Twilight colors of deep indigo accents and burnished copper lamps. The mood is serene and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuChvfsDjZkeuUQEklYCvBsoG1XEF4-cAKYFFdJiVhvC5LC33Vyps44wGIJPzbi3tt75HzZEhdnkKpT8Sl0MYNh-NNY61S7Zd4kVg3WhCxQ3zs3Cgofa0IFJrD-aSX-GeDbR6ICP75nUV4WqGlnES52b4yeAymNItab4zv8AegIUoWO0a9XoCuk9sKMCCzwujHNfqpa5gbJIxlQUorn7Qy3CCkD_XmllkP6Afe28ScG6nICKE3dQl82BQU7SH4nFNqNFrUIFwHwgEkw"/>
+</div>
+</div>
+</div>
+<!-- Suite 02 -->
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-6 mb-12 lg:mb-0">
+<div class="arch-frame aspect-[4/5] overflow-hidden diffusion-shadow">
+<img class="w-full h-full object-cover" data-alt="An editorial shot of a high-end bathroom featuring a freestanding copper bathtub positioned on a dark marble floor. Minimalist sage mist walls provide a soft backdrop. Soft light spills in from a side window, creating a tranquil spa-like atmosphere that blends modern heirloom style with luxurious materials." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpxK7PlPudk0GXs1wD_s6Ux-xDBGXy8dgt9AxuRCskUoS51_oQuiqYBPbWvXv2LHP1gUr78zBEZPh_3OMlNzceXksxTFxEtQZGJZm2WEMeiv0QHHeBPFouoCBiEzNuT16r_MJGlh-fYwIhPSJJMWDM1oZKPhiQqkEAZeLAGVXAgWepja7Eu6VViWeAR02bgoXpUR0KVn9BWz0bsaUsEIcb7oA_E77tLeBqAvjmsKBqUJ87emc7UIfoejSKEAwL2H4vqAn9GawY0MU"/>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-6 pl-0 lg:pl-12">
+<span class="font-label-caps text-label-caps text-copper mb-4 block">THE AMENITIES</span>
+<h2 class="font-headline-lg text-headline-lg mb-8">Refined Respite</h2>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-md">
+                            Every element of your stay is curated for sensory delight—from the bespoke linen scents to the artisanal breakfast baskets delivered to your door each morning.
+                        </p>
+<ul class="space-y-6">
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-copper">local_cafe</span>
+<span class="font-utility text-utility">Artisanal Pour-Over Coffee Service</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-copper">spa</span>
+<span class="font-utility text-utility">Bespoke Botanical Bath Rituals</span>
+</li>
+<li class="flex items-center gap-4">
+<span class="material-symbols-outlined text-copper">menu_book</span>
+<span class="font-utility text-utility">Curated Library of Southern Literature</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- The Heart (About) -->
+<section class="py-section-gap relative overflow-hidden bg-primary text-surface" id="heart">
+<div class="max-w-[1200px] mx-auto px-container-padding-desktop relative z-10">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-5 mb-12 lg:mb-0">
+<h2 class="font-display-lg text-display-lg mb-8">The <span class="italic text-copper">Heart</span></h2>
+<p class="font-body-lg text-body-lg text-primary-fixed-dim leading-relaxed mb-8">
+                            Tink’s B&amp;B is more than a destination; it is a personal passion project born from a love for Clarksville’s architectural history and the art of Southern hospitality. 
+                        </p>
+<p class="font-body-md text-body-md text-primary-fixed-dim/70 leading-relaxed mb-12">
+                            Named after the founder’s grandmother, whose porch was always open and whose tea was always sweet, we strive to recreate that same sense of effortless belonging in a contemporary, elevated setting.
+                        </p>
+<div class="flex items-center gap-4">
+<div class="w-12 h-px bg-copper"></div>
+<span class="font-label-caps text-label-caps tracking-[0.4em] text-copper">TINK'S PROMISE</span>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7">
+<div class="grid grid-cols-2 gap-4">
+<div class="arch-frame h-80 overflow-hidden mt-12">
+<img class="w-full h-full object-cover" data-alt="A portrait of a sophisticated, warm dining room with a long wooden table set for breakfast. The lighting is soft and golden, highlighting the fine china and fresh garden flowers. The style is 'Editorial Minimalism,' emphasizing the quiet beauty of a well-appointed home in the heart of Tennessee." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTLJrny2cCt-YNb135P9turptEzmnytbro6ZOV2GEbGAS7anR1nLfYH2tBYLiB3v2xf7roPB7ggs2sNLfW2exT5-XZvDwKMFRDbGWA487-3Z0x-qv-P8ARr09gkr3UxWM2HzujAAtHdqKEns4dnUV6pNnKcyoNiIw_MBR2kh96fct6a-H2qv-K7Unvysrhumse91OuMyHV-4fHyQfRFyeY7A6RYYYpAOElGFtiDOoZyXEmfnHXPQ5mnyjBOEmnSokH9nWLM26IgmY"/>
+</div>
+<div class="arch-frame h-80 overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="An overhead flat-lay of artisanal breakfast items: freshly baked biscuits, locally sourced honey, and a silver pot of tea. The composition is clean and modern, set on a warm parchment surface. The colors are muted and sophisticated, reflecting the premium hospitality of Tink's B&amp;B." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe05qGoiVmu7LSj8QEO4co_n9u6FdqAYhNJIf0rupe649ZBsk1ZTS7QA9agRaCUnbL4zNeBocjx1KtwCH2VMtAw-MDsWOQk4apf2ymHQ_k1rVO8yLPE3mWFhFET8umZ4ryJIodF465H7RR8K6zN-mGH4eVep9bYK-gadjCMAaktxcVukBfU7L8RXTTrVvFDZZuMwYO71cQQ7OU_7oRMvSGhTGUnTAFPN7K8P9gyA0WNRnNlnwLivlvW0MQ6DZp5pBIW5aZqDjH5_g"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Aesthetic Background Element -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-surface/5 -skew-x-12 transform translate-x-20"></div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap px-container-padding-desktop max-w-[1200px] mx-auto" id="visit">
+<div class="flex justify-between items-end mb-12">
+<div>
+<span class="font-label-caps text-label-caps text-copper mb-4 block">FIND US</span>
+<h2 class="font-headline-lg text-headline-lg">#visit</h2>
+</div>
+<p class="font-label-caps text-label-caps text-secondary pb-2 tracking-widest uppercase">Clarksville, TN</p>
+</div>
+<div class="arch-frame overflow-hidden min-h-[500px] relative diffusion-shadow group">
+<div aria-label="Map" class="map-slot absolute inset-0 bg-surface-container-highest flex items-center justify-center" data-location="Clarksville, TN" data-map-slot="" style="">
+<div class="text-center">
+<span class="material-symbols-outlined text-copper text-5xl mb-4">location_on</span>
+<p class="font-label-caps text-label-caps text-primary">Interactive Map Loading...</p>
+</div>
+</div>
+<!-- Overlay Card -->
+<div class="absolute bottom-12 right-12 bg-surface p-10 max-w-xs diffusion-shadow border border-outline-variant/20 transform group-hover:-translate-y-2 transition-transform duration-500">
+<h3 class="font-headline-md text-headline-md mb-4 text-[24px]">Location</h3>
+<p class="font-body-md text-body-md text-secondary mb-6">Located in the historic Gatlin district, just minutes from the Cumberland Riverwalk.</p>
+<a class="font-label-caps text-label-caps text-copper flex items-center gap-2 group/link" href="https://maps.google.com" target="_blank">
+                        GET DIRECTIONS 
+                        <span class="material-symbols-outlined text-[16px] group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Connect (Contact Form) -->
+<section class="py-section-gap bg-surface" id="connect">
+<div class="max-w-[800px] mx-auto px-container-padding-desktop">
+<div class="text-center mb-20">
+<h2 class="font-display-lg text-display-lg mb-6">Connect</h2>
+<p class="font-body-lg text-body-lg text-secondary">Inquire about availability or curate a custom experience.</p>
+</div>
+<form class="space-y-12" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-primary py-3 px-0 focus:ring-0 placeholder:text-outline-variant/50 font-body-md" placeholder="Johnathan Sterling" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-primary py-3 px-0 focus:ring-0 placeholder:text-outline-variant/50 font-body-md" placeholder="johnathan@refined.com" required="" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Desired Dates</label>
+<input class="w-full bg-transparent border-0 border-b border-primary py-3 px-0 focus:ring-0 placeholder:text-outline-variant/50 font-body-md" placeholder="Oct 12 - Oct 15" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary mb-2 block uppercase">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-primary py-3 px-0 focus:ring-0 placeholder:text-outline-variant/50 font-body-md resize-none" placeholder="Share your vision for your stay..." rows="4"></textarea>
+</div>
+<div class="text-center pt-8">
+<button class="bg-primary text-surface px-12 py-5 font-label-caps text-label-caps tracking-[0.2em] hover:bg-copper hover:-translate-y-1 transition-all duration-300" type="submit">
+                            SEND INQUIRY
+                        </button>
+</div>
+</form>
+<div class="hidden text-center mt-12 p-8 bg-surface-container border border-copper/30 fade-in" id="successMessage">
+<p class="font-headline-md text-headline-md text-copper">Inquiry Received.</p>
+<p class="font-body-md text-secondary mt-2">Our concierge will reach out within 24 hours.</p>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-surface py-section-gap border-t border-on-tertiary-container/20">
+<div class="max-w-[1200px] mx-auto px-container-padding-desktop flex flex-col md:flex-row justify-between gap-gutter">
+<div class="space-y-8">
+<a class="font-headline-lg text-headline-lg text-primary-fixed-dim block" href="#">Tink's B&amp;B</a>
+<p class="font-body-md text-primary-fixed-dim/60 max-w-xs leading-relaxed">
+                    A refined sanctuary in the heart of Tennessee, celebrating the art of storied comfort and Southern sophistication.
+                </p>
+<div class="flex gap-6">
+<a class="text-primary-fixed-dim hover:text-copper transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-primary-fixed-dim hover:text-copper transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+<a class="text-primary-fixed-dim hover:text-copper transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter md:gap-20">
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-copper tracking-widest">VISIT</h4>
+<address class="not-italic font-body-md text-primary-fixed-dim/80 space-y-2">
+<p>321 Gatlin Street</p>
+<p>Clarksville, TN 37040</p>
+<p class="pt-4 text-primary-fixed-dim">265.663 7265</p>
+<p class="text-primary-fixed-dim">Tinksbandb@yahoo.com</p>
+</address>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-caps text-label-caps text-copper tracking-widest">LEGAL</h4>
+<nav class="flex flex-col gap-4">
+<a class="font-body-md text-primary-fixed-dim/80 hover:text-copper transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-primary-fixed-dim/80 hover:text-copper transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-primary-fixed-dim/80 hover:text-copper transition-colors" href="#">Sustainability</a>
+</nav>
+</div>
+</div>
+</div>
+<div class="max-w-[1200px] mx-auto px-container-padding-desktop mt-20 pt-8 border-t border-surface/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-[10px] text-primary-fixed-dim/40 tracking-widest">© 2024 Tink's B&amp;B. ALL RIGHTS RESERVED.</p>
+<p class="font-label-caps text-[10px] text-primary-fixed-dim/40 tracking-widest uppercase">DESIGNED BY MODERN HEIRLOOM STUDIO</p>
+</div>
+</footer>
+<script>
+        // Form Interaction
+        const form = document.getElementById('contactForm');
+        const success = document.getElementById('successMessage');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.classList.add('opacity-0', 'pointer-events-none', 'transition-opacity', 'duration-500');
+            setTimeout(() => {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+            }, 500);
+        });
+
+        // Simple Parallax Effect for Arched Images
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const images = document.querySelectorAll('.arch-frame img');
+            images.forEach(img => {
+                const speed = 0.05;
+                img.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+    </script>
+</body></html>
