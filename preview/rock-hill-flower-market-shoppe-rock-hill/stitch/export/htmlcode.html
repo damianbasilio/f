@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Fleur &amp; Forage | Rock Hill Flower Market Shoppe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "primary-fixed-dim": "#bccbb2",
+                        "on-secondary-container": "#656461",
+                        "primary-container": "#2d3a28",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed": "#1c1c19",
+                        "surface-container-lowest": "#ffffff",
+                        "secondary": "#5f5e5b",
+                        "surface-tint": "#54624e",
+                        "inverse-primary": "#bccbb2",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f1f5f1",
+                        "secondary-container": "#e5e2dd",
+                        "on-background": "#181d1b",
+                        "surface-container-high": "#e5e9e6",
+                        "outline": "#757870",
+                        "inverse-surface": "#2d3130",
+                        "primary": "#182414",
+                        "tertiary-container": "#592728",
+                        "surface-dim": "#d7dbd8",
+                        "on-surface-variant": "#444841",
+                        "surface-container": "#ebefec",
+                        "surface-bright": "#f6faf7",
+                        "tertiary-fixed": "#ffdad9",
+                        "outline-variant": "#c5c8be",
+                        "on-tertiary-container": "#d38d8c",
+                        "secondary-fixed": "#e5e2dd",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed-dim": "#c8c6c2",
+                        "on-primary-fixed": "#121f0f",
+                        "on-primary-container": "#95a48c",
+                        "error": "#ba1a1a",
+                        "surface": "#f6faf7",
+                        "on-tertiary-fixed-variant": "#6d3738",
+                        "on-secondary-fixed-variant": "#474743",
+                        "tertiary": "#3e1214",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed-dim": "#ffb3b2",
+                        "primary-fixed": "#d8e7cd",
+                        "surface-variant": "#dfe3e0",
+                        "on-tertiary-fixed": "#370d0f",
+                        "on-error-container": "#93000a",
+                        "on-primary-fixed-variant": "#3d4a37",
+                        "surface-container-highest": "#dfe3e0",
+                        "on-error": "#ffffff",
+                        "background": "#f6faf7",
+                        "on-surface": "#181d1b",
+                        "inverse-on-surface": "#eef2ef"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "margin-desktop": "64px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-lg": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "body-md": ["Montserrat"]
+                    },
+                    "fontSize": {
+                        "label-md": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                        "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .floating-leaf {
+            position: absolute;
+            pointer-events: none;
+            opacity: 0.15;
+            z-index: 10;
+        }
+        .editorial-line {
+            height: 1px;
+            background-color: #2D3A28;
+            opacity: 0.2;
+        }
+        .btn-editorial {
+            @apply border border-primary px-8 py-3 font-label-md text-label-md uppercase tracking-[0.2em] transition-all duration-150 hover:bg-primary hover:text-surface active:scale-95;
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-bottom-color: #54624e;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Utility Bar -->
+<div class="bg-primary text-surface py-2 px-margin-desktop flex justify-between items-center z-50 relative">
+<span class="font-label-md text-[10px] tracking-widest uppercase">Now Offering Autumn Bespoke Collections</span>
+<a class="font-label-md text-[10px] tracking-widest hover:opacity-70 transition-opacity" href="tel:8032506479">(803) 250-6479</a>
+</div>
+<!-- Navigation -->
+<nav class="sticky top-0 w-full z-40 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30 px-margin-desktop py-4">
+<div class="max-w-container-max mx-auto flex justify-between items-center">
+<div class="flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#collections">Collections</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#services">Services</a>
+</div>
+<a class="font-headline-lg text-headline-lg font-semibold tracking-tighter text-primary" href="/">Fleur &amp; Forage</a>
+<div class="flex gap-gutter items-center">
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#about">Our Story</a>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors" href="#contact">Contact</a>
+<div class="flex items-center gap-4 ml-4">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:opacity-70 transition-opacity">shopping_bag</span>
+</div>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center px-margin-desktop py-20 overflow-hidden">
+<!-- Floating Leaf Motif -->
+<div class="floating-leaf top-20 -left-10 transform -rotate-45">
+<span class="material-symbols-outlined text-[120px]">eco</span>
+</div>
+<div class="max-w-container-max mx-auto grid grid-cols-12 gap-gutter items-center relative">
+<div class="col-span-5 z-20">
+<h1 class="font-display-lg text-display-lg text-primary mb-6 leading-tight italic">Rooted in <br/><span class="not-italic">Artistry</span></h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-md">The Rock Hill Flower Market Shoppe defines luxury through the organic lens of nature. We craft living sculptures that whisper stories of the soil.</p>
+<div class="flex gap-6">
+<a class="btn-editorial bg-primary text-surface" href="#collections">Shop Collection</a>
+<a class="btn-editorial" href="#services">Bespoke Inquiry</a>
+</div>
+</div>
+<div class="col-span-7 relative flex justify-end">
+<div class="relative w-4/5 aspect-[4/5] overflow-hidden">
+<img alt="Bespoke Floral Arrangement" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLsY0d5BPe3M83mH7PqFKHjAGL1U8N4Qm_pt_qxw4XVomVYR6Hk1BmGUndxttpVAlm24pA0g-mUf8_ZRcoaSpSZJPa3wYdQtzaiZJBNhobJ_nj1zHEwe1eC1aMC_qUFp-S3hOfBZwzYa3RycAURutSYi1OxeEn9kf-BEti2vyPY5pEJV5eVYLV6GF9KQCd7Zav5bmEduX3ho8EHybQlIDOI7uV4Bws3sDQClk64nvdmWGEADZK_PFwJ50KIf"/>
+</div>
+<!-- Editorial Overlap Image -->
+<div class="absolute -bottom-10 -left-10 w-2/5 aspect-square border-8 border-surface z-30 shadow-2xl overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="A macro close-up of a delicate ranunculus flower with translucent petals in soft shades of cream and salmon. The lighting is diffused and romantic, capturing the intricate textures and organic curves of the bloom. The aesthetic is high-fashion editorial, clean and grounded in the quiet luxury of nature's detailed craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDwRtypAZAqcGym0nR75fUMhGug9nfe7z1RsUJIr_6lmpMUnM_OT0vAiLz0HnAZ79X-pZk_885HSy_KYtTYsphyYCUTQCcyXIIIebDlV1IXsJhkpnRPFCCHa4yU2wcVKXttbMSZ2a8Rxqr4vTMvgUftIZGQoi97GWKnmWKTEN2zZSTc_bT4_FXzGyiydv7w9Z_MeGjSRKmFNn3I5XI0UYPG-C__aPD-Da2A2qoj2liRqwAJ79boU_-F4kRAfHhtpaRYWAnKZ4hmkdFg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-32 bg-surface-container-low px-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row items-end justify-between mb-20">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">A Local Legacy of Botanical Innovation</h2>
+<div class="editorial-line w-32 mb-8"></div>
+</div>
+<p class="font-label-md text-label-md text-on-secondary-container uppercase tracking-widest max-w-xs text-right">EST. IN THE HEART OF ROCK HILL, SC</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="flex flex-col gap-4 p-8 border border-outline-variant/30 bg-surface">
+<span class="material-symbols-outlined text-primary-container text-4xl">amp_error</span>
+<h3 class="font-headline-md text-headline-md text-primary">Sustainably Sourced</h3>
+<p class="font-body-md text-secondary">We partner with local growers to ensure our blooms are as fresh as they are environmentally conscious.</p>
+</div>
+<div class="flex flex-col gap-4 p-8 border border-outline-variant/30 bg-surface">
+<span class="material-symbols-outlined text-primary-container text-4xl">palette</span>
+<h3 class="font-headline-md text-headline-md text-primary">Color Theory</h3>
+<p class="font-body-md text-secondary">Our designers are classically trained in fine arts, bringing a painterly eye to every stem selection.</p>
+</div>
+<div class="flex flex-col gap-4 p-8 border border-outline-variant/30 bg-surface">
+<span class="material-symbols-outlined text-primary-container text-4xl">auto_awesome</span>
+<h3 class="font-headline-md text-headline-md text-primary">Ephemeral Art</h3>
+<p class="font-body-md text-secondary">We treat every arrangement as a temporary masterpiece, designed to evolve as it blossoms.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-margin-desktop" id="services">
+<div class="max-w-container-max mx-auto grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-6 order-2 md:order-1">
+<div class="relative w-full aspect-[16/10] overflow-hidden mb-12">
+<img alt="Artistic Floral Centerpiece" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvwga8WIOst5iOfn_MyJB0qrLDtXWOfBxjZfKJq_bXuLgl6bgr3gRi_gnVkNFKWQ8hv-voYVL5C8FicynHMf3JBb0mIWaHE5mc193Zi0DoCZ6DhG6d30vhE-d2ge89kOHi0TGOulxXlIpt3tq7Sn-W-PtA4t9PAC5DvPSGhALYA4b1ixxlOO1TnJp4UwNF7BH-Me3El0AFSErZd7G4w0WkWWJT49BpBaQPKRt_UB0suwcvPS2IAAdAPisoD"/>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Bespoke Bouquets</h4>
+<p class="font-body-md text-secondary">Daily signatures and seasonal curators.</p>
+</div>
+<div>
+<h4 class="font-headline-md text-headline-md text-primary mb-2">Event Artistry</h4>
+<p class="font-body-md text-secondary">Transformative botanical installations for gala events.</p>
+</div>
+</div>
+</div>
+<div class="col-span-5 col-start-8 order-1 md:order-2 mb-12 md:mb-0">
+<h2 class="font-label-md text-label-md text-on-secondary-container uppercase tracking-[0.3em] mb-4">Our Services</h2>
+<h3 class="font-display-lg text-[56px] text-primary leading-tight mb-8">Curating Life's Most <span class="italic font-normal">Poetic Moments</span></h3>
+<p class="font-body-lg text-body-lg text-secondary mb-10">Whether it is the celebration of a new union or a quiet, dignified tribute, our floral narratives are composed with deep empathy and architectural precision.</p>
+<ul class="space-y-6 mb-12">
+<li class="flex items-center gap-4 group cursor-default">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim group-hover:scale-150 transition-transform"></span>
+<span class="font-label-md text-label-md uppercase">Wedding &amp; Bridal Concepting</span>
+</li>
+<li class="flex items-center gap-4 group cursor-default">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim group-hover:scale-150 transition-transform"></span>
+<span class="font-label-md text-label-md uppercase">Corporate Identity Florals</span>
+</li>
+<li class="flex items-center gap-4 group cursor-default">
+<span class="w-2 h-2 rounded-full bg-primary-fixed-dim group-hover:scale-150 transition-transform"></span>
+<span class="font-label-md text-label-md uppercase">Sympathy &amp; Commemoration</span>
+</li>
+</ul>
+<a class="btn-editorial inline-block" href="#">View Service Guide</a>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-primary text-surface px-margin-desktop relative overflow-hidden" id="about">
+<div class="floating-leaf bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 rotate-12">
+<span class="material-symbols-outlined text-[300px] text-surface/5">dual_screen</span>
+</div>
+<div class="max-w-container-max mx-auto grid grid-cols-12 gap-gutter relative z-20">
+<div class="col-span-12 md:col-span-5 mb-16 md:mb-0">
+<div class="relative">
+<img alt="Floral Studio Interior" class="w-full aspect-[3/4] object-cover grayscale opacity-80 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLtapfgzfr1e9pLe_gXLJAIbixxA2yq7MXMr7Sd4R93s20O1YowAmwzyo3FDTa8-XgsxCNMvFdIe0f4xUA__LQ20Y3LqqCGMfeISwfmXf_DswnnVggZbhTGVvW3v3GP3lx5EXlKCRG_mCVsg9g5YtfuwDzdTSVoAqAWvtQ9wWIeV0M4cEZMdaLTxXIk4h1Tu-Z7Wo6-IDDzFrMIhNANNtFdfr8oiWp7PBJTE_K48xMiajVhOJM0Sk6Ee2oPt"/>
+<div class="absolute -top-10 -right-10 bg-surface text-primary p-12 max-w-xs shadow-xl hidden lg:block">
+<p class="font-headline-md text-headline-md italic mb-4">"Flowers are the earth's laughter."</p>
+<cite class="font-label-md text-label-md uppercase block">— Studio Philosophy</cite>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 flex flex-col justify-center">
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-none">The <span class="italic font-light">Soul</span> of the Shoppe</h2>
+<p class="font-body-lg text-body-lg text-surface-variant mb-8">At Fleur &amp; Forage, we believe in the "Quiet Luxury" of the wild. Our design ethos is a dialogue between the disciplined structure of high-fashion and the unruly grace of a meadow.</p>
+<p class="font-body-md text-surface-variant/80 mb-12">Founded in Rock Hill, our studio serves as a sanctuary for those who seek beauty that isn't just seen, but felt. We don't just arrange flowers; we curate atmosphere.</p>
+<div class="editorial-line bg-surface opacity-30 w-full mb-8"></div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<span class="font-display-lg text-[48px] block mb-2">15+</span>
+<span class="font-label-md text-label-md uppercase opacity-60">Years of Artistry</span>
+</div>
+<div>
+<span class="font-display-lg text-[48px] block mb-2">1.2k</span>
+<span class="font-label-md text-label-md uppercase opacity-60">Custom Events</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="py-32 px-margin-desktop">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="order-2 md:order-1">
+<div aria-label="Map of Rock Hill, SC" class="map-slot relative overflow-hidden min-h-[500px] border border-outline-variant/50" data-map-slot="">
+<div class="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-primary text-5xl mb-4">location_on</span>
+<p class="font-headline-md text-headline-md">1143 North Anderson Road</p>
+<p class="font-body-md text-secondary">Rock Hill, SC 29730</p>
+<div class="hidden" data-location="Rock Hill, SC" style=""></div>
+</div>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2 pl-0 md:pl-20 mb-16 md:mb-0">
+<h2 class="font-label-md text-label-md text-on-secondary-container uppercase tracking-widest mb-4">Visit Us</h2>
+<h3 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-primary mb-8">Step into our <br/><span class="italic font-normal">Botanical Sanctuary</span></h3>
+<div class="space-y-8">
+<div>
+<h4 class="font-label-md text-label-md uppercase mb-2">Studio Hours</h4>
+<p class="font-body-md text-secondary">Tuesday — Friday: 10:00am to 6:00pm</p>
+<p class="font-body-md text-secondary">Saturday: 10:00am to 4:00pm</p>
+<p class="font-body-md text-secondary">Closed Sunday &amp; Monday</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md uppercase mb-2">Direct Reach</h4>
+<a class="font-body-lg text-body-lg text-primary block hover:underline" href="tel:8032506479">(803) 250-6479</a>
+<a class="font-body-lg text-body-lg text-primary block hover:underline" href="mailto:info@rhflowermarketshoppe.com">info@rhflowermarketshoppe.com</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-32 bg-surface-container px-margin-desktop" id="contact">
+<div class="max-w-3xl mx-auto text-center mb-20">
+<h2 class="font-display-lg text-display-lg text-primary mb-6">Inquiry <span class="italic font-light">Form</span></h2>
+<p class="font-body-lg text-secondary">For bespoke orders, event concepting, or floral subscriptions, please share your vision with us.</p>
+</div>
+<form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-gutter" onsubmit="event.preventDefault(); alert('Your message has been elegantly delivered.');">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-secondary-fixed-variant uppercase">Full Name</label>
+<input class="bg-transparent border-b border-primary/20 py-3 font-body-md focus:border-primary transition-colors" placeholder="Your name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-secondary-fixed-variant uppercase">Email Address</label>
+<input class="bg-transparent border-b border-primary/20 py-3 font-body-md focus:border-primary transition-colors" placeholder="email@example.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-secondary-fixed-variant uppercase">Inquiry Type</label>
+<select class="bg-transparent border-b border-primary/20 py-3 font-body-md focus:border-primary transition-colors appearance-none">
+<option>Bespoke Bouquet</option>
+<option>Wedding &amp; Bridal</option>
+<option>Corporate Event</option>
+<option>Sympathy Design</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md text-on-secondary-fixed-variant uppercase">Event Date (Optional)</label>
+<input class="bg-transparent border-b border-primary/20 py-3 font-body-md focus:border-primary transition-colors" type="date"/>
+</div>
+<div class="col-span-1 md:col-span-2 flex flex-col gap-2 mt-8">
+<label class="font-label-md text-label-md text-on-secondary-fixed-variant uppercase">Your Narrative</label>
+<textarea class="bg-transparent border-b border-primary/20 py-3 font-body-md focus:border-primary transition-colors resize-none" placeholder="Describe your vision, color palettes, or the emotion you wish to convey..." rows="4"></textarea>
+</div>
+<div class="col-span-1 md:col-span-2 flex justify-center mt-12">
+<button class="btn-editorial bg-primary text-surface px-16" type="submit">Send Inquiry</button>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-surface pt-32 pb-12 px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-start gap-gutter mb-20">
+<div class="max-w-sm">
+<span class="font-display-lg text-[64px] text-surface-container tracking-tight opacity-10 leading-none">Fleur &amp; Forage</span>
+<p class="font-body-md text-secondary-fixed-dim mt-8">A curated botanical experience for the discerning eye. Crafting high-fashion floral artistry in Rock Hill, South Carolina.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-20">
+<div class="flex flex-col gap-6">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-on-primary-fixed">Explore</h5>
+<nav class="flex flex-col gap-4">
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#collections">Collections</a>
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#services">Event Artistry</a>
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#about">Our Story</a>
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#journal">Botanical Journal</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-on-primary-fixed">Ethics</h5>
+<nav class="flex flex-col gap-4">
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#">Sustainability</a>
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#">Shipping Policy</a>
+<a class="font-label-md text-label-md text-secondary-fixed-dim hover:text-surface transition-colors hover:underline underline-offset-4" href="#">Terms of Art</a>
+</nav>
+</div>
+<div class="flex flex-col gap-6">
+<h5 class="font-label-md text-label-md uppercase tracking-widest text-on-primary-fixed">Connect</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline/30 flex items-center justify-center hover:bg-surface hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">share</span>
+</a>
+<a class="w-10 h-10 border border-outline/30 flex items-center justify-center hover:bg-surface hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-[18px]">local_florist</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto pt-12 border-t border-primary-container flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-md text-[10px] text-secondary-fixed-dim uppercase tracking-widest">© 2024 Fleur &amp; Forage. All Rights Reserved.</p>
+<div class="flex gap-8">
+<span class="font-label-md text-[10px] text-secondary-fixed-dim uppercase tracking-widest">Designed for Rock Hill, SC</span>
+<span class="font-label-md text-[10px] text-secondary-fixed-dim uppercase tracking-widest italic">Quiet Luxury Since 2009</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and parallax effects
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const leaves = document.querySelectorAll('.floating-leaf');
+            leaves.forEach((leaf, index) => {
+                const speed = (index + 1) * 0.1;
+                leaf.style.transform = `translateY(${scrolled * speed}px) rotate(${scrolled * 0.05}deg)`;
+            });
+        });
+
+        // Smooth reveal animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
