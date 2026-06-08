@@ -1,0 +1,525 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Sunset Noir Editorial",
+        "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in an **Editorial Minimalist** aesthetic, moving away from typical coastal tropes toward a high-fashion, boutique salon experience. The brand personality is exclusive, authoritative, and sophisticated, targeting an audience that views tanning as a luxury skincare ritual rather than a casual beach activity.\n\nThe visual style utilizes **intentional density**—grouping information tightly with generous surrounding white space (or \"charcoal space\") to mimic the layout of a premium fashion magazine. Thin architectural lines and organic grain textures replace traditional shadows to establish structure. The emotional response is one of warmth, prestige, and the \"afterglow\" of a high-end treatment.\n\n## Layout & Spacing\n\nThis design system utilizes a **fixed grid** model for desktop to maintain the integrity of editorial compositions. \n\n- **The 12-Column Grid:** A 12-column grid is used with narrow 16px (1rem) gutters to create \"intentional density.\" \n- **Architectural Rules:** Vertical and horizontal lines (0.5px or 1px thickness) in Bronze or low-opacity Sand are used to separate sections, replacing traditional padding in many instances.\n- **Responsive Behavior:** On mobile, the grid collapses to a 4-column system. The large `section-gap` (8rem) is essential to provide breathing room between dense information clusters, ensuring the \"minimalist\" aspect of the brand is preserved.\n\n## Elevation & Depth\n\nTo maintain the Editorial Minimalist style, this design system avoids standard drop shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The base background is Charcoal (#121212). Elevated surfaces (like cards or modals) use a slightly lighter Charcoal or a very subtle gradient that incorporates the Bronze tone.\n- **Inner Glows:** Instead of outward shadows, use a subtle 1px inner border in Bronze or a soft inner glow to suggest the \"lit from within\" quality of a tan.\n- **Grainy Textures:** Apply a subtle noise/grain texture to primary surfaces to evoke the tactile feel of sand and high-end print media.\n- **Rule Lines:** Use thin, 1px lines to define boundaries. A Bronze line indicates interactivity or a primary boundary, while a Sand line (at 20% opacity) indicates secondary structural separation.\n\n## Components\n\n- **Buttons:** \n    - *Primary:* Solid Bronze (#A87C4F) with Charcoal text. Sharp corners. All-caps Montserrat.\n    - *Secondary:* Transparent with a 1px Bronze border.\n- **Inputs:** Minimalist \"underline\" style. No containing box; just a 1px Sand line that turns Bronze on focus. Labels sit above in all-caps Montserrat.\n- **Chips/Tags:** Small, sharp-edged rectangles with a thin Bronze border and Sand text. Used for \"Premium,\" \"New,\" or specific tanning levels.\n- **Cards:** Defined by thin rule lines rather than solid backgrounds. A card might only have a top and bottom border to separate it from the vertical flow.\n- **Lists:** Standard list items are separated by 0.5px Sand lines. Use Playfair Display for the list item titles and Montserrat for descriptions.\n- **Architectural Rules:** A custom component used to divide sections. These can be vertical (for sidebars) or horizontal. They should be consistently 1px and use the Bronze color for primary thematic breaks.\n- **Image Containers:** Images should always feature a subtle grain overlay to match the \"luxury of the glow\" motif.",
+        "theme": {
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#a87c4f",
+          "designMd": "---\nname: Sunset Noir Editorial\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#d4c4b7'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#9c8e82'\n  outline-variant: '#50453b'\n  surface-tint: '#f0bd8a'\n  primary: '#f0bd8a'\n  on-primary: '#482903'\n  primary-container: '#b5885a'\n  on-primary-container: '#402300'\n  inverse-primary: '#7d562d'\n  secondary: '#ffb3b0'\n  on-secondary: '#68000f'\n  secondary-container: '#901822'\n  on-secondary-container: '#ff9e9b'\n  tertiary: '#d2c4b2'\n  on-tertiary: '#372f22'\n  tertiary-container: '#9b8f7e'\n  on-tertiary-container: '#30291c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdcbd'\n  primary-fixed-dim: '#f0bd8a'\n  on-primary-fixed: '#2c1600'\n  on-primary-fixed-variant: '#623f18'\n  secondary-fixed: '#ffdad8'\n  secondary-fixed-dim: '#ffb3b0'\n  on-secondary-fixed: '#410006'\n  on-secondary-fixed-variant: '#8c1520'\n  tertiary-fixed: '#efe0cd'\n  tertiary-fixed-dim: '#d2c4b2'\n  on-tertiary-fixed: '#221a0f'\n  on-tertiary-fixed-variant: '#4f4538'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: 0.2em\n  stats-num:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1'\nspacing:\n  container-max: 1280px\n  gutter: 1rem\n  margin-desktop: 4rem\n  margin-mobile: 1.5rem\n  stack-tight: 0.5rem\n  stack-md: 1.5rem\n  section-gap: 8rem\n---\n\n## Brand & Style\n\nThe design system is anchored in an **Editorial Minimalist** aesthetic, moving away from typical coastal tropes toward a high-fashion, boutique salon experience. The brand personality is exclusive, authoritative, and sophisticated, targeting an audience that views tanning as a luxury skincare ritual rather than a casual beach activity.\n\nThe visual style utilizes **intentional density**—grouping information tightly with generous surrounding white space (or \"charcoal space\") to mimic the layout of a premium fashion magazine. Thin architectural lines and organic grain textures replace traditional shadows to establish structure. The emotional response is one of warmth, prestige, and the \"afterglow\" of a high-end treatment.\n\n## Colors\n\nThe \"Sunset Noir\" palette is designed to contrast the deep, shadows of a premium interior with the radiant glow of a tan.\n\n- **Deep Charcoal (#121212):** The foundation. Used for backgrounds to make bronze and coral tones vibrate.\n- **Rich Bronze (#A87C4F):** The primary brand color. Represents the \"glow\" and is used for primary actions and key brand moments.\n- **Warm Sand (#F5E6D3):** The primary typography and surface color, providing a softer, more luxurious contrast than pure white.\n- **Tropical Coral (#FF6B6B):** A high-impact accent color used sparingly for notifications, specific CTAs, or to draw attention to premium upsells.\n\nThe design system defaults to **dark mode** to emphasize depth and luxury.\n\n## Typography\n\nTypography follows an editorial hierarchy. **Playfair Display** provides a classic, literary feel for headlines, while **Montserrat** offers a clean, geometric counterpoint for functional text.\n\n- **Display & Headlines:** Use Playfair Display. Large headings should use tight line heights to maintain the \"dense\" editorial feel.\n- **Body Text:** Use Montserrat with slightly increased line height and letter spacing for maximum legibility against dark backgrounds.\n- **Labels:** Small, all-caps Montserrat labels are used for navigation and eyebrow text to create an architectural, organized feel.\n- **Numbers:** When displaying prices or durations, use Playfair Display Italic to elevate the data point.\n\n## Layout & Spacing\n\nThis design system utilizes a **fixed grid** model for desktop to maintain the integrity of editorial compositions. \n\n- **The 12-Column Grid:** A 12-column grid is used with narrow 16px (1rem) gutters to create \"intentional density.\" \n- **Architectural Rules:** Vertical and horizontal lines (0.5px or 1px thickness) in Bronze or low-opacity Sand are used to separate sections, replacing traditional padding in many instances.\n- **Responsive Behavior:** On mobile, the grid collapses to a 4-column system. The large `section-gap` (8rem) is essential to provide breathing room between dense information clusters, ensuring the \"minimalist\" aspect of the brand is preserved.\n\n## Elevation & Depth\n\nTo maintain the Editorial Minimalist style, this design system avoids standard drop shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The base background is Charcoal (#121212). Elevated surfaces (like cards or modals) use a slightly lighter Charcoal or a very subtle gradient that incorporates the Bronze tone.\n- **Inner Glows:** Instead of outward shadows, use a subtle 1px inner border in Bronze or a soft inner glow to suggest the \"lit from within\" quality of a tan.\n- **Grainy Textures:** Apply a subtle noise/grain texture to primary surfaces to evoke the tactile feel of sand and high-end print media.\n- **Rule Lines:** Use thin, 1px lines to define boundaries. A Bronze line indicates interactivity or a primary boundary, while a Sand line (at 20% opacity) indicates secondary structural separation.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. All containers, buttons, and input fields must have hard 90-degree corners to reinforce the architectural and high-fashion editorial direction. \n\nThe only exception to this rule is for organic imagery (photos of people/textures), which should be framed in either sharp rectangles or perfect circles for a \"stamp\" or \"cameo\" effect.\n\n## Components\n\n- **Buttons:** \n    - *Primary:* Solid Bronze (#A87C4F) with Charcoal text. Sharp corners. All-caps Montserrat.\n    - *Secondary:* Transparent with a 1px Bronze border.\n- **Inputs:** Minimalist \"underline\" style. No containing box; just a 1px Sand line that turns Bronze on focus. Labels sit above in all-caps Montserrat.\n- **Chips/Tags:** Small, sharp-edged rectangles with a thin Bronze border and Sand text. Used for \"Premium,\" \"New,\" or specific tanning levels.\n- **Cards:** Defined by thin rule lines rather than solid backgrounds. A card might only have a top and bottom border to separate it from the vertical flow.\n- **Lists:** Standard list items are separated by 0.5px Sand lines. Use Playfair Display for the list item titles and Montserrat for descriptions.\n- **Architectural Rules:** A custom component used to divide sections. These can be vertical (for sidebars) or horizontal. They should be consistently 1px and use the Bronze color for primary thematic breaks.\n- **Image Containers:** Images should always feature a subtle grain overlay to match the \"luxury of the glow\" motif.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
+          "namedColors": {
+            "background": "#131313",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#313030",
+            "inverse_primary": "#7d562d",
+            "inverse_surface": "#e5e2e1",
+            "on_background": "#e5e2e1",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#482903",
+            "on_primary_container": "#402300",
+            "on_primary_fixed": "#2c1600",
+            "on_primary_fixed_variant": "#623f18",
+            "on_secondary": "#68000f",
+            "on_secondary_container": "#ff9e9b",
+            "on_secondary_fixed": "#410006",
+            "on_secondary_fixed_variant": "#8c1520",
+            "on_surface": "#e5e2e1",
+            "on_surface_variant": "#d4c4b7",
+            "on_tertiary": "#372f22",
+            "on_tertiary_container": "#30291c",
+            "on_tertiary_fixed": "#221a0f",
+            "on_tertiary_fixed_variant": "#4f4538",
+            "outline": "#9c8e82",
+            "outline_variant": "#50453b",
+            "primary": "#f0bd8a",
+            "primary_container": "#b5885a",
+            "primary_fixed": "#ffdcbd",
+            "primary_fixed_dim": "#f0bd8a",
+            "secondary": "#ffb3b0",
+            "secondary_container": "#901822",
+            "secondary_fixed": "#ffdad8",
+            "secondary_fixed_dim": "#ffb3b0",
+            "surface": "#131313",
+            "surface_bright": "#393939",
+            "surface_container": "#201f1f",
+            "surface_container_high": "#2a2a2a",
+            "surface_container_highest": "#353534",
+            "surface_container_low": "#1c1b1b",
+            "surface_container_lowest": "#0e0e0e",
+            "surface_dim": "#131313",
+            "surface_tint": "#f0bd8a",
+            "surface_variant": "#353534",
+            "tertiary": "#d2c4b2",
+            "tertiary_container": "#9b8f7e",
+            "tertiary_fixed": "#efe0cd",
+            "tertiary_fixed_dim": "#d2c4b2"
+          },
+          "overrideNeutralColor": "#121212",
+          "overridePrimaryColor": "#a87c4f",
+          "overrideSecondaryColor": "#ff6b6b",
+          "overrideTertiaryColor": "#f5e6d3",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "1rem",
+            "margin-desktop": "4rem",
+            "margin-mobile": "1.5rem",
+            "section-gap": "8rem",
+            "stack-md": "1.5rem",
+            "stack-tight": "0.5rem"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "72px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "40px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "500",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "Montserrat",
+              "fontSize": "12px",
+              "fontWeight": "700",
+              "letterSpacing": "0.2em",
+              "lineHeight": "1"
+            },
+            "stats-num": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "400",
+              "lineHeight": "1"
+            }
+          }
+        }
+      },
+      "name": "assets/add12d84e17449938e1d0b76562da2cb",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "e17c810432644b35b2a6040c733bec28",
+          "name": "projects/9120257539467921709/screens/e17c810432644b35b2a6040c733bec28",
+          "prompt": "Editorial fashion photography of a person with a perfect golden tan, sun-kissed skin, high-end aesthetic, warm sunset lighting, soft grain texture, cinematic composition, luxury tanning salon vibes, golden hour glow, #A87C4F bronze tones.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtJWqX6-Bhxm4FP5K3i94muslbXK89gbImBRoK9np7YR5qtGT26y9q-LR8rXBkBDUfcBZ9XlRNCcvDite84N0SB-qsUDcDKLYZ6zZsR-e4PmrBAg6BwAG6yor7Rw3ocJNWdf7qALsdZMAXaVhtckN_2sF06XYDCuAzQTJKfA92_MzUwYXb2lxfKNY1qOrCONefOiniaa9lEmgQYzPC28t3AcXvfWyAngNaBeVbvh8YkiCNC2EvqnimTTlc",
+            "name": "projects/9120257539467921709/files/0f5247a9cfd84a0387723993b7657823"
+          },
+          "theme": {},
+          "title": "Editorial fashion photography of a person with a perfect golden tan, sun-kissed skin, high-end aesthetic, warm sunset lighting, soft grain texture, cinematic composition, luxury tanning salon vibes, golden hour glow, #A87C4F bronze tones.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "c7bb3bcaf17848e78ea73239ebea8e14",
+          "name": "projects/9120257539467921709/screens/c7bb3bcaf17848e78ea73239ebea8e14",
+          "prompt": "Interior design of a luxury boutique tanning salon, minimalist aesthetic, warm accent lighting, natural stone and wood textures, premium equipment, serene atmosphere, high-end editorial style.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtNh6pxdfFrsOaaAiYlcSBpAxcDDWs4McaSK-wbeWNdiAI-xu2zd5yBl_k2eoz2us-7_UJ7Q2m9QWwOsiuufsqXdvic9HX2AZT777G1PPMkrxuvyCDShyzilp9Uf3oK6bFxhG2zOHEyR1afgO4yXvhmb4nOWIJSBddzms5TwvcMsC5chFOI2e3GdGAtgGUravuVsAhIk0ZBBRjiQfQrsIn0Tj4wor287r-JC33cNlpL1rOjNF4_HSCUDPE",
+            "name": "projects/9120257539467921709/files/f9e58144dc0e4a0eace4131317027160"
+          },
+          "theme": {},
+          "title": "Interior design of a luxury boutique tanning salon, minimalist aesthetic, warm accent lighting, natural stone and wood textures, premium equipment, serene atmosphere, high-end editorial style.",
+          "width": "1200"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "67032d67ba4441c1a8f40f291987d493",
+          "name": "projects/9120257539467921709/screens/67032d67ba4441c1a8f40f291987d493",
+          "prompt": "Detail shot of premium tanning lotions and golden oils on a textured sand or stone surface, soft focus, high-end skincare aesthetic, golden glow.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtzzVVAwC7lywnS3fA70caO4SG6aB76dRYigv2ZqIO-Dm1bRzuD8C21fkJysqZnPK1Id6kjTyitVV1zOlpQGtiLWOV3O_DoZlUePSZws-qhaAMId9bSoZLOZ6bAbcdXBe0GmSHhg0jmkYIzp97OhkMGohgv27j2anRq2bVf1M1TcgOwDi47nPJx2lpGghODYqwSXlXnkp587Eq_HOzQKzUCLRhoAPPNSOOypqpeNPe5Xi_wfmeQ8OYyAW0",
+            "name": "projects/9120257539467921709/files/713622b1179c469dad6b9d76a434b331"
+          },
+          "theme": {},
+          "title": "Detail shot of premium tanning lotions and golden oils on a textured sand or stone surface, soft focus, high-end skincare aesthetic, golden glow.",
+          "width": "1264"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Sunset Noir Editorial",
+              "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in an **Editorial Minimalist** aesthetic, moving away from typical coastal tropes toward a high-fashion, boutique salon experience. The brand personality is exclusive, authoritative, and sophisticated, targeting an audience that views tanning as a luxury skincare ritual rather than a casual beach activity.\n\nThe visual style utilizes **intentional density**—grouping information tightly with generous surrounding white space (or \"charcoal space\") to mimic the layout of a premium fashion magazine. Thin architectural lines and organic grain textures replace traditional shadows to establish structure. The emotional response is one of warmth, prestige, and the \"afterglow\" of a high-end treatment.\n\n## Layout & Spacing\n\nThis design system utilizes a **fixed grid** model for desktop to maintain the integrity of editorial compositions. \n\n- **The 12-Column Grid:** A 12-column grid is used with narrow 16px (1rem) gutters to create \"intentional density.\" \n- **Architectural Rules:** Vertical and horizontal lines (0.5px or 1px thickness) in Bronze or low-opacity Sand are used to separate sections, replacing traditional padding in many instances.\n- **Responsive Behavior:** On mobile, the grid collapses to a 4-column system. The large `section-gap` (8rem) is essential to provide breathing room between dense information clusters, ensuring the \"minimalist\" aspect of the brand is preserved.\n\n## Elevation & Depth\n\nTo maintain the Editorial Minimalist style, this design system avoids standard drop shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The base background is Charcoal (#121212). Elevated surfaces (like cards or modals) use a slightly lighter Charcoal or a very subtle gradient that incorporates the Bronze tone.\n- **Inner Glows:** Instead of outward shadows, use a subtle 1px inner border in Bronze or a soft inner glow to suggest the \"lit from within\" quality of a tan.\n- **Grainy Textures:** Apply a subtle noise/grain texture to primary surfaces to evoke the tactile feel of sand and high-end print media.\n- **Rule Lines:** Use thin, 1px lines to define boundaries. A Bronze line indicates interactivity or a primary boundary, while a Sand line (at 20% opacity) indicates secondary structural separation.\n\n## Components\n\n- **Buttons:** \n    - *Primary:* Solid Bronze (#A87C4F) with Charcoal text. Sharp corners. All-caps Montserrat.\n    - *Secondary:* Transparent with a 1px Bronze border.\n- **Inputs:** Minimalist \"underline\" style. No containing box; just a 1px Sand line that turns Bronze on focus. Labels sit above in all-caps Montserrat.\n- **Chips/Tags:** Small, sharp-edged rectangles with a thin Bronze border and Sand text. Used for \"Premium,\" \"New,\" or specific tanning levels.\n- **Cards:** Defined by thin rule lines rather than solid backgrounds. A card might only have a top and bottom border to separate it from the vertical flow.\n- **Lists:** Standard list items are separated by 0.5px Sand lines. Use Playfair Display for the list item titles and Montserrat for descriptions.\n- **Architectural Rules:** A custom component used to divide sections. These can be vertical (for sidebars) or horizontal. They should be consistently 1px and use the Bronze color for primary thematic breaks.\n- **Image Containers:** Images should always feature a subtle grain overlay to match the \"luxury of the glow\" motif.",
+              "theme": {
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#a87c4f",
+                "designMd": "---\nname: Sunset Noir Editorial\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#d4c4b7'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#9c8e82'\n  outline-variant: '#50453b'\n  surface-tint: '#f0bd8a'\n  primary: '#f0bd8a'\n  on-primary: '#482903'\n  primary-container: '#b5885a'\n  on-primary-container: '#402300'\n  inverse-primary: '#7d562d'\n  secondary: '#ffb3b0'\n  on-secondary: '#68000f'\n  secondary-container: '#901822'\n  on-secondary-container: '#ff9e9b'\n  tertiary: '#d2c4b2'\n  on-tertiary: '#372f22'\n  tertiary-container: '#9b8f7e'\n  on-tertiary-container: '#30291c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdcbd'\n  primary-fixed-dim: '#f0bd8a'\n  on-primary-fixed: '#2c1600'\n  on-primary-fixed-variant: '#623f18'\n  secondary-fixed: '#ffdad8'\n  secondary-fixed-dim: '#ffb3b0'\n  on-secondary-fixed: '#410006'\n  on-secondary-fixed-variant: '#8c1520'\n  tertiary-fixed: '#efe0cd'\n  tertiary-fixed-dim: '#d2c4b2'\n  on-tertiary-fixed: '#221a0f'\n  on-tertiary-fixed-variant: '#4f4538'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: 0.2em\n  stats-num:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1'\nspacing:\n  container-max: 1280px\n  gutter: 1rem\n  margin-desktop: 4rem\n  margin-mobile: 1.5rem\n  stack-tight: 0.5rem\n  stack-md: 1.5rem\n  section-gap: 8rem\n---\n\n## Brand & Style\n\nThe design system is anchored in an **Editorial Minimalist** aesthetic, moving away from typical coastal tropes toward a high-fashion, boutique salon experience. The brand personality is exclusive, authoritative, and sophisticated, targeting an audience that views tanning as a luxury skincare ritual rather than a casual beach activity.\n\nThe visual style utilizes **intentional density**—grouping information tightly with generous surrounding white space (or \"charcoal space\") to mimic the layout of a premium fashion magazine. Thin architectural lines and organic grain textures replace traditional shadows to establish structure. The emotional response is one of warmth, prestige, and the \"afterglow\" of a high-end treatment.\n\n## Colors\n\nThe \"Sunset Noir\" palette is designed to contrast the deep, shadows of a premium interior with the radiant glow of a tan.\n\n- **Deep Charcoal (#121212):** The foundation. Used for backgrounds to make bronze and coral tones vibrate.\n- **Rich Bronze (#A87C4F):** The primary brand color. Represents the \"glow\" and is used for primary actions and key brand moments.\n- **Warm Sand (#F5E6D3):** The primary typography and surface color, providing a softer, more luxurious contrast than pure white.\n- **Tropical Coral (#FF6B6B):** A high-impact accent color used sparingly for notifications, specific CTAs, or to draw attention to premium upsells.\n\nThe design system defaults to **dark mode** to emphasize depth and luxury.\n\n## Typography\n\nTypography follows an editorial hierarchy. **Playfair Display** provides a classic, literary feel for headlines, while **Montserrat** offers a clean, geometric counterpoint for functional text.\n\n- **Display & Headlines:** Use Playfair Display. Large headings should use tight line heights to maintain the \"dense\" editorial feel.\n- **Body Text:** Use Montserrat with slightly increased line height and letter spacing for maximum legibility against dark backgrounds.\n- **Labels:** Small, all-caps Montserrat labels are used for navigation and eyebrow text to create an architectural, organized feel.\n- **Numbers:** When displaying prices or durations, use Playfair Display Italic to elevate the data point.\n\n## Layout & Spacing\n\nThis design system utilizes a **fixed grid** model for desktop to maintain the integrity of editorial compositions. \n\n- **The 12-Column Grid:** A 12-column grid is used with narrow 16px (1rem) gutters to create \"intentional density.\" \n- **Architectural Rules:** Vertical and horizontal lines (0.5px or 1px thickness) in Bronze or low-opacity Sand are used to separate sections, replacing traditional padding in many instances.\n- **Responsive Behavior:** On mobile, the grid collapses to a 4-column system. The large `section-gap` (8rem) is essential to provide breathing room between dense information clusters, ensuring the \"minimalist\" aspect of the brand is preserved.\n\n## Elevation & Depth\n\nTo maintain the Editorial Minimalist style, this design system avoids standard drop shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The base background is Charcoal (#121212). Elevated surfaces (like cards or modals) use a slightly lighter Charcoal or a very subtle gradient that incorporates the Bronze tone.\n- **Inner Glows:** Instead of outward shadows, use a subtle 1px inner border in Bronze or a soft inner glow to suggest the \"lit from within\" quality of a tan.\n- **Grainy Textures:** Apply a subtle noise/grain texture to primary surfaces to evoke the tactile feel of sand and high-end print media.\n- **Rule Lines:** Use thin, 1px lines to define boundaries. A Bronze line indicates interactivity or a primary boundary, while a Sand line (at 20% opacity) indicates secondary structural separation.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. All containers, buttons, and input fields must have hard 90-degree corners to reinforce the architectural and high-fashion editorial direction. \n\nThe only exception to this rule is for organic imagery (photos of people/textures), which should be framed in either sharp rectangles or perfect circles for a \"stamp\" or \"cameo\" effect.\n\n## Components\n\n- **Buttons:** \n    - *Primary:* Solid Bronze (#A87C4F) with Charcoal text. Sharp corners. All-caps Montserrat.\n    - *Secondary:* Transparent with a 1px Bronze border.\n- **Inputs:** Minimalist \"underline\" style. No containing box; just a 1px Sand line that turns Bronze on focus. Labels sit above in all-caps Montserrat.\n- **Chips/Tags:** Small, sharp-edged rectangles with a thin Bronze border and Sand text. Used for \"Premium,\" \"New,\" or specific tanning levels.\n- **Cards:** Defined by thin rule lines rather than solid backgrounds. A card might only have a top and bottom border to separate it from the vertical flow.\n- **Lists:** Standard list items are separated by 0.5px Sand lines. Use Playfair Display for the list item titles and Montserrat for descriptions.\n- **Architectural Rules:** A custom component used to divide sections. These can be vertical (for sidebars) or horizontal. They should be consistently 1px and use the Bronze color for primary thematic breaks.\n- **Image Containers:** Images should always feature a subtle grain overlay to match the \"luxury of the glow\" motif.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
+                "namedColors": {
+                  "background": "#131313",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#313030",
+                  "inverse_primary": "#7d562d",
+                  "inverse_surface": "#e5e2e1",
+                  "on_background": "#e5e2e1",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#482903",
+                  "on_primary_container": "#402300",
+                  "on_primary_fixed": "#2c1600",
+                  "on_primary_fixed_variant": "#623f18",
+                  "on_secondary": "#68000f",
+                  "on_secondary_container": "#ff9e9b",
+                  "on_secondary_fixed": "#410006",
+                  "on_secondary_fixed_variant": "#8c1520",
+                  "on_surface": "#e5e2e1",
+                  "on_surface_variant": "#d4c4b7",
+                  "on_tertiary": "#372f22",
+                  "on_tertiary_container": "#30291c",
+                  "on_tertiary_fixed": "#221a0f",
+                  "on_tertiary_fixed_variant": "#4f4538",
+                  "outline": "#9c8e82",
+                  "outline_variant": "#50453b",
+                  "primary": "#f0bd8a",
+                  "primary_container": "#b5885a",
+                  "primary_fixed": "#ffdcbd",
+                  "primary_fixed_dim": "#f0bd8a",
+                  "secondary": "#ffb3b0",
+                  "secondary_container": "#901822",
+                  "secondary_fixed": "#ffdad8",
+                  "secondary_fixed_dim": "#ffb3b0",
+                  "surface": "#131313",
+                  "surface_bright": "#393939",
+                  "surface_container": "#201f1f",
+                  "surface_container_high": "#2a2a2a",
+                  "surface_container_highest": "#353534",
+                  "surface_container_low": "#1c1b1b",
+                  "surface_container_lowest": "#0e0e0e",
+                  "surface_dim": "#131313",
+                  "surface_tint": "#f0bd8a",
+                  "surface_variant": "#353534",
+                  "tertiary": "#d2c4b2",
+                  "tertiary_container": "#9b8f7e",
+                  "tertiary_fixed": "#efe0cd",
+                  "tertiary_fixed_dim": "#d2c4b2"
+                },
+                "overrideNeutralColor": "#121212",
+                "overridePrimaryColor": "#a87c4f",
+                "overrideSecondaryColor": "#ff6b6b",
+                "overrideTertiaryColor": "#f5e6d3",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "1rem",
+                  "margin-desktop": "4rem",
+                  "margin-mobile": "1.5rem",
+                  "section-gap": "8rem",
+                  "stack-md": "1.5rem",
+                  "stack-tight": "0.5rem"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "72px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "40px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.3"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "12px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.2em",
+                    "lineHeight": "1"
+                  },
+                  "stats-num": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "400",
+                    "lineHeight": "1"
+                  }
+                }
+              }
+            },
+            "name": "assets/add12d84e17449938e1d0b76562da2cb",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10022",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzc4OWYyODU0ZDZhNjQ2ZjBhODZhYWUxNDA3ODFlZmM3EgsSBxDb5PK-owYYAZIBIwoKcHJvamVjdF9pZBIVQhM5MTIwMjU3NTM5NDY3OTIxNzA5&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/9120257539467921709/files/6aee420fb5e44b57995b6a1ab3e27a91"
+          },
+          "id": "08ecd99c77ce4e4e9a16a5acf3e9ad4c",
+          "name": "projects/9120257539467921709/screens/08ecd99c77ce4e4e9a16a5acf3e9ad4c",
+          "prompt": "Create a bespoke, editorial-quality homepage for Aloha Tanning. \nBusiness Name: ALOHA TANNING\nLocation: 9100 w U.S. 98, Pensacola, FL 32506\nContact: (850) 741-2000, aloha_tanning@yahoo.com\n\nLAYOUT & STYLE:\n- Unique 'Editorial Noir' aesthetic. Use {{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}.\n- Strong vertical and horizontal rule lines (hairline borders) as a repeating motif.\n- High-contrast typography: Oversized Playfair Display serif headings.\n- Intentional density: Overlapping elements, asymmetrical grid, and sophisticated use of negative space.\n- NO generic cards. Use custom flex/grid layouts with borders.\n\nSECTIONS:\n1. Header: Use TopNavBar from {{DATA:COMPONENTS:COMPONENTS_2}}.\n2. Hero: Features {{DATA:IMAGE:IMAGE_5}}. Headline: \"THE PERPETUAL GLOW.\" Subtext: \"Pensacola's premier destination for bespoke bronzing and editorial-quality tanning.\"\n3. Credibility ('The Standard'): A sophisticated list of values: \"Advanced UVA/UVB Precision\", \"Designer Skin Formulas\", \"Certified Glow Specialists\". \n4. Services: An elegant, border-separated menu. \n   - Level 1: Sun-Kissed Foundation.\n   - Level 2: Deep Bronze Immersion.\n   - Level 3: Elite High-Pressure Intensity.\n   - UV-Free: Custom Airbrush Artistry.\n5. About: Uses {{DATA:IMAGE:IMAGE_3}}. Text about the curated experience and the science of the tan.\n6. Visit: Split layout. Left side: Address and Hours. Right side: The map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: Integrated, sleek form with custom-styled inputs.\n8. Footer: Use Footer from {{DATA:COMPONENTS:COMPONENTS_2}}.\n\nTECHNICAL:\n- Fully responsive.\n- Smooth scroll navigation.\n- Use {{DATA:IMAGE:IMAGE_4}} in the services or about section as a detail shot.\n- No placeholder text. All copy must be specific to Aloha Tanning.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuUlbJIFFnyYL27N3iKQfP7Q733L-KwOn7oS3mz0pl8dXOKrLYDP4i_UlGcyzYMsY96xbggopqYV5rHuoN8UMkcXuG7ekL9vcNIIDoizDKgLSUM0O-Qx8BCkfb6wmq_7uDbpxC8C_WXlne4a74o25Zn0Cc4oS7KhJWEz7hoUHepo3u1waRy6Tr_ox5YbJJKb46Sv-C2HJ3z1mil7uykbOQcrPudkewSEmuH5JMDjPvN9_J4jKXKAuX7QbI",
+            "name": "projects/9120257539467921709/files/943bd87da6354abea9f9521185a614e4"
+          },
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#a87c4f",
+            "designMd": "---\nname: Sunset Noir Editorial\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353534'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#d4c4b7'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#9c8e82'\n  outline-variant: '#50453b'\n  surface-tint: '#f0bd8a'\n  primary: '#f0bd8a'\n  on-primary: '#482903'\n  primary-container: '#b5885a'\n  on-primary-container: '#402300'\n  inverse-primary: '#7d562d'\n  secondary: '#ffb3b0'\n  on-secondary: '#68000f'\n  secondary-container: '#901822'\n  on-secondary-container: '#ff9e9b'\n  tertiary: '#d2c4b2'\n  on-tertiary: '#372f22'\n  tertiary-container: '#9b8f7e'\n  on-tertiary-container: '#30291c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdcbd'\n  primary-fixed-dim: '#f0bd8a'\n  on-primary-fixed: '#2c1600'\n  on-primary-fixed-variant: '#623f18'\n  secondary-fixed: '#ffdad8'\n  secondary-fixed-dim: '#ffb3b0'\n  on-secondary-fixed: '#410006'\n  on-secondary-fixed-variant: '#8c1520'\n  tertiary-fixed: '#efe0cd'\n  tertiary-fixed-dim: '#d2c4b2'\n  on-tertiary-fixed: '#221a0f'\n  on-tertiary-fixed-variant: '#4f4538'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353534'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1'\n    letterSpacing: 0.2em\n  stats-num:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1'\nspacing:\n  container-max: 1280px\n  gutter: 1rem\n  margin-desktop: 4rem\n  margin-mobile: 1.5rem\n  stack-tight: 0.5rem\n  stack-md: 1.5rem\n  section-gap: 8rem\n---\n\n## Brand & Style\n\nThe design system is anchored in an **Editorial Minimalist** aesthetic, moving away from typical coastal tropes toward a high-fashion, boutique salon experience. The brand personality is exclusive, authoritative, and sophisticated, targeting an audience that views tanning as a luxury skincare ritual rather than a casual beach activity.\n\nThe visual style utilizes **intentional density**—grouping information tightly with generous surrounding white space (or \"charcoal space\") to mimic the layout of a premium fashion magazine. Thin architectural lines and organic grain textures replace traditional shadows to establish structure. The emotional response is one of warmth, prestige, and the \"afterglow\" of a high-end treatment.\n\n## Colors\n\nThe \"Sunset Noir\" palette is designed to contrast the deep, shadows of a premium interior with the radiant glow of a tan.\n\n- **Deep Charcoal (#121212):** The foundation. Used for backgrounds to make bronze and coral tones vibrate.\n- **Rich Bronze (#A87C4F):** The primary brand color. Represents the \"glow\" and is used for primary actions and key brand moments.\n- **Warm Sand (#F5E6D3):** The primary typography and surface color, providing a softer, more luxurious contrast than pure white.\n- **Tropical Coral (#FF6B6B):** A high-impact accent color used sparingly for notifications, specific CTAs, or to draw attention to premium upsells.\n\nThe design system defaults to **dark mode** to emphasize depth and luxury.\n\n## Typography\n\nTypography follows an editorial hierarchy. **Playfair Display** provides a classic, literary feel for headlines, while **Montserrat** offers a clean, geometric counterpoint for functional text.\n\n- **Display & Headlines:** Use Playfair Display. Large headings should use tight line heights to maintain the \"dense\" editorial feel.\n- **Body Text:** Use Montserrat with slightly increased line height and letter spacing for maximum legibility against dark backgrounds.\n- **Labels:** Small, all-caps Montserrat labels are used for navigation and eyebrow text to create an architectural, organized feel.\n- **Numbers:** When displaying prices or durations, use Playfair Display Italic to elevate the data point.\n\n## Layout & Spacing\n\nThis design system utilizes a **fixed grid** model for desktop to maintain the integrity of editorial compositions. \n\n- **The 12-Column Grid:** A 12-column grid is used with narrow 16px (1rem) gutters to create \"intentional density.\" \n- **Architectural Rules:** Vertical and horizontal lines (0.5px or 1px thickness) in Bronze or low-opacity Sand are used to separate sections, replacing traditional padding in many instances.\n- **Responsive Behavior:** On mobile, the grid collapses to a 4-column system. The large `section-gap` (8rem) is essential to provide breathing room between dense information clusters, ensuring the \"minimalist\" aspect of the brand is preserved.\n\n## Elevation & Depth\n\nTo maintain the Editorial Minimalist style, this design system avoids standard drop shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The base background is Charcoal (#121212). Elevated surfaces (like cards or modals) use a slightly lighter Charcoal or a very subtle gradient that incorporates the Bronze tone.\n- **Inner Glows:** Instead of outward shadows, use a subtle 1px inner border in Bronze or a soft inner glow to suggest the \"lit from within\" quality of a tan.\n- **Grainy Textures:** Apply a subtle noise/grain texture to primary surfaces to evoke the tactile feel of sand and high-end print media.\n- **Rule Lines:** Use thin, 1px lines to define boundaries. A Bronze line indicates interactivity or a primary boundary, while a Sand line (at 20% opacity) indicates secondary structural separation.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. All containers, buttons, and input fields must have hard 90-degree corners to reinforce the architectural and high-fashion editorial direction. \n\nThe only exception to this rule is for organic imagery (photos of people/textures), which should be framed in either sharp rectangles or perfect circles for a \"stamp\" or \"cameo\" effect.\n\n## Components\n\n- **Buttons:** \n    - *Primary:* Solid Bronze (#A87C4F) with Charcoal text. Sharp corners. All-caps Montserrat.\n    - *Secondary:* Transparent with a 1px Bronze border.\n- **Inputs:** Minimalist \"underline\" style. No containing box; just a 1px Sand line that turns Bronze on focus. Labels sit above in all-caps Montserrat.\n- **Chips/Tags:** Small, sharp-edged rectangles with a thin Bronze border and Sand text. Used for \"Premium,\" \"New,\" or specific tanning levels.\n- **Cards:** Defined by thin rule lines rather than solid backgrounds. A card might only have a top and bottom border to separate it from the vertical flow.\n- **Lists:** Standard list items are separated by 0.5px Sand lines. Use Playfair Display for the list item titles and Montserrat for descriptions.\n- **Architectural Rules:** A custom component used to divide sections. These can be vertical (for sidebars) or horizontal. They should be consistently 1px and use the Bronze color for primary thematic breaks.\n- **Image Containers:** Images should always feature a subtle grain overlay to match the \"luxury of the glow\" motif.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313030",
+              "inverse_primary": "#7d562d",
+              "inverse_surface": "#e5e2e1",
+              "on_background": "#e5e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#482903",
+              "on_primary_container": "#402300",
+              "on_primary_fixed": "#2c1600",
+              "on_primary_fixed_variant": "#623f18",
+              "on_secondary": "#68000f",
+              "on_secondary_container": "#ff9e9b",
+              "on_secondary_fixed": "#410006",
+              "on_secondary_fixed_variant": "#8c1520",
+              "on_surface": "#e5e2e1",
+              "on_surface_variant": "#d4c4b7",
+              "on_tertiary": "#372f22",
+              "on_tertiary_container": "#30291c",
+              "on_tertiary_fixed": "#221a0f",
+              "on_tertiary_fixed_variant": "#4f4538",
+              "outline": "#9c8e82",
+              "outline_variant": "#50453b",
+              "primary": "#f0bd8a",
+              "primary_container": "#b5885a",
+              "primary_fixed": "#ffdcbd",
+              "primary_fixed_dim": "#f0bd8a",
+              "secondary": "#ffb3b0",
+              "secondary_container": "#901822",
+              "secondary_fixed": "#ffdad8",
+              "secondary_fixed_dim": "#ffb3b0",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#201f1f",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353534",
+              "surface_container_low": "#1c1b1b",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#f0bd8a",
+              "surface_variant": "#353534",
+              "tertiary": "#d2c4b2",
+              "tertiary_container": "#9b8f7e",
+              "tertiary_fixed": "#efe0cd",
+              "tertiary_fixed_dim": "#d2c4b2"
+            },
+            "overrideNeutralColor": "#121212",
+            "overridePrimaryColor": "#a87c4f",
+            "overrideSecondaryColor": "#ff6b6b",
+            "overrideTertiaryColor": "#f5e6d3",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "1rem",
+              "margin-desktop": "4rem",
+              "margin-mobile": "1.5rem",
+              "section-gap": "8rem",
+              "stack-md": "1.5rem",
+              "stack-tight": "0.5rem"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "700",
+                "letterSpacing": "0.2em",
+                "lineHeight": "1"
+              },
+              "stats-num": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "1"
+              }
+            }
+          },
+          "title": "ALOHA TANNING | The Art of the Glow",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, editorial-style homepage for Aloha Tanning that moves away from standard local business templates to establish a premium, \"Sunset Noir\" visual identity.\n\n### Design Highlights:\n- **Visual Identity:** The \"Sunset Noir\" palette uses deep charcoals and rich bronzes to evoke a high-fashion, golden-hour aesthetic.\n- **Editorial Layout:** I implemented a high-contrast typographic system using *Playfair Display* for oversized headings, paired with thin architectural rule lines to create a structured yet sophisticated feel.\n- **Immersive Imagery:** The design features custom-generated editorial photography—from the \"Perpetual Glow\" hero image to the \"Science Meets Serenity\" interior shots—to position Aloha Tanning as a boutique destination rather than a typical salon.\n- **Functional Sophistication:** The layout replaces generic card grids with a custom, border-separated menu for services, ensuring the \"The Aloha Standard\" is felt in every pixel.\n- **Pensacola Presence:** Local details are integrated throughout, including a custom visit section with a dedicated map slot and integrated contact form.\n\nThe resulting code is a production-ready, fully responsive semantic HTML document with custom CSS variables and smooth-scroll interactions."
+  },
+  {
+    "suggestion": "Can you add a 'Book Now' popup modal?"
+  },
+  {
+    "suggestion": "Let's make the 'Services' section use a horizontal scroll on mobile."
+  },
+  {
+    "suggestion": "Can we add a subtle parallax effect to the hero image?"
+  }
+]
