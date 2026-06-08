@@ -10,12 +10,12 @@
 
 - **Gate:** PASS
 - **Evidence:** Active Facebook page with content and 3 post caption(s) scraped
-- **Checked:** 2026-06-07 — Facebook profile scrape
+- **Checked:** 2026-06-08 — Facebook profile scrape
 
 ## Human approval
 
 - **Reviewed by:** auto (Facebook-only verified lead)
-- **Date:** 2026-06-07
+- **Date:** 2026-06-08
 - **Website bad enough to proceed:** yes — no owned website on Facebook profile
 - **Gate:** PASS
 
@@ -40,7 +40,7 @@
 Thanks for your support! For your mother or for yourself! We all deserve some pampering! squaremktg.com/campaigns/qudrFavDXhvyyTUG/landing Gift Cards
 Hours: Closed now
 Address: 156 McGregor Ave N, Mobile, AL, United States, 36608
-Phone: 251-721-0343
+Phone: 265.663 7265
 Email: jeffreysleah@gmail.com
 
 Recent posts from their Facebook page:
@@ -87,7 +87,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/SpringhillSpa/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T20:54:04.471Z
+- **Scraped:** 2026-06-08T00:18:33.073Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/SpringhillSpa/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

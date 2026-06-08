@@ -1,32 +1,14 @@
-// Mobile Menu Logic
-        const menuBtn = document.getElementById('mobileMenuBtn');
-        const closeBtn = document.getElementById('closeMenuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        const menuLinks = mobileMenu.querySelectorAll('a');
-
-        const toggleMenu = (open) => {
-            mobileMenu.style.transform = open ? 'translateX(0)' : 'translateX(100%)';
-            document.body.style.overflow = open ? 'hidden' : 'auto';
-        };
-
-        menuBtn.addEventListener('click', () => toggleMenu(true));
-        closeBtn.addEventListener('click', () => toggleMenu(false));
-        menuLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
-
-        // Form Interaction
-        const form = document.getElementById('contactForm');
-        const feedback = document.getElementById('formFeedback');
-
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            feedback.classList.remove('hidden');
-            form.reset();
-            setTimeout(() => {
-                feedback.classList.add('hidden');
-            }, 5000);
+// Smooth scroll for internal links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
-        // Simple Fade-in Observer
+        // Simple reveal animation on scroll
         const observerOptions = {
             threshold: 0.1
         };
@@ -34,16 +16,14 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
         document.querySelectorAll('section').forEach(section => {
-            section.style.transition = 'all 1s ease-out';
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(section);
         });
 
