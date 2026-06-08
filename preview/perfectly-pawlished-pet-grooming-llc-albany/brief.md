@@ -86,7 +86,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/profile.php?id=61556726754581&mibextid=wwXIfr&mibextid=wwXIfr
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T07:19:08.421Z
+- **Scraped:** 2026-06-08T08:37:22.109Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/profile.php?id=61556726754581&mibextid=wwXIfr&mibextid=wwXIfr. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

@@ -1,29 +1,19 @@
-// Simple micro-interactions for the bespoke feel
-        document.querySelectorAll('a, button').forEach(el => {
-            el.addEventListener('mousedown', () => {
-                el.style.opacity = '0.7';
-                el.style.transform = 'translateY(1px)';
-            });
-            el.addEventListener('mouseup', () => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0px)';
-            });
-            el.addEventListener('mouseleave', () => {
-                el.style.opacity = '1';
-                el.style.transform = 'translateY(0px)';
-            });
-        });
-
-        // Navigation scroll effect
+// Simple scroll behavior for header
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
             if (window.scrollY > 50) {
-                nav.classList.add('py-4', 'shadow-sm');
-                nav.classList.remove('py-6');
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-4');
             } else {
-                nav.classList.add('py-6');
-                nav.classList.remove('py-4', 'shadow-sm');
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-sm');
             }
+        });
+
+        // Basic form submission simulation
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your request. An editorial specialist will reach out to schedule your consultation shortly.');
         });
 
 (() => {

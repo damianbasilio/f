@@ -1,0 +1,473 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Apex Engineering",
+          "styleGuidelines": "## Brand & Style\nThe design system is built on the intersection of avian aggression and mechanical precision. It targets a premium demographic that values technical expertise and high-performance results. The brand personality is authoritative, rugged, and unapologetically professional.\n\nThe visual style is a fusion of **Industrial Minimalism** and **High-Contrast Editorial**. It rejects softness in favor of hard edges, utilizing a \"mechanical-first\" approach where every UI element feels like a machined component. Expect heavy use of whitespace to frame bold, aggressive typography, creating an aesthetic that feels like a high-end automotive magazine or a technical blueprint.\n\n## Layout & Spacing\nThe layout follows a strict **12-column fixed grid** on desktop and a **4-column fluid grid** on mobile. \n\nA \"Technical Margin\" of 64px on desktop provides the necessary whitespace to achieve an editorial feel. Spacing follows a 4px base unit, but emphasizes large, dramatic gaps (64px, 128px) between major sections to mimic the expansive layout of a premium broadsheet or technical manual. Elements should often be \"broken\" by the grid, with images or large type bleeding off-edge to create a sense of scale.\n\n## Elevation & Depth\nThis design system avoids traditional drop shadows to maintain its rugged, flat-engineered aesthetic. Depth is achieved through:\n\n1.  **Tonal Stacking:** Using varying shades of Charcoal and Black to define hierarchy.\n2.  **Hard Outlines:** 1px solid borders in Concrete Grey or Ignition Red to define boundaries.\n3.  **Texture Layers:** Subtle carbon fiber or blueprint grid overlays (5% opacity) applied to the base background layer.\n4.  **Sharp Angles:** Using 45-degree clipped corners on containers to create a \"machined\" look, suggesting the geometry of hawk wings and engine housings.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons use Ignition Red background with white uppercase text. Secondary buttons use a 1px Concrete Grey border. Use a 45-degree \"wing clip\" on the top-right corner for primary CTAs.\n- **Inputs:** Dark backgrounds (Carbon Charcoal) with 1px bottom-only borders. Labels use the `technical-label` mono-space style, positioned strictly above the field.\n- **Cards:** Flat containers with 1px borders. No shadows. Use a blueprint grid pattern as a subtle background for data-heavy cards.\n- **Chips/Status:** High-contrast blocks. Success is Concrete Grey with Black text; Error/Urgent is Ignition Red with White text.\n- **Dividers:** Use the \"Mechanical Feather\" motif—a thin horizontal line interrupted by a 45-degree jagged segment to signify a transition.\n- **Data Lists:** Use `JetBrains Mono` for all numerical values, aligned to a strict vertical axis to resemble a spec sheet.",
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#e63946",
+            "designMd": "---\nname: Apex Engineering\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#e4bebc'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#ab8987'\n  outline-variant: '#5b403f'\n  surface-tint: '#ffb3b1'\n  primary: '#ffb3b1'\n  on-primary: '#680011'\n  primary-container: '#ff535b'\n  on-primary-container: '#5b000e'\n  inverse-primary: '#bb152c'\n  secondary: '#c8c6c5'\n  on-secondary: '#313030'\n  secondary-container: '#474746'\n  on-secondary-container: '#b7b5b4'\n  tertiary: '#c6c6c7'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#909191'\n  on-tertiary-container: '#282a2a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad8'\n  primary-fixed-dim: '#ffb3b1'\n  on-primary-fixed: '#410007'\n  on-primary-fixed-variant: '#92001c'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  headline-display:\n    fontFamily: Archivo Narrow\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 90%\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 100%\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 100%\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 110%\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 160%\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 150%\n  technical-label:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 140%\n    letterSpacing: 0.05em\n  data-point:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 100%\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system is built on the intersection of avian aggression and mechanical precision. It targets a premium demographic that values technical expertise and high-performance results. The brand personality is authoritative, rugged, and unapologetically professional.\n\nThe visual style is a fusion of **Industrial Minimalism** and **High-Contrast Editorial**. It rejects softness in favor of hard edges, utilizing a \"mechanical-first\" approach where every UI element feels like a machined component. Expect heavy use of whitespace to frame bold, aggressive typography, creating an aesthetic that feels like a high-end automotive magazine or a technical blueprint.\n\n## Colors\nThe palette is rooted in the high-stakes environment of motorsport and mechanical engineering.\n\n- **Ignition Red (#E63946):** The primary kinetic energy of the brand. Used for critical CTAs, status indicators, and high-impact branding moments.\n- **Oil Slick Black (#1A1A1A):** The foundation. Used for primary backgrounds to create a deep, premium environment that makes white text and red accents pop.\n- **Concrete Grey (#F1F1F1):** The primary surface color for high-readability content and editorial sections.\n- **Carbon Charcoal (#2D2D2D):** Used for UI layering, input fields, and secondary containers to provide depth without resorting to shadows.\n\n## Typography\nThe typography system prioritizes impact and technical clarity. \n\n**Archivo Narrow** provides the \"Red Hawks\" aggression—a condensed, powerful sans-serif that demands attention in large formats. **Inter** serves as the workhorse for body copy, ensuring legibility against dark backgrounds. **JetBrains Mono** is utilized for metadata, technical specs, and \"blueprint\" style annotations, reinforcing the engineering narrative. \n\nAll headlines must be uppercase to maintain the industrial tone.\n\n## Layout & Spacing\nThe layout follows a strict **12-column fixed grid** on desktop and a **4-column fluid grid** on mobile. \n\nA \"Technical Margin\" of 64px on desktop provides the necessary whitespace to achieve an editorial feel. Spacing follows a 4px base unit, but emphasizes large, dramatic gaps (64px, 128px) between major sections to mimic the expansive layout of a premium broadsheet or technical manual. Elements should often be \"broken\" by the grid, with images or large type bleeding off-edge to create a sense of scale.\n\n## Elevation & Depth\nThis design system avoids traditional drop shadows to maintain its rugged, flat-engineered aesthetic. Depth is achieved through:\n\n1.  **Tonal Stacking:** Using varying shades of Charcoal and Black to define hierarchy.\n2.  **Hard Outlines:** 1px solid borders in Concrete Grey or Ignition Red to define boundaries.\n3.  **Texture Layers:** Subtle carbon fiber or blueprint grid overlays (5% opacity) applied to the base background layer.\n4.  **Sharp Angles:** Using 45-degree clipped corners on containers to create a \"machined\" look, suggesting the geometry of hawk wings and engine housings.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo introduce visual interest without using curves, employ 45-degree diagonal clips on the corners of buttons and primary cards. This \"chamfered\" edge aesthetic mimics industrial metalwork. Dividers should incorporate a \"feather\" motif—a repeating series of slanted vertical lines that function as a textural break between sections.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons use Ignition Red background with white uppercase text. Secondary buttons use a 1px Concrete Grey border. Use a 45-degree \"wing clip\" on the top-right corner for primary CTAs.\n- **Inputs:** Dark backgrounds (Carbon Charcoal) with 1px bottom-only borders. Labels use the `technical-label` mono-space style, positioned strictly above the field.\n- **Cards:** Flat containers with 1px borders. No shadows. Use a blueprint grid pattern as a subtle background for data-heavy cards.\n- **Chips/Status:** High-contrast blocks. Success is Concrete Grey with Black text; Error/Urgent is Ignition Red with White text.\n- **Dividers:** Use the \"Mechanical Feather\" motif—a thin horizontal line interrupted by a 45-degree jagged segment to signify a transition.\n- **Data Lists:** Use `JetBrains Mono` for all numerical values, aligned to a strict vertical axis to resemble a spec sheet.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303030",
+              "inverse_primary": "#bb152c",
+              "inverse_surface": "#e4e2e1",
+              "on_background": "#e4e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#680011",
+              "on_primary_container": "#5b000e",
+              "on_primary_fixed": "#410007",
+              "on_primary_fixed_variant": "#92001c",
+              "on_secondary": "#313030",
+              "on_secondary_container": "#b7b5b4",
+              "on_secondary_fixed": "#1c1b1b",
+              "on_secondary_fixed_variant": "#474746",
+              "on_surface": "#e4e2e1",
+              "on_surface_variant": "#e4bebc",
+              "on_tertiary": "#2f3131",
+              "on_tertiary_container": "#282a2a",
+              "on_tertiary_fixed": "#1a1c1c",
+              "on_tertiary_fixed_variant": "#454747",
+              "outline": "#ab8987",
+              "outline_variant": "#5b403f",
+              "primary": "#ffb3b1",
+              "primary_container": "#ff535b",
+              "primary_fixed": "#ffdad8",
+              "primary_fixed_dim": "#ffb3b1",
+              "secondary": "#c8c6c5",
+              "secondary_container": "#474746",
+              "secondary_fixed": "#e5e2e1",
+              "secondary_fixed_dim": "#c8c6c5",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#1f2020",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353535",
+              "surface_container_low": "#1b1c1c",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#ffb3b1",
+              "surface_variant": "#353535",
+              "tertiary": "#c6c6c7",
+              "tertiary_container": "#909191",
+              "tertiary_fixed": "#e2e2e2",
+              "tertiary_fixed_dim": "#c6c6c7"
+            },
+            "overrideNeutralColor": "#2d2d2d",
+            "overridePrimaryColor": "#e63946",
+            "overrideSecondaryColor": "#1a1a1a",
+            "overrideTertiaryColor": "#f1f1f1",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "section-gap": "128px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "160%"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "150%"
+              },
+              "data-point": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "lineHeight": "100%"
+              },
+              "headline-display": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "84px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "90%"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "100%"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "100%"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "110%"
+              },
+              "technical-label": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "140%"
+              }
+            }
+          }
+        },
+        "name": "assets/b44181e5e80c42ffb941712ac7c63ae7",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "512",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2UzNjdiNjgxM2RmYzQ0NDliMmRlMmY0YmRhY2NiMWU0EgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDgyMjkwMDQ4NzA0NDA4NjI1Mw&filename=&opi=96797242",
+              "mimeType": "image/svg+xml",
+              "name": "projects/10822900487044086253/files/ba8c8b82d06f4d3cb91fad84b56f05b2"
+            },
+            "id": "978de2b22de84708ac0fca0cd5479ca8",
+            "name": "projects/10822900487044086253/screens/978de2b22de84708ac0fca0cd5479ca8",
+            "prompt": "Brand logo. - Primary color: #e63946\n- Font: archivoNarrow\n- Mode: dark\n- Roundness: rounded-lg\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "displayMode": "SVG",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvP9uVqSMxOu7pUmjFrIlOseIo1ig23D3065Uj3oAeBBBrq0BqGoI_bfArccc_-O2a_fQeW9FdtJMicqb9mrAeCNiFJ4QohaKM158SqtRD2MyE7gq1M8tfCUIeaCTe5RRn31VfyKC3dplkYPWYnq3b5XopT878r-2S-tDnu4zKvWC6C6MqY9TuMcEJ0W8Fc8CWm2f5qfJ-7_EgsmPoQQTocw_HQWChBXahtlYADiLMoX5vSehkNk0gfL3w",
+              "name": "projects/10822900487044086253/files/455875cebf6548d8a0c6499e271d0d31"
+            },
+            "theme": {},
+            "title": "Red Hawks Mechanical Logo",
+            "width": "512"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Apex Engineering",
+                "styleGuidelines": "## Brand & Style\nThe design system is built on the intersection of avian aggression and mechanical precision. It targets a premium demographic that values technical expertise and high-performance results. The brand personality is authoritative, rugged, and unapologetically professional.\n\nThe visual style is a fusion of **Industrial Minimalism** and **High-Contrast Editorial**. It rejects softness in favor of hard edges, utilizing a \"mechanical-first\" approach where every UI element feels like a machined component. Expect heavy use of whitespace to frame bold, aggressive typography, creating an aesthetic that feels like a high-end automotive magazine or a technical blueprint.\n\n## Layout & Spacing\nThe layout follows a strict **12-column fixed grid** on desktop and a **4-column fluid grid** on mobile. \n\nA \"Technical Margin\" of 64px on desktop provides the necessary whitespace to achieve an editorial feel. Spacing follows a 4px base unit, but emphasizes large, dramatic gaps (64px, 128px) between major sections to mimic the expansive layout of a premium broadsheet or technical manual. Elements should often be \"broken\" by the grid, with images or large type bleeding off-edge to create a sense of scale.\n\n## Elevation & Depth\nThis design system avoids traditional drop shadows to maintain its rugged, flat-engineered aesthetic. Depth is achieved through:\n\n1.  **Tonal Stacking:** Using varying shades of Charcoal and Black to define hierarchy.\n2.  **Hard Outlines:** 1px solid borders in Concrete Grey or Ignition Red to define boundaries.\n3.  **Texture Layers:** Subtle carbon fiber or blueprint grid overlays (5% opacity) applied to the base background layer.\n4.  **Sharp Angles:** Using 45-degree clipped corners on containers to create a \"machined\" look, suggesting the geometry of hawk wings and engine housings.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons use Ignition Red background with white uppercase text. Secondary buttons use a 1px Concrete Grey border. Use a 45-degree \"wing clip\" on the top-right corner for primary CTAs.\n- **Inputs:** Dark backgrounds (Carbon Charcoal) with 1px bottom-only borders. Labels use the `technical-label` mono-space style, positioned strictly above the field.\n- **Cards:** Flat containers with 1px borders. No shadows. Use a blueprint grid pattern as a subtle background for data-heavy cards.\n- **Chips/Status:** High-contrast blocks. Success is Concrete Grey with Black text; Error/Urgent is Ignition Red with White text.\n- **Dividers:** Use the \"Mechanical Feather\" motif—a thin horizontal line interrupted by a 45-degree jagged segment to signify a transition.\n- **Data Lists:** Use `JetBrains Mono` for all numerical values, aligned to a strict vertical axis to resemble a spec sheet.",
+                "theme": {
+                  "bodyFont": "INTER",
+                  "bodyFontFamily": "Inter",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#e63946",
+                  "designMd": "---\nname: Apex Engineering\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#e4bebc'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#ab8987'\n  outline-variant: '#5b403f'\n  surface-tint: '#ffb3b1'\n  primary: '#ffb3b1'\n  on-primary: '#680011'\n  primary-container: '#ff535b'\n  on-primary-container: '#5b000e'\n  inverse-primary: '#bb152c'\n  secondary: '#c8c6c5'\n  on-secondary: '#313030'\n  secondary-container: '#474746'\n  on-secondary-container: '#b7b5b4'\n  tertiary: '#c6c6c7'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#909191'\n  on-tertiary-container: '#282a2a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad8'\n  primary-fixed-dim: '#ffb3b1'\n  on-primary-fixed: '#410007'\n  on-primary-fixed-variant: '#92001c'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  headline-display:\n    fontFamily: Archivo Narrow\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 90%\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 100%\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 100%\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 110%\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 160%\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 150%\n  technical-label:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 140%\n    letterSpacing: 0.05em\n  data-point:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 100%\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system is built on the intersection of avian aggression and mechanical precision. It targets a premium demographic that values technical expertise and high-performance results. The brand personality is authoritative, rugged, and unapologetically professional.\n\nThe visual style is a fusion of **Industrial Minimalism** and **High-Contrast Editorial**. It rejects softness in favor of hard edges, utilizing a \"mechanical-first\" approach where every UI element feels like a machined component. Expect heavy use of whitespace to frame bold, aggressive typography, creating an aesthetic that feels like a high-end automotive magazine or a technical blueprint.\n\n## Colors\nThe palette is rooted in the high-stakes environment of motorsport and mechanical engineering.\n\n- **Ignition Red (#E63946):** The primary kinetic energy of the brand. Used for critical CTAs, status indicators, and high-impact branding moments.\n- **Oil Slick Black (#1A1A1A):** The foundation. Used for primary backgrounds to create a deep, premium environment that makes white text and red accents pop.\n- **Concrete Grey (#F1F1F1):** The primary surface color for high-readability content and editorial sections.\n- **Carbon Charcoal (#2D2D2D):** Used for UI layering, input fields, and secondary containers to provide depth without resorting to shadows.\n\n## Typography\nThe typography system prioritizes impact and technical clarity. \n\n**Archivo Narrow** provides the \"Red Hawks\" aggression—a condensed, powerful sans-serif that demands attention in large formats. **Inter** serves as the workhorse for body copy, ensuring legibility against dark backgrounds. **JetBrains Mono** is utilized for metadata, technical specs, and \"blueprint\" style annotations, reinforcing the engineering narrative. \n\nAll headlines must be uppercase to maintain the industrial tone.\n\n## Layout & Spacing\nThe layout follows a strict **12-column fixed grid** on desktop and a **4-column fluid grid** on mobile. \n\nA \"Technical Margin\" of 64px on desktop provides the necessary whitespace to achieve an editorial feel. Spacing follows a 4px base unit, but emphasizes large, dramatic gaps (64px, 128px) between major sections to mimic the expansive layout of a premium broadsheet or technical manual. Elements should often be \"broken\" by the grid, with images or large type bleeding off-edge to create a sense of scale.\n\n## Elevation & Depth\nThis design system avoids traditional drop shadows to maintain its rugged, flat-engineered aesthetic. Depth is achieved through:\n\n1.  **Tonal Stacking:** Using varying shades of Charcoal and Black to define hierarchy.\n2.  **Hard Outlines:** 1px solid borders in Concrete Grey or Ignition Red to define boundaries.\n3.  **Texture Layers:** Subtle carbon fiber or blueprint grid overlays (5% opacity) applied to the base background layer.\n4.  **Sharp Angles:** Using 45-degree clipped corners on containers to create a \"machined\" look, suggesting the geometry of hawk wings and engine housings.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo introduce visual interest without using curves, employ 45-degree diagonal clips on the corners of buttons and primary cards. This \"chamfered\" edge aesthetic mimics industrial metalwork. Dividers should incorporate a \"feather\" motif—a repeating series of slanted vertical lines that function as a textural break between sections.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons use Ignition Red background with white uppercase text. Secondary buttons use a 1px Concrete Grey border. Use a 45-degree \"wing clip\" on the top-right corner for primary CTAs.\n- **Inputs:** Dark backgrounds (Carbon Charcoal) with 1px bottom-only borders. Labels use the `technical-label` mono-space style, positioned strictly above the field.\n- **Cards:** Flat containers with 1px borders. No shadows. Use a blueprint grid pattern as a subtle background for data-heavy cards.\n- **Chips/Status:** High-contrast blocks. Success is Concrete Grey with Black text; Error/Urgent is Ignition Red with White text.\n- **Dividers:** Use the \"Mechanical Feather\" motif—a thin horizontal line interrupted by a 45-degree jagged segment to signify a transition.\n- **Data Lists:** Use `JetBrains Mono` for all numerical values, aligned to a strict vertical axis to resemble a spec sheet.",
+                  "font": "ARCHIVO_NARROW",
+                  "headlineFont": "ARCHIVO_NARROW",
+                  "headlineFontFamily": "Archivo Narrow",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#131313",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#303030",
+                    "inverse_primary": "#bb152c",
+                    "inverse_surface": "#e4e2e1",
+                    "on_background": "#e4e2e1",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#680011",
+                    "on_primary_container": "#5b000e",
+                    "on_primary_fixed": "#410007",
+                    "on_primary_fixed_variant": "#92001c",
+                    "on_secondary": "#313030",
+                    "on_secondary_container": "#b7b5b4",
+                    "on_secondary_fixed": "#1c1b1b",
+                    "on_secondary_fixed_variant": "#474746",
+                    "on_surface": "#e4e2e1",
+                    "on_surface_variant": "#e4bebc",
+                    "on_tertiary": "#2f3131",
+                    "on_tertiary_container": "#282a2a",
+                    "on_tertiary_fixed": "#1a1c1c",
+                    "on_tertiary_fixed_variant": "#454747",
+                    "outline": "#ab8987",
+                    "outline_variant": "#5b403f",
+                    "primary": "#ffb3b1",
+                    "primary_container": "#ff535b",
+                    "primary_fixed": "#ffdad8",
+                    "primary_fixed_dim": "#ffb3b1",
+                    "secondary": "#c8c6c5",
+                    "secondary_container": "#474746",
+                    "secondary_fixed": "#e5e2e1",
+                    "secondary_fixed_dim": "#c8c6c5",
+                    "surface": "#131313",
+                    "surface_bright": "#393939",
+                    "surface_container": "#1f2020",
+                    "surface_container_high": "#2a2a2a",
+                    "surface_container_highest": "#353535",
+                    "surface_container_low": "#1b1c1c",
+                    "surface_container_lowest": "#0e0e0e",
+                    "surface_dim": "#131313",
+                    "surface_tint": "#ffb3b1",
+                    "surface_variant": "#353535",
+                    "tertiary": "#c6c6c7",
+                    "tertiary_container": "#909191",
+                    "tertiary_fixed": "#e2e2e2",
+                    "tertiary_fixed_dim": "#c6c6c7"
+                  },
+                  "overrideNeutralColor": "#2d2d2d",
+                  "overridePrimaryColor": "#e63946",
+                  "overrideSecondaryColor": "#1a1a1a",
+                  "overrideTertiaryColor": "#f1f1f1",
+                  "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "section-gap": "128px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "160%"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "150%"
+                    },
+                    "data-point": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "lineHeight": "100%"
+                    },
+                    "headline-display": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "84px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "90%"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "100%"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "100%"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "110%"
+                    },
+                    "technical-label": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "140%"
+                    }
+                  }
+                }
+              },
+              "name": "assets/b44181e5e80c42ffb941712ac7c63ae7",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "6674",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzVlOWY2YjAyMWFiMDQ3Y2VhY2MxMDIzMzhjMTU3Yzc0EgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDgyMjkwMDQ4NzA0NDA4NjI1Mw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/10822900487044086253/files/71a2f9c52cc44a7d8073284df98b4a2e"
+            },
+            "id": "e684bb77a3e748f5b5f41376239898cf",
+            "name": "projects/10822900487044086253/screens/e684bb77a3e748f5b5f41376239898cf",
+            "prompt": "Build a bespoke, high-end homepage for Red Hawks Mobile Mechanics. \n\n**STRICT FIDELITY TO UNIQUE VISUAL IDENTITY**:\n- **Hero Section**: Use a 'Technical Split' layout. Left 40%: Solid #1A1A1A with the logo {{DATA:IMAGE:IMAGE_2}} and massive vertical text 'IGNITION'. Right 60%: Large high-contrast photo of a performance car engine. Overlay a 'Mechanical Scan' HUD graphic—a red semi-transparent rectangle with monospace text 'SYSTEM_READY: 100%'.\n- **Service Section ('Flight Path')**: A horizontal row of three sections separated by 45-degree slashes. \n    1. 'DIAGNOSTIC' - 'Precision fault finding.'\n    2. 'RESCUE' - 'Roadside deployment 24/7.'\n    3. 'TUNING' - 'Peak performance unlocked.'\n    Each should look like a technical blueprint or schematic.\n- **Audit Grid**: A 3-column grid of dense technical stats. \n    1. '542 ENGINES REVIVED'\n    2. '14 MIN AVG DISPATCH'\n    3. '4.9 HAWK-EYE RATING'\n    Background: Dark grey with a subtle carbon fiber or blueprint grid texture.\n- **Mission Section**: A large, centered quote in bold condensed typography: 'PRECISION IS OUR PREDATOR INSTINCT.' \n- **Footer**: High contrast, brutalist style. 'DISPATCH' button is the primary CTA.\n\n**COLOR & TYPE**: \n- Background: #1A1A1A (Oil Slick Black).\n- Text: #F1F1F1 (Concrete Grey) and #E63946 (Ignition Red).\n- Font: Use Archivo Narrow (condensed) for all headers and a monospace font for all technical labels and small stats.\n- No rounded corners. 0px border-radius everywhere. Use sharp edges and 45-degree angles.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Alt Text: Red Hawks Mechanical Logo\n  Description: Brand logo. - Primary color: #e63946\n- Font: archivoNarrow\n- Mode: dark\n- Roundness: rounded-lg\n\n  Dimensions: 512x512\n  Aspect Ratio: 1.00\n  Colors: #E63946\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtTl5EqjPFmH-g5pP2PuMCFyAzHAZQ7L3_nufyOuXRQLGkwiS8EjQvkuPX7KMEy5kIgTCfwDXgQJ5YO0AGJSXc0RUjYBrVlfcLAvWVRQsLpZmLhXjD7f3_rW7Ju90_Fd8G2qGGhvQp5vK06EYxRJA1Cvy1WTE9LHXCyfim4FWK84MLC2dNNHLVlBifb8mHKlbyeAe9sK_ghUeCGxOkV_BrzQ_fzXOh0LLj3s52bgJ2Kix-HuT9T0xI4OyqK",
+              "name": "projects/10822900487044086253/files/50d76c299ef346419761359a2e15e73f"
+            },
+            "theme": {
+              "bodyFont": "INTER",
+              "bodyFontFamily": "Inter",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#e63946",
+              "designMd": "---\nname: Apex Engineering\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#e4bebc'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#ab8987'\n  outline-variant: '#5b403f'\n  surface-tint: '#ffb3b1'\n  primary: '#ffb3b1'\n  on-primary: '#680011'\n  primary-container: '#ff535b'\n  on-primary-container: '#5b000e'\n  inverse-primary: '#bb152c'\n  secondary: '#c8c6c5'\n  on-secondary: '#313030'\n  secondary-container: '#474746'\n  on-secondary-container: '#b7b5b4'\n  tertiary: '#c6c6c7'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#909191'\n  on-tertiary-container: '#282a2a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad8'\n  primary-fixed-dim: '#ffb3b1'\n  on-primary-fixed: '#410007'\n  on-primary-fixed-variant: '#92001c'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  headline-display:\n    fontFamily: Archivo Narrow\n    fontSize: 84px\n    fontWeight: '700'\n    lineHeight: 90%\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 100%\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: 100%\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 110%\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 160%\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 150%\n  technical-label:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 140%\n    letterSpacing: 0.05em\n  data-point:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 100%\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 128px\n---\n\n## Brand & Style\nThe design system is built on the intersection of avian aggression and mechanical precision. It targets a premium demographic that values technical expertise and high-performance results. The brand personality is authoritative, rugged, and unapologetically professional.\n\nThe visual style is a fusion of **Industrial Minimalism** and **High-Contrast Editorial**. It rejects softness in favor of hard edges, utilizing a \"mechanical-first\" approach where every UI element feels like a machined component. Expect heavy use of whitespace to frame bold, aggressive typography, creating an aesthetic that feels like a high-end automotive magazine or a technical blueprint.\n\n## Colors\nThe palette is rooted in the high-stakes environment of motorsport and mechanical engineering.\n\n- **Ignition Red (#E63946):** The primary kinetic energy of the brand. Used for critical CTAs, status indicators, and high-impact branding moments.\n- **Oil Slick Black (#1A1A1A):** The foundation. Used for primary backgrounds to create a deep, premium environment that makes white text and red accents pop.\n- **Concrete Grey (#F1F1F1):** The primary surface color for high-readability content and editorial sections.\n- **Carbon Charcoal (#2D2D2D):** Used for UI layering, input fields, and secondary containers to provide depth without resorting to shadows.\n\n## Typography\nThe typography system prioritizes impact and technical clarity. \n\n**Archivo Narrow** provides the \"Red Hawks\" aggression—a condensed, powerful sans-serif that demands attention in large formats. **Inter** serves as the workhorse for body copy, ensuring legibility against dark backgrounds. **JetBrains Mono** is utilized for metadata, technical specs, and \"blueprint\" style annotations, reinforcing the engineering narrative. \n\nAll headlines must be uppercase to maintain the industrial tone.\n\n## Layout & Spacing\nThe layout follows a strict **12-column fixed grid** on desktop and a **4-column fluid grid** on mobile. \n\nA \"Technical Margin\" of 64px on desktop provides the necessary whitespace to achieve an editorial feel. Spacing follows a 4px base unit, but emphasizes large, dramatic gaps (64px, 128px) between major sections to mimic the expansive layout of a premium broadsheet or technical manual. Elements should often be \"broken\" by the grid, with images or large type bleeding off-edge to create a sense of scale.\n\n## Elevation & Depth\nThis design system avoids traditional drop shadows to maintain its rugged, flat-engineered aesthetic. Depth is achieved through:\n\n1.  **Tonal Stacking:** Using varying shades of Charcoal and Black to define hierarchy.\n2.  **Hard Outlines:** 1px solid borders in Concrete Grey or Ignition Red to define boundaries.\n3.  **Texture Layers:** Subtle carbon fiber or blueprint grid overlays (5% opacity) applied to the base background layer.\n4.  **Sharp Angles:** Using 45-degree clipped corners on containers to create a \"machined\" look, suggesting the geometry of hawk wings and engine housings.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo introduce visual interest without using curves, employ 45-degree diagonal clips on the corners of buttons and primary cards. This \"chamfered\" edge aesthetic mimics industrial metalwork. Dividers should incorporate a \"feather\" motif—a repeating series of slanted vertical lines that function as a textural break between sections.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons use Ignition Red background with white uppercase text. Secondary buttons use a 1px Concrete Grey border. Use a 45-degree \"wing clip\" on the top-right corner for primary CTAs.\n- **Inputs:** Dark backgrounds (Carbon Charcoal) with 1px bottom-only borders. Labels use the `technical-label` mono-space style, positioned strictly above the field.\n- **Cards:** Flat containers with 1px borders. No shadows. Use a blueprint grid pattern as a subtle background for data-heavy cards.\n- **Chips/Status:** High-contrast blocks. Success is Concrete Grey with Black text; Error/Urgent is Ignition Red with White text.\n- **Dividers:** Use the \"Mechanical Feather\" motif—a thin horizontal line interrupted by a 45-degree jagged segment to signify a transition.\n- **Data Lists:** Use `JetBrains Mono` for all numerical values, aligned to a strict vertical axis to resemble a spec sheet.",
+              "font": "ARCHIVO_NARROW",
+              "headlineFont": "ARCHIVO_NARROW",
+              "headlineFontFamily": "Archivo Narrow",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#131313",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#303030",
+                "inverse_primary": "#bb152c",
+                "inverse_surface": "#e4e2e1",
+                "on_background": "#e4e2e1",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#680011",
+                "on_primary_container": "#5b000e",
+                "on_primary_fixed": "#410007",
+                "on_primary_fixed_variant": "#92001c",
+                "on_secondary": "#313030",
+                "on_secondary_container": "#b7b5b4",
+                "on_secondary_fixed": "#1c1b1b",
+                "on_secondary_fixed_variant": "#474746",
+                "on_surface": "#e4e2e1",
+                "on_surface_variant": "#e4bebc",
+                "on_tertiary": "#2f3131",
+                "on_tertiary_container": "#282a2a",
+                "on_tertiary_fixed": "#1a1c1c",
+                "on_tertiary_fixed_variant": "#454747",
+                "outline": "#ab8987",
+                "outline_variant": "#5b403f",
+                "primary": "#ffb3b1",
+                "primary_container": "#ff535b",
+                "primary_fixed": "#ffdad8",
+                "primary_fixed_dim": "#ffb3b1",
+                "secondary": "#c8c6c5",
+                "secondary_container": "#474746",
+                "secondary_fixed": "#e5e2e1",
+                "secondary_fixed_dim": "#c8c6c5",
+                "surface": "#131313",
+                "surface_bright": "#393939",
+                "surface_container": "#1f2020",
+                "surface_container_high": "#2a2a2a",
+                "surface_container_highest": "#353535",
+                "surface_container_low": "#1b1c1c",
+                "surface_container_lowest": "#0e0e0e",
+                "surface_dim": "#131313",
+                "surface_tint": "#ffb3b1",
+                "surface_variant": "#353535",
+                "tertiary": "#c6c6c7",
+                "tertiary_container": "#909191",
+                "tertiary_fixed": "#e2e2e2",
+                "tertiary_fixed_dim": "#c6c6c7"
+              },
+              "overrideNeutralColor": "#2d2d2d",
+              "overridePrimaryColor": "#e63946",
+              "overrideSecondaryColor": "#1a1a1a",
+              "overrideTertiaryColor": "#f1f1f1",
+              "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "section-gap": "128px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "160%"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "150%"
+                },
+                "data-point": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "lineHeight": "100%"
+                },
+                "headline-display": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "84px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "90%"
+                },
+                "headline-lg": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "100%"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "100%"
+                },
+                "headline-md": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "110%"
+                },
+                "technical-label": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "140%"
+                }
+              }
+            },
+            "title": "Red Hawks Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've completed the bespoke homepage for **Red Hawks Mobile Mechanics**. \n\nThis isn't a template—it's a high-precision digital environment designed to mirror the mechanical excellence of the business. \n\n### Design Rationale:\n*   **The \"Ignition\" Split-Hero**: I moved away from traditional centered heroes for a high-contrast split layout. The left side uses massive vertical typography to establish authority, while the right side features a \"Mechanical Scan\" HUD overlay, making the user feel like they’re looking through a diagnostic lens.\n*   **Industrial Precision Aesthetic**: To lean into the \"Red Hawks\" name and mechanical theme, I’ve used a sharp, 45-degree angled design language and a brutalist color palette (Ignition Red, Oil Slick Black, and Concrete Grey). Every element has 0px border-radius to emphasize rugged durability.\n*   **Technical Hierarchy**: By pairing a condensed industrial sans-serif with monospace labels, I’ve given the site an \"engineering schematic\" feel. This reinforces the brand’s positioning as a premium, technical specialist rather than a generic repair shop.\n*   **The \"Flight Path\" Services**: Instead of a standard card grid, I’ve designed a continuous timeline-style flow that guides the user through the mechanical lifecycle from diagnostic to rescue.\n\nThe result is a digital presence that feels like a piece of high-end automotive machinery—bold, precise, and impossible to ignore."
+    },
+    {
+      "suggestion": "Change the hero image to a classic muscle car engine."
+    },
+    {
+      "suggestion": "Add an 'Interactive Diagnostic' section where users can select symptoms."
+    },
+    {
+      "suggestion": "Make the 'Ignition Red' even more vibrant across the whole page."
+    }
+  ],
+  "projectId": "10822900487044086253",
+  "sessionId": "15098789888824793960"
+}

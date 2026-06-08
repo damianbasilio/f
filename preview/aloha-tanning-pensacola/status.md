@@ -6,7 +6,7 @@
 | brand-extract | pending |
 | stitch | done |
 | images | done |
-| copy | pending |
+| copy | done |
 | design-qa/craft | done |
 | design-qa/emil | done |
 | design-qa/taste | done |
@@ -15,4 +15,6 @@
 | design-qa/polish | done |
 | site-eval | done |
 | outreach | pending |
-| outreach-sent | pending |
+| outreach-sent | done |
+
+**Sent at:** 2026-06-08T18:26:26.976Z
