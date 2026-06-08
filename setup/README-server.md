@@ -88,9 +88,12 @@ Copy the printed `GMAIL_REFRESH_TOKEN` into `.env`.
 
 ```bash
 npm install -g pm2
+cd /path/to/facebook-leads   # repo root — required
 pm2 start ecosystem.config.cjs
 pm2 status
 ```
+
+This starts both `outreach-pipeline` (cron automation) and `outreach-dashboard` (web UI on port 3456). Always run PM2 from the repo directory, or use `ecosystem.config.cjs` which sets `cwd` automatically.
 
 Enable restart on boot:
 
