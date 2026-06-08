@@ -1,47 +1,70 @@
-// Smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
+// Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        let isMenuOpen = false;
 
-        // Sticky header background shift
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('bg-surface/100', 'shadow-2xl');
-                nav.classList.remove('bg-surface/90');
+        mobileMenuBtn.addEventListener('click', () => {
+            isMenuOpen = !isMenuOpen;
+            if (isMenuOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined">close</span>';
+                document.body.style.overflow = 'hidden';
             } else {
-                nav.classList.remove('bg-surface/100', 'shadow-2xl');
-                nav.classList.add('bg-surface/90');
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+                document.body.style.overflow = 'auto';
             }
         });
 
-        // Simple Form Feedback
-        const form = document.getElementById('dispatch-form');
-        form.addEventListener('submit', (e) => {
+        // Close menu on link click
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenuBtn.innerHTML = '<span class="material-symbols-outlined">menu</span>';
+                document.body.style.overflow = 'auto';
+                isMenuOpen = false;
+            });
+        });
+
+        // Sticky Nav Style Change on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'bg-opacity-95', 'backdrop-blur-sm');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.add('h-20');
+                nav.classList.remove('h-16', 'bg-opacity-95', 'backdrop-blur-sm');
+            }
+        });
+
+        // Form Validation Interaction
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.disabled = true;
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">sync</span> TRANSMITTING...';
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerText;
             
+            btn.innerText = 'TRANSMITTING...';
+            btn.disabled = true;
+            btn.classList.add('opacity-50');
+
             setTimeout(() => {
-                btn.classList.replace('bg-primary-container', 'bg-green-600');
-                btn.innerHTML = '<span class="material-symbols-outlined">check_circle</span> DISPATCH RECEIVED';
-                form.reset();
+                btn.innerText = 'DISPATCHED SUCCESSFULLY';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-600');
+                
                 setTimeout(() => {
-                    btn.classList.replace('bg-green-600', 'bg-primary-container');
-                    btn.innerHTML = originalText;
+                    contactForm.reset();
+                    btn.innerText = originalText;
                     btn.disabled = false;
+                    btn.classList.remove('opacity-50', 'bg-green-600');
+                    btn.classList.add('bg-primary');
                 }, 3000);
             }, 1500);
         });
 
-        // Intersection Observer for reveal effects
+        // Reveal animations on scroll
         const observerOptions = {
             threshold: 0.1
         };
@@ -55,9 +78,9 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+        document.querySelectorAll('section > div').forEach(section => {
+            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
 
 (() => {
