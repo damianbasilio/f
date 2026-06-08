@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>LaBelle Spa &amp; Nails | The Art of Serenity</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error": "#ffffff",
+                      "secondary": "#76546a",
+                      "on-tertiary-container": "#6c736c",
+                      "on-tertiary-fixed": "#171d18",
+                      "tertiary-fixed": "#dde4dc",
+                      "surface-container-high": "#eae7e7",
+                      "on-primary-fixed-variant": "#474744",
+                      "secondary-container": "#ffd3ed",
+                      "on-secondary-fixed": "#2d1225",
+                      "surface-dim": "#dcd9d9",
+                      "on-secondary-container": "#7b586e",
+                      "surface-container-low": "#f6f3f2",
+                      "surface-bright": "#fcf9f8",
+                      "surface-variant": "#e4e2e1",
+                      "surface-tint": "#5e5e5b",
+                      "tertiary": "#59605a",
+                      "secondary-fixed-dim": "#e5bad4",
+                      "primary": "#5e5e5b",
+                      "on-tertiary": "#ffffff",
+                      "on-primary-fixed": "#1b1c19",
+                      "surface": "#fcf9f8",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a",
+                      "outline": "#777871",
+                      "inverse-surface": "#303030",
+                      "secondary-fixed": "#ffd8ee",
+                      "outline-variant": "#c7c7bf",
+                      "primary-container": "#f9f7f2",
+                      "on-error-container": "#93000a",
+                      "surface-container": "#f0eded",
+                      "primary-fixed-dim": "#c8c6c2",
+                      "on-tertiary-fixed-variant": "#424843",
+                      "on-surface-variant": "#464742",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6",
+                      "tertiary-container": "#f2f9f1",
+                      "on-secondary-fixed-variant": "#5d3d52",
+                      "on-primary-container": "#71716d",
+                      "on-background": "#1b1c1c",
+                      "on-surface": "#1b1c1c",
+                      "background": "#fcf9f8",
+                      "primary-fixed": "#e4e2dd",
+                      "inverse-primary": "#c8c6c2",
+                      "tertiary-fixed-dim": "#c1c8c1",
+                      "inverse-on-surface": "#f3f0f0",
+                      "on-secondary": "#ffffff",
+                      "surface-container-highest": "#e4e2e1",
+                      "orchid": "#76546a",
+                      "ivory": "#fcf9f8",
+                      "gold": "#C5A059"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "container-max": "1200px",
+                      "gutter": "32px",
+                      "section-gap": "128px"
+              },
+              "fontFamily": {
+                      "body-lg": ["Inter"],
+                      "label-sm": ["Inter"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"],
+                      "headline-lg-mobile": ["Playfair Display"],
+                      "display-lg-mobile": ["Playfair Display"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "300"}],
+                      "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "headline-lg-mobile": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .thin-gold-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #C5A059, transparent);
+            width: 120px;
+            margin: 0 auto;
+        }
+        .editorial-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .editorial-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .stagger-1 { transition-delay: 100ms; }
+        .stagger-2 { transition-delay: 200ms; }
+        .stagger-3 { transition-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden selection:bg-orchid/10 selection:text-orchid">
+<!-- Header -->
+<nav class="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-md border-b border-outline-variant/30 transition-all duration-500 ease-in-out py-4" id="main-nav">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop w-full max-w-container-max mx-auto">
+<div class="flex flex-col">
+<span class="font-headline-md text-2xl md:text-headline-md text-on-surface leading-none tracking-tight">LaBelle</span>
+<span class="font-label-sm text-[9px] md:text-[10px] tracking-[0.4em] uppercase text-orchid">Spa &amp; Nails</span>
+</div>
+<div class="hidden lg:flex items-center space-x-10">
+<a class="font-label-sm text-[11px] uppercase tracking-widest text-orchid font-bold border-b border-orchid pb-1" href="#hero">The Spa</a>
+<a class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-orchid transition-colors duration-300" href="#services">Services</a>
+<a class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-orchid transition-colors duration-300" href="#">Gift Cards</a>
+<a class="font-label-sm text-[11px] uppercase tracking-widest text-on-surface-variant hover:text-orchid transition-colors duration-300" href="#visit">Bookings</a>
+</div>
+<div class="flex items-center gap-8">
+<a class="hidden sm:flex items-center gap-2 text-orchid font-label-sm text-[11px] uppercase tracking-widest hover:opacity-70 transition-opacity" href="tel:6096528300">
+<span class="material-symbols-outlined text-sm">call</span>
+                (609) 652-8300
+            </a>
+<button class="bg-orchid text-on-secondary px-6 md:px-8 py-3 text-[11px] font-label-sm uppercase tracking-[0.2em] hover:bg-orchid/90 transition-all duration-300">
+                Reserve Now
+            </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen flex items-center justify-center overflow-hidden" id="hero">
+<div class="absolute inset-0 z-0">
+<img alt="High-end editorial nail spa" class="w-full h-full object-cover scale-110 transition-transform duration-[12s] ease-out hover:scale-100" src="https://lh3.googleusercontent.com/aida/AP1WRLt9nMsIrBsnmHb9v-xBoaXprYNpKwkWoGhvOy4Qfpn5-debtN8B5iNXLtV6fg4lZOhB7h-CBNQaHcPK08cuFxLtodhKZw99d8Tp37uo8M0K4DB1kh3TEC3wTgv3FOIKa7ganU6d60tQ1uPYWK7xJEYu0Wmi9GRRQ1yrCWva5BO70bBA1DDFvsZp7IP5WflS_PjkCuoGQ033rNbH_wHGqUT0GCjQSIufZenQ4-NlRLlDoUvwXtX_v6ZfiFNs"/>
+<div class="absolute inset-0 bg-black/5"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg text-5xl md:text-display-lg text-white mb-8 leading-tight drop-shadow-xl">
+            The Art of <br/><span class="italic font-normal">Serenity</span>
+</h1>
+<p class="font-body-lg text-white/95 max-w-xl mx-auto mb-12 font-light text-base md:text-body-lg">
+            Galloway's premier destination for quiet luxury. Experience professional beauty curated with an editorial eye and a peaceful heart.
+        </p>
+<div class="flex flex-col md:flex-row gap-6 justify-center items-center">
+<button class="bg-white text-orchid px-12 py-5 text-[11px] font-label-sm uppercase tracking-[0.3em] hover:bg-ivory transition-colors w-full md:w-auto shadow-lg">
+                View Services
+            </button>
+<button class="border border-white/40 backdrop-blur-sm text-white px-12 py-5 text-[11px] font-label-sm uppercase tracking-[0.3em] hover:bg-white/10 transition-colors w-full md:w-auto">
+                Our Story
+            </button>
+</div>
+</div>
+<div class="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-4 animate-bounce">
+<span class="font-label-sm text-[9px] uppercase tracking-[0.4em] text-white/70">Discover</span>
+<span class="material-symbols-outlined text-white/70">expand_more</span>
+</div>
+</header>
+<!-- Credibility Section -->
+<section class="bg-white py-24 relative overflow-hidden" id="credibility">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid md:grid-cols-3 gap-16 items-center text-center">
+<div class="editorial-reveal">
+<span class="material-symbols-outlined text-orchid text-3xl mb-6 opacity-60">verified</span>
+<h3 class="font-headline-md text-orchid text-2xl mb-3">15+ Years</h3>
+<p class="font-body-md text-on-surface-variant uppercase tracking-[0.2em] text-[10px]">Of Curated Excellence</p>
+</div>
+<div class="editorial-reveal stagger-1">
+<div class="thin-gold-line mb-10 opacity-30"></div>
+<span class="material-symbols-outlined text-orchid text-3xl mb-6 opacity-60">spa</span>
+<h3 class="font-headline-md text-orchid text-2xl mb-3">Botanical</h3>
+<p class="font-body-md text-on-surface-variant uppercase tracking-[0.2em] text-[10px]">Premium Treatments</p>
+<div class="thin-gold-line mt-10 opacity-30"></div>
+</div>
+<div class="editorial-reveal stagger-2">
+<span class="material-symbols-outlined text-orchid text-3xl mb-6 opacity-60">content_cut</span>
+<h3 class="font-headline-md text-orchid text-2xl mb-3">Bespoke</h3>
+<p class="font-body-md text-on-surface-variant uppercase tracking-[0.2em] text-[10px]">Personalized Care</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Editorial Section -->
+<section class="py-section-gap bg-ivory" id="services">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-24 gap-12">
+<div class="max-w-2xl">
+<span class="font-label-sm text-orchid uppercase tracking-[0.4em] mb-6 block text-[10px]">The Menu</span>
+<h2 class="font-headline-lg text-4xl md:text-headline-lg text-on-surface leading-tight">Curated Experiences</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-sm text-sm leading-relaxed border-l border-gold/40 pl-8">
+                Each service is a meditative practice in precision and relaxation, tailored to your individual aesthetic.
+            </p>
+</div>
+<!-- Non-Grid Editorial Arrangement -->
+<div class="relative">
+<div class="flex flex-col lg:flex-row gap-20 items-stretch">
+<!-- Large Image Context -->
+<div class="lg:w-7/12 relative overflow-hidden editorial-reveal">
+<img alt="Professional treatment" class="w-full aspect-[4/5] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvAkMnpbkALFwJy5_AxhCzkEp2l1fZt8EG9NSvY8ZB3EJM4rAhTbXzQub4oakTBP8yw8yN6iiTiB7h8bdMiitxMW8C65PlAFHgl1CrW7EVEPl4bmMLgapbzWFqrFrEN0kjhEDolCSU1gwE5DJIXGzY87nhFClZbVY0411c2OZH2QY8Bz9iLGnzpmSSgs4rUFiQhhzsXOugf82dNQUgPY3TtbuvWpJ0RswSX5UaUWQRC1x7mc8lh1lB4uko"/>
+<div class="absolute bottom-12 left-12 right-12 bg-white/90 backdrop-blur-md p-10 shadow-2xl">
+<h3 class="font-headline-md text-orchid mb-4">Manicures</h3>
+<p class="font-body-md text-on-surface-variant mb-8 text-sm">From classic treatments to contemporary nail art, we define elegance through meticulous detail.</p>
+<a class="inline-block font-label-sm text-[10px] uppercase tracking-[0.3em] border-b border-orchid pb-1 text-orchid hover:opacity-70 transition-opacity" href="#">Explore Options</a>
+</div>
+</div>
+<!-- Floating Vertical Services -->
+<div class="lg:w-5/12 flex flex-col justify-between gap-12">
+<div class="bg-white p-12 shadow-sm border border-outline-variant/10 editorial-reveal stagger-1">
+<span class="material-symbols-outlined text-orchid/40 text-4xl mb-8">self_care</span>
+<h3 class="font-headline-md text-orchid text-2xl mb-4">Pedicures</h3>
+<p class="font-body-md text-on-surface-variant text-sm mb-8 leading-relaxed">A therapeutic journey for the senses, restoring balance and vitality through heated stone massage and sea mineral soaks.</p>
+<a class="font-label-sm text-[10px] uppercase tracking-[0.3em] text-orchid hover:pl-2 transition-all duration-300" href="#">Book Journey →</a>
+</div>
+<div class="bg-orchid text-white p-12 shadow-xl editorial-reveal stagger-2">
+<h3 class="font-headline-md text-2xl mb-4">Specialty</h3>
+<p class="font-body-md text-white/80 text-sm mb-8 leading-relaxed">Exclusive botanical wraps and mineral-rich treatments for total rejuvenation. Featuring our signature orchid paraffin soak.</p>
+<a class="font-label-sm text-[10px] uppercase tracking-[0.3em] text-white border border-white/30 px-6 py-3 hover:bg-white/10 transition-all" href="#">Book Specialty</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Our Story) -->
+<section class="py-section-gap overflow-hidden bg-white">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-2 gap-24 items-center">
+<div class="relative editorial-reveal">
+<div class="absolute -top-16 -left-16 w-80 h-80 bg-orchid/5 rounded-full blur-3xl z-0"></div>
+<img alt="LaBelle Spa Interior" class="relative z-10 w-full aspect-[4/5] lg:aspect-[5/6] object-cover shadow-2xl" src="https://lh3.googleusercontent.com/aida/AP1WRLtpJSK1WDE0qWE5xypaW8uZa3DJMWT9J_bRXlpQA66haqCSOGIUkhyjx5ycaNZVWsIWAZ9sr0rIK6MaHfJlWnYFn-c5hBH1J9RKzmfxrqa8wZV3soDpOHQYmIPySRTsHGTiyTawp8RCvq6SznUVOQg7HwzXjCn92rg4pEw93taQ9IfsLmvKTcG4exOYOdVgXO0vMFR1rkZC6E8pLRmIdiYu2nYu8OvBjrNUhNg-7RwHrrOjskV2cYpg2cYa"/>
+<div class="absolute -bottom-8 -right-8 w-48 h-48 border-r border-b border-gold/30 hidden lg:block"></div>
+</div>
+<div class="editorial-reveal stagger-2 lg:pl-12">
+<span class="font-label-sm text-orchid uppercase tracking-[0.4em] mb-8 block text-[10px]">Our Story</span>
+<h2 class="font-headline-lg text-on-surface mb-10 leading-tight">A Legacy of <br/><span class="italic">Elegance</span></h2>
+<div class="w-24 h-px bg-gold mb-12"></div>
+<div class="space-y-8">
+<p class="font-body-lg text-on-surface-variant leading-relaxed text-lg">
+                        For over fifteen years, LaBelle has served as a sanctuary for the discerning residents of Galloway. Our philosophy is simple: beauty is an inward journey expressed through outward care.
+                    </p>
+<p class="font-body-md text-on-surface-variant italic border-l-2 border-orchid/20 pl-8 py-4">
+                        "We don't just provide services; we curate moments of stillness in a noisy world."
+                    </p>
+</div>
+<div class="grid grid-cols-2 gap-12 pt-16 border-t border-outline-variant/30 mt-16">
+<div>
+<span class="font-display-lg text-5xl text-orchid block mb-3 font-light tracking-tighter">15k+</span>
+<span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Clients Served</span>
+</div>
+<div>
+<span class="font-display-lg text-5xl text-orchid block mb-3 font-light tracking-tighter">100%</span>
+<span class="font-label-sm text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Botanic Focus</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit & Contact Section -->
+<section class="bg-surface-container-low py-section-gap" id="visit">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid lg:grid-cols-12 gap-20">
+<!-- Information & Map -->
+<div class="lg:col-span-7 editorial-reveal">
+<h2 class="font-headline-lg text-4xl md:text-headline-lg text-on-surface mb-12 leading-tight">Find Your <br/>Sanctuary</h2>
+<div class="grid md:grid-cols-2 gap-12 mb-16">
+<div class="space-y-10">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-orchid/60">location_on</span>
+<div>
+<h4 class="font-label-sm text-orchid uppercase mb-3 text-[10px] tracking-widest font-bold">Address</h4>
+<p class="font-body-md text-on-surface-variant text-sm leading-relaxed">168 South New York Road<br/>Galloway, NJ 08205</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-orchid/60">mail</span>
+<div>
+<h4 class="font-label-sm text-orchid uppercase mb-3 text-[10px] tracking-widest font-bold">Inquiries</h4>
+<p class="font-body-md text-on-surface-variant text-sm">labellespa609@gmail.com<br/>(609) 652-8300</p>
+</div>
+</div>
+</div>
+<div class="space-y-10">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-orchid/60">schedule</span>
+<div>
+<h4 class="font-label-sm text-orchid uppercase mb-3 text-[10px] tracking-widest font-bold">Hours</h4>
+<p class="font-body-md text-on-surface-variant text-sm leading-relaxed">Mon – Sat: 9am – 7pm<br/>Sun: 10am – 5pm</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Map Slot -->
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border border-outline-variant/30 shadow-sm" data-map-slot="">
+<div class="absolute inset-0 bg-orchid/5 flex items-center justify-center flex-col gap-4">
+<span class="material-symbols-outlined text-orchid/30 text-5xl">explore</span>
+<p class="font-label-sm text-orchid/60 uppercase tracking-[0.3em] text-[10px]">Map Loading...</p>
+</div>
+</div>
+</div>
+<!-- High-Fidelity Contact Form -->
+<div class="lg:col-span-5 editorial-reveal stagger-2">
+<div class="bg-white p-10 md:p-14 shadow-2xl border-t-4 border-orchid sticky top-32">
+<h3 class="font-headline-md text-on-surface mb-10">Send a Message</h3>
+<form class="space-y-8" id="contact-form">
+<div class="relative group">
+<label class="font-label-sm text-[9px] uppercase tracking-widest text-orchid/70 block mb-2 transition-colors group-focus-within:text-orchid">Full Name</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-orchid px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 transition-all text-sm" placeholder="Evelyn Thorne" required="" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-sm text-[9px] uppercase tracking-widest text-orchid/70 block mb-2 transition-colors group-focus-within:text-orchid">Email Address</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-orchid px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 transition-all text-sm" placeholder="evelyn@example.com" required="" type="email"/>
+</div>
+<div class="relative group">
+<label class="font-label-sm text-[9px] uppercase tracking-widest text-orchid/70 block mb-2 transition-colors group-focus-within:text-orchid">How can we help?</label>
+<textarea class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-orchid px-0 py-3 text-on-surface placeholder:text-on-surface-variant/30 transition-all text-sm min-h-[100px] resize-none" placeholder="Share your inquiry or booking preference..." required=""></textarea>
+</div>
+<button class="w-full bg-orchid text-white py-5 text-[11px] font-label-sm uppercase tracking-[0.3em] hover:bg-orchid/90 hover:shadow-lg transition-all active:scale-[0.98]" type="submit">
+                            Send Inquiry
+                        </button>
+<p class="text-[10px] text-on-surface-variant/50 text-center uppercase tracking-widest">Typical response time: Within 2 hours</p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-white border-t border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-24">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+<div class="lg:col-span-1">
+<span class="font-headline-md text-3xl text-on-surface block mb-6 leading-none tracking-tight">LaBelle</span>
+<p class="font-body-md text-on-surface-variant text-sm leading-relaxed max-w-xs">
+                    A sanctuary of quiet luxury, dedicated to the art of professional beauty and wellness in Galloway.
+                </p>
+</div>
+<div>
+<h4 class="font-label-sm text-orchid uppercase mb-8 tracking-[0.3em] text-[11px] font-bold">Discover</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#hero">The Spa</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#services">Services</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Gift Cards</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#visit">Bookings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-orchid uppercase mb-8 tracking-[0.3em] text-[11px] font-bold">Connect</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Instagram</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Facebook</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Google Reviews</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-sm text-orchid uppercase mb-8 tracking-[0.3em] text-[11px] font-bold">Legal</h4>
+<ul class="space-y-4">
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Terms of Service</a></li>
+<li><a class="text-sm text-on-surface-variant hover:text-orchid transition-colors" href="#">Safety Protocols</a></li>
+</ul>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-outline-variant/10">
+<p class="font-body-md text-on-surface-variant/40 text-xs mb-8 md:mb-0 uppercase tracking-widest">
+                © 2024 LaBelle Spa &amp; Nails. A Sanctuary of Quiet Luxury.
+            </p>
+<div class="flex gap-10">
+<span class="material-symbols-outlined text-orchid/30 text-xl">star</span>
+<span class="material-symbols-outlined text-orchid/30 text-xl">favorite</span>
+<span class="material-symbols-outlined text-orchid/30 text-xl">spa</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+    // Editorial reveal animation on scroll
+    const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+            }
+        });
+    }, observerOptions);
+
+    document.querySelectorAll('.editorial-reveal').forEach(el => observer.observe(el));
+
+    // Sticky header behavior
+    let lastScroll = 0;
+    const nav = document.getElementById('main-nav');
+
+    window.addEventListener('scroll', () => {
+        const currentScroll = window.pageYOffset;
+        
+        if (currentScroll > 50) {
+            nav.classList.add('py-3', 'shadow-sm', 'bg-white/95');
+            nav.classList.remove('py-4', 'bg-white/80');
+        } else {
+            nav.classList.remove('py-3', 'shadow-sm', 'bg-white/95');
+            nav.classList.add('py-4', 'bg-white/80');
+        }
+        lastScroll = currentScroll;
+    });
+
+    // Simple Form Validation Feedback
+    document.getElementById('contact-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const btn = this.querySelector('button');
+        const originalText = btn.innerText;
+        btn.innerText = 'Sending...';
+        btn.disabled = true;
+        
+        setTimeout(() => {
+            btn.innerText = 'Message Sent';
+            btn.classList.add('bg-green-600');
+            this.reset();
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.remove('bg-green-600');
+                btn.disabled = false;
+            }, 3000);
+        }, 1500);
+    });
+</script>
+</body></html>
