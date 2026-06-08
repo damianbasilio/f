@@ -6,7 +6,8 @@
 - refreshed map layout CSS
 - injected mobile safety CSS
 - body overflow-x-clip
-- responsive horizontal margins (8 blocks)
+- section overflow-hidden for decorative layers
+- responsive horizontal margins (1 blocks)
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

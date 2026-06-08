@@ -1,21 +1,35 @@
-// Micro-interactions and subtle glow effects
-        document.querySelectorAll('input').forEach(input => {
-            input.addEventListener('focus', () => {
-                input.parentElement.querySelector('label').classList.add('text-primary-fixed-dim');
-            });
-            input.addEventListener('blur', () => {
-                input.parentElement.querySelector('label').classList.remove('text-primary-fixed-dim');
+// Micro-interactions for the scanning line
+        document.addEventListener('mousemove', (e) => {
+            const boxes = document.querySelectorAll('.spec-box');
+            boxes.forEach(box => {
+                const rect = box.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                if (x > 0 && x < rect.width && y > 0 && y < rect.height) {
+                    box.style.borderColor = '#b0d500';
+                    box.style.transition = 'border-color 0.2s ease';
+                } else {
+                    box.style.borderColor = 'rgba(144, 144, 151, 0.3)';
+                }
             });
         });
 
-        // Simple parallax or reveal effect on scroll can be added here
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroImage = document.querySelector('section img');
-            if(heroImage) {
-                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+        // Simple typing effect for technical status
+        const statusElement = document.querySelector('.spec-box span');
+        if(statusElement) {
+            const text = statusElement.innerText;
+            statusElement.innerText = '';
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    statusElement.innerText += text.charAt(i);
+                    i++;
+                    setTimeout(type, 50);
+                }
             }
-        });
+            type();
+        }
 
 (() => {
   function initMockupNotice() {
