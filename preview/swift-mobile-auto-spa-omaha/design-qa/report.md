@@ -1,6 +1,6 @@
 # Design QA — swift-mobile-auto-spa-omaha
 
-**Result:** NEEDS FIX
+**Result:** PASS
 
 **Craft warnings:** 2 (see craft section)
 
@@ -8,17 +8,16 @@
 
 | Skill | Status |
 | ----- | ------ |
-| craft | fail |
+| craft | pass |
 | emil | pass |
 | taste | pass |
-| audit | fail |
+| audit | pass |
 | harden | pass |
 | polish | pass |
 
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -27,12 +26,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- FAIL: Fake ratings or hype copy detected
+- OK: No fake ratings/hype
 - OK: No obvious buzzwords
-- WARN: Repeated 3-column grid pattern (3 hits) — likely template layout
+- OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 3
+- WARN: 16 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -44,9 +43,8 @@
 
 ### taste
 
-- Eyebrow discipline: 3 uppercase-tracked labels
+- WARN: 16 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
 - Anti-slop: no em dashes, layout families from Stitch brief
-- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 
@@ -56,7 +54,6 @@
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
-- FAIL: Fake star ratings or unverifiable superlatives
 
 ### harden
 

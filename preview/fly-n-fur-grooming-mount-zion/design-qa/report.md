@@ -18,6 +18,8 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
+- emil: added :active press feedback
+- craft: injected brief fonts (Oswald / Source Sans 3)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 

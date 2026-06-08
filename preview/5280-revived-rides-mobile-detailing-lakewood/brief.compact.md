@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/5280-revived-rides-mobile-detailing-lakewood/
+https://sites.damianbasilio.dev/preview/5280-revived-rides-mobile-detailing-lakewood

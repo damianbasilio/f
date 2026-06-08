@@ -1,21 +1,23 @@
 # Sun-kissed Spray Tanning & Bootyful Bar - outreach
 
 **To:** sunkissedtanningforyou@gmail.com  
-**Subject:** Your Lakewood page caught my eye
+**Subject:** Something I noticed about your Lakewood page
 
 Hi,
 
-I noticed how you emphasize the importance of natural products at Sun-kissed Spray Tanning & Bootyful Bar. I was impressed by the fact that you use all natural products, vegan, gluten free, organic, and hypoallergenic sunless tan solution. Your commitment to customers' skin health really shines through.
+I love the idea of using natural products for spray tanning - it's refreshing to see eco-friendly options in the industry. It's also great that you mention the benefits of feeling confident and radiant after a tan.
 
-But I noticed you don't have your own website yet, which might be leaving potential clients like me wondering about your hours, services, and contact information when they're looking for a new salon to try.
+But I noticed you don't have your own website yet, which might be leaving potential clients who prefer to book online or check services before visiting in-person.
 
-I sketched out a simple webpage idea from what you share on Facebook, featuring a services menu that highlights your spray tanning options, a work gallery showcasing your beautiful results, a prominent booking call-to-action, and an easy-to-find hours & location section.
+I recently sketched out a simple homepage idea based on your Facebook posts and photos. It includes a services menu to showcase your customization options and a work gallery to highlight your talented team's work.
 
-https://damianbasilio.github.io/f/preview/sun-kissed-spray-tanning-bootyful-bar-lakewood/
+https://sites.damianbasilio.dev/preview/sun-kissed-spray-tanning-bootyful-bar-lakewood
 
-Building a website like this is a straightforward project that can help you reach more customers and grow your business. I'd be happy to discuss the details with you and provide a quote.
+This is just a starting point, but I'd love to discuss how we can bring your online presence to life with a custom website tailored to your needs.
 
-Reply or let's schedule a quick call to explore further.
+Let's chat about the details - or feel free to reply with your questions.
+
+Flat fee for local businesses like yours, and I'd be happy to discuss over a quick call or via email.
 
 Thanks,
 Damian Basilio
@@ -30,5 +32,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | sunkissedtanningforyou@gmail.com (https://www.facebook.com/tanningofdenver/) |
 | Activity | Active Facebook page with content and 4 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/sun-kissed-spray-tanning-bootyful-bar-lakewood/ |
+| Live URL | https://sites.damianbasilio.dev/preview/sun-kissed-spray-tanning-bootyful-bar-lakewood |
 | Current site | https://www.facebook.com/tanningofdenver/ |

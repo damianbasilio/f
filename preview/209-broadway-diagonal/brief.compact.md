@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/209-broadway-diagonal/
+https://sites.damianbasilio.dev/preview/209-broadway-diagonal

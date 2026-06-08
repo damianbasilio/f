@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/pawsies-pet-sitting-of-east-asheville-asheville/
+https://sites.damianbasilio.dev/preview/pawsies-pet-sitting-of-east-asheville-asheville

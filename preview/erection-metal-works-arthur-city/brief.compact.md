@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/erection-metal-works-arthur-city/
+https://sites.damianbasilio.dev/preview/erection-metal-works-arthur-city

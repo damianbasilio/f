@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/j-m-mobile-auto-repairs-killeen/
+https://sites.damianbasilio.dev/preview/j-m-mobile-auto-repairs-killeen

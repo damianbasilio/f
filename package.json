@@ -9,6 +9,8 @@
     "verify:leads": "node scripts/verify-leads.mjs",
     "stitch:prompt": "node scripts/stitch-prompt-fb.mjs",
     "stitch:build": "node scripts/stitch-build.mjs",
+    "stitch:dashboard": "node scripts/stitch-dashboard.mjs",
+    "dashboard:apply": "node scripts/apply-stitch-dashboard.mjs",
     "images:fetch": "node scripts/fetch-fb-images.mjs",
     "images:apply": "node scripts/apply-images.mjs",
     "qa:check": "node scripts/qa-check.mjs",
@@ -24,11 +26,20 @@
     "git:rewrite-authors": "node scripts/rewrite-git-authors.mjs",
     "mobile-layout:audit": "node scripts/mobile-layout-audit.mjs",
     "mockup-notice:sync": "node scripts/mockup-notice-sync.mjs",
-    "server": "node scripts/server.mjs"
+    "server": "node scripts/server.mjs",
+    "discover:run": "node scripts/discover-run.mjs",
+    "discover:verify-export": "node scripts/discover-verify-export.mjs",
+    "pipeline": "node lib/daily-pipeline.mjs --once-morning",
+    "send:queue": "node lib/send-queue-worker.mjs --run",
+    "reply:check": "node lib/gmail-reply-checker.mjs",
+    "followup": "node lib/followup-queue-worker.mjs",
+    "backfill:sent-at": "node scripts/backfill-sent-at.mjs"
   },
   "dependencies": {
     "@google/stitch-sdk": "^0.3.5",
     "express": "^4.21.2",
+    "googleapis": "^148.0.0",
+    "node-cron": "^3.0.3",
     "node-html-parser": "^7.0.1",
     "nodemailer": "^8.0.10",
     "puppeteer": "^25.1.0"

@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/the-paw-spa-terre-haute/
+https://sites.damianbasilio.dev/preview/the-paw-spa-terre-haute

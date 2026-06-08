@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/sun-kissed-spray-tanning-bootyful-bar-lakewood/
+https://sites.damianbasilio.dev/preview/sun-kissed-spray-tanning-bootyful-bar-lakewood

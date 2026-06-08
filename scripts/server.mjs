@@ -13,9 +13,36 @@ import {
   getCurrentReviewItem,
   approveReview,
   regenerateReview,
+  requeueSend,
+  queueEmailRedraftAfterRebuild,
 } from "../lib/outreach-queues.mjs";
 import { kickGroqDraftWorker, getGroqWorkerStatus } from "../lib/groq-draft-worker.mjs";
 import { kickSendWorker, getSendWorkerStatus } from "../lib/send-queue-worker.mjs";
+import { kickQaAutoRebuildWorker, getQaRebuildStatus } from "../lib/qa-auto-rebuild-worker.mjs";
+import { listDashboardLeads } from "../lib/dashboard-leads.mjs";
+import {
+  JOB_STAGES,
+  createJob,
+  loadJob,
+  listJobs,
+  getActiveJob,
+  appendJobLog,
+  finishJob,
+  saveJob,
+  reconcileStaleJobs,
+} from "../lib/dashboard-jobs.mjs";
+import {
+  reconcileSentState,
+  reconcileStuckDrafts,
+  reconcileStuckSends,
+  recoverAllOrphanReviewLeads,
+} from "../lib/queue-reconcile.mjs";
+import { listReviewInbox, getReviewItemDetail, summarizeInbox } from "../lib/review-inbox.mjs";
+import { rebuildMockupOne } from "../lib/rebuild-mockup-one.mjs";
+import { retryLeadPipeline, findBatchForSlug } from "../lib/retry-lead-pipeline.mjs";
+import { deleteLead, leadExists } from "../lib/delete-lead.mjs";
+import { isSlugSent } from "../lib/outreach-send.mjs";
+import { mockupsRoot } from "../lib/paths.mjs";
 
 const app = express();
 const port = Number(process.env.PORT || 3456);
@@ -23,6 +50,7 @@ const scriptsDir = path.dirname(fileURLToPath(import.meta.url));
 
 app.use(express.json({ limit: "10mb" }));
 app.use(express.static(path.join(root, "public")));
+app.use("/preview", express.static(mockupsRoot()));
 app.get("/outreach-report-:id.md", (req, res) => {
   const p = path.join(root, `outreach-report-${req.params.id}.md`);
   if (fs.existsSync(p)) res.type("text/markdown").send(fs.readFileSync(p, "utf8"));
@@ -31,12 +59,120 @@ app.get("/outreach-report-:id.md", (req, res) => {
 
 /** @type {import('node:child_process').ChildProcess|null} */
 let pipelineProcess = null;
+/** @type {import('node:child_process').ChildProcess|null} */
+let searchProcess = null;
+/** @type {string|null} */
+let activeJobId = null;
 let pipelineLog = "";
 
-app.get("/api/status", (_req, res) => {
+/** @type {Map<string, { running: boolean, error?: string, startedAt?: string }>} */
+const rebuildBySlug = new Map();
+/** @type {Map<string, { running: boolean, error?: string, startedAt?: string }>} */
+const retryBySlug = new Map();
+
+function extractBatchFromLog(log) {
+  const m = log.match(/batch[- ](\d{10,})/i) || log.match(/Imported batch (\d+)/i);
+  return m ? m[1] : null;
+}
+
+function wireJobProcess(proc, jobId) {
+  activeJobId = jobId;
+  const job = loadJob(jobId);
+  if (!job) return;
+
+  proc.stdout.on("data", (d) => {
+    const chunk = d.toString();
+    pipelineLog += chunk;
+    appendJobLog(job, chunk);
+    const batch = extractBatchFromLog(job.log);
+    if (batch) job.batchNum = batch;
+    saveJob(job);
+  });
+  proc.stderr.on("data", (d) => {
+    const chunk = d.toString();
+    pipelineLog += chunk;
+    appendJobLog(job, chunk);
+    saveJob(job);
+  });
+  proc.on("close", (code) => {
+    pipelineLog += `\n[Exited with code ${code}]\n`;
+    const batch = extractBatchFromLog(job.log);
+    finishJob(job, code ?? 1, batch);
+    activeJobId = null;
+    pipelineProcess = null;
+    searchProcess = null;
+    kickGroqDraftWorker();
+  });
+}
+
+app.get("/api/leads", (_req, res) => {
+  res.json({ leads: listDashboardLeads() });
+});
+
+app.delete("/api/leads/:slug", (req, res) => {
+  const { slug } = req.params;
+  if (!leadExists(slug)) return res.status(404).json({ error: "Lead not found" });
+  if (pipelineProcess || searchProcess) {
+    return res.status(409).json({ error: "Cannot delete while a pipeline job is running" });
+  }
+  if (rebuildBySlug.get(slug)?.running) {
+    return res.status(409).json({ error: "Cannot delete while mockup rebuild is running" });
+  }
+  if (retryBySlug.get(slug)?.running) {
+    return res.status(409).json({ error: "Cannot delete while pipeline retry is running" });
+  }
+
+  try {
+    const result = deleteLead(slug);
+    rebuildBySlug.delete(slug);
+    retryBySlug.delete(slug);
+    res.json(result);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+});
+
+app.get("/api/jobs", (_req, res) => {
+  res.json({ jobs: listJobs(), stages: JOB_STAGES, active: getActiveJob() });
+});
+
+app.get("/api/jobs/:id", (req, res) => {
+  const job = loadJob(req.params.id);
+  if (!job) return res.status(404).json({ error: "Job not found" });
+  res.json({ job, stages: JOB_STAGES });
+});
+
+app.post("/api/search/start", (req, res) => {
+  if (!pipelineProcess && !searchProcess) {
+    reconcileStaleJobs({ quiet: true });
+  }
+  if (pipelineProcess || searchProcess) {
+    return res.status(409).json({ error: "A job is already running" });
+  }
+
+  const maxSearches = Math.max(1, Math.min(Number(req.body?.maxSearches) || 5, 50));
+  const serpBudget = req.body?.serpBudget != null ? Number(req.body.serpBudget) : undefined;
+  const args = ["--max-searches", String(maxSearches)];
+  if (serpBudget != null && !Number.isNaN(serpBudget)) {
+    args.push("--serp-budget", String(serpBudget));
+  }
+
+  pipelineLog = "";
+  const job = createJob({ type: "search", label: `Discover · ${maxSearches} searches` });
+  searchProcess = spawn(process.execPath, [path.join(scriptsDir, "discover-to-pipeline.mjs"), ...args], {
+    cwd: root,
+    env: { ...process.env, FB_PIPELINE_SPAWNED: "1" },
+  });
+  wireJobProcess(searchProcess, job.id);
+
+  res.json({ started: true, jobId: job.id });
+});
+
+/** Build status payload shared by /api/status and /api/snapshot */
+function getStatusPayload() {
   const batchesDir = path.join(root, "data", "batches");
   if (!fs.existsSync(batchesDir)) {
-    return res.json({ batches: [], latestReport: null });
+    return { batches: [], latestReport: null, pipelineRunning: false, activeJob: null, workers: {}, rebuilds: {} };
   }
   const batches = fs
     .readdirSync(batchesDir)
@@ -56,12 +192,47 @@ app.get("/api/status", (_req, res) => {
   const reports = fs.readdirSync(root).filter((f) => /^outreach-report-\d+\.md$/.test(f));
   reports.sort().reverse();
 
-  res.json({
+  return {
     batches,
     latestReport: reports[0] || null,
-    pipelineRunning: Boolean(pipelineProcess),
-    workers: { ...getGroqWorkerStatus(), ...getSendWorkerStatus() },
+    pipelineRunning: Boolean(pipelineProcess || searchProcess),
+    activeJob: getActiveJob(),
+    workers: { ...getGroqWorkerStatus(), ...getSendWorkerStatus(), ...getQaRebuildStatus() },
+    rebuilds: Object.fromEntries(rebuildBySlug.entries()),
+    retries: Object.fromEntries(retryBySlug.entries()),
+  };
+}
+
+function getPipelinePayload() {
+  const live = Boolean(pipelineProcess || searchProcess);
+  const job = live ? (activeJobId ? loadJob(activeJobId) : getActiveJob()) : null;
+  return {
+    running: live,
+    log: pipelineLog,
+    job,
+  };
+}
+
+app.get("/api/snapshot", (_req, res) => {
+  const items = listReviewInbox();
+  res.json({
+    serverTime: new Date().toISOString(),
+    status: getStatusPayload(),
+    pipeline: getPipelinePayload(),
+    jobs: listJobs(),
+    stages: JOB_STAGES,
+    leads: listDashboardLeads(),
+    inbox: {
+      items,
+      counts: summarizeInbox(items),
+      rebuilds: Object.fromEntries(rebuildBySlug.entries()),
+      retries: Object.fromEntries(retryBySlug.entries()),
+    },
   });
+});
+
+app.get("/api/status", (_req, res) => {
+  res.json(getStatusPayload());
 });
 
 app.get("/api/workers/status", (_req, res) => {
@@ -78,6 +249,20 @@ app.get("/api/batch/:batchNum/queues", (req, res) => {
 app.get("/api/batch/:batchNum/review/current", (req, res) => {
   const { batchNum } = req.params;
   res.json(getCurrentReviewItem(batchNum));
+});
+
+app.post("/api/batch/:batchNum/review/retry-send", (req, res) => {
+  try {
+    const { batchNum } = req.params;
+    const slug = req.body?.slug;
+    if (!slug) return res.status(400).json({ error: "slug required" });
+
+    requeueSend(batchNum, slug);
+    kickSendWorker();
+    res.json({ ok: true, slug });
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
 });
 
 app.post("/api/batch/:batchNum/review/approve", (req, res) => {
@@ -108,69 +293,106 @@ app.post("/api/batch/:batchNum/review/regenerate", (req, res) => {
   }
 });
 
-app.post("/api/import", (req, res) => {
-  try {
-    const body = req.body?.leads ?? req.body;
-    if (!body) return res.status(400).json({ error: "No JSON body" });
-
-    const batchNum = Date.now();
-    const importPath = path.join(root, "data", "imports", `import-${batchNum}.json`);
-    fs.mkdirSync(path.dirname(importPath), { recursive: true });
-    fs.writeFileSync(importPath, JSON.stringify(body, null, 2) + "\n", "utf8");
-
-    const proc = spawn(process.execPath, [path.join(scriptsDir, "import-leads.mjs"), importPath, "--batch", String(batchNum)], {
-      cwd: root,
-    });
-    let out = "";
-    proc.stdout.on("data", (d) => (out += d));
-    proc.stderr.on("data", (d) => (out += d));
-    proc.on("close", (code) => {
-      if (code !== 0) return res.status(500).json({ error: out });
-      res.json({ batchNum, output: out, slugsFile: `data/batches/batch-${batchNum}/slugs.txt` });
-    });
-  } catch (err) {
-    res.status(500).json({ error: err.message });
-  }
+app.get("/api/review/inbox", (_req, res) => {
+  const items = listReviewInbox();
+  const rebuilds = Object.fromEntries(rebuildBySlug.entries());
+  res.json({ items, counts: summarizeInbox(items), rebuilds });
 });
 
-app.post("/api/pipeline/run", (req, res) => {
-  const batchNum = req.body?.batchNum;
-  if (!batchNum) return res.status(400).json({ error: "batchNum required" });
-
-  const slugsFile = path.join(root, "data", "batches", `batch-${batchNum}`, "slugs.txt");
-  if (!fs.existsSync(slugsFile)) return res.status(404).json({ error: "Batch not found" });
-
-  if (pipelineProcess) return res.status(409).json({ error: "Pipeline already running" });
-
-  pipelineLog = "";
-
-  pipelineProcess = spawn(
-    process.execPath,
-    [path.join(scriptsDir, "pipeline-fb-run.mjs"), slugsFile, "--batch", String(batchNum)],
-    { cwd: root, env: { ...process.env, FB_PIPELINE_SPAWNED: "1" } }
-  );
-
-  pipelineProcess.stdout.on("data", (d) => {
-    pipelineLog += d.toString();
+app.get("/api/review/:batchNum/:slug", (req, res) => {
+  const detail = getReviewItemDetail(req.params.batchNum, req.params.slug);
+  if (!detail) return res.status(404).json({ error: "Review item not found" });
+  const rebuild = rebuildBySlug.get(req.params.slug);
+  res.json({
+    ...detail,
+    rebuilding: Boolean(rebuild?.running),
+    rebuildError: rebuild?.error || null,
+    rebuildFinishedAt: rebuild?.finishedAt || null,
   });
-  pipelineProcess.stderr.on("data", (d) => {
-    pipelineLog += d.toString();
-  });
-  pipelineProcess.on("close", (code) => {
-    pipelineLog += `\n[Pipeline exited with code ${code}]\n`;
-    pipelineProcess = null;
-    kickGroqDraftWorker();
-  });
+});
 
-  res.json({ started: true, batchNum });
+app.post("/api/leads/:slug/retry", (req, res) => {
+  const { slug } = req.params;
+  if (!leadExists(slug)) return res.status(404).json({ error: "Lead not found" });
+  if (isSlugSent(slug)) return res.status(400).json({ error: "Lead already sent — cannot retry" });
+  if (pipelineProcess || searchProcess) {
+    return res.status(409).json({ error: "Cannot retry while a batch pipeline job is running" });
+  }
+  if (retryBySlug.get(slug)?.running || rebuildBySlug.get(slug)?.running) {
+    return res.status(409).json({ error: "Retry already running for this lead" });
+  }
+
+  const batchNum = req.body?.batchNum || findBatchForSlug(slug);
+  if (!batchNum) return res.status(400).json({ error: "No batch found for this lead" });
+
+  retryBySlug.set(slug, { running: true, startedAt: new Date().toISOString() });
+  res.json({ started: true, slug, batchNum });
+
+  (async () => {
+    try {
+      await retryLeadPipeline(slug, { batchNum });
+      kickGroqDraftWorker();
+      retryBySlug.set(slug, { running: false, finishedAt: new Date().toISOString() });
+    } catch (err) {
+      retryBySlug.set(slug, { running: false, error: err.message });
+      console.error(`[retry] ✗ ${slug}:`, err.message);
+    }
+  })();
+});
+
+app.post("/api/review/:batchNum/:slug/rebuild-mockup", (req, res) => {
+  const { batchNum, slug } = req.params;
+  const detail = getReviewItemDetail(batchNum, slug);
+  if (!detail) return res.status(404).json({ error: "Review item not found" });
+  if (!detail.canRebuild) return res.status(400).json({ error: "Cannot rebuild — missing lead data" });
+  if (rebuildBySlug.get(slug)?.running) return res.status(409).json({ error: "Rebuild already running" });
+
+  rebuildBySlug.set(slug, { running: true, startedAt: new Date().toISOString() });
+  res.json({ started: true, slug });
+
+  (async () => {
+    try {
+      await rebuildMockupOne(slug);
+      try {
+        queueEmailRedraftAfterRebuild(batchNum, slug);
+        kickGroqDraftWorker();
+      } catch (err) {
+        console.warn(`[rebuild] email re-draft queue skipped for ${slug}:`, err.message);
+      }
+      rebuildBySlug.set(slug, { running: false, finishedAt: new Date().toISOString() });
+    } catch (err) {
+      rebuildBySlug.set(slug, { running: false, error: err.message });
+      console.error(`[rebuild] ✗ ${slug}:`, err.message);
+    }
+  })();
 });
 
 app.get("/api/pipeline/log", (_req, res) => {
-  res.json({ running: Boolean(pipelineProcess), log: pipelineLog });
+  res.json(getPipelinePayload());
 });
 
 app.listen(port, () => {
+  const staleJobs = reconcileStaleJobs({ quiet: true });
+  if (staleJobs.cleared) {
+    console.log(`[reconcile] closed ${staleJobs.cleared} stale job(s) from prior session`);
+  }
+  reconcileSentState({ quiet: true });
+  const stuckDrafts = reconcileStuckDrafts({ quiet: true });
+  if (stuckDrafts.draftsReady || stuckDrafts.draftsRequeued) {
+    console.log(
+      `[reconcile] unstuck drafts: ${stuckDrafts.draftsReady} ready, ${stuckDrafts.draftsRequeued} re-queued`
+    );
+  }
+  const stuck = reconcileStuckSends({ quiet: true });
+  if (stuck.sendsRequeued) {
+    console.log(`[reconcile] re-queued ${stuck.sendsRequeued} stuck send(s) after restart`);
+  }
+  const { recovered } = recoverAllOrphanReviewLeads({ quiet: true });
+  if (recovered.length) {
+    console.log(`[reconcile] recovered ${recovered.length} orphan lead(s) for review`);
+  }
   console.log(`Facebook Leads UI → http://localhost:${port}`);
   kickGroqDraftWorker();
   kickSendWorker();
+  kickQaAutoRebuildWorker();
 });

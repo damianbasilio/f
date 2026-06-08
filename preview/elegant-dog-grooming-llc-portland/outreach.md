@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might be making it a bi
 
 I sketched up a simple page idea from your Facebook posts, featuring a hero headline that highlights your professional pet care services in Portland and a clear call-to-action to book grooming. I also included a photo gallery showcasing the beautiful dogs you've worked with and a prominent booking call-to-action.
 
-https://damianbasilio.github.io/f/preview/elegant-dog-grooming-llc-portland/
+https://sites.damianbasilio.dev/preview/elegant-dog-grooming-llc-portland
 
 Would love to chat more about bringing this idea to life for you - it's a straightforward project with a flat fee for local businesses. Feel free to reply or give me a quick call to discuss further.
 
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | elegantdog1@gmail.com (https://www.facebook.com/ElegantDogGrooming/) |
 | Activity | Active Facebook page with content and 4 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/elegant-dog-grooming-llc-portland/ |
+| Live URL | https://sites.damianbasilio.dev/preview/elegant-dog-grooming-llc-portland |
 | Current site | https://www.facebook.com/ElegantDogGrooming/ |

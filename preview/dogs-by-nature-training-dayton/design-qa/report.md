@@ -2,7 +2,7 @@
 
 **Result:** PASS
 
-**Craft warnings:** 2 (see craft section)
+**Craft warnings:** 1 (see craft section)
 
 ## Skills run
 
@@ -18,6 +18,8 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
+- emil: added :active press feedback
+- craft: injected brief fonts (Oswald / Source Sans 3)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -30,7 +32,6 @@
 - OK: No obvious buzzwords
 - WARN: Repeated 3-column grid pattern (3 hits) — likely template layout
 - OK: Typography: brand fonts referenced
-- WARN: Ghost-card pattern (1px border + heavy shadow) detected
 - OK: Eyebrow count: 3
 - OK: No transition: all
 - OK: Reduced motion: present

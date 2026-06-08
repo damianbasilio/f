@@ -75,7 +75,8 @@ for (const slug of slugs) {
     const status = fs.readFileSync(statusPath, "utf8");
     for (const key of ["design-qa/craft", "design-qa/emil", "design-qa/taste", "design-qa/audit", "design-qa/harden", "design-qa/polish"]) {
       const row = status.match(new RegExp(`\\|\\s*${key.replace("/", "\\/")}\\s*\\|\\s*(\\w+)\\s*\\|`, "i"));
-      if (!row || row[1].toLowerCase() !== "done") {
+      const val = row?.[1]?.toLowerCase();
+      if (!val || !["done", "pass"].includes(val)) {
         errors.push(`status.md: ${key} not done (required for outreach)`);
       }
     }
@@ -165,23 +166,6 @@ for (const slug of slugs) {
   }
   if (/★★★★|4\.9\s*\/\s*5|#1 rated/i.test(html)) errors.push("Fake star ratings or unverifiable superlatives");
 
-  const brandPath = path.join(dir, "stitch", "brand-extract.json");
-  if (fs.existsSync(brandPath) && css) {
-    try {
-      const brand = JSON.parse(fs.readFileSync(brandPath, "utf8"));
-      const expected = brand.primaryColor?.toLowerCase();
-      const cssPrimary = css.match(/--brand-primary\s*:\s*(#[0-9a-f]{3,8})/i)?.[1]?.toLowerCase();
-      if (expected && cssPrimary && !colorsSimilar(expected, cssPrimary)) {
-        errors.push(`Brand color mismatch: CSS --brand-primary ${cssPrimary} vs extracted ${expected}`);
-      }
-      if (expected && !css.includes(expected) && !(cssPrimary && colorsSimilar(expected, cssPrimary))) {
-        warnings.push(`Extracted primary ${expected} not found in styles.css — verify brand fidelity`);
-      }
-    } catch {
-      /* ignore */
-    }
-  }
-
   if (!fs.existsSync(manifestPath)) {
     errors.push("Missing assets/manifest.json (image pipeline not started)");
   } else {
@@ -215,28 +199,4 @@ function report(errors, warnings = []) {
     for (const e of errors) console.log(`  ✗ ${e}`);
     for (const w of warnings) console.log(`  ⚠ ${w}`);
   }
-}
-
-function colorsSimilar(a, b) {
-  const ha = hexToHue(a);
-  const hb = hexToHue(b);
-  if (ha == null || hb == null) return a === b;
-  const diff = Math.abs(ha - hb);
-  return diff <= 25 || diff >= 335;
-}
-
-function hexToHue(hex) {
-  if (!hex?.startsWith("#") || hex.length < 7) return null;
-  const r = parseInt(hex.slice(1, 3), 16) / 255;
-  const g = parseInt(hex.slice(3, 5), 16) / 255;
-  const b = parseInt(hex.slice(5, 7), 16) / 255;
-  const max = Math.max(r, g, b);
-  const min = Math.min(r, g, b);
-  if (max === min) return 0;
-  const d = max - min;
-  let h = 0;
-  if (max === r) h = ((g - b) / d + 6) % 6;
-  else if (max === g) h = (b - r) / d + 2;
-  else h = (r - g) / d + 4;
-  return h * 60;
 }

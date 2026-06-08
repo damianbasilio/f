@@ -45,13 +45,13 @@ Email: theelderbread@gmail.com
 
 Recent posts from their Facebook page:
 1. The growing season is coming, and I am growing alongside it. 🌻
-2. HOURS : MON-FRI 7-6 • SAT-SUN 8-4 Food Menu: WED-SAT 11-2
-3. The Elder Bread is at The Elder Bread.
+2. The Elder Bread is at The Elder Bread.
+3. HOURS : MON-FRI 7-6 • SAT-SUN 8-4 Food Menu: WED-SAT 11-2
 
 **Recent post captions (3 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "The growing season is coming, and I am growing alongside it. 🌻"
-2. "HOURS : MON-FRI 7-6 • SAT-SUN 8-4 Food Menu: WED-SAT 11-2"
-3. "The Elder Bread is at The Elder Bread."
+2. "The Elder Bread is at The Elder Bread."
+3. "HOURS : MON-FRI 7-6 • SAT-SUN 8-4 Food Menu: WED-SAT 11-2"
 
 **Preserve:** real business name, city, services, phone, and the warm local tone from their page.
 **Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).

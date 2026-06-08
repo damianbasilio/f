@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet - as a nail studio, I imagine 
 
 I took a closer look at your Facebook posts and photos, and I was inspired to sketch out a simple idea for a homepage that showcases your services, beautiful work, and easy booking process. I included a services menu, a work gallery, and a clear call-to-action to book an appointment.
 
-https://damianbasilio.github.io/f/preview/q-nology-nail-studio-richmond/
+https://sites.damianbasilio.dev/preview/q-nology-nail-studio-richmond
 
 I'd love to help you bring this idea to life with a simple, one-flat-project-fee solution.
 
@@ -30,5 +30,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | Qnology25@gmail.com (https://www.facebook.com/p/Q-Nology-Nail-Studio-61585325378028/) |
 | Activity | Active Facebook page with content and 3 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/q-nology-nail-studio-richmond/ |
+| Live URL | https://sites.damianbasilio.dev/preview/q-nology-nail-studio-richmond |
 | Current site | https://www.facebook.com/p/Q-Nology-Nail-Studio-61585325378028/ |

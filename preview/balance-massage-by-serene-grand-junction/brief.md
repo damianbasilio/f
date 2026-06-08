@@ -86,7 +86,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/Balancemassagebyserene/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T08:13:14.742Z
+- **Scraped:** 2026-06-07T08:17:44.342Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/Balancemassagebyserene/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

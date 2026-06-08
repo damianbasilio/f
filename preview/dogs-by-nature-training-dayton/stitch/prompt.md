@@ -35,7 +35,7 @@ Use location and phone from above.
 
 **Full scraped profile (About, services, voice — use for copy, do not invent facts):**
 Today was Arizona’s last training session and I think she was really trying to work the crowd. 😂 “Mom if I act extra cute and roll around like this… do we get to keep coming to training forever?” Honestly, she may be onto something.🤣 Watching her confidence grow over these sessions has been so special, and I’m so proud of this sweet girl. Even if she spent half the class trying to convince us belly rubs are a valid training reward. Dogs by Nature
-Phone: 937-272-7697
+Phone: 265.663 7265
 Email: Contact.dogsbynature@gmail.com
 
 Recent posts from their Facebook page:

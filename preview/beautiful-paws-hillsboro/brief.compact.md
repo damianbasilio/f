@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/beautiful-paws-hillsboro/
+https://sites.damianbasilio.dev/preview/beautiful-paws-hillsboro

@@ -338,3 +338,36 @@ body.mockup-notice-open {
   aspect-ratio: unset !important;
 }
 
+
+
+/* design-qa: emil — press feedback */
+button:active,
+a[class*="btn"]:active,
+a[class*="button"]:active,
+[role="button"]:active {
+  transform: scale(0.97);
+}
+@media (prefers-reduced-motion: reduce) {
+  button:active,
+  a[class*="btn"]:active,
+  a[class*="button"]:active,
+  [role="button"]:active {
+    transform: none;
+  }
+}
+
+/* design-qa: brief brand fonts */
+:root {
+  --font-display: 'Oswald', Georgia, serif;
+  --font-body: 'Source Sans 3', system-ui, sans-serif;
+}
+html, body {
+  font-family: var(--font-body);
+}
+h1, h2, h3, h4, h5, h6,
+.font-display, [class*="font-display"], [class*="headline"] {
+  font-family: var(--font-display);
+}
+p, li, span, a, button, input, textarea, label, nav {
+  font-family: var(--font-body);
+}

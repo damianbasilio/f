@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/food-for-your-soul-catering-food-truck-rolla/
+https://sites.damianbasilio.dev/preview/food-for-your-soul-catering-food-truck-rolla

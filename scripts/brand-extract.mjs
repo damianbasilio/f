@@ -74,5 +74,9 @@ if (!/\*\*Owner:\*\*/i.test(updatedBrief)) {
 fs.writeFileSync(briefPath, updatedBrief, "utf8");
 
 console.log(`Wrote ${outPath}`);
-console.log(`Colors: ${brand.colors.slice(0, 8).join(", ") || "(none detected)"}`);
-console.log(`Fonts: ${brand.fonts.join(", ") || "(none detected)"}`);
+if (brand.facebookOnly) {
+  console.log("Stitch will choose colors and typography from business identity.");
+} else {
+  console.log(`Colors: ${brand.colors.slice(0, 8).join(", ") || "(none detected)"}`);
+  console.log(`Fonts: ${brand.fonts.join(", ") || "(none detected)"}`);
+}

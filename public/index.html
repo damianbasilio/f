@@ -3,284 +3,186 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Facebook Leads — Import & Pipeline</title>
-  <style>
-    :root { color-scheme: dark; font-family: system-ui, sans-serif; line-height: 1.5; }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: #0a0a0a; color: #f5f5f5; min-height: 100dvh; }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 2rem 1.25rem 4rem; }
-    h1 { font-size: 1.5rem; margin: 0 0 0.25rem; }
-    .sub { color: #a3a3a3; margin-bottom: 1.5rem; font-size: 0.9375rem; }
-    label { display: block; font-size: 0.8125rem; color: #a3a3a3; margin-bottom: 0.35rem; }
-    textarea {
-      width: 100%; min-height: 200px; padding: 0.75rem; border-radius: 8px;
-      border: 1px solid #333; background: #141414; color: #f5f5f5; font-family: ui-monospace, monospace; font-size: 0.8125rem;
-    }
-    .row { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 1rem 0; align-items: center; }
-    button, .btn {
-      padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #444; background: #1a1a1a;
-      color: #f5f5f5; cursor: pointer; font-size: 0.875rem;
-    }
-    button.primary { background: #2563eb; border-color: #2563eb; }
-    button.secondary { background: #262626; }
-    button:disabled { opacity: 0.5; cursor: not-allowed; }
-    .log {
-      margin-top: 1.5rem; padding: 1rem; background: #141414; border: 1px solid #262626;
-      border-radius: 8px; font-family: ui-monospace, monospace; font-size: 0.75rem;
-      white-space: pre-wrap; max-height: 320px; overflow: auto; color: #d4d4d4;
-    }
-    .status { margin-top: 1rem; padding: 0.75rem 1rem; background: #141414; border-radius: 8px; font-size: 0.875rem; }
-    input[type=file] { font-size: 0.875rem; color: #a3a3a3; }
-    a { color: #60a5fa; }
-    .review-panel {
-      margin-top: 1.5rem; padding: 1.25rem; background: #141414; border: 1px solid #333;
-      border-radius: 10px; display: none;
-    }
-    .review-panel.visible { display: block; }
-    .review-panel h2 { margin: 0 0 0.25rem; font-size: 1.125rem; }
-    .review-meta { color: #a3a3a3; font-size: 0.8125rem; margin-bottom: 1rem; }
-    .review-meta div { margin-bottom: 0.25rem; }
-    .email-body {
-      white-space: pre-wrap; font-family: ui-monospace, monospace; font-size: 0.8125rem;
-      background: #0a0a0a; border: 1px solid #262626; border-radius: 8px; padding: 1rem;
-      max-height: 360px; overflow: auto; margin: 1rem 0;
-    }
-    .queue-summary { font-size: 0.8125rem; color: #a3a3a3; margin-bottom: 0.75rem; }
-    .empty-review { color: #a3a3a3; font-size: 0.9375rem; padding: 0.5rem 0; }
-    .error-msg { color: #f87171; font-size: 0.875rem; margin: 0.5rem 0; }
-  </style>
+  <title>Facebook Leads</title>
+  <link rel="stylesheet" href="/styles.css" />
 </head>
 <body>
-  <div class="wrap">
-    <h1>Facebook Leads</h1>
-    <p class="sub">Paste or upload lead JSON → verify Facebook profiles → build mockups → review emails one at a time.</p>
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <p class="brand-name">Facebook Leads</p>
+        <p class="brand-sub">Dashboard</p>
+      </div>
+      <nav class="nav" id="nav">
+        <button type="button" data-view="dashboard" class="active">Dashboard</button>
+        <button type="button" data-view="leads">Leads</button>
+        <button type="button" data-view="review">Review <span class="nav-badge hidden" id="navReviewBadge">0</span></button>
+        <button type="button" data-view="search">New search</button>
+      </nav>
+      <div class="sidebar-foot">
+        <span class="status-pip" aria-hidden="true"></span>
+        <span id="sidebarStatus">Ready</span>
+      </div>
+    </aside>
 
-    <label for="json">Lead JSON (array of objects)</label>
-    <textarea id="json" placeholder='[{"name":"...","facebook":"https://...","emails":"..."}]'></textarea>
-
-    <div class="row">
-      <input type="file" id="file" accept=".json,application/json" />
-      <button type="button" class="primary" id="importBtn">Import leads</button>
-      <button type="button" id="runBtn" disabled>Run pipeline</button>
-    </div>
-
-    <div class="status" id="status">Ready.</div>
-
-    <div class="review-panel" id="reviewPanel">
-      <div class="queue-summary" id="queueSummary"></div>
-      <div id="reviewContent"></div>
-    </div>
-
-    <div class="log" id="log"></div>
-  </div>
-  <script>
-    let currentBatch = null;
-    let pollTimer = null;
-    let currentReviewSlug = null;
-
-    const logEl = document.getElementById("log");
-    const statusEl = document.getElementById("status");
-    const runBtn = document.getElementById("runBtn");
-    const reviewPanel = document.getElementById("reviewPanel");
-    const reviewContent = document.getElementById("reviewContent");
-    const queueSummary = document.getElementById("queueSummary");
-
-    function log(msg) { logEl.textContent += msg + "\n"; logEl.scrollTop = logEl.scrollHeight; }
-
-    function formatQueueSummary(counts) {
-      if (!counts) return "";
-      const parts = [];
-      const waiting = (counts.reviewPending || 0) + (counts.reviewReady || 0);
-      if (waiting) parts.push(`Review: ${counts.reviewReady || 0} ready · ${counts.reviewPending || 0} drafting`);
-      if (counts.sendQueued || counts.sendSending) parts.push(`Send: ${(counts.sendQueued || 0) + (counts.sendSending || 0)} queued`);
-      if (counts.sendSent) parts.push(`${counts.sendSent} sent`);
-      if (counts.sendFailed) parts.push(`${counts.sendFailed} failed`);
-      return parts.join(" · ") || "No queue activity";
-    }
-
-    async function refreshReview() {
-      if (!currentBatch) return;
-      const [reviewR, workersR] = await Promise.all([
-        fetch(`/api/batch/${currentBatch}/review/current`),
-        fetch("/api/workers/status"),
-      ]);
-      const review = await reviewR.json();
-      const workers = await workersR.json();
-
-      reviewPanel.classList.add("visible");
-      queueSummary.textContent = formatQueueSummary(review.counts);
-
-      if (workers.groqRunning && workers.groqCurrentSlug) {
-        queueSummary.textContent += ` · Groq drafting ${workers.groqCurrentSlug}`;
-      }
-      if (workers.sendRunning && workers.sendCurrentSlug) {
-        queueSummary.textContent += ` · Sending ${workers.sendCurrentSlug}`;
-      }
-
-      if (review.empty) {
-        currentReviewSlug = null;
-        if (review.drafting) {
-          reviewContent.innerHTML = '<p class="empty-review">Drafting next email…</p>';
-        } else if (review.counts?.reviewApproved === review.counts?.reviewTotal && review.counts?.reviewTotal > 0) {
-          reviewContent.innerHTML = '<p class="empty-review">All emails reviewed.</p>';
-        } else {
-          reviewContent.innerHTML = '<p class="empty-review">No emails ready for review yet.</p>';
-        }
-        return;
-      }
-
-      currentReviewSlug = review.slug;
-      const email = review.email;
-      if (review.parseError || !email) {
-        reviewContent.innerHTML = `
-          <h2>${review.slug}</h2>
-          <p class="error-msg">Could not load outreach.md: ${review.parseError || "missing file"}</p>
-          <div class="row">
-            <button type="button" class="secondary" id="regenBtn">Regenerate email</button>
-          </div>`;
-        document.getElementById("regenBtn")?.addEventListener("click", () => regenerate(review.slug));
-        return;
-      }
-
-      reviewContent.innerHTML = `
-        <h2>${escapeHtml(email.businessName || review.slug)}</h2>
-        <div class="review-meta">
-          <div><strong>To:</strong> ${escapeHtml(email.to)}</div>
-          <div><strong>Subject:</strong> ${escapeHtml(email.subject)}</div>
-          <div><strong>Mockup:</strong> <a href="${escapeHtml(email.mockupUrl)}" target="_blank">${escapeHtml(email.mockupUrl)}</a></div>
+    <div class="content">
+      <header class="topbar">
+        <div>
+          <h1 class="topbar-title" id="pageTitle">Dashboard</h1>
+          <p class="topbar-sub" id="pageSubtitle">Pipeline overview</p>
         </div>
-        <div class="email-body">${escapeHtml(email.text)}</div>
-        <div class="row">
-          <button type="button" class="primary" id="approveBtn">Approve &amp; send</button>
-          <button type="button" class="secondary" id="regenBtn">Regenerate email</button>
-        </div>`;
+        <div class="topbar-actions">
+          <span class="live-pip" id="livePip" aria-hidden="true" title="Auto-updating"></span>
+          <span class="topbar-meta" id="lastUpdated"></span>
+          <a class="btn btn-sm hidden" id="reportLink" href="#" target="_blank" rel="noopener">Outreach report</a>
+          <button type="button" class="btn" data-goto="search">New search</button>
+          <button type="button" class="btn primary" data-goto="review" id="reviewCta">Review emails</button>
+        </div>
+      </header>
 
-      document.getElementById("approveBtn").addEventListener("click", () => approve(review.slug));
-      document.getElementById("regenBtn").addEventListener("click", () => regenerate(review.slug));
-    }
+      <div class="pages">
+        <!-- Dashboard -->
+        <section class="page active" id="view-dashboard">
+          <div class="alert-banner hidden" id="reviewAlert">
+            <span id="reviewAlertText">Emails ready for review.</span>
+            <button type="button" class="btn btn-sm primary" data-goto="review">Review now</button>
+          </div>
 
-    function escapeHtml(s) {
-      return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
-    }
+          <div class="stats" id="statsGrid">
+            <button type="button" class="stat-card stat-click" data-goto="leads">
+              <span class="stat-label">Total leads</span><span class="stat-value" id="statTotal">—</span>
+            </button>
+            <button type="button" class="stat-card stat-click" data-goto="leads">
+              <span class="stat-label">Mockups</span><span class="stat-value" id="statMockups">—</span>
+            </button>
+            <button type="button" class="stat-card stat-click accent" data-goto="review">
+              <span class="stat-label">Ready to review</span><span class="stat-value" id="statReview">—</span>
+            </button>
+            <button type="button" class="stat-card stat-click" data-goto="leads" data-stage="sent">
+              <span class="stat-label">Sent</span><span class="stat-value" id="statSent">—</span>
+            </button>
+            <button type="button" class="stat-card stat-click" data-goto="leads" data-stage="building">
+              <span class="stat-label">Building</span><span class="stat-value" id="statBuilding">—</span>
+            </button>
+            <button type="button" class="stat-card stat-click warn" data-goto="leads" data-stage="failed">
+              <span class="stat-label">Failed</span><span class="stat-value" id="statFailed">—</span>
+            </button>
+          </div>
 
-    async function approve(slug) {
-      if (!currentBatch || !confirm(`Approve and send email for ${slug}?`)) return;
-      statusEl.textContent = "Approved — sending…";
-      const r = await fetch(`/api/batch/${currentBatch}/review/approve`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug }),
-      });
-      const data = await r.json();
-      if (!r.ok) {
-        statusEl.textContent = "Approve failed: " + (data.error || "unknown");
-        return;
-      }
-      statusEl.textContent = `Approved ${slug} — send queued.`;
-      await refreshReview();
-    }
+          <div class="dash-grid">
+            <div class="panel dash-panel">
+              <div class="panel-header">
+                <h2>Pipeline</h2>
+                <span class="pill" id="dashPipelineStatus">Idle</span>
+              </div>
+              <div class="panel-body" id="dashPipelineBody">
+                <p class="muted-line">No active job.</p>
+              </div>
+            </div>
+            <div class="panel dash-panel">
+              <div class="panel-header">
+                <h2>Batches</h2>
+              </div>
+              <div class="panel-body" id="dashBatches"><p class="muted-line">Loading…</p></div>
+            </div>
+          </div>
 
-    async function regenerate(slug) {
-      if (!currentBatch) return;
-      statusEl.textContent = `Regenerating ${slug}…`;
-      const r = await fetch(`/api/batch/${currentBatch}/review/regenerate`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ slug }),
-      });
-      const data = await r.json();
-      if (!r.ok) {
-        statusEl.textContent = "Regenerate failed: " + (data.error || "unknown");
-        return;
-      }
-      statusEl.textContent = `Regenerating ${slug} — showing next ready email.`;
-      await refreshReview();
-    }
+          <div class="dash-grid">
+            <div class="panel dash-panel">
+              <div class="panel-header"><h2>By stage</h2></div>
+              <div class="panel-body" id="stageBreakdown"></div>
+            </div>
+            <div class="panel dash-panel">
+              <div class="panel-header">
+                <h2>Recent jobs</h2>
+                <button type="button" class="btn btn-sm" data-goto="search">View all</button>
+              </div>
+              <div class="panel-body" id="dashRecentJobs"><p class="muted-line">No jobs yet.</p></div>
+            </div>
+          </div>
 
-    function startPolling() {
-      if (pollTimer) clearInterval(pollTimer);
-      pollTimer = setInterval(async () => {
-        const [statusR, logR] = await Promise.all([fetch("/api/status"), fetch("/api/pipeline/log")]);
-        const data = await statusR.json();
-        const logData = await logR.json();
-        if (logData.log) logEl.textContent = logData.log;
+          <div class="panel dash-panel">
+            <div class="panel-header">
+              <h2>Recent leads</h2>
+              <button type="button" class="btn btn-sm" data-goto="leads">View all</button>
+            </div>
+            <div id="dashRecentLeads"><p class="empty">Loading…</p></div>
+          </div>
+        </section>
 
-        const workersActive = data.workers?.groqRunning || data.workers?.sendRunning;
-        if (currentBatch) await refreshReview();
+        <!-- Leads -->
+        <section class="page" id="view-leads">
+          <div class="toolbar">
+            <input type="search" id="leadFilter" placeholder="Filter by name, city, email…" />
+            <select id="leadStageFilter">
+              <option value="">All stages</option>
+              <option value="building">Creating design</option>
+              <option value="review_ready">Email ready</option>
+              <option value="approved">Approved</option>
+              <option value="sent">Sent</option>
+              <option value="failed">Failed</option>
+            </select>
+            <button type="button" class="btn btn-sm" id="retryAllFailedBtn" hidden>Retry all failed</button>
+            <span class="pill" id="leadsCount"></span>
+          </div>
+          <div class="panel" id="leadsTableWrap">
+            <p class="empty">Loading leads…</p>
+          </div>
+        </section>
 
-        if (data.pipelineRunning || logData.running || workersActive) {
-          statusEl.textContent = `Batch ${currentBatch} — pipeline or workers active…`;
-        }
-      }, 2000);
-    }
+        <!-- Review -->
+        <section class="page" id="view-review">
+          <header class="review-header">
+            <div>
+              <h2 class="review-heading">Email review</h2>
+              <p class="review-sub">Approve outreach before sending — mockup preview on the right</p>
+            </div>
+            <span class="pill" id="queueSummary"></span>
+          </header>
+          <div class="review-layout">
+            <aside class="review-queue panel" id="reviewQueuePanel">
+              <div class="panel-header"><h2>Queue</h2></div>
+              <ul class="review-queue-list" id="reviewQueueList"></ul>
+            </aside>
+            <div class="review-workspace" id="reviewWorkspace">
+              <p class="empty review-empty">Loading review queue…</p>
+            </div>
+          </div>
+        </section>
 
-    document.getElementById("file").addEventListener("change", async (e) => {
-      const f = e.target.files[0];
-      if (!f) return;
-      document.getElementById("json").value = await f.text();
-    });
-
-    document.getElementById("importBtn").addEventListener("click", async () => {
-      logEl.textContent = "";
-      try {
-        const leads = JSON.parse(document.getElementById("json").value);
-        statusEl.textContent = "Importing…";
-        const r = await fetch("/api/import", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ leads }),
-        });
-        const data = await r.json();
-        if (!r.ok) throw new Error(data.error || "Import failed");
-        currentBatch = data.batchNum;
-        log(data.output);
-        statusEl.textContent = `Imported batch ${currentBatch}. Click Run pipeline.`;
-        runBtn.disabled = false;
-        reviewPanel.classList.remove("visible");
-      } catch (err) {
-        statusEl.textContent = "Error: " + err.message;
-      }
-    });
-
-    runBtn.addEventListener("click", async () => {
-      if (!currentBatch) return;
-      logEl.textContent = "";
-      statusEl.textContent = "Pipeline running…";
-      runBtn.disabled = true;
-      reviewPanel.classList.add("visible");
-      await fetch("/api/pipeline/run", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ batchNum: currentBatch }),
-      });
-      startPolling();
-
-      const waitForPipeline = setInterval(async () => {
-        const logR = await fetch("/api/pipeline/log");
-        const logData = await logR.json();
-        if (!logData.running) {
-          clearInterval(waitForPipeline);
-          statusEl.textContent = `Pipeline finished — batch ${currentBatch}. Review emails below.`;
-          runBtn.disabled = false;
-          await refreshReview();
-        }
-      }, 2000);
-    });
-
-    fetch("/api/status").then(r => r.json()).then(async (data) => {
-      if (data.batches?.length) {
-        const latest = data.batches[0];
-        if (latest.batchNum) {
-          currentBatch = latest.batchNum;
-          runBtn.disabled = false;
-          if (latest.queues) {
-            reviewPanel.classList.add("visible");
-            await refreshReview();
-            startPolling();
-          }
-        }
-      }
-    });
-  </script>
+        <!-- New search -->
+        <section class="page" id="view-search">
+          <div class="search-grid">
+            <form id="searchForm" class="panel form-panel">
+              <p class="muted-line search-desc">Discover leads, verify Facebook, build mockups, and queue outreach emails — all in one run.</p>
+              <div class="field">
+                <label for="maxSearches">Max searches</label>
+                <input type="number" id="maxSearches" min="1" max="50" value="5" />
+              </div>
+              <div class="field">
+                <label for="serpBudget">SERP budget (USD, optional)</label>
+                <input type="number" id="serpBudget" min="0" step="0.01" placeholder="0.05" />
+              </div>
+              <button type="submit" class="btn primary" id="searchBtn">Start search &amp; pipeline</button>
+            </form>
+            <div>
+              <div id="searchIdle" class="panel idle-msg">No search running.</div>
+              <div id="searchProgress" class="panel progress-panel" hidden>
+                <p class="status-line" id="searchJobLabel"></p>
+                <ul class="progress-list" id="progressSteps"></ul>
+                <div class="bar-track"><div class="bar-fill" id="progressBar" style="width:0%"></div></div>
+                <div class="log" id="searchLog"></div>
+              </div>
+              <div class="panel progress-panel" id="searchHistory" hidden>
+                <div class="panel-header"><h2>Recent jobs</h2></div>
+                <div class="panel-body" id="searchHistoryList"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script src="/app.js" type="module"></script>
 </body>
 </html>

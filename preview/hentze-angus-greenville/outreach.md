@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, and I think that might be lea
 
 I pulled together a quick page concept from what you already post on Facebook. The mockup includes a services overview, photo gallery, and contact section, as well as a map with your current hours.
 
-https://damianbasilio.github.io/f/preview/hentze-angus-greenville/
+https://sites.damianbasilio.dev/preview/hentze-angus-greenville
 
 If you're interested in learning more about bringing your online presence up to date, I'd be happy to discuss the process and how it can help you reach more customers.
 
@@ -30,5 +30,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | HentzeAngus@gmail.com (https://www.facebook.com/HentzeAngus/) |
 | Activity | Active Facebook page with content and 3 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/hentze-angus-greenville/ |
+| Live URL | https://sites.damianbasilio.dev/preview/hentze-angus-greenville |
 | Current site | https://www.facebook.com/HentzeAngus/ |

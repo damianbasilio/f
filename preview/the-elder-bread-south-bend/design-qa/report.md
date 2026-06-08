@@ -18,7 +18,6 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 

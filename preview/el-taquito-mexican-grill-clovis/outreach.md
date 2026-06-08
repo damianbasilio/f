@@ -1,19 +1,19 @@
 # El Taquito Mexican Grill - outreach
 
 **To:** eltaquitomexicangrill@gmail.com  
-**Subject:** Your Authentic Sonoran Mexican Food post in Clovis
+**Subject:** Your Clovis page caught my eye
 
 Hi,
 
-I've been exploring the food scene in Clovis and loved seeing your post about Authentic Sonoran Mexican Food. Your Black Angus heritage must inspire some incredible dishes!
+Your authentic Sonoran Mexican Food heritage is something that really stands out on your Facebook page. I've visited Clovis a few times and it's always great to see a local favorite like El Taquito Mexican Grill thriving.
 
-But I noticed you don't have your own website yet, which might mean you're missing out on direct online bookings and calls from customers looking for a great dining experience.
+But I noticed you don't have your own website yet, and I think that might be leaving potential customers like myself wondering how to find your hours, view your menu, or even get directions to your Prince Street location.
 
-I sketched a simple homepage idea from your Facebook photos and posts, with a menu hero section to showcase your specialties, a hours block to keep customers informed, and a photo gallery to share more of your delicious food. I also included a map & directions section to make it easy for visitors to find you.
+I took a look at your Facebook posts and sketched out a simple homepage idea that incorporates your menu hero, hours block, and a photo gallery of your delicious dishes. Take a look and let me know if you'd like to discuss building it out for your business.
 
-https://damianbasilio.github.io/f/preview/el-taquito-mexican-grill-clovis/
+https://sites.damianbasilio.dev/preview/el-taquito-mexican-grill-clovis
 
-Building a website like this is a straightforward project with a flat fee for local businesses. If you'd like to get started or have any questions, feel free to reply or give me a quick call.
+Building a website is a straightforward project with a flat fee for local businesses like yours. If you'd like to get a quote or discuss further, feel free to reply or give me a quick call.
 
 Thanks,
 Damian Basilio
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | eltaquitomexicangrill@gmail.com (https://www.facebook.com/p/El-Taquito-Mexican-Grill-61555191586193/) |
 | Activity | Active Facebook page with content and 4 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/el-taquito-mexican-grill-clovis/ |
+| Live URL | https://sites.damianbasilio.dev/preview/el-taquito-mexican-grill-clovis |
 | Current site | https://www.facebook.com/p/El-Taquito-Mexican-Grill-61555191586193/ |

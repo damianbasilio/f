@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/sheryl-s-candy-apple-creations-jacksonville/
+https://sites.damianbasilio.dev/preview/sheryl-s-candy-apple-creations-jacksonville

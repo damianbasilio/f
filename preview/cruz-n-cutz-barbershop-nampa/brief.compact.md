@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/cruz-n-cutz-barbershop-nampa/
+https://sites.damianbasilio.dev/preview/cruz-n-cutz-barbershop-nampa

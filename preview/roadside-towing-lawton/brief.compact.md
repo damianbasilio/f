@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/roadside-towing-lawton/
+https://sites.damianbasilio.dev/preview/roadside-towing-lawton

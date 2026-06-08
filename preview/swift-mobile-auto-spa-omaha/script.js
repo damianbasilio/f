@@ -1,34 +1,43 @@
-// Smooth scroll for nav links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+// Intersection Observer for Nav Highlighting
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav-link');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav-link');
+                }
             });
         });
 
-        // Simple scroll observer for animations
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.stagger-load').forEach(el => observer.observe(el));
-
-        // Header scroll effect
-        window.addEventListener('scroll', () => {
-            const nav = document.getElementById('top-nav');
-            if (window.scrollY > 50) {
-                nav.classList.add('shadow-sm', 'py-2');
-                nav.classList.remove('py-4');
-            } else {
-                nav.classList.remove('shadow-sm', 'py-2');
-                nav.classList.add('py-4');
-            }
+        // Form micro-interaction
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'TRANSMITTING...';
+            btn.style.opacity = '0.7';
+            setTimeout(() => {
+                btn.textContent = 'SECURED';
+                btn.style.backgroundColor = '#10b981';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.opacity = '1';
+                    form.reset();
+                }, 2000);
+            }, 1500);
         });
 
 (() => {

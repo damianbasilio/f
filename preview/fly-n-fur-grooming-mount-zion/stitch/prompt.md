@@ -15,6 +15,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 - **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
 - Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
 - Every section should feel **designed**, not assembled from a component library.
+- Whole email should be 100 words or less.
 
 ---
 
@@ -122,6 +123,7 @@ Bento-style grid: hero spans 2 cells, services and gallery as varied tile sizes;
 hero → credibility → services → gallery → about → visit → contact
 
 **Hero direction:**
+
 - **H1 (adapt closely):** Professional pet care in Mount Zion
 - **Subhead:** Hello! My phone has been absolutely flooded with spam calls lately. I've received over …
 - **Primary CTA:** Book grooming
@@ -210,3 +212,4 @@ Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery
 - Mockup banner placeholder at top: "Concept preview — not affiliated with Fly’n Fur Grooming"
 
 ---
+

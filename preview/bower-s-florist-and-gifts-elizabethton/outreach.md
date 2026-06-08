@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might be leaving potent
 
 I sketched out a simple homepage idea from what you're already sharing on Facebook, featuring a services overview, photo gallery, contact section, and even a map with your hours. Take a look and let me know if you'd like to discuss bringing it to life with a straightforward project that includes a flat fee for local businesses. 
 
-https://damianbasilio.github.io/f/preview/bower-s-florist-and-gifts-elizabethton/
+https://sites.damianbasilio.dev/preview/bower-s-florist-and-gifts-elizabethton
 
 Reply or let's schedule a quick call to discuss details.
 
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | bowersflorist77@gmail.com (https://m.facebook.com/Bowers.Florist.Gifts.Elz/) |
 | Activity | Active Facebook page with content and 2 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/bower-s-florist-and-gifts-elizabethton/ |
+| Live URL | https://sites.damianbasilio.dev/preview/bower-s-florist-and-gifts-elizabethton |
 | Current site | https://m.facebook.com/Bowers.Florist.Gifts.Elz/ |

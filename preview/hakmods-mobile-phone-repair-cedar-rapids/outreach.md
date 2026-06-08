@@ -5,15 +5,15 @@
 
 Hi,
 
-I love seeing local businesses participating in community events, and your post about the FREE Liquid Screen Protectors at Big Grove this Sunday caught my eye. It sounds like a great opportunity for people to get their phones protected in under 30 seconds!
+I loved seeing your team's enthusiasm for giving back to the community with free liquid screen protectors at Big Grove Brewery this Sunday! It's great to see local businesses like yours supporting local events.
 
-But I noticed you don't have your own website yet, and as a mobile phone repair service that brings its expertise directly to customers' doors, having a simple online presence could help you reach an even wider audience and potentially increase bookings.
+But I noticed you don't have your own website yet, which might be leaving potential customers in Eastern Iowa, like those in Robins or Marion, from finding you online.
 
-I took a look at the photos and posts you're sharing on Facebook, and I sketched out a simple homepage idea that incorporates your services overview, a photo gallery, and contact information. It's just a starting point, but I thought you might be interested in seeing it.
+I sketched out a simple homepage idea from your Facebook photos and posts. It would feature a services overview highlighting your onsite repair capabilities, a photo gallery showcasing your work, and a contact section with your phone number and email. 
 
-https://damianbasilio.github.io/f/preview/hakmods-mobile-phone-repair-cedar-rapids/
+https://sites.damianbasilio.dev/preview/hakmods-mobile-phone-repair-cedar-rapids
 
-I'd love to discuss how building out this idea could work for your business, and I'd be happy to provide a flat fee for local businesses. If you're interested in learning more, please reply or let's schedule a quick call to chat.
+If you're interested in learning more about how a simple website could help you connect with more customers, I'd be happy to discuss a straightforward project with a flat fee for local businesses. Please reply or let's schedule a quick call to explore further.
 
 Thanks,
 Damian Basilio
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | Hakmods@gmail.com (http://www.facebook.com/Hakmods) |
 | Activity | Active Facebook page with content and 5 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/hakmods-mobile-phone-repair-cedar-rapids/ |
+| Live URL | https://sites.damianbasilio.dev/preview/hakmods-mobile-phone-repair-cedar-rapids |
 | Current site | http://www.facebook.com/Hakmods |

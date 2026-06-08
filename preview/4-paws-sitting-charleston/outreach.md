@@ -1,21 +1,20 @@
 # 4 Paws Sitting - outreach
 
 **To:** phoenixwv2015@gmail.com  
-**Subject:** Your Charleston page caught my eye
+**Subject:** Your Charleston page caught my eye, 4 Paws Sitting
 
 Hi,
 
-I was browsing through Facebook and noticed how 4 Paws Sitting offers in-home pet care to the Kanawha Valley. It's great to see that you're serving such a specific area and providing personalized services for pet owners.
- 
-But I noticed you don't have your own website yet, which might be leaving some potential clients who prefer to plan ahead and book services online on the table. Your business seems well-established, and having a website could help you reach a broader audience.
+I love seeing the Black Angus heritage shine through in the ranch photos you share on your Facebook page. It's clear you're passionate about serving the pet owners in the Kanawha Valley.
 
-I've taken a look at your Facebook posts and photos, and I thought it would be great to sketch out a simple homepage idea that showcases some of the things you do. I included a services overview, a photo gallery, and a contact section with a map to make it easy for people to find you.
+But I noticed you don't have your own website yet, which might mean you're missing out on potential bookings and calls from interested clients.
 
-https://damianbasilio.github.io/f/preview/4-paws-sitting-charleston/
+I took a close look at your Facebook photos and posts, and I sketched up a simple homepage idea that highlights your services, showcases your beautiful ranch, and makes it easy for clients to get in touch. It includes a services overview, a photo gallery, and a contact section with a map and hours.
 
-If you're interested in learning more about how a simple website like this could work for your business, I'd be happy to discuss the details and provide a quote. Just reply or give me a quick call at your convenience.
- 
-A straightforward project with one flat project fee for local businesses like yours.
+https://sites.damianbasilio.dev/preview/4-paws-sitting-charleston
+
+Feel free to reply or give me a quick call if you'd like to discuss building out a simple website for your local business.
+One flat project fee for local businesses like yours would make it an easy and straightforward project to complete.
 
 Thanks,
 Damian Basilio
@@ -30,5 +29,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | phoenixwv2015@gmail.com (http://www.facebook.com/4-Paws-Sitting-518124105034925/) |
 | Activity | Active Facebook page with content and 5 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/4-paws-sitting-charleston/ |
+| Live URL | https://sites.damianbasilio.dev/preview/4-paws-sitting-charleston |
 | Current site | http://www.facebook.com/4-Paws-Sitting-518124105034925/ |

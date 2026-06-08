@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/behind-the-chair-yakima/
+https://sites.damianbasilio.dev/preview/behind-the-chair-yakima

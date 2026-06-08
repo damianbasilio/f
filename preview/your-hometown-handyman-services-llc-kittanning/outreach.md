@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, and I think it might be worth
 
 I took a look at your Facebook photos and posts, and I thought I'd sketch out a simple idea for a homepage that highlights your services, shares some of your beautiful work, and makes it easy for people to get in touch. Here's a quick preview:
 
-https://damianbasilio.github.io/f/preview/your-hometown-handyman-services-llc-kittanning/
+https://sites.damianbasilio.dev/preview/your-hometown-handyman-services-llc-kittanning
 
 This mockup includes a services overview section, a photo gallery, a contact section with your hours and address, and a map to help people find you. I think it's a straightforward project that could make a big difference for your business.
 
@@ -30,5 +30,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | yourhometownhandyman@aol.com (https://www.facebook.com/profile.php?id=100086383233376) |
 | Activity | Active Facebook page with content and 4 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/your-hometown-handyman-services-llc-kittanning/ |
+| Live URL | https://sites.damianbasilio.dev/preview/your-hometown-handyman-services-llc-kittanning |
 | Current site | https://www.facebook.com/profile.php?id=100086383233376 |

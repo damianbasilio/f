@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/woof-it-dog-walking-training-san-antonio/
+https://sites.damianbasilio.dev/preview/woof-it-dog-walking-training-san-antonio

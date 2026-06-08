@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might mean that potenti
 
 I sketched up a page idea that draws from your Facebook posts and photos - it includes a services overview to highlight everything you offer, as well as a photo gallery to give customers a glimpse into your store.
 
-https://damianbasilio.github.io/f/preview/halsey-s-country-store-campton/
+https://sites.damianbasilio.dev/preview/halsey-s-country-store-campton
 
 Would love to discuss how this could work for your business - flat fee for local businesses, and a simple way to get started. Feel free to reply or let's hop on a quick call to chat more about it.
 
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | halseyscountrystore@gmail.com (http://www.facebook.com/HalseysCountryStore) |
 | Activity | Active Facebook page with content and 1 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/halsey-s-country-store-campton/ |
+| Live URL | https://sites.damianbasilio.dev/preview/halsey-s-country-store-campton |
 | Current site | http://www.facebook.com/HalseysCountryStore |

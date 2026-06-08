@@ -1,19 +1,19 @@
 # Two Cities Towing & Roadside LLC - outreach
 
 **To:** twocitiestowing@gmail.com  
-**Subject:** Your Midland page caught my eye
+**Subject:** Your accident response in Midland caught my eye
 
 Hi,
 
-I love the photos you share of your team helping customers in need - that recent post about an accident was particularly striking. It really showcases your team's commitment to Midland.
+The way you and your team helped that customer with an accident really stood out to me. Your dedication to your community is something to be proud of.
 
-But I noticed you don't have your own website yet, which might be leaving potential customers who want to book your services online having to look elsewhere.
+But I noticed you don't have your own website yet, which might be leaving potential customers on the phone - a problem for a tow service like yours that relies on quick response times.
 
-I sketched out a few ideas for a homepage based on your Facebook posts and photos - it includes a services menu, a work gallery showcasing your team in action, a prominent booking CTA, and even a section for hours and location.
+I took a look at your Facebook page and sketched out a simple page idea that matches your services and style. It includes a services menu, a work gallery to showcase your team's efforts, a prominent booking call-to-action, and clear hours & location information.
 
-https://damianbasilio.github.io/f/preview/two-cities-towing-roadside-llc-midland/
+https://sites.damianbasilio.dev/preview/two-cities-towing-roadside-llc-midland
 
-I thought it might be worth taking a closer look and discussing how a simple website could help you reach more customers in Midland. If you're interested, I'd be happy to discuss details of a straightforward project with a flat fee for local businesses. Just reply or let's schedule a quick call to explore further.
+I think a straightforward website like this could be a great addition to your business. For local businesses like yours, I offer a flat fee for a project like this - would you like to discuss further or schedule a quick call to go over the details?
 
 Thanks,
 Damian Basilio
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | twocitiestowing@gmail.com (https://www.facebook.com/p/Two-Cities-Towing-100054211433775/) |
 | Activity | Active Facebook page with content and 3 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/two-cities-towing-roadside-llc-midland/ |
+| Live URL | https://sites.damianbasilio.dev/preview/two-cities-towing-roadside-llc-midland |
 | Current site | https://www.facebook.com/p/Two-Cities-Towing-100054211433775/ |

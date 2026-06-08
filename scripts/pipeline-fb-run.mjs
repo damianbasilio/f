@@ -1,21 +1,19 @@
 /**
  * Main Facebook leads pipeline orchestrator.
+ * Each slug flows verify → enrich → stitch → post-build → review without waiting for the batch.
  * Usage: node scripts/pipeline-fb-run.mjs <slugs.txt|slug...> [--batch N] [--skip-stitch]
  */
 import fs from "node:fs";
 import path from "node:path";
-import { root, loadEnv, getStitchApiKeys } from "../lib/load-env.mjs";
+import { loadEnv, getStitchApiKeys, getPipelineConcurrency } from "../lib/load-env.mjs";
 import { parseSlugs } from "../lib/slugs.mjs";
-import { verifyAndScrapeFacebook } from "../lib/facebook-verify.mjs";
-import { enrichLead } from "../lib/lead-enrichment.mjs";
-import { writeFbStitchPrompt } from "../lib/stitch-prompt-fb.mjs";
-import { buildSlug } from "../lib/stitch-build-one.mjs";
 import { runPool, logPoolStart } from "../lib/stitch-pool.mjs";
-import { postBuildQueue } from "../lib/post-build-queue.mjs";
+import { runConcurrentPool } from "../lib/concurrent-pool.mjs";
+import { runSlugPipeline } from "../lib/pipeline-slug.mjs";
+import { createBatchPipelineStatus } from "../lib/batch-pipeline-status.mjs";
 import { resetBatchDedup } from "../lib/outreach-email-fb.mjs";
-import { enqueueReview } from "../lib/outreach-queues.mjs";
 import { drainGroqQueue } from "../lib/groq-draft-worker.mjs";
-import { slugDir } from "../lib/paths.mjs";
+import { ensureFbLeadRegistry } from "../lib/fb-lead-registry.mjs";
 
 const skipStitch = process.argv.includes("--skip-stitch");
 const batchIdx = process.argv.indexOf("--batch");
@@ -29,139 +27,60 @@ if (slugs.length === 0) {
 
 loadEnv();
 resetBatchDedup();
+ensureFbLeadRegistry();
 
-const batchDir = path.join(root, "data", "batches", `batch-${batchNum}`);
-fs.mkdirSync(batchDir, { recursive: true });
+const { status, recordSlugResult, recordPoolFailure, save } = createBatchPipelineStatus(batchNum);
 
-/** @type {object} */
-const status = {
-  batchId: batchNum,
-  startedAt: new Date().toISOString(),
-  slugs: {},
-  passed: [],
-  skipped: [],
-  failed: [],
-};
+console.log(
+  `\nFacebook Leads pipeline — batch ${batchNum} (${slugs.length} slug(s), per-slug streaming)\n`
+);
 
-console.log(`\nFacebook Leads pipeline — batch ${batchNum} (${slugs.length} slug(s))\n`);
+const stitchEnabled = !skipStitch && getStitchApiKeys().length > 0;
+let poolResults;
 
-for (const slug of slugs) {
-  console.log(`\n══ ${slug} ══`);
-  const dir = slugDir(slug);
-  const leadPath = path.join(dir, "lead.json");
-
-  if (!fs.existsSync(leadPath)) {
-    console.error(`  ✗ missing lead.json — run import-leads first`);
-    status.failed.push(slug);
-    status.slugs[slug] = { step: "import", status: "fail", reason: "missing lead.json" };
-    continue;
-  }
-
-  const lead = JSON.parse(fs.readFileSync(leadPath, "utf8"));
-  const fbUrl = lead.facebook || lead.url;
-  const assetsDir = path.join(dir, "assets");
-
-  console.log(`  verifying Facebook profile…`);
-  const verify = await verifyAndScrapeFacebook(fbUrl, lead, slug, assetsDir);
-
-  fs.writeFileSync(path.join(dir, "verification.json"), JSON.stringify(verify, null, 2) + "\n", "utf8");
-
-  if (verify.status === "skip") {
-    console.log(`  ○ SKIP — ${verify.reason} (${verify.fbWebsiteUrl || "no url"})`);
-    status.skipped.push(slug);
-    status.slugs[slug] = { step: "verify", status: "skip", reason: verify.reason };
-    continue;
-  }
-
-  if (verify.status === "error") {
-    console.error(`  ✗ verify error: ${verify.error}`);
-    status.failed.push(slug);
-    status.slugs[slug] = { step: "verify", status: "fail", reason: verify.error };
-    continue;
-  }
-
-  console.log(`  ✓ PASS — ${verify.reason}`);
-
-  try {
-    console.log(`  enriching brief…`);
-    await enrichLead(slug, lead, verify);
-    console.log(`  ✓ brief.md + prompt-input.json`);
-
-    writeFbStitchPrompt(slug);
-    console.log(`  ✓ stitch prompt`);
-  } catch (err) {
-    console.error(`  ✗ enrich/prompt: ${err.message}`);
-    status.failed.push(slug);
-    status.slugs[slug] = { step: "enrich", status: "fail", reason: err.message };
-    continue;
-  }
-
-  status.passed.push(slug);
-  status.slugs[slug] = { step: "enrich", status: "pass" };
-}
-
-const stitchSlugs = status.passed.filter((s) => !skipStitch);
-
-if (stitchSlugs.length && getStitchApiKeys().length) {
-  logPoolStart(stitchSlugs);
-  const poolResults = await runPool(stitchSlugs, async (slug, worker) => {
-    await buildSlug(slug, worker);
-    return postBuildQueue(slug, { outreach: false });
+if (stitchEnabled) {
+  logPoolStart(slugs);
+  console.log("Each worker: verify → enrich → stitch → post-build → review (no batch wait between steps).\n");
+  poolResults = await runPool(slugs, async (slug, worker) => {
+    const result = await runSlugPipeline(slug, worker, { batchNum, skipStitch });
+    recordSlugResult(slug, result);
+    return result;
   });
-
-  for (const br of poolResults) {
-    if (!br.ok) {
-      status.slugs[br.slug] = { ...status.slugs[br.slug], stitch: "fail", error: br.error?.message };
-      if (status.passed.includes(br.slug)) {
-        status.passed = status.passed.filter((s) => s !== br.slug);
-        status.failed.push(br.slug);
-      }
-    } else {
-      status.slugs[br.slug] = {
-        ...status.slugs[br.slug],
-        stitch: "pass",
-        postBuild: br.value?.ok ? "pass" : "fail",
-        deploy: br.value?.summary?.deploy || "—",
-      };
-    }
+} else {
+  if (slugs.length && !skipStitch) {
+    console.log("\n○ Stitch skipped — no STITCH_API_KEY in .env (use --skip-stitch to silence)");
   }
-
-} else if (stitchSlugs.length) {
-  console.log("\n○ Stitch skipped — no STITCH_API_KEY in .env (use --skip-stitch to silence)");
+  const concurrency = getPipelineConcurrency(slugs.length);
+  console.log(`Preflight pool: ${concurrency} concurrent worker(s), ${slugs.length} slug(s).\n`);
+  poolResults = await runConcurrentPool(
+    slugs,
+    async (slug) => {
+      const result = await runSlugPipeline(slug, null, { batchNum, skipStitch: true });
+      recordSlugResult(slug, result);
+      return result;
+    },
+    { concurrency }
+  );
 }
 
-function canEnqueueForReview(slug, slugStatus) {
-  if (slugStatus?.postBuild === "pass") return true;
-  if (slugStatus?.stitch !== "pass") return false;
-  const htmlPath = slugDir(slug, "index.html");
-  if (!fs.existsSync(htmlPath)) return false;
-  const evalPath = slugDir(slug, "design-qa", "site-eval.md");
-  if (!fs.existsSync(evalPath)) return false;
-  return /\*\*Result:\*\*\s*PASS/i.test(fs.readFileSync(evalPath, "utf8"));
+for (const br of poolResults) {
+  if (br.ok) continue;
+  recordPoolFailure(br.slug, br.error?.message);
 }
 
-for (const slug of status.passed) {
-  const slugStatus = status.slugs[slug];
-  if (canEnqueueForReview(slug, slugStatus)) {
-    if (slugStatus?.postBuild !== "pass") {
-      console.log(`  ○ review enqueue (site built; post-build had non-blocking QA issues)`);
-    }
-    enqueueReview(batchNum, slug);
-    console.log(`  ✓ enqueued for review ${slug}`);
-    status.slugs[slug] = { ...status.slugs[slug], outreach: "queued" };
-  }
-}
-
-status.finishedAt = new Date().toISOString();
-fs.writeFileSync(path.join(batchDir, "status.json"), JSON.stringify(status, null, 2) + "\n", "utf8");
+save();
 
 if (!process.env.FB_PIPELINE_SPAWNED) {
-  console.log("\n  Drafting outreach emails (Groq queue)…");
+  console.log("\n  Finishing outreach drafts (Groq queue)…");
   await drainGroqQueue();
 }
 
 console.log(`\n── Batch ${batchNum} complete ──`);
-console.log(`  Passed: ${status.passed.length} | Skipped: ${status.skipped.length} | Failed: ${status.failed.length}`);
+const retryCount = status.retry?.length || 0;
+console.log(
+  `  Passed: ${status.passed.length} | Skipped: ${status.skipped.length} | Failed: ${status.failed.length}` +
+    (retryCount ? ` | Stitch retry: ${retryCount}` : "")
+);
 console.log(`  Status: data/batches/batch-${batchNum}/status.json`);
 console.log(`  Review: data/batches/batch-${batchNum}/queues.json`);
 console.log(`\n→ Open http://localhost:3456 to review and approve emails one at a time.`);

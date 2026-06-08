@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/port-city-pops-ice-cream-truck-wilmington/
+https://sites.damianbasilio.dev/preview/port-city-pops-ice-cream-truck-wilmington

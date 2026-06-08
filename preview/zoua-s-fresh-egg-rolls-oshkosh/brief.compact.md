@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/zoua-s-fresh-egg-rolls-oshkosh/
+https://sites.damianbasilio.dev/preview/zoua-s-fresh-egg-rolls-oshkosh

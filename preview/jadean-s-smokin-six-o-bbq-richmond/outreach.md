@@ -1,19 +1,21 @@
 # Jadean's Smokin' Six O BBQ - outreach
 
 **To:** jadeans60@gmail.com  
-**Subject:** Jadean's Smokin' Six O BBQ in Richmond; Something I noticed about your Richmond page
+**Subject:** Your Richmond page caught my eye, Jadean's Smokin' Six O BBQ
 
 Hi,
 
-Your Richmond page caught my eye, especially when I saw the new cover photo update. The way you showcase your BBQ heritage and community ties in your posts is impressive.
+Your Richmond page caught my eye - I love the updated cover photo of your signature BBQ smoker. It's a great addition to your branding.
 
-But I noticed you don't have your own website yet, which might be leaving some potential customers wondering about your hours, menu, and contact information. For a local favorite like yours, having a simple website can make a big difference in driving bookings and calls.
+But I noticed you don't have your own website yet, which might be leaving potential customers searching for your hours or menu on services like Google or Yelp instead of directly on your site. 
 
-I thought I'd sketch out a rough idea for a homepage based on the photos and posts you share on Facebook. I included a menu hero section, an hours block, a photo gallery, and map & directions – all to help visitors quickly find the information they need.
+I sketched out a quick homepage idea to bring your Facebook presence to life, featuring a menu hero, hours block, photo gallery from your recent posts, and even a map & directions section to make it easy for customers to find you. 
 
-https://damianbasilio.github.io/f/preview/jadean-s-smokin-six-o-bbq-richmond/
+https://sites.damianbasilio.dev/preview/jadean-s-smokin-six-o-bbq-richmond
 
-This is just a starting point, and I'd love to discuss how we can bring this idea to life for you. Simple websites like this are a straightforward project, and I'd be happy to provide a flat fee for local businesses – no obligation, of course. If you'd like to know more, just reply or give me a quick call, and we can chat about details.
+If you're interested in building out a site like this, I'd love to discuss the process and how it could work for your business - a simple flat fee for local businesses like yours can make it a straightforward project. 
+
+Let's talk and get the details.
 
 Thanks,
 Damian Basilio
@@ -28,5 +30,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | jadeans60@gmail.com (https://www.facebook.com/JadeansSmokinSixO/) |
 | Activity | Active Facebook page with content and 4 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/jadean-s-smokin-six-o-bbq-richmond/ |
+| Live URL | https://sites.damianbasilio.dev/preview/jadean-s-smokin-six-o-bbq-richmond |
 | Current site | https://www.facebook.com/JadeansSmokinSixO/ |

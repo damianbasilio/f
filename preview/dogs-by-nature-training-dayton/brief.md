@@ -38,7 +38,7 @@
 - **Full profile (scraped):**
 
 Today was Arizona’s last training session and I think she was really trying to work the crowd. 😂 “Mom if I act extra cute and roll around like this… do we get to keep coming to training forever?” Honestly, she may be onto something.🤣 Watching her confidence grow over these sessions has been so special, and I’m so proud of this sweet girl. Even if she spent half the class trying to convince us belly rubs are a valid training reward. Dogs by Nature
-Phone: 937-272-7697
+Phone: 265.663 7265
 Email: Contact.dogsbynature@gmail.com
 
 Recent posts from their Facebook page:
@@ -86,7 +86,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/profile.php?id=61561320924750&mibextid=LQQJ4d
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T08:08:03.180Z
+- **Scraped:** 2026-06-07T08:17:47.345Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/profile.php?id=61561320924750&mibextid=LQQJ4d. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

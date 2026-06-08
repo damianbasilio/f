@@ -4,7 +4,7 @@
 import { loadOutreachContext, writeOutreachMd } from "../lib/outreach-email-fb.mjs";
 import { parseOutreachMd } from "../lib/parse-outreach.mjs";
 import fs from "node:fs";
-import { slugDir } from "../lib/paths.mjs";
+import { slugDir, mockupUrl } from "../lib/paths.mjs";
 
 const samples = {
   "rustic-scruff-coal-city": {
@@ -17,7 +17,7 @@ But I noticed you don't have your own website yet, which might mean you're relyi
 
 On a whim, I pulled together a quick page concept from what you already post on Facebook, featuring sections on grooming services and a photo gallery showcasing your work. You can check it out here:
 
-https://damianbasilio.github.io/f/preview/rustic-scruff-coal-city/
+__MOCKUP_URL__
 
 If you'd like to discuss building out a simple website that matches your brand and showcases your services, I'd be happy to walk you through the process and provide a flat fee for local businesses - just reply or give me a quick call to start the conversation.`,
   },
@@ -31,7 +31,7 @@ But I noticed you don't have your own website yet, which might be leaving some p
 
 On a whim I pulled together a quick page concept from what you already post on Facebook. The idea includes an emergency call CTA, a service list, and a service area map.
 
-https://damianbasilio.github.io/f/preview/jbs-towing-and-recovery-chaparral/
+__MOCKUP_URL__
 
 This kind of site is a straightforward project with a flat project fee for local businesses. I'd love to discuss the details with you further - reply here or hop on a quick call if that's easier.`,
   },
@@ -39,7 +39,8 @@ This kind of site is a straightforward project with a flat project fee for local
 
 for (const [slug, email] of Object.entries(samples)) {
   const ctx = loadOutreachContext(slug);
-  writeOutreachMd(slug, { ...ctx, ...email, source: "groq" });
+  const body = email.body.replaceAll("__MOCKUP_URL__", mockupUrl(slug));
+  writeOutreachMd(slug, { ...ctx, ...email, body, source: "groq" });
   const md = fs.readFileSync(slugDir(slug, "outreach.md"), "utf8");
   const send = parseOutreachMd(slug);
   console.log("=".repeat(72));

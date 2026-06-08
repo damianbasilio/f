@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might be leaving potent
 
 I sketched a simple homepage idea from what you post on Facebook, featuring a hero menu section, hours block, photo gallery, and a map to help customers find their way. You can take a look here:
 
-https://damianbasilio.github.io/f/preview/vests-greenhouse-johnson-city/
+https://sites.damianbasilio.dev/preview/vests-greenhouse-johnson-city
 
 If you're interested in building a simple website to showcase your business, I'd be happy to provide a flat fee for local businesses and discuss the details further over a quick call or reply to this email to get started.
 
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | vestgreenhouse@gmail.com (https://www.facebook.com/p/Vest-Greenhouse-100069923730533/) |
 | Activity | Active Facebook page with content and 1 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/vests-greenhouse-johnson-city/ |
+| Live URL | https://sites.damianbasilio.dev/preview/vests-greenhouse-johnson-city |
 | Current site | https://www.facebook.com/p/Vest-Greenhouse-100069923730533/ |

@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might mean you're missi
 
 I sketched up a simple homepage idea based on your Facebook photos and posts. It includes a clear call-to-action to call now, a list of your services, a map of your service area, and even a sticky phone bar so customers can quickly get in touch.
 
-https://damianbasilio.github.io/f/preview/acceler8-towing-lakewood/
+https://sites.damianbasilio.dev/preview/acceler8-towing-lakewood
 
 This is just a starting point, but I think it's something worth exploring further. If you'd like to discuss this project in more detail and get a quote, please reply to this email or give me a quick call at your convenience.
 
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | Acceler8towing@gmail.com (https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/) |
 | Activity | Active Facebook page with content and 3 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/acceler8-towing-lakewood/ |
+| Live URL | https://sites.damianbasilio.dev/preview/acceler8-towing-lakewood |
 | Current site | https://www.facebook.com/p/Acceler8-Towing-Colorado-61565752108280/ |

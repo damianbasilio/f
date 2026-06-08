@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/bounce-n-splash-rentals-llc-oakland/
+https://sites.damianbasilio.dev/preview/bounce-n-splash-rentals-llc-oakland

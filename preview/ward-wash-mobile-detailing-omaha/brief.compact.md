@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/ward-wash-mobile-detailing-omaha/
+https://sites.damianbasilio.dev/preview/ward-wash-mobile-detailing-omaha

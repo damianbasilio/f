@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/attitudes-with-tails-grooming-salon-creve-coeur/
+https://sites.damianbasilio.dev/preview/attitudes-with-tails-grooming-salon-creve-coeur

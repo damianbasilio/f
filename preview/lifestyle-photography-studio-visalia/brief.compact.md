@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/lifestyle-photography-studio-visalia/
+https://sites.damianbasilio.dev/preview/lifestyle-photography-studio-visalia

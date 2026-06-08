@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/d-d-wrecker-inc-davenport/
+https://sites.damianbasilio.dev/preview/d-d-wrecker-inc-davenport

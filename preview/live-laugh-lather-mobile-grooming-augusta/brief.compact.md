@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/live-laugh-lather-mobile-grooming-augusta/
+https://sites.damianbasilio.dev/preview/live-laugh-lather-mobile-grooming-augusta

@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/arkatex-towing-and-roadside-assistance-pine-bluff/
+https://sites.damianbasilio.dev/preview/arkatex-towing-and-roadside-assistance-pine-bluff

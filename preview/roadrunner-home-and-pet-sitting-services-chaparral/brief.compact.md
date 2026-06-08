@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/roadrunner-home-and-pet-sitting-services-chaparral/
+https://sites.damianbasilio.dev/preview/roadrunner-home-and-pet-sitting-services-chaparral

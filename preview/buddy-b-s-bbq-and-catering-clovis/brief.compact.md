@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/buddy-b-s-bbq-and-catering-clovis/
+https://sites.damianbasilio.dev/preview/buddy-b-s-bbq-and-catering-clovis

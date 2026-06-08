@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/dakar-auto-detail-omaha-mobile-car-wash-omaha/
+https://sites.damianbasilio.dev/preview/dakar-auto-detail-omaha-mobile-car-wash-omaha

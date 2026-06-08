@@ -1,19 +1,17 @@
 # Fresh Finish Mobile Detail - outreach
 
 **To:** freshfinishwash25@gmail.com  
-**Subject:** Something I noticed about Fresh Finish Mobile Detail
+**Subject:** Your Gastonia page caught my eye, Fresh Finish Mobile Detail
 
 Hi,
 
-I love the 'come sparkle with Fresh Finish' vibe you're creating in Gastonia. Your mobile detailing business has a great energy to it.
+I noticed you're promoting a great deal till the end of May – that's a fantastic way to boost bookings in Gastonia. However, I noticed you don't have your own website yet, which might be leaving some potential customers who prefer to book online without a clear way to do so.
 
-But I noticed you don't have your own website yet – as a mobile business, you might be missing out on direct bookings and inquiries from potential customers.
+I sketched out a simple homepage idea based on the photos and posts you share on Facebook. It includes a services overview, a photo gallery to showcase your work, a clear contact section, and a map to help customers find you in Gastonia.
 
-I took a closer look at your Facebook page and sketched out a simple homepage idea that highlights your services, showcases your photo gallery, and makes it easy for people to get in touch. 
+https://sites.damianbasilio.dev/preview/fresh-finish-mobile-detail-gastonia
 
-https://damianbasilio.github.io/f/preview/fresh-finish-mobile-detail-gastonia/
-
-If you're interested in learning more about how to get your business online, I'd be happy to discuss a straightforward project with a flat fee for local businesses. Feel free to reply or give me a quick call to discuss details.
+If you're interested in learning more about bringing your online presence up to date, I'd be happy to discuss a straightforward project with a flat fee for local businesses. Feel free to reply or let's schedule a quick call to explore the details.
 
 Thanks,
 Damian Basilio
@@ -28,5 +26,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | freshfinishwash25@gmail.com (https://www.facebook.com/p/Fresh-Finish-Auto-Spa-61574194392800/) |
 | Activity | Active Facebook page with content and 5 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/fresh-finish-mobile-detail-gastonia/ |
+| Live URL | https://sites.damianbasilio.dev/preview/fresh-finish-mobile-detail-gastonia |
 | Current site | https://www.facebook.com/p/Fresh-Finish-Auto-Spa-61574194392800/ |

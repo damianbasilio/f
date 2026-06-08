@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/rig-doctor-24-7-emergency-mobile-truck-and-trailer-repair-ce/
+https://sites.damianbasilio.dev/preview/rig-doctor-24-7-emergency-mobile-truck-and-trailer-repair-ce

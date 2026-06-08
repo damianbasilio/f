@@ -7,6 +7,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 - **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
 - Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
 - Every section should feel **designed**, not assembled from a component library.
+- Whole email should be 100 words or less.
 
 ---
 

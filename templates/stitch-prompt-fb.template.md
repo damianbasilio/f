@@ -6,11 +6,21 @@ Use with: `npm run stitch:prompt -- {{SLUG}}` then `npm run stitch:build -- {{SL
 
 ## Prompt (paste into Stitch)
 
-You are building **one specific local business website** from their **Facebook page content only**. This is NOT a generic template. The business has **no dedicated website** — you are creating their first professional homepage using real Facebook photos and scraped copy.
+You are an award-winning local-brand web designer building **one bespoke homepage** for **{{BUSINESS_NAME}}**. This business has **no dedicated website** — only a Facebook page. You are not filling a template. You are designing a **unique, premium, memorable first impression** that could only belong to this business.
 
-### Facebook source context (use this copy — do not invent a different brand)
+### Non-negotiable: uniqueness
 
-**Facebook page:** {{LIVE_URL}}
+- This site must **not** look like other local-business mockups, Webflow templates, or AI landing pages.
+- **Do not** reuse the same hero layout, section order, card grid, or color story you used on other projects.
+- **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
+- Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
+- Every section should feel **designed**, not assembled from a component library.
+
+---
+
+### Facebook source (copy only — do not copy Facebook's UI)
+
+**Page:** {{LIVE_URL}}
 **Business:** {{BUSINESS_NAME}}
 **Category:** {{VERTICAL}}
 **Location:** {{FULL_ADDRESS}}
@@ -20,19 +30,17 @@ You are building **one specific local business website** from their **Facebook p
 **Page description:** {{DESCRIPTION}}
 **Hours:** {{HOURS}}
 
-**About / profile details (from Facebook About tab):**
+**About / profile details:**
 {{PROFILE_DETAILS}}
 
-**Full scraped profile (use this for About section, services, and copy voice — do not invent details):**
+**Full scraped profile (About, services, voice — use for copy, do not invent facts):**
 {{PROFILE_SUMMARY}}
 
-**Recent post captions ({{POST_COUNT}} useful — echo voice in headlines; skip registry/SKU/listing lines):**
+**Recent post captions ({{POST_COUNT}} — echo their voice in headlines; skip registry/SKU/listing lines):**
 {{POST_CAPTIONS}}
 
-**Design read:** {{DESIGN_READ}}
-
-**What to preserve:** The business name, location, services, and warm local tone from the Facebook page above.
-**What to fix:** No dedicated website — build a clean homepage with phone/CTA above fold, services, gallery, map slot, and contact form (preview only).
+**Preserve:** real business name, city, services, phone, and the warm local tone from their page.
+**Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).
 
 ---
 
@@ -40,28 +48,38 @@ You are building **one specific local business website** from their **Facebook p
 
 ---
 
-### Business identity
+### Creative direction (this business only)
 
-- **Name:** {{BUSINESS_NAME}}
-- **Type:** {{VERTICAL}}
-- **Location:** {{FULL_ADDRESS}}
-- **Hero H1 (use or adapt closely):** {{HERO_H1}}
-- **Hero subhead:** {{HERO_SUBHEAD}}
-- **Primary CTA button:** {{PRIMARY_CTA}}
+{{CREATIVE_DIRECTION}}
+
+**Layout archetype:** {{LAYOUT_ARCHETYPE}}
+{{LAYOUT_DESCRIPTION}}
+{{STICKY_CALL_BAR}}
+
+**Signature sections to include (rename, reorder, and style them — do not use generic labels like "Our Services" unless it fits the voice):**
+{{SECTIONS_LIST}}
+
+**Hero direction:**
+
+- **H1 (adapt closely):** {{HERO_H1}}
+- **Subhead:** {{HERO_SUBHEAD}}
+- **Primary CTA:** {{PRIMARY_CTA}}
 - **Secondary CTA:** {{SECONDARY_CTA}}
 
-**Service bullets (feature these prominently):**
+**Services / offerings (feature prominently with business-specific language):**
 {{SERVICE_BULLETS}}
 
 ---
 
-### Layout brief
+### Visual identity — Stitch decides (no extracted colors)
 
-**Layout family:** {{LAYOUT_FAMILY}}
-**Wireframe:** {{LAYOUT_DESCRIPTION}}
-{{STICKY_CALL_BAR}}
+{{COLOR_DIRECTION}}
 
-**Sections (in this order):** {{SECTIONS_LIST}}
+{{TYPOGRAPHY_DIRECTION}}
+
+**Mood target:** {{MOOD}}
+
+There is **no existing website** and **nothing to extract**. Choose palette and typography from business type ({{VERTICAL}}), name, location ({{CITY}}), and post voice. Document colors as CSS custom properties in `styles.css`.
 
 ---
 
@@ -69,70 +87,57 @@ You are building **one specific local business website** from their **Facebook p
 
 {{PHOTO_INVENTORY}}
 
-Use `<img>` tags with descriptive `alt` attributes. Real photos will replace placeholder areas via manifest — design generous photo regions, not tiny thumbnails.
+Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
 ---
 
-### Brand — mandatory (from Facebook imagery)
+### Anti-template rules
 
-**Use these exact hex values in `styles.css`:**
-
-{{CSS_VARIABLES}}
-
-| Role | Hex |
-| ---- | --- |
-| Primary | {{PRIMARY_COLOR}} |
-| Secondary | {{SECONDARY_COLOR}} |
-| Accent | {{ACCENT_COLOR}} |
-
-- **Typography:** Load Google Fonts: {{GOOGLE_FONTS_URL}}
-- **Display font:** {{FONT_DISPLAY}}
-- **Body font:** {{FONT_BODY}}
-- **Mood:** {{MOOD}}
-
----
-
-### Anti-slop rules (non-negotiable)
-
-- Do NOT use Tailwind CDN, utility-class-only pages, or Material Symbols as primary UI.
-- Do NOT use generic AI landing templates (3-column icon cards, purple/indigo SaaS gradients, Inter/Roboto defaults).
-- Do NOT use `transition: all` — animate specific properties with purpose; include `:active` scale on buttons.
-- Do NOT invent fake awards, star rating widgets, or "#1 rated" unless review score is provided above.
-- Do NOT use stock photo URLs or AI placeholder image services.
-- Do NOT use emojis anywhere — no emoji in headings, buttons, body copy, or labels.
-- Layout must feel specific to **{{VERTICAL}}** — not a Webflow clone or startup landing page.
-- Respect `prefers-reduced-motion`.
+- **No** Tailwind CDN, utility-only pages, or Material Symbols as the primary UI system.
+- **No** identical 3-column icon-card rows repeated across sections.
+- **No** purple/indigo SaaS gradients, Inter/Roboto defaults, or cream-beige "AI landing" backgrounds unless the business genuinely calls for it (heritage bakery, ranch, etc.).
+- **No** `transition: all` — animate transform and opacity with purpose; `:active` scale on buttons.
+- **No** fake star widgets, "#1 rated", or unverifiable awards unless review score is provided above.
+- **No** stock URLs or AI placeholder image services.
+- **No emojis** in headings, buttons, or body copy.
+- **No** em dashes (—) in copy — use commas, periods, or hyphens.
 - Phone must be a visible `tel:` link in header and hero.
 - {{ANTI_PATTERNS}}
 
-**Design dials:** variance {{DESIGN_VARIANCE}}/10 · motion {{MOTION_INTENSITY}}/10 · density {{VISUAL_DENSITY}}/10
+**Design dials for this build:** variance {{DESIGN_VARIANCE}}/10 · motion {{MOTION_INTENSITY}}/10 · density {{VISUAL_DENSITY}}/10
 
 ---
 
-### Deliverable requirements
+### Deliverable
 
-- **Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`
-- **Responsive:** mobile (390px), tablet (768px), desktop (1280px) — no horizontal scroll; hero + primary CTA visible on first mobile screen
-- **Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (preview only)
-- **Copy:** Use post caption voice and service bullets above — no lorem ipsum
-- **Unique layout:** {{LAYOUT_FAMILY}} — avoid default 3-column card grids
+**Full website:** semantic HTML5, dedicated `styles.css`, dedicated `script.js`.
 
-### Page structure
+**Responsive:** 390px mobile, 768px tablet, 1280px desktop — no horizontal scroll; hero + primary CTA visible on first mobile screen.
 
-1. **Header** — wordmark, nav, phone CTA visible on desktop
-2. **Hero** — {{HERO_H1}}, subhead, primary CTA ({{PRIMARY_CTA}}), brand colors dominant
-3. **Credibility** — `#credibility` — verifiable trust only (local, review score if provided, years serving community)
-4. **Services** — {{SERVICE_BULLETS}}
-5. **About** — pull from full scraped profile above; use specific details from their posts (names, offers, community ties)
-6. **Gallery** — photo grid for Facebook images
+**Interactive:** mobile nav (`data-nav-toggle`), smooth anchor scroll, contact form UI with validation (**preview only** — show notice, never fake "sent").
+
+**Copy:** from Facebook scrape and post captions — no lorem ipsum.
+
+**Layout:** follow archetype **{{LAYOUT_ARCHETYPE}}** but interpret it boldly; vary section rhythm (full-bleed band → narrow column → split → gallery mosaic, etc.).
+
+### Required capabilities (implement with unique structure and naming)
+
+1. **Header** — wordmark or logotype treatment, nav, phone visible on desktop
+2. **Hero** — {{HERO_H1}}, subhead, {{PRIMARY_CTA}}, your invented palette dominant
+3. **Credibility** — `#credibility` — only verifiable trust (local, years serving, review score if provided)
+4. **Offerings** — services from bullets above, not generic filler
+5. **About** — specific details from scraped profile and posts
+6. **Gallery** — photo grid sized for Facebook images
 7. **Visit** — `#visit` — address, hours; map panel: `<div class="map-slot" data-map-slot aria-label="Map"></div>` (empty — map injected at build)
-8. **Contact** — form + phone + email (preview-only form notice)
-9. **Footer** — hours, address, disclaimer space for mockup banner
+8. **Contact** — form + phone + email
+9. **Footer** — hours, address, space for mockup disclaimer
 
 ### Technical
 
-- CSS custom properties with brand hex values above
-- Accessible: contrast, focus rings, landmarks
+- CSS custom properties for your invented palette and type scale
+- Accessible contrast, focus rings, landmarks
+- `@media (prefers-reduced-motion: reduce)` — disable motion, keep opacity/color
 - Mockup banner placeholder at top: "Concept preview — not affiliated with {{BUSINESS_NAME}}"
 
 ---
+

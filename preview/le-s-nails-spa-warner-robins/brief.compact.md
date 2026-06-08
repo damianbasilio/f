@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/le-s-nails-spa-warner-robins/
+https://sites.damianbasilio.dev/preview/le-s-nails-spa-warner-robins

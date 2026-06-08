@@ -1,20 +1,17 @@
 # JBS Towing and Recovery - outreach
 
 **To:** laurag@jbscustoms.com  
-**Subject:** Your Chaparral page caught my eye
+**Subject:** Something I noticed about JBS Towing and Recovery
 
 Hi,
 
-I've been following your Facebook posts about roadside assistance in Chaparral, and I'm impressed by how you're staying visible during the cold weather. The post about Chaparral freezing but you're just warming up really stood out.
+Chaparral is freezing, but your team is warming up with 24/7 roadside assistance services. But I noticed you don't have your own website yet, which might make it harder for people to find you when they need help most.
 
-But I noticed you don't have your own website yet, which might be leaving some potential customers stuck in the snow - literally. Many people rely on search engines to find local businesses like yours, especially during emergencies.
+I sketched a page idea that could fit your business, with an emergency call-to-action, a list of services, and a map of your service area. https://sites.damianbasilio.dev/preview/jbs-towing-and-recovery-chaparral
 
-On a whim I pulled together a quick page concept from what you already post on Facebook. The idea includes an emergency call CTA, a service list, and a service area map.
+Let's discuss how a simple website could help you reach more customers in Chaparral. For local businesses like yours, I offer a flat fee for website development. Feel free to reply or give me a quick call to start the conversation.
 
-https://sites.damianbasilio.dev/preview/jbs-towing-and-recovery-chaparral
-
-This kind of site is a straightforward project with a flat project fee for local businesses. I'd love to discuss the details with you further - reply here or hop on a quick call if that's easier.
-
+Thanks,
 Damian Basilio
 Freelance Web Developer
 dam.basilio@gmail.com
@@ -25,7 +22,7 @@ dam.basilio@gmail.com
 
 | Field | Value |
 | ----- | ----- |
-| Email | laurag@jbscustoms.com (undefined) |
+| Email | laurag@jbscustoms.com (https://www.facebook.com/JBSTowingandRecovery/) |
 | Activity | Active Facebook page with content and 5 post caption(s) scraped |
 | Live URL | https://sites.damianbasilio.dev/preview/jbs-towing-and-recovery-chaparral |
 | Current site | https://www.facebook.com/JBSTowingandRecovery/ |

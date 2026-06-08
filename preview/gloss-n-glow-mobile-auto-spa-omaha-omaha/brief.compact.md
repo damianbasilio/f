@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/gloss-n-glow-mobile-auto-spa-omaha-omaha/
+https://sites.damianbasilio.dev/preview/gloss-n-glow-mobile-auto-spa-omaha-omaha

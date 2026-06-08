@@ -10,7 +10,7 @@ Your post about rainy days, muddy paws, and happy dogs caught my eye - it's clea
 I sketched out a homepage idea from what you post on Facebook, featuring a services overview section that highlights your daily dog adventures and a photo gallery showcasing the fun times you have with the furry friends. The goal is to make it easy for people to learn more and contact you.
 
 
-https://damianbasilio.github.io/f/preview/the-fluffy-bus-myrtle-beach/
+https://sites.damianbasilio.dev/preview/the-fluffy-bus-myrtle-beach
 
 
 If you'd like to discuss turning this idea into a simple website, I'd be happy to provide a flat project fee for local businesses. Let me know if you'd like to chat more about it or reply to this email for a quote.
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | TheFluffyBus@gmail.com (https://www.facebook.com/p/The-Fluffy-Bus-61569774014348/) |
 | Activity | Active Facebook page with content and 5 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/the-fluffy-bus-myrtle-beach/ |
+| Live URL | https://sites.damianbasilio.dev/preview/the-fluffy-bus-myrtle-beach |
 | Current site | https://www.facebook.com/p/The-Fluffy-Bus-61569774014348/ |

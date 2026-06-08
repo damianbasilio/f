@@ -84,7 +84,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/ValleyWaggs?mibextid=ZbWKwL
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T08:09:19.214Z
+- **Scraped:** 2026-06-07T08:17:11.665Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/ValleyWaggs?mibextid=ZbWKwL. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

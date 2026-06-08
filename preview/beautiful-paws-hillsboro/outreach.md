@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might be leaving potent
 
 I sketched up a simple homepage idea from your Facebook photos and posts, featuring a hero headline that highlights your professional pet care services in Hillsboro, a section showcasing your grooming services, and a photo gallery from your posts. I also included a clear call-to-action to book grooming services.
 
-https://damianbasilio.github.io/f/preview/beautiful-paws-hillsboro/
+https://sites.damianbasilio.dev/preview/beautiful-paws-hillsboro
 
 If you're interested in learning more about bringing your online presence up to date, I'd be happy to discuss a straightforward project with a flat fee for local businesses. Please reply or let's schedule a quick call to explore further.
 
@@ -28,5 +28,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | malonegso@gmail.com (https://www.facebook.com/Beautifulpaws13/) |
 | Activity | Active Facebook page with content and 2 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/beautiful-paws-hillsboro/ |
+| Live URL | https://sites.damianbasilio.dev/preview/beautiful-paws-hillsboro |
 | Current site | https://www.facebook.com/Beautifulpaws13/ |

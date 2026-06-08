@@ -31,4 +31,4 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup URL
 
-https://damianbasilio.github.io/f/preview/on-the-spot-mobile-mechanic-and-rv-specialist-llc-north-las-/
+https://sites.damianbasilio.dev/preview/on-the-spot-mobile-mechanic-and-rv-specialist-llc-north-las-

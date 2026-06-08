@@ -11,7 +11,7 @@ But I noticed you don't have your own website yet, which might mean some potenti
 
 On a whim I pulled together a quick page concept from what you already post on Facebook, featuring an emergency call CTA, service list, and service area map.
 
-https://damianbasilio.github.io/f/preview/alfords-auto-collision-monroe/
+https://sites.damianbasilio.dev/preview/alfords-auto-collision-monroe
 
 If you're interested in learning more about bringing your online presence up to speed, I'd love to discuss a straightforward project with a flat fee for local businesses. Reply or let's schedule a quick call to explore further.
 
@@ -27,5 +27,5 @@ dam.basilio@gmail.com
 | ----- | ----- |
 | Email | alfordsautocollision@yahoo.com (https://www.facebook.com/alfordsautocollision/) |
 | Activity | Active Facebook page with content and 2 post caption(s) scraped |
-| Live URL | https://damianbasilio.github.io/f/preview/alfords-auto-collision-monroe/ |
+| Live URL | https://sites.damianbasilio.dev/preview/alfords-auto-collision-monroe |
 | Current site | https://www.facebook.com/alfordsautocollision/ |

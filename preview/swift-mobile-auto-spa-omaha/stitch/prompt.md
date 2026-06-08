@@ -15,6 +15,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 - **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
 - Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
 - Every section should feel **designed**, not assembled from a component library.
+- Whole email should be 100 words or less.
 
 ---
 
@@ -105,7 +106,7 @@ Establish a clear type scale (display, h2, body, small) with intentional letter-
 Design as if you won a paid branding project: distinctive hero, memorable section rhythm, premium polish.
 Layout seed: **diagonal-cut** — interpret literally but creatively.
 You choose the full color palette and typography — there is nothing to extract from a website.
-They have 9 real Facebook photos — design hero and gallery for authentic local imagery.
+They have 10 real Facebook photos — design hero and gallery for authentic local imagery.
 
 **Layout archetype:** diagonal-cut
 Diagonal or angled section dividers (clip-path or skewed bands); hero with angled color block behind headline; dynamic but not chaotic.
@@ -115,6 +116,7 @@ Diagonal or angled section dividers (clip-path or skewed bands); hero with angle
 hero → credibility → services → about → gallery → visit → contact
 
 **Hero direction:**
+
 - **H1 (adapt closely):** This is a sign to get your car detailed this summer 🌞
 - **Subhead:** Swift Mobile Auto Spa. 137 likes. 🧼 Full service mobile auto detailing based in Omaha,…
 - **Primary CTA:** Contact us
@@ -149,7 +151,7 @@ There is **no existing website** and **nothing to extract**. Choose palette and 
 
 ### Photo inventory
 
-You will receive 9 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
+You will receive 10 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
 
 Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
@@ -204,3 +206,4 @@ Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery
 - Mockup banner placeholder at top: "Concept preview — not affiliated with Swift Mobile Auto Spa"
 
 ---
+

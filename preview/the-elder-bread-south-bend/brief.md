@@ -48,8 +48,8 @@ Email: theelderbread@gmail.com
 
 Recent posts from their Facebook page:
 1. The growing season is coming, and I am growing alongside it. 🌻
-2. HOURS : MON-FRI 7-6 • SAT-SUN 8-4 Food Menu: WED-SAT 11-2
-3. The Elder Bread is at The Elder Bread.
+2. The Elder Bread is at The Elder Bread.
+3. HOURS : MON-FRI 7-6 • SAT-SUN 8-4 Food Menu: WED-SAT 11-2
 - **Category:** Restaurant / food service
 - **Vertical:** Restaurant / food service
 
@@ -90,7 +90,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/theelderbread/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T08:12:27.361Z
+- **Scraped:** 2026-06-07T08:17:52.928Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/theelderbread/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
