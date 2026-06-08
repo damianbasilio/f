@@ -7,7 +7,13 @@ import fs from "node:fs";
 import path from "node:path";
 import { spawn } from "node:child_process";
 import { fileURLToPath } from "node:url";
-import { root } from "../lib/load-env.mjs";
+import { loadEnv, root } from "../lib/load-env.mjs";
+import {
+  requireDashboardAuthConfig,
+  createAuthMiddleware,
+  handleLogin,
+  handleLogout,
+} from "../lib/dashboard-auth.mjs";
 import {
   getQueueSummary,
   getCurrentReviewItem,
@@ -44,11 +50,24 @@ import { deleteLead, leadExists } from "../lib/delete-lead.mjs";
 import { isSlugSent } from "../lib/outreach-send.mjs";
 import { mockupsRoot } from "../lib/paths.mjs";
 
+loadEnv();
+requireDashboardAuthConfig();
+
 const app = express();
 const port = Number(process.env.PORT || 3456);
 const scriptsDir = path.dirname(fileURLToPath(import.meta.url));
 
+app.set("trust proxy", 1);
 app.use(express.json({ limit: "10mb" }));
+
+app.get("/login", (_req, res) => {
+  res.sendFile(path.join(root, "public", "login.html"));
+});
+app.post("/api/auth/login", handleLogin);
+app.post("/api/auth/logout", handleLogout);
+
+app.use(createAuthMiddleware());
+
 app.use(express.static(path.join(root, "public")));
 app.use("/preview", express.static(mockupsRoot()));
 app.get("/outreach-report-:id.md", (req, res) => {

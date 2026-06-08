@@ -52,6 +52,7 @@ Required keys:
 
 | Variable | Purpose |
 |----------|---------|
+| `DASHBOARD_PASSWORD` | Dashboard login (password only) |
 | `STITCH_API_KEY` | Mockup generation |
 | `GROQ_API_KEY` | Email drafts |
 | `GMAIL_USER` | SMTP send + reply matching |

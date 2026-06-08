@@ -2,6 +2,16 @@
  * Dashboard UI — scroll-safe polling.
  */
 
+async function apiFetch(url, opts = {}) {
+  const r = await fetch(url, { credentials: "same-origin", ...opts });
+  if (r.status === 401) {
+    const next = encodeURIComponent(window.location.pathname + window.location.search);
+    window.location.href = `/login?next=${next}`;
+    throw new Error("Unauthorized");
+  }
+  return r;
+}
+
 const POLL_LIVE_MS = 1500;
 const POLL_IDLE_MS = 4000;
 
@@ -159,7 +169,7 @@ async function handleRetryLead(slug, name, batchNum, { skipConfirm = false } = {
     return;
   }
   try {
-    const r = await fetch(`/api/leads/${encodeURIComponent(slug)}/retry`, {
+    const r = await apiFetch(`/api/leads/${encodeURIComponent(slug)}/retry`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ batchNum: batchNum || undefined }),
@@ -185,7 +195,7 @@ async function handleDeleteLead(slug, name) {
     return;
   }
   try {
-    const r = await fetch(`/api/leads/${encodeURIComponent(slug)}`, { method: "DELETE" });
+    const r = await apiFetch(`/api/leads/${encodeURIComponent(slug)}`, { method: "DELETE" });
     const raw = await r.text();
     let data = {};
     try {
@@ -756,7 +766,7 @@ function renderPreviewPanel(detail) {
 }
 
 async function loadReviewDetail(batchNum, slug) {
-  const r = await fetch(`/api/review/${encodeURIComponent(batchNum)}/${encodeURIComponent(slug)}`);
+  const r = await apiFetch(`/api/review/${encodeURIComponent(batchNum)}/${encodeURIComponent(slug)}`);
   if (!r.ok) return null;
   return r.json();
 }
@@ -810,7 +820,7 @@ function refreshMockupFrame(detail) {
 }
 
 async function refreshReview(workers) {
-  const inboxR = await fetch("/api/review/inbox", { cache: "no-store" });
+  const inboxR = await apiFetch("/api/review/inbox", { cache: "no-store" });
   if (!inboxR.ok) return;
   const inbox = await inboxR.json();
   await syncReviewFromSnapshot(
@@ -835,7 +845,7 @@ $("reviewWorkspace")?.addEventListener("click", async (e) => {
 
   if (action === "approve") {
     if (!confirm(`Approve and send email for ${slug}?`)) return;
-    const r = await fetch(`/api/batch/${batch}/review/approve`, {
+    const r = await apiFetch(`/api/batch/${batch}/review/approve`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ slug }),
@@ -850,7 +860,7 @@ $("reviewWorkspace")?.addEventListener("click", async (e) => {
   }
 
   if (action === "retry-send") {
-    const r = await fetch(`/api/batch/${batch}/review/retry-send`, {
+    const r = await apiFetch(`/api/batch/${batch}/review/retry-send`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ slug }),
@@ -865,7 +875,7 @@ $("reviewWorkspace")?.addEventListener("click", async (e) => {
   }
 
   if (action === "regen") {
-    const r = await fetch(`/api/batch/${batch}/review/regenerate`, {
+    const r = await apiFetch(`/api/batch/${batch}/review/regenerate`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ slug }),
@@ -882,7 +892,7 @@ $("reviewWorkspace")?.addEventListener("click", async (e) => {
   if (action === "rebuild") {
     if (!confirm("Rebuild mockup from Stitch? This creates a new design and re-drafts the email.")) return;
     btn.disabled = true;
-    const r = await fetch(`/api/review/${encodeURIComponent(batch)}/${encodeURIComponent(slug)}/rebuild-mockup`, {
+    const r = await apiFetch(`/api/review/${encodeURIComponent(batch)}/${encodeURIComponent(slug)}/rebuild-mockup`, {
       method: "POST",
     });
     const data = await r.json();
@@ -961,7 +971,7 @@ $("searchForm")?.addEventListener("submit", async (e) => {
     const body = { maxSearches: Number($("maxSearches").value) || 5 };
     const budget = $("serpBudget").value;
     if (budget) body.serpBudget = Number(budget);
-    const r = await fetch("/api/search/start", {
+    const r = await apiFetch("/api/search/start", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
@@ -983,7 +993,7 @@ $("searchForm")?.addEventListener("submit", async (e) => {
 
 async function tick() {
   try {
-    const r = await fetch("/api/snapshot", { cache: "no-store" });
+    const r = await apiFetch("/api/snapshot", { cache: "no-store" });
     if (!r.ok) throw new Error(String(r.status));
     await applySnapshot(await r.json());
   } catch {
@@ -1002,5 +1012,14 @@ function startPolling() {
   tick();
   pollTimer = setInterval(tick, pollInterval);
 }
+
+$("logoutBtn")?.addEventListener("click", async () => {
+  try {
+    await fetch("/api/auth/logout", { method: "POST", credentials: "same-origin" });
+  } catch {
+    /* redirect anyway */
+  }
+  window.location.href = "/login";
+});
 
 startPolling();

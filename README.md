@@ -30,7 +30,7 @@ npm run outreach:send -- --file data/batches/batch-<N>/approved.txt --send
 
 ```bash
 npm run server
-# → http://localhost:3456 — paste/upload JSON, run pipeline, approve send
+# → http://localhost:3456 — password-protected dashboard (set DASHBOARD_PASSWORD in .env)
 ```
 
 ## Commands
