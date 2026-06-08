@@ -1,14 +1,4 @@
-// Micro-interactions for mouse parallax on hero text
-        document.addEventListener('mousemove', (e) => {
-            const verticalText = document.querySelector('.text-vertical');
-            if (verticalText) {
-                const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-                const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-                verticalText.style.transform = `translate(calc(-10% + ${moveX}px), ${moveY}px)`;
-            }
-        });
-
-        // Simple smooth scroll behavior
+// Smooth scroll for nav links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -16,6 +6,29 @@
                     behavior: 'smooth'
                 });
             });
+        });
+
+        // Simple scroll observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.stagger-load').forEach(el => observer.observe(el));
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('shadow-sm', 'py-2');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('shadow-sm', 'py-2');
+                nav.classList.add('py-4');
+            }
         });
 
 (() => {

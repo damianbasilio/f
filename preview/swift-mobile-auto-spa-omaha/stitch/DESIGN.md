@@ -1,180 +1,167 @@
-I've designed a bespoke, editorial homepage for **Swift Mobile Auto Spa** that moves beyond the standard local business template. This design focuses on "Detailing as a Discipline," using a high-contrast visual identity to establish a premium, technical authority for the brand.
+I've designed a bespoke, editorial-grade homepage for **Swift Mobile Auto Spa** that moves away from generic local business templates to create a truly premium, memorable first impression.
 
-### Key Design Decisions:
-*   **Asymmetrical Hero:** I broke the traditional centered hero layout with a 40/60 split, using vertical, large-scale typography and a sharp diagonal image cut to create a sense of dynamic energy and "velocity."
-*   **Velocity Motif:** Thin, slanted teal lines are used throughout the page as a recurring visual motif, subtly suggesting speed and precision.
-*   **High-Density Technical Stats:** Instead of generic marketing copy, I've included a "System Parameters" section using monospaced fonts. This emphasizes the meticulous, lab-like approach to their mobile detailing process.
-*   **List-Based Services:** I replaced standard card grids with a sophisticated, numbered list that focuses on the "Primary Directives" of the business, using generous whitespace to give the premium typography room to breathe.
-*   **Midnight & Teal Palette:** The deep graphite background provides a "carbon fiber" feel, while the electric teal accents act as high-precision focal points for navigation and CTAs.
+### Design Rationale:
+*   **Visual Identity**: I established the "Midnight Velocity" theme—a high-contrast combination of Deep Charcoal and Electric Orange accents, framed by generous whitespace and "precision line" motifs (1px rules) that echo automotive technical drawings.
+*   **Editorial Typography**: Using **Syne** for bold, wide headings provides a sense of power and stability, while clean sans-serif body text ensures high-end readability.
+*   **Bespoke Layout**:
+    *   The **Hero** section uses asymmetric typography to emphasize the "Precision Comes To You" value proposition.
+    *   The **Services** tier uses high-density cards with specific Omaha-focused pricing to drive immediate action.
+    *   The **"Visit"** section integrates the requested map slot alongside a structured contact interface that captures vehicle details (Year, Make, Model), streamlining the quote process.
+*   **Interactive Polish**: I've included smooth-scroll navigation and a responsive mobile menu to ensure the premium experience translates across all devices.
 
-This layout is designed to feel less like a service listing and more like a high-end automotive editorial, positioning Swift as the elite choice for vehicle preservation.
-
-How does this editorial direction feel for the brand? We can dive deeper into the specific detailing packages or build out the "Standards" page next.
-
----
+The site is production-ready with semantic HTML5, utility-first CSS, and essential JavaScript for navigation and form validation UI.
 
 ---
-name: Velocity Editorial
+
+---
+name: Swift Mobile Auto Spa
 colors:
-  surface: '#131313'
-  surface-dim: '#131313'
-  surface-bright: '#393939'
-  surface-container-lowest: '#0e0e0e'
-  surface-container-low: '#1b1c1c'
-  surface-container: '#1f2020'
-  surface-container-high: '#2a2a2a'
-  surface-container-highest: '#353535'
-  on-surface: '#e4e2e1'
-  on-surface-variant: '#b9caca'
-  inverse-surface: '#e4e2e1'
-  inverse-on-surface: '#303030'
-  outline: '#849495'
-  outline-variant: '#3a494a'
-  surface-tint: '#00dce5'
-  primary: '#e9feff'
-  on-primary: '#003739'
-  primary-container: '#00f5ff'
-  on-primary-container: '#006c71'
-  inverse-primary: '#00696e'
-  secondary: '#c6c6c6'
-  on-secondary: '#2f3131'
-  secondary-container: '#454747'
-  on-secondary-container: '#b5b5b5'
-  tertiary: '#fdf9f9'
-  on-tertiary: '#313030'
-  tertiary-container: '#e0dddc'
-  on-tertiary-container: '#626161'
-  error: '#ffb4ab'
-  on-error: '#690005'
-  error-container: '#93000a'
-  on-error-container: '#ffdad6'
-  primary-fixed: '#63f7ff'
-  primary-fixed-dim: '#00dce5'
-  on-primary-fixed: '#002021'
-  on-primary-fixed-variant: '#004f53'
-  secondary-fixed: '#e2e2e2'
-  secondary-fixed-dim: '#c6c6c6'
-  on-secondary-fixed: '#1a1c1c'
-  on-secondary-fixed-variant: '#454747'
-  tertiary-fixed: '#e5e2e1'
-  tertiary-fixed-dim: '#c8c6c5'
-  on-tertiary-fixed: '#1c1b1b'
-  on-tertiary-fixed-variant: '#474646'
-  background: '#131313'
-  on-background: '#e4e2e1'
-  surface-variant: '#353535'
+  surface: '#f6faff'
+  surface-dim: '#d2dbe4'
+  surface-bright: '#f6faff'
+  surface-container-lowest: '#ffffff'
+  surface-container-low: '#ecf5fe'
+  surface-container: '#e6eff8'
+  surface-container-high: '#e0e9f2'
+  surface-container-highest: '#dbe4ed'
+  on-surface: '#141d23'
+  on-surface-variant: '#444748'
+  inverse-surface: '#293138'
+  inverse-on-surface: '#e9f2fb'
+  outline: '#747878'
+  outline-variant: '#c4c7c7'
+  surface-tint: '#5f5e5e'
+  primary: '#000000'
+  on-primary: '#ffffff'
+  primary-container: '#1c1b1b'
+  on-primary-container: '#858383'
+  inverse-primary: '#c8c6c5'
+  secondary: '#ab3600'
+  on-secondary: '#ffffff'
+  secondary-container: '#fe5e1e'
+  on-secondary-container: '#551600'
+  tertiary: '#000000'
+  on-tertiary: '#ffffff'
+  tertiary-container: '#191c1d'
+  on-tertiary-container: '#828485'
+  error: '#ba1a1a'
+  on-error: '#ffffff'
+  error-container: '#ffdad6'
+  on-error-container: '#93000a'
+  primary-fixed: '#e5e2e1'
+  primary-fixed-dim: '#c8c6c5'
+  on-primary-fixed: '#1c1b1b'
+  on-primary-fixed-variant: '#474646'
+  secondary-fixed: '#ffdbcf'
+  secondary-fixed-dim: '#ffb59c'
+  on-secondary-fixed: '#390c00'
+  on-secondary-fixed-variant: '#832700'
+  tertiary-fixed: '#e1e3e4'
+  tertiary-fixed-dim: '#c5c7c8'
+  on-tertiary-fixed: '#191c1d'
+  on-tertiary-fixed-variant: '#454748'
+  background: '#f6faff'
+  on-background: '#141d23'
+  surface-variant: '#dbe4ed'
 typography:
-  display-lg:
-    fontFamily: Archivo Narrow
-    fontSize: 72px
-    fontWeight: '700'
-    lineHeight: 64px
-    letterSpacing: -0.04em
   headline-xl:
-    fontFamily: Archivo Narrow
-    fontSize: 48px
-    fontWeight: '700'
-    lineHeight: 48px
-    letterSpacing: -0.02em
-  headline-xl-mobile:
-    fontFamily: Archivo Narrow
-    fontSize: 36px
-    fontWeight: '700'
-    lineHeight: 36px
+    fontFamily: Syne
+    fontSize: 64px
+    fontWeight: '800'
+    lineHeight: '1.1'
     letterSpacing: -0.02em
   headline-lg:
-    fontFamily: Archivo Narrow
+    fontFamily: Syne
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
+    letterSpacing: -0.01em
+  headline-lg-mobile:
+    fontFamily: Syne
     fontSize: 32px
-    fontWeight: '600'
-    lineHeight: 36px
-    letterSpacing: 0.01em
+    fontWeight: '700'
+    lineHeight: '1.2'
+  headline-md:
+    fontFamily: Syne
+    fontSize: 24px
+    fontWeight: '700'
+    lineHeight: '1.3'
   body-lg:
     fontFamily: Hanken Grotesk
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: 28px
+    lineHeight: '1.6'
   body-md:
     fontFamily: Hanken Grotesk
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: 24px
-  label-md:
-    fontFamily: JetBrains Mono
-    fontSize: 14px
-    fontWeight: '500'
-    lineHeight: 20px
-    letterSpacing: 0.1em
-  label-sm:
+    lineHeight: '1.5'
+  label-caps:
     fontFamily: JetBrains Mono
     fontSize: 12px
     fontWeight: '500'
-    lineHeight: 16px
+    lineHeight: '1'
+    letterSpacing: 0.1em
+  button:
+    fontFamily: Syne
+    fontSize: 14px
+    fontWeight: '700'
+    lineHeight: '1'
     letterSpacing: 0.05em
 spacing:
   unit: 4px
   gutter: 24px
-  margin-mobile: 16px
-  margin-desktop: 64px
-  velocity-angle: 15deg
+  margin: 32px
+  container-max: 1280px
+  section-padding: 80px
 ---
 
 ## Brand & Style
+The design system for this product is rooted in the "Modern Automotive Atelier" aesthetic. It moves away from common service industry tropes, favoring the precision and sophistication of luxury automotive engineering. The brand personality is high-end and meticulous, yet carries an underlying energetic pulse.
 
-This design system is built on a high-octane, premium editorial aesthetic tailored for the elite automotive detailing industry. It merges the precision of mechanical engineering with the sophistication of luxury publishing. The visual language is defined by high-contrast densities, sharp geometric precision, and a relentless sense of forward motion.
-
-The style is a hybrid of **Minimalism** and **High-Contrast Bold**. It utilizes heavy blacks and stark silvers to create a sense of exclusivity, while "velocity rules"—slanted, razor-thin decorative lines—inject energy and movement into a structured, magazine-like layout. The atmosphere is quiet but powerful, suggesting both the stillness of a showroom and the speed of a high-performance vehicle.
+The visual style is **Modern Minimalism** infused with **Technical Precision**. It utilizes heavy whitespace to evoke a sense of "clean," while employing rigid grid structures and fine 1px "precision lines" reminiscent of technical blueprints. The interface should feel like a high-end configurator—stable, authoritative, and expertly tuned.
 
 ## Colors
+The palette, "Midnight Velocity," focuses on extreme contrast to highlight precision.
 
-The palette is rooted in 'Midnight Graphite' to evoke the depth of premium automotive paint. 'Electric Teal' is used sparingly but aggressively for high-priority calls to action, status indicators, and movement motifs. 'Polished Silver' provides a crisp, metallic contrast for content, ensuring readability against the dark foundation.
-
-- **Midnight Graphite (#121212):** The bedrock of the system. Used for backgrounds and deep layering.
-- **Electric Teal (#00F5FF):** The "Ignition" color. Used for accents, underlines, and interactive states.
-- **Polished Silver (#E0E0E0):** The primary content color, providing a refined, readable contrast.
-- **Stealth Grey (#2A2A2A):** Used for subtle borders, input backgrounds, and secondary surfaces.
+- **Primary (Midnight):** #121212. Used for typography, deep-surfaces, and primary actions. It represents the road and carbon fiber.
+- **Secondary (High-Octane Orange):** #FF5F1F. Used sparingly for precision accents, active states, and critical calls to action. It represents speed and mechanical energy.
+- **Tertiary/Neutral (Slate & Cloud):** #F8F9FA. Used for large layout blocks and background sections to provide "air" and a sense of clinical cleanliness.
+- **Functional Greys:** Used for technical metadata and secondary information, maintaining the blueprint aesthetic.
 
 ## Typography
+The typography system balances the aggressive stability of a wide neo-grotesk with the functional clarity of a contemporary sans-serif.
 
-The typography strategy mirrors a premium car magazine. Headlines use **Archivo Narrow** in uppercase to emulate technical specifications and racing telemetry, emphasizing height and density. Body copy uses **Hanken Grotesk**, a sharp, contemporary sans-serif that balances readability with a modern edge.
+- **Headlines (Syne):** Bold and wide. Used to anchor the page with a sense of "speed-induced stability."
+- **Body (Hanken Grotesk):** Modern and sharp. It provides excellent legibility for service descriptions and technical details.
+- **Labels (JetBrains Mono):** Introduced for technical metadata, price points, and "blueprint" callouts to reinforce the automotive atelier theme.
 
-**JetBrains Mono** is introduced for labels and small metadata to reinforce the feeling of precision and "technical data." All display text should favor tight tracking and uppercase styling to maintain the editorial punch.
+Type scales are generous. Headlines should use tight tracking to feel cohesive, while mono labels use wider tracking for a "serialized" look.
 
 ## Layout & Spacing
+This design system utilizes a **Fixed Grid** model for desktop and a **Fluid** model for mobile.
 
-This design system employs a **Fixed Grid** model on desktop (12 columns) and a fluid 4-column model on mobile. The spacing philosophy is one of "Intentional Density"—avoiding excessive whitespace in favor of structured, tight groupings that feel like a high-end dashboard.
-
-- **Velocity Rules:** Use 1px slanted lines (15-degree angle) as dividers between sections or as decorative backgrounds behind headlines to suggest aerodynamic flow.
-- **Asymmetric Balance:** Use large imagery on one side of the grid balanced by dense technical data or labels on the other.
-- **Margins:** Generous outer margins (64px) focus the eye on the central "engine" of the content.
+- **Grid:** A 12-column grid is the standard for desktop, with elements strictly aligned to the grid lines. 
+- **The "Precision Line":** Layout sections are separated by 1px solid lines (#121212 at 10% opacity). These lines should extend to the edges of the screen or container, mimicking a technical drawing.
+- **Vertical Rhythm:** A base 4px unit governs all spacing. Section headers should have significant top-padding (80px+) to maintain an editorial, premium feel.
+- **Responsive:** On mobile, margins reduce to 16px, and the 12-column grid collapses to a 2-column or 1-column layout, but the 1px divider lines remain to preserve the brand identity.
 
 ## Elevation & Depth
+Elevation in this design system is conveyed through **Tonal Layers** and **Rigid Outlines** rather than soft shadows.
 
-Elevation is achieved through **Tonal Layering** rather than traditional shadows. Shadows, where used, should be extremely sharp and low-opacity, mimicking the hard shadows found in automotive studio photography.
-
-- **Base Level:** Midnight Graphite (#121212) solid background.
-- **Surface Level:** Stealth Grey (#2A2A2A) for containers or card backgrounds, often featuring a 1px border in Polished Silver at 10% opacity.
-- **Accent Depth:** Use Electric Teal as a "glow" or backdrop blur behind key assets (like a pristine car wheel) to create an ethereal, neon-lit showroom effect.
-- **Overlays:** Semi-transparent Midnight Graphite overlays (80% opacity) are used on top of imagery to ensure typography remains legible and high-contrast.
+- **Flat Hierachy:** Surface levels are defined by color shifts (e.g., #FFFFFF background to #F8F9FA cards).
+- **No Soft Shadows:** Avoid traditional box-shadows. Depth is created by "stacking" elements with 1px borders.
+- **High-Contrast Overlays:** When an element must float (like a modal or a floating action button), use a solid #121212 background with an orange accent border, or a stark white surface with a heavy 2px black border to create "Hard Elevation."
 
 ## Shapes
+The shape language is strictly **Sharp (0px roundedness)**.
 
-The shape language is strictly **Sharp (0)**. To reflect the precision of automotive tools and the lines of a chassis, all buttons, cards, and input fields must have square corners. Softness is rejected in favor of industrial rigor.
-
-Small 45-degree corner cuts (chamfers) may be used on primary action buttons or decorative containers to further emphasize the mechanical "machined" aesthetic.
+The use of 90-degree angles reinforces the architectural and technical nature of the brand. This applies to buttons, input fields, cards, and image containers. The only exception to the "sharp" rule is the use of perfect circles for small utility icons or status indicators, though these should still be contained within square hit areas.
 
 ## Components
 
-### Buttons
-Primary buttons are solid Electric Teal with black, uppercase JetBrains Mono text. They feature a sharp 0px radius. On hover, the button should shift to a Polished Silver background with a "velocity rule" sliding across the surface.
-
-### Chips & Tags
-Technical tags (e.g., "Ceramic Coating," "Stage 1") should appear in JetBrains Mono, enclosed in a 1px Stealth Grey border. These resemble technical spec labels found in an engine bay.
-
-### Inputs
-Fields are transparent with a 1px bottom-border only in Polished Silver. When active, the border turns Electric Teal and a small slanted "velocity rule" appears at the right edge of the input.
-
-### Cards
-Cards are defined by their content density. They feature high-contrast close-up imagery as the background, a dark gradient overlay at the bottom, and sharp silver typography. No rounded corners are permitted.
-
-### Imagery
-Images must be desaturated with increased contrast. Focus on textures: the metallic grain of a rim, the fibers of carbon, or the tension of water beading on a hood. Cool-toned filters are preferred to keep the "Electric Teal" accents feeling integrated.
+- **Buttons:** Primary buttons are solid #121212 with white text, using the Syne-Bold typeface in all caps. Secondary buttons are 1px outlined rectangles. The "Precision" action uses a solid #FF5F1F background with a black label for high-impact conversion.
+- **Service Cards:** Structured with a 1px border. The top section contains a JetBrains Mono label (e.g., "STAGE 01"), followed by a Syne headline. Content is separated by 1px horizontal rules.
+- **Input Fields:** Bottom-border only, or a full rectangular border with 0px radius. Use JetBrains Mono for placeholder text to maintain the "technical form" look.
+- **Chips/Status Tags:** Square-edged tags with a subtle #F8F9FA fill and a 1px border. Text is JetBrains Mono, 10px, all caps.
+- **The "Detailer's Ruler":** A unique component—a vertical or horizontal 1px line with incremental tick marks (like a ruler) used as a decorative separator or to indicate progress in a multi-step booking flow.
