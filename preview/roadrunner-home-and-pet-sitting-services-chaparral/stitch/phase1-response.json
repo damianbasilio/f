@@ -1,0 +1,538 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "High Desert Editorial",
+          "styleGuidelines": "## Brand & Style\nThis design system embodies a \"High-Desert Editorial\" aesthetic—a blend of sophisticated home management and the warm, grounded reliability of the Southwest. It rejects the over-saturated, cartoonish tropes of the pet-care industry in favor of a quiet luxury that resonates with homeowners who view their pets and properties as precious investments.\n\nThe visual narrative is defined by:\n- **Sophisticated Warmth:** Using earth-toned palettes to evoke a sense of calm and environmental harmony.\n- **Intentional Restraint:** Utilizing generous whitespace and a \"less is more\" philosophy to convey professional competence and clarity.\n- **Editorial Precision:** High-contrast typography and thin horizontal \"horizon\" rules that mimic the layout of a premium lifestyle magazine.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain the integrity of editorial compositions, shifting to a fluid model on mobile devices.\n\n- **The Horizon Motif:** Every major content section should be separated by a 1px `Sage Brush` horizontal rule. These rules should have generous padding above and below (minimum 40px) to maintain the sense of \"vast desert space.\"\n- **Desktop (12 columns):** Max-width of 1280px with 40px outer margins. Elements should be aligned with significant \"negative space\" columns to prevent clutter.\n- **Mobile (4 columns):** 20px margins. Content should stack vertically, but the 1px horizontal rules remain a primary separator to maintain brand identity.\n- **Vertical Rhythm:** A strict 8px baseline grid ensures that while whitespace is generous, it remains mathematically balanced.\n\n## Elevation & Depth\nIn keeping with the flat, desert-inspired aesthetic, this design system avoids heavy shadows or artificial depth.\n\n- **Tonal Layering:** Depth is achieved through color stacking rather than shadows. Cards and containers use a slightly lighter or darker tint of `Sandstone` or a semi-transparent `Sage Brush` wash.\n- **Soft Diffusion:** If elevation is required for functional components (like modals), use an extremely diffused, low-opacity shadow (#2D3132 at 5% opacity) with a large 32px blur to mimic natural, ambient sunlight.\n- **Low-Contrast Outlines:** Use 1px borders in `Sage Brush` at 30% opacity to define boundaries without breaking the \"horizon\" flow of the page.\n\n## Components\nComponents are designed to look like elements of a high-end estate management portal.\n\n- **Buttons:** Primary buttons use a solid `Deep Terracotta` fill with white text. Secondary buttons use a `Midnight Slate` outline with `Midnight Slate` text. No gradients.\n- **Cards:** Cards should have no border-radius on the top-left and bottom-right corners occasionally to create a custom \"notched\" editorial look, or use standard `rounded-lg` with a `Sandstone` fill that is 5% darker than the background.\n- **Input Fields:** Use a simple 1px bottom-border (Midnight Slate) with a `Sandstone` fill. Avoid full box-outlines to keep the \"horizon\" feel.\n- **Horizon Rules:** A core component. Thin 1px lines in `Sage Brush` or `Midnight Slate` (at 10% opacity) used to lead the eye across the page.\n- **Interactive Chips:** Small, `rounded-md` boxes in `Sage Brush` with dark slate text, used for service categories (e.g., \"Overnight Stay,\" \"Garden Care\").\n- **Photography:** Images should feature high-desert landscapes, minimalist home interiors, and candid, high-end pet photography with natural lighting. Avoid \"stock-photo\" smiles.",
+          "theme": {
+            "bodyFont": "DM_SANS",
+            "bodyFontFamily": "Dm Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#c25a3d",
+            "designMd": "---\nname: High Desert Editorial\ncolors:\n  surface: '#f7fafb'\n  surface-dim: '#d7dadb'\n  surface-bright: '#f7fafb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f1f4f5'\n  surface-container: '#ebeeef'\n  surface-container-high: '#e6e9ea'\n  surface-container-highest: '#e0e3e4'\n  on-surface: '#181c1d'\n  on-surface-variant: '#56423d'\n  inverse-surface: '#2d3132'\n  inverse-on-surface: '#eef1f2'\n  outline: '#89726c'\n  outline-variant: '#ddc0b9'\n  surface-tint: '#9f4026'\n  primary: '#9c3e23'\n  on-primary: '#ffffff'\n  primary-container: '#bc5639'\n  on-primary-container: '#fffbff'\n  inverse-primary: '#ffb5a1'\n  secondary: '#556252'\n  on-secondary: '#ffffff'\n  secondary-container: '#d9e7d2'\n  on-secondary-container: '#5b6858'\n  tertiary: '#5e5c57'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#77746f'\n  on-tertiary-container: '#fffbff'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbd1'\n  primary-fixed-dim: '#ffb5a1'\n  on-primary-fixed: '#3b0900'\n  on-primary-fixed-variant: '#802a11'\n  secondary-fixed: '#d9e7d2'\n  secondary-fixed-dim: '#bdcab7'\n  on-secondary-fixed: '#131e12'\n  on-secondary-fixed-variant: '#3e4a3b'\n  tertiary-fixed: '#e6e2dc'\n  tertiary-fixed-dim: '#cac6c0'\n  on-tertiary-fixed: '#1d1b18'\n  on-tertiary-fixed-variant: '#494642'\n  background: '#f7fafb'\n  on-background: '#181c1d'\n  surface-variant: '#e0e3e4'\ntypography:\n  display:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.08em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 80px\n  container-padding-desktop: 40px\n  container-padding-mobile: 20px\n  gutter: 24px\n  horizon-rule-weight: 1px\n---\n\n## Brand & Style\nThis design system embodies a \"High-Desert Editorial\" aesthetic—a blend of sophisticated home management and the warm, grounded reliability of the Southwest. It rejects the over-saturated, cartoonish tropes of the pet-care industry in favor of a quiet luxury that resonates with homeowners who view their pets and properties as precious investments.\n\nThe visual narrative is defined by:\n- **Sophisticated Warmth:** Using earth-toned palettes to evoke a sense of calm and environmental harmony.\n- **Intentional Restraint:** Utilizing generous whitespace and a \"less is more\" philosophy to convey professional competence and clarity.\n- **Editorial Precision:** High-contrast typography and thin horizontal \"horizon\" rules that mimic the layout of a premium lifestyle magazine.\n\n## Colors\nThe palette is a curated reflection of the high-desert landscape, balanced to provide high legibility and an upscale emotional response.\n\n- **Deep Terracotta (#C25A3D):** Our primary action color. It represents the warmth of the sun and the red earth, used for calls to action and key brand moments.\n- **Sage Brush (#8E9B89):** A stabilizing secondary color used for success states, thin rules, and subtle UI accents to evoke nature and reliability.\n- **Sandstone (#F4EFE9):** The primary background surface. It provides a warmer, more premium alternative to stark white, reducing eye strain and feeling more \"residential.\"\n- **Midnight Slate (#2D3132):** Used for primary typography and deep grounding elements. It ensures accessibility and provides the \"editorial\" weight required for high-contrast headers.\n\n## Typography\nThe typography strategy relies on a dramatic tension between the \"human\" touch of the serif and the \"functional\" clarity of the sans-serif.\n\n- **Headlines:** `Playfair Display` is used to establish an authoritative, editorial voice. Larger sizes should utilize tighter letter spacing to emphasize its high-contrast strokes.\n- **Body & UI:** `DM Sans` provides an airy, modern feel. Its low-contrast, geometric shapes ensure readability even on textured sandstone backgrounds.\n- **Utility:** Use `label-md` and `label-sm` in all-caps with increased letter spacing for navigation, small badges, and secondary \"horizon\" titles.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain the integrity of editorial compositions, shifting to a fluid model on mobile devices.\n\n- **The Horizon Motif:** Every major content section should be separated by a 1px `Sage Brush` horizontal rule. These rules should have generous padding above and below (minimum 40px) to maintain the sense of \"vast desert space.\"\n- **Desktop (12 columns):** Max-width of 1280px with 40px outer margins. Elements should be aligned with significant \"negative space\" columns to prevent clutter.\n- **Mobile (4 columns):** 20px margins. Content should stack vertically, but the 1px horizontal rules remain a primary separator to maintain brand identity.\n- **Vertical Rhythm:** A strict 8px baseline grid ensures that while whitespace is generous, it remains mathematically balanced.\n\n## Elevation & Depth\nIn keeping with the flat, desert-inspired aesthetic, this design system avoids heavy shadows or artificial depth.\n\n- **Tonal Layering:** Depth is achieved through color stacking rather than shadows. Cards and containers use a slightly lighter or darker tint of `Sandstone` or a semi-transparent `Sage Brush` wash.\n- **Soft Diffusion:** If elevation is required for functional components (like modals), use an extremely diffused, low-opacity shadow (#2D3132 at 5% opacity) with a large 32px blur to mimic natural, ambient sunlight.\n- **Low-Contrast Outlines:** Use 1px borders in `Sage Brush` at 30% opacity to define boundaries without breaking the \"horizon\" flow of the page.\n\n## Shapes\nShapes are inspired by weathered desert stones—organic but structured.\n\n- **Soft Radius:** The standard `rounded-md` (0.5rem) is applied to most interactive elements.\n- **Large Components:** Larger containers like image cards or testimonial blocks use `rounded-lg` (1rem) to emphasize the \"organic\" feel.\n- **Buttons:** Buttons should maintain a `rounded-md` shape rather than a pill shape to feel more \"architectural\" and less \"playful.\"\n\n## Components\nComponents are designed to look like elements of a high-end estate management portal.\n\n- **Buttons:** Primary buttons use a solid `Deep Terracotta` fill with white text. Secondary buttons use a `Midnight Slate` outline with `Midnight Slate` text. No gradients.\n- **Cards:** Cards should have no border-radius on the top-left and bottom-right corners occasionally to create a custom \"notched\" editorial look, or use standard `rounded-lg` with a `Sandstone` fill that is 5% darker than the background.\n- **Input Fields:** Use a simple 1px bottom-border (Midnight Slate) with a `Sandstone` fill. Avoid full box-outlines to keep the \"horizon\" feel.\n- **Horizon Rules:** A core component. Thin 1px lines in `Sage Brush` or `Midnight Slate` (at 10% opacity) used to lead the eye across the page.\n- **Interactive Chips:** Small, `rounded-md` boxes in `Sage Brush` with dark slate text, used for service categories (e.g., \"Overnight Stay,\" \"Garden Care\").\n- **Photography:** Images should feature high-desert landscapes, minimalist home interiors, and candid, high-end pet photography with natural lighting. Avoid \"stock-photo\" smiles.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "DM_SANS",
+            "labelFontFamily": "Dm Sans",
+            "namedColors": {
+              "background": "#f7fafb",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#eef1f2",
+              "inverse_primary": "#ffb5a1",
+              "inverse_surface": "#2d3132",
+              "on_background": "#181c1d",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#fffbff",
+              "on_primary_fixed": "#3b0900",
+              "on_primary_fixed_variant": "#802a11",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#5b6858",
+              "on_secondary_fixed": "#131e12",
+              "on_secondary_fixed_variant": "#3e4a3b",
+              "on_surface": "#181c1d",
+              "on_surface_variant": "#56423d",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#fffbff",
+              "on_tertiary_fixed": "#1d1b18",
+              "on_tertiary_fixed_variant": "#494642",
+              "outline": "#89726c",
+              "outline_variant": "#ddc0b9",
+              "primary": "#9c3e23",
+              "primary_container": "#bc5639",
+              "primary_fixed": "#ffdbd1",
+              "primary_fixed_dim": "#ffb5a1",
+              "secondary": "#556252",
+              "secondary_container": "#d9e7d2",
+              "secondary_fixed": "#d9e7d2",
+              "secondary_fixed_dim": "#bdcab7",
+              "surface": "#f7fafb",
+              "surface_bright": "#f7fafb",
+              "surface_container": "#ebeeef",
+              "surface_container_high": "#e6e9ea",
+              "surface_container_highest": "#e0e3e4",
+              "surface_container_low": "#f1f4f5",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#d7dadb",
+              "surface_tint": "#9f4026",
+              "surface_variant": "#e0e3e4",
+              "tertiary": "#5e5c57",
+              "tertiary_container": "#77746f",
+              "tertiary_fixed": "#e6e2dc",
+              "tertiary_fixed_dim": "#cac6c0"
+            },
+            "overrideNeutralColor": "#2d3132",
+            "overridePrimaryColor": "#c25a3d",
+            "overrideSecondaryColor": "#8e9b89",
+            "overrideTertiaryColor": "#f4efe9",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "base": "8px",
+              "container-padding-desktop": "40px",
+              "container-padding-mobile": "20px",
+              "gutter": "24px",
+              "horizon-rule-weight": "1px",
+              "section-gap": "80px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "label-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.2"
+              },
+              "label-sm": {
+                "fontFamily": "DM Sans",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.08em",
+                "lineHeight": "1.2"
+              }
+            }
+          }
+        },
+        "name": "assets/bec352f2bfe745ae8d65f250a01e60a4",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "430f9ee206114056a051c41fdd4060b9",
+            "name": "projects/17403648014764359240/screens/430f9ee206114056a051c41fdd4060b9",
+            "prompt": "Professional, high-end editorial photography of a modern, sun-drenched living room in Las Cruces, New Mexico. A well-groomed Golden Retriever sits calmly by a large window overlooking a desert landscape. Soft natural light, premium interior design, sage and terracotta accents. High-quality architecture photography style.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsRDqLcKS0KZEDZcmFRN_kj-uNS2CuTi9ccYtu-saPlGGTYzZp5rIuc68bCTDXCInPM6teTYXoETffExZ6uUAl3YCqtlFZ1dW8Vzg9s20cHpiysF6gZ-4YivFyQt1kT_GgCl28Rv8frB2__AzgjCQQJfVOC0jeG-gmg7yVzuSTUj8W28exdawlPp8VzUP3ewu-ip8H7fUx2TtLa4q5q42QEh2c56f6e5cMFBdEzL-mlUB9fObGZYhI6K583",
+              "name": "projects/17403648014764359240/files/baa16eddb27047b0a211df55c4746ba0"
+            },
+            "theme": {},
+            "title": "Professional, high-end editorial photography of a modern, sun-drenched living room in Las Cruces, New Mexico. A well-groomed Golden Retriever sits calmly by a large window overlooking a desert landscape. Soft natural light, premium interior design, sage and terracotta accents. High-quality architecture photography style.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "60",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FhZmNkY2FhM2ZkNzQ5OTZiZmRjYjQ4OGNiMzMwM2I0EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQwMzY0ODAxNDc2NDM1OTI0MA&filename=&opi=96797242",
+              "mimeType": "image/svg+xml",
+              "name": "projects/17403648014764359240/files/d5168edc91f9476b8b9b8c91ef2bce62"
+            },
+            "id": "bc64cac514d54bc398de13b178ca817d",
+            "name": "projects/17403648014764359240/screens/bc64cac514d54bc398de13b178ca817d",
+            "prompt": "A minimalist, sophisticated wordmark for 'Roadrunner' using high-contrast serif typography. A thin, elegant horizontal line suggests a desert horizon, with a subtle, stylized abstract roadrunner silhouette integrated into the line. Color: Midnight Slate.. Brand logo",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "displayMode": "SVG",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsvtLQpj9uX-X1ByiuJ50zNi4XpGNwDFdqfc0DSlWCxRW0FVw25uJ9wNyDgengpsJ8ngLA3au68qtmzQP-LPiWNuWKJkIypbqkwqpNFGsFi67N7WcQ8dJ5OCYw2ovFWY92urs53csRhtQ8E6ZGRLZ9ORyTRnYRtw0CA-TAfKXpJYweiiwLZjdKkbagqMU2CKc0pQyqSJLyypbhwvQqNCvG7QE77hFCkEbArsM5UK8fjZvPTEiYyFQ3IsFS9",
+              "name": "projects/17403648014764359240/files/6cddfdb627af439291eb8efb775f13c4"
+            },
+            "theme": {},
+            "title": "Roadrunner Brand Mark",
+            "width": "240"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "db182a364a7445da89aebbf361c7d0bc",
+            "name": "projects/17403648014764359240/screens/db182a364a7445da89aebbf361c7d0bc",
+            "prompt": "A close-up, warm lifestyle photo of a professional pet sitter's hand gently petting a content tabby cat on a velvet sofa. Soft focus, warm desert morning light, high-end residential feel. Deep slate and sandstone tones.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvPNJbhEcvyi-C3_GOAMUML6cEoFy4-80_mIn3MBIJWjE17FyeR9Iz6Hoij5Wk4_0PmiLQe4BWz_3jRLZBSySeZ1SfB7nmcuX6NYUhk7AbbzEwI-1-B5rDHfoZ9ht1sMuU6NkdtTctuCDm4MsqzlHtKjbWVYyTyp4L_u972A1Jk5coHvmNWMSU0OocHlupLev8zQroU38l75yaYgT3CcHsMbqtszzKf11HX-t62iE_MBkWqpdPx2RdMYuaK",
+              "name": "projects/17403648014764359240/files/e8a08db24c544a59aec86a166990aba0"
+            },
+            "theme": {},
+            "title": "A close-up, warm lifestyle photo of a professional pet sitter's hand gently petting a content tabby cat on a velvet sofa. Soft focus, warm desert morning light, high-end residential feel. Deep slate and sandstone tones.",
+            "width": "1200"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "High Desert Editorial",
+                "styleGuidelines": "## Brand & Style\nThis design system embodies a \"High-Desert Editorial\" aesthetic—a blend of sophisticated home management and the warm, grounded reliability of the Southwest. It rejects the over-saturated, cartoonish tropes of the pet-care industry in favor of a quiet luxury that resonates with homeowners who view their pets and properties as precious investments.\n\nThe visual narrative is defined by:\n- **Sophisticated Warmth:** Using earth-toned palettes to evoke a sense of calm and environmental harmony.\n- **Intentional Restraint:** Utilizing generous whitespace and a \"less is more\" philosophy to convey professional competence and clarity.\n- **Editorial Precision:** High-contrast typography and thin horizontal \"horizon\" rules that mimic the layout of a premium lifestyle magazine.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain the integrity of editorial compositions, shifting to a fluid model on mobile devices.\n\n- **The Horizon Motif:** Every major content section should be separated by a 1px `Sage Brush` horizontal rule. These rules should have generous padding above and below (minimum 40px) to maintain the sense of \"vast desert space.\"\n- **Desktop (12 columns):** Max-width of 1280px with 40px outer margins. Elements should be aligned with significant \"negative space\" columns to prevent clutter.\n- **Mobile (4 columns):** 20px margins. Content should stack vertically, but the 1px horizontal rules remain a primary separator to maintain brand identity.\n- **Vertical Rhythm:** A strict 8px baseline grid ensures that while whitespace is generous, it remains mathematically balanced.\n\n## Elevation & Depth\nIn keeping with the flat, desert-inspired aesthetic, this design system avoids heavy shadows or artificial depth.\n\n- **Tonal Layering:** Depth is achieved through color stacking rather than shadows. Cards and containers use a slightly lighter or darker tint of `Sandstone` or a semi-transparent `Sage Brush` wash.\n- **Soft Diffusion:** If elevation is required for functional components (like modals), use an extremely diffused, low-opacity shadow (#2D3132 at 5% opacity) with a large 32px blur to mimic natural, ambient sunlight.\n- **Low-Contrast Outlines:** Use 1px borders in `Sage Brush` at 30% opacity to define boundaries without breaking the \"horizon\" flow of the page.\n\n## Components\nComponents are designed to look like elements of a high-end estate management portal.\n\n- **Buttons:** Primary buttons use a solid `Deep Terracotta` fill with white text. Secondary buttons use a `Midnight Slate` outline with `Midnight Slate` text. No gradients.\n- **Cards:** Cards should have no border-radius on the top-left and bottom-right corners occasionally to create a custom \"notched\" editorial look, or use standard `rounded-lg` with a `Sandstone` fill that is 5% darker than the background.\n- **Input Fields:** Use a simple 1px bottom-border (Midnight Slate) with a `Sandstone` fill. Avoid full box-outlines to keep the \"horizon\" feel.\n- **Horizon Rules:** A core component. Thin 1px lines in `Sage Brush` or `Midnight Slate` (at 10% opacity) used to lead the eye across the page.\n- **Interactive Chips:** Small, `rounded-md` boxes in `Sage Brush` with dark slate text, used for service categories (e.g., \"Overnight Stay,\" \"Garden Care\").\n- **Photography:** Images should feature high-desert landscapes, minimalist home interiors, and candid, high-end pet photography with natural lighting. Avoid \"stock-photo\" smiles.",
+                "theme": {
+                  "bodyFont": "DM_SANS",
+                  "bodyFontFamily": "Dm Sans",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#c25a3d",
+                  "designMd": "---\nname: High Desert Editorial\ncolors:\n  surface: '#f7fafb'\n  surface-dim: '#d7dadb'\n  surface-bright: '#f7fafb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f1f4f5'\n  surface-container: '#ebeeef'\n  surface-container-high: '#e6e9ea'\n  surface-container-highest: '#e0e3e4'\n  on-surface: '#181c1d'\n  on-surface-variant: '#56423d'\n  inverse-surface: '#2d3132'\n  inverse-on-surface: '#eef1f2'\n  outline: '#89726c'\n  outline-variant: '#ddc0b9'\n  surface-tint: '#9f4026'\n  primary: '#9c3e23'\n  on-primary: '#ffffff'\n  primary-container: '#bc5639'\n  on-primary-container: '#fffbff'\n  inverse-primary: '#ffb5a1'\n  secondary: '#556252'\n  on-secondary: '#ffffff'\n  secondary-container: '#d9e7d2'\n  on-secondary-container: '#5b6858'\n  tertiary: '#5e5c57'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#77746f'\n  on-tertiary-container: '#fffbff'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbd1'\n  primary-fixed-dim: '#ffb5a1'\n  on-primary-fixed: '#3b0900'\n  on-primary-fixed-variant: '#802a11'\n  secondary-fixed: '#d9e7d2'\n  secondary-fixed-dim: '#bdcab7'\n  on-secondary-fixed: '#131e12'\n  on-secondary-fixed-variant: '#3e4a3b'\n  tertiary-fixed: '#e6e2dc'\n  tertiary-fixed-dim: '#cac6c0'\n  on-tertiary-fixed: '#1d1b18'\n  on-tertiary-fixed-variant: '#494642'\n  background: '#f7fafb'\n  on-background: '#181c1d'\n  surface-variant: '#e0e3e4'\ntypography:\n  display:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.08em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 80px\n  container-padding-desktop: 40px\n  container-padding-mobile: 20px\n  gutter: 24px\n  horizon-rule-weight: 1px\n---\n\n## Brand & Style\nThis design system embodies a \"High-Desert Editorial\" aesthetic—a blend of sophisticated home management and the warm, grounded reliability of the Southwest. It rejects the over-saturated, cartoonish tropes of the pet-care industry in favor of a quiet luxury that resonates with homeowners who view their pets and properties as precious investments.\n\nThe visual narrative is defined by:\n- **Sophisticated Warmth:** Using earth-toned palettes to evoke a sense of calm and environmental harmony.\n- **Intentional Restraint:** Utilizing generous whitespace and a \"less is more\" philosophy to convey professional competence and clarity.\n- **Editorial Precision:** High-contrast typography and thin horizontal \"horizon\" rules that mimic the layout of a premium lifestyle magazine.\n\n## Colors\nThe palette is a curated reflection of the high-desert landscape, balanced to provide high legibility and an upscale emotional response.\n\n- **Deep Terracotta (#C25A3D):** Our primary action color. It represents the warmth of the sun and the red earth, used for calls to action and key brand moments.\n- **Sage Brush (#8E9B89):** A stabilizing secondary color used for success states, thin rules, and subtle UI accents to evoke nature and reliability.\n- **Sandstone (#F4EFE9):** The primary background surface. It provides a warmer, more premium alternative to stark white, reducing eye strain and feeling more \"residential.\"\n- **Midnight Slate (#2D3132):** Used for primary typography and deep grounding elements. It ensures accessibility and provides the \"editorial\" weight required for high-contrast headers.\n\n## Typography\nThe typography strategy relies on a dramatic tension between the \"human\" touch of the serif and the \"functional\" clarity of the sans-serif.\n\n- **Headlines:** `Playfair Display` is used to establish an authoritative, editorial voice. Larger sizes should utilize tighter letter spacing to emphasize its high-contrast strokes.\n- **Body & UI:** `DM Sans` provides an airy, modern feel. Its low-contrast, geometric shapes ensure readability even on textured sandstone backgrounds.\n- **Utility:** Use `label-md` and `label-sm` in all-caps with increased letter spacing for navigation, small badges, and secondary \"horizon\" titles.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain the integrity of editorial compositions, shifting to a fluid model on mobile devices.\n\n- **The Horizon Motif:** Every major content section should be separated by a 1px `Sage Brush` horizontal rule. These rules should have generous padding above and below (minimum 40px) to maintain the sense of \"vast desert space.\"\n- **Desktop (12 columns):** Max-width of 1280px with 40px outer margins. Elements should be aligned with significant \"negative space\" columns to prevent clutter.\n- **Mobile (4 columns):** 20px margins. Content should stack vertically, but the 1px horizontal rules remain a primary separator to maintain brand identity.\n- **Vertical Rhythm:** A strict 8px baseline grid ensures that while whitespace is generous, it remains mathematically balanced.\n\n## Elevation & Depth\nIn keeping with the flat, desert-inspired aesthetic, this design system avoids heavy shadows or artificial depth.\n\n- **Tonal Layering:** Depth is achieved through color stacking rather than shadows. Cards and containers use a slightly lighter or darker tint of `Sandstone` or a semi-transparent `Sage Brush` wash.\n- **Soft Diffusion:** If elevation is required for functional components (like modals), use an extremely diffused, low-opacity shadow (#2D3132 at 5% opacity) with a large 32px blur to mimic natural, ambient sunlight.\n- **Low-Contrast Outlines:** Use 1px borders in `Sage Brush` at 30% opacity to define boundaries without breaking the \"horizon\" flow of the page.\n\n## Shapes\nShapes are inspired by weathered desert stones—organic but structured.\n\n- **Soft Radius:** The standard `rounded-md` (0.5rem) is applied to most interactive elements.\n- **Large Components:** Larger containers like image cards or testimonial blocks use `rounded-lg` (1rem) to emphasize the \"organic\" feel.\n- **Buttons:** Buttons should maintain a `rounded-md` shape rather than a pill shape to feel more \"architectural\" and less \"playful.\"\n\n## Components\nComponents are designed to look like elements of a high-end estate management portal.\n\n- **Buttons:** Primary buttons use a solid `Deep Terracotta` fill with white text. Secondary buttons use a `Midnight Slate` outline with `Midnight Slate` text. No gradients.\n- **Cards:** Cards should have no border-radius on the top-left and bottom-right corners occasionally to create a custom \"notched\" editorial look, or use standard `rounded-lg` with a `Sandstone` fill that is 5% darker than the background.\n- **Input Fields:** Use a simple 1px bottom-border (Midnight Slate) with a `Sandstone` fill. Avoid full box-outlines to keep the \"horizon\" feel.\n- **Horizon Rules:** A core component. Thin 1px lines in `Sage Brush` or `Midnight Slate` (at 10% opacity) used to lead the eye across the page.\n- **Interactive Chips:** Small, `rounded-md` boxes in `Sage Brush` with dark slate text, used for service categories (e.g., \"Overnight Stay,\" \"Garden Care\").\n- **Photography:** Images should feature high-desert landscapes, minimalist home interiors, and candid, high-end pet photography with natural lighting. Avoid \"stock-photo\" smiles.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "DM_SANS",
+                  "labelFontFamily": "Dm Sans",
+                  "namedColors": {
+                    "background": "#f7fafb",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#eef1f2",
+                    "inverse_primary": "#ffb5a1",
+                    "inverse_surface": "#2d3132",
+                    "on_background": "#181c1d",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#fffbff",
+                    "on_primary_fixed": "#3b0900",
+                    "on_primary_fixed_variant": "#802a11",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#5b6858",
+                    "on_secondary_fixed": "#131e12",
+                    "on_secondary_fixed_variant": "#3e4a3b",
+                    "on_surface": "#181c1d",
+                    "on_surface_variant": "#56423d",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#fffbff",
+                    "on_tertiary_fixed": "#1d1b18",
+                    "on_tertiary_fixed_variant": "#494642",
+                    "outline": "#89726c",
+                    "outline_variant": "#ddc0b9",
+                    "primary": "#9c3e23",
+                    "primary_container": "#bc5639",
+                    "primary_fixed": "#ffdbd1",
+                    "primary_fixed_dim": "#ffb5a1",
+                    "secondary": "#556252",
+                    "secondary_container": "#d9e7d2",
+                    "secondary_fixed": "#d9e7d2",
+                    "secondary_fixed_dim": "#bdcab7",
+                    "surface": "#f7fafb",
+                    "surface_bright": "#f7fafb",
+                    "surface_container": "#ebeeef",
+                    "surface_container_high": "#e6e9ea",
+                    "surface_container_highest": "#e0e3e4",
+                    "surface_container_low": "#f1f4f5",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#d7dadb",
+                    "surface_tint": "#9f4026",
+                    "surface_variant": "#e0e3e4",
+                    "tertiary": "#5e5c57",
+                    "tertiary_container": "#77746f",
+                    "tertiary_fixed": "#e6e2dc",
+                    "tertiary_fixed_dim": "#cac6c0"
+                  },
+                  "overrideNeutralColor": "#2d3132",
+                  "overridePrimaryColor": "#c25a3d",
+                  "overrideSecondaryColor": "#8e9b89",
+                  "overrideTertiaryColor": "#f4efe9",
+                  "roundness": "ROUND_EIGHT",
+                  "spacing": {
+                    "base": "8px",
+                    "container-padding-desktop": "40px",
+                    "container-padding-mobile": "20px",
+                    "gutter": "24px",
+                    "horizon-rule-weight": "1px",
+                    "section-gap": "80px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.4"
+                    },
+                    "label-md": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.2"
+                    },
+                    "label-sm": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.08em",
+                      "lineHeight": "1.2"
+                    }
+                  }
+                }
+              },
+              "name": "assets/bec352f2bfe745ae8d65f250a01e60a4",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10970",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzc1NTU0MmI3MjBkODQyZTliNjRiZGU0Y2VjNzAyZTEzEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzQwMzY0ODAxNDc2NDM1OTI0MA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/17403648014764359240/files/1eb211ce9ea441afaad414d8422f2370"
+            },
+            "id": "c157fa2922ad4d619ab5f904eecfb3e6",
+            "name": "projects/17403648014764359240/screens/c157fa2922ad4d619ab5f904eecfb3e6",
+            "prompt": "Create a bespoke, production-ready landing page for 'Roadrunner Home and Pet Sitting Services'. \n\n### Brand & Visual Identity\n- Business: Roadrunner Home and Pet Sitting Services\n- Logo: {{DATA:IMAGE:IMAGE_1}}\n- Aesthetic: 'High Desert Editorial'. Sophisticated, warm, and professional. \n- Palette: Deep Terracotta, Sage, Sandstone, and Midnight Slate.\n- Typography: Playfair Display for headlines, Inter for body.\n- Visual Motif: Use thin horizontal rules (terracotta) to separate sections and create a desert horizon feel. Use generous whitespace.\n\n### Structure & Content\n1. **Header**: Navigation (Services, About, Location, Contact) and (575) 639-4007 button.\n2. **Hero**: Cinematic full-width layout using {{DATA:IMAGE:IMAGE_3}}. Headline: \"High-Desert Living, Refined.\" Subheadline: \"Professional home management and pet care for the discerning resident of Las Cruces and Chaparral.\" Primary CTA: \"View Our Services\".\n3. **Credibility**: A minimalist marquee or grid mentioning \"Licensed, Bonded, & Insured,\" \"Serving Las Cruces since [Year],\" and \"Specializing in High-Value Estates.\"\n4. **Services**: An asymmetrical layout (not a generic grid). \n   - 'House Sitting': Daily checks, mail, plants, and security for peace of mind.\n   - 'Pet Concierge': In-home care tailored to your pets' unique rhythms.\n   - 'Estate Management': Comprehensive oversight for seasonal residents.\n5. **About**: A warm section featuring {{DATA:IMAGE:IMAGE_4}}. Copy: \"Founded by Dale and Laura, Roadrunner was born from a simple belief: your home and your pets deserve more than just a check-in. They deserve a steward.\"\n6. **Visit**: Include the required map slot: `<div class=\"map-slot relative overflow-hidden min-h-[400px] bg-surface-container\" data-map-slot aria-label=\"Map\"></div>`.\n7. **Contact**: A refined form. Info: Daleandlaura@roadrunnerhome.com.\n8. **Footer**: Clean, elegant links and copyright info.\n\n### Technical\n- Responsive (375px+).\n- Smooth scroll navigation.\n- Real copy (no lorem ipsum).\n- Production-ready HTML/CSS/JS.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_1}}\n  Alt Text: Roadrunner Brand Mark\n  Description: A minimalist, sophisticated wordmark for 'Roadrunner' using high-contrast serif typography. A thin, elegant horizontal line suggests a desert horizon, with a subtle, stylized abstract roadrunner silhouette integrated into the line. Color: Midnight Slate.. Brand logo\n  Dimensions: 240x60\n  Aspect Ratio: 4.00\n  Colors: #2D3132, #C25A3D\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv3RD4Dn9U41lg2quLPuUaI9GAh5m9c8ZYhausnlBaK0fsw20PLxUuijlPsiZe2y9eD0ZMu501a1S7RrNyGuxPiIYZyIcX8BQ_b7ne7QqMbtKa3AUYcAnTIBEGLB8B0hRBdVfktwaoc9UKfegjl9XtII1ojHK-yR7nT80RyAs7rCrCvucoiY98z--XU4SEPqIstNxiOjP9x7u-9tJH8-rQ2s7kttf7p76_T8CmVrItAnDn9ZBSegWfxi5j3",
+              "name": "projects/17403648014764359240/files/ae6aa196415846869e4fe83ea40c505c"
+            },
+            "theme": {
+              "bodyFont": "DM_SANS",
+              "bodyFontFamily": "Dm Sans",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#c25a3d",
+              "designMd": "---\nname: High Desert Editorial\ncolors:\n  surface: '#f7fafb'\n  surface-dim: '#d7dadb'\n  surface-bright: '#f7fafb'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f1f4f5'\n  surface-container: '#ebeeef'\n  surface-container-high: '#e6e9ea'\n  surface-container-highest: '#e0e3e4'\n  on-surface: '#181c1d'\n  on-surface-variant: '#56423d'\n  inverse-surface: '#2d3132'\n  inverse-on-surface: '#eef1f2'\n  outline: '#89726c'\n  outline-variant: '#ddc0b9'\n  surface-tint: '#9f4026'\n  primary: '#9c3e23'\n  on-primary: '#ffffff'\n  primary-container: '#bc5639'\n  on-primary-container: '#fffbff'\n  inverse-primary: '#ffb5a1'\n  secondary: '#556252'\n  on-secondary: '#ffffff'\n  secondary-container: '#d9e7d2'\n  on-secondary-container: '#5b6858'\n  tertiary: '#5e5c57'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#77746f'\n  on-tertiary-container: '#fffbff'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbd1'\n  primary-fixed-dim: '#ffb5a1'\n  on-primary-fixed: '#3b0900'\n  on-primary-fixed-variant: '#802a11'\n  secondary-fixed: '#d9e7d2'\n  secondary-fixed-dim: '#bdcab7'\n  on-secondary-fixed: '#131e12'\n  on-secondary-fixed-variant: '#3e4a3b'\n  tertiary-fixed: '#e6e2dc'\n  tertiary-fixed-dim: '#cac6c0'\n  on-tertiary-fixed: '#1d1b18'\n  on-tertiary-fixed-variant: '#494642'\n  background: '#f7fafb'\n  on-background: '#181c1d'\n  surface-variant: '#e0e3e4'\ntypography:\n  display:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.08em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 80px\n  container-padding-desktop: 40px\n  container-padding-mobile: 20px\n  gutter: 24px\n  horizon-rule-weight: 1px\n---\n\n## Brand & Style\nThis design system embodies a \"High-Desert Editorial\" aesthetic—a blend of sophisticated home management and the warm, grounded reliability of the Southwest. It rejects the over-saturated, cartoonish tropes of the pet-care industry in favor of a quiet luxury that resonates with homeowners who view their pets and properties as precious investments.\n\nThe visual narrative is defined by:\n- **Sophisticated Warmth:** Using earth-toned palettes to evoke a sense of calm and environmental harmony.\n- **Intentional Restraint:** Utilizing generous whitespace and a \"less is more\" philosophy to convey professional competence and clarity.\n- **Editorial Precision:** High-contrast typography and thin horizontal \"horizon\" rules that mimic the layout of a premium lifestyle magazine.\n\n## Colors\nThe palette is a curated reflection of the high-desert landscape, balanced to provide high legibility and an upscale emotional response.\n\n- **Deep Terracotta (#C25A3D):** Our primary action color. It represents the warmth of the sun and the red earth, used for calls to action and key brand moments.\n- **Sage Brush (#8E9B89):** A stabilizing secondary color used for success states, thin rules, and subtle UI accents to evoke nature and reliability.\n- **Sandstone (#F4EFE9):** The primary background surface. It provides a warmer, more premium alternative to stark white, reducing eye strain and feeling more \"residential.\"\n- **Midnight Slate (#2D3132):** Used for primary typography and deep grounding elements. It ensures accessibility and provides the \"editorial\" weight required for high-contrast headers.\n\n## Typography\nThe typography strategy relies on a dramatic tension between the \"human\" touch of the serif and the \"functional\" clarity of the sans-serif.\n\n- **Headlines:** `Playfair Display` is used to establish an authoritative, editorial voice. Larger sizes should utilize tighter letter spacing to emphasize its high-contrast strokes.\n- **Body & UI:** `DM Sans` provides an airy, modern feel. Its low-contrast, geometric shapes ensure readability even on textured sandstone backgrounds.\n- **Utility:** Use `label-md` and `label-sm` in all-caps with increased letter spacing for navigation, small badges, and secondary \"horizon\" titles.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop to maintain the integrity of editorial compositions, shifting to a fluid model on mobile devices.\n\n- **The Horizon Motif:** Every major content section should be separated by a 1px `Sage Brush` horizontal rule. These rules should have generous padding above and below (minimum 40px) to maintain the sense of \"vast desert space.\"\n- **Desktop (12 columns):** Max-width of 1280px with 40px outer margins. Elements should be aligned with significant \"negative space\" columns to prevent clutter.\n- **Mobile (4 columns):** 20px margins. Content should stack vertically, but the 1px horizontal rules remain a primary separator to maintain brand identity.\n- **Vertical Rhythm:** A strict 8px baseline grid ensures that while whitespace is generous, it remains mathematically balanced.\n\n## Elevation & Depth\nIn keeping with the flat, desert-inspired aesthetic, this design system avoids heavy shadows or artificial depth.\n\n- **Tonal Layering:** Depth is achieved through color stacking rather than shadows. Cards and containers use a slightly lighter or darker tint of `Sandstone` or a semi-transparent `Sage Brush` wash.\n- **Soft Diffusion:** If elevation is required for functional components (like modals), use an extremely diffused, low-opacity shadow (#2D3132 at 5% opacity) with a large 32px blur to mimic natural, ambient sunlight.\n- **Low-Contrast Outlines:** Use 1px borders in `Sage Brush` at 30% opacity to define boundaries without breaking the \"horizon\" flow of the page.\n\n## Shapes\nShapes are inspired by weathered desert stones—organic but structured.\n\n- **Soft Radius:** The standard `rounded-md` (0.5rem) is applied to most interactive elements.\n- **Large Components:** Larger containers like image cards or testimonial blocks use `rounded-lg` (1rem) to emphasize the \"organic\" feel.\n- **Buttons:** Buttons should maintain a `rounded-md` shape rather than a pill shape to feel more \"architectural\" and less \"playful.\"\n\n## Components\nComponents are designed to look like elements of a high-end estate management portal.\n\n- **Buttons:** Primary buttons use a solid `Deep Terracotta` fill with white text. Secondary buttons use a `Midnight Slate` outline with `Midnight Slate` text. No gradients.\n- **Cards:** Cards should have no border-radius on the top-left and bottom-right corners occasionally to create a custom \"notched\" editorial look, or use standard `rounded-lg` with a `Sandstone` fill that is 5% darker than the background.\n- **Input Fields:** Use a simple 1px bottom-border (Midnight Slate) with a `Sandstone` fill. Avoid full box-outlines to keep the \"horizon\" feel.\n- **Horizon Rules:** A core component. Thin 1px lines in `Sage Brush` or `Midnight Slate` (at 10% opacity) used to lead the eye across the page.\n- **Interactive Chips:** Small, `rounded-md` boxes in `Sage Brush` with dark slate text, used for service categories (e.g., \"Overnight Stay,\" \"Garden Care\").\n- **Photography:** Images should feature high-desert landscapes, minimalist home interiors, and candid, high-end pet photography with natural lighting. Avoid \"stock-photo\" smiles.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "DM_SANS",
+              "labelFontFamily": "Dm Sans",
+              "namedColors": {
+                "background": "#f7fafb",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#eef1f2",
+                "inverse_primary": "#ffb5a1",
+                "inverse_surface": "#2d3132",
+                "on_background": "#181c1d",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#fffbff",
+                "on_primary_fixed": "#3b0900",
+                "on_primary_fixed_variant": "#802a11",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#5b6858",
+                "on_secondary_fixed": "#131e12",
+                "on_secondary_fixed_variant": "#3e4a3b",
+                "on_surface": "#181c1d",
+                "on_surface_variant": "#56423d",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#fffbff",
+                "on_tertiary_fixed": "#1d1b18",
+                "on_tertiary_fixed_variant": "#494642",
+                "outline": "#89726c",
+                "outline_variant": "#ddc0b9",
+                "primary": "#9c3e23",
+                "primary_container": "#bc5639",
+                "primary_fixed": "#ffdbd1",
+                "primary_fixed_dim": "#ffb5a1",
+                "secondary": "#556252",
+                "secondary_container": "#d9e7d2",
+                "secondary_fixed": "#d9e7d2",
+                "secondary_fixed_dim": "#bdcab7",
+                "surface": "#f7fafb",
+                "surface_bright": "#f7fafb",
+                "surface_container": "#ebeeef",
+                "surface_container_high": "#e6e9ea",
+                "surface_container_highest": "#e0e3e4",
+                "surface_container_low": "#f1f4f5",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#d7dadb",
+                "surface_tint": "#9f4026",
+                "surface_variant": "#e0e3e4",
+                "tertiary": "#5e5c57",
+                "tertiary_container": "#77746f",
+                "tertiary_fixed": "#e6e2dc",
+                "tertiary_fixed_dim": "#cac6c0"
+              },
+              "overrideNeutralColor": "#2d3132",
+              "overridePrimaryColor": "#c25a3d",
+              "overrideSecondaryColor": "#8e9b89",
+              "overrideTertiaryColor": "#f4efe9",
+              "roundness": "ROUND_EIGHT",
+              "spacing": {
+                "base": "8px",
+                "container-padding-desktop": "40px",
+                "container-padding-mobile": "20px",
+                "gutter": "24px",
+                "horizon-rule-weight": "1px",
+                "section-gap": "80px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.4"
+                },
+                "label-md": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.2"
+                },
+                "label-sm": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.08em",
+                  "lineHeight": "1.2"
+                }
+              }
+            },
+            "title": "Roadrunner Home & Pet Sitting - Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed a bespoke, editorial-grade homepage for **Roadrunner Home and Pet Sitting Services**. \n\nThis design breaks away from the typical local business template, instead leaning into a \"High-Desert Editorial\" aesthetic that feels premium and trustworthy.\n\n### Design Highlights:\n- **Visual Identity**: I established a palette of **Deep Terracotta, Sage Brush, and Midnight Slate**, reflecting the unique landscape of Las Cruces and Chaparral.\n- **Typographic Rhythm**: High-contrast serif headings (Playfair Display) provide an authoritative yet warm editorial feel, paired with generous whitespace to ensure the brand feels premium.\n- **Bespoke Layouts**: \n    - The **Hero** uses a cinematic photography style to immediately establish a sense of \"home stewardship.\"\n    - The **Services** section utilizes an asymmetrical composition to avoid a generic grid look, focusing on the \"stewardship\" of precious assets.\n    - **Visual Motif**: Thin horizontal rules in terracotta are used throughout the page as a recurring \"horizon\" motif, tying the sections together with a subtle geographic nod.\n- **Production Ready**: The site includes the requested map placeholder, a refined contact form, and full responsive behavior.\n\nThe code is semantic, utilizes CSS variables for the color system, and features a clean mobile navigation and smooth scroll interactions."
+    },
+    {
+      "suggestion": "Add a testimonial carousel from happy pet owners"
+    },
+    {
+      "suggestion": "Create a dedicated 'Estate Management' details page"
+    },
+    {
+      "suggestion": "Make the 'horizon' rules animate as I scroll down the page"
+    }
+  ],
+  "projectId": "17403648014764359240",
+  "sessionId": "1259197956758560939"
+}
