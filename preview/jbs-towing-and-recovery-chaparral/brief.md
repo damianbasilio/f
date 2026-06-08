@@ -68,3 +68,12 @@
 - **Typography direction:** Barlow Condensed + Barlow
 - **Layout family:** asymmetric-grid
 - **Design dials:** DESIGN_VARIANCE 6 | MOTION_INTENSITY 3 | VISUAL_DENSITY 5
+
+## Facebook source (no brand colors to extract)
+
+- **Source:** https://www.facebook.com/JBSTowingandRecovery/
+- **Platform:** Facebook (no dedicated website)
+- **Scraped:** 2026-06-08T04:32:52.439Z
+- **Colors / typography:** Stitch decides — there is no website or brand manual to sample
+- **Guidance:** Facebook-only at https://www.facebook.com/JBSTowingandRecovery/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
+
