@@ -1,8 +1,8 @@
 # Design QA — mindsoultouch-campton
 
-**Result:** NEEDS FIX
+**Result:** PASS
 
-**Craft warnings:** 2 (see craft section)
+**Craft warnings:** 4 (see craft section)
 
 ## Skills run
 
@@ -11,17 +11,14 @@
 | craft | pass |
 | emil | pass |
 | taste | pass |
-| audit | fail |
+| audit | pass |
 | harden | pass |
 | polish | pass |
 
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- emil: added :active press feedback
-- taste: removed 1 em/en dash(es) from copy
-- craft: injected brief fonts (Barlow Condensed / Barlow)
-- craft: fixed 2 broken hash anchor(s)
+- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -31,11 +28,11 @@
 
 - OK: No AI purple gradient
 - OK: No fake ratings/hype
-- OK: No obvious buzzwords
+- WARN: Generic marketing buzzword in copy
 - WARN: Repeated 3-column grid pattern (3 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 6
+- WARN: 19 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -47,19 +44,18 @@
 
 ### taste
 
-- Eyebrow discipline: 6 uppercase-tracked labels
+- WARN: 19 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
 - Anti-slop: no em dashes, layout families from Stitch brief
 - WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 
-- FAIL: stock or Stitch AI image URL still present
+- Images: no stock/aida URLs in HTML
 - Mockup notice: popup present
-- WARN: missing #credibility
+- Credibility section: present
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
-- WARN: Stitch AI placeholder images — run images:apply
 
 ### harden
 

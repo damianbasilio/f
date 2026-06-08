@@ -1,36 +1,26 @@
-// Micro-interaction for form submission
-        const wellnessForm = document.getElementById('wellnessForm');
-        const formSuccess = document.getElementById('formSuccess');
+// Simple form interaction
+        const form = document.getElementById('ritual-form');
+        const successMessage = document.getElementById('form-success');
 
-        wellnessForm.addEventListener('submit', (e) => {
+        form.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Simple visual validation & success feedback
-            wellnessForm.classList.add('opacity-50', 'pointer-events-none');
+            form.classList.add('opacity-0');
             setTimeout(() => {
-                wellnessForm.style.display = 'none';
-                formSuccess.classList.remove('hidden');
-                formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            }, 1000);
+                form.classList.add('hidden');
+                successMessage.classList.remove('hidden');
+            }, 300);
         });
 
-        // Simple scroll observer for fading elements
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
-                }
-            });
-        }, observerOptions);
-
-        // Apply to sections
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
-            observer.observe(section);
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-4', 'shadow-sm');
+                nav.classList.remove('py-6');
+            } else {
+                nav.classList.add('py-6');
+                nav.classList.remove('py-4', 'shadow-sm');
+            }
         });
 
 (() => {
