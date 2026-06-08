@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STUDIO LEGACY | Capturing the Rhythm of Life</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Montserrat:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary-container": "#949391",
+                      "on-surface-variant": "#454844",
+                      "surface-container-lowest": "#ffffff",
+                      "secondary-fixed-dim": "#cbc6ba",
+                      "on-tertiary-container": "#c68369",
+                      "error-container": "#ffdad6",
+                      "outline-variant": "#c5c7c2",
+                      "outline": "#757873",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-container-low": "#f4f3f1",
+                      "inverse-on-surface": "#f1f1ef",
+                      "error": "#ba1a1a",
+                      "on-secondary-container": "#666259",
+                      "surface-variant": "#e3e2e0",
+                      "inverse-primary": "#c8c6c4",
+                      "tertiary-fixed-dim": "#ffb599",
+                      "surface-container": "#efeeec",
+                      "tertiary-container": "#4b1f0c",
+                      "on-surface": "#1a1c1b",
+                      "background": "#faf9f7",
+                      "secondary": "#625e55",
+                      "tertiary-fixed": "#ffdbce",
+                      "on-background": "#1a1c1b",
+                      "on-tertiary-fixed-variant": "#6c3924",
+                      "on-primary": "#ffffff",
+                      "secondary-container": "#e5dfd3",
+                      "on-tertiary-fixed": "#360f01",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e4e2e0",
+                      "secondary-fixed": "#e8e2d6",
+                      "surface-tint": "#5f5e5d",
+                      "on-error-container": "#93000a",
+                      "primary-container": "#2c2c2b",
+                      "primary-fixed-dim": "#c8c6c4",
+                      "on-primary-fixed-variant": "#474745",
+                      "on-secondary-fixed": "#1e1c14",
+                      "surface": "#faf9f7",
+                      "on-secondary-fixed-variant": "#4a473e",
+                      "primary": "#171817",
+                      "surface-container-high": "#e9e8e6",
+                      "inverse-surface": "#2f3130",
+                      "tertiary": "#300b00",
+                      "on-primary-fixed": "#1b1c1b",
+                      "surface-bright": "#faf9f7",
+                      "surface-container-highest": "#e3e2e0",
+                      "surface-dim": "#dadad8"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "24px",
+                      "rule-weight": "1px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Bodoni Moda"],
+                      "label-caps": ["Montserrat"],
+                      "display-lg-mobile": ["Bodoni Moda"],
+                      "headline-sm": ["Bodoni Moda"],
+                      "display-lg": ["Bodoni Moda"],
+                      "body-lg": ["Montserrat"],
+                      "body-md": ["Montserrat"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "400"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "letterSpacing": "0.01em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay {
+            pointer-events: none;
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+        }
+        .asymmetric-rule {
+            height: 1px;
+            background: currentColor;
+            opacity: 0.2;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-gutter bg-background/90 backdrop-blur-sm border-b border-on-surface/20">
+<a class="font-headline-md text-headline-md text-primary tracking-tighter" href="#">STUDIO LEGACY</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#portfolio">PORTFOLIO</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#about">JOURNAL</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#services">THE EYE</a>
+<a class="font-label-caps text-label-caps text-secondary hover:text-primary transition-colors" href="#contact">LOCATION</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-caps text-label-caps text-primary" href="tel:559-308-6763">559-308-6763</a>
+<a class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps hover:opacity-90 transition-opacity border border-primary" href="#contact">BOOK A SESSION</a>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[921px] md:h-[972px] flex items-center px-margin-mobile md:px-margin-desktop">
+<div class="absolute inset-0 z-0 overflow-hidden">
+<img alt="Capturing the Rhythm of Life" class="w-full h-full object-cover filter grayscale-[20%] brightness-90" data-alt="A cinematic, high-contrast black and white photograph of a young couple laughing during a candid sunset moment in a golden California field. The lighting is soft and directional, highlighting textures of lace and linen. The composition is editorial and wide, with plenty of negative space at the top to allow for professional typography. The atmosphere is authentically intimate and timeless." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8-hJ3M0yNgYXs4H26PAtGeX3DRT8__dLXKmnI38k9PQxPSTYhnlnXq9n1DnFhWQEgER_uC-DQm_Cp0nmgfs6CA-3hFXWjEHBbXqAv9qBy5NCVzFr0-7YzNXvTfRM1hJ4s-hN-1vFKGN-PYrcHECAx2W9Ct4ntFWEfheUC1eBZrm3E0hSqwZ-PioMs0OmhAZZ-xBw7YmmzvPxRftPojljJPvTi_U2rmmcEcgYKiWj37E6C44iaVQduh8yujfahjMWagBkr-Y3ncjY"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background/40 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label-caps text-label-caps text-primary mb-6 animate-fade-in">CENTRAL CALIFORNIA ARTISTRY</p>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary leading-none mb-12 italic">
+                    Capturing the <br/> <span class="not-italic">Rhythm of Life</span>
+</h1>
+<div class="flex items-center gap-4">
+<div class="w-24 asymmetric-rule"></div>
+<p class="font-body-lg text-body-lg text-secondary italic">Honest moments, preserved for generations.</p>
+</div>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4">
+<h2 class="font-headline-md text-headline-md text-primary mb-4">A Legacy of Excellence</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Thirteen years of documenting heritage and light across the Central Valley.</p>
+</div>
+<div class="md:col-start-6 md:col-span-7 flex flex-wrap gap-12 md:gap-24">
+<div class="flex flex-col">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-tertiary-container">12+</span>
+<span class="font-label-caps text-label-caps text-secondary">YEARS ACTIVE</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-tertiary-container">08</span>
+<span class="font-label-caps text-label-caps text-secondary">AWARDS WON</span>
+</div>
+<div class="flex flex-col">
+<span class="font-display-lg-mobile text-display-lg-mobile text-on-tertiary-container">450</span>
+<span class="font-label-caps text-label-caps text-secondary">STORIES TOLD</span>
+</div>
+</div>
+</div>
+<div class="mt-16 border-t border-outline-variant/30 pt-8 flex justify-between items-center opacity-60 grayscale">
+<span class="font-label-caps text-label-caps">VOGUE ITALIA</span>
+<span class="font-label-caps text-label-caps">BRIDE MAGAZINE</span>
+<span class="font-label-caps text-label-caps">MODERN LUXURY</span>
+<span class="font-label-caps text-label-caps">STYLE ME PRETTY</span>
+</div>
+</section>
+<!-- Services Section (Bento Inspired) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop" id="services">
+<div class="mb-20">
+<span class="font-label-caps text-label-caps text-on-tertiary-container">OUR DISCIPLINES</span>
+<h2 class="font-display-lg-mobile md:font-headline-md text-display-lg-mobile md:text-headline-md mt-4">Crafting Visual Narratives</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Service 1 -->
+<div class="md:col-span-7 group cursor-pointer overflow-hidden">
+<div class="aspect-[16/9] mb-6 overflow-hidden">
+<img alt="Wedding Editorial" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-end editorial wedding portrait of a bride standing in a minimalist concrete architectural space. The sunlight creates sharp geometric shadows across the frame. Her gown is avant-garde and textured. The overall mood is sophisticated, silent, and deeply artistic, reflecting a premium boutique photography studio style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7soPgEsCVg1JZJHPcb33N1A4hpsUv6QMui6q0HThMBSJTVnoU9HR_sh-8D_b_PusgqZsrhN3_7Rb-jPL2tYWMF5bas8sOQm5REVOAQkQerFH7bopEusJKCBB1dg2Da6upW1LXnRKL6qFnWxq5cqU4ShmrqRh359WF9V2BsgJVxH2Ct6eRym5s61fvpvXEHCTYCG48EgVzU_UzM4tLXAnOpk1W9jwMIwcobEGtqnX3Y93FiI60Q7ahS6CnrOjwmJGt3g45d0BI6As"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Wedding Editorial</h3>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">Cinematic documentation of union, focusing on quiet intimacy and the grandeur of the day.</p>
+</div>
+<span class="material-symbols-outlined text-primary">arrow_outward</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="md:col-span-5 flex flex-col justify-end pt-12 md:pt-0">
+<div class="group cursor-pointer">
+<div class="aspect-[4/5] mb-6 overflow-hidden">
+<img alt="Portraiture" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A minimalist studio portrait of an individual with soft, painterly lighting reminiscent of old master paintings. The background is a muted oat-colored textured canvas. The subject has a serene expression, with focus on the fine details of the skin and hair. The lighting is warm and natural, evoking a sense of authentic personality and timelessness." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCk1X3hpeW_YJ7TNUeUyKQ4jLZUt5PIA5jb4t10gUxm8EgmUlVf4KhcTU9fx8xOYSUmWwwWD43MMRMVe-AWCvXsC_KPF0ONB78qNVhIlI79bHxdYhkVrf8jMbl30wTyQmJgXxZNAWA81Og2eFRp6Cjt6SEfSAyxs18gIBxQrmuJAgDsr3l2cN4l4m_dzkkvt0rPZ88I-nKogKMd5kwUPFP5b80-0535cX_TBdLMELuq_Tly7Kbm43QFPBZoty7b6zvZvtpTlcTIUhY"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Portraiture</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Character-driven sessions that reveal the raw soul beneath the surface.</p>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="md:col-span-4 mt-12">
+<div class="group cursor-pointer">
+<div class="aspect-square mb-6 overflow-hidden border border-outline-variant/20 p-4">
+<img alt="Lifestyle Branding" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A lifestyle branding shot of a modern creative workspace in a light-filled loft. A professional camera and sketchbook sit on a clean oak desk. Soft shadows fall from a nearby window. The aesthetic is clean, professional, and organized, using a palette of soft whites and natural wood tones to communicate luxury and focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjhCOGl_uj-8An4u-a-zQJ63EQht64YJ8MyIYrY2U6UKs9-CaDNAmNar8u1YL_bS-Fg8NMQ-OrcVwW6AxN7VedDAPBc2oXwqAbJUR9-3gVEKJRAvTbksSvdHWsGNGRyWeFEFfOsKtzDebaYJ6P1QD68OW8OF6lWlZ8l8l676gqKyvJ59yg5m9QDgJHxIyRcq2bpx4xVCl363PfzNJMLfQU2y102vlhy6VtJyGcgsyCa3vLveN60XShxkmG9Nl7ABgMC-nvmNbbRRQ"/>
+</div>
+<h3 class="font-headline-sm text-headline-sm mb-2">Lifestyle Branding</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Visual identity for artisans and entrepreneurs who lead with heart.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section (Asymmetric) -->
+<section class="py-32 bg-secondary-container/30 relative" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop items-center">
+<div class="md:col-span-5 md:col-start-2">
+<img alt="Studio Vision" class="w-full aspect-[3/4] object-cover shadow-2xl" data-alt="A portrait of a professional photographer working in a sun-drenched studio. Dust motes dance in the light. The photographer is holding a vintage Leica camera, looking thoughtfully out of a large industrial window. The scene is warm, grainy, and feels like a behind-the-scenes moment from a high-fashion editorial shoot." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRXifqYBSeN9xng8gI9jAaPG_4TPn81SZ0I_i9k5793LmANN0m8--duQ4mcXRJTFpZvMaRLzj76Q615KW8AOxh5Bm7GzL9ZJ-QIAQKblj01vkmrM5MsylDsGx8Uc6druabgLIJLXaUr5babCI8NqjrcYKkupIil1Y6zAoSQaTpBTXvo9Y-6yUuQYH5hkKLNanL0H_NbcHIxDZV_TWSZUT_el4Gb6Sl4CYJDD7kOzmQY0A748ZmalUo1kbDvc8wgBtgWQKLQvpEbsI"/>
+</div>
+<div class="md:col-span-5 md:col-start-8 py-12">
+<span class="font-label-caps text-label-caps text-on-tertiary-container">THE VISION</span>
+<h2 class="font-headline-md text-headline-md text-primary mt-6 mb-8 italic">Authenticity is the ultimate legacy.</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-background">At Studio Legacy, we believe that the most profound stories aren't staged; they are discovered in the pauses between heartbeats.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">Our approach is rooted in the "Quiet Eye"—a philosophy of observation that prioritizes natural light, unforced composition, and the genuine connection between our subjects. Based in Visalia, we document the evolving heritage of Central California one frame at a time.</p>
+<a class="inline-flex items-center gap-4 group" href="#">
+<span class="font-label-caps text-label-caps border-b border-primary pb-1">READ OUR FULL STORY</span>
+<span class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">east</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Visit -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Form -->
+<div class="md:col-span-5">
+<h2 class="font-headline-md text-headline-md mb-12">Inquire for your Date</h2>
+<form class="space-y-12" id="contactForm">
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2 text-secondary group-focus-within:text-primary transition-colors">FULL NAME</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors outline-none" placeholder="Julian Thorne" required="" type="text"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2 text-secondary group-focus-within:text-primary transition-colors">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors outline-none" placeholder="lifestylephotographystudio@gmail.com" required="" type="email"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2 text-secondary group-focus-within:text-primary transition-colors">EVENT DATE / TYPE</label>
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors outline-none" placeholder="June 2025 - Editorial Wedding" required="" type="text"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2 text-secondary group-focus-within:text-primary transition-colors">YOUR VISION</label>
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 transition-colors outline-none resize-none" placeholder="Tell us about the moments you want to preserve..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-5 font-label-caps text-label-caps tracking-[0.2em] hover:bg-opacity-90 transition-all flex justify-between items-center px-8" type="submit">
+                            SEND INQUIRY
+                            <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+<div class="hidden mt-6 p-4 bg-tertiary-fixed text-on-tertiary-fixed font-label-caps text-center" id="formSuccess">
+                        MESSAGE SENT WITH GRACE.
+                    </div>
+</div>
+<!-- Map & Details -->
+<div class="md:col-span-6 md:col-start-7 mt-20 md:mt-0">
+<div class="mb-12">
+<span class="font-label-caps text-label-caps text-on-tertiary-container block mb-4">THE ATELIER</span>
+<address class="not-italic font-headline-sm text-headline-sm text-primary mb-2">
+                            3105 West Cambridge Avenue<br/>
+                            Visalia, CA 93277
+                        </address>
+<p class="font-body-md text-body-md text-on-surface-variant">Available for travel worldwide.</p>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container-highest flex items-center justify-center group" data-location="Visalia, CA" data-map-slot="" style="">
+<!-- Placeholder for Map Interface -->
+<div class="absolute inset-0 opacity-40 grayscale group-hover:grayscale-0 transition-all duration-1000">
+<img alt="Map location" class="w-full h-full object-cover" data-alt="A stylized, minimal map graphic of a city grid. The map is rendered in muted tones of ivory, oat, and charcoal. A single elegant marker indicates a location. The style is clean, modern, and fits seamlessly into a high-end photography studio's visual identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdL7uoNSYXcZJ9b5ctL3gbxxnWRL0QigDbeOogM92QKr9nQW3ywGFVuCx6U-C_F3oG-9Q-2Cokqh28oejHu51fFzz00I0L5v_osBn8OIDXd-06mj29wWHdN2X3Wd_WVtcIBH_SOFLty2uYtqINaaRUqW3uS9RZbhup5s0SZ2HIha1jTh4tc6poOwTKYeKsb5J3bt96I7QxJA_08R7k0ldchkitof-e5iedllzqoAt0M6rSn7kCep0IoXstKe7Ksw46l6IrVEF1FTI"/>
+</div>
+<div class="relative z-10 bg-background/90 backdrop-blur px-8 py-4 border border-outline-variant text-center">
+<span class="material-symbols-outlined text-primary mb-2">location_on</span>
+<p class="font-label-caps text-label-caps text-primary">VIEW ON MAP</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-24 flex flex-col md:flex-row justify-between items-start gap-gutter bg-surface-container-highest border-t border-outline-variant">
+<div class="space-y-8 max-w-sm">
+<h2 class="font-headline-sm text-headline-sm text-primary">STUDIO LEGACY</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Capturing the profound and the poetic in the everyday. Central California's premier lifestyle photography studio.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">share</span>
+</a>
+<a class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-primary hover:text-on-primary transition-colors" href="#">
+<span class="material-symbols-outlined text-lg">mail</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary font-bold">EXPLORE</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">INSTAGRAM</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">PINTEREST</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">JOURNAL</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-primary font-bold">LEGAL</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">PRIVACY</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">TERMS</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">ACCESSIBILITY</a>
+</div>
+</div>
+<div class="w-full md:w-auto mt-12 md:mt-0 pt-12 md:pt-0 border-t md:border-t-0 border-outline-variant">
+<p class="font-label-caps text-[10px] text-on-surface-variant leading-loose tracking-widest uppercase">
+                © 2024 STUDIO LEGACY. <br/>
+                CAPTURING CENTRAL CALIFORNIA. <br/>
+                ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<script>
+        // Form Interaction
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const success = document.getElementById('formSuccess');
+            
+            btn.innerHTML = 'SENDING...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                this.classList.add('opacity-0', 'pointer-events-none');
+                setTimeout(() => {
+                    this.style.display = 'none';
+                    success.classList.remove('hidden');
+                    success.classList.add('animate-pulse');
+                }, 500);
+            }, 1500);
+        });
+
+        // Atmospheric Scroll Effect
+        window.addEventListener('scroll', () => {
+            const scrollPos = window.scrollY;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrollPos * 0.1}px)`;
+            }
+        });
+
+        // Simple Intersection Observer for Reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
