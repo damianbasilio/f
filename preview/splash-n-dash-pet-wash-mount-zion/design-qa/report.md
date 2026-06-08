@@ -1,6 +1,6 @@
 # Design QA — splash-n-dash-pet-wash-mount-zion
 
-**Result:** PASS
+**Result:** NEEDS FIX
 
 **Craft warnings:** 1 (see craft section)
 
@@ -8,10 +8,10 @@
 
 | Skill | Status |
 | ----- | ------ |
-| craft | pass |
+| craft | fail |
 | emil | pass |
 | taste | pass |
-| audit | pass |
+| audit | fail |
 | harden | pass |
 | polish | pass |
 
@@ -26,12 +26,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- OK: No fake ratings/hype
+- FAIL: Fake ratings or hype copy detected
 - OK: No obvious buzzwords
 - OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 4
+- OK: Eyebrow count: 2
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,7 +43,7 @@
 
 ### taste
 
-- Eyebrow discipline: 4 uppercase-tracked labels
+- Eyebrow discipline: 2 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
 
 ### audit
@@ -54,6 +54,7 @@
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
+- FAIL: Fake star ratings or unverifiable superlatives
 
 ### harden
 

@@ -1,4 +1,4 @@
-// Smooth reveal on scroll for bento grid items
+// Simple intersection observer for reveal animations
         const observerOptions = {
             threshold: 0.1
         };
@@ -12,21 +12,25 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('.grid > div').forEach(item => {
-            item.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(item);
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
 
-        // Simple form interaction simulation
-        const inputs = document.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                input.parentElement.querySelector('label').classList.add('text-secondary', 'opacity-100');
-            });
-            input.addEventListener('blur', () => {
-                if (!input.value) {
-                    input.parentElement.querySelector('label').classList.remove('text-secondary', 'opacity-100');
-                }
+        // Instant reveal for hero
+        const hero = document.querySelector('section');
+        hero.classList.remove('opacity-0', 'translate-y-10');
+        hero.classList.add('opacity-100', 'translate-y-0');
+
+        // Atmospheric Bubble Wobble Effect
+        document.addEventListener('mousemove', (e) => {
+            const bubbles = document.querySelectorAll('.bubble-shape');
+            const x = (e.clientX / window.innerWidth) - 0.5;
+            const y = (e.clientY / window.innerHeight) - 0.5;
+
+            bubbles.forEach((bubble, index) => {
+                const speed = (index + 1) * 20;
+                bubble.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
             });
         });
 
