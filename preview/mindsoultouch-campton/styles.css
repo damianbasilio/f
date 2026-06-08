@@ -2,29 +2,31 @@
         .material-symbols-outlined {
             font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
         }
-        .pebble-mask {
-            clip-path: url(#pebble-clip);
+        body {
+            background-color: #fdfae7; /* surface */
+            color: #1c1c11; /* on-surface */
+            overflow-x: hidden;
         }
-        .text-watermark {
-            -webkit-text-stroke: 1px rgba(0,0,0,0.05);
-            color: transparent;
-        }
-        .hairline-y {
-            width: 1px;
-            height: 100px;
-        }
-        .hairline-x {
+        .editorial-line {
             height: 1px;
-            width: 60px;
+            background: rgba(6, 27, 14, 0.15); /* primary at 15% */
+        }
+        .organic-blob {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms cubic-bezier(0.23, 1, 0.32, 1) 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .map-slot {
+            filter: grayscale(1) contrast(0.9) brightness(1.1);
         }
     
-
-
-                @keyframes scroll {
-                    0% { transform: translateY(-100%); }
-                    100% { transform: translateY(100%); }
-                }
-            
 
 /* map-embed (outreach) */
 .map-slot {

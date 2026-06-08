@@ -1,173 +1,183 @@
-I have designed a bespoke, editorial-grade homepage for **MindSoulTouch**. This layout moves away from conventional local business templates to create a high-end, memorable brand experience.
+I have designed a bespoke, editorial-quality landing page for MindSoulTouch. 
 
-### Key Design Decisions:
-*   **Editorial Layout**: I utilized an asymmetrical hero section with oversized serif typography ("The Art of Being") and an organic, pebble-masked image to immediately signal a premium, artistic brand voice.
-*   **Serene Editorial Design System**: The palette is grounded in "Obsidian" charcoal and "Ethereal" mist, with subtle ochre accents. I chose **Bodoni Moda** for its high-contrast elegance, reinforcing the bespoke nature of the services.
-*   **Organic Motifs**: Instead of rigid grids, I used overlapping organic shapes and fine hairlines to guide the eye through the "The Touch" services section, creating a tactile and fluid narrative.
-*   **Minimalist Navigation**: A floating, split-navigation header keeps the focus on the centered wordmark, ensuring the brand identity is always present but never intrusive.
+### Design Highlights:
+*   **Unique Visual Identity:** I've moved away from standard local-business templates, opting for a sophisticated, editorial layout with asymmetrical compositions and a rich, grounded color palette of forest green, sandstone, and terracotta.
+*   **Typographic Hierarchy:** Using a bold, elegant serif for headlines (*Playfair Display*) creates an immediate sense of trust and premium quality, balanced with a clean sans-serif for readability.
+*   **Bespoke Sections:**
+    *   **Hero:** A high-concept, atmospheric entry point that emphasizes the "Rhythm of your Soul."
+    *   **Offerings:** A magazine-style gallery for services that feels curated rather than listed.
+    *   **The Philosophy:** A storytelling-focused "About" section that highlights the personal touch behind the brand.
+    *   **Visit & Contact:** A clear, welcoming path to finding the physical location in Campton, NH, paired with a serene, minimalist contact experience.
 
-Does this visual direction capture the "unique and memorable" feel you were looking for, or should we explore more texture and density in the philosophy section?
+The site is fully responsive, optimized for desktop and mobile, and built with clean, semantic HTML and CSS.
+
+How does this new visual direction feel for the brand? We can refine specific imagery, adjust the color weight, or expand on any of the service descriptions.
 
 ---
 
 ---
-name: Serene Editorial
+name: MindSoulTouch
 colors:
-  surface: '#f9f9f8'
-  surface-dim: '#dadad9'
-  surface-bright: '#f9f9f8'
+  surface: '#fdfae7'
+  surface-dim: '#dddbc8'
+  surface-bright: '#fdfae7'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f3f4f3'
-  surface-container: '#eeeeed'
-  surface-container-high: '#e8e8e7'
-  surface-container-highest: '#e2e2e2'
-  on-surface: '#1a1c1c'
-  on-surface-variant: '#46474a'
-  inverse-surface: '#2f3130'
-  inverse-on-surface: '#f1f1f0'
-  outline: '#76777b'
-  outline-variant: '#c7c6ca'
-  surface-tint: '#5f5e5f'
-  primary: '#000000'
+  surface-container-low: '#f7f4e1'
+  surface-container: '#f1eedb'
+  surface-container-high: '#ece9d6'
+  surface-container-highest: '#e6e3d0'
+  on-surface: '#1c1c11'
+  on-surface-variant: '#434843'
+  inverse-surface: '#313124'
+  inverse-on-surface: '#f4f1de'
+  outline: '#737973'
+  outline-variant: '#c3c8c1'
+  surface-tint: '#4d6453'
+  primary: '#061b0e'
   on-primary: '#ffffff'
-  primary-container: '#1b1b1c'
-  on-primary-container: '#858384'
-  inverse-primary: '#c8c6c7'
-  secondary: '#5c5f5e'
+  primary-container: '#1b3022'
+  on-primary-container: '#819986'
+  inverse-primary: '#b4cdb8'
+  secondary: '#56642b'
   on-secondary: '#ffffff'
-  secondary-container: '#dee0df'
-  on-secondary-container: '#606363'
-  tertiary: '#000000'
+  secondary-container: '#d6e7a1'
+  on-secondary-container: '#5a682f'
+  tertiary: '#261200'
   on-tertiary: '#ffffff'
-  tertiary-container: '#2b1700'
-  on-tertiary-container: '#ad7938'
+  tertiary-container: '#422401'
+  on-tertiary-container: '#b7895b'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#e5e2e3'
-  primary-fixed-dim: '#c8c6c7'
-  on-primary-fixed: '#1b1b1c'
-  on-primary-fixed-variant: '#474647'
-  secondary-fixed: '#e1e3e2'
-  secondary-fixed-dim: '#c5c7c6'
-  on-secondary-fixed: '#191c1c'
-  on-secondary-fixed-variant: '#444747'
-  tertiary-fixed: '#ffddb9'
-  tertiary-fixed-dim: '#f8bb73'
-  on-tertiary-fixed: '#2b1700'
-  on-tertiary-fixed-variant: '#663e00'
-  background: '#f9f9f8'
-  on-background: '#1a1c1c'
-  surface-variant: '#e2e2e2'
+  primary-fixed: '#d0e9d4'
+  primary-fixed-dim: '#b4cdb8'
+  on-primary-fixed: '#0b2013'
+  on-primary-fixed-variant: '#364c3c'
+  secondary-fixed: '#d9eaa3'
+  secondary-fixed-dim: '#bdce89'
+  on-secondary-fixed: '#161f00'
+  on-secondary-fixed-variant: '#3e4c16'
+  tertiary-fixed: '#ffdcbd'
+  tertiary-fixed-dim: '#f0bd8b'
+  on-tertiary-fixed: '#2c1600'
+  on-tertiary-fixed-variant: '#623f18'
+  background: '#fdfae7'
+  on-background: '#1c1c11'
+  surface-variant: '#e6e3d0'
 typography:
   display-lg:
-    fontFamily: Bodoni Moda
-    fontSize: 72px
-    fontWeight: '600'
+    fontFamily: Playfair Display
+    fontSize: 64px
+    fontWeight: '700'
     lineHeight: '1.1'
     letterSpacing: -0.02em
+  display-lg-mobile:
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
   headline-lg:
-    fontFamily: Bodoni Moda
-    fontSize: 48px
-    fontWeight: '500'
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '600'
     lineHeight: '1.2'
   headline-lg-mobile:
-    fontFamily: Bodoni Moda
+    fontFamily: Playfair Display
     fontSize: 32px
-    fontWeight: '500'
+    fontWeight: '600'
     lineHeight: '1.2'
   headline-md:
-    fontFamily: Bodoni Moda
-    fontSize: 32px
-    fontWeight: '400'
+    fontFamily: Playfair Display
+    fontSize: 28px
+    fontWeight: '600'
     lineHeight: '1.3'
   body-lg:
-    fontFamily: DM Sans
+    fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
-    letterSpacing: 0.01em
   body-md:
-    fontFamily: DM Sans
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-    letterSpacing: 0.01em
   label-md:
-    fontFamily: DM Sans
-    fontSize: 12px
+    fontFamily: Inter
+    fontSize: 14px
     fontWeight: '600'
-    lineHeight: '1.0'
-    letterSpacing: 0.15em
+    lineHeight: '1.4'
+    letterSpacing: 0.05em
   label-sm:
-    fontFamily: DM Sans
-    fontSize: 10px
+    fontFamily: Inter
+    fontSize: 12px
     fontWeight: '500'
-    lineHeight: '1.0'
-    letterSpacing: 0.1em
+    lineHeight: '1.4'
 rounded:
-  sm: 0.25rem
-  DEFAULT: 0.5rem
-  md: 0.75rem
-  lg: 1rem
-  xl: 1.5rem
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
   full: 9999px
 spacing:
-  unit: 4px
+  base: 8px
   gutter: 24px
-  margin-desktop: 80px
   margin-mobile: 20px
+  margin-desktop: 64px
   section-gap: 120px
 ---
 
 ## Brand & Style
-The brand personality is rooted in high-end, holistic wellness, merging the intellectual weight of a luxury editorial magazine with the grounded serenity of a modern spa. It targets a discerning audience seeking both aesthetic refinement and mental clarity.
 
-The visual style is a sophisticated blend of **Minimalism** and **Memphis-inspired geometry**. It avoids the clutter of traditional Memphis design, instead adopting its organic, playful silhouettes—specifically "pebble" shapes—and reimagining them through a restrained, monochromatic lens with singular warm accents. The aesthetic relies on fine hairlines, generous whitespace, and a high-contrast typographic hierarchy to create a "tactile" digital environment that feels like premium stationery.
+The design system is built upon the concept of "Earthy Serenity," a visual philosophy that blends high-end editorial aesthetics with the grounding presence of the White Mountains. The brand personality is calm, expert, and restorative, moving away from clinical coldness toward a warm, human-centric wellness experience. 
+
+The style utilizes a **Minimalist-Editorial** approach. It prioritizes generous, intentional whitespace to give the user "room to breathe," reflecting the restorative nature of the services. Visual interest is generated through high-contrast typography and subtle organic shapes that break the rigidity of traditional grids. The interface should feel like a premium lifestyle publication—sophisticated, quiet, and deeply trustworthy.
 
 ## Colors
-The palette is architectural and atmospheric, designed to evoke a sense of quietude and luxury.
 
-*   **Obsidian (#1A1A1B):** The foundational charcoal. Used for primary text, structural hairlines, and deep-fill sections to provide grounding and authority.
-*   **Ethereal (#E5E7E6):** A soft mist grey that serves as the primary surface color, softer than pure white to reduce eye strain and enhance the premium feel.
-*   **Touch (#C58E4B):** A muted, earthy ochre used sparingly as a high-intent accent for call-to-actions, markers, and organic motifs.
-*   **Neutral (#F9F9F8):** An off-white "paper" tone for background layers, providing a clean canvas for the editorial layout.
+The palette is rooted in the natural landscape of Campton, NH. 
+- **Primary (Deep Forest Green):** Used for primary headings, call-to-action backgrounds, and heavy structural elements. It provides the "grounding" force of the design.
+- **Secondary (Muted Sage):** Used for subtle backgrounds, secondary actions, and success states. It acts as a bridge between the dark primary and light neutrals.
+- **Tertiary (Soft Terracotta):** A signature accent used sparingly for highlights, notifications, or specific interactive elements to provide warmth and focus.
+- **Neutral (Sandstone):** The primary surface color for containers and sections, providing a softer, more organic alternative to pure white.
+
+The base background should be a slightly off-white "Paper" tone (#FDFCF7) to reduce screen glare and enhance the editorial feel.
 
 ## Typography
-The typography system is the primary driver of the "Serene Editorial" identity. It pairs the high-fashion elegance of **Bodoni Moda** with the functional, airy quality of **DM Sans**.
 
-**Bodoni Moda** is reserved for headlines and large-scale display text. Its high stroke contrast requires ample breathing room; it should never be crowded.
-
-**DM Sans** handles all UI and body text. To maintain the high-end feel, body text uses slightly wider line-heights, while labels and buttons utilize **wide tracking (0.1em - 0.15em)** and uppercase styling to evoke the precision of a luxury watch or gallery catalog.
+Typography is the primary driver of the "Sophisticated" brand pillar. 
+- **Headlines:** Use Playfair Display. This serif provides the literary and authoritative tone required for a premium wellness brand. Large display sizes should use a slight negative letter-spacing for a tighter, more polished look.
+- **Body & UI:** Use Inter. Its neutral, systematic nature ensures high legibility and a modern professional feel. 
+- **Labels:** Small labels and overlines should use Inter with increased letter-spacing and uppercase styling to create a distinct hierarchy and an "index" feel common in high-end design.
 
 ## Layout & Spacing
-The layout philosophy rejects standard grids in favor of **intentional asymmetry** and an "open field" approach.
 
-*   **Grid Model:** A 12-column fluid grid is used for alignment, but content should frequently break the grid or span odd column counts (e.g., a 5-column text block offset by a 3-column empty space) to create visual tension and interest.
-*   **Whitespace:** Use "generous to a fault" padding. Section gaps should be expansive to allow the eye to rest.
-*   **Asymmetry:** Align primary imagery to the right while pulling text headlines deep into the left margin, or vice versa, to simulate the layout of a physical art book.
-*   **Mobile Adaptivity:** On mobile, asymmetry is simplified into a single-column stack, but "Touch" ochre organic pebble shapes are used as background floaters to maintain the brand's distinctiveness.
+This design system utilizes a **Fluid Grid with an Editorial Bias**. 
+- **Desktop:** A 12-column grid with wide 64px margins and 24px gutters. Use asymmetrical layouts where content often spans columns 2 through 10 to create white space on the peripheries.
+- **Mobile:** A 4-column grid with 20px margins. 
+- **Spacing Rhythm:** Use a base-8 increment system. However, for section-to-section transitions, use "Generous Gaps" (120px+) to ensure the content never feels crowded. Elements should have breathing room to emphasize the "Calm" tone.
 
 ## Elevation & Depth
-This design system eschews shadows and traditional depth metaphors. Instead, hierarchy is established through:
 
-1.  **Fine Hairlines:** 1px Obsidian or Ethereal lines define boundaries and sections, creating a "technical drawing" or "blueprint" feel.
-2.  **Tonal Layering:** Deep Obsidian containers appear to sit "behind" the Ethereal or paper-white foreground elements.
-3.  **Depth via Overlap:** Images and pebble shapes should subtly overlap text or grid lines, creating a flat yet layered physical sensation without the use of blurs or drop-shadows.
+To maintain a grounded and organic feel, this design system avoids heavy shadows and traditional material elevation.
+- **Tonal Layering:** Depth is conveyed through color shifting (e.g., a Sandstone card on a Paper background).
+- **Hairline Borders:** Use 0.5px to 1px borders in the Primary color at 15-20% opacity. This creates structure without the "weight" of traditional shadows.
+- **Micro-Shadows:** If depth is strictly necessary (e.g., for a floating action button or a modal), use a very soft, highly diffused shadow with a tint of the Primary Forest Green rather than pure black.
+- **Organic Overlays:** Use semi-transparent Muted Sage or Sandstone overlays on high-quality photography to ensure text legibility while maintaining a soft, natural aesthetic.
 
 ## Shapes
-The shape language is a duality of **Precision** and **Nature**.
 
-*   **UI Containers:** Buttons, input fields, and main content blocks use a "Soft" (0.5rem) roundedness to maintain a clean, architectural look.
-*   **Organic Pebbles:** Decorative elements and image masks use highly irregular, organic "pebble" shapes. These should never be perfect circles or ellipses; they should look hand-drawn or naturally eroded by water.
-*   **Hairlines:** 1px solid lines are the primary separators.
+The shape language is a mix of architectural precision and organic softness. 
+- **UI Elements:** Buttons, input fields, and cards use **Soft (0.25rem)** roundedness to maintain a professional, structured look.
+- **Organic Accents:** Use large, non-geometric SVG blobs or "pebble" shapes in the background (using Sandstone or Sage at low opacity) to break up the linear grid. These should feel like river stones or soft foliage.
+- **Hairlines:** Lines used to separate sections should be extremely thin and elegant, echoing the "fine hairline borders" motif.
 
 ## Components
 
-*   **Buttons:** Primary buttons are solid Obsidian with wide-tracked uppercase DM Sans text in Ethereal. Secondary buttons are ghost-style with a 1px Obsidian border and no fill.
-*   **Pebble Chips:** Small tags or category markers should use the organic pebble shape with a light Ethereal fill and Obsidian text.
-*   **Input Fields:** Minimalist 1px bottom-border only. Labels sit above in uppercase `label-sm`.
-*   **Cards:** Avoid standard boxed cards. Group related content using whitespace and a single vertical or horizontal hairline. If a container is necessary, use a subtle Ethereal background fill with no border or shadow.
-*   **Interactive Pebble:** The "Touch" ochre color should be reserved for the most important interactive elements, such as a floating "Book Session" button or a progress indicator, often rendered in a distinct pebble silhouette.
-*   **Lists:** Editorial-style lists using Bodoni Moda numerals (e.g., *01.*, *02.*) followed by wide-tracked descriptions.
+- **Buttons:** Primary buttons use the Forest Green background with Sandstone text. They should be rectangular with subtle 4px corner radii. Secondary buttons use a Forest Green hairline border with no fill.
+- **Input Fields:** Bottom-border only or very light Sandstone fills. Focus states should be indicated by a weight increase in the bottom border rather than a color change.
+- **Cards:** No shadows. Use a 1px Sage-tinted border or a subtle Sandstone background fill. Card titles should always be in Playfair Display.
+- **Chips/Tags:** Used for "Wellness Categories" or "Treatment Types." These should be fully rounded (pill-shaped) with Muted Sage backgrounds and Forest Green text.
+- **Photography:** Images must be the centerpiece. Use "Full-Bleed" or large inset frames with generous padding. Photography style should be natural light, slightly desaturated, focusing on the local NH environment or tactile wellness details (linens, botanical oils, hands).
+- **Lists:** Use custom icons for list bullets—specifically a small, terracotta-colored organic dot or a fine horizontal line.

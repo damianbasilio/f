@@ -1,36 +1,47 @@
-// Simple Intersection Observer for scroll-reveal effects
+// Mobile Menu Logic
+        const menuBtn = document.getElementById('mobileMenuToggle');
+        const closeBtn = document.getElementById('closeMobileMenu');
+        const menu = document.getElementById('mobileMenu');
+        const menuLinks = menu.querySelectorAll('a');
+
+        menuBtn.addEventListener('click', () => {
+            menu.classList.remove('translate-x-full');
+        });
+
+        const closeMenu = () => {
+            menu.classList.add('translate-x-full');
+        };
+
+        closeBtn.addEventListener('click', closeMenu);
+        menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+
+        // Reveal on Scroll Logic
         const observerOptions = {
-            threshold: 0.1
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    entry.target.classList.add('active');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'ease-out');
-            // Initial state set here for those we want to reveal
-            if (!section.classList.contains('min-h-screen')) {
-                section.classList.add('opacity-0', 'translate-y-10');
-                observer.observe(section);
-            }
-        });
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
 
-        // Sticky Header Shrink
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-2', 'w-[90%]');
-                header.classList.remove('py-3', 'w-[95%]');
-            } else {
-                header.classList.remove('py-2', 'w-[90%]');
-                header.classList.add('py-3', 'w-[95%]');
-            }
+        // Micro-interaction for form inputs
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('border-primary');
+            });
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.classList.remove('border-primary');
+                }
+            });
         });
 
 (() => {
