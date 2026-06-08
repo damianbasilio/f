@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Hakmods | Technical Mastery for the Modern Device</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Geist:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --electric-ember: #ff4500;
+        }
+        body {
+            background-color: #0b1326;
+            color: #dae2fd;
+            scroll-behavior: smooth;
+        }
+        .text-electric-ember { color: var(--electric-ember); }
+        .bg-electric-ember { background-color: var(--electric-ember); }
+        .border-electric-ember { border-color: var(--electric-ember); }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .scanline-overlay::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.03));
+            background-size: 100% 2px, 3px 100%;
+            pointer-events: none;
+        }
+
+        .dotted-leader {
+            border-bottom: 1px dotted rgba(173, 136, 126, 0.4);
+            flex-grow: 1;
+            margin: 0 8px;
+            margin-bottom: 5px;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline-variant": "#5d4038",
+                        "on-secondary-container": "#a7b6cc",
+                        "surface-bright": "#31394d",
+                        "on-tertiary-fixed-variant": "#3c475a",
+                        "outline": "#ad887e",
+                        "surface-container": "#171f33",
+                        "secondary-container": "#39485a",
+                        "surface-container-lowest": "#060e20",
+                        "on-tertiary-container": "#1f2a3c",
+                        "on-secondary-fixed": "#0d1c2d",
+                        "on-primary-fixed-variant": "#872000",
+                        "tertiary": "#bcc7de",
+                        "on-primary-fixed": "#3b0900",
+                        "on-background": "#dae2fd",
+                        "background": "#0b1326",
+                        "inverse-primary": "#b12d00",
+                        "surface-variant": "#2d3449",
+                        "surface-container-high": "#222a3d",
+                        "inverse-surface": "#dae2fd",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#e7bdb2",
+                        "on-secondary": "#233143",
+                        "on-surface": "#dae2fd",
+                        "secondary-fixed-dim": "#b9c8de",
+                        "surface": "#0b1326",
+                        "primary-fixed": "#ffdbd1",
+                        "on-secondary-fixed-variant": "#39485a",
+                        "on-tertiary-fixed": "#111c2d",
+                        "surface-dim": "#0b1326",
+                        "secondary-fixed": "#d4e4fa",
+                        "secondary": "#b9c8de",
+                        "on-primary-container": "#541100",
+                        "inverse-on-surface": "#283044",
+                        "surface-container-highest": "#2d3449",
+                        "tertiary-container": "#8691a7",
+                        "surface-tint": "#ffb5a0",
+                        "on-primary": "#601400",
+                        "primary-container": "#ff5625",
+                        "error-container": "#93000a",
+                        "primary": "#ffb5a0",
+                        "on-tertiary": "#263143",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#ffb5a0",
+                        "tertiary-fixed": "#d8e3fb",
+                        "tertiary-fixed-dim": "#bcc7de",
+                        "surface-container-low": "#131b2e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "section-gap": "120px",
+                        "unit": "4px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "caption": ["Geist"],
+                        "body-md": ["Geist"],
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-lg": ["Geist"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "label-mono": ["Geist"]
+                    },
+                    "fontSize": {
+                        "caption": ["11px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-mono": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-outline/20">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md font-bold text-on-surface dark:text-on-surface" href="#">Hakmods</a>
+<nav class="hidden md:flex gap-6">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#about">The Craft</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#visit">Location</a>
+</nav>
+</div>
+<div class="flex items-center gap-4">
+<a class="hidden lg:block font-label-mono text-label-mono text-primary" href="tel:3197435595">(319) 743-5595</a>
+<a class="bg-primary-container text-on-primary-container px-6 py-2 font-label-mono text-label-mono transition-all hover:brightness-110 active:scale-95" href="#contact">Book Repair</a>
+</div>
+</header>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-margin-mobile md:px-margin-desktop overflow-hidden border-b border-outline/10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter w-full z-10">
+<div class="lg:col-span-7 flex flex-col justify-center">
+<span class="font-label-mono text-label-mono text-primary mb-4 block">PRECISION ENGINEERING</span>
+<h1 class="font-display-lg text-display-lg mb-6 max-w-2xl leading-tight">Technical Mastery for the Modern Device.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-10">
+                        Beyond the standard fix. We provide laboratory-grade restoration for sophisticated mobile hardware in Cedar Rapids.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<a class="bg-electric-ember text-white px-8 py-4 font-label-mono text-label-mono hover:opacity-90 transition-opacity" href="#contact">DIAGNOSTIC APPOINTMENT</a>
+<a class="border border-outline px-8 py-4 font-label-mono text-label-mono hover:bg-surface-variant transition-colors" href="mailto:Hakmods@gmail.com">HAKMODS@GMAIL.COM</a>
+</div>
+</div>
+<div class="hidden lg:block lg:col-span-5 relative h-full">
+<div class="absolute inset-0 scanline-overlay bg-surface-container-high rounded-lg overflow-hidden border border-outline/30">
+<img alt="Precision repair" class="w-full h-full object-cover grayscale opacity-60" data-alt="A highly detailed macro photograph of a professional technician using fine-tipped tweezers to adjust a microchip on a smartphone logic board. The lighting is cold and technical, highlighting the intricate copper traces and silicon surfaces. The background is a dark, organized laboratory setting with high-end diagnostic tools. The aesthetic is sophisticated and precise, mirroring a luxury watchmaking environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-sqG_MgkLYMLhl5iBd8AwaIIjXMZ_iIEyplx-67vFfxMfic0dq8wuBqTCo243Set2CWGhhDf6bym5G830yoV0G3vCFdRin7bxuT6H-ETBNow2JQV7Obp_Y18xygyHB_0N4bLgbqoh0RMDAvXvqbvNCa_8pzmDd2cuG_rDIvVqjGztMzSwKaYk52WUkoKpuzJWDWfEz037c-lY2rBgIKgEuDpaSXYwzIMROCdoVaiu4GKym1rfiq9kPoOLlaChapReutS6vnTrQDU9"/>
+</div>
+</div>
+</div>
+<!-- Background Decoration -->
+<div class="absolute -right-20 -top-20 w-96 h-96 bg-primary/5 blur-[120px] rounded-full"></div>
+</section>
+<!-- Mission (#credibility) -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="credibility">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg mb-6">Micro-Scale Precision</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our reputation is built on the atomic level. With over 15,000 successful restorations, Hakmods represents the pinnacle of independent device repair in Iowa.
+                    </p>
+</div>
+<div class="flex gap-12">
+<div class="text-center">
+<span class="block font-headline-md text-headline-md text-primary">15K+</span>
+<span class="font-label-mono text-caption text-outline">REPAIRS</span>
+</div>
+<div class="text-center">
+<span class="block font-headline-md text-headline-md text-primary">5.0</span>
+<span class="font-label-mono text-caption text-outline">RATING</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-8 border border-outline/20 bg-surface-container-low hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="microscope">microwave</span>
+<h3 class="font-headline-md text-headline-md mb-4">Diagnostics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep-layer analysis using oscilloscope and thermal imaging to identify root causes, not just symptoms.</p>
+</div>
+<div class="p-8 border border-outline/20 bg-surface-container-low hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="precision_manufacturing">precision_manufacturing</span>
+<h3 class="font-headline-md text-headline-md mb-4">Calibration</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">TrueTone, FaceID, and biometric sensors are painstakingly recalibrated to original manufacturer specs.</p>
+</div>
+<div class="p-8 border border-outline/20 bg-surface-container-low hover:border-primary/50 transition-colors group">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="verified">verified</span>
+<h3 class="font-headline-md text-headline-md mb-4">Integrity</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Only Tier-1 OEM-grade components are selected for integration. No generic substitutes, ever.</p>
+</div>
+</div>
+</section>
+<!-- Services -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="services">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4 sticky top-32 h-fit">
+<h2 class="font-headline-lg text-headline-lg mb-8 italic">Specialized Technical Protocols</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">
+                        We operate at the intersection of metallurgy and computation. Each repair is treated as a restoration project.
+                    </p>
+<hr class="border-outline/20 mb-8"/>
+<div class="flex flex-col gap-4">
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span>OLED CALIBRATION</span>
+<span class="text-primary">0.02ms</span>
+</div>
+<div class="flex items-center justify-between font-label-mono text-label-mono">
+<span>SOLDER PURITY</span>
+<span class="text-primary">99.9%</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Block 1 -->
+<div class="relative overflow-hidden group border border-outline/20 p-1">
+<div class="grid md:grid-cols-2 bg-surface-container">
+<div class="p-8 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md mb-4">Glass Restoration</h4>
+<p class="font-body-md text-body-md text-on-secondary-container">Full-frame digitizer replacement using cold-press adhesive techniques for a factory-tight seal.</p>
+</div>
+<div class="mt-8">
+<div class="flex items-end mb-2">
+<span class="font-label-mono text-label-mono">BASE PROTOCOL</span>
+<div class="dotted-leader"></div>
+<span class="font-label-mono text-label-mono text-primary">$129</span>
+</div>
+</div>
+</div>
+<div class="h-64 md:h-auto overflow-hidden relative">
+<img alt="Glass repair" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, high-contrast close-up of a shattered smartphone screen being illuminated by a single blue LED light. The cracks form a complex, crystalline pattern across the surface. A professional repair tool is visible at the edge, hinting at the upcoming restoration process. The mood is dramatic and highlights the technical challenge of the repair, set against a dark, minimalist background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8NXQJ5I0TuonjBrP9WKsSfG0AbFy-RIQ7-HvoNGElmjB8QMIjFl_qsvNjWxyEvqiZKVINU4BuUbHX1GR52CQ9qFtcPH1Zw6OKT0t0_MeHYtd9pExF70979q-eXhkY3435_QbWgRz0lF5xln0j1kHLF7VnNRucB0t1W6Uad7r3uUjCIivT5JThNbIDAKE4UGkLeHN6XLcErhHk__aEATtJ8gOduuC2FRI42EgdCHP9QX8CpLiPSOwLCOsCI27caitRA3PUi27f28RI"/>
+</div>
+</div>
+</div>
+<!-- Block 2 -->
+<div class="relative overflow-hidden group border border-outline/20 p-1">
+<div class="grid md:grid-cols-2 bg-surface-container">
+<div class="h-64 md:h-auto overflow-hidden relative order-2 md:order-1">
+<img alt="Microsoldering" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A professional macro shot through a digital microscope showing a technician's hand using a high-end soldering iron to work on a miniature logic board component. Glowing orange solder points contrast against the deep green substrate of the circuit. Fine wisps of smoke rise in a controlled environment. The overall feel is one of extreme precision and technical expertise in a dark-mode, high-tech laboratory." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFBUFypGtlexdecmeAbzuVNj5R6-xgLudOubtGUHCp8tSINhatRwvgcHbY8FqmTbKhtGzX9-RARpMY3HR_kMgzBOklTWTsSxhR5Tcx5dEQfrui9S6KGLaQpNfCaSFqnvPKT6O1U3RelRfC1HIlF3pEUBf1rzg05a8NMuHwyGpWovP7ZMg-5k7--yU_h04FsACTdgQTBQGph8gaN1JtSqbAr_IDDcNrZlGgtGXBV0OYvnxcjEYqPRBa61_HMpPy6cTy-qZNKRZbxBhQ"/>
+</div>
+<div class="p-8 flex flex-col justify-between order-1 md:order-2">
+<div>
+<h4 class="font-headline-md text-headline-md mb-4">Logic Board Microsoldering</h4>
+<p class="font-body-md text-body-md text-on-secondary-container">Component-level repair including IC replacement, trace reconstruction, and water damage remediation.</p>
+</div>
+<div class="mt-8">
+<div class="flex items-end mb-2">
+<span class="font-label-mono text-label-mono">DIAGNOSTIC FEE</span>
+<div class="dotted-leader"></div>
+<span class="font-label-mono text-label-mono text-primary">$45</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Block 3 -->
+<div class="relative overflow-hidden group border border-outline/20 p-1">
+<div class="grid md:grid-cols-2 bg-surface-container">
+<div class="p-8 flex flex-col justify-between">
+<div>
+<h4 class="font-headline-md text-headline-md mb-4">Power Systems</h4>
+<p class="font-body-md text-body-md text-on-secondary-container">Cellular-grade battery replacement and charging port stabilization for peak longevity.</p>
+</div>
+<div class="mt-8">
+<div class="flex items-end mb-2">
+<span class="font-label-mono text-label-mono">PREMIUM CELL</span>
+<div class="dotted-leader"></div>
+<span class="font-label-mono text-label-mono text-primary">$79</span>
+</div>
+</div>
+</div>
+<div class="h-64 md:h-auto overflow-hidden relative">
+<img alt="Battery repair" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A clean, technical top-down view of various high-quality smartphone batteries and internal power ribbons laid out on a gridded, anti-static repair mat. The lighting is bright and even, highlighting the technical labels and metallic connectors. The scene suggests an organized, expert workspace dedicated to power system optimization. The color palette is dominated by dark blues and silvers with amber accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXPFka6x0xE7cwMw6anoTrQ9LoLmDTJmOzl7J4LmheFP5pIl1UK-qTRMgpFD7lBNS7Nc1m4FBbGJ3H6wyFv_kpcwSwtOw0rxHkn9tFEGzMgsADaTih9ujdyRevXBusySqkD9s_CvC6qzz2IArRi3oq6sCD9ZT8YKOwGZXIB9N8yZEEO-Oq6mG-oCP_iZ6KnSf2ghOqvmxJ3DrigD296jT_euKZmB1eJlDK9uLMLxGq2cdPAPEjQ7ZD8XXXm88wrlV7wMvuj1I9LnDY"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About: Philosophy -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-high border-y border-outline/20 overflow-hidden relative" id="about">
+<div class="absolute right-0 top-0 text-[20rem] font-headline-lg opacity-5 select-none pointer-events-none -translate-y-1/4 translate-x-1/4">H</div>
+<div class="max-w-4xl mx-auto text-center relative z-10">
+<span class="font-label-mono text-label-mono text-primary mb-6 block">THE HAKMODS PHILOSOPHY</span>
+<h2 class="font-display-lg text-display-lg mb-8 italic">Precision Over Speed.</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 text-left">
+<p class="font-body-lg text-body-lg text-on-surface">
+                        We reject the "fast-fix" culture. At Hakmods, we understand that modern mobile devices are marvels of engineering that deserve more than a 15-minute quick-swap. 
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Our technicians are craftsmen who view every device as a complex ecosystem. We invest in high-end diagnostic equipment that allows us to see what others miss, ensuring your hardware operates at its design-limit performance.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Visit & Contact -->
+<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+<!-- Contact Details -->
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">The Laboratory.</h2>
+<div class="flex flex-col gap-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="location_on">location_on</span>
+<div>
+<h5 class="font-label-mono text-label-mono text-outline mb-2 uppercase">Physical Address</h5>
+<p class="font-headline-md text-headline-md">Cedar Rapids, Iowa<br/>Technical District</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="schedule">schedule</span>
+<div>
+<h5 class="font-label-mono text-label-mono text-outline mb-2 uppercase">Protocol Hours</h5>
+<p class="font-body-lg text-body-lg">Mon – Fri: 09:00 – 18:00<br/>Sat: By Appointment Only</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="alternate_email">alternate_email</span>
+<div>
+<h5 class="font-label-mono text-label-mono text-outline mb-2 uppercase">Direct Link</h5>
+<p class="font-body-lg text-body-lg underline decoration-primary/40 underline-offset-4">Hakmods@gmail.com</p>
+</div>
+</div>
+</div>
+<!-- Map Slot -->
+<div aria-label="Map" class="mt-16 map-slot relative overflow-hidden min-h-[400px] border border-outline/30 grayscale hover:grayscale-0 transition-all duration-700 bg-surface-container-low" data-location="Cedar Rapids, Iowa" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
+<div class="w-full h-full bg-[radial-gradient(#ad887e_1px,transparent_1px)] [background-size:20px_20px]"></div>
+</div>
+</div>
+</div>
+<!-- Form -->
+<div class="bg-surface-container p-8 md:p-12 border border-outline/20" id="contact">
+<h3 class="font-headline-md text-headline-md mb-8">Initiate Technical Request</h3>
+<form class="flex flex-col gap-6" onsubmit="event.preventDefault(); alert('Request logged to system. Our technician will contact you shortly.');">
+<div class="flex flex-col gap-2">
+<label class="font-label-mono text-label-mono text-outline">CLIENT NAME</label>
+<input class="bg-surface border-outline/30 focus:border-electric-ember focus:ring-0 text-on-surface px-4 py-3 font-body-md" placeholder="Enter Full Name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-mono text-label-mono text-outline">CONTACT CHANNEL</label>
+<input class="bg-surface border-outline/30 focus:border-electric-ember focus:ring-0 text-on-surface px-4 py-3 font-body-md" placeholder="Email Address" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-mono text-label-mono text-outline">HARDWARE MODEL</label>
+<select class="bg-surface border-outline/30 focus:border-electric-ember focus:ring-0 text-on-surface px-4 py-3 font-body-md appearance-none">
+<option>iPhone 15 Series</option>
+<option>iPhone 14 Series</option>
+<option>iPhone 13 Series</option>
+<option>Samsung S-Series</option>
+<option>Google Pixel</option>
+<option>Other Micro-Hardware</option>
+</select>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-mono text-label-mono text-outline">SYMPTOM DESCRIPTION</label>
+<textarea class="bg-surface border-outline/30 focus:border-electric-ember focus:ring-0 text-on-surface px-4 py-3 font-body-md" placeholder="Describe the device failure in detail..." rows="4"></textarea>
+</div>
+<button class="bg-electric-ember text-white font-label-mono text-label-mono py-4 mt-4 hover:brightness-110 active:scale-95 transition-all" type="submit">SUBMIT FOR DIAGNOSTIC</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-gutter px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8 bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="flex flex-col gap-2">
+<span class="font-headline-md text-headline-md text-on-surface">Hakmods</span>
+<p class="font-label-mono text-caption text-on-secondary-container">© 2024 Hakmods Mobile. Precision Engineering.</p>
+</div>
+<nav class="flex gap-6">
+<a class="font-label-mono text-label-mono text-on-secondary-container hover:text-primary transition-colors" href="#">Privacy Protocol</a>
+<a class="font-label-mono text-label-mono text-on-secondary-container hover:text-primary transition-colors" href="#">Technical Terms</a>
+<a class="font-label-mono text-label-mono text-on-secondary-container hover:text-primary transition-colors" href="#">Diagnostic Login</a>
+</nav>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline/20 hover:border-primary/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface" data-icon="share">share</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline/20 hover:border-primary/50 transition-colors" href="#">
+<span class="material-symbols-outlined text-on-surface" data-icon="mail">mail</span>
+</a>
+</div>
+</footer>
+<script>
+        // Micro-interactions and parallax effect on images
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                const speed = 0.05;
+                img.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Add active state to navigation on scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= sectionTop - 150) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                if (link.getAttribute('href').includes(current) && current !== '') {
+                    link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                }
+            });
+        });
+    </script>
+</body></html>
