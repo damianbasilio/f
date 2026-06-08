@@ -1,118 +1,114 @@
-I have designed a bespoke, editorial-quality landing page for MindSoulTouch. 
+I've designed a bespoke, editorial-grade homepage for **MindSoulTouch** that captures the essence of a "Modern Sanctuary." 
 
 ### Design Highlights:
-*   **Unique Visual Identity:** I've moved away from standard local-business templates, opting for a sophisticated, editorial layout with asymmetrical compositions and a rich, grounded color palette of forest green, sandstone, and terracotta.
-*   **Typographic Hierarchy:** Using a bold, elegant serif for headlines (*Playfair Display*) creates an immediate sense of trust and premium quality, balanced with a clean sans-serif for readability.
-*   **Bespoke Sections:**
-    *   **Hero:** A high-concept, atmospheric entry point that emphasizes the "Rhythm of your Soul."
-    *   **Offerings:** A magazine-style gallery for services that feels curated rather than listed.
-    *   **The Philosophy:** A storytelling-focused "About" section that highlights the personal touch behind the brand.
-    *   **Visit & Contact:** A clear, welcoming path to finding the physical location in Campton, NH, paired with a serene, minimalist contact experience.
+*   **Visual Identity**: I established a unique New Hampshire-inspired palette using **Granite Moss**, **Birch Bark**, and a muted **NH Sunset** terracotta accent to create a grounding, premium feel.
+*   **Editorial Layout**: Eschewing generic templates, the page uses an asymmetrical grid with generous whitespace and thin typographic rules to mimic a high-end wellness magazine.
+*   **Memorable Motifs**: Overlapping elements and large, sophisticated serif typography (**Playfair Display**) create a distinct brand voice that feels both clinical and ethereal.
+*   **Production-Ready**: The screen includes the requested semantic sections, a functional mobile navigation, and the specific interactive map slot for your Campton location.
 
-The site is fully responsive, optimized for desktop and mobile, and built with clean, semantic HTML and CSS.
-
-How does this new visual direction feel for the brand? We can refine specific imagery, adjust the color weight, or expand on any of the service descriptions.
+The site is now ready to serve as the definitive digital home for Sheryl Legie’s holistic practice. How would you like to proceed?
 
 ---
 
 ---
-name: MindSoulTouch
+name: Modern Sanctuary
 colors:
-  surface: '#fdfae7'
-  surface-dim: '#dddbc8'
-  surface-bright: '#fdfae7'
+  surface: '#f8faf9'
+  surface-dim: '#d8dada'
+  surface-bright: '#f8faf9'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f7f4e1'
-  surface-container: '#f1eedb'
-  surface-container-high: '#ece9d6'
-  surface-container-highest: '#e6e3d0'
-  on-surface: '#1c1c11'
-  on-surface-variant: '#434843'
-  inverse-surface: '#313124'
-  inverse-on-surface: '#f4f1de'
-  outline: '#737973'
-  outline-variant: '#c3c8c1'
-  surface-tint: '#4d6453'
-  primary: '#061b0e'
+  surface-container-low: '#f2f4f3'
+  surface-container: '#eceeed'
+  surface-container-high: '#e6e9e8'
+  surface-container-highest: '#e1e3e2'
+  on-surface: '#191c1c'
+  on-surface-variant: '#424845'
+  inverse-surface: '#2e3131'
+  inverse-on-surface: '#eff1f0'
+  outline: '#737874'
+  outline-variant: '#c2c8c3'
+  surface-tint: '#50635a'
+  primary: '#172821'
   on-primary: '#ffffff'
-  primary-container: '#1b3022'
-  on-primary-container: '#819986'
-  inverse-primary: '#b4cdb8'
-  secondary: '#56642b'
+  primary-container: '#2c3e36'
+  on-primary-container: '#95a99e'
+  inverse-primary: '#b7cbc0'
+  secondary: '#615e57'
   on-secondary: '#ffffff'
-  secondary-container: '#d6e7a1'
-  on-secondary-container: '#5a682f'
-  tertiary: '#261200'
+  secondary-container: '#e8e2d9'
+  on-secondary-container: '#67645d'
+  tertiary: '#421806'
   on-tertiary: '#ffffff'
-  tertiary-container: '#422401'
-  on-tertiary-container: '#b7895b'
+  tertiary-container: '#5d2d18'
+  on-tertiary-container: '#d99478'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#d0e9d4'
-  primary-fixed-dim: '#b4cdb8'
-  on-primary-fixed: '#0b2013'
-  on-primary-fixed-variant: '#364c3c'
-  secondary-fixed: '#d9eaa3'
-  secondary-fixed-dim: '#bdce89'
-  on-secondary-fixed: '#161f00'
-  on-secondary-fixed-variant: '#3e4c16'
-  tertiary-fixed: '#ffdcbd'
-  tertiary-fixed-dim: '#f0bd8b'
-  on-tertiary-fixed: '#2c1600'
-  on-tertiary-fixed-variant: '#623f18'
-  background: '#fdfae7'
-  on-background: '#1c1c11'
-  surface-variant: '#e6e3d0'
+  primary-fixed: '#d3e7dc'
+  primary-fixed-dim: '#b7cbc0'
+  on-primary-fixed: '#0d1f18'
+  on-primary-fixed-variant: '#384b42'
+  secondary-fixed: '#e8e2d9'
+  secondary-fixed-dim: '#cbc6bd'
+  on-secondary-fixed: '#1d1b16'
+  on-secondary-fixed-variant: '#494640'
+  tertiary-fixed: '#ffdbce'
+  tertiary-fixed-dim: '#ffb598'
+  on-tertiary-fixed: '#360f01'
+  on-tertiary-fixed-variant: '#6c3923'
+  background: '#f8faf9'
+  on-background: '#191c1c'
+  surface-variant: '#e1e3e2'
 typography:
   display-lg:
     fontFamily: Playfair Display
-    fontSize: 64px
-    fontWeight: '700'
+    fontSize: 72px
+    fontWeight: '400'
     lineHeight: '1.1'
     letterSpacing: -0.02em
-  display-lg-mobile:
-    fontFamily: Playfair Display
-    fontSize: 40px
-    fontWeight: '700'
-    lineHeight: '1.2'
   headline-lg:
     fontFamily: Playfair Display
-    fontSize: 40px
-    fontWeight: '600'
+    fontSize: 48px
+    fontWeight: '400'
     lineHeight: '1.2'
   headline-lg-mobile:
     fontFamily: Playfair Display
     fontSize: 32px
-    fontWeight: '600'
+    fontWeight: '400'
     lineHeight: '1.2'
   headline-md:
     fontFamily: Playfair Display
-    fontSize: 28px
-    fontWeight: '600'
+    fontSize: 32px
+    fontWeight: '400'
     lineHeight: '1.3'
+  headline-sm:
+    fontFamily: Playfair Display
+    fontSize: 24px
+    fontWeight: '500'
+    lineHeight: '1.4'
   body-lg:
-    fontFamily: Inter
+    fontFamily: Hanken Grotesk
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
   body-md:
-    fontFamily: Inter
+    fontFamily: Hanken Grotesk
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
   label-md:
-    fontFamily: Inter
+    fontFamily: Hanken Grotesk
     fontSize: 14px
     fontWeight: '600'
-    lineHeight: '1.4'
+    lineHeight: '1.2'
     letterSpacing: 0.05em
   label-sm:
-    fontFamily: Inter
+    fontFamily: Hanken Grotesk
     fontSize: 12px
     fontWeight: '500'
-    lineHeight: '1.4'
+    lineHeight: '1.2'
+    letterSpacing: 0.02em
 rounded:
   sm: 0.125rem
   DEFAULT: 0.25rem
@@ -121,63 +117,62 @@ rounded:
   xl: 0.75rem
   full: 9999px
 spacing:
-  base: 8px
-  gutter: 24px
-  margin-mobile: 20px
+  unit: 8px
+  container-max: 1280px
+  gutter: 32px
   margin-desktop: 64px
-  section-gap: 120px
+  margin-mobile: 24px
+  overlap-offset: -40px
 ---
 
 ## Brand & Style
+The brand personality is grounded, restorative, and sophisticated. It aims to evoke an immediate sense of exhale—a "Modern Sanctuary" that bridges the gap between clinical expertise and ethereal wellness. The target audience seeks a premium, intentional experience that values quiet luxury over loud marketing.
 
-The design system is built upon the concept of "Earthy Serenity," a visual philosophy that blends high-end editorial aesthetics with the grounding presence of the White Mountains. The brand personality is calm, expert, and restorative, moving away from clinical coldness toward a warm, human-centric wellness experience. 
-
-The style utilizes a **Minimalist-Editorial** approach. It prioritizes generous, intentional whitespace to give the user "room to breathe," reflecting the restorative nature of the services. Visual interest is generated through high-contrast typography and subtle organic shapes that break the rigidity of traditional grids. The interface should feel like a premium lifestyle publication—sophisticated, quiet, and deeply trustworthy.
+The design style is **Editorial Minimalism**. It draws heavily from high-end wellness publications, utilizing generous whitespace to provide "breathable" layouts. Unlike standard digital interfaces, this design system prioritizes a rule-based grid that allows for intentional asymmetry, overlapping elements, and a visual rhythm that feels curated rather than templated.
 
 ## Colors
-
-The palette is rooted in the natural landscape of Campton, NH. 
-- **Primary (Deep Forest Green):** Used for primary headings, call-to-action backgrounds, and heavy structural elements. It provides the "grounding" force of the design.
-- **Secondary (Muted Sage):** Used for subtle backgrounds, secondary actions, and success states. It acts as a bridge between the dark primary and light neutrals.
-- **Tertiary (Soft Terracotta):** A signature accent used sparingly for highlights, notifications, or specific interactive elements to provide warmth and focus.
-- **Neutral (Sandstone):** The primary surface color for containers and sections, providing a softer, more organic alternative to pure white.
-
-The base background should be a slightly off-white "Paper" tone (#FDFCF7) to reduce screen glare and enhance the editorial feel.
+The palette is inspired by the natural landscape of Campton, New Hampshire.
+- **Granite Moss (#2C3E36):** The primary anchor. Used for typography and deep structural elements to provide a sense of groundedness and authority.
+- **Frost Breath (#F9FBFA):** The canvas. This cool, airy off-white is used for primary backgrounds to maintain a crisp, clean environment.
+- **Birch Bark (#E8E2D9):** A warm neutral used for large surface areas, tonal sections, and subtle separators to add softness to the cool background.
+- **New Hampshire Sunset (#D18D72):** An accent color used sparingly for calls to action, highlights, and organic decorative elements to provide a warm, human touch.
 
 ## Typography
-
-Typography is the primary driver of the "Sophisticated" brand pillar. 
-- **Headlines:** Use Playfair Display. This serif provides the literary and authoritative tone required for a premium wellness brand. Large display sizes should use a slight negative letter-spacing for a tighter, more polished look.
-- **Body & UI:** Use Inter. Its neutral, systematic nature ensures high legibility and a modern professional feel. 
-- **Labels:** Small labels and overlines should use Inter with increased letter-spacing and uppercase styling to create a distinct hierarchy and an "index" feel common in high-end design.
+The typography pairing establishes a clear editorial hierarchy. 
+- **Headlines:** Uses `Playfair Display`. Its high-contrast serifs convey elegance and tradition. For "Display" roles, use tight letter-spacing to create a more impactful, magazine-style header.
+- **Body & UI:** Uses `Hanken Grotesk`. This crisp sans-serif ensures maximum legibility for functional text.
+- **Rules:** Always prioritize generous line-heights to maintain the airy aesthetic. Use uppercase labels with increased letter-spacing for category headers or small metadata to create a distinct professional contrast against the serif headlines.
 
 ## Layout & Spacing
+The design system utilizes a **12-column fluid grid** with an emphasis on intentional "white space as content." 
 
-This design system utilizes a **Fluid Grid with an Editorial Bias**. 
-- **Desktop:** A 12-column grid with wide 64px margins and 24px gutters. Use asymmetrical layouts where content often spans columns 2 through 10 to create white space on the peripheries.
-- **Mobile:** A 4-column grid with 20px margins. 
-- **Spacing Rhythm:** Use a base-8 increment system. However, for section-to-section transitions, use "Generous Gaps" (120px+) to ensure the content never feels crowded. Elements should have breathing room to emphasize the "Calm" tone.
+### Editorial Layout Rules:
+- **Asymmetry:** Avoid centering all elements. Align text to the left 4 columns while allowing imagery to span the right 8, or vice versa.
+- **Overlapping:** Use the `overlap-offset` variable to allow images or text containers to break the grid and bleed into adjacent sections, creating depth.
+- **Negative Space:** Sections should have vertical padding ranging from 80px to 160px to prevent the UI from feeling "crowded."
+- **Breakpoints:** 
+  - *Desktop (1024px+):* Full 12-column asymmetry.
+  - *Tablet (768px - 1023px):* 8-column grid, reduced margins, limited overlapping.
+  - *Mobile (Under 768px):* 4-column vertical stack; remove complex overlaps to maintain legibility.
 
 ## Elevation & Depth
-
-To maintain a grounded and organic feel, this design system avoids heavy shadows and traditional material elevation.
-- **Tonal Layering:** Depth is conveyed through color shifting (e.g., a Sandstone card on a Paper background).
-- **Hairline Borders:** Use 0.5px to 1px borders in the Primary color at 15-20% opacity. This creates structure without the "weight" of traditional shadows.
-- **Micro-Shadows:** If depth is strictly necessary (e.g., for a floating action button or a modal), use a very soft, highly diffused shadow with a tint of the Primary Forest Green rather than pure black.
-- **Organic Overlays:** Use semi-transparent Muted Sage or Sandstone overlays on high-quality photography to ensure text legibility while maintaining a soft, natural aesthetic.
+Depth is achieved through **Tonal Layers** and light-play rather than heavy shadows.
+- **Surface Tiers:** Use 'Frost Breath' as the base, with 'Birch Bark' used for secondary sections to create a subtle lift.
+- **Soft Shadows:** If a shadow is required for a floating element (like a modal or a primary button), use a very large blur (32px+) with extremely low opacity (5-8%) using a 'Granite Moss' tint to keep it feeling natural.
+- **Backdrop Blurs:** Use subtle background blurs (8px-12px) on navigation bars or overlays to maintain a sense of glass-like transparency, reinforcing the "Airy" brand pillar.
 
 ## Shapes
-
-The shape language is a mix of architectural precision and organic softness. 
-- **UI Elements:** Buttons, input fields, and cards use **Soft (0.25rem)** roundedness to maintain a professional, structured look.
-- **Organic Accents:** Use large, non-geometric SVG blobs or "pebble" shapes in the background (using Sandstone or Sage at low opacity) to break up the linear grid. These should feel like river stones or soft foliage.
-- **Hairlines:** Lines used to separate sections should be extremely thin and elegant, echoing the "fine hairline borders" motif.
+The shape language is primarily **Soft** and structured, but interspersed with **Organic Motifs**.
+- **Structural Elements:** Buttons, input fields, and containers use a subtle 0.25rem (Soft) radius to maintain a professional, architectural feel.
+- **Organic Motifs:** Use high-radius or "blob" shapes for background decorations or image masks. These should be asymmetrical (e.g., `border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%`) to mimic natural stones or botanical forms.
+- **Rules:** Use thin 1px lines (using 'Birch Bark') for section dividers to reinforce the editorial "grid" look.
 
 ## Components
-
-- **Buttons:** Primary buttons use the Forest Green background with Sandstone text. They should be rectangular with subtle 4px corner radii. Secondary buttons use a Forest Green hairline border with no fill.
-- **Input Fields:** Bottom-border only or very light Sandstone fills. Focus states should be indicated by a weight increase in the bottom border rather than a color change.
-- **Cards:** No shadows. Use a 1px Sage-tinted border or a subtle Sandstone background fill. Card titles should always be in Playfair Display.
-- **Chips/Tags:** Used for "Wellness Categories" or "Treatment Types." These should be fully rounded (pill-shaped) with Muted Sage backgrounds and Forest Green text.
-- **Photography:** Images must be the centerpiece. Use "Full-Bleed" or large inset frames with generous padding. Photography style should be natural light, slightly desaturated, focusing on the local NH environment or tactile wellness details (linens, botanical oils, hands).
-- **Lists:** Use custom icons for list bullets—specifically a small, terracotta-colored organic dot or a fine horizontal line.
+- **Buttons:**
+  - *Primary:* Solid 'Granite Moss' with 'Frost Breath' text. Rectangular with soft corners.
+  - *Secondary:* Outlined 'Granite Moss' or 'New Hampshire Sunset' with 1px borders.
+  - *Text:* All-caps 'Hanken Grotesk' with 0.05em letter spacing.
+- **Cards:** Do not use traditional "boxed" cards with shadows. Instead, use "Editorial Blocks"—an image with a caption using 'Playfair Display' for the title, placed with asymmetrical padding.
+- **Inputs:** Minimalist bottom-border only or very light 'Birch Bark' fills. Labels should be small, uppercase 'Hanken Grotesk' placed above the field.
+- **Chips/Tags:** Use 'Birch Bark' backgrounds with 'Granite Moss' text, fully pill-shaped (rounded-xl) to distinguish them from structural buttons.
+- **Featured Quote:** A specific component for testimonials using 'Playfair Display' italic, centered or offset, with a thin 'New Hampshire Sunset' vertical line to the left.

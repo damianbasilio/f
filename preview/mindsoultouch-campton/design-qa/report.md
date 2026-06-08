@@ -18,9 +18,8 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- emil: replaced transition: all
 - emil: added :active press feedback
-- taste: removed 1 em/en dash(es) from copy
+- taste: removed 2 em/en dash(es) from copy
 - craft: injected brief fonts (Barlow Condensed / Barlow)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
@@ -35,7 +34,7 @@
 - OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- WARN: 8 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
+- WARN: 27 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -47,7 +46,7 @@
 
 ### taste
 
-- WARN: 8 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
+- WARN: 27 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
 - Anti-slop: no em dashes, layout families from Stitch brief
 
 ### audit

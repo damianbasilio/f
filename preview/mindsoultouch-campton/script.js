@@ -1,47 +1,40 @@
-// Mobile Menu Logic
-        const menuBtn = document.getElementById('mobileMenuToggle');
-        const closeBtn = document.getElementById('closeMobileMenu');
-        const menu = document.getElementById('mobileMenu');
-        const menuLinks = menu.querySelectorAll('a');
-
-        menuBtn.addEventListener('click', () => {
-            menu.classList.remove('translate-x-full');
+// Micro-interactions and Form Validation
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Preview only';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'Received with Gratitude';
+                btn.classList.add('bg-on-primary-fixed-variant');
+                e.target.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-on-primary-fixed-variant');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
         });
 
-        const closeMenu = () => {
-            menu.classList.add('translate-x-full');
-        };
-
-        closeBtn.addEventListener('click', closeMenu);
-        menuLinks.forEach(link => link.addEventListener('click', closeMenu));
-
-        // Reveal on Scroll Logic
+        // Simple scroll reveal effect for images
         const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
+            threshold: 0.1
         };
 
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-
-        // Micro-interaction for form inputs
-        const inputs = document.querySelectorAll('input, textarea');
-        inputs.forEach(input => {
-            input.addEventListener('focus', () => {
-                input.parentElement.classList.add('border-primary');
-            });
-            input.addEventListener('blur', () => {
-                if (!input.value) {
-                    input.parentElement.classList.remove('border-primary');
-                }
-            });
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
 
 (() => {
