@@ -1,61 +1,22 @@
-// Scroll Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
+// Smooth scroll reveal interaction
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.stagger-load').forEach(el => observer.observe(el));
-
-        // Smooth Scroll Logic (Native but enhanced)
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
                 });
+            }, observerOptions);
+
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+                observer.observe(section);
             });
-        });
-
-        // Form Submission Interaction
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button');
-            const originalText = btn.textContent;
-            
-            btn.disabled = true;
-            btn.textContent = 'Preview only';
-            
-            setTimeout(() => {
-                btn.textContent = 'SENT SUCCESSFULLY';
-                btn.classList.replace('bg-primary', 'bg-green-700');
-                this.reset();
-                
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.classList.replace('bg-green-700', 'bg-primary');
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-
-        // Dynamic Header Shrink
-        window.addEventListener('scroll', () => {
-            const nav = document.querySelector('nav');
-            if (window.scrollY > 100) {
-                nav.classList.add('py-2', 'mt-0');
-                nav.classList.remove('py-4', 'top-unit');
-            } else {
-                nav.classList.remove('py-2', 'mt-0');
-                nav.classList.add('py-4', 'top-unit');
-            }
         });
 
 (() => {

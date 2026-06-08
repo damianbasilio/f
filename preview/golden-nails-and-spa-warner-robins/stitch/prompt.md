@@ -38,7 +38,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 Golden Nails & Spa, Warner Robins. 1,139 likes · 839 were here. Pedicures, Nails, SNS Dip, Waxing, Gel polish, eyebrows,powders nails, desigh
 Hours: Closed now
 Address: 2197 Watson blvd #R, Warner Robins, GA, United States, 31093
-Phone: 478-225-2131
+Phone: 265.663 7265
 Email: chuongba2004@yahoo.com
 
 Recent posts from their Facebook page:
