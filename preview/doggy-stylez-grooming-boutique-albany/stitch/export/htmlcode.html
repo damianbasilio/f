@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Doggy Stylez | Grooming &amp; Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e6e2de",
+                    "primary-fixed-dim": "#9acee1",
+                    "tertiary-container": "#3b465d",
+                    "surface-variant": "#e6e2de",
+                    "on-secondary-fixed-variant": "#5b4300",
+                    "tertiary": "#253045",
+                    "on-secondary-fixed": "#251a00",
+                    "on-primary": "#ffffff",
+                    "on-primary-fixed": "#001f28",
+                    "outline": "#70787c",
+                    "on-surface-variant": "#40484b",
+                    "inverse-on-surface": "#f4f0ec",
+                    "surface": "#fdf9f5",
+                    "surface-dim": "#ddd9d6",
+                    "background": "#fdf9f5",
+                    "inverse-surface": "#31302e",
+                    "primary-container": "#0f4c5c",
+                    "primary": "#003441",
+                    "inverse-primary": "#9acee1",
+                    "surface-container-high": "#ebe7e4",
+                    "surface-container-low": "#f7f3ef",
+                    "on-tertiary-container": "#a9b4cf",
+                    "on-tertiary": "#ffffff",
+                    "surface-tint": "#306576",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#ffdf9b",
+                    "on-primary-container": "#87bbce",
+                    "secondary-fixed-dim": "#edc157",
+                    "tertiary-fixed": "#d7e2ff",
+                    "secondary": "#785a00",
+                    "on-tertiary-fixed": "#101b30",
+                    "on-surface": "#1c1c19",
+                    "on-error-container": "#93000a",
+                    "tertiary-fixed-dim": "#bbc6e2",
+                    "on-tertiary-fixed-variant": "#3c475d",
+                    "on-secondary-container": "#765900",
+                    "on-background": "#1c1c19",
+                    "surface-bright": "#fdf9f5",
+                    "secondary-container": "#ffd167",
+                    "on-primary-fixed-variant": "#114d5d",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c0c8cb",
+                    "surface-container": "#f1ede9",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#b6ebfe",
+                    "on-error": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "grid-margin-desktop": "64px",
+                    "section-gap-mobile": "64px",
+                    "section-gap-desktop": "120px",
+                    "base": "8px",
+                    "gutter": "24px",
+                    "grid-margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "label-lg": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "label-sm": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-lg": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .stitch-border { border: 1px dashed #0f4c5c; }
+        .stitch-border-b { border-bottom: 2px dashed rgba(15, 76, 92, 0.3); }
+        .pebble-shape { border-radius: 45% 55% 70% 30% / 30% 60% 40% 70%; }
+        .hover-lift { transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .hover-lift:hover { transform: translateY(-8px); }
+        .glass-nav { backdrop-filter: blur(12px); background-color: rgba(253, 249, 245, 0.8); }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-grid-margin-mobile md:px-grid-margin-desktop py-4 glass-nav border-b border-dashed border-primary/20">
+<a class="font-display-lg-mobile text-display-lg-mobile text-primary italic leading-none" href="#">Doggy Stylez</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#boutique">Boutique</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#ethos">Philosophy</a>
+<a class="font-label-lg text-label-lg uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors" href="#visit">Visit</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="hidden md:block font-label-lg text-label-lg uppercase tracking-widest text-primary font-bold" href="tel:2293440689">(229) 344-0689</a>
+<button class="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg uppercase tracking-widest px-6 py-3 rounded-full hover:scale-95 transition-all duration-150 active:scale-90">Book Now</button>
+</div>
+</header>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative px-grid-margin-mobile md:px-grid-margin-desktop mb-section-gap-desktop">
+<div class="grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 z-10 order-2 md:order-1">
+<span class="font-label-lg text-label-lg uppercase tracking-[0.2em] text-primary mb-4 block">Est. 2024</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-[1.1]">
+                        The Art of the Groom.<br/>
+<span class="italic font-normal">The Soul of the Boutique.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-10">
+                        Elevating canine care into an editorial experience. We don't just groom; we curate a lifestyle of wellness and sophisticated aesthetics for your most loyal companion.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest px-10 py-5 rounded-full hover-lift">Our Collection</button>
+<div class="flex items-center gap-3 px-6">
+<span class="material-symbols-outlined text-primary" data-icon="auto_awesome">auto_awesome</span>
+<span class="font-label-sm text-label-sm uppercase text-on-surface-variant">Handcrafted Care</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 order-1 md:order-2 relative">
+<div class="pebble-shape overflow-hidden aspect-[4/5] md:aspect-square relative z-0">
+<img alt="Editorial dog portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLtQbey1bguVrEB2vzP40F5QSAGfzIutfxuX_Ug0goV2nxbxgYXhHwDM_E_SRFYMY9ZjfaiTaAIb9nPwlvUMf6dAzMoiSupH2dpDC158C4YqLTfh8Nk98SzpUCj6D5m7NS4YwRMUYeisefKP_4ZrcKSTmsgVNDWD6iAR47zK0Bq7cAGahbAMzvcT4lLAwE6zEB-WJV9U-MhXksvNbebWssNZbIPyU8G1Mj2HNThYMx1uUb9Dxq4OZ2AdxtU"/>
+</div>
+<!-- Stitch Accent -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 stitch-border pebble-shape -z-10 opacity-40"></div>
+</div>
+</div>
+</section>
+<!-- Credibility / Artisanal Care -->
+<section class="bg-surface-container-low py-section-gap-desktop px-grid-margin-mobile md:px-grid-margin-desktop">
+<div class="grid md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="content_cut">content_cut</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Certified Stylists</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Masters of breed-specific aesthetics and artistic scissoring techniques.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="shopping_bag">shopping_bag</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Boutique Curation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">A hand-selected gallery of global artisanal pet wear and accessories.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="favorite">favorite</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Soulful Approach</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Low-stress, high-empathy environments focused on individual pet temperament.</p>
+</div>
+</div>
+</section>
+<!-- Services / Offerings -->
+<section class="py-section-gap-desktop px-grid-margin-mobile md:px-grid-margin-desktop overflow-hidden" id="services">
+<div class="flex flex-col md:flex-row gap-20 items-center">
+<div class="w-full md:w-5/12 relative">
+<div class="aspect-square bg-surface-container-highest rounded-2xl overflow-hidden shadow-2xl">
+<img alt="Premium grooming tools" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvXy92Aoa5NAf5zsOXkAua_3-rbZs1GLnPuR9g17Z_VRU5Q7rFlwPtnPsR86XUDhXluHy5ER4_Y2gQo9tQXm89b9AnNLTgUVxakBB_DzMRMyLxWrubUevLGLxvHkhrri6OXc2qaMeGpI7jMMYtQPZ1yEzK3x7i550k4NxLGGd4zdCpjqricHfRaYwyLhwRPIgISMGYL9JA54sJgHEZne4JXN8G3O4aVd5mQZeH4C22h8YDYxe-NHKI8YBM"/>
+</div>
+<div class="absolute -top-12 -right-12 hidden md:block w-48 h-48 stitch-border rounded-full opacity-30 animate-spin-slow"></div>
+</div>
+<div class="w-full md:w-7/12">
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-primary mb-6">Signature Grooming</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 italic border-l-4 border-primary pl-6">
+                        A masterclass in canine aesthetics. We utilize state-of-the-art hydro-massage therapy and ozone treatments to revitalize the coat from the root.
+                    </p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-8">
+<div class="p-8 bg-white stitch-border hover-lift">
+<h4 class="font-label-lg text-label-lg uppercase text-primary mb-3">Hydro-Massage</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Deep-cleansing bubbles to soothe joints and muscles.</p>
+</div>
+<div class="p-8 bg-white stitch-border hover-lift">
+<h4 class="font-label-lg text-label-lg uppercase text-primary mb-3">Hand-Scissoring</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Artisanal finishing for a precise, high-fashion silhouette.</p>
+</div>
+<div class="p-8 bg-white stitch-border hover-lift">
+<h4 class="font-label-lg text-label-lg uppercase text-primary mb-3">Ozone Therapy</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Skin rejuvenation and bacteria elimination for sensitive coats.</p>
+</div>
+<div class="p-8 bg-white stitch-border hover-lift">
+<h4 class="font-label-lg text-label-lg uppercase text-primary mb-3">Paw-Dicure</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Smoothing and protection for active paws with organic balms.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- The Boutique -->
+<section class="bg-primary text-on-primary py-section-gap-desktop overflow-hidden" id="boutique">
+<div class="px-grid-margin-mobile md:px-grid-margin-desktop">
+<div class="grid md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<span class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed mb-4 block">The Gallery</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg mb-8 leading-tight">A Curated Sanctuary of Luxury.</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-10">
+                            Our boutique isn't a store—it's an invitation to explore the world's most exquisite pet lifestyle brands. From hand-stitched leather collars to artisanal organic treats, every item is selected for its quality, story, and soul.
+                        </p>
+<button class="bg-secondary-container text-on-secondary-container font-label-lg text-label-lg uppercase tracking-widest px-10 py-5 rounded-full hover:bg-secondary-fixed transition-colors">Explore the Collection</button>
+</div>
+<div class="order-1 md:order-2 relative">
+<div class="pebble-shape overflow-hidden aspect-square border-8 border-white/10">
+<img alt="Boutique interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuEsT9dZSUUKBdvtn-e9iiGSI1vL9uQbxiOPbhsy73clFvEk7yJk6syQTEiDkZrCdyqUfzO16vAtex5Iq5atyTvsmCViICcNb9RPTR5czvAVeYKKPWujoEkbxcxXuV6lSNVppl2pz_R21TMZ3puf7Mu1UuefGU_W6WVmQSPTzS4n1-jQmtp391Gg4_A23REEpDLEP_caktru8D6vttazvbcEWmis-dr_y6o4PpI6zJaE-BkRMvc8_24pg"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Ethos Section -->
+<section class="py-section-gap-desktop px-grid-margin-mobile md:px-grid-margin-desktop" id="ethos">
+<div class="max-w-4xl mx-auto text-center">
+<span class="material-symbols-outlined text-primary text-5xl mb-8" data-icon="eco">eco</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-lg text-primary mb-8">The Stylez Philosophy</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        We believe that grooming is more than a maintenance task; it is an act of handcrafted care. At Doggy Stylez, we treat every pet as an individual canvas, respecting their comfort levels and celebrating their unique personality.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                        Our Sylvester location serves as a hub for the Albany community's most discerning pet owners, offering a peaceful retreat where style meets well-being.
+                    </p>
+</div>
+<div class="mt-16 w-32 h-0.5 bg-primary/20 mx-auto"></div>
+</div>
+</section>
+<!-- Visit & Contact -->
+<section class="px-grid-margin-mobile md:px-grid-margin-desktop pb-section-gap-desktop" id="visit">
+<div class="grid md:grid-cols-12 gap-gutter">
+<div class="md:col-span-7 rounded-3xl overflow-hidden bg-surface-container shadow-inner">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] md:h-full group" data-location="Sylvester, Albany, United States" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center bg-surface-container-high/50 italic text-primary">
+<div class="text-center p-8">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="location_on">location_on</span>
+<p class="font-headline-md">Visit Our Atelier</p>
+<p class="font-body-md mt-2">Sylvester, Albany, United States</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 bg-white p-10 md:p-16 rounded-3xl stitch-border">
+<h3 class="font-headline-md text-headline-md text-primary mb-8">Begin the Experience</h3>
+<form class="space-y-6" id="contactForm" onsubmit="event.preventDefault(); validateForm();">
+<div>
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Full Name</label>
+<input class="w-full bg-surface-container-low border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-3 px-0 font-body-md" id="name" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Email Address</label>
+<input class="w-full bg-surface-container-low border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-3 px-0 font-body-md" id="email" placeholder="your@email.com" required="" type="email"/>
+</div>
+<div>
+<label class="font-label-sm text-label-sm uppercase text-on-surface-variant mb-2 block">Service Interest</label>
+<select class="w-full bg-surface-container-low border-b-2 border-primary/20 focus:border-primary focus:ring-0 transition-all py-3 px-0 font-body-md" id="service">
+<option>Signature Grooming</option>
+<option>Boutique Inquiry</option>
+<option>Hydro-Massage Therapy</option>
+<option>Full Aesthetic Package</option>
+</select>
+</div>
+<button class="w-full bg-primary text-on-primary font-label-lg text-label-lg uppercase tracking-widest py-5 rounded-full hover-lift mt-8" type="submit">Send Inquiry</button>
+</form>
+<div class="hidden mt-6 p-4 rounded-lg bg-green-50 text-green-800 font-label-sm text-center" id="formFeedback">
+                        Thank you for your interest. We will contact you shortly.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-primary text-on-primary py-section-gap-mobile md:py-section-gap-desktop px-grid-margin-mobile md:px-grid-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter border-t-2 border-dashed border-on-primary/30">
+<div class="md:col-span-4 mb-12 md:mb-0">
+<h2 class="font-display-lg text-display-lg text-on-primary leading-none mb-6">Doggy Stylez</h2>
+<p class="font-body-md text-on-primary/70 max-w-xs">
+                Handcrafted care for the sophisticated companion. Experience the art of grooming in our boutique sanctuary.
+            </p>
+<div class="flex gap-4 mt-8">
+<a class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="photo_camera">photo_camera</span>
+</a>
+<a class="w-10 h-10 rounded-full border border-on-primary/30 flex items-center justify-center hover:bg-secondary-fixed hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="share">share</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed mb-6">Atelier</h4>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#boutique">Boutique</a>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#services">Services</a>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#ethos">Philosophy</a>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#visit">Visit</a>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed mb-6">Legal</h4>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#">Privacy Policy</a>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#">Terms of Service</a>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#">Sustainability</a>
+<a class="block font-body-md text-on-primary/70 hover:text-secondary-fixed transition-colors" href="#">Careers</a>
+</div>
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed mb-6">Connect</h4>
+<p class="font-body-md text-on-primary/70">Sylvester, Albany, United States</p>
+<p class="font-body-md text-on-primary/70">dsgalbany@gmail.com</p>
+<p class="font-body-md text-on-primary font-bold">(229) 344-0689</p>
+</div>
+<div class="md:col-span-12 mt-16 pt-8 border-t border-on-primary/10 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-sm text-label-sm uppercase text-on-primary/50">
+                © 2024 Doggy Stylez Grooming &amp; Boutique. Handcrafted Care.
+            </p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm uppercase text-on-primary/70">Currently accepting new clients</span>
+</div>
+</div>
+</footer>
+<script>
+        function validateForm() {
+            const form = document.getElementById('contactForm');
+            const feedback = document.getElementById('formFeedback');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            if (name && email) {
+                form.classList.add('opacity-50', 'pointer-events-none');
+                feedback.classList.remove('hidden');
+                setTimeout(() => {
+                    form.reset();
+                    form.classList.remove('opacity-50', 'pointer-events-none');
+                    feedback.classList.add('hidden');
+                }, 4000);
+            }
+        }
+
+        // Simple Intersection Observer for scroll animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
