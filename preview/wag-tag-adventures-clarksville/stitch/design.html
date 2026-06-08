@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Wag &amp; Tag Adventures | Editorial Canine Journeys</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-container-high": "#e7e8e9",
+                "on-secondary": "#ffffff",
+                "on-tertiary-fixed-variant": "#61401b",
+                "outline-variant": "#c3c8c1",
+                "primary": "#061b0e",
+                "background": "#f8f9fa",
+                "inverse-on-surface": "#f0f1f2",
+                "surface": "#f8f9fa",
+                "secondary-container": "#ffab69",
+                "primary-fixed": "#d0e9d4",
+                "on-secondary-fixed": "#2f1400",
+                "surface-bright": "#f8f9fa",
+                "error-container": "#ffdad6",
+                "inverse-surface": "#2e3132",
+                "secondary-fixed-dim": "#ffb780",
+                "surface-tint": "#4d6453",
+                "outline": "#737973",
+                "on-primary": "#ffffff",
+                "on-surface": "#191c1d",
+                "surface-container-highest": "#e1e3e4",
+                "on-background": "#191c1d",
+                "on-tertiary-fixed": "#2c1600",
+                "surface-container": "#edeeef",
+                "on-tertiary": "#ffffff",
+                "error": "#ba1a1a",
+                "on-error-container": "#93000a",
+                "on-primary-fixed": "#0b2013",
+                "surface-variant": "#e1e3e4",
+                "on-surface-variant": "#434843",
+                "tertiary-container": "#412503",
+                "on-secondary-fixed-variant": "#6f3800",
+                "primary-container": "#1b3022",
+                "surface-container-lowest": "#ffffff",
+                "surface-container-low": "#f3f4f5",
+                "surface-dim": "#d9dadb",
+                "tertiary": "#261200",
+                "secondary": "#8e4e14",
+                "secondary-fixed": "#ffdcc4",
+                "tertiary-fixed": "#ffdcbd",
+                "on-primary-fixed-variant": "#364c3c",
+                "on-secondary-container": "#783d01",
+                "on-primary-container": "#819986",
+                "on-error": "#ffffff",
+                "primary-fixed-dim": "#b4cdb8",
+                "inverse-primary": "#b4cdb8",
+                "on-tertiary-container": "#b68a5f",
+                "tertiary-fixed-dim": "#eebd8e"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.125rem",
+                "lg": "0.25rem",
+                "xl": "0.5rem",
+                "full": "0.75rem"
+            },
+            "spacing": {
+                "unit": "8px",
+                "section-gap": "120px",
+                "gutter": "24px",
+                "margin-mobile": "20px",
+                "margin-desktop": "80px"
+            },
+            "fontFamily": {
+                "headline-md": ["Playfair Display"],
+                "headline-lg": ["Playfair Display"],
+                "headline-lg-mobile": ["Playfair Display"],
+                "body-lg": ["Hanken Grotesk"],
+                "label-caps": ["Hanken Grotesk"],
+                "display-lg": ["Playfair Display"],
+                "body-md": ["Hanken Grotesk"],
+                "label-md": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                "label-md": ["14px", {"lineHeight": "1.4", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .grain-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-light.png");
+            opacity: 0.03;
+            pointer-events: none;
+        }
+        .adventure-item:hover .adventure-img {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1.05);
+        }
+        .trail-path {
+            stroke-dasharray: 4 4;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Navigation -->
+<header class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-outline-variant/30">
+<nav class="flex justify-between items-center w-full px-margin-desktop py-4 max-w-none mx-auto">
+<div class="font-headline-md text-headline-md font-bold text-primary">Wag &amp; Tag Adventures</div>
+<div class="hidden md:flex gap-12 items-center">
+<a class="font-label-caps text-label-caps text-secondary font-bold border-b-2 border-secondary" href="#adventures">Adventures</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#roots">Our Roots</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden md:block font-label-md text-label-md text-primary font-bold">(727) 278-0763</span>
+<button class="bg-primary text-on-primary px-6 py-2 rounded font-label-caps text-label-caps hover:bg-primary/90 transition-opacity">Book an Adventure</button>
+</div>
+</nav>
+</header>
+<main class="relative overflow-hidden">
+<!-- Trail Motif (Global Background) -->
+<div class="absolute inset-0 z-[-1] pointer-events-none opacity-20">
+<svg class="w-full h-full" fill="none" viewbox="0 0 1440 3000">
+<path class="trail-path stroke-outline" d="M100,200 Q400,400 200,800 T600,1200 T1200,1600 T800,2200 T1000,2800" fill="none" stroke-width="1"></path>
+<circle class="text-secondary" cx="100" cy="200" fill="currentColor" r="4"></circle>
+<circle class="text-secondary" cx="1000" cy="2800" fill="currentColor" r="4"></circle>
+</svg>
+</div>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24">
+<div class="grid grid-cols-1 md:grid-cols-12 w-full px-margin-desktop gap-gutter">
+<div class="md:col-span-7 relative z-10 self-center">
+<h1 class="font-display-lg text-display-lg text-primary mb-8 leading-tight">
+                        Untethered Joy, <br/>
+<span class="italic text-secondary">Expertly Guided.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg mb-12">
+                        Beyond the standard backyard loop, we offer curated canine expeditions through the rugged beauty of Tennessee. Professional adventure care for the dog who craves more than a walk.
+                    </p>
+<div class="flex gap-8 items-center">
+<button class="bg-primary text-on-primary px-8 py-4 rounded font-label-caps text-label-caps hover:bg-primary/90 transition-all flex items-center gap-2">
+                            Explore Trails <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</button>
+<div class="h-[1px] w-24 bg-outline-variant"></div>
+<span class="font-label-caps text-label-caps text-secondary">Est. 2024</span>
+</div>
+</div>
+<div class="md:col-span-6 md:absolute md:right-0 md:top-0 h-full w-full md:w-1/2 -z-0">
+<img alt="Adventure dog on trail" class="w-full h-full object-cover rounded-l-none md:rounded-l-[200px]" data-alt="A vigorous Golden Retriever happily running through a sun-drenched forest trail in Tennessee. The light filters through lush green leaves, creating a warm and energetic outdoor atmosphere. The composition is high-end and editorial, capturing a moment of pure canine freedom in a rugged yet beautiful wilderness setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEka2UJM_x-5cirqnybT38dovih4u711hgDoZGAYQeQ1A014NeFGLUx_FT9ElGJ3oI5IWLaJqiwasOzG4iB0zdtOWbbLjr8YseX2T9xoGmCHbORic9f0hVv2yGTnnqXmOEYV9d4pC_Nw8lNZ6EAAFun8liPF8Y_UJlIm0Sr8dmp5o-FnJflP6zu8mSVwyBWfbPz_wPHFmcqKIi9LRkd_aMvVNqmRuKHm7FRDjET2aZipbuxX6CxD3DKeOrzzUckAau6ZXzjeW2ddk"/>
+</div>
+</div>
+</section>
+<!-- Credibility Strip -->
+<section class="bg-primary py-12">
+<div class="px-margin-desktop flex flex-col md:flex-row justify-between items-center text-on-primary gap-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container">eco</span>
+<span class="font-label-caps text-label-caps">Nature-First Pet Care</span>
+</div>
+<div class="h-[1px] md:h-12 w-full md:w-[1px] bg-on-primary/20"></div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container">location_on</span>
+<span class="font-label-caps text-label-caps">Clarksville's Premier Adventure Service</span>
+</div>
+<div class="h-[1px] md:h-12 w-full md:w-[1px] bg-on-primary/20"></div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary-container">verified_user</span>
+<span class="font-label-caps text-label-caps">Fully Insured &amp; Pet CPR Certified</span>
+</div>
+</div>
+</section>
+<!-- Adventure Menu (Services) -->
+<section class="py-section-gap px-margin-desktop bg-surface relative" id="services">
+<div class="mb-24 max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary block mb-4">Our Offerings</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Adventure Menu</h2>
+</div>
+<div class="space-y-12">
+<!-- Service Item 1 -->
+<div class="adventure-item group relative py-12 border-b border-outline-variant/30 flex flex-col md:flex-row md:items-end justify-between transition-all cursor-pointer">
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Duration: 2 Hours</span>
+<h3 class="font-display-lg text-display-lg group-hover:italic transition-all">Forest Trek</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-md">Off-leash (where safe) exploration through local state parks and wooded trails.</p>
+</div>
+<div class="mt-8 md:mt-0 relative z-10">
+<span class="font-headline-md text-headline-md text-secondary">$65 / Journey</span>
+</div>
+<!-- Hover Image Container -->
+<img alt="Forest Trek Preview" class="adventure-img hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] object-cover rounded opacity-0 transition-all duration-500 pointer-events-none z-0" data-alt="A portrait-style close-up of an alert Australian Shepherd standing on a mossy log in a deep forest. The lighting is moody and soft, highlighting the dog's coat texture and bright eyes. The background is a soft-focus blur of deep greens and earthy tones, maintaining a high-fashion pet photography aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoGIoKvlU_7oLClRSN0nzTB9MIdDixv4csBrYLe_ZATnl0JRNubt60aNGV7Muuk1yw7pcCqpsc17XRAUTWh6_Nc6YIBxk29Foh_FYtlwea2RDeHvwE_k0vXMLk3652JRLETSAJdrmoHxiMoRNEyFBFMYCOujONxcgnh8aVROeSleKC222zVm4fLdr4evQZfbaQfsK2JZnb6Af0tmwSoHZzneHAmiYcIMvR21XL26co5m7Bz6Coz_kB-bKN1MMhiwYbGd9sGPD39dg"/>
+</div>
+<!-- Service Item 2 -->
+<div class="adventure-item group relative py-12 border-b border-outline-variant/30 flex flex-col md:flex-row md:items-end justify-between transition-all cursor-pointer">
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Duration: 4 Hours</span>
+<h3 class="font-display-lg text-display-lg group-hover:italic transition-all">Peak Pursuit</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-md">High-intensity hiking for active breeds requiring mental and physical exhaustion.</p>
+</div>
+<div class="mt-8 md:mt-0 relative z-10">
+<span class="font-headline-md text-headline-md text-secondary">$110 / Journey</span>
+</div>
+<img alt="Peak Pursuit Preview" class="adventure-img hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] object-cover rounded opacity-0 transition-all duration-500 pointer-events-none z-0" data-alt="A athletic Vizsla dog jumping across a small stream during a hike. Water droplets are frozen in mid-air, illuminated by the bright morning sun. The setting is a rocky trail with mountain peaks in the far distance. The image captures motion and high-energy adventure with a crisp, clear cinematic quality." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5YCs4cUvlCVcE4GIL1pAGaaCm6HdoRWosT4q1akq9WmrVv_us6nURVx5rQAA4EJemFNvixGY8oFaDV7HPMV-y6fyQ_u6ocerm64WBrigEOau1P66KQtaVyuWi6_PNeq0Y7iXipvtxAPh3D3epzVYH18yseIIXWYpuILweu4dcorhX4RAYY-dnZs95JKMn_GWM6CEnHIVYM5XORKWckzZNKTFr56YnjUQ31u1Ry2lUjTu6BTHbGGdcvgZrTNeIfthCl0Dj-AC9KWQ"/>
+</div>
+<!-- Service Item 3 -->
+<div class="adventure-item group relative py-12 border-b border-outline-variant/30 flex flex-col md:flex-row md:items-end justify-between transition-all cursor-pointer">
+<div class="relative z-10">
+<span class="font-label-caps text-label-caps text-on-surface-variant block mb-2">Duration: Custom</span>
+<h3 class="font-display-lg text-display-lg group-hover:italic transition-all">Tag Team</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-4 max-w-md">Multi-dog households or specialized pack-socialization treks through scenic landscapes.</p>
+</div>
+<div class="mt-8 md:mt-0 relative z-10">
+<span class="font-headline-md text-headline-md text-secondary">Custom Quote</span>
+</div>
+<img alt="Tag Team Preview" class="adventure-img hidden md:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[400px] object-cover rounded opacity-0 transition-all duration-500 pointer-events-none z-0" data-alt="Two different dog breeds, a Lab and a Border Collie, sitting side by side on a scenic overlook. They are looking out over a valley filled with autumn colors. The image is composed with a wide-angle perspective, emphasizing the scale of the adventure and the bond between the dogs. The palette is rich with oranges, browns, and deep greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsNoDfylo2Fy288KdzuATneO-C0lU_6loMtfPOeypn7e8G2bjFt5Ocd7yN0MxesJaRwYMKWlisL4rU6aW_Kk8OIDtc2geUqlt9szh8bp9wygtYTcysQBpeQAsePqVPP5iZ7l_jinpIxgU2PIKBQdqAG1ff7A2lfAu3WuuR-P2scRAW52vmwh9EM2rlE5SAR7ExcojIgyOfnci6CWL1zJnpfR9lOK-mpTAYlocUi3r-xXapJQqzCzggkz-xkGBbLfRSssp_zZ3IQcw"/>
+</div>
+</div>
+</section>
+<!-- Our Roots (About) -->
+<section class="py-section-gap px-margin-desktop overflow-hidden" id="roots">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 bg-secondary-fixed/30 rounded-full blur-3xl z-0"></div>
+<img alt="Founder of Wag &amp; Tag" class="w-full h-auto rounded-xl relative z-10 border border-outline-variant shadow-lg" data-alt="A professional and friendly portrait of the founder of Wag &amp; Tag Adventures, a woman in her 30s wearing outdoor gear, with a happy dog by her side. They are in a blurred outdoor park setting with soft, natural lighting. The founder has a confident and warm expression, conveying trust and passion for animal welfare. The style is warm, authentic, and premium." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbS_misHiVVQrAqX4XBxasIO4HpElDkF4Zt4XPtvBne67sQL9Dr48O-UF3sZ1waR-9wG7enb6YUyTQT_G4gdR7FZa3UcVwKHDZl6j9D_G0Yu8IMyevYfA4cA0Z2IAvGXKJGGH1oVH5cUXbDpHm6QNpE6UHB2jftBzqIK6Hso4n1fVrAiXotlWuQV0ptmpUIe6rE4ftnPfGqi16xj2IwYsnDV2o3eMBsVlz_BkbAonHLry8T3HV9RzEtDAh6HmwFitrLj28iQOkL_8"/>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary block mb-4">Our Roots</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8 italic">Born from the Trail</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+<p>Wag &amp; Tag Adventures was founded on a simple realization: your dog's happiness is directly proportional to the size of their world. As a lifelong resident of Clarksville and an avid hiker, I saw too many high-energy dogs limited to the same four corners of a fenced yard.</p>
+<p>We believe every dog has an "inner explorer." Our mission is to safely unlock that side of them, providing professional supervision, GPS tracking, and pure outdoor engagement that standard dog-walking services simply can't match.</p>
+<p>When you trust us with your pet, you're not just hiring a walker—you're booking a curated experience designed for their health, wellness, and adventure-loving soul.</p>
+</div>
+<div class="mt-12">
+<div class="flex items-center gap-4">
+<div class="h-[2px] w-12 bg-secondary"></div>
+<span class="font-headline-md text-headline-md text-primary">Sarah J., Founder</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="relative">
+<div class="bg-primary-container py-12 px-margin-desktop text-on-primary-container text-center">
+<h3 class="font-headline-md text-headline-md">Roaming Across Clarksville &amp; Beyond</h3>
+<p class="font-body-md mt-2">Check our current trail availability and service radius.</p>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] grayscale" data-location="Clarksville, TN" data-map-slot="" style="">
+<!-- Fallback background image for map -->
+<div class="absolute inset-0 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-6xl text-outline opacity-20">map</span>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-low" id="contact">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-display-lg text-primary mb-4">Get in Touch</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Ready to start the journey? Let's discuss your dog's specific needs.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="md:col-span-1 space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-secondary block mb-2">Call or Text</span>
+<a class="font-headline-md text-headline-md text-primary hover:text-secondary transition-colors" href="tel:7272780763">(727) 278-0763</a>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary block mb-2">Email</span>
+<a class="font-body-lg text-body-lg text-on-surface-variant hover:text-primary transition-colors underline" href="mailto:Wag.tagadventuresllc@gmail.com">Wag.tagadventuresllc@gmail.com</a>
+</div>
+</div>
+<form class="md:col-span-2 space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-secondary placeholder-transparent" id="name" placeholder="Name" type="text"/>
+<label class="absolute left-0 top-0 font-label-caps text-label-caps text-on-surface-variant transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:text-secondary" for="name">Full Name</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-secondary placeholder-transparent" id="email" placeholder="Email" type="email"/>
+<label class="absolute left-0 top-0 font-label-caps text-label-caps text-on-surface-variant transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:text-secondary" for="email">Email Address</label>
+</div>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-secondary placeholder-transparent" id="pet" placeholder="Pet Name &amp; Breed" type="text"/>
+<label class="absolute left-0 top-0 font-label-caps text-label-caps text-on-surface-variant transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:text-secondary" for="pet">Pet Name &amp; Breed</label>
+</div>
+<div class="relative">
+<textarea class="peer w-full bg-transparent border-0 border-b border-outline-variant py-4 px-0 focus:ring-0 focus:border-secondary placeholder-transparent" id="message" placeholder="Message" rows="4"></textarea>
+<label class="absolute left-0 top-0 font-label-caps text-label-caps text-on-surface-variant transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-4 peer-focus:top-0 peer-focus:text-label-caps peer-focus:text-secondary" for="message">Tell us about your pup</label>
+</div>
+<button class="w-full bg-primary text-on-primary py-6 font-label-caps text-label-caps hover:bg-primary/90 transition-all uppercase tracking-widest" type="submit">Send Inquiry</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary dark:bg-primary-container text-on-primary dark:text-on-primary-container py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop w-full mx-auto">
+<div>
+<div class="font-headline-lg text-headline-lg text-on-primary mb-8">Wag &amp; Tag</div>
+<p class="font-body-md max-w-xs opacity-80 italic">Curating moments of discovery for your most loyal companions.</p>
+</div>
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps block opacity-60">Connections</span>
+<ul class="space-y-2">
+<li><a class="text-surface-variant/80 hover:text-on-primary transition-transform duration-300 hover:translate-x-1 inline-block" href="tel:7272780763">(727) 278-0763</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary transition-transform duration-300 hover:translate-x-1 inline-block" href="mailto:Wag.tagadventuresllc@gmail.com">Email Us</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary transition-transform duration-300 hover:translate-x-1 inline-block" href="#">Instagram</a></li>
+<li><a class="text-surface-variant/80 hover:text-on-primary transition-transform duration-300 hover:translate-x-1 inline-block" href="#">Facebook</a></li>
+</ul>
+</div>
+<div class="space-y-4">
+<span class="font-label-caps text-label-caps block opacity-60">Legal</span>
+<p class="font-body-lg text-body-lg">© 2024 Wag &amp; Tag Adventures LLC. Based in Clarksville, TN.</p>
+<div class="flex gap-4 mt-8">
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">pets</span>
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">landscape</span>
+<span class="material-symbols-outlined text-secondary-container" style="font-variation-settings: 'FILL' 1;">hiking</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Parallax Effect on Hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+    </script>
+</body></html>
