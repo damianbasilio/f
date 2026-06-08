@@ -1,38 +1,27 @@
-// Form Interaction
-        const bookingForm = document.querySelector('#booking form');
-        if (bookingForm) {
-            bookingForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const btn = bookingForm.querySelector('button');
-                const originalText = btn.textContent;
-                btn.disabled = true;
-                btn.textContent = 'Preview only';
-                
-                setTimeout(() => {
-                    btn.textContent = 'REQUEST SENT';
-                    btn.classList.replace('bg-primary', 'bg-secondary');
-                    bookingForm.reset();
-                    setTimeout(() => {
-                        btn.textContent = originalText;
-                        btn.classList.replace('bg-secondary', 'bg-primary');
-                        btn.disabled = false;
-                    }, 3000);
-                }, 1500);
-            });
-        }
+// Form Handling
+        const form = document.getElementById('inquiryForm');
+        const success = document.getElementById('successMessage');
 
-        // Simple smooth scroll enhancement
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    window.scrollTo({
-                        top: target.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                }
-            });
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simple visual validation & success toggle
+            success.classList.remove('hidden');
+            setTimeout(() => {
+                success.classList.add('hidden');
+                form.reset();
+            }, 5000);
+        });
+
+        // Sticky Nav Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('py-2');
+                header.classList.remove('py-5');
+            } else {
+                header.classList.add('py-5');
+                header.classList.remove('py-2');
+            }
         });
 
 (() => {
