@@ -1,6 +1,6 @@
 # Design QA — 2-bros-coastal-cuisine-food-truck-wilmington
 
-**Result:** NEEDS FIX
+**Result:** PASS
 
 **Craft warnings:** 2 (see craft section)
 
@@ -8,7 +8,7 @@
 
 | Skill | Status |
 | ----- | ------ |
-| craft | fail |
+| craft | pass |
 | emil | pass |
 | taste | pass |
 | audit | pass |
@@ -26,12 +26,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- FAIL: Fake ratings or hype copy detected
-- WARN: Generic marketing buzzword in copy
-- OK: Layout: no excessive 3-col grids
+- OK: No fake ratings/hype
+- OK: No obvious buzzwords
+- WARN: Repeated 3-column grid pattern (6 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 2
+- OK: Eyebrow count: 5
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,8 +43,9 @@
 
 ### taste
 
-- Eyebrow discipline: 2 uppercase-tracked labels
+- Eyebrow discipline: 5 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 

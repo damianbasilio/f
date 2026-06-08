@@ -7,9 +7,7 @@
 - injected mobile safety CSS
 - pulled in decorative absolute offsets
 - section overflow-hidden for decorative layers
-- nav min-width + tighter mobile gap
-- nav brand truncate on mobile
-- map-slot: removed h-full (use aspect-ratio fill)
+- responsive horizontal margins (3 blocks)
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

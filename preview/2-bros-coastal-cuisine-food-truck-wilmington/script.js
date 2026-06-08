@@ -1,36 +1,52 @@
-// Mobile Menu Toggle
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            const icon = btn.querySelector('span');
-            icon.textContent = menu.classList.contains('hidden') ? 'menu' : 'close';
+// Header scroll behavior
+        const header = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('py-1', 'bg-white/95', 'backdrop-blur-sm');
+                header.classList.remove('py-unit');
+            } else {
+                header.classList.remove('py-1', 'bg-white/95', 'backdrop-blur-sm');
+                header.classList.add('py-unit');
+            }
         });
 
-        // Simple smooth scroll highlighting or adjustments can go here
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                menu.classList.add('hidden');
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
+        // Form feedback
+        const form = document.getElementById('catering-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Transmitting...';
+            btn.classList.add('opacity-50');
+            
+            setTimeout(() => {
+                btn.innerText = 'Request Sent';
+                btn.classList.remove('bg-on-tertiary-container');
+                btn.classList.add('bg-green-700');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-700', 'opacity-50');
+                    btn.classList.add('bg-on-tertiary-container');
+                }, 3000);
+            }, 1500);
         });
 
-        // Atmospheric interaction: subtle movement of images on mouse move
-        if (window.innerWidth > 1024) {
-            document.addEventListener('mousemove', (e) => {
-                const moveX = (e.clientX - window.innerWidth / 2) * 0.01;
-                const moveY = (e.clientY - window.innerHeight / 2) * 0.01;
-                const polaroids = document.querySelectorAll('.polaroid-effect');
-                polaroids.forEach((p, idx) => {
-                    const factor = (idx + 1) * 0.5;
-                    p.style.transform = `translate(${moveX * factor}px, ${moveY * factor}px) rotate(${idx % 2 === 0 ? -3 : 2}deg)`;
-                });
+        // Simple Fade-in Observer
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
             });
-        }
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('stagger-item', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
 
 (() => {
   function initMockupNotice() {
