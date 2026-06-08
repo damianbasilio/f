@@ -1,0 +1,511 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "L'Artiste de Manchester",
+        "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in the \"New Editorial\" movement, blending the tactile sensation of a high-fashion print magazine with the fluid precision of a digital boutique. The brand personality is poised, sophisticated, and quiet in its confidence. It targets a discerning clientele that values craftsmanship over trend-following, positioning nail care as an art form rather than a routine maintenance task.\n\nThe visual style utilizes a high-contrast layout, characterized by dramatic typographic scale and purposeful negative space. It rejects the standard \"SaaS\" look in favor of a composition-driven approach: asymmetric grids, delicate linework (thin-rule borders), and subtle organic grain textures that provide a sense of physical paper stock. The emotional response should be one of immediate calm, luxury, and exclusivity.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop, centered to create the feeling of a curated page. The 12-column grid is used loosely; allow content to \"breathe\" by leaving entire columns empty to serve as whitespace.\n\nLarge section gaps (120px+) are intentional—they signal that the content is not rushed. Elements should frequently be separated by elegant 1px thin-rule lines in Deep Plum (at 20% opacity) or Charcoal to maintain structure without adding visual bulk. On mobile, transition to a single-column stack but maintain generous top/bottom padding to preserve the premium feel.\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** and **Fine Outlines** rather than shadows. The design is intentionally \"flat\" to mimic the pages of a magazine.\n\n- **Thin-Rule Borders:** Use 1px solid lines to define sections, borders of cards, or to separate navigation items.\n- **Glassmorphism:** Use only for mobile navigation overlays—a high-blur \"Soft Champagne\" backdrop that allows the colors of the imagery beneath to bleed through.\n- **Organic Grain:** A global SVG noise filter should be applied to the main Champagne background. This creates a tactile, non-digital texture that makes the UI feel like physical stationery.\n- **Stacking:** Elements should overlap slightly (e.g., an image overlapping a text block) to create a sophisticated, custom-designed appearance.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Deep Plum with Soft Champagne text in `label-caps`. Secondary buttons use a 1px Charcoal border with no fill. The hover state should involve a subtle shift in background color (e.g., Plum to a slightly lighter tint) rather than a scale change.\n\n### Inputs\nFields consist of a 1px bottom border only (Charcoal). Labels are set in `label-caps` positioned above the line. Focus states transition the bottom border to Deep Plum.\n\n### Cards & Imagery\nCards are defined by thin 1px borders and generous internal padding (32px+). Images are the centerpiece; they should always be high-resolution, featuring macro shots of textures, polish, or hands. Use \"Art-Gallery\" style captions (small, italicized DM Sans) beneath images.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Manicure\", \"Artistry\"). These should be simple text in `label-caps` surrounded by a 1px thin-rule border, no background fill.\n\n### Service Menus\nLists should be styled like a table of contents: the service name on the left in Bodoni Moda, a thin dotted line (leader) across the center, and the price on the right in DM Sans.",
+        "theme": {
+          "bodyFont": "DM_SANS",
+          "bodyFontFamily": "Dm Sans",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#4a0e2e",
+          "designMd": "---\nname: L'Artiste de Manchester\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#524348'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#847378'\n  outline-variant: '#d6c1c7'\n  surface-tint: '#8e4767'\n  primary: '#2b0018'\n  on-primary: '#ffffff'\n  primary-container: '#4a0e2e'\n  on-primary-container: '#c57597'\n  inverse-primary: '#ffb0cf'\n  secondary: '#675d4e'\n  on-secondary: '#ffffff'\n  secondary-container: '#efe0cd'\n  on-secondary-container: '#6d6354'\n  tertiary: '#091506'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1d2a18'\n  on-tertiary-container: '#83927a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffd8e5'\n  primary-fixed-dim: '#ffb0cf'\n  on-primary-fixed: '#3c0223'\n  on-primary-fixed-variant: '#72304f'\n  secondary-fixed: '#efe0cd'\n  secondary-fixed-dim: '#d2c4b2'\n  on-secondary-fixed: '#221a0f'\n  on-secondary-fixed-variant: '#4f4538'\n  tertiary-fixed: '#d8e7cc'\n  tertiary-fixed-dim: '#bccbb1'\n  on-tertiary-fixed: '#121f0e'\n  on-tertiary-fixed-variant: '#3d4b37'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"New Editorial\" movement, blending the tactile sensation of a high-fashion print magazine with the fluid precision of a digital boutique. The brand personality is poised, sophisticated, and quiet in its confidence. It targets a discerning clientele that values craftsmanship over trend-following, positioning nail care as an art form rather than a routine maintenance task.\n\nThe visual style utilizes a high-contrast layout, characterized by dramatic typographic scale and purposeful negative space. It rejects the standard \"SaaS\" look in favor of a composition-driven approach: asymmetric grids, delicate linework (thin-rule borders), and subtle organic grain textures that provide a sense of physical paper stock. The emotional response should be one of immediate calm, luxury, and exclusivity.\n\n## Colors\n\nThe palette is anchored by **Deep Plum**, used for primary actions and high-impact headings to convey depth and luxury. **Soft Champagne** serves as the primary surface color, replacing standard whites to provide a warmer, more tactile \"paper\" feel. \n\n**Muted Sage** is utilized for secondary elements, accents, and nature-inspired callouts, providing a soft counterpoint to the intensity of the plum. **Charcoal** is reserved for body text and structural elements where high legibility is required. \n\nPairings should prioritize contrast: Plum on Champagne for elegance, or Sage on Charcoal for a moody, sophisticated \"after-hours\" section. Use grain overlays on Champagne surfaces to prevent them from feeling digitally flat.\n\n## Typography\n\nThis design system uses a sharp dichotomy between its two typefaces. **Bodoni Moda** provides the editorial \"voice\"—use it for large, dramatic headlines and pull quotes. Its high contrast between thick and thin strokes mimics the sophistication of fashion mastheads.\n\n**DM Sans** provides the functional \"anchor.\" It should be set with generous letter-spacing (tracking) for body copy to enhance the airy, luxurious feel. The `label-caps` style is critical for navigation and small headers, providing a modern, clean contrast to the romantic serif. Avoid using Bodoni for long-form body text; its high contrast makes it fatiguing at small sizes.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop, centered to create the feeling of a curated page. The 12-column grid is used loosely; allow content to \"breathe\" by leaving entire columns empty to serve as whitespace.\n\nLarge section gaps (120px+) are intentional—they signal that the content is not rushed. Elements should frequently be separated by elegant 1px thin-rule lines in Deep Plum (at 20% opacity) or Charcoal to maintain structure without adding visual bulk. On mobile, transition to a single-column stack but maintain generous top/bottom padding to preserve the premium feel.\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** and **Fine Outlines** rather than shadows. The design is intentionally \"flat\" to mimic the pages of a magazine.\n\n- **Thin-Rule Borders:** Use 1px solid lines to define sections, borders of cards, or to separate navigation items.\n- **Glassmorphism:** Use only for mobile navigation overlays—a high-blur \"Soft Champagne\" backdrop that allows the colors of the imagery beneath to bleed through.\n- **Organic Grain:** A global SVG noise filter should be applied to the main Champagne background. This creates a tactile, non-digital texture that makes the UI feel like physical stationery.\n- **Stacking:** Elements should overlap slightly (e.g., an image overlapping a text block) to create a sophisticated, custom-designed appearance.\n\n## Shapes\n\nThe shape language is **Sharp (0px roundedness)**. Every button, input field, and image container must have crisp, 90-degree corners. This evokes the precision of a nail technician’s work and reinforces the architectural, high-end editorial aesthetic. Rounded corners are too casual for this particular visual identity; stick to hard edges to maintain the \"luxury magazine\" rigor.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Deep Plum with Soft Champagne text in `label-caps`. Secondary buttons use a 1px Charcoal border with no fill. The hover state should involve a subtle shift in background color (e.g., Plum to a slightly lighter tint) rather than a scale change.\n\n### Inputs\nFields consist of a 1px bottom border only (Charcoal). Labels are set in `label-caps` positioned above the line. Focus states transition the bottom border to Deep Plum.\n\n### Cards & Imagery\nCards are defined by thin 1px borders and generous internal padding (32px+). Images are the centerpiece; they should always be high-resolution, featuring macro shots of textures, polish, or hands. Use \"Art-Gallery\" style captions (small, italicized DM Sans) beneath images.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Manicure\", \"Artistry\"). These should be simple text in `label-caps` surrounded by a 1px thin-rule border, no background fill.\n\n### Service Menus\nLists should be styled like a table of contents: the service name on the left in Bodoni Moda, a thin dotted line (leader) across the center, and the price on the right in DM Sans.",
+          "font": "BODONI_MODA",
+          "headlineFont": "BODONI_MODA",
+          "headlineFontFamily": "Bodoni Moda",
+          "labelFont": "DM_SANS",
+          "labelFontFamily": "Dm Sans",
+          "namedColors": {
+            "background": "#fcf9f8",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f3f0f0",
+            "inverse_primary": "#ffb0cf",
+            "inverse_surface": "#303030",
+            "on_background": "#1b1c1c",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#c57597",
+            "on_primary_fixed": "#3c0223",
+            "on_primary_fixed_variant": "#72304f",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#6d6354",
+            "on_secondary_fixed": "#221a0f",
+            "on_secondary_fixed_variant": "#4f4538",
+            "on_surface": "#1b1c1c",
+            "on_surface_variant": "#524348",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#83927a",
+            "on_tertiary_fixed": "#121f0e",
+            "on_tertiary_fixed_variant": "#3d4b37",
+            "outline": "#847378",
+            "outline_variant": "#d6c1c7",
+            "primary": "#2b0018",
+            "primary_container": "#4a0e2e",
+            "primary_fixed": "#ffd8e5",
+            "primary_fixed_dim": "#ffb0cf",
+            "secondary": "#675d4e",
+            "secondary_container": "#efe0cd",
+            "secondary_fixed": "#efe0cd",
+            "secondary_fixed_dim": "#d2c4b2",
+            "surface": "#fcf9f8",
+            "surface_bright": "#fcf9f8",
+            "surface_container": "#f0eded",
+            "surface_container_high": "#eae7e7",
+            "surface_container_highest": "#e4e2e1",
+            "surface_container_low": "#f6f3f2",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcd9d9",
+            "surface_tint": "#8e4767",
+            "surface_variant": "#e4e2e1",
+            "tertiary": "#091506",
+            "tertiary_container": "#1d2a18",
+            "tertiary_fixed": "#d8e7cc",
+            "tertiary_fixed_dim": "#bccbb1"
+          },
+          "overrideNeutralColor": "#2d2d2d",
+          "overridePrimaryColor": "#4a0e2e",
+          "overrideSecondaryColor": "#f5e6d3",
+          "overrideTertiaryColor": "#8b9a82",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "24px",
+            "section-gap": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "DM Sans",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.02em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "DM Sans",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "80px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "48px",
+              "fontWeight": "600",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "32px",
+              "fontWeight": "500",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "DM Sans",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.2em",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/e41d05071b51493dbab94b6e9bb405d7",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "82f7143e031d4ada87de543dd6676afe",
+          "name": "projects/8763029383367616934/screens/82f7143e031d4ada87de543dd6676afe",
+          "prompt": "Editorial fashion photography of high-end manicured nails. The hands are posed elegantly against a textured, deep plum and charcoal backdrop. Soft, cinematic lighting highlights the glossy finish and intricate detail. Sophisticated, luxury magazine aesthetic. No text.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsoEBrsZvmDBTavU0gzEHdRy5uXoLWaopU88v-Ah1Qblccoh9qnCf4CiZsMG4tr3NMcGog7ak3v7YFlHz_uBOQ07MnsWmU58MaV4_8dSZwBk4KcwaTkARRQxQxlHJ9SFqWqr8RALfIuTlyMVwgfZwF_S7n835g3gijuqdl7oQY3q-601yZ3Piv9oHR7B7filx04ccpQJof0ZrtVqjwQhdOLoRaHNjEKpBzNp8hfjBYm8COlAyo59euubGY",
+            "name": "projects/8763029383367616934/files/089eefdcd87244f4b2b59305b9609f6c"
+          },
+          "theme": {},
+          "title": "Editorial fashion photography of high-end manicured nails. The hands are posed elegantly against a textured, deep plum and charcoal backdrop. Soft, cinematic lighting highlights the glossy finish and intricate detail. Sophisticated, luxury magazine aesthetic. No text.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "d0cf721966044ce6bb469d3fa28eb186",
+          "name": "projects/8763029383367616934/screens/d0cf721966044ce6bb469d3fa28eb186",
+          "prompt": "Close-up, artistic shot of a nail artist's hands at work, performing a precision polish application. Soft champagne and muted sage color palette. High-end salon environment with minimalist, clean surfaces. Editorial quality, soft focus background.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtpFOTEmqrYHSgkMAuxzhaO-UMZaw9dbXak3tU-z3wGN2AeJ4d9TlJ1CXjyp1sI5bp37-NhUDHPfV6u_c5OEGYGqKmQK5E3l4sNfKgFoB7RxvECr5cDEdizwQxCEPU_Tf1m3EsaQMl3GKe-OqL0XCGRaTlq7ChT2mo5CQooY6DpcwqtWKOEKz6zDwQLwmeqy6MYrW9zPs_uPPsDjJvbAn10FtjR0sECoXJ88groDkJy8X-_TH6fzjKdoMs",
+            "name": "projects/8763029383367616934/files/6208fc53d4144cb39002ce5ce692ad4b"
+          },
+          "theme": {},
+          "title": "Close-up, artistic shot of a nail artist's hands at work, performing a precision polish application. Soft champagne and muted sage color palette. High-end salon environment with minimalist, clean surfaces. Editorial quality, soft focus background.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "69b7fb579aea4c89a8b0b42f20be3bae",
+          "name": "projects/8763029383367616934/screens/69b7fb579aea4c89a8b0b42f20be3bae",
+          "prompt": "A professional, warm portrait of a boutique salon owner. She has a welcoming, expert expression. The background is a softly blurred high-end salon interior with neutral tones. High-fashion editorial lighting.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLufZPJPF0YGaoNnR_lFyc2HmLMhYfyUFXEVVq2a4a5lEPpig0DsJjpOyLeUHSDgkiWzKCihpESdL7xQ1iRKI5rblhPg3DcZUH_yXy0d9amAHwZCYZ4xzHQJdLflL_D1jTME_QFexFQCExgw_c4RMASZq3fQGeqiH0iu_lNuBQEd7W3t_BYNCZaj5f8Z7LRLR9nwRxEpDBQFlruRE18vAcg_gMyobqLJhm3tFWwzsmUaOJhe5seXNZdliDs",
+            "name": "projects/8763029383367616934/files/6197068f26974284b5b05cc70a8c48bb"
+          },
+          "theme": {},
+          "title": "A professional, warm portrait of a boutique salon owner. She has a welcoming, expert expression. The background is a softly blurred high-end salon interior with neutral tones. High-fashion editorial lighting.",
+          "width": "1024"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "04eaa31cedbe4afca2bb1738dfb4639c",
+          "name": "projects/8763029383367616934/screens/04eaa31cedbe4afca2bb1738dfb4639c",
+          "prompt": "A serene, high-end nail salon interior in Manchester, NH. Minimalist design, featuring soft champagne walls, deep plum velvet seating, and elegant thin-rule gold accents. Generous whitespace, sophisticated and inviting. Editorial photography style.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt4dmPoVv2ZdM8xHTYRsk-jXKJQL9PPDluWrwTK_BT_issSNM5IPQKe9LsSlGDPs6k_gnOVOslgie-GffBSUyoz7B0xxotncGUMuAkSczm1_0X2ndrl1lsFKgAWz47PDskh485LH7Qmsh2Cu33p8hy9MydVdNAsMx1D35GV95HAyQq4MytICRSaKlx7zWC6i69dIzyMmk9YbQTNK1-kDpdZ0KPsy4YOAchS962wCOdKFyrOIcA03YWEvDI",
+            "name": "projects/8763029383367616934/files/27087bbdacf5472f9f13d3c3b7f3bb8d"
+          },
+          "theme": {},
+          "title": "A serene, high-end nail salon interior in Manchester, NH. Minimalist design, featuring soft champagne walls, deep plum velvet seating, and elegant thin-rule gold accents. Generous whitespace, sophisticated and inviting. Editorial photography style.",
+          "width": "1200"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "L'Artiste de Manchester",
+              "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in the \"New Editorial\" movement, blending the tactile sensation of a high-fashion print magazine with the fluid precision of a digital boutique. The brand personality is poised, sophisticated, and quiet in its confidence. It targets a discerning clientele that values craftsmanship over trend-following, positioning nail care as an art form rather than a routine maintenance task.\n\nThe visual style utilizes a high-contrast layout, characterized by dramatic typographic scale and purposeful negative space. It rejects the standard \"SaaS\" look in favor of a composition-driven approach: asymmetric grids, delicate linework (thin-rule borders), and subtle organic grain textures that provide a sense of physical paper stock. The emotional response should be one of immediate calm, luxury, and exclusivity.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop, centered to create the feeling of a curated page. The 12-column grid is used loosely; allow content to \"breathe\" by leaving entire columns empty to serve as whitespace.\n\nLarge section gaps (120px+) are intentional—they signal that the content is not rushed. Elements should frequently be separated by elegant 1px thin-rule lines in Deep Plum (at 20% opacity) or Charcoal to maintain structure without adding visual bulk. On mobile, transition to a single-column stack but maintain generous top/bottom padding to preserve the premium feel.\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** and **Fine Outlines** rather than shadows. The design is intentionally \"flat\" to mimic the pages of a magazine.\n\n- **Thin-Rule Borders:** Use 1px solid lines to define sections, borders of cards, or to separate navigation items.\n- **Glassmorphism:** Use only for mobile navigation overlays—a high-blur \"Soft Champagne\" backdrop that allows the colors of the imagery beneath to bleed through.\n- **Organic Grain:** A global SVG noise filter should be applied to the main Champagne background. This creates a tactile, non-digital texture that makes the UI feel like physical stationery.\n- **Stacking:** Elements should overlap slightly (e.g., an image overlapping a text block) to create a sophisticated, custom-designed appearance.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Deep Plum with Soft Champagne text in `label-caps`. Secondary buttons use a 1px Charcoal border with no fill. The hover state should involve a subtle shift in background color (e.g., Plum to a slightly lighter tint) rather than a scale change.\n\n### Inputs\nFields consist of a 1px bottom border only (Charcoal). Labels are set in `label-caps` positioned above the line. Focus states transition the bottom border to Deep Plum.\n\n### Cards & Imagery\nCards are defined by thin 1px borders and generous internal padding (32px+). Images are the centerpiece; they should always be high-resolution, featuring macro shots of textures, polish, or hands. Use \"Art-Gallery\" style captions (small, italicized DM Sans) beneath images.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Manicure\", \"Artistry\"). These should be simple text in `label-caps` surrounded by a 1px thin-rule border, no background fill.\n\n### Service Menus\nLists should be styled like a table of contents: the service name on the left in Bodoni Moda, a thin dotted line (leader) across the center, and the price on the right in DM Sans.",
+              "theme": {
+                "bodyFont": "DM_SANS",
+                "bodyFontFamily": "Dm Sans",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#4a0e2e",
+                "designMd": "---\nname: L'Artiste de Manchester\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#524348'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#847378'\n  outline-variant: '#d6c1c7'\n  surface-tint: '#8e4767'\n  primary: '#2b0018'\n  on-primary: '#ffffff'\n  primary-container: '#4a0e2e'\n  on-primary-container: '#c57597'\n  inverse-primary: '#ffb0cf'\n  secondary: '#675d4e'\n  on-secondary: '#ffffff'\n  secondary-container: '#efe0cd'\n  on-secondary-container: '#6d6354'\n  tertiary: '#091506'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1d2a18'\n  on-tertiary-container: '#83927a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffd8e5'\n  primary-fixed-dim: '#ffb0cf'\n  on-primary-fixed: '#3c0223'\n  on-primary-fixed-variant: '#72304f'\n  secondary-fixed: '#efe0cd'\n  secondary-fixed-dim: '#d2c4b2'\n  on-secondary-fixed: '#221a0f'\n  on-secondary-fixed-variant: '#4f4538'\n  tertiary-fixed: '#d8e7cc'\n  tertiary-fixed-dim: '#bccbb1'\n  on-tertiary-fixed: '#121f0e'\n  on-tertiary-fixed-variant: '#3d4b37'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"New Editorial\" movement, blending the tactile sensation of a high-fashion print magazine with the fluid precision of a digital boutique. The brand personality is poised, sophisticated, and quiet in its confidence. It targets a discerning clientele that values craftsmanship over trend-following, positioning nail care as an art form rather than a routine maintenance task.\n\nThe visual style utilizes a high-contrast layout, characterized by dramatic typographic scale and purposeful negative space. It rejects the standard \"SaaS\" look in favor of a composition-driven approach: asymmetric grids, delicate linework (thin-rule borders), and subtle organic grain textures that provide a sense of physical paper stock. The emotional response should be one of immediate calm, luxury, and exclusivity.\n\n## Colors\n\nThe palette is anchored by **Deep Plum**, used for primary actions and high-impact headings to convey depth and luxury. **Soft Champagne** serves as the primary surface color, replacing standard whites to provide a warmer, more tactile \"paper\" feel. \n\n**Muted Sage** is utilized for secondary elements, accents, and nature-inspired callouts, providing a soft counterpoint to the intensity of the plum. **Charcoal** is reserved for body text and structural elements where high legibility is required. \n\nPairings should prioritize contrast: Plum on Champagne for elegance, or Sage on Charcoal for a moody, sophisticated \"after-hours\" section. Use grain overlays on Champagne surfaces to prevent them from feeling digitally flat.\n\n## Typography\n\nThis design system uses a sharp dichotomy between its two typefaces. **Bodoni Moda** provides the editorial \"voice\"—use it for large, dramatic headlines and pull quotes. Its high contrast between thick and thin strokes mimics the sophistication of fashion mastheads.\n\n**DM Sans** provides the functional \"anchor.\" It should be set with generous letter-spacing (tracking) for body copy to enhance the airy, luxurious feel. The `label-caps` style is critical for navigation and small headers, providing a modern, clean contrast to the romantic serif. Avoid using Bodoni for long-form body text; its high contrast makes it fatiguing at small sizes.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop, centered to create the feeling of a curated page. The 12-column grid is used loosely; allow content to \"breathe\" by leaving entire columns empty to serve as whitespace.\n\nLarge section gaps (120px+) are intentional—they signal that the content is not rushed. Elements should frequently be separated by elegant 1px thin-rule lines in Deep Plum (at 20% opacity) or Charcoal to maintain structure without adding visual bulk. On mobile, transition to a single-column stack but maintain generous top/bottom padding to preserve the premium feel.\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** and **Fine Outlines** rather than shadows. The design is intentionally \"flat\" to mimic the pages of a magazine.\n\n- **Thin-Rule Borders:** Use 1px solid lines to define sections, borders of cards, or to separate navigation items.\n- **Glassmorphism:** Use only for mobile navigation overlays—a high-blur \"Soft Champagne\" backdrop that allows the colors of the imagery beneath to bleed through.\n- **Organic Grain:** A global SVG noise filter should be applied to the main Champagne background. This creates a tactile, non-digital texture that makes the UI feel like physical stationery.\n- **Stacking:** Elements should overlap slightly (e.g., an image overlapping a text block) to create a sophisticated, custom-designed appearance.\n\n## Shapes\n\nThe shape language is **Sharp (0px roundedness)**. Every button, input field, and image container must have crisp, 90-degree corners. This evokes the precision of a nail technician’s work and reinforces the architectural, high-end editorial aesthetic. Rounded corners are too casual for this particular visual identity; stick to hard edges to maintain the \"luxury magazine\" rigor.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Deep Plum with Soft Champagne text in `label-caps`. Secondary buttons use a 1px Charcoal border with no fill. The hover state should involve a subtle shift in background color (e.g., Plum to a slightly lighter tint) rather than a scale change.\n\n### Inputs\nFields consist of a 1px bottom border only (Charcoal). Labels are set in `label-caps` positioned above the line. Focus states transition the bottom border to Deep Plum.\n\n### Cards & Imagery\nCards are defined by thin 1px borders and generous internal padding (32px+). Images are the centerpiece; they should always be high-resolution, featuring macro shots of textures, polish, or hands. Use \"Art-Gallery\" style captions (small, italicized DM Sans) beneath images.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Manicure\", \"Artistry\"). These should be simple text in `label-caps` surrounded by a 1px thin-rule border, no background fill.\n\n### Service Menus\nLists should be styled like a table of contents: the service name on the left in Bodoni Moda, a thin dotted line (leader) across the center, and the price on the right in DM Sans.",
+                "font": "BODONI_MODA",
+                "headlineFont": "BODONI_MODA",
+                "headlineFontFamily": "Bodoni Moda",
+                "labelFont": "DM_SANS",
+                "labelFontFamily": "Dm Sans",
+                "namedColors": {
+                  "background": "#fcf9f8",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f3f0f0",
+                  "inverse_primary": "#ffb0cf",
+                  "inverse_surface": "#303030",
+                  "on_background": "#1b1c1c",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#c57597",
+                  "on_primary_fixed": "#3c0223",
+                  "on_primary_fixed_variant": "#72304f",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#6d6354",
+                  "on_secondary_fixed": "#221a0f",
+                  "on_secondary_fixed_variant": "#4f4538",
+                  "on_surface": "#1b1c1c",
+                  "on_surface_variant": "#524348",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#83927a",
+                  "on_tertiary_fixed": "#121f0e",
+                  "on_tertiary_fixed_variant": "#3d4b37",
+                  "outline": "#847378",
+                  "outline_variant": "#d6c1c7",
+                  "primary": "#2b0018",
+                  "primary_container": "#4a0e2e",
+                  "primary_fixed": "#ffd8e5",
+                  "primary_fixed_dim": "#ffb0cf",
+                  "secondary": "#675d4e",
+                  "secondary_container": "#efe0cd",
+                  "secondary_fixed": "#efe0cd",
+                  "secondary_fixed_dim": "#d2c4b2",
+                  "surface": "#fcf9f8",
+                  "surface_bright": "#fcf9f8",
+                  "surface_container": "#f0eded",
+                  "surface_container_high": "#eae7e7",
+                  "surface_container_highest": "#e4e2e1",
+                  "surface_container_low": "#f6f3f2",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dcd9d9",
+                  "surface_tint": "#8e4767",
+                  "surface_variant": "#e4e2e1",
+                  "tertiary": "#091506",
+                  "tertiary_container": "#1d2a18",
+                  "tertiary_fixed": "#d8e7cc",
+                  "tertiary_fixed_dim": "#bccbb1"
+                },
+                "overrideNeutralColor": "#2d2d2d",
+                "overridePrimaryColor": "#4a0e2e",
+                "overrideSecondaryColor": "#f5e6d3",
+                "overrideTertiaryColor": "#8b9a82",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "24px",
+                  "section-gap": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "80px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "48px",
+                    "fontWeight": "600",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "32px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.3"
+                  },
+                  "label-caps": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.2em",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/e41d05071b51493dbab94b6e9bb405d7",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10910",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2U2NDVkZjYzNDRjNjQ3NDRhMGExNzhmN2U5NTY2ODVhEgsSBxCq7_ih7hkYAZIBIwoKcHJvamVjdF9pZBIVQhM4NzYzMDI5MzgzMzY3NjE2OTM0&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/8763029383367616934/files/0548cdcc48734efb869ef7775e8fa7d2"
+          },
+          "id": "f496243d32d441899737f9fd5b205649",
+          "name": "projects/8763029383367616934/screens/f496243d32d441899737f9fd5b205649",
+          "prompt": "Build a bespoke, editorial-grade desktop landing page for 'Beautiful Nails' in Manchester, NH. \n\nLayout Strategy: \n- Editorial magazine style with generous whitespace and intentional asymmetry.\n- Memorable Visual Motif: Use thin-rule borders (1px) and elegant grain textures.\n- Sections:\n  1. Header: Brand wordmark, phone (603) 232-4700, and minimalist nav.\n  2. Hero: High-fashion, full-width or large offset layout using {{DATA:IMAGE:IMAGE_4}}. Large serif heading: 'The Art of the Manicure'.\n  3. Credibility: A minimalist row showing salon philosophy and high-end focus.\n  4. Services: An asymmetrical grid of services (Signature Manicures, Gel Art, Spa Pedicures, Custom Extensions) using {{DATA:IMAGE:IMAGE_6}} and {{DATA:IMAGE:IMAGE_5}}. Each service should feel like a magazine feature.\n  5. About: A section anchored by {{DATA:IMAGE:IMAGE_3}}, telling the story of Manchester's premier nail atelier.\n  6. Visit: A dedicated section with the address '1525 South Willow Street, Manchester, NH 03103' and the required map slot: <div class='map-slot relative overflow-hidden min-h-[400px]' data-map-slot aria-label='Map'></div>.\n  7. Contact: A premium, minimalist contact form with validation UI.\n  8. Footer: Complete business info and social links.\n\nTechnical:\n- Use the Deep Plum, Soft Champagne, and Charcoal palette.\n- High-contrast Serif for headings, clean Sans-Serif for body.\n- Smooth scroll, responsive design, and production-ready HTML/CSS.\n- No placeholder text (lorem ipsum); use real, evocative copy.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvVWZqffTOhc8Mn4wBgskHdJBTVn8I3cJQVp2p4icBcBklXNl9rmkRTbFsinWv44fBZdusQnUU1Bg01_A58QaCOP4N7Bpi8bWbZaTxK5TB2cPTzKZg0OVq6UuCkHYIvofjBSdRIBdA-N2K6e7PUj26SNREvBmzFsaYIjP_FyY15sj5Oe82MCI6gqJn9dffabMuFno5US9c_D9B44Pqz--8nS7YhafJzY-wF0yg8wnhnneLYeZAaaRgQYxc",
+            "name": "projects/8763029383367616934/files/89bb1fdfe53d42c9a00d59e68fae7776"
+          },
+          "theme": {
+            "bodyFont": "DM_SANS",
+            "bodyFontFamily": "Dm Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#4a0e2e",
+            "designMd": "---\nname: L'Artiste de Manchester\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#524348'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#847378'\n  outline-variant: '#d6c1c7'\n  surface-tint: '#8e4767'\n  primary: '#2b0018'\n  on-primary: '#ffffff'\n  primary-container: '#4a0e2e'\n  on-primary-container: '#c57597'\n  inverse-primary: '#ffb0cf'\n  secondary: '#675d4e'\n  on-secondary: '#ffffff'\n  secondary-container: '#efe0cd'\n  on-secondary-container: '#6d6354'\n  tertiary: '#091506'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1d2a18'\n  on-tertiary-container: '#83927a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffd8e5'\n  primary-fixed-dim: '#ffb0cf'\n  on-primary-fixed: '#3c0223'\n  on-primary-fixed-variant: '#72304f'\n  secondary-fixed: '#efe0cd'\n  secondary-fixed-dim: '#d2c4b2'\n  on-secondary-fixed: '#221a0f'\n  on-secondary-fixed-variant: '#4f4538'\n  tertiary-fixed: '#d8e7cc'\n  tertiary-fixed-dim: '#bccbb1'\n  on-tertiary-fixed: '#121f0e'\n  on-tertiary-fixed-variant: '#3d4b37'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"New Editorial\" movement, blending the tactile sensation of a high-fashion print magazine with the fluid precision of a digital boutique. The brand personality is poised, sophisticated, and quiet in its confidence. It targets a discerning clientele that values craftsmanship over trend-following, positioning nail care as an art form rather than a routine maintenance task.\n\nThe visual style utilizes a high-contrast layout, characterized by dramatic typographic scale and purposeful negative space. It rejects the standard \"SaaS\" look in favor of a composition-driven approach: asymmetric grids, delicate linework (thin-rule borders), and subtle organic grain textures that provide a sense of physical paper stock. The emotional response should be one of immediate calm, luxury, and exclusivity.\n\n## Colors\n\nThe palette is anchored by **Deep Plum**, used for primary actions and high-impact headings to convey depth and luxury. **Soft Champagne** serves as the primary surface color, replacing standard whites to provide a warmer, more tactile \"paper\" feel. \n\n**Muted Sage** is utilized for secondary elements, accents, and nature-inspired callouts, providing a soft counterpoint to the intensity of the plum. **Charcoal** is reserved for body text and structural elements where high legibility is required. \n\nPairings should prioritize contrast: Plum on Champagne for elegance, or Sage on Charcoal for a moody, sophisticated \"after-hours\" section. Use grain overlays on Champagne surfaces to prevent them from feeling digitally flat.\n\n## Typography\n\nThis design system uses a sharp dichotomy between its two typefaces. **Bodoni Moda** provides the editorial \"voice\"—use it for large, dramatic headlines and pull quotes. Its high contrast between thick and thin strokes mimics the sophistication of fashion mastheads.\n\n**DM Sans** provides the functional \"anchor.\" It should be set with generous letter-spacing (tracking) for body copy to enhance the airy, luxurious feel. The `label-caps` style is critical for navigation and small headers, providing a modern, clean contrast to the romantic serif. Avoid using Bodoni for long-form body text; its high contrast makes it fatiguing at small sizes.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop, centered to create the feeling of a curated page. The 12-column grid is used loosely; allow content to \"breathe\" by leaving entire columns empty to serve as whitespace.\n\nLarge section gaps (120px+) are intentional—they signal that the content is not rushed. Elements should frequently be separated by elegant 1px thin-rule lines in Deep Plum (at 20% opacity) or Charcoal to maintain structure without adding visual bulk. On mobile, transition to a single-column stack but maintain generous top/bottom padding to preserve the premium feel.\n\n## Elevation & Depth\n\nDepth in this design system is achieved through **Tonal Layering** and **Fine Outlines** rather than shadows. The design is intentionally \"flat\" to mimic the pages of a magazine.\n\n- **Thin-Rule Borders:** Use 1px solid lines to define sections, borders of cards, or to separate navigation items.\n- **Glassmorphism:** Use only for mobile navigation overlays—a high-blur \"Soft Champagne\" backdrop that allows the colors of the imagery beneath to bleed through.\n- **Organic Grain:** A global SVG noise filter should be applied to the main Champagne background. This creates a tactile, non-digital texture that makes the UI feel like physical stationery.\n- **Stacking:** Elements should overlap slightly (e.g., an image overlapping a text block) to create a sophisticated, custom-designed appearance.\n\n## Shapes\n\nThe shape language is **Sharp (0px roundedness)**. Every button, input field, and image container must have crisp, 90-degree corners. This evokes the precision of a nail technician’s work and reinforces the architectural, high-end editorial aesthetic. Rounded corners are too casual for this particular visual identity; stick to hard edges to maintain the \"luxury magazine\" rigor.\n\n## Components\n\n### Buttons\nPrimary buttons are solid Deep Plum with Soft Champagne text in `label-caps`. Secondary buttons use a 1px Charcoal border with no fill. The hover state should involve a subtle shift in background color (e.g., Plum to a slightly lighter tint) rather than a scale change.\n\n### Inputs\nFields consist of a 1px bottom border only (Charcoal). Labels are set in `label-caps` positioned above the line. Focus states transition the bottom border to Deep Plum.\n\n### Cards & Imagery\nCards are defined by thin 1px borders and generous internal padding (32px+). Images are the centerpiece; they should always be high-resolution, featuring macro shots of textures, polish, or hands. Use \"Art-Gallery\" style captions (small, italicized DM Sans) beneath images.\n\n### Chips & Tags\nUsed sparingly for service categories (e.g., \"Manicure\", \"Artistry\"). These should be simple text in `label-caps` surrounded by a 1px thin-rule border, no background fill.\n\n### Service Menus\nLists should be styled like a table of contents: the service name on the left in Bodoni Moda, a thin dotted line (leader) across the center, and the price on the right in DM Sans.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "DM_SANS",
+            "labelFontFamily": "Dm Sans",
+            "namedColors": {
+              "background": "#fcf9f8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0f0",
+              "inverse_primary": "#ffb0cf",
+              "inverse_surface": "#303030",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#c57597",
+              "on_primary_fixed": "#3c0223",
+              "on_primary_fixed_variant": "#72304f",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#6d6354",
+              "on_secondary_fixed": "#221a0f",
+              "on_secondary_fixed_variant": "#4f4538",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#524348",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#83927a",
+              "on_tertiary_fixed": "#121f0e",
+              "on_tertiary_fixed_variant": "#3d4b37",
+              "outline": "#847378",
+              "outline_variant": "#d6c1c7",
+              "primary": "#2b0018",
+              "primary_container": "#4a0e2e",
+              "primary_fixed": "#ffd8e5",
+              "primary_fixed_dim": "#ffb0cf",
+              "secondary": "#675d4e",
+              "secondary_container": "#efe0cd",
+              "secondary_fixed": "#efe0cd",
+              "secondary_fixed_dim": "#d2c4b2",
+              "surface": "#fcf9f8",
+              "surface_bright": "#fcf9f8",
+              "surface_container": "#f0eded",
+              "surface_container_high": "#eae7e7",
+              "surface_container_highest": "#e4e2e1",
+              "surface_container_low": "#f6f3f2",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9d9",
+              "surface_tint": "#8e4767",
+              "surface_variant": "#e4e2e1",
+              "tertiary": "#091506",
+              "tertiary_container": "#1d2a18",
+              "tertiary_fixed": "#d8e7cc",
+              "tertiary_fixed_dim": "#bccbb1"
+            },
+            "overrideNeutralColor": "#2d2d2d",
+            "overridePrimaryColor": "#4a0e2e",
+            "overrideSecondaryColor": "#f5e6d3",
+            "overrideTertiaryColor": "#8b9a82",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "80px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "DM Sans",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.2em",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "Beautiful Nails | Editorial Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've completed the bespoke editorial homepage for **Beautiful Nails**. \n\n### Design Highlights:\n*   **Editorial Layout:** Moving away from standard business templates, I've implemented a high-fashion magazine aesthetic with intentional asymmetry and generous whitespace to elevate the brand's perception.\n*   **Visual Motif:** The design uses a sophisticated \"Thin-Rule & Texture\" motif, featuring 1px borders and a soft champagne/deep plum color story that feels both tactile and premium.\n*   **Artistic Imagery:** I've integrated custom-generated photography, including an editorial hero visual and craftsmanship shots, to anchor the salon's identity in artistry rather than just utility.\n*   **Bespoke Typography:** By pairing a high-contrast serif for headlines with a clean, wide-spaced sans-serif for body copy, I've established a typographic hierarchy that reflects the precision of their services.\n*   **Interactive Foundations:** The page includes a custom contact form, smooth scrolling, and the required interactive map container, all built with semantic, production-ready code.\n\nThe result is a memorable first impression that positions **Beautiful Nails** as Manchester's premier sanctuary for elevated nail artistry."
+  },
+  {
+    "suggestion": "Add a booking integration overlay"
+  },
+  {
+    "suggestion": "Create a mobile-optimized version"
+  },
+  {
+    "suggestion": "Design a seasonal 'Gallery' page for nail art trends"
+  }
+]
