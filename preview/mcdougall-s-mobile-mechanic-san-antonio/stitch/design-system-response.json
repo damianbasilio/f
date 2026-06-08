@@ -1,0 +1,447 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Forge & Friction",
+        "styleGuidelines": "## Brand & Style\n\nThis design system embodies a **Modern Industrial** aesthetic tailored for high-end mobile mechanical services. It moves away from the generic \"grease-monkey\" tropes toward an editorial, boutique workshop identity. The brand personality is rugged yet hyper-professional, authoritative, and deeply rooted in local craft.\n\nThe visual direction combines **Minimalism** with **Modern Brutalism**. It utilizes heavy whitespace to frame dense, technical information, creating a \"structured chaos\" reminiscent of a master mechanic’s organized toolbox. Design motifs include thin blueprint-style grid lines, asymmetrical layout blocks, and subtle grit textures that provide a tactile, high-end feel. The goal is to evoke the reliability of heavy machinery and the precision of modern engineering.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Desktop:** A 12-column grid with wide 64px margins. Elements often \"break\" the grid slightly or align to an asymmetrical 60/40 split to mimic a blueprint layout.\n- **Spacing Rhythm:** Based on a 4px baseline unit. Internal component padding should be generous to maintain the premium feel.\n- **Structural Lines:** Use 1px \"Cool Slate\" borders to separate sections instead of relying solely on whitespace. These lines should occasionally extend to the edge of the viewport, resembling technical drafting lines.\n- **Mobile:** Transition to a 4-column fluid grid with tighter margins (20px). Content stacks vertically, but maintains the \"heavy header\" style.\n\n## Elevation & Depth\n\nTo maintain the rugged, industrial feel, this design system avoids soft, organic shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The \"Deep Asphalt\" background is the lowest level. Surface containers use \"Cool Slate\" with a slightly higher luminosity to indicate elevation.\n- **Hard Borders:** 1px or 2px solid borders create definition. For active states, these borders switch to \"High-Vis Amber.\"\n- **Grit Overlay:** A low-opacity (2-3%) grain or noise texture is applied to the primary background to eliminate the \"flatness\" of digital UI and add a physical, metallic quality.\n- **Hard Shadows:** If depth is required, use 0-blur \"drop shadows\" offset by 4px or 8px in a darker shade of Asphalt, creating a \"sticker\" or \"plated\" effect.\n\n## Components\n\n- **Buttons:** Rectangular, sharp-edged, and high-contrast. The primary button is \"High-Vis Amber\" with black text in `label-md` (All Caps). Secondary buttons use a \"Cool Slate\" outline.\n- **Input Fields:** Thick 2px bottom borders with a dark background. The label is always `label-sm` monospaced text appearing above the field.\n- **Cards:** Defined by 1px \"Cool Slate\" borders. Cards do not have background fills unless they are highlighting a specific service, in which case they use a subtle gradient of \"Deep Asphalt.\"\n- **Status Chips:** Small, monospaced text blocks with a solid background color (e.g., Red for \"Engine Failure,\" Green for \"Fixed,\" Amber for \"In Progress\"). Sharp corners only.\n- **Lists:** Technical lists (parts, labor) should use dotted \"leader lines\" (like a menu) to connect descriptions to prices, reinforcing the blueprint aesthetic.\n- **Additional Component: The \"Spec-Sheet\":** A specialized data display component for vehicle diagnostics that uses a 2-column monospaced layout with heavy vertical dividers.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#ffbf00",
+          "designMd": "---\nname: Forge & Friction\ncolors:\n  surface: '#101417'\n  surface-dim: '#101417'\n  surface-bright: '#36393e'\n  surface-container-lowest: '#0b0f12'\n  surface-container-low: '#181c20'\n  surface-container: '#1c2024'\n  surface-container-high: '#272a2e'\n  surface-container-highest: '#323539'\n  on-surface: '#e0e2e8'\n  on-surface-variant: '#d4c5ab'\n  inverse-surface: '#e0e2e8'\n  inverse-on-surface: '#2d3135'\n  outline: '#9c8f78'\n  outline-variant: '#504532'\n  surface-tint: '#fbbc00'\n  primary: '#ffe2ab'\n  on-primary: '#402d00'\n  primary-container: '#ffbf00'\n  on-primary-container: '#6d5000'\n  inverse-primary: '#795900'\n  secondary: '#c6c6c9'\n  on-secondary: '#2f3133'\n  secondary-container: '#454749'\n  on-secondary-container: '#b4b5b7'\n  tertiary: '#e4e5e7'\n  on-tertiary: '#2e3133'\n  tertiary-container: '#c8c9cb'\n  on-tertiary-container: '#525456'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdfa0'\n  primary-fixed-dim: '#fbbc00'\n  on-primary-fixed: '#261a00'\n  on-primary-fixed-variant: '#5c4300'\n  secondary-fixed: '#e2e2e5'\n  secondary-fixed-dim: '#c6c6c9'\n  on-secondary-fixed: '#1a1c1e'\n  on-secondary-fixed-variant: '#454749'\n  tertiary-fixed: '#e2e2e5'\n  tertiary-fixed-dim: '#c6c6c9'\n  on-tertiary-fixed: '#1a1c1e'\n  on-tertiary-fixed-variant: '#454749'\n  background: '#101417'\n  on-background: '#e0e2e8'\n  surface-variant: '#323539'\ntypography:\n  headline-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThis design system embodies a **Modern Industrial** aesthetic tailored for high-end mobile mechanical services. It moves away from the generic \"grease-monkey\" tropes toward an editorial, boutique workshop identity. The brand personality is rugged yet hyper-professional, authoritative, and deeply rooted in local craft.\n\nThe visual direction combines **Minimalism** with **Modern Brutalism**. It utilizes heavy whitespace to frame dense, technical information, creating a \"structured chaos\" reminiscent of a master mechanic’s organized toolbox. Design motifs include thin blueprint-style grid lines, asymmetrical layout blocks, and subtle grit textures that provide a tactile, high-end feel. The goal is to evoke the reliability of heavy machinery and the precision of modern engineering.\n\n## Colors\n\nThe palette is anchored in the \"Modern Industrial\" world, using high-contrast accents to guide the eye through technical data.\n\n- **Primary (High-Vis Amber):** A vibrant, saturated yellow used exclusively for calls to action, critical alerts, and branding accents. It mimics industrial safety markings.\n- **Secondary (Deep Asphalt):** The primary background color. A dark, blue-toned charcoal that provides depth and a premium \"after-hours workshop\" feel.\n- **Tertiary (Cool Slate):** Used for component surfaces, borders, and secondary containers to create subtle layering.\n- **Neutral:** A range of greys used for body text and metadata to ensure legibility against the dark background.\n\nThe system defaults to **dark mode** to reinforce the premium, industrial atmosphere.\n\n## Typography\n\nThe typography strategy relies on a hierarchy of three distinct voices:\n\n1.  **The Authority (Archivo Narrow):** Bold, heavy-weight, and condensed. Used for massive headlines to create impact and an editorial feel.\n2.  **The Technical Detail (JetBrains Mono):** A monospaced font used for \"data-heavy\" elements like VIN numbers, pricing, timestamps, and technical specs. It reinforces the precision of the trade.\n3.  **The Narrative (Inter):** A clean, highly legible sans-serif for body copy and descriptions, ensuring the user can digest complex service information without fatigue.\n\nAll uppercase styling should be reserved for `label` roles to mimic industrial signage.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Desktop:** A 12-column grid with wide 64px margins. Elements often \"break\" the grid slightly or align to an asymmetrical 60/40 split to mimic a blueprint layout.\n- **Spacing Rhythm:** Based on a 4px baseline unit. Internal component padding should be generous to maintain the premium feel.\n- **Structural Lines:** Use 1px \"Cool Slate\" borders to separate sections instead of relying solely on whitespace. These lines should occasionally extend to the edge of the viewport, resembling technical drafting lines.\n- **Mobile:** Transition to a 4-column fluid grid with tighter margins (20px). Content stacks vertically, but maintains the \"heavy header\" style.\n\n## Elevation & Depth\n\nTo maintain the rugged, industrial feel, this design system avoids soft, organic shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The \"Deep Asphalt\" background is the lowest level. Surface containers use \"Cool Slate\" with a slightly higher luminosity to indicate elevation.\n- **Hard Borders:** 1px or 2px solid borders create definition. For active states, these borders switch to \"High-Vis Amber.\"\n- **Grit Overlay:** A low-opacity (2-3%) grain or noise texture is applied to the primary background to eliminate the \"flatness\" of digital UI and add a physical, metallic quality.\n- **Hard Shadows:** If depth is required, use 0-blur \"drop shadows\" offset by 4px or 8px in a darker shade of Asphalt, creating a \"sticker\" or \"plated\" effect.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. \n\nEvery UI element—from buttons and input fields to cards and images—uses 90-degree corners. This evokes the hard edges of tools, engine blocks, and industrial structural beams. There are no rounded corners in this system. This lack of \"softness\" is what differentiates the product as a serious, professional service provider rather than a consumer-grade app.\n\n## Components\n\n- **Buttons:** Rectangular, sharp-edged, and high-contrast. The primary button is \"High-Vis Amber\" with black text in `label-md` (All Caps). Secondary buttons use a \"Cool Slate\" outline.\n- **Input Fields:** Thick 2px bottom borders with a dark background. The label is always `label-sm` monospaced text appearing above the field.\n- **Cards:** Defined by 1px \"Cool Slate\" borders. Cards do not have background fills unless they are highlighting a specific service, in which case they use a subtle gradient of \"Deep Asphalt.\"\n- **Status Chips:** Small, monospaced text blocks with a solid background color (e.g., Red for \"Engine Failure,\" Green for \"Fixed,\" Amber for \"In Progress\"). Sharp corners only.\n- **Lists:** Technical lists (parts, labor) should use dotted \"leader lines\" (like a menu) to connect descriptions to prices, reinforcing the blueprint aesthetic.\n- **Additional Component: The \"Spec-Sheet\":** A specialized data display component for vehicle diagnostics that uses a 2-column monospaced layout with heavy vertical dividers.",
+          "font": "ARCHIVO_NARROW",
+          "headlineFont": "ARCHIVO_NARROW",
+          "headlineFontFamily": "Archivo Narrow",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#101417",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#2d3135",
+            "inverse_primary": "#795900",
+            "inverse_surface": "#e0e2e8",
+            "on_background": "#e0e2e8",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#402d00",
+            "on_primary_container": "#6d5000",
+            "on_primary_fixed": "#261a00",
+            "on_primary_fixed_variant": "#5c4300",
+            "on_secondary": "#2f3133",
+            "on_secondary_container": "#b4b5b7",
+            "on_secondary_fixed": "#1a1c1e",
+            "on_secondary_fixed_variant": "#454749",
+            "on_surface": "#e0e2e8",
+            "on_surface_variant": "#d4c5ab",
+            "on_tertiary": "#2e3133",
+            "on_tertiary_container": "#525456",
+            "on_tertiary_fixed": "#1a1c1e",
+            "on_tertiary_fixed_variant": "#454749",
+            "outline": "#9c8f78",
+            "outline_variant": "#504532",
+            "primary": "#ffe2ab",
+            "primary_container": "#ffbf00",
+            "primary_fixed": "#ffdfa0",
+            "primary_fixed_dim": "#fbbc00",
+            "secondary": "#c6c6c9",
+            "secondary_container": "#454749",
+            "secondary_fixed": "#e2e2e5",
+            "secondary_fixed_dim": "#c6c6c9",
+            "surface": "#101417",
+            "surface_bright": "#36393e",
+            "surface_container": "#1c2024",
+            "surface_container_high": "#272a2e",
+            "surface_container_highest": "#323539",
+            "surface_container_low": "#181c20",
+            "surface_container_lowest": "#0b0f12",
+            "surface_dim": "#101417",
+            "surface_tint": "#fbbc00",
+            "surface_variant": "#323539",
+            "tertiary": "#e4e5e7",
+            "tertiary_container": "#c8c9cb",
+            "tertiary_fixed": "#e2e2e5",
+            "tertiary_fixed_dim": "#c6c6c9"
+          },
+          "overrideNeutralColor": "#8e9196",
+          "overridePrimaryColor": "#ffbf00",
+          "overrideSecondaryColor": "#1a1c1e",
+          "overrideTertiaryColor": "#454749",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "unit": "4px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.5"
+            },
+            "headline-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "headline-xl": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "72px",
+              "fontWeight": "800",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "label-md": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "letterSpacing": "0.05em",
+              "lineHeight": "1.4"
+            },
+            "label-sm": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "12px",
+              "fontWeight": "400",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.4"
+            }
+          }
+        }
+      },
+      "name": "assets/99aa7bf26e8c4d1e8dffbd841d189c40",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Forge & Friction",
+              "styleGuidelines": "## Brand & Style\n\nThis design system embodies a **Modern Industrial** aesthetic tailored for high-end mobile mechanical services. It moves away from the generic \"grease-monkey\" tropes toward an editorial, boutique workshop identity. The brand personality is rugged yet hyper-professional, authoritative, and deeply rooted in local craft.\n\nThe visual direction combines **Minimalism** with **Modern Brutalism**. It utilizes heavy whitespace to frame dense, technical information, creating a \"structured chaos\" reminiscent of a master mechanic’s organized toolbox. Design motifs include thin blueprint-style grid lines, asymmetrical layout blocks, and subtle grit textures that provide a tactile, high-end feel. The goal is to evoke the reliability of heavy machinery and the precision of modern engineering.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Desktop:** A 12-column grid with wide 64px margins. Elements often \"break\" the grid slightly or align to an asymmetrical 60/40 split to mimic a blueprint layout.\n- **Spacing Rhythm:** Based on a 4px baseline unit. Internal component padding should be generous to maintain the premium feel.\n- **Structural Lines:** Use 1px \"Cool Slate\" borders to separate sections instead of relying solely on whitespace. These lines should occasionally extend to the edge of the viewport, resembling technical drafting lines.\n- **Mobile:** Transition to a 4-column fluid grid with tighter margins (20px). Content stacks vertically, but maintains the \"heavy header\" style.\n\n## Elevation & Depth\n\nTo maintain the rugged, industrial feel, this design system avoids soft, organic shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The \"Deep Asphalt\" background is the lowest level. Surface containers use \"Cool Slate\" with a slightly higher luminosity to indicate elevation.\n- **Hard Borders:** 1px or 2px solid borders create definition. For active states, these borders switch to \"High-Vis Amber.\"\n- **Grit Overlay:** A low-opacity (2-3%) grain or noise texture is applied to the primary background to eliminate the \"flatness\" of digital UI and add a physical, metallic quality.\n- **Hard Shadows:** If depth is required, use 0-blur \"drop shadows\" offset by 4px or 8px in a darker shade of Asphalt, creating a \"sticker\" or \"plated\" effect.\n\n## Components\n\n- **Buttons:** Rectangular, sharp-edged, and high-contrast. The primary button is \"High-Vis Amber\" with black text in `label-md` (All Caps). Secondary buttons use a \"Cool Slate\" outline.\n- **Input Fields:** Thick 2px bottom borders with a dark background. The label is always `label-sm` monospaced text appearing above the field.\n- **Cards:** Defined by 1px \"Cool Slate\" borders. Cards do not have background fills unless they are highlighting a specific service, in which case they use a subtle gradient of \"Deep Asphalt.\"\n- **Status Chips:** Small, monospaced text blocks with a solid background color (e.g., Red for \"Engine Failure,\" Green for \"Fixed,\" Amber for \"In Progress\"). Sharp corners only.\n- **Lists:** Technical lists (parts, labor) should use dotted \"leader lines\" (like a menu) to connect descriptions to prices, reinforcing the blueprint aesthetic.\n- **Additional Component: The \"Spec-Sheet\":** A specialized data display component for vehicle diagnostics that uses a 2-column monospaced layout with heavy vertical dividers.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#ffbf00",
+                "designMd": "---\nname: Forge & Friction\ncolors:\n  surface: '#101417'\n  surface-dim: '#101417'\n  surface-bright: '#36393e'\n  surface-container-lowest: '#0b0f12'\n  surface-container-low: '#181c20'\n  surface-container: '#1c2024'\n  surface-container-high: '#272a2e'\n  surface-container-highest: '#323539'\n  on-surface: '#e0e2e8'\n  on-surface-variant: '#d4c5ab'\n  inverse-surface: '#e0e2e8'\n  inverse-on-surface: '#2d3135'\n  outline: '#9c8f78'\n  outline-variant: '#504532'\n  surface-tint: '#fbbc00'\n  primary: '#ffe2ab'\n  on-primary: '#402d00'\n  primary-container: '#ffbf00'\n  on-primary-container: '#6d5000'\n  inverse-primary: '#795900'\n  secondary: '#c6c6c9'\n  on-secondary: '#2f3133'\n  secondary-container: '#454749'\n  on-secondary-container: '#b4b5b7'\n  tertiary: '#e4e5e7'\n  on-tertiary: '#2e3133'\n  tertiary-container: '#c8c9cb'\n  on-tertiary-container: '#525456'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdfa0'\n  primary-fixed-dim: '#fbbc00'\n  on-primary-fixed: '#261a00'\n  on-primary-fixed-variant: '#5c4300'\n  secondary-fixed: '#e2e2e5'\n  secondary-fixed-dim: '#c6c6c9'\n  on-secondary-fixed: '#1a1c1e'\n  on-secondary-fixed-variant: '#454749'\n  tertiary-fixed: '#e2e2e5'\n  tertiary-fixed-dim: '#c6c6c9'\n  on-tertiary-fixed: '#1a1c1e'\n  on-tertiary-fixed-variant: '#454749'\n  background: '#101417'\n  on-background: '#e0e2e8'\n  surface-variant: '#323539'\ntypography:\n  headline-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThis design system embodies a **Modern Industrial** aesthetic tailored for high-end mobile mechanical services. It moves away from the generic \"grease-monkey\" tropes toward an editorial, boutique workshop identity. The brand personality is rugged yet hyper-professional, authoritative, and deeply rooted in local craft.\n\nThe visual direction combines **Minimalism** with **Modern Brutalism**. It utilizes heavy whitespace to frame dense, technical information, creating a \"structured chaos\" reminiscent of a master mechanic’s organized toolbox. Design motifs include thin blueprint-style grid lines, asymmetrical layout blocks, and subtle grit textures that provide a tactile, high-end feel. The goal is to evoke the reliability of heavy machinery and the precision of modern engineering.\n\n## Colors\n\nThe palette is anchored in the \"Modern Industrial\" world, using high-contrast accents to guide the eye through technical data.\n\n- **Primary (High-Vis Amber):** A vibrant, saturated yellow used exclusively for calls to action, critical alerts, and branding accents. It mimics industrial safety markings.\n- **Secondary (Deep Asphalt):** The primary background color. A dark, blue-toned charcoal that provides depth and a premium \"after-hours workshop\" feel.\n- **Tertiary (Cool Slate):** Used for component surfaces, borders, and secondary containers to create subtle layering.\n- **Neutral:** A range of greys used for body text and metadata to ensure legibility against the dark background.\n\nThe system defaults to **dark mode** to reinforce the premium, industrial atmosphere.\n\n## Typography\n\nThe typography strategy relies on a hierarchy of three distinct voices:\n\n1.  **The Authority (Archivo Narrow):** Bold, heavy-weight, and condensed. Used for massive headlines to create impact and an editorial feel.\n2.  **The Technical Detail (JetBrains Mono):** A monospaced font used for \"data-heavy\" elements like VIN numbers, pricing, timestamps, and technical specs. It reinforces the precision of the trade.\n3.  **The Narrative (Inter):** A clean, highly legible sans-serif for body copy and descriptions, ensuring the user can digest complex service information without fatigue.\n\nAll uppercase styling should be reserved for `label` roles to mimic industrial signage.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Desktop:** A 12-column grid with wide 64px margins. Elements often \"break\" the grid slightly or align to an asymmetrical 60/40 split to mimic a blueprint layout.\n- **Spacing Rhythm:** Based on a 4px baseline unit. Internal component padding should be generous to maintain the premium feel.\n- **Structural Lines:** Use 1px \"Cool Slate\" borders to separate sections instead of relying solely on whitespace. These lines should occasionally extend to the edge of the viewport, resembling technical drafting lines.\n- **Mobile:** Transition to a 4-column fluid grid with tighter margins (20px). Content stacks vertically, but maintains the \"heavy header\" style.\n\n## Elevation & Depth\n\nTo maintain the rugged, industrial feel, this design system avoids soft, organic shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The \"Deep Asphalt\" background is the lowest level. Surface containers use \"Cool Slate\" with a slightly higher luminosity to indicate elevation.\n- **Hard Borders:** 1px or 2px solid borders create definition. For active states, these borders switch to \"High-Vis Amber.\"\n- **Grit Overlay:** A low-opacity (2-3%) grain or noise texture is applied to the primary background to eliminate the \"flatness\" of digital UI and add a physical, metallic quality.\n- **Hard Shadows:** If depth is required, use 0-blur \"drop shadows\" offset by 4px or 8px in a darker shade of Asphalt, creating a \"sticker\" or \"plated\" effect.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. \n\nEvery UI element—from buttons and input fields to cards and images—uses 90-degree corners. This evokes the hard edges of tools, engine blocks, and industrial structural beams. There are no rounded corners in this system. This lack of \"softness\" is what differentiates the product as a serious, professional service provider rather than a consumer-grade app.\n\n## Components\n\n- **Buttons:** Rectangular, sharp-edged, and high-contrast. The primary button is \"High-Vis Amber\" with black text in `label-md` (All Caps). Secondary buttons use a \"Cool Slate\" outline.\n- **Input Fields:** Thick 2px bottom borders with a dark background. The label is always `label-sm` monospaced text appearing above the field.\n- **Cards:** Defined by 1px \"Cool Slate\" borders. Cards do not have background fills unless they are highlighting a specific service, in which case they use a subtle gradient of \"Deep Asphalt.\"\n- **Status Chips:** Small, monospaced text blocks with a solid background color (e.g., Red for \"Engine Failure,\" Green for \"Fixed,\" Amber for \"In Progress\"). Sharp corners only.\n- **Lists:** Technical lists (parts, labor) should use dotted \"leader lines\" (like a menu) to connect descriptions to prices, reinforcing the blueprint aesthetic.\n- **Additional Component: The \"Spec-Sheet\":** A specialized data display component for vehicle diagnostics that uses a 2-column monospaced layout with heavy vertical dividers.",
+                "font": "ARCHIVO_NARROW",
+                "headlineFont": "ARCHIVO_NARROW",
+                "headlineFontFamily": "Archivo Narrow",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#101417",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#2d3135",
+                  "inverse_primary": "#795900",
+                  "inverse_surface": "#e0e2e8",
+                  "on_background": "#e0e2e8",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#402d00",
+                  "on_primary_container": "#6d5000",
+                  "on_primary_fixed": "#261a00",
+                  "on_primary_fixed_variant": "#5c4300",
+                  "on_secondary": "#2f3133",
+                  "on_secondary_container": "#b4b5b7",
+                  "on_secondary_fixed": "#1a1c1e",
+                  "on_secondary_fixed_variant": "#454749",
+                  "on_surface": "#e0e2e8",
+                  "on_surface_variant": "#d4c5ab",
+                  "on_tertiary": "#2e3133",
+                  "on_tertiary_container": "#525456",
+                  "on_tertiary_fixed": "#1a1c1e",
+                  "on_tertiary_fixed_variant": "#454749",
+                  "outline": "#9c8f78",
+                  "outline_variant": "#504532",
+                  "primary": "#ffe2ab",
+                  "primary_container": "#ffbf00",
+                  "primary_fixed": "#ffdfa0",
+                  "primary_fixed_dim": "#fbbc00",
+                  "secondary": "#c6c6c9",
+                  "secondary_container": "#454749",
+                  "secondary_fixed": "#e2e2e5",
+                  "secondary_fixed_dim": "#c6c6c9",
+                  "surface": "#101417",
+                  "surface_bright": "#36393e",
+                  "surface_container": "#1c2024",
+                  "surface_container_high": "#272a2e",
+                  "surface_container_highest": "#323539",
+                  "surface_container_low": "#181c20",
+                  "surface_container_lowest": "#0b0f12",
+                  "surface_dim": "#101417",
+                  "surface_tint": "#fbbc00",
+                  "surface_variant": "#323539",
+                  "tertiary": "#e4e5e7",
+                  "tertiary_container": "#c8c9cb",
+                  "tertiary_fixed": "#e2e2e5",
+                  "tertiary_fixed_dim": "#c6c6c9"
+                },
+                "overrideNeutralColor": "#8e9196",
+                "overridePrimaryColor": "#ffbf00",
+                "overrideSecondaryColor": "#1a1c1e",
+                "overrideTertiaryColor": "#454749",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "unit": "4px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "32px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "72px",
+                    "fontWeight": "800",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "label-md": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "14px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "1.4"
+                  },
+                  "label-sm": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "12px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.4"
+                  }
+                }
+              }
+            },
+            "name": "assets/99aa7bf26e8c4d1e8dffbd841d189c40",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "7376",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2VlYjNlNmM2MmRmMjQ5ZTJhNDliYWQxMTZlZmIyYjRhEgsSBxCbzKqCsBkYAZIBIwoKcHJvamVjdF9pZBIVQhM4NTY1NDAxOTAxOTE3MjE5MzQx&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/8565401901917219341/files/c714c1c996c7463d873c6ffc5d4c205f"
+          },
+          "id": "e4b949672daa4e91808a2ee96b1c15a4",
+          "name": "projects/8565401901917219341/screens/e4b949672daa4e91808a2ee96b1c15a4",
+          "prompt": "A bespoke, high-fidelity homepage for McDougall's Mobile Mechanic. \nStyle: Modern Industrial Editorial.\nLayout: \n1. Navigation: Asymmetrical 'Forge & Friction' header.\n2. Hero: Massive, heavy-weight typography: \"WE COME TO YOU. WE FIX IT RIGHT.\" Overlaid on a gritty, dark metallic background with industrial amber accents. One large, high-quality image of a heavy-duty tool or a close-up of a high-performance engine part.\n3. The McDougall Mission: A text-heavy section with generous whitespace, using a technical mono-spaced font for subheadings. Focus on 'Reliability in the Field.'\n4. Services: A non-standard grid. Instead of cards, use thick industrial borders and large, bold numbers (01, 02, 03) to label services like 'Fleet Maintenance,' 'Emergency Diagnostics,' and 'On-Site Repair.' Use blueprint-style background lines.\n5. Trust Section: \"MECHANICALLY SUPERIOR.\" A bold, yellow-background strip with high-impact customer quotes in all-caps.\n6. Footer: A dense, utility-focused footer with technical specs and quick links.\nAvoid all generic 'mechanic' tropes like stock photos of people pointing at clipboards. Focus on the machine, the tools, and the grit.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv2IpFvDw5lqDteCpxH66F64As1kNk2akiSN2yv1xoYjvouYsd0coOgtVSsMUUYgzVuIPGMe-YrdwvY9uG3996S9PkkZQv5ttGDFapUnUU8Rl9ZS35HX2U2mfkKRoyNgX0bxTisEoQkTFFy-SC5eGqeMf0CetJ2KvNBkyj3aCX4HN1AkGjNrQihNjkMCslpcZhwVAAFXaBZeAEAYBPau0E8aVw7HmPXHEbGAdrxB2MUbDMMGA3u90mLVQ",
+            "name": "projects/8565401901917219341/files/0e8ea4bcaa254390a7e039933bc780b8"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ffbf00",
+            "designMd": "---\nname: Forge & Friction\ncolors:\n  surface: '#101417'\n  surface-dim: '#101417'\n  surface-bright: '#36393e'\n  surface-container-lowest: '#0b0f12'\n  surface-container-low: '#181c20'\n  surface-container: '#1c2024'\n  surface-container-high: '#272a2e'\n  surface-container-highest: '#323539'\n  on-surface: '#e0e2e8'\n  on-surface-variant: '#d4c5ab'\n  inverse-surface: '#e0e2e8'\n  inverse-on-surface: '#2d3135'\n  outline: '#9c8f78'\n  outline-variant: '#504532'\n  surface-tint: '#fbbc00'\n  primary: '#ffe2ab'\n  on-primary: '#402d00'\n  primary-container: '#ffbf00'\n  on-primary-container: '#6d5000'\n  inverse-primary: '#795900'\n  secondary: '#c6c6c9'\n  on-secondary: '#2f3133'\n  secondary-container: '#454749'\n  on-secondary-container: '#b4b5b7'\n  tertiary: '#e4e5e7'\n  on-tertiary: '#2e3133'\n  tertiary-container: '#c8c9cb'\n  on-tertiary-container: '#525456'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdfa0'\n  primary-fixed-dim: '#fbbc00'\n  on-primary-fixed: '#261a00'\n  on-primary-fixed-variant: '#5c4300'\n  secondary-fixed: '#e2e2e5'\n  secondary-fixed-dim: '#c6c6c9'\n  on-secondary-fixed: '#1a1c1e'\n  on-secondary-fixed-variant: '#454749'\n  tertiary-fixed: '#e2e2e5'\n  tertiary-fixed-dim: '#c6c6c9'\n  on-tertiary-fixed: '#1a1c1e'\n  on-tertiary-fixed-variant: '#454749'\n  background: '#101417'\n  on-background: '#e0e2e8'\n  surface-variant: '#323539'\ntypography:\n  headline-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThis design system embodies a **Modern Industrial** aesthetic tailored for high-end mobile mechanical services. It moves away from the generic \"grease-monkey\" tropes toward an editorial, boutique workshop identity. The brand personality is rugged yet hyper-professional, authoritative, and deeply rooted in local craft.\n\nThe visual direction combines **Minimalism** with **Modern Brutalism**. It utilizes heavy whitespace to frame dense, technical information, creating a \"structured chaos\" reminiscent of a master mechanic’s organized toolbox. Design motifs include thin blueprint-style grid lines, asymmetrical layout blocks, and subtle grit textures that provide a tactile, high-end feel. The goal is to evoke the reliability of heavy machinery and the precision of modern engineering.\n\n## Colors\n\nThe palette is anchored in the \"Modern Industrial\" world, using high-contrast accents to guide the eye through technical data.\n\n- **Primary (High-Vis Amber):** A vibrant, saturated yellow used exclusively for calls to action, critical alerts, and branding accents. It mimics industrial safety markings.\n- **Secondary (Deep Asphalt):** The primary background color. A dark, blue-toned charcoal that provides depth and a premium \"after-hours workshop\" feel.\n- **Tertiary (Cool Slate):** Used for component surfaces, borders, and secondary containers to create subtle layering.\n- **Neutral:** A range of greys used for body text and metadata to ensure legibility against the dark background.\n\nThe system defaults to **dark mode** to reinforce the premium, industrial atmosphere.\n\n## Typography\n\nThe typography strategy relies on a hierarchy of three distinct voices:\n\n1.  **The Authority (Archivo Narrow):** Bold, heavy-weight, and condensed. Used for massive headlines to create impact and an editorial feel.\n2.  **The Technical Detail (JetBrains Mono):** A monospaced font used for \"data-heavy\" elements like VIN numbers, pricing, timestamps, and technical specs. It reinforces the precision of the trade.\n3.  **The Narrative (Inter):** A clean, highly legible sans-serif for body copy and descriptions, ensuring the user can digest complex service information without fatigue.\n\nAll uppercase styling should be reserved for `label` roles to mimic industrial signage.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Desktop:** A 12-column grid with wide 64px margins. Elements often \"break\" the grid slightly or align to an asymmetrical 60/40 split to mimic a blueprint layout.\n- **Spacing Rhythm:** Based on a 4px baseline unit. Internal component padding should be generous to maintain the premium feel.\n- **Structural Lines:** Use 1px \"Cool Slate\" borders to separate sections instead of relying solely on whitespace. These lines should occasionally extend to the edge of the viewport, resembling technical drafting lines.\n- **Mobile:** Transition to a 4-column fluid grid with tighter margins (20px). Content stacks vertically, but maintains the \"heavy header\" style.\n\n## Elevation & Depth\n\nTo maintain the rugged, industrial feel, this design system avoids soft, organic shadows. Instead, depth is communicated through:\n\n- **Tonal Layering:** The \"Deep Asphalt\" background is the lowest level. Surface containers use \"Cool Slate\" with a slightly higher luminosity to indicate elevation.\n- **Hard Borders:** 1px or 2px solid borders create definition. For active states, these borders switch to \"High-Vis Amber.\"\n- **Grit Overlay:** A low-opacity (2-3%) grain or noise texture is applied to the primary background to eliminate the \"flatness\" of digital UI and add a physical, metallic quality.\n- **Hard Shadows:** If depth is required, use 0-blur \"drop shadows\" offset by 4px or 8px in a darker shade of Asphalt, creating a \"sticker\" or \"plated\" effect.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. \n\nEvery UI element—from buttons and input fields to cards and images—uses 90-degree corners. This evokes the hard edges of tools, engine blocks, and industrial structural beams. There are no rounded corners in this system. This lack of \"softness\" is what differentiates the product as a serious, professional service provider rather than a consumer-grade app.\n\n## Components\n\n- **Buttons:** Rectangular, sharp-edged, and high-contrast. The primary button is \"High-Vis Amber\" with black text in `label-md` (All Caps). Secondary buttons use a \"Cool Slate\" outline.\n- **Input Fields:** Thick 2px bottom borders with a dark background. The label is always `label-sm` monospaced text appearing above the field.\n- **Cards:** Defined by 1px \"Cool Slate\" borders. Cards do not have background fills unless they are highlighting a specific service, in which case they use a subtle gradient of \"Deep Asphalt.\"\n- **Status Chips:** Small, monospaced text blocks with a solid background color (e.g., Red for \"Engine Failure,\" Green for \"Fixed,\" Amber for \"In Progress\"). Sharp corners only.\n- **Lists:** Technical lists (parts, labor) should use dotted \"leader lines\" (like a menu) to connect descriptions to prices, reinforcing the blueprint aesthetic.\n- **Additional Component: The \"Spec-Sheet\":** A specialized data display component for vehicle diagnostics that uses a 2-column monospaced layout with heavy vertical dividers.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#101417",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2d3135",
+              "inverse_primary": "#795900",
+              "inverse_surface": "#e0e2e8",
+              "on_background": "#e0e2e8",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#402d00",
+              "on_primary_container": "#6d5000",
+              "on_primary_fixed": "#261a00",
+              "on_primary_fixed_variant": "#5c4300",
+              "on_secondary": "#2f3133",
+              "on_secondary_container": "#b4b5b7",
+              "on_secondary_fixed": "#1a1c1e",
+              "on_secondary_fixed_variant": "#454749",
+              "on_surface": "#e0e2e8",
+              "on_surface_variant": "#d4c5ab",
+              "on_tertiary": "#2e3133",
+              "on_tertiary_container": "#525456",
+              "on_tertiary_fixed": "#1a1c1e",
+              "on_tertiary_fixed_variant": "#454749",
+              "outline": "#9c8f78",
+              "outline_variant": "#504532",
+              "primary": "#ffe2ab",
+              "primary_container": "#ffbf00",
+              "primary_fixed": "#ffdfa0",
+              "primary_fixed_dim": "#fbbc00",
+              "secondary": "#c6c6c9",
+              "secondary_container": "#454749",
+              "secondary_fixed": "#e2e2e5",
+              "secondary_fixed_dim": "#c6c6c9",
+              "surface": "#101417",
+              "surface_bright": "#36393e",
+              "surface_container": "#1c2024",
+              "surface_container_high": "#272a2e",
+              "surface_container_highest": "#323539",
+              "surface_container_low": "#181c20",
+              "surface_container_lowest": "#0b0f12",
+              "surface_dim": "#101417",
+              "surface_tint": "#fbbc00",
+              "surface_variant": "#323539",
+              "tertiary": "#e4e5e7",
+              "tertiary_container": "#c8c9cb",
+              "tertiary_fixed": "#e2e2e5",
+              "tertiary_fixed_dim": "#c6c6c9"
+            },
+            "overrideNeutralColor": "#8e9196",
+            "overridePrimaryColor": "#ffbf00",
+            "overrideSecondaryColor": "#1a1c1e",
+            "overrideTertiaryColor": "#454749",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "72px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "label-md": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.4"
+              },
+              "label-sm": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "400",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.4"
+              }
+            }
+          },
+          "title": "McDougall's Mobile Mechanic - Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, premium homepage for **McDougall’s Mobile Mechanic** that moves far beyond the standard local business template.\n\n### Design Rationale:\n*   **Modern Industrial Identity:** I established a \"Forge & Friction\" design system, using a high-contrast palette of **Deep Asphalt** and **High-Vis Amber** to signal both professional reliability and urgent on-site service.\n*   **Editorial Typography:** The site uses **Archivo Narrow** in a massive, heavy weight for headlines to create an authoritative, \"bigger than life\" presence. I paired this with technical mono-spaced fonts for details, mimicking the look of mechanical manuals and blueprints.\n*   **Non-Standard Layout:** Instead of a generic card grid, I utilized **industrial borders and blueprint-inspired line work** to structure the \"Core Services.\" The hero section breaks the grid with asymmetrical text placement and gritty textures, emphasizing the \"Mobile\" nature of the business.\n*   **Technical Density:** The design balances generous whitespace in the \"Mission\" section with intentional density in the technical footer, giving the brand a \"field-ready\" and meticulously detailed feel.\n\nThis design is crafted to turn a mobile service into a premium technical brand. Does this industrial direction align with the vision you had for McDougall’s?"
+  },
+  {
+    "suggestion": "Make it feel even more \"technical\" with more blueprint details."
+  },
+  {
+    "suggestion": "Can we try a version with more action photography of the service?"
+  },
+  {
+    "suggestion": "Change the accent color from amber to a heavy-duty orange."
+  }
+]
