@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ward Wash | Precision Mobile Detailing Omaha</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Source+Serif+4:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed": "#3a0b00",
+                    "on-secondary-container": "#afb6bd",
+                    "on-background": "#d9e3f9",
+                    "surface-container": "#162030",
+                    "primary-fixed": "#e2e2e6",
+                    "on-secondary": "#2b3137",
+                    "surface-variant": "#2b3546",
+                    "on-secondary-fixed": "#161c22",
+                    "on-primary-container": "#7d7e82",
+                    "on-primary": "#2f3034",
+                    "inverse-on-surface": "#273141",
+                    "on-surface-variant": "#c6c6ca",
+                    "tertiary-fixed": "#ffdbd0",
+                    "surface-tint": "#c6c6ca",
+                    "error-container": "#93000a",
+                    "on-surface": "#d9e3f9",
+                    "tertiary": "#ffb59e", // Turbo Orange
+                    "surface-dim": "#091423",
+                    "tertiary-container": "#2d0600",
+                    "primary-fixed-dim": "#c6c6ca",
+                    "secondary": "#c1c7cf",
+                    "primary-container": "#121417",
+                    "primary": "#c6c6ca",
+                    "inverse-surface": "#d9e3f9",
+                    "error": "#ffb4ab",
+                    "tertiary-fixed-dim": "#ffb59e",
+                    "on-secondary-fixed-variant": "#41474e",
+                    "inverse-primary": "#5d5e62",
+                    "outline-variant": "#45474a",
+                    "on-error": "#690005",
+                    "on-primary-fixed-variant": "#45474a",
+                    "secondary-fixed": "#dde3eb",
+                    "outline": "#8f9094",
+                    "surface": "#091423",
+                    "background": "#091423",
+                    "on-primary-fixed": "#1a1c1f",
+                    "surface-container-lowest": "#040e1e",
+                    "on-tertiary": "#5e1700",
+                    "on-tertiary-fixed-variant": "#852400",
+                    "surface-container-low": "#121c2c",
+                    "surface-container-highest": "#2b3546",
+                    "secondary-fixed-dim": "#c1c7cf",
+                    "surface-bright": "#303a4b",
+                    "surface-container-high": "#202a3b",
+                    "secondary-container": "#41474e",
+                    "on-tertiary-container": "#e64500",
+                    "on-error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "container-max": "1280px",
+                    "unit": "4px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "body-md": ["Source Serif 4"],
+                    "headline-lg": ["Barlow Condensed"],
+                    "label-sm": ["JetBrains Mono"],
+                    "body-lg": ["Source Serif 4"],
+                    "headline-md": ["Barlow Condensed"],
+                    "headline-xl": ["Barlow Condensed"],
+                    "headline-lg-mobile": ["Barlow Condensed"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #091423;
+            color: #d9e3f9;
+            scroll-behavior: smooth;
+        }
+        .technical-divider {
+            height: 1px;
+            background-color: rgba(193, 199, 207, 0.1);
+            width: 100%;
+        }
+        .water-bead-overlay {
+            background-image: radial-gradient(#ffb59e 0.5px, transparent 0.5px);
+            background-size: 24px 24px;
+            opacity: 0.03;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 181, 158, 0.2);
+        }
+        .reveal-on-scroll {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.6s ease-out;
+        }
+        .reveal-on-scroll.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-tertiary selection:text-on-tertiary">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 glass-nav bg-surface/80">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-surface uppercase">
+                Ward Wash
+            </div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="#services">SERVICES</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="#about">PHILOSOPHY</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary transition-colors duration-200" href="#contact">CONTACT</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-sm text-label-sm text-tertiary font-bold tracking-widest" href="tel:2656637265">
+                    CALL: 265.663.7265
+                </a>
+<button class="bg-tertiary text-on-tertiary-fixed px-6 py-3 font-headline-md text-headline-md uppercase font-bold hover:scale-105 transition-transform">
+                    Book Now
+                </button>
+</div>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative h-[90vh] flex items-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
+<img alt="Luxury Car Detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvaSBYy0E8fsEY67BAtF_gwCgRS20D3j24MRxPUxc3vtEg8D2HkzXicQCEZI4OgEV_tNOLzMoPNsb-5-ehd59unnFHE1C1_VDZzJRHaVY67xJ55hiKdCoIKYQ_wXNgxKt9U6PsAnb6xIvIdOpl9LVF4VFalYIafiNW-Yy2ljbce7hp4vmduVjHnY5ZQXhGIs9ZjSDlZOzWcN9AufayP8Kuo1UIkl_9nK3Sy_FIZdv5VlTF1lMlE0oB2Bc4"/>
+</div>
+<div class="relative z-20 px-margin-desktop max-w-container-max mx-auto w-full">
+<div class="max-w-2xl">
+<span class="inline-block font-label-sm text-label-sm text-tertiary mb-4 tracking-[0.3em] uppercase">Mobile Automotive Excellence</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 uppercase leading-tight">
+                        The Omaha Standard in <br/>
+<span class="text-tertiary">Mobile Refinement.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Precision detailing delivered to your doorstep. We specialize in paint correction and ceramic coatings for those who view their vehicles as investments.
+                    </p>
+<div class="flex items-center gap-8">
+<button class="bg-tertiary text-on-tertiary-fixed px-10 py-5 font-headline-md text-headline-md uppercase font-bold">
+                            View Maintenance Tiers
+                        </button>
+<div class="h-1 w-20 bg-tertiary/30"></div>
+</div>
+</div>
+</div>
+<!-- Technical Rule -->
+<div class="absolute bottom-0 left-0 w-full technical-divider"></div>
+</section>
+<!-- Credibility Stats -->
+<section class="py-20 bg-surface-container-lowest relative overflow-hidden">
+<div class="water-bead-overlay absolute inset-0"></div>
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center relative z-10">
+<div class="reveal-on-scroll">
+<div class="font-label-sm text-label-sm text-tertiary mb-2">PRECISION VOLUME</div>
+<div class="font-headline-xl text-headline-xl">1,200+</div>
+<div class="font-body-md text-body-md text-on-surface-variant uppercase tracking-widest">Vehicles Refined</div>
+</div>
+<div class="reveal-on-scroll" style="transition-delay: 100ms;">
+<div class="font-label-sm text-label-sm text-tertiary mb-2">CLIENT SATISFACTION</div>
+<div class="font-headline-xl text-headline-xl">5.0</div>
+<div class="font-body-md text-body-md text-on-surface-variant uppercase tracking-widest">Verified Stars</div>
+</div>
+<div class="reveal-on-scroll" style="transition-delay: 200ms;">
+<div class="font-label-sm text-label-sm text-tertiary mb-2">RESPONSE TIME</div>
+<div class="font-headline-xl text-headline-xl">&lt;2H</div>
+<div class="font-body-md text-body-md text-on-surface-variant uppercase tracking-widest">Inquiry Turnaround</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 px-margin-desktop max-w-container-max mx-auto" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div>
+<h2 class="font-label-sm text-label-sm text-tertiary mb-4 tracking-widest uppercase">The Menu</h2>
+<h3 class="font-headline-lg text-headline-lg uppercase">Curated Maintenance Tiers</h3>
+</div>
+<div class="h-1px bg-tertiary/20 flex-grow mx-12 hidden md:block"></div>
+<p class="font-body-md text-body-md max-w-sm text-on-surface-variant italic">
+                    Engineered for the enthusiast. Every package utilizes pH-balanced chemicals and micro-precision tools.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter">
+<!-- Service 1 -->
+<div class="group relative bg-surface-container border border-white/5 overflow-hidden transition-all duration-500 hover:border-tertiary/30">
+<div class="aspect-[16/9] overflow-hidden">
+<img alt="Interior Detail" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLu-Gn-_TGWordObmEke2AtBHbaGEoKKB2h34DhAQ1GV9p3cKygVAFceGlY-jWK_jkCQawSFOuRfYJ0MXUAg_TdG-10Ho1MxG7aCPMsytWY7WZvdaw125gQp_EhXrZih2UVplw3ysg_sDaclbN5DGXl4sfyWv1oUngaRqS7YBthMS9tvnP7sPz5sReTSZoFHDv_TxosWTcpodwXafIKE8uWl5T5Rne3jopRHnuMonWDn68uGhJy7MahHxRYt"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="font-label-sm text-label-sm text-tertiary mb-2">TIER 02</div>
+<h4 class="font-headline-md text-headline-md uppercase">Interior Restoration</h4>
+</div>
+<div class="font-headline-md text-headline-md text-tertiary">$150+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Deep extraction, steam sanitation, and UV leather conditioning. We restore the tactile feel of factory-fresh materials.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 border border-white/10 font-label-sm text-[10px] uppercase">pH Neutral</span>
+<span class="px-3 py-1 border border-white/10 font-label-sm text-[10px] uppercase">Antistatic</span>
+<span class="px-3 py-1 border border-white/10 font-label-sm text-[10px] uppercase">UV Protect</span>
+</div>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group relative bg-surface-container border border-white/5 overflow-hidden transition-all duration-500 hover:border-tertiary/30">
+<div class="aspect-[16/9] overflow-hidden">
+<!-- Reusing Image 2 for consistent high-end exterior look -->
+<img alt="Ceramic Coating" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLvaSBYy0E8fsEY67BAtF_gwCgRS20D3j24MRxPUxc3vtEg8D2HkzXicQCEZI4OgEV_tNOLzMoPNsb-5-ehd59unnFHE1C1_VDZzJRHaVY67xJ55hiKdCoIKYQ_wXNgxKt9U6PsAnb6xIvIdOpl9LVF4VFalYIafiNW-Yy2ljbce7hp4vmduVjHnY5ZQXhGIs9ZjSDlZOzWcN9AufayP8Kuo1UIkl_9nK3Sy_FIZdv5VlTF1lMlE0oB2Bc4"/>
+</div>
+<div class="p-8">
+<div class="flex justify-between items-start mb-6">
+<div>
+<div class="font-label-sm text-label-sm text-tertiary mb-2">TIER 03</div>
+<h4 class="font-headline-md text-headline-md uppercase">Level 03 Ceramic Coating</h4>
+</div>
+<div class="font-headline-md text-headline-md text-tertiary">$800+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Graphene-infused multi-year protection. Unmatched hydrophobic properties and a deep, mirror-like gloss that defies Omaha winters.</p>
+<div class="flex gap-2">
+<span class="px-3 py-1 border border-white/10 font-label-sm text-[10px] uppercase">9H Hardness</span>
+<span class="px-3 py-1 border border-white/10 font-label-sm text-[10px] uppercase">Hydrophobic</span>
+<span class="px-3 py-1 border border-white/10 font-label-sm text-[10px] uppercase">Correction Incl.</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Philosophy Section -->
+<section class="py-32 bg-surface-container-low border-y border-white/5" id="about">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-start-2 md:col-span-4 reveal-on-scroll">
+<h2 class="font-label-sm text-label-sm text-tertiary mb-4 tracking-[0.3em] uppercase">Philosophy</h2>
+<h3 class="font-headline-lg text-headline-lg uppercase mb-8">The Ward <br/>Obsession</h3>
+<div class="h-1 w-20 bg-tertiary mb-8"></div>
+</div>
+<div class="md:col-span-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed reveal-on-scroll" style="transition-delay: 200ms;">
+<p class="mb-6">At Ward Wash, we believe detailing is not a commodity—it is a craft. Our obsession with automotive aesthetics goes beyond simple cleanliness; it is about the preservation of engineering excellence.</p>
+<p>Every stroke of the brush and every pass of the polisher is executed with clinical precision. We don't just wash cars; we curate the visual legacy of your vehicle, ensuring every surface reflects the highest standard of technical care.</p>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="py-32">
+<div class="px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-stretch">
+<div class="lg:col-span-5 bg-surface-container-high p-12 flex flex-col justify-center">
+<h3 class="font-headline-lg text-headline-lg uppercase mb-6">Service Radius</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">We bring the studio to you. Serving the entire Omaha metro area and surrounding communities with fully self-contained mobile units.</p>
+<ul class="space-y-4 font-label-sm text-label-sm tracking-widest">
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-tertiary"></span> OMAHA METRO</li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-tertiary"></span> ELKHORN</li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-tertiary"></span> PAPILLION</li>
+<li class="flex items-center gap-3"><span class="w-2 h-2 bg-tertiary"></span> GRETNA</li>
+</ul>
+</div>
+<div class="lg:col-span-7">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] h-full grayscale hover:grayscale-0 transition-all duration-700" data-location="Omaha, Nebraska" data-map-slot="" style="">
+<div class="absolute inset-0 bg-tertiary/5 mix-blend-overlay"></div>
+<!-- Mock Map UI -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="w-12 h-12 bg-tertiary rounded-full animate-ping absolute opacity-20"></div>
+<div class="w-4 h-4 bg-tertiary rounded-full relative z-10 border-2 border-on-tertiary"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface-container-lowest relative" id="contact">
+<div class="px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div>
+<h2 class="font-headline-xl text-headline-xl uppercase mb-8 leading-tight">Request a <br/><span class="text-tertiary">Consultation</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">Detailing is specific to the vehicle condition. Submit your details for a precision quote and availability check.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">phone_iphone</span>
+<span class="font-label-sm text-label-sm tracking-widest">265.663.7265</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-tertiary">mail</span>
+<span class="font-label-sm text-label-sm tracking-widest">WARDWASH1@GMAIL.COM</span>
+</div>
+</div>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2 uppercase group-focus-within:text-tertiary transition-colors">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors" placeholder="James Ward" type="text"/>
+</div>
+<div class="group">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2 uppercase group-focus-within:text-tertiary transition-colors">Vehicle Make/Model</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors" placeholder="2024 Porsche 911" type="text"/>
+</div>
+</div>
+<div class="group">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2 uppercase group-focus-within:text-tertiary transition-colors">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors" placeholder="client@example.com" type="email"/>
+</div>
+<div class="group">
+<label class="block font-label-sm text-label-sm text-on-surface-variant mb-2 uppercase group-focus-within:text-tertiary transition-colors">Primary Concern</label>
+<select class="w-full bg-transparent border-0 border-b border-white/20 px-0 py-3 text-on-surface focus:ring-0 focus:border-tertiary transition-colors appearance-none">
+<option class="bg-surface">Ceramic Coating Application</option>
+<option class="bg-surface">Paint Correction</option>
+<option class="bg-surface">Full Interior Restoration</option>
+<option class="bg-surface">Maintenance Detail</option>
+</select>
+</div>
+<button class="w-full bg-tertiary text-on-tertiary-fixed py-5 font-headline-md text-headline-md uppercase font-bold hover:bg-tertiary-fixed transition-colors">
+                        Send Request
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="col-span-1 md:col-span-2">
+<div class="font-headline-md text-headline-md font-bold text-on-surface uppercase mb-6">Ward Wash</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm mb-8">
+                    The premium standard for mobile automotive detailing in Omaha, NE. Dedicated to precision, craft, and client satisfaction.
+                </p>
+<div class="font-label-sm text-label-sm text-on-surface-variant">
+                    © 2024 Ward Wash Mobile Detailing Omaha. Precision Craft Standards.
+                </div>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-label-sm text-tertiary uppercase mb-2">Connect</h4>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary underline decoration-tertiary decoration-1 transition-opacity duration-200" href="#">INSTAGRAM</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary underline decoration-tertiary decoration-1 transition-opacity duration-200" href="#">FACEBOOK</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary underline decoration-tertiary decoration-1 transition-opacity duration-200" href="mailto:Wardwash1@gmail.com">WARDWASH1@GMAIL.COM</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-sm text-label-sm text-tertiary uppercase mb-2">Legal</h4>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary underline decoration-tertiary decoration-1 transition-opacity duration-200" href="#">PRIVACY POLICY</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary underline decoration-tertiary decoration-1 transition-opacity duration-200" href="#">TERMS OF SERVICE</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-tertiary underline decoration-tertiary decoration-1 transition-opacity duration-200" href="#">FAQ</a>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal-on-scroll').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Parallax effect for hero
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('.absolute.inset-0 img');
+            if (heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
+        });
+    </script>
+</body></html>
