@@ -1,35 +1,56 @@
-// Smooth scroll implementation
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-
-        // Atmospheric fade-in effect on scroll
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+// Reveal animation on scroll
+        const revealElements = document.querySelectorAll('.reveal');
+        
+        const revealOnScroll = () => {
+            revealElements.forEach(el => {
+                const elementTop = el.getBoundingClientRect().top;
+                const windowHeight = window.innerHeight;
+                if (elementTop < windowHeight - 100) {
+                    el.classList.add('active');
                 }
             });
-        }, observerOptions);
+        };
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
+        window.addEventListener('scroll', revealOnScroll);
+        window.addEventListener('load', revealOnScroll);
+
+        // Header shadow on scroll
+        const header = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+                header.classList.remove('h-20');
+                header.classList.add('h-16');
+            } else {
+                header.classList.remove('shadow-sm');
+                header.classList.remove('h-16');
+                header.classList.add('h-20');
+            }
         });
 
-        // Instant show for hero
-        const hero = document.querySelector('section');
-        hero.classList.remove('opacity-0', 'translate-y-10');
+        // Form Submission Micro-interaction
+        const form = document.querySelector('form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.textContent;
+            btn.textContent = 'Preview only';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.textContent = 'Message Received';
+                btn.classList.replace('bg-primary-container', 'bg-secondary-container');
+                btn.classList.add('text-on-secondary-container');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                    btn.classList.replace('bg-secondary-container', 'bg-primary-container');
+                    btn.classList.remove('text-on-secondary-container');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
 
 (() => {
   function initMockupNotice() {
