@@ -1,0 +1,447 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Artisanal Culinary Craft",
+        "styleGuidelines": "## Brand & Style\nThe brand personality is rooted in the intersection of heritage and modern culinary excellence. It evokes the feeling of a high-end, chef-led pop-up: intentional, transparent, and deeply connected to the ingredients. The target audience values authenticity, craft, and the narrative behind their food.\n\nThe design style is **Editorial Minimalism**. It prioritizes high-fidelity food photography and generous whitespace to allow the product's texture and color to lead. Visual interest is generated through intentional asymmetry—placing elements off-center to create a dynamic, rhythmic flow—and the use of subtle rice-paper textures that add tactile depth without cluttering the interface. Hand-drawn line art provides a human, \"sketched in the kitchen\" feel that balances the precision of the typography.\n\n## Layout & Spacing\nThis design system utilizes a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve the \"editorial\" look, do not center-align all content. Instead, use \"The Power of the Void\"—leave large gutters or entire columns empty to draw focus to high-resolution imagery. Spacing should be expansive; section gaps of 120px on desktop create a sense of luxury and unhurried browsing. Use a baseline 8px rhythm for internal component padding to maintain structural integrity.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** rather than shadows. Surfaces should feel flat and physical. \n\n1.  **Base:** The Parchment background (#FDFCF7) with a subtle grain texture.\n2.  **Mid-layer:** Semi-transparent \"Rice Paper\" overlays (White @ 60% opacity) with a `backdrop-filter: blur(8px)` used for floating menus or hover states.\n3.  **High-layer:** Cards and modals are defined by 1px solid Ink (#18181B) borders. \n\nAvoid drop shadows entirely. If depth is required, use a \"Hard Offset\" shadow: a solid block of color (Golden Crisp or Ink) shifted 4px down and 4px right from the element.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink (#18181B) with White text, using the `label-caps` style. Hover states shift to Golden Crisp (#D97706). Secondary buttons are transparent with a 1px Ink border.\n- **Input Fields:** Minimalist design—only a bottom border (1px Ink). Labels sit above in `label-caps`. Focus state thickens the bottom border to 2px.\n- **Cards:** Product cards use a \"Bleed\" layout where the food photography takes up 100% of the card width, with text content placed asymmetrically below it. No borders on card containers unless they are interactive.\n- **Chips/Badges:** Small, rectangular tags using the Fresh Verdant (#15803D) color for \"Vegan\" or \"Gluten-Free\" markers.\n- **Lists:** Menu items are separated by a thin 0.5px Ink rule. Prices are always right-aligned in `headline-sm`.\n- **Illustrations:** Use the \"Rice Paper\" texture as a background for hand-drawn line art of ingredients like ginger, scallions, and chili flakes. These should be placed overlapping the edges of containers for an organic feel.",
+        "theme": {
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#d97706",
+          "designMd": "---\nname: Artisanal Culinary Craft\ncolors:\n  surface: '#fbf8fc'\n  surface-dim: '#dcd9dd'\n  surface-bright: '#fbf8fc'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f2f7'\n  surface-container: '#f0edf1'\n  surface-container-high: '#eae7eb'\n  surface-container-highest: '#e4e1e6'\n  on-surface: '#1b1b1e'\n  on-surface-variant: '#554336'\n  inverse-surface: '#303033'\n  inverse-on-surface: '#f3f0f4'\n  outline: '#887364'\n  outline-variant: '#dbc2b0'\n  surface-tint: '#904d00'\n  primary: '#8d4b00'\n  on-primary: '#ffffff'\n  primary-container: '#b15f00'\n  on-primary-container: '#fffbff'\n  inverse-primary: '#ffb77d'\n  secondary: '#006d30'\n  on-secondary: '#ffffff'\n  secondary-container: '#92f5a4'\n  on-secondary-container: '#007233'\n  tertiary: '#5b5c59'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#747571'\n  on-tertiary-container: '#fefdf8'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdcc3'\n  primary-fixed-dim: '#ffb77d'\n  on-primary-fixed: '#2f1500'\n  on-primary-fixed-variant: '#6e3900'\n  secondary-fixed: '#95f8a7'\n  secondary-fixed-dim: '#79db8d'\n  on-secondary-fixed: '#00210a'\n  on-secondary-fixed-variant: '#005323'\n  tertiary-fixed: '#e3e3de'\n  tertiary-fixed-dim: '#c7c7c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#464744'\n  background: '#fbf8fc'\n  on-background: '#1b1b1e'\n  surface-variant: '#e4e1e6'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality is rooted in the intersection of heritage and modern culinary excellence. It evokes the feeling of a high-end, chef-led pop-up: intentional, transparent, and deeply connected to the ingredients. The target audience values authenticity, craft, and the narrative behind their food.\n\nThe design style is **Editorial Minimalism**. It prioritizes high-fidelity food photography and generous whitespace to allow the product's texture and color to lead. Visual interest is generated through intentional asymmetry—placing elements off-center to create a dynamic, rhythmic flow—and the use of subtle rice-paper textures that add tactile depth without cluttering the interface. Hand-drawn line art provides a human, \"sketched in the kitchen\" feel that balances the precision of the typography.\n\n## Colors\nThe palette is inspired by the transition from raw ingredients to the finished, golden-fried product.\n\n- **Golden Crisp (#D97706):** Used for primary calls to action, price points, and highlights that represent the perfect fry.\n- **Fresh Verdant (#15803D):** Used for health-focused badges, ingredient callouts, and secondary accents to denote freshness.\n- **Ink (#18181B):** The foundation for all typography and structural lines, providing a sharp, authoritative contrast against the background.\n- **Parchment (#FDFCF7):** The global background color. It is warmer than pure white, mimicking the natural tone of culinary paper and unbleached rice wraps.\n\n## Typography\nThe typographic system relies on a high-contrast pairing. **Playfair Display** provides an editorial, sophisticated voice for storytelling and product naming. It should be used with tight leading and slight negative tracking in larger sizes to emphasize its dramatic strokes.\n\n**Hanken Grotesk** serves as the functional workhorse. It is a clean, contemporary sans-serif that ensures legibility for menus, descriptions, and UI controls. For micro-copy and metadata (like calorie counts or prep time), use `label-caps` to provide a clear visual hierarchy and a modern, \"packaged goods\" aesthetic.\n\n## Layout & Spacing\nThis design system utilizes a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve the \"editorial\" look, do not center-align all content. Instead, use \"The Power of the Void\"—leave large gutters or entire columns empty to draw focus to high-resolution imagery. Spacing should be expansive; section gaps of 120px on desktop create a sense of luxury and unhurried browsing. Use a baseline 8px rhythm for internal component padding to maintain structural integrity.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** rather than shadows. Surfaces should feel flat and physical. \n\n1.  **Base:** The Parchment background (#FDFCF7) with a subtle grain texture.\n2.  **Mid-layer:** Semi-transparent \"Rice Paper\" overlays (White @ 60% opacity) with a `backdrop-filter: blur(8px)` used for floating menus or hover states.\n3.  **High-layer:** Cards and modals are defined by 1px solid Ink (#18181B) borders. \n\nAvoid drop shadows entirely. If depth is required, use a \"Hard Offset\" shadow: a solid block of color (Golden Crisp or Ink) shifted 4px down and 4px right from the element.\n\n## Shapes\nThe shape language is strictly **Sharp (0)**. Everything from buttons to image containers uses 90-degree corners. This evokes the precision of a chef's knife and the structure of architectural editorial layouts. \n\nThe only exceptions are \"Ingredient Illustration\" containers, which may use organic, irregular masks to mimic the natural shape of fresh produce.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink (#18181B) with White text, using the `label-caps` style. Hover states shift to Golden Crisp (#D97706). Secondary buttons are transparent with a 1px Ink border.\n- **Input Fields:** Minimalist design—only a bottom border (1px Ink). Labels sit above in `label-caps`. Focus state thickens the bottom border to 2px.\n- **Cards:** Product cards use a \"Bleed\" layout where the food photography takes up 100% of the card width, with text content placed asymmetrically below it. No borders on card containers unless they are interactive.\n- **Chips/Badges:** Small, rectangular tags using the Fresh Verdant (#15803D) color for \"Vegan\" or \"Gluten-Free\" markers.\n- **Lists:** Menu items are separated by a thin 0.5px Ink rule. Prices are always right-aligned in `headline-sm`.\n- **Illustrations:** Use the \"Rice Paper\" texture as a background for hand-drawn line art of ingredients like ginger, scallions, and chili flakes. These should be placed overlapping the edges of containers for an organic feel.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "HANKEN_GROTESK",
+          "labelFontFamily": "Hanken Grotesk",
+          "namedColors": {
+            "background": "#fbf8fc",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f3f0f4",
+            "inverse_primary": "#ffb77d",
+            "inverse_surface": "#303033",
+            "on_background": "#1b1b1e",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#fffbff",
+            "on_primary_fixed": "#2f1500",
+            "on_primary_fixed_variant": "#6e3900",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#007233",
+            "on_secondary_fixed": "#00210a",
+            "on_secondary_fixed_variant": "#005323",
+            "on_surface": "#1b1b1e",
+            "on_surface_variant": "#554336",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#fefdf8",
+            "on_tertiary_fixed": "#1b1c19",
+            "on_tertiary_fixed_variant": "#464744",
+            "outline": "#887364",
+            "outline_variant": "#dbc2b0",
+            "primary": "#8d4b00",
+            "primary_container": "#b15f00",
+            "primary_fixed": "#ffdcc3",
+            "primary_fixed_dim": "#ffb77d",
+            "secondary": "#006d30",
+            "secondary_container": "#92f5a4",
+            "secondary_fixed": "#95f8a7",
+            "secondary_fixed_dim": "#79db8d",
+            "surface": "#fbf8fc",
+            "surface_bright": "#fbf8fc",
+            "surface_container": "#f0edf1",
+            "surface_container_high": "#eae7eb",
+            "surface_container_highest": "#e4e1e6",
+            "surface_container_low": "#f6f2f7",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcd9dd",
+            "surface_tint": "#904d00",
+            "surface_variant": "#e4e1e6",
+            "tertiary": "#5b5c59",
+            "tertiary_container": "#747571",
+            "tertiary_fixed": "#e3e3de",
+            "tertiary_fixed_dim": "#c7c7c2"
+          },
+          "overrideNeutralColor": "#18181b",
+          "overridePrimaryColor": "#d97706",
+          "overrideSecondaryColor": "#15803d",
+          "overrideTertiaryColor": "#fdfcf7",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "section-gap": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "64px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "1.4"
+            },
+            "label-caps": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.2"
+            },
+            "label-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "lineHeight": "1.2"
+            }
+          }
+        }
+      },
+      "name": "assets/55d95adbf996497387a3af0032e790f0",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Artisanal Culinary Craft",
+              "styleGuidelines": "## Brand & Style\nThe brand personality is rooted in the intersection of heritage and modern culinary excellence. It evokes the feeling of a high-end, chef-led pop-up: intentional, transparent, and deeply connected to the ingredients. The target audience values authenticity, craft, and the narrative behind their food.\n\nThe design style is **Editorial Minimalism**. It prioritizes high-fidelity food photography and generous whitespace to allow the product's texture and color to lead. Visual interest is generated through intentional asymmetry—placing elements off-center to create a dynamic, rhythmic flow—and the use of subtle rice-paper textures that add tactile depth without cluttering the interface. Hand-drawn line art provides a human, \"sketched in the kitchen\" feel that balances the precision of the typography.\n\n## Layout & Spacing\nThis design system utilizes a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve the \"editorial\" look, do not center-align all content. Instead, use \"The Power of the Void\"—leave large gutters or entire columns empty to draw focus to high-resolution imagery. Spacing should be expansive; section gaps of 120px on desktop create a sense of luxury and unhurried browsing. Use a baseline 8px rhythm for internal component padding to maintain structural integrity.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** rather than shadows. Surfaces should feel flat and physical. \n\n1.  **Base:** The Parchment background (#FDFCF7) with a subtle grain texture.\n2.  **Mid-layer:** Semi-transparent \"Rice Paper\" overlays (White @ 60% opacity) with a `backdrop-filter: blur(8px)` used for floating menus or hover states.\n3.  **High-layer:** Cards and modals are defined by 1px solid Ink (#18181B) borders. \n\nAvoid drop shadows entirely. If depth is required, use a \"Hard Offset\" shadow: a solid block of color (Golden Crisp or Ink) shifted 4px down and 4px right from the element.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink (#18181B) with White text, using the `label-caps` style. Hover states shift to Golden Crisp (#D97706). Secondary buttons are transparent with a 1px Ink border.\n- **Input Fields:** Minimalist design—only a bottom border (1px Ink). Labels sit above in `label-caps`. Focus state thickens the bottom border to 2px.\n- **Cards:** Product cards use a \"Bleed\" layout where the food photography takes up 100% of the card width, with text content placed asymmetrically below it. No borders on card containers unless they are interactive.\n- **Chips/Badges:** Small, rectangular tags using the Fresh Verdant (#15803D) color for \"Vegan\" or \"Gluten-Free\" markers.\n- **Lists:** Menu items are separated by a thin 0.5px Ink rule. Prices are always right-aligned in `headline-sm`.\n- **Illustrations:** Use the \"Rice Paper\" texture as a background for hand-drawn line art of ingredients like ginger, scallions, and chili flakes. These should be placed overlapping the edges of containers for an organic feel.",
+              "theme": {
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#d97706",
+                "designMd": "---\nname: Artisanal Culinary Craft\ncolors:\n  surface: '#fbf8fc'\n  surface-dim: '#dcd9dd'\n  surface-bright: '#fbf8fc'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f2f7'\n  surface-container: '#f0edf1'\n  surface-container-high: '#eae7eb'\n  surface-container-highest: '#e4e1e6'\n  on-surface: '#1b1b1e'\n  on-surface-variant: '#554336'\n  inverse-surface: '#303033'\n  inverse-on-surface: '#f3f0f4'\n  outline: '#887364'\n  outline-variant: '#dbc2b0'\n  surface-tint: '#904d00'\n  primary: '#8d4b00'\n  on-primary: '#ffffff'\n  primary-container: '#b15f00'\n  on-primary-container: '#fffbff'\n  inverse-primary: '#ffb77d'\n  secondary: '#006d30'\n  on-secondary: '#ffffff'\n  secondary-container: '#92f5a4'\n  on-secondary-container: '#007233'\n  tertiary: '#5b5c59'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#747571'\n  on-tertiary-container: '#fefdf8'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdcc3'\n  primary-fixed-dim: '#ffb77d'\n  on-primary-fixed: '#2f1500'\n  on-primary-fixed-variant: '#6e3900'\n  secondary-fixed: '#95f8a7'\n  secondary-fixed-dim: '#79db8d'\n  on-secondary-fixed: '#00210a'\n  on-secondary-fixed-variant: '#005323'\n  tertiary-fixed: '#e3e3de'\n  tertiary-fixed-dim: '#c7c7c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#464744'\n  background: '#fbf8fc'\n  on-background: '#1b1b1e'\n  surface-variant: '#e4e1e6'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality is rooted in the intersection of heritage and modern culinary excellence. It evokes the feeling of a high-end, chef-led pop-up: intentional, transparent, and deeply connected to the ingredients. The target audience values authenticity, craft, and the narrative behind their food.\n\nThe design style is **Editorial Minimalism**. It prioritizes high-fidelity food photography and generous whitespace to allow the product's texture and color to lead. Visual interest is generated through intentional asymmetry—placing elements off-center to create a dynamic, rhythmic flow—and the use of subtle rice-paper textures that add tactile depth without cluttering the interface. Hand-drawn line art provides a human, \"sketched in the kitchen\" feel that balances the precision of the typography.\n\n## Colors\nThe palette is inspired by the transition from raw ingredients to the finished, golden-fried product.\n\n- **Golden Crisp (#D97706):** Used for primary calls to action, price points, and highlights that represent the perfect fry.\n- **Fresh Verdant (#15803D):** Used for health-focused badges, ingredient callouts, and secondary accents to denote freshness.\n- **Ink (#18181B):** The foundation for all typography and structural lines, providing a sharp, authoritative contrast against the background.\n- **Parchment (#FDFCF7):** The global background color. It is warmer than pure white, mimicking the natural tone of culinary paper and unbleached rice wraps.\n\n## Typography\nThe typographic system relies on a high-contrast pairing. **Playfair Display** provides an editorial, sophisticated voice for storytelling and product naming. It should be used with tight leading and slight negative tracking in larger sizes to emphasize its dramatic strokes.\n\n**Hanken Grotesk** serves as the functional workhorse. It is a clean, contemporary sans-serif that ensures legibility for menus, descriptions, and UI controls. For micro-copy and metadata (like calorie counts or prep time), use `label-caps` to provide a clear visual hierarchy and a modern, \"packaged goods\" aesthetic.\n\n## Layout & Spacing\nThis design system utilizes a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve the \"editorial\" look, do not center-align all content. Instead, use \"The Power of the Void\"—leave large gutters or entire columns empty to draw focus to high-resolution imagery. Spacing should be expansive; section gaps of 120px on desktop create a sense of luxury and unhurried browsing. Use a baseline 8px rhythm for internal component padding to maintain structural integrity.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** rather than shadows. Surfaces should feel flat and physical. \n\n1.  **Base:** The Parchment background (#FDFCF7) with a subtle grain texture.\n2.  **Mid-layer:** Semi-transparent \"Rice Paper\" overlays (White @ 60% opacity) with a `backdrop-filter: blur(8px)` used for floating menus or hover states.\n3.  **High-layer:** Cards and modals are defined by 1px solid Ink (#18181B) borders. \n\nAvoid drop shadows entirely. If depth is required, use a \"Hard Offset\" shadow: a solid block of color (Golden Crisp or Ink) shifted 4px down and 4px right from the element.\n\n## Shapes\nThe shape language is strictly **Sharp (0)**. Everything from buttons to image containers uses 90-degree corners. This evokes the precision of a chef's knife and the structure of architectural editorial layouts. \n\nThe only exceptions are \"Ingredient Illustration\" containers, which may use organic, irregular masks to mimic the natural shape of fresh produce.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink (#18181B) with White text, using the `label-caps` style. Hover states shift to Golden Crisp (#D97706). Secondary buttons are transparent with a 1px Ink border.\n- **Input Fields:** Minimalist design—only a bottom border (1px Ink). Labels sit above in `label-caps`. Focus state thickens the bottom border to 2px.\n- **Cards:** Product cards use a \"Bleed\" layout where the food photography takes up 100% of the card width, with text content placed asymmetrically below it. No borders on card containers unless they are interactive.\n- **Chips/Badges:** Small, rectangular tags using the Fresh Verdant (#15803D) color for \"Vegan\" or \"Gluten-Free\" markers.\n- **Lists:** Menu items are separated by a thin 0.5px Ink rule. Prices are always right-aligned in `headline-sm`.\n- **Illustrations:** Use the \"Rice Paper\" texture as a background for hand-drawn line art of ingredients like ginger, scallions, and chili flakes. These should be placed overlapping the edges of containers for an organic feel.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "HANKEN_GROTESK",
+                "labelFontFamily": "Hanken Grotesk",
+                "namedColors": {
+                  "background": "#fbf8fc",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f3f0f4",
+                  "inverse_primary": "#ffb77d",
+                  "inverse_surface": "#303033",
+                  "on_background": "#1b1b1e",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#fffbff",
+                  "on_primary_fixed": "#2f1500",
+                  "on_primary_fixed_variant": "#6e3900",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#007233",
+                  "on_secondary_fixed": "#00210a",
+                  "on_secondary_fixed_variant": "#005323",
+                  "on_surface": "#1b1b1e",
+                  "on_surface_variant": "#554336",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#fefdf8",
+                  "on_tertiary_fixed": "#1b1c19",
+                  "on_tertiary_fixed_variant": "#464744",
+                  "outline": "#887364",
+                  "outline_variant": "#dbc2b0",
+                  "primary": "#8d4b00",
+                  "primary_container": "#b15f00",
+                  "primary_fixed": "#ffdcc3",
+                  "primary_fixed_dim": "#ffb77d",
+                  "secondary": "#006d30",
+                  "secondary_container": "#92f5a4",
+                  "secondary_fixed": "#95f8a7",
+                  "secondary_fixed_dim": "#79db8d",
+                  "surface": "#fbf8fc",
+                  "surface_bright": "#fbf8fc",
+                  "surface_container": "#f0edf1",
+                  "surface_container_high": "#eae7eb",
+                  "surface_container_highest": "#e4e1e6",
+                  "surface_container_low": "#f6f2f7",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dcd9dd",
+                  "surface_tint": "#904d00",
+                  "surface_variant": "#e4e1e6",
+                  "tertiary": "#5b5c59",
+                  "tertiary_container": "#747571",
+                  "tertiary_fixed": "#e3e3de",
+                  "tertiary_fixed_dim": "#c7c7c2"
+                },
+                "overrideNeutralColor": "#18181b",
+                "overridePrimaryColor": "#d97706",
+                "overrideSecondaryColor": "#15803d",
+                "overrideTertiaryColor": "#fdfcf7",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "section-gap": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "64px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "40px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.4"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.2"
+                  },
+                  "label-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "14px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                  }
+                }
+              }
+            },
+            "name": "assets/55d95adbf996497387a3af0032e790f0",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "12534",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2M1MzFjZWJkMjdkODQ4NjM4YWNjYjhkNTg1YmY3ZDk4EgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhMyMTI3ODM1Njc5MzM4MTkwMTM3&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/2127835679338190137/files/979834809baf48618b998544608729c7"
+          },
+          "id": "7e48f246099541bf8f835feecb582055",
+          "name": "projects/2127835679338190137/screens/7e48f246099541bf8f835feecb582055",
+          "prompt": "Create a complete, production-ready bespoke landing page for Zoua's Fresh Egg Rolls. \nVisual Style: Premium editorial. Use an asymmetrical layout, large high-contrast serif typography for headlines, and a sophisticated 'Golden Crisp' and 'Fresh Verdant' color palette. \n\nSections:\n1. Header: Fixed with phone (920) 385-0505, logo, and links.\n2. Hero: High-impact section featuring a 'Signature Hand-Rolled' egg roll with a bold headline and clear 'Order Now' CTA.\n3. Credibility: A subtle, refined bar showcasing local recognition and the 'Handcrafted with Heritage' motto.\n4. Offerings: Instead of a grid, use a staggered editorial layout showing 'The Fresh Egg Roll', 'Spring Specials', and 'Signature Dipping Sauces'.\n5. About: A storytelling section focused on Zoua's craft, using a large serif quote.\n6. Visit (#visit): A minimalist section with address (393 Bacon Avenue, Oshkosh, WI) and the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A modern, minimal form with validation UI states.\n8. Footer: Semantic and detailed.\n\nTechnical: Full semantic HTML, CSS custom properties, responsive at 375px, smooth scroll, no lorem ipsum. Use real copy focused on 'Fresh, Hand-Rolled, Oshkosh Local'.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuIiHvRe6pqz3NiiSk7s6ixk3ON-MMzxf5XwnTbzGhGWotgGeljMtkpHdAezdBSl8EWhl_MLR7TEyOlOKv3VgnyPU1m5Xhx-D0BWyuyK7J8wES3BVXeZm1oG2VBWPRFurtxrugquMXB3gqxtv8F2vq_FWFNuKYxytLgYapuBGn4pvacIAoD_AELqZCiKHSGaWpfOLxeYNOnnOxgbsOqnIDli7s7MYlhoQxAECPImttr2YwbnFpLLcHbzF0",
+            "name": "projects/2127835679338190137/files/18c93b3803f14fd598cadf79878e26cd"
+          },
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#d97706",
+            "designMd": "---\nname: Artisanal Culinary Craft\ncolors:\n  surface: '#fbf8fc'\n  surface-dim: '#dcd9dd'\n  surface-bright: '#fbf8fc'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f2f7'\n  surface-container: '#f0edf1'\n  surface-container-high: '#eae7eb'\n  surface-container-highest: '#e4e1e6'\n  on-surface: '#1b1b1e'\n  on-surface-variant: '#554336'\n  inverse-surface: '#303033'\n  inverse-on-surface: '#f3f0f4'\n  outline: '#887364'\n  outline-variant: '#dbc2b0'\n  surface-tint: '#904d00'\n  primary: '#8d4b00'\n  on-primary: '#ffffff'\n  primary-container: '#b15f00'\n  on-primary-container: '#fffbff'\n  inverse-primary: '#ffb77d'\n  secondary: '#006d30'\n  on-secondary: '#ffffff'\n  secondary-container: '#92f5a4'\n  on-secondary-container: '#007233'\n  tertiary: '#5b5c59'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#747571'\n  on-tertiary-container: '#fefdf8'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdcc3'\n  primary-fixed-dim: '#ffb77d'\n  on-primary-fixed: '#2f1500'\n  on-primary-fixed-variant: '#6e3900'\n  secondary-fixed: '#95f8a7'\n  secondary-fixed-dim: '#79db8d'\n  on-secondary-fixed: '#00210a'\n  on-secondary-fixed-variant: '#005323'\n  tertiary-fixed: '#e3e3de'\n  tertiary-fixed-dim: '#c7c7c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#464744'\n  background: '#fbf8fc'\n  on-background: '#1b1b1e'\n  surface-variant: '#e4e1e6'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality is rooted in the intersection of heritage and modern culinary excellence. It evokes the feeling of a high-end, chef-led pop-up: intentional, transparent, and deeply connected to the ingredients. The target audience values authenticity, craft, and the narrative behind their food.\n\nThe design style is **Editorial Minimalism**. It prioritizes high-fidelity food photography and generous whitespace to allow the product's texture and color to lead. Visual interest is generated through intentional asymmetry—placing elements off-center to create a dynamic, rhythmic flow—and the use of subtle rice-paper textures that add tactile depth without cluttering the interface. Hand-drawn line art provides a human, \"sketched in the kitchen\" feel that balances the precision of the typography.\n\n## Colors\nThe palette is inspired by the transition from raw ingredients to the finished, golden-fried product.\n\n- **Golden Crisp (#D97706):** Used for primary calls to action, price points, and highlights that represent the perfect fry.\n- **Fresh Verdant (#15803D):** Used for health-focused badges, ingredient callouts, and secondary accents to denote freshness.\n- **Ink (#18181B):** The foundation for all typography and structural lines, providing a sharp, authoritative contrast against the background.\n- **Parchment (#FDFCF7):** The global background color. It is warmer than pure white, mimicking the natural tone of culinary paper and unbleached rice wraps.\n\n## Typography\nThe typographic system relies on a high-contrast pairing. **Playfair Display** provides an editorial, sophisticated voice for storytelling and product naming. It should be used with tight leading and slight negative tracking in larger sizes to emphasize its dramatic strokes.\n\n**Hanken Grotesk** serves as the functional workhorse. It is a clean, contemporary sans-serif that ensures legibility for menus, descriptions, and UI controls. For micro-copy and metadata (like calorie counts or prep time), use `label-caps` to provide a clear visual hierarchy and a modern, \"packaged goods\" aesthetic.\n\n## Layout & Spacing\nThis design system utilizes a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve the \"editorial\" look, do not center-align all content. Instead, use \"The Power of the Void\"—leave large gutters or entire columns empty to draw focus to high-resolution imagery. Spacing should be expansive; section gaps of 120px on desktop create a sense of luxury and unhurried browsing. Use a baseline 8px rhythm for internal component padding to maintain structural integrity.\n\n## Elevation & Depth\nDepth is created through **Tonal Layers** rather than shadows. Surfaces should feel flat and physical. \n\n1.  **Base:** The Parchment background (#FDFCF7) with a subtle grain texture.\n2.  **Mid-layer:** Semi-transparent \"Rice Paper\" overlays (White @ 60% opacity) with a `backdrop-filter: blur(8px)` used for floating menus or hover states.\n3.  **High-layer:** Cards and modals are defined by 1px solid Ink (#18181B) borders. \n\nAvoid drop shadows entirely. If depth is required, use a \"Hard Offset\" shadow: a solid block of color (Golden Crisp or Ink) shifted 4px down and 4px right from the element.\n\n## Shapes\nThe shape language is strictly **Sharp (0)**. Everything from buttons to image containers uses 90-degree corners. This evokes the precision of a chef's knife and the structure of architectural editorial layouts. \n\nThe only exceptions are \"Ingredient Illustration\" containers, which may use organic, irregular masks to mimic the natural shape of fresh produce.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink (#18181B) with White text, using the `label-caps` style. Hover states shift to Golden Crisp (#D97706). Secondary buttons are transparent with a 1px Ink border.\n- **Input Fields:** Minimalist design—only a bottom border (1px Ink). Labels sit above in `label-caps`. Focus state thickens the bottom border to 2px.\n- **Cards:** Product cards use a \"Bleed\" layout where the food photography takes up 100% of the card width, with text content placed asymmetrically below it. No borders on card containers unless they are interactive.\n- **Chips/Badges:** Small, rectangular tags using the Fresh Verdant (#15803D) color for \"Vegan\" or \"Gluten-Free\" markers.\n- **Lists:** Menu items are separated by a thin 0.5px Ink rule. Prices are always right-aligned in `headline-sm`.\n- **Illustrations:** Use the \"Rice Paper\" texture as a background for hand-drawn line art of ingredients like ginger, scallions, and chili flakes. These should be placed overlapping the edges of containers for an organic feel.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "HANKEN_GROTESK",
+            "labelFontFamily": "Hanken Grotesk",
+            "namedColors": {
+              "background": "#fbf8fc",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0f4",
+              "inverse_primary": "#ffb77d",
+              "inverse_surface": "#303033",
+              "on_background": "#1b1b1e",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#fffbff",
+              "on_primary_fixed": "#2f1500",
+              "on_primary_fixed_variant": "#6e3900",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#007233",
+              "on_secondary_fixed": "#00210a",
+              "on_secondary_fixed_variant": "#005323",
+              "on_surface": "#1b1b1e",
+              "on_surface_variant": "#554336",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#fefdf8",
+              "on_tertiary_fixed": "#1b1c19",
+              "on_tertiary_fixed_variant": "#464744",
+              "outline": "#887364",
+              "outline_variant": "#dbc2b0",
+              "primary": "#8d4b00",
+              "primary_container": "#b15f00",
+              "primary_fixed": "#ffdcc3",
+              "primary_fixed_dim": "#ffb77d",
+              "secondary": "#006d30",
+              "secondary_container": "#92f5a4",
+              "secondary_fixed": "#95f8a7",
+              "secondary_fixed_dim": "#79db8d",
+              "surface": "#fbf8fc",
+              "surface_bright": "#fbf8fc",
+              "surface_container": "#f0edf1",
+              "surface_container_high": "#eae7eb",
+              "surface_container_highest": "#e4e1e6",
+              "surface_container_low": "#f6f2f7",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9dd",
+              "surface_tint": "#904d00",
+              "surface_variant": "#e4e1e6",
+              "tertiary": "#5b5c59",
+              "tertiary_container": "#747571",
+              "tertiary_fixed": "#e3e3de",
+              "tertiary_fixed_dim": "#c7c7c2"
+            },
+            "overrideNeutralColor": "#18181b",
+            "overridePrimaryColor": "#d97706",
+            "overrideSecondaryColor": "#15803d",
+            "overrideTertiaryColor": "#fdfcf7",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "label-caps": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.2"
+              },
+              "label-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "lineHeight": "1.2"
+              }
+            }
+          },
+          "title": "Zoua's Fresh Egg Rolls - Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have designed a bespoke, award-winning-caliber landing page for **Zoua’s Fresh Egg Rolls**. \n\n### Design Rationale\n- **Editorial Identity**: I moved away from common local-business templates, opting for a high-contrast serif typeface and asymmetrical layouts that feel like a premium food magazine.\n- **Strategic Color Story**: The palette uses \"Golden Crisp\" (amber) to evoke the perfect fry and \"Fresh Verdant\" (green) to emphasize the quality of ingredients, all set against a clean, \"Parchment\" off-white background for a craft feel.\n- **Unique Visual Motif**: I’ve integrated subtle \"rice paper\" textures and a signature \"Z\" emblem to create a memorable brand mark that anchors the heritage storytelling.\n- **Conversion-Focused Layout**: The site flows from brand story to menu highlights, finishing with a clear \"Visit the Kitchen\" section and an intuitive contact form for catering inquiries.\n\nThe resulting code is a production-ready, semantic HTML document featuring fully responsive layouts, smooth scroll interactions, and CSS custom properties for easy maintenance.\n\nWould you like to explore a **mobile-specific version** of this design, or perhaps **add some subtle scroll animations** to enhance the premium feel?"
+  },
+  {
+    "suggestion": "Add scroll animations to the sections"
+  },
+  {
+    "suggestion": "Create a mobile version of the page"
+  },
+  {
+    "suggestion": "Add a dedicated Catering page"
+  }
+]
