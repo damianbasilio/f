@@ -2,7 +2,7 @@
 
 **Result:** NEEDS FIX
 
-**Craft warnings:** 1 (see craft section)
+**Craft warnings:** 2 (see craft section)
 
 ## Skills run
 
@@ -18,11 +18,10 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- emil: replaced transition: all
 - emil: added :active press feedback
-- taste: removed 3 em/en dash(es) from copy
+- taste: removed 1 em/en dash(es) from copy
 - craft: injected brief fonts (Barlow Condensed / Barlow)
-- craft: fixed 1 broken hash anchor(s)
+- craft: fixed 2 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -33,10 +32,10 @@
 - OK: No AI purple gradient
 - OK: No fake ratings/hype
 - OK: No obvious buzzwords
-- OK: Layout: no excessive 3-col grids
+- WARN: Repeated 3-column grid pattern (3 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 4
+- OK: Eyebrow count: 6
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -48,14 +47,15 @@
 
 ### taste
 
-- Eyebrow discipline: 4 uppercase-tracked labels
+- Eyebrow discipline: 6 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 
 - FAIL: stock or Stitch AI image URL still present
 - Mockup notice: popup present
-- Credibility section: present
+- WARN: missing #credibility
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
