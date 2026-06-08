@@ -2,78 +2,82 @@
   {
     "designSystem": {
       "designSystem": {
-        "displayName": "Homebound",
-        "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in a **Premium Editorial** aesthetic, positioning pet care as a bespoke, high-end service. It avoids the typical \"playful\" tropes of the pet industry in favor of a sophisticated, architectural approach that emphasizes the \"Home\" in Homebound.\n\nThe personality is **Trustworthy, Bespoke, and Local.** The visual style leverages **Minimalism** with an **Editorial** twist, utilizing generous whitespace (breathing room), high-contrast typography, and thin architectural lines to create a sense of structure and safety. The UI should feel like a premium lifestyle magazine—intentional, calm, and expertly curated.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** with an **Editorial Rhythm**. \n\n- **The Grid:** A 12-column system on desktop with wide 32px gutters. \n- **Off-Grid Elements:** To achieve the bespoke look, \"Display\" typography and high-end imagery should occasionally break the grid—shifting 1/2 column width to the left or right.\n- **Architectural Lines:** Use 1px rules (Deep Charcoal at 20% opacity) to separate sections or frame content. These lines should mimic floor plans or architectural sketches.\n- **White Space:** Use a minimum of 128px between major sections to ensure the content never feels crowded.\n\n## Elevation & Depth\n\nThis design system eschews traditional shadows for **Tonal Layers** and **Bold Outlines**.\n\n- **Depth via Tone:** Hierarchy is established by placing Oatmeal containers on top of slightly darker Neutral backgrounds, or Deep Charcoal cards on Oatmeal.\n- **Thin Rules:** Instead of shadows, use 1px solid borders in Deep Charcoal to define boundaries.\n- **Glassmorphism:** Reserved exclusively for navigation bars when scrolling over imagery, using a high-blur (20px) background filter with a subtle Oatmeal tint (60% opacity).\n\n## Components\n\n- **Buttons:** Rectangular with 0px radius. Primary buttons are Deep Charcoal with Oatmeal text. \"Ghost\" buttons use a 1px Charcoal border and wide letter-spacing for the label.\n- **Input Fields:** Bottom-border only (1px Deep Charcoal). Labels are placed in `label-caps` typography above the line.\n- **Cards:** Defined by 1px Deep Charcoal borders. No shadows. Cards should have generous internal padding (32px or more).\n- **Chips/Badges:** Small, rectangular tags with `label-caps` text. Used for \"Certified\" or \"Local\" indicators.\n- **Editorial Callouts:** Large, italicized quotes in Bodoni Moda that span 8 of the 12 columns, flanked by thin vertical 1px rules.\n- **Architectural Rules:** Vertical and horizontal 1px lines used to \"anchor\" floating text or images to the edges of the viewport.",
+        "displayName": "Heritage Hearth & Hound",
+        "styleGuidelines": "## Brand & Style\n\nThis design system establishes an \"Editorial Domesticity\" aesthetic, moving away from clinical or tech-heavy pet care tropes toward a warm, established, and premium local service feel. The brand personality is that of a trusted neighbor who happens to be a professional—someone who values the sanctity of the home and the comfort of the animals within it.\n\nThe style is a blend of **Minimalism** and **Tactile** design. It prioritizes generous whitespace (Parchment), intentional editorial layouts, and high-quality photography. It evokes the feeling of a high-end interior design magazine: calm, sophisticated, and deeply reliable. The visual language uses thin, elegant rules to compartmentalize information, ensuring the interface feels organized yet inviting.\n\nTargeting discerning pet owners who view their animals as family, the UI avoids \"loud\" calls to action, opting instead for a quiet confidence that signals safety and premium care.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain the feel of a printed book or magazine, centered within the viewport. \n\n*   **The 8px Rhythm:** All padding and margins are multiples of 8px.\n*   **Grid Model:** A 12-column grid is used for desktop (1120px max-width), while a 4-column grid is used for mobile. \n*   **Editorial Rules:** Use thin 1px lines (color: Slate Moss at 10% opacity) to separate content sections vertically or horizontally. These lines should often span the full width of their container.\n*   **Whitespace:** Content \"breathing room\" is prioritized. Use `stack-lg` (64px) between major sections to prevent the UI from feeling cluttered, reinforcing the \"calm\" brand pillar.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows, instead using **Tonal Layers** and **Low-Contrast Outlines** to define hierarchy.\n\n*   **Surfaces:** The primary background is Parchment. Secondary surfaces (like cards or sidebars) can use a slightly lighter \"Paper\" tint or a very soft tint of Slate Moss (5% opacity).\n*   **Borders:** Use 1px solid borders in Slate Moss (at 15% opacity) for cards and inputs. This creates a crisp, architectural feel.\n*   **Depth:** To indicate elevation (e.g., a floating \"Book Now\" bar), use a single, highly diffused \"Ambient Shadow\": `0px 12px 32px rgba(45, 57, 48, 0.08)`. The shadow should be tinted with the primary Slate Moss color rather than pure black to maintain the organic feel.\n\n## Components\n\n*   **Buttons:** \n    *   *Primary:* Solid Slate Moss with white DM Sans text (Bold). 0.5rem radius.\n    *   *Secondary:* Transparent with 1px Heirloom Gold border and Heirloom Gold text.\n    *   *Text Button:* All-caps DM Sans with a 1px underline, used for \"Read More\" links.\n*   **Input Fields:** Minimalist design with a 1px Slate Moss bottom-border only (or very subtle all-around border). Focus state transitions the border to Heirloom Gold.\n*   **Cards:** Use a \"Parchment-on-Parchment\" style with a 1px Slate Moss (10% opacity) border. No shadow. Typography within cards should be highly structured using the editorial rules.\n*   **Service Chips:** Small, pill-shaped tags with a light Slate Moss background (10% opacity) and Slate Moss text.\n*   **The \"Daily Log\" List:** A specialized component for owners. Each entry is separated by a 1px horizontal rule, featuring a small thumbnail of the pet, a timestamp in `label-caps`, and a brief body text update.\n*   **Checkboxes:** Square with a 2px radius, filling with Slate Moss when checked. Avoid circular checkboxes to maintain the \"architectural\" feel of the system.",
         "theme": {
           "bodyFont": "DM_SANS",
           "bodyFontFamily": "Dm Sans",
           "colorMode": "LIGHT",
           "colorVariant": "FIDELITY",
-          "customColor": "#1a1a1a",
-          "designMd": "---\nname: Homebound\ncolors:\n  surface: '#fcf9f5'\n  surface-dim: '#dcdad6'\n  surface-bright: '#fcf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3ef'\n  surface-container: '#f0ede9'\n  surface-container-high: '#eae8e4'\n  surface-container-highest: '#e5e2de'\n  on-surface: '#1c1c1a'\n  on-surface-variant: '#444748'\n  inverse-surface: '#31302e'\n  inverse-on-surface: '#f3f0ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1c1b1a'\n  on-tertiary-container: '#868382'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#e6e2df'\n  tertiary-fixed-dim: '#cac6c4'\n  on-tertiary-fixed: '#1c1b1a'\n  on-tertiary-fixed-variant: '#484645'\n  background: '#fcf9f5'\n  on-background: '#1c1c1a'\n  surface-variant: '#e5e2de'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 128px\n---\n\n## Brand & Style\n\nThe design system is rooted in a **Premium Editorial** aesthetic, positioning pet care as a bespoke, high-end service. It avoids the typical \"playful\" tropes of the pet industry in favor of a sophisticated, architectural approach that emphasizes the \"Home\" in Homebound.\n\nThe personality is **Trustworthy, Bespoke, and Local.** The visual style leverages **Minimalism** with an **Editorial** twist, utilizing generous whitespace (breathing room), high-contrast typography, and thin architectural lines to create a sense of structure and safety. The UI should feel like a premium lifestyle magazine—intentional, calm, and expertly curated.\n\n## Colors\n\nThe \"Warm Hearth\" palette is designed to evoke a sense of security and domestic comfort.\n\n- **Primary (Deep Charcoal):** Used for all primary headlines, heavy borders, and icons to provide a grounded, authoritative foundation.\n- **Secondary (Soft Oatmeal):** The primary background color. It is softer than pure white, reducing eye strain and creating a \"paper-like\" editorial feel.\n- **Accent (Burnt Sienna):** Used sparingly for call-to-actions, status indicators, or to highlight premium service tiers. It provides a warm, human touch to the cool charcoal and oatmeal.\n- **Neutral:** A muted grey-taupe used for secondary text and subtle dividers to maintain the low-noise environment.\n\n## Typography\n\nThis design system uses a high-contrast pairing to achieve an editorial rhythm. \n\n**Bodoni Moda** is the primary display face. It should be used for large, impactful headlines. In \"Display\" sizes, it may be placed off-grid or overlapping imagery to break the standard digital flow.\n\n**DM Sans** provides a clean, wide-spaced counterpoint. Body copy should prioritize legibility with a generous line height (1.7) to maintain the airy, premium feel. **Label Caps** are used for eyebrows and small metadata to add a structured, professional layer.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** with an **Editorial Rhythm**. \n\n- **The Grid:** A 12-column system on desktop with wide 32px gutters. \n- **Off-Grid Elements:** To achieve the bespoke look, \"Display\" typography and high-end imagery should occasionally break the grid—shifting 1/2 column width to the left or right.\n- **Architectural Lines:** Use 1px rules (Deep Charcoal at 20% opacity) to separate sections or frame content. These lines should mimic floor plans or architectural sketches.\n- **White Space:** Use a minimum of 128px between major sections to ensure the content never feels crowded.\n\n## Elevation & Depth\n\nThis design system eschews traditional shadows for **Tonal Layers** and **Bold Outlines**.\n\n- **Depth via Tone:** Hierarchy is established by placing Oatmeal containers on top of slightly darker Neutral backgrounds, or Deep Charcoal cards on Oatmeal.\n- **Thin Rules:** Instead of shadows, use 1px solid borders in Deep Charcoal to define boundaries.\n- **Glassmorphism:** Reserved exclusively for navigation bars when scrolling over imagery, using a high-blur (20px) background filter with a subtle Oatmeal tint (60% opacity).\n\n## Shapes\n\nThe shape language is **Sharp (0)**. \n\nTo maintain the architectural and \"bespoke\" feel, avoid rounded corners. All buttons, input fields, cards, and image containers must use hard 90-degree angles. This reinforces the \"Home/Structure\" motif and differentiates the brand from the softer, consumer-grade competitors.\n\n## Components\n\n- **Buttons:** Rectangular with 0px radius. Primary buttons are Deep Charcoal with Oatmeal text. \"Ghost\" buttons use a 1px Charcoal border and wide letter-spacing for the label.\n- **Input Fields:** Bottom-border only (1px Deep Charcoal). Labels are placed in `label-caps` typography above the line.\n- **Cards:** Defined by 1px Deep Charcoal borders. No shadows. Cards should have generous internal padding (32px or more).\n- **Chips/Badges:** Small, rectangular tags with `label-caps` text. Used for \"Certified\" or \"Local\" indicators.\n- **Editorial Callouts:** Large, italicized quotes in Bodoni Moda that span 8 of the 12 columns, flanked by thin vertical 1px rules.\n- **Architectural Rules:** Vertical and horizontal 1px lines used to \"anchor\" floating text or images to the edges of the viewport.",
-          "font": "BODONI_MODA",
-          "headlineFont": "BODONI_MODA",
-          "headlineFontFamily": "Bodoni Moda",
+          "customColor": "#2d3930",
+          "designMd": "---\nname: Heritage Hearth & Hound\ncolors:\n  surface: '#fff8f4'\n  surface-dim: '#e1d8d2'\n  surface-bright: '#fff8f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2eb'\n  surface-container: '#f5ece5'\n  surface-container-high: '#f0e7df'\n  surface-container-highest: '#eae1da'\n  on-surface: '#1f1b17'\n  on-surface-variant: '#434843'\n  inverse-surface: '#34302b'\n  inverse-on-surface: '#f8efe8'\n  outline: '#747873'\n  outline-variant: '#c3c8c2'\n  surface-tint: '#556157'\n  primary: '#18241b'\n  on-primary: '#ffffff'\n  primary-container: '#2d3930'\n  on-primary-container: '#95a397'\n  inverse-primary: '#bccabd'\n  secondary: '#765a26'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed798'\n  on-secondary-container: '#785c29'\n  tertiary: '#20211e'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#363633'\n  on-tertiary-container: '#a09f9a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d8e6d9'\n  primary-fixed-dim: '#bccabd'\n  on-primary-fixed: '#131e16'\n  on-primary-fixed-variant: '#3d4a40'\n  secondary-fixed: '#ffdea9'\n  secondary-fixed-dim: '#e6c184'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5c4211'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fff8f4'\n  on-background: '#1f1b17'\n  surface-variant: '#eae1da'\ntypography:\n  display-lg:\n    fontFamily: Libre Caslon Text\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Libre Caslon Text\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Libre Caslon Text\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Libre Caslon Text\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1120px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stack-sm: 16px\n  stack-md: 32px\n  stack-lg: 64px\n---\n\n## Brand & Style\n\nThis design system establishes an \"Editorial Domesticity\" aesthetic, moving away from clinical or tech-heavy pet care tropes toward a warm, established, and premium local service feel. The brand personality is that of a trusted neighbor who happens to be a professional—someone who values the sanctity of the home and the comfort of the animals within it.\n\nThe style is a blend of **Minimalism** and **Tactile** design. It prioritizes generous whitespace (Parchment), intentional editorial layouts, and high-quality photography. It evokes the feeling of a high-end interior design magazine: calm, sophisticated, and deeply reliable. The visual language uses thin, elegant rules to compartmentalize information, ensuring the interface feels organized yet inviting.\n\nTargeting discerning pet owners who view their animals as family, the UI avoids \"loud\" calls to action, opting instead for a quiet confidence that signals safety and premium care.\n\n## Colors\n\nThe palette is rooted in a \"Modern Heirloom\" philosophy, utilizing earth-toned neutrals to create a sense of groundedness.\n\n*   **Slate Moss (#2D3930):** The primary anchor. Used for high-level branding, primary buttons, and deep background sections. It represents calm, nature, and the professional stability of the service.\n*   **Heirloom Gold (#C9A66B):** The secondary accent. A muted, sophisticated yellow used for emphasis, subtle highlights, and active states. It suggests warmth, sunlight, and a premium touch without being aggressive.\n*   **Parchment (#F9F7F2):** The foundation. Used for main backgrounds to provide a softer, more domestic feel than pure white, reducing eye strain and feeling more \"organic.\"\n*   **Estate Charcoal (#4A4540):** The neutral. A warm-toned grey used for body text and secondary labels to maintain readability while keeping the palette cohesive.\n\n## Typography\n\nThe typographic system relies on a high-contrast pairing that balances tradition with modern legibility.\n\n**Libre Caslon Text** is used for all headlines. Its literary heritage and sharp serifs convey authority and timelessness. For larger display sizes, it should be set with slightly tighter letter-spacing to emphasize its editorial elegance.\n\n**DM Sans** serves as the functional workhorse for body text and interface elements. It is chosen for its wide-set, geometric proportions which feel modern and airy. To enhance the \"premium\" feel, body text uses a slightly increased line-height (1.5x - 1.6x) and subtle letter-spacing to ensure the layout never feels cramped or hurried.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain the feel of a printed book or magazine, centered within the viewport. \n\n*   **The 8px Rhythm:** All padding and margins are multiples of 8px.\n*   **Grid Model:** A 12-column grid is used for desktop (1120px max-width), while a 4-column grid is used for mobile. \n*   **Editorial Rules:** Use thin 1px lines (color: Slate Moss at 10% opacity) to separate content sections vertically or horizontally. These lines should often span the full width of their container.\n*   **Whitespace:** Content \"breathing room\" is prioritized. Use `stack-lg` (64px) between major sections to prevent the UI from feeling cluttered, reinforcing the \"calm\" brand pillar.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows, instead using **Tonal Layers** and **Low-Contrast Outlines** to define hierarchy.\n\n*   **Surfaces:** The primary background is Parchment. Secondary surfaces (like cards or sidebars) can use a slightly lighter \"Paper\" tint or a very soft tint of Slate Moss (5% opacity).\n*   **Borders:** Use 1px solid borders in Slate Moss (at 15% opacity) for cards and inputs. This creates a crisp, architectural feel.\n*   **Depth:** To indicate elevation (e.g., a floating \"Book Now\" bar), use a single, highly diffused \"Ambient Shadow\": `0px 12px 32px rgba(45, 57, 48, 0.08)`. The shadow should be tinted with the primary Slate Moss color rather than pure black to maintain the organic feel.\n\n## Shapes\n\nThe shape language is defined by **Subtle Organic Curves**. While the grid is structured and linear, the elements themselves are softened to feel approachable.\n\n*   **Buttons & Containers:** Standard containers use a 0.5rem (8px) radius. This is enough to feel \"friendly\" without becoming \"bubbly\" or juvenile.\n*   **Special Accents:** Large imagery or featured \"About\" sections may use an asymmetrical \"Organic\" corner radius (e.g., top-left and bottom-right at 100px) to mimic the fluidity of home life and nature.\n*   **Icons:** Use \"Outline\" style icons with a consistent 1.5pt stroke weight and slightly rounded ends to match the typography.\n\n## Components\n\n*   **Buttons:** \n    *   *Primary:* Solid Slate Moss with white DM Sans text (Bold). 0.5rem radius.\n    *   *Secondary:* Transparent with 1px Heirloom Gold border and Heirloom Gold text.\n    *   *Text Button:* All-caps DM Sans with a 1px underline, used for \"Read More\" links.\n*   **Input Fields:** Minimalist design with a 1px Slate Moss bottom-border only (or very subtle all-around border). Focus state transitions the border to Heirloom Gold.\n*   **Cards:** Use a \"Parchment-on-Parchment\" style with a 1px Slate Moss (10% opacity) border. No shadow. Typography within cards should be highly structured using the editorial rules.\n*   **Service Chips:** Small, pill-shaped tags with a light Slate Moss background (10% opacity) and Slate Moss text.\n*   **The \"Daily Log\" List:** A specialized component for owners. Each entry is separated by a 1px horizontal rule, featuring a small thumbnail of the pet, a timestamp in `label-caps`, and a brief body text update.\n*   **Checkboxes:** Square with a 2px radius, filling with Slate Moss when checked. Avoid circular checkboxes to maintain the \"architectural\" feel of the system.",
+          "font": "LIBRE_CASLON_TEXT",
+          "headlineFont": "LIBRE_CASLON_TEXT",
+          "headlineFontFamily": "Libre Caslon Text",
           "labelFont": "DM_SANS",
           "labelFontFamily": "Dm Sans",
           "namedColors": {
-            "background": "#fcf9f5",
+            "background": "#fff8f4",
             "error": "#ba1a1a",
             "error_container": "#ffdad6",
-            "inverse_on_surface": "#f3f0ec",
-            "inverse_primary": "#c8c6c5",
-            "inverse_surface": "#31302e",
-            "on_background": "#1c1c1a",
+            "inverse_on_surface": "#f8efe8",
+            "inverse_primary": "#bccabd",
+            "inverse_surface": "#34302b",
+            "on_background": "#1f1b17",
             "on_error": "#ffffff",
             "on_error_container": "#93000a",
             "on_primary": "#ffffff",
-            "on_primary_container": "#858383",
-            "on_primary_fixed": "#1c1b1b",
-            "on_primary_fixed_variant": "#474746",
+            "on_primary_container": "#95a397",
+            "on_primary_fixed": "#131e16",
+            "on_primary_fixed_variant": "#3d4a40",
             "on_secondary": "#ffffff",
-            "on_secondary_container": "#656461",
-            "on_secondary_fixed": "#1c1c19",
-            "on_secondary_fixed_variant": "#474743",
-            "on_surface": "#1c1c1a",
-            "on_surface_variant": "#444748",
+            "on_secondary_container": "#785c29",
+            "on_secondary_fixed": "#271900",
+            "on_secondary_fixed_variant": "#5c4211",
+            "on_surface": "#1f1b17",
+            "on_surface_variant": "#434843",
             "on_tertiary": "#ffffff",
-            "on_tertiary_container": "#868382",
-            "on_tertiary_fixed": "#1c1b1a",
-            "on_tertiary_fixed_variant": "#484645",
-            "outline": "#747878",
-            "outline_variant": "#c4c7c7",
-            "primary": "#000000",
-            "primary_container": "#1c1b1b",
-            "primary_fixed": "#e5e2e1",
-            "primary_fixed_dim": "#c8c6c5",
-            "secondary": "#5f5e5b",
-            "secondary_container": "#e5e2dd",
-            "secondary_fixed": "#e5e2dd",
-            "secondary_fixed_dim": "#c9c6c2",
-            "surface": "#fcf9f5",
-            "surface_bright": "#fcf9f5",
-            "surface_container": "#f0ede9",
-            "surface_container_high": "#eae8e4",
-            "surface_container_highest": "#e5e2de",
-            "surface_container_low": "#f6f3ef",
+            "on_tertiary_container": "#a09f9a",
+            "on_tertiary_fixed": "#1b1c19",
+            "on_tertiary_fixed_variant": "#474744",
+            "outline": "#747873",
+            "outline_variant": "#c3c8c2",
+            "primary": "#18241b",
+            "primary_container": "#2d3930",
+            "primary_fixed": "#d8e6d9",
+            "primary_fixed_dim": "#bccabd",
+            "secondary": "#765a26",
+            "secondary_container": "#fed798",
+            "secondary_fixed": "#ffdea9",
+            "secondary_fixed_dim": "#e6c184",
+            "surface": "#fff8f4",
+            "surface_bright": "#fff8f4",
+            "surface_container": "#f5ece5",
+            "surface_container_high": "#f0e7df",
+            "surface_container_highest": "#eae1da",
+            "surface_container_low": "#fbf2eb",
             "surface_container_lowest": "#ffffff",
-            "surface_dim": "#dcdad6",
-            "surface_tint": "#5f5e5e",
-            "surface_variant": "#e5e2de",
-            "tertiary": "#000000",
-            "tertiary_container": "#1c1b1a",
-            "tertiary_fixed": "#e6e2df",
-            "tertiary_fixed_dim": "#cac6c4"
+            "surface_dim": "#e1d8d2",
+            "surface_tint": "#556157",
+            "surface_variant": "#eae1da",
+            "tertiary": "#20211e",
+            "tertiary_container": "#363633",
+            "tertiary_fixed": "#e4e2dd",
+            "tertiary_fixed_dim": "#c8c6c2"
           },
-          "overrideNeutralColor": "#706f6c",
-          "overridePrimaryColor": "#1a1a1a",
-          "overrideSecondaryColor": "#f5f2ed",
+          "overrideNeutralColor": "#4a4540",
+          "overridePrimaryColor": "#2d3930",
+          "overrideSecondaryColor": "#c9a66b",
+          "overrideTertiaryColor": "#f9f7f2",
+          "roundness": "ROUND_EIGHT",
           "spacing": {
-            "container-max": "1280px",
-            "gutter": "32px",
+            "container-max": "1120px",
+            "gutter": "24px",
             "margin-desktop": "64px",
-            "margin-mobile": "24px",
-            "section-gap": "128px",
+            "margin-mobile": "20px",
+            "stack-lg": "64px",
+            "stack-md": "32px",
+            "stack-sm": "16px",
             "unit": "8px"
           },
           "spacingScale": 2,
@@ -83,57 +87,58 @@
               "fontSize": "18px",
               "fontWeight": "400",
               "letterSpacing": "0.01em",
-              "lineHeight": "1.7"
+              "lineHeight": "28px"
             },
             "body-md": {
               "fontFamily": "DM Sans",
               "fontSize": "16px",
               "fontWeight": "400",
-              "lineHeight": "1.6"
+              "letterSpacing": "0.01em",
+              "lineHeight": "24px"
             },
             "display-lg": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "80px",
+              "fontFamily": "Libre Caslon Text",
+              "fontSize": "48px",
               "fontWeight": "700",
               "letterSpacing": "-0.02em",
-              "lineHeight": "1.1"
+              "lineHeight": "56px"
             },
             "display-lg-mobile": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "48px",
+              "fontFamily": "Libre Caslon Text",
+              "fontSize": "36px",
               "fontWeight": "700",
-              "letterSpacing": "-0.02em",
-              "lineHeight": "1.1"
-            },
-            "headline-lg": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "48px",
-              "fontWeight": "600",
-              "lineHeight": "1.2"
-            },
-            "headline-lg-mobile": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "32px",
-              "fontWeight": "600",
-              "lineHeight": "1.2"
+              "letterSpacing": "-0.01em",
+              "lineHeight": "44px"
             },
             "headline-md": {
-              "fontFamily": "Bodoni Moda",
+              "fontFamily": "Libre Caslon Text",
               "fontSize": "32px",
-              "fontWeight": "500",
-              "lineHeight": "1.3"
+              "fontWeight": "400",
+              "lineHeight": "40px"
+            },
+            "headline-sm": {
+              "fontFamily": "Libre Caslon Text",
+              "fontSize": "24px",
+              "fontWeight": "400",
+              "lineHeight": "32px"
             },
             "label-caps": {
               "fontFamily": "DM Sans",
               "fontSize": "12px",
               "fontWeight": "700",
-              "letterSpacing": "0.15em",
-              "lineHeight": "1.0"
+              "letterSpacing": "0.1em",
+              "lineHeight": "16px"
+            },
+            "label-md": {
+              "fontFamily": "DM Sans",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "lineHeight": "20px"
             }
           }
         }
       },
-      "name": "assets/9722dddd83734aa9bd0fad2d4fef1bee",
+      "name": "assets/3015be7ddb6c4c8cb74912a39e42b869",
       "version": "1"
     }
   },
@@ -141,80 +146,147 @@
     "design": {
       "screens": [
         {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "61f97367cb40400997ef9b4e0c32cd5a",
+          "name": "projects/10470795620100012858/screens/61f97367cb40400997ef9b4e0c32cd5a",
+          "prompt": "Professional, high-end editorial photography of a happy dog sitting comfortably on a stylish, sun-drenched living room rug. Soft natural light, warm domestic atmosphere, shallow depth of field. High-resolution, architectural digest style.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuFgQvEztTyUbzy8_IejLzedNVA2UTTO1PnvXXoI7RLZFKbDxkWIOOFHpK0Zc4wvjiRna2EueGwppahL3asNY8TbW3yHjSoRSSmHje_ETlcvgxRwYd9hCye2xz5nuH3PHs69txaHkjL8Pai-XzvG9V4GbgH_Krj9lLr9OHYxsPBj9QCLdKsLalKHucCkiCDZAJ4g61Zuyjt6ypAgBVnnIxlpw6zniD46_B7jEVjdAm0sktmNci_fXhogr7Z",
+            "name": "projects/10470795620100012858/files/7490c3323b6b4e8995a2e96bd6305604"
+          },
+          "theme": {},
+          "title": "Professional, high-end editorial photography of a happy dog sitting comfortably on a stylish, sun-drenched living room rug. Soft natural light, warm domestic atmosphere, shallow depth of field. High-resolution, architectural digest style.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "b4e314b0f13749f8a2d4afbe0484b845",
+          "name": "projects/10470795620100012858/screens/b4e314b0f13749f8a2d4afbe0484b845",
+          "prompt": "A close-up, warm-toned photo of a person's hand gently petting a cat's head. Cozy home environment, soft textures, professional lifestyle photography. Emotional and comforting.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt9BA2-mYwo3-c2JFbrM-Bxl6y-sikn--G5ejqlcsJLayKJsQXeza3uVS7Jzdu-vFcm0QwRTHyMYsbov0CVSzVRYAdz4heV5fuEIxmaxpRTE5UgHYVAQYOAIEJ5vtqGrK-HPLUtdyfT0v7_s1Lddf9zrLHCPLQecCdB597otYeI22NbM1VA82LOuOAYfe5i75GNsEzdutMKeUNGZPDGtYFDougUzzkDB3PCwTeZGS8NyZMD5Y7Ju5-9aHfx",
+            "name": "projects/10470795620100012858/files/25683b5c86b44c2281b2c2076fbbebaf"
+          },
+          "theme": {},
+          "title": "A close-up, warm-toned photo of a person's hand gently petting a cat's head. Cozy home environment, soft textures, professional lifestyle photography. Emotional and comforting.",
+          "width": "1200"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "512",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzhiM2IwM2I4MGM5YzRiM2Q5NGE2ZDM4YWI0Yzg2YmY3EgsSBxCq7_ih7hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDQ3MDc5NTYyMDEwMDAxMjg1OA&filename=&opi=96797242",
+            "mimeType": "image/svg+xml",
+            "name": "projects/10470795620100012858/files/38877d8179c54d628f8c78ce4bb012bf"
+          },
+          "id": "61e04a8b3051447093b605e50b62ed70",
+          "name": "projects/10470795620100012858/screens/61e04a8b3051447093b605e50b62ed70",
+          "prompt": "A sophisticated, minimalist logo for Homebound Pet Sitting. A single continuous line forming the silhouette of a house that subtly transitions into a wagging tail or a pet's ear. Elegant and modern.. Brand logo",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "displayMode": "SVG",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvitao0hdqPVL8cWinV-QyOj6JBZtNgM2T5mptiVe9kQhmDrCj18YnomKrWqIUEUjPvjxSMo-fNBn6gZQ9NoQmRCEUMWW7u0c7VJtoyhJxdHzmrrsFHRXzD5bw4PpNddFyTseAlzICa5pgDAOorpAefr-8JPTVEZKTH3iS93PBAS-ppKAIfkwIdyLvgE0ruM_nED8rXMZFxD6YDhY22zWD1_n2R_Lyhh_AaE4j_y0okNJQfcApJtif4tqs",
+            "name": "projects/10470795620100012858/files/21f173dbf3d5486ba9ed418610c7bd85"
+          },
+          "theme": {},
+          "title": "Homebound Logo",
+          "width": "512"
+        },
+        {
           "designSystem": {
             "designSystem": {
-              "displayName": "Homebound",
-              "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in a **Premium Editorial** aesthetic, positioning pet care as a bespoke, high-end service. It avoids the typical \"playful\" tropes of the pet industry in favor of a sophisticated, architectural approach that emphasizes the \"Home\" in Homebound.\n\nThe personality is **Trustworthy, Bespoke, and Local.** The visual style leverages **Minimalism** with an **Editorial** twist, utilizing generous whitespace (breathing room), high-contrast typography, and thin architectural lines to create a sense of structure and safety. The UI should feel like a premium lifestyle magazine—intentional, calm, and expertly curated.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** with an **Editorial Rhythm**. \n\n- **The Grid:** A 12-column system on desktop with wide 32px gutters. \n- **Off-Grid Elements:** To achieve the bespoke look, \"Display\" typography and high-end imagery should occasionally break the grid—shifting 1/2 column width to the left or right.\n- **Architectural Lines:** Use 1px rules (Deep Charcoal at 20% opacity) to separate sections or frame content. These lines should mimic floor plans or architectural sketches.\n- **White Space:** Use a minimum of 128px between major sections to ensure the content never feels crowded.\n\n## Elevation & Depth\n\nThis design system eschews traditional shadows for **Tonal Layers** and **Bold Outlines**.\n\n- **Depth via Tone:** Hierarchy is established by placing Oatmeal containers on top of slightly darker Neutral backgrounds, or Deep Charcoal cards on Oatmeal.\n- **Thin Rules:** Instead of shadows, use 1px solid borders in Deep Charcoal to define boundaries.\n- **Glassmorphism:** Reserved exclusively for navigation bars when scrolling over imagery, using a high-blur (20px) background filter with a subtle Oatmeal tint (60% opacity).\n\n## Components\n\n- **Buttons:** Rectangular with 0px radius. Primary buttons are Deep Charcoal with Oatmeal text. \"Ghost\" buttons use a 1px Charcoal border and wide letter-spacing for the label.\n- **Input Fields:** Bottom-border only (1px Deep Charcoal). Labels are placed in `label-caps` typography above the line.\n- **Cards:** Defined by 1px Deep Charcoal borders. No shadows. Cards should have generous internal padding (32px or more).\n- **Chips/Badges:** Small, rectangular tags with `label-caps` text. Used for \"Certified\" or \"Local\" indicators.\n- **Editorial Callouts:** Large, italicized quotes in Bodoni Moda that span 8 of the 12 columns, flanked by thin vertical 1px rules.\n- **Architectural Rules:** Vertical and horizontal 1px lines used to \"anchor\" floating text or images to the edges of the viewport.",
+              "displayName": "Heritage Hearth & Hound",
+              "styleGuidelines": "## Brand & Style\n\nThis design system establishes an \"Editorial Domesticity\" aesthetic, moving away from clinical or tech-heavy pet care tropes toward a warm, established, and premium local service feel. The brand personality is that of a trusted neighbor who happens to be a professional—someone who values the sanctity of the home and the comfort of the animals within it.\n\nThe style is a blend of **Minimalism** and **Tactile** design. It prioritizes generous whitespace (Parchment), intentional editorial layouts, and high-quality photography. It evokes the feeling of a high-end interior design magazine: calm, sophisticated, and deeply reliable. The visual language uses thin, elegant rules to compartmentalize information, ensuring the interface feels organized yet inviting.\n\nTargeting discerning pet owners who view their animals as family, the UI avoids \"loud\" calls to action, opting instead for a quiet confidence that signals safety and premium care.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain the feel of a printed book or magazine, centered within the viewport. \n\n*   **The 8px Rhythm:** All padding and margins are multiples of 8px.\n*   **Grid Model:** A 12-column grid is used for desktop (1120px max-width), while a 4-column grid is used for mobile. \n*   **Editorial Rules:** Use thin 1px lines (color: Slate Moss at 10% opacity) to separate content sections vertically or horizontally. These lines should often span the full width of their container.\n*   **Whitespace:** Content \"breathing room\" is prioritized. Use `stack-lg` (64px) between major sections to prevent the UI from feeling cluttered, reinforcing the \"calm\" brand pillar.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows, instead using **Tonal Layers** and **Low-Contrast Outlines** to define hierarchy.\n\n*   **Surfaces:** The primary background is Parchment. Secondary surfaces (like cards or sidebars) can use a slightly lighter \"Paper\" tint or a very soft tint of Slate Moss (5% opacity).\n*   **Borders:** Use 1px solid borders in Slate Moss (at 15% opacity) for cards and inputs. This creates a crisp, architectural feel.\n*   **Depth:** To indicate elevation (e.g., a floating \"Book Now\" bar), use a single, highly diffused \"Ambient Shadow\": `0px 12px 32px rgba(45, 57, 48, 0.08)`. The shadow should be tinted with the primary Slate Moss color rather than pure black to maintain the organic feel.\n\n## Components\n\n*   **Buttons:** \n    *   *Primary:* Solid Slate Moss with white DM Sans text (Bold). 0.5rem radius.\n    *   *Secondary:* Transparent with 1px Heirloom Gold border and Heirloom Gold text.\n    *   *Text Button:* All-caps DM Sans with a 1px underline, used for \"Read More\" links.\n*   **Input Fields:** Minimalist design with a 1px Slate Moss bottom-border only (or very subtle all-around border). Focus state transitions the border to Heirloom Gold.\n*   **Cards:** Use a \"Parchment-on-Parchment\" style with a 1px Slate Moss (10% opacity) border. No shadow. Typography within cards should be highly structured using the editorial rules.\n*   **Service Chips:** Small, pill-shaped tags with a light Slate Moss background (10% opacity) and Slate Moss text.\n*   **The \"Daily Log\" List:** A specialized component for owners. Each entry is separated by a 1px horizontal rule, featuring a small thumbnail of the pet, a timestamp in `label-caps`, and a brief body text update.\n*   **Checkboxes:** Square with a 2px radius, filling with Slate Moss when checked. Avoid circular checkboxes to maintain the \"architectural\" feel of the system.",
               "theme": {
                 "bodyFont": "DM_SANS",
                 "bodyFontFamily": "Dm Sans",
                 "colorMode": "LIGHT",
                 "colorVariant": "FIDELITY",
-                "customColor": "#1a1a1a",
-                "designMd": "---\nname: Homebound\ncolors:\n  surface: '#fcf9f5'\n  surface-dim: '#dcdad6'\n  surface-bright: '#fcf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3ef'\n  surface-container: '#f0ede9'\n  surface-container-high: '#eae8e4'\n  surface-container-highest: '#e5e2de'\n  on-surface: '#1c1c1a'\n  on-surface-variant: '#444748'\n  inverse-surface: '#31302e'\n  inverse-on-surface: '#f3f0ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1c1b1a'\n  on-tertiary-container: '#868382'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#e6e2df'\n  tertiary-fixed-dim: '#cac6c4'\n  on-tertiary-fixed: '#1c1b1a'\n  on-tertiary-fixed-variant: '#484645'\n  background: '#fcf9f5'\n  on-background: '#1c1c1a'\n  surface-variant: '#e5e2de'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 128px\n---\n\n## Brand & Style\n\nThe design system is rooted in a **Premium Editorial** aesthetic, positioning pet care as a bespoke, high-end service. It avoids the typical \"playful\" tropes of the pet industry in favor of a sophisticated, architectural approach that emphasizes the \"Home\" in Homebound.\n\nThe personality is **Trustworthy, Bespoke, and Local.** The visual style leverages **Minimalism** with an **Editorial** twist, utilizing generous whitespace (breathing room), high-contrast typography, and thin architectural lines to create a sense of structure and safety. The UI should feel like a premium lifestyle magazine—intentional, calm, and expertly curated.\n\n## Colors\n\nThe \"Warm Hearth\" palette is designed to evoke a sense of security and domestic comfort.\n\n- **Primary (Deep Charcoal):** Used for all primary headlines, heavy borders, and icons to provide a grounded, authoritative foundation.\n- **Secondary (Soft Oatmeal):** The primary background color. It is softer than pure white, reducing eye strain and creating a \"paper-like\" editorial feel.\n- **Accent (Burnt Sienna):** Used sparingly for call-to-actions, status indicators, or to highlight premium service tiers. It provides a warm, human touch to the cool charcoal and oatmeal.\n- **Neutral:** A muted grey-taupe used for secondary text and subtle dividers to maintain the low-noise environment.\n\n## Typography\n\nThis design system uses a high-contrast pairing to achieve an editorial rhythm. \n\n**Bodoni Moda** is the primary display face. It should be used for large, impactful headlines. In \"Display\" sizes, it may be placed off-grid or overlapping imagery to break the standard digital flow.\n\n**DM Sans** provides a clean, wide-spaced counterpoint. Body copy should prioritize legibility with a generous line height (1.7) to maintain the airy, premium feel. **Label Caps** are used for eyebrows and small metadata to add a structured, professional layer.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** with an **Editorial Rhythm**. \n\n- **The Grid:** A 12-column system on desktop with wide 32px gutters. \n- **Off-Grid Elements:** To achieve the bespoke look, \"Display\" typography and high-end imagery should occasionally break the grid—shifting 1/2 column width to the left or right.\n- **Architectural Lines:** Use 1px rules (Deep Charcoal at 20% opacity) to separate sections or frame content. These lines should mimic floor plans or architectural sketches.\n- **White Space:** Use a minimum of 128px between major sections to ensure the content never feels crowded.\n\n## Elevation & Depth\n\nThis design system eschews traditional shadows for **Tonal Layers** and **Bold Outlines**.\n\n- **Depth via Tone:** Hierarchy is established by placing Oatmeal containers on top of slightly darker Neutral backgrounds, or Deep Charcoal cards on Oatmeal.\n- **Thin Rules:** Instead of shadows, use 1px solid borders in Deep Charcoal to define boundaries.\n- **Glassmorphism:** Reserved exclusively for navigation bars when scrolling over imagery, using a high-blur (20px) background filter with a subtle Oatmeal tint (60% opacity).\n\n## Shapes\n\nThe shape language is **Sharp (0)**. \n\nTo maintain the architectural and \"bespoke\" feel, avoid rounded corners. All buttons, input fields, cards, and image containers must use hard 90-degree angles. This reinforces the \"Home/Structure\" motif and differentiates the brand from the softer, consumer-grade competitors.\n\n## Components\n\n- **Buttons:** Rectangular with 0px radius. Primary buttons are Deep Charcoal with Oatmeal text. \"Ghost\" buttons use a 1px Charcoal border and wide letter-spacing for the label.\n- **Input Fields:** Bottom-border only (1px Deep Charcoal). Labels are placed in `label-caps` typography above the line.\n- **Cards:** Defined by 1px Deep Charcoal borders. No shadows. Cards should have generous internal padding (32px or more).\n- **Chips/Badges:** Small, rectangular tags with `label-caps` text. Used for \"Certified\" or \"Local\" indicators.\n- **Editorial Callouts:** Large, italicized quotes in Bodoni Moda that span 8 of the 12 columns, flanked by thin vertical 1px rules.\n- **Architectural Rules:** Vertical and horizontal 1px lines used to \"anchor\" floating text or images to the edges of the viewport.",
-                "font": "BODONI_MODA",
-                "headlineFont": "BODONI_MODA",
-                "headlineFontFamily": "Bodoni Moda",
+                "customColor": "#2d3930",
+                "designMd": "---\nname: Heritage Hearth & Hound\ncolors:\n  surface: '#fff8f4'\n  surface-dim: '#e1d8d2'\n  surface-bright: '#fff8f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2eb'\n  surface-container: '#f5ece5'\n  surface-container-high: '#f0e7df'\n  surface-container-highest: '#eae1da'\n  on-surface: '#1f1b17'\n  on-surface-variant: '#434843'\n  inverse-surface: '#34302b'\n  inverse-on-surface: '#f8efe8'\n  outline: '#747873'\n  outline-variant: '#c3c8c2'\n  surface-tint: '#556157'\n  primary: '#18241b'\n  on-primary: '#ffffff'\n  primary-container: '#2d3930'\n  on-primary-container: '#95a397'\n  inverse-primary: '#bccabd'\n  secondary: '#765a26'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed798'\n  on-secondary-container: '#785c29'\n  tertiary: '#20211e'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#363633'\n  on-tertiary-container: '#a09f9a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d8e6d9'\n  primary-fixed-dim: '#bccabd'\n  on-primary-fixed: '#131e16'\n  on-primary-fixed-variant: '#3d4a40'\n  secondary-fixed: '#ffdea9'\n  secondary-fixed-dim: '#e6c184'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5c4211'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fff8f4'\n  on-background: '#1f1b17'\n  surface-variant: '#eae1da'\ntypography:\n  display-lg:\n    fontFamily: Libre Caslon Text\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Libre Caslon Text\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Libre Caslon Text\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Libre Caslon Text\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1120px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stack-sm: 16px\n  stack-md: 32px\n  stack-lg: 64px\n---\n\n## Brand & Style\n\nThis design system establishes an \"Editorial Domesticity\" aesthetic, moving away from clinical or tech-heavy pet care tropes toward a warm, established, and premium local service feel. The brand personality is that of a trusted neighbor who happens to be a professional—someone who values the sanctity of the home and the comfort of the animals within it.\n\nThe style is a blend of **Minimalism** and **Tactile** design. It prioritizes generous whitespace (Parchment), intentional editorial layouts, and high-quality photography. It evokes the feeling of a high-end interior design magazine: calm, sophisticated, and deeply reliable. The visual language uses thin, elegant rules to compartmentalize information, ensuring the interface feels organized yet inviting.\n\nTargeting discerning pet owners who view their animals as family, the UI avoids \"loud\" calls to action, opting instead for a quiet confidence that signals safety and premium care.\n\n## Colors\n\nThe palette is rooted in a \"Modern Heirloom\" philosophy, utilizing earth-toned neutrals to create a sense of groundedness.\n\n*   **Slate Moss (#2D3930):** The primary anchor. Used for high-level branding, primary buttons, and deep background sections. It represents calm, nature, and the professional stability of the service.\n*   **Heirloom Gold (#C9A66B):** The secondary accent. A muted, sophisticated yellow used for emphasis, subtle highlights, and active states. It suggests warmth, sunlight, and a premium touch without being aggressive.\n*   **Parchment (#F9F7F2):** The foundation. Used for main backgrounds to provide a softer, more domestic feel than pure white, reducing eye strain and feeling more \"organic.\"\n*   **Estate Charcoal (#4A4540):** The neutral. A warm-toned grey used for body text and secondary labels to maintain readability while keeping the palette cohesive.\n\n## Typography\n\nThe typographic system relies on a high-contrast pairing that balances tradition with modern legibility.\n\n**Libre Caslon Text** is used for all headlines. Its literary heritage and sharp serifs convey authority and timelessness. For larger display sizes, it should be set with slightly tighter letter-spacing to emphasize its editorial elegance.\n\n**DM Sans** serves as the functional workhorse for body text and interface elements. It is chosen for its wide-set, geometric proportions which feel modern and airy. To enhance the \"premium\" feel, body text uses a slightly increased line-height (1.5x - 1.6x) and subtle letter-spacing to ensure the layout never feels cramped or hurried.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain the feel of a printed book or magazine, centered within the viewport. \n\n*   **The 8px Rhythm:** All padding and margins are multiples of 8px.\n*   **Grid Model:** A 12-column grid is used for desktop (1120px max-width), while a 4-column grid is used for mobile. \n*   **Editorial Rules:** Use thin 1px lines (color: Slate Moss at 10% opacity) to separate content sections vertically or horizontally. These lines should often span the full width of their container.\n*   **Whitespace:** Content \"breathing room\" is prioritized. Use `stack-lg` (64px) between major sections to prevent the UI from feeling cluttered, reinforcing the \"calm\" brand pillar.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows, instead using **Tonal Layers** and **Low-Contrast Outlines** to define hierarchy.\n\n*   **Surfaces:** The primary background is Parchment. Secondary surfaces (like cards or sidebars) can use a slightly lighter \"Paper\" tint or a very soft tint of Slate Moss (5% opacity).\n*   **Borders:** Use 1px solid borders in Slate Moss (at 15% opacity) for cards and inputs. This creates a crisp, architectural feel.\n*   **Depth:** To indicate elevation (e.g., a floating \"Book Now\" bar), use a single, highly diffused \"Ambient Shadow\": `0px 12px 32px rgba(45, 57, 48, 0.08)`. The shadow should be tinted with the primary Slate Moss color rather than pure black to maintain the organic feel.\n\n## Shapes\n\nThe shape language is defined by **Subtle Organic Curves**. While the grid is structured and linear, the elements themselves are softened to feel approachable.\n\n*   **Buttons & Containers:** Standard containers use a 0.5rem (8px) radius. This is enough to feel \"friendly\" without becoming \"bubbly\" or juvenile.\n*   **Special Accents:** Large imagery or featured \"About\" sections may use an asymmetrical \"Organic\" corner radius (e.g., top-left and bottom-right at 100px) to mimic the fluidity of home life and nature.\n*   **Icons:** Use \"Outline\" style icons with a consistent 1.5pt stroke weight and slightly rounded ends to match the typography.\n\n## Components\n\n*   **Buttons:** \n    *   *Primary:* Solid Slate Moss with white DM Sans text (Bold). 0.5rem radius.\n    *   *Secondary:* Transparent with 1px Heirloom Gold border and Heirloom Gold text.\n    *   *Text Button:* All-caps DM Sans with a 1px underline, used for \"Read More\" links.\n*   **Input Fields:** Minimalist design with a 1px Slate Moss bottom-border only (or very subtle all-around border). Focus state transitions the border to Heirloom Gold.\n*   **Cards:** Use a \"Parchment-on-Parchment\" style with a 1px Slate Moss (10% opacity) border. No shadow. Typography within cards should be highly structured using the editorial rules.\n*   **Service Chips:** Small, pill-shaped tags with a light Slate Moss background (10% opacity) and Slate Moss text.\n*   **The \"Daily Log\" List:** A specialized component for owners. Each entry is separated by a 1px horizontal rule, featuring a small thumbnail of the pet, a timestamp in `label-caps`, and a brief body text update.\n*   **Checkboxes:** Square with a 2px radius, filling with Slate Moss when checked. Avoid circular checkboxes to maintain the \"architectural\" feel of the system.",
+                "font": "LIBRE_CASLON_TEXT",
+                "headlineFont": "LIBRE_CASLON_TEXT",
+                "headlineFontFamily": "Libre Caslon Text",
                 "labelFont": "DM_SANS",
                 "labelFontFamily": "Dm Sans",
                 "namedColors": {
-                  "background": "#fcf9f5",
+                  "background": "#fff8f4",
                   "error": "#ba1a1a",
                   "error_container": "#ffdad6",
-                  "inverse_on_surface": "#f3f0ec",
-                  "inverse_primary": "#c8c6c5",
-                  "inverse_surface": "#31302e",
-                  "on_background": "#1c1c1a",
+                  "inverse_on_surface": "#f8efe8",
+                  "inverse_primary": "#bccabd",
+                  "inverse_surface": "#34302b",
+                  "on_background": "#1f1b17",
                   "on_error": "#ffffff",
                   "on_error_container": "#93000a",
                   "on_primary": "#ffffff",
-                  "on_primary_container": "#858383",
-                  "on_primary_fixed": "#1c1b1b",
-                  "on_primary_fixed_variant": "#474746",
+                  "on_primary_container": "#95a397",
+                  "on_primary_fixed": "#131e16",
+                  "on_primary_fixed_variant": "#3d4a40",
                   "on_secondary": "#ffffff",
-                  "on_secondary_container": "#656461",
-                  "on_secondary_fixed": "#1c1c19",
-                  "on_secondary_fixed_variant": "#474743",
-                  "on_surface": "#1c1c1a",
-                  "on_surface_variant": "#444748",
+                  "on_secondary_container": "#785c29",
+                  "on_secondary_fixed": "#271900",
+                  "on_secondary_fixed_variant": "#5c4211",
+                  "on_surface": "#1f1b17",
+                  "on_surface_variant": "#434843",
                   "on_tertiary": "#ffffff",
-                  "on_tertiary_container": "#868382",
-                  "on_tertiary_fixed": "#1c1b1a",
-                  "on_tertiary_fixed_variant": "#484645",
-                  "outline": "#747878",
-                  "outline_variant": "#c4c7c7",
-                  "primary": "#000000",
-                  "primary_container": "#1c1b1b",
-                  "primary_fixed": "#e5e2e1",
-                  "primary_fixed_dim": "#c8c6c5",
-                  "secondary": "#5f5e5b",
-                  "secondary_container": "#e5e2dd",
-                  "secondary_fixed": "#e5e2dd",
-                  "secondary_fixed_dim": "#c9c6c2",
-                  "surface": "#fcf9f5",
-                  "surface_bright": "#fcf9f5",
-                  "surface_container": "#f0ede9",
-                  "surface_container_high": "#eae8e4",
-                  "surface_container_highest": "#e5e2de",
-                  "surface_container_low": "#f6f3ef",
+                  "on_tertiary_container": "#a09f9a",
+                  "on_tertiary_fixed": "#1b1c19",
+                  "on_tertiary_fixed_variant": "#474744",
+                  "outline": "#747873",
+                  "outline_variant": "#c3c8c2",
+                  "primary": "#18241b",
+                  "primary_container": "#2d3930",
+                  "primary_fixed": "#d8e6d9",
+                  "primary_fixed_dim": "#bccabd",
+                  "secondary": "#765a26",
+                  "secondary_container": "#fed798",
+                  "secondary_fixed": "#ffdea9",
+                  "secondary_fixed_dim": "#e6c184",
+                  "surface": "#fff8f4",
+                  "surface_bright": "#fff8f4",
+                  "surface_container": "#f5ece5",
+                  "surface_container_high": "#f0e7df",
+                  "surface_container_highest": "#eae1da",
+                  "surface_container_low": "#fbf2eb",
                   "surface_container_lowest": "#ffffff",
-                  "surface_dim": "#dcdad6",
-                  "surface_tint": "#5f5e5e",
-                  "surface_variant": "#e5e2de",
-                  "tertiary": "#000000",
-                  "tertiary_container": "#1c1b1a",
-                  "tertiary_fixed": "#e6e2df",
-                  "tertiary_fixed_dim": "#cac6c4"
+                  "surface_dim": "#e1d8d2",
+                  "surface_tint": "#556157",
+                  "surface_variant": "#eae1da",
+                  "tertiary": "#20211e",
+                  "tertiary_container": "#363633",
+                  "tertiary_fixed": "#e4e2dd",
+                  "tertiary_fixed_dim": "#c8c6c2"
                 },
-                "overrideNeutralColor": "#706f6c",
-                "overridePrimaryColor": "#1a1a1a",
-                "overrideSecondaryColor": "#f5f2ed",
+                "overrideNeutralColor": "#4a4540",
+                "overridePrimaryColor": "#2d3930",
+                "overrideSecondaryColor": "#c9a66b",
+                "overrideTertiaryColor": "#f9f7f2",
+                "roundness": "ROUND_EIGHT",
                 "spacing": {
-                  "container-max": "1280px",
-                  "gutter": "32px",
+                  "container-max": "1120px",
+                  "gutter": "24px",
                   "margin-desktop": "64px",
-                  "margin-mobile": "24px",
-                  "section-gap": "128px",
+                  "margin-mobile": "20px",
+                  "stack-lg": "64px",
+                  "stack-md": "32px",
+                  "stack-sm": "16px",
                   "unit": "8px"
                 },
                 "spacingScale": 2,
@@ -224,149 +296,154 @@
                     "fontSize": "18px",
                     "fontWeight": "400",
                     "letterSpacing": "0.01em",
-                    "lineHeight": "1.7"
+                    "lineHeight": "28px"
                   },
                   "body-md": {
                     "fontFamily": "DM Sans",
                     "fontSize": "16px",
                     "fontWeight": "400",
-                    "lineHeight": "1.6"
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "24px"
                   },
                   "display-lg": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "80px",
+                    "fontFamily": "Libre Caslon Text",
+                    "fontSize": "48px",
                     "fontWeight": "700",
                     "letterSpacing": "-0.02em",
-                    "lineHeight": "1.1"
+                    "lineHeight": "56px"
                   },
                   "display-lg-mobile": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "48px",
+                    "fontFamily": "Libre Caslon Text",
+                    "fontSize": "36px",
                     "fontWeight": "700",
-                    "letterSpacing": "-0.02em",
-                    "lineHeight": "1.1"
-                  },
-                  "headline-lg": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "48px",
-                    "fontWeight": "600",
-                    "lineHeight": "1.2"
-                  },
-                  "headline-lg-mobile": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "32px",
-                    "fontWeight": "600",
-                    "lineHeight": "1.2"
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "44px"
                   },
                   "headline-md": {
-                    "fontFamily": "Bodoni Moda",
+                    "fontFamily": "Libre Caslon Text",
                     "fontSize": "32px",
-                    "fontWeight": "500",
-                    "lineHeight": "1.3"
+                    "fontWeight": "400",
+                    "lineHeight": "40px"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Libre Caslon Text",
+                    "fontSize": "24px",
+                    "fontWeight": "400",
+                    "lineHeight": "32px"
                   },
                   "label-caps": {
                     "fontFamily": "DM Sans",
                     "fontSize": "12px",
                     "fontWeight": "700",
-                    "letterSpacing": "0.15em",
-                    "lineHeight": "1.0"
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "16px"
+                  },
+                  "label-md": {
+                    "fontFamily": "DM Sans",
+                    "fontSize": "14px",
+                    "fontWeight": "500",
+                    "lineHeight": "20px"
                   }
                 }
               }
             },
-            "name": "assets/9722dddd83734aa9bd0fad2d4fef1bee",
+            "name": "assets/3015be7ddb6c4c8cb74912a39e42b869",
             "version": "1"
           },
           "deviceType": "DESKTOP",
           "generatedBy": "figaro_agent",
-          "height": "9842",
+          "height": "9704",
           "htmlCode": {
-            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ6Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpZCiVodG1sX2Q1MWQzMzEyNGRkMDQyNWNiNjFiYjcyYWNjMGJlNzJmEgsSBxDBloTL-h4YAZIBIgoKcHJvamVjdF9pZBIUQhIzNzM5MjkyNTY4NDI5MTEzNDU&filename=&opi=96797242",
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzQzYjQ3ZDI1YzI5ODRmZTQ5OTcyYmVmNDVlYmUzODhkEgsSBxCq7_ih7hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDQ3MDc5NTYyMDEwMDAxMjg1OA&filename=&opi=96797242",
             "mimeType": "text/html",
-            "name": "projects/373929256842911345/files/fd6cb5aad9fb4f458f83d93f1754c3f9"
+            "name": "projects/10470795620100012858/files/277d13a260db45d2a1c0fcccb53cbfda"
           },
-          "id": "91ec4afe40a748e1a196fedf4209d510",
-          "name": "projects/373929256842911345/screens/91ec4afe40a748e1a196fedf4209d510",
-          "prompt": "Build the complete bespoke DESKTOP landing page for Homebound Pet Sitting. \n\nLayout: Use an editorial, off-grid rhythm. High-contrast typography (Bodoni-style serifs). \nVisual Motif: 1px charcoal borders and generous whitespace.\n\nSections:\n1. Header: Include phone (218) 790-0471 and email homeboundpetsitting@yahoo.com.\n2. Hero: \"Bespoke Care for the Pets Who Stay Home.\" Large, elegant serif headline. Use a high-quality photo placeholder of a calm, well-cared-for pet in a premium home setting.\n3. Credibility: \"Trusted in Dayton since [Year].\" Highlighting local reliability.\n4. Services: \"Our Bespoke Offerings.\" Not a grid of boxes—use a vertical list with hover reveals or staggered imagery.\n5. About: \"The Homebound Philosophy.\" Narrative text about professional, in-home care.\n6. Visit: #visit section with the required empty map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A premium form for \"Inquiries.\"\n8. Footer: Complete contact details and navigation.\n\nTechnical: Smooth scrolling, responsive design, and valid production HTML/CSS. No placeholder text—use real business details.",
+          "id": "8c302de1c2de44699aadce707b9e7ded",
+          "name": "projects/10470795620100012858/screens/8c302de1c2de44699aadce707b9e7ded",
+          "prompt": "Create a bespoke, high-fidelity desktop homepage for Homebound Pet Sitting. \n\nLayout & Structure:\n- Skip standard Bootstrap-like grids. Use an editorial, asymmetrical layout with intentional whitespace and elegant thin dividers.\n- Header: Use the TopAppBar component from {{DATA:COMPONENTS:COMPONENTS_5}}. \n- Hero Section: Large, atmospheric background with {{DATA:IMAGE:IMAGE_3}}. Headline: \"Professional Care in the Comfort of Home.\" \n- Credibility: A minimalist row of local accolades and a \"Trusted in Dayton\" badge.\n- Services: Three non-uniform blocks with overlapping images and text. Use unique icons.\n- About Section: A two-column spread with {{DATA:IMAGE:IMAGE_4}} and a warm letter from the founder.\n- Visit: The required map slot with a minimalist address block.\n- Contact: A clean, single-column form with 'Slate Moss' inputs.\n- Footer: Use the Footer component from {{DATA:COMPONENTS:COMPONENTS_5}}.\n\nVisual Details:\n- Use the 'Heritage Hearth & Hound' design system ({{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_2}}).\n- Background: #fff8f4 (Parchment).\n- Accents: #2d3930 (Slate Moss) for buttons and primary text.\n- Typography: Large, elegant serif (Libre Caslon Text) for headers.\n- Interaction: Subtle fade-in animations and hover states for all buttons.\n\nContent:\n- Use real information: (218) 790-0471, homeboundpetsitting@yahoo.com, Dayton, United States.\n- NO lorem ipsum. All copy must be professional and warm.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "DESIGN",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt3Lio3PotUPKoMt3FzxBRdz-SRhF1aEHQ1IH_VkOP6hUrbd4pQUXnv8ba3eKebZPprwj4vBwMIPibEL7D7nEk_FB7XcshGY5_UiZCdq4Xv01WVqJEIIVA_ewiOq8ITS9MMh_6RFg4IuKbekVzhYbgNq5eeGgEkHKhQ5rVEI3l-2XRld8jUGQqYPKdifu8dA6wDTJO8aEPsLBf3_ODU_M7hyU2NUKtk2gPJX0oicdeZ553k0I-JczFtMw",
-            "name": "projects/373929256842911345/files/fed2183a3531441081cb6c4ea65617e9"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuhXRQMa-Y4rpkndFY4h-VOi50u_YyRpLBPr1QrwqKuhGowuqsdQOcXG5RhX3u3Drivv07OyFo-LYHjgQKrP4GKO9vL2N17vDyfdbBEZHmlI5HVa47h2elSNpRT5dpgCPaGOjfgPbwmsr8Ij2NHm8gke2Tgfv2JZCPTjTiFiAVP9V6nQLkFKPRIJQelIYbRXevaTGXR3ZOE9Ga1XtiZ_gW1zOHRmMbOis0A0T2d4OkDiS-pW12jf53dcZ18",
+            "name": "projects/10470795620100012858/files/42273da96c074878837c17c981725f32"
           },
           "theme": {
             "bodyFont": "DM_SANS",
             "bodyFontFamily": "Dm Sans",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
-            "customColor": "#1a1a1a",
-            "designMd": "---\nname: Homebound\ncolors:\n  surface: '#fcf9f5'\n  surface-dim: '#dcdad6'\n  surface-bright: '#fcf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3ef'\n  surface-container: '#f0ede9'\n  surface-container-high: '#eae8e4'\n  surface-container-highest: '#e5e2de'\n  on-surface: '#1c1c1a'\n  on-surface-variant: '#444748'\n  inverse-surface: '#31302e'\n  inverse-on-surface: '#f3f0ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1c1b1a'\n  on-tertiary-container: '#868382'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#e6e2df'\n  tertiary-fixed-dim: '#cac6c4'\n  on-tertiary-fixed: '#1c1b1a'\n  on-tertiary-fixed-variant: '#484645'\n  background: '#fcf9f5'\n  on-background: '#1c1c1a'\n  surface-variant: '#e5e2de'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 128px\n---\n\n## Brand & Style\n\nThe design system is rooted in a **Premium Editorial** aesthetic, positioning pet care as a bespoke, high-end service. It avoids the typical \"playful\" tropes of the pet industry in favor of a sophisticated, architectural approach that emphasizes the \"Home\" in Homebound.\n\nThe personality is **Trustworthy, Bespoke, and Local.** The visual style leverages **Minimalism** with an **Editorial** twist, utilizing generous whitespace (breathing room), high-contrast typography, and thin architectural lines to create a sense of structure and safety. The UI should feel like a premium lifestyle magazine—intentional, calm, and expertly curated.\n\n## Colors\n\nThe \"Warm Hearth\" palette is designed to evoke a sense of security and domestic comfort.\n\n- **Primary (Deep Charcoal):** Used for all primary headlines, heavy borders, and icons to provide a grounded, authoritative foundation.\n- **Secondary (Soft Oatmeal):** The primary background color. It is softer than pure white, reducing eye strain and creating a \"paper-like\" editorial feel.\n- **Accent (Burnt Sienna):** Used sparingly for call-to-actions, status indicators, or to highlight premium service tiers. It provides a warm, human touch to the cool charcoal and oatmeal.\n- **Neutral:** A muted grey-taupe used for secondary text and subtle dividers to maintain the low-noise environment.\n\n## Typography\n\nThis design system uses a high-contrast pairing to achieve an editorial rhythm. \n\n**Bodoni Moda** is the primary display face. It should be used for large, impactful headlines. In \"Display\" sizes, it may be placed off-grid or overlapping imagery to break the standard digital flow.\n\n**DM Sans** provides a clean, wide-spaced counterpoint. Body copy should prioritize legibility with a generous line height (1.7) to maintain the airy, premium feel. **Label Caps** are used for eyebrows and small metadata to add a structured, professional layer.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** with an **Editorial Rhythm**. \n\n- **The Grid:** A 12-column system on desktop with wide 32px gutters. \n- **Off-Grid Elements:** To achieve the bespoke look, \"Display\" typography and high-end imagery should occasionally break the grid—shifting 1/2 column width to the left or right.\n- **Architectural Lines:** Use 1px rules (Deep Charcoal at 20% opacity) to separate sections or frame content. These lines should mimic floor plans or architectural sketches.\n- **White Space:** Use a minimum of 128px between major sections to ensure the content never feels crowded.\n\n## Elevation & Depth\n\nThis design system eschews traditional shadows for **Tonal Layers** and **Bold Outlines**.\n\n- **Depth via Tone:** Hierarchy is established by placing Oatmeal containers on top of slightly darker Neutral backgrounds, or Deep Charcoal cards on Oatmeal.\n- **Thin Rules:** Instead of shadows, use 1px solid borders in Deep Charcoal to define boundaries.\n- **Glassmorphism:** Reserved exclusively for navigation bars when scrolling over imagery, using a high-blur (20px) background filter with a subtle Oatmeal tint (60% opacity).\n\n## Shapes\n\nThe shape language is **Sharp (0)**. \n\nTo maintain the architectural and \"bespoke\" feel, avoid rounded corners. All buttons, input fields, cards, and image containers must use hard 90-degree angles. This reinforces the \"Home/Structure\" motif and differentiates the brand from the softer, consumer-grade competitors.\n\n## Components\n\n- **Buttons:** Rectangular with 0px radius. Primary buttons are Deep Charcoal with Oatmeal text. \"Ghost\" buttons use a 1px Charcoal border and wide letter-spacing for the label.\n- **Input Fields:** Bottom-border only (1px Deep Charcoal). Labels are placed in `label-caps` typography above the line.\n- **Cards:** Defined by 1px Deep Charcoal borders. No shadows. Cards should have generous internal padding (32px or more).\n- **Chips/Badges:** Small, rectangular tags with `label-caps` text. Used for \"Certified\" or \"Local\" indicators.\n- **Editorial Callouts:** Large, italicized quotes in Bodoni Moda that span 8 of the 12 columns, flanked by thin vertical 1px rules.\n- **Architectural Rules:** Vertical and horizontal 1px lines used to \"anchor\" floating text or images to the edges of the viewport.",
-            "font": "BODONI_MODA",
-            "headlineFont": "BODONI_MODA",
-            "headlineFontFamily": "Bodoni Moda",
+            "customColor": "#2d3930",
+            "designMd": "---\nname: Heritage Hearth & Hound\ncolors:\n  surface: '#fff8f4'\n  surface-dim: '#e1d8d2'\n  surface-bright: '#fff8f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2eb'\n  surface-container: '#f5ece5'\n  surface-container-high: '#f0e7df'\n  surface-container-highest: '#eae1da'\n  on-surface: '#1f1b17'\n  on-surface-variant: '#434843'\n  inverse-surface: '#34302b'\n  inverse-on-surface: '#f8efe8'\n  outline: '#747873'\n  outline-variant: '#c3c8c2'\n  surface-tint: '#556157'\n  primary: '#18241b'\n  on-primary: '#ffffff'\n  primary-container: '#2d3930'\n  on-primary-container: '#95a397'\n  inverse-primary: '#bccabd'\n  secondary: '#765a26'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed798'\n  on-secondary-container: '#785c29'\n  tertiary: '#20211e'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#363633'\n  on-tertiary-container: '#a09f9a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d8e6d9'\n  primary-fixed-dim: '#bccabd'\n  on-primary-fixed: '#131e16'\n  on-primary-fixed-variant: '#3d4a40'\n  secondary-fixed: '#ffdea9'\n  secondary-fixed-dim: '#e6c184'\n  on-secondary-fixed: '#271900'\n  on-secondary-fixed-variant: '#5c4211'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fff8f4'\n  on-background: '#1f1b17'\n  surface-variant: '#eae1da'\ntypography:\n  display-lg:\n    fontFamily: Libre Caslon Text\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 56px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Libre Caslon Text\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Libre Caslon Text\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Libre Caslon Text\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: 20px\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1120px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  stack-sm: 16px\n  stack-md: 32px\n  stack-lg: 64px\n---\n\n## Brand & Style\n\nThis design system establishes an \"Editorial Domesticity\" aesthetic, moving away from clinical or tech-heavy pet care tropes toward a warm, established, and premium local service feel. The brand personality is that of a trusted neighbor who happens to be a professional—someone who values the sanctity of the home and the comfort of the animals within it.\n\nThe style is a blend of **Minimalism** and **Tactile** design. It prioritizes generous whitespace (Parchment), intentional editorial layouts, and high-quality photography. It evokes the feeling of a high-end interior design magazine: calm, sophisticated, and deeply reliable. The visual language uses thin, elegant rules to compartmentalize information, ensuring the interface feels organized yet inviting.\n\nTargeting discerning pet owners who view their animals as family, the UI avoids \"loud\" calls to action, opting instead for a quiet confidence that signals safety and premium care.\n\n## Colors\n\nThe palette is rooted in a \"Modern Heirloom\" philosophy, utilizing earth-toned neutrals to create a sense of groundedness.\n\n*   **Slate Moss (#2D3930):** The primary anchor. Used for high-level branding, primary buttons, and deep background sections. It represents calm, nature, and the professional stability of the service.\n*   **Heirloom Gold (#C9A66B):** The secondary accent. A muted, sophisticated yellow used for emphasis, subtle highlights, and active states. It suggests warmth, sunlight, and a premium touch without being aggressive.\n*   **Parchment (#F9F7F2):** The foundation. Used for main backgrounds to provide a softer, more domestic feel than pure white, reducing eye strain and feeling more \"organic.\"\n*   **Estate Charcoal (#4A4540):** The neutral. A warm-toned grey used for body text and secondary labels to maintain readability while keeping the palette cohesive.\n\n## Typography\n\nThe typographic system relies on a high-contrast pairing that balances tradition with modern legibility.\n\n**Libre Caslon Text** is used for all headlines. Its literary heritage and sharp serifs convey authority and timelessness. For larger display sizes, it should be set with slightly tighter letter-spacing to emphasize its editorial elegance.\n\n**DM Sans** serves as the functional workhorse for body text and interface elements. It is chosen for its wide-set, geometric proportions which feel modern and airy. To enhance the \"premium\" feel, body text uses a slightly increased line-height (1.5x - 1.6x) and subtle letter-spacing to ensure the layout never feels cramped or hurried.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** philosophy on desktop to maintain the feel of a printed book or magazine, centered within the viewport. \n\n*   **The 8px Rhythm:** All padding and margins are multiples of 8px.\n*   **Grid Model:** A 12-column grid is used for desktop (1120px max-width), while a 4-column grid is used for mobile. \n*   **Editorial Rules:** Use thin 1px lines (color: Slate Moss at 10% opacity) to separate content sections vertically or horizontally. These lines should often span the full width of their container.\n*   **Whitespace:** Content \"breathing room\" is prioritized. Use `stack-lg` (64px) between major sections to prevent the UI from feeling cluttered, reinforcing the \"calm\" brand pillar.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows, instead using **Tonal Layers** and **Low-Contrast Outlines** to define hierarchy.\n\n*   **Surfaces:** The primary background is Parchment. Secondary surfaces (like cards or sidebars) can use a slightly lighter \"Paper\" tint or a very soft tint of Slate Moss (5% opacity).\n*   **Borders:** Use 1px solid borders in Slate Moss (at 15% opacity) for cards and inputs. This creates a crisp, architectural feel.\n*   **Depth:** To indicate elevation (e.g., a floating \"Book Now\" bar), use a single, highly diffused \"Ambient Shadow\": `0px 12px 32px rgba(45, 57, 48, 0.08)`. The shadow should be tinted with the primary Slate Moss color rather than pure black to maintain the organic feel.\n\n## Shapes\n\nThe shape language is defined by **Subtle Organic Curves**. While the grid is structured and linear, the elements themselves are softened to feel approachable.\n\n*   **Buttons & Containers:** Standard containers use a 0.5rem (8px) radius. This is enough to feel \"friendly\" without becoming \"bubbly\" or juvenile.\n*   **Special Accents:** Large imagery or featured \"About\" sections may use an asymmetrical \"Organic\" corner radius (e.g., top-left and bottom-right at 100px) to mimic the fluidity of home life and nature.\n*   **Icons:** Use \"Outline\" style icons with a consistent 1.5pt stroke weight and slightly rounded ends to match the typography.\n\n## Components\n\n*   **Buttons:** \n    *   *Primary:* Solid Slate Moss with white DM Sans text (Bold). 0.5rem radius.\n    *   *Secondary:* Transparent with 1px Heirloom Gold border and Heirloom Gold text.\n    *   *Text Button:* All-caps DM Sans with a 1px underline, used for \"Read More\" links.\n*   **Input Fields:** Minimalist design with a 1px Slate Moss bottom-border only (or very subtle all-around border). Focus state transitions the border to Heirloom Gold.\n*   **Cards:** Use a \"Parchment-on-Parchment\" style with a 1px Slate Moss (10% opacity) border. No shadow. Typography within cards should be highly structured using the editorial rules.\n*   **Service Chips:** Small, pill-shaped tags with a light Slate Moss background (10% opacity) and Slate Moss text.\n*   **The \"Daily Log\" List:** A specialized component for owners. Each entry is separated by a 1px horizontal rule, featuring a small thumbnail of the pet, a timestamp in `label-caps`, and a brief body text update.\n*   **Checkboxes:** Square with a 2px radius, filling with Slate Moss when checked. Avoid circular checkboxes to maintain the \"architectural\" feel of the system.",
+            "font": "LIBRE_CASLON_TEXT",
+            "headlineFont": "LIBRE_CASLON_TEXT",
+            "headlineFontFamily": "Libre Caslon Text",
             "labelFont": "DM_SANS",
             "labelFontFamily": "Dm Sans",
             "namedColors": {
-              "background": "#fcf9f5",
+              "background": "#fff8f4",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f3f0ec",
-              "inverse_primary": "#c8c6c5",
-              "inverse_surface": "#31302e",
-              "on_background": "#1c1c1a",
+              "inverse_on_surface": "#f8efe8",
+              "inverse_primary": "#bccabd",
+              "inverse_surface": "#34302b",
+              "on_background": "#1f1b17",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
-              "on_primary_container": "#858383",
-              "on_primary_fixed": "#1c1b1b",
-              "on_primary_fixed_variant": "#474746",
+              "on_primary_container": "#95a397",
+              "on_primary_fixed": "#131e16",
+              "on_primary_fixed_variant": "#3d4a40",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#656461",
-              "on_secondary_fixed": "#1c1c19",
-              "on_secondary_fixed_variant": "#474743",
-              "on_surface": "#1c1c1a",
-              "on_surface_variant": "#444748",
+              "on_secondary_container": "#785c29",
+              "on_secondary_fixed": "#271900",
+              "on_secondary_fixed_variant": "#5c4211",
+              "on_surface": "#1f1b17",
+              "on_surface_variant": "#434843",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#868382",
-              "on_tertiary_fixed": "#1c1b1a",
-              "on_tertiary_fixed_variant": "#484645",
-              "outline": "#747878",
-              "outline_variant": "#c4c7c7",
-              "primary": "#000000",
-              "primary_container": "#1c1b1b",
-              "primary_fixed": "#e5e2e1",
-              "primary_fixed_dim": "#c8c6c5",
-              "secondary": "#5f5e5b",
-              "secondary_container": "#e5e2dd",
-              "secondary_fixed": "#e5e2dd",
-              "secondary_fixed_dim": "#c9c6c2",
-              "surface": "#fcf9f5",
-              "surface_bright": "#fcf9f5",
-              "surface_container": "#f0ede9",
-              "surface_container_high": "#eae8e4",
-              "surface_container_highest": "#e5e2de",
-              "surface_container_low": "#f6f3ef",
+              "on_tertiary_container": "#a09f9a",
+              "on_tertiary_fixed": "#1b1c19",
+              "on_tertiary_fixed_variant": "#474744",
+              "outline": "#747873",
+              "outline_variant": "#c3c8c2",
+              "primary": "#18241b",
+              "primary_container": "#2d3930",
+              "primary_fixed": "#d8e6d9",
+              "primary_fixed_dim": "#bccabd",
+              "secondary": "#765a26",
+              "secondary_container": "#fed798",
+              "secondary_fixed": "#ffdea9",
+              "secondary_fixed_dim": "#e6c184",
+              "surface": "#fff8f4",
+              "surface_bright": "#fff8f4",
+              "surface_container": "#f5ece5",
+              "surface_container_high": "#f0e7df",
+              "surface_container_highest": "#eae1da",
+              "surface_container_low": "#fbf2eb",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#dcdad6",
-              "surface_tint": "#5f5e5e",
-              "surface_variant": "#e5e2de",
-              "tertiary": "#000000",
-              "tertiary_container": "#1c1b1a",
-              "tertiary_fixed": "#e6e2df",
-              "tertiary_fixed_dim": "#cac6c4"
+              "surface_dim": "#e1d8d2",
+              "surface_tint": "#556157",
+              "surface_variant": "#eae1da",
+              "tertiary": "#20211e",
+              "tertiary_container": "#363633",
+              "tertiary_fixed": "#e4e2dd",
+              "tertiary_fixed_dim": "#c8c6c2"
             },
-            "overrideNeutralColor": "#706f6c",
-            "overridePrimaryColor": "#1a1a1a",
-            "overrideSecondaryColor": "#f5f2ed",
+            "overrideNeutralColor": "#4a4540",
+            "overridePrimaryColor": "#2d3930",
+            "overrideSecondaryColor": "#c9a66b",
+            "overrideTertiaryColor": "#f9f7f2",
+            "roundness": "ROUND_EIGHT",
             "spacing": {
-              "container-max": "1280px",
-              "gutter": "32px",
+              "container-max": "1120px",
+              "gutter": "24px",
               "margin-desktop": "64px",
-              "margin-mobile": "24px",
-              "section-gap": "128px",
+              "margin-mobile": "20px",
+              "stack-lg": "64px",
+              "stack-md": "32px",
+              "stack-sm": "16px",
               "unit": "8px"
             },
             "spacingScale": 2,
@@ -376,56 +453,57 @@
                 "fontSize": "18px",
                 "fontWeight": "400",
                 "letterSpacing": "0.01em",
-                "lineHeight": "1.7"
+                "lineHeight": "28px"
               },
               "body-md": {
                 "fontFamily": "DM Sans",
                 "fontSize": "16px",
                 "fontWeight": "400",
-                "lineHeight": "1.6"
+                "letterSpacing": "0.01em",
+                "lineHeight": "24px"
               },
               "display-lg": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "80px",
+                "fontFamily": "Libre Caslon Text",
+                "fontSize": "48px",
                 "fontWeight": "700",
                 "letterSpacing": "-0.02em",
-                "lineHeight": "1.1"
+                "lineHeight": "56px"
               },
               "display-lg-mobile": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "48px",
+                "fontFamily": "Libre Caslon Text",
+                "fontSize": "36px",
                 "fontWeight": "700",
-                "letterSpacing": "-0.02em",
-                "lineHeight": "1.1"
-              },
-              "headline-lg": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "48px",
-                "fontWeight": "600",
-                "lineHeight": "1.2"
-              },
-              "headline-lg-mobile": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "32px",
-                "fontWeight": "600",
-                "lineHeight": "1.2"
+                "letterSpacing": "-0.01em",
+                "lineHeight": "44px"
               },
               "headline-md": {
-                "fontFamily": "Bodoni Moda",
+                "fontFamily": "Libre Caslon Text",
                 "fontSize": "32px",
-                "fontWeight": "500",
-                "lineHeight": "1.3"
+                "fontWeight": "400",
+                "lineHeight": "40px"
+              },
+              "headline-sm": {
+                "fontFamily": "Libre Caslon Text",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "32px"
               },
               "label-caps": {
                 "fontFamily": "DM Sans",
                 "fontSize": "12px",
                 "fontWeight": "700",
-                "letterSpacing": "0.15em",
-                "lineHeight": "1.0"
+                "letterSpacing": "0.1em",
+                "lineHeight": "16px"
+              },
+              "label-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "lineHeight": "20px"
               }
             }
           },
-          "title": "Homebound Pet Sitting - Bespoke Editorial Homepage",
+          "title": "Homebound Pet Sitting - Bespoke Homepage",
           "width": "2560"
         }
       ],
@@ -433,15 +511,15 @@
     }
   },
   {
-    "text": "I've designed a bespoke, editorial-grade homepage for Homebound Pet Sitting. \n\n### Design Strategy:\n*   **Visual Identity:** I moved away from common \"pet care\" tropes in favor of a premium, architectural aesthetic. The palette uses **Warm Hearth** tones—Charcoal, Oatmeal, and Burnt Sienna—to convey sophistication and trust.\n*   **Editorial Layout:** The site uses an off-grid, asymmetrical rhythm with generous whitespace and 1px \"architectural\" rules. This creates a high-end feel that differentiates the brand from local competitors.\n*   **Typography:** A high-contrast Serif (Bodoni-style) for headings creates a sense of legacy and precision, while a clean Sans-Serif ensures readability.\n*   **Narrative Focus:** Instead of generic service cards, I used a structured vertical list for \"Bespoke Offerings\" to maintain the editorial flow.\n\nThe site is production-ready, responsive, and includes the requested map slot and functional contact form UI."
+    "text": "I've designed a bespoke, editorial-grade homepage for Homebound Pet Sitting. This design moves away from generic local-business templates, opting for a sophisticated \"Heritage Hearth & Hound\" aesthetic.\n\n### Key Design Choices:\n- **Editorial Layout:** I used an asymmetrical, high-contrast layout with generous whitespace and fine hairline rules to evoke a sense of premium, personalized service.\n- **Warm Color Story:** The palette uses 'Parchment' (soft off-white) and 'Slate Moss' (deep, calming green) to create a cozy, domestic atmosphere that feels trustworthy and high-end.\n- **Bespoke Motifs:** I've integrated organic curves and custom SVG icons to ensure every section feels intentionally designed rather than assembled.\n- **Authentic Imagery:** High-end editorial photography (Professional, high-end editorial photography of a happy dog sitting comfortably on a stylish, sun-drenched living room rug. Soft natural light, warm domestic atmosphere, shallow depth of field. High-resolution, architectural digest style., A close-up, warm-toned photo of a person's hand gently petting a cat's head. Cozy home environment, soft textures, professional lifestyle photography. Emotional and comforting.) is used to anchor the emotional connection between pet owners and home-based care.\n\nThe result is a production-ready desktop experience that prioritizes professional credibility while maintaining the intimate, local feel of the Homebound brand."
   },
   {
-    "suggestion": "Make it dark mode for a more exclusive feel"
+    "suggestion": "Make it mobile-responsive"
   },
   {
-    "suggestion": "Add more pet-centric motion effects"
+    "suggestion": "Add more detail to the 'Services' section"
   },
   {
-    "suggestion": "Add a 'The Journal' blog section layout"
+    "suggestion": "Create a dark mode variation"
   }
 ]

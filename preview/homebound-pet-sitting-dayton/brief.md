@@ -86,7 +86,7 @@ Recent posts from their Facebook page:
 
 - **Source:** http://www.facebook.com/homeboundpetsitting
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T01:08:10.106Z
+- **Scraped:** 2026-06-08T01:12:01.661Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at http://www.facebook.com/homeboundpetsitting. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

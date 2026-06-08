@@ -5,7 +5,11 @@
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
-- responsive horizontal margins (8 blocks)
+- body overflow-x-clip
+- section overflow-hidden for decorative layers
+- nav min-width + tighter mobile gap
+- nav brand truncate on mobile
+- nav toggle aria-label
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

@@ -1,9 +1,46 @@
-// Simple parallax or micro-interactions could be added here
-        document.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroImage = document.querySelector('.off-grid-right');
-            if(heroImage) {
-                heroImage.style.transform = `translateY(${scrolled * 0.05}px) translateX(4%)`;
+// Mobile Menu Logic
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+        });
+
+        // Simple Form Submission UX
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'Preview only';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'Preview only';
+                btn.classList.replace('bg-primary', 'bg-secondary');
+                contactForm.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.replace('bg-secondary', 'bg-primary');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Scroll highlight for nav
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-ambient');
+            } else {
+                header.classList.remove('shadow-ambient');
             }
         });
 

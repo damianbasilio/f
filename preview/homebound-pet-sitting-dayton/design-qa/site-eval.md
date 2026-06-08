@@ -6,8 +6,8 @@
 
 - none
 
-## Warnings (1)
+## Warnings (0)
 
-- Broken anchor: #journal
+- none
 
 _Run after every build. Fix errors before images/outreach._
