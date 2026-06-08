@@ -1,24 +1,4 @@
-// Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileNav = document.getElementById('mobile-nav');
-        const closeMenu = document.getElementById('close-menu');
-        const navLinks = mobileNav.querySelectorAll('a');
-
-        menuToggle.addEventListener('click', () => {
-            mobileNav.classList.remove('translate-x-full');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            mobileNav.classList.add('translate-x-full');
-        });
-
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileNav.classList.add('translate-x-full');
-            });
-        });
-
-        // Intersection Observer for fade-in/slide effects
+// Smooth reveal on scroll for vendor cards
         const observerOptions = {
             threshold: 0.1
         };
@@ -26,32 +6,36 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
                     entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+        document.querySelectorAll('#lineup .group').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
         });
-        
-        // Simple micro-interaction for active nav
+
+        // Simple Nav Highlighting
         window.addEventListener('scroll', () => {
-            const sections = ['offerings', 'culture', 'visit', 'booking'];
+            const sections = ['lineup', 'story', 'location', 'contact'];
             let current = '';
             
             sections.forEach(section => {
                 const element = document.getElementById(section);
-                const rect = element.getBoundingClientRect();
-                if (rect.top <= 150) current = section;
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (pageYOffset >= sectionTop - 150) {
+                        current = section;
+                    }
+                }
             });
 
             document.querySelectorAll('nav a').forEach(a => {
-                a.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
-                if (a.getAttribute('href') === `#${current}`) {
-                    a.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                a.classList.remove('active-nav-link');
+                if (a.getAttribute('href').includes(current) && current !== '') {
+                    a.classList.add('active-nav-link');
                 }
             });
         });
