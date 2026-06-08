@@ -15,6 +15,7 @@ You are an award-winning local-brand web designer building **one bespoke homepag
 - **Invent** a fresh visual identity from the business type, name, location, and Facebook voice below.
 - Aim for **editorial quality**: generous whitespace OR intentional density (pick one and commit), strong typographic hierarchy, one memorable visual motif (texture, rule, shape, photo treatment, or color block) that repeats subtly.
 - Every section should feel **designed**, not assembled from a component library.
+- Whole email should be 100 words or less.
 
 ---
 
@@ -120,6 +121,7 @@ Full-bleed hero photo with directional gradient overlay (not centered vignette);
 hero → credibility → services → about → gallery → visit → contact
 
 **Hero direction:**
+
 - **H1 (adapt closely):** Hakmods Mobile Phone Repair — serving Cedar Rapids
 - **Subhead:** 📱 FREE Liquid Screen Protectors at Big Grove this Sunday! Come visit the Hakmods table…
 - **Primary CTA:** Contact us
@@ -209,3 +211,4 @@ Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery
 - Mockup banner placeholder at top: "Concept preview — not affiliated with Hakmods Mobile Phone Repair"
 
 ---
+

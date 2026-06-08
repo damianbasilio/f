@@ -1,33 +1,20 @@
-// Micro-interactions and parallax effect on images
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const images = document.querySelectorAll('img');
-            images.forEach(img => {
-                const speed = 0.05;
-                img.style.transform = `translateY(${scrolled * speed}px)`;
+// Micro-interactions and subtle glow effects
+        document.querySelectorAll('input').forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.add('text-primary-fixed-dim');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.querySelector('label').classList.remove('text-primary-fixed-dim');
             });
         });
 
-        // Add active state to navigation on scroll
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('nav a');
-
+        // Simple parallax or reveal effect on scroll can be added here
         window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.clientHeight;
-                if (pageYOffset >= sectionTop - 150) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
-                if (link.getAttribute('href').includes(current) && current !== '') {
-                    link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
-                }
-            });
+            const scrolled = window.pageYOffset;
+            const heroImage = document.querySelector('section img');
+            if(heroImage) {
+                heroImage.style.transform = `translateY(${scrolled * 0.4}px)`;
+            }
         });
 
 (() => {

@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** http://www.facebook.com/Hakmods
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T00:55:17.036Z
+- **Scraped:** 2026-06-08T01:06:46.484Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at http://www.facebook.com/Hakmods. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
