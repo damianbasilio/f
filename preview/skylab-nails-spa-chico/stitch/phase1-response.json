@@ -1,0 +1,439 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Celestial Premium",
+          "styleGuidelines": "## Brand & Style\nThe design system embodies \"Celestial Premium,\" a narrative that bridges the technical precision of high-end nail artistry with the infinite serenity of the night sky. The brand personality is professional and avant-garde, positioning the salon as a destination for artistic discovery rather than just a service provider.\n\nThe visual style is a sophisticated blend of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace—or more accurately, \"darkspace\"—to let editorial imagery breathe. Translucent layers and shimmering gold accents create a sense of depth, mimicking the layering of gels and polishes. The overall emotional response should be one of profound calm and curated luxury.\n\n## Layout & Spacing\nThe layout rejects standard block-based web design in favor of **Editorial Asymmetry**. \n\n- **Grid:** Use a 12-column fluid grid, but frequently break the grid by overlapping images and text blocks. \n- **Overlaps:** Elements (like a high-res photo of nail art) should overlap background shapes or text containers by the `asymmetric-offset` value to create depth.\n- **Negative Space:** Use intentionally large vertical gaps (up to 160px on desktop) between sections to create a serene, unhurried browsing experience.\n- **Mobile Adaption:** On mobile, revert to a single-column flow but maintain the overlapping \"orbital\" line decorations to preserve the brand's visual motif.\n\n## Elevation & Depth\nDepth is created through **Glassmorphism** and layered \"Orbital\" elements rather than traditional shadows.\n\n1.  **Base Layer:** Solid Midnight Navy (#0A0E1A).\n2.  **Decorative Layer:** Thin, 1px Champagne Gold lines drawn in large, sweeping arcs that disappear off the edge of the viewport.\n3.  **Surface Layer:** Semi-transparent containers (Background: #E6E6FA at 5-10% opacity) with a 20px backdrop blur. This creates a \"frosted glass\" effect that feels like polished acrylic or top-coat gel.\n4.  **Accent Elevation:** High-contrast Gold borders (1px) are used only for active states or primary call-outs, making them \"glow\" against the dark background.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped with a solid Champagne Gold fill and Navy text. Secondary buttons are \"Ghost\" style with a 1px Gold border and shimmering hover effects.\n- **Cards:** Use the glassmorphism style—translucent background with a heavy backdrop blur and a very subtle 0.5px border in Cloud Lavender.\n- **Inputs:** Minimalist bottom-border only. On focus, the border transitions from Lavender to Gold with a soft glow effect.\n- **Chips/Labels:** Small, pill-shaped elements with Cloud Lavender text and a low-opacity Lavender fill.\n- **Orbital Dividers:** Instead of horizontal rules, use large-radius arcs (SVG) in Gold to separate major page sections.\n- **Nail Art Gallery:** A custom component using an asymmetrical masonry grid where items have varying corner radii to feel more organic.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0a0e1a",
+            "designMd": "---\nname: Celestial Premium\ncolors:\n  surface: '#111415'\n  surface-dim: '#111415'\n  surface-bright: '#373a3b'\n  surface-container-lowest: '#0c0f10'\n  surface-container-low: '#191c1d'\n  surface-container: '#1d2021'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#323536'\n  on-surface: '#e1e3e4'\n  on-surface-variant: '#c7c6cc'\n  inverse-surface: '#e1e3e4'\n  inverse-on-surface: '#2e3132'\n  outline: '#909096'\n  outline-variant: '#46464c'\n  surface-tint: '#c3c6d7'\n  primary: '#c3c6d7'\n  on-primary: '#2c303d'\n  primary-container: '#0a0e1a'\n  on-primary-container: '#777b8a'\n  inverse-primary: '#5a5e6d'\n  secondary: '#e9c349'\n  on-secondary: '#3c2f00'\n  secondary-container: '#af8d11'\n  on-secondary-container: '#342800'\n  tertiary: '#c5c5d8'\n  on-tertiary: '#2e2f3e'\n  tertiary-container: '#0c0e1b'\n  on-tertiary-container: '#797a8c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dfe2f3'\n  primary-fixed-dim: '#c3c6d7'\n  on-primary-fixed: '#171b28'\n  on-primary-fixed-variant: '#434654'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#e1e1f5'\n  tertiary-fixed-dim: '#c5c5d8'\n  on-tertiary-fixed: '#191b29'\n  on-tertiary-fixed-variant: '#444655'\n  background: '#111415'\n  on-background: '#e1e3e4'\n  surface-variant: '#323536'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  asymmetric-offset: 64px\n---\n\n## Brand & Style\nThe design system embodies \"Celestial Premium,\" a narrative that bridges the technical precision of high-end nail artistry with the infinite serenity of the night sky. The brand personality is professional and avant-garde, positioning the salon as a destination for artistic discovery rather than just a service provider.\n\nThe visual style is a sophisticated blend of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace—or more accurately, \"darkspace\"—to let editorial imagery breathe. Translucent layers and shimmering gold accents create a sense of depth, mimicking the layering of gels and polishes. The overall emotional response should be one of profound calm and curated luxury.\n\n## Colors\nThe palette, \"Deep Dusk to Starlight,\" relies on extreme contrast to establish a premium feel. \n\n- **Primary (Midnight Navy):** The foundational canvas. It should be used for large surfaces and backgrounds to evoke the depths of the cosmos.\n- **Secondary (Champagne Gold):** Used sparingly for \"orbital\" lines, primary call-to-actions, and interactive highlights. It represents precision and luxury.\n- **Tertiary (Cloud Lavender):** A soft, ethereal counter-balance used for secondary information, subtle gradients, and background blurs.\n- **Neutral:** A high-clarity off-white used exclusively for body text and functional icons to ensure maximum legibility against the dark primary base.\n\n## Typography\nThe typography system pairs high-contrast editorial elegance with modern utilitarian clarity. \n\n**Playfair Display** is reserved for headlines. It should be typeset with tight tracking in larger sizes to emphasize its dramatic stroke contrast. For \"Celestial\" effects, use italic styles for specific keywords within headlines to break the rhythm.\n\n**Montserrat** provides the functional balance. It is set with generous letter spacing (tracking) to evoke a sense of openness and luxury. All labels and navigation items should use Montserrat in uppercase with increased letter spacing to maintain the avant-garde aesthetic.\n\n## Layout & Spacing\nThe layout rejects standard block-based web design in favor of **Editorial Asymmetry**. \n\n- **Grid:** Use a 12-column fluid grid, but frequently break the grid by overlapping images and text blocks. \n- **Overlaps:** Elements (like a high-res photo of nail art) should overlap background shapes or text containers by the `asymmetric-offset` value to create depth.\n- **Negative Space:** Use intentionally large vertical gaps (up to 160px on desktop) between sections to create a serene, unhurried browsing experience.\n- **Mobile Adaption:** On mobile, revert to a single-column flow but maintain the overlapping \"orbital\" line decorations to preserve the brand's visual motif.\n\n## Elevation & Depth\nDepth is created through **Glassmorphism** and layered \"Orbital\" elements rather than traditional shadows.\n\n1.  **Base Layer:** Solid Midnight Navy (#0A0E1A).\n2.  **Decorative Layer:** Thin, 1px Champagne Gold lines drawn in large, sweeping arcs that disappear off the edge of the viewport.\n3.  **Surface Layer:** Semi-transparent containers (Background: #E6E6FA at 5-10% opacity) with a 20px backdrop blur. This creates a \"frosted glass\" effect that feels like polished acrylic or top-coat gel.\n4.  **Accent Elevation:** High-contrast Gold borders (1px) are used only for active states or primary call-outs, making them \"glow\" against the dark background.\n\n## Shapes\nThe shape language mimics the curvature of a perfectly manicured nail. \n\nStandard containers and cards use the **Rounded** (0.5rem) setting. However, interactive elements like buttons and chips must follow a **Pill-shaped** convention to mirror the organic, soft-edged aesthetic of the brand. \n\nCircular masks should be applied to 30% of editorial imagery to reinforce the \"Orbital\" motif. These circles should often be positioned off-center within their parent containers.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped with a solid Champagne Gold fill and Navy text. Secondary buttons are \"Ghost\" style with a 1px Gold border and shimmering hover effects.\n- **Cards:** Use the glassmorphism style—translucent background with a heavy backdrop blur and a very subtle 0.5px border in Cloud Lavender.\n- **Inputs:** Minimalist bottom-border only. On focus, the border transitions from Lavender to Gold with a soft glow effect.\n- **Chips/Labels:** Small, pill-shaped elements with Cloud Lavender text and a low-opacity Lavender fill.\n- **Orbital Dividers:** Instead of horizontal rules, use large-radius arcs (SVG) in Gold to separate major page sections.\n- **Nail Art Gallery:** A custom component using an asymmetrical masonry grid where items have varying corner radii to feel more organic.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#111415",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2e3132",
+              "inverse_primary": "#5a5e6d",
+              "inverse_surface": "#e1e3e4",
+              "on_background": "#e1e3e4",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#2c303d",
+              "on_primary_container": "#777b8a",
+              "on_primary_fixed": "#171b28",
+              "on_primary_fixed_variant": "#434654",
+              "on_secondary": "#3c2f00",
+              "on_secondary_container": "#342800",
+              "on_secondary_fixed": "#241a00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#e1e3e4",
+              "on_surface_variant": "#c7c6cc",
+              "on_tertiary": "#2e2f3e",
+              "on_tertiary_container": "#797a8c",
+              "on_tertiary_fixed": "#191b29",
+              "on_tertiary_fixed_variant": "#444655",
+              "outline": "#909096",
+              "outline_variant": "#46464c",
+              "primary": "#c3c6d7",
+              "primary_container": "#0a0e1a",
+              "primary_fixed": "#dfe2f3",
+              "primary_fixed_dim": "#c3c6d7",
+              "secondary": "#e9c349",
+              "secondary_container": "#af8d11",
+              "secondary_fixed": "#ffe088",
+              "secondary_fixed_dim": "#e9c349",
+              "surface": "#111415",
+              "surface_bright": "#373a3b",
+              "surface_container": "#1d2021",
+              "surface_container_high": "#282a2b",
+              "surface_container_highest": "#323536",
+              "surface_container_low": "#191c1d",
+              "surface_container_lowest": "#0c0f10",
+              "surface_dim": "#111415",
+              "surface_tint": "#c3c6d7",
+              "surface_variant": "#323536",
+              "tertiary": "#c5c5d8",
+              "tertiary_container": "#0c0e1b",
+              "tertiary_fixed": "#e1e1f5",
+              "tertiary_fixed_dim": "#c5c5d8"
+            },
+            "overrideNeutralColor": "#f8f9fa",
+            "overridePrimaryColor": "#0a0e1a",
+            "overrideSecondaryColor": "#d4af37",
+            "overrideTertiaryColor": "#e6e6fa",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "asymmetric-offset": "64px",
+              "container-max": "1440px",
+              "gutter": "24px",
+              "margin-desktop": "80px",
+              "margin-mobile": "24px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.03em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "1.6"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "label-sm": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1"
+              }
+            }
+          }
+        },
+        "name": "assets/8c59bfc661df4bfbbde0d167efb00387",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Celestial Premium",
+                "styleGuidelines": "## Brand & Style\nThe design system embodies \"Celestial Premium,\" a narrative that bridges the technical precision of high-end nail artistry with the infinite serenity of the night sky. The brand personality is professional and avant-garde, positioning the salon as a destination for artistic discovery rather than just a service provider.\n\nThe visual style is a sophisticated blend of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace—or more accurately, \"darkspace\"—to let editorial imagery breathe. Translucent layers and shimmering gold accents create a sense of depth, mimicking the layering of gels and polishes. The overall emotional response should be one of profound calm and curated luxury.\n\n## Layout & Spacing\nThe layout rejects standard block-based web design in favor of **Editorial Asymmetry**. \n\n- **Grid:** Use a 12-column fluid grid, but frequently break the grid by overlapping images and text blocks. \n- **Overlaps:** Elements (like a high-res photo of nail art) should overlap background shapes or text containers by the `asymmetric-offset` value to create depth.\n- **Negative Space:** Use intentionally large vertical gaps (up to 160px on desktop) between sections to create a serene, unhurried browsing experience.\n- **Mobile Adaption:** On mobile, revert to a single-column flow but maintain the overlapping \"orbital\" line decorations to preserve the brand's visual motif.\n\n## Elevation & Depth\nDepth is created through **Glassmorphism** and layered \"Orbital\" elements rather than traditional shadows.\n\n1.  **Base Layer:** Solid Midnight Navy (#0A0E1A).\n2.  **Decorative Layer:** Thin, 1px Champagne Gold lines drawn in large, sweeping arcs that disappear off the edge of the viewport.\n3.  **Surface Layer:** Semi-transparent containers (Background: #E6E6FA at 5-10% opacity) with a 20px backdrop blur. This creates a \"frosted glass\" effect that feels like polished acrylic or top-coat gel.\n4.  **Accent Elevation:** High-contrast Gold borders (1px) are used only for active states or primary call-outs, making them \"glow\" against the dark background.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped with a solid Champagne Gold fill and Navy text. Secondary buttons are \"Ghost\" style with a 1px Gold border and shimmering hover effects.\n- **Cards:** Use the glassmorphism style—translucent background with a heavy backdrop blur and a very subtle 0.5px border in Cloud Lavender.\n- **Inputs:** Minimalist bottom-border only. On focus, the border transitions from Lavender to Gold with a soft glow effect.\n- **Chips/Labels:** Small, pill-shaped elements with Cloud Lavender text and a low-opacity Lavender fill.\n- **Orbital Dividers:** Instead of horizontal rules, use large-radius arcs (SVG) in Gold to separate major page sections.\n- **Nail Art Gallery:** A custom component using an asymmetrical masonry grid where items have varying corner radii to feel more organic.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#0a0e1a",
+                  "designMd": "---\nname: Celestial Premium\ncolors:\n  surface: '#111415'\n  surface-dim: '#111415'\n  surface-bright: '#373a3b'\n  surface-container-lowest: '#0c0f10'\n  surface-container-low: '#191c1d'\n  surface-container: '#1d2021'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#323536'\n  on-surface: '#e1e3e4'\n  on-surface-variant: '#c7c6cc'\n  inverse-surface: '#e1e3e4'\n  inverse-on-surface: '#2e3132'\n  outline: '#909096'\n  outline-variant: '#46464c'\n  surface-tint: '#c3c6d7'\n  primary: '#c3c6d7'\n  on-primary: '#2c303d'\n  primary-container: '#0a0e1a'\n  on-primary-container: '#777b8a'\n  inverse-primary: '#5a5e6d'\n  secondary: '#e9c349'\n  on-secondary: '#3c2f00'\n  secondary-container: '#af8d11'\n  on-secondary-container: '#342800'\n  tertiary: '#c5c5d8'\n  on-tertiary: '#2e2f3e'\n  tertiary-container: '#0c0e1b'\n  on-tertiary-container: '#797a8c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dfe2f3'\n  primary-fixed-dim: '#c3c6d7'\n  on-primary-fixed: '#171b28'\n  on-primary-fixed-variant: '#434654'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#e1e1f5'\n  tertiary-fixed-dim: '#c5c5d8'\n  on-tertiary-fixed: '#191b29'\n  on-tertiary-fixed-variant: '#444655'\n  background: '#111415'\n  on-background: '#e1e3e4'\n  surface-variant: '#323536'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  asymmetric-offset: 64px\n---\n\n## Brand & Style\nThe design system embodies \"Celestial Premium,\" a narrative that bridges the technical precision of high-end nail artistry with the infinite serenity of the night sky. The brand personality is professional and avant-garde, positioning the salon as a destination for artistic discovery rather than just a service provider.\n\nThe visual style is a sophisticated blend of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace—or more accurately, \"darkspace\"—to let editorial imagery breathe. Translucent layers and shimmering gold accents create a sense of depth, mimicking the layering of gels and polishes. The overall emotional response should be one of profound calm and curated luxury.\n\n## Colors\nThe palette, \"Deep Dusk to Starlight,\" relies on extreme contrast to establish a premium feel. \n\n- **Primary (Midnight Navy):** The foundational canvas. It should be used for large surfaces and backgrounds to evoke the depths of the cosmos.\n- **Secondary (Champagne Gold):** Used sparingly for \"orbital\" lines, primary call-to-actions, and interactive highlights. It represents precision and luxury.\n- **Tertiary (Cloud Lavender):** A soft, ethereal counter-balance used for secondary information, subtle gradients, and background blurs.\n- **Neutral:** A high-clarity off-white used exclusively for body text and functional icons to ensure maximum legibility against the dark primary base.\n\n## Typography\nThe typography system pairs high-contrast editorial elegance with modern utilitarian clarity. \n\n**Playfair Display** is reserved for headlines. It should be typeset with tight tracking in larger sizes to emphasize its dramatic stroke contrast. For \"Celestial\" effects, use italic styles for specific keywords within headlines to break the rhythm.\n\n**Montserrat** provides the functional balance. It is set with generous letter spacing (tracking) to evoke a sense of openness and luxury. All labels and navigation items should use Montserrat in uppercase with increased letter spacing to maintain the avant-garde aesthetic.\n\n## Layout & Spacing\nThe layout rejects standard block-based web design in favor of **Editorial Asymmetry**. \n\n- **Grid:** Use a 12-column fluid grid, but frequently break the grid by overlapping images and text blocks. \n- **Overlaps:** Elements (like a high-res photo of nail art) should overlap background shapes or text containers by the `asymmetric-offset` value to create depth.\n- **Negative Space:** Use intentionally large vertical gaps (up to 160px on desktop) between sections to create a serene, unhurried browsing experience.\n- **Mobile Adaption:** On mobile, revert to a single-column flow but maintain the overlapping \"orbital\" line decorations to preserve the brand's visual motif.\n\n## Elevation & Depth\nDepth is created through **Glassmorphism** and layered \"Orbital\" elements rather than traditional shadows.\n\n1.  **Base Layer:** Solid Midnight Navy (#0A0E1A).\n2.  **Decorative Layer:** Thin, 1px Champagne Gold lines drawn in large, sweeping arcs that disappear off the edge of the viewport.\n3.  **Surface Layer:** Semi-transparent containers (Background: #E6E6FA at 5-10% opacity) with a 20px backdrop blur. This creates a \"frosted glass\" effect that feels like polished acrylic or top-coat gel.\n4.  **Accent Elevation:** High-contrast Gold borders (1px) are used only for active states or primary call-outs, making them \"glow\" against the dark background.\n\n## Shapes\nThe shape language mimics the curvature of a perfectly manicured nail. \n\nStandard containers and cards use the **Rounded** (0.5rem) setting. However, interactive elements like buttons and chips must follow a **Pill-shaped** convention to mirror the organic, soft-edged aesthetic of the brand. \n\nCircular masks should be applied to 30% of editorial imagery to reinforce the \"Orbital\" motif. These circles should often be positioned off-center within their parent containers.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped with a solid Champagne Gold fill and Navy text. Secondary buttons are \"Ghost\" style with a 1px Gold border and shimmering hover effects.\n- **Cards:** Use the glassmorphism style—translucent background with a heavy backdrop blur and a very subtle 0.5px border in Cloud Lavender.\n- **Inputs:** Minimalist bottom-border only. On focus, the border transitions from Lavender to Gold with a soft glow effect.\n- **Chips/Labels:** Small, pill-shaped elements with Cloud Lavender text and a low-opacity Lavender fill.\n- **Orbital Dividers:** Instead of horizontal rules, use large-radius arcs (SVG) in Gold to separate major page sections.\n- **Nail Art Gallery:** A custom component using an asymmetrical masonry grid where items have varying corner radii to feel more organic.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#111415",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2e3132",
+                    "inverse_primary": "#5a5e6d",
+                    "inverse_surface": "#e1e3e4",
+                    "on_background": "#e1e3e4",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#2c303d",
+                    "on_primary_container": "#777b8a",
+                    "on_primary_fixed": "#171b28",
+                    "on_primary_fixed_variant": "#434654",
+                    "on_secondary": "#3c2f00",
+                    "on_secondary_container": "#342800",
+                    "on_secondary_fixed": "#241a00",
+                    "on_secondary_fixed_variant": "#574500",
+                    "on_surface": "#e1e3e4",
+                    "on_surface_variant": "#c7c6cc",
+                    "on_tertiary": "#2e2f3e",
+                    "on_tertiary_container": "#797a8c",
+                    "on_tertiary_fixed": "#191b29",
+                    "on_tertiary_fixed_variant": "#444655",
+                    "outline": "#909096",
+                    "outline_variant": "#46464c",
+                    "primary": "#c3c6d7",
+                    "primary_container": "#0a0e1a",
+                    "primary_fixed": "#dfe2f3",
+                    "primary_fixed_dim": "#c3c6d7",
+                    "secondary": "#e9c349",
+                    "secondary_container": "#af8d11",
+                    "secondary_fixed": "#ffe088",
+                    "secondary_fixed_dim": "#e9c349",
+                    "surface": "#111415",
+                    "surface_bright": "#373a3b",
+                    "surface_container": "#1d2021",
+                    "surface_container_high": "#282a2b",
+                    "surface_container_highest": "#323536",
+                    "surface_container_low": "#191c1d",
+                    "surface_container_lowest": "#0c0f10",
+                    "surface_dim": "#111415",
+                    "surface_tint": "#c3c6d7",
+                    "surface_variant": "#323536",
+                    "tertiary": "#c5c5d8",
+                    "tertiary_container": "#0c0e1b",
+                    "tertiary_fixed": "#e1e1f5",
+                    "tertiary_fixed_dim": "#c5c5d8"
+                  },
+                  "overrideNeutralColor": "#f8f9fa",
+                  "overridePrimaryColor": "#0a0e1a",
+                  "overrideSecondaryColor": "#d4af37",
+                  "overrideTertiaryColor": "#e6e6fa",
+                  "roundness": "ROUND_EIGHT",
+                  "spacing": {
+                    "asymmetric-offset": "64px",
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.03em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "1.6"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "500",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "label-sm": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1"
+                    }
+                  }
+                }
+              },
+              "name": "assets/8c59bfc661df4bfbbde0d167efb00387",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "8640",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2M3ZTI1MGM0NDg2NTRhNDJhMjI3OWE2MTZkMDU5ZDU5EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzI0NTY4OTE5Mjc3Njg2MTIwNw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/13245689192776861207/files/d82c04fc06f94754b63d1f14b837548a"
+            },
+            "id": "abd35126db504d97acb2d2ed89d83cc9",
+            "name": "projects/13245689192776861207/screens/abd35126db504d97acb2d2ed89d83cc9",
+            "prompt": "Create a bespoke, editorial homepage for SkyLab Nails & Spa. \n\nDesign Requirements:\n- Theme: \"Celestial Premium\" (Deep navy #0A0E1A, Champagne Gold #D4AF37). \n- Hero Section (\"The Zenith\"): Use a large, elegant serif headline \"Artistry Beyond the Horizon.\" Include a high-fashion nail art image in a circular or elliptical 'lens' mask, positioned off-center.\n- Navigation: Use the TopNavBar component with a transparent background.\n- Services Section (\"Constellations\"): Instead of a grid, place services (e.g., \"Manicure Artistry,\" \"Stellar Pedicures,\" \"Celestial Extensions\") in a floating, asymmetrical arrangement connected by thin gold lines.\n- Visual Motif: Repeat thin gold 'orbital' curves throughout the page to guide the eye and break up sections.\n- Content: Use sophisticated, minimal copy. \n- Spacing: Generous whitespace to feel premium and airy despite the deep background.\n- Footer: Use the Footer component with deep navy background.\n\nEnsure the layout feels unique, using overlapping elements and unconventional grids.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuacTnc4fBlaNwN_u_HsuGRfPf3kPFRF5oFAdmsSg8489r1oZ41YRky9SqKm8BAxRUdq1yD6wvNhSxkQ8WcjyfS5SRfd-Ep2Xk_vbL3MCjV90bHFqaKgCsuqaZCTiGbsG7UMt1ZGuo6mu8hPJBrcaAvpLAKQY2UTzrDpwasvwBLfyXoIDTchkOJDiXHYCicAQs-ciIVGat4E7lVwdcb-tebOhh7dlVh0t3hgnDlG0r2HWhOwgAJFR62QXXd",
+              "name": "projects/13245689192776861207/files/a24939cbc959425a9d9b4ca71688c3f5"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#0a0e1a",
+              "designMd": "---\nname: Celestial Premium\ncolors:\n  surface: '#111415'\n  surface-dim: '#111415'\n  surface-bright: '#373a3b'\n  surface-container-lowest: '#0c0f10'\n  surface-container-low: '#191c1d'\n  surface-container: '#1d2021'\n  surface-container-high: '#282a2b'\n  surface-container-highest: '#323536'\n  on-surface: '#e1e3e4'\n  on-surface-variant: '#c7c6cc'\n  inverse-surface: '#e1e3e4'\n  inverse-on-surface: '#2e3132'\n  outline: '#909096'\n  outline-variant: '#46464c'\n  surface-tint: '#c3c6d7'\n  primary: '#c3c6d7'\n  on-primary: '#2c303d'\n  primary-container: '#0a0e1a'\n  on-primary-container: '#777b8a'\n  inverse-primary: '#5a5e6d'\n  secondary: '#e9c349'\n  on-secondary: '#3c2f00'\n  secondary-container: '#af8d11'\n  on-secondary-container: '#342800'\n  tertiary: '#c5c5d8'\n  on-tertiary: '#2e2f3e'\n  tertiary-container: '#0c0e1b'\n  on-tertiary-container: '#797a8c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dfe2f3'\n  primary-fixed-dim: '#c3c6d7'\n  on-primary-fixed: '#171b28'\n  on-primary-fixed-variant: '#434654'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#e1e1f5'\n  tertiary-fixed-dim: '#c5c5d8'\n  on-tertiary-fixed: '#191b29'\n  on-tertiary-fixed-variant: '#444655'\n  background: '#111415'\n  on-background: '#e1e3e4'\n  surface-variant: '#323536'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.03em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.02em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  asymmetric-offset: 64px\n---\n\n## Brand & Style\nThe design system embodies \"Celestial Premium,\" a narrative that bridges the technical precision of high-end nail artistry with the infinite serenity of the night sky. The brand personality is professional and avant-garde, positioning the salon as a destination for artistic discovery rather than just a service provider.\n\nThe visual style is a sophisticated blend of **Minimalism** and **Glassmorphism**. It utilizes heavy whitespace—or more accurately, \"darkspace\"—to let editorial imagery breathe. Translucent layers and shimmering gold accents create a sense of depth, mimicking the layering of gels and polishes. The overall emotional response should be one of profound calm and curated luxury.\n\n## Colors\nThe palette, \"Deep Dusk to Starlight,\" relies on extreme contrast to establish a premium feel. \n\n- **Primary (Midnight Navy):** The foundational canvas. It should be used for large surfaces and backgrounds to evoke the depths of the cosmos.\n- **Secondary (Champagne Gold):** Used sparingly for \"orbital\" lines, primary call-to-actions, and interactive highlights. It represents precision and luxury.\n- **Tertiary (Cloud Lavender):** A soft, ethereal counter-balance used for secondary information, subtle gradients, and background blurs.\n- **Neutral:** A high-clarity off-white used exclusively for body text and functional icons to ensure maximum legibility against the dark primary base.\n\n## Typography\nThe typography system pairs high-contrast editorial elegance with modern utilitarian clarity. \n\n**Playfair Display** is reserved for headlines. It should be typeset with tight tracking in larger sizes to emphasize its dramatic stroke contrast. For \"Celestial\" effects, use italic styles for specific keywords within headlines to break the rhythm.\n\n**Montserrat** provides the functional balance. It is set with generous letter spacing (tracking) to evoke a sense of openness and luxury. All labels and navigation items should use Montserrat in uppercase with increased letter spacing to maintain the avant-garde aesthetic.\n\n## Layout & Spacing\nThe layout rejects standard block-based web design in favor of **Editorial Asymmetry**. \n\n- **Grid:** Use a 12-column fluid grid, but frequently break the grid by overlapping images and text blocks. \n- **Overlaps:** Elements (like a high-res photo of nail art) should overlap background shapes or text containers by the `asymmetric-offset` value to create depth.\n- **Negative Space:** Use intentionally large vertical gaps (up to 160px on desktop) between sections to create a serene, unhurried browsing experience.\n- **Mobile Adaption:** On mobile, revert to a single-column flow but maintain the overlapping \"orbital\" line decorations to preserve the brand's visual motif.\n\n## Elevation & Depth\nDepth is created through **Glassmorphism** and layered \"Orbital\" elements rather than traditional shadows.\n\n1.  **Base Layer:** Solid Midnight Navy (#0A0E1A).\n2.  **Decorative Layer:** Thin, 1px Champagne Gold lines drawn in large, sweeping arcs that disappear off the edge of the viewport.\n3.  **Surface Layer:** Semi-transparent containers (Background: #E6E6FA at 5-10% opacity) with a 20px backdrop blur. This creates a \"frosted glass\" effect that feels like polished acrylic or top-coat gel.\n4.  **Accent Elevation:** High-contrast Gold borders (1px) are used only for active states or primary call-outs, making them \"glow\" against the dark background.\n\n## Shapes\nThe shape language mimics the curvature of a perfectly manicured nail. \n\nStandard containers and cards use the **Rounded** (0.5rem) setting. However, interactive elements like buttons and chips must follow a **Pill-shaped** convention to mirror the organic, soft-edged aesthetic of the brand. \n\nCircular masks should be applied to 30% of editorial imagery to reinforce the \"Orbital\" motif. These circles should often be positioned off-center within their parent containers.\n\n## Components\n- **Buttons:** Primary buttons are pill-shaped with a solid Champagne Gold fill and Navy text. Secondary buttons are \"Ghost\" style with a 1px Gold border and shimmering hover effects.\n- **Cards:** Use the glassmorphism style—translucent background with a heavy backdrop blur and a very subtle 0.5px border in Cloud Lavender.\n- **Inputs:** Minimalist bottom-border only. On focus, the border transitions from Lavender to Gold with a soft glow effect.\n- **Chips/Labels:** Small, pill-shaped elements with Cloud Lavender text and a low-opacity Lavender fill.\n- **Orbital Dividers:** Instead of horizontal rules, use large-radius arcs (SVG) in Gold to separate major page sections.\n- **Nail Art Gallery:** A custom component using an asymmetrical masonry grid where items have varying corner radii to feel more organic.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#111415",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2e3132",
+                "inverse_primary": "#5a5e6d",
+                "inverse_surface": "#e1e3e4",
+                "on_background": "#e1e3e4",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#2c303d",
+                "on_primary_container": "#777b8a",
+                "on_primary_fixed": "#171b28",
+                "on_primary_fixed_variant": "#434654",
+                "on_secondary": "#3c2f00",
+                "on_secondary_container": "#342800",
+                "on_secondary_fixed": "#241a00",
+                "on_secondary_fixed_variant": "#574500",
+                "on_surface": "#e1e3e4",
+                "on_surface_variant": "#c7c6cc",
+                "on_tertiary": "#2e2f3e",
+                "on_tertiary_container": "#797a8c",
+                "on_tertiary_fixed": "#191b29",
+                "on_tertiary_fixed_variant": "#444655",
+                "outline": "#909096",
+                "outline_variant": "#46464c",
+                "primary": "#c3c6d7",
+                "primary_container": "#0a0e1a",
+                "primary_fixed": "#dfe2f3",
+                "primary_fixed_dim": "#c3c6d7",
+                "secondary": "#e9c349",
+                "secondary_container": "#af8d11",
+                "secondary_fixed": "#ffe088",
+                "secondary_fixed_dim": "#e9c349",
+                "surface": "#111415",
+                "surface_bright": "#373a3b",
+                "surface_container": "#1d2021",
+                "surface_container_high": "#282a2b",
+                "surface_container_highest": "#323536",
+                "surface_container_low": "#191c1d",
+                "surface_container_lowest": "#0c0f10",
+                "surface_dim": "#111415",
+                "surface_tint": "#c3c6d7",
+                "surface_variant": "#323536",
+                "tertiary": "#c5c5d8",
+                "tertiary_container": "#0c0e1b",
+                "tertiary_fixed": "#e1e1f5",
+                "tertiary_fixed_dim": "#c5c5d8"
+              },
+              "overrideNeutralColor": "#f8f9fa",
+              "overridePrimaryColor": "#0a0e1a",
+              "overrideSecondaryColor": "#d4af37",
+              "overrideTertiaryColor": "#e6e6fa",
+              "roundness": "ROUND_EIGHT",
+              "spacing": {
+                "asymmetric-offset": "64px",
+                "container-max": "1440px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.03em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "1.6"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "500",
+                  "lineHeight": "1.3"
+                },
+                "headline-xl": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "label-sm": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1"
+                }
+              }
+            },
+            "title": "SkyLab Nails & Spa | Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke homepage for SkyLab Nails & Spa that intentionally avoids the typical local-business template.\n\n**Design Rationale:**\n*   **The \"Celestial\" Visual Motif:** I used thin gold \"orbital\" curves and circular masks to create a unique brand identity that feels both high-fashion and ethereal.\n*   **Editorial Layout:** By utilizing an asymmetrical grid and floating \"constellation\" service cards, the site breaks away from standard blocky layouts, giving it a premium, custom-coded feel.\n*   **High-Contrast Palette:** The deep navy background paired with shimmering champagne gold and generous whitespace creates a sophisticated, \"Zenith\" experience that feels like a luxury atelier rather than a standard spa.\n\nDoes this direction capture the premium atmosphere you were looking for, or should we adjust the visual weight of the \"orbital\" elements?"
+    },
+    {
+      "suggestion": "Add an 'After-Hours' booking section"
+    },
+    {
+      "suggestion": "Make the gallery more interactive"
+    },
+    {
+      "suggestion": "Try a lighter, cloud-inspired color variant"
+    }
+  ],
+  "projectId": "13245689192776861207",
+  "sessionId": "11253924848699451272"
+}

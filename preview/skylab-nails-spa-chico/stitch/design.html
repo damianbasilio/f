@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SkyLab | Celestial Nail Artistry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700&amp;family=Montserrat:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#0c0e1b",
+                    "on-primary": "#2c303d",
+                    "on-secondary-fixed-variant": "#574500",
+                    "inverse-primary": "#5a5e6d",
+                    "secondary": "#e9c349",
+                    "background": "#111415",
+                    "tertiary": "#c5c5d8",
+                    "outline-variant": "#46464c",
+                    "tertiary-fixed": "#e1e1f5",
+                    "primary-container": "#0a0e1a",
+                    "primary-fixed-dim": "#c3c6d7",
+                    "on-background": "#e1e3e4",
+                    "surface-bright": "#373a3b",
+                    "on-primary-fixed": "#171b28",
+                    "primary": "#c3c6d7",
+                    "on-error": "#690005",
+                    "on-secondary-fixed": "#241a00",
+                    "surface-container-high": "#282a2b",
+                    "secondary-fixed-dim": "#e9c349",
+                    "on-tertiary-container": "#797a8c",
+                    "surface-dim": "#111415",
+                    "primary-fixed": "#dfe2f3",
+                    "inverse-on-surface": "#2e3132",
+                    "on-secondary": "#3c2f00",
+                    "surface-container": "#1d2021",
+                    "on-surface-variant": "#c7c6cc",
+                    "tertiary-fixed-dim": "#c5c5d8",
+                    "surface-container-low": "#191c1d",
+                    "surface-container-lowest": "#0c0f10",
+                    "error-container": "#93000a",
+                    "surface-variant": "#323536",
+                    "outline": "#909096",
+                    "secondary-fixed": "#ffe088",
+                    "surface-container-highest": "#323536",
+                    "on-tertiary-fixed": "#191b29",
+                    "on-secondary-container": "#342800",
+                    "surface-tint": "#c3c6d7",
+                    "on-tertiary": "#2e2f3e",
+                    "on-surface": "#e1e3e4",
+                    "error": "#ffb4ab",
+                    "on-error-container": "#ffdad6",
+                    "on-tertiary-fixed-variant": "#444655",
+                    "secondary-container": "#af8d11",
+                    "on-primary-fixed-variant": "#434654",
+                    "on-primary-container": "#777b8a",
+                    "inverse-surface": "#e1e3e4",
+                    "surface": "#111415"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin-desktop": "80px",
+                    "gutter": "24px",
+                    "margin-mobile": "24px",
+                    "unit": "8px",
+                    "container-max": "1440px",
+                    "asymmetric-offset": "64px"
+            },
+            "fontFamily": {
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-sm": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "body-lg": ["Montserrat"],
+                    "headline-xl": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #0A0E1A; /* Deep Midnight Navy override */
+            color: #e1e3e4;
+            overflow-x: hidden;
+        }
+        .glass-card {
+            background: rgba(230, 230, 250, 0.07);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 0.5px solid rgba(197, 197, 216, 0.2);
+        }
+        .orbital-arc {
+            position: absolute;
+            pointer-events: none;
+            stroke: #e9c349;
+            stroke-width: 0.5;
+            fill: none;
+            opacity: 0.3;
+        }
+        .lens-mask {
+            clip-path: ellipse(45% 50% at 50% 50%);
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-secondary selection:text-on-secondary">
+<!-- Orbital Decorations -->
+<svg class="fixed top-0 left-0 w-full h-full z-0" xmlns="http://www.w3.org/2000/svg">
+<circle class="orbital-arc" cx="90%" cy="20%" r="400"></circle>
+<circle class="orbital-arc" cx="10%" cy="80%" r="600"></circle>
+<path class="orbital-arc" d="M -100,500 Q 400,200 1200,800" stroke-dasharray="4 4"></path>
+</svg>
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-8 bg-transparent transition-all duration-500" id="main-nav">
+<div class="font-headline-md text-headline-md text-secondary tracking-tighter">SkyLab</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-sm text-label-sm text-secondary border-b border-secondary pb-1 transition-colors duration-300" href="#">The Zenith</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Constellations</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Gallery</a>
+<a class="font-label-sm text-label-sm text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#">Booking</a>
+</div>
+<button class="px-8 py-3 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm uppercase tracking-widest hover:scale-95 duration-200 transition-transform">
+            Reserve Now
+        </button>
+</nav>
+<main class="relative z-10">
+<!-- Hero Section: The Zenith -->
+<section class="min-h-screen flex flex-col justify-center px-margin-mobile md:px-margin-desktop pt-32 pb-20 relative overflow-hidden">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 z-20">
+<span class="font-label-sm text-label-sm text-secondary tracking-[0.3em] uppercase mb-6 block">The Zenith Experience</span>
+<h1 class="font-headline-xl text-[48px] md:text-headline-xl text-primary leading-tight mb-8">
+                        Artistry <br/>
+<span class="italic text-secondary">Beyond</span> the <br/>
+                        Horizon.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-12">
+                        Elevate your personal aesthetic through celestial-inspired nail couture. Precision engineering meets cosmic inspiration in our private atelier.
+                    </p>
+<div class="flex items-center gap-6">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<span class="font-label-sm text-label-sm text-secondary uppercase">Scroll to explore</span>
+</div>
+</div>
+<div class="lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="relative w-full aspect-[4/5] lens-mask overflow-hidden float-animation border border-secondary/20 shadow-2xl">
+<img alt="Luxury Nail Art" class="w-full h-full object-cover" data-alt="A high-fashion, editorial close-up of a hand with avant-garde nail art featuring intricate gold leaf details and deep navy chrome finishes. The hand is posed elegantly against a dark, velvety backdrop with soft, celestial-inspired lighting that creates a shimmering, premium aesthetic. The image evokes a sense of cosmic luxury and artistic precision, perfectly aligned with a professional nail salon's high-end brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWu7yCqgl6-cpupwRwruYLrpCxsRGmXGwrojuvG1rGSYOVaBpU-4IFgCC1NstlET4LQ3TEToeWcmAkfoZWnEZi3RO_t-y4FbpDmaKwOR2rZzwSqwSikLKvo86yiopj7cUu6x9ktnX0CSZmXndvjWNQotLiyP_cyZJsvN1AorFO5vkF0TjHtrcI2tsbNnbLDMUm14ZxLXluY-ZBkjHWLAiww-h4FtRKsvv1pD9u2MZmU1gdHejfs9WOAaF12LAyPfWKmwPCw3AmQ56k"/>
+</div>
+<!-- Decorative element -->
+<div class="absolute -bottom-10 -left-10 w-40 h-40 border border-secondary/30 rounded-full flex items-center justify-center animate-spin-slow">
+<span class="material-symbols-outlined text-secondary text-4xl">star_rate</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: Constellations -->
+<section class="py-40 px-margin-mobile md:px-margin-desktop relative">
+<div class="text-center mb-32">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Constellations</h2>
+<div class="w-24 h-[1px] bg-secondary mx-auto"></div>
+</div>
+<div class="relative min-h-[800px] flex items-center justify-center">
+<!-- SVG Lines connecting services -->
+<svg class="absolute inset-0 w-full h-full" xmlns="http://www.w3.org/2000/svg">
+<path class="orbital-arc" d="M 200,200 L 500,400 L 800,200"></path>
+<path class="orbital-arc" d="M 500,400 L 400,700"></path>
+<path class="orbital-arc" d="M 500,400 L 1000,600"></path>
+</svg>
+<!-- Floating Cards in Asymmetrical Arrangement -->
+<div class="absolute top-0 left-[10%] glass-card p-10 rounded-2xl w-full max-w-[320px] transition-transform hover:-translate-y-4 duration-500">
+<span class="font-label-sm text-label-sm text-secondary mb-4 block">01</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Manicure Artistry</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision shaping and bespoke gel designs that mirror the infinite patterns of the cosmos.</p>
+</div>
+<div class="absolute top-[30%] right-[15%] glass-card p-10 rounded-2xl w-full max-w-[340px] transition-transform hover:-translate-y-4 duration-500 z-20">
+<span class="font-label-sm text-label-sm text-secondary mb-4 block">02</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Stellar Pedicures</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Revitalizing treatments using lunar minerals and volcanic stones for profound earthly restoration.</p>
+</div>
+<div class="absolute bottom-0 left-[25%] glass-card p-10 rounded-2xl w-full max-w-[300px] transition-transform hover:-translate-y-4 duration-500">
+<span class="font-label-sm text-label-sm text-secondary mb-4 block">03</span>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Celestial Extensions</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Structural perfection using high-grade polymers, sculpted to elongate and redefine the hand's silhouette.</p>
+</div>
+</div>
+</section>
+<!-- Gallery / Visual Anchor -->
+<section class="py-40">
+<div class="grid grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop items-end">
+<div class="col-span-12 lg:col-span-5 mb-12 lg:mb-0">
+<div class="relative group overflow-hidden rounded-tl-[120px] rounded-br-[120px]">
+<img alt="Salon Interior" class="w-full aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A minimalist, high-end nail salon interior with deep midnight navy walls and champagne gold accents. The space features sleek, modern furniture with architectural curves, illuminated by soft, recessed ambient lighting that creates a serene and private atmosphere. Translucent glass partitions with subtle orbital motifs separate the manicure stations, embodying a 'Celestial Premium' aesthetic of quiet luxury and professional artistry." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA43UcafDAM6XkVEmbUa6LEQukHPfAsC0HJaXjtUq3ZG1Gw0cvhZKGlh3z0pnYYcuykp3thnViiY47pLCFQvEW12PMS0hvwH1adF5Oz3CQHX7Lvg61O6GccILOQLQxKcaaKKZ-8CggHnROCHXBVN8FkXT5SqFDOBzSrfFoFDESqwxzeF7Xk14wjdPATvnDAr8Xh6XYTF6q8MGrYtYqH_iR1_5C9j006MdEbWOEdF9uVjrA2Uy7x516amNKfQgJEznA6oa1nXdKXrwJx"/>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 lg:pl-20 pb-10">
+<h2 class="font-headline-xl text-[40px] md:text-headline-xl text-primary leading-tight mb-8">
+                        The Gallery <br/> of <span class="italic font-normal">Wonders</span>
+</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12 max-w-xl">
+                        Our work is a dialogue between the technician and the canvas. Explore a curated selection of our most avant-garde commissions, where every nail tells a story of celestial motion.
+                    </p>
+<a class="inline-flex items-center gap-4 text-secondary hover:gap-8 transition-all duration-300" href="#">
+<span class="font-label-sm text-label-sm uppercase tracking-widest">View Collection</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Call to Action -->
+<section class="py-40 relative">
+<div class="max-w-4xl mx-auto text-center px-margin-mobile">
+<div class="glass-card p-20 rounded-[40px] relative overflow-hidden">
+<!-- Glow effect -->
+<div class="absolute -top-20 -right-20 w-60 h-60 bg-secondary/10 blur-[80px] rounded-full"></div>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Begin Your Journey</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        Appointments are limited. Secure your place in the SkyLab constellation today for a transformative aesthetic experience.
+                    </p>
+<button class="px-12 py-5 bg-secondary text-on-secondary rounded-full font-label-sm text-label-sm uppercase tracking-[0.2em] hover:shadow-[0_0_30px_rgba(233,195,73,0.3)] transition-all duration-500">
+                        Secure Your Session
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest border-t border-outline-variant relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-8">
+<div class="font-headline-lg text-headline-lg text-secondary">SkyLab</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    The intersection of luxury and technology. Crafting the future of nail artistry under the eternal light of inspiration.
+                </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-4">Explore</span>
+<a class="text-on-surface-variant hover:text-secondary transition-all opacity-80 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all opacity-80 hover:opacity-100" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-sm text-label-sm text-primary uppercase mb-4">Connect</span>
+<a class="text-on-surface-variant hover:text-secondary transition-all opacity-80 hover:opacity-100" href="#">Press Inquiry</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all opacity-80 hover:opacity-100" href="#">Sustainability</a>
+</div>
+</div>
+</div>
+<div class="mt-20 pt-8 border-t border-outline-variant/30 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-body-md text-body-md text-on-surface-variant/60">© 2024 SkyLab Nails &amp; Spa. All rights reserved.</p>
+<div class="flex gap-6">
+<a class="text-secondary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-secondary hover:scale-110 transition-transform" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Navbar behavior on scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('bg-[#0A0E1A]/80', 'backdrop-blur-md', 'py-4');
+                nav.classList.remove('py-8');
+            } else {
+                nav.classList.remove('bg-[#0A0E1A]/80', 'backdrop-blur-md', 'py-4');
+                nav.classList.add('py-8');
+            }
+        });
+
+        // Simple Parallax for floating elements
+        document.addEventListener('mousemove', (e) => {
+            const cards = document.querySelectorAll('.glass-card');
+            const x = e.clientX / window.innerWidth;
+            const y = e.clientY / window.innerHeight;
+            
+            cards.forEach((card, index) => {
+                const speed = (index + 1) * 10;
+                card.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+            });
+        });
+    </script>
+</body></html>
