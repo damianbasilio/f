@@ -1,4 +1,4 @@
-// Intersection Observer for scroll animations
+// Smooth reveal on scroll for bento grid items
         const observerOptions = {
             threshold: 0.1
         };
@@ -12,19 +12,21 @@
             });
         }, observerOptions);
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
+        document.querySelectorAll('.grid > div').forEach(item => {
+            item.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(item);
         });
 
-        // Interactive Bubbles logic
-        document.addEventListener('mousemove', (e) => {
-            const bubbles = document.querySelectorAll('.bubble-float');
-            bubbles.forEach((bubble, index) => {
-                const speed = (index + 1) * 0.01;
-                const x = (window.innerWidth - e.pageX * speed) / 100;
-                const y = (window.innerHeight - e.pageY * speed) / 100;
-                bubble.style.transform = `translateX(${x}px) translateY(${y}px)`;
+        // Simple form interaction simulation
+        const inputs = document.querySelectorAll('input, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.querySelector('label').classList.add('text-secondary', 'opacity-100');
+            });
+            input.addEventListener('blur', () => {
+                if (!input.value) {
+                    input.parentElement.querySelector('label').classList.remove('text-secondary', 'opacity-100');
+                }
             });
         });
 

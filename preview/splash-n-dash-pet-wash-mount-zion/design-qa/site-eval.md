@@ -6,8 +6,8 @@
 
 - none
 
-## Warnings (0)
+## Warnings (1)
 
-- none
+- Duplicate image URLs on page
 
 _Run after every build. Fix errors before images/outreach._
