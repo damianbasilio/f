@@ -1,0 +1,460 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Urban Industrial Authority",
+          "styleGuidelines": "## Brand & Style\nThe design system is built upon a \"Rugged-Premium\" duality. It departs from the cluttered, low-trust aesthetic of traditional towing services, instead positioning itself as a high-end urban utility. The brand personality is grounded, authoritative, and meticulously organized.\n\nThe visual direction follows a **Modern-Industrial** style, characterized by:\n- **Architectural Precision:** Heavy use of thin technical lines (the \"City Line\" motif) to divide sections and frame content.\n- **High-Contrast Editorial:** Dramatic shifts between deep charcoal backgrounds and vibrant amber accents.\n- **Functional Brutalism:** Utilizing monospaced fonts and grid-based layouts to evoke a sense of mechanical reliability and logistical expertise.\n- **Generous Negative Space:** Creating a premium feel that suggests calmness and control, even in emergency roadside situations.\n\n## Layout & Spacing\nThe layout is governed by a strict 12-column grid that mimics architectural blueprints.\n\n- **Grid Lines:** Every major section should be separated by a 1px solid line (`#F4F4F4` at 10% opacity). Vertical lines should be used sparingly to separate columns in data-heavy views.\n- **Margins:** Desktop uses a generous 80px side margin to push content toward the center, creating an \"editorial\" column. Mobile drops this to 24px.\n- **Rhythm:** Spacing follows a hard 8px base unit. Components should favor large, \"airy\" internal padding (e.g., 24px or 32px) to maintain the premium feel.\n- **The City Line:** Use a recurring horizontal rule that extends to the edge of the viewport, even if the content is contained, to suggest an infinite urban horizon.\n\n## Elevation & Depth\nIn keeping with the urban-industrial theme, this design system avoids traditional soft shadows. Depth is achieved through **Tonal Layering** and **Technical Borders**.\n\n- **Z-Axis:** Instead of shadows, use \"Surface Tiers.\" The background is `#1A1A1A`. Cards and interactive containers use a slightly lighter `#2D2D2D`.\n- **Ghost Outlines:** Primary interaction areas should use 1px solid borders in Industrial Amber or Steel Grey rather than drop shadows.\n- **Active State:** When an element is pressed or active, it should \"illuminate\" (increase border opacity or gain an inner glow) rather than lift off the page.\n- **Glassmorphism:** Reserved only for mobile navigation overlays, using a heavy backdrop blur (20px) with a dark tint to maintain focus on the map or primary action.\n\n## Components\n- **Buttons:** Large, rectangular, and high-contrast. The primary button is Solid Amber with Black text. The \"City Line\" motif is used for secondary buttons as a 1px Steel Grey outline.\n- **Inputs:** Dark backgrounds with a 1px bottom-border only, mimicking a technical form. When focused, the bottom-border turns Amber.\n- **Cards:** No shadows. Defined by 1px borders and a subtle background shift to `#2D2D2D`.\n- **Chips/Status:** Use the \"Space Mono\" font. Statuses (e.g., \"En Route\") are displayed in a small box with a 1px border—no rounded corners.\n- **The \"Service Grid\":** A custom component for listing services (Towing, Lockout, etc.) using large-scale Hanken Grotesk numbers (e.g., 01, 02) in the background to emphasize the systematic nature of the business.\n- **Action Bar:** A persistent, pinned bottom-bar on mobile containing a \"Call Now\" button and \"Request Service\" button, ensuring the local authority is always reachable.",
+          "theme": {
+            "bodyFont": "WORK_SANS",
+            "bodyFontFamily": "Work Sans",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#f5a623",
+            "designMd": "---\nname: Urban Industrial Authority\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#d7c3ae'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#9f8e7a'\n  outline-variant: '#524534'\n  surface-tint: '#ffb955'\n  primary: '#ffc880'\n  on-primary: '#452b00'\n  primary-container: '#f5a623'\n  on-primary-container: '#644000'\n  inverse-primary: '#835500'\n  secondary: '#c8c6c5'\n  on-secondary: '#313030'\n  secondary-container: '#474746'\n  on-secondary-container: '#b7b5b4'\n  tertiary: '#d1d1d2'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#b5b6b6'\n  on-tertiary-container: '#464748'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffddb4'\n  primary-fixed-dim: '#ffb955'\n  on-primary-fixed: '#291800'\n  on-primary-fixed-variant: '#633f00'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  headline-xl:\n    fontFamily: Hanken Grotesk\n    fontSize: 64px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-mono:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  container-max: 1280px\n  gutter: 24px\n---\n\n## Brand & Style\nThe design system is built upon a \"Rugged-Premium\" duality. It departs from the cluttered, low-trust aesthetic of traditional towing services, instead positioning itself as a high-end urban utility. The brand personality is grounded, authoritative, and meticulously organized.\n\nThe visual direction follows a **Modern-Industrial** style, characterized by:\n- **Architectural Precision:** Heavy use of thin technical lines (the \"City Line\" motif) to divide sections and frame content.\n- **High-Contrast Editorial:** Dramatic shifts between deep charcoal backgrounds and vibrant amber accents.\n- **Functional Brutalism:** Utilizing monospaced fonts and grid-based layouts to evoke a sense of mechanical reliability and logistical expertise.\n- **Generous Negative Space:** Creating a premium feel that suggests calmness and control, even in emergency roadside situations.\n\n## Colors\nThis design system utilizes a high-contrast \"Midnight & Amber\" palette designed for maximum legibility in both high-glare daytime and low-light roadside environments.\n\n- **Primary (Industrial Amber):** Used exclusively for calls to action, urgent status indicators, and critical branding motifs. It represents the safety and visibility of a beacon.\n- **Secondary (Midnight Charcoal):** The foundation of the UI. It provides a deep, stable backdrop that evokes the asphalt and the city at night.\n- **Tertiary (Steel Grey):** Used for typography on dark backgrounds and as a surface color for cards or containers to create subtle depth.\n- **Technical Rules:** A 10% opacity white or a 20% opacity amber is used for the \"City Line\" motif—thin 1px borders that define the grid.\n\n## Typography\nThe typography strategy contrasts heavy, industrial grotesque faces with precise, technical monospaced accents.\n\n- **Headlines:** Set in **Hanken Grotesk**. These should be tight, bold, and impactful. For an editorial feel, use \"headline-xl\" with negative letter spacing on hero sections.\n- **Body:** Set in **Work Sans**. Chosen for its exceptional readability and neutral, professional tone. \n- **Accents & Data:** Set in **Space Mono**. Use this for \"label-mono\" roles: timestamps, coordinates, vehicle IDs, and small eyebrow headers above main titles. This reinforces the \"mechanical\" and \"logistics\" nature of the service.\n\n## Layout & Spacing\nThe layout is governed by a strict 12-column grid that mimics architectural blueprints.\n\n- **Grid Lines:** Every major section should be separated by a 1px solid line (`#F4F4F4` at 10% opacity). Vertical lines should be used sparingly to separate columns in data-heavy views.\n- **Margins:** Desktop uses a generous 80px side margin to push content toward the center, creating an \"editorial\" column. Mobile drops this to 24px.\n- **Rhythm:** Spacing follows a hard 8px base unit. Components should favor large, \"airy\" internal padding (e.g., 24px or 32px) to maintain the premium feel.\n- **The City Line:** Use a recurring horizontal rule that extends to the edge of the viewport, even if the content is contained, to suggest an infinite urban horizon.\n\n## Elevation & Depth\nIn keeping with the urban-industrial theme, this design system avoids traditional soft shadows. Depth is achieved through **Tonal Layering** and **Technical Borders**.\n\n- **Z-Axis:** Instead of shadows, use \"Surface Tiers.\" The background is `#1A1A1A`. Cards and interactive containers use a slightly lighter `#2D2D2D`.\n- **Ghost Outlines:** Primary interaction areas should use 1px solid borders in Industrial Amber or Steel Grey rather than drop shadows.\n- **Active State:** When an element is pressed or active, it should \"illuminate\" (increase border opacity or gain an inner glow) rather than lift off the page.\n- **Glassmorphism:** Reserved only for mobile navigation overlays, using a heavy backdrop blur (20px) with a dark tint to maintain focus on the map or primary action.\n\n## Shapes\nThe shape language is **unapologetically sharp**. To reflect the rugged nature of heavy machinery and urban architecture, rounded corners are strictly avoided.\n\n- **Corners:** 0px radius for all buttons, inputs, and cards. This creates a \"blocked\" look that feels sturdy and structural.\n- **Icons:** Use thick-stroke (2px), geometric icons. Avoid rounded terminals; prefer squared-off ends for all icon lines.\n- **Dividers:** Horizontal and vertical rules are 1px thick. Never use feathered or gradient dividers.\n\n## Components\n- **Buttons:** Large, rectangular, and high-contrast. The primary button is Solid Amber with Black text. The \"City Line\" motif is used for secondary buttons as a 1px Steel Grey outline.\n- **Inputs:** Dark backgrounds with a 1px bottom-border only, mimicking a technical form. When focused, the bottom-border turns Amber.\n- **Cards:** No shadows. Defined by 1px borders and a subtle background shift to `#2D2D2D`.\n- **Chips/Status:** Use the \"Space Mono\" font. Statuses (e.g., \"En Route\") are displayed in a small box with a 1px border—no rounded corners.\n- **The \"Service Grid\":** A custom component for listing services (Towing, Lockout, etc.) using large-scale Hanken Grotesk numbers (e.g., 01, 02) in the background to emphasize the systematic nature of the business.\n- **Action Bar:** A persistent, pinned bottom-bar on mobile containing a \"Call Now\" button and \"Request Service\" button, ensuring the local authority is always reachable.",
+            "font": "HANKEN_GROTESK",
+            "headlineFont": "HANKEN_GROTESK",
+            "headlineFontFamily": "Hanken Grotesk",
+            "labelFont": "SPACE_MONO",
+            "labelFontFamily": "Space Mono",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303030",
+              "inverse_primary": "#835500",
+              "inverse_surface": "#e4e2e1",
+              "on_background": "#e4e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#452b00",
+              "on_primary_container": "#644000",
+              "on_primary_fixed": "#291800",
+              "on_primary_fixed_variant": "#633f00",
+              "on_secondary": "#313030",
+              "on_secondary_container": "#b7b5b4",
+              "on_secondary_fixed": "#1c1b1b",
+              "on_secondary_fixed_variant": "#474746",
+              "on_surface": "#e4e2e1",
+              "on_surface_variant": "#d7c3ae",
+              "on_tertiary": "#2f3131",
+              "on_tertiary_container": "#464748",
+              "on_tertiary_fixed": "#1a1c1c",
+              "on_tertiary_fixed_variant": "#454747",
+              "outline": "#9f8e7a",
+              "outline_variant": "#524534",
+              "primary": "#ffc880",
+              "primary_container": "#f5a623",
+              "primary_fixed": "#ffddb4",
+              "primary_fixed_dim": "#ffb955",
+              "secondary": "#c8c6c5",
+              "secondary_container": "#474746",
+              "secondary_fixed": "#e5e2e1",
+              "secondary_fixed_dim": "#c8c6c5",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#1f2020",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353535",
+              "surface_container_low": "#1b1c1c",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#ffb955",
+              "surface_variant": "#353535",
+              "tertiary": "#d1d1d2",
+              "tertiary_container": "#b5b6b6",
+              "tertiary_fixed": "#e2e2e2",
+              "tertiary_fixed_dim": "#c6c6c7"
+            },
+            "overrideNeutralColor": "#2d2d2d",
+            "overridePrimaryColor": "#f5a623",
+            "overrideSecondaryColor": "#1a1a1a",
+            "overrideTertiaryColor": "#f4f4f4",
+            "spacing": {
+              "base": "8px",
+              "container-max": "1280px",
+              "gutter": "24px",
+              "lg": "48px",
+              "md": "24px",
+              "sm": "12px",
+              "xl": "80px",
+              "xs": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Work Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Work Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "button-text": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.0"
+              },
+              "headline-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "64px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "1.1"
+              },
+              "label-mono": {
+                "fontFamily": "Space Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/0639cb8bea3b41d8b9aa9eb2ed8c7ed4",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Urban Industrial Authority",
+                "styleGuidelines": "## Brand & Style\nThe design system is built upon a \"Rugged-Premium\" duality. It departs from the cluttered, low-trust aesthetic of traditional towing services, instead positioning itself as a high-end urban utility. The brand personality is grounded, authoritative, and meticulously organized.\n\nThe visual direction follows a **Modern-Industrial** style, characterized by:\n- **Architectural Precision:** Heavy use of thin technical lines (the \"City Line\" motif) to divide sections and frame content.\n- **High-Contrast Editorial:** Dramatic shifts between deep charcoal backgrounds and vibrant amber accents.\n- **Functional Brutalism:** Utilizing monospaced fonts and grid-based layouts to evoke a sense of mechanical reliability and logistical expertise.\n- **Generous Negative Space:** Creating a premium feel that suggests calmness and control, even in emergency roadside situations.\n\n## Layout & Spacing\nThe layout is governed by a strict 12-column grid that mimics architectural blueprints.\n\n- **Grid Lines:** Every major section should be separated by a 1px solid line (`#F4F4F4` at 10% opacity). Vertical lines should be used sparingly to separate columns in data-heavy views.\n- **Margins:** Desktop uses a generous 80px side margin to push content toward the center, creating an \"editorial\" column. Mobile drops this to 24px.\n- **Rhythm:** Spacing follows a hard 8px base unit. Components should favor large, \"airy\" internal padding (e.g., 24px or 32px) to maintain the premium feel.\n- **The City Line:** Use a recurring horizontal rule that extends to the edge of the viewport, even if the content is contained, to suggest an infinite urban horizon.\n\n## Elevation & Depth\nIn keeping with the urban-industrial theme, this design system avoids traditional soft shadows. Depth is achieved through **Tonal Layering** and **Technical Borders**.\n\n- **Z-Axis:** Instead of shadows, use \"Surface Tiers.\" The background is `#1A1A1A`. Cards and interactive containers use a slightly lighter `#2D2D2D`.\n- **Ghost Outlines:** Primary interaction areas should use 1px solid borders in Industrial Amber or Steel Grey rather than drop shadows.\n- **Active State:** When an element is pressed or active, it should \"illuminate\" (increase border opacity or gain an inner glow) rather than lift off the page.\n- **Glassmorphism:** Reserved only for mobile navigation overlays, using a heavy backdrop blur (20px) with a dark tint to maintain focus on the map or primary action.\n\n## Components\n- **Buttons:** Large, rectangular, and high-contrast. The primary button is Solid Amber with Black text. The \"City Line\" motif is used for secondary buttons as a 1px Steel Grey outline.\n- **Inputs:** Dark backgrounds with a 1px bottom-border only, mimicking a technical form. When focused, the bottom-border turns Amber.\n- **Cards:** No shadows. Defined by 1px borders and a subtle background shift to `#2D2D2D`.\n- **Chips/Status:** Use the \"Space Mono\" font. Statuses (e.g., \"En Route\") are displayed in a small box with a 1px border—no rounded corners.\n- **The \"Service Grid\":** A custom component for listing services (Towing, Lockout, etc.) using large-scale Hanken Grotesk numbers (e.g., 01, 02) in the background to emphasize the systematic nature of the business.\n- **Action Bar:** A persistent, pinned bottom-bar on mobile containing a \"Call Now\" button and \"Request Service\" button, ensuring the local authority is always reachable.",
+                "theme": {
+                  "bodyFont": "WORK_SANS",
+                  "bodyFontFamily": "Work Sans",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#f5a623",
+                  "designMd": "---\nname: Urban Industrial Authority\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#d7c3ae'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#9f8e7a'\n  outline-variant: '#524534'\n  surface-tint: '#ffb955'\n  primary: '#ffc880'\n  on-primary: '#452b00'\n  primary-container: '#f5a623'\n  on-primary-container: '#644000'\n  inverse-primary: '#835500'\n  secondary: '#c8c6c5'\n  on-secondary: '#313030'\n  secondary-container: '#474746'\n  on-secondary-container: '#b7b5b4'\n  tertiary: '#d1d1d2'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#b5b6b6'\n  on-tertiary-container: '#464748'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffddb4'\n  primary-fixed-dim: '#ffb955'\n  on-primary-fixed: '#291800'\n  on-primary-fixed-variant: '#633f00'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  headline-xl:\n    fontFamily: Hanken Grotesk\n    fontSize: 64px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-mono:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  container-max: 1280px\n  gutter: 24px\n---\n\n## Brand & Style\nThe design system is built upon a \"Rugged-Premium\" duality. It departs from the cluttered, low-trust aesthetic of traditional towing services, instead positioning itself as a high-end urban utility. The brand personality is grounded, authoritative, and meticulously organized.\n\nThe visual direction follows a **Modern-Industrial** style, characterized by:\n- **Architectural Precision:** Heavy use of thin technical lines (the \"City Line\" motif) to divide sections and frame content.\n- **High-Contrast Editorial:** Dramatic shifts between deep charcoal backgrounds and vibrant amber accents.\n- **Functional Brutalism:** Utilizing monospaced fonts and grid-based layouts to evoke a sense of mechanical reliability and logistical expertise.\n- **Generous Negative Space:** Creating a premium feel that suggests calmness and control, even in emergency roadside situations.\n\n## Colors\nThis design system utilizes a high-contrast \"Midnight & Amber\" palette designed for maximum legibility in both high-glare daytime and low-light roadside environments.\n\n- **Primary (Industrial Amber):** Used exclusively for calls to action, urgent status indicators, and critical branding motifs. It represents the safety and visibility of a beacon.\n- **Secondary (Midnight Charcoal):** The foundation of the UI. It provides a deep, stable backdrop that evokes the asphalt and the city at night.\n- **Tertiary (Steel Grey):** Used for typography on dark backgrounds and as a surface color for cards or containers to create subtle depth.\n- **Technical Rules:** A 10% opacity white or a 20% opacity amber is used for the \"City Line\" motif—thin 1px borders that define the grid.\n\n## Typography\nThe typography strategy contrasts heavy, industrial grotesque faces with precise, technical monospaced accents.\n\n- **Headlines:** Set in **Hanken Grotesk**. These should be tight, bold, and impactful. For an editorial feel, use \"headline-xl\" with negative letter spacing on hero sections.\n- **Body:** Set in **Work Sans**. Chosen for its exceptional readability and neutral, professional tone. \n- **Accents & Data:** Set in **Space Mono**. Use this for \"label-mono\" roles: timestamps, coordinates, vehicle IDs, and small eyebrow headers above main titles. This reinforces the \"mechanical\" and \"logistics\" nature of the service.\n\n## Layout & Spacing\nThe layout is governed by a strict 12-column grid that mimics architectural blueprints.\n\n- **Grid Lines:** Every major section should be separated by a 1px solid line (`#F4F4F4` at 10% opacity). Vertical lines should be used sparingly to separate columns in data-heavy views.\n- **Margins:** Desktop uses a generous 80px side margin to push content toward the center, creating an \"editorial\" column. Mobile drops this to 24px.\n- **Rhythm:** Spacing follows a hard 8px base unit. Components should favor large, \"airy\" internal padding (e.g., 24px or 32px) to maintain the premium feel.\n- **The City Line:** Use a recurring horizontal rule that extends to the edge of the viewport, even if the content is contained, to suggest an infinite urban horizon.\n\n## Elevation & Depth\nIn keeping with the urban-industrial theme, this design system avoids traditional soft shadows. Depth is achieved through **Tonal Layering** and **Technical Borders**.\n\n- **Z-Axis:** Instead of shadows, use \"Surface Tiers.\" The background is `#1A1A1A`. Cards and interactive containers use a slightly lighter `#2D2D2D`.\n- **Ghost Outlines:** Primary interaction areas should use 1px solid borders in Industrial Amber or Steel Grey rather than drop shadows.\n- **Active State:** When an element is pressed or active, it should \"illuminate\" (increase border opacity or gain an inner glow) rather than lift off the page.\n- **Glassmorphism:** Reserved only for mobile navigation overlays, using a heavy backdrop blur (20px) with a dark tint to maintain focus on the map or primary action.\n\n## Shapes\nThe shape language is **unapologetically sharp**. To reflect the rugged nature of heavy machinery and urban architecture, rounded corners are strictly avoided.\n\n- **Corners:** 0px radius for all buttons, inputs, and cards. This creates a \"blocked\" look that feels sturdy and structural.\n- **Icons:** Use thick-stroke (2px), geometric icons. Avoid rounded terminals; prefer squared-off ends for all icon lines.\n- **Dividers:** Horizontal and vertical rules are 1px thick. Never use feathered or gradient dividers.\n\n## Components\n- **Buttons:** Large, rectangular, and high-contrast. The primary button is Solid Amber with Black text. The \"City Line\" motif is used for secondary buttons as a 1px Steel Grey outline.\n- **Inputs:** Dark backgrounds with a 1px bottom-border only, mimicking a technical form. When focused, the bottom-border turns Amber.\n- **Cards:** No shadows. Defined by 1px borders and a subtle background shift to `#2D2D2D`.\n- **Chips/Status:** Use the \"Space Mono\" font. Statuses (e.g., \"En Route\") are displayed in a small box with a 1px border—no rounded corners.\n- **The \"Service Grid\":** A custom component for listing services (Towing, Lockout, etc.) using large-scale Hanken Grotesk numbers (e.g., 01, 02) in the background to emphasize the systematic nature of the business.\n- **Action Bar:** A persistent, pinned bottom-bar on mobile containing a \"Call Now\" button and \"Request Service\" button, ensuring the local authority is always reachable.",
+                  "font": "HANKEN_GROTESK",
+                  "headlineFont": "HANKEN_GROTESK",
+                  "headlineFontFamily": "Hanken Grotesk",
+                  "labelFont": "SPACE_MONO",
+                  "labelFontFamily": "Space Mono",
+                  "namedColors": {
+                    "background": "#131313",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#303030",
+                    "inverse_primary": "#835500",
+                    "inverse_surface": "#e4e2e1",
+                    "on_background": "#e4e2e1",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#452b00",
+                    "on_primary_container": "#644000",
+                    "on_primary_fixed": "#291800",
+                    "on_primary_fixed_variant": "#633f00",
+                    "on_secondary": "#313030",
+                    "on_secondary_container": "#b7b5b4",
+                    "on_secondary_fixed": "#1c1b1b",
+                    "on_secondary_fixed_variant": "#474746",
+                    "on_surface": "#e4e2e1",
+                    "on_surface_variant": "#d7c3ae",
+                    "on_tertiary": "#2f3131",
+                    "on_tertiary_container": "#464748",
+                    "on_tertiary_fixed": "#1a1c1c",
+                    "on_tertiary_fixed_variant": "#454747",
+                    "outline": "#9f8e7a",
+                    "outline_variant": "#524534",
+                    "primary": "#ffc880",
+                    "primary_container": "#f5a623",
+                    "primary_fixed": "#ffddb4",
+                    "primary_fixed_dim": "#ffb955",
+                    "secondary": "#c8c6c5",
+                    "secondary_container": "#474746",
+                    "secondary_fixed": "#e5e2e1",
+                    "secondary_fixed_dim": "#c8c6c5",
+                    "surface": "#131313",
+                    "surface_bright": "#393939",
+                    "surface_container": "#1f2020",
+                    "surface_container_high": "#2a2a2a",
+                    "surface_container_highest": "#353535",
+                    "surface_container_low": "#1b1c1c",
+                    "surface_container_lowest": "#0e0e0e",
+                    "surface_dim": "#131313",
+                    "surface_tint": "#ffb955",
+                    "surface_variant": "#353535",
+                    "tertiary": "#d1d1d2",
+                    "tertiary_container": "#b5b6b6",
+                    "tertiary_fixed": "#e2e2e2",
+                    "tertiary_fixed_dim": "#c6c6c7"
+                  },
+                  "overrideNeutralColor": "#2d2d2d",
+                  "overridePrimaryColor": "#f5a623",
+                  "overrideSecondaryColor": "#1a1a1a",
+                  "overrideTertiaryColor": "#f4f4f4",
+                  "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "lg": "48px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "xs": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Work Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "button-text": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.0"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "64px",
+                      "fontWeight": "800",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "1.1"
+                    },
+                    "label-mono": {
+                      "fontFamily": "Space Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/0639cb8bea3b41d8b9aa9eb2ed8c7ed4",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10036",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzI0NjEyYzYwOWNiODRlYmJhYzAyY2E0NDE5YWZjZGM2EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzAwOTg5NDQyMjE2OTg4MDQ0NQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/13009894422169880445/files/164684c693c5469e8c6e2f7d82851bf9"
+            },
+            "id": "7eacb5aa8d61421bbf69c7e0e68c23d9",
+            "name": "projects/13009894422169880445/screens/7eacb5aa8d61421bbf69c7e0e68c23d9",
+            "prompt": "Build a premium, editorial-style desktop homepage for Two Cities Towing & Roadside LLC. \n\nVisual Style: \n- Theme: Urban Industrial Authority (Midnight, Amber, Steel).\n- Layout: 'Urban Grid' — use thin technical lines (1px borders) to define sections, asymmetrical placements, and oversized typography. \n- Tone: Rugged authority. \n\nSections:\n1. Header: Fixed, featuring (432) 288-1762 as a primary CTA.\n2. Hero: High-impact headline 'THE URBAN AUTHORITY ON ROADSIDE RECOVERY.' Large high-quality background image of a tow truck in a city environment at twilight.\n3. Credibility: A horizontal ticker or static bar with stats: '15+ Years Service', '24/7 Rapid Response', 'Midland & Odessa Authority'.\n4. Services: An asymmetrical grid showing 24/7 Towing, Flatbed Service, Fuel Delivery, Jump Starts, and Lockouts. Use icons that feel mechanical/technical.\n5. About: 'Heritage of the Two Cities' — text-heavy editorial layout explaining their roots in Midland/Odessa.\n6. Visit: Large map slot using `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`. \n7. Contact: A minimalist form with amber focus states. Address: 1261 W. Apple St., Midland.\n8. Footer: Clean, multi-column.\n\nConstraints: No lorem ipsum. Use semantic HTML5. Smooth scroll. Form validation UI. No generic templates.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuSdAEMmc9l-QmO7PyFAVUxjxodGoQl_7fZOzsijG5azedtCGDhotGO-rVBILwhj-arnSy5RNL8QnClMGlmXJ2qqjUOT4QMlZnv1aa7QEOQjOGJHymxH9QfKXjpLSNpV9BKXkvIsuiJHrJHK8gfYDSQRaHMAevyQgVf45uzMnQ43IItz-nhE8VQw4tNl40ZjaHhy-FvomoHVmIFbFaR-UsiX-Op7P1G2EoK6baXgCF314UcOTjr5lMPEx2v",
+              "name": "projects/13009894422169880445/files/dbc0df1d61bf451bbd36f7034e326952"
+            },
+            "theme": {
+              "bodyFont": "WORK_SANS",
+              "bodyFontFamily": "Work Sans",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#f5a623",
+              "designMd": "---\nname: Urban Industrial Authority\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#d7c3ae'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#9f8e7a'\n  outline-variant: '#524534'\n  surface-tint: '#ffb955'\n  primary: '#ffc880'\n  on-primary: '#452b00'\n  primary-container: '#f5a623'\n  on-primary-container: '#644000'\n  inverse-primary: '#835500'\n  secondary: '#c8c6c5'\n  on-secondary: '#313030'\n  secondary-container: '#474746'\n  on-secondary-container: '#b7b5b4'\n  tertiary: '#d1d1d2'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#b5b6b6'\n  on-tertiary-container: '#464748'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffddb4'\n  primary-fixed-dim: '#ffb955'\n  on-primary-fixed: '#291800'\n  on-primary-fixed-variant: '#633f00'\n  secondary-fixed: '#e5e2e1'\n  secondary-fixed-dim: '#c8c6c5'\n  on-secondary-fixed: '#1c1b1b'\n  on-secondary-fixed-variant: '#474746'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  headline-xl:\n    fontFamily: Hanken Grotesk\n    fontSize: 64px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Work Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Work Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-mono:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  container-max: 1280px\n  gutter: 24px\n---\n\n## Brand & Style\nThe design system is built upon a \"Rugged-Premium\" duality. It departs from the cluttered, low-trust aesthetic of traditional towing services, instead positioning itself as a high-end urban utility. The brand personality is grounded, authoritative, and meticulously organized.\n\nThe visual direction follows a **Modern-Industrial** style, characterized by:\n- **Architectural Precision:** Heavy use of thin technical lines (the \"City Line\" motif) to divide sections and frame content.\n- **High-Contrast Editorial:** Dramatic shifts between deep charcoal backgrounds and vibrant amber accents.\n- **Functional Brutalism:** Utilizing monospaced fonts and grid-based layouts to evoke a sense of mechanical reliability and logistical expertise.\n- **Generous Negative Space:** Creating a premium feel that suggests calmness and control, even in emergency roadside situations.\n\n## Colors\nThis design system utilizes a high-contrast \"Midnight & Amber\" palette designed for maximum legibility in both high-glare daytime and low-light roadside environments.\n\n- **Primary (Industrial Amber):** Used exclusively for calls to action, urgent status indicators, and critical branding motifs. It represents the safety and visibility of a beacon.\n- **Secondary (Midnight Charcoal):** The foundation of the UI. It provides a deep, stable backdrop that evokes the asphalt and the city at night.\n- **Tertiary (Steel Grey):** Used for typography on dark backgrounds and as a surface color for cards or containers to create subtle depth.\n- **Technical Rules:** A 10% opacity white or a 20% opacity amber is used for the \"City Line\" motif—thin 1px borders that define the grid.\n\n## Typography\nThe typography strategy contrasts heavy, industrial grotesque faces with precise, technical monospaced accents.\n\n- **Headlines:** Set in **Hanken Grotesk**. These should be tight, bold, and impactful. For an editorial feel, use \"headline-xl\" with negative letter spacing on hero sections.\n- **Body:** Set in **Work Sans**. Chosen for its exceptional readability and neutral, professional tone. \n- **Accents & Data:** Set in **Space Mono**. Use this for \"label-mono\" roles: timestamps, coordinates, vehicle IDs, and small eyebrow headers above main titles. This reinforces the \"mechanical\" and \"logistics\" nature of the service.\n\n## Layout & Spacing\nThe layout is governed by a strict 12-column grid that mimics architectural blueprints.\n\n- **Grid Lines:** Every major section should be separated by a 1px solid line (`#F4F4F4` at 10% opacity). Vertical lines should be used sparingly to separate columns in data-heavy views.\n- **Margins:** Desktop uses a generous 80px side margin to push content toward the center, creating an \"editorial\" column. Mobile drops this to 24px.\n- **Rhythm:** Spacing follows a hard 8px base unit. Components should favor large, \"airy\" internal padding (e.g., 24px or 32px) to maintain the premium feel.\n- **The City Line:** Use a recurring horizontal rule that extends to the edge of the viewport, even if the content is contained, to suggest an infinite urban horizon.\n\n## Elevation & Depth\nIn keeping with the urban-industrial theme, this design system avoids traditional soft shadows. Depth is achieved through **Tonal Layering** and **Technical Borders**.\n\n- **Z-Axis:** Instead of shadows, use \"Surface Tiers.\" The background is `#1A1A1A`. Cards and interactive containers use a slightly lighter `#2D2D2D`.\n- **Ghost Outlines:** Primary interaction areas should use 1px solid borders in Industrial Amber or Steel Grey rather than drop shadows.\n- **Active State:** When an element is pressed or active, it should \"illuminate\" (increase border opacity or gain an inner glow) rather than lift off the page.\n- **Glassmorphism:** Reserved only for mobile navigation overlays, using a heavy backdrop blur (20px) with a dark tint to maintain focus on the map or primary action.\n\n## Shapes\nThe shape language is **unapologetically sharp**. To reflect the rugged nature of heavy machinery and urban architecture, rounded corners are strictly avoided.\n\n- **Corners:** 0px radius for all buttons, inputs, and cards. This creates a \"blocked\" look that feels sturdy and structural.\n- **Icons:** Use thick-stroke (2px), geometric icons. Avoid rounded terminals; prefer squared-off ends for all icon lines.\n- **Dividers:** Horizontal and vertical rules are 1px thick. Never use feathered or gradient dividers.\n\n## Components\n- **Buttons:** Large, rectangular, and high-contrast. The primary button is Solid Amber with Black text. The \"City Line\" motif is used for secondary buttons as a 1px Steel Grey outline.\n- **Inputs:** Dark backgrounds with a 1px bottom-border only, mimicking a technical form. When focused, the bottom-border turns Amber.\n- **Cards:** No shadows. Defined by 1px borders and a subtle background shift to `#2D2D2D`.\n- **Chips/Status:** Use the \"Space Mono\" font. Statuses (e.g., \"En Route\") are displayed in a small box with a 1px border—no rounded corners.\n- **The \"Service Grid\":** A custom component for listing services (Towing, Lockout, etc.) using large-scale Hanken Grotesk numbers (e.g., 01, 02) in the background to emphasize the systematic nature of the business.\n- **Action Bar:** A persistent, pinned bottom-bar on mobile containing a \"Call Now\" button and \"Request Service\" button, ensuring the local authority is always reachable.",
+              "font": "HANKEN_GROTESK",
+              "headlineFont": "HANKEN_GROTESK",
+              "headlineFontFamily": "Hanken Grotesk",
+              "labelFont": "SPACE_MONO",
+              "labelFontFamily": "Space Mono",
+              "namedColors": {
+                "background": "#131313",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#303030",
+                "inverse_primary": "#835500",
+                "inverse_surface": "#e4e2e1",
+                "on_background": "#e4e2e1",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#452b00",
+                "on_primary_container": "#644000",
+                "on_primary_fixed": "#291800",
+                "on_primary_fixed_variant": "#633f00",
+                "on_secondary": "#313030",
+                "on_secondary_container": "#b7b5b4",
+                "on_secondary_fixed": "#1c1b1b",
+                "on_secondary_fixed_variant": "#474746",
+                "on_surface": "#e4e2e1",
+                "on_surface_variant": "#d7c3ae",
+                "on_tertiary": "#2f3131",
+                "on_tertiary_container": "#464748",
+                "on_tertiary_fixed": "#1a1c1c",
+                "on_tertiary_fixed_variant": "#454747",
+                "outline": "#9f8e7a",
+                "outline_variant": "#524534",
+                "primary": "#ffc880",
+                "primary_container": "#f5a623",
+                "primary_fixed": "#ffddb4",
+                "primary_fixed_dim": "#ffb955",
+                "secondary": "#c8c6c5",
+                "secondary_container": "#474746",
+                "secondary_fixed": "#e5e2e1",
+                "secondary_fixed_dim": "#c8c6c5",
+                "surface": "#131313",
+                "surface_bright": "#393939",
+                "surface_container": "#1f2020",
+                "surface_container_high": "#2a2a2a",
+                "surface_container_highest": "#353535",
+                "surface_container_low": "#1b1c1c",
+                "surface_container_lowest": "#0e0e0e",
+                "surface_dim": "#131313",
+                "surface_tint": "#ffb955",
+                "surface_variant": "#353535",
+                "tertiary": "#d1d1d2",
+                "tertiary_container": "#b5b6b6",
+                "tertiary_fixed": "#e2e2e2",
+                "tertiary_fixed_dim": "#c6c6c7"
+              },
+              "overrideNeutralColor": "#2d2d2d",
+              "overridePrimaryColor": "#f5a623",
+              "overrideSecondaryColor": "#1a1a1a",
+              "overrideTertiaryColor": "#f4f4f4",
+              "spacing": {
+                "base": "8px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "lg": "48px",
+                "md": "24px",
+                "sm": "12px",
+                "xl": "80px",
+                "xs": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Work Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "button-text": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.0"
+                },
+                "headline-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-xl": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "64px",
+                  "fontWeight": "800",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "1.1"
+                },
+                "label-mono": {
+                  "fontFamily": "Space Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "Two Cities Towing Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Two Cities Towing & Roadside LLC**. \n\n### Design Rationale:\n*   **Visual Identity:** I moved away from generic \"emergency\" aesthetics to create the **\"Urban Industrial Authority\"** style. It uses a high-contrast palette of Midnight Charcoal and Industrial Amber to project premium reliability.\n*   **The \"Urban Grid\" Layout:** Instead of standard containers, I used a structured layout motif with thin technical rules and asymmetrical spacing. This gives the site an architectural, precise feel that mirrors the mechanical nature of their work.\n*   **Strong Typography:** I used bold, oversized grotesque headings for impact, paired with mono-accented details to emphasize their status as local experts in Midland and Odessa.\n*   **Bespoke Sections:**\n    *   **Hero:** A cinematic, high-impact introduction focusing on \"The Urban Authority.\"\n    *   **Mechanical Solutions:** A technical services grid designed to look like an industrial catalog.\n    *   **Heritage:** An editorial section dedicated to their roots in the West Texas region.\n    *   **Production-Ready:** The site includes a fully functional responsive navigation, form validation UI, and a dedicated map slot ready for integration.\n\nThe code is clean, semantic, and optimized for a premium desktop experience while remaining fully responsive. How does this new visual direction feel for the brand?"
+    },
+    {
+      "suggestion": "Make the amber color slightly more golden"
+    },
+    {
+      "suggestion": "Add more technical 'blueprint' details to the backgrounds"
+    },
+    {
+      "suggestion": "Create a mobile version of this design"
+    }
+  ],
+  "projectId": "13009894422169880445",
+  "sessionId": "12718113451371922080"
+}
