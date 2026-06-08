@@ -1,0 +1,516 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Modern Serenity",
+        "styleGuidelines": "## Brand & Style\n\nThis design system establishes a premium, editorial visual identity for a high-end wellness brand. It bridges the gap between a clinical restorative practice and a luxury lifestyle publication. The brand personality is poised, sophisticated, and deeply rooted in the concept of \"curated stillness.\"\n\nThe design style is a blend of **Minimalism** and **Modern Editorial**. It prioritizes high-quality whitespace, large-scale imagery, and a meticulous typographic hierarchy. The visual language moves away from the cliché \"seafoam and waves\" of traditional spas, opting instead for a grounded, earthy, and architectural aesthetic that feels both bespoke and professional. \n\nKey visual motifs include the \"Arch\"—representing entry into a state of indulgence—and thin, elegant \"Rule\" lines that organize content with the precision of a high-end magazine.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to mimic the layout of a luxury print magazine. \n- **Desktop:** A 12-column grid with a 1280px max-width, 32px (2rem) gutters, and 64px (4rem) outer margins.\n- **Tablet:** 8-column grid with 24px gutters and 32px margins.\n- **Mobile:** 4-column grid with 16px (1rem) gutters and 20px margins.\n\nSpacing is designed to be \"breathable.\" Avoid cluttering elements; use the `section` spacing (8rem) to separate major content blocks. Content should often be asymmetrical—for example, an image spanning 7 columns with text spanning 4 columns, leaving a 1-column gap to create visual tension and interest.\n\n## Elevation & Depth\n\nTo maintain a sophisticated and flat editorial feel, this design system avoids heavy, realistic shadows. Depth is instead communicated through **Tonal Layers** and **Low-Contrast Outlines**.\n\n1.  **Surfaces:** Use the Oatmeal color (#F5F0E6) as the base background. Elevated elements (like cards or menus) should use pure White (#FFFFFF) to subtly \"lift\" off the page.\n2.  **Borders:** Use very thin (1px) borders in Keystone at 10% opacity for container definition.\n3.  **Shadows:** When necessary (e.g., floating modals), use a single, highly diffused \"Ambient\" shadow: `0px 20px 40px rgba(45, 52, 70, 0.05)`.\n4.  **Glassmorphism:** Use subtle background blurs (10px - 20px) on navigation bars to allow the warm tones of the imagery to bleed through while maintaining legibility.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Keystone background with White text. Rectangular with a slight 0.5rem radius.\n- **Secondary:** Transparent background with a Keystone border and Dusty Rose text for a \"boutique\" feel.\n- **Tertiary:** Text-only with a 1px underline that expands on hover.\n\n### Cards\n- Cards do not use shadows. They use a pure White background against the Oatmeal page background. \n- Use the `label-caps` typography for categories at the top of cards.\n\n### Input Fields\n- Use \"Editorial Inputs\": No background color, just a 1px Keystone bottom border. \n- Labels should be `label-caps` and placed above the field.\n\n### Chips & Tags\n- Used for massage types or durations (e.g., \"90 MIN\", \"DEEP TISSUE\"). \n- Small, pill-shaped with a Eucalyptus background at 10% opacity and Keystone text.\n\n### Lists\n- Use thin horizontal dividers between list items. Icons, if used, should be ultra-thin line art in Keystone or Eucalyptus.\n\n### The Arch Container\n- A specialized component for featured imagery. The top of the image is a perfect semi-circle, while the bottom remains flush with the grid. Use this for \"Treatment Spotlight\" sections.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#2d3436",
+          "designMd": "---\nname: Modern Serenity\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e5e2e1'\n  on-surface: '#1b1b1c'\n  on-surface-variant: '#434749'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#747879'\n  outline-variant: '#c3c7c8'\n  surface-tint: '#586062'\n  primary: '#181f21'\n  on-primary: '#ffffff'\n  primary-container: '#2d3436'\n  on-primary-container: '#959c9f'\n  inverse-primary: '#c1c8ca'\n  secondary: '#615e57'\n  on-secondary: '#ffffff'\n  secondary-container: '#e7e2d8'\n  on-secondary-container: '#67645c'\n  tertiary: '#092211'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1f3825'\n  on-tertiary-container: '#85a288'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dde4e6'\n  primary-fixed-dim: '#c1c8ca'\n  on-primary-fixed: '#161d1f'\n  on-primary-fixed-variant: '#41484a'\n  secondary-fixed: '#e7e2d8'\n  secondary-fixed-dim: '#cac6bd'\n  on-secondary-fixed: '#1d1c16'\n  on-secondary-fixed-variant: '#494740'\n  tertiary-fixed: '#cceace'\n  tertiary-fixed-dim: '#b0ceb2'\n  on-tertiary-fixed: '#07200f'\n  on-tertiary-fixed-variant: '#334d38'\n  background: '#fcf9f8'\n  on-background: '#1b1b1c'\n  surface-variant: '#e5e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: -0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  quote:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '400'\n    lineHeight: '1.5'\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  xs: 0.5rem\n  sm: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 4rem\n  section: 8rem\n  gutter: 2rem\n  margin-desktop: 4rem\n  margin-mobile: 1.25rem\n---\n\n## Brand & Style\n\nThis design system establishes a premium, editorial visual identity for a high-end wellness brand. It bridges the gap between a clinical restorative practice and a luxury lifestyle publication. The brand personality is poised, sophisticated, and deeply rooted in the concept of \"curated stillness.\"\n\nThe design style is a blend of **Minimalism** and **Modern Editorial**. It prioritizes high-quality whitespace, large-scale imagery, and a meticulous typographic hierarchy. The visual language moves away from the cliché \"seafoam and waves\" of traditional spas, opting instead for a grounded, earthy, and architectural aesthetic that feels both bespoke and professional. \n\nKey visual motifs include the \"Arch\"—representing entry into a state of indulgence—and thin, elegant \"Rule\" lines that organize content with the precision of a high-end magazine.\n\n## Colors\n\nThe palette is anchored by **Keystone**, a deep slate that provides an authoritative and grounded foundation. This is contrasted against **Oatmeal**, a warm parchment hue used for primary surfaces to create an atmosphere of soft, natural warmth. \n\n**Eucalyptus** serves as a muted, sophisticated green for success states or secondary accents, while **Dusty Rose** provides a warm, human touch for calls to action or interactive highlights.\n\n- **Primary (Keystone):** Used for typography, borders, and high-contrast UI elements.\n- **Secondary (Oatmeal):** The primary canvas color; use it to reduce the harshness of pure white.\n- **Tertiary (Eucalyptus):** Subtle accents and iconography.\n- **Accent (Dusty Rose):** High-priority interactions and editorial highlights.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing. **Playfair Display** provides an editorial, flared-serif authority for headings, suggesting a legacy of craft and luxury. **Inter** provides a highly legible, airy sans-serif counterpoint for body text and navigation.\n\nLarge display headings should use a tight letter-spacing for a modern look, while labels and small captions should use generous tracking (letter-spacing) in all-caps to maintain an \"expensive\" feel. Use the `quote` style for testimonials or featured treatment descriptions to break the rhythm of the page.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to mimic the layout of a luxury print magazine. \n- **Desktop:** A 12-column grid with a 1280px max-width, 32px (2rem) gutters, and 64px (4rem) outer margins.\n- **Tablet:** 8-column grid with 24px gutters and 32px margins.\n- **Mobile:** 4-column grid with 16px (1rem) gutters and 20px margins.\n\nSpacing is designed to be \"breathable.\" Avoid cluttering elements; use the `section` spacing (8rem) to separate major content blocks. Content should often be asymmetrical—for example, an image spanning 7 columns with text spanning 4 columns, leaving a 1-column gap to create visual tension and interest.\n\n## Elevation & Depth\n\nTo maintain a sophisticated and flat editorial feel, this design system avoids heavy, realistic shadows. Depth is instead communicated through **Tonal Layers** and **Low-Contrast Outlines**.\n\n1.  **Surfaces:** Use the Oatmeal color (#F5F0E6) as the base background. Elevated elements (like cards or menus) should use pure White (#FFFFFF) to subtly \"lift\" off the page.\n2.  **Borders:** Use very thin (1px) borders in Keystone at 10% opacity for container definition.\n3.  **Shadows:** When necessary (e.g., floating modals), use a single, highly diffused \"Ambient\" shadow: `0px 20px 40px rgba(45, 52, 70, 0.05)`.\n4.  **Glassmorphism:** Use subtle background blurs (10px - 20px) on navigation bars to allow the warm tones of the imagery to bleed through while maintaining legibility.\n\n## Shapes\n\nThe shape language is primarily architectural and organic. \n- **Corner Radius:** Standard components (cards, inputs) use a **Rounded** (0.5rem) setting to feel approachable.\n- **The Arch Motif:** High-priority imagery or decorative sections should utilize a \"top-arch\" mask (semi-circle top, flat bottom). This is a signature brand element.\n- **Dividers:** Use thin, full-width horizontal rules (1px) in Keystone to separate editorial sections.\n- **Overlapping Shapes:** Subtle, low-opacity organic blobs in Oatmeal-darker variants or Eucalyptus-light can be used in the background to break the rigidity of the grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Keystone background with White text. Rectangular with a slight 0.5rem radius.\n- **Secondary:** Transparent background with a Keystone border and Dusty Rose text for a \"boutique\" feel.\n- **Tertiary:** Text-only with a 1px underline that expands on hover.\n\n### Cards\n- Cards do not use shadows. They use a pure White background against the Oatmeal page background. \n- Use the `label-caps` typography for categories at the top of cards.\n\n### Input Fields\n- Use \"Editorial Inputs\": No background color, just a 1px Keystone bottom border. \n- Labels should be `label-caps` and placed above the field.\n\n### Chips & Tags\n- Used for massage types or durations (e.g., \"90 MIN\", \"DEEP TISSUE\"). \n- Small, pill-shaped with a Eucalyptus background at 10% opacity and Keystone text.\n\n### Lists\n- Use thin horizontal dividers between list items. Icons, if used, should be ultra-thin line art in Keystone or Eucalyptus.\n\n### The Arch Container\n- A specialized component for featured imagery. The top of the image is a perfect semi-circle, while the bottom remains flush with the grid. Use this for \"Treatment Spotlight\" sections.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "INTER",
+          "labelFontFamily": "Inter",
+          "namedColors": {
+            "background": "#fcf9f8",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f3f0ef",
+            "inverse_primary": "#c1c8ca",
+            "inverse_surface": "#313030",
+            "on_background": "#1b1b1c",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#959c9f",
+            "on_primary_fixed": "#161d1f",
+            "on_primary_fixed_variant": "#41484a",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#67645c",
+            "on_secondary_fixed": "#1d1c16",
+            "on_secondary_fixed_variant": "#494740",
+            "on_surface": "#1b1b1c",
+            "on_surface_variant": "#434749",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#85a288",
+            "on_tertiary_fixed": "#07200f",
+            "on_tertiary_fixed_variant": "#334d38",
+            "outline": "#747879",
+            "outline_variant": "#c3c7c8",
+            "primary": "#181f21",
+            "primary_container": "#2d3436",
+            "primary_fixed": "#dde4e6",
+            "primary_fixed_dim": "#c1c8ca",
+            "secondary": "#615e57",
+            "secondary_container": "#e7e2d8",
+            "secondary_fixed": "#e7e2d8",
+            "secondary_fixed_dim": "#cac6bd",
+            "surface": "#fcf9f8",
+            "surface_bright": "#fcf9f8",
+            "surface_container": "#f0eded",
+            "surface_container_high": "#eae7e7",
+            "surface_container_highest": "#e5e2e1",
+            "surface_container_low": "#f6f3f2",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dcd9d9",
+            "surface_tint": "#586062",
+            "surface_variant": "#e5e2e1",
+            "tertiary": "#092211",
+            "tertiary_container": "#1f3825",
+            "tertiary_fixed": "#cceace",
+            "tertiary_fixed_dim": "#b0ceb2"
+          },
+          "overridePrimaryColor": "#2d3436",
+          "overrideSecondaryColor": "#f5f0e6",
+          "overrideTertiaryColor": "#8ba88e",
+          "roundness": "ROUND_EIGHT",
+          "spacing": {
+            "gutter": "2rem",
+            "lg": "2rem",
+            "margin-desktop": "4rem",
+            "margin-mobile": "1.25rem",
+            "md": "1.5rem",
+            "section": "8rem",
+            "sm": "1rem",
+            "unit": "4px",
+            "xl": "4rem",
+            "xs": "0.5rem"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "64px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "500",
+              "lineHeight": "1.4"
+            },
+            "label-caps": {
+              "fontFamily": "Inter",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.0"
+            },
+            "quote": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "28px",
+              "fontWeight": "400",
+              "lineHeight": "1.5"
+            }
+          }
+        }
+      },
+      "name": "assets/8a6e3b5ad79441eeacaa56207af2601f",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "58de8f0e1142498bb9587dfa2f89193e",
+          "name": "projects/15186776950014290347/screens/58de8f0e1142498bb9587dfa2f89193e",
+          "prompt": "High-end, editorial lifestyle photography for a premium massage and reflexology studio. A close-up of smooth, dark basalt stones resting on soft, textured oatmeal-colored linen. Warm, natural side-lighting creating soft shadows. The mood is tranquil, sophisticated, and restorative. Minimalist composition. 8k resolution, professional photography. Color palette: charcoal, warm beige, soft sage.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv1Vngu9SF18zDaZNO875ranuBuiBLtcbTeirWGn2o6fe6pw4jviBHO9yat0ImnBurflQ-7mTekaOoCndgVIUqM1pY7z6D5BTYn5tz1OZ30O7rXW3HjX81VxDV5Q8Ed9RnQAFdJPixGhZRR_kUOD3BAmaiM1m9gbV5hBcfcxh_M2FiaQGSv1RjTykM7J3-CcItDlHvaDImQMEPWeaOc9HSAA-oWOmkDxLtGbeELGxmzEpQxhYSJgRkuL6-a",
+            "name": "projects/15186776950014290347/files/9b0bde6821c44ceaab153efaee8a27b7"
+          },
+          "theme": {},
+          "title": "High-end, editorial lifestyle photography for a premium massage and reflexology studio. A close-up of smooth, dark basalt stones resting on soft, textured oatmeal-colored linen. Warm, natural side-lighting creating soft shadows. The mood is tranquil, sophisticated, and restorative. Minimalist composition. 8k resolution, professional photography. Color palette: charcoal, warm beige, soft sage.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "a2bdc9751203475aad4c96483b9841f7",
+          "name": "projects/15186776950014290347/screens/a2bdc9751203475aad4c96483b9841f7",
+          "prompt": "Close-up detail of hands performing reflexology on a foot, set against a backdrop of minimalist, modern spa decor. Soft, diffused lighting. The focus is on the healing touch and the serene environment. Editorial style, clean lines, high-end aesthetic. Colors: muted earth tones, soft greens.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs4uabrRQOt86JfsRYUwh24FYBXWm1p0xqusmAPbaoCjz2i1EYeO73SmkyrwZ3VkhvpXv0ZMgjd1uvLRMiDEBd687yzxXXWhl-v6FU4jsx9kqbQOQDDQL0mRpg2AQOh4EJc6Mm-YjemM5wf4tA5U8pQ6h2F5jjcdb1zVZzj21Dt9pLsFd4Nyjn3Mh5CZCBVcaEvR6nJG8wLxOpLcZm7Vhi7pig0WmdQ0SHbt_wcin0b4_1Hz3o3aFjBcTO2",
+            "name": "projects/15186776950014290347/files/ad76079776f44511b9a557d0e632e6a8"
+          },
+          "theme": {},
+          "title": "Close-up detail of hands performing reflexology on a foot, set against a backdrop of minimalist, modern spa decor. Soft, diffused lighting. The focus is on the healing touch and the serene environment. Editorial style, clean lines, high-end aesthetic. Colors: muted earth tones, soft greens.",
+          "width": "1200"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "0b99a2f0320d4bc8ac534407cdbaf576",
+          "name": "projects/15186776950014290347/screens/0b99a2f0320d4bc8ac534407cdbaf576",
+          "prompt": "Interior design of a high-end, minimalist massage studio in Reno. Natural materials, wood accents, soft linen curtains, and a single branch of eucalyptus in a ceramic vase. Airy and bright but grounded. Sophisticated and welcoming. 8k, architectural photography.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtjO1pQYGDWgaGX2mtpxA7jCFPwRoS-YTHm8BrXr1CC0b_yHbV3qnahyABZNKLUIz-81Oao1N3qXxtV8ug8sceBAG-AXuABVhSNoX_tpX_aLMk_NauQQlPhafNAlrRAo9pCYY7SRR_7oBNykm6j2jaNfEiHu5SZkpObDdo9dB5rIUwhFRq7NQIc6QrwmwiXM7bAZj5gAa_k7dCtilJCy2EwudZUk0jIaYTzi0znqQabkTfsAn_Cg4LHCu2H",
+            "name": "projects/15186776950014290347/files/6ce82ff6de92401e9f98cacfa61ab51f"
+          },
+          "theme": {},
+          "title": "Interior design of a high-end, minimalist massage studio in Reno. Natural materials, wood accents, soft linen curtains, and a single branch of eucalyptus in a ceramic vase. Airy and bright but grounded. Sophisticated and welcoming. 8k, architectural photography.",
+          "width": "1264"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Modern Serenity",
+              "styleGuidelines": "## Brand & Style\n\nThis design system establishes a premium, editorial visual identity for a high-end wellness brand. It bridges the gap between a clinical restorative practice and a luxury lifestyle publication. The brand personality is poised, sophisticated, and deeply rooted in the concept of \"curated stillness.\"\n\nThe design style is a blend of **Minimalism** and **Modern Editorial**. It prioritizes high-quality whitespace, large-scale imagery, and a meticulous typographic hierarchy. The visual language moves away from the cliché \"seafoam and waves\" of traditional spas, opting instead for a grounded, earthy, and architectural aesthetic that feels both bespoke and professional. \n\nKey visual motifs include the \"Arch\"—representing entry into a state of indulgence—and thin, elegant \"Rule\" lines that organize content with the precision of a high-end magazine.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to mimic the layout of a luxury print magazine. \n- **Desktop:** A 12-column grid with a 1280px max-width, 32px (2rem) gutters, and 64px (4rem) outer margins.\n- **Tablet:** 8-column grid with 24px gutters and 32px margins.\n- **Mobile:** 4-column grid with 16px (1rem) gutters and 20px margins.\n\nSpacing is designed to be \"breathable.\" Avoid cluttering elements; use the `section` spacing (8rem) to separate major content blocks. Content should often be asymmetrical—for example, an image spanning 7 columns with text spanning 4 columns, leaving a 1-column gap to create visual tension and interest.\n\n## Elevation & Depth\n\nTo maintain a sophisticated and flat editorial feel, this design system avoids heavy, realistic shadows. Depth is instead communicated through **Tonal Layers** and **Low-Contrast Outlines**.\n\n1.  **Surfaces:** Use the Oatmeal color (#F5F0E6) as the base background. Elevated elements (like cards or menus) should use pure White (#FFFFFF) to subtly \"lift\" off the page.\n2.  **Borders:** Use very thin (1px) borders in Keystone at 10% opacity for container definition.\n3.  **Shadows:** When necessary (e.g., floating modals), use a single, highly diffused \"Ambient\" shadow: `0px 20px 40px rgba(45, 52, 70, 0.05)`.\n4.  **Glassmorphism:** Use subtle background blurs (10px - 20px) on navigation bars to allow the warm tones of the imagery to bleed through while maintaining legibility.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Keystone background with White text. Rectangular with a slight 0.5rem radius.\n- **Secondary:** Transparent background with a Keystone border and Dusty Rose text for a \"boutique\" feel.\n- **Tertiary:** Text-only with a 1px underline that expands on hover.\n\n### Cards\n- Cards do not use shadows. They use a pure White background against the Oatmeal page background. \n- Use the `label-caps` typography for categories at the top of cards.\n\n### Input Fields\n- Use \"Editorial Inputs\": No background color, just a 1px Keystone bottom border. \n- Labels should be `label-caps` and placed above the field.\n\n### Chips & Tags\n- Used for massage types or durations (e.g., \"90 MIN\", \"DEEP TISSUE\"). \n- Small, pill-shaped with a Eucalyptus background at 10% opacity and Keystone text.\n\n### Lists\n- Use thin horizontal dividers between list items. Icons, if used, should be ultra-thin line art in Keystone or Eucalyptus.\n\n### The Arch Container\n- A specialized component for featured imagery. The top of the image is a perfect semi-circle, while the bottom remains flush with the grid. Use this for \"Treatment Spotlight\" sections.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#2d3436",
+                "designMd": "---\nname: Modern Serenity\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e5e2e1'\n  on-surface: '#1b1b1c'\n  on-surface-variant: '#434749'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#747879'\n  outline-variant: '#c3c7c8'\n  surface-tint: '#586062'\n  primary: '#181f21'\n  on-primary: '#ffffff'\n  primary-container: '#2d3436'\n  on-primary-container: '#959c9f'\n  inverse-primary: '#c1c8ca'\n  secondary: '#615e57'\n  on-secondary: '#ffffff'\n  secondary-container: '#e7e2d8'\n  on-secondary-container: '#67645c'\n  tertiary: '#092211'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1f3825'\n  on-tertiary-container: '#85a288'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dde4e6'\n  primary-fixed-dim: '#c1c8ca'\n  on-primary-fixed: '#161d1f'\n  on-primary-fixed-variant: '#41484a'\n  secondary-fixed: '#e7e2d8'\n  secondary-fixed-dim: '#cac6bd'\n  on-secondary-fixed: '#1d1c16'\n  on-secondary-fixed-variant: '#494740'\n  tertiary-fixed: '#cceace'\n  tertiary-fixed-dim: '#b0ceb2'\n  on-tertiary-fixed: '#07200f'\n  on-tertiary-fixed-variant: '#334d38'\n  background: '#fcf9f8'\n  on-background: '#1b1b1c'\n  surface-variant: '#e5e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: -0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  quote:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '400'\n    lineHeight: '1.5'\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  xs: 0.5rem\n  sm: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 4rem\n  section: 8rem\n  gutter: 2rem\n  margin-desktop: 4rem\n  margin-mobile: 1.25rem\n---\n\n## Brand & Style\n\nThis design system establishes a premium, editorial visual identity for a high-end wellness brand. It bridges the gap between a clinical restorative practice and a luxury lifestyle publication. The brand personality is poised, sophisticated, and deeply rooted in the concept of \"curated stillness.\"\n\nThe design style is a blend of **Minimalism** and **Modern Editorial**. It prioritizes high-quality whitespace, large-scale imagery, and a meticulous typographic hierarchy. The visual language moves away from the cliché \"seafoam and waves\" of traditional spas, opting instead for a grounded, earthy, and architectural aesthetic that feels both bespoke and professional. \n\nKey visual motifs include the \"Arch\"—representing entry into a state of indulgence—and thin, elegant \"Rule\" lines that organize content with the precision of a high-end magazine.\n\n## Colors\n\nThe palette is anchored by **Keystone**, a deep slate that provides an authoritative and grounded foundation. This is contrasted against **Oatmeal**, a warm parchment hue used for primary surfaces to create an atmosphere of soft, natural warmth. \n\n**Eucalyptus** serves as a muted, sophisticated green for success states or secondary accents, while **Dusty Rose** provides a warm, human touch for calls to action or interactive highlights.\n\n- **Primary (Keystone):** Used for typography, borders, and high-contrast UI elements.\n- **Secondary (Oatmeal):** The primary canvas color; use it to reduce the harshness of pure white.\n- **Tertiary (Eucalyptus):** Subtle accents and iconography.\n- **Accent (Dusty Rose):** High-priority interactions and editorial highlights.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing. **Playfair Display** provides an editorial, flared-serif authority for headings, suggesting a legacy of craft and luxury. **Inter** provides a highly legible, airy sans-serif counterpoint for body text and navigation.\n\nLarge display headings should use a tight letter-spacing for a modern look, while labels and small captions should use generous tracking (letter-spacing) in all-caps to maintain an \"expensive\" feel. Use the `quote` style for testimonials or featured treatment descriptions to break the rhythm of the page.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to mimic the layout of a luxury print magazine. \n- **Desktop:** A 12-column grid with a 1280px max-width, 32px (2rem) gutters, and 64px (4rem) outer margins.\n- **Tablet:** 8-column grid with 24px gutters and 32px margins.\n- **Mobile:** 4-column grid with 16px (1rem) gutters and 20px margins.\n\nSpacing is designed to be \"breathable.\" Avoid cluttering elements; use the `section` spacing (8rem) to separate major content blocks. Content should often be asymmetrical—for example, an image spanning 7 columns with text spanning 4 columns, leaving a 1-column gap to create visual tension and interest.\n\n## Elevation & Depth\n\nTo maintain a sophisticated and flat editorial feel, this design system avoids heavy, realistic shadows. Depth is instead communicated through **Tonal Layers** and **Low-Contrast Outlines**.\n\n1.  **Surfaces:** Use the Oatmeal color (#F5F0E6) as the base background. Elevated elements (like cards or menus) should use pure White (#FFFFFF) to subtly \"lift\" off the page.\n2.  **Borders:** Use very thin (1px) borders in Keystone at 10% opacity for container definition.\n3.  **Shadows:** When necessary (e.g., floating modals), use a single, highly diffused \"Ambient\" shadow: `0px 20px 40px rgba(45, 52, 70, 0.05)`.\n4.  **Glassmorphism:** Use subtle background blurs (10px - 20px) on navigation bars to allow the warm tones of the imagery to bleed through while maintaining legibility.\n\n## Shapes\n\nThe shape language is primarily architectural and organic. \n- **Corner Radius:** Standard components (cards, inputs) use a **Rounded** (0.5rem) setting to feel approachable.\n- **The Arch Motif:** High-priority imagery or decorative sections should utilize a \"top-arch\" mask (semi-circle top, flat bottom). This is a signature brand element.\n- **Dividers:** Use thin, full-width horizontal rules (1px) in Keystone to separate editorial sections.\n- **Overlapping Shapes:** Subtle, low-opacity organic blobs in Oatmeal-darker variants or Eucalyptus-light can be used in the background to break the rigidity of the grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Keystone background with White text. Rectangular with a slight 0.5rem radius.\n- **Secondary:** Transparent background with a Keystone border and Dusty Rose text for a \"boutique\" feel.\n- **Tertiary:** Text-only with a 1px underline that expands on hover.\n\n### Cards\n- Cards do not use shadows. They use a pure White background against the Oatmeal page background. \n- Use the `label-caps` typography for categories at the top of cards.\n\n### Input Fields\n- Use \"Editorial Inputs\": No background color, just a 1px Keystone bottom border. \n- Labels should be `label-caps` and placed above the field.\n\n### Chips & Tags\n- Used for massage types or durations (e.g., \"90 MIN\", \"DEEP TISSUE\"). \n- Small, pill-shaped with a Eucalyptus background at 10% opacity and Keystone text.\n\n### Lists\n- Use thin horizontal dividers between list items. Icons, if used, should be ultra-thin line art in Keystone or Eucalyptus.\n\n### The Arch Container\n- A specialized component for featured imagery. The top of the image is a perfect semi-circle, while the bottom remains flush with the grid. Use this for \"Treatment Spotlight\" sections.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "INTER",
+                "labelFontFamily": "Inter",
+                "namedColors": {
+                  "background": "#fcf9f8",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f3f0ef",
+                  "inverse_primary": "#c1c8ca",
+                  "inverse_surface": "#313030",
+                  "on_background": "#1b1b1c",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#959c9f",
+                  "on_primary_fixed": "#161d1f",
+                  "on_primary_fixed_variant": "#41484a",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#67645c",
+                  "on_secondary_fixed": "#1d1c16",
+                  "on_secondary_fixed_variant": "#494740",
+                  "on_surface": "#1b1b1c",
+                  "on_surface_variant": "#434749",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#85a288",
+                  "on_tertiary_fixed": "#07200f",
+                  "on_tertiary_fixed_variant": "#334d38",
+                  "outline": "#747879",
+                  "outline_variant": "#c3c7c8",
+                  "primary": "#181f21",
+                  "primary_container": "#2d3436",
+                  "primary_fixed": "#dde4e6",
+                  "primary_fixed_dim": "#c1c8ca",
+                  "secondary": "#615e57",
+                  "secondary_container": "#e7e2d8",
+                  "secondary_fixed": "#e7e2d8",
+                  "secondary_fixed_dim": "#cac6bd",
+                  "surface": "#fcf9f8",
+                  "surface_bright": "#fcf9f8",
+                  "surface_container": "#f0eded",
+                  "surface_container_high": "#eae7e7",
+                  "surface_container_highest": "#e5e2e1",
+                  "surface_container_low": "#f6f3f2",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dcd9d9",
+                  "surface_tint": "#586062",
+                  "surface_variant": "#e5e2e1",
+                  "tertiary": "#092211",
+                  "tertiary_container": "#1f3825",
+                  "tertiary_fixed": "#cceace",
+                  "tertiary_fixed_dim": "#b0ceb2"
+                },
+                "overridePrimaryColor": "#2d3436",
+                "overrideSecondaryColor": "#f5f0e6",
+                "overrideTertiaryColor": "#8ba88e",
+                "roundness": "ROUND_EIGHT",
+                "spacing": {
+                  "gutter": "2rem",
+                  "lg": "2rem",
+                  "margin-desktop": "4rem",
+                  "margin-mobile": "1.25rem",
+                  "md": "1.5rem",
+                  "section": "8rem",
+                  "sm": "1rem",
+                  "unit": "4px",
+                  "xl": "4rem",
+                  "xs": "0.5rem"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "64px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "40px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.4"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Inter",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.0"
+                  },
+                  "quote": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "28px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                  }
+                }
+              }
+            },
+            "name": "assets/8a6e3b5ad79441eeacaa56207af2601f",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10126",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzdmZDVmNmQ4MjVhMzQxYmM4MzUzYTFjODMzNDQ1YjZjEgsSBxDBloTL-h4YAZIBJAoKcHJvamVjdF9pZBIWQhQxNTE4Njc3Njk1MDAxNDI5MDM0Nw&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/15186776950014290347/files/42a14e9d57744e718fe7b988ee196e46"
+          },
+          "id": "86166fb08e9c490888d07b9299f54ef8",
+          "name": "projects/15186776950014290347/screens/86166fb08e9c490888d07b9299f54ef8",
+          "prompt": "Build a complete, bespoke DESKTOP homepage for 'Indulge Massage & Reflexology'. \n\nLAYOUT & STYLE:\n- Avoid generic local business templates. Use an editorial, asymmetrical layout with generous whitespace and high-contrast typography.\n- Motif: Use an 'arch' shape or subtle elegant rule lines to divide sections.\n- Color Palette: Keystone Slate (#2D3436), Oatmeal (#F5F0E6), Eucalyptus Sage (#8BA88E).\n- Typography: Playfair Display for headlines, Inter for body.\n\nSECTIONS:\n1. Header: Fixed, minimalist, featuring the phone number (775) 737-9799 and the brand name 'Indulge'.\n2. Hero: A breathtaking editorial composition using {{DATA:IMAGE:IMAGE_3}}. The headline should be evocative: \"A Restorative Pause in the Heart of Reno.\"\n3. Credibility: A quiet, confident section highlighting local expertise and years of healing touch. No cheesy icons—use elegant text and subtle lines.\n4. Offerings: A curated grid of services (Massages, Reflexology, Body Treatments). Use {{DATA:IMAGE:IMAGE_4}} for the reflexology block. Each card should feel like a piece of art, not a sales pitch.\n5. About: A narrative section about the Reno studio, using {{DATA:IMAGE:IMAGE_5}}. Focus on the atmosphere and the personalized approach.\n6. Visit: Include a contact form and a 'Map' section with the specific code: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Footer: Clean and minimal with contact details (413 Keystone Avenue, Reno, NV 89503, indulgemassage@yahoo.com) and social links.\n\nTECHNICAL:\n- Fully responsive.\n- Smooth scrolling.\n- Real content, no lorem ipsum.\n- Form validation UI for the contact form.\n- Use CSS custom properties for the color palette.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvCg7DmKddC4qN26xAKCnwNeRPgm_skkYGv6veIszewD-YwCim5h-6V_XqVml5FqERbZKT1HB97A5f6_Q8nbrHBcRJKMRjFQiEZyvb3LoO0vESbCvVq93lXkvseNWin3Rxir5qea-Vsh3onYoGxWWLTDPGT9Px7ToDNLaWuEKHHAaYWpxmm1Jdv0nl2Dh9FpNdlszPzBoJTI1AR6b4DNmGih-IR2VO1y8MxFkzMynX8bMiizJ01YkEoCVJp",
+            "name": "projects/15186776950014290347/files/9986c27266d341de90acf28adfd33135"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#2d3436",
+            "designMd": "---\nname: Modern Serenity\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e5e2e1'\n  on-surface: '#1b1b1c'\n  on-surface-variant: '#434749'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f3f0ef'\n  outline: '#747879'\n  outline-variant: '#c3c7c8'\n  surface-tint: '#586062'\n  primary: '#181f21'\n  on-primary: '#ffffff'\n  primary-container: '#2d3436'\n  on-primary-container: '#959c9f'\n  inverse-primary: '#c1c8ca'\n  secondary: '#615e57'\n  on-secondary: '#ffffff'\n  secondary-container: '#e7e2d8'\n  on-secondary-container: '#67645c'\n  tertiary: '#092211'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1f3825'\n  on-tertiary-container: '#85a288'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#dde4e6'\n  primary-fixed-dim: '#c1c8ca'\n  on-primary-fixed: '#161d1f'\n  on-primary-fixed-variant: '#41484a'\n  secondary-fixed: '#e7e2d8'\n  secondary-fixed-dim: '#cac6bd'\n  on-secondary-fixed: '#1d1c16'\n  on-secondary-fixed-variant: '#494740'\n  tertiary-fixed: '#cceace'\n  tertiary-fixed-dim: '#b0ceb2'\n  on-tertiary-fixed: '#07200f'\n  on-tertiary-fixed-variant: '#334d38'\n  background: '#fcf9f8'\n  on-background: '#1b1b1c'\n  surface-variant: '#e5e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: -0.01em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  quote:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '400'\n    lineHeight: '1.5'\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 4px\n  xs: 0.5rem\n  sm: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 4rem\n  section: 8rem\n  gutter: 2rem\n  margin-desktop: 4rem\n  margin-mobile: 1.25rem\n---\n\n## Brand & Style\n\nThis design system establishes a premium, editorial visual identity for a high-end wellness brand. It bridges the gap between a clinical restorative practice and a luxury lifestyle publication. The brand personality is poised, sophisticated, and deeply rooted in the concept of \"curated stillness.\"\n\nThe design style is a blend of **Minimalism** and **Modern Editorial**. It prioritizes high-quality whitespace, large-scale imagery, and a meticulous typographic hierarchy. The visual language moves away from the cliché \"seafoam and waves\" of traditional spas, opting instead for a grounded, earthy, and architectural aesthetic that feels both bespoke and professional. \n\nKey visual motifs include the \"Arch\"—representing entry into a state of indulgence—and thin, elegant \"Rule\" lines that organize content with the precision of a high-end magazine.\n\n## Colors\n\nThe palette is anchored by **Keystone**, a deep slate that provides an authoritative and grounded foundation. This is contrasted against **Oatmeal**, a warm parchment hue used for primary surfaces to create an atmosphere of soft, natural warmth. \n\n**Eucalyptus** serves as a muted, sophisticated green for success states or secondary accents, while **Dusty Rose** provides a warm, human touch for calls to action or interactive highlights.\n\n- **Primary (Keystone):** Used for typography, borders, and high-contrast UI elements.\n- **Secondary (Oatmeal):** The primary canvas color; use it to reduce the harshness of pure white.\n- **Tertiary (Eucalyptus):** Subtle accents and iconography.\n- **Accent (Dusty Rose):** High-priority interactions and editorial highlights.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing. **Playfair Display** provides an editorial, flared-serif authority for headings, suggesting a legacy of craft and luxury. **Inter** provides a highly legible, airy sans-serif counterpoint for body text and navigation.\n\nLarge display headings should use a tight letter-spacing for a modern look, while labels and small captions should use generous tracking (letter-spacing) in all-caps to maintain an \"expensive\" feel. Use the `quote` style for testimonials or featured treatment descriptions to break the rhythm of the page.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model on desktop to mimic the layout of a luxury print magazine. \n- **Desktop:** A 12-column grid with a 1280px max-width, 32px (2rem) gutters, and 64px (4rem) outer margins.\n- **Tablet:** 8-column grid with 24px gutters and 32px margins.\n- **Mobile:** 4-column grid with 16px (1rem) gutters and 20px margins.\n\nSpacing is designed to be \"breathable.\" Avoid cluttering elements; use the `section` spacing (8rem) to separate major content blocks. Content should often be asymmetrical—for example, an image spanning 7 columns with text spanning 4 columns, leaving a 1-column gap to create visual tension and interest.\n\n## Elevation & Depth\n\nTo maintain a sophisticated and flat editorial feel, this design system avoids heavy, realistic shadows. Depth is instead communicated through **Tonal Layers** and **Low-Contrast Outlines**.\n\n1.  **Surfaces:** Use the Oatmeal color (#F5F0E6) as the base background. Elevated elements (like cards or menus) should use pure White (#FFFFFF) to subtly \"lift\" off the page.\n2.  **Borders:** Use very thin (1px) borders in Keystone at 10% opacity for container definition.\n3.  **Shadows:** When necessary (e.g., floating modals), use a single, highly diffused \"Ambient\" shadow: `0px 20px 40px rgba(45, 52, 70, 0.05)`.\n4.  **Glassmorphism:** Use subtle background blurs (10px - 20px) on navigation bars to allow the warm tones of the imagery to bleed through while maintaining legibility.\n\n## Shapes\n\nThe shape language is primarily architectural and organic. \n- **Corner Radius:** Standard components (cards, inputs) use a **Rounded** (0.5rem) setting to feel approachable.\n- **The Arch Motif:** High-priority imagery or decorative sections should utilize a \"top-arch\" mask (semi-circle top, flat bottom). This is a signature brand element.\n- **Dividers:** Use thin, full-width horizontal rules (1px) in Keystone to separate editorial sections.\n- **Overlapping Shapes:** Subtle, low-opacity organic blobs in Oatmeal-darker variants or Eucalyptus-light can be used in the background to break the rigidity of the grid.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Keystone background with White text. Rectangular with a slight 0.5rem radius.\n- **Secondary:** Transparent background with a Keystone border and Dusty Rose text for a \"boutique\" feel.\n- **Tertiary:** Text-only with a 1px underline that expands on hover.\n\n### Cards\n- Cards do not use shadows. They use a pure White background against the Oatmeal page background. \n- Use the `label-caps` typography for categories at the top of cards.\n\n### Input Fields\n- Use \"Editorial Inputs\": No background color, just a 1px Keystone bottom border. \n- Labels should be `label-caps` and placed above the field.\n\n### Chips & Tags\n- Used for massage types or durations (e.g., \"90 MIN\", \"DEEP TISSUE\"). \n- Small, pill-shaped with a Eucalyptus background at 10% opacity and Keystone text.\n\n### Lists\n- Use thin horizontal dividers between list items. Icons, if used, should be ultra-thin line art in Keystone or Eucalyptus.\n\n### The Arch Container\n- A specialized component for featured imagery. The top of the image is a perfect semi-circle, while the bottom remains flush with the grid. Use this for \"Treatment Spotlight\" sections.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
+            "namedColors": {
+              "background": "#fcf9f8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0ef",
+              "inverse_primary": "#c1c8ca",
+              "inverse_surface": "#313030",
+              "on_background": "#1b1b1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#959c9f",
+              "on_primary_fixed": "#161d1f",
+              "on_primary_fixed_variant": "#41484a",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#67645c",
+              "on_secondary_fixed": "#1d1c16",
+              "on_secondary_fixed_variant": "#494740",
+              "on_surface": "#1b1b1c",
+              "on_surface_variant": "#434749",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#85a288",
+              "on_tertiary_fixed": "#07200f",
+              "on_tertiary_fixed_variant": "#334d38",
+              "outline": "#747879",
+              "outline_variant": "#c3c7c8",
+              "primary": "#181f21",
+              "primary_container": "#2d3436",
+              "primary_fixed": "#dde4e6",
+              "primary_fixed_dim": "#c1c8ca",
+              "secondary": "#615e57",
+              "secondary_container": "#e7e2d8",
+              "secondary_fixed": "#e7e2d8",
+              "secondary_fixed_dim": "#cac6bd",
+              "surface": "#fcf9f8",
+              "surface_bright": "#fcf9f8",
+              "surface_container": "#f0eded",
+              "surface_container_high": "#eae7e7",
+              "surface_container_highest": "#e5e2e1",
+              "surface_container_low": "#f6f3f2",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9d9",
+              "surface_tint": "#586062",
+              "surface_variant": "#e5e2e1",
+              "tertiary": "#092211",
+              "tertiary_container": "#1f3825",
+              "tertiary_fixed": "#cceace",
+              "tertiary_fixed_dim": "#b0ceb2"
+            },
+            "overridePrimaryColor": "#2d3436",
+            "overrideSecondaryColor": "#f5f0e6",
+            "overrideTertiaryColor": "#8ba88e",
+            "roundness": "ROUND_EIGHT",
+            "spacing": {
+              "gutter": "2rem",
+              "lg": "2rem",
+              "margin-desktop": "4rem",
+              "margin-mobile": "1.25rem",
+              "md": "1.5rem",
+              "section": "8rem",
+              "sm": "1rem",
+              "unit": "4px",
+              "xl": "4rem",
+              "xs": "0.5rem"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "500",
+                "lineHeight": "1.4"
+              },
+              "label-caps": {
+                "fontFamily": "Inter",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              },
+              "quote": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "28px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              }
+            }
+          },
+          "title": "Indulge Massage & Reflexology - Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've completed the bespoke homepage for Indulge Massage & Reflexology. \n\n### Design Choices & Rationale:\n- **Editorial Identity**: I moved away from the standard \"spa\" aesthetic (blues and teals) and instead used a sophisticated palette of **Keystone Slate, Oatmeal, and Eucalyptus**. This gives the brand a more exclusive, boutique feel that stands out in the Reno market.\n- **Asymmetrical Layout**: The hero and service sections use intentional whitespace and an asymmetrical grid to create a sense of movement and modern luxury, moving away from the \"boxy\" feel of standard templates.\n- **Visual Motifs**: I introduced a soft **arch motif** in the hero image and subtle rule lines throughout the site to provide a unique, consistent visual thread that feels high-end and curated.\n- **Typography**: The high-contrast pairing of **Playfair Display** (serif) and **Inter** (sans-serif) establishes a strong typographic hierarchy that balances restorative warmth with clinical professionalism.\n- **Production-Ready Code**: The design is implemented as a semantic, responsive HTML5 document using CSS Custom Properties for easy maintenance and smooth-scroll interactivity.\n\n### Key Features:\n- **Curated Offerings**: A service grid that highlights Therapeutic Massage, Advanced Reflexology, and Holistic Body Rituals.\n- **Studio Narrative**: A section dedicated to the \"Stillness\" of your Reno studio, grounding the brand in its physical location.\n- **Production-Ready Visit Section**: Includes a dedicated map slot and a refined booking inquiry form with built-in validation UI.\n\nHow do you feel about this visual direction? I can adjust the color story or refine the layout hierarchy if needed."
+  },
+  {
+    "suggestion": "Make the Eucalyptus sage more prominent"
+  },
+  {
+    "suggestion": "Add a dedicated 'Testimonials' section with an editorial look"
+  },
+  {
+    "suggestion": "Try a dark mode version for an 'after-hours' vibe"
+  }
+]
