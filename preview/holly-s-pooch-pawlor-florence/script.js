@@ -1,26 +1,27 @@
-// Simple micro-interactions
-        document.querySelectorAll('form').forEach(form => {
-            form.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const btn = form.querySelector('button');
-                const originalText = btn.innerText;
-                btn.innerText = 'Sent Successfully';
-                btn.classList.add('bg-brand-red', 'border-brand-red');
+// Simple micro-interaction for form button
+        const contactBtn = document.querySelector('#contactForm button');
+        contactBtn.addEventListener('click', () => {
+            const originalText = contactBtn.innerText;
+            contactBtn.innerText = 'Preview only';
+            setTimeout(() => {
+                contactBtn.innerText = 'Thank You';
+                contactBtn.classList.add('bg-green-800');
                 setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.classList.remove('bg-brand-red', 'border-brand-red');
-                    form.reset();
+                    contactBtn.innerText = originalText;
+                    contactBtn.classList.remove('bg-green-800');
+                    document.getElementById('contactForm').reset();
                 }, 3000);
-            });
+            }, 1000);
         });
 
-        // Parallax-ish scroll effect for vertical lines
+        // Sticky Navbar subtle effect
         window.addEventListener('scroll', () => {
-            const lines = document.querySelectorAll('.vertical-line');
-            const scrolled = window.pageYOffset;
-            lines.forEach((line, index) => {
-                line.style.transform = `translateY(${scrolled * (0.05 * (index + 1))}px)`;
-            });
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('shadow-sm');
+            } else {
+                header.classList.remove('shadow-sm');
+            }
         });
 
 (() => {
