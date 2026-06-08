@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Top Notch Barbershop | The Standard of Fargo</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#303031",
+                        "primary": "#eebd8e",
+                        "outline-variant": "#50453b",
+                        "tertiary-container": "#929091",
+                        "secondary-container": "#484c4e",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#c8c6c7",
+                        "on-primary": "#472a06",
+                        "on-secondary-container": "#b8bcbe",
+                        "secondary": "#c3c7c9",
+                        "surface-container-high": "#282a2b",
+                        "on-primary-fixed-variant": "#61401b",
+                        "on-secondary-fixed-variant": "#434749",
+                        "tertiary": "#c8c6c7",
+                        "on-tertiary-fixed": "#1b1b1c",
+                        "primary-container": "#b4885d",
+                        "secondary-fixed": "#dfe3e5",
+                        "secondary-fixed-dim": "#c3c7c9",
+                        "surface-container-highest": "#333535",
+                        "on-background": "#e2e2e2",
+                        "on-error-container": "#ffdad6",
+                        "on-error": "#690005",
+                        "on-surface": "#e2e2e2",
+                        "surface-container": "#1e2020",
+                        "surface-container-low": "#1a1c1c",
+                        "surface-variant": "#333535",
+                        "on-secondary-fixed": "#181c1e",
+                        "background": "#121414",
+                        "outline": "#9c8e83",
+                        "surface-container-lowest": "#0c0f0f",
+                        "on-primary-container": "#3f2302",
+                        "inverse-primary": "#7c5730",
+                        "on-surface-variant": "#d4c4b7",
+                        "surface-tint": "#eebd8e",
+                        "primary-fixed": "#ffdcbd",
+                        "surface-bright": "#38393a",
+                        "inverse-surface": "#e2e2e2",
+                        "surface": "#121414",
+                        "tertiary-fixed": "#e5e2e3",
+                        "error": "#ffb4ab",
+                        "inverse-on-surface": "#2f3131",
+                        "surface-dim": "#121414",
+                        "on-tertiary-container": "#2a292b",
+                        "on-primary-fixed": "#2c1600",
+                        "on-secondary": "#2d3133",
+                        "on-tertiary-fixed-variant": "#474647",
+                        "primary-fixed-dim": "#eebd8e"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "base": "8px",
+                        "section-gap": "120px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Bodoni Moda"],
+                        "label-caps": ["JetBrains Mono"],
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "display-lg": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #121414;
+            color: #e2e2e2;
+            font-family: 'Hanken Grotesk', sans-serif;
+            overflow-x: hidden;
+        }
+        .grain {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/felt.png");
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .rotated-label {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .mask-gradient {
+            mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="selection:bg-primary/30 selection:text-primary">
+<div class="grain"></div>
+<!-- Navigation Shell -->
+<header class="fixed top-0 w-full z-50 bg-background/60 backdrop-blur-xl border-b border-outline/30 flex justify-between items-center px-4 md:px-margin-desktop py-4">
+<div class="flex items-center gap-8">
+<a class="font-headline-md text-headline-md tracking-tighter text-on-surface" href="#">TOP NOTCH</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">Legacy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#visit">Visit</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-label-caps text-label-caps text-outline tracking-widest">(701) 232-0788</span>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-3 tracking-widest hover:bg-primary transition-all duration-300 active:scale-95">BOOK NOW</button>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col justify-end pt-32 pb-24 px-4 md:px-margin-desktop border-b border-outline/30 overflow-hidden">
+<div class="absolute inset-0 -z-10 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<img alt="The Standard of Fargo Hero" class="absolute inset-0 -z-20 w-full h-full object-cover grayscale opacity-40 mix-blend-luminosity" data-alt="A moody, high-contrast black and white photograph of a professional barbershop interior in Fargo. The scene features a heavy vintage leather barber chair in the foreground under a focused warm spotlight, with brushed steel and exposed brick walls in the background. The atmosphere is quiet, industrial, and sophisticated, reflecting a premium editorial grooming aesthetic with deep shadows and sharp architectural lines." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr1aZUlq28a8NaDqx2qGEu1n0RjMf5w5R16HR8d3ww48U9jlia8ri0kxIfnKqaEtsMttjTbnI1GXw_4KEbOxYGAI3qUPXe1shW8-Gcs-6ZVcAGpBEHE84T63TPBSkvYy9OrNRmktmogQ0Jhmu0zY36iBOlNlk9yxTGEXE4BZ4gcYGQXVY009hrQTTpGib0CBxlYcioZVA9uNJ9tUTskXCXmhNffRfnW6PKHxGypuXx8v9pOkCRPxpGIwi3cyWTmvWYM630n6VgAB4"/>
+<div class="max-w-7xl w-full">
+<div class="mb-6 flex items-center gap-4">
+<div class="h-px w-12 bg-primary"></div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-[0.2em]">Est. 2024 / Fargo, ND</span>
+</div>
+<h1 class="font-display-lg text-[10vw] lg:text-display-lg leading-[0.85] text-on-surface mb-8 uppercase">
+                    The Standard <br/> of Fargo
+                </h1>
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-8">
+<p class="font-headline-md text-headline-md max-w-xl text-on-surface-variant italic">
+                        Precision at 1015 Main Ave. Where industrial grit meets refined craft.
+                    </p>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps text-outline">SCROLL TO DISCOVER</span>
+<div class="w-px h-16 bg-outline/30 self-start ml-2"></div>
+</div>
+</div>
+</div>
+<!-- Vertical Side Label (Craft Indicator) -->
+<div class="hidden lg:block absolute right-12 top-1/2 -translate-y-1/2">
+<span class="rotated-label font-label-caps text-label-caps text-outline/40 uppercase tracking-[0.5em]">HARDWORKING HERITAGE</span>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-24 border-b border-outline/30 bg-surface-container-lowest">
+<div class="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-outline/30 h-full">
+<div class="px-4 md:px-margin-desktop py-12 flex flex-col justify-center gap-4">
+<span class="font-label-caps text-label-caps text-primary">01</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase">Craft</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Technical mastery delivered with mathematical precision. Every cut is a structural achievement.</p>
+</div>
+<div class="px-4 md:px-margin-desktop py-12 flex flex-col justify-center gap-4">
+<span class="font-label-caps text-label-caps text-primary">02</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase">Community</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Rooted on Main Ave. We serve the architects of Fargo's future with the respect they deserve.</p>
+</div>
+<div class="px-4 md:px-margin-desktop py-12 flex flex-col justify-center gap-4">
+<span class="font-label-caps text-label-caps text-primary">03</span>
+<h3 class="font-headline-lg text-headline-lg-mobile md:text-headline-md uppercase">Consistency</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">The same superior standard, every visit. We don't just cut hair; we maintain your presence.</p>
+</div>
+</div>
+</section>
+<!-- Services (The Menu) -->
+<section class="py-section-gap px-4 md:px-margin-desktop bg-background" id="services">
+<div class="flex flex-col md:flex-row justify-between items-start mb-20 gap-8">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">Our Offering</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase">The Menu</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">
+                    Transparent pricing. Impeccable execution. All services include a complimentary beverage and a hot towel finish.
+                </p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div class="space-y-0 border-t border-outline/30">
+<!-- Service Item -->
+<div class="group py-8 border-b border-outline/30 hover:bg-surface-container-low transition-colors duration-300 px-4 -mx-4 flex justify-between items-center cursor-default">
+<div class="space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">The Top Notch Cut</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision haircut, neck shave, and style.</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary block">$45</span>
+<span class="font-label-caps text-[10px] text-outline">45 MIN</span>
+</div>
+</div>
+<div class="group py-8 border-b border-outline/30 hover:bg-surface-container-low transition-colors duration-300 px-4 -mx-4 flex justify-between items-center cursor-default">
+<div class="space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Straight Razor Shave</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Traditional hot towel, lather, and blade finish.</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary block">$55</span>
+<span class="font-label-caps text-[10px] text-outline">60 MIN</span>
+</div>
+</div>
+<div class="group py-8 border-b border-outline/30 hover:bg-surface-container-low transition-colors duration-300 px-4 -mx-4 flex justify-between items-center cursor-default">
+<div class="space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">Beard Sculpture</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">Shape, trim, and conditioning treatment.</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary block">$30</span>
+<span class="font-label-caps text-[10px] text-outline">30 MIN</span>
+</div>
+</div>
+<div class="group py-8 border-b border-outline/30 hover:bg-surface-container-low transition-colors duration-300 px-4 -mx-4 flex justify-between items-center cursor-default">
+<div class="space-y-1">
+<h4 class="font-headline-md text-headline-md text-on-surface">The Executive Package</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">The Cut &amp; Shave combo with deep conditioning.</p>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary block">$85</span>
+<span class="font-label-caps text-[10px] text-outline">90 MIN</span>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 border border-primary/20 scale-95 group-hover:scale-100 transition-transform duration-700"></div>
+<img alt="Grooming Craft" class="w-full h-[600px] object-cover grayscale brightness-75" data-alt="A macro close-up photograph of a professional barber's tools resting on a dark, weathered leather roll. The collection includes a silver straight razor, matte black professional shears, and a wooden handle brush. The lighting is low and atmospheric, emphasizing the metallic texture of the steel and the grain of the leather, creating an industrial luxe visual style with rich cognac tones in the highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5eU4sAcAMHk5ziGgV2WAQKAAnGi316KbZoKK-L-Y1pCrXZ4ilP1UOIM0iKIpqvNfj8fsccNUt3F6sz2CQE-dkuohv-fz9d_yX3lBzjiee0j-UBSbuc-69poysVEXTdTpFLQgWYCjGvQ_CRE5sQBoaZGA8fC9hnAKWBD8jx_j8eALMKUm2fKXKt-wtr-Vm8yPmY2fd6KfErg9fHi9NCKuXl7sZYC7Me-C88GJoxb1KRkwN3ME3pz9f0k4KsvhOgsVBZZ3q9lwyHQ0"/>
+<div class="mt-8 flex gap-4">
+<div class="p-1 border border-outline/30">
+<div class="bg-surface-container px-6 py-4">
+<span class="block font-label-caps text-label-caps text-primary">NOW HIRING</span>
+<span class="block font-body-md text-on-surface-variant">Fargo's finest talent.</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap relative bg-surface-container-lowest overflow-hidden" id="about">
+<div class="px-4 md:px-margin-desktop grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 z-10">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">Our Story</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-8">Hardworking Heritage</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                        Top Notch isn't just a barbershop; it's an extension of Fargo's industrial legacy. Founded on the principle that precision grooming should be accessible to those who build this city, we've made our home at 1015 Main Ave.
+                    </p>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                        We respect the ritual of the morning shave and the power of a clean taper. Our space is built with the same grit and steel that defines North Dakota, refined for the modern professional.
+                    </p>
+<a class="inline-flex items-center gap-4 group" href="#">
+<span class="font-label-caps text-label-caps text-primary tracking-widest">READ OUR FULL HISTORY</span>
+<div class="h-px w-8 bg-primary group-hover:w-16 transition-all duration-300"></div>
+</a>
+</div>
+<div class="lg:col-span-7 relative">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Shop Interior" class="w-full aspect-[4/5] object-cover grayscale" data-alt="A wide-angle editorial shot of a modern, industrial-luxe barbershop interior. High ceilings with exposed pipes, dark charcoal painted brick walls, and custom-made walnut cabinetry. The floor is polished concrete. Multiple barber stations are neatly arranged with oversized circular mirrors reflecting the warm, atmospheric lighting. The mood is calm, professional, and elite." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAITK0XIJxLM7wBtUPgC7WZU_9udjq2NvA9SorpgRAh2JqLhesYtXct4rrCvUY2qFttWxUBbn9GxGUl8H3NaHy15pjhDnWSvG9Xxc5ptC1LRrNqZR0SQ82kDYN218QfVKy5qGA7MjSEc-YFGyBhO1J2OcM2O0Kfw6JH4gHb5HhesFcQICFHQiV4sIzrh-P02Mn9-pWWjRoFfc_r_xQTk8vEtYYqkfZnRtpXJCI-NOZ7JtEnM4n4IV_rZCkf8lRRy0bmLNh4LbbinbI"/>
+<img alt="The Cut" class="w-full aspect-[4/5] object-cover grayscale mt-12" data-alt="A focused close-up of a barber's hands performing a precision cut on a client's beard. The lighting captures the dust motes in the air and the sharp edge of the blade. The aesthetic is extremely detailed and textured, showcasing the high-level craft and 'industrial luxe' vibe of Top Notch Barbershop. Deep charcoal backgrounds highlight the warm skin tones and the cured cognac color of the barber's apron." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeooe7udZcIdeKHyXIYj7LdK64kwoXHK3mwjsLWjLsc-OleVBBegMdsK9r68uRMK2FioVzs9Xye5IzMSAf1hqhmuUGmJSwDL1XnAfVWtfaNox_EOLbONTYZQFvl8xc8G6dnZaL2_ddXWLViIBj9bOsPMbbNQ0V82cLyNyh8hZdZZXrm-vWbv3BgOXUqn6u9hwujb5Rept17mf_d0CpKtWrPjXEIte5t3ltkBPWwIfKFBjmQycUyJQ3n0_KMvz6RfZUNa0fyfXjut4"/>
+</div>
+<!-- Blueprint Grid Overlay -->
+<div class="absolute -inset-12 border-x border-outline/10 pointer-events-none"></div>
+<div class="absolute -inset-12 border-y border-outline/10 pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Visit & Map -->
+<section class="py-section-gap px-4 md:px-margin-desktop border-t border-outline/30" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-stretch">
+<div class="flex flex-col justify-between py-12">
+<div>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-12">Locate The Standard</h2>
+<div class="space-y-12">
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-2">ADDRESS</span>
+<p class="font-headline-md text-headline-md">1015 Main Avenue<br/>Fargo, ND 58103</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-primary block mb-2">HOURS</span>
+<div class="grid grid-cols-2 max-w-xs font-body-md text-on-surface-variant">
+<span>Mon — Fri</span>
+<span>9AM — 7PM</span>
+<span>Saturday</span>
+<span>10AM — 4PM</span>
+<span>Sunday</span>
+<span>Closed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-12">
+<button class="flex items-center gap-4 group">
+<span class="material-symbols-outlined text-primary">directions</span>
+<span class="font-label-caps text-label-caps text-on-surface border-b border-transparent group-hover:border-primary transition-all">GET DIRECTIONS</span>
+</button>
+</div>
+</div>
+<div class="min-h-[500px] bg-surface-container relative border border-outline/30">
+<div aria-label="Map" class="map-slot relative overflow-hidden h-full w-full" data-location="Fargo, ND" data-map-slot="" style="">
+<!-- Map placeholder visual -->
+<div class="absolute inset-0 grayscale opacity-50 bg-[url('https://api.placeholder.com/1200x800')] bg-cover bg-center"></div>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="w-12 h-12 bg-primary rounded-full animate-ping opacity-20"></div>
+<div class="w-4 h-4 bg-primary rounded-full absolute shadow-xl shadow-primary/40"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-4 md:px-margin-desktop bg-surface-container-low border-y border-outline/30" id="contact">
+<div class="max-w-4xl mx-auto text-center mb-20">
+<span class="font-label-caps text-label-caps text-primary uppercase tracking-widest mb-4 block">Get in Touch</span>
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg uppercase mb-6">Join the Standard</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                    Questions about our services or private events? Reach out and we'll get back to you within 24 hours.
+                </p>
+</div>
+<form class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary px-0 py-3 font-body-lg text-on-surface placeholder-transparent transition-all" id="name" name="name" placeholder=" " type="text"/>
+<label class="absolute left-0 top-3 font-label-caps text-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-primary peer-focus:text-label-caps" for="name">FULL NAME</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary px-0 py-3 font-body-lg text-on-surface placeholder-transparent transition-all" id="email" name="email" placeholder=" " type="email"/>
+<label class="absolute left-0 top-3 font-label-caps text-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-primary peer-focus:text-label-caps" for="email">EMAIL ADDRESS</label>
+</div>
+<div class="relative md:col-span-2">
+<select class="peer w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary px-0 py-3 font-body-lg text-on-surface appearance-none transition-all" id="service" name="service">
+<option class="bg-surface-container" disabled="" selected="" value="">Select a Service</option>
+<option class="bg-surface-container" value="cut">The Top Notch Cut</option>
+<option class="bg-surface-container" value="shave">Straight Razor Shave</option>
+<option class="bg-surface-container" value="beard">Beard Sculpture</option>
+<option class="bg-surface-container" value="other">General Inquiry</option>
+</select>
+<label class="absolute left-0 -top-6 font-label-caps text-label-caps text-primary uppercase" for="service">SERVICE CHOICE</label>
+<div class="absolute right-0 top-3 pointer-events-none">
+<span class="material-symbols-outlined text-outline">expand_more</span>
+</div>
+</div>
+<div class="relative md:col-span-2">
+<textarea class="peer w-full bg-transparent border-0 border-b border-outline/30 focus:ring-0 focus:border-primary px-0 py-3 font-body-lg text-on-surface placeholder-transparent transition-all resize-none" id="message" name="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 top-3 font-label-caps text-label-caps text-outline transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-3 peer-focus:-top-6 peer-focus:text-primary peer-focus:text-label-caps" for="message">MESSAGE</label>
+</div>
+<div class="md:col-span-2 flex justify-center">
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-12 py-5 tracking-widest hover:bg-primary transition-all duration-300 shadow-xl shadow-primary/10 flex items-center gap-3" type="submit">
+                        SEND MESSAGE
+                        <span class="material-symbols-outlined">arrow_right_alt</span>
+</button>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest pt-24 pb-12 px-4 md:px-margin-desktop border-t border-outline/30">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-24">
+<div class="lg:col-span-2">
+<span class="font-headline-lg text-headline-lg text-on-surface opacity-10 uppercase block leading-none mb-8">TOP NOTCH</span>
+<p class="font-body-md text-on-surface-variant max-w-sm mb-8">
+                    Elevating the grooming experience in the Red River Valley since 2024. Built on craft, community, and consistency.
+                </p>
+<div class="flex gap-6">
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">public</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-outline hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">mail</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">QUICK LINKS</h5>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#about">Careers</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-on-surface mb-8">VISIT US</h5>
+<p class="font-body-md text-on-surface-variant">
+                    1015 Main Avenue<br/>
+                    Fargo, ND 58103<br/><br/>
+                    (701) 232-0788<br/>
+                    hello@topnotchfargo.com
+                </p>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-outline/10">
+<span class="font-label-caps text-[10px] text-outline tracking-widest">© 2024 TOP NOTCH BARBERSHOP. EST. FARGO, ND.</span>
+<div class="flex items-center gap-4">
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-caps text-[10px] text-primary tracking-widest uppercase">Accepting New Clients</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form interactivity
+        const inputs = document.querySelectorAll('input, select, textarea');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.parentElement.classList.add('focused');
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.classList.remove('focused');
+            });
+        });
+
+        // Scroll reveal logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
