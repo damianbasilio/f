@@ -10,12 +10,12 @@
 
 - **Gate:** PASS
 - **Evidence:** Active Facebook page with content and 5 post caption(s) scraped
-- **Checked:** 2026-06-07 — Facebook profile scrape
+- **Checked:** 2026-06-08 — Facebook profile scrape
 
 ## Human approval
 
 - **Reviewed by:** auto (Facebook-only verified lead)
-- **Date:** 2026-06-07
+- **Date:** 2026-06-08
 - **Website bad enough to proceed:** yes — no owned website on Facebook profile
 - **Gate:** PASS
 
@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/61573708533317/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-07T20:55:11.960Z
+- **Scraped:** 2026-06-08T00:18:32.973Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/61573708533317/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

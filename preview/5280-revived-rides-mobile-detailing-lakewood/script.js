@@ -1,34 +1,52 @@
-// Simple scroll interaction for header
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-3', 'bg-surface/95');
-                header.classList.remove('py-4', 'bg-surface/80');
-            } else {
-                header.classList.add('py-4', 'bg-surface/80');
-                header.classList.remove('py-3', 'bg-surface/95');
-            }
+// Scroll Reveal Animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+
+        // Form Validation & Interaction
+        const revivalForm = document.getElementById('revivalForm');
+        const feedback = document.getElementById('formFeedback');
+
+        revivalForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = revivalForm.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.disabled = true;
+            btn.innerText = "TRANSMITTING...";
+            btn.classList.add('opacity-50');
+
+            setTimeout(() => {
+                feedback.innerText = "SUCCESS: MISSION PARAMETERS RECEIVED. EXPECT CONTACT WITHIN 4 HOURS.";
+                feedback.classList.remove('opacity-0');
+                feedback.classList.add('text-green-500');
+                
+                btn.innerText = "MISSION RECEIVED";
+                btn.classList.remove('bg-revive-orange');
+                btn.classList.add('bg-green-600');
+                
+                revivalForm.reset();
+            }, 1500);
         });
 
-        // Form submission micro-interaction
-        const form = document.querySelector('form');
-        form?.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'TRANSMITTING...';
-            btn.classList.add('opacity-70');
-            
-            setTimeout(() => {
-                btn.innerText = 'SUCCESS';
-                btn.style.backgroundColor = '#4caf50';
-                form.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.classList.remove('opacity-70');
-                }, 2000);
-            }, 1500);
+        // Smooth Scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
 (() => {

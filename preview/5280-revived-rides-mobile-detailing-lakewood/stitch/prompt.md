@@ -110,7 +110,7 @@ Establish a clear type scale (display, h2, body, small) with intentional letter-
 Design as if you won a paid branding project: distinctive hero, memorable section rhythm, premium polish.
 Layout seed: **asymmetric-overlap** — interpret literally but creatively.
 You choose the full color palette and typography — there is nothing to extract from a website.
-They have 8 real Facebook photos — design hero and gallery for authentic local imagery.
+They have 9 real Facebook photos — design hero and gallery for authentic local imagery.
 
 **Layout archetype:** asymmetric-overlap
 Offset hero image overlapping a colored content panel; credibility strip overlaps photo edge; services in staggered two-column rhythm, not uniform cards.
@@ -153,7 +153,7 @@ There is **no existing website** and **nothing to extract**. Choose palette and 
 
 ### Photo inventory
 
-You will receive 8 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
+You will receive 9 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
 
 Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
