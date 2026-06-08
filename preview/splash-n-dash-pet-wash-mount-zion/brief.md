@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/p/Splash-N-Dash-Pet-Wash-61575933494497/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T01:36:35.964Z
+- **Scraped:** 2026-06-08T01:38:31.013Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/p/Splash-N-Dash-Pet-Wash-61575933494497/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

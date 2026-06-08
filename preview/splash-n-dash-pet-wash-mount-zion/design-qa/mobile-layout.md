@@ -5,10 +5,9 @@
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
+- bumped 10px label text
 - pulled in decorative absolute offsets
-- section overflow-hidden for decorative layers
-- map-slot: removed h-full (use aspect-ratio fill)
-- map-shell: removed tall min-height wrapper
+- responsive horizontal margins (6 blocks)
 
 ## Viewports
 - mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok

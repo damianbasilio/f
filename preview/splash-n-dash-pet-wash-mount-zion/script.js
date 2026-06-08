@@ -1,36 +1,29 @@
-// Simple intersection observer for reveal animations
-        const observerOptions = {
-            threshold: 0.1
-        };
+// Form Submission Micro-interaction
+        const form = document.getElementById('sparkle-form');
+        const feedback = document.getElementById('form-feedback');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(section);
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.disabled = true;
+            btn.innerHTML = `<span class="animate-spin material-symbols-outlined mr-2">refresh</span> Processing...`;
+            
+            setTimeout(() => {
+                btn.innerHTML = `Success!`;
+                btn.classList.replace('bg-tertiary', 'bg-primary');
+                feedback.classList.remove('hidden');
+                form.reset();
+            }, 1500);
         });
 
-        // Instant reveal for hero
-        const hero = document.querySelector('section');
-        hero.classList.remove('opacity-0', 'translate-y-10');
-        hero.classList.add('opacity-100', 'translate-y-0');
-
-        // Atmospheric Bubble Wobble Effect
-        document.addEventListener('mousemove', (e) => {
-            const bubbles = document.querySelectorAll('.bubble-shape');
-            const x = (e.clientX / window.innerWidth) - 0.5;
-            const y = (e.clientY / window.innerHeight) - 0.5;
-
-            bubbles.forEach((bubble, index) => {
-                const speed = (index + 1) * 20;
-                bubble.style.transform = `translate(${x * speed}px, ${y * speed}px)`;
+        // Simple Parallax for Floating Elements
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const accents = document.querySelectorAll('.bolt-accent');
+            accents.forEach(accent => {
+                accent.style.transform = `translateY(${scroll * 0.1}px)`;
             });
         });
 
