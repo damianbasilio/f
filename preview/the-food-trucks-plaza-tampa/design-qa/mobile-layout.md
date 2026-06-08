@@ -1,22 +1,19 @@
 # Mobile layout — the-food-trucks-plaza-tampa
 
-**Result:** PASS
+**Result:** FAIL
 
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
-- bumped 10px label text
-- body overflow-x-clip
-- section overflow-hidden for decorative layers
-- map-slot: removed h-full (use aspect-ratio fill)
+- refreshed map layout CSS
 
 ## Viewports
-- mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok
+- mobile (390px): overflow=no, tinyText=yes, navToggle=ok, width=ok
 - tablet (768px): overflow=no, tinyText=no, navToggle=ok, width=ok
 - desktop (1280px): overflow=no, tinyText=no, navToggle=ok, width=ok
 
-## Errors (0)
-- none
+## Errors (1)
+- mobile: body text below 12px
 
 
 _Auto-run in post-build. Fixes overflow-x, nav toggle, and map slot gaps._

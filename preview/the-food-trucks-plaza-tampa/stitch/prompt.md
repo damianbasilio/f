@@ -44,14 +44,14 @@ Email: thefoodtrucksplaza@gmail.com
 
 Recent posts from their Facebook page:
 1. Ready for Benito Bowl el Domingo!!! Pues haz tu orden ya en Papi's Pizza Delicioso Calzón "Meat Lover" En salsa blanca con unas alitas crujientes! Ordena las tuyas para el Super Bowl el Domingo! Síguelos Papi's Pizza 1798 W. Hillsborough Avenue Tampa, FL #Pizza #Tampa #superbowl #badbunny #Florida
-2. The Food Trucks Plaza give the opportunity to locals and tourist to have a taste and grab bites from local small business owners dedicated to the creation of unique flavors in the Tampa Bay Area.
-3. The Food Trucks Plaza and Ady Ramos — with Papi's Pizza at The Food Trucks Plaza.
+2. The Food Trucks Plaza and Ady Ramos — with Papi's Pizza at The Food Trucks Plaza.
+3. The Food Trucks Plaza give the opportunity to locals and tourist to have a taste and grab bites from local small business owners dedicated to the creation of unique flavors in the Tampa Bay Area.
 4. It'll be available to watch on The Food Trucks Plaza's profile shortly.
 
 **Recent post captions (4 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "Ready for Benito Bowl el Domingo!!! Pues haz tu orden ya en Papi's Pizza Delicioso Calzón "Meat Lover" En salsa blanca con unas alitas crujientes! Ordena las tuyas para el Super Bowl el Domingo! Síguelos Papi's Pizza 1798 W. Hillsborough Avenue Tampa, FL #Pizza #Tampa #superbowl #badbunny #Florida"
-2. "The Food Trucks Plaza give the opportunity to locals and tourist to have a taste and grab bites from local small business owners dedicated to the creation of unique flavors in the Tampa Bay Area."
-3. "The Food Trucks Plaza and Ady Ramos — with Papi's Pizza at The Food Trucks Plaza."
+2. "The Food Trucks Plaza and Ady Ramos — with Papi's Pizza at The Food Trucks Plaza."
+3. "The Food Trucks Plaza give the opportunity to locals and tourist to have a taste and grab bites from local small business owners dedicated to the creation of unique flavors in the Tampa Bay Area."
 4. "It'll be available to watch on The Food Trucks Plaza's profile shortly."
 
 **Preserve:** real business name, city, services, phone, and the warm local tone from their page.

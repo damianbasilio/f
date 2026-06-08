@@ -3,410 +3,468 @@
 <html class="dark" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>THE FOOD TRUCKS PLAZA | Raw Artistry. Urban Utility.</title>
+<title>THE FOOD TRUCKS PLAZA | Industrial Neon Culinary Hub</title>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&amp;family=Montserrat:wght@400;500;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Archivo+Narrow:wght@400;700&amp;family=JetBrains+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton:wght@100..900&amp;family=Archivo+Narrow:wght@100..900&amp;family=JetBrains+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --electric-tangerine: #fa5c1c;
+            --safety-yellow: #f0e800;
+            --concrete-gray: #8e9192;
+            --deep-charcoal: #121414;
+        }
+        
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--deep-charcoal); }
+        ::-webkit-scrollbar-thumb { background: var(--concrete-gray); }
+        ::-webkit-scrollbar-thumb:hover { background: var(--electric-tangerine); }
+
+        .hazard-pattern {
+            background-image: repeating-linear-gradient(45deg, var(--safety-yellow) 0, var(--safety-yellow) 10px, #000 10px, #000 20px);
+        }
+        
+        .grainy-overlay {
+            position: relative;
+        }
+        .grainy-overlay::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            opacity: 0.15;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .neon-glow-active {
+            box-shadow: 0 0 15px var(--electric-tangerine);
+            border: 2px solid var(--electric-tangerine);
+        }
+
+        .ticker-scroll {
+            display: flex;
+            width: fit-content;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .hard-shadow {
+            box-shadow: 8px 8px 0px 0px #000;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        html { scroll-behavior: smooth; }
+    </style>
+<!-- Tailwind Config Injection -->
 <script id="tailwind-config">
       tailwind.config = {
         darkMode: "class",
         theme: {
           extend: {
             "colors": {
-                    "surface-variant": "#323536",
+                    "on-secondary-fixed": "#390c00",
+                    "surface-container-lowest": "#0d0e0f",
                     "primary-container": "#1a1a1a",
-                    "on-primary-container": "#848282",
+                    "outline-variant": "#444748",
+                    "on-tertiary-fixed-variant": "#4b4900",
+                    "on-tertiary-fixed": "#1e1c00",
+                    "on-secondary-fixed-variant": "#832700",
+                    "on-secondary": "#5c1900",
+                    "surface-container-highest": "#333535",
+                    "inverse-on-surface": "#2f3131",
+                    "surface-dim": "#121414",
+                    "tertiary": "#d2cb00",
+                    "secondary-fixed": "#ffdbcf",
+                    "on-primary-fixed": "#1c1b1b",
+                    "primary-fixed": "#e5e2e1",
+                    "on-error": "#690005",
+                    "surface-container-high": "#282a2b",
+                    "surface-variant": "#333535",
+                    "surface-bright": "#38393a",
+                    "error": "#ffb4ab",
+                    "secondary-container": "#fa5c1c",
+                    "tertiary-fixed-dim": "#d2cb00",
+                    "inverse-surface": "#e2e2e2",
+                    "on-surface-variant": "#c4c7c7",
                     "inverse-primary": "#5f5e5e",
                     "outline": "#8e9192",
-                    "surface-container-lowest": "#0c0f10",
-                    "tertiary": "#ffb4ab",
-                    "on-tertiary-fixed-variant": "#93000b",
-                    "primary-fixed-dim": "#c8c6c5",
-                    "surface-container-highest": "#323536",
-                    "secondary": "#ffb77d",
                     "error-container": "#93000a",
-                    "on-error-container": "#ffdad6",
-                    "secondary-fixed": "#ffdcc3",
-                    "secondary-fixed-dim": "#ffb77d",
-                    "on-background": "#e1e3e4",
-                    "primary-fixed": "#e5e2e1",
-                    "surface-dim": "#111415",
-                    "background": "#111415",
-                    "tertiary-fixed-dim": "#ffb4ab",
-                    "inverse-on-surface": "#2e3132",
-                    "error": "#ffb4ab",
-                    "on-error": "#690005",
-                    "tertiary-container": "#3e0002",
-                    "surface-bright": "#373a3b",
-                    "surface-container": "#1d2021",
-                    "on-secondary-fixed": "#2f1500",
-                    "inverse-surface": "#e1e3e4",
-                    "secondary-container": "#d97707",
-                    "on-secondary-fixed-variant": "#6e3900",
+                    "secondary": "#ffb59c",
+                    "surface": "#121414",
                     "on-primary-fixed-variant": "#474746",
-                    "surface-container-low": "#191c1d",
-                    "on-surface-variant": "#c4c7c7",
-                    "outline-variant": "#444748",
-                    "on-primary-fixed": "#1c1b1b",
-                    "on-surface": "#e1e3e4",
-                    "on-secondary-container": "#432100",
-                    "tertiary-fixed": "#ffdad6",
-                    "on-tertiary-fixed": "#410002",
-                    "surface-container-high": "#282a2b",
                     "surface-tint": "#c8c6c5",
-                    "on-secondary": "#4d2600",
-                    "surface": "#111415",
-                    "on-primary": "#313030",
+                    "secondary-fixed-dim": "#ffb59c",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed": "#f0e800",
+                    "on-secondary-container": "#511500",
                     "primary": "#c8c6c5",
-                    "on-tertiary-container": "#f43934",
-                    "on-tertiary": "#690005"
+                    "surface-container-low": "#1a1c1c",
+                    "on-tertiary": "#343200",
+                    "tertiary-container": "#b5af00",
+                    "on-primary-container": "#848282",
+                    "on-tertiary-container": "#444100",
+                    "background": "#121414",
+                    "on-primary": "#313030",
+                    "on-surface": "#e2e2e2",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#1e2020",
+                    "on-background": "#e2e2e2"
             },
             "borderRadius": {
-                    "DEFAULT": "0px",
-                    "lg": "0px",
-                    "xl": "0px",
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
                     "full": "9999px"
             },
             "spacing": {
-                    "margin-desktop": "64px",
-                    "gutter": "32px",
-                    "margin-mobile": "24px",
-                    "unit": "8px",
-                    "section-gap": "128px"
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "block-gap": "32px",
+                    "gutter": "16px",
+                    "unit": "4px"
             },
             "fontFamily": {
-                    "label-caps": ["Montserrat"],
-                    "display-xl": ["Playfair Display"],
-                    "body-md": ["Montserrat"],
-                    "body-lg": ["Montserrat"],
-                    "headline-lg-mobile": ["Playfair Display"],
-                    "headline-lg": ["Playfair Display"],
-                    "headline-md": ["Playfair Display"],
-                    "cta": ["Montserrat"]
+                    "body-lg": ["JetBrains Mono"],
+                    "body-md": ["JetBrains Mono"],
+                    "headline-lg": ["Anton"],
+                    "headline-lg-mobile": ["Anton"],
+                    "label-sm": ["Archivo Narrow"],
+                    "display-lg": ["Anton"],
+                    "display-md": ["Anton"],
+                    "label-bold": ["Archivo Narrow"]
             },
             "fontSize": {
-                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}],
-                    "display-xl": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.02em", "fontWeight": "800"}],
-                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
-                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
-                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
-                    "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
-                    "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
-                    "cta": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "700"}]
+                    "body-lg": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-md": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["24px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                    "label-sm": ["10px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "0.9", "fontWeight": "400"}],
+                    "display-md": ["48px", {"lineHeight": "0.9", "fontWeight": "400"}],
+                    "label-bold": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}]
             }
           },
         },
       }
     </script>
-<style>
-        body {
-            background-color: #111415;
-            color: #e1e3e4;
-            overflow-x: hidden;
-        }
-
-        .grain-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.04;
-            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
-        }
-
-        .border-motif {
-            border: 2px solid #8e9192;
-        }
-
-        .border-heavy {
-            border: 3px solid #e1e3e4;
-        }
-
-        .text-vertical {
-            writing-mode: vertical-rl;
-            text-orientation: mixed;
-        }
-
-        .asymmetric-grid {
-            display: grid;
-            grid-template-columns: repeat(12, 1fr);
-            gap: 32px;
-        }
-
-        .reveal-on-scroll {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.6s ease-out;
-        }
-
-        .reveal-on-scroll.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-bottom-color: #ffb77d !important;
-        }
-
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-    </style>
 </head>
-<body class="font-body-md text-body-md bg-surface text-on-surface selection:bg-secondary selection:text-on-secondary">
-<div class="grain-overlay"></div>
-<!-- TopNavBar -->
-<nav class="sticky top-0 w-full flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 z-50 bg-surface/95 backdrop-blur-sm border-b-2 border-outline dark:border-outline-variant">
-<div class="flex items-center gap-8">
-<a class="font-headline-lg text-headline-lg-mobile md:text-headline-lg tracking-tighter text-on-surface dark:text-on-surface leading-none" href="#">
-                FOOD TRUCKS PLAZA
-            </a>
-</div>
-<div class="hidden md:flex gap-12 items-center">
-<a class="text-secondary font-bold border-b-2 border-secondary font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Trucks</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Events</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Story</a>
-<a class="text-on-surface-variant dark:text-on-surface-variant font-medium font-label-caps text-label-caps hover:text-secondary transition-colors duration-200" href="#">Hours</a>
-</div>
-<div class="flex items-center gap-6">
-<span class="hidden lg:block font-label-caps text-label-caps tracking-widest opacity-60">265.663 7265</span>
-<button class="bg-secondary text-on-secondary px-8 py-3 font-cta text-cta transition-transform active:scale-95 border-motif hover:bg-on-tertiary-container transition-colors duration-300">
-                Find Us
-            </button>
-</div>
+<body class="bg-background text-on-background font-body-lg overflow-x-hidden grainy-overlay">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-background/95 backdrop-blur-sm border-b-4 border-surface-container-highest">
+<div class="font-headline-lg text-headline-lg text-secondary tracking-tighter">FOOD TRUCKS PLAZA</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-on-surface font-label-bold hover:text-secondary transition-colors" href="#offerings">OFFERINGS</a>
+<a class="text-on-surface font-label-bold hover:text-secondary transition-colors" href="#culture">CULTURE</a>
+<a class="text-on-surface font-label-bold hover:text-secondary transition-colors" href="#visit">VISIT</a>
+<a class="text-on-surface font-label-bold hover:text-secondary transition-colors" href="#booking">BOOKING</a>
 </nav>
-<main>
+<div class="flex items-center gap-4">
+<span class="font-label-bold text-label-bold text-primary hidden md:block">813-555-0199</span>
+<button class="material-symbols-outlined text-secondary md:hidden" id="menu-toggle">menu</button>
+</div>
+</header>
+<!-- SideNavBar (Desktop Only Anchor) -->
+<aside class="hidden md:flex flex-col fixed left-0 top-0 h-full z-40 bg-surface-container-lowest border-r-4 border-secondary w-20 hover:w-64 transition-all duration-300 overflow-hidden group">
+<div class="p-4 pt-24 mb-10">
+<div class="font-headline-lg text-headline-lg text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">TRUCK PLAZA</div>
+<div class="font-label-bold text-label-sm text-secondary whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity">TAMPA BAY INDUSTRIAL</div>
+</div>
+<nav class="flex flex-col gap-2 px-2">
+<a class="flex items-center gap-4 p-4 text-on-surface font-label-bold hover:bg-secondary/10 transition-transform group-active:translate-y-1" href="#offerings">
+<span class="material-symbols-outlined text-secondary">restaurant</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity">MENU</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface font-label-bold hover:bg-secondary/10 transition-transform group-active:translate-y-1" href="#vendors">
+<span class="material-symbols-outlined text-secondary">local_shipping</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity">VENDORS</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface font-label-bold hover:bg-secondary/10 transition-transform group-active:translate-y-1" href="#events">
+<span class="material-symbols-outlined text-secondary">event</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity">EVENTS</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface font-label-bold hover:bg-secondary/10 transition-transform group-active:translate-y-1" href="#visit">
+<span class="material-symbols-outlined text-secondary">map</span>
+<span class="opacity-0 group-hover:opacity-100 transition-opacity">LOCATION</span>
+</a>
+</nav>
+</aside>
+<main class="md:ml-20">
 <!-- Hero Section -->
-<section class="relative min-h-screen flex items-center overflow-hidden">
+<section class="relative h-screen min-h-[700px] flex items-center justify-start overflow-hidden px-margin-mobile md:px-margin-desktop">
 <div class="absolute inset-0 z-0">
-<div class="w-full h-full bg-cover bg-center" style="background-image: url('https://lh3.googleusercontent.com/aida/AP1WRLs-WWRhAHvD4x0KzF73e6b1oT-h4Ox0pMVexJfq68QL8f4HyOuOxUODdZSwhQcudvROvxBK9amHXrrykFAoSZkvUxDYw0uNTFh4bPpiMjKxUWbZTlqzsXvlpqTeLKejLuxrWaolFWC4NyI9y6CiIwTY7VmXHkv9fU32UzTJ04ZU4F3BGHZpv-rQN09CmIrmmUFfQsQYroxqcw3BE2Uc7hdHQxx3Am1OE5Xq4Elx_eO44tDIDvNKuLhQuFI')">
-<div class="absolute inset-0 bg-gradient-to-r from-surface via-surface/60 to-transparent"></div>
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A gritty, industrial street scene at night featuring several modern food trucks with bright neon signage in electric tangerine and safety yellow. The atmosphere is energetic with steam rising from grills and a crowd of people in soft-focus background, all set against a dark charcoal sky. The lighting is high-contrast, highlighting metallic textures and urban grit." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA7d-ev-unjuxTQRTzFhZYlFnX9Ynz5LPzV3Qb92Wt-afnjvO65T7K4bgkwGa2TOVR5dOhgBraHBwqFxCcq-qah_p0sBytiS2RngMto64nYHCJCh5b_xbxr2WlELlPAJWhGTsTklUALaqxU7nyvuDON9zxw0eKjGDPQjco1yD8ftpWCakc5ISWtpXvfRoB_6SHFXJXIXEXNRrreUP44I2wBeZ42WfTC2xyB-6wBvS3Ai8WUNyXviTyynPv30HVBBgh3t1NpnF14MGBH"/>
 </div>
-</div>
-<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full asymmetric-grid">
-<div class="col-span-12 md:col-span-8 lg:col-span-7">
-<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] mb-6 block">EST. 2024 TAMPA BAY</span>
-<h1 class="font-display-xl text-[60px] md:text-display-xl leading-[0.9] text-on-surface mb-8">
-                        THE <br/> URBAN <br/> <span class="italic text-secondary">FEAST</span>
+<div class="relative z-10 max-w-5xl">
+<h1 class="font-display-lg text-[12vw] md:text-[18vw] leading-[0.8] tracking-tighter text-on-background drop-shadow-2xl">
+                    THE<br/>
+<span class="text-secondary-container">PLAZA</span>
 </h1>
-<p class="font-body-lg text-body-lg max-w-md text-on-surface-variant mb-10 border-l-2 border-secondary pl-6">
-                        A collision of raw industrial grit and artisanal culinary craft. Experience Tampa's most sophisticated street food destination.
-                    </p>
-<div class="flex flex-col sm:flex-row gap-4">
-<a class="bg-secondary text-on-secondary px-10 py-5 font-cta text-cta text-center border-heavy hover:bg-transparent hover:text-secondary transition-all duration-300" href="#visit">EXPLORE TRUCKS</a>
-<a class="border-motif px-10 py-5 font-cta text-cta text-center hover:bg-surface-variant transition-all duration-300" href="#">VIEW CALENDAR</a>
+<div class="mt-8 flex flex-col md:flex-row gap-6 items-start">
+<button class="bg-secondary-container text-on-secondary-fixed font-headline-lg px-12 py-6 hard-shadow hover:bg-tertiary transition-all hover:-translate-y-1 active:translate-y-1">
+                        VIEW LIVE VENDORS
+                    </button>
+<div class="bg-surface-container-highest/80 backdrop-blur-md border-l-4 border-tertiary p-6 max-w-sm">
+<p class="font-body-lg text-on-surface">Tampa's raw industrial landscape meets world-class street culinary arts. 15+ trucks. 1 destination.</p>
 </div>
 </div>
 </div>
-<div class="hidden lg:flex absolute bottom-20 right-margin-desktop flex-col items-end gap-4">
-<div class="text-vertical font-label-caps text-[10px] tracking-[0.5em] opacity-40 uppercase">Scroll to explore</div>
-<div class="w-[1px] h-24 bg-outline-variant"></div>
-</div>
-</section>
-<!-- Credibility Ticker -->
-<section class="bg-on-primary-fixed py-12 border-y-2 border-outline-variant overflow-hidden">
-<div class="flex whitespace-nowrap animate-marquee">
-<div class="flex gap-20 items-center px-10">
-<span class="font-headline-md text-headline-md italic">BEST TACO IN TAMPA</span>
-<span class="w-3 h-3 bg-secondary rotate-45"></span>
-<span class="font-headline-md text-headline-md">URBAN DESIGN AWARD</span>
-<span class="w-3 h-3 bg-secondary rotate-45"></span>
-<span class="font-headline-md text-headline-md italic">COMMUNITY HUB 2024</span>
-<span class="w-3 h-3 bg-secondary rotate-45"></span>
-</div>
-<!-- Duplicate for seamless loop -->
-<div aria-hidden="true" class="flex gap-20 items-center px-10">
-<span class="font-headline-md text-headline-md italic">BEST TACO IN TAMPA</span>
-<span class="w-3 h-3 bg-secondary rotate-45"></span>
-<span class="font-headline-md text-headline-md">URBAN DESIGN AWARD</span>
-<span class="w-3 h-3 bg-secondary rotate-45"></span>
-<span class="font-headline-md text-headline-md italic">COMMUNITY HUB 2024</span>
-<span class="w-3 h-3 bg-secondary rotate-45"></span>
+<div class="absolute bottom-10 right-10 hidden lg:block">
+<div class="w-32 h-32 border-4 border-secondary animate-spin-slow flex items-center justify-center">
+<span class="font-label-bold text-secondary text-center leading-none">TAMPA<br/>FL</span>
 </div>
 </div>
 </section>
-<!-- Offerings (Gourmet on Wheels) -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
-<div class="asymmetric-grid mb-24">
-<div class="col-span-12 lg:col-span-5 reveal-on-scroll">
-<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">GOURMET <br/> ON WHEELS</h2>
-<p class="font-body-md text-body-md text-on-surface-variant mb-12">
-                        We curate only the most avant-garde mobile kitchens. No standard fare, only high-concept culinary execution delivered in a raw, industrial setting.
-                    </p>
+<!-- Ticker Marquee -->
+<div class="w-full bg-tertiary py-4 border-y-4 border-black overflow-hidden whitespace-nowrap z-30 relative">
+<div class="ticker-scroll">
+<span class="font-headline-lg text-black px-10">TAMPA'S PREMIER STREET FOOD DESTINATION</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<span class="font-headline-lg text-black px-10">OPEN DAILY UNTIL 2AM</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<span class="font-headline-lg text-black px-10">INDUSTRIAL NEON VIBES</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<span class="font-headline-lg text-black px-10">GREET THE GRILL</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<!-- Repeat for seamless scroll -->
+<span class="font-headline-lg text-black px-10">TAMPA'S PREMIER STREET FOOD DESTINATION</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<span class="font-headline-lg text-black px-10">OPEN DAILY UNTIL 2AM</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<span class="font-headline-lg text-black px-10">INDUSTRIAL NEON VIBES</span>
+<span class="font-headline-lg text-black px-10">●</span>
+<span class="font-headline-lg text-black px-10">GREET THE GRILL</span>
+<span class="font-headline-lg text-black px-10">●</span>
 </div>
 </div>
-<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-<!-- Card 1 -->
-<div class="group relative overflow-hidden reveal-on-scroll">
-<div class="aspect-[16/10] overflow-hidden border-motif">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="A gourmet street taco with vibrant purple cabbage, lime, and cilantro on a ceramic plate. Dark, textured concrete background. Macro photography, shallow depth of field, high contrast. Industrial gourmet aesthetic with deep blacks and vibrant food colors." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
+<!-- Offerings: Asymmetrical Grid -->
+<section class="py-block-gap px-margin-mobile md:px-margin-desktop bg-surface" id="offerings">
+<div class="mb-20">
+<h2 class="font-display-md text-display-md text-on-surface uppercase border-b-4 border-outline w-fit pr-20 pb-4">Core Offerings</h2>
 </div>
-<div class="mt-8">
-<div class="flex justify-between items-end">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-10 items-center">
+<!-- Item 1 -->
+<div class="md:col-span-7 relative group">
+<div class="absolute -top-10 -left-10 bg-secondary-container p-4 z-20 hard-shadow">
+<span class="font-headline-lg text-on-secondary-fixed">01</span>
+</div>
+<div class="overflow-hidden border-2 border-outline-variant">
+<img class="w-full aspect-video object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Gourmet street tacos with vibrant radish, lime, and cilantro garnishes served on a dark slate plate. The lighting is moody and dramatic with deep shadows and warm highlights, reflecting an industrial neon aesthetic. The background features blurred metallic textures and hints of safety yellow hazard patterns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnTPbOuVhfwxy05jUTiqudfvJgF_ENzdmEk2UylXvgR4ey1m-rSFMdJFKT6bEKge3iyPA6-PhEyS2pbIaMgRVInGxuJcFBZmVKYpIIrcw9Bjek7LplLAM3TLsPO82fhtfuTCDIhM6JXQVXZ88cNeZCNaoLimfJYQc9zxzEJ7Y6nXfGceS2f1iwprfIYz9I4UUkaTY9T37CEG32tHhs9f4wcr4RCPVZxHBA3PDKU1XNzPDzD9QKXXVv57-U4iRQn5Gt_7NA10_EW_H8"/>
+</div>
+<div class="mt-6">
+<h3 class="font-display-md text-secondary">GOURMET TACOS</h3>
+<p class="font-body-lg text-on-surface-variant max-w-xl">Elevated street classics featuring slow-braised proteins, hand-pressed blue corn tortillas, and experimental salsas that push the boundaries of Tampa's food scene.</p>
+</div>
+</div>
+<!-- Item 2 (Asymmetric Shift) -->
+<div class="md:col-span-5 md:mt-40 relative group">
+<div class="absolute -top-10 -right-10 bg-tertiary p-4 z-20 hard-shadow">
+<span class="font-headline-lg text-on-tertiary-fixed">02</span>
+</div>
+<div class="overflow-hidden border-2 border-outline-variant">
+<img class="w-full aspect-square object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A thick, juicy artisan burger stacked with melted cheese, crispy onions, and secret sauce on a toasted brioche bun. It is presented in a high-contrast industrial setting with sharp lighting that emphasizes the textures of the food. The background is a dark charcoal with subtle neon tangerine light leaks." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ96G1dGe5T1uc7l7_l49XGepq0bkdWRgsnoKRFr1WVA52s0y8mENB3ZtvzTtUOQhrNcy9cP7v1T2cQ3cdLsLQ7bWQbisI8lwX6M97QDd8SmMhIPuOQ5Iq4tWlrVM6jPIzFvpeeVFid1noPTI34l0w-Qv1BG1s4ufJlPDwq0MOY2IjaC-It36tVSprZ5odv0W3_yJjOpvw_PMgG0xH1wzGNUs6gAuqR2X3JKo4On-xAHpz7f0kaJwR0Ia26rNdUFjYR8mYQOJpK7eI"/>
+</div>
+<div class="mt-6 text-right">
+<h3 class="font-display-md text-tertiary">ARTISAN BURGERS</h3>
+<p class="font-body-lg text-on-surface-variant">Dry-aged beef blends, charcoal-fired, served on custom-baked brioche with house-fermented pickles.</p>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="md:col-span-12 mt-20 flex flex-col md:flex-row gap-10 items-center">
+<div class="md:w-1/2 overflow-hidden border-2 border-outline-variant relative group">
+<div class="absolute inset-0 bg-secondary/20 z-10 mix-blend-overlay"></div>
+<img class="w-full h-[500px] object-cover" data-alt="A smooth pour of nitro cold brew coffee with a thick creamy head of foam, served in a heavy industrial-style glass. The shot is captured in extreme close-up with a grainy film texture. The environment is dark and utilitarian, illuminated by a single concentrated light source that mimics a neon glow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDluEzE-Fmtlv8_tnVqPdykqv6VsCnFoG3cw9N72rJamzYVX6mVhSUfKNKH-XUVfR3Fqx1jkY8_NSKGIQMpsgi5NmcH70-d_rUusnLrC9HATan4do-T2u7oPYUkmNvcx0njIAmIXhDPtfGDGXJyXHqSgEYIWeXqrMJ5CDCAJLW_FLMzTrtyFVVf8j7WKZHof7gBIJlKD1CbxEfgz0QCnzq4IzKsUsYBG0n_inTogVsG0TFCMlFzONNNcExhQFr5hKDsuD_od4aa7ut0"/>
+</div>
+<div class="md:w-1/2 p-10 bg-surface-container-high border-4 border-black hard-shadow">
+<span class="font-label-bold text-secondary mb-4 block">HAZARD: EXTREME CAFFEINE</span>
+<h3 class="font-display-md text-on-surface mb-6">NITRO BREWS &amp; COCKTAILS</h3>
+<p class="font-body-lg text-on-surface-variant mb-8">Fuel for the city. Our nitro taps deliver silken texture and high-octane energy, while our mixologists blend street-inspired cocktails with technical precision.</p>
+<button class="bg-transparent border-2 border-secondary text-secondary font-headline-lg px-8 py-4 hover:bg-secondary hover:text-black transition-colors">EXPLORE DRINKS</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Mission Section -->
+<section class="relative py-32 overflow-hidden bg-surface-container-lowest" id="culture">
+<div class="absolute inset-0 opacity-10 hazard-pattern"></div>
+<div class="container mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 <div>
-<span class="font-label-caps text-[10px] text-secondary tracking-widest mb-2 block">LATIN FUSION</span>
-<h3 class="font-headline-md text-headline-md">NOIR TACO</h3>
-</div>
-<span class="font-display-xl text-headline-lg opacity-10">01</span>
-</div>
-<div class="h-[2px] w-full bg-outline-variant mt-4 relative overflow-hidden">
-<div class="absolute inset-0 bg-secondary -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-</div>
-<p class="mt-6 font-body-md text-on-surface-variant">Signature squid-ink tortillas paired with flash-seared ahi tuna and wasabi-lime crema.</p>
-</div>
-</div>
-<!-- Card 2 -->
-<div class="group relative overflow-hidden reveal-on-scroll" style="transition-delay: 200ms;">
-<div class="aspect-[16/10] overflow-hidden border-motif">
-<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="Smoked BBQ brisket sliders on a metal tray with parchment paper. Urban, industrial setting. Top-down view, rustic texture, warm lighting. High contrast editorial style with rich wood and steel elements." src="https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg"/>
-</div>
-<div class="mt-8">
-<div class="flex justify-between items-end">
-<div>
-<span class="font-label-caps text-[10px] text-secondary tracking-widest mb-2 block">ARTISAN SMOKE</span>
-<h3 class="font-headline-md text-headline-md">SMOKE &amp; IRON</h3>
-</div>
-<span class="font-display-xl text-headline-lg opacity-10">02</span>
-</div>
-<div class="h-[2px] w-full bg-outline-variant mt-4 relative overflow-hidden">
-<div class="absolute inset-0 bg-secondary -translate-x-full group-hover:translate-x-0 transition-transform duration-500"></div>
-</div>
-<p class="mt-6 font-body-md text-on-surface-variant">16-hour hickory smoked brisket served on toasted brioche with a house-fermented espresso BBQ reduction.</p>
-</div>
-</div>
-</div>
-</section>
-<!-- About Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-primary-container relative overflow-hidden">
-<div class="asymmetric-grid items-center">
-<div class="col-span-12 lg:col-span-6 reveal-on-scroll">
-<div class="relative z-10 border-heavy p-8 md:p-16 bg-surface/50 backdrop-blur-md">
-<h2 class="font-headline-lg text-headline-lg mb-8">RAW ARTISTRY <br/> &amp; URBAN UTILITY</h2>
-<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
-                            Founded in the heart of Tampa's industrial district, The Plaza is more than a food court—it's a manifesto on urban living. We believe that fine dining doesn't require white tablecloths, but it does require soul.
+<span class="font-label-bold text-tertiary tracking-widest block mb-4">EST. 2024 / TAMPA FL</span>
+<h2 class="font-display-lg text-[6vw] leading-[0.9] text-on-surface mb-10">RECLAIMING THE<br/><span class="text-secondary-container">CONCRETE</span></h2>
+<div class="w-20 h-2 bg-secondary mb-10"></div>
+<p class="font-body-lg text-on-surface text-xl max-w-xl leading-relaxed">
+                            The Food Trucks Plaza isn't just a food court. It's an urban reclamation project. We took a dormant industrial lot on West Hillsborough and turned it into a high-voltage hub for culinary entrepreneurs who reject the traditional restaurant model.
                         </p>
-<p class="font-body-md text-body-md text-on-surface-variant mb-10">
-                            Our space is a repurposed steel foundry, maintained with its original structural integrity. Cold concrete and dark iron provide the backdrop for vibrant culinary masterpieces, creating a high-contrast experience for the modern urbanite.
+<p class="font-body-lg text-on-surface-variant mt-6 max-w-xl">
+                            Our mission is simple: Aggressive quality. High-contrast atmosphere. Zero compromise. This is where Tampa eats when the sun goes down.
                         </p>
-<button class="flex items-center gap-4 font-cta text-cta group">
-<span class="border-b-2 border-secondary pb-1">OUR PHILOSOPHY</span>
-<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
-</button>
 </div>
+<div class="relative">
+<div class="aspect-[3/4] border-8 border-surface-container-highest overflow-hidden hard-shadow">
+<img class="w-full h-full object-cover grayscale brightness-75" data-alt="An atmospheric wide shot of a modern industrial dining space at night. Exposed steel beams, hanging Edison bulbs with an orange tint, and large glass windows revealing the city lights of Tampa. The aesthetic is raw, bold, and high-contrast with deep charcoal tones and vibrant highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC3_6TvZrA6MRn8Df1nPylpa9qnVV-_wdsFI7F2jde3NH1DlbCbwEnnOTGIZDw-p8fHYS4zv3hOUpqvpifj8upz2ZTPFZBazd3XovL6GgDkyfLqP-oRIv6RLvPIfGC1_QWoIfhsw6Jy3GA1KOcGmYuuQRiCbysTdxVBmh3Yqisld5AgfZ3WFfBRjkDrg4pajqfHmlRD5J8EV6mW6HChfGS4su1NrLWAWKSeKwYNrfmbYAmTcstytagQsU-R30o0fxA_V6rrAWRo7jME"/>
 </div>
-<div class="col-span-12 lg:col-span-6 mt-12 lg:mt-0 reveal-on-scroll" style="transition-delay: 300ms;">
-<div class="relative pl-0 lg:pl-12">
-<div class="absolute -top-12 -left-4 w-32 h-32 border-l-4 border-t-4 border-secondary opacity-30 z-0"></div>
-<img class="w-full grayscale hover:grayscale-0 transition-all duration-700 border-motif relative z-10" data-alt="A stylish, young couple laughing and eating street food at an outdoor plaza with industrial decor. Natural lighting, candid, editorial lifestyle photography. The atmosphere is energetic and urban, with steel beams and warm lighting in the background." src="https://lh3.googleusercontent.com/aida/AP1WRLu5gCFyF0XY6drNBmP2rJso_Wqhfgye2KQBLYM1AFR2mRmGEg395QPiZ3GOdUIyXvL8jdIxgfCB7LU0TJ6J95L9JOSnobOjnkKhjXdyA48RgHaXXbInsbFduIAH1dkAD6ZItqtE1zwTtkMwNs6mChVzYdZnMW_vwF3Ou2zb6fT8KrAT1qKGPXpX78sT9J1fC5hhtATRwtL_Fj59bHG4T87Tgomk9da5pkS8C8n44OVhSOOFmKRdWj21FU8"/>
+<div class="absolute -bottom-10 -right-10 w-48 h-48 bg-secondary-container border-4 border-black p-6 flex flex-col justify-center items-center">
+<span class="font-display-md text-on-secondary-fixed">15+</span>
+<span class="font-label-bold text-on-secondary-fixed">VENDORS</span>
+</div>
 </div>
 </div>
 </div>
 </section>
 <!-- Visit Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop" id="visit">
-<div class="asymmetric-grid">
-<div class="col-span-12 lg:col-span-4 reveal-on-scroll">
-<span class="font-label-caps text-label-caps text-secondary mb-4 block">LOCATION</span>
-<h2 class="font-headline-md text-headline-md mb-8">THE ANCHOR POINT</h2>
-<div class="space-y-8">
+<section class="py-block-gap px-margin-mobile md:px-margin-desktop bg-background" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
 <div>
-<h4 class="font-label-caps text-[10px] opacity-50 mb-2">ADDRESS</h4>
-<p class="font-body-lg text-body-lg">1798 West Hillsborough Avenue<br/>Tampa, FL 33603</p>
-</div>
+<h2 class="font-display-md text-on-surface mb-8">LOCATE THE PLAZA</h2>
+<div class="space-y-6 mb-12">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">location_on</span>
 <div>
-<h4 class="font-label-caps text-[10px] opacity-50 mb-2">OPERATING HOURS</h4>
-<div class="grid grid-cols-2 gap-4">
-<p class="text-on-surface-variant">Mon - Thu</p>
-<p>11am — 10pm</p>
-<p class="text-on-surface-variant">Fri - Sat</p>
-<p>11am — Midnight</p>
-<p class="text-on-surface-variant">Sunday</p>
-<p>10am — 9pm</p>
+<h4 class="font-label-bold text-on-surface text-lg">ADDRESS</h4>
+<p class="font-body-lg text-on-surface-variant">1798 West Hillsborough Avenue<br/>Tampa, FL 33603</p>
 </div>
 </div>
-<div class="pt-6">
-<button class="w-full py-4 border-motif font-cta text-cta flex items-center justify-center gap-4 hover:bg-secondary hover:text-on-secondary transition-colors duration-300">
-<span class="material-symbols-outlined">directions</span>
-                                GET DIRECTIONS
-                            </button>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">schedule</span>
+<div>
+<h4 class="font-label-bold text-on-surface text-lg">OPERATING HOURS</h4>
+<p class="font-body-lg text-on-surface-variant">MON - THU: 4PM - 12AM<br/>FRI - SUN: 12PM - 2AM</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">call</span>
+<div>
+<h4 class="font-label-bold text-on-surface text-lg">DIRECT LINE</h4>
+<p class="font-body-lg text-on-surface-variant">813-555-0199</p>
 </div>
 </div>
 </div>
-<div class="col-span-12 lg:col-span-8 mt-12 lg:mt-0 border-motif overflow-hidden reveal-on-scroll">
-<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] md:h-full grayscale hover:grayscale-0 transition-all duration-1000" data-location="Tampa, Florida" data-map-slot="" style="">
-<!-- Mock Map UI -->
-<div class="absolute inset-0 bg-surface-container-high flex items-center justify-center">
+<div class="p-8 bg-surface-container border-2 border-tertiary">
+<h3 class="font-headline-lg text-tertiary mb-4">JOIN THE FLEET</h3>
+<p class="font-body-md text-on-surface mb-6">Are you a food truck operator looking for a permanent home in Tampa's hottest destination? We are currently reviewing applications for seasonal residencies.</p>
+<button class="w-full bg-tertiary text-black font-headline-lg py-4 hover:bg-white transition-colors">APPLY FOR A SLOT</button>
+</div>
+</div>
+<div class="relative">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] h-full border-4 border-secondary hard-shadow" data-location="Tampa, Florida" data-map-slot="" style="">
+<div class="absolute inset-0 bg-neutral-900 flex items-center justify-center">
 <div class="text-center">
-<span class="material-symbols-outlined text-[64px] text-secondary animate-pulse">location_on</span>
-<p class="font-label-caps text-label-caps mt-4">MAP INTERFACE ACTIVE</p>
+<span class="material-symbols-outlined text-secondary text-6xl mb-4">map</span>
+<p class="font-label-bold text-on-surface-variant">INTERACTIVE MAP LOADING...</p>
 </div>
 </div>
+</div>
+<div class="absolute top-4 right-4 bg-black/80 px-4 py-2 border border-secondary">
+<span class="text-secondary font-label-bold text-sm tracking-widest animate-pulse">LIVE TRAFFIC: LOW</span>
 </div>
 </div>
 </div>
 </section>
 <!-- Contact Section -->
-<section class="py-section-gap px-margin-mobile md:px-margin-desktop bg-surface-container">
-<div class="max-w-4xl mx-auto reveal-on-scroll">
+<section class="py-block-gap px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t-8 border-surface-container-highest" id="booking">
+<div class="max-w-4xl mx-auto">
 <div class="text-center mb-16">
-<h2 class="font-headline-lg text-headline-lg mb-4">INQUIRIES &amp; BOOKINGS</h2>
-<p class="font-body-md text-on-surface-variant max-w-lg mx-auto">Host your next industrial-scale event at the Plaza or inquire about vendor opportunities.</p>
+<h2 class="font-display-md text-on-surface">CONTACT THE CORE</h2>
+<p class="font-body-lg text-on-surface-variant mt-4">Inquiries, event bookings, and lost &amp; found.</p>
 </div>
-<form class="asymmetric-grid" onsubmit="event.preventDefault(); alert('Inquiry Sent.')">
-<div class="col-span-12 md:col-span-6 mb-8">
-<label class="font-label-caps text-[10px] opacity-50 mb-2 block">FULL NAME</label>
-<input class="w-full bg-transparent border-t-0 border-x-0 border-b-2 border-outline-variant p-0 pb-3 focus:ring-0 text-on-surface" placeholder="John Doe" required="" type="text"/>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="block font-label-bold text-tertiary mb-2">OPERATOR NAME</label>
+<input class="w-full bg-surface-container-high border-b-2 border-concrete-gray focus:border-tertiary text-on-surface font-body-lg p-4 outline-none transition-all placeholder:text-surface-container-highest" placeholder="REQUIRED" type="text"/>
 </div>
-<div class="col-span-12 md:col-span-6 mb-8">
-<label class="font-label-caps text-[10px] opacity-50 mb-2 block">EMAIL ADDRESS</label>
-<input class="w-full bg-transparent border-t-0 border-x-0 border-b-2 border-outline-variant p-0 pb-3 focus:ring-0 text-on-surface" placeholder="contact@example.com" required="" type="email"/>
+<div class="relative">
+<label class="block font-label-bold text-tertiary mb-2">SECURE EMAIL</label>
+<input class="w-full bg-surface-container-high border-b-2 border-concrete-gray focus:border-tertiary text-on-surface font-body-lg p-4 outline-none transition-all placeholder:text-surface-container-highest" placeholder="REQUIRED" type="email"/>
 </div>
-<div class="col-span-12 mb-12">
-<label class="font-label-caps text-[10px] opacity-50 mb-2 block">MESSAGE / INQUIRY TYPE</label>
-<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b-2 border-outline-variant p-0 pb-3 focus:ring-0 text-on-surface resize-none" placeholder="Details about your event or vendor inquiry..." required="" rows="4"></textarea>
 </div>
-<div class="col-span-12 flex justify-center">
-<button class="bg-on-surface text-surface px-16 py-5 font-cta text-cta hover:bg-secondary hover:text-on-secondary transition-all duration-300 transform hover:-translate-y-1" type="submit">
-                            SEND TRANSMISSION
-                        </button>
+<div class="relative">
+<label class="block font-label-bold text-tertiary mb-2">SUBJECT</label>
+<select class="w-full bg-surface-container-high border-b-2 border-concrete-gray focus:border-tertiary text-on-surface font-body-lg p-4 outline-none appearance-none">
+<option>GENERAL INQUIRY</option>
+<option>PRIVATE EVENT BOOKING</option>
+<option>VENDOR APPLICATION</option>
+<option>PRESS / MEDIA</option>
+</select>
 </div>
+<div class="relative">
+<label class="block font-label-bold text-tertiary mb-2">TRANSMISSION</label>
+<textarea class="w-full bg-surface-container-high border-b-2 border-concrete-gray focus:border-tertiary text-on-surface font-body-lg p-4 outline-none transition-all placeholder:text-surface-container-highest" placeholder="ENTER MESSAGE..." rows="5"></textarea>
+</div>
+<button class="w-full bg-secondary-container text-on-secondary-fixed font-headline-lg py-6 hard-shadow hover:bg-tertiary transition-transform active:translate-y-2" type="submit">
+                        SEND TRANSMISSION
+                    </button>
 </form>
 </div>
 </section>
 </main>
 <!-- Footer -->
-<footer class="w-full grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-section-gap bg-surface-container-highest dark:bg-surface-container-highest border-t-3 border-on-surface dark:border-on-surface">
-<div class="col-span-12 lg:col-span-6 flex flex-col justify-between mb-12 lg:mb-0">
-<div>
-<span class="font-headline-lg text-headline-lg text-on-surface dark:text-on-surface opacity-20 block mb-4">FOOD TRUCKS PLAZA</span>
-<p class="font-label-caps text-label-caps tracking-[0.4em] text-secondary">RAW ARTISTRY. URBAN UTILITY.</p>
+<footer class="w-full py-block-gap px-margin-desktop flex flex-col md:flex-row justify-between items-start gap-8 bg-surface-container-lowest border-t-4 border-surface-container-highest">
+<div class="max-w-xs">
+<div class="font-headline-lg text-headline-lg text-on-surface mb-4">FOOD TRUCKS PLAZA</div>
+<p class="font-body-md text-on-surface-variant">The industrial heart of Tampa's food revolution. High-contrast flavors, low-fi aesthetics.</p>
 </div>
-<p class="font-body-md text-body-md text-on-surface-variant mt-12">© 2024 THE FOOD TRUCKS PLAZA. ALL RIGHTS RESERVED.</p>
+<div class="grid grid-cols-2 gap-12">
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-secondary mb-2">LEGAL</span>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold transition-colors" href="#">PRIVACY</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold transition-colors" href="#">TERMS</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold transition-colors" href="#">ACCESSIBILITY</a>
 </div>
-<div class="col-span-12 md:col-span-6 lg:col-span-3">
-<h4 class="font-label-caps text-label-caps mb-8 text-secondary">NAVIGATION</h4>
-<ul class="space-y-4">
-<li><a class="text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all duration-300 block font-body-md" href="#">Instagram</a></li>
-<li><a class="text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all duration-300 block font-body-md" href="#">Facebook</a></li>
-<li><a class="text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all duration-300 block font-body-md" href="#">TikTok</a></li>
-</ul>
+<div class="flex flex-col gap-2">
+<span class="font-label-bold text-secondary mb-2">CONNECT</span>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold transition-colors" href="#">INSTAGRAM</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold transition-colors" href="#">TIKTOK</a>
+<a class="text-on-surface-variant hover:text-secondary font-label-bold transition-colors" href="#">PRESS</a>
 </div>
-<div class="col-span-12 md:col-span-6 lg:col-span-3">
-<h4 class="font-label-caps text-label-caps mb-8 text-secondary">UTILITY</h4>
-<ul class="space-y-4">
-<li><a class="text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all duration-300 block font-body-md" href="#">Location</a></li>
-<li><a class="text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all duration-300 block font-body-md" href="#">Contact</a></li>
-<li><a class="text-on-surface-variant hover:text-secondary hover:translate-x-1 transition-all duration-300 block font-body-md" href="#">Privacy</a></li>
-</ul>
+</div>
+<div class="text-right">
+<div class="font-label-bold text-secondary mb-4">813-555-0199</div>
+<div class="font-label-bold text-label-bold text-on-surface-variant">©2024 THE FOOD TRUCKS PLAZA. ALL RIGHTS RESERVED.</div>
 </div>
 </footer>
+<!-- Mobile Nav Overlay -->
+<div class="fixed inset-0 bg-background z-[100] flex flex-col items-center justify-center gap-8 translate-x-full transition-transform duration-500 md:hidden" id="mobile-nav">
+<button class="absolute top-8 right-8 text-secondary material-symbols-outlined text-4xl" id="close-menu">close</button>
+<a class="font-display-md text-on-surface" href="#offerings">OFFERINGS</a>
+<a class="font-display-md text-on-surface" href="#culture">CULTURE</a>
+<a class="font-display-md text-on-surface" href="#visit">VISIT</a>
+<a class="font-display-md text-on-surface" href="#booking">BOOKING</a>
+<div class="mt-12 text-secondary font-headline-lg">813-555-0199</div>
+</div>
 <script>
-        // Intersection Observer for reveal animations
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const closeMenu = document.getElementById('close-menu');
+        const navLinks = mobileNav.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileNav.classList.add('translate-x-full');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('translate-x-full');
+            });
+        });
+
+        // Intersection Observer for fade-in/slide effects
         const observerOptions = {
             threshold: 0.1
         };
@@ -414,24 +472,32 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(el);
         });
+        
+        // Simple micro-interaction for active nav
+        window.addEventListener('scroll', () => {
+            const sections = ['offerings', 'culture', 'visit', 'booking'];
+            let current = '';
+            
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 150) current = section;
+            });
 
-        // Micro-interactions for smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
                 }
             });
         });

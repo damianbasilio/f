@@ -45,8 +45,8 @@ Email: thefoodtrucksplaza@gmail.com
 
 Recent posts from their Facebook page:
 1. Ready for Benito Bowl el Domingo!!! Pues haz tu orden ya en Papi's Pizza Delicioso Calzón "Meat Lover" En salsa blanca con unas alitas crujientes! Ordena las tuyas para el Super Bowl el Domingo! Síguelos Papi's Pizza 1798 W. Hillsborough Avenue Tampa, FL #Pizza #Tampa #superbowl #badbunny #Florida
-2. The Food Trucks Plaza give the opportunity to locals and tourist to have a taste and grab bites from local small business owners dedicated to the creation of unique flavors in the Tampa Bay Area.
-3. The Food Trucks Plaza and Ady Ramos — with Papi's Pizza at The Food Trucks Plaza.
+2. The Food Trucks Plaza and Ady Ramos — with Papi's Pizza at The Food Trucks Plaza.
+3. The Food Trucks Plaza give the opportunity to locals and tourist to have a taste and grab bites from local small business owners dedicated to the creation of unique flavors in the Tampa Bay Area.
 4. It'll be available to watch on The Food Trucks Plaza's profile shortly.
 - **Category:** Restaurant / food service
 - **Vertical:** Restaurant / food service
@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/FoodTrucksPlaza/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T01:29:56.277Z
+- **Scraped:** 2026-06-08T01:37:50.098Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/FoodTrucksPlaza/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

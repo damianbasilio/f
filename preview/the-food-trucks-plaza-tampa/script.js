@@ -1,4 +1,24 @@
-// Intersection Observer for reveal animations
+// Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileNav = document.getElementById('mobile-nav');
+        const closeMenu = document.getElementById('close-menu');
+        const navLinks = mobileNav.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mobileNav.classList.remove('translate-x-full');
+        });
+
+        closeMenu.addEventListener('click', () => {
+            mobileNav.classList.add('translate-x-full');
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('translate-x-full');
+            });
+        });
+
+        // Intersection Observer for fade-in/slide effects
         const observerOptions = {
             threshold: 0.1
         };
@@ -6,24 +26,32 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal-on-scroll').forEach((el) => {
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
             observer.observe(el);
         });
+        
+        // Simple micro-interaction for active nav
+        window.addEventListener('scroll', () => {
+            const sections = ['offerings', 'culture', 'visit', 'booking'];
+            let current = '';
+            
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                const rect = element.getBoundingClientRect();
+                if (rect.top <= 150) current = section;
+            });
 
-        // Micro-interactions for smooth scrolling
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth'
-                    });
+            document.querySelectorAll('nav a').forEach(a => {
+                a.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
+                if (a.getAttribute('href') === `#${current}`) {
+                    a.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'pb-1');
                 }
             });
         });
