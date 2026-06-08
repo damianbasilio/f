@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>CLIPPER CITY | THE YAKIMA STANDARD</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Inter:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-tertiary-fixed-variant": "#574425",
+                      "on-primary-fixed": "#131b2e",
+                      "surface-container": "#f0edef",
+                      "on-tertiary": "#ffffff",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f3f0f2",
+                      "on-secondary-fixed": "#261a00",
+                      "primary-fixed": "#dae2fd",
+                      "on-secondary": "#ffffff",
+                      "tertiary-container": "#271901",
+                      "tertiary": "#000000",
+                      "tertiary-fixed-dim": "#dec29a",
+                      "secondary-fixed": "#ffdf9e",
+                      "outline": "#76777d",
+                      "error": "#ba1a1a",
+                      "on-primary": "#ffffff",
+                      "outline-variant": "#c6c6cd",
+                      "secondary-container": "#fddc98",
+                      "primary-container": "#131b2e",
+                      "surface": "#fcf8fa",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e4e2e4",
+                      "on-secondary-fixed-variant": "#59430e",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "on-primary-container": "#7c839b",
+                      "surface-dim": "#dcd9db",
+                      "secondary-fixed-dim": "#e3c381",
+                      "secondary": "#735b24",
+                      "inverse-primary": "#bec6e0",
+                      "on-tertiary-container": "#98805d",
+                      "surface-container-highest": "#e4e2e4",
+                      "primary": "#000000",
+                      "on-error": "#ffffff",
+                      "surface-tint": "#565e74",
+                      "on-surface": "#1b1b1d",
+                      "on-surface-variant": "#45464d",
+                      "on-background": "#1b1b1d",
+                      "surface-bright": "#fcf8fa",
+                      "surface-container-low": "#f6f3f5",
+                      "on-secondary-container": "#785f28",
+                      "on-tertiary-fixed": "#271901",
+                      "surface-container-high": "#eae7e9",
+                      "tertiary-fixed": "#fcdeb5",
+                      "inverse-surface": "#303032",
+                      "background": "#fcf8fa",
+                      "primary-fixed-dim": "#bec6e0",
+                      "surface-container-lowest": "#ffffff"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0px",
+                      "lg": "0px",
+                      "xl": "0px",
+                      "full": "0px"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "vertical-rule-width": "1px",
+                      "base": "8px",
+                      "container-margin": "64px",
+                      "section-gap": "128px"
+              },
+              "fontFamily": {
+                      "body-md": ["Inter"],
+                      "display-lg-mobile": ["Bodoni Moda"],
+                      "headline-md": ["Bodoni Moda"],
+                      "button": ["Inter"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Inter"],
+                      "headline-xl": ["Bodoni Moda"],
+                      "display-lg": ["Bodoni Moda"]
+              },
+              "fontSize": {
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                      "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                      "button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                      "headline-xl": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vertical-rule {
+            width: 1px;
+            background-color: #735b24; /* Raw Brass */
+        }
+        .brass-border {
+            border-color: #735b24;
+        }
+        .service-item:hover .service-title {
+            color: #735b24;
+            transform: translateX(20px);
+        }
+        .service-title {
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .brass-underline::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            background: #735b24;
+            transition: width .3s;
+        }
+        .brass-underline:hover::after {
+            width: 100%;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<nav class="bg-background dark:bg-background flex justify-between items-center w-full px-gutter py-base max-w-full docked full-width top-0 border-b border-secondary dark:border-secondary z-50 sticky">
+<div class="font-headline-md text-headline-md tracking-tighter text-primary dark:text-primary">CLIPPER CITY</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary border-b border-secondary pb-1 hover:text-secondary dark:hover:text-secondary transition-colors duration-300" href="#">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors duration-300" href="#">ABOUT</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant hover:text-secondary dark:hover:text-secondary transition-colors duration-300" href="#">LOCATIONS</a>
+</div>
+<div class="font-label-caps text-label-caps text-primary dark:text-primary tracking-widest">(509) 907-5022</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex flex-col md:flex-row items-center px-gutter pt-section-gap overflow-hidden">
+<div class="w-full md:w-1/2 z-10">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary uppercase mb-8">
+                CLIPPER CITY: <br/>THE YAKIMA <br/>STANDARD.
+            </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-12">
+                Elevated grooming for the modern gentleman. We bridge the gap between traditional craftsmanship and contemporary precision in the heart of the Pacific Northwest.
+            </p>
+<button class="bg-primary text-background font-button text-button px-10 py-5 hover:bg-secondary transition-all duration-300">
+                BOOK APPOINTMENT
+            </button>
+</div>
+<div class="w-full md:w-1/2 h-[600px] md:h-[819px] mt-12 md:mt-0 relative">
+<div class="absolute inset-0 brass-border border-[1px] translate-x-4 translate-y-4"></div>
+<img alt="Barbershop Interior" class="w-full h-full object-cover grayscale brightness-75 contrast-125" data-alt="A high-contrast, black and white editorial photograph of a premium barbershop interior. The scene features vintage leather chairs and clean marble countertops under dramatic, focused architectural lighting. The mood is sophisticated and quiet, emphasizing the sharp lines and traditional masculine elegance of a high-end grooming studio. Deep shadows and bright highlights create a rich, textured atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJn3YqkmLroQoYUdN4k4n1bIyzkEvf5JOlzBczu16RuwEDsdFCcOpky61cWqneqzZMrJ7EX9D7RZ4Be5Iza77yPMRAYyRAGjHW55qsY-PY3S5BoQ5SqzLR6KSTcSoMxohrSQGfKp7ohmJc-FuvGkWjGBlAYQOeyfAP9q_7BP4cve4WgsQFiyqDXYVKPQhruuzCQrSMFxycE2czvKa3MtB6zKbNnDrOehuuCejZNvWpu6WPaoOonjfSv6K8DEQhSkqe9ABXS02uLsY"/>
+</div>
+</section>
+<!-- Credibility Bar -->
+<section class="w-full px-gutter py-12 border-y border-secondary mt-section-gap">
+<div class="flex justify-between items-center">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em]">ESTABLISHED 2018</span>
+<span class="font-label-caps text-label-caps text-primary">CRAFTED IN THE PACIFIC NORTHWEST SINCE ESTABLISHMENT.</span>
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em]">YAKIMA, WA</span>
+</div>
+</section>
+<!-- Services: THE DOSSIER -->
+<section class="px-gutter py-section-gap">
+<div class="flex items-baseline gap-4 mb-20">
+<h2 class="font-headline-xl text-headline-xl text-primary">THE DOSSIER</h2>
+<div class="h-[1px] flex-grow bg-outline-variant"></div>
+</div>
+<div class="flex flex-col">
+<!-- Service 01 -->
+<div class="service-item border-b border-outline-variant py-12 group cursor-pointer flex flex-col md:flex-row md:items-center justify-between">
+<div class="md:w-1/2">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">01 / GROOMING</span>
+<h3 class="service-title font-headline-xl text-headline-xl text-primary group-hover:italic">THE SIGNATURE CUT</h3>
+</div>
+<div class="md:w-1/3 mt-4 md:mt-0">
+<p class="font-body-md text-body-md text-on-surface-variant">A tailored precision haircut inclusive of a hot towel finish, neck shave, and expert styling to define your profile.</p>
+</div>
+<div class="font-headline-md text-headline-md text-primary mt-4 md:mt-0">$45</div>
+</div>
+<!-- Service 02 -->
+<div class="service-item border-b border-outline-variant py-12 group cursor-pointer flex flex-col md:flex-row md:items-center justify-between">
+<div class="md:w-1/2">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">02 / TRADITION</span>
+<h3 class="service-title font-headline-xl text-headline-xl text-primary group-hover:italic">HOT TOWEL SHAVE</h3>
+</div>
+<div class="md:w-1/3 mt-4 md:mt-0">
+<p class="font-body-md text-body-md text-on-surface-variant">The ultimate ritual. Multiple hot towel applications, pre-shave oil, and a straight-razor finish for unparalleled smoothness.</p>
+</div>
+<div class="font-headline-md text-headline-md text-primary mt-4 md:mt-0">$55</div>
+</div>
+<!-- Service 03 -->
+<div class="service-item border-b border-outline-variant py-12 group cursor-pointer flex flex-col md:flex-row md:items-center justify-between">
+<div class="md:w-1/2">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">03 / DETAIL</span>
+<h3 class="service-title font-headline-xl text-headline-xl text-primary group-hover:italic">BEARD SCULPTING</h3>
+</div>
+<div class="md:w-1/3 mt-4 md:mt-0">
+<p class="font-body-md text-body-md text-on-surface-variant">Architectural shaping of the beard paired with a straight-razor line-up and conditioning treatment for a sharp, clean finish.</p>
+</div>
+<div class="font-headline-md text-headline-md text-primary mt-4 md:mt-0">$35</div>
+</div>
+</div>
+</section>
+<!-- Philosophy -->
+<section class="bg-primary-container text-on-primary-container px-gutter py-section-gap flex flex-col md:flex-row gap-section-gap relative overflow-hidden">
+<div class="w-full md:w-1/2">
+<h2 class="font-label-caps text-label-caps text-secondary mb-12">OUR PHILOSOPHY</h2>
+<blockquote class="font-display-lg-mobile md:font-headline-xl text-display-lg-mobile md:text-headline-xl italic text-surface leading-tight">
+                "We don't just cut hair; we curate the confidence of the men who build this city."
+            </blockquote>
+</div>
+<div class="w-full md:w-1/3 flex flex-col justify-end">
+<p class="font-body-lg text-body-lg text-on-primary-container mb-8">
+                Clipper City was founded on the belief that a barbershop should be a sanctuary of craft. Located in the heart of Yakima, we honor the timeless techniques of the masters while embracing the sharp aesthetics of today. 
+            </p>
+<p class="font-body-md text-body-md text-on-primary-container opacity-80">
+                Every tool, every chair, and every stroke of the blade is chosen with intention. This is the Yakima standard of excellence.
+            </p>
+<div class="mt-12 h-[2px] w-24 bg-secondary"></div>
+</div>
+<!-- Decorative Rule -->
+<div class="absolute right-12 top-0 bottom-0 w-[1px] bg-secondary opacity-20 hidden md:block"></div>
+</section>
+<!-- Locate Us -->
+<section class="px-gutter py-section-gap grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4">
+<h2 class="font-headline-xl text-headline-xl text-primary mb-6">LOCATE US</h2>
+<div class="space-y-4 mb-12">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<address class="not-italic font-body-lg text-body-lg text-on-surface">
+                        901 Summitview Avenue<br/>
+                        Yakima, WA 98902
+                    </address>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                        TUE - FRI: 9AM — 6PM<br/>
+                        SAT: 8AM — 4PM<br/>
+                        SUN - MON: CLOSED
+                    </div>
+</div>
+</div>
+<a class="font-label-caps text-label-caps text-secondary border-b border-secondary pb-1 brass-underline" href="https://maps.google.com" target="_blank">GET DIRECTIONS</a>
+</div>
+<div class="md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border border-secondary" data-location="901 Summitview Avenue, Yakima, WA" data-map-slot="" style="">
+<!-- Fallback Map Image style -->
+<img alt="Map Location" class="w-full h-full object-cover grayscale opacity-50" data-alt="A minimalist, monochromatic street map of Yakima, Washington, focusing on the Summitview Avenue area. The map is rendered in a sophisticated architectural style with clean lines in slate and charcoal tones, punctuated by a single elegant metallic brass marker indicating the location of the barbershop. The aesthetic is clean and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYjcBphVe7uuW4wDrzypk0OQi_uW7wQiN5pTFixMcqd61yQHdbrzQUb27XQqgKHQRZjRH7wNWUC_mHOJZ47pbL0vGvpLbtr2mQIQC-JNSIihPzLzmS4jzq8T9U_jLuLUSw6h3bLO1OIHDrBZBdpAt8ctQkzVk_8gMFLHvnlBjxSiHS8w_nhYqeDzq-bO9uEPJdWdzHCojkyQ7fcOttih5ZO5rhBoPat-Gim02JARpFBVZj0G1nBFJu4p_K9dqujDt9v95sXDEukLE"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="bg-primary text-background p-6">
+<span class="font-label-caps text-label-caps">CLIPPER CITY HQ</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiries Form -->
+<section class="bg-surface-container-low px-gutter py-section-gap">
+<div class="max-w-4xl mx-auto">
+<h2 class="font-headline-xl text-headline-xl text-primary text-center mb-16 uppercase tracking-widest">INQUIRIES</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all py-2 placeholder:text-outline-variant font-body-md" placeholder="Gideon West" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all py-2 placeholder:text-outline-variant font-body-md" placeholder="g.west@domain.com" type="email"/>
+</div>
+<div class="md:col-span-2 relative group">
+<label class="font-label-caps text-label-caps text-on-surface-variant mb-2 block">MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline focus:ring-0 focus:border-secondary transition-all py-2 placeholder:text-outline-variant font-body-md" placeholder="How can we assist your grooming journey?" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 flex justify-center mt-8">
+<button class="bg-primary text-surface px-12 py-5 font-button text-button hover:bg-secondary transition-all duration-300" type="submit">SEND MESSAGE</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary-container dark:bg-primary-container text-surface dark:text-surface flex flex-col md:flex-row justify-between items-start gap-gutter px-gutter py-section-gap w-full border-t border-on-tertiary-fixed-variant">
+<div class="flex flex-col gap-6">
+<div class="font-headline-md text-headline-md text-surface dark:text-surface uppercase tracking-tighter">CLIPPER CITY</div>
+<p class="font-body-md text-body-md max-w-xs text-on-primary-container">
+                Dedicated to the heritage of barbering. Yakima's premier destination for executive grooming.
+            </p>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary">NAVIGATION</span>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors" href="#">INSTAGRAM</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors" href="#">FACEBOOK</a>
+<a class="font-label-caps text-label-caps text-on-primary-container hover:text-secondary transition-colors" href="#">PRIVACY POLICY</a>
+</div>
+<div class="flex flex-col gap-4 md:text-right">
+<span class="font-label-caps text-label-caps text-secondary">COPYRIGHT</span>
+<div class="font-label-caps text-label-caps text-on-primary-container">
+                © CLIPPER CITY BARBERSHOP EST. YAKIMA.<br/>ALL RIGHTS RESERVED.
+            </div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Fade-in intersection observer
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
