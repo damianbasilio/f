@@ -1,0 +1,516 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Luxury Lodge Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in the \"Luxury Lodge\" aesthetic—a blend of high-end hospitality and editorial sophistication. It targets discerning pet owners who view their companions as family members deserving of a premium, retreat-like experience. The UI must evoke feelings of exclusivity, safety, and meticulous care.\n\nThe style leverages **Minimalism** with a **Tactile** edge. It utilizes expansive whitespace to create a sense of calm, punctuated by high-contrast typography and subtle metallic accents. The interface should feel less like a utility app and more like a digital concierge service for an upscale mountain resort.\n\n- **Primary Motif:** Rounded pill shapes and \"stadium\" containers.\n- **Accents:** Gold hairline dividers (0.5px to 1px) to separate editorial sections.\n- **Imagery:** Large, high-resolution photography with soft focus backgrounds, often housed in asymmetric pill-shaped frames.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\n- **Generous Whitespace:** Vertical spacing between major sections should be significant (120px+) to allow the content to \"breathe\" and signal luxury.\n- **Asymmetric Balance:** Elements should often be offset from the center or span irregular column counts (e.g., a 5-column image next to a 6-column text block) to maintain an editorial, non-templated look.\n- **Alignment:** Text is primarily left-aligned to maintain readability, with Gold hairline rules used to anchor the eye at the start of new content modules.\n\n## Elevation & Depth\n\nTo maintain the \"Lodge\" aesthetic, this design system avoids heavy drop shadows in favor of **Tonal Layers** and **Subtle Depth**.\n\n- **Surface Levels:** \n  - Level 0: Soft Cream (#F9F7F2) - Main Canvas.\n  - Level 1: Pure White (#FFFFFF) - Cards and Floating containers.\n  - Level 2: Deep Hunter Green (#1B3022) - Inverted sections for high contrast.\n- **Shadows:** When necessary for interactivity (e.g., a hovered card), use a very diffused, low-opacity shadow tinted with the primary green: `0px 10px 30px rgba(27, 48, 34, 0.05)`.\n- **Rules:** Gold hairline rules (#C5A059 at 50% opacity) serve as the primary method of visual separation between stacked content, replacing standard borders.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Hunter Green background, Soft Cream text, pill-shaped. No border.\n- **Secondary:** Gold hairline border (#C5A059), Gold text, pill-shaped.\n- **Ghost:** Transparent background, Hunter Green text with a Gold underline on hover.\n\n### Cards\n- **Editorial Cards:** Used for pet profiles or blog posts. Soft White background, 3rem corner radius, subtle inner border in Gold.\n- **Service Cards:** Feature a large pill-shaped image at the top, followed by Playfair Display subheads.\n\n### Inputs & Fields\n- Pill-shaped with a Soft Cream background that is 5% darker than the page surface. \n- Focus state is indicated by a 1px Gold border.\n\n### Decorative Elements\n- **Vertical Rule:** A 1px wide Gold vertical line used to connect related steps in a process or as a lead-in to a headline.\n- **Booking Badge:** A small, pill-shaped floating button in Gold used for immediate \"Book a Stay\" actions.",
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1b3022",
+            "designMd": "---\nname: Luxury Lodge Editorial\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#434843'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#171815'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2b2c29'\n  on-tertiary-container: '#94938f'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.5rem\n  DEFAULT: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 3rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-desktop: 120px\n  section-mobile: 64px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThe design system is anchored in the \"Luxury Lodge\" aesthetic—a blend of high-end hospitality and editorial sophistication. It targets discerning pet owners who view their companions as family members deserving of a premium, retreat-like experience. The UI must evoke feelings of exclusivity, safety, and meticulous care.\n\nThe style leverages **Minimalism** with a **Tactile** edge. It utilizes expansive whitespace to create a sense of calm, punctuated by high-contrast typography and subtle metallic accents. The interface should feel less like a utility app and more like a digital concierge service for an upscale mountain resort.\n\n- **Primary Motif:** Rounded pill shapes and \"stadium\" containers.\n- **Accents:** Gold hairline dividers (0.5px to 1px) to separate editorial sections.\n- **Imagery:** Large, high-resolution photography with soft focus backgrounds, often housed in asymmetric pill-shaped frames.\n\n## Colors\n\nThe palette is inspired by traditional lodge materials: forest flora, brass fixtures, and parchment.\n\n- **Deep Hunter Green (#1B3022):** Used for primary backgrounds, heavy headings, and high-importance UI elements. It represents stability and prestige.\n- **Rich Gold (#C5A059):** Reserved for interactive accents, call-to-action highlights, and decorative hairline rules. It should be used sparingly to maintain its premium impact.\n- **Soft Cream (#F9F7F2):** The primary surface color. It provides a warmer, more inviting alternative to pure white, reducing eye strain and enhancing the \"organic\" feel.\n- **Charcoal (#2D2D2D):** Used primarily for body text and functional icons to ensure WCAG AA readability against the cream background.\n\n## Typography\n\nThis design system employs a high-contrast typographic pairing to reinforce the editorial feel.\n\n- **Headlines (Playfair Display):** Should be set with tight letter-spacing. Use \"Display\" sizes for hero sections and service titles to evoke a magazine layout.\n- **Body & Labels (Montserrat):** A geometric sans-serif that provides clarity and modernity. Body text should be given generous line-height (1.5-1.6x) to facilitate a relaxed reading pace.\n- **Stylistic Note:** Labels and small captions should often use uppercase with increased tracking (letter-spacing) to mimic luxury brand tagging.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\n- **Generous Whitespace:** Vertical spacing between major sections should be significant (120px+) to allow the content to \"breathe\" and signal luxury.\n- **Asymmetric Balance:** Elements should often be offset from the center or span irregular column counts (e.g., a 5-column image next to a 6-column text block) to maintain an editorial, non-templated look.\n- **Alignment:** Text is primarily left-aligned to maintain readability, with Gold hairline rules used to anchor the eye at the start of new content modules.\n\n## Elevation & Depth\n\nTo maintain the \"Lodge\" aesthetic, this design system avoids heavy drop shadows in favor of **Tonal Layers** and **Subtle Depth**.\n\n- **Surface Levels:** \n  - Level 0: Soft Cream (#F9F7F2) - Main Canvas.\n  - Level 1: Pure White (#FFFFFF) - Cards and Floating containers.\n  - Level 2: Deep Hunter Green (#1B3022) - Inverted sections for high contrast.\n- **Shadows:** When necessary for interactivity (e.g., a hovered card), use a very diffused, low-opacity shadow tinted with the primary green: `0px 10px 30px rgba(27, 48, 34, 0.05)`.\n- **Rules:** Gold hairline rules (#C5A059 at 50% opacity) serve as the primary method of visual separation between stacked content, replacing standard borders.\n\n## Shapes\n\nThe shape language is defined by the **Pill (Stadium)** form factor. This softness contrasts with the sharp serifs of the typography, creating a welcoming and safe visual metaphor.\n\n- **Interactive Elements:** All buttons, input fields, and tags must use full-round pill shapes (Border Radius: 999px).\n- **Containers:** Large image containers and cards use a `rounded-xl` (3rem) radius to soften the edges of the photography.\n- **Iconography:** Icons should be thin-stroke (1.5px) with rounded caps to match the secondary font weight.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Hunter Green background, Soft Cream text, pill-shaped. No border.\n- **Secondary:** Gold hairline border (#C5A059), Gold text, pill-shaped.\n- **Ghost:** Transparent background, Hunter Green text with a Gold underline on hover.\n\n### Cards\n- **Editorial Cards:** Used for pet profiles or blog posts. Soft White background, 3rem corner radius, subtle inner border in Gold.\n- **Service Cards:** Feature a large pill-shaped image at the top, followed by Playfair Display subheads.\n\n### Inputs & Fields\n- Pill-shaped with a Soft Cream background that is 5% darker than the page surface. \n- Focus state is indicated by a 1px Gold border.\n\n### Decorative Elements\n- **Vertical Rule:** A 1px wide Gold vertical line used to connect related steps in a process or as a lead-in to a headline.\n- **Booking Badge:** A small, pill-shaped floating button in Gold used for immediate \"Book a Stay\" actions.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fcf9f8",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f3f0f0",
+              "inverse_primary": "#b4cdb8",
+              "inverse_surface": "#303030",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#819986",
+              "on_primary_fixed": "#0b2013",
+              "on_primary_fixed_variant": "#364c3c",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#785a1a",
+              "on_secondary_fixed": "#261900",
+              "on_secondary_fixed_variant": "#5d4201",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#434843",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#94938f",
+              "on_tertiary_fixed": "#1b1c19",
+              "on_tertiary_fixed_variant": "#474744",
+              "outline": "#737973",
+              "outline_variant": "#c3c8c1",
+              "primary": "#061b0e",
+              "primary_container": "#1b3022",
+              "primary_fixed": "#d0e9d4",
+              "primary_fixed_dim": "#b4cdb8",
+              "secondary": "#775a19",
+              "secondary_container": "#fed488",
+              "secondary_fixed": "#ffdea5",
+              "secondary_fixed_dim": "#e9c176",
+              "surface": "#fcf9f8",
+              "surface_bright": "#fcf9f8",
+              "surface_container": "#f0eded",
+              "surface_container_high": "#eae7e7",
+              "surface_container_highest": "#e4e2e1",
+              "surface_container_low": "#f6f3f2",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dcd9d9",
+              "surface_tint": "#4d6453",
+              "surface_variant": "#e4e2e1",
+              "tertiary": "#171815",
+              "tertiary_container": "#2b2c29",
+              "tertiary_fixed": "#e4e2dd",
+              "tertiary_fixed_dim": "#c8c6c2"
+            },
+            "overrideNeutralColor": "#2d2d2d",
+            "overridePrimaryColor": "#1b3022",
+            "overrideSecondaryColor": "#c5a059",
+            "overrideTertiaryColor": "#f9f7f2",
+            "roundness": "ROUND_FULL",
+            "spacing": {
+              "base": "8px",
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "section-desktop": "120px",
+              "section-mobile": "64px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "label-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.2"
+              },
+              "label-sm": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.2"
+              }
+            }
+          }
+        },
+        "name": "assets/218f897d2e85430a8276a0ef06238da8",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "1024",
+            "id": "ec11f0d8983b461f9c0029a5d3b2eb4a",
+            "name": "projects/3202082029229250504/screens/ec11f0d8983b461f9c0029a5d3b2eb4a",
+            "prompt": "Close-up of a pampered tabby cat sitting on a high-quality wool blanket in a sunlit modern room. Luxury pet care aesthetic, soft lighting, warm cream and gold tones. Professional photography.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtkvh7L6JArLIBj_-MbzDZ6C1P45KKwERS2S49xaTO1OwUyi0gxaP1KkROGbwf9d_pVxeOWeMcV1pLQoZjK3WARQubP7ZfaK8X5mTkLfhl_Rd-adeoBGveVSBILKtYsYnObtWYRrUPeTfRgg4AUBj6T38CPJ6ByafVdNLgkgMQ2LSTIOOpGSTx_9zR6cIdmLy7jLP5wps8GEorVpJf4ioG4JeCDA467IL6Ce4iT6yK-mydbNurOvi8YTNo",
+              "name": "projects/3202082029229250504/files/ccabe6557a124f10ace63a9d725254ba"
+            },
+            "theme": {},
+            "title": "Close-up of a pampered tabby cat sitting on a high-quality wool blanket in a sunlit modern room. Luxury pet care aesthetic, soft lighting, warm cream and gold tones. Professional photography.",
+            "width": "1024"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "15667247594b49b698c53ba36f9621d3",
+            "name": "projects/3202082029229250504/screens/15667247594b49b698c53ba36f9621d3",
+            "prompt": "A premium, high-end lifestyle photograph of a happy Golden Retriever relaxing on a velvet sofa in a luxury lodge setting with soft sunlight. Professional architectural photography style, shallow depth of field, warm tones. No people. 4k, editorial quality.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuxqjd-SfqOsg9rBhrBF3jB1hQ47i-ZhFgLZlUJ1n_rWqjLeOS25XEzYMImmrClDINTihx2YgxaHUkU68OJG90zluSsDlZ8zDt84Tm-vtbESEW_wxNReMT3lcZ172SPzukCQo-fJNqwXTJT7GDhCAivV2WOm-CzPBk7i4rPiQK6esmZKQHH1EI6ghjmJDhtLrVVm4RwRICp9-B4eG43wdpf0oPmybHZ5IOdQVa6rOU1R4duqfw8FKmhNQw",
+              "name": "projects/3202082029229250504/files/e0fcaff312a4473a8f93fdf108b9a114"
+            },
+            "theme": {},
+            "title": "A premium, high-end lifestyle photograph of a happy Golden Retriever relaxing on a velvet sofa in a luxury lodge setting with soft sunlight. Professional architectural photography style, shallow depth of field, warm tones. No people. 4k, editorial quality.",
+            "width": "1376"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Luxury Lodge Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is anchored in the \"Luxury Lodge\" aesthetic—a blend of high-end hospitality and editorial sophistication. It targets discerning pet owners who view their companions as family members deserving of a premium, retreat-like experience. The UI must evoke feelings of exclusivity, safety, and meticulous care.\n\nThe style leverages **Minimalism** with a **Tactile** edge. It utilizes expansive whitespace to create a sense of calm, punctuated by high-contrast typography and subtle metallic accents. The interface should feel less like a utility app and more like a digital concierge service for an upscale mountain resort.\n\n- **Primary Motif:** Rounded pill shapes and \"stadium\" containers.\n- **Accents:** Gold hairline dividers (0.5px to 1px) to separate editorial sections.\n- **Imagery:** Large, high-resolution photography with soft focus backgrounds, often housed in asymmetric pill-shaped frames.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\n- **Generous Whitespace:** Vertical spacing between major sections should be significant (120px+) to allow the content to \"breathe\" and signal luxury.\n- **Asymmetric Balance:** Elements should often be offset from the center or span irregular column counts (e.g., a 5-column image next to a 6-column text block) to maintain an editorial, non-templated look.\n- **Alignment:** Text is primarily left-aligned to maintain readability, with Gold hairline rules used to anchor the eye at the start of new content modules.\n\n## Elevation & Depth\n\nTo maintain the \"Lodge\" aesthetic, this design system avoids heavy drop shadows in favor of **Tonal Layers** and **Subtle Depth**.\n\n- **Surface Levels:** \n  - Level 0: Soft Cream (#F9F7F2) - Main Canvas.\n  - Level 1: Pure White (#FFFFFF) - Cards and Floating containers.\n  - Level 2: Deep Hunter Green (#1B3022) - Inverted sections for high contrast.\n- **Shadows:** When necessary for interactivity (e.g., a hovered card), use a very diffused, low-opacity shadow tinted with the primary green: `0px 10px 30px rgba(27, 48, 34, 0.05)`.\n- **Rules:** Gold hairline rules (#C5A059 at 50% opacity) serve as the primary method of visual separation between stacked content, replacing standard borders.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Hunter Green background, Soft Cream text, pill-shaped. No border.\n- **Secondary:** Gold hairline border (#C5A059), Gold text, pill-shaped.\n- **Ghost:** Transparent background, Hunter Green text with a Gold underline on hover.\n\n### Cards\n- **Editorial Cards:** Used for pet profiles or blog posts. Soft White background, 3rem corner radius, subtle inner border in Gold.\n- **Service Cards:** Feature a large pill-shaped image at the top, followed by Playfair Display subheads.\n\n### Inputs & Fields\n- Pill-shaped with a Soft Cream background that is 5% darker than the page surface. \n- Focus state is indicated by a 1px Gold border.\n\n### Decorative Elements\n- **Vertical Rule:** A 1px wide Gold vertical line used to connect related steps in a process or as a lead-in to a headline.\n- **Booking Badge:** A small, pill-shaped floating button in Gold used for immediate \"Book a Stay\" actions.",
+                "theme": {
+                  "bodyFont": "MONTSERRAT",
+                  "bodyFontFamily": "Montserrat",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#1b3022",
+                  "designMd": "---\nname: Luxury Lodge Editorial\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#434843'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#171815'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2b2c29'\n  on-tertiary-container: '#94938f'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.5rem\n  DEFAULT: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 3rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-desktop: 120px\n  section-mobile: 64px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThe design system is anchored in the \"Luxury Lodge\" aesthetic—a blend of high-end hospitality and editorial sophistication. It targets discerning pet owners who view their companions as family members deserving of a premium, retreat-like experience. The UI must evoke feelings of exclusivity, safety, and meticulous care.\n\nThe style leverages **Minimalism** with a **Tactile** edge. It utilizes expansive whitespace to create a sense of calm, punctuated by high-contrast typography and subtle metallic accents. The interface should feel less like a utility app and more like a digital concierge service for an upscale mountain resort.\n\n- **Primary Motif:** Rounded pill shapes and \"stadium\" containers.\n- **Accents:** Gold hairline dividers (0.5px to 1px) to separate editorial sections.\n- **Imagery:** Large, high-resolution photography with soft focus backgrounds, often housed in asymmetric pill-shaped frames.\n\n## Colors\n\nThe palette is inspired by traditional lodge materials: forest flora, brass fixtures, and parchment.\n\n- **Deep Hunter Green (#1B3022):** Used for primary backgrounds, heavy headings, and high-importance UI elements. It represents stability and prestige.\n- **Rich Gold (#C5A059):** Reserved for interactive accents, call-to-action highlights, and decorative hairline rules. It should be used sparingly to maintain its premium impact.\n- **Soft Cream (#F9F7F2):** The primary surface color. It provides a warmer, more inviting alternative to pure white, reducing eye strain and enhancing the \"organic\" feel.\n- **Charcoal (#2D2D2D):** Used primarily for body text and functional icons to ensure WCAG AA readability against the cream background.\n\n## Typography\n\nThis design system employs a high-contrast typographic pairing to reinforce the editorial feel.\n\n- **Headlines (Playfair Display):** Should be set with tight letter-spacing. Use \"Display\" sizes for hero sections and service titles to evoke a magazine layout.\n- **Body & Labels (Montserrat):** A geometric sans-serif that provides clarity and modernity. Body text should be given generous line-height (1.5-1.6x) to facilitate a relaxed reading pace.\n- **Stylistic Note:** Labels and small captions should often use uppercase with increased tracking (letter-spacing) to mimic luxury brand tagging.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\n- **Generous Whitespace:** Vertical spacing between major sections should be significant (120px+) to allow the content to \"breathe\" and signal luxury.\n- **Asymmetric Balance:** Elements should often be offset from the center or span irregular column counts (e.g., a 5-column image next to a 6-column text block) to maintain an editorial, non-templated look.\n- **Alignment:** Text is primarily left-aligned to maintain readability, with Gold hairline rules used to anchor the eye at the start of new content modules.\n\n## Elevation & Depth\n\nTo maintain the \"Lodge\" aesthetic, this design system avoids heavy drop shadows in favor of **Tonal Layers** and **Subtle Depth**.\n\n- **Surface Levels:** \n  - Level 0: Soft Cream (#F9F7F2) - Main Canvas.\n  - Level 1: Pure White (#FFFFFF) - Cards and Floating containers.\n  - Level 2: Deep Hunter Green (#1B3022) - Inverted sections for high contrast.\n- **Shadows:** When necessary for interactivity (e.g., a hovered card), use a very diffused, low-opacity shadow tinted with the primary green: `0px 10px 30px rgba(27, 48, 34, 0.05)`.\n- **Rules:** Gold hairline rules (#C5A059 at 50% opacity) serve as the primary method of visual separation between stacked content, replacing standard borders.\n\n## Shapes\n\nThe shape language is defined by the **Pill (Stadium)** form factor. This softness contrasts with the sharp serifs of the typography, creating a welcoming and safe visual metaphor.\n\n- **Interactive Elements:** All buttons, input fields, and tags must use full-round pill shapes (Border Radius: 999px).\n- **Containers:** Large image containers and cards use a `rounded-xl` (3rem) radius to soften the edges of the photography.\n- **Iconography:** Icons should be thin-stroke (1.5px) with rounded caps to match the secondary font weight.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Hunter Green background, Soft Cream text, pill-shaped. No border.\n- **Secondary:** Gold hairline border (#C5A059), Gold text, pill-shaped.\n- **Ghost:** Transparent background, Hunter Green text with a Gold underline on hover.\n\n### Cards\n- **Editorial Cards:** Used for pet profiles or blog posts. Soft White background, 3rem corner radius, subtle inner border in Gold.\n- **Service Cards:** Feature a large pill-shaped image at the top, followed by Playfair Display subheads.\n\n### Inputs & Fields\n- Pill-shaped with a Soft Cream background that is 5% darker than the page surface. \n- Focus state is indicated by a 1px Gold border.\n\n### Decorative Elements\n- **Vertical Rule:** A 1px wide Gold vertical line used to connect related steps in a process or as a lead-in to a headline.\n- **Booking Badge:** A small, pill-shaped floating button in Gold used for immediate \"Book a Stay\" actions.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "MONTSERRAT",
+                  "labelFontFamily": "Montserrat",
+                  "namedColors": {
+                    "background": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f3f0f0",
+                    "inverse_primary": "#b4cdb8",
+                    "inverse_surface": "#303030",
+                    "on_background": "#1b1c1c",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#819986",
+                    "on_primary_fixed": "#0b2013",
+                    "on_primary_fixed_variant": "#364c3c",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#785a1a",
+                    "on_secondary_fixed": "#261900",
+                    "on_secondary_fixed_variant": "#5d4201",
+                    "on_surface": "#1b1c1c",
+                    "on_surface_variant": "#434843",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#94938f",
+                    "on_tertiary_fixed": "#1b1c19",
+                    "on_tertiary_fixed_variant": "#474744",
+                    "outline": "#737973",
+                    "outline_variant": "#c3c8c1",
+                    "primary": "#061b0e",
+                    "primary_container": "#1b3022",
+                    "primary_fixed": "#d0e9d4",
+                    "primary_fixed_dim": "#b4cdb8",
+                    "secondary": "#775a19",
+                    "secondary_container": "#fed488",
+                    "secondary_fixed": "#ffdea5",
+                    "secondary_fixed_dim": "#e9c176",
+                    "surface": "#fcf9f8",
+                    "surface_bright": "#fcf9f8",
+                    "surface_container": "#f0eded",
+                    "surface_container_high": "#eae7e7",
+                    "surface_container_highest": "#e4e2e1",
+                    "surface_container_low": "#f6f3f2",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dcd9d9",
+                    "surface_tint": "#4d6453",
+                    "surface_variant": "#e4e2e1",
+                    "tertiary": "#171815",
+                    "tertiary_container": "#2b2c29",
+                    "tertiary_fixed": "#e4e2dd",
+                    "tertiary_fixed_dim": "#c8c6c2"
+                  },
+                  "overrideNeutralColor": "#2d2d2d",
+                  "overridePrimaryColor": "#1b3022",
+                  "overrideSecondaryColor": "#c5a059",
+                  "overrideTertiaryColor": "#f9f7f2",
+                  "roundness": "ROUND_FULL",
+                  "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "section-desktop": "120px",
+                    "section-mobile": "64px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.5"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "label-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "14px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.2"
+                    },
+                    "label-sm": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.2"
+                    }
+                  }
+                }
+              },
+              "name": "assets/218f897d2e85430a8276a0ef06238da8",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10198",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzY2YTA3YTJkMTdmZDQ3MTVhMmVhZjk2NGViYjA5ZDllEgsSBxDb1ZDNzgsYAZIBIwoKcHJvamVjdF9pZBIVQhMzMjAyMDgyMDI5MjI5MjUwNTA0&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/3202082029229250504/files/c1d038e2d4174c05a49b0625465ce6b4"
+            },
+            "id": "ec7b99c9643d429cbcfaab275ad04806",
+            "name": "projects/3202082029229250504/screens/ec7b99c9643d429cbcfaab275ad04806",
+            "prompt": "Create a bespoke, editorial-grade landing page for NKY Paw Pals - Luxury Pet Sitters & Boarding. \n\nLAYOUT & STYLE:\n- Use a 'Luxury Lodge' aesthetic: Deep Hunter Green (#1B3022), Rich Gold (#C5A059), and Soft Cream (#F9F7F2).\n- Typographic hierarchy: Large, elegant serif headings (Playfair Display) and clean sans-serif body text.\n- Motif: Large rounded containers (pill shapes), gold hairline dividers, and high-quality lifestyle imagery.\n- Section Order: Sticky Header -> Hero -> Credibility -> Services -> About -> Visit (Map) -> Contact -> Footer.\n\nCONTENT SECTIONS:\n1. HEADER: Brand name 'NKY Paw Pals', nav links (Lodge, Services, About), and prominent phone link (859) 982-7257.\n2. HERO: Use {{DATA:IMAGE:IMAGE_3}}. Headline: 'Bespoke Care for Discerning Companions.' Subtext: 'Northern Kentucky\\'s premier luxury boarding and sitting service, where every guest is family.' Primary CTA: 'Book a Stay'.\n3. CREDIBILITY: A subtle row of 4 badges: '10+ Years Experience', 'Certified Caregivers', 'Erlanger\\'s Finest', '24/7 Peace of Mind'.\n4. SERVICES: Editorial grid. \n   - 'Premium Boarding': Private suites with lodge vibes.\n   - 'Home Sitting': Luxury care in their own environment.\n   - 'Grooming Spa': Refresh and relax.\n   Include {{DATA:IMAGE:IMAGE_2}} in the Grooming or Boarding section with a unique circular or pill-shaped crop.\n5. ABOUT: 'The Paw Pals Story'. Personal, warm copy about their mission in Erlanger.\n6. VISIT: Section #visit. Headline: 'Our Erlanger Lodge'. Address: 4000 Dixie Highway, Erlanger, KY 41018. Include the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. CONTACT: 'Inquire for Availability'. Fields: Name, Pet Name, Dates, Email, Message. Elegant, high-contrast inputs.\n8. FOOTER: Minimalist. Contact details: (859) 982-7257 · Nkypawpals@gmail.com. Copyright 2024.\n\nTECHNICAL:\n- Full semantic HTML document.\n- Custom CSS in <style> block using variables.\n- Smooth scroll and form validation UI logic.\n- Fully responsive from 375px to Desktop.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Alt Text: Close-up of a pampered tabby cat sitting on a high-quality wool blanket in a sunlit modern room. Luxury pet care aesthetic, soft lighting, warm cream and gold tones. Professional photography.\n  Description: Close-up of a pampered tabby cat sitting on a high-quality wool blanket in a sunlit modern room. Luxury pet care aesthetic, soft lighting, warm cream and gold tones. Professional photography.\n  Dimensions: 1024x1024\n  Aspect Ratio: 1.00\n- {{DATA:IMAGE:IMAGE_3}}\n  Alt Text: A premium, high-end lifestyle photograph of a happy Golden Retriever relaxing on a velvet sofa in a luxury lodge setting with soft sunlight. Professional architectural photography style, shallow depth of field, warm tones. No people. 4k, editorial quality.\n  Description: A premium, high-end lifestyle photograph of a happy Golden Retriever relaxing on a velvet sofa in a luxury lodge setting with soft sunlight. Professional architectural photography style, shallow depth of field, warm tones. No people. 4k, editorial quality.\n  Dimensions: 1376x768\n  Aspect Ratio: 1.79\n",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsaQ8CbZZrT9yXoDnGQbmsXpVwQsJ2DzfO1lXrkuaHdQSrCiWzvFKFq0i9n7ikSt_xPIjUQCfZBWirAw47m2pBdkdRsaWEf0GYBpdYfqiRUpX2mvvhuq6tcczOOWK4s3ihkKsZKjlbTCDVEfMSSeOB6nKkHkCQnbX1jzpBIW4445JLVddg-K-Q8ksu9Ugx_0-7qDWNOCMty9wywDBb4gytu8XMXbOd7RVCRLSImYGo9SbmN4djn6Gy4JA",
+              "name": "projects/3202082029229250504/files/820d8e1a83ed4dd08f70f02ba353bc43"
+            },
+            "theme": {
+              "bodyFont": "MONTSERRAT",
+              "bodyFontFamily": "Montserrat",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#1b3022",
+              "designMd": "---\nname: Luxury Lodge Editorial\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#434843'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#171815'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2b2c29'\n  on-tertiary-container: '#94938f'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e4e2dd'\n  tertiary-fixed-dim: '#c8c6c2'\n  on-tertiary-fixed: '#1b1c19'\n  on-tertiary-fixed-variant: '#474744'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.5rem\n  DEFAULT: 1rem\n  md: 1.5rem\n  lg: 2rem\n  xl: 3rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-desktop: 120px\n  section-mobile: 64px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  container-max: 1280px\n---\n\n## Brand & Style\n\nThe design system is anchored in the \"Luxury Lodge\" aesthetic—a blend of high-end hospitality and editorial sophistication. It targets discerning pet owners who view their companions as family members deserving of a premium, retreat-like experience. The UI must evoke feelings of exclusivity, safety, and meticulous care.\n\nThe style leverages **Minimalism** with a **Tactile** edge. It utilizes expansive whitespace to create a sense of calm, punctuated by high-contrast typography and subtle metallic accents. The interface should feel less like a utility app and more like a digital concierge service for an upscale mountain resort.\n\n- **Primary Motif:** Rounded pill shapes and \"stadium\" containers.\n- **Accents:** Gold hairline dividers (0.5px to 1px) to separate editorial sections.\n- **Imagery:** Large, high-resolution photography with soft focus backgrounds, often housed in asymmetric pill-shaped frames.\n\n## Colors\n\nThe palette is inspired by traditional lodge materials: forest flora, brass fixtures, and parchment.\n\n- **Deep Hunter Green (#1B3022):** Used for primary backgrounds, heavy headings, and high-importance UI elements. It represents stability and prestige.\n- **Rich Gold (#C5A059):** Reserved for interactive accents, call-to-action highlights, and decorative hairline rules. It should be used sparingly to maintain its premium impact.\n- **Soft Cream (#F9F7F2):** The primary surface color. It provides a warmer, more inviting alternative to pure white, reducing eye strain and enhancing the \"organic\" feel.\n- **Charcoal (#2D2D2D):** Used primarily for body text and functional icons to ensure WCAG AA readability against the cream background.\n\n## Typography\n\nThis design system employs a high-contrast typographic pairing to reinforce the editorial feel.\n\n- **Headlines (Playfair Display):** Should be set with tight letter-spacing. Use \"Display\" sizes for hero sections and service titles to evoke a magazine layout.\n- **Body & Labels (Montserrat):** A geometric sans-serif that provides clarity and modernity. Body text should be given generous line-height (1.5-1.6x) to facilitate a relaxed reading pace.\n- **Stylistic Note:** Labels and small captions should often use uppercase with increased tracking (letter-spacing) to mimic luxury brand tagging.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) and a **Fluid Grid** on mobile (4 columns). \n\n- **Generous Whitespace:** Vertical spacing between major sections should be significant (120px+) to allow the content to \"breathe\" and signal luxury.\n- **Asymmetric Balance:** Elements should often be offset from the center or span irregular column counts (e.g., a 5-column image next to a 6-column text block) to maintain an editorial, non-templated look.\n- **Alignment:** Text is primarily left-aligned to maintain readability, with Gold hairline rules used to anchor the eye at the start of new content modules.\n\n## Elevation & Depth\n\nTo maintain the \"Lodge\" aesthetic, this design system avoids heavy drop shadows in favor of **Tonal Layers** and **Subtle Depth**.\n\n- **Surface Levels:** \n  - Level 0: Soft Cream (#F9F7F2) - Main Canvas.\n  - Level 1: Pure White (#FFFFFF) - Cards and Floating containers.\n  - Level 2: Deep Hunter Green (#1B3022) - Inverted sections for high contrast.\n- **Shadows:** When necessary for interactivity (e.g., a hovered card), use a very diffused, low-opacity shadow tinted with the primary green: `0px 10px 30px rgba(27, 48, 34, 0.05)`.\n- **Rules:** Gold hairline rules (#C5A059 at 50% opacity) serve as the primary method of visual separation between stacked content, replacing standard borders.\n\n## Shapes\n\nThe shape language is defined by the **Pill (Stadium)** form factor. This softness contrasts with the sharp serifs of the typography, creating a welcoming and safe visual metaphor.\n\n- **Interactive Elements:** All buttons, input fields, and tags must use full-round pill shapes (Border Radius: 999px).\n- **Containers:** Large image containers and cards use a `rounded-xl` (3rem) radius to soften the edges of the photography.\n- **Iconography:** Icons should be thin-stroke (1.5px) with rounded caps to match the secondary font weight.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Hunter Green background, Soft Cream text, pill-shaped. No border.\n- **Secondary:** Gold hairline border (#C5A059), Gold text, pill-shaped.\n- **Ghost:** Transparent background, Hunter Green text with a Gold underline on hover.\n\n### Cards\n- **Editorial Cards:** Used for pet profiles or blog posts. Soft White background, 3rem corner radius, subtle inner border in Gold.\n- **Service Cards:** Feature a large pill-shaped image at the top, followed by Playfair Display subheads.\n\n### Inputs & Fields\n- Pill-shaped with a Soft Cream background that is 5% darker than the page surface. \n- Focus state is indicated by a 1px Gold border.\n\n### Decorative Elements\n- **Vertical Rule:** A 1px wide Gold vertical line used to connect related steps in a process or as a lead-in to a headline.\n- **Booking Badge:** A small, pill-shaped floating button in Gold used for immediate \"Book a Stay\" actions.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "MONTSERRAT",
+              "labelFontFamily": "Montserrat",
+              "namedColors": {
+                "background": "#fcf9f8",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f3f0f0",
+                "inverse_primary": "#b4cdb8",
+                "inverse_surface": "#303030",
+                "on_background": "#1b1c1c",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#819986",
+                "on_primary_fixed": "#0b2013",
+                "on_primary_fixed_variant": "#364c3c",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#785a1a",
+                "on_secondary_fixed": "#261900",
+                "on_secondary_fixed_variant": "#5d4201",
+                "on_surface": "#1b1c1c",
+                "on_surface_variant": "#434843",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#94938f",
+                "on_tertiary_fixed": "#1b1c19",
+                "on_tertiary_fixed_variant": "#474744",
+                "outline": "#737973",
+                "outline_variant": "#c3c8c1",
+                "primary": "#061b0e",
+                "primary_container": "#1b3022",
+                "primary_fixed": "#d0e9d4",
+                "primary_fixed_dim": "#b4cdb8",
+                "secondary": "#775a19",
+                "secondary_container": "#fed488",
+                "secondary_fixed": "#ffdea5",
+                "secondary_fixed_dim": "#e9c176",
+                "surface": "#fcf9f8",
+                "surface_bright": "#fcf9f8",
+                "surface_container": "#f0eded",
+                "surface_container_high": "#eae7e7",
+                "surface_container_highest": "#e4e2e1",
+                "surface_container_low": "#f6f3f2",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dcd9d9",
+                "surface_tint": "#4d6453",
+                "surface_variant": "#e4e2e1",
+                "tertiary": "#171815",
+                "tertiary_container": "#2b2c29",
+                "tertiary_fixed": "#e4e2dd",
+                "tertiary_fixed_dim": "#c8c6c2"
+              },
+              "overrideNeutralColor": "#2d2d2d",
+              "overridePrimaryColor": "#1b3022",
+              "overrideSecondaryColor": "#c5a059",
+              "overrideTertiaryColor": "#f9f7f2",
+              "roundness": "ROUND_FULL",
+              "spacing": {
+                "base": "8px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "margin-mobile": "20px",
+                "section-desktop": "120px",
+                "section-mobile": "64px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.5"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "label-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "14px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.2"
+                },
+                "label-sm": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.2"
+                }
+              }
+            },
+            "title": "NKY Paw Pals | Luxury Pet Boarding & Sitting",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've completed the bespoke, editorial-grade homepage for **NKY Paw Pals**. \n\nThe design establishes a unique \"Luxury Lodge\" visual identity, setting it apart from typical local business templates. Key features include:\n\n*   **Bespoke Aesthetic:** A premium palette of Deep Hunter Green, Gold, and Warm Cream, paired with sophisticated Playfair Display typography to evoke a sense of high-end hospitality.\n*   **Editorial Layout:** Custom section designs that avoid generic grids, using large rounded containers and intentional whitespace to highlight the \"Bespoke Care\" mission.\n*   **Memorable Visuals:** Integrated high-quality photography, including a golden retriever in a lodge setting and a pampered cat, both treated with unique pill-shaped and circular crops.\n*   **Production-Ready:** Full semantic HTML, responsive CSS with custom properties, and mobile navigation logic.\n*   **Key Sections:** A cinematic hero, credibility trust-markers, personalized service offerings, a dedicated \"Visit\" section with the required map slot, and a streamlined contact form.\n\nHow does this visual direction feel for the brand? We can refine the color balance or adjust any specific sections if you'd like."
+    },
+    {
+      "suggestion": "Change to a darker midnight theme"
+    },
+    {
+      "suggestion": "Make the services section more visual"
+    },
+    {
+      "suggestion": "Add a testimonials slider section"
+    }
+  ],
+  "projectId": "3202082029229250504",
+  "sessionId": "11501797459800204590"
+}
