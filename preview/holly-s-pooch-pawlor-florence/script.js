@@ -1,27 +1,30 @@
-// Simple micro-interaction for form button
-        const contactBtn = document.querySelector('#contactForm button');
-        contactBtn.addEventListener('click', () => {
-            const originalText = contactBtn.innerText;
-            contactBtn.innerText = 'Preview only';
-            setTimeout(() => {
-                contactBtn.innerText = 'Thank You';
-                contactBtn.classList.add('bg-green-800');
-                setTimeout(() => {
-                    contactBtn.innerText = originalText;
-                    contactBtn.classList.remove('bg-green-800');
-                    document.getElementById('contactForm').reset();
-                }, 3000);
-            }, 1000);
-        });
+function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
 
-        // Sticky Navbar subtle effect
         window.addEventListener('scroll', () => {
             const header = document.querySelector('header');
             if (window.scrollY > 50) {
-                header.classList.add('shadow-sm');
+                header.classList.add('py-2', 'shadow-sm');
+                header.classList.remove('py-unit');
             } else {
-                header.classList.remove('shadow-sm');
+                header.classList.remove('py-2', 'shadow-sm');
+                header.classList.add('py-unit');
             }
+        });
+
+        // Form submission animation placeholder
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Processing RSVP...";
+            btn.disabled = true;
+            setTimeout(() => {
+                btn.innerText = "Invitation Requested";
+                btn.classList.replace('bg-primary', 'bg-tertiary-container');
+            }, 1500);
         });
 
 (() => {

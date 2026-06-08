@@ -1,16 +1,33 @@
 
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
-        }
-        .scallop-divider {
-            height: 24px;
-            width: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg width='100' height='20' viewBox='0 0 100 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 20C12.5 20 12.5 0 25 0C37.5 0 37.5 20 50 20C62.5 20 62.5 0 75 0C87.5 0 87.5 20 100 20' fill='none' stroke='%231A1A1A' stroke-opacity='0.1' stroke-width='1'/%3E%3C/svg%3E");
-            background-repeat: repeat-x;
-        }
-        .editorial-line {
-            height: 1px;
-            background-color: rgba(28, 28, 26, 0.1);
+        @layer base {
+            body { @apply bg-background text-on-surface antialiased font-body-md; }
+            .scallop-divider {
+                width: 100%;
+                height: 48px;
+                background-color: transparent;
+                background-image: radial-gradient(circle at 10px 0, transparent 12px, #fff8f5 13px);
+                background-size: 20px 20px;
+                transform: translateY(-50%);
+            }
+            .grain-overlay {
+                position: fixed;
+                top: 0; left: 0; width: 100%; height: 100%;
+                pointer-events: none;
+                z-index: 9999;
+                opacity: 0.03;
+                background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            }
+            .asymmetric-image-container::before {
+                content: '';
+                position: absolute;
+                top: -20px;
+                left: -20px;
+                width: 100px;
+                height: 100px;
+                border-top: 1px solid #061b0e;
+                border-left: 1px solid #061b0e;
+                z-index: -1;
+            }
         }
     
 
