@@ -1,0 +1,510 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Heritage Canine",
+        "styleGuidelines": "## Brand & Style\n\nThis design system establishes an editorial-grade visual identity for a boutique canine service. It departs from typical pet industry tropes in favor of a \"Heritage Modern\" aesthetic—blending the authoritative weight of traditional British sporting journals with the clean, airy functionality of a high-end lifestyle brand.\n\nThe brand personality is **Expert** and **Attentive**, reflected in a rigorous attention to detail and structured layouts. It remains **Warm** and **Memorable** through the use of organic color palettes and soft-touch tactile elements. The interface should evoke the feeling of a premium physical publication: intentional, spacious, and sophisticated.\n\n**Style Direction:**\n- **Minimalist Editorial:** High use of negative space to allow professional photography to serve as the primary visual driver.\n- **The \"Leash & Line\" Motif:** Subtle 1px bezier curves act as directional cues, connecting disparate content blocks to symbolize the invisible bond between trainer and dog.\n- **Refined Tactility:** Use of thin, low-contrast borders and large-scale imagery to create a sense of bespoke craft.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** approach for desktop to mimic the structured columns of a magazine, transitioning to a flexible fluid stack for mobile.\n\n- **Desktop (1440px+):** 12-column grid with 64px outside margins. Large vertical gaps (120px+) between sections to emphasize the \"Leash & Line\" visual motifs.\n- **Tablet (768px - 1024px):** 8-column grid with 40px margins.\n- **Mobile (<768px):** 4-column grid with 20px margins.\n\nUse asymmetrical spacing where possible—for example, offsetting an image to span 7 columns while the descriptive text spans 4, leaving a 1-column \"breathing room\" between them.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows and traditional skeuomorphism. Depth is achieved through **Tonal Layering** and **Ghost Outlines**.\n\n- **Surface Tiers:** Use \"Warm Sand\" as the base (Level 0). Cards and containers should use a slightly lighter tint of the background or a pure white with a 1px \"Deep Forest Green\" border at 10% opacity (Level 1).\n- **Subtle Depth:** Where shadows are necessary (e.g., primary buttons), use a very soft, highly diffused \"Ambient Shadow\" tinted with the Primary color: `0px 10px 30px rgba(26, 60, 52, 0.08)`.\n- **The \"Leash\" Overlay:** Use SVG paths for the line motif that appear to weave behind and in front of image containers, creating a multi-planar feel without using blurs.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Forest Green background, white text. No border. 4px radius.\n- **Secondary:** Transparent background, 1px Brick Red border, Brick Red text.\n- **Tertiary (Text):** Label-caps style with a subtle 1px underline that expands on hover.\n\n### Cards\n- Minimal styling. Use a 1px border (#1A3C34 at 10% opacity). No heavy drop shadows. Padding should be generous (min 32px).\n\n### Input Fields\n- \"Warm Sand\" background (slightly darker than page background). Bottom-border only (2px) in Deep Forest Green for a sophisticated, minimalist look.\n\n### Lists\n- Use custom \"Line\" bullets—small horizontal 8px strokes in Brick Red instead of standard dots.\n\n### Special Component: The \"Line Connector\"\n- A decorative SVG element used between sections. It should be a 1px stroke in Deep Forest Green that flows from the bottom of one card to the top of another, guiding the user's scroll.",
+        "theme": {
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1a3c34",
+          "designMd": "---\nname: Heritage Canine\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e1d8d4'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2ed'\n  surface-container: '#f5ece7'\n  surface-container-high: '#efe6e2'\n  surface-container-highest: '#e9e1dc'\n  on-surface: '#1e1b18'\n  on-surface-variant: '#414846'\n  inverse-surface: '#34302c'\n  inverse-on-surface: '#f8efea'\n  outline: '#717976'\n  outline-variant: '#c1c8c4'\n  surface-tint: '#43655c'\n  primary: '#01261f'\n  on-primary: '#ffffff'\n  primary-container: '#1a3c34'\n  on-primary-container: '#83a69c'\n  inverse-primary: '#aacec3'\n  secondary: '#615e57'\n  on-secondary: '#ffffff'\n  secondary-container: '#e7e2d9'\n  on-secondary-container: '#67645d'\n  tertiary: '#420f00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#661d00'\n  on-tertiary-container: '#ed825c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c5eadf'\n  primary-fixed-dim: '#aacec3'\n  on-primary-fixed: '#00201a'\n  on-primary-fixed-variant: '#2b4d44'\n  secondary-fixed: '#e7e2d9'\n  secondary-fixed-dim: '#cac6be'\n  on-secondary-fixed: '#1d1c16'\n  on-secondary-fixed-variant: '#494740'\n  tertiary-fixed: '#ffdbcf'\n  tertiary-fixed-dim: '#ffb59c'\n  on-tertiary-fixed: '#390c00'\n  on-tertiary-fixed-variant: '#7d2d0e'\n  background: '#fff8f5'\n  on-background: '#1e1b18'\n  surface-variant: '#e9e1dc'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-padding: 120px\n---\n\n## Brand & Style\n\nThis design system establishes an editorial-grade visual identity for a boutique canine service. It departs from typical pet industry tropes in favor of a \"Heritage Modern\" aesthetic—blending the authoritative weight of traditional British sporting journals with the clean, airy functionality of a high-end lifestyle brand.\n\nThe brand personality is **Expert** and **Attentive**, reflected in a rigorous attention to detail and structured layouts. It remains **Warm** and **Memorable** through the use of organic color palettes and soft-touch tactile elements. The interface should evoke the feeling of a premium physical publication: intentional, spacious, and sophisticated.\n\n**Style Direction:**\n- **Minimalist Editorial:** High use of negative space to allow professional photography to serve as the primary visual driver.\n- **The \"Leash & Line\" Motif:** Subtle 1px bezier curves act as directional cues, connecting disparate content blocks to symbolize the invisible bond between trainer and dog.\n- **Refined Tactility:** Use of thin, low-contrast borders and large-scale imagery to create a sense of bespoke craft.\n\n## Colors\n\nThe palette is rooted in a \"Heritage\" foundation, utilizing deep, earthy tones to establish trust and maturity.\n\n- **Primary (Deep Forest Green):** Used for primary navigation, headings, and core brand elements. It conveys stability and expertise.\n- **Secondary (Warm Sand):** The primary background color. It provides a softer, more premium alternative to pure white, reducing eye strain and feeling more \"organic.\"\n- **Tertiary (Brick Red):** Reserved for secondary actions and subtle highlights. It adds a \"human\" warmth to the professional green.\n- **Accent (Whistle Yellow):** Used sparingly for critical calls-to-action (CTAs) or to draw attention to specific success states.\n- **Neutral:** A warm-toned charcoal for body text, ensuring high legibility without the harshness of true black.\n\n## Typography\n\nThe typographic scale relies on a high-contrast pairing to balance tradition with modernity.\n\n**Headlines (Playfair Display):** Should be set with tight letter-spacing. Use the \"Display\" scale for hero sections to emphasize the high-stroke contrast of the serif. It represents the \"Expert\" and \"Bespoke\" nature of the brand.\n\n**Body & UI (Montserrat):** Set with generous line-height and slight positive tracking (0.01em to 0.02em) to ensure a modern, clean feel. Montserrat's geometric clarity provides a functional counterpoint to the decorative serif.\n\n**Labels:** Small caps with increased tracking are used for categories and metadata to maintain the editorial look.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** approach for desktop to mimic the structured columns of a magazine, transitioning to a flexible fluid stack for mobile.\n\n- **Desktop (1440px+):** 12-column grid with 64px outside margins. Large vertical gaps (120px+) between sections to emphasize the \"Leash & Line\" visual motifs.\n- **Tablet (768px - 1024px):** 8-column grid with 40px margins.\n- **Mobile (<768px):** 4-column grid with 20px margins.\n\nUse asymmetrical spacing where possible—for example, offsetting an image to span 7 columns while the descriptive text spans 4, leaving a 1-column \"breathing room\" between them.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows and traditional skeuomorphism. Depth is achieved through **Tonal Layering** and **Ghost Outlines**.\n\n- **Surface Tiers:** Use \"Warm Sand\" as the base (Level 0). Cards and containers should use a slightly lighter tint of the background or a pure white with a 1px \"Deep Forest Green\" border at 10% opacity (Level 1).\n- **Subtle Depth:** Where shadows are necessary (e.g., primary buttons), use a very soft, highly diffused \"Ambient Shadow\" tinted with the Primary color: `0px 10px 30px rgba(26, 60, 52, 0.08)`.\n- **The \"Leash\" Overlay:** Use SVG paths for the line motif that appear to weave behind and in front of image containers, creating a multi-planar feel without using blurs.\n\n## Shapes\n\nThe shape language is \"Soft Professional.\" We avoid the clinical nature of sharp corners but stay away from the playfulness of heavy rounding.\n\n- **Primary Radius:** 0.25rem (4px) for small UI elements like checkboxes and input fields.\n- **Container Radius:** 0.5rem (8px) for cards and featured images.\n- **Interactive Elements:** Buttons should use the primary 4px radius. \n- **Image Treatments:** Photography should occasionally use a \"Heritage Frame\"—a thin 1px border offset by 8px from the image itself to create an editorial framing effect.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Forest Green background, white text. No border. 4px radius.\n- **Secondary:** Transparent background, 1px Brick Red border, Brick Red text.\n- **Tertiary (Text):** Label-caps style with a subtle 1px underline that expands on hover.\n\n### Cards\n- Minimal styling. Use a 1px border (#1A3C34 at 10% opacity). No heavy drop shadows. Padding should be generous (min 32px).\n\n### Input Fields\n- \"Warm Sand\" background (slightly darker than page background). Bottom-border only (2px) in Deep Forest Green for a sophisticated, minimalist look.\n\n### Lists\n- Use custom \"Line\" bullets—small horizontal 8px strokes in Brick Red instead of standard dots.\n\n### Special Component: The \"Line Connector\"\n- A decorative SVG element used between sections. It should be a 1px stroke in Deep Forest Green that flows from the bottom of one card to the top of another, guiding the user's scroll.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
+          "namedColors": {
+            "background": "#fff8f5",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f8efea",
+            "inverse_primary": "#aacec3",
+            "inverse_surface": "#34302c",
+            "on_background": "#1e1b18",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#83a69c",
+            "on_primary_fixed": "#00201a",
+            "on_primary_fixed_variant": "#2b4d44",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#67645d",
+            "on_secondary_fixed": "#1d1c16",
+            "on_secondary_fixed_variant": "#494740",
+            "on_surface": "#1e1b18",
+            "on_surface_variant": "#414846",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#ed825c",
+            "on_tertiary_fixed": "#390c00",
+            "on_tertiary_fixed_variant": "#7d2d0e",
+            "outline": "#717976",
+            "outline_variant": "#c1c8c4",
+            "primary": "#01261f",
+            "primary_container": "#1a3c34",
+            "primary_fixed": "#c5eadf",
+            "primary_fixed_dim": "#aacec3",
+            "secondary": "#615e57",
+            "secondary_container": "#e7e2d9",
+            "secondary_fixed": "#e7e2d9",
+            "secondary_fixed_dim": "#cac6be",
+            "surface": "#fff8f5",
+            "surface_bright": "#fff8f5",
+            "surface_container": "#f5ece7",
+            "surface_container_high": "#efe6e2",
+            "surface_container_highest": "#e9e1dc",
+            "surface_container_low": "#fbf2ed",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#e1d8d4",
+            "surface_tint": "#43655c",
+            "surface_variant": "#e9e1dc",
+            "tertiary": "#420f00",
+            "tertiary_container": "#661d00",
+            "tertiary_fixed": "#ffdbcf",
+            "tertiary_fixed_dim": "#ffb59c"
+          },
+          "overrideNeutralColor": "#2d2926",
+          "overridePrimaryColor": "#1a3c34",
+          "overrideSecondaryColor": "#f4efe6",
+          "overrideTertiaryColor": "#a64b2a",
+          "roundness": "ROUND_FOUR",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "section-padding": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "button": {
+              "fontFamily": "Montserrat",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "letterSpacing": "0.05em",
+              "lineHeight": "1.0"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "64px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "Montserrat",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.15em",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/2a87483c9ab7409486d9e1c0a30c1dc3",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "832",
+          "id": "1011a33b7ce74be28ae3c29cf0624924",
+          "name": "projects/365395792546080833/screens/1011a33b7ce74be28ae3c29cf0624924",
+          "prompt": "High-end, editorial lifestyle photography of a well-behaved Golden Retriever sitting calmly in a sun-drenched, modern minimalist living room. Professional lighting, shallow depth of field, warm tones, sophisticated aesthetic. No people. 8k resolution.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtPJOcZILk9odVT3XjJnmIsxtwE6kdGUjz-z4clbfkVQlhW_nJPpV13ihR6tBHZlkG9cXNOt-rOgpM90fPAqT2KK-3Kc5fu4NISSuhzhu9CkNTFvIRbcQKG3nfOH4gqQ9W-MzxrfSL4DCnFMoOLXb5F-mxBpJm9TQobkXKzXPUFxHDXAylB8S300TSw9RfJPq9QFzfwJdR-AE5FY-7g5mwu8T5STl-_m99CKMna1RXHJfEIinUb89R76g",
+            "name": "projects/365395792546080833/files/65040e5df16140a8bd5932808e3189e0"
+          },
+          "theme": {},
+          "title": "High-end, editorial lifestyle photography of a well-behaved Golden Retriever sitting calmly in a sun-drenched, modern minimalist living room. Professional lighting, shallow depth of field, warm tones, sophisticated aesthetic. No people. 8k resolution.",
+          "width": "1248"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "864",
+          "id": "2b0b0f17938c4bc2a9ecfcf31e94b295",
+          "name": "projects/365395792546080833/screens/2b0b0f17938c4bc2a9ecfcf31e94b295",
+          "prompt": "Professional documentary-style photo of a dog trainer's hand gently guiding a German Shepherd's collar. Close-up, focus on the bond and communication. Warm, natural lighting, high-contrast, premium look.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs6YP3MD5zzAYgH6HNgfHM1XTO6CkzWzxIiqG2AFcLFN8Av55VsRugrz8nz91MhaXGKlM7vGPGkWogD5_2I3wzQy39vs9mXiUssybEX7KbpZ9zpO-cMURIKabn1qBLQ5_WYeT2bjqw2ggksKrGNCjNCBJFSETfVQkc0GT6c6cyhCPCQNhisUh3nyi4darYZG08bfMEdleSg_48qWb0vZU5d4p_0RRZDrzPDLR2Od8wg5r2sABtwT72EaQ",
+            "name": "projects/365395792546080833/files/476c4cfb3ea744cca47c88ef1bc0ba38"
+          },
+          "theme": {},
+          "title": "Professional documentary-style photo of a dog trainer's hand gently guiding a German Shepherd's collar. Close-up, focus on the bond and communication. Warm, natural lighting, high-contrast, premium look.",
+          "width": "1184"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "a79e4ebaf0e6432cbfa6ff90d17c2a7c",
+          "name": "projects/365395792546080833/screens/a79e4ebaf0e6432cbfa6ff90d17c2a7c",
+          "prompt": "A collection of premium dog grooming tools—leather leash, wooden brush, and a brass whistle—arranged artistically on a textured linen surface. Still life, editorial style, warm sand and forest green color palette.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv9omeEKKrT4hIjTvUHD0qJGjlnfcSlDRDhrGNxAG4PWNPXNKRislTBOQv9x7wYcfUdnjyj6xzLvXutIlkmIRQ7fHba_AO-iQqH6PFQxj1KooYaYjDaS7uLlXAq6tRjypD_o1np-VE5AeAnc3lxJI4V1cL9KJ4GKp-GiPsRjFBR4dAJ7cjvUxw-WWTwe8FXaKBzP7hnQVw5pGve6656IX5TZ9li1LVO_nkAm8SejgcG7NuC8AwAXsC0",
+            "name": "projects/365395792546080833/files/7bd771791c534122a753dc3abb5c65bc"
+          },
+          "theme": {},
+          "title": "A collection of premium dog grooming tools—leather leash, wooden brush, and a brass whistle—arranged artistically on a textured linen surface. Still life, editorial style, warm sand and forest green color palette.",
+          "width": "1024"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Heritage Canine",
+              "styleGuidelines": "## Brand & Style\n\nThis design system establishes an editorial-grade visual identity for a boutique canine service. It departs from typical pet industry tropes in favor of a \"Heritage Modern\" aesthetic—blending the authoritative weight of traditional British sporting journals with the clean, airy functionality of a high-end lifestyle brand.\n\nThe brand personality is **Expert** and **Attentive**, reflected in a rigorous attention to detail and structured layouts. It remains **Warm** and **Memorable** through the use of organic color palettes and soft-touch tactile elements. The interface should evoke the feeling of a premium physical publication: intentional, spacious, and sophisticated.\n\n**Style Direction:**\n- **Minimalist Editorial:** High use of negative space to allow professional photography to serve as the primary visual driver.\n- **The \"Leash & Line\" Motif:** Subtle 1px bezier curves act as directional cues, connecting disparate content blocks to symbolize the invisible bond between trainer and dog.\n- **Refined Tactility:** Use of thin, low-contrast borders and large-scale imagery to create a sense of bespoke craft.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** approach for desktop to mimic the structured columns of a magazine, transitioning to a flexible fluid stack for mobile.\n\n- **Desktop (1440px+):** 12-column grid with 64px outside margins. Large vertical gaps (120px+) between sections to emphasize the \"Leash & Line\" visual motifs.\n- **Tablet (768px - 1024px):** 8-column grid with 40px margins.\n- **Mobile (<768px):** 4-column grid with 20px margins.\n\nUse asymmetrical spacing where possible—for example, offsetting an image to span 7 columns while the descriptive text spans 4, leaving a 1-column \"breathing room\" between them.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows and traditional skeuomorphism. Depth is achieved through **Tonal Layering** and **Ghost Outlines**.\n\n- **Surface Tiers:** Use \"Warm Sand\" as the base (Level 0). Cards and containers should use a slightly lighter tint of the background or a pure white with a 1px \"Deep Forest Green\" border at 10% opacity (Level 1).\n- **Subtle Depth:** Where shadows are necessary (e.g., primary buttons), use a very soft, highly diffused \"Ambient Shadow\" tinted with the Primary color: `0px 10px 30px rgba(26, 60, 52, 0.08)`.\n- **The \"Leash\" Overlay:** Use SVG paths for the line motif that appear to weave behind and in front of image containers, creating a multi-planar feel without using blurs.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Forest Green background, white text. No border. 4px radius.\n- **Secondary:** Transparent background, 1px Brick Red border, Brick Red text.\n- **Tertiary (Text):** Label-caps style with a subtle 1px underline that expands on hover.\n\n### Cards\n- Minimal styling. Use a 1px border (#1A3C34 at 10% opacity). No heavy drop shadows. Padding should be generous (min 32px).\n\n### Input Fields\n- \"Warm Sand\" background (slightly darker than page background). Bottom-border only (2px) in Deep Forest Green for a sophisticated, minimalist look.\n\n### Lists\n- Use custom \"Line\" bullets—small horizontal 8px strokes in Brick Red instead of standard dots.\n\n### Special Component: The \"Line Connector\"\n- A decorative SVG element used between sections. It should be a 1px stroke in Deep Forest Green that flows from the bottom of one card to the top of another, guiding the user's scroll.",
+              "theme": {
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1a3c34",
+                "designMd": "---\nname: Heritage Canine\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e1d8d4'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2ed'\n  surface-container: '#f5ece7'\n  surface-container-high: '#efe6e2'\n  surface-container-highest: '#e9e1dc'\n  on-surface: '#1e1b18'\n  on-surface-variant: '#414846'\n  inverse-surface: '#34302c'\n  inverse-on-surface: '#f8efea'\n  outline: '#717976'\n  outline-variant: '#c1c8c4'\n  surface-tint: '#43655c'\n  primary: '#01261f'\n  on-primary: '#ffffff'\n  primary-container: '#1a3c34'\n  on-primary-container: '#83a69c'\n  inverse-primary: '#aacec3'\n  secondary: '#615e57'\n  on-secondary: '#ffffff'\n  secondary-container: '#e7e2d9'\n  on-secondary-container: '#67645d'\n  tertiary: '#420f00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#661d00'\n  on-tertiary-container: '#ed825c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c5eadf'\n  primary-fixed-dim: '#aacec3'\n  on-primary-fixed: '#00201a'\n  on-primary-fixed-variant: '#2b4d44'\n  secondary-fixed: '#e7e2d9'\n  secondary-fixed-dim: '#cac6be'\n  on-secondary-fixed: '#1d1c16'\n  on-secondary-fixed-variant: '#494740'\n  tertiary-fixed: '#ffdbcf'\n  tertiary-fixed-dim: '#ffb59c'\n  on-tertiary-fixed: '#390c00'\n  on-tertiary-fixed-variant: '#7d2d0e'\n  background: '#fff8f5'\n  on-background: '#1e1b18'\n  surface-variant: '#e9e1dc'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-padding: 120px\n---\n\n## Brand & Style\n\nThis design system establishes an editorial-grade visual identity for a boutique canine service. It departs from typical pet industry tropes in favor of a \"Heritage Modern\" aesthetic—blending the authoritative weight of traditional British sporting journals with the clean, airy functionality of a high-end lifestyle brand.\n\nThe brand personality is **Expert** and **Attentive**, reflected in a rigorous attention to detail and structured layouts. It remains **Warm** and **Memorable** through the use of organic color palettes and soft-touch tactile elements. The interface should evoke the feeling of a premium physical publication: intentional, spacious, and sophisticated.\n\n**Style Direction:**\n- **Minimalist Editorial:** High use of negative space to allow professional photography to serve as the primary visual driver.\n- **The \"Leash & Line\" Motif:** Subtle 1px bezier curves act as directional cues, connecting disparate content blocks to symbolize the invisible bond between trainer and dog.\n- **Refined Tactility:** Use of thin, low-contrast borders and large-scale imagery to create a sense of bespoke craft.\n\n## Colors\n\nThe palette is rooted in a \"Heritage\" foundation, utilizing deep, earthy tones to establish trust and maturity.\n\n- **Primary (Deep Forest Green):** Used for primary navigation, headings, and core brand elements. It conveys stability and expertise.\n- **Secondary (Warm Sand):** The primary background color. It provides a softer, more premium alternative to pure white, reducing eye strain and feeling more \"organic.\"\n- **Tertiary (Brick Red):** Reserved for secondary actions and subtle highlights. It adds a \"human\" warmth to the professional green.\n- **Accent (Whistle Yellow):** Used sparingly for critical calls-to-action (CTAs) or to draw attention to specific success states.\n- **Neutral:** A warm-toned charcoal for body text, ensuring high legibility without the harshness of true black.\n\n## Typography\n\nThe typographic scale relies on a high-contrast pairing to balance tradition with modernity.\n\n**Headlines (Playfair Display):** Should be set with tight letter-spacing. Use the \"Display\" scale for hero sections to emphasize the high-stroke contrast of the serif. It represents the \"Expert\" and \"Bespoke\" nature of the brand.\n\n**Body & UI (Montserrat):** Set with generous line-height and slight positive tracking (0.01em to 0.02em) to ensure a modern, clean feel. Montserrat's geometric clarity provides a functional counterpoint to the decorative serif.\n\n**Labels:** Small caps with increased tracking are used for categories and metadata to maintain the editorial look.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** approach for desktop to mimic the structured columns of a magazine, transitioning to a flexible fluid stack for mobile.\n\n- **Desktop (1440px+):** 12-column grid with 64px outside margins. Large vertical gaps (120px+) between sections to emphasize the \"Leash & Line\" visual motifs.\n- **Tablet (768px - 1024px):** 8-column grid with 40px margins.\n- **Mobile (<768px):** 4-column grid with 20px margins.\n\nUse asymmetrical spacing where possible—for example, offsetting an image to span 7 columns while the descriptive text spans 4, leaving a 1-column \"breathing room\" between them.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows and traditional skeuomorphism. Depth is achieved through **Tonal Layering** and **Ghost Outlines**.\n\n- **Surface Tiers:** Use \"Warm Sand\" as the base (Level 0). Cards and containers should use a slightly lighter tint of the background or a pure white with a 1px \"Deep Forest Green\" border at 10% opacity (Level 1).\n- **Subtle Depth:** Where shadows are necessary (e.g., primary buttons), use a very soft, highly diffused \"Ambient Shadow\" tinted with the Primary color: `0px 10px 30px rgba(26, 60, 52, 0.08)`.\n- **The \"Leash\" Overlay:** Use SVG paths for the line motif that appear to weave behind and in front of image containers, creating a multi-planar feel without using blurs.\n\n## Shapes\n\nThe shape language is \"Soft Professional.\" We avoid the clinical nature of sharp corners but stay away from the playfulness of heavy rounding.\n\n- **Primary Radius:** 0.25rem (4px) for small UI elements like checkboxes and input fields.\n- **Container Radius:** 0.5rem (8px) for cards and featured images.\n- **Interactive Elements:** Buttons should use the primary 4px radius. \n- **Image Treatments:** Photography should occasionally use a \"Heritage Frame\"—a thin 1px border offset by 8px from the image itself to create an editorial framing effect.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Forest Green background, white text. No border. 4px radius.\n- **Secondary:** Transparent background, 1px Brick Red border, Brick Red text.\n- **Tertiary (Text):** Label-caps style with a subtle 1px underline that expands on hover.\n\n### Cards\n- Minimal styling. Use a 1px border (#1A3C34 at 10% opacity). No heavy drop shadows. Padding should be generous (min 32px).\n\n### Input Fields\n- \"Warm Sand\" background (slightly darker than page background). Bottom-border only (2px) in Deep Forest Green for a sophisticated, minimalist look.\n\n### Lists\n- Use custom \"Line\" bullets—small horizontal 8px strokes in Brick Red instead of standard dots.\n\n### Special Component: The \"Line Connector\"\n- A decorative SVG element used between sections. It should be a 1px stroke in Deep Forest Green that flows from the bottom of one card to the top of another, guiding the user's scroll.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
+                "namedColors": {
+                  "background": "#fff8f5",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f8efea",
+                  "inverse_primary": "#aacec3",
+                  "inverse_surface": "#34302c",
+                  "on_background": "#1e1b18",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#83a69c",
+                  "on_primary_fixed": "#00201a",
+                  "on_primary_fixed_variant": "#2b4d44",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#67645d",
+                  "on_secondary_fixed": "#1d1c16",
+                  "on_secondary_fixed_variant": "#494740",
+                  "on_surface": "#1e1b18",
+                  "on_surface_variant": "#414846",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#ed825c",
+                  "on_tertiary_fixed": "#390c00",
+                  "on_tertiary_fixed_variant": "#7d2d0e",
+                  "outline": "#717976",
+                  "outline_variant": "#c1c8c4",
+                  "primary": "#01261f",
+                  "primary_container": "#1a3c34",
+                  "primary_fixed": "#c5eadf",
+                  "primary_fixed_dim": "#aacec3",
+                  "secondary": "#615e57",
+                  "secondary_container": "#e7e2d9",
+                  "secondary_fixed": "#e7e2d9",
+                  "secondary_fixed_dim": "#cac6be",
+                  "surface": "#fff8f5",
+                  "surface_bright": "#fff8f5",
+                  "surface_container": "#f5ece7",
+                  "surface_container_high": "#efe6e2",
+                  "surface_container_highest": "#e9e1dc",
+                  "surface_container_low": "#fbf2ed",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#e1d8d4",
+                  "surface_tint": "#43655c",
+                  "surface_variant": "#e9e1dc",
+                  "tertiary": "#420f00",
+                  "tertiary_container": "#661d00",
+                  "tertiary_fixed": "#ffdbcf",
+                  "tertiary_fixed_dim": "#ffb59c"
+                },
+                "overrideNeutralColor": "#2d2926",
+                "overridePrimaryColor": "#1a3c34",
+                "overrideSecondaryColor": "#f4efe6",
+                "overrideTertiaryColor": "#a64b2a",
+                "roundness": "ROUND_FOUR",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "section-padding": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "button": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "1.0"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "64px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/2a87483c9ab7409486d9e1c0a30c1dc3",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "7836",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ6Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpZCiVodG1sXzQzMGVhNGI4NTI3YzRiZDJhNmM5NzU1MGU2Y2IyNTMyEgsSBxDb5PK-owYYAZIBIgoKcHJvamVjdF9pZBIUQhIzNjUzOTU3OTI1NDYwODA4MzM&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/365395792546080833/files/da54afd507cf481faa394138ed8b55c5"
+          },
+          "id": "e9e15610beda4438a10552a485cffa81",
+          "name": "projects/365395792546080833/screens/e9e15610beda4438a10552a485cffa81",
+          "prompt": "Create a bespoke, editorial-grade homepage for 'Doggone Awesome! LLC'. \n\nDESIGN DIRECTION:\n- The Art of Restraint: Use generous whitespace and large, high-impact serif typography (Playfair Display).\n- Motif: Use thin, forest-green lines (the 'leash line') to connect headings to body text or to divide sections asymmetrically.\n- Color: Surface-sand background (#F4EFE6) with deep forest-green text (#1A3C34).\n\nSECTIONS:\n1. Editorial Hero: \n   - Large headline: 'The Art of Connection.' \n   - Subhead: 'Elevating the bond between canine and companion through intentional training.' \n   - Use {{DATA:IMAGE:IMAGE_6}} as the main visual.\n2. The Philosophy: \n   - A minimalist, text-focused section. \n   - Headline: 'Less Command, More Conversation.'\n   - Use {{DATA:IMAGE:IMAGE_8}} in an asymmetrical layout with the text.\n3. Services: \n   - A grid that feels like a magazine spread.\n   - Training: Elite behavior modification.\n   - Wellness: Holistic care for the modern hound.\n   - Boarding: A sanctuary for the selective.\n   - Use {{DATA:IMAGE:IMAGE_7}} as a supporting visual for the section.\n4. Call to Action: \n   - A bold, simple section: 'Join the Pack.' \n   - A prominent button leading to 'Contact'.\n\nKeep the layout asymmetric, intentional, and high-fidelity. No standard Bootstrap-style rows/columns. Everything should feel like a custom-printed journal.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuRtlzjzdzq2XLjISNEy8sSCbg-GLfYYNQ64eSWtz_A480Krigc8gqOCPO4YymzFHmVeTpC7B8LxpPhGnNh5B05pwvrK6inVjlX0-etuHwx0e4rNt9dZdBeUZ4Sfn7JcAY-iOz5kFVTWkarD0m_5EkSW3lbcxCQiX_ko29XDbvS0T9AP4fON3nG29_UBzN0YG1eAYCGJOXxOUoIaTpHLpheP0lndSG9dDQuoSQP6HLAgqzgDj_9muwupA",
+            "name": "projects/365395792546080833/files/50ce12a1e637446a96c30acb77d83d73"
+          },
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a3c34",
+            "designMd": "---\nname: Heritage Canine\ncolors:\n  surface: '#fff8f5'\n  surface-dim: '#e1d8d4'\n  surface-bright: '#fff8f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf2ed'\n  surface-container: '#f5ece7'\n  surface-container-high: '#efe6e2'\n  surface-container-highest: '#e9e1dc'\n  on-surface: '#1e1b18'\n  on-surface-variant: '#414846'\n  inverse-surface: '#34302c'\n  inverse-on-surface: '#f8efea'\n  outline: '#717976'\n  outline-variant: '#c1c8c4'\n  surface-tint: '#43655c'\n  primary: '#01261f'\n  on-primary: '#ffffff'\n  primary-container: '#1a3c34'\n  on-primary-container: '#83a69c'\n  inverse-primary: '#aacec3'\n  secondary: '#615e57'\n  on-secondary: '#ffffff'\n  secondary-container: '#e7e2d9'\n  on-secondary-container: '#67645d'\n  tertiary: '#420f00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#661d00'\n  on-tertiary-container: '#ed825c'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#c5eadf'\n  primary-fixed-dim: '#aacec3'\n  on-primary-fixed: '#00201a'\n  on-primary-fixed-variant: '#2b4d44'\n  secondary-fixed: '#e7e2d9'\n  secondary-fixed-dim: '#cac6be'\n  on-secondary-fixed: '#1d1c16'\n  on-secondary-fixed-variant: '#494740'\n  tertiary-fixed: '#ffdbcf'\n  tertiary-fixed-dim: '#ffb59c'\n  on-tertiary-fixed: '#390c00'\n  on-tertiary-fixed-variant: '#7d2d0e'\n  background: '#fff8f5'\n  on-background: '#1e1b18'\n  surface-variant: '#e9e1dc'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.05em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-padding: 120px\n---\n\n## Brand & Style\n\nThis design system establishes an editorial-grade visual identity for a boutique canine service. It departs from typical pet industry tropes in favor of a \"Heritage Modern\" aesthetic—blending the authoritative weight of traditional British sporting journals with the clean, airy functionality of a high-end lifestyle brand.\n\nThe brand personality is **Expert** and **Attentive**, reflected in a rigorous attention to detail and structured layouts. It remains **Warm** and **Memorable** through the use of organic color palettes and soft-touch tactile elements. The interface should evoke the feeling of a premium physical publication: intentional, spacious, and sophisticated.\n\n**Style Direction:**\n- **Minimalist Editorial:** High use of negative space to allow professional photography to serve as the primary visual driver.\n- **The \"Leash & Line\" Motif:** Subtle 1px bezier curves act as directional cues, connecting disparate content blocks to symbolize the invisible bond between trainer and dog.\n- **Refined Tactility:** Use of thin, low-contrast borders and large-scale imagery to create a sense of bespoke craft.\n\n## Colors\n\nThe palette is rooted in a \"Heritage\" foundation, utilizing deep, earthy tones to establish trust and maturity.\n\n- **Primary (Deep Forest Green):** Used for primary navigation, headings, and core brand elements. It conveys stability and expertise.\n- **Secondary (Warm Sand):** The primary background color. It provides a softer, more premium alternative to pure white, reducing eye strain and feeling more \"organic.\"\n- **Tertiary (Brick Red):** Reserved for secondary actions and subtle highlights. It adds a \"human\" warmth to the professional green.\n- **Accent (Whistle Yellow):** Used sparingly for critical calls-to-action (CTAs) or to draw attention to specific success states.\n- **Neutral:** A warm-toned charcoal for body text, ensuring high legibility without the harshness of true black.\n\n## Typography\n\nThe typographic scale relies on a high-contrast pairing to balance tradition with modernity.\n\n**Headlines (Playfair Display):** Should be set with tight letter-spacing. Use the \"Display\" scale for hero sections to emphasize the high-stroke contrast of the serif. It represents the \"Expert\" and \"Bespoke\" nature of the brand.\n\n**Body & UI (Montserrat):** Set with generous line-height and slight positive tracking (0.01em to 0.02em) to ensure a modern, clean feel. Montserrat's geometric clarity provides a functional counterpoint to the decorative serif.\n\n**Labels:** Small caps with increased tracking are used for categories and metadata to maintain the editorial look.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** approach for desktop to mimic the structured columns of a magazine, transitioning to a flexible fluid stack for mobile.\n\n- **Desktop (1440px+):** 12-column grid with 64px outside margins. Large vertical gaps (120px+) between sections to emphasize the \"Leash & Line\" visual motifs.\n- **Tablet (768px - 1024px):** 8-column grid with 40px margins.\n- **Mobile (<768px):** 4-column grid with 20px margins.\n\nUse asymmetrical spacing where possible—for example, offsetting an image to span 7 columns while the descriptive text spans 4, leaving a 1-column \"breathing room\" between them.\n\n## Elevation & Depth\n\nThis design system avoids heavy shadows and traditional skeuomorphism. Depth is achieved through **Tonal Layering** and **Ghost Outlines**.\n\n- **Surface Tiers:** Use \"Warm Sand\" as the base (Level 0). Cards and containers should use a slightly lighter tint of the background or a pure white with a 1px \"Deep Forest Green\" border at 10% opacity (Level 1).\n- **Subtle Depth:** Where shadows are necessary (e.g., primary buttons), use a very soft, highly diffused \"Ambient Shadow\" tinted with the Primary color: `0px 10px 30px rgba(26, 60, 52, 0.08)`.\n- **The \"Leash\" Overlay:** Use SVG paths for the line motif that appear to weave behind and in front of image containers, creating a multi-planar feel without using blurs.\n\n## Shapes\n\nThe shape language is \"Soft Professional.\" We avoid the clinical nature of sharp corners but stay away from the playfulness of heavy rounding.\n\n- **Primary Radius:** 0.25rem (4px) for small UI elements like checkboxes and input fields.\n- **Container Radius:** 0.5rem (8px) for cards and featured images.\n- **Interactive Elements:** Buttons should use the primary 4px radius. \n- **Image Treatments:** Photography should occasionally use a \"Heritage Frame\"—a thin 1px border offset by 8px from the image itself to create an editorial framing effect.\n\n## Components\n\n### Buttons\n- **Primary:** Deep Forest Green background, white text. No border. 4px radius.\n- **Secondary:** Transparent background, 1px Brick Red border, Brick Red text.\n- **Tertiary (Text):** Label-caps style with a subtle 1px underline that expands on hover.\n\n### Cards\n- Minimal styling. Use a 1px border (#1A3C34 at 10% opacity). No heavy drop shadows. Padding should be generous (min 32px).\n\n### Input Fields\n- \"Warm Sand\" background (slightly darker than page background). Bottom-border only (2px) in Deep Forest Green for a sophisticated, minimalist look.\n\n### Lists\n- Use custom \"Line\" bullets—small horizontal 8px strokes in Brick Red instead of standard dots.\n\n### Special Component: The \"Line Connector\"\n- A decorative SVG element used between sections. It should be a 1px stroke in Deep Forest Green that flows from the bottom of one card to the top of another, guiding the user's scroll.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fff8f5",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f8efea",
+              "inverse_primary": "#aacec3",
+              "inverse_surface": "#34302c",
+              "on_background": "#1e1b18",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#83a69c",
+              "on_primary_fixed": "#00201a",
+              "on_primary_fixed_variant": "#2b4d44",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#67645d",
+              "on_secondary_fixed": "#1d1c16",
+              "on_secondary_fixed_variant": "#494740",
+              "on_surface": "#1e1b18",
+              "on_surface_variant": "#414846",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#ed825c",
+              "on_tertiary_fixed": "#390c00",
+              "on_tertiary_fixed_variant": "#7d2d0e",
+              "outline": "#717976",
+              "outline_variant": "#c1c8c4",
+              "primary": "#01261f",
+              "primary_container": "#1a3c34",
+              "primary_fixed": "#c5eadf",
+              "primary_fixed_dim": "#aacec3",
+              "secondary": "#615e57",
+              "secondary_container": "#e7e2d9",
+              "secondary_fixed": "#e7e2d9",
+              "secondary_fixed_dim": "#cac6be",
+              "surface": "#fff8f5",
+              "surface_bright": "#fff8f5",
+              "surface_container": "#f5ece7",
+              "surface_container_high": "#efe6e2",
+              "surface_container_highest": "#e9e1dc",
+              "surface_container_low": "#fbf2ed",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#e1d8d4",
+              "surface_tint": "#43655c",
+              "surface_variant": "#e9e1dc",
+              "tertiary": "#420f00",
+              "tertiary_container": "#661d00",
+              "tertiary_fixed": "#ffdbcf",
+              "tertiary_fixed_dim": "#ffb59c"
+            },
+            "overrideNeutralColor": "#2d2926",
+            "overridePrimaryColor": "#1a3c34",
+            "overrideSecondaryColor": "#f4efe6",
+            "overrideTertiaryColor": "#a64b2a",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "section-padding": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "button": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.0"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "Doggone Awesome! Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, editorial-grade homepage for **Doggone Awesome! LLC**. \n\nMoving away from the standard template look, this design focuses on **The Art of Connection**, treating pet care and training with the same level of craft and sophistication as a high-end lifestyle brand.\n\n### Design Decisions:\n- **Typographic Authority**: I used a high-contrast serif (Playfair Display) for the headlines to establish an expert, premium voice, paired with generous tracking on the subheadings for an airy, luxurious feel.\n- **Heritage Palette**: The brand is grounded in a deep **Forest Green** and **Warm Sand**, which feels organic and timeless. I used thin, intentional line work (a \"leash motif\") to connect sections and guide the eye without the need for traditional boxes.\n- **Asymmetrical Editorial Layout**: Instead of standard grid cards, the sections are arranged like a magazine spread. This creates a sense of \"bespoke curation\" that matches the boutique nature of their services.\n- **Lifestyle Photography**: The imagery (Golden Retriever in a minimalist setting, the close-up training bond, and the still-life tools) reinforces the premium, professional, and attentive nature of the business.\n\nThe result is a first impression that feels unique to the Doggone Awesome! brand—expert, warm, and highly selective."
+  },
+  {
+    "suggestion": "Make the hero section even bolder with larger type"
+  },
+  {
+    "suggestion": "Add a section for 'Client Success Stories' in a journal style"
+  },
+  {
+    "suggestion": "Change the color palette to a more modern 'Navy and Gold' theme"
+  }
+]
