@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STL MOBILE MECHANIC | Industrial Grade Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #121414;
+            color: #e2e2e2;
+            overflow-x: hidden;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, #46474a 1px, transparent 1px),
+                linear-gradient(to bottom, #46474a 1px, transparent 1px);
+            background-size: 40px 40px;
+            opacity: 0.1;
+        }
+        .vertical-text {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .hard-shadow-orange {
+            box-shadow: 4px 4px 0px #fe6b00;
+        }
+        .segmented-progress {
+            display: flex;
+            gap: 4px;
+        }
+        .segment {
+            height: 4px;
+            flex: 1;
+            background-color: #46474a;
+        }
+        .segment.active {
+            background-color: #fe6b00;
+        }
+    </style>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "surface-bright": "#37393a",
+                "outline-variant": "#46474a",
+                "surface-container-highest": "#333535",
+                "error-container": "#93000a",
+                "on-tertiary-container": "#7f838a",
+                "on-secondary-container": "#572000",
+                "on-background": "#e2e2e2",
+                "secondary": "#ffb693",
+                "inverse-primary": "#5f5e5f",
+                "on-primary-container": "#848283",
+                "inverse-on-surface": "#2f3131",
+                "tertiary-container": "#171b20",
+                "on-primary": "#303031",
+                "error": "#ffb4ab",
+                "background": "#121414",
+                "on-tertiary": "#2d3136",
+                "tertiary": "#c3c6ce",
+                "on-surface": "#e2e2e2",
+                "tertiary-fixed": "#dfe2ea",
+                "on-primary-fixed": "#1b1b1c",
+                "surface-container": "#1e2020",
+                "secondary-container": "#fe6b00",
+                "on-secondary-fixed": "#351000",
+                "on-error": "#690005",
+                "primary-container": "#1a1a1b",
+                "secondary-fixed": "#ffdbcc",
+                "surface": "#121414",
+                "on-primary-fixed-variant": "#474647",
+                "surface-dim": "#121414",
+                "surface-container-lowest": "#0c0f0f",
+                "primary-fixed-dim": "#c8c6c7",
+                "surface-tint": "#c8c6c7",
+                "on-secondary-fixed-variant": "#7a3000",
+                "outline": "#909094",
+                "secondary-fixed-dim": "#ffb693",
+                "inverse-surface": "#e2e2e2",
+                "surface-container-high": "#282a2b",
+                "primary": "#c8c6c7",
+                "on-error-container": "#ffdad6",
+                "primary-fixed": "#e5e2e3",
+                "surface-variant": "#333535",
+                "surface-container-low": "#1a1c1c",
+                "on-tertiary-fixed": "#181c21",
+                "on-tertiary-fixed-variant": "#43474d",
+                "tertiary-fixed-dim": "#c3c6ce",
+                "on-surface-variant": "#c7c6ca",
+                "on-secondary": "#561f00"
+            },
+            "borderRadius": {
+                "DEFAULT": "0px",
+                "lg": "0px",
+                "xl": "0px",
+                "full": "0px"
+            },
+            "spacing": {
+                "margin-mobile": "20px",
+                "gutter": "16px",
+                "rule-width": "1px",
+                "unit": "4px",
+                "margin-desktop": "40px"
+            },
+            "fontFamily": {
+                "headline-xl": ["Archivo Narrow"],
+                "label-caps": ["JetBrains Mono"],
+                "body-md": ["Inter"],
+                "body-lg": ["Inter"],
+                "technical-sm": ["JetBrains Mono"],
+                "headline-md": ["Archivo Narrow"],
+                "headline-lg": ["Archivo Narrow"]
+            },
+            "fontSize": {
+                "headline-xl": ["64px", {"lineHeight": "60px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                "label-caps": ["12px", {"lineHeight": "14px", "fontWeight": "700"}],
+                "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                "technical-sm": ["13px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                "headline-md": ["24px", {"lineHeight": "28px", "fontWeight": "600"}],
+                "headline-lg": ["40px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="selection:bg-secondary-container selection:text-white">
+<!-- TopAppBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop h-20 max-w-full">
+<div class="font-headline-md text-headline-md font-bold tracking-tighter text-on-background uppercase">STL MOBILE MECHANIC</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-secondary transition-colors duration-200 uppercase" href="#">Diagnostics</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Fleet</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">Schedule</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200 uppercase" href="#">History</a>
+</div>
+<button class="bg-secondary-container text-black font-label-caps text-label-caps px-6 py-3 font-bold uppercase hard-shadow-orange active:scale-95 transition-all">
+            EMERGENCY DISPATCH
+        </button>
+</nav>
+<!-- SideNavBar (Hidden on Mobile, used for structural anchor) -->
+<aside class="hidden lg:flex flex-col h-screen fixed left-0 top-0 z-40 bg-surface-container-low border-r border-outline-variant w-64 pt-24 pb-8 px-6">
+<div class="mb-12">
+<div class="text-secondary font-label-caps text-[10px] tracking-widest mb-1">UNIT STATUS</div>
+<div class="font-headline-md text-headline-md text-on-surface uppercase">STL UNIT 01</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="w-2 h-2 bg-secondary-container"></span>
+<span class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">Active Duty</span>
+</div>
+</div>
+<nav class="flex flex-col gap-6 flex-grow">
+<a class="group flex items-center gap-3 text-secondary border-l-2 border-secondary pl-4 transition-all translate-x-1" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="precision_manufacturing">precision_manufacturing</span>
+<span class="font-label-caps text-label-caps uppercase">Diagnostics</span>
+</a>
+<a class="group flex items-center gap-3 text-on-surface-variant pl-4 hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-caps text-label-caps uppercase">Fleet</span>
+</a>
+<a class="group flex items-center gap-3 text-on-surface-variant pl-4 hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="calendar_today">calendar_today</span>
+<span class="font-label-caps text-label-caps uppercase">Schedule</span>
+</a>
+<a class="group flex items-center gap-3 text-on-surface-variant pl-4 hover:bg-surface-bright transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]" data-icon="history">history</span>
+<span class="font-label-caps text-label-caps uppercase">History</span>
+</a>
+</nav>
+<button class="mt-auto border-2 border-white text-white font-label-caps text-label-caps py-4 uppercase font-bold hover:bg-white hover:text-black transition-all">
+            REQUEST SERVICE
+        </button>
+</aside>
+<main class="lg:ml-64 pt-20 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop border-b border-outline-variant">
+<div class="absolute inset-0 blueprint-grid z-0"></div>
+<!-- Large STL Watermark -->
+<div class="absolute -bottom-10 -right-20 text-[20rem] md:text-[40rem] font-bold text-outline-variant/10 select-none pointer-events-none tracking-tighter z-0">
+                STL
+            </div>
+<div class="relative z-10 w-full grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-8 flex flex-col justify-center">
+<div class="inline-flex items-center gap-4 mb-6">
+<span class="h-px w-12 bg-secondary-container"></span>
+<span class="font-technical-sm text-technical-sm text-secondary uppercase tracking-[0.3em]">24/7 ROADSIDE DISPATCH</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-on-background uppercase mb-8 max-w-4xl">
+                        MECHANICAL <span class="text-secondary-container">PRECISION.</span> ANYWHERE.
+                    </h1>
+<div class="flex flex-col sm:flex-row gap-6">
+<button class="bg-secondary-container text-black font-label-caps text-label-caps px-10 py-5 font-bold uppercase hard-shadow-orange active:scale-95 transition-all text-lg">
+                            INITIALIZE SERVICE REQUEST
+                        </button>
+<div class="flex items-center gap-4">
+<div class="segmented-progress w-32">
+<div class="segment active"></div>
+<div class="segment active"></div>
+<div class="segment"></div>
+<div class="segment"></div>
+</div>
+<span class="font-technical-sm text-technical-sm text-on-surface-variant">EST. ARRIVAL: 24 MIN</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-4 relative mt-12 lg:mt-0">
+<div class="border border-outline-variant bg-surface-container-low p-6 relative">
+<div class="absolute -top-3 -left-3 w-6 h-6 border-t-2 border-l-2 border-secondary-container"></div>
+<img alt="Engine Diagnostic" class="w-full aspect-[4/5] object-cover grayscale brightness-75 contrast-125 mb-4" data-alt="A cinematic, high-contrast close-up of a heavy-duty diesel engine block illuminated by a sharp, warm orange side-light. The atmosphere is gritty and industrial, with subtle lens flares and a deep charcoal background. The metallic textures are crisp, highlighting the intricate engineering of the machinery in a premium, editorial style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsQJv7MWiSbCM9Vaf5bPayuac5sAKw8rPj6OW9RN0iIoXDJX51g42unoOlpml39tbZvlZhOqpfYPjlCQXavOLjQUvjEIx4wIteyoRaO6rfgP5WRVKu8khPjQx0DvCgOBMhFlb3m6iQgJ1veLXTDmNtPa5kkbdJLMrekGcTb7TY4o4K1XoErdCLXC2IuqJ37akYRAnyOoXQQIkBzz6L_otl1YGiwu9jwaFagBEq_1gQAb1YsXVIEcp6bJtdxKOy0ALsxFJMrq6nlEA"/>
+<div class="flex justify-between items-end">
+<div>
+<div class="font-label-caps text-label-caps text-secondary mb-1">DATA LOG #091</div>
+<div class="font-technical-sm text-technical-sm text-on-surface uppercase">Cylinder Compression: OPTIMAL</div>
+</div>
+<div class="font-headline-md text-headline-md text-secondary-container">98%</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-6xl mx-auto">
+<div class="font-technical-sm text-technical-sm text-secondary-container mb-12 uppercase tracking-[0.4em]">ST. LOUIS SERVICE PROTOCOL</div>
+<h2 class="font-headline-lg text-headline-lg text-on-background uppercase mb-16 leading-tight">
+                    We don't just fix vehicles. We restore industrial-grade reliability through surgical diagnostics and rapid field deployment. This is St. Louis local authority.
+                </h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="border-t border-outline-variant pt-8">
+<div class="font-headline-md text-headline-md text-on-background mb-4 uppercase">01. SCAN</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Full-spectrum computer diagnostics identifying faults before we even crack the hood. Precision over guesswork.</p>
+</div>
+<div class="border-t border-outline-variant pt-8">
+<div class="font-headline-md text-headline-md text-on-background mb-4 uppercase">02. EXECUTE</div>
+<p class="font-body-md text-body-md text-on-surface-variant">On-site mechanical intervention. Heavy-duty tools meeting street-level urgency. Zero-compromise quality.</p>
+</div>
+<div class="border-t border-outline-variant pt-8">
+<div class="font-headline-md text-headline-md text-on-background mb-4 uppercase">03. VERIFY</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Comprehensive post-repair testing and documentation. Digital work logs delivered instantly to your device.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Services Section -->
+<section class="py-24 border-y border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-5 pointer-events-none">
+<div class="blueprint-grid w-full h-full"></div>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-start mb-20">
+<h3 class="font-headline-xl text-headline-xl text-on-background uppercase">CAPABILITIES</h3>
+<div class="vertical-text hidden md:block font-technical-sm text-technical-sm text-outline-variant/40">TECH_SPEC_V4.2</div>
+</div>
+<div class="space-y-0">
+<!-- Service Row 1 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center py-10 border-t border-outline-variant hover:bg-surface-bright transition-all cursor-crosshair">
+<div class="w-20 font-technical-sm text-technical-sm text-secondary mb-4 md:mb-0">#001</div>
+<div class="flex-grow">
+<h4 class="font-headline-lg text-headline-lg text-on-background uppercase">Full Engine Diagnostics</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">CAN-BUS ANALYTICS / SENSOR CALIBRATION / ECU FLASHING</p>
+</div>
+<div class="md:w-64 mt-6 md:mt-0 flex gap-2">
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface font-technical-sm text-[10px] uppercase">Mobile Lab</span>
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface font-technical-sm text-[10px] uppercase">OBD-II Elite</span>
+</div>
+</div>
+<!-- Service Row 2 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center py-10 border-t border-outline-variant hover:bg-surface-bright transition-all cursor-crosshair">
+<div class="w-20 font-technical-sm text-technical-sm text-secondary mb-4 md:mb-0">#002</div>
+<div class="flex-grow">
+<h4 class="font-headline-lg text-headline-lg text-on-background uppercase">Field Repairs &amp; Recovery</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">TRANSMISSION OVERHAUL / BRAKE SYSTEM REBUILD / HYDRAULICS</p>
+</div>
+<div class="md:w-64 mt-6 md:mt-0 flex gap-2">
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface font-technical-sm text-[10px] uppercase">Roadside Support</span>
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface font-technical-sm text-[10px] uppercase">Heavy Duty</span>
+</div>
+</div>
+<!-- Service Row 3 -->
+<div class="group flex flex-col md:flex-row items-start md:items-center py-10 border-t border-b border-outline-variant hover:bg-surface-bright transition-all cursor-crosshair">
+<div class="w-20 font-technical-sm text-technical-sm text-secondary mb-4 md:mb-0">#003</div>
+<div class="flex-grow">
+<h4 class="font-headline-lg text-headline-lg text-on-background uppercase">Fleet Logistics</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mt-2">PREVENTATIVE MAINTENANCE / ASSET MANAGEMENT / MULTI-UNIT CARE</p>
+</div>
+<div class="md:w-64 mt-6 md:mt-0 flex gap-2">
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface font-technical-sm text-[10px] uppercase">Enterprise</span>
+<span class="px-3 py-1 bg-outline-variant/20 text-on-surface font-technical-sm text-[10px] uppercase">Scheduled</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Logbook Section (Social Proof) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-background">
+<div class="mb-16 flex items-end justify-between">
+<div>
+<h3 class="font-headline-lg text-headline-lg text-on-background uppercase mb-2">FIELD LOGBOOK</h3>
+<p class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">Operator Testimonials &amp; Verified Repairs</p>
+</div>
+<div class="hidden md:block font-label-caps text-label-caps text-secondary-container">LATEST ENTRIES [24H]</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-px bg-outline-variant border border-outline-variant">
+<!-- Log 1 -->
+<div class="bg-surface-container-low p-10 flex flex-col">
+<div class="flex justify-between mb-8">
+<div class="font-label-caps text-label-caps text-on-surface-variant">CASE ID: 8821-X</div>
+<div class="font-label-caps text-label-caps text-secondary">★★★★★</div>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface italic mb-10 flex-grow">
+                        "Stranded on I-64 at 3 AM with a dead alternator. Unit 01 arrived in 20 minutes. Professional grade equipment, efficient repair, back on the road by 4:15. Unmatched response time for St. Louis."
+                    </blockquote>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 bg-outline-variant grayscale flex items-center justify-center text-on-background font-bold text-xl">MK</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-background uppercase">Mark K.</div>
+<div class="font-technical-sm text-technical-sm text-on-surface-variant">Fleet Logistics Manager</div>
+</div>
+</div>
+</div>
+<!-- Log 2 -->
+<div class="bg-surface-container-low p-10 flex flex-col">
+<div class="flex justify-between mb-8">
+<div class="font-label-caps text-label-caps text-on-surface-variant">CASE ID: 9004-T</div>
+<div class="font-label-caps text-label-caps text-secondary">★★★★★</div>
+</div>
+<blockquote class="font-body-lg text-body-lg text-on-surface italic mb-10 flex-grow">
+                        "STL Mobile Mechanic handles our entire delivery fleet. Their diagnostic reports are more detailed than the dealership's. They keep us operational without the overhead of a dedicated shop."
+                    </blockquote>
+<div class="flex items-center gap-4 border-t border-outline-variant pt-6">
+<div class="w-12 h-12 bg-outline-variant grayscale flex items-center justify-center text-on-background font-bold text-xl">JD</div>
+<div>
+<div class="font-label-caps text-label-caps text-on-background uppercase">Julia D.</div>
+<div class="font-technical-sm text-technical-sm text-on-surface-variant">Operational Director</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="relative py-40 flex flex-col items-center justify-center text-center px-margin-mobile border-t border-outline-variant">
+<div class="absolute inset-0 z-0">
+<img alt="Service Truck Night" class="w-full h-full object-cover grayscale brightness-[0.2] contrast-125" data-alt="A wide-angle, moody shot of a heavy-duty mobile mechanic truck parked under the neon lights of a St. Louis street at night. The vehicle is finished in a matte charcoal gray with vibrant safety orange accents and high-visibility 'STL' branding. Smoke or steam rises from a nearby manhole, creating a cinematic, noir-industrial atmosphere with sharp reflections on the truck's metallic surfaces." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX3O7whM5DRCFU_YG-c65IL8qdeE6wFQF4zwEKhP9B29HLmZRT9mOrE03W0Ic8b4yISyeROyh9qtvoTWzDCBJjkG8N-1mh3q3PIoG3aAlT4cuB3MvZEszQu_2SxPTZR_pvlwhjZePI5cmlbQiwxObPppR422xyEOE10BOXA_VJgeoKwaTb6kkNyWMVBe6_5eGFQllr-z5tZOM0dy9Db6Lxh_mTNj4wIvy84zmmFe1fN1G0xHbWihJVxaTl9gglhH0bEbJKKRQHeJg"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<div class="font-technical-sm text-technical-sm text-secondary-container mb-6 uppercase tracking-[0.5em]">SYSTEM STATUS: READY</div>
+<h2 class="font-headline-xl text-headline-xl text-on-background uppercase mb-12">DON'T LET A MECHANICAL FAULT HALT YOUR PROGRESS.</h2>
+<button class="bg-secondary-container text-black font-label-caps text-label-caps px-16 py-6 font-bold uppercase hard-shadow-orange active:scale-95 transition-all text-xl">
+                    DEPLOY MECHANIC NOW
+                </button>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-margin-mobile md:px-margin-desktop py-16 flex flex-col gap-gutter bg-surface-container-lowest border-t-2 border-outline-variant">
+<div class="flex flex-col md:flex-row justify-between items-start">
+<div class="font-headline-xl text-headline-xl opacity-10 text-outline uppercase select-none mb-12 md:mb-0">STL MOBILE MECHANIC</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 w-full md:w-auto">
+<div class="flex flex-col gap-4">
+<div class="font-label-caps text-label-caps text-secondary uppercase">Navigation</div>
+<a class="font-technical-sm text-technical-sm text-on-tertiary-container hover:text-secondary transition-colors uppercase" href="#">Diagnostics</a>
+<a class="font-technical-sm text-technical-sm text-on-tertiary-container hover:text-secondary transition-colors uppercase" href="#">Fleet</a>
+<a class="font-technical-sm text-technical-sm text-on-tertiary-container hover:text-secondary transition-colors uppercase" href="#">Schedule</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-label-caps text-label-caps text-secondary uppercase">Legal</div>
+<a class="font-technical-sm text-technical-sm text-on-tertiary-container hover:text-secondary transition-colors uppercase" href="#">Privacy Protocol</a>
+<a class="font-technical-sm text-technical-sm text-on-tertiary-container hover:text-secondary transition-colors uppercase" href="#">Service Terms</a>
+<a class="font-technical-sm text-technical-sm text-on-tertiary-container hover:text-secondary transition-colors uppercase" href="#">Diagnostic Data</a>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-label-caps text-label-caps text-secondary uppercase">Contact</div>
+<div class="font-technical-sm text-technical-sm text-on-tertiary-container uppercase">314-555-0199</div>
+<div class="font-technical-sm text-technical-sm text-on-tertiary-container uppercase">HQ: ST. LOUIS, MO</div>
+</div>
+<div class="flex flex-col gap-4">
+<div class="font-label-caps text-label-caps text-secondary uppercase">Network</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer" data-icon="share">share</span>
+<span class="material-symbols-outlined text-on-surface-variant hover:text-secondary cursor-pointer" data-icon="rss_feed">rss_feed</span>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<div class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">©2024 STL MOBILE MECHANIC - INDUSTRIAL GRADE SERVICE</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 bg-secondary-container"></span>
+<span class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">All Systems Nominal</span>
+</div>
+<div class="font-technical-sm text-technical-sm text-on-surface-variant uppercase">LAT: 38.6270° N / LON: 90.1994° W</div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Interactive Micro-interactions -->
+<script>
+        document.querySelectorAll('a, button').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                // Subtle interaction logic if needed
+            });
+        });
+
+        // Simple blueprint scroll parallax effect
+        window.addEventListener('scroll', () => {
+            const scroll = window.pageYOffset;
+            const blueprint = document.querySelector('.blueprint-grid');
+            if(blueprint) {
+                blueprint.style.backgroundPositionY = -(scroll * 0.1) + 'px';
+            }
+        });
+    </script>
+</body></html>
