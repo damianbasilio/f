@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/thepartnersbarbershop/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-09T16:36:23.822Z
+- **Scraped:** 2026-06-09T16:40:55.139Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/thepartnersbarbershop/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

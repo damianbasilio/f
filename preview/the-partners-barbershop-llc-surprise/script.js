@@ -1,60 +1,37 @@
-// Mobile Menu Logic
-        const menuToggle = document.getElementById('mobile-menu-toggle');
-        const menuClose = document.getElementById('mobile-menu-close');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const menuLinks = mobileMenu.querySelectorAll('a');
+// Reveal on scroll observer
+        const observerOptions = {
+            threshold: 0.1
+        };
 
-        menuToggle.addEventListener('click', () => {
-            mobileMenu.classList.remove('translate-x-full');
-        });
-
-        menuClose.addEventListener('click', () => {
-            mobileMenu.classList.add('translate-x-full');
-        });
-
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('translate-x-full');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal-visible');
+                    if (entry.target.querySelector('.golden-rule')) {
+                        entry.target.querySelector('.golden-rule').style.transform = 'scaleX(1)';
+                    }
+                }
             });
-        });
+        }, observerOptions);
 
-        // Header Scroll Effect
-        let lastScroll = 0;
-        const header = document.getElementById('main-header');
-        const bookingBar = document.getElementById('booking-bar');
+        document.querySelectorAll('.reveal-line, section').forEach(el => observer.observe(el));
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll <= 0) {
-                header.classList.remove('-translate-y-full');
-                return;
-            }
-
-            if (currentScroll > lastScroll && !header.classList.contains('-translate-y-full')) {
-                // Scroll down
-                header.classList.add('-translate-y-full');
-            } else if (currentScroll < lastScroll && header.classList.contains('-translate-y-full')) {
-                // Scroll up
-                header.classList.remove('-translate-y-full');
-            }
-            lastScroll = currentScroll;
-        });
-
-        // Form Validation UI preview
-        const bookingForm = document.getElementById('booking-form');
-        bookingForm.addEventListener('submit', (e) => {
+        // Form Submission Interaction
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = bookingForm.querySelector('button');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = 'REQUEST SENT';
-            btn.classList.add('bg-secondary');
-            
+            const status = document.getElementById('formStatus');
+            status.classList.remove('hidden');
+            this.reset();
             setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.classList.remove('bg-secondary');
-                bookingForm.reset();
-            }, 3000);
+                status.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Horizontal line animation on mount
+        window.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('.golden-rule').forEach(line => {
+                line.style.transform = 'scaleX(0)';
+            });
         });
 
 (() => {
