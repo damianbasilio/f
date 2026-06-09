@@ -1,105 +1,68 @@
 
         body {
-            background-color: #121414;
-            color: #e2e2e2;
-            overflow-x: hidden;
+            background-color: #111415;
+            color: #e1e3e4;
             scroll-behavior: smooth;
         }
 
-        .hawk-wing-right {
-            clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%);
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(rgba(71, 84, 103, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(71, 84, 103, 0.1) 1px, transparent 1px);
+            background-size: 40px 40px;
         }
 
-        .hawk-wing-left {
-            clip-path: polygon(15% 0, 100% 0, 100% 100%, 0% 100%);
+        .hawk-angle-right {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
         }
 
-        .hawk-diagonal-bg {
-            background: linear-gradient(135deg, rgba(211, 47, 47, 0.1) 0%, transparent 50%);
+        .hawk-angle-left {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
         }
 
-        .btn-primary {
-            background-color: #ba1a20;
-            color: white;
-            font-family: 'Oswald', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 1rem 2rem;
+        .hazard-stripe-hover:hover {
+            background-image: repeating-linear-gradient(
+                45deg,
+                #d92d20,
+                #d92d20 10px,
+                #b02117 10px,
+                #b02117 20px
+            );
+        }
+
+        .btn-primary-hazard {
             position: relative;
-            transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms cubic-bezier(0.23, 1, 0.32, 1) 100ms ease;
-            clip-path: polygon(0 0, 95% 0, 100% 15%, 100% 100%, 0 100%);
-        }
-
-        .btn-primary:active {
-            transform: scale(0.95);
-        }
-
-        .btn-secondary {
-            border: 2px solid #333535;
-            color: #e2e2e2;
-            font-family: 'Oswald', sans-serif;
-            font-weight: 700;
-            text-transform: uppercase;
-            padding: 1rem 2rem;
-            transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms cubic-bezier(0.23, 1, 0.32, 1) 100ms ease;
-        }
-
-        .btn-secondary:hover {
-            background-color: #333535;
-        }
-
-        .service-number {
-            -webkit-text-stroke: 1px #333535;
-            color: transparent;
-            font-size: 8rem;
-            line-height: 1;
-            transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms cubic-bezier(0.23, 1, 0.32, 1) 300ms ease;
-        }
-
-        .service-row:hover .service-number {
-            -webkit-text-stroke: 1px #ba1a20;
-            color: #ba1a20;
-            transform: translateX(20px);
-        }
-
-        .ticker-wrap {
-            width: 100%;
             overflow: hidden;
-            background: #1e2020;
-            padding: 20px 0;
-            border-top: 1px solid #333535;
-            border-bottom: 1px solid #333535;
+            background: #d92d20;
+            transition: transform 200ms cubic-bezier(0.23, 1, 0.32, 1), opacity 200ms cubic-bezier(0.23, 1, 0.32, 1) 0.3s ease;
+        }
+        
+        .btn-primary-hazard::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: repeating-linear-gradient(
+                -45deg,
+                #facc15,
+                #facc15 10px,
+                #000000 10px,
+                #000000 20px
+            );
+            transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 0;
+            opacity: 0.15;
         }
 
-        .ticker {
-            display: flex;
-            white-space: nowrap;
-            animation: ticker 30s linear infinite;
+        .btn-primary-hazard:hover::before {
+            transform: translateX(100%);
         }
 
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
-        }
-
-        input:focus, textarea:focus {
-            outline: none;
-            border-bottom-color: #ba1a20 !important;
-        }
-
-        .custom-cursor {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #ba1a20;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.1s ease;
-            display: none;
-        }
-        @media (min-width: 1024px) {
-            .custom-cursor { display: block; }
+        .dotted-leader {
+            border-bottom: 2px dotted #475467;
+            flex-grow: 1;
+            margin: 0 8px;
+            margin-bottom: 6px;
         }
     
 
