@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Northland Boarding | Rugged Elegance for Pets</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#d1e5f9",
+                    "secondary-container": "#fdddb9",
+                    "inverse-on-surface": "#f2f1ec",
+                    "on-tertiary-container": "#8194a7",
+                    "surface-tint": "#4d6355",
+                    "secondary": "#715a3e",
+                    "on-secondary-fixed": "#281803",
+                    "surface-container-highest": "#e4e2dd",
+                    "on-error": "#ffffff",
+                    "surface": "#fbf9f4",
+                    "secondary-fixed": "#fdddb9",
+                    "secondary-fixed-dim": "#e0c29f",
+                    "outline": "#737973",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e4e2dd",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#b4ccbb",
+                    "on-primary-container": "#809787",
+                    "on-primary-fixed-variant": "#364c3e",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#f0eee9",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#d0e9d6",
+                    "on-surface": "#1b1c19",
+                    "primary-container": "#1a2f23",
+                    "surface-container-high": "#eae8e3",
+                    "tertiary": "#041827",
+                    "error": "#ba1a1a",
+                    "on-primary-fixed": "#0a2014",
+                    "on-tertiary-fixed-variant": "#364959",
+                    "primary": "#051a0f",
+                    "background": "#fbf9f4",
+                    "surface-dim": "#dbdad5",
+                    "tertiary-fixed-dim": "#b5c9dd",
+                    "on-tertiary-fixed": "#081d2c",
+                    "on-surface-variant": "#424843",
+                    "primary-fixed-dim": "#b4ccbb",
+                    "on-background": "#1b1c19",
+                    "on-primary": "#ffffff",
+                    "outline-variant": "#c2c8c2",
+                    "on-secondary-fixed-variant": "#584329",
+                    "on-secondary": "#ffffff",
+                    "surface-bright": "#fbf9f4",
+                    "on-secondary-container": "#786044",
+                    "surface-container-low": "#f5f3ee",
+                    "inverse-surface": "#30312e",
+                    "tertiary-container": "#1a2d3c"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "container-max": "1280px",
+                    "gutter": "32px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "24px",
+                    "stack-md": "48px",
+                    "stack-sm": "24px",
+                    "stack-lg": "80px"
+            },
+            "fontFamily": {
+                    "headline-md": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "label-caps": ["Montserrat"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "body-md": ["Montserrat"]
+            },
+            "fontSize": {
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #fbf9f4; /* background color */
+            color: #1b1c19; /* on-background */
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .topographic-bg {
+            background-image: url("https://www.transparenttextures.com/patterns/topography.png");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+
+        .hero-vignette {
+            background: linear-gradient(to bottom, rgba(5, 26, 15, 0.4), rgba(5, 26, 15, 0.7));
+        }
+
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/p6.png");
+            opacity: 0.03;
+            z-index: 9999;
+            pointer-events: none;
+        }
+
+        .editorial-offset {
+            transform: translateX(calc(100% / 12 * 1));
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background selection:bg-primary-fixed selection:text-on-primary-fixed">
+<div class="grain-overlay"></div>
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/90 dark:bg-background/90 backdrop-blur-md border-b border-outline-variant/20">
+<nav class="flex justify-between items-center px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-stack-sm">
+<a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="#">NORTHLAND BOARDING</a>
+<div class="hidden md:flex gap-6 ml-12">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed border-b border-primary pb-1 transition-colors duration-300" href="#">Our Story</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Canine Suites</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Feline Retreat</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant dark:text-on-surface-variant/80 hover:text-primary dark:hover:text-primary-fixed-dim transition-colors duration-300" href="#">Location</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="hidden lg:flex items-center gap-4 text-on-surface-variant">
+<a class="flex items-center gap-2 hover:text-primary transition-colors" href="mailto:stay@northlandboarding.com">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+<span class="font-label-caps text-[10px]">STAY@NORTHLANDBOARDING.COM</span>
+</a>
+<a class="flex items-center gap-2 hover:text-primary transition-colors border-l border-outline-variant/30 pl-4" href="tel:2185550123">
+<span class="material-symbols-outlined text-[20px]">call</span>
+<span class="font-label-caps text-[10px]">218.555.0123</span>
+</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2.5 font-label-caps text-label-caps hover:bg-primary-container transition-all active:scale-[0.98]">
+                    Book a Stay
+                </button>
+</div>
+</nav>
+</header>
+<main class="relative">
+<div class="topographic-bg absolute inset-0 z-0"></div>
+<!-- Hero Section -->
+<section class="relative h-screen flex items-center overflow-hidden">
+<div class="absolute inset-0">
+<img alt="A proud husky dog in a snowy Duluth forest" class="w-full h-full object-cover grayscale-[0.2] brightness-75 scale-105 transition-transform duration-[10000ms] hover:scale-100" data-alt="A majestic Siberian Husky standing proudly in a dense, snow-covered pine forest near Duluth, Minnesota. The lighting is moody and overcast, capturing the serene atmosphere of the rugged Northwoods. The photograph is shot with a fine-film grain aesthetic, utilizing high contrast between the dog's thick coat and the deep forest shadows. The overall palette is composed of cool slate grays, deep forest greens, and crisp whites, embodying a sense of silent, professional care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAuIehRdt53BOa7w8TFjx3Pr7vrnSysqRMeRWjEG5SFwKTAsQTbPWZugcfkZxVNOqms8mlcy3dUgmlLQM4fzpSPp-ZpEBadEMg77Dizm0jAG6F-4NVW1og_Rgph-Cmtbtve1_y2SWxawQcRW1qXb3uhPZHhGWr6LSAdjeK7hvoQJ6k7D5HTSWZga740gAwNOaDeKknwmfPVBNDR1wmVxNwz69FxmMW052oF9Qd51S_ClNWdaJrW-X26oTurWerjrbTZRn31sGF109w"/>
+<div class="absolute inset-0 hero-vignette"></div>
+</div>
+<div class="relative z-10 px-margin-desktop max-w-[900px]">
+<span class="font-label-caps text-label-caps text-primary-fixed mb-6 block tracking-[0.3em]">EST. IN THE NORTHWOODS</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-white mb-8 leading-tight">
+                    A Second Home as <span class="italic font-light">Rugged and Refined</span> as the North.
+                </h1>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary border border-primary px-10 py-4 font-label-caps text-label-caps hover:bg-transparent hover:text-white transition-all">
+                        VIEW SUITES
+                    </button>
+<button class="bg-transparent text-white border border-white/40 px-10 py-4 font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all backdrop-blur-sm">
+                        OUR ETHOS
+                    </button>
+</div>
+</div>
+</section>
+<!-- Credibility / Trust Section -->
+<section class="py-stack-lg bg-surface relative z-10">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter items-start">
+<div class="flex flex-col gap-4 border-l border-outline-variant/30 pl-6 py-4">
+<span class="material-symbols-outlined text-primary text-4xl">health_and_safety</span>
+<h3 class="font-headline-md text-headline-md text-primary">Vet-Vetted Safety</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Designed in consultation with leading veterinarians to ensure a sterile, low-stress environment for every guest.</p>
+</div>
+<div class="flex flex-col gap-4 border-l border-outline-variant/30 pl-6 py-4">
+<span class="material-symbols-outlined text-primary text-4xl">location_city</span>
+<h3 class="font-headline-md text-headline-md text-primary">24/7 Duluth Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Locally owned and staffed around the clock. We are mere minutes from Duluth's premier emergency animal hospital.</p>
+</div>
+<div class="flex flex-col gap-4 border-l border-outline-variant/30 pl-6 py-4">
+<span class="material-symbols-outlined text-primary text-4xl">park</span>
+<h3 class="font-headline-md text-headline-md text-primary">Spacious Wooded Suites</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Acres of private, secured northern trailways. Your pet's stay includes guided forest walks and fresh air.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section (Editorial Layout) -->
+<section class="py-stack-lg bg-surface-container-low">
+<div class="max-w-container-max mx-auto px-margin-desktop space-y-32">
+<!-- Canine Suites -->
+<div class="flex flex-col md:flex-row items-center gap-16 relative">
+<div class="w-full md:w-7/12 relative group">
+<div class="absolute -inset-4 border border-primary/10 -z-10 translate-x-8 translate-y-8"></div>
+<img alt="Luxury canine accommodation" class="w-full aspect-[4/5] object-cover grayscale-[0.1]" data-alt="A luxurious canine suite featuring minimalist architecture with natural cedar wood accents and polished slate floors. The room is flooded with soft, natural light from a large window overlooking a misty Duluth forest. A comfortable, high-end orthopedic dog bed is neatly placed in the center. The photography style is editorial and architectural, focusing on clean lines and organic textures in a palette of deep greens, muted wood tones, and cool grays." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_7OOCvSPg3Qfns4b-R8BHV6sPcuU-2CC0pig2snEPE8JKiW_91UYfO8nYFivaArhHpwQE1T87-ZnNhEMbz8bOPh8d3IEeygMXKCpLtNxAcyDCR56_MIc4_c9wp1y9wR0YwLffGiLxaqZJgJmVHSXw1cNz8ufynsya8wBkkNqRFY1_2RCk5kKGe3JceeSLMISB76yimtHVSvfSg3gYY73nuGLNJchUS7CnEm2u6EXMYZ6t7yoMohEQqDfh3emWc_wdY-jo70jO7M0"/>
+</div>
+<div class="w-full md:w-5/12 space-y-6 md:-ml-24 bg-surface p-12 border border-outline-variant/20 shadow-sm z-20">
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Canine Accommodations</span>
+<h2 class="font-display-lg text-headline-lg text-primary">The Canine Suites</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            More than just a stay, it's a retreat. Our canine suites feature under-floor heating, individual outdoor patios, and daily personalized enrichment sessions within our private forest acreage.
+                        </p>
+<div class="pt-4">
+<a class="group flex items-center gap-4 font-label-caps text-label-caps text-primary" href="#">
+                                EXPLORE CANINE LIFE
+                                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Feline Retreat -->
+<div class="flex flex-col md:flex-row-reverse items-center gap-16 relative">
+<div class="w-full md:w-7/12 relative">
+<div class="absolute -inset-4 border border-primary/10 -z-10 -translate-x-8 translate-y-8"></div>
+<img alt="Serene cat in a luxury retreat" class="w-full aspect-[4/5] object-cover grayscale-[0.1]" data-alt="A serene feline retreat area featuring multi-level climbing structures made from natural driftwood and reclaimed oak. A sleek, ginger tabby cat rests gracefully on a high perch, bathed in warm, golden afternoon sunlight. The environment is impeccably clean with minimalist design, utilizing warm earth tones and soft textures. The image captures a sense of quiet luxury and peacefulness, perfectly aligning with the Northland Boarding aesthetic of rugged elegance." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCG9OIAobt-pTkjg9hbEPlwFciN8QkuhHtO7ouu_xsQCmqXrLm3jN-1WLegwSSWXdsWfEqEu1PEpYHo4CEym-ryifU37bdJo1BgtqZ6sGqJHaRL8gHo_2G5AQcUtvAIbkEpGi5_5wmZDB-RxWgjxaWDG4CfHUTM7s-QVgjJpbqPZ5dz_pKT6ce5dRhJ8EQnlFUeQvWY4OgXuN9q8-Zvs13TJZyQOdzQ5RYkQ2Q5WrUpgDA_HHVzxOEozDbNLMtPuJeiguTpuxZIJPs"/>
+</div>
+<div class="w-full md:w-5/12 space-y-6 md:-mr-24 bg-surface p-12 border border-outline-variant/20 shadow-sm z-20">
+<span class="font-label-caps text-[10px] text-secondary tracking-widest uppercase">Feline Sanctuary</span>
+<h2 class="font-display-lg text-headline-lg text-primary">The Feline Retreat</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                            A separate, quiet wing dedicated to our feline guests. Multi-story vertical climbing walls, bird-watching windows, and Feliway-infused air provide a tranquil sanctuary away from the hustle.
+                        </p>
+<div class="pt-4">
+<a class="group flex items-center gap-4 font-label-caps text-label-caps text-primary" href="#">
+                                DISCOVER THE SANCTUARY
+                                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-stack-lg bg-surface overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 space-y-stack-sm">
+<h2 class="font-display-lg text-headline-lg text-primary">The Northland Standard</h2>
+<div class="w-20 h-1 bg-secondary mb-8"></div>
+<p class="font-body-lg text-body-lg text-on-surface italic">"We believe the rugged beauty of Duluth shouldn't be a compromise for luxury care."</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Founded in 2012 by a team of wilderness enthusiasts and pet care specialists, Northland Boarding was born from a simple observation: pets deserve the same level of architectural beauty and environmental wellness as their owners. 
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                        Our facility is integrated into the natural topography of the North Shore, utilizing sustainable heating and cooling systems to provide a climate that mirrors the invigorating lake breeze of Gitchigami.
+                    </p>
+</div>
+<div class="md:col-span-5 md:col-start-8 relative">
+<img alt="Scenic Duluth landscape" class="w-full grayscale brightness-90 shadow-2xl" data-alt="An atmospheric, black and white landscape photograph of the Duluth harbor at dusk. Thin veils of fog roll over the cold waters of Lake Superior, with the iconic Lift Bridge visible in the distant silhouette. The image is high-contrast with a cinematic grain, emphasizing the rugged, powerful nature of the North Shore. The composition is wide and breathtaking, evoking the deep roots and quiet strength of the Northland Boarding brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAErKv4ZgLTKNptv7mJqvPvft-D3gp5yu0kcoYoLSZyGz9MQJpxoXUw654K_oV2E7o1tq2PN5xIsxYMCwZ_kTQ6a9DlZ3LYC6Y4BESmYbnmvWyxaur4GnMUJ7a0MZaQ16lORyZBPQt3R_NHh5TdM7NXDMicr_8Pqz0l7duZhxVWF4QcWug0sADdkyFivpTh8xR9cGlZAJuMGU9q9es3udup3g3KJQcGISinRObGlgMwdPYZHzj1mqZLvuhhyuwasu4CsKnQBhSeFRc"/>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="py-stack-lg bg-surface-container-highest">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 space-y-8">
+<h2 class="font-display-lg text-headline-lg text-primary">Visit the North Shore</h2>
+<div class="space-y-4">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">location_on</span>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                                4802 Northland Way<br/>
+                                Duluth, MN 55804
+                            </div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary mt-1">schedule</span>
+<div class="font-body-md text-body-md text-on-surface-variant">
+                                Mon - Fri: 7:00am - 7:00pm<br/>
+                                Sat - Sun: 8:00am - 5:00pm
+                            </div>
+</div>
+</div>
+</div>
+<div class="md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border border-outline-variant/40" data-location="Duluth, MN" data-map-slot="" style="">
+<!-- Map integration placeholder -->
+<div class="absolute inset-0 bg-surface-variant flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant">LOADING MAP DATA...</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-stack-lg bg-surface relative">
+<div class="max-w-[700px] mx-auto px-margin-mobile text-center mb-stack-md">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.2em] mb-4 block">SECURE A RESERVATION</span>
+<h2 class="font-display-lg text-headline-lg text-primary">Inquire About a Stay</h2>
+</div>
+<div class="max-w-[800px] mx-auto px-margin-mobile">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:border-primary focus:ring-0 transition-colors font-body-md" id="name" placeholder=" " type="text"/>
+<label class="absolute left-0 -top-4 text-[10px] font-label-caps text-on-surface-variant uppercase transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary" for="name">Pet Owner Name</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:border-primary focus:ring-0 transition-colors font-body-md" id="email" placeholder=" " type="email"/>
+<label class="absolute left-0 -top-4 text-[10px] font-label-caps text-on-surface-variant uppercase transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary" for="email">Email Address</label>
+</div>
+<div class="relative md:col-span-2">
+<select class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:border-primary focus:ring-0 transition-colors font-body-md appearance-none" id="service">
+<option value="">Select Accommodation</option>
+<option value="canine">Canine Suite</option>
+<option value="feline">Feline Retreat</option>
+<option value="extended">Extended Wilderness Stay</option>
+</select>
+<label class="absolute left-0 -top-4 text-[10px] font-label-caps text-on-surface-variant uppercase" for="service">Interest</label>
+</div>
+<div class="relative md:col-span-2">
+<textarea class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:border-primary focus:ring-0 transition-colors font-body-md resize-none" id="message" placeholder=" " rows="4"></textarea>
+<label class="absolute left-0 -top-4 text-[10px] font-label-caps text-on-surface-variant uppercase transition-all peer-placeholder-shown:text-body-md peer-placeholder-shown:top-2 peer-focus:-top-4 peer-focus:text-[10px] peer-focus:text-primary" for="message">Pet Details &amp; Dates</label>
+</div>
+<div class="md:col-span-2 flex justify-center pt-8">
+<button class="bg-primary text-on-primary px-16 py-5 font-label-caps text-label-caps tracking-widest hover:bg-primary-container transition-all shadow-lg active:scale-[0.98]" type="submit">
+                            SEND INQUIRY
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-stack-lg bg-tertiary dark:bg-tertiary-container">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-4 flex flex-col gap-6">
+<span class="font-display-lg text-headline-lg text-tertiary-fixed">NORTHLAND BOARDING</span>
+<p class="font-body-md text-body-md text-tertiary-fixed/60 max-w-xs">
+                    Redefining pet boarding through architectural excellence and the raw spirit of the North Shore.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-tertiary-fixed/20 flex items-center justify-center text-tertiary-fixed hover:bg-tertiary-fixed hover:text-tertiary transition-all" href="#">
+<i class="material-symbols-outlined">share</i>
+</a>
+<a class="w-10 h-10 border border-tertiary-fixed/20 flex items-center justify-center text-tertiary-fixed hover:bg-tertiary-fixed hover:text-tertiary transition-all" href="#">
+<i class="material-symbols-outlined">camera_indoor</i>
+</a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-caps text-[10px] text-tertiary-fixed tracking-[0.2em]">NAVIGATION</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Our Story</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Canine Suites</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Feline Retreat</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-caps text-[10px] text-tertiary-fixed tracking-[0.2em]">LEGAL</h4>
+<ul class="flex flex-col gap-2">
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-body-md text-body-md text-tertiary-fixed/60 hover:text-tertiary-fixed transition-all" href="#">Health &amp; Safety</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-label-caps text-[10px] text-tertiary-fixed tracking-[0.2em]">THE NEWSLETTER</h4>
+<p class="font-body-md text-body-md text-tertiary-fixed/60">Seasonal updates from the Northwoods.</p>
+<form class="flex border-b border-tertiary-fixed/30 py-2">
+<input class="bg-transparent border-none focus:ring-0 text-tertiary-fixed placeholder:text-tertiary-fixed/30 w-full font-label-caps text-label-caps" placeholder="YOUR EMAIL" type="email"/>
+<button class="text-tertiary-fixed material-symbols-outlined" type="submit">north_east</button>
+</form>
+</div>
+<div class="md:col-span-12 border-t border-tertiary-fixed/10 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-body-md text-body-md text-tertiary-fixed/60">© 2024 Northland Boarding. Rugged Elegance for the Modern Pet.</span>
+<span class="font-label-caps text-[10px] text-tertiary-fixed/40">Soli Deo Gloria</span>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll reveal animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(el);
+        });
+
+        // Mobile Nav Toggle (Simplified for this exercise)
+        document.querySelector('header').addEventListener('click', (e) => {
+            if (window.innerWidth < 768 && e.target.tagName !== 'A') {
+                // Potential expansion here
+            }
+        });
+    </script>
+</body></html>

@@ -1,0 +1,444 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Northland Boarding",
+        "styleGuidelines": "## Brand & Style\n\nThis design system embodies the \"Northwoods Premium\" aesthetic—a sophisticated intersection of rugged natural textures and high-end editorial clarity. Designed for a luxury pet boarding facility in Duluth, the brand personality is quiet, authoritative, and deeply rooted in the landscape. \n\nThe visual style leans into **Minimalism** with an **Editorial** edge. It utilizes generous whitespace to convey a sense of calm and safety, while incorporating organic textures through high-contrast, slightly grainy photography. The UI should evoke the feeling of a premium outdoor lifestyle magazine: structured yet breathable, professional yet warm.\n\n**Key Visual Pillars:**\n- **Asymmetry:** Layouts should feel intentional and curated, breaking standard grid patterns to mimic the unpredictability of nature.\n- **Topographic Detail:** Subtle vector line work representing the Duluth terrain should be used as background overlays (opacity 5-10%) to add depth.\n- **Photography:** Imagery should feature moody, natural lighting with high contrast and a fine-film grain. Subjects (pets) should be captured in \"heroic\" or serene poses within the Northland environment.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) but transitions to a fluid, spacious model on smaller screens. \n\n- **Generous Margins:** Desktop layouts utilize a 64px outer margin to frame content, reinforcing the editorial \"magazine\" aesthetic.\n- **The \"Breath\" Rule:** Vertical rhythm is intentionally loose. Sections should be separated by `stack-lg` (80px) to prevent the UI from feeling cluttered or \"discount.\"\n- **Asymmetric Offsets:** Content blocks (like image and text pairings) should often be offset by 1-2 columns to create a dynamic, modern visual flow rather than a perfectly symmetrical split.\n\n## Elevation & Depth\n\nTo maintain the \"Rugged Elegance\" theme, depth is achieved through **Tonal Layers** and **Low-Contrast Outlines** rather than heavy shadows.\n\n- **Surface Tiers:** Use subtle shifts between `Cream (#F9F7F2)` and a very light tint of `Frosted Slate` to define separate content areas.\n- **Ghost Borders:** Cards and containers should use a 1px solid border in a low-opacity `Frosted Slate` (#4A5D6E at 20%) to provide structure without adding weight.\n- **Textural Depth:** Depth is primarily communicated through layering typography over background textures (topographic lines) or high-contrast imagery, creating a physical sense of \"stacking.\"\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Deep Forest Green` with `Cream` text in `label-caps`. They should have a 1px border of the same color to ensure crispness. Secondary buttons are \"Ghost\" style: `Deep Forest Green` borders with no fill.\n- **Cards:** Use a 1px `Frosted Slate` (low opacity) border. Avoid shadows. The background should be the same as the page (`Cream`) or slightly off-set.\n- **Input Fields:** Minimalist design with only a bottom border (2px) in `Frosted Slate`, transitioning to `Warm Earth` on focus. This mimics a high-end stationary or registration form.\n- **Chips/Badges:** Use `Warm Earth` backgrounds with `Cream` text for status indicators (e.g., \"Available,\" \"Luxury Suite\").\n- **Booking Progress:** Use a custom-styled thin line with small circular nodes, utilizing `Frosted Slate` for inactive and `Deep Forest Green` for active steps.\n- **Image Treatments:** All hero images should feature a 1-2% grain overlay and a slight vignette to pull the focus toward the center, enhancing the \"moody Northwoods\" atmosphere.",
+        "theme": {
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1a2f23",
+          "designMd": "---\nname: Northland Boarding\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#424843'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#737973'\n  outline-variant: '#c2c8c2'\n  surface-tint: '#4d6355'\n  primary: '#051a0f'\n  on-primary: '#ffffff'\n  primary-container: '#1a2f23'\n  on-primary-container: '#809787'\n  inverse-primary: '#b4ccbb'\n  secondary: '#715a3e'\n  on-secondary: '#ffffff'\n  secondary-container: '#fdddb9'\n  on-secondary-container: '#786044'\n  tertiary: '#041827'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a2d3c'\n  on-tertiary-container: '#8194a7'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d6'\n  primary-fixed-dim: '#b4ccbb'\n  on-primary-fixed: '#0a2014'\n  on-primary-fixed-variant: '#364c3e'\n  secondary-fixed: '#fdddb9'\n  secondary-fixed-dim: '#e0c29f'\n  on-secondary-fixed: '#281803'\n  on-secondary-fixed-variant: '#584329'\n  tertiary-fixed: '#d1e5f9'\n  tertiary-fixed-dim: '#b5c9dd'\n  on-tertiary-fixed: '#081d2c'\n  on-tertiary-fixed-variant: '#364959'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  stack-lg: 80px\n  stack-md: 48px\n  stack-sm: 24px\n---\n\n## Brand & Style\n\nThis design system embodies the \"Northwoods Premium\" aesthetic—a sophisticated intersection of rugged natural textures and high-end editorial clarity. Designed for a luxury pet boarding facility in Duluth, the brand personality is quiet, authoritative, and deeply rooted in the landscape. \n\nThe visual style leans into **Minimalism** with an **Editorial** edge. It utilizes generous whitespace to convey a sense of calm and safety, while incorporating organic textures through high-contrast, slightly grainy photography. The UI should evoke the feeling of a premium outdoor lifestyle magazine: structured yet breathable, professional yet warm.\n\n**Key Visual Pillars:**\n- **Asymmetry:** Layouts should feel intentional and curated, breaking standard grid patterns to mimic the unpredictability of nature.\n- **Topographic Detail:** Subtle vector line work representing the Duluth terrain should be used as background overlays (opacity 5-10%) to add depth.\n- **Photography:** Imagery should feature moody, natural lighting with high contrast and a fine-film grain. Subjects (pets) should be captured in \"heroic\" or serene poses within the Northland environment.\n\n## Colors\n\nThe palette is derived directly from the Minnesota Northwoods—coniferous forests, granite bluffs, and the muted tones of Lake Superior.\n\n- **Deep Forest Green (#1A2F23):** Used for primary headings, navigation backgrounds, and high-impact UI elements. It represents stability and the density of the woods.\n- **Warm Earth (#8C7355):** An accent color used for call-to-action buttons, secondary highlights, and active states. It provides a tactile, grounded warmth.\n- **Frosted Slate (#4A5D6E):** Used for supporting text, borders, and secondary icons. It echoes the cool, atmospheric tones of the lake.\n- **Crisp Cream (#F9F7F2):** The universal canvas. This replaces pure white to soften the visual experience and create a \"premium paper\" feel.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing that balances traditional elegance with modern utility.\n\n- **Headlines (Playfair Display):** Should be set with tight letter-spacing. Use for all major titles and storytelling elements. The high-contrast serifs convey a sense of bespoke service and heritage.\n- **UI & Body (Montserrat):** Set with wider-than-average tracking (letter-spacing) to enhance readability and give a modern, \"airy\" feel. Montserrat's geometric clarity balances the ornate nature of the serif.\n- **Micro-copy:** Use `label-caps` for eyebrows, breadcrumbs, and button labels to create a sophisticated, structural hierarchy.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) but transitions to a fluid, spacious model on smaller screens. \n\n- **Generous Margins:** Desktop layouts utilize a 64px outer margin to frame content, reinforcing the editorial \"magazine\" aesthetic.\n- **The \"Breath\" Rule:** Vertical rhythm is intentionally loose. Sections should be separated by `stack-lg` (80px) to prevent the UI from feeling cluttered or \"discount.\"\n- **Asymmetric Offsets:** Content blocks (like image and text pairings) should often be offset by 1-2 columns to create a dynamic, modern visual flow rather than a perfectly symmetrical split.\n\n## Elevation & Depth\n\nTo maintain the \"Rugged Elegance\" theme, depth is achieved through **Tonal Layers** and **Low-Contrast Outlines** rather than heavy shadows.\n\n- **Surface Tiers:** Use subtle shifts between `Cream (#F9F7F2)` and a very light tint of `Frosted Slate` to define separate content areas.\n- **Ghost Borders:** Cards and containers should use a 1px solid border in a low-opacity `Frosted Slate` (#4A5D6E at 20%) to provide structure without adding weight.\n- **Textural Depth:** Depth is primarily communicated through layering typography over background textures (topographic lines) or high-contrast imagery, creating a physical sense of \"stacking.\"\n\n## Shapes\n\nThe shape language is primarily **Soft (0.25rem)**. While the brand is premium, it must remain approachable and pet-friendly. \n\n- **Primary Radius:** Use a subtle 4px radius for buttons and input fields to take the \"edge\" off while maintaining a professional, structured appearance.\n- **Large Components:** Images and cards can occasionally use a `rounded-lg` (8px) if they contain softer lifestyle content, but sharp 0px corners are preferred for hero image containers to maintain the editorial look.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Deep Forest Green` with `Cream` text in `label-caps`. They should have a 1px border of the same color to ensure crispness. Secondary buttons are \"Ghost\" style: `Deep Forest Green` borders with no fill.\n- **Cards:** Use a 1px `Frosted Slate` (low opacity) border. Avoid shadows. The background should be the same as the page (`Cream`) or slightly off-set.\n- **Input Fields:** Minimalist design with only a bottom border (2px) in `Frosted Slate`, transitioning to `Warm Earth` on focus. This mimics a high-end stationary or registration form.\n- **Chips/Badges:** Use `Warm Earth` backgrounds with `Cream` text for status indicators (e.g., \"Available,\" \"Luxury Suite\").\n- **Booking Progress:** Use a custom-styled thin line with small circular nodes, utilizing `Frosted Slate` for inactive and `Deep Forest Green` for active steps.\n- **Image Treatments:** All hero images should feature a 1-2% grain overlay and a slight vignette to pull the focus toward the center, enhancing the \"moody Northwoods\" atmosphere.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
+          "namedColors": {
+            "background": "#fbf9f4",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f2f1ec",
+            "inverse_primary": "#b4ccbb",
+            "inverse_surface": "#30312e",
+            "on_background": "#1b1c19",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#809787",
+            "on_primary_fixed": "#0a2014",
+            "on_primary_fixed_variant": "#364c3e",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#786044",
+            "on_secondary_fixed": "#281803",
+            "on_secondary_fixed_variant": "#584329",
+            "on_surface": "#1b1c19",
+            "on_surface_variant": "#424843",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#8194a7",
+            "on_tertiary_fixed": "#081d2c",
+            "on_tertiary_fixed_variant": "#364959",
+            "outline": "#737973",
+            "outline_variant": "#c2c8c2",
+            "primary": "#051a0f",
+            "primary_container": "#1a2f23",
+            "primary_fixed": "#d0e9d6",
+            "primary_fixed_dim": "#b4ccbb",
+            "secondary": "#715a3e",
+            "secondary_container": "#fdddb9",
+            "secondary_fixed": "#fdddb9",
+            "secondary_fixed_dim": "#e0c29f",
+            "surface": "#fbf9f4",
+            "surface_bright": "#fbf9f4",
+            "surface_container": "#f0eee9",
+            "surface_container_high": "#eae8e3",
+            "surface_container_highest": "#e4e2dd",
+            "surface_container_low": "#f5f3ee",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dbdad5",
+            "surface_tint": "#4d6355",
+            "surface_variant": "#e4e2dd",
+            "tertiary": "#041827",
+            "tertiary_container": "#1a2d3c",
+            "tertiary_fixed": "#d1e5f9",
+            "tertiary_fixed_dim": "#b5c9dd"
+          },
+          "overrideNeutralColor": "#f9f7f2",
+          "overridePrimaryColor": "#1a2f23",
+          "overrideSecondaryColor": "#8c7355",
+          "overrideTertiaryColor": "#4a5d6e",
+          "roundness": "ROUND_FOUR",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "32px",
+            "margin-desktop": "64px",
+            "margin-mobile": "24px",
+            "stack-lg": "80px",
+            "stack-md": "48px",
+            "stack-sm": "24px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "letterSpacing": "0.02em",
+              "lineHeight": "24px"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "64px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "72px"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "48px"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "40px"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "32px"
+            },
+            "label-caps": {
+              "fontFamily": "Montserrat",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.15em",
+              "lineHeight": "16px"
+            }
+          }
+        }
+      },
+      "name": "assets/c1d4365075364dfc8504c65150013739",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Northland Boarding",
+              "styleGuidelines": "## Brand & Style\n\nThis design system embodies the \"Northwoods Premium\" aesthetic—a sophisticated intersection of rugged natural textures and high-end editorial clarity. Designed for a luxury pet boarding facility in Duluth, the brand personality is quiet, authoritative, and deeply rooted in the landscape. \n\nThe visual style leans into **Minimalism** with an **Editorial** edge. It utilizes generous whitespace to convey a sense of calm and safety, while incorporating organic textures through high-contrast, slightly grainy photography. The UI should evoke the feeling of a premium outdoor lifestyle magazine: structured yet breathable, professional yet warm.\n\n**Key Visual Pillars:**\n- **Asymmetry:** Layouts should feel intentional and curated, breaking standard grid patterns to mimic the unpredictability of nature.\n- **Topographic Detail:** Subtle vector line work representing the Duluth terrain should be used as background overlays (opacity 5-10%) to add depth.\n- **Photography:** Imagery should feature moody, natural lighting with high contrast and a fine-film grain. Subjects (pets) should be captured in \"heroic\" or serene poses within the Northland environment.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) but transitions to a fluid, spacious model on smaller screens. \n\n- **Generous Margins:** Desktop layouts utilize a 64px outer margin to frame content, reinforcing the editorial \"magazine\" aesthetic.\n- **The \"Breath\" Rule:** Vertical rhythm is intentionally loose. Sections should be separated by `stack-lg` (80px) to prevent the UI from feeling cluttered or \"discount.\"\n- **Asymmetric Offsets:** Content blocks (like image and text pairings) should often be offset by 1-2 columns to create a dynamic, modern visual flow rather than a perfectly symmetrical split.\n\n## Elevation & Depth\n\nTo maintain the \"Rugged Elegance\" theme, depth is achieved through **Tonal Layers** and **Low-Contrast Outlines** rather than heavy shadows.\n\n- **Surface Tiers:** Use subtle shifts between `Cream (#F9F7F2)` and a very light tint of `Frosted Slate` to define separate content areas.\n- **Ghost Borders:** Cards and containers should use a 1px solid border in a low-opacity `Frosted Slate` (#4A5D6E at 20%) to provide structure without adding weight.\n- **Textural Depth:** Depth is primarily communicated through layering typography over background textures (topographic lines) or high-contrast imagery, creating a physical sense of \"stacking.\"\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Deep Forest Green` with `Cream` text in `label-caps`. They should have a 1px border of the same color to ensure crispness. Secondary buttons are \"Ghost\" style: `Deep Forest Green` borders with no fill.\n- **Cards:** Use a 1px `Frosted Slate` (low opacity) border. Avoid shadows. The background should be the same as the page (`Cream`) or slightly off-set.\n- **Input Fields:** Minimalist design with only a bottom border (2px) in `Frosted Slate`, transitioning to `Warm Earth` on focus. This mimics a high-end stationary or registration form.\n- **Chips/Badges:** Use `Warm Earth` backgrounds with `Cream` text for status indicators (e.g., \"Available,\" \"Luxury Suite\").\n- **Booking Progress:** Use a custom-styled thin line with small circular nodes, utilizing `Frosted Slate` for inactive and `Deep Forest Green` for active steps.\n- **Image Treatments:** All hero images should feature a 1-2% grain overlay and a slight vignette to pull the focus toward the center, enhancing the \"moody Northwoods\" atmosphere.",
+              "theme": {
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1a2f23",
+                "designMd": "---\nname: Northland Boarding\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#424843'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#737973'\n  outline-variant: '#c2c8c2'\n  surface-tint: '#4d6355'\n  primary: '#051a0f'\n  on-primary: '#ffffff'\n  primary-container: '#1a2f23'\n  on-primary-container: '#809787'\n  inverse-primary: '#b4ccbb'\n  secondary: '#715a3e'\n  on-secondary: '#ffffff'\n  secondary-container: '#fdddb9'\n  on-secondary-container: '#786044'\n  tertiary: '#041827'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a2d3c'\n  on-tertiary-container: '#8194a7'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d6'\n  primary-fixed-dim: '#b4ccbb'\n  on-primary-fixed: '#0a2014'\n  on-primary-fixed-variant: '#364c3e'\n  secondary-fixed: '#fdddb9'\n  secondary-fixed-dim: '#e0c29f'\n  on-secondary-fixed: '#281803'\n  on-secondary-fixed-variant: '#584329'\n  tertiary-fixed: '#d1e5f9'\n  tertiary-fixed-dim: '#b5c9dd'\n  on-tertiary-fixed: '#081d2c'\n  on-tertiary-fixed-variant: '#364959'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  stack-lg: 80px\n  stack-md: 48px\n  stack-sm: 24px\n---\n\n## Brand & Style\n\nThis design system embodies the \"Northwoods Premium\" aesthetic—a sophisticated intersection of rugged natural textures and high-end editorial clarity. Designed for a luxury pet boarding facility in Duluth, the brand personality is quiet, authoritative, and deeply rooted in the landscape. \n\nThe visual style leans into **Minimalism** with an **Editorial** edge. It utilizes generous whitespace to convey a sense of calm and safety, while incorporating organic textures through high-contrast, slightly grainy photography. The UI should evoke the feeling of a premium outdoor lifestyle magazine: structured yet breathable, professional yet warm.\n\n**Key Visual Pillars:**\n- **Asymmetry:** Layouts should feel intentional and curated, breaking standard grid patterns to mimic the unpredictability of nature.\n- **Topographic Detail:** Subtle vector line work representing the Duluth terrain should be used as background overlays (opacity 5-10%) to add depth.\n- **Photography:** Imagery should feature moody, natural lighting with high contrast and a fine-film grain. Subjects (pets) should be captured in \"heroic\" or serene poses within the Northland environment.\n\n## Colors\n\nThe palette is derived directly from the Minnesota Northwoods—coniferous forests, granite bluffs, and the muted tones of Lake Superior.\n\n- **Deep Forest Green (#1A2F23):** Used for primary headings, navigation backgrounds, and high-impact UI elements. It represents stability and the density of the woods.\n- **Warm Earth (#8C7355):** An accent color used for call-to-action buttons, secondary highlights, and active states. It provides a tactile, grounded warmth.\n- **Frosted Slate (#4A5D6E):** Used for supporting text, borders, and secondary icons. It echoes the cool, atmospheric tones of the lake.\n- **Crisp Cream (#F9F7F2):** The universal canvas. This replaces pure white to soften the visual experience and create a \"premium paper\" feel.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing that balances traditional elegance with modern utility.\n\n- **Headlines (Playfair Display):** Should be set with tight letter-spacing. Use for all major titles and storytelling elements. The high-contrast serifs convey a sense of bespoke service and heritage.\n- **UI & Body (Montserrat):** Set with wider-than-average tracking (letter-spacing) to enhance readability and give a modern, \"airy\" feel. Montserrat's geometric clarity balances the ornate nature of the serif.\n- **Micro-copy:** Use `label-caps` for eyebrows, breadcrumbs, and button labels to create a sophisticated, structural hierarchy.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) but transitions to a fluid, spacious model on smaller screens. \n\n- **Generous Margins:** Desktop layouts utilize a 64px outer margin to frame content, reinforcing the editorial \"magazine\" aesthetic.\n- **The \"Breath\" Rule:** Vertical rhythm is intentionally loose. Sections should be separated by `stack-lg` (80px) to prevent the UI from feeling cluttered or \"discount.\"\n- **Asymmetric Offsets:** Content blocks (like image and text pairings) should often be offset by 1-2 columns to create a dynamic, modern visual flow rather than a perfectly symmetrical split.\n\n## Elevation & Depth\n\nTo maintain the \"Rugged Elegance\" theme, depth is achieved through **Tonal Layers** and **Low-Contrast Outlines** rather than heavy shadows.\n\n- **Surface Tiers:** Use subtle shifts between `Cream (#F9F7F2)` and a very light tint of `Frosted Slate` to define separate content areas.\n- **Ghost Borders:** Cards and containers should use a 1px solid border in a low-opacity `Frosted Slate` (#4A5D6E at 20%) to provide structure without adding weight.\n- **Textural Depth:** Depth is primarily communicated through layering typography over background textures (topographic lines) or high-contrast imagery, creating a physical sense of \"stacking.\"\n\n## Shapes\n\nThe shape language is primarily **Soft (0.25rem)**. While the brand is premium, it must remain approachable and pet-friendly. \n\n- **Primary Radius:** Use a subtle 4px radius for buttons and input fields to take the \"edge\" off while maintaining a professional, structured appearance.\n- **Large Components:** Images and cards can occasionally use a `rounded-lg` (8px) if they contain softer lifestyle content, but sharp 0px corners are preferred for hero image containers to maintain the editorial look.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Deep Forest Green` with `Cream` text in `label-caps`. They should have a 1px border of the same color to ensure crispness. Secondary buttons are \"Ghost\" style: `Deep Forest Green` borders with no fill.\n- **Cards:** Use a 1px `Frosted Slate` (low opacity) border. Avoid shadows. The background should be the same as the page (`Cream`) or slightly off-set.\n- **Input Fields:** Minimalist design with only a bottom border (2px) in `Frosted Slate`, transitioning to `Warm Earth` on focus. This mimics a high-end stationary or registration form.\n- **Chips/Badges:** Use `Warm Earth` backgrounds with `Cream` text for status indicators (e.g., \"Available,\" \"Luxury Suite\").\n- **Booking Progress:** Use a custom-styled thin line with small circular nodes, utilizing `Frosted Slate` for inactive and `Deep Forest Green` for active steps.\n- **Image Treatments:** All hero images should feature a 1-2% grain overlay and a slight vignette to pull the focus toward the center, enhancing the \"moody Northwoods\" atmosphere.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
+                "namedColors": {
+                  "background": "#fbf9f4",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f2f1ec",
+                  "inverse_primary": "#b4ccbb",
+                  "inverse_surface": "#30312e",
+                  "on_background": "#1b1c19",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#809787",
+                  "on_primary_fixed": "#0a2014",
+                  "on_primary_fixed_variant": "#364c3e",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#786044",
+                  "on_secondary_fixed": "#281803",
+                  "on_secondary_fixed_variant": "#584329",
+                  "on_surface": "#1b1c19",
+                  "on_surface_variant": "#424843",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#8194a7",
+                  "on_tertiary_fixed": "#081d2c",
+                  "on_tertiary_fixed_variant": "#364959",
+                  "outline": "#737973",
+                  "outline_variant": "#c2c8c2",
+                  "primary": "#051a0f",
+                  "primary_container": "#1a2f23",
+                  "primary_fixed": "#d0e9d6",
+                  "primary_fixed_dim": "#b4ccbb",
+                  "secondary": "#715a3e",
+                  "secondary_container": "#fdddb9",
+                  "secondary_fixed": "#fdddb9",
+                  "secondary_fixed_dim": "#e0c29f",
+                  "surface": "#fbf9f4",
+                  "surface_bright": "#fbf9f4",
+                  "surface_container": "#f0eee9",
+                  "surface_container_high": "#eae8e3",
+                  "surface_container_highest": "#e4e2dd",
+                  "surface_container_low": "#f5f3ee",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dbdad5",
+                  "surface_tint": "#4d6355",
+                  "surface_variant": "#e4e2dd",
+                  "tertiary": "#041827",
+                  "tertiary_container": "#1a2d3c",
+                  "tertiary_fixed": "#d1e5f9",
+                  "tertiary_fixed_dim": "#b5c9dd"
+                },
+                "overrideNeutralColor": "#f9f7f2",
+                "overridePrimaryColor": "#1a2f23",
+                "overrideSecondaryColor": "#8c7355",
+                "overrideTertiaryColor": "#4a5d6e",
+                "roundness": "ROUND_FOUR",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "32px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "24px",
+                  "stack-lg": "80px",
+                  "stack-md": "48px",
+                  "stack-sm": "24px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "24px"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "64px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "72px"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "40px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "48px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "40px"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "32px"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "16px"
+                  }
+                }
+              }
+            },
+            "name": "assets/c1d4365075364dfc8504c65150013739",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "11638",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzU0YzA2NmI0ZGY4ZDQyMmQ4NDJiOTZmODI0MDgwZWNhEgsSBxCuyafx8hkYAZIBIwoKcHJvamVjdF9pZBIVQhMxMTg5MjA3MjM0MTEwNzQ2MDkx&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/1189207234110746091/files/f7fe132550044012b3a4129a52d30f2d"
+          },
+          "id": "f3eddf2d377f4433b3d7d36aa88dded8",
+          "name": "projects/1189207234110746091/screens/f3eddf2d377f4433b3d7d36aa88dded8",
+          "prompt": "A bespoke, premium landing page for Northland Boarding. \nLayout: Editorial, asymmetrical, with heavy use of whitespace and strong typographic hierarchy. \nSections: \n1. Header: Minimalist with phone number and email prominently featured. \n2. Hero: Immersive and moody, featuring a high-quality photo of a happy dog in a snowy or forest setting. Headline: \"A Second Home as Rugged and Refined as the North.\" \n3. Credibility: A minimalist \"Trust\" section with three unique icons (e.g., \"Vet-Vetted Safety,\" \"24/7 Duluth Care,\" \"Spacious Wooded Suites\"). \n4. Services: Two large, high-impact blocks for \"Canine Suites\" and \"Feline Retreat,\" using overlapping images and text for an editorial feel. \n5. About: \"The Northland Standard\" — a story-driven section about their Duluth roots and commitment to pet wellness. \n6. Visit: A clean, minimalist section featuring the contact address and the specific map slot: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`. \n7. Contact: A refined, simple form with custom styling for inputs and a clear call-to-action. \n8. Footer: Complete with copyright and contact info. \nVisual Identity: Deep forest greens, slate grays, and warm earth tones. No generic card grids. Use thin rule lines and topographic motifs for texture.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsEdHWsgn-AJUjHpe9hpDu5aGmAxDndlRWEZ7SujnexOsDiHojurxFO5RPbrSE3vz0e8h9l-8gWE2u1JjtCxNDceq333JQWIOAt7eEPt4NXuYoDFQqdadN8rdG50P1VuUulznhwjwxJoUMx2pwIcjJO_MqplERX60xWhQm47wLz3jTWRAwu15yE7o7NqNBxHAzZy5UsjUJ9bI6SSJyKO6_DhtZVTJJaVtp9SfnuUTAqo9Q3rEaScXnjxIs",
+            "name": "projects/1189207234110746091/files/aa47128b1f45496e8e5e0e2d7d123cba"
+          },
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a2f23",
+            "designMd": "---\nname: Northland Boarding\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#424843'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#737973'\n  outline-variant: '#c2c8c2'\n  surface-tint: '#4d6355'\n  primary: '#051a0f'\n  on-primary: '#ffffff'\n  primary-container: '#1a2f23'\n  on-primary-container: '#809787'\n  inverse-primary: '#b4ccbb'\n  secondary: '#715a3e'\n  on-secondary: '#ffffff'\n  secondary-container: '#fdddb9'\n  on-secondary-container: '#786044'\n  tertiary: '#041827'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a2d3c'\n  on-tertiary-container: '#8194a7'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d6'\n  primary-fixed-dim: '#b4ccbb'\n  on-primary-fixed: '#0a2014'\n  on-primary-fixed-variant: '#364c3e'\n  secondary-fixed: '#fdddb9'\n  secondary-fixed-dim: '#e0c29f'\n  on-secondary-fixed: '#281803'\n  on-secondary-fixed-variant: '#584329'\n  tertiary-fixed: '#d1e5f9'\n  tertiary-fixed-dim: '#b5c9dd'\n  on-tertiary-fixed: '#081d2c'\n  on-tertiary-fixed-variant: '#364959'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.02em\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  stack-lg: 80px\n  stack-md: 48px\n  stack-sm: 24px\n---\n\n## Brand & Style\n\nThis design system embodies the \"Northwoods Premium\" aesthetic—a sophisticated intersection of rugged natural textures and high-end editorial clarity. Designed for a luxury pet boarding facility in Duluth, the brand personality is quiet, authoritative, and deeply rooted in the landscape. \n\nThe visual style leans into **Minimalism** with an **Editorial** edge. It utilizes generous whitespace to convey a sense of calm and safety, while incorporating organic textures through high-contrast, slightly grainy photography. The UI should evoke the feeling of a premium outdoor lifestyle magazine: structured yet breathable, professional yet warm.\n\n**Key Visual Pillars:**\n- **Asymmetry:** Layouts should feel intentional and curated, breaking standard grid patterns to mimic the unpredictability of nature.\n- **Topographic Detail:** Subtle vector line work representing the Duluth terrain should be used as background overlays (opacity 5-10%) to add depth.\n- **Photography:** Imagery should feature moody, natural lighting with high contrast and a fine-film grain. Subjects (pets) should be captured in \"heroic\" or serene poses within the Northland environment.\n\n## Colors\n\nThe palette is derived directly from the Minnesota Northwoods—coniferous forests, granite bluffs, and the muted tones of Lake Superior.\n\n- **Deep Forest Green (#1A2F23):** Used for primary headings, navigation backgrounds, and high-impact UI elements. It represents stability and the density of the woods.\n- **Warm Earth (#8C7355):** An accent color used for call-to-action buttons, secondary highlights, and active states. It provides a tactile, grounded warmth.\n- **Frosted Slate (#4A5D6E):** Used for supporting text, borders, and secondary icons. It echoes the cool, atmospheric tones of the lake.\n- **Crisp Cream (#F9F7F2):** The universal canvas. This replaces pure white to soften the visual experience and create a \"premium paper\" feel.\n\n## Typography\n\nThe typography system relies on a high-contrast pairing that balances traditional elegance with modern utility.\n\n- **Headlines (Playfair Display):** Should be set with tight letter-spacing. Use for all major titles and storytelling elements. The high-contrast serifs convey a sense of bespoke service and heritage.\n- **UI & Body (Montserrat):** Set with wider-than-average tracking (letter-spacing) to enhance readability and give a modern, \"airy\" feel. Montserrat's geometric clarity balances the ornate nature of the serif.\n- **Micro-copy:** Use `label-caps` for eyebrows, breadcrumbs, and button labels to create a sophisticated, structural hierarchy.\n\n## Layout & Spacing\n\nThe layout philosophy follows a **Fixed Grid** on desktop (12 columns) but transitions to a fluid, spacious model on smaller screens. \n\n- **Generous Margins:** Desktop layouts utilize a 64px outer margin to frame content, reinforcing the editorial \"magazine\" aesthetic.\n- **The \"Breath\" Rule:** Vertical rhythm is intentionally loose. Sections should be separated by `stack-lg` (80px) to prevent the UI from feeling cluttered or \"discount.\"\n- **Asymmetric Offsets:** Content blocks (like image and text pairings) should often be offset by 1-2 columns to create a dynamic, modern visual flow rather than a perfectly symmetrical split.\n\n## Elevation & Depth\n\nTo maintain the \"Rugged Elegance\" theme, depth is achieved through **Tonal Layers** and **Low-Contrast Outlines** rather than heavy shadows.\n\n- **Surface Tiers:** Use subtle shifts between `Cream (#F9F7F2)` and a very light tint of `Frosted Slate` to define separate content areas.\n- **Ghost Borders:** Cards and containers should use a 1px solid border in a low-opacity `Frosted Slate` (#4A5D6E at 20%) to provide structure without adding weight.\n- **Textural Depth:** Depth is primarily communicated through layering typography over background textures (topographic lines) or high-contrast imagery, creating a physical sense of \"stacking.\"\n\n## Shapes\n\nThe shape language is primarily **Soft (0.25rem)**. While the brand is premium, it must remain approachable and pet-friendly. \n\n- **Primary Radius:** Use a subtle 4px radius for buttons and input fields to take the \"edge\" off while maintaining a professional, structured appearance.\n- **Large Components:** Images and cards can occasionally use a `rounded-lg` (8px) if they contain softer lifestyle content, but sharp 0px corners are preferred for hero image containers to maintain the editorial look.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Deep Forest Green` with `Cream` text in `label-caps`. They should have a 1px border of the same color to ensure crispness. Secondary buttons are \"Ghost\" style: `Deep Forest Green` borders with no fill.\n- **Cards:** Use a 1px `Frosted Slate` (low opacity) border. Avoid shadows. The background should be the same as the page (`Cream`) or slightly off-set.\n- **Input Fields:** Minimalist design with only a bottom border (2px) in `Frosted Slate`, transitioning to `Warm Earth` on focus. This mimics a high-end stationary or registration form.\n- **Chips/Badges:** Use `Warm Earth` backgrounds with `Cream` text for status indicators (e.g., \"Available,\" \"Luxury Suite\").\n- **Booking Progress:** Use a custom-styled thin line with small circular nodes, utilizing `Frosted Slate` for inactive and `Deep Forest Green` for active steps.\n- **Image Treatments:** All hero images should feature a 1-2% grain overlay and a slight vignette to pull the focus toward the center, enhancing the \"moody Northwoods\" atmosphere.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fbf9f4",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f1ec",
+              "inverse_primary": "#b4ccbb",
+              "inverse_surface": "#30312e",
+              "on_background": "#1b1c19",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#809787",
+              "on_primary_fixed": "#0a2014",
+              "on_primary_fixed_variant": "#364c3e",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#786044",
+              "on_secondary_fixed": "#281803",
+              "on_secondary_fixed_variant": "#584329",
+              "on_surface": "#1b1c19",
+              "on_surface_variant": "#424843",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#8194a7",
+              "on_tertiary_fixed": "#081d2c",
+              "on_tertiary_fixed_variant": "#364959",
+              "outline": "#737973",
+              "outline_variant": "#c2c8c2",
+              "primary": "#051a0f",
+              "primary_container": "#1a2f23",
+              "primary_fixed": "#d0e9d6",
+              "primary_fixed_dim": "#b4ccbb",
+              "secondary": "#715a3e",
+              "secondary_container": "#fdddb9",
+              "secondary_fixed": "#fdddb9",
+              "secondary_fixed_dim": "#e0c29f",
+              "surface": "#fbf9f4",
+              "surface_bright": "#fbf9f4",
+              "surface_container": "#f0eee9",
+              "surface_container_high": "#eae8e3",
+              "surface_container_highest": "#e4e2dd",
+              "surface_container_low": "#f5f3ee",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbdad5",
+              "surface_tint": "#4d6355",
+              "surface_variant": "#e4e2dd",
+              "tertiary": "#041827",
+              "tertiary_container": "#1a2d3c",
+              "tertiary_fixed": "#d1e5f9",
+              "tertiary_fixed_dim": "#b5c9dd"
+            },
+            "overrideNeutralColor": "#f9f7f2",
+            "overridePrimaryColor": "#1a2f23",
+            "overrideSecondaryColor": "#8c7355",
+            "overrideTertiaryColor": "#4a5d6e",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "stack-lg": "80px",
+              "stack-md": "48px",
+              "stack-sm": "24px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "24px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "72px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "48px"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "32px"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "16px"
+              }
+            }
+          },
+          "title": "Northland Boarding | Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, editorial-grade homepage for Northland Boarding that moves away from generic local business templates in favor of a \"Rugged Elegance\" aesthetic.\n\n### Design Rationale:\n- **Visual Identity:** I established a premium \"Northwoods\" palette of Forest Green, Frosted Slate, and Warm Earth tones. This is paired with high-contrast serif typography for an editorial, high-end feel.\n- **Asymmetrical Layout:** The design uses intentional whitespace and overlapping elements (specifically in the Canine and Feline sections) to create a unique flow that feels designed rather than assembled.\n- **Visual Motifs:** I used thin rule lines and a moody, immersive hero section to reflect the Duluth landscape and the business's premium positioning.\n- **Functionality:** The site includes the requested #visit section with the dedicated map slot, a story-driven \"Northland Standard\" section for credibility, and a refined contact form.\n\nThe code is fully semantic, responsive, and ready for production use. You can see the full layout on the canvas."
+  },
+  {
+    "suggestion": "Make the color palette moodier (darker)"
+  },
+  {
+    "suggestion": "Add subtle scroll animations to the text blocks"
+  },
+  {
+    "suggestion": "Explore a version with more topographic textures"
+  }
+]
