@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Mobile Pet Spa | Sophisticated Grooming</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#004d64",
+                    "on-secondary-fixed": "#14124d",
+                    "on-tertiary-fixed": "#001f2a",
+                    "error-container": "#ffdad6",
+                    "primary-fixed": "#e1e0ff",
+                    "on-secondary-fixed-variant": "#40407b",
+                    "primary": "#020229",
+                    "tertiary-fixed": "#bde9ff",
+                    "on-surface": "#1b1c19",
+                    "on-primary-container": "#8283af",
+                    "on-primary-fixed": "#16173d",
+                    "secondary": "#585894",
+                    "on-tertiary-container": "#0092bb",
+                    "secondary-fixed-dim": "#c2c1ff",
+                    "surface": "#faf9f4",
+                    "secondary-container": "#bbbbfe",
+                    "primary-fixed-dim": "#c2c2f2",
+                    "tertiary-fixed-dim": "#68d3ff",
+                    "inverse-surface": "#30312e",
+                    "surface-container-high": "#e9e8e3",
+                    "primary-container": "#1a1b41",
+                    "surface-variant": "#e3e3de",
+                    "tertiary-container": "#00232f",
+                    "surface-container": "#efeee9",
+                    "secondary-fixed": "#e2dfff",
+                    "inverse-primary": "#c2c2f2",
+                    "surface-container-lowest": "#ffffff",
+                    "error": "#ba1a1a",
+                    "surface-dim": "#dbdad5",
+                    "surface-container-low": "#f5f4ef",
+                    "surface-bright": "#faf9f4",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#47464e",
+                    "surface-tint": "#5a5b84",
+                    "on-error-container": "#93000a",
+                    "outline-variant": "#c8c5cf",
+                    "inverse-on-surface": "#f2f1ec",
+                    "surface-container-highest": "#e3e3de",
+                    "on-primary-fixed-variant": "#42436b",
+                    "on-secondary-container": "#494983",
+                    "outline": "#77767f",
+                    "on-background": "#1b1c19",
+                    "tertiary": "#00090e",
+                    "on-error": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "background": "#faf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "gutter": "32px",
+                    "section-gap": "128px",
+                    "unit": "8px",
+                    "margin-mobile": "24px",
+                    "container-max": "1200px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "label-sm": ["Inter"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "body-md": ["Inter"],
+                    "display-lg": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "500"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "display-lg-mobile": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        :root {
+            --deep-indigo: #020229;
+            --soft-cream: #faf9f4;
+            --bubble: #68d3ff;
+        }
+        .bubble-mask {
+            clip-path: ellipse(45% 48% at 50% 50%);
+            transition: clip-path 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .bubble-mask:hover {
+            clip-path: ellipse(50% 50% at 50% 50%);
+        }
+        .editorial-line {
+            height: 1px;
+            background: linear-gradient(90deg, rgba(2,2,41,0.2) 0%, rgba(2,2,41,0) 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-primary selection:bg-tertiary-fixed-dim selection:text-primary overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-md border-b border-primary/10 transition-all duration-300">
+<div class="flex justify-between items-center w-full px-margin-desktop py-6 max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-primary italic cursor-pointer active:scale-95 transition-transform">
+                The Mobile Pet Spa
+            </div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-md text-label-md uppercase tracking-wider text-primary border-b-2 border-tertiary-fixed-dim pb-1 transition-all" href="#services">Services</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors" href="#">Portfolio</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors" href="#">The Spa</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary hover:text-primary transition-colors" href="#contact">Contact</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-md text-label-md uppercase tracking-wider text-secondary transition-opacity hover:opacity-80" href="tel:7244226567">Call (724) 422-6567</a>
+<button class="bg-primary-container text-on-primary font-label-md text-label-md uppercase tracking-wider px-8 py-3 rounded-lg hover:opacity-80 active:scale-95 transition-all">
+                    Book Now
+                </button>
+</div>
+</div>
+</header>
+<main class="pt-32">
+<!-- Hero Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 z-10">
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-8 leading-tight">
+                        Sophisticated Grooming, <span class="italic font-light">Delivered</span> to Your Door.
+                    </h1>
+<p class="font-body-lg text-body-lg text-secondary mb-10 max-w-lg">
+                        Elevating the standard of mobile care through meticulous artistry and stress-free environments for your discerning companions.
+                    </p>
+<div class="flex gap-4">
+<button class="bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider px-10 py-4 rounded-lg hover:opacity-90 transition-all">
+                            Explore Services
+                        </button>
+</div>
+</div>
+<div class="md:col-span-6 relative flex justify-end">
+<div class="w-full h-[600px] bg-surface-container-high bubble-mask overflow-hidden relative group">
+<img alt="Luxury pet grooming" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A highly professional close-up shot of a well-groomed, pristine white Samoyed dog receiving a gentle finishing touch from a groomer. The setting is a bright, airy, and high-end mobile spa interior with soft cream walls and minimalist decor. The lighting is ethereal and soft, reflecting a premium editorial fashion aesthetic with high-key whites and deep indigo accents. The mood is calm, luxurious, and sophisticated." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpslGZN5_1U7XumK_qL1QK5GiWHenBVUyOYYFgdisJHc6w6dZu32EBOYxHTvSQ8KnEEU2G1iet3Zl4HxiP84aLVkkmpEmBTO2p6CgCJM3ZO4VTIF7IPIXv5Qs2ZyLY4DRIrOGLOb5XLNhaeu-n0kIcNgVnQe0aLY-47jyw-6mHNCvAHTCbh--qqIe6kjbfkGrgO033pJquuYhfVNLJtPnRVxg2WWAW6OKQu3IT3SiYorEGkaiY9eEX1CJvDlVyjT2m7lT_LaWhXcEa"/>
+</div>
+<!-- Decorative Bubble -->
+<div class="absolute -bottom-8 -left-8 w-32 h-32 rounded-full border border-primary/20 animate-pulse"></div>
+</div>
+</div>
+</section>
+<!-- Credibility Bar -->
+<section class="bg-surface-container-low py-12 border-y border-primary/5 mb-section-gap overflow-hidden">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="text-center md:text-left">
+<span class="font-headline-md text-headline-md block">500+</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary opacity-60">Pampered Pets</span>
+</div>
+<div class="h-12 w-px bg-primary/10 hidden md:block"></div>
+<div class="text-center md:text-left">
+<span class="font-headline-md text-headline-md block">#1 Ranked</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary opacity-60">Mobile Spa in Johnstown</span>
+</div>
+<div class="h-12 w-px bg-primary/10 hidden md:block"></div>
+<div class="text-center md:text-left">
+<span class="font-headline-md text-headline-md block">Precision</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary opacity-60">Artisan Grooming Care</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-6">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-6">Curated Services</h2>
+<p class="font-body-md text-body-md text-secondary">Our menu of services is designed to cater to the specific physical and aesthetic needs of luxury pet owners.</p>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-widest text-secondary mb-2">(01—04)</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-24 gap-y-16">
+<!-- Service 1 -->
+<div class="group cursor-pointer">
+<div class="editorial-line mb-8"></div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md group-hover:italic transition-all">Signature Baths</h3>
+<span class="material-symbols-outlined text-tertiary-fixed-dim transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-6">Organic, sulfate-free botanicals tailored to coat type and skin sensitivity.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Botanical</span>
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">pH Balanced</span>
+</div>
+</div>
+<!-- Service 2 -->
+<div class="group cursor-pointer md:mt-24">
+<div class="editorial-line mb-8"></div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md group-hover:italic transition-all">Precision Trims</h3>
+<span class="material-symbols-outlined text-tertiary-fixed-dim transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-6">Expert hand-scissoring and breed-standard styling by certified artisans.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Hand Scissor</span>
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Artisan</span>
+</div>
+</div>
+<!-- Service 3 -->
+<div class="group cursor-pointer">
+<div class="editorial-line mb-8"></div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md group-hover:italic transition-all">De-Shedding</h3>
+<span class="material-symbols-outlined text-tertiary-fixed-dim transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-6">Advanced undercoat removal treatments to maintain a healthy, breathable coat.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Low Shed</span>
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Health First</span>
+</div>
+</div>
+<!-- Service 4 -->
+<div class="group cursor-pointer md:mt-24">
+<div class="editorial-line mb-8"></div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md group-hover:italic transition-all">Luxury Paw-dicures</h3>
+<span class="material-symbols-outlined text-tertiary-fixed-dim transition-transform group-hover:translate-x-2">arrow_forward</span>
+</div>
+<p class="font-body-md text-body-md text-secondary mb-6">Nail filing, pad moisturizing, and therapeutic massage for tired paws.</p>
+<div class="flex flex-wrap gap-2">
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Moisturizing</span>
+<span class="px-4 py-1 rounded-full border border-primary/10 font-label-sm text-label-sm uppercase">Therapeutic</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container py-section-gap overflow-hidden mb-section-gap">
+<div class="px-margin-desktop max-w-container-max mx-auto relative">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 relative order-2 md:order-1">
+<div class="w-full aspect-square md:aspect-[4/5] bubble-mask overflow-hidden border border-primary/5">
+<img alt="Grooming van interior" class="w-full h-full object-cover" data-alt="An interior shot of an ultra-modern, high-end mobile pet grooming van. The interior features sleek, minimalist white cabinetry, stainless steel high-efficiency tubs, and soft LED ambient lighting. The space looks immaculate, serene, and incredibly clean, resembling a luxury human spa. A small, fluffy dog is visible resting comfortably on a padded surface, conveying a sense of stress-free one-on-one care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB0Qi5pNjpVx4aoaOgcNvIADB-Yu6b0HEycHBSdSylZNoGVFmWL55JIvsKeSBT7UQV9FnPlyJg2fIkZvgIvMX35d1FlqbNhju3K422XT-J6PSA2nxDeijHkiETw7wjwAuSGDFERIN5qYEAocj81PqTHcjcB09Ka7DnmGVUS1S2mzVylB2PkTyeNldwEL2J7ZqQW9pyhPar8iaoTieIgThYzfbwQDAl3eUQimkRgBpzczxuFDxuFhtOIIlXcbxudOnLt8-7uMpsemxxO"/>
+</div>
+</div>
+<div class="md:col-span-7 md:pl-20 order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">The Spa Experience</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-primary">At The Mobile Pet Spa, we believe grooming shouldn't be a source of stress for your companion.</p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">Our commitment to one-on-one care ensures that your pet receives our undivided attention in a calm, crate-free environment. Operating directly from our studio-on-wheels based at 132 Stewart Run Rd, we eliminate the anxiety of travel and the noise of a busy shop.</p>
+<p class="font-body-md text-body-md text-secondary leading-relaxed">Every session is treated as an art form—combining technical precision with a deep understanding of animal behavior to create a restorative experience.</p>
+<div class="pt-8 flex items-center gap-4 group cursor-pointer">
+<div class="w-12 h-12 rounded-full border border-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-all">
+<span class="material-symbols-outlined">play_arrow</span>
+</div>
+<span class="font-label-md text-label-md uppercase tracking-widest">Our Philosophy</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit & Map Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+<div class="order-2 md:order-1">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] rounded-lg border border-primary/10" data-location="Johnstown, United States" data-map-slot="" style="">
+<!-- Map placeholder behavior -->
+<div class="absolute inset-0 bg-surface-container-high flex items-center justify-center">
+<div class="text-center">
+<span class="material-symbols-outlined text-4xl mb-4 text-primary/30">location_on</span>
+<p class="font-label-md text-label-md uppercase tracking-widest text-secondary opacity-60">Interactive Map View</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:pl-12 order-1 md:order-2">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-8">Located in Johnstown</h2>
+<p class="font-body-lg text-body-lg mb-8">Serving discerning pets throughout the region from our hub.</p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">pin_drop</span>
+<div>
+<h4 class="font-label-md text-label-md uppercase mb-1">Our Base</h4>
+<p class="font-body-md text-body-md text-secondary">132 Stewart Run Rd, Johnstown,<br/>United States</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-fixed-dim">schedule</span>
+<div>
+<h4 class="font-label-md text-label-md uppercase mb-1">Hours of Service</h4>
+<p class="font-body-md text-body-md text-secondary">Mon — Fri: 8:00am — 6:00pm<br/>Sat: 9:00am — 4:00pm</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="px-margin-desktop max-w-container-max mx-auto mb-section-gap" id="contact">
+<div class="max-w-4xl mx-auto border border-primary/5 p-12 md:p-20 relative overflow-hidden">
+<!-- Decorative Bubble -->
+<div class="absolute -top-10 -right-10 w-40 h-40 bg-surface-container-high rounded-full -z-10 opacity-50"></div>
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg-mobile md:text-headline-lg mb-4">Book Your Consultation</h2>
+<p class="font-body-md text-body-md text-secondary">Provide a few details and we will contact you to curate your pet's perfect day.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8" id="spaForm" onsubmit="return validateForm(event)">
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-secondary">Your Name</label>
+<input class="bg-transparent border-0 border-b border-primary/20 focus:ring-0 focus:border-tertiary-fixed-dim transition-all py-3 px-0 font-body-md" placeholder="Pet Parent" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-secondary">Pet Name &amp; Breed</label>
+<input class="bg-transparent border-0 border-b border-primary/20 focus:ring-0 focus:border-tertiary-fixed-dim transition-all py-3 px-0 font-body-md" placeholder="e.g. Luna, Goldendoodle" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-secondary">Phone Number</label>
+<input class="bg-transparent border-0 border-b border-primary/20 focus:ring-0 focus:border-tertiary-fixed-dim transition-all py-3 px-0 font-body-md" placeholder="(724) 422-6567" required="" type="tel"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-secondary">Email Address</label>
+<input class="bg-transparent border-0 border-b border-primary/20 focus:ring-0 focus:border-tertiary-fixed-dim transition-all py-3 px-0 font-body-md" placeholder="themobilepetspa@yahoo.com" required="" type="email"/>
+</div>
+<div class="md:col-span-2 flex flex-col gap-2">
+<label class="font-label-md text-label-md uppercase text-secondary">Special Requests</label>
+<textarea class="bg-transparent border-0 border-b border-primary/20 focus:ring-0 focus:border-tertiary-fixed-dim transition-all py-3 px-0 font-body-md" placeholder="Allergies, behavior notes, or specific styles..." rows="3"></textarea>
+</div>
+<div class="md:col-span-2 pt-8 text-center">
+<button class="bg-primary text-on-primary font-label-md text-label-md uppercase tracking-wider px-16 py-5 rounded-lg hover:opacity-90 active:scale-95 transition-all" type="submit">
+                            Send Request
+                        </button>
+<p class="hidden mt-4 text-secondary font-label-md uppercase tracking-widest animate-pulse" id="successMessage">Request Sent. We'll contact you shortly.</p>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface border-t border-primary/5">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-margin-desktop py-section-gap max-w-container-max mx-auto gap-12">
+<div class="text-center md:text-left">
+<div class="font-headline-lg text-headline-lg text-primary mb-4 italic">The Mobile Pet Spa</div>
+<div class="flex gap-4 justify-center md:justify-start">
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-tertiary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-tertiary-fixed-dim transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+</div>
+</div>
+<div class="flex flex-wrap justify-center gap-x-12 gap-y-6">
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase text-primary font-semibold mb-2">Connect</span>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-tertiary-fixed-dim transition-colors underline decoration-2 underline-offset-4" href="tel:7244226567">(724) 422-6567</a>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-tertiary-fixed-dim transition-colors underline decoration-2 underline-offset-4" href="mailto:themobilepetspa@yahoo.com">themobilepetspa@yahoo.com</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase text-primary font-semibold mb-2">Policies</span>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-tertiary-fixed-dim transition-colors underline decoration-2 underline-offset-4" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-tertiary-fixed-dim transition-colors underline decoration-2 underline-offset-4" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md uppercase text-primary font-semibold mb-2">Company</span>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-tertiary-fixed-dim transition-colors underline decoration-2 underline-offset-4" href="#">Service Areas</a>
+<a class="font-body-md text-body-md text-secondary-fixed-variant hover:text-tertiary-fixed-dim transition-colors underline decoration-2 underline-offset-4" href="#">Careers</a>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-primary/5 text-center">
+<p class="font-body-md text-body-md text-secondary-fixed-variant opacity-60">© 2024 The Mobile Pet Spa. All rights reserved. Sophisticated Care for Discerning Companions.</p>
+</div>
+</footer>
+<script>
+        function validateForm(e) {
+            e.preventDefault();
+            const success = document.getElementById('successMessage');
+            success.classList.remove('hidden');
+            e.target.reset();
+            setTimeout(() => {
+                success.classList.add('hidden');
+            }, 5000);
+            return false;
+        }
+
+        // Simple scroll parallax for bubble masks
+        window.addEventListener('scroll', () => {
+            const bubbles = document.querySelectorAll('.bubble-mask');
+            bubbles.forEach(bubble => {
+                const speed = 0.1;
+                const rect = bubble.getBoundingClientRect();
+                const visible = rect.top < window.innerHeight && rect.bottom > 0;
+                if (visible) {
+                    const shift = (window.innerHeight - rect.top) * speed;
+                    bubble.style.transform = `translateY(${shift * -0.1}px)`;
+                }
+            });
+        });
+    </script>
+</body></html>
