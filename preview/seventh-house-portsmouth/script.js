@@ -1,48 +1,31 @@
-// Simple Form Validation & Submission
-        const contactForm = document.getElementById('contact-form');
-        const successMessage = document.getElementById('form-success');
-
-        contactForm.addEventListener('submit', (e) => {
+// Micro-interaction for form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
             e.preventDefault();
-            // Simulate submission
-            contactForm.classList.add('opacity-50', 'pointer-events-none');
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Preview only <span class="w-24 h-px bg-on-tertiary-container transition-all"></span>';
             setTimeout(() => {
-                contactForm.reset();
-                contactForm.classList.add('hidden');
-                successMessage.classList.remove('hidden');
-            }, 1000);
+                btn.innerHTML = originalText;
+                this.reset();
+            }, 3000);
         });
 
-        // Image Reveal Observer
-        const observerOptions = {
-            threshold: 0.2
-        };
-
-        const observer = new IntersectionObserver((entries) => {
+        // Smooth reveal on scroll
+        const revealElements = document.querySelectorAll('section');
+        const revealOnScroll = new IntersectionObserver((entries, observer) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.image-reveal').forEach(el => observer.observe(el));
-
-        // Smooth reveal for sections
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
+                    entry.target.classList.add('opacity-100');
                     entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
                 }
             });
         }, { threshold: 0.1 });
 
-        document.querySelectorAll('section').forEach(section => {
-            section.style.opacity = '0';
-            section.style.transform = 'translateY(20px)';
-            section.style.transition = 'all 0.8s ease-out';
-            revealObserver.observe(section);
+        revealElements.forEach(el => {
+            el.classList.add('opacity-0', 'transition-all', 'duration-1000');
+            el.style.transform = 'translateY(20px)';
+            revealOnScroll.observe(el);
         });
 
 (() => {
