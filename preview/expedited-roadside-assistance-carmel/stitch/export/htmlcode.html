@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>EXPEDITED ROADSIDE | Precision Logistics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=Inter:wght@400;500;600&amp;family=Geist:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#2f3131",
+                    "inverse-surface": "#e5e2e1",
+                    "tertiary": "#d2d2d2",
+                    "tertiary-fixed": "#e2e2e2",
+                    "on-primary-fixed-variant": "#604100",
+                    "tertiary-container": "#b6b7b7",
+                    "on-surface-variant": "#d6c4ac",
+                    "on-error": "#690005",
+                    "inverse-primary": "#7f5700",
+                    "on-primary": "#432c00",
+                    "tertiary-fixed-dim": "#c6c6c6",
+                    "on-primary-container": "#614200",
+                    "on-secondary": "#292f48",
+                    "surface-container-highest": "#353534",
+                    "primary-fixed": "#ffdead",
+                    "on-background": "#e5e2e1",
+                    "on-secondary-fixed": "#141a32",
+                    "on-secondary-fixed-variant": "#3f465f",
+                    "on-tertiary-container": "#464848",
+                    "primary": "#ffca74",
+                    "primary-fixed-dim": "#ffba3b",
+                    "secondary": "#bfc5e4",
+                    "error-container": "#93000a",
+                    "outline": "#9e8e79",
+                    "on-tertiary-fixed": "#1a1c1c",
+                    "on-secondary-container": "#b1b7d6",
+                    "background": "#131313",
+                    "primary-container": "#f2a900",
+                    "secondary-fixed-dim": "#bfc5e4",
+                    "outline-variant": "#514533",
+                    "surface-container-low": "#1c1b1b",
+                    "secondary-fixed": "#dce1ff",
+                    "surface-variant": "#353534",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#201f1f",
+                    "on-surface": "#e5e2e1",
+                    "inverse-on-surface": "#313030",
+                    "surface-container-lowest": "#0e0e0e",
+                    "surface-tint": "#ffba3b",
+                    "surface": "#131313",
+                    "surface-dim": "#131313",
+                    "surface-bright": "#393939",
+                    "on-primary-fixed": "#281900",
+                    "surface-container-high": "#2a2a2a",
+                    "secondary-container": "#424862",
+                    "on-tertiary-fixed-variant": "#454747",
+                    "error": "#ffb4ab"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "4px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "container-max": "1440px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Archivo Narrow"],
+                    "label-caps": ["Geist"],
+                    "headline-xl": ["Archivo Narrow"],
+                    "headline-md": ["Archivo Narrow"],
+                    "body-md": ["Inter"],
+                    "mono-data": ["Geist"],
+                    "headline-lg-mobile": ["Archivo Narrow"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "48px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-xl": ["80px", {"lineHeight": "80px", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "mono-data": ["14px", {"lineHeight": "20px", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+        .industrial-grid {
+            background-image: linear-gradient(#1c1b1b 1px, transparent 1px), linear-gradient(90deg, #1c1b1b 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .corner-accent {
+            position: relative;
+        }
+        .corner-accent::before {
+            content: '';
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            width: 10px;
+            height: 10px;
+            border-top: 2px solid #f2a900;
+            border-left: 2px solid #f2a900;
+        }
+        .noise-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            z-index: 9999;
+        }
+        .bracket-label {
+            display: inline-flex;
+            align-items: center;
+            border-left: 1px solid #f2a900;
+            border-right: 1px solid #f2a900;
+            padding: 0 8px;
+        }
+        .clip-asymmetric {
+            clip-path: polygon(0 0, 100% 0, 100% 90%, 0 100%);
+        }
+    </style>
+</head>
+<body class="font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<div class="noise-overlay"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-background/95 backdrop-blur-sm border-b border-outline-variant">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-primary">EXPEDITED</span>
+<div class="hidden md:flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#services">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#dispatch">DISPATCH</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#coverage">COVERAGE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-200" href="#fleet">FLEET</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="font-mono-data text-mono-data text-primary hidden sm:block">EMERGENCY: (317) 555-0199</span>
+<a class="bg-primary-container text-on-primary-container px-6 py-2 font-label-caps text-label-caps font-bold hover:scale-95 transition-transform duration-100 uppercase" href="tel:3175550199">Call Now</a>
+</div>
+</nav>
+<main class="pt-20 industrial-grid">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center px-margin-desktop overflow-hidden">
+<div class="absolute right-0 top-0 w-2/3 h-full z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+<img alt="Expedited Roadside Truck" class="w-full h-full object-cover grayscale brightness-50 contrast-125" data-alt="A powerful, modern flatbed tow truck with chrome details parked on a dark, wet asphalt street at night under industrial streetlights. The scene is cinematic with high contrast, deep shadows, and vibrant yellow amber light reflections on the truck's polished surfaces. The overall mood is professional, efficient, and authoritative, set against a blurred urban industrial backdrop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDiEHjLpTusPCZqqJ71S89A1vZ-oKScaCwz310TC22pI-LE6lpO4FkLSgazj83GXV6WzSzpEEJLT773wifT8YPaAu_fP3y5rX7rSwuzR_tExdm0MFDr3iSw829xCFkV6zV6US9Vy7cdwwkzIVfNsBZXTqUhxE6sEZxgsm2piHFmWlj6vnnzi0r1m30vUqUa44us9qg-ARGBKM_tzMZsq3mvl5-JxkPN-MJObARervmOHxEa7piCewYxc4J9-DGC97qTxjJVa6avOpdy"/>
+</div>
+<div class="relative z-20 max-w-3xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="font-mono-data text-mono-data text-primary">SEC_01 // STRATEGIC_DEPLOYMENT</span>
+<div class="h-[1px] w-12 bg-primary"></div>
+</div>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-[0.9] text-on-surface">
+                    PRECISION ROADSIDE LOGISTICS. <br/>
+<span class="text-primary-container">WHEN MINUTES ARE THE ONLY METRIC.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                    Elite automotive recovery and support services engineered for Carmel’s most demanding motorists. We don't just tow; we execute logistics with surgical precision.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary-container text-on-primary-container px-8 py-4 font-label-caps text-label-caps font-black hover:bg-primary transition-colors uppercase">Deploy Unit</button>
+<button class="border border-outline-variant px-8 py-4 font-label-caps text-label-caps text-on-surface hover:bg-surface-variant transition-colors uppercase">View Fleet Specs</button>
+</div>
+</div>
+<!-- Bottom Data Bar -->
+<div class="absolute bottom-12 left-margin-desktop right-margin-desktop border-t border-outline-variant pt-6 grid grid-cols-2 md:grid-cols-4 gap-gutter">
+<div>
+<span class="block font-label-caps text-label-caps text-primary mb-1 uppercase">Response Window</span>
+<span class="block font-headline-md text-headline-md text-on-surface">15 MIN AVG</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-primary mb-1 uppercase">Dispatch Status</span>
+<span class="block font-headline-md text-headline-md text-on-surface">24/7 ACTIVE</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-primary mb-1 uppercase">Service Zone</span>
+<span class="block font-headline-md text-headline-md text-on-surface">CARMEL HQ</span>
+</div>
+<div>
+<span class="block font-label-caps text-label-caps text-primary mb-1 uppercase">Asset Reliability</span>
+<span class="block font-headline-md text-headline-md text-on-surface">99.8% READY</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-lowest" id="services">
+<div class="mb-16">
+<span class="font-mono-data text-mono-data text-primary block mb-2 uppercase">SEC_02 // OPERATIONAL_CAPABILITIES</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">Mission-Critical Services</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+<!-- Service 01 -->
+<div class="group border border-outline-variant p-8 hover:border-primary transition-all duration-300 corner-accent bg-surface-container">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="towing">rowing</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">EMERGENCY TOWING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Heavy-duty transport for luxury and high-performance vehicles using low-clearance flatbeds.</p>
+<ul class="font-mono-data text-mono-data text-primary space-y-2">
+<li>&gt; ZERO_DAMAGE_PROTOCOLS</li>
+<li>&gt; WHEEL_STRAP_ONLY</li>
+</ul>
+</div>
+<!-- Service 02 -->
+<div class="group border border-outline-variant p-8 hover:border-primary transition-all duration-300 corner-accent bg-surface-container">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="battery_charging_full">battery_charging_full</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">BATTERY RECOVERY</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Advanced diagnostic and jump-start services for modern electronic systems and EVs.</p>
+<ul class="font-mono-data text-mono-data text-primary space-y-2">
+<li>&gt; VOLTAGE_STABILIZED</li>
+<li>&gt; OEM_REPLACEMENT</li>
+</ul>
+</div>
+<!-- Service 03 -->
+<div class="group border border-outline-variant p-8 hover:border-primary transition-all duration-300 corner-accent bg-surface-container">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="lock_open">lock_open</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">LOCKOUT SOLUTIONS</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Non-destructive entry techniques for all major automotive makes, including keyless systems.</p>
+<ul class="font-mono-data text-mono-data text-primary space-y-2">
+<li>&gt; AIR_WEDGE_ACCURACY</li>
+<li>&gt; RAPID_ENTRY</li>
+</ul>
+</div>
+<!-- Service 04 -->
+<div class="group border border-outline-variant p-8 hover:border-primary transition-all duration-300 corner-accent bg-surface-container">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="local_gas_station">local_gas_station</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-on-surface">FUEL DELIVERY</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">High-octane fuel delivery for high-compression engines and diesel systems.</p>
+<ul class="font-mono-data text-mono-data text-primary space-y-2">
+<li>&gt; 93_OCTANE_MINIMUM</li>
+<li>&gt; SYSTEM_PRIMING</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Dispatch Protocol / About -->
+<section class="py-24 px-margin-desktop border-y border-outline-variant" id="dispatch">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="absolute -top-12 -left-12 w-64 h-64 border-l-2 border-t-2 border-primary/20 z-0"></div>
+<img alt="Dispatch Center" class="relative z-10 border border-outline-variant grayscale brightness-75" data-alt="A high-tech emergency dispatch center workspace at night. Large monitors display glowing digital maps and telemetry data with amber and blue highlights. A professional workspace with high-end mechanical keyboards and tactical communications equipment. The atmosphere is quiet, focused, and intensely professional, lit only by the soft glow of multiple screens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmCw2VYn-JzTfRKQBSzvXxR68zETvBhWqVCPfLnkUDqbCF4CMAYaHLe28j1t9FijJbUwL5_zTRp93_mUgy0nuLqGb6GUQCji_pXyfJmuk7AI5gtnYlcf0bIZX_v0jITHiTZ9Xq91WfxUJmAJG_28Yt3pjmq7rses69GyxnERb_yonVC8khHPfZg0bHdyjMl9dZU52R1zczdhVPE0jfP1mx_yRQdTbLoYDRkVCMPq8OrJfCN1g3yRoOSa_MHumOQKsl84-qHNcLiR7Y"/>
+<div class="absolute bottom-6 right-6 z-20 bg-background border border-primary p-4">
+<span class="block font-label-caps text-label-caps text-primary mb-1">COMMAND CENTER</span>
+<span class="block font-mono-data text-mono-data">CARMEL_NORTH_NODE</span>
+</div>
+</div>
+<div>
+<span class="font-mono-data text-mono-data text-primary block mb-2 uppercase">SEC_03 // DISPATCH_PROTOCOL</span>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8 text-on-surface">The Logistics of Relief</h2>
+<div class="space-y-8">
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-primary-container">01.</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface font-bold mb-2">RAPID TRIAGE</h4>
+<p class="text-on-surface-variant">Instant assessment of your location and vehicle state via our precision dispatching software.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-primary-container">02.</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface font-bold mb-2">UNIT ALLOCATION</h4>
+<p class="text-on-surface-variant">The closest specialized unit is mobilized within 120 seconds of your confirmed request.</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="font-headline-md text-headline-md text-primary-container">03.</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface font-bold mb-2">PRECISION EXECUTION</h4>
+<p class="text-on-surface-variant">Certified technicians arrive in high-spec vehicles to resolve your issue with industrial-grade tools.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-desktop bg-background industrial-grid" id="contact">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<span class="font-mono-data text-mono-data text-primary block mb-2 uppercase">SEC_04 // SERVICE_REQUEST</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">INITIATE SERVICE REQUEST</h2>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-8 border border-outline-variant p-12 bg-surface-container relative">
+<div class="absolute top-0 right-0 p-4 border-l border-b border-outline-variant font-mono-data text-[10px] text-primary/40">FORM_ID: 992-XQ</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Operator Name</label>
+<input class="w-full bg-background border-b border-outline-variant focus:border-primary-container text-on-surface font-mono-data p-4 outline-none transition-colors" placeholder="FULL NAME" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Contact Protocol (Phone)</label>
+<input class="w-full bg-background border-b border-outline-variant focus:border-primary-container text-on-surface font-mono-data p-4 outline-none transition-colors" placeholder="(XXX) XXX-XXXX" type="tel"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Asset Type</label>
+<select class="w-full bg-background border-b border-outline-variant focus:border-primary-container text-on-surface font-mono-data p-4 outline-none transition-colors appearance-none">
+<option>LUXURY / EXOTIC</option>
+<option>PASSENGER VEHICLE</option>
+<option>COMMERCIAL ASSET</option>
+<option>MOTORCYCLE</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Deployment Location</label>
+<input class="w-full bg-background border-b border-outline-variant focus:border-primary-container text-on-surface font-mono-data p-4 outline-none transition-colors" placeholder="STREET ADDRESS OR COORDINATES" type="text"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Mission Details</label>
+<textarea class="w-full bg-background border-b border-outline-variant focus:border-primary-container text-on-surface font-mono-data p-4 outline-none transition-colors resize-none" placeholder="DESCRIBE ISSUE..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-4">
+<button class="w-full bg-primary-container text-on-primary-container font-black py-5 font-headline-md tracking-widest hover:bg-primary transition-all active:scale-95 uppercase" type="submit">Transmit Signal</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Map Section -->
+<section class="relative" id="coverage">
+<div class="absolute inset-0 bg-gradient-to-b from-background via-transparent to-background z-10 pointer-events-none"></div>
+<div aria-label="Operational Zone Map" class="map-slot relative overflow-hidden min-h-[500px] border-y border-outline-variant" data-location="Carmel, Indiana" data-map-slot="" style=""></div>
+<div class="absolute top-12 left-margin-desktop z-20 bg-background/90 backdrop-blur-md border border-outline-variant p-6 max-w-sm">
+<div class="bracket-label mb-4">
+<span class="font-label-caps text-label-caps text-primary">COVERAGE_MAP</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">PRIMARY SERVICE RADIUS</h3>
+<p class="font-body-md text-on-surface-variant">We maintain peak operational density within the Carmel corridor, ensuring 15-minute response windows 24/7.</p>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full px-margin-desktop py-16 grid grid-cols-1 md:grid-cols-4 gap-gutter border-t border-outline-variant bg-surface-container-lowest">
+<div class="md:col-span-2">
+<span class="font-headline-md text-headline-md font-black text-on-surface block mb-4">EXPEDITED ROADSIDE</span>
+<p class="font-body-md text-on-surface-variant max-w-md mb-8">
+                PRECISION LOGISTICS DIVISION. Providing elite automotive support and heavy-duty recovery services since 2012. Our fleet is equipped with state-of-the-art telemetry and recovery hardware.
+            </p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">call</span></a>
+<a class="text-on-surface-variant hover:text-primary" href="#"><span class="material-symbols-outlined">location_on</span></a>
+</div>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary font-bold mb-6">PROTOCOLS</h4>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline decoration-primary transition-all" href="#">DISPATCH PROTOCOLS</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline decoration-primary transition-all" href="#">FLEET SPECS</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline decoration-primary transition-all" href="#">CARMEL SERVICE ZONE</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary font-bold mb-6">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline decoration-primary transition-all" href="#">PRIVACY</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline decoration-primary transition-all" href="#">TERMS</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary underline decoration-primary transition-all" href="#">COMPLIANCE</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 pt-12 border-t border-outline-variant mt-12 flex flex-col md:flex-row justify-between items-center gap-6">
+<span class="font-label-caps text-label-caps text-on-surface-variant">© 2024 EXPEDITED ROADSIDE CARMEL. PRECISION LOGISTICS DIVISION. ALL RIGHTS RESERVED.</span>
+<div class="font-mono-data text-mono-data text-primary/50">SYSTEM_STATUS: NOMINAL // ENCRYPTION: AES-256</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and subtle parallax
+        document.addEventListener('mousemove', (e) => {
+            const amount = 5;
+            const x = (e.clientX / window.innerWidth - 0.5) * amount;
+            const y = (e.clientY / window.innerHeight - 0.5) * amount;
+            
+            document.querySelectorAll('.corner-accent').forEach(card => {
+                card.style.transform = `perspective(1000px) rotateY(${x}deg) rotateX(${-y}deg)`;
+            });
+        });
+
+        // Intersection Observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
