@@ -3,27 +3,27 @@
     "designSystem": {
       "designSystem": {
         "displayName": "Seventh House",
-        "styleGuidelines": "## Brand & Style\nThe brand personality is **Artisanal, Confident, and World-Class**, capturing a \"New England Sophisticated\" aesthetic. This design system bridges the gap between historic Portsmouth charm and contemporary high-fashion editorial.\n\nThe style is **Modern Editorial Minimalism**. It relies on high-contrast pairings, generous parchment-toned whitespace, and a structured grid defined by thin hairline rules. The visual narrative should feel like a premium printed lookbook—grounded, intentional, and quiet in its luxury. Photography should be treated with high-contrast, slightly desaturated tones and subtle film grain to reinforce the tactile, artisanal nature of the studio.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model inspired by newspaper and magazine columns. \n\n- **The \"House\" Structure:** Use thin 1px rules (#1A1A1A at 20-30% opacity) to separate sections, creating a grid-like framework.\n- **Density Contrast:** Alternate between \"dense\" blocks of text (3-column width) and \"airy\" areas of pure whitespace or large-scale imagery.\n- **Responsive Behavior:** \n    - **Desktop:** 12-column grid with wide margins (80px) to frame the content.\n    - **Tablet:** 8-column grid with 40px margins.\n    - **Mobile:** 4-column grid with 24px margins; rules transition from vertical to horizontal separators.\n\n## Elevation & Depth\nThis design system avoids shadows entirely. Depth is conveyed through **Tonal Layering** and **Structural Framing**.\n\n- **Layers:** Most content sits flat on the Parchment surface. Use very subtle shifts to a slightly darker parchment shade for \"sunken\" elements like input fields or footers.\n- **Framing:** High-fashion photography should be framed with thin 1px borders or offset by large serif initials behind the image to create a 2D-depth effect.\n- **Overlays:** If an overlay is required (e.g., mobile menu), use a solid Warm Parchment background with no transparency to maintain the \"printed paper\" feel.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink Charcoal with white (Parchment) uppercase text. Secondary buttons are outlined with a 1px border. All buttons are sharp-edged.\n- **Chips:** Used for \"Services\" or \"Stylists.\" These should be simple text labels separated by thin vertical bars (|) or heritage gold dots, rather than pills.\n- **Inputs:** Underlined only (1px solid #1A1A1A) with labels in uppercase Montserrat 12px. No rounded boxes.\n- **Cards:** Defined by their grid position and rule lines rather than containers. An image with a title and price below it, separated by a thin horizontal rule.\n- **Lists:** Service menus should be styled with \"Playfair Display\" names on the left and prices on the right, connected by a faint dotted line or simply wide whitespace.\n- **Special Component (The \"Studio Seal\"):** A large, semi-transparent Playfair Display \"7\" or \"7H\" that sits behind text blocks or in the corner of images as a watermark.",
+        "styleGuidelines": "## Brand & Style\nThe design system for Seventh House embodies \"Modern Heritage.\" It is a premium, editorial-grade aesthetic that bridges the gap between Portsmouth’s coastal history and the avant-garde world of high-fashion hair artistry. The brand personality is sophisticated, confident, and meticulously curated.\n\nThe design style is **Editorial Minimalism** with **High-Contrast** accents. It utilizes expansive white space to create a sense of luxury and calm, while employing asymmetric layouts and overlapping elements to mimic the composition of a high-end fashion magazine. The visual signature is defined by \"The Strand\"—ultra-thin 0.5pt vertical lines that act as structural dividers and decorative motifs, subtly nodding to the craft of hair design.\n\n## Layout & Spacing\nThis design system utilizes an **Asymmetric Fluid Grid**. Avoid traditional, centered symmetry.\n\n- **The Staggered Layout:** Content blocks (images and text) should be offset from one another by the `stagger-offset` value, creating a sense of movement down the page.\n- **The Strand:** Use 0.5px vertical rules to separate columns or to \"anchor\" floating text. These rules should often extend beyond the content containers to the top or bottom of the viewport.\n- **Overlays:** Imagery should frequently overlap background color blocks or typography to create depth without using shadows.\n- **Margins:** Large horizontal margins are required (80px on desktop) to compress the content and focus the eye, mimicking the \"safe zones\" of a printed magazine.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** and **Z-axis Overlaps** rather than traditional shadows.\n\n- **Surfaces:** Use the Linen background as the base. Muted Sage and Deep Charcoal can be used as \"layered sheets\" that sit on top or underneath content.\n- **Glass Effects:** On scroll-over or navigation overlays, use a very subtle backdrop blur (8px) with a 90% opacity Linen tint to maintain the editorial feel while providing functional focus.\n- **Zero Shadow Policy:** Avoid drop shadows. Visual hierarchy is communicated through size, color contrast, and the physical stacking of elements.\n\n## Components\n- **Primary Button:** Rectangular, sharp corners. Solid Deep Charcoal background with Linen text in `label-caps`. On hover, transition to Muted Sage.\n- **Ghost Button:** 1px Deep Charcoal border, no background, `label-caps` text. Used for secondary actions.\n- **Editorial Card:** Not a traditional card with a border; instead, a combination of an image with a `stagger-offset` and a floating `headline-md` that overlaps the image corner.\n- **Input Fields:** A single 1px Deep Charcoal line at the bottom (underline style only) to maintain the \"Strand\" motif. Labels use `label-caps` positioned above the line.\n- **The Hair Menu:** A list-style component where the service name (Bodoni Moda) and price are separated by a long, 0.5px horizontal line that spans the container.\n- **Navigation:** Minimalist top-bar. Links in `label-caps`. Active state indicated by a 0.5px vertical line \"Strand\" appearing above the link.",
         "theme": {
-          "bodyFont": "MONTSERRAT",
-          "bodyFontFamily": "Montserrat",
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
           "colorMode": "LIGHT",
           "colorVariant": "FIDELITY",
           "customColor": "#1a1a1a",
-          "designMd": "---\nname: Seventh House\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#271900'\n  on-tertiary-container: '#ab7c00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#ffdea6'\n  tertiary-fixed-dim: '#f7bd48'\n  on-tertiary-fixed: '#271900'\n  on-tertiary-fixed-variant: '#5d4200'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  navigation:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  margin-desktop: 80px\n  margin-mobile: 24px\n  gutter: 32px\n  unit-xs: 4px\n  unit-sm: 8px\n  unit-md: 16px\n  unit-lg: 32px\n  unit-xl: 64px\n---\n\n## Brand & Style\nThe brand personality is **Artisanal, Confident, and World-Class**, capturing a \"New England Sophisticated\" aesthetic. This design system bridges the gap between historic Portsmouth charm and contemporary high-fashion editorial.\n\nThe style is **Modern Editorial Minimalism**. It relies on high-contrast pairings, generous parchment-toned whitespace, and a structured grid defined by thin hairline rules. The visual narrative should feel like a premium printed lookbook—grounded, intentional, and quiet in its luxury. Photography should be treated with high-contrast, slightly desaturated tones and subtle film grain to reinforce the tactile, artisanal nature of the studio.\n\n## Colors\nThe palette is rooted in a \"Parchment and Ink\" philosophy, creating a high-contrast environment that feels more like a physical document than a digital interface.\n\n- **Primary (Ink Charcoal):** Used for all primary typography, iconography, and structural hairline rules.\n- **Secondary (Warm Parchment):** The foundational background color. It provides a softer, more historic feel than pure white.\n- **Tertiary (Heritage Gold):** Used sparingly for micro-interactions, active states, and small ornamental details (like \"Available\" indicators or special callouts).\n- **Neutral:** A muted grey for secondary information to ensure the hierarchy remains sharp.\n\n## Typography\nThe typography system uses a dramatic contrast between a traditional, high-contrast serif and a modern, airy sans-serif.\n\n- **Headlines:** Playfair Display is used to establish the \"Editorial\" authority. Large-scale initials (drop caps or background elements) should be used for section transitions.\n- **Body & Labels:** Montserrat provides a clean, functional counterpoint. For body text, ensure generous line-height to maintain readability and \"air.\"\n- **Navigation & Metadata:** Always use uppercase Montserrat with wide letter-spacing (0.1em to 0.15em) to evoke a sense of premium branding.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model inspired by newspaper and magazine columns. \n\n- **The \"House\" Structure:** Use thin 1px rules (#1A1A1A at 20-30% opacity) to separate sections, creating a grid-like framework.\n- **Density Contrast:** Alternate between \"dense\" blocks of text (3-column width) and \"airy\" areas of pure whitespace or large-scale imagery.\n- **Responsive Behavior:** \n    - **Desktop:** 12-column grid with wide margins (80px) to frame the content.\n    - **Tablet:** 8-column grid with 40px margins.\n    - **Mobile:** 4-column grid with 24px margins; rules transition from vertical to horizontal separators.\n\n## Elevation & Depth\nThis design system avoids shadows entirely. Depth is conveyed through **Tonal Layering** and **Structural Framing**.\n\n- **Layers:** Most content sits flat on the Parchment surface. Use very subtle shifts to a slightly darker parchment shade for \"sunken\" elements like input fields or footers.\n- **Framing:** High-fashion photography should be framed with thin 1px borders or offset by large serif initials behind the image to create a 2D-depth effect.\n- **Overlays:** If an overlay is required (e.g., mobile menu), use a solid Warm Parchment background with no transparency to maintain the \"printed paper\" feel.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo maintain the architectural and \"house\" motif, every element—including buttons, input fields, and image containers—must have square corners. This reinforces the professional, precise, and grounded New England character of the brand.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink Charcoal with white (Parchment) uppercase text. Secondary buttons are outlined with a 1px border. All buttons are sharp-edged.\n- **Chips:** Used for \"Services\" or \"Stylists.\" These should be simple text labels separated by thin vertical bars (|) or heritage gold dots, rather than pills.\n- **Inputs:** Underlined only (1px solid #1A1A1A) with labels in uppercase Montserrat 12px. No rounded boxes.\n- **Cards:** Defined by their grid position and rule lines rather than containers. An image with a title and price below it, separated by a thin horizontal rule.\n- **Lists:** Service menus should be styled with \"Playfair Display\" names on the left and prices on the right, connected by a faint dotted line or simply wide whitespace.\n- **Special Component (The \"Studio Seal\"):** A large, semi-transparent Playfair Display \"7\" or \"7H\" that sits behind text blocks or in the corner of images as a watermark.",
-          "font": "PLAYFAIR_DISPLAY",
-          "headlineFont": "PLAYFAIR_DISPLAY",
-          "headlineFontFamily": "Playfair Display",
-          "labelFont": "MONTSERRAT",
-          "labelFontFamily": "Montserrat",
+          "designMd": "---\nname: Seventh House\ncolors:\n  surface: '#faf9f7'\n  surface-dim: '#dadad8'\n  surface-bright: '#faf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f1'\n  surface-container: '#efeeec'\n  surface-container-high: '#e9e8e6'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1b'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f3130'\n  inverse-on-surface: '#f1f1ef'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#556158'\n  on-secondary: '#ffffff'\n  secondary-container: '#d6e3d7'\n  on-secondary-container: '#59665c'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#261900'\n  on-tertiary-container: '#a17f3b'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#d9e6da'\n  secondary-fixed-dim: '#bdcabe'\n  on-secondary-fixed: '#131e17'\n  on-secondary-fixed-variant: '#3e4a41'\n  tertiary-fixed: '#ffdea5'\n  tertiary-fixed-dim: '#e9c176'\n  on-tertiary-fixed: '#261900'\n  on-tertiary-fixed-variant: '#5d4201'\n  background: '#faf9f7'\n  on-background: '#1a1c1b'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n    letterSpacing: 0.05em\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n    letterSpacing: 0.02em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  statement-serif:\n    fontFamily: Bodoni Moda\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 32px\nspacing:\n  unit: 4px\n  strand-width: 0.5px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  gutter: 24px\n  stagger-offset: 48px\n---\n\n## Brand & Style\nThe design system for Seventh House embodies \"Modern Heritage.\" It is a premium, editorial-grade aesthetic that bridges the gap between Portsmouth’s coastal history and the avant-garde world of high-fashion hair artistry. The brand personality is sophisticated, confident, and meticulously curated.\n\nThe design style is **Editorial Minimalism** with **High-Contrast** accents. It utilizes expansive white space to create a sense of luxury and calm, while employing asymmetric layouts and overlapping elements to mimic the composition of a high-end fashion magazine. The visual signature is defined by \"The Strand\"—ultra-thin 0.5pt vertical lines that act as structural dividers and decorative motifs, subtly nodding to the craft of hair design.\n\n## Colors\nThe palette is grounded in monochromatic depth with organic, coastal-inspired undertones.\n\n- **Primary (Deep Charcoal):** Used for primary typography and structural \"Strand\" lines to ensure high-contrast authority.\n- **Secondary (Muted Sage):** Used for subtle backgrounds, secondary buttons, and tonal shifts in editorial sections.\n- **Accent (Warm Ochre):** Reserved for high-value calls to action, active states, and premium highlights (representing \"Aged Brass\").\n- **Background (Linen):** The primary canvas for all interfaces, providing a warmer, more tactile feel than pure white.\n\n## Typography\nThe typography is the core of this design system’s editorial feel. \n\n**Bodoni Moda** is used for all headlines and display text. For \"Display LG\" roles, use optical sizing to emphasize the high-contrast thins and thicks of the typeface. All serif headlines should utilize generous tracking (letter spacing) to evoke a sense of airiness and luxury.\n\n**Inter** provides a functional, modern counterpoint for body copy and UI labels. It ensures legibility in service menus and booking flows. \"Label Caps\" should always be used in uppercase for navigational elements and small headers to maintain the \"Modern Heritage\" structure.\n\n## Layout & Spacing\nThis design system utilizes an **Asymmetric Fluid Grid**. Avoid traditional, centered symmetry.\n\n- **The Staggered Layout:** Content blocks (images and text) should be offset from one another by the `stagger-offset` value, creating a sense of movement down the page.\n- **The Strand:** Use 0.5px vertical rules to separate columns or to \"anchor\" floating text. These rules should often extend beyond the content containers to the top or bottom of the viewport.\n- **Overlays:** Imagery should frequently overlap background color blocks or typography to create depth without using shadows.\n- **Margins:** Large horizontal margins are required (80px on desktop) to compress the content and focus the eye, mimicking the \"safe zones\" of a printed magazine.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** and **Z-axis Overlaps** rather than traditional shadows.\n\n- **Surfaces:** Use the Linen background as the base. Muted Sage and Deep Charcoal can be used as \"layered sheets\" that sit on top or underneath content.\n- **Glass Effects:** On scroll-over or navigation overlays, use a very subtle backdrop blur (8px) with a 90% opacity Linen tint to maintain the editorial feel while providing functional focus.\n- **Zero Shadow Policy:** Avoid drop shadows. Visual hierarchy is communicated through size, color contrast, and the physical stacking of elements.\n\n## Shapes\nThe design system uses **Sharp (0px)** corners for all primary elements. \n\nThe use of 90-degree angles reinforces the architectural, \"heritage\" feel of the brand. This applies to buttons, image containers, input fields, and cards. The only exception is for \"The Strand\" vertical lines, which should have no visible cap styling.\n\n## Components\n- **Primary Button:** Rectangular, sharp corners. Solid Deep Charcoal background with Linen text in `label-caps`. On hover, transition to Muted Sage.\n- **Ghost Button:** 1px Deep Charcoal border, no background, `label-caps` text. Used for secondary actions.\n- **Editorial Card:** Not a traditional card with a border; instead, a combination of an image with a `stagger-offset` and a floating `headline-md` that overlaps the image corner.\n- **Input Fields:** A single 1px Deep Charcoal line at the bottom (underline style only) to maintain the \"Strand\" motif. Labels use `label-caps` positioned above the line.\n- **The Hair Menu:** A list-style component where the service name (Bodoni Moda) and price are separated by a long, 0.5px horizontal line that spans the container.\n- **Navigation:** Minimalist top-bar. Links in `label-caps`. Active state indicated by a 0.5px vertical line \"Strand\" appearing above the link.",
+          "font": "BODONI_MODA",
+          "headlineFont": "BODONI_MODA",
+          "headlineFontFamily": "Bodoni Moda",
+          "labelFont": "INTER",
+          "labelFontFamily": "Inter",
           "namedColors": {
-            "background": "#fbf9f8",
+            "background": "#faf9f7",
             "error": "#ba1a1a",
             "error_container": "#ffdad6",
-            "inverse_on_surface": "#f2f0f0",
+            "inverse_on_surface": "#f1f1ef",
             "inverse_primary": "#c8c6c5",
-            "inverse_surface": "#303031",
-            "on_background": "#1b1c1c",
+            "inverse_surface": "#2f3130",
+            "on_background": "#1a1c1b",
             "on_error": "#ffffff",
             "on_error_container": "#93000a",
             "on_primary": "#ffffff",
@@ -31,113 +31,113 @@
             "on_primary_fixed": "#1c1b1b",
             "on_primary_fixed_variant": "#474746",
             "on_secondary": "#ffffff",
-            "on_secondary_container": "#656461",
-            "on_secondary_fixed": "#1c1c19",
-            "on_secondary_fixed_variant": "#474743",
-            "on_surface": "#1b1c1c",
+            "on_secondary_container": "#59665c",
+            "on_secondary_fixed": "#131e17",
+            "on_secondary_fixed_variant": "#3e4a41",
+            "on_surface": "#1a1c1b",
             "on_surface_variant": "#444748",
             "on_tertiary": "#ffffff",
-            "on_tertiary_container": "#ab7c00",
-            "on_tertiary_fixed": "#271900",
-            "on_tertiary_fixed_variant": "#5d4200",
+            "on_tertiary_container": "#a17f3b",
+            "on_tertiary_fixed": "#261900",
+            "on_tertiary_fixed_variant": "#5d4201",
             "outline": "#747878",
             "outline_variant": "#c4c7c7",
             "primary": "#000000",
             "primary_container": "#1c1b1b",
             "primary_fixed": "#e5e2e1",
             "primary_fixed_dim": "#c8c6c5",
-            "secondary": "#5f5e5b",
-            "secondary_container": "#e5e2dd",
-            "secondary_fixed": "#e5e2dd",
-            "secondary_fixed_dim": "#c9c6c2",
-            "surface": "#fbf9f8",
-            "surface_bright": "#fbf9f8",
-            "surface_container": "#efeded",
-            "surface_container_high": "#e9e8e7",
-            "surface_container_highest": "#e4e2e2",
-            "surface_container_low": "#f5f3f3",
+            "secondary": "#556158",
+            "secondary_container": "#d6e3d7",
+            "secondary_fixed": "#d9e6da",
+            "secondary_fixed_dim": "#bdcabe",
+            "surface": "#faf9f7",
+            "surface_bright": "#faf9f7",
+            "surface_container": "#efeeec",
+            "surface_container_high": "#e9e8e6",
+            "surface_container_highest": "#e3e2e0",
+            "surface_container_low": "#f4f3f1",
             "surface_container_lowest": "#ffffff",
-            "surface_dim": "#dbdad9",
+            "surface_dim": "#dadad8",
             "surface_tint": "#5f5e5e",
-            "surface_variant": "#e4e2e2",
+            "surface_variant": "#e3e2e0",
             "tertiary": "#000000",
-            "tertiary_container": "#271900",
-            "tertiary_fixed": "#ffdea6",
-            "tertiary_fixed_dim": "#f7bd48"
+            "tertiary_container": "#261900",
+            "tertiary_fixed": "#ffdea5",
+            "tertiary_fixed_dim": "#e9c176"
           },
-          "overrideNeutralColor": "#6b6b6b",
+          "overrideNeutralColor": "#f9f8f6",
           "overridePrimaryColor": "#1a1a1a",
-          "overrideSecondaryColor": "#f5f2ed",
-          "overrideTertiaryColor": "#b8860b",
+          "overrideSecondaryColor": "#8e9b90",
+          "overrideTertiaryColor": "#c5a059",
           "spacing": {
-            "gutter": "32px",
+            "gutter": "24px",
             "margin-desktop": "80px",
-            "margin-mobile": "24px",
-            "unit-lg": "32px",
-            "unit-md": "16px",
-            "unit-sm": "8px",
-            "unit-xl": "64px",
-            "unit-xs": "4px"
+            "margin-mobile": "20px",
+            "stagger-offset": "48px",
+            "strand-width": "0.5px",
+            "unit": "4px"
           },
           "spacingScale": 2,
           "typography": {
             "body-lg": {
-              "fontFamily": "Montserrat",
+              "fontFamily": "Inter",
               "fontSize": "18px",
               "fontWeight": "400",
-              "letterSpacing": "0.01em",
-              "lineHeight": "1.6"
+              "letterSpacing": "0em",
+              "lineHeight": "28px"
             },
             "body-md": {
-              "fontFamily": "Montserrat",
+              "fontFamily": "Inter",
               "fontSize": "16px",
               "fontWeight": "400",
-              "letterSpacing": "0.01em",
-              "lineHeight": "1.6"
+              "letterSpacing": "0em",
+              "lineHeight": "24px"
             },
             "display-lg": {
-              "fontFamily": "Playfair Display",
-              "fontSize": "72px",
-              "fontWeight": "700",
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "84px",
+              "fontWeight": "400",
               "letterSpacing": "-0.02em",
-              "lineHeight": "1.1"
+              "lineHeight": "92px"
             },
-            "headline-lg": {
-              "fontFamily": "Playfair Display",
+            "display-lg-mobile": {
+              "fontFamily": "Bodoni Moda",
               "fontSize": "48px",
-              "fontWeight": "600",
-              "lineHeight": "1.2"
-            },
-            "headline-lg-mobile": {
-              "fontFamily": "Playfair Display",
-              "fontSize": "32px",
-              "fontWeight": "600",
-              "lineHeight": "1.2"
+              "fontWeight": "400",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "52px"
             },
             "headline-md": {
-              "fontFamily": "Playfair Display",
+              "fontFamily": "Bodoni Moda",
               "fontSize": "32px",
-              "fontWeight": "500",
-              "lineHeight": "1.3"
+              "fontWeight": "400",
+              "letterSpacing": "0.02em",
+              "lineHeight": "40px"
             },
-            "label-sm": {
-              "fontFamily": "Montserrat",
+            "headline-xl": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "48px",
+              "fontWeight": "400",
+              "letterSpacing": "0.05em",
+              "lineHeight": "56px"
+            },
+            "label-caps": {
+              "fontFamily": "Inter",
               "fontSize": "12px",
               "fontWeight": "600",
               "letterSpacing": "0.15em",
-              "lineHeight": "1.2"
+              "lineHeight": "16px"
             },
-            "navigation": {
-              "fontFamily": "Montserrat",
-              "fontSize": "14px",
-              "fontWeight": "500",
-              "letterSpacing": "0.1em",
-              "lineHeight": "1.0"
+            "statement-serif": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "24px",
+              "fontWeight": "400",
+              "lineHeight": "32px"
             }
           }
         }
       },
-      "name": "assets/3cd9ac55e1104440bd60bfc56a6ca4f4",
+      "name": "assets/0e79f92866d645b7b7a7298b9e07b157",
       "version": "1"
     }
   },
@@ -148,27 +148,27 @@
           "designSystem": {
             "designSystem": {
               "displayName": "Seventh House",
-              "styleGuidelines": "## Brand & Style\nThe brand personality is **Artisanal, Confident, and World-Class**, capturing a \"New England Sophisticated\" aesthetic. This design system bridges the gap between historic Portsmouth charm and contemporary high-fashion editorial.\n\nThe style is **Modern Editorial Minimalism**. It relies on high-contrast pairings, generous parchment-toned whitespace, and a structured grid defined by thin hairline rules. The visual narrative should feel like a premium printed lookbook—grounded, intentional, and quiet in its luxury. Photography should be treated with high-contrast, slightly desaturated tones and subtle film grain to reinforce the tactile, artisanal nature of the studio.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model inspired by newspaper and magazine columns. \n\n- **The \"House\" Structure:** Use thin 1px rules (#1A1A1A at 20-30% opacity) to separate sections, creating a grid-like framework.\n- **Density Contrast:** Alternate between \"dense\" blocks of text (3-column width) and \"airy\" areas of pure whitespace or large-scale imagery.\n- **Responsive Behavior:** \n    - **Desktop:** 12-column grid with wide margins (80px) to frame the content.\n    - **Tablet:** 8-column grid with 40px margins.\n    - **Mobile:** 4-column grid with 24px margins; rules transition from vertical to horizontal separators.\n\n## Elevation & Depth\nThis design system avoids shadows entirely. Depth is conveyed through **Tonal Layering** and **Structural Framing**.\n\n- **Layers:** Most content sits flat on the Parchment surface. Use very subtle shifts to a slightly darker parchment shade for \"sunken\" elements like input fields or footers.\n- **Framing:** High-fashion photography should be framed with thin 1px borders or offset by large serif initials behind the image to create a 2D-depth effect.\n- **Overlays:** If an overlay is required (e.g., mobile menu), use a solid Warm Parchment background with no transparency to maintain the \"printed paper\" feel.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink Charcoal with white (Parchment) uppercase text. Secondary buttons are outlined with a 1px border. All buttons are sharp-edged.\n- **Chips:** Used for \"Services\" or \"Stylists.\" These should be simple text labels separated by thin vertical bars (|) or heritage gold dots, rather than pills.\n- **Inputs:** Underlined only (1px solid #1A1A1A) with labels in uppercase Montserrat 12px. No rounded boxes.\n- **Cards:** Defined by their grid position and rule lines rather than containers. An image with a title and price below it, separated by a thin horizontal rule.\n- **Lists:** Service menus should be styled with \"Playfair Display\" names on the left and prices on the right, connected by a faint dotted line or simply wide whitespace.\n- **Special Component (The \"Studio Seal\"):** A large, semi-transparent Playfair Display \"7\" or \"7H\" that sits behind text blocks or in the corner of images as a watermark.",
+              "styleGuidelines": "## Brand & Style\nThe design system for Seventh House embodies \"Modern Heritage.\" It is a premium, editorial-grade aesthetic that bridges the gap between Portsmouth’s coastal history and the avant-garde world of high-fashion hair artistry. The brand personality is sophisticated, confident, and meticulously curated.\n\nThe design style is **Editorial Minimalism** with **High-Contrast** accents. It utilizes expansive white space to create a sense of luxury and calm, while employing asymmetric layouts and overlapping elements to mimic the composition of a high-end fashion magazine. The visual signature is defined by \"The Strand\"—ultra-thin 0.5pt vertical lines that act as structural dividers and decorative motifs, subtly nodding to the craft of hair design.\n\n## Layout & Spacing\nThis design system utilizes an **Asymmetric Fluid Grid**. Avoid traditional, centered symmetry.\n\n- **The Staggered Layout:** Content blocks (images and text) should be offset from one another by the `stagger-offset` value, creating a sense of movement down the page.\n- **The Strand:** Use 0.5px vertical rules to separate columns or to \"anchor\" floating text. These rules should often extend beyond the content containers to the top or bottom of the viewport.\n- **Overlays:** Imagery should frequently overlap background color blocks or typography to create depth without using shadows.\n- **Margins:** Large horizontal margins are required (80px on desktop) to compress the content and focus the eye, mimicking the \"safe zones\" of a printed magazine.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** and **Z-axis Overlaps** rather than traditional shadows.\n\n- **Surfaces:** Use the Linen background as the base. Muted Sage and Deep Charcoal can be used as \"layered sheets\" that sit on top or underneath content.\n- **Glass Effects:** On scroll-over or navigation overlays, use a very subtle backdrop blur (8px) with a 90% opacity Linen tint to maintain the editorial feel while providing functional focus.\n- **Zero Shadow Policy:** Avoid drop shadows. Visual hierarchy is communicated through size, color contrast, and the physical stacking of elements.\n\n## Components\n- **Primary Button:** Rectangular, sharp corners. Solid Deep Charcoal background with Linen text in `label-caps`. On hover, transition to Muted Sage.\n- **Ghost Button:** 1px Deep Charcoal border, no background, `label-caps` text. Used for secondary actions.\n- **Editorial Card:** Not a traditional card with a border; instead, a combination of an image with a `stagger-offset` and a floating `headline-md` that overlaps the image corner.\n- **Input Fields:** A single 1px Deep Charcoal line at the bottom (underline style only) to maintain the \"Strand\" motif. Labels use `label-caps` positioned above the line.\n- **The Hair Menu:** A list-style component where the service name (Bodoni Moda) and price are separated by a long, 0.5px horizontal line that spans the container.\n- **Navigation:** Minimalist top-bar. Links in `label-caps`. Active state indicated by a 0.5px vertical line \"Strand\" appearing above the link.",
               "theme": {
-                "bodyFont": "MONTSERRAT",
-                "bodyFontFamily": "Montserrat",
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
                 "colorMode": "LIGHT",
                 "colorVariant": "FIDELITY",
                 "customColor": "#1a1a1a",
-                "designMd": "---\nname: Seventh House\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#271900'\n  on-tertiary-container: '#ab7c00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#ffdea6'\n  tertiary-fixed-dim: '#f7bd48'\n  on-tertiary-fixed: '#271900'\n  on-tertiary-fixed-variant: '#5d4200'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  navigation:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  margin-desktop: 80px\n  margin-mobile: 24px\n  gutter: 32px\n  unit-xs: 4px\n  unit-sm: 8px\n  unit-md: 16px\n  unit-lg: 32px\n  unit-xl: 64px\n---\n\n## Brand & Style\nThe brand personality is **Artisanal, Confident, and World-Class**, capturing a \"New England Sophisticated\" aesthetic. This design system bridges the gap between historic Portsmouth charm and contemporary high-fashion editorial.\n\nThe style is **Modern Editorial Minimalism**. It relies on high-contrast pairings, generous parchment-toned whitespace, and a structured grid defined by thin hairline rules. The visual narrative should feel like a premium printed lookbook—grounded, intentional, and quiet in its luxury. Photography should be treated with high-contrast, slightly desaturated tones and subtle film grain to reinforce the tactile, artisanal nature of the studio.\n\n## Colors\nThe palette is rooted in a \"Parchment and Ink\" philosophy, creating a high-contrast environment that feels more like a physical document than a digital interface.\n\n- **Primary (Ink Charcoal):** Used for all primary typography, iconography, and structural hairline rules.\n- **Secondary (Warm Parchment):** The foundational background color. It provides a softer, more historic feel than pure white.\n- **Tertiary (Heritage Gold):** Used sparingly for micro-interactions, active states, and small ornamental details (like \"Available\" indicators or special callouts).\n- **Neutral:** A muted grey for secondary information to ensure the hierarchy remains sharp.\n\n## Typography\nThe typography system uses a dramatic contrast between a traditional, high-contrast serif and a modern, airy sans-serif.\n\n- **Headlines:** Playfair Display is used to establish the \"Editorial\" authority. Large-scale initials (drop caps or background elements) should be used for section transitions.\n- **Body & Labels:** Montserrat provides a clean, functional counterpoint. For body text, ensure generous line-height to maintain readability and \"air.\"\n- **Navigation & Metadata:** Always use uppercase Montserrat with wide letter-spacing (0.1em to 0.15em) to evoke a sense of premium branding.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model inspired by newspaper and magazine columns. \n\n- **The \"House\" Structure:** Use thin 1px rules (#1A1A1A at 20-30% opacity) to separate sections, creating a grid-like framework.\n- **Density Contrast:** Alternate between \"dense\" blocks of text (3-column width) and \"airy\" areas of pure whitespace or large-scale imagery.\n- **Responsive Behavior:** \n    - **Desktop:** 12-column grid with wide margins (80px) to frame the content.\n    - **Tablet:** 8-column grid with 40px margins.\n    - **Mobile:** 4-column grid with 24px margins; rules transition from vertical to horizontal separators.\n\n## Elevation & Depth\nThis design system avoids shadows entirely. Depth is conveyed through **Tonal Layering** and **Structural Framing**.\n\n- **Layers:** Most content sits flat on the Parchment surface. Use very subtle shifts to a slightly darker parchment shade for \"sunken\" elements like input fields or footers.\n- **Framing:** High-fashion photography should be framed with thin 1px borders or offset by large serif initials behind the image to create a 2D-depth effect.\n- **Overlays:** If an overlay is required (e.g., mobile menu), use a solid Warm Parchment background with no transparency to maintain the \"printed paper\" feel.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo maintain the architectural and \"house\" motif, every element—including buttons, input fields, and image containers—must have square corners. This reinforces the professional, precise, and grounded New England character of the brand.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink Charcoal with white (Parchment) uppercase text. Secondary buttons are outlined with a 1px border. All buttons are sharp-edged.\n- **Chips:** Used for \"Services\" or \"Stylists.\" These should be simple text labels separated by thin vertical bars (|) or heritage gold dots, rather than pills.\n- **Inputs:** Underlined only (1px solid #1A1A1A) with labels in uppercase Montserrat 12px. No rounded boxes.\n- **Cards:** Defined by their grid position and rule lines rather than containers. An image with a title and price below it, separated by a thin horizontal rule.\n- **Lists:** Service menus should be styled with \"Playfair Display\" names on the left and prices on the right, connected by a faint dotted line or simply wide whitespace.\n- **Special Component (The \"Studio Seal\"):** A large, semi-transparent Playfair Display \"7\" or \"7H\" that sits behind text blocks or in the corner of images as a watermark.",
-                "font": "PLAYFAIR_DISPLAY",
-                "headlineFont": "PLAYFAIR_DISPLAY",
-                "headlineFontFamily": "Playfair Display",
-                "labelFont": "MONTSERRAT",
-                "labelFontFamily": "Montserrat",
+                "designMd": "---\nname: Seventh House\ncolors:\n  surface: '#faf9f7'\n  surface-dim: '#dadad8'\n  surface-bright: '#faf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f1'\n  surface-container: '#efeeec'\n  surface-container-high: '#e9e8e6'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1b'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f3130'\n  inverse-on-surface: '#f1f1ef'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#556158'\n  on-secondary: '#ffffff'\n  secondary-container: '#d6e3d7'\n  on-secondary-container: '#59665c'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#261900'\n  on-tertiary-container: '#a17f3b'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#d9e6da'\n  secondary-fixed-dim: '#bdcabe'\n  on-secondary-fixed: '#131e17'\n  on-secondary-fixed-variant: '#3e4a41'\n  tertiary-fixed: '#ffdea5'\n  tertiary-fixed-dim: '#e9c176'\n  on-tertiary-fixed: '#261900'\n  on-tertiary-fixed-variant: '#5d4201'\n  background: '#faf9f7'\n  on-background: '#1a1c1b'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n    letterSpacing: 0.05em\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n    letterSpacing: 0.02em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  statement-serif:\n    fontFamily: Bodoni Moda\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 32px\nspacing:\n  unit: 4px\n  strand-width: 0.5px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  gutter: 24px\n  stagger-offset: 48px\n---\n\n## Brand & Style\nThe design system for Seventh House embodies \"Modern Heritage.\" It is a premium, editorial-grade aesthetic that bridges the gap between Portsmouth’s coastal history and the avant-garde world of high-fashion hair artistry. The brand personality is sophisticated, confident, and meticulously curated.\n\nThe design style is **Editorial Minimalism** with **High-Contrast** accents. It utilizes expansive white space to create a sense of luxury and calm, while employing asymmetric layouts and overlapping elements to mimic the composition of a high-end fashion magazine. The visual signature is defined by \"The Strand\"—ultra-thin 0.5pt vertical lines that act as structural dividers and decorative motifs, subtly nodding to the craft of hair design.\n\n## Colors\nThe palette is grounded in monochromatic depth with organic, coastal-inspired undertones.\n\n- **Primary (Deep Charcoal):** Used for primary typography and structural \"Strand\" lines to ensure high-contrast authority.\n- **Secondary (Muted Sage):** Used for subtle backgrounds, secondary buttons, and tonal shifts in editorial sections.\n- **Accent (Warm Ochre):** Reserved for high-value calls to action, active states, and premium highlights (representing \"Aged Brass\").\n- **Background (Linen):** The primary canvas for all interfaces, providing a warmer, more tactile feel than pure white.\n\n## Typography\nThe typography is the core of this design system’s editorial feel. \n\n**Bodoni Moda** is used for all headlines and display text. For \"Display LG\" roles, use optical sizing to emphasize the high-contrast thins and thicks of the typeface. All serif headlines should utilize generous tracking (letter spacing) to evoke a sense of airiness and luxury.\n\n**Inter** provides a functional, modern counterpoint for body copy and UI labels. It ensures legibility in service menus and booking flows. \"Label Caps\" should always be used in uppercase for navigational elements and small headers to maintain the \"Modern Heritage\" structure.\n\n## Layout & Spacing\nThis design system utilizes an **Asymmetric Fluid Grid**. Avoid traditional, centered symmetry.\n\n- **The Staggered Layout:** Content blocks (images and text) should be offset from one another by the `stagger-offset` value, creating a sense of movement down the page.\n- **The Strand:** Use 0.5px vertical rules to separate columns or to \"anchor\" floating text. These rules should often extend beyond the content containers to the top or bottom of the viewport.\n- **Overlays:** Imagery should frequently overlap background color blocks or typography to create depth without using shadows.\n- **Margins:** Large horizontal margins are required (80px on desktop) to compress the content and focus the eye, mimicking the \"safe zones\" of a printed magazine.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** and **Z-axis Overlaps** rather than traditional shadows.\n\n- **Surfaces:** Use the Linen background as the base. Muted Sage and Deep Charcoal can be used as \"layered sheets\" that sit on top or underneath content.\n- **Glass Effects:** On scroll-over or navigation overlays, use a very subtle backdrop blur (8px) with a 90% opacity Linen tint to maintain the editorial feel while providing functional focus.\n- **Zero Shadow Policy:** Avoid drop shadows. Visual hierarchy is communicated through size, color contrast, and the physical stacking of elements.\n\n## Shapes\nThe design system uses **Sharp (0px)** corners for all primary elements. \n\nThe use of 90-degree angles reinforces the architectural, \"heritage\" feel of the brand. This applies to buttons, image containers, input fields, and cards. The only exception is for \"The Strand\" vertical lines, which should have no visible cap styling.\n\n## Components\n- **Primary Button:** Rectangular, sharp corners. Solid Deep Charcoal background with Linen text in `label-caps`. On hover, transition to Muted Sage.\n- **Ghost Button:** 1px Deep Charcoal border, no background, `label-caps` text. Used for secondary actions.\n- **Editorial Card:** Not a traditional card with a border; instead, a combination of an image with a `stagger-offset` and a floating `headline-md` that overlaps the image corner.\n- **Input Fields:** A single 1px Deep Charcoal line at the bottom (underline style only) to maintain the \"Strand\" motif. Labels use `label-caps` positioned above the line.\n- **The Hair Menu:** A list-style component where the service name (Bodoni Moda) and price are separated by a long, 0.5px horizontal line that spans the container.\n- **Navigation:** Minimalist top-bar. Links in `label-caps`. Active state indicated by a 0.5px vertical line \"Strand\" appearing above the link.",
+                "font": "BODONI_MODA",
+                "headlineFont": "BODONI_MODA",
+                "headlineFontFamily": "Bodoni Moda",
+                "labelFont": "INTER",
+                "labelFontFamily": "Inter",
                 "namedColors": {
-                  "background": "#fbf9f8",
+                  "background": "#faf9f7",
                   "error": "#ba1a1a",
                   "error_container": "#ffdad6",
-                  "inverse_on_surface": "#f2f0f0",
+                  "inverse_on_surface": "#f1f1ef",
                   "inverse_primary": "#c8c6c5",
-                  "inverse_surface": "#303031",
-                  "on_background": "#1b1c1c",
+                  "inverse_surface": "#2f3130",
+                  "on_background": "#1a1c1b",
                   "on_error": "#ffffff",
                   "on_error_container": "#93000a",
                   "on_primary": "#ffffff",
@@ -176,155 +176,155 @@
                   "on_primary_fixed": "#1c1b1b",
                   "on_primary_fixed_variant": "#474746",
                   "on_secondary": "#ffffff",
-                  "on_secondary_container": "#656461",
-                  "on_secondary_fixed": "#1c1c19",
-                  "on_secondary_fixed_variant": "#474743",
-                  "on_surface": "#1b1c1c",
+                  "on_secondary_container": "#59665c",
+                  "on_secondary_fixed": "#131e17",
+                  "on_secondary_fixed_variant": "#3e4a41",
+                  "on_surface": "#1a1c1b",
                   "on_surface_variant": "#444748",
                   "on_tertiary": "#ffffff",
-                  "on_tertiary_container": "#ab7c00",
-                  "on_tertiary_fixed": "#271900",
-                  "on_tertiary_fixed_variant": "#5d4200",
+                  "on_tertiary_container": "#a17f3b",
+                  "on_tertiary_fixed": "#261900",
+                  "on_tertiary_fixed_variant": "#5d4201",
                   "outline": "#747878",
                   "outline_variant": "#c4c7c7",
                   "primary": "#000000",
                   "primary_container": "#1c1b1b",
                   "primary_fixed": "#e5e2e1",
                   "primary_fixed_dim": "#c8c6c5",
-                  "secondary": "#5f5e5b",
-                  "secondary_container": "#e5e2dd",
-                  "secondary_fixed": "#e5e2dd",
-                  "secondary_fixed_dim": "#c9c6c2",
-                  "surface": "#fbf9f8",
-                  "surface_bright": "#fbf9f8",
-                  "surface_container": "#efeded",
-                  "surface_container_high": "#e9e8e7",
-                  "surface_container_highest": "#e4e2e2",
-                  "surface_container_low": "#f5f3f3",
+                  "secondary": "#556158",
+                  "secondary_container": "#d6e3d7",
+                  "secondary_fixed": "#d9e6da",
+                  "secondary_fixed_dim": "#bdcabe",
+                  "surface": "#faf9f7",
+                  "surface_bright": "#faf9f7",
+                  "surface_container": "#efeeec",
+                  "surface_container_high": "#e9e8e6",
+                  "surface_container_highest": "#e3e2e0",
+                  "surface_container_low": "#f4f3f1",
                   "surface_container_lowest": "#ffffff",
-                  "surface_dim": "#dbdad9",
+                  "surface_dim": "#dadad8",
                   "surface_tint": "#5f5e5e",
-                  "surface_variant": "#e4e2e2",
+                  "surface_variant": "#e3e2e0",
                   "tertiary": "#000000",
-                  "tertiary_container": "#271900",
-                  "tertiary_fixed": "#ffdea6",
-                  "tertiary_fixed_dim": "#f7bd48"
+                  "tertiary_container": "#261900",
+                  "tertiary_fixed": "#ffdea5",
+                  "tertiary_fixed_dim": "#e9c176"
                 },
-                "overrideNeutralColor": "#6b6b6b",
+                "overrideNeutralColor": "#f9f8f6",
                 "overridePrimaryColor": "#1a1a1a",
-                "overrideSecondaryColor": "#f5f2ed",
-                "overrideTertiaryColor": "#b8860b",
+                "overrideSecondaryColor": "#8e9b90",
+                "overrideTertiaryColor": "#c5a059",
                 "spacing": {
-                  "gutter": "32px",
+                  "gutter": "24px",
                   "margin-desktop": "80px",
-                  "margin-mobile": "24px",
-                  "unit-lg": "32px",
-                  "unit-md": "16px",
-                  "unit-sm": "8px",
-                  "unit-xl": "64px",
-                  "unit-xs": "4px"
+                  "margin-mobile": "20px",
+                  "stagger-offset": "48px",
+                  "strand-width": "0.5px",
+                  "unit": "4px"
                 },
                 "spacingScale": 2,
                 "typography": {
                   "body-lg": {
-                    "fontFamily": "Montserrat",
+                    "fontFamily": "Inter",
                     "fontSize": "18px",
                     "fontWeight": "400",
-                    "letterSpacing": "0.01em",
-                    "lineHeight": "1.6"
+                    "letterSpacing": "0em",
+                    "lineHeight": "28px"
                   },
                   "body-md": {
-                    "fontFamily": "Montserrat",
+                    "fontFamily": "Inter",
                     "fontSize": "16px",
                     "fontWeight": "400",
-                    "letterSpacing": "0.01em",
-                    "lineHeight": "1.6"
+                    "letterSpacing": "0em",
+                    "lineHeight": "24px"
                   },
                   "display-lg": {
-                    "fontFamily": "Playfair Display",
-                    "fontSize": "72px",
-                    "fontWeight": "700",
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "84px",
+                    "fontWeight": "400",
                     "letterSpacing": "-0.02em",
-                    "lineHeight": "1.1"
+                    "lineHeight": "92px"
                   },
-                  "headline-lg": {
-                    "fontFamily": "Playfair Display",
+                  "display-lg-mobile": {
+                    "fontFamily": "Bodoni Moda",
                     "fontSize": "48px",
-                    "fontWeight": "600",
-                    "lineHeight": "1.2"
-                  },
-                  "headline-lg-mobile": {
-                    "fontFamily": "Playfair Display",
-                    "fontSize": "32px",
-                    "fontWeight": "600",
-                    "lineHeight": "1.2"
+                    "fontWeight": "400",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "52px"
                   },
                   "headline-md": {
-                    "fontFamily": "Playfair Display",
+                    "fontFamily": "Bodoni Moda",
                     "fontSize": "32px",
-                    "fontWeight": "500",
-                    "lineHeight": "1.3"
+                    "fontWeight": "400",
+                    "letterSpacing": "0.02em",
+                    "lineHeight": "40px"
                   },
-                  "label-sm": {
-                    "fontFamily": "Montserrat",
+                  "headline-xl": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "48px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "56px"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Inter",
                     "fontSize": "12px",
                     "fontWeight": "600",
                     "letterSpacing": "0.15em",
-                    "lineHeight": "1.2"
+                    "lineHeight": "16px"
                   },
-                  "navigation": {
-                    "fontFamily": "Montserrat",
-                    "fontSize": "14px",
-                    "fontWeight": "500",
-                    "letterSpacing": "0.1em",
-                    "lineHeight": "1.0"
+                  "statement-serif": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "24px",
+                    "fontWeight": "400",
+                    "lineHeight": "32px"
                   }
                 }
               }
             },
-            "name": "assets/3cd9ac55e1104440bd60bfc56a6ca4f4",
+            "name": "assets/0e79f92866d645b7b7a7298b9e07b157",
             "version": "1"
           },
           "deviceType": "DESKTOP",
           "generatedBy": "figaro_agent",
-          "height": "7754",
+          "height": "9346",
           "htmlCode": {
-            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzIzMzM1ODc0NDM5NDQ0MDliOGMxODMxNTlmODM5NjMyEgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNzUyNDM2NDM5NzgwNDY3MzQ3OQ&filename=&opi=96797242",
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2NjZTlhYzg3MDlmNjRkMWM5YzY0NTdiOWJmYjU0ZmFlEgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDQzNjY5MTMzMTkxMTEzMjk2MA&filename=&opi=96797242",
             "mimeType": "text/html",
-            "name": "projects/17524364397804673479/files/f391303d56a843bba21c442af06b311c"
+            "name": "projects/10436691331911132960/files/b1e1f74874194ed7bcaf31b60ebc8b3f"
           },
-          "id": "5de529d05f814320a70df3f57ddf77fc",
-          "name": "projects/17524364397804673479/screens/5de529d05f814320a70df3f57ddf77fc",
-          "prompt": "Create a complete, bespoke desktop landing page for 'Seventh House' Hair Studio.\n\nDesign Requirements:\n- Visual Identity: Editorial, premium, and sophisticated. Use the Parchment (#F5F2ED) and Ink (#1A1A1A) palette from the design system. \n- Layout: Asymmetrical editorial grid. Use thin vertical and horizontal 'architectural rules' (1px borders) to divide sections and content blocks. Avoid standard card grids.\n- Typography: Huge, high-contrast serif headlines for section titles. Small, uppercase, wide-spaced sans-serif for labels.\n- Content:\n  - Header: Logo 'SEVENTH HOUSE' centered. Phone '(603) 555-0107' and 'BOOK APPOINTMENT' CTA on the ends. \n  - Hero: A bold statement: 'THE ART OF THE INDIVIDUAL.' in large serif, with subtext about Portsmouth's premier hair artisans.\n  - Credibility: A minimalist list: 'SINCE 2012', '40 DEER STREET', 'PORTSMOUTH, NH'.\n  - Services: 'OUR CRAFT' - List services like Precision Cutting, Bespoke Color, Editorial Styling, and Bridal. Use a vertical list layout with high-end photography for each.\n  - About: 'THE STUDIO' - Narrative text about the artisan philosophy.\n  - Visit: Include the map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n  - Contact Form: A minimal, two-column form for inquiries.\n- Specific Content: Phone: 265.663 7265 (use as (603) 265-6637 for US formatting) · email: seventhhousehair@gmail.com · 40 Deer Street, Portsmouth, NH 03801.\n\nTechnical:\n- Full semantic HTML5.\n- Tailored CSS using variables from {{DATA:DESIGN_SYSTEM:DESIGN_SYSTEM_1}}.\n- Responsive at 375px.\n- Mobile nav and smooth scroll.\n- Form validation UI preview.",
+          "id": "b603214f39fc48a486b195e3aab2dbfe",
+          "name": "projects/10436691331911132960/screens/b603214f39fc48a486b195e3aab2dbfe",
+          "prompt": "Create a complete, production-ready desktop homepage for 'Seventh House'. \n\nDESIGN SPECIFICATIONS:\n- Aesthetic: Editorial, high-fashion, Modern Heritage. \n- Layout: Asymmetric, staggered sections, thin vertical lines (visual motif), generous whitespace.\n- Sections:\n  1. Header: Include phone (265.663 7265) and 'Book Now'.\n  2. Hero: Overlapping text 'The Art of Hair' with subtext about Seventh House.\n  3. Credibility: A minimalist 'Trusted by Portsmouth' section with 3 premium testimonials.\n  4. Services: Staggered layout. List 'Precision Cutting', 'Artisanal Color', 'Editorial Styling'.\n  5. About: A section titled 'A Sanctuary on Deer Street' focusing on the boutique experience.\n  6. Visit: ID #visit. Include a map slot: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n  7. Contact: A minimalist form with name, email, and 'Inquiry' fields.\n  8. Footer: Semantic footer with all contact details.\n\nCONTENT:\n- Phone: 265.663 7265\n- Email: seventhhousehair@gmail.com\n- Address: 40 Deer Street, Portsmouth, NH 03801\n- NO LOREM IPSUM. Use evocative, professional copy.\n\nTECHNICAL:\n- Full semantic HTML5, CSS3 (using Tailwind-style classes and custom properties from the design system), and vanilla JS for mobile nav/smooth scroll/form validation.\n- Responsive design.\n- Descriptive alt tags.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "DESIGN",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtbjQ4Qs7JUxdirjjGdrW-wHsDJfxdCavO83GV08t3Z1vS6ChJ6NCmEF9FUgzrpMDx0DPhz_f1PuPkEWJyNNm3vMgarv75jqy13WZxCTeNJDUegMUnuCJqXT389GrFFGJKdR-r6QNPHEoOMaqbjgLrLlZDlJXGs8p6vnwnx9llNTEPEgQ8Gg5e6YYRqXRFvt7oCxbPbiy8QdIeXgO6us8zp0aL9EeqVxWj0wd3BHUTntwtmfoRIy6z7_691",
-            "name": "projects/17524364397804673479/files/b20f727b7ab44e2399ca34e9951d56cb"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsJPQFXDj7Zg3n2fY94sxJnQbMLg6uWUoKCc-MIh5Ts2_76_zfWElry8w4cLpmGeGXNtTLIn4OkttuApd1SqpOCbQ8Z-_TkkpffgOwFC6UD3lgWpBGDuYU9bNHc7rP0He-wzB7NTyT1lWJTluB8BN1Z3QZVLoT7Krms1u6WqFnFI4KGu0v0neT7eOFONHJba_5BqJSKQXlKFxSEQe18A40YrskeDjH7XobG1DhlEjy18pEOY0D97U4b4C4o",
+            "name": "projects/10436691331911132960/files/c0a6424da3c34941ae4b14392b39dae2"
           },
           "theme": {
-            "bodyFont": "MONTSERRAT",
-            "bodyFontFamily": "Montserrat",
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
             "customColor": "#1a1a1a",
-            "designMd": "---\nname: Seventh House\ncolors:\n  surface: '#fbf9f8'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#5f5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e5e2dd'\n  on-secondary-container: '#656461'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#271900'\n  on-tertiary-container: '#ab7c00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#e5e2dd'\n  secondary-fixed-dim: '#c9c6c2'\n  on-secondary-fixed: '#1c1c19'\n  on-secondary-fixed-variant: '#474743'\n  tertiary-fixed: '#ffdea6'\n  tertiary-fixed-dim: '#f7bd48'\n  on-tertiary-fixed: '#271900'\n  on-tertiary-fixed-variant: '#5d4200'\n  background: '#fbf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  navigation:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  margin-desktop: 80px\n  margin-mobile: 24px\n  gutter: 32px\n  unit-xs: 4px\n  unit-sm: 8px\n  unit-md: 16px\n  unit-lg: 32px\n  unit-xl: 64px\n---\n\n## Brand & Style\nThe brand personality is **Artisanal, Confident, and World-Class**, capturing a \"New England Sophisticated\" aesthetic. This design system bridges the gap between historic Portsmouth charm and contemporary high-fashion editorial.\n\nThe style is **Modern Editorial Minimalism**. It relies on high-contrast pairings, generous parchment-toned whitespace, and a structured grid defined by thin hairline rules. The visual narrative should feel like a premium printed lookbook—grounded, intentional, and quiet in its luxury. Photography should be treated with high-contrast, slightly desaturated tones and subtle film grain to reinforce the tactile, artisanal nature of the studio.\n\n## Colors\nThe palette is rooted in a \"Parchment and Ink\" philosophy, creating a high-contrast environment that feels more like a physical document than a digital interface.\n\n- **Primary (Ink Charcoal):** Used for all primary typography, iconography, and structural hairline rules.\n- **Secondary (Warm Parchment):** The foundational background color. It provides a softer, more historic feel than pure white.\n- **Tertiary (Heritage Gold):** Used sparingly for micro-interactions, active states, and small ornamental details (like \"Available\" indicators or special callouts).\n- **Neutral:** A muted grey for secondary information to ensure the hierarchy remains sharp.\n\n## Typography\nThe typography system uses a dramatic contrast between a traditional, high-contrast serif and a modern, airy sans-serif.\n\n- **Headlines:** Playfair Display is used to establish the \"Editorial\" authority. Large-scale initials (drop caps or background elements) should be used for section transitions.\n- **Body & Labels:** Montserrat provides a clean, functional counterpoint. For body text, ensure generous line-height to maintain readability and \"air.\"\n- **Navigation & Metadata:** Always use uppercase Montserrat with wide letter-spacing (0.1em to 0.15em) to evoke a sense of premium branding.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model inspired by newspaper and magazine columns. \n\n- **The \"House\" Structure:** Use thin 1px rules (#1A1A1A at 20-30% opacity) to separate sections, creating a grid-like framework.\n- **Density Contrast:** Alternate between \"dense\" blocks of text (3-column width) and \"airy\" areas of pure whitespace or large-scale imagery.\n- **Responsive Behavior:** \n    - **Desktop:** 12-column grid with wide margins (80px) to frame the content.\n    - **Tablet:** 8-column grid with 40px margins.\n    - **Mobile:** 4-column grid with 24px margins; rules transition from vertical to horizontal separators.\n\n## Elevation & Depth\nThis design system avoids shadows entirely. Depth is conveyed through **Tonal Layering** and **Structural Framing**.\n\n- **Layers:** Most content sits flat on the Parchment surface. Use very subtle shifts to a slightly darker parchment shade for \"sunken\" elements like input fields or footers.\n- **Framing:** High-fashion photography should be framed with thin 1px borders or offset by large serif initials behind the image to create a 2D-depth effect.\n- **Overlays:** If an overlay is required (e.g., mobile menu), use a solid Warm Parchment background with no transparency to maintain the \"printed paper\" feel.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo maintain the architectural and \"house\" motif, every element—including buttons, input fields, and image containers—must have square corners. This reinforces the professional, precise, and grounded New England character of the brand.\n\n## Components\n- **Buttons:** Primary buttons are solid Ink Charcoal with white (Parchment) uppercase text. Secondary buttons are outlined with a 1px border. All buttons are sharp-edged.\n- **Chips:** Used for \"Services\" or \"Stylists.\" These should be simple text labels separated by thin vertical bars (|) or heritage gold dots, rather than pills.\n- **Inputs:** Underlined only (1px solid #1A1A1A) with labels in uppercase Montserrat 12px. No rounded boxes.\n- **Cards:** Defined by their grid position and rule lines rather than containers. An image with a title and price below it, separated by a thin horizontal rule.\n- **Lists:** Service menus should be styled with \"Playfair Display\" names on the left and prices on the right, connected by a faint dotted line or simply wide whitespace.\n- **Special Component (The \"Studio Seal\"):** A large, semi-transparent Playfair Display \"7\" or \"7H\" that sits behind text blocks or in the corner of images as a watermark.",
-            "font": "PLAYFAIR_DISPLAY",
-            "headlineFont": "PLAYFAIR_DISPLAY",
-            "headlineFontFamily": "Playfair Display",
-            "labelFont": "MONTSERRAT",
-            "labelFontFamily": "Montserrat",
+            "designMd": "---\nname: Seventh House\ncolors:\n  surface: '#faf9f7'\n  surface-dim: '#dadad8'\n  surface-bright: '#faf9f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f3f1'\n  surface-container: '#efeeec'\n  surface-container-high: '#e9e8e6'\n  surface-container-highest: '#e3e2e0'\n  on-surface: '#1a1c1b'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f3130'\n  inverse-on-surface: '#f1f1ef'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#556158'\n  on-secondary: '#ffffff'\n  secondary-container: '#d6e3d7'\n  on-secondary-container: '#59665c'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#261900'\n  on-tertiary-container: '#a17f3b'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#d9e6da'\n  secondary-fixed-dim: '#bdcabe'\n  on-secondary-fixed: '#131e17'\n  on-secondary-fixed-variant: '#3e4a41'\n  tertiary-fixed: '#ffdea5'\n  tertiary-fixed-dim: '#e9c176'\n  on-tertiary-fixed: '#261900'\n  on-tertiary-fixed-variant: '#5d4201'\n  background: '#faf9f7'\n  on-background: '#1a1c1b'\n  surface-variant: '#e3e2e0'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 92px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n    letterSpacing: -0.01em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 56px\n    letterSpacing: 0.05em\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 40px\n    letterSpacing: 0.02em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0em\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0em\n  label-caps:\n    fontFamily: Inter\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  statement-serif:\n    fontFamily: Bodoni Moda\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 32px\nspacing:\n  unit: 4px\n  strand-width: 0.5px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  gutter: 24px\n  stagger-offset: 48px\n---\n\n## Brand & Style\nThe design system for Seventh House embodies \"Modern Heritage.\" It is a premium, editorial-grade aesthetic that bridges the gap between Portsmouth’s coastal history and the avant-garde world of high-fashion hair artistry. The brand personality is sophisticated, confident, and meticulously curated.\n\nThe design style is **Editorial Minimalism** with **High-Contrast** accents. It utilizes expansive white space to create a sense of luxury and calm, while employing asymmetric layouts and overlapping elements to mimic the composition of a high-end fashion magazine. The visual signature is defined by \"The Strand\"—ultra-thin 0.5pt vertical lines that act as structural dividers and decorative motifs, subtly nodding to the craft of hair design.\n\n## Colors\nThe palette is grounded in monochromatic depth with organic, coastal-inspired undertones.\n\n- **Primary (Deep Charcoal):** Used for primary typography and structural \"Strand\" lines to ensure high-contrast authority.\n- **Secondary (Muted Sage):** Used for subtle backgrounds, secondary buttons, and tonal shifts in editorial sections.\n- **Accent (Warm Ochre):** Reserved for high-value calls to action, active states, and premium highlights (representing \"Aged Brass\").\n- **Background (Linen):** The primary canvas for all interfaces, providing a warmer, more tactile feel than pure white.\n\n## Typography\nThe typography is the core of this design system’s editorial feel. \n\n**Bodoni Moda** is used for all headlines and display text. For \"Display LG\" roles, use optical sizing to emphasize the high-contrast thins and thicks of the typeface. All serif headlines should utilize generous tracking (letter spacing) to evoke a sense of airiness and luxury.\n\n**Inter** provides a functional, modern counterpoint for body copy and UI labels. It ensures legibility in service menus and booking flows. \"Label Caps\" should always be used in uppercase for navigational elements and small headers to maintain the \"Modern Heritage\" structure.\n\n## Layout & Spacing\nThis design system utilizes an **Asymmetric Fluid Grid**. Avoid traditional, centered symmetry.\n\n- **The Staggered Layout:** Content blocks (images and text) should be offset from one another by the `stagger-offset` value, creating a sense of movement down the page.\n- **The Strand:** Use 0.5px vertical rules to separate columns or to \"anchor\" floating text. These rules should often extend beyond the content containers to the top or bottom of the viewport.\n- **Overlays:** Imagery should frequently overlap background color blocks or typography to create depth without using shadows.\n- **Margins:** Large horizontal margins are required (80px on desktop) to compress the content and focus the eye, mimicking the \"safe zones\" of a printed magazine.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layering** and **Z-axis Overlaps** rather than traditional shadows.\n\n- **Surfaces:** Use the Linen background as the base. Muted Sage and Deep Charcoal can be used as \"layered sheets\" that sit on top or underneath content.\n- **Glass Effects:** On scroll-over or navigation overlays, use a very subtle backdrop blur (8px) with a 90% opacity Linen tint to maintain the editorial feel while providing functional focus.\n- **Zero Shadow Policy:** Avoid drop shadows. Visual hierarchy is communicated through size, color contrast, and the physical stacking of elements.\n\n## Shapes\nThe design system uses **Sharp (0px)** corners for all primary elements. \n\nThe use of 90-degree angles reinforces the architectural, \"heritage\" feel of the brand. This applies to buttons, image containers, input fields, and cards. The only exception is for \"The Strand\" vertical lines, which should have no visible cap styling.\n\n## Components\n- **Primary Button:** Rectangular, sharp corners. Solid Deep Charcoal background with Linen text in `label-caps`. On hover, transition to Muted Sage.\n- **Ghost Button:** 1px Deep Charcoal border, no background, `label-caps` text. Used for secondary actions.\n- **Editorial Card:** Not a traditional card with a border; instead, a combination of an image with a `stagger-offset` and a floating `headline-md` that overlaps the image corner.\n- **Input Fields:** A single 1px Deep Charcoal line at the bottom (underline style only) to maintain the \"Strand\" motif. Labels use `label-caps` positioned above the line.\n- **The Hair Menu:** A list-style component where the service name (Bodoni Moda) and price are separated by a long, 0.5px horizontal line that spans the container.\n- **Navigation:** Minimalist top-bar. Links in `label-caps`. Active state indicated by a 0.5px vertical line \"Strand\" appearing above the link.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "INTER",
+            "labelFontFamily": "Inter",
             "namedColors": {
-              "background": "#fbf9f8",
+              "background": "#faf9f7",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f2f0f0",
+              "inverse_on_surface": "#f1f1ef",
               "inverse_primary": "#c8c6c5",
-              "inverse_surface": "#303031",
-              "on_background": "#1b1c1c",
+              "inverse_surface": "#2f3130",
+              "on_background": "#1a1c1b",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
@@ -332,112 +332,112 @@
               "on_primary_fixed": "#1c1b1b",
               "on_primary_fixed_variant": "#474746",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#656461",
-              "on_secondary_fixed": "#1c1c19",
-              "on_secondary_fixed_variant": "#474743",
-              "on_surface": "#1b1c1c",
+              "on_secondary_container": "#59665c",
+              "on_secondary_fixed": "#131e17",
+              "on_secondary_fixed_variant": "#3e4a41",
+              "on_surface": "#1a1c1b",
               "on_surface_variant": "#444748",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#ab7c00",
-              "on_tertiary_fixed": "#271900",
-              "on_tertiary_fixed_variant": "#5d4200",
+              "on_tertiary_container": "#a17f3b",
+              "on_tertiary_fixed": "#261900",
+              "on_tertiary_fixed_variant": "#5d4201",
               "outline": "#747878",
               "outline_variant": "#c4c7c7",
               "primary": "#000000",
               "primary_container": "#1c1b1b",
               "primary_fixed": "#e5e2e1",
               "primary_fixed_dim": "#c8c6c5",
-              "secondary": "#5f5e5b",
-              "secondary_container": "#e5e2dd",
-              "secondary_fixed": "#e5e2dd",
-              "secondary_fixed_dim": "#c9c6c2",
-              "surface": "#fbf9f8",
-              "surface_bright": "#fbf9f8",
-              "surface_container": "#efeded",
-              "surface_container_high": "#e9e8e7",
-              "surface_container_highest": "#e4e2e2",
-              "surface_container_low": "#f5f3f3",
+              "secondary": "#556158",
+              "secondary_container": "#d6e3d7",
+              "secondary_fixed": "#d9e6da",
+              "secondary_fixed_dim": "#bdcabe",
+              "surface": "#faf9f7",
+              "surface_bright": "#faf9f7",
+              "surface_container": "#efeeec",
+              "surface_container_high": "#e9e8e6",
+              "surface_container_highest": "#e3e2e0",
+              "surface_container_low": "#f4f3f1",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#dbdad9",
+              "surface_dim": "#dadad8",
               "surface_tint": "#5f5e5e",
-              "surface_variant": "#e4e2e2",
+              "surface_variant": "#e3e2e0",
               "tertiary": "#000000",
-              "tertiary_container": "#271900",
-              "tertiary_fixed": "#ffdea6",
-              "tertiary_fixed_dim": "#f7bd48"
+              "tertiary_container": "#261900",
+              "tertiary_fixed": "#ffdea5",
+              "tertiary_fixed_dim": "#e9c176"
             },
-            "overrideNeutralColor": "#6b6b6b",
+            "overrideNeutralColor": "#f9f8f6",
             "overridePrimaryColor": "#1a1a1a",
-            "overrideSecondaryColor": "#f5f2ed",
-            "overrideTertiaryColor": "#b8860b",
+            "overrideSecondaryColor": "#8e9b90",
+            "overrideTertiaryColor": "#c5a059",
             "spacing": {
-              "gutter": "32px",
+              "gutter": "24px",
               "margin-desktop": "80px",
-              "margin-mobile": "24px",
-              "unit-lg": "32px",
-              "unit-md": "16px",
-              "unit-sm": "8px",
-              "unit-xl": "64px",
-              "unit-xs": "4px"
+              "margin-mobile": "20px",
+              "stagger-offset": "48px",
+              "strand-width": "0.5px",
+              "unit": "4px"
             },
             "spacingScale": 2,
             "typography": {
               "body-lg": {
-                "fontFamily": "Montserrat",
+                "fontFamily": "Inter",
                 "fontSize": "18px",
                 "fontWeight": "400",
-                "letterSpacing": "0.01em",
-                "lineHeight": "1.6"
+                "letterSpacing": "0em",
+                "lineHeight": "28px"
               },
               "body-md": {
-                "fontFamily": "Montserrat",
+                "fontFamily": "Inter",
                 "fontSize": "16px",
                 "fontWeight": "400",
-                "letterSpacing": "0.01em",
-                "lineHeight": "1.6"
+                "letterSpacing": "0em",
+                "lineHeight": "24px"
               },
               "display-lg": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "72px",
-                "fontWeight": "700",
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "84px",
+                "fontWeight": "400",
                 "letterSpacing": "-0.02em",
-                "lineHeight": "1.1"
+                "lineHeight": "92px"
               },
-              "headline-lg": {
-                "fontFamily": "Playfair Display",
+              "display-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
                 "fontSize": "48px",
-                "fontWeight": "600",
-                "lineHeight": "1.2"
-              },
-              "headline-lg-mobile": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "32px",
-                "fontWeight": "600",
-                "lineHeight": "1.2"
+                "fontWeight": "400",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "52px"
               },
               "headline-md": {
-                "fontFamily": "Playfair Display",
+                "fontFamily": "Bodoni Moda",
                 "fontSize": "32px",
-                "fontWeight": "500",
-                "lineHeight": "1.3"
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "40px"
               },
-              "label-sm": {
-                "fontFamily": "Montserrat",
+              "headline-xl": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "400",
+                "letterSpacing": "0.05em",
+                "lineHeight": "56px"
+              },
+              "label-caps": {
+                "fontFamily": "Inter",
                 "fontSize": "12px",
                 "fontWeight": "600",
                 "letterSpacing": "0.15em",
-                "lineHeight": "1.2"
+                "lineHeight": "16px"
               },
-              "navigation": {
-                "fontFamily": "Montserrat",
-                "fontSize": "14px",
-                "fontWeight": "500",
-                "letterSpacing": "0.1em",
-                "lineHeight": "1.0"
+              "statement-serif": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "32px"
               }
             }
           },
-          "title": "Seventh House - Home",
+          "title": "Seventh House | Bespoke Editorial Homepage",
           "width": "2560"
         }
       ],
@@ -445,15 +445,15 @@
     }
   },
   {
-    "text": "I've designed and built a bespoke, editorial-grade homepage for **Seventh House**. \n\n### Design Rationale:\n- **Architectural Grid**: Instead of a standard local-business layout, I used an asymmetrical editorial grid defined by thin, elegant rules. This mirrors the precision of hair artistry and the historic structure of Portsmouth.\n- **Parchment & Ink Palette**: I moved away from generic \"salon\" colors to a sophisticated high-contrast palette of warm parchment and deep ink charcoal, creating an atmosphere of quiet luxury.\n- **Typography as Art**: Large-scale serif headlines serve as visual anchors, reinforcing the \"Artisan Studio\" positioning.\n- **Memorable Visual Motif**: The layout uses intentional density in the typographic headers contrasted with expansive whitespace, creating a rhythm that feels curated rather than assembled.\n\n### Technical Details:\n- **Production-Ready HTML/CSS**: A fully semantic document with a mobile-responsive navigation system.\n- **Interactive Elements**: Includes a custom form validation UI and smooth-scroll navigation.\n- **Standard-Compliant**: Built with the specific contact details and technical requirements you provided, including the designated map slot.\n\nThe resulting site provides Seventh House with a memorable digital presence that feels like a high-fashion editorial magazine, positioning the studio as Portsmouth's premier destination for bespoke hair."
+    "text": "I have designed a bespoke, editorial-grade homepage for **Seventh House** that breaks away from standard local business templates to create a truly premium first impression.\n\n### Design Rationale:\n*   **Modern Heritage Aesthetic**: I utilized a high-contrast palette of **Deep Charcoal**, **Muted Sage**, and **Warm Ochre** on an **Off-white Linen** background to reflect Portsmouth’s coastal history while maintaining a high-fashion, editorial edge.\n*   **Editorial Layout**: The design uses an asymmetric, staggered grid with generous whitespace and a repeating visual motif of thin vertical rules—echoing the precision and artistry of hair design.\n*   **Typographic Hierarchy**: Bold, high-contrast serifs create a sense of authority and luxury, while clean sans-serifs ensure clarity for service details and contact information.\n*   **Memorable Sections**: \n    *   The **Hero** features overlapping typography for a distinctive visual statement.\n    *   The **Services** section is styled like a magazine menu rather than a generic grid.\n    *   The **Visit** section includes the requested technical map slot and a minimalist inquiry form for a seamless user experience.\n\nThe site is fully responsive, semantic, and production-ready with integrated smooth scrolling and form validation UI.\n\nHow does this visual direction feel for the brand? We can refine the color balance or adjust specific section layouts if you'd like to explore further."
   },
   {
-    "suggestion": "Add a scroll-triggered fade-in animation to the services section"
+    "suggestion": "Adjust the color palette to be more coastal blue"
   },
   {
-    "suggestion": "Create a mobile-optimized version with a slide-out menu"
+    "suggestion": "Make the 'About' section more prominent with a larger image"
   },
   {
-    "suggestion": "Add a gallery section for artisan portfolios"
+    "suggestion": "Add a 'Gallery' section for client transformations"
   }
 ]

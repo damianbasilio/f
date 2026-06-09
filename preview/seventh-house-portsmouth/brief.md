@@ -86,7 +86,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/seventhhousestudio/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-09T16:36:31.044Z
+- **Scraped:** 2026-06-09T16:40:20.961Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/seventhhousestudio/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

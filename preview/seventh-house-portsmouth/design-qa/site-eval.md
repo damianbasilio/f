@@ -1,10 +1,10 @@
 # Site evaluation — seventh-house-portsmouth
 
-**Result:** PASS
+**Result:** FAIL
 
-## Errors (0)
+## Errors (1)
 
-- none
+- Stitch AI placeholder images still present — run images:apply
 
 ## Warnings (0)
 

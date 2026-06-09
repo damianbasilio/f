@@ -2,22 +2,24 @@
 
 **Result:** NEEDS FIX
 
-**Craft warnings:** 1 (see craft section)
+**Craft warnings:** 2 (see craft section)
 
 ## Skills run
 
 | Skill | Status |
 | ----- | ------ |
-| craft | fail |
+| craft | pass |
 | emil | pass |
 | taste | pass |
-| audit | pass |
+| audit | fail |
 | harden | pass |
 | polish | pass |
 
 ## Fixes applied
 
 - normalize: single DOCTYPE
+- emil: added :active press feedback
+- craft: injected brief fonts (Source Serif 4 / Nunito)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -26,12 +28,12 @@
 ### craft
 
 - OK: No AI purple gradient
-- FAIL: Fake ratings or hype copy detected
+- OK: No fake ratings/hype
 - OK: No obvious buzzwords
 - OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 3
+- WARN: 8 uppercase-tracked labels — cap ~1 eyebrow per 3 sections
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,17 +45,18 @@
 
 ### taste
 
-- Eyebrow discipline: 3 uppercase-tracked labels
+- WARN: 8 uppercase-tracked labels (eyebrow cap ~1 per 3 sections)
 - Anti-slop: no em dashes, layout families from Stitch brief
 
 ### audit
 
-- Images: no stock/aida URLs in HTML
+- FAIL: stock or Stitch AI image URL still present
 - Mockup notice: popup present
 - Credibility section: present
 - Map: embedded for location
 - WARN: Tailwind CDN (Stitch export limitation — accepted in shipped mockups)
 - WARN: Material Symbols icon font (Stitch export limitation — accepted in shipped mockups)
+- FAIL: Stitch AI placeholder images still present after images:apply
 
 ### harden
 

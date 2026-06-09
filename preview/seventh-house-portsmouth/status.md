@@ -7,12 +7,12 @@
 | stitch | done |
 | images | done |
 | copy | pending |
-| design-qa/craft | fail |
+| design-qa/craft | done |
 | design-qa/emil | done |
 | design-qa/taste | done |
-| design-qa/audit | done |
+| design-qa/audit | fail |
 | design-qa/harden | done |
 | design-qa/polish | done |
-| site-eval | done |
+| site-eval | fail |
 | outreach | pending |
 | outreach-sent | pending |

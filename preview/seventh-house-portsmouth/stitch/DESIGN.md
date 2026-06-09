@@ -1,35 +1,35 @@
-I've designed and built a bespoke, editorial-grade homepage for **Seventh House**. 
+I have designed a bespoke, editorial-grade homepage for **Seventh House** that breaks away from standard local business templates to create a truly premium first impression.
 
 ### Design Rationale:
-- **Architectural Grid**: Instead of a standard local-business layout, I used an asymmetrical editorial grid defined by thin, elegant rules. This mirrors the precision of hair artistry and the historic structure of Portsmouth.
-- **Parchment & Ink Palette**: I moved away from generic "salon" colors to a sophisticated high-contrast palette of warm parchment and deep ink charcoal, creating an atmosphere of quiet luxury.
-- **Typography as Art**: Large-scale serif headlines serve as visual anchors, reinforcing the "Artisan Studio" positioning.
-- **Memorable Visual Motif**: The layout uses intentional density in the typographic headers contrasted with expansive whitespace, creating a rhythm that feels curated rather than assembled.
+*   **Modern Heritage Aesthetic**: I utilized a high-contrast palette of **Deep Charcoal**, **Muted Sage**, and **Warm Ochre** on an **Off-white Linen** background to reflect Portsmouth’s coastal history while maintaining a high-fashion, editorial edge.
+*   **Editorial Layout**: The design uses an asymmetric, staggered grid with generous whitespace and a repeating visual motif of thin vertical rules—echoing the precision and artistry of hair design.
+*   **Typographic Hierarchy**: Bold, high-contrast serifs create a sense of authority and luxury, while clean sans-serifs ensure clarity for service details and contact information.
+*   **Memorable Sections**: 
+    *   The **Hero** features overlapping typography for a distinctive visual statement.
+    *   The **Services** section is styled like a magazine menu rather than a generic grid.
+    *   The **Visit** section includes the requested technical map slot and a minimalist inquiry form for a seamless user experience.
 
-### Technical Details:
-- **Production-Ready HTML/CSS**: A fully semantic document with a mobile-responsive navigation system.
-- **Interactive Elements**: Includes a custom form validation UI and smooth-scroll navigation.
-- **Standard-Compliant**: Built with the specific contact details and technical requirements you provided, including the designated map slot.
+The site is fully responsive, semantic, and production-ready with integrated smooth scrolling and form validation UI.
 
-The resulting site provides Seventh House with a memorable digital presence that feels like a high-fashion editorial magazine, positioning the studio as Portsmouth's premier destination for bespoke hair.
+How does this visual direction feel for the brand? We can refine the color balance or adjust specific section layouts if you'd like to explore further.
 
 ---
 
 ---
 name: Seventh House
 colors:
-  surface: '#fbf9f8'
-  surface-dim: '#dbdad9'
-  surface-bright: '#fbf9f8'
+  surface: '#faf9f7'
+  surface-dim: '#dadad8'
+  surface-bright: '#faf9f7'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f3f3'
-  surface-container: '#efeded'
-  surface-container-high: '#e9e8e7'
-  surface-container-highest: '#e4e2e2'
-  on-surface: '#1b1c1c'
+  surface-container-low: '#f4f3f1'
+  surface-container: '#efeeec'
+  surface-container-high: '#e9e8e6'
+  surface-container-highest: '#e3e2e0'
+  on-surface: '#1a1c1b'
   on-surface-variant: '#444748'
-  inverse-surface: '#303031'
-  inverse-on-surface: '#f2f0f0'
+  inverse-surface: '#2f3130'
+  inverse-on-surface: '#f1f1ef'
   outline: '#747878'
   outline-variant: '#c4c7c7'
   surface-tint: '#5f5e5e'
@@ -38,14 +38,14 @@ colors:
   primary-container: '#1c1b1b'
   on-primary-container: '#858383'
   inverse-primary: '#c8c6c5'
-  secondary: '#5f5e5b'
+  secondary: '#556158'
   on-secondary: '#ffffff'
-  secondary-container: '#e5e2dd'
-  on-secondary-container: '#656461'
+  secondary-container: '#d6e3d7'
+  on-secondary-container: '#59665c'
   tertiary: '#000000'
   on-tertiary: '#ffffff'
-  tertiary-container: '#271900'
-  on-tertiary-container: '#ab7c00'
+  tertiary-container: '#261900'
+  on-tertiary-container: '#a17f3b'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
@@ -54,120 +54,118 @@ colors:
   primary-fixed-dim: '#c8c6c5'
   on-primary-fixed: '#1c1b1b'
   on-primary-fixed-variant: '#474746'
-  secondary-fixed: '#e5e2dd'
-  secondary-fixed-dim: '#c9c6c2'
-  on-secondary-fixed: '#1c1c19'
-  on-secondary-fixed-variant: '#474743'
-  tertiary-fixed: '#ffdea6'
-  tertiary-fixed-dim: '#f7bd48'
-  on-tertiary-fixed: '#271900'
-  on-tertiary-fixed-variant: '#5d4200'
-  background: '#fbf9f8'
-  on-background: '#1b1c1c'
-  surface-variant: '#e4e2e2'
+  secondary-fixed: '#d9e6da'
+  secondary-fixed-dim: '#bdcabe'
+  on-secondary-fixed: '#131e17'
+  on-secondary-fixed-variant: '#3e4a41'
+  tertiary-fixed: '#ffdea5'
+  tertiary-fixed-dim: '#e9c176'
+  on-tertiary-fixed: '#261900'
+  on-tertiary-fixed-variant: '#5d4201'
+  background: '#faf9f7'
+  on-background: '#1a1c1b'
+  surface-variant: '#e3e2e0'
 typography:
   display-lg:
-    fontFamily: Playfair Display
-    fontSize: 72px
-    fontWeight: '700'
-    lineHeight: '1.1'
+    fontFamily: Bodoni Moda
+    fontSize: 84px
+    fontWeight: '400'
+    lineHeight: 92px
     letterSpacing: -0.02em
-  headline-lg:
-    fontFamily: Playfair Display
+  display-lg-mobile:
+    fontFamily: Bodoni Moda
     fontSize: 48px
-    fontWeight: '600'
-    lineHeight: '1.2'
-  headline-lg-mobile:
-    fontFamily: Playfair Display
-    fontSize: 32px
-    fontWeight: '600'
-    lineHeight: '1.2'
+    fontWeight: '400'
+    lineHeight: 52px
+    letterSpacing: -0.01em
+  headline-xl:
+    fontFamily: Bodoni Moda
+    fontSize: 48px
+    fontWeight: '400'
+    lineHeight: 56px
+    letterSpacing: 0.05em
   headline-md:
-    fontFamily: Playfair Display
+    fontFamily: Bodoni Moda
     fontSize: 32px
-    fontWeight: '500'
-    lineHeight: '1.3'
+    fontWeight: '400'
+    lineHeight: 40px
+    letterSpacing: 0.02em
   body-lg:
-    fontFamily: Montserrat
+    fontFamily: Inter
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.6'
-    letterSpacing: 0.01em
+    lineHeight: 28px
+    letterSpacing: 0em
   body-md:
-    fontFamily: Montserrat
+    fontFamily: Inter
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.6'
-    letterSpacing: 0.01em
-  label-sm:
-    fontFamily: Montserrat
+    lineHeight: 24px
+    letterSpacing: 0em
+  label-caps:
+    fontFamily: Inter
     fontSize: 12px
     fontWeight: '600'
-    lineHeight: '1.2'
+    lineHeight: 16px
     letterSpacing: 0.15em
-  navigation:
-    fontFamily: Montserrat
-    fontSize: 14px
-    fontWeight: '500'
-    lineHeight: '1.0'
-    letterSpacing: 0.1em
+  statement-serif:
+    fontFamily: Bodoni Moda
+    fontSize: 24px
+    fontWeight: '400'
+    lineHeight: 32px
 spacing:
+  unit: 4px
+  strand-width: 0.5px
   margin-desktop: 80px
-  margin-mobile: 24px
-  gutter: 32px
-  unit-xs: 4px
-  unit-sm: 8px
-  unit-md: 16px
-  unit-lg: 32px
-  unit-xl: 64px
+  margin-mobile: 20px
+  gutter: 24px
+  stagger-offset: 48px
 ---
 
 ## Brand & Style
-The brand personality is **Artisanal, Confident, and World-Class**, capturing a "New England Sophisticated" aesthetic. This design system bridges the gap between historic Portsmouth charm and contemporary high-fashion editorial.
+The design system for Seventh House embodies "Modern Heritage." It is a premium, editorial-grade aesthetic that bridges the gap between Portsmouth’s coastal history and the avant-garde world of high-fashion hair artistry. The brand personality is sophisticated, confident, and meticulously curated.
 
-The style is **Modern Editorial Minimalism**. It relies on high-contrast pairings, generous parchment-toned whitespace, and a structured grid defined by thin hairline rules. The visual narrative should feel like a premium printed lookbook—grounded, intentional, and quiet in its luxury. Photography should be treated with high-contrast, slightly desaturated tones and subtle film grain to reinforce the tactile, artisanal nature of the studio.
+The design style is **Editorial Minimalism** with **High-Contrast** accents. It utilizes expansive white space to create a sense of luxury and calm, while employing asymmetric layouts and overlapping elements to mimic the composition of a high-end fashion magazine. The visual signature is defined by "The Strand"—ultra-thin 0.5pt vertical lines that act as structural dividers and decorative motifs, subtly nodding to the craft of hair design.
 
 ## Colors
-The palette is rooted in a "Parchment and Ink" philosophy, creating a high-contrast environment that feels more like a physical document than a digital interface.
+The palette is grounded in monochromatic depth with organic, coastal-inspired undertones.
 
-- **Primary (Ink Charcoal):** Used for all primary typography, iconography, and structural hairline rules.
-- **Secondary (Warm Parchment):** The foundational background color. It provides a softer, more historic feel than pure white.
-- **Tertiary (Heritage Gold):** Used sparingly for micro-interactions, active states, and small ornamental details (like "Available" indicators or special callouts).
-- **Neutral:** A muted grey for secondary information to ensure the hierarchy remains sharp.
+- **Primary (Deep Charcoal):** Used for primary typography and structural "Strand" lines to ensure high-contrast authority.
+- **Secondary (Muted Sage):** Used for subtle backgrounds, secondary buttons, and tonal shifts in editorial sections.
+- **Accent (Warm Ochre):** Reserved for high-value calls to action, active states, and premium highlights (representing "Aged Brass").
+- **Background (Linen):** The primary canvas for all interfaces, providing a warmer, more tactile feel than pure white.
 
 ## Typography
-The typography system uses a dramatic contrast between a traditional, high-contrast serif and a modern, airy sans-serif.
+The typography is the core of this design system’s editorial feel. 
 
-- **Headlines:** Playfair Display is used to establish the "Editorial" authority. Large-scale initials (drop caps or background elements) should be used for section transitions.
-- **Body & Labels:** Montserrat provides a clean, functional counterpoint. For body text, ensure generous line-height to maintain readability and "air."
-- **Navigation & Metadata:** Always use uppercase Montserrat with wide letter-spacing (0.1em to 0.15em) to evoke a sense of premium branding.
+**Bodoni Moda** is used for all headlines and display text. For "Display LG" roles, use optical sizing to emphasize the high-contrast thins and thicks of the typeface. All serif headlines should utilize generous tracking (letter spacing) to evoke a sense of airiness and luxury.
+
+**Inter** provides a functional, modern counterpoint for body copy and UI labels. It ensures legibility in service menus and booking flows. "Label Caps" should always be used in uppercase for navigational elements and small headers to maintain the "Modern Heritage" structure.
 
 ## Layout & Spacing
-The layout follows a **Fixed Grid** model inspired by newspaper and magazine columns. 
+This design system utilizes an **Asymmetric Fluid Grid**. Avoid traditional, centered symmetry.
 
-- **The "House" Structure:** Use thin 1px rules (#1A1A1A at 20-30% opacity) to separate sections, creating a grid-like framework.
-- **Density Contrast:** Alternate between "dense" blocks of text (3-column width) and "airy" areas of pure whitespace or large-scale imagery.
-- **Responsive Behavior:** 
-    - **Desktop:** 12-column grid with wide margins (80px) to frame the content.
-    - **Tablet:** 8-column grid with 40px margins.
-    - **Mobile:** 4-column grid with 24px margins; rules transition from vertical to horizontal separators.
+- **The Staggered Layout:** Content blocks (images and text) should be offset from one another by the `stagger-offset` value, creating a sense of movement down the page.
+- **The Strand:** Use 0.5px vertical rules to separate columns or to "anchor" floating text. These rules should often extend beyond the content containers to the top or bottom of the viewport.
+- **Overlays:** Imagery should frequently overlap background color blocks or typography to create depth without using shadows.
+- **Margins:** Large horizontal margins are required (80px on desktop) to compress the content and focus the eye, mimicking the "safe zones" of a printed magazine.
 
 ## Elevation & Depth
-This design system avoids shadows entirely. Depth is conveyed through **Tonal Layering** and **Structural Framing**.
+Depth is achieved through **Tonal Layering** and **Z-axis Overlaps** rather than traditional shadows.
 
-- **Layers:** Most content sits flat on the Parchment surface. Use very subtle shifts to a slightly darker parchment shade for "sunken" elements like input fields or footers.
-- **Framing:** High-fashion photography should be framed with thin 1px borders or offset by large serif initials behind the image to create a 2D-depth effect.
-- **Overlays:** If an overlay is required (e.g., mobile menu), use a solid Warm Parchment background with no transparency to maintain the "printed paper" feel.
+- **Surfaces:** Use the Linen background as the base. Muted Sage and Deep Charcoal can be used as "layered sheets" that sit on top or underneath content.
+- **Glass Effects:** On scroll-over or navigation overlays, use a very subtle backdrop blur (8px) with a 90% opacity Linen tint to maintain the editorial feel while providing functional focus.
+- **Zero Shadow Policy:** Avoid drop shadows. Visual hierarchy is communicated through size, color contrast, and the physical stacking of elements.
 
 ## Shapes
-The shape language is strictly **Sharp (0px)**. 
+The design system uses **Sharp (0px)** corners for all primary elements. 
 
-To maintain the architectural and "house" motif, every element—including buttons, input fields, and image containers—must have square corners. This reinforces the professional, precise, and grounded New England character of the brand.
+The use of 90-degree angles reinforces the architectural, "heritage" feel of the brand. This applies to buttons, image containers, input fields, and cards. The only exception is for "The Strand" vertical lines, which should have no visible cap styling.
 
 ## Components
-- **Buttons:** Primary buttons are solid Ink Charcoal with white (Parchment) uppercase text. Secondary buttons are outlined with a 1px border. All buttons are sharp-edged.
-- **Chips:** Used for "Services" or "Stylists." These should be simple text labels separated by thin vertical bars (|) or heritage gold dots, rather than pills.
-- **Inputs:** Underlined only (1px solid #1A1A1A) with labels in uppercase Montserrat 12px. No rounded boxes.
-- **Cards:** Defined by their grid position and rule lines rather than containers. An image with a title and price below it, separated by a thin horizontal rule.
-- **Lists:** Service menus should be styled with "Playfair Display" names on the left and prices on the right, connected by a faint dotted line or simply wide whitespace.
-- **Special Component (The "Studio Seal"):** A large, semi-transparent Playfair Display "7" or "7H" that sits behind text blocks or in the corner of images as a watermark.
+- **Primary Button:** Rectangular, sharp corners. Solid Deep Charcoal background with Linen text in `label-caps`. On hover, transition to Muted Sage.
+- **Ghost Button:** 1px Deep Charcoal border, no background, `label-caps` text. Used for secondary actions.
+- **Editorial Card:** Not a traditional card with a border; instead, a combination of an image with a `stagger-offset` and a floating `headline-md` that overlaps the image corner.
+- **Input Fields:** A single 1px Deep Charcoal line at the bottom (underline style only) to maintain the "Strand" motif. Labels use `label-caps` positioned above the line.
+- **The Hair Menu:** A list-style component where the service name (Bodoni Moda) and price are separated by a long, 0.5px horizontal line that spans the container.
+- **Navigation:** Minimalist top-bar. Links in `label-caps`. Active state indicated by a 0.5px vertical line "Strand" appearing above the link.

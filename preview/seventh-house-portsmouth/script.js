@@ -1,36 +1,48 @@
-// Form Submission Interaction
-        const contactForm = document.getElementById('contactForm');
-        const formSuccess = document.getElementById('formSuccess');
+// Simple Form Validation & Submission
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('form-success');
 
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
+            // Simulate submission
             contactForm.classList.add('opacity-50', 'pointer-events-none');
             setTimeout(() => {
+                contactForm.reset();
                 contactForm.classList.add('hidden');
-                formSuccess.classList.remove('hidden');
-            }, 800);
+                successMessage.classList.remove('hidden');
+            }, 1000);
         });
 
-        // Simple Smooth Scroll Logic for all anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
+        // Image Reveal Observer
+        const observerOptions = {
+            threshold: 0.2
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
             });
-        });
+        }, observerOptions);
 
-        // Navigation Highlight On Scroll
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('header');
-            if (window.scrollY > 50) {
-                header.classList.add('py-1');
-                header.classList.remove('py-unit-md');
-            } else {
-                header.classList.add('py-unit-md');
-                header.classList.remove('py-1');
-            }
+        document.querySelectorAll('.image-reveal').forEach(el => observer.observe(el));
+
+        // Smooth reveal for sections
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transform = 'translateY(20px)';
+            section.style.transition = 'all 0.8s ease-out';
+            revealObserver.observe(section);
         });
 
 (() => {
