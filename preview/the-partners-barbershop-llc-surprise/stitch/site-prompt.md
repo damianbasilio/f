@@ -1,3 +1,7 @@
+Build the complete DESKTOP landing page website for The Partners Barbershop LLC now.
+
+
+Apply the design system already established in this project:
 I have designed a bespoke, editorial-grade homepage for **The Partners Barbershop LLC**. 
 
 ### Design Strategy
@@ -8,3 +12,13 @@ I have designed a bespoke, editorial-grade homepage for **The Partners Barbersho
 *   **Technical Excellence:** The site features a fully responsive layout, smooth scroll interactions, a functional contact form UI, and a dedicated high-contrast map slot for local discoverability.
 
 The result is a digital experience that serves as a premium "first impression," positioning The Partners as the premier destination for grooming in Surprise, AZ.
+
+This must be production-ready frontend code — a full semantic HTML document with CSS and JavaScript.
+Do NOT output a DESIGN.md file, design system document, or markdown summary.
+Do NOT scrape or copy the business's existing website — create a new mockup layout.
+
+Required sections: header with phone, hero, #credibility, services/offerings, about, visit (#visit with empty map panel: `<div class="map-slot relative overflow-hidden min-h-[400px]" data-map-slot aria-label="Map"></div>` — no fake map image, no second map block), contact form, footer. **Vary layout, section order, and visual style** — do not reuse a generic local-business template.
+
+Contact: (623) 230-3311 · Barbershopthepartners@gmail.com · 14557 West Grand Avenue, Surprise, AZ 85374
+
+Technical: responsive at 375px, mobile nav, smooth scroll, form validation UI (preview only), invent a distinctive color palette in styles.css (CSS custom properties), descriptive img alt tags, no lorem ipsum.

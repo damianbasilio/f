@@ -1,30 +1,60 @@
-// Smooth transitions for interaction states
-        document.querySelectorAll('button').forEach(button => {
-            button.addEventListener('mousedown', () => {
-                button.classList.add('scale-95', 'opacity-80');
-            });
-            button.addEventListener('mouseup', () => {
-                button.classList.remove('scale-95', 'opacity-80');
+// Mobile Menu Logic
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const menuClose = document.getElementById('mobile-menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
             });
         });
 
-        // Intersection Observer for fade-in effects
-        const observerOptions = {
-            threshold: 0.1
-        };
+        // Header Scroll Effect
+        let lastScroll = 0;
+        const header = document.getElementById('main-header');
+        const bookingBar = document.getElementById('booking-bar');
 
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll <= 0) {
+                header.classList.remove('-translate-y-full');
+                return;
+            }
 
-        document.querySelectorAll('section > div').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
-            observer.observe(el);
+            if (currentScroll > lastScroll && !header.classList.contains('-translate-y-full')) {
+                // Scroll down
+                header.classList.add('-translate-y-full');
+            } else if (currentScroll < lastScroll && header.classList.contains('-translate-y-full')) {
+                // Scroll up
+                header.classList.remove('-translate-y-full');
+            }
+            lastScroll = currentScroll;
+        });
+
+        // Form Validation UI preview
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = bookingForm.querySelector('button');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'REQUEST SENT';
+            btn.classList.add('bg-secondary');
+            
+            setTimeout(() => {
+                btn.innerHTML = originalText;
+                btn.classList.remove('bg-secondary');
+                bookingForm.reset();
+            }, 3000);
         });
 
 (() => {

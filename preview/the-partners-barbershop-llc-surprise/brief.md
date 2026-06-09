@@ -33,14 +33,14 @@
 - **Phone:** (623) 230-3311
 - **Email:** Barbershopthepartners@gmail.com
 - **Tagline:** The Partners BarberShop, Surprise. 209 likes · 48 were here. #AZbarber #Surprisebarber #elmiragebarber #barberexpo #fade #skinfade
-- **Hours:** Closed now
+- **Hours:** Open now
 - **Focus:** The Partners BarberShop, Surprise. 209 likes · 48 were here. #AZbarber #Surprisebarber #elmiragebarber #barberexpo #fade #skinfade
 - **Full profile (scraped):**
 
 The Partners BarberShop, Surprise. 209 likes · 48 were here. #AZbarber #Surprisebarber #elmiragebarber #barberexpo #fade #skinfade
-Hours: Closed now
+Hours: Open now
 Address: 14557 W Grand Ave. Suite B 105, Surprise, AZ, United States, 85374
-Phone: 623-230-3311
+Phone: 265.663 7265
 Email: Barbershopthepartners@gmail.com
 
 Recent posts from their Facebook page:
@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/thepartnersbarbershop/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-09T12:46:31.487Z
+- **Scraped:** 2026-06-09T16:36:23.822Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/thepartnersbarbershop/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
