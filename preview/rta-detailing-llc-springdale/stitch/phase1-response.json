@@ -1,0 +1,514 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "The Precision Workshop",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is engineered to evoke the atmosphere of a high-performance automotive studio. It rejects common \"car care\" tropes in favor of a sophisticated, editorial aesthetic that mirrors the meticulous nature of premium detailing. The brand personality is elite, technical, and authoritative.\n\nThe visual style is a fusion of **Modern Minimalism** and **Technical Editorial**. It utilizes high-contrast typography and a dark, atmospheric environment to create a sense of exclusivity. Strategic use of \"technical lines\"—thin, 1px rules—creates a blueprint-like structure, suggesting engineering precision and attention to detail. The UI should feel like a premium digital tool for a master craftsman, where every pixel has been polished to a mirror finish.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column fluid grid** with an emphasis on **asymmetric balance**. To avoid a generic corporate look, content should occasionally break the grid or be offset to create visual tension and interest.\n\nGenerous whitespace (the \"xl\" spacing unit) is essential to convey a premium, high-end feel. Use 1px Metallic Silver lines to separate sections and define content areas, mimicking technical drawings. \n\n**Breakpoints:**\n- **Mobile (<768px):** 4-column grid, 16px margins. Headlines scale down significantly.\n- **Tablet (768px - 1024px):** 8-column grid, 32px margins.\n- **Desktop (>1024px):** 12-column grid, 64px margins. Content is often center-aligned with wide gutters to maintain a \"gallery\" feel.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows in favor of **Tonal Layering** and **Technical Outlines**. \n\nDepth is communicated through color value:\n- **Level 0 (Background):** Deep Carbon (#0A0A0B).\n- **Level 1 (Cards/Containers):** Slate Gray (#1E2024) with a 1px Metallic Silver (#E2E8F0) border at 20% opacity.\n- **Level 2 (Active/Floating):** Slate Gray with a 1px Electric Cyan border.\n\nFor interactive elements in an active state, a subtle **Electric Cyan outer glow** (blur: 8px, opacity: 0.3) may be used to simulate the hum of a precision tool or an illuminated workshop display.\n\n## Components\n\n### Buttons\nPrimary buttons use a \"Ghost\" style: Sharp corners, 1px Electric Cyan border, Cyan text (uppercase JetBrains Mono). On hover, the button fills with Electric Cyan and the text becomes Deep Carbon. Secondary buttons use Metallic Silver instead of Cyan.\n\n### Cards\nCards are defined by thin 1px rules rather than heavy fills. Use Slate Gray for the background and a subtle Silver border. Headlines inside cards should be Playfair Display, while metadata uses JetBrains Mono.\n\n### Input Fields\nInputs are minimalist: a single 1px Silver bottom-border. Labels are positioned above the field in JetBrains Mono (uppercase). When focused, the bottom border transitions to Electric Cyan.\n\n### Chips & Tags\nTechnical tags for detailing services (e.g., \"CERAMIC COATING\") should look like serialized labels: JetBrains Mono, 10px, boxed in a 1px Silver frame with significant horizontal padding.\n\n### Lists\nLists are separated by 1px horizontal rules. Each item should have a \"serial number\" (e.g., 01, 02) in JetBrains Mono to emphasize the methodical process of detailing.\n\n### Image Treatment\nPhotography should be high-contrast with deep blacks. Images should be treated as \"Specimen Views\"—sharp edges, often accompanied by technical captions or dimensions in monospaced type.",
+          "theme": {
+            "bodyFont": "GEIST",
+            "bodyFontFamily": "Geist",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0a0a0b",
+            "designMd": "---\nname: The Precision Workshop\ncolors:\n  surface: '#141313'\n  surface-dim: '#141313'\n  surface-bright: '#3a3939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2b2a2a'\n  surface-container-highest: '#353434'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#c7c6ca'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#919094'\n  outline-variant: '#46464a'\n  surface-tint: '#c8c6c7'\n  primary: '#c8c6c7'\n  on-primary: '#313031'\n  primary-container: '#0a0a0b'\n  on-primary-container: '#7a797a'\n  inverse-primary: '#5f5e5f'\n  secondary: '#c6c6cb'\n  on-secondary: '#2e3035'\n  secondary-container: '#47494d'\n  on-secondary-container: '#b7b8bd'\n  tertiary: '#c1c7cf'\n  on-tertiary: '#2b3137'\n  tertiary-container: '#050b10'\n  on-tertiary-container: '#747a81'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1c1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#e2e2e7'\n  secondary-fixed-dim: '#c6c6cb'\n  on-secondary-fixed: '#1a1c20'\n  on-secondary-fixed-variant: '#45474b'\n  tertiary-fixed: '#dde3eb'\n  tertiary-fixed-dim: '#c1c7cf'\n  on-tertiary-fixed: '#161c22'\n  on-tertiary-fixed-variant: '#41474e'\n  background: '#141313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353434'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Geist\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  data-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe design system is engineered to evoke the atmosphere of a high-performance automotive studio. It rejects common \"car care\" tropes in favor of a sophisticated, editorial aesthetic that mirrors the meticulous nature of premium detailing. The brand personality is elite, technical, and authoritative.\n\nThe visual style is a fusion of **Modern Minimalism** and **Technical Editorial**. It utilizes high-contrast typography and a dark, atmospheric environment to create a sense of exclusivity. Strategic use of \"technical lines\"—thin, 1px rules—creates a blueprint-like structure, suggesting engineering precision and attention to detail. The UI should feel like a premium digital tool for a master craftsman, where every pixel has been polished to a mirror finish.\n\n## Colors\n\nThe palette is strictly high-contrast and atmospheric, rooted in the materials of automotive engineering. \n\n- **Deep Carbon (#0A0A0B):** The primary surface color. It provides a void-like depth that allows metallic and vibrant elements to pop.\n- **Slate Gray (#1E2024):** Used for secondary containers and UI layering, providing subtle distinction from the background without breaking the dark mode immersion.\n- **Metallic Silver (#E2E8F0):** The primary text and line color. It mimics the sheen of polished chrome and raw aluminum.\n- **Electric Cyan (#00F5FF):** A sharp, high-energy accent reserved strictly for interaction cues, status indicators, and critical call-to-actions. This color represents the \"spark\" of precision.\n\nSurface backgrounds should predominantly use Deep Carbon, with Slate Gray used to define \"work zones\" or cards.\n\n## Typography\n\nTypography is used to establish an editorial hierarchy. **Playfair Display** provides the luxury \"magazine\" feel for headlines, contrasting the raw power of the automotive world with classical elegance. \n\n**Geist** serves as the primary sans-serif for body copy, offering a clean, modern, and highly legible experience that feels technical yet approachable. \n\n**JetBrains Mono** is utilized for functional labels, metadata, and technical specifications. This monospaced font reinforces the \"Precision Workshop\" narrative, suggesting data readouts and engineering logs. All labels should be set in uppercase with increased letter spacing to enhance the technical aesthetic.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column fluid grid** with an emphasis on **asymmetric balance**. To avoid a generic corporate look, content should occasionally break the grid or be offset to create visual tension and interest.\n\nGenerous whitespace (the \"xl\" spacing unit) is essential to convey a premium, high-end feel. Use 1px Metallic Silver lines to separate sections and define content areas, mimicking technical drawings. \n\n**Breakpoints:**\n- **Mobile (<768px):** 4-column grid, 16px margins. Headlines scale down significantly.\n- **Tablet (768px - 1024px):** 8-column grid, 32px margins.\n- **Desktop (>1024px):** 12-column grid, 64px margins. Content is often center-aligned with wide gutters to maintain a \"gallery\" feel.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows in favor of **Tonal Layering** and **Technical Outlines**. \n\nDepth is communicated through color value:\n- **Level 0 (Background):** Deep Carbon (#0A0A0B).\n- **Level 1 (Cards/Containers):** Slate Gray (#1E2024) with a 1px Metallic Silver (#E2E8F0) border at 20% opacity.\n- **Level 2 (Active/Floating):** Slate Gray with a 1px Electric Cyan border.\n\nFor interactive elements in an active state, a subtle **Electric Cyan outer glow** (blur: 8px, opacity: 0.3) may be used to simulate the hum of a precision tool or an illuminated workshop display.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. \n\nRounded corners are avoided to maintain the technical, architectural, and precise feel of the \"Workshop.\" Every element—from buttons to input fields to images—must have hard 90-degree angles. This reinforces the meticulous, uncompromising nature of the RTA Detailing brand.\n\n## Components\n\n### Buttons\nPrimary buttons use a \"Ghost\" style: Sharp corners, 1px Electric Cyan border, Cyan text (uppercase JetBrains Mono). On hover, the button fills with Electric Cyan and the text becomes Deep Carbon. Secondary buttons use Metallic Silver instead of Cyan.\n\n### Cards\nCards are defined by thin 1px rules rather than heavy fills. Use Slate Gray for the background and a subtle Silver border. Headlines inside cards should be Playfair Display, while metadata uses JetBrains Mono.\n\n### Input Fields\nInputs are minimalist: a single 1px Silver bottom-border. Labels are positioned above the field in JetBrains Mono (uppercase). When focused, the bottom border transitions to Electric Cyan.\n\n### Chips & Tags\nTechnical tags for detailing services (e.g., \"CERAMIC COATING\") should look like serialized labels: JetBrains Mono, 10px, boxed in a 1px Silver frame with significant horizontal padding.\n\n### Lists\nLists are separated by 1px horizontal rules. Each item should have a \"serial number\" (e.g., 01, 02) in JetBrains Mono to emphasize the methodical process of detailing.\n\n### Image Treatment\nPhotography should be high-contrast with deep blacks. Images should be treated as \"Specimen Views\"—sharp edges, often accompanied by technical captions or dimensions in monospaced type.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#141313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313030",
+              "inverse_primary": "#5f5e5f",
+              "inverse_surface": "#e5e2e1",
+              "on_background": "#e5e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#313031",
+              "on_primary_container": "#7a797a",
+              "on_primary_fixed": "#1c1b1c",
+              "on_primary_fixed_variant": "#474647",
+              "on_secondary": "#2e3035",
+              "on_secondary_container": "#b7b8bd",
+              "on_secondary_fixed": "#1a1c20",
+              "on_secondary_fixed_variant": "#45474b",
+              "on_surface": "#e5e2e1",
+              "on_surface_variant": "#c7c6ca",
+              "on_tertiary": "#2b3137",
+              "on_tertiary_container": "#747a81",
+              "on_tertiary_fixed": "#161c22",
+              "on_tertiary_fixed_variant": "#41474e",
+              "outline": "#919094",
+              "outline_variant": "#46464a",
+              "primary": "#c8c6c7",
+              "primary_container": "#0a0a0b",
+              "primary_fixed": "#e5e2e3",
+              "primary_fixed_dim": "#c8c6c7",
+              "secondary": "#c6c6cb",
+              "secondary_container": "#47494d",
+              "secondary_fixed": "#e2e2e7",
+              "secondary_fixed_dim": "#c6c6cb",
+              "surface": "#141313",
+              "surface_bright": "#3a3939",
+              "surface_container": "#201f1f",
+              "surface_container_high": "#2b2a2a",
+              "surface_container_highest": "#353434",
+              "surface_container_low": "#1c1b1b",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#141313",
+              "surface_tint": "#c8c6c7",
+              "surface_variant": "#353434",
+              "tertiary": "#c1c7cf",
+              "tertiary_container": "#050b10",
+              "tertiary_fixed": "#dde3eb",
+              "tertiary_fixed_dim": "#c1c7cf"
+            },
+            "overridePrimaryColor": "#0a0a0b",
+            "overrideSecondaryColor": "#1e2024",
+            "overrideTertiaryColor": "#e2e8f0",
+            "spacing": {
+              "base": "8px",
+              "gutter": "24px",
+              "lg": "48px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "md": "24px",
+              "sm": "12px",
+              "xl": "80px",
+              "xs": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Geist",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Geist",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "data-mono": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "1.4"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "headline-xl": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "label-caps": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/d9a3246860824564809bc930fd094ae8",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "1024",
+            "id": "b2c4cf0a56334b27bf5270095e23cfc5",
+            "name": "projects/15987087960969468711/screens/b2c4cf0a56334b27bf5270095e23cfc5",
+            "prompt": "Premium minimalist monogram logo for 'RTA' (RTA Detailing LLC). Luxury automotive style, sleek metallic finish, sharp geometric typography, dark background, professional, high-end, silver and cyan accents.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt0_g54mTC5vpDaC1RI1nGmHAMEAb3FLHuP77yj5BtTwRqK9ehHvVCt4pf3kXM3dZ2_A5gG1FimmmT_zxncYH0ZJpFBcf-E_r-P5f6e5ZRH4WMJQKD_2_kkUraee3JokOMHAY-XKBobQ3XcmZcFwB2e0DGlvG4wkwF8Rh2ytlhUEJem04wdTwCjc-XJRdaOOaNTj3KctZO3BsdDhm5y4f2ZI5q9FWNlFASC-iAOJ0xPtfeLvmrQO3KJujU",
+              "name": "projects/15987087960969468711/files/06007d99a29444f89f6b425936fe6fdc"
+            },
+            "theme": {},
+            "title": "RTA Detailing Monogram Logo",
+            "width": "1024"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "848",
+            "id": "022255c009ee48458844459f64bea8ee",
+            "name": "projects/15987087960969468711/screens/022255c009ee48458844459f64bea8ee",
+            "prompt": "Interior of a luxury vehicle, focusing on perfectly cleaned leather stitching and a polished carbon fiber dashboard. Soft bokeh background, professional studio lighting, immaculate condition, high-end aesthetic.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv56cLUwAVMxk8Y_K4p2F5Juu6GufMVan2pD_qZFYRrkb9xjq-otfCQiX-ekrvZt1u6OV87Q436Z8ESOBHw6mbFvEX_n5M-qXObLMCy3pTuyGpIlq4itPHkuImJhsfdSExWJYWRw5AWz-lUgxMZ30YsPEepNv296fG0clfPyNVvr3NEwGK0li94OQNCRkNi76BCCAdc8eYENujh5yqWWYwlETA1TRs_eb6ht4L7WmsZiFZgrUMIcYfmxfty",
+              "name": "projects/15987087960969468711/files/03a7f93b280f4ae7b4fc263d73cfff1a"
+            },
+            "theme": {},
+            "title": "Interior of a luxury vehicle, focusing on perfectly cleaned leather stitching and a polished carbon fiber dashboard. Soft bokeh background, professional studio lighting, immaculate condition, high-end aesthetic.",
+            "width": "1264"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "40f76cd7acc346bb998ddbd52aa70f5b",
+            "name": "projects/15987087960969468711/screens/40f76cd7acc346bb998ddbd52aa70f5b",
+            "prompt": "Cinematic, close-up shot of a high-end luxury sports car's hood reflecting sharp studio lights. Deep black paint with incredible gloss and clarity. Professional automotive detailing photography. Moody lighting, 8k resolution, ultra-realistic, water beads on surface.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLulnnhU7HP7d4n5zNDnIvbGepkO0nv7lycbRWhekjf8G0o0qqpi_a0VRM0jRy0Q0aZizGFEc9y27u-Hu2p05kV1HcispFLzrTYBcQYK5RZgav0stwOhXjLuSGc8c7e6MBnyGt1owxtEWvtz8NhbsWxZDzR5lbW1lnRz9aRWBAaRHVScjMh4LH1T9A3Z65MeEKGIX6oItgZ0MxTa2VikSFIE_RGYy_WgYgvddqHAOakdpWNglYw0sUgJMgEG",
+              "name": "projects/15987087960969468711/files/f99e8f7c8e6441b6b1acf857ee710590"
+            },
+            "theme": {},
+            "title": "Cinematic, close-up shot of a high-end luxury sports car's hood reflecting sharp studio lights. Deep black paint with incredible gloss and clarity. Professional automotive detailing photography. Moody lighting, 8k resolution, ultra-realistic, water beads on surface.",
+            "width": "1376"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "The Precision Workshop",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is engineered to evoke the atmosphere of a high-performance automotive studio. It rejects common \"car care\" tropes in favor of a sophisticated, editorial aesthetic that mirrors the meticulous nature of premium detailing. The brand personality is elite, technical, and authoritative.\n\nThe visual style is a fusion of **Modern Minimalism** and **Technical Editorial**. It utilizes high-contrast typography and a dark, atmospheric environment to create a sense of exclusivity. Strategic use of \"technical lines\"—thin, 1px rules—creates a blueprint-like structure, suggesting engineering precision and attention to detail. The UI should feel like a premium digital tool for a master craftsman, where every pixel has been polished to a mirror finish.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column fluid grid** with an emphasis on **asymmetric balance**. To avoid a generic corporate look, content should occasionally break the grid or be offset to create visual tension and interest.\n\nGenerous whitespace (the \"xl\" spacing unit) is essential to convey a premium, high-end feel. Use 1px Metallic Silver lines to separate sections and define content areas, mimicking technical drawings. \n\n**Breakpoints:**\n- **Mobile (<768px):** 4-column grid, 16px margins. Headlines scale down significantly.\n- **Tablet (768px - 1024px):** 8-column grid, 32px margins.\n- **Desktop (>1024px):** 12-column grid, 64px margins. Content is often center-aligned with wide gutters to maintain a \"gallery\" feel.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows in favor of **Tonal Layering** and **Technical Outlines**. \n\nDepth is communicated through color value:\n- **Level 0 (Background):** Deep Carbon (#0A0A0B).\n- **Level 1 (Cards/Containers):** Slate Gray (#1E2024) with a 1px Metallic Silver (#E2E8F0) border at 20% opacity.\n- **Level 2 (Active/Floating):** Slate Gray with a 1px Electric Cyan border.\n\nFor interactive elements in an active state, a subtle **Electric Cyan outer glow** (blur: 8px, opacity: 0.3) may be used to simulate the hum of a precision tool or an illuminated workshop display.\n\n## Components\n\n### Buttons\nPrimary buttons use a \"Ghost\" style: Sharp corners, 1px Electric Cyan border, Cyan text (uppercase JetBrains Mono). On hover, the button fills with Electric Cyan and the text becomes Deep Carbon. Secondary buttons use Metallic Silver instead of Cyan.\n\n### Cards\nCards are defined by thin 1px rules rather than heavy fills. Use Slate Gray for the background and a subtle Silver border. Headlines inside cards should be Playfair Display, while metadata uses JetBrains Mono.\n\n### Input Fields\nInputs are minimalist: a single 1px Silver bottom-border. Labels are positioned above the field in JetBrains Mono (uppercase). When focused, the bottom border transitions to Electric Cyan.\n\n### Chips & Tags\nTechnical tags for detailing services (e.g., \"CERAMIC COATING\") should look like serialized labels: JetBrains Mono, 10px, boxed in a 1px Silver frame with significant horizontal padding.\n\n### Lists\nLists are separated by 1px horizontal rules. Each item should have a \"serial number\" (e.g., 01, 02) in JetBrains Mono to emphasize the methodical process of detailing.\n\n### Image Treatment\nPhotography should be high-contrast with deep blacks. Images should be treated as \"Specimen Views\"—sharp edges, often accompanied by technical captions or dimensions in monospaced type.",
+                "theme": {
+                  "bodyFont": "GEIST",
+                  "bodyFontFamily": "Geist",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#0a0a0b",
+                  "designMd": "---\nname: The Precision Workshop\ncolors:\n  surface: '#141313'\n  surface-dim: '#141313'\n  surface-bright: '#3a3939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2b2a2a'\n  surface-container-highest: '#353434'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#c7c6ca'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#919094'\n  outline-variant: '#46464a'\n  surface-tint: '#c8c6c7'\n  primary: '#c8c6c7'\n  on-primary: '#313031'\n  primary-container: '#0a0a0b'\n  on-primary-container: '#7a797a'\n  inverse-primary: '#5f5e5f'\n  secondary: '#c6c6cb'\n  on-secondary: '#2e3035'\n  secondary-container: '#47494d'\n  on-secondary-container: '#b7b8bd'\n  tertiary: '#c1c7cf'\n  on-tertiary: '#2b3137'\n  tertiary-container: '#050b10'\n  on-tertiary-container: '#747a81'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1c1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#e2e2e7'\n  secondary-fixed-dim: '#c6c6cb'\n  on-secondary-fixed: '#1a1c20'\n  on-secondary-fixed-variant: '#45474b'\n  tertiary-fixed: '#dde3eb'\n  tertiary-fixed-dim: '#c1c7cf'\n  on-tertiary-fixed: '#161c22'\n  on-tertiary-fixed-variant: '#41474e'\n  background: '#141313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353434'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Geist\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  data-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe design system is engineered to evoke the atmosphere of a high-performance automotive studio. It rejects common \"car care\" tropes in favor of a sophisticated, editorial aesthetic that mirrors the meticulous nature of premium detailing. The brand personality is elite, technical, and authoritative.\n\nThe visual style is a fusion of **Modern Minimalism** and **Technical Editorial**. It utilizes high-contrast typography and a dark, atmospheric environment to create a sense of exclusivity. Strategic use of \"technical lines\"—thin, 1px rules—creates a blueprint-like structure, suggesting engineering precision and attention to detail. The UI should feel like a premium digital tool for a master craftsman, where every pixel has been polished to a mirror finish.\n\n## Colors\n\nThe palette is strictly high-contrast and atmospheric, rooted in the materials of automotive engineering. \n\n- **Deep Carbon (#0A0A0B):** The primary surface color. It provides a void-like depth that allows metallic and vibrant elements to pop.\n- **Slate Gray (#1E2024):** Used for secondary containers and UI layering, providing subtle distinction from the background without breaking the dark mode immersion.\n- **Metallic Silver (#E2E8F0):** The primary text and line color. It mimics the sheen of polished chrome and raw aluminum.\n- **Electric Cyan (#00F5FF):** A sharp, high-energy accent reserved strictly for interaction cues, status indicators, and critical call-to-actions. This color represents the \"spark\" of precision.\n\nSurface backgrounds should predominantly use Deep Carbon, with Slate Gray used to define \"work zones\" or cards.\n\n## Typography\n\nTypography is used to establish an editorial hierarchy. **Playfair Display** provides the luxury \"magazine\" feel for headlines, contrasting the raw power of the automotive world with classical elegance. \n\n**Geist** serves as the primary sans-serif for body copy, offering a clean, modern, and highly legible experience that feels technical yet approachable. \n\n**JetBrains Mono** is utilized for functional labels, metadata, and technical specifications. This monospaced font reinforces the \"Precision Workshop\" narrative, suggesting data readouts and engineering logs. All labels should be set in uppercase with increased letter spacing to enhance the technical aesthetic.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column fluid grid** with an emphasis on **asymmetric balance**. To avoid a generic corporate look, content should occasionally break the grid or be offset to create visual tension and interest.\n\nGenerous whitespace (the \"xl\" spacing unit) is essential to convey a premium, high-end feel. Use 1px Metallic Silver lines to separate sections and define content areas, mimicking technical drawings. \n\n**Breakpoints:**\n- **Mobile (<768px):** 4-column grid, 16px margins. Headlines scale down significantly.\n- **Tablet (768px - 1024px):** 8-column grid, 32px margins.\n- **Desktop (>1024px):** 12-column grid, 64px margins. Content is often center-aligned with wide gutters to maintain a \"gallery\" feel.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows in favor of **Tonal Layering** and **Technical Outlines**. \n\nDepth is communicated through color value:\n- **Level 0 (Background):** Deep Carbon (#0A0A0B).\n- **Level 1 (Cards/Containers):** Slate Gray (#1E2024) with a 1px Metallic Silver (#E2E8F0) border at 20% opacity.\n- **Level 2 (Active/Floating):** Slate Gray with a 1px Electric Cyan border.\n\nFor interactive elements in an active state, a subtle **Electric Cyan outer glow** (blur: 8px, opacity: 0.3) may be used to simulate the hum of a precision tool or an illuminated workshop display.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. \n\nRounded corners are avoided to maintain the technical, architectural, and precise feel of the \"Workshop.\" Every element—from buttons to input fields to images—must have hard 90-degree angles. This reinforces the meticulous, uncompromising nature of the RTA Detailing brand.\n\n## Components\n\n### Buttons\nPrimary buttons use a \"Ghost\" style: Sharp corners, 1px Electric Cyan border, Cyan text (uppercase JetBrains Mono). On hover, the button fills with Electric Cyan and the text becomes Deep Carbon. Secondary buttons use Metallic Silver instead of Cyan.\n\n### Cards\nCards are defined by thin 1px rules rather than heavy fills. Use Slate Gray for the background and a subtle Silver border. Headlines inside cards should be Playfair Display, while metadata uses JetBrains Mono.\n\n### Input Fields\nInputs are minimalist: a single 1px Silver bottom-border. Labels are positioned above the field in JetBrains Mono (uppercase). When focused, the bottom border transitions to Electric Cyan.\n\n### Chips & Tags\nTechnical tags for detailing services (e.g., \"CERAMIC COATING\") should look like serialized labels: JetBrains Mono, 10px, boxed in a 1px Silver frame with significant horizontal padding.\n\n### Lists\nLists are separated by 1px horizontal rules. Each item should have a \"serial number\" (e.g., 01, 02) in JetBrains Mono to emphasize the methodical process of detailing.\n\n### Image Treatment\nPhotography should be high-contrast with deep blacks. Images should be treated as \"Specimen Views\"—sharp edges, often accompanied by technical captions or dimensions in monospaced type.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#141313",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#313030",
+                    "inverse_primary": "#5f5e5f",
+                    "inverse_surface": "#e5e2e1",
+                    "on_background": "#e5e2e1",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#313031",
+                    "on_primary_container": "#7a797a",
+                    "on_primary_fixed": "#1c1b1c",
+                    "on_primary_fixed_variant": "#474647",
+                    "on_secondary": "#2e3035",
+                    "on_secondary_container": "#b7b8bd",
+                    "on_secondary_fixed": "#1a1c20",
+                    "on_secondary_fixed_variant": "#45474b",
+                    "on_surface": "#e5e2e1",
+                    "on_surface_variant": "#c7c6ca",
+                    "on_tertiary": "#2b3137",
+                    "on_tertiary_container": "#747a81",
+                    "on_tertiary_fixed": "#161c22",
+                    "on_tertiary_fixed_variant": "#41474e",
+                    "outline": "#919094",
+                    "outline_variant": "#46464a",
+                    "primary": "#c8c6c7",
+                    "primary_container": "#0a0a0b",
+                    "primary_fixed": "#e5e2e3",
+                    "primary_fixed_dim": "#c8c6c7",
+                    "secondary": "#c6c6cb",
+                    "secondary_container": "#47494d",
+                    "secondary_fixed": "#e2e2e7",
+                    "secondary_fixed_dim": "#c6c6cb",
+                    "surface": "#141313",
+                    "surface_bright": "#3a3939",
+                    "surface_container": "#201f1f",
+                    "surface_container_high": "#2b2a2a",
+                    "surface_container_highest": "#353434",
+                    "surface_container_low": "#1c1b1b",
+                    "surface_container_lowest": "#0e0e0e",
+                    "surface_dim": "#141313",
+                    "surface_tint": "#c8c6c7",
+                    "surface_variant": "#353434",
+                    "tertiary": "#c1c7cf",
+                    "tertiary_container": "#050b10",
+                    "tertiary_fixed": "#dde3eb",
+                    "tertiary_fixed_dim": "#c1c7cf"
+                  },
+                  "overridePrimaryColor": "#0a0a0b",
+                  "overrideSecondaryColor": "#1e2024",
+                  "overrideTertiaryColor": "#e2e8f0",
+                  "spacing": {
+                    "base": "8px",
+                    "gutter": "24px",
+                    "lg": "48px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "md": "24px",
+                    "sm": "12px",
+                    "xl": "80px",
+                    "xs": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Geist",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Geist",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "data-mono": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.4"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "72px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "label-caps": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/d9a3246860824564809bc930fd094ae8",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9584",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FmZTg5YTRlZWZhYjQwZTFhZjAxMDg0ZjNlOWU0MTlmEgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNTk4NzA4Nzk2MDk2OTQ2ODcxMQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/15987087960969468711/files/53570518ba8343b2be05bbca39686436"
+            },
+            "id": "ff6980c1601647789a3ff26cdd8d6dbb",
+            "name": "projects/15987087960969468711/screens/ff6980c1601647789a3ff26cdd8d6dbb",
+            "prompt": "A bespoke, premium landing page for RTA Detailing LLC. \n\nLayout Design:\n- Use an editorial, high-fashion automotive aesthetic.\n- Hero: Cinematic image {{DATA:IMAGE:IMAGE_4}} as a full-bleed background or large asymmetric block. Headline: \"THE ART OF THE FINISH\" in Playfair Display. Monospace subtext for technical specs.\n- Credibility: \"ENGINEERED EXCELLENCE\" section. A horizontal technical bar or grid with stats: \"500+ CARS PERFECTED\", \"LEVEL 3 CERAMIC SPECIALISTS\", \"SPRINGDALE, AR\".\n- Services: Titled \"THE COLLECTIONS\". Use a masonry or overlapping grid. Feature {{DATA:IMAGE:IMAGE_3}} for \"Interior Restoration\". Use clear, sharp Cyan accents for CTAs.\n- About: \"BEYOND THE SURFACE\". A narrative layout with wide margins and thin vertical rules.\n- Visit: #visit section with the specific map slot: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`. Include address: 4262 South Thompson Street, Springdale, AR 72764.\n- Form: A minimalist \"Service Inquiry\" form with thin borders and cyan focus states.\n- Footer: Use predicted component {{DATA:COMPONENTS:COMPONENTS_5}}.\n\nVisual Details:\n- Color Palette: Deep Carbon (#0A0A0B), Metallic Silver (#E2E8F0), and Electric Cyan (#00F5FF) highlights.\n- Typography: Playfair Display for big, bold statements; Inter for body; JetBrains Mono for labels and data.\n- Motifs: 1px silver rules, subtle cyan glows on interaction, and high-resolution automotive textures.\n- Interaction: Smooth scrolling and hover states that feel \"mechanical\" and precise.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs3XNd-8NUgYU46U8um8JnMuWmSo0MRL3g7M5XVx242AgtQaC_zOu7kZOfP_nQGrIf6DrsiBtXdEX5_NTv-WgQXhjzQHkuDhnttPjkF-fGJcSxzVXwssus2e8_ZDztXXw0WZCqB69BarsDBTyXKSIQrolbp47JimZB2ve9-3WNhdWPZ4_wRGXDWseWeUNIXeB8giys2BK7DlYB4YAJubdeH3wyh_5L2uxUfwWOZhAB4q0-KJPWTLCJ2-T6t",
+              "name": "projects/15987087960969468711/files/70a8eb69004444fbb65aeed308489fba"
+            },
+            "theme": {
+              "bodyFont": "GEIST",
+              "bodyFontFamily": "Geist",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#0a0a0b",
+              "designMd": "---\nname: The Precision Workshop\ncolors:\n  surface: '#141313'\n  surface-dim: '#141313'\n  surface-bright: '#3a3939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#201f1f'\n  surface-container-high: '#2b2a2a'\n  surface-container-highest: '#353434'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#c7c6ca'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#919094'\n  outline-variant: '#46464a'\n  surface-tint: '#c8c6c7'\n  primary: '#c8c6c7'\n  on-primary: '#313031'\n  primary-container: '#0a0a0b'\n  on-primary-container: '#7a797a'\n  inverse-primary: '#5f5e5f'\n  secondary: '#c6c6cb'\n  on-secondary: '#2e3035'\n  secondary-container: '#47494d'\n  on-secondary-container: '#b7b8bd'\n  tertiary: '#c1c7cf'\n  on-tertiary: '#2b3137'\n  tertiary-container: '#050b10'\n  on-tertiary-container: '#747a81'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1c1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#e2e2e7'\n  secondary-fixed-dim: '#c6c6cb'\n  on-secondary-fixed: '#1a1c20'\n  on-secondary-fixed-variant: '#45474b'\n  tertiary-fixed: '#dde3eb'\n  tertiary-fixed-dim: '#c1c7cf'\n  on-tertiary-fixed: '#161c22'\n  on-tertiary-fixed-variant: '#41474e'\n  background: '#141313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353434'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Geist\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Geist\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  data-mono:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  base: 8px\n  xs: 4px\n  sm: 12px\n  md: 24px\n  lg: 48px\n  xl: 80px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\n\nThe design system is engineered to evoke the atmosphere of a high-performance automotive studio. It rejects common \"car care\" tropes in favor of a sophisticated, editorial aesthetic that mirrors the meticulous nature of premium detailing. The brand personality is elite, technical, and authoritative.\n\nThe visual style is a fusion of **Modern Minimalism** and **Technical Editorial**. It utilizes high-contrast typography and a dark, atmospheric environment to create a sense of exclusivity. Strategic use of \"technical lines\"—thin, 1px rules—creates a blueprint-like structure, suggesting engineering precision and attention to detail. The UI should feel like a premium digital tool for a master craftsman, where every pixel has been polished to a mirror finish.\n\n## Colors\n\nThe palette is strictly high-contrast and atmospheric, rooted in the materials of automotive engineering. \n\n- **Deep Carbon (#0A0A0B):** The primary surface color. It provides a void-like depth that allows metallic and vibrant elements to pop.\n- **Slate Gray (#1E2024):** Used for secondary containers and UI layering, providing subtle distinction from the background without breaking the dark mode immersion.\n- **Metallic Silver (#E2E8F0):** The primary text and line color. It mimics the sheen of polished chrome and raw aluminum.\n- **Electric Cyan (#00F5FF):** A sharp, high-energy accent reserved strictly for interaction cues, status indicators, and critical call-to-actions. This color represents the \"spark\" of precision.\n\nSurface backgrounds should predominantly use Deep Carbon, with Slate Gray used to define \"work zones\" or cards.\n\n## Typography\n\nTypography is used to establish an editorial hierarchy. **Playfair Display** provides the luxury \"magazine\" feel for headlines, contrasting the raw power of the automotive world with classical elegance. \n\n**Geist** serves as the primary sans-serif for body copy, offering a clean, modern, and highly legible experience that feels technical yet approachable. \n\n**JetBrains Mono** is utilized for functional labels, metadata, and technical specifications. This monospaced font reinforces the \"Precision Workshop\" narrative, suggesting data readouts and engineering logs. All labels should be set in uppercase with increased letter spacing to enhance the technical aesthetic.\n\n## Layout & Spacing\n\nThe layout philosophy is based on a **12-column fluid grid** with an emphasis on **asymmetric balance**. To avoid a generic corporate look, content should occasionally break the grid or be offset to create visual tension and interest.\n\nGenerous whitespace (the \"xl\" spacing unit) is essential to convey a premium, high-end feel. Use 1px Metallic Silver lines to separate sections and define content areas, mimicking technical drawings. \n\n**Breakpoints:**\n- **Mobile (<768px):** 4-column grid, 16px margins. Headlines scale down significantly.\n- **Tablet (768px - 1024px):** 8-column grid, 32px margins.\n- **Desktop (>1024px):** 12-column grid, 64px margins. Content is often center-aligned with wide gutters to maintain a \"gallery\" feel.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows in favor of **Tonal Layering** and **Technical Outlines**. \n\nDepth is communicated through color value:\n- **Level 0 (Background):** Deep Carbon (#0A0A0B).\n- **Level 1 (Cards/Containers):** Slate Gray (#1E2024) with a 1px Metallic Silver (#E2E8F0) border at 20% opacity.\n- **Level 2 (Active/Floating):** Slate Gray with a 1px Electric Cyan border.\n\nFor interactive elements in an active state, a subtle **Electric Cyan outer glow** (blur: 8px, opacity: 0.3) may be used to simulate the hum of a precision tool or an illuminated workshop display.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. \n\nRounded corners are avoided to maintain the technical, architectural, and precise feel of the \"Workshop.\" Every element—from buttons to input fields to images—must have hard 90-degree angles. This reinforces the meticulous, uncompromising nature of the RTA Detailing brand.\n\n## Components\n\n### Buttons\nPrimary buttons use a \"Ghost\" style: Sharp corners, 1px Electric Cyan border, Cyan text (uppercase JetBrains Mono). On hover, the button fills with Electric Cyan and the text becomes Deep Carbon. Secondary buttons use Metallic Silver instead of Cyan.\n\n### Cards\nCards are defined by thin 1px rules rather than heavy fills. Use Slate Gray for the background and a subtle Silver border. Headlines inside cards should be Playfair Display, while metadata uses JetBrains Mono.\n\n### Input Fields\nInputs are minimalist: a single 1px Silver bottom-border. Labels are positioned above the field in JetBrains Mono (uppercase). When focused, the bottom border transitions to Electric Cyan.\n\n### Chips & Tags\nTechnical tags for detailing services (e.g., \"CERAMIC COATING\") should look like serialized labels: JetBrains Mono, 10px, boxed in a 1px Silver frame with significant horizontal padding.\n\n### Lists\nLists are separated by 1px horizontal rules. Each item should have a \"serial number\" (e.g., 01, 02) in JetBrains Mono to emphasize the methodical process of detailing.\n\n### Image Treatment\nPhotography should be high-contrast with deep blacks. Images should be treated as \"Specimen Views\"—sharp edges, often accompanied by technical captions or dimensions in monospaced type.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#141313",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#313030",
+                "inverse_primary": "#5f5e5f",
+                "inverse_surface": "#e5e2e1",
+                "on_background": "#e5e2e1",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#313031",
+                "on_primary_container": "#7a797a",
+                "on_primary_fixed": "#1c1b1c",
+                "on_primary_fixed_variant": "#474647",
+                "on_secondary": "#2e3035",
+                "on_secondary_container": "#b7b8bd",
+                "on_secondary_fixed": "#1a1c20",
+                "on_secondary_fixed_variant": "#45474b",
+                "on_surface": "#e5e2e1",
+                "on_surface_variant": "#c7c6ca",
+                "on_tertiary": "#2b3137",
+                "on_tertiary_container": "#747a81",
+                "on_tertiary_fixed": "#161c22",
+                "on_tertiary_fixed_variant": "#41474e",
+                "outline": "#919094",
+                "outline_variant": "#46464a",
+                "primary": "#c8c6c7",
+                "primary_container": "#0a0a0b",
+                "primary_fixed": "#e5e2e3",
+                "primary_fixed_dim": "#c8c6c7",
+                "secondary": "#c6c6cb",
+                "secondary_container": "#47494d",
+                "secondary_fixed": "#e2e2e7",
+                "secondary_fixed_dim": "#c6c6cb",
+                "surface": "#141313",
+                "surface_bright": "#3a3939",
+                "surface_container": "#201f1f",
+                "surface_container_high": "#2b2a2a",
+                "surface_container_highest": "#353434",
+                "surface_container_low": "#1c1b1b",
+                "surface_container_lowest": "#0e0e0e",
+                "surface_dim": "#141313",
+                "surface_tint": "#c8c6c7",
+                "surface_variant": "#353434",
+                "tertiary": "#c1c7cf",
+                "tertiary_container": "#050b10",
+                "tertiary_fixed": "#dde3eb",
+                "tertiary_fixed_dim": "#c1c7cf"
+              },
+              "overridePrimaryColor": "#0a0a0b",
+              "overrideSecondaryColor": "#1e2024",
+              "overrideTertiaryColor": "#e2e8f0",
+              "spacing": {
+                "base": "8px",
+                "gutter": "24px",
+                "lg": "48px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "md": "24px",
+                "sm": "12px",
+                "xl": "80px",
+                "xs": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Geist",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Geist",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "data-mono": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "14px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.4"
+                },
+                "headline-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "headline-xl": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "72px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "label-caps": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "RTA Detailing - The Precision Workshop",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have crafted a bespoke, high-fidelity homepage for **RTA Detailing LLC**, designed to elevate the brand from its Facebook-only presence into a premium digital destination.\n\n### Design Rationale:\n*   **\"The Precision Workshop\" Aesthetic**: I moved away from common car-wash templates to create an editorial \"Night Mode\" experience. The palette uses **Deep Carbon**, **Metallic Silver**, and sharp **Electric Cyan** accents to mirror the technical precision of high-end detailing.\n*   **Asymmetric Layout**: The design breaks the standard grid with overlapping elements and generous whitespace, creating a custom, bespoke feel that emphasizes quality over quantity.\n*   **Technical Motifs**: I used thin 1px rules and monospace labels (JetBrains Mono) to evoke a sense of engineering and meticulous care, paired with the high-contrast elegance of **Playfair Display** for headlines.\n*   **Custom Brand Assets**: I generated cinematic automotive imagery and a minimalist monogram logo to ensure the visual identity feels cohesive and elite.\n\n### Key Features:\n*   **Production-Ready Code**: Semantic HTML, modern CSS with custom properties, and smooth-scroll JavaScript.\n*   **Interactive Form**: A minimalist service inquiry form with custom-styled focus states.\n*   **Technical Map Slot**: A dedicated container for the studio location, ready for future map integration as specified.\n\nThe site is fully responsive and optimized to provide a memorable first impression for RTA Detailing's luxury clientele."
+    },
+    {
+      "suggestion": "Change the accent color to a gold/copper tone"
+    },
+    {
+      "suggestion": "Add a gallery section for recent projects"
+    },
+    {
+      "suggestion": "Make the header background transparent on scroll"
+    }
+  ],
+  "projectId": "15987087960969468711",
+  "sessionId": "17215422908980160655"
+}
