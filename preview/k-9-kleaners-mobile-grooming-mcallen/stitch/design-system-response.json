@@ -2,138 +2,145 @@
   {
     "designSystem": {
       "designSystem": {
-        "displayName": "The Modern Groomer",
-        "styleGuidelines": "## Brand & Style\nThe design system embodies a \"Modern Groomer\" aesthetic: a sophisticated, editorial-first approach to mobile pet care that balances high-end luxury with an approachable, organic warmth. It targets discerning pet owners who view grooming as a wellness ritual rather than a chore.\n\nThe style is **Editorial Minimalism** with a **Tactile** edge. It leverages generous whitespace to evoke a sense of calm and cleanliness, punctuated by bold typographic choices and organic, fluid containers that mimic the natural curves of water or soft silhouettes. To differentiate from standard corporate apps, the system avoids generic rounded corners in favor of a \"Chiseled & Pill\" hybrid—using sharp 90-degree intersections for structural containers and oversized, exaggerated pill shapes for interactive elements. A subtle film grain texture should be applied to large color fields to provide a premium, paper-like feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** with an aggressive \"whitespace-first\" philosophy. \n- **Desktop:** 12-column grid with wide 80px side margins and 32px gutters.\n- **Mobile:** 4-column grid with 24px margins.\n- **Overlap Logic:** Key elements (like a dog portrait or a price chip) should intentionally break the grid, overlapping the boundary between two sections or a photo and a text block by 40-80px.\n- **Vertical Rhythm:** Use large gaps (120px+) between major sections to allow the content to breathe, mimicking a coffee-table book layout.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Asymmetric Overlaps** rather than traditional shadows.\n- **Stacked Surfaces:** Use the Cream and Forest Green colors to create distinct depth levels. A Forest Green card sitting on a Cream background is considered \"Level 1.\"\n- **Floating Elements:** Only use shadows for floating action buttons or high-priority modals. When used, shadows must be extremely diffused (30px+ blur) and tinted with the Forest Green hex at 5-10% opacity to maintain a natural look.\n- **Grain Texture:** Apply a global CSS noise overlay (opacity 0.03) to all primary backgrounds to eliminate the \"flatness\" of digital screens and provide a tactile, premium paper feel.\n\n## Components\n- **Buttons:** Primary buttons are oversized pills in Burnt Orange with Space Mono (All Caps) text. Secondary buttons are Forest Green outlines with no fill.\n- **Cards:** Use sharp 90-degree corners. Use an \"Editorial Spread\" layout where the image takes up 60% of the card and typography overlaps the bottom edge of the image.\n- **Inputs:** Simple bottom-border only (underline style) in Forest Green. Labels sit above in Space Mono.\n- **Vertical Labels:** Use as category markers on the far left or right of a section.\n- **Photography:** All placeholders should be high-contrast, \"lifestyle\" pet photography with a warm, slightly desaturated color grade.\n- **Chips/Status:** Small pills using the secondary Cream color with Forest Green text for a subtle, high-end look.",
+        "displayName": "Alpine Canine Editorial",
+        "styleGuidelines": "## Brand & Style\n\nThis design system is built upon the concept of a \"modern canine spa,\" merging high-end editorial aesthetics with a serene, aquatic atmosphere. The brand personality is professional yet nurturing, evoking the feeling of a premium, white-glove service that treats pets as family.\n\nThe visual style utilizes a sophisticated blend of **Minimalism** and **Glassmorphism**. Extensive whitespace ensures a clutter-free environment, while \"Floating Bubble\" motifs—rendered through soft translucency and organic curves—create a sense of lightness and cleanliness. The design avoids harsh corners in favor of a fluid, rhythmic interface that feels as refreshing as a luxury bath.\n\n## Layout & Spacing\n\nThe layout philosophy is centered on **intentional asymmetry** and generous whitespace. Rather than a rigid, blocky grid, this design system encourages a fluid flow that mimics the movement of water.\n\n- **Grid Model:** A 12-column fixed grid for desktop, moving to 8 columns for tablet and 4 for mobile. \n- **Asymmetry:** Key elements (like hero images or feature cards) should be slightly offset from their background containers to create depth and an \"editorial\" layout.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct service offerings, allowing each \"bubble\" of content to breathe.\n- **Floating Elements:** Content blocks often sit atop \"Bubbled Aqua\" shapes that do not perfectly align with the grid, reinforcing the organic visual motif.\n\n## Elevation & Depth\n\nVisual hierarchy is established through a combination of **Glassmorphism** and **Tonal Layers**. \n\n1. **The Bubble Layer:** Primary cards and modals use a semi-transparent `Soft Foam` background with a heavy `Backdrop Blur` (20px-40px). This creates the \"floating\" effect over background photography or organic aqua shapes.\n2. **Subtle Shadows:** Avoid heavy, dark shadows. Use extremely diffused, low-opacity shadows tinted with the `Deep Charcoal` color (e.g., 4% opacity) to provide just enough lift for interactive elements.\n3. **Outlines:** Use thin (1px) borders in `Bubbled Aqua` or a 10% opacity version of `Deep Charcoal` to define edges without adding visual weight.\n\n## Components\n\n### Buttons\nPrimary buttons are pill-shaped, using the `Golden Retriever` accent with `Deep Charcoal` text for maximum visibility. Hover states should include a subtle scale-up effect (1.02x) rather than a drastic color change. Secondary buttons use a transparent background with a `Deep Charcoal` border.\n\n### Cards\nCards are the heart of the \"Floating Bubble\" motif. They must feature a white-transparent background, a soft backdrop blur, and a delicate 1px border. Content inside cards should be center-aligned for an editorial look.\n\n### Input Fields\nInputs are minimalist: a single bottom border in `Deep Charcoal` (20% opacity) that becomes 100% opaque on focus. Labels sit above the line in `label-lg` Montserrat.\n\n### Chips & Tags\nUsed for service features (e.g., \"Deep Clean,\" \"De-shedding\"). These are small, pill-shaped elements with a `Bubbled Aqua` background and `Deep Charcoal` text.\n\n### Interactive Lists\nService menus should be displayed as a list where the item expands on hover, revealing a circular image of a dog within a \"bubble\" frame.",
         "theme": {
-          "bodyFont": "DM_SANS",
-          "bodyFontFamily": "Dm Sans",
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
           "colorMode": "LIGHT",
           "colorVariant": "FIDELITY",
-          "customColor": "#1b3022",
-          "designMd": "---\nname: The Modern Groomer\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#434843'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#5e5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e1dfdb'\n  on-secondary-container: '#63635f'\n  tertiary: '#281100'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#462200'\n  on-tertiary-container: '#dc790a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#e4e2dd'\n  secondary-fixed-dim: '#c8c6c2'\n  on-secondary-fixed: '#1b1c19'\n  on-secondary-fixed-variant: '#474744'\n  tertiary-fixed: '#ffdcc3'\n  tertiary-fixed-dim: '#ffb77d'\n  on-tertiary-fixed: '#2f1500'\n  on-tertiary-fixed-variant: '#6e3900'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  vertical-accent:\n    fontFamily: Space Mono\n    fontSize: 10px\n    fontWeight: '400'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-padding-desktop: 80px\n  container-padding-mobile: 24px\n  gutter: 32px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system embodies a \"Modern Groomer\" aesthetic: a sophisticated, editorial-first approach to mobile pet care that balances high-end luxury with an approachable, organic warmth. It targets discerning pet owners who view grooming as a wellness ritual rather than a chore.\n\nThe style is **Editorial Minimalism** with a **Tactile** edge. It leverages generous whitespace to evoke a sense of calm and cleanliness, punctuated by bold typographic choices and organic, fluid containers that mimic the natural curves of water or soft silhouettes. To differentiate from standard corporate apps, the system avoids generic rounded corners in favor of a \"Chiseled & Pill\" hybrid—using sharp 90-degree intersections for structural containers and oversized, exaggerated pill shapes for interactive elements. A subtle film grain texture should be applied to large color fields to provide a premium, paper-like feel.\n\n## Colors\nThe palette is rooted in nature and high-end apothecary branding.\n- **Deep Forest Green (#1B3022):** The primary anchor. Used for backgrounds of high-impact sections and primary typography to convey stability and premium quality.\n- **Soft Cream (#F9F7F2):** The canvas. This replaces pure white to create a warmer, more inviting and sophisticated atmosphere.\n- **Burnt Orange (#D97706):** The kinetic accent. Used sparingly for calls-to-action, alerts, and vital interactive cues.\n- **Neutral (#2D2D2D):** Reserved for long-form body text on cream backgrounds to ensure optimal legibility without the harshness of pure black.\n\n## Typography\nThe typography strategy creates a high-contrast hierarchy common in luxury fashion magazines.\n- **Headlines:** Use *Playfair Display*. Its high-contrast serifs provide the \"editorial\" authority. Display sizes should use tight tracking to look like a masthead.\n- **Body:** Use *DM Sans*. Its wide-set, geometric construction ensures clarity and adds a contemporary, \"airy\" feel to the descriptions of services.\n- **Accents:** *Space Mono* is used for utility labels and vertical \"side-bar\" text. This adds a technical, precise layer to the organic brand, suggesting professional expertise. \n- **Vertical Accents:** Use vertical typography for dates, category tags, or decorative section markers to break the standard horizontal grid.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** with an aggressive \"whitespace-first\" philosophy. \n- **Desktop:** 12-column grid with wide 80px side margins and 32px gutters.\n- **Mobile:** 4-column grid with 24px margins.\n- **Overlap Logic:** Key elements (like a dog portrait or a price chip) should intentionally break the grid, overlapping the boundary between two sections or a photo and a text block by 40-80px.\n- **Vertical Rhythm:** Use large gaps (120px+) between major sections to allow the content to breathe, mimicking a coffee-table book layout.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Asymmetric Overlaps** rather than traditional shadows.\n- **Stacked Surfaces:** Use the Cream and Forest Green colors to create distinct depth levels. A Forest Green card sitting on a Cream background is considered \"Level 1.\"\n- **Floating Elements:** Only use shadows for floating action buttons or high-priority modals. When used, shadows must be extremely diffused (30px+ blur) and tinted with the Forest Green hex at 5-10% opacity to maintain a natural look.\n- **Grain Texture:** Apply a global CSS noise overlay (opacity 0.03) to all primary backgrounds to eliminate the \"flatness\" of digital screens and provide a tactile, premium paper feel.\n\n## Shapes\nThe shape language is a juxtaposition of **Architectural Precision** and **Fluid Organicism**.\n- **Containers:** All primary layout containers, image frames, and input fields use **0px (Sharp)** corners. This provides a modern, high-fashion structural look.\n- **Interactive Elements:** Buttons and selected state chips use **Pill-shaped (3)** rounding. This makes the primary actions feel \"touchable\" and friendly.\n- **Organic Masks:** Large imagery or decorative background shapes should use \"blob\" masks—reminiscent of water droplets or soft organic forms—to contrast against the sharp grid.\n\n## Components\n- **Buttons:** Primary buttons are oversized pills in Burnt Orange with Space Mono (All Caps) text. Secondary buttons are Forest Green outlines with no fill.\n- **Cards:** Use sharp 90-degree corners. Use an \"Editorial Spread\" layout where the image takes up 60% of the card and typography overlaps the bottom edge of the image.\n- **Inputs:** Simple bottom-border only (underline style) in Forest Green. Labels sit above in Space Mono.\n- **Vertical Labels:** Use as category markers on the far left or right of a section.\n- **Photography:** All placeholders should be high-contrast, \"lifestyle\" pet photography with a warm, slightly desaturated color grade.\n- **Chips/Status:** Small pills using the secondary Cream color with Forest Green text for a subtle, high-end look.",
+          "customColor": "#2d2e2e",
+          "designMd": "---\nname: Alpine Canine Editorial\ncolors:\n  surface: '#f8f9fa'\n  surface-dim: '#d9dadb'\n  surface-bright: '#f8f9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f4f5'\n  surface-container: '#edeeef'\n  surface-container-high: '#e7e8e9'\n  surface-container-highest: '#e1e3e4'\n  on-surface: '#191c1d'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2e3132'\n  inverse-on-surface: '#f0f1f2'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5e5e5e'\n  primary: '#181919'\n  on-primary: '#ffffff'\n  primary-container: '#2d2e2e'\n  on-primary-container: '#959595'\n  inverse-primary: '#c7c6c6'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#0c1c1c'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#213131'\n  on-tertiary-container: '#889998'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e3e2e2'\n  primary-fixed-dim: '#c7c6c6'\n  on-primary-fixed: '#1b1c1c'\n  on-primary-fixed-variant: '#464747'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#d4e6e5'\n  tertiary-fixed-dim: '#b8cac9'\n  on-tertiary-fixed: '#0e1e1e'\n  on-tertiary-fixed-variant: '#3a4a49'\n  background: '#f8f9fa'\n  on-background: '#191c1d'\n  surface-variant: '#e1e3e4'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-tablet: 32px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThis design system is built upon the concept of a \"modern canine spa,\" merging high-end editorial aesthetics with a serene, aquatic atmosphere. The brand personality is professional yet nurturing, evoking the feeling of a premium, white-glove service that treats pets as family.\n\nThe visual style utilizes a sophisticated blend of **Minimalism** and **Glassmorphism**. Extensive whitespace ensures a clutter-free environment, while \"Floating Bubble\" motifs—rendered through soft translucency and organic curves—create a sense of lightness and cleanliness. The design avoids harsh corners in favor of a fluid, rhythmic interface that feels as refreshing as a luxury bath.\n\n## Colors\n\nThe \"Alpine Groom\" palette is designed to ground the user in trust while providing moments of warmth.\n\n- **Deep Charcoal (#2D2E2E):** Used primarily for typography and structural borders to provide an authoritative, high-contrast foundation.\n- **Soft Foam (#F8F9FA):** The primary canvas color. It is a near-white that feels softer and more premium than pure hex white.\n- **Bubbled Aqua (#E0F2F1):** A light, airy tint used for decorative backgrounds, subtle highlights, and \"bubble\" containers to evoke water.\n- **Golden Retriever (#D4A373):** A warm, sophisticated gold used exclusively for Call to Action (CTA) elements and key status indicators, providing a friendly contrast to the cooler tones.\n\n## Typography\n\nThis design system employs a classic high-contrast pairing to establish an editorial feel. \n\n**Playfair Display** is used for all headlines. Its elegant serifs and varying stroke weights communicate luxury and attention to detail. Large display type should use tight letter-spacing to enhance its fashionable impact.\n\n**Montserrat** provides a clean, geometric balance for body text and functional labels. It ensures legibility across all service descriptions and booking forms. Use `label-lg` for navigation items and small headings to introduce a modern, structured rhythm to the page.\n\n## Layout & Spacing\n\nThe layout philosophy is centered on **intentional asymmetry** and generous whitespace. Rather than a rigid, blocky grid, this design system encourages a fluid flow that mimics the movement of water.\n\n- **Grid Model:** A 12-column fixed grid for desktop, moving to 8 columns for tablet and 4 for mobile. \n- **Asymmetry:** Key elements (like hero images or feature cards) should be slightly offset from their background containers to create depth and an \"editorial\" layout.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct service offerings, allowing each \"bubble\" of content to breathe.\n- **Floating Elements:** Content blocks often sit atop \"Bubbled Aqua\" shapes that do not perfectly align with the grid, reinforcing the organic visual motif.\n\n## Elevation & Depth\n\nVisual hierarchy is established through a combination of **Glassmorphism** and **Tonal Layers**. \n\n1. **The Bubble Layer:** Primary cards and modals use a semi-transparent `Soft Foam` background with a heavy `Backdrop Blur` (20px-40px). This creates the \"floating\" effect over background photography or organic aqua shapes.\n2. **Subtle Shadows:** Avoid heavy, dark shadows. Use extremely diffused, low-opacity shadows tinted with the `Deep Charcoal` color (e.g., 4% opacity) to provide just enough lift for interactive elements.\n3. **Outlines:** Use thin (1px) borders in `Bubbled Aqua` or a 10% opacity version of `Deep Charcoal` to define edges without adding visual weight.\n\n## Shapes\n\nThe shape language is defined by \"Organic Water Curves.\" \n\n- **Containers:** Standard cards and containers use a `1rem` (rounded-lg) radius to maintain a soft, approachable feel.\n- **Floating Motifs:** Background decorative elements should use irregular, blob-like radii (e.g., `60% 40% 30% 70% / 60% 30% 70% 40%`) to simulate water droplets.\n- **Interactive Elements:** Buttons and tags utilize pill-shaped (fully rounded) geometry to contrast against the more structured card containers.\n\n## Components\n\n### Buttons\nPrimary buttons are pill-shaped, using the `Golden Retriever` accent with `Deep Charcoal` text for maximum visibility. Hover states should include a subtle scale-up effect (1.02x) rather than a drastic color change. Secondary buttons use a transparent background with a `Deep Charcoal` border.\n\n### Cards\nCards are the heart of the \"Floating Bubble\" motif. They must feature a white-transparent background, a soft backdrop blur, and a delicate 1px border. Content inside cards should be center-aligned for an editorial look.\n\n### Input Fields\nInputs are minimalist: a single bottom border in `Deep Charcoal` (20% opacity) that becomes 100% opaque on focus. Labels sit above the line in `label-lg` Montserrat.\n\n### Chips & Tags\nUsed for service features (e.g., \"Deep Clean,\" \"De-shedding\"). These are small, pill-shaped elements with a `Bubbled Aqua` background and `Deep Charcoal` text.\n\n### Interactive Lists\nService menus should be displayed as a list where the item expands on hover, revealing a circular image of a dog within a \"bubble\" frame.",
           "font": "PLAYFAIR_DISPLAY",
           "headlineFont": "PLAYFAIR_DISPLAY",
           "headlineFontFamily": "Playfair Display",
-          "labelFont": "SPACE_MONO",
-          "labelFontFamily": "Space Mono",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
           "namedColors": {
-            "background": "#fcf9f8",
+            "background": "#f8f9fa",
             "error": "#ba1a1a",
             "error_container": "#ffdad6",
-            "inverse_on_surface": "#f3f0f0",
-            "inverse_primary": "#b4cdb8",
-            "inverse_surface": "#303030",
-            "on_background": "#1b1c1c",
+            "inverse_on_surface": "#f0f1f2",
+            "inverse_primary": "#c7c6c6",
+            "inverse_surface": "#2e3132",
+            "on_background": "#191c1d",
             "on_error": "#ffffff",
             "on_error_container": "#93000a",
             "on_primary": "#ffffff",
-            "on_primary_container": "#819986",
-            "on_primary_fixed": "#0b2013",
-            "on_primary_fixed_variant": "#364c3c",
+            "on_primary_container": "#959595",
+            "on_primary_fixed": "#1b1c1c",
+            "on_primary_fixed_variant": "#464747",
             "on_secondary": "#ffffff",
-            "on_secondary_container": "#63635f",
-            "on_secondary_fixed": "#1b1c19",
-            "on_secondary_fixed_variant": "#474744",
-            "on_surface": "#1b1c1c",
-            "on_surface_variant": "#434843",
+            "on_secondary_container": "#7a532a",
+            "on_secondary_fixed": "#2c1600",
+            "on_secondary_fixed_variant": "#623f18",
+            "on_surface": "#191c1d",
+            "on_surface_variant": "#444748",
             "on_tertiary": "#ffffff",
-            "on_tertiary_container": "#dc790a",
-            "on_tertiary_fixed": "#2f1500",
-            "on_tertiary_fixed_variant": "#6e3900",
-            "outline": "#737973",
-            "outline_variant": "#c3c8c1",
-            "primary": "#061b0e",
-            "primary_container": "#1b3022",
-            "primary_fixed": "#d0e9d4",
-            "primary_fixed_dim": "#b4cdb8",
-            "secondary": "#5e5e5b",
-            "secondary_container": "#e1dfdb",
-            "secondary_fixed": "#e4e2dd",
-            "secondary_fixed_dim": "#c8c6c2",
-            "surface": "#fcf9f8",
-            "surface_bright": "#fcf9f8",
-            "surface_container": "#f0eded",
-            "surface_container_high": "#eae7e7",
-            "surface_container_highest": "#e4e2e1",
-            "surface_container_low": "#f6f3f2",
+            "on_tertiary_container": "#889998",
+            "on_tertiary_fixed": "#0e1e1e",
+            "on_tertiary_fixed_variant": "#3a4a49",
+            "outline": "#747878",
+            "outline_variant": "#c4c7c7",
+            "primary": "#181919",
+            "primary_container": "#2d2e2e",
+            "primary_fixed": "#e3e2e2",
+            "primary_fixed_dim": "#c7c6c6",
+            "secondary": "#7d562d",
+            "secondary_container": "#ffca98",
+            "secondary_fixed": "#ffdcbd",
+            "secondary_fixed_dim": "#f0bd8b",
+            "surface": "#f8f9fa",
+            "surface_bright": "#f8f9fa",
+            "surface_container": "#edeeef",
+            "surface_container_high": "#e7e8e9",
+            "surface_container_highest": "#e1e3e4",
+            "surface_container_low": "#f3f4f5",
             "surface_container_lowest": "#ffffff",
-            "surface_dim": "#dcd9d9",
-            "surface_tint": "#4d6453",
-            "surface_variant": "#e4e2e1",
-            "tertiary": "#281100",
-            "tertiary_container": "#462200",
-            "tertiary_fixed": "#ffdcc3",
-            "tertiary_fixed_dim": "#ffb77d"
+            "surface_dim": "#d9dadb",
+            "surface_tint": "#5e5e5e",
+            "surface_variant": "#e1e3e4",
+            "tertiary": "#0c1c1c",
+            "tertiary_container": "#213131",
+            "tertiary_fixed": "#d4e6e5",
+            "tertiary_fixed_dim": "#b8cac9"
           },
-          "overrideNeutralColor": "#2d2d2d",
-          "overridePrimaryColor": "#1b3022",
-          "overrideSecondaryColor": "#f9f7f2",
-          "overrideTertiaryColor": "#d97706",
+          "overrideNeutralColor": "#f8f9fa",
+          "overridePrimaryColor": "#2d2e2e",
+          "overrideSecondaryColor": "#d4a373",
+          "overrideTertiaryColor": "#e0f2f1",
+          "roundness": "ROUND_EIGHT",
           "spacing": {
-            "container-padding-desktop": "80px",
-            "container-padding-mobile": "24px",
+            "container-max": "1280px",
             "gutter": "32px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "margin-tablet": "32px",
             "section-gap": "120px",
             "unit": "8px"
           },
           "spacingScale": 2,
           "typography": {
             "body-lg": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Montserrat",
               "fontSize": "18px",
               "fontWeight": "400",
-              "letterSpacing": "0.01em",
               "lineHeight": "1.6"
             },
             "body-md": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Montserrat",
               "fontSize": "16px",
               "fontWeight": "400",
               "lineHeight": "1.6"
             },
-            "display-lg": {
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "36px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "500",
+              "lineHeight": "1.3"
+            },
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "1.4"
+            },
+            "headline-xl": {
               "fontFamily": "Playfair Display",
               "fontSize": "64px",
               "fontWeight": "700",
               "letterSpacing": "-0.02em",
               "lineHeight": "1.1"
             },
-            "headline-lg": {
-              "fontFamily": "Playfair Display",
-              "fontSize": "40px",
-              "fontWeight": "700",
-              "lineHeight": "1.2"
-            },
-            "headline-lg-mobile": {
-              "fontFamily": "Playfair Display",
-              "fontSize": "32px",
-              "fontWeight": "700",
-              "lineHeight": "1.2"
-            },
-            "headline-md": {
-              "fontFamily": "Playfair Display",
-              "fontSize": "28px",
+            "label-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "14px",
               "fontWeight": "600",
-              "lineHeight": "1.3"
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.2"
             },
-            "label-caps": {
-              "fontFamily": "Space Mono",
+            "label-md": {
+              "fontFamily": "Montserrat",
               "fontSize": "12px",
-              "fontWeight": "700",
-              "letterSpacing": "0.15em",
-              "lineHeight": "1.0"
-            },
-            "vertical-accent": {
-              "fontFamily": "Space Mono",
-              "fontSize": "10px",
-              "fontWeight": "400",
-              "letterSpacing": "0.2em",
-              "lineHeight": "1.0"
+              "fontWeight": "500",
+              "lineHeight": "1.2"
             }
           }
         }
       },
-      "name": "assets/4b1fd23e49784bba940f8beaeab3637e",
+      "name": "assets/2736c889070b472c91e9fde3f134b761",
       "version": "1"
     }
   },
@@ -141,291 +148,362 @@
     "design": {
       "screens": [
         {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "d642cfade1944b05a16fead47ee07e86",
+          "name": "projects/4672352249659912557/screens/d642cfade1944b05a16fead47ee07e86",
+          "prompt": "A close-up, high-end lifestyle shot of professional dog grooming tools: a pair of silver shears, a wooden brush, and a bottle of luxury dog shampoo on a clean white marble surface. Soft sunlight, elegant and clean composition. Editorial quality.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLswxrVstKvTa6RxYWTM-6AFWyBFsrhpHziqx83ysSjWc9VzZMwk4e1JCsyHD3QYQR6Jtjy4uUbOTcxsWGYYOLtGGMuxWFnAzG2ngyjzoAom-qLfenDIqtC_PydTTEMn-WvpZxe5UDF2yk8FAXaZA26RNWp9v29N352WvxbD2LuSFj-FMOqwDUPRq0EPYy-5Qe6ZTD_BL0rUqmJMyoIdzCaODAmJzFJkAXi1nFjjco0J1TTDUVMGfTBHew",
+            "name": "projects/4672352249659912557/files/887cb2aca8f04957a082f9ef36262bbe"
+          },
+          "theme": {},
+          "title": "A close-up, high-end lifestyle shot of professional dog grooming tools: a pair of silver shears, a wooden brush, and a bottle of luxury dog shampoo on a clean white marble surface. Soft sunlight, elegant and clean composition. Editorial quality.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "695cf9d952af476eac088aa24a23bca6",
+          "name": "projects/4672352249659912557/screens/695cf9d952af476eac088aa24a23bca6",
+          "prompt": "Premium editorial photography of a happy, fluffy white Samoyed dog after a grooming session, looking clean and pampered. The dog is positioned slightly off-center. Background is a soft, minimalist interior with warm, natural lighting. High-end, spa-like aesthetic. Professional photography, shallow depth of field.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtruK-HPZ_9I_DLDxf3UjHBHLq4r45mnMzccYAkAkR9OJjddamfjAPD_7k3DCasPmhxGpu5NXFFU2rGorNYNLyCAX6LwVa5YyKoh5KL2B9ts6QvtgO1VWgjwtEjkzJJrxp6qqxPYpbDwQhUWjCvQfQ_QDdcpMxO9_bGEEMjtKk6NaE993NlQNAyzElUSYBPYmLmef-XGZt8NDVV1pKmad3X35ut8jnm4FjKzd02_Cq1eJJr2k_tXMcIE74",
+            "name": "projects/4672352249659912557/files/508a161cd0db45ecbb2875f3b0f8271a"
+          },
+          "theme": {},
+          "title": "Premium editorial photography of a happy, fluffy white Samoyed dog after a grooming session, looking clean and pampered. The dog is positioned slightly off-center. Background is a soft, minimalist interior with warm, natural lighting. High-end, spa-like aesthetic. Professional photography, shallow depth of field.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "65dead7deddf47258e16d4ed64352d99",
+          "name": "projects/4672352249659912557/screens/65dead7deddf47258e16d4ed64352d99",
+          "prompt": "A professional portrait of a groomer's hands gently drying a small, cute puppy with a soft teal towel. The focus is on the care and gentleness. Minimalist, high-key lighting, premium spa feel.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuLO19RSXp-_Me5XF7Zzp_nCXtIzCYJkHAy6pAoyoFF5Hd8IYqHKAYijtqKvx23daMs8QLB1c9f8GL6NCD6lTyl_LmTrQ222ov-DVcroJpWow-hPqdSejHrYimOpWmCzMrW6_CsXxx-iesDiFJC_9UtgzrUJFJty6hLfqXiKIkG-yutBuVmiXBCHjdwZJIgeB6f1-GYkIDcZRjnCHsw63jVswe9Fgi9rE9GnzPLnVLQ0mXQfGjMVbUAcuw",
+            "name": "projects/4672352249659912557/files/895314142ff446a69737338e8df1c6ef"
+          },
+          "theme": {},
+          "title": "A professional portrait of a groomer's hands gently drying a small, cute puppy with a soft teal towel. The focus is on the care and gentleness. Minimalist, high-key lighting, premium spa feel.",
+          "width": "1024"
+        },
+        {
           "designSystem": {
             "designSystem": {
-              "displayName": "The Modern Groomer",
-              "styleGuidelines": "## Brand & Style\nThe design system embodies a \"Modern Groomer\" aesthetic: a sophisticated, editorial-first approach to mobile pet care that balances high-end luxury with an approachable, organic warmth. It targets discerning pet owners who view grooming as a wellness ritual rather than a chore.\n\nThe style is **Editorial Minimalism** with a **Tactile** edge. It leverages generous whitespace to evoke a sense of calm and cleanliness, punctuated by bold typographic choices and organic, fluid containers that mimic the natural curves of water or soft silhouettes. To differentiate from standard corporate apps, the system avoids generic rounded corners in favor of a \"Chiseled & Pill\" hybrid—using sharp 90-degree intersections for structural containers and oversized, exaggerated pill shapes for interactive elements. A subtle film grain texture should be applied to large color fields to provide a premium, paper-like feel.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** with an aggressive \"whitespace-first\" philosophy. \n- **Desktop:** 12-column grid with wide 80px side margins and 32px gutters.\n- **Mobile:** 4-column grid with 24px margins.\n- **Overlap Logic:** Key elements (like a dog portrait or a price chip) should intentionally break the grid, overlapping the boundary between two sections or a photo and a text block by 40-80px.\n- **Vertical Rhythm:** Use large gaps (120px+) between major sections to allow the content to breathe, mimicking a coffee-table book layout.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Asymmetric Overlaps** rather than traditional shadows.\n- **Stacked Surfaces:** Use the Cream and Forest Green colors to create distinct depth levels. A Forest Green card sitting on a Cream background is considered \"Level 1.\"\n- **Floating Elements:** Only use shadows for floating action buttons or high-priority modals. When used, shadows must be extremely diffused (30px+ blur) and tinted with the Forest Green hex at 5-10% opacity to maintain a natural look.\n- **Grain Texture:** Apply a global CSS noise overlay (opacity 0.03) to all primary backgrounds to eliminate the \"flatness\" of digital screens and provide a tactile, premium paper feel.\n\n## Components\n- **Buttons:** Primary buttons are oversized pills in Burnt Orange with Space Mono (All Caps) text. Secondary buttons are Forest Green outlines with no fill.\n- **Cards:** Use sharp 90-degree corners. Use an \"Editorial Spread\" layout where the image takes up 60% of the card and typography overlaps the bottom edge of the image.\n- **Inputs:** Simple bottom-border only (underline style) in Forest Green. Labels sit above in Space Mono.\n- **Vertical Labels:** Use as category markers on the far left or right of a section.\n- **Photography:** All placeholders should be high-contrast, \"lifestyle\" pet photography with a warm, slightly desaturated color grade.\n- **Chips/Status:** Small pills using the secondary Cream color with Forest Green text for a subtle, high-end look.",
+              "displayName": "Alpine Canine Editorial",
+              "styleGuidelines": "## Brand & Style\n\nThis design system is built upon the concept of a \"modern canine spa,\" merging high-end editorial aesthetics with a serene, aquatic atmosphere. The brand personality is professional yet nurturing, evoking the feeling of a premium, white-glove service that treats pets as family.\n\nThe visual style utilizes a sophisticated blend of **Minimalism** and **Glassmorphism**. Extensive whitespace ensures a clutter-free environment, while \"Floating Bubble\" motifs—rendered through soft translucency and organic curves—create a sense of lightness and cleanliness. The design avoids harsh corners in favor of a fluid, rhythmic interface that feels as refreshing as a luxury bath.\n\n## Layout & Spacing\n\nThe layout philosophy is centered on **intentional asymmetry** and generous whitespace. Rather than a rigid, blocky grid, this design system encourages a fluid flow that mimics the movement of water.\n\n- **Grid Model:** A 12-column fixed grid for desktop, moving to 8 columns for tablet and 4 for mobile. \n- **Asymmetry:** Key elements (like hero images or feature cards) should be slightly offset from their background containers to create depth and an \"editorial\" layout.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct service offerings, allowing each \"bubble\" of content to breathe.\n- **Floating Elements:** Content blocks often sit atop \"Bubbled Aqua\" shapes that do not perfectly align with the grid, reinforcing the organic visual motif.\n\n## Elevation & Depth\n\nVisual hierarchy is established through a combination of **Glassmorphism** and **Tonal Layers**. \n\n1. **The Bubble Layer:** Primary cards and modals use a semi-transparent `Soft Foam` background with a heavy `Backdrop Blur` (20px-40px). This creates the \"floating\" effect over background photography or organic aqua shapes.\n2. **Subtle Shadows:** Avoid heavy, dark shadows. Use extremely diffused, low-opacity shadows tinted with the `Deep Charcoal` color (e.g., 4% opacity) to provide just enough lift for interactive elements.\n3. **Outlines:** Use thin (1px) borders in `Bubbled Aqua` or a 10% opacity version of `Deep Charcoal` to define edges without adding visual weight.\n\n## Components\n\n### Buttons\nPrimary buttons are pill-shaped, using the `Golden Retriever` accent with `Deep Charcoal` text for maximum visibility. Hover states should include a subtle scale-up effect (1.02x) rather than a drastic color change. Secondary buttons use a transparent background with a `Deep Charcoal` border.\n\n### Cards\nCards are the heart of the \"Floating Bubble\" motif. They must feature a white-transparent background, a soft backdrop blur, and a delicate 1px border. Content inside cards should be center-aligned for an editorial look.\n\n### Input Fields\nInputs are minimalist: a single bottom border in `Deep Charcoal` (20% opacity) that becomes 100% opaque on focus. Labels sit above the line in `label-lg` Montserrat.\n\n### Chips & Tags\nUsed for service features (e.g., \"Deep Clean,\" \"De-shedding\"). These are small, pill-shaped elements with a `Bubbled Aqua` background and `Deep Charcoal` text.\n\n### Interactive Lists\nService menus should be displayed as a list where the item expands on hover, revealing a circular image of a dog within a \"bubble\" frame.",
               "theme": {
-                "bodyFont": "DM_SANS",
-                "bodyFontFamily": "Dm Sans",
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
                 "colorMode": "LIGHT",
                 "colorVariant": "FIDELITY",
-                "customColor": "#1b3022",
-                "designMd": "---\nname: The Modern Groomer\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#434843'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#5e5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e1dfdb'\n  on-secondary-container: '#63635f'\n  tertiary: '#281100'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#462200'\n  on-tertiary-container: '#dc790a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#e4e2dd'\n  secondary-fixed-dim: '#c8c6c2'\n  on-secondary-fixed: '#1b1c19'\n  on-secondary-fixed-variant: '#474744'\n  tertiary-fixed: '#ffdcc3'\n  tertiary-fixed-dim: '#ffb77d'\n  on-tertiary-fixed: '#2f1500'\n  on-tertiary-fixed-variant: '#6e3900'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  vertical-accent:\n    fontFamily: Space Mono\n    fontSize: 10px\n    fontWeight: '400'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-padding-desktop: 80px\n  container-padding-mobile: 24px\n  gutter: 32px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system embodies a \"Modern Groomer\" aesthetic: a sophisticated, editorial-first approach to mobile pet care that balances high-end luxury with an approachable, organic warmth. It targets discerning pet owners who view grooming as a wellness ritual rather than a chore.\n\nThe style is **Editorial Minimalism** with a **Tactile** edge. It leverages generous whitespace to evoke a sense of calm and cleanliness, punctuated by bold typographic choices and organic, fluid containers that mimic the natural curves of water or soft silhouettes. To differentiate from standard corporate apps, the system avoids generic rounded corners in favor of a \"Chiseled & Pill\" hybrid—using sharp 90-degree intersections for structural containers and oversized, exaggerated pill shapes for interactive elements. A subtle film grain texture should be applied to large color fields to provide a premium, paper-like feel.\n\n## Colors\nThe palette is rooted in nature and high-end apothecary branding.\n- **Deep Forest Green (#1B3022):** The primary anchor. Used for backgrounds of high-impact sections and primary typography to convey stability and premium quality.\n- **Soft Cream (#F9F7F2):** The canvas. This replaces pure white to create a warmer, more inviting and sophisticated atmosphere.\n- **Burnt Orange (#D97706):** The kinetic accent. Used sparingly for calls-to-action, alerts, and vital interactive cues.\n- **Neutral (#2D2D2D):** Reserved for long-form body text on cream backgrounds to ensure optimal legibility without the harshness of pure black.\n\n## Typography\nThe typography strategy creates a high-contrast hierarchy common in luxury fashion magazines.\n- **Headlines:** Use *Playfair Display*. Its high-contrast serifs provide the \"editorial\" authority. Display sizes should use tight tracking to look like a masthead.\n- **Body:** Use *DM Sans*. Its wide-set, geometric construction ensures clarity and adds a contemporary, \"airy\" feel to the descriptions of services.\n- **Accents:** *Space Mono* is used for utility labels and vertical \"side-bar\" text. This adds a technical, precise layer to the organic brand, suggesting professional expertise. \n- **Vertical Accents:** Use vertical typography for dates, category tags, or decorative section markers to break the standard horizontal grid.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** with an aggressive \"whitespace-first\" philosophy. \n- **Desktop:** 12-column grid with wide 80px side margins and 32px gutters.\n- **Mobile:** 4-column grid with 24px margins.\n- **Overlap Logic:** Key elements (like a dog portrait or a price chip) should intentionally break the grid, overlapping the boundary between two sections or a photo and a text block by 40-80px.\n- **Vertical Rhythm:** Use large gaps (120px+) between major sections to allow the content to breathe, mimicking a coffee-table book layout.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Asymmetric Overlaps** rather than traditional shadows.\n- **Stacked Surfaces:** Use the Cream and Forest Green colors to create distinct depth levels. A Forest Green card sitting on a Cream background is considered \"Level 1.\"\n- **Floating Elements:** Only use shadows for floating action buttons or high-priority modals. When used, shadows must be extremely diffused (30px+ blur) and tinted with the Forest Green hex at 5-10% opacity to maintain a natural look.\n- **Grain Texture:** Apply a global CSS noise overlay (opacity 0.03) to all primary backgrounds to eliminate the \"flatness\" of digital screens and provide a tactile, premium paper feel.\n\n## Shapes\nThe shape language is a juxtaposition of **Architectural Precision** and **Fluid Organicism**.\n- **Containers:** All primary layout containers, image frames, and input fields use **0px (Sharp)** corners. This provides a modern, high-fashion structural look.\n- **Interactive Elements:** Buttons and selected state chips use **Pill-shaped (3)** rounding. This makes the primary actions feel \"touchable\" and friendly.\n- **Organic Masks:** Large imagery or decorative background shapes should use \"blob\" masks—reminiscent of water droplets or soft organic forms—to contrast against the sharp grid.\n\n## Components\n- **Buttons:** Primary buttons are oversized pills in Burnt Orange with Space Mono (All Caps) text. Secondary buttons are Forest Green outlines with no fill.\n- **Cards:** Use sharp 90-degree corners. Use an \"Editorial Spread\" layout where the image takes up 60% of the card and typography overlaps the bottom edge of the image.\n- **Inputs:** Simple bottom-border only (underline style) in Forest Green. Labels sit above in Space Mono.\n- **Vertical Labels:** Use as category markers on the far left or right of a section.\n- **Photography:** All placeholders should be high-contrast, \"lifestyle\" pet photography with a warm, slightly desaturated color grade.\n- **Chips/Status:** Small pills using the secondary Cream color with Forest Green text for a subtle, high-end look.",
+                "customColor": "#2d2e2e",
+                "designMd": "---\nname: Alpine Canine Editorial\ncolors:\n  surface: '#f8f9fa'\n  surface-dim: '#d9dadb'\n  surface-bright: '#f8f9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f4f5'\n  surface-container: '#edeeef'\n  surface-container-high: '#e7e8e9'\n  surface-container-highest: '#e1e3e4'\n  on-surface: '#191c1d'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2e3132'\n  inverse-on-surface: '#f0f1f2'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5e5e5e'\n  primary: '#181919'\n  on-primary: '#ffffff'\n  primary-container: '#2d2e2e'\n  on-primary-container: '#959595'\n  inverse-primary: '#c7c6c6'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#0c1c1c'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#213131'\n  on-tertiary-container: '#889998'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e3e2e2'\n  primary-fixed-dim: '#c7c6c6'\n  on-primary-fixed: '#1b1c1c'\n  on-primary-fixed-variant: '#464747'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#d4e6e5'\n  tertiary-fixed-dim: '#b8cac9'\n  on-tertiary-fixed: '#0e1e1e'\n  on-tertiary-fixed-variant: '#3a4a49'\n  background: '#f8f9fa'\n  on-background: '#191c1d'\n  surface-variant: '#e1e3e4'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-tablet: 32px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThis design system is built upon the concept of a \"modern canine spa,\" merging high-end editorial aesthetics with a serene, aquatic atmosphere. The brand personality is professional yet nurturing, evoking the feeling of a premium, white-glove service that treats pets as family.\n\nThe visual style utilizes a sophisticated blend of **Minimalism** and **Glassmorphism**. Extensive whitespace ensures a clutter-free environment, while \"Floating Bubble\" motifs—rendered through soft translucency and organic curves—create a sense of lightness and cleanliness. The design avoids harsh corners in favor of a fluid, rhythmic interface that feels as refreshing as a luxury bath.\n\n## Colors\n\nThe \"Alpine Groom\" palette is designed to ground the user in trust while providing moments of warmth.\n\n- **Deep Charcoal (#2D2E2E):** Used primarily for typography and structural borders to provide an authoritative, high-contrast foundation.\n- **Soft Foam (#F8F9FA):** The primary canvas color. It is a near-white that feels softer and more premium than pure hex white.\n- **Bubbled Aqua (#E0F2F1):** A light, airy tint used for decorative backgrounds, subtle highlights, and \"bubble\" containers to evoke water.\n- **Golden Retriever (#D4A373):** A warm, sophisticated gold used exclusively for Call to Action (CTA) elements and key status indicators, providing a friendly contrast to the cooler tones.\n\n## Typography\n\nThis design system employs a classic high-contrast pairing to establish an editorial feel. \n\n**Playfair Display** is used for all headlines. Its elegant serifs and varying stroke weights communicate luxury and attention to detail. Large display type should use tight letter-spacing to enhance its fashionable impact.\n\n**Montserrat** provides a clean, geometric balance for body text and functional labels. It ensures legibility across all service descriptions and booking forms. Use `label-lg` for navigation items and small headings to introduce a modern, structured rhythm to the page.\n\n## Layout & Spacing\n\nThe layout philosophy is centered on **intentional asymmetry** and generous whitespace. Rather than a rigid, blocky grid, this design system encourages a fluid flow that mimics the movement of water.\n\n- **Grid Model:** A 12-column fixed grid for desktop, moving to 8 columns for tablet and 4 for mobile. \n- **Asymmetry:** Key elements (like hero images or feature cards) should be slightly offset from their background containers to create depth and an \"editorial\" layout.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct service offerings, allowing each \"bubble\" of content to breathe.\n- **Floating Elements:** Content blocks often sit atop \"Bubbled Aqua\" shapes that do not perfectly align with the grid, reinforcing the organic visual motif.\n\n## Elevation & Depth\n\nVisual hierarchy is established through a combination of **Glassmorphism** and **Tonal Layers**. \n\n1. **The Bubble Layer:** Primary cards and modals use a semi-transparent `Soft Foam` background with a heavy `Backdrop Blur` (20px-40px). This creates the \"floating\" effect over background photography or organic aqua shapes.\n2. **Subtle Shadows:** Avoid heavy, dark shadows. Use extremely diffused, low-opacity shadows tinted with the `Deep Charcoal` color (e.g., 4% opacity) to provide just enough lift for interactive elements.\n3. **Outlines:** Use thin (1px) borders in `Bubbled Aqua` or a 10% opacity version of `Deep Charcoal` to define edges without adding visual weight.\n\n## Shapes\n\nThe shape language is defined by \"Organic Water Curves.\" \n\n- **Containers:** Standard cards and containers use a `1rem` (rounded-lg) radius to maintain a soft, approachable feel.\n- **Floating Motifs:** Background decorative elements should use irregular, blob-like radii (e.g., `60% 40% 30% 70% / 60% 30% 70% 40%`) to simulate water droplets.\n- **Interactive Elements:** Buttons and tags utilize pill-shaped (fully rounded) geometry to contrast against the more structured card containers.\n\n## Components\n\n### Buttons\nPrimary buttons are pill-shaped, using the `Golden Retriever` accent with `Deep Charcoal` text for maximum visibility. Hover states should include a subtle scale-up effect (1.02x) rather than a drastic color change. Secondary buttons use a transparent background with a `Deep Charcoal` border.\n\n### Cards\nCards are the heart of the \"Floating Bubble\" motif. They must feature a white-transparent background, a soft backdrop blur, and a delicate 1px border. Content inside cards should be center-aligned for an editorial look.\n\n### Input Fields\nInputs are minimalist: a single bottom border in `Deep Charcoal` (20% opacity) that becomes 100% opaque on focus. Labels sit above the line in `label-lg` Montserrat.\n\n### Chips & Tags\nUsed for service features (e.g., \"Deep Clean,\" \"De-shedding\"). These are small, pill-shaped elements with a `Bubbled Aqua` background and `Deep Charcoal` text.\n\n### Interactive Lists\nService menus should be displayed as a list where the item expands on hover, revealing a circular image of a dog within a \"bubble\" frame.",
                 "font": "PLAYFAIR_DISPLAY",
                 "headlineFont": "PLAYFAIR_DISPLAY",
                 "headlineFontFamily": "Playfair Display",
-                "labelFont": "SPACE_MONO",
-                "labelFontFamily": "Space Mono",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
                 "namedColors": {
-                  "background": "#fcf9f8",
+                  "background": "#f8f9fa",
                   "error": "#ba1a1a",
                   "error_container": "#ffdad6",
-                  "inverse_on_surface": "#f3f0f0",
-                  "inverse_primary": "#b4cdb8",
-                  "inverse_surface": "#303030",
-                  "on_background": "#1b1c1c",
+                  "inverse_on_surface": "#f0f1f2",
+                  "inverse_primary": "#c7c6c6",
+                  "inverse_surface": "#2e3132",
+                  "on_background": "#191c1d",
                   "on_error": "#ffffff",
                   "on_error_container": "#93000a",
                   "on_primary": "#ffffff",
-                  "on_primary_container": "#819986",
-                  "on_primary_fixed": "#0b2013",
-                  "on_primary_fixed_variant": "#364c3c",
+                  "on_primary_container": "#959595",
+                  "on_primary_fixed": "#1b1c1c",
+                  "on_primary_fixed_variant": "#464747",
                   "on_secondary": "#ffffff",
-                  "on_secondary_container": "#63635f",
-                  "on_secondary_fixed": "#1b1c19",
-                  "on_secondary_fixed_variant": "#474744",
-                  "on_surface": "#1b1c1c",
-                  "on_surface_variant": "#434843",
+                  "on_secondary_container": "#7a532a",
+                  "on_secondary_fixed": "#2c1600",
+                  "on_secondary_fixed_variant": "#623f18",
+                  "on_surface": "#191c1d",
+                  "on_surface_variant": "#444748",
                   "on_tertiary": "#ffffff",
-                  "on_tertiary_container": "#dc790a",
-                  "on_tertiary_fixed": "#2f1500",
-                  "on_tertiary_fixed_variant": "#6e3900",
-                  "outline": "#737973",
-                  "outline_variant": "#c3c8c1",
-                  "primary": "#061b0e",
-                  "primary_container": "#1b3022",
-                  "primary_fixed": "#d0e9d4",
-                  "primary_fixed_dim": "#b4cdb8",
-                  "secondary": "#5e5e5b",
-                  "secondary_container": "#e1dfdb",
-                  "secondary_fixed": "#e4e2dd",
-                  "secondary_fixed_dim": "#c8c6c2",
-                  "surface": "#fcf9f8",
-                  "surface_bright": "#fcf9f8",
-                  "surface_container": "#f0eded",
-                  "surface_container_high": "#eae7e7",
-                  "surface_container_highest": "#e4e2e1",
-                  "surface_container_low": "#f6f3f2",
+                  "on_tertiary_container": "#889998",
+                  "on_tertiary_fixed": "#0e1e1e",
+                  "on_tertiary_fixed_variant": "#3a4a49",
+                  "outline": "#747878",
+                  "outline_variant": "#c4c7c7",
+                  "primary": "#181919",
+                  "primary_container": "#2d2e2e",
+                  "primary_fixed": "#e3e2e2",
+                  "primary_fixed_dim": "#c7c6c6",
+                  "secondary": "#7d562d",
+                  "secondary_container": "#ffca98",
+                  "secondary_fixed": "#ffdcbd",
+                  "secondary_fixed_dim": "#f0bd8b",
+                  "surface": "#f8f9fa",
+                  "surface_bright": "#f8f9fa",
+                  "surface_container": "#edeeef",
+                  "surface_container_high": "#e7e8e9",
+                  "surface_container_highest": "#e1e3e4",
+                  "surface_container_low": "#f3f4f5",
                   "surface_container_lowest": "#ffffff",
-                  "surface_dim": "#dcd9d9",
-                  "surface_tint": "#4d6453",
-                  "surface_variant": "#e4e2e1",
-                  "tertiary": "#281100",
-                  "tertiary_container": "#462200",
-                  "tertiary_fixed": "#ffdcc3",
-                  "tertiary_fixed_dim": "#ffb77d"
+                  "surface_dim": "#d9dadb",
+                  "surface_tint": "#5e5e5e",
+                  "surface_variant": "#e1e3e4",
+                  "tertiary": "#0c1c1c",
+                  "tertiary_container": "#213131",
+                  "tertiary_fixed": "#d4e6e5",
+                  "tertiary_fixed_dim": "#b8cac9"
                 },
-                "overrideNeutralColor": "#2d2d2d",
-                "overridePrimaryColor": "#1b3022",
-                "overrideSecondaryColor": "#f9f7f2",
-                "overrideTertiaryColor": "#d97706",
+                "overrideNeutralColor": "#f8f9fa",
+                "overridePrimaryColor": "#2d2e2e",
+                "overrideSecondaryColor": "#d4a373",
+                "overrideTertiaryColor": "#e0f2f1",
+                "roundness": "ROUND_EIGHT",
                 "spacing": {
-                  "container-padding-desktop": "80px",
-                  "container-padding-mobile": "24px",
+                  "container-max": "1280px",
                   "gutter": "32px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "margin-tablet": "32px",
                   "section-gap": "120px",
                   "unit": "8px"
                 },
                 "spacingScale": 2,
                 "typography": {
                   "body-lg": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Montserrat",
                     "fontSize": "18px",
                     "fontWeight": "400",
-                    "letterSpacing": "0.01em",
                     "lineHeight": "1.6"
                   },
                   "body-md": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Montserrat",
                     "fontSize": "16px",
                     "fontWeight": "400",
                     "lineHeight": "1.6"
                   },
-                  "display-lg": {
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "36px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.4"
+                  },
+                  "headline-xl": {
                     "fontFamily": "Playfair Display",
                     "fontSize": "64px",
                     "fontWeight": "700",
                     "letterSpacing": "-0.02em",
                     "lineHeight": "1.1"
                   },
-                  "headline-lg": {
-                    "fontFamily": "Playfair Display",
-                    "fontSize": "40px",
-                    "fontWeight": "700",
-                    "lineHeight": "1.2"
-                  },
-                  "headline-lg-mobile": {
-                    "fontFamily": "Playfair Display",
-                    "fontSize": "32px",
-                    "fontWeight": "700",
-                    "lineHeight": "1.2"
-                  },
-                  "headline-md": {
-                    "fontFamily": "Playfair Display",
-                    "fontSize": "28px",
+                  "label-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "14px",
                     "fontWeight": "600",
-                    "lineHeight": "1.3"
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.2"
                   },
-                  "label-caps": {
-                    "fontFamily": "Space Mono",
+                  "label-md": {
+                    "fontFamily": "Montserrat",
                     "fontSize": "12px",
-                    "fontWeight": "700",
-                    "letterSpacing": "0.15em",
-                    "lineHeight": "1.0"
-                  },
-                  "vertical-accent": {
-                    "fontFamily": "Space Mono",
-                    "fontSize": "10px",
-                    "fontWeight": "400",
-                    "letterSpacing": "0.2em",
-                    "lineHeight": "1.0"
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
                   }
                 }
               }
             },
-            "name": "assets/4b1fd23e49784bba940f8beaeab3637e",
+            "name": "assets/2736c889070b472c91e9fde3f134b761",
             "version": "1"
           },
           "deviceType": "DESKTOP",
           "generatedBy": "figaro_agent",
-          "height": "9574",
+          "height": "10048",
           "htmlCode": {
-            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Y4MjZjOWViMjFkOTQxODY5YzU1MTY3MTZlNDk5MDkwEgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDgzNzgyMjA4NzczNTMyMTI3OA&filename=&opi=96797242",
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzc0MzU1MTgwYWQ3ZDQ0MTBiMWVhNGQ1MTI3ZTU1MDJkEgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM0NjcyMzUyMjQ5NjU5OTEyNTU3&filename=&opi=96797242",
             "mimeType": "text/html",
-            "name": "projects/14837822087735321278/files/380fa2f5827d47fa8403268849e8c121"
+            "name": "projects/4672352249659912557/files/8cd56727c17a48af85f9242fb75070c6"
           },
-          "id": "30f52f6493a148dcacc32f770e11fda6",
-          "name": "projects/14837822087735321278/screens/30f52f6493a148dcacc32f770e11fda6",
-          "prompt": "Create a bespoke, editorial-grade desktop landing page for K-9 Kleaners Mobile Grooming. \n\nLayout Requirements:\n- Header: Sticky, minimalist, includes \"(956) 309-6209\".\n- Hero: High-fashion aesthetic. Large Serif headline: \"The Spa That Comes To You.\" Use an asymmetrical layout with a prominent CTA \"Secure Your Slot\".\n- Credibility: \"Professionalism in Every Paw.\" Highlighting McAllen roots and premium care.\n- Services: Three columns with unique visual treatments (not standard cards). 1. Full Grooming (The Works), 2. Bath & Brush (The Refresh), 3. Specialty Care (The Detail).\n- About: Focus on Adrian's dedication. Text: \"Crafting Comfort for McAllen's Canines.\" \n- Visit: Includes the required empty map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: A clean, high-contrast form. Include email Adrianmendo55@gmail.com and address \"McAllen, United States\".\n- Style: Use the 'Modern Groomer' design system: #1B3022, #F9F7F2, #D97706. Incorporate a vertical line motif and generous whitespace.\n\nTechnical: Production-ready HTML/CSS/JS. Smooth scroll, mobile-responsive navigation, and form validation UI. No lorem ipsum.",
+          "id": "dfe67fab0e0342a591d0a320557d7cd6",
+          "name": "projects/4672352249659912557/screens/dfe67fab0e0342a591d0a320557d7cd6",
+          "prompt": "Create a bespoke, editorial-grade desktop homepage for K-9 Kleaners Mobile Grooming. \n\nLayout: Unique, asymmetrical sections. Use the 'Floating Bubble' motif with rounded container shapes and translucent backgrounds.\nSections:\n1. Header: Use {{DATA:COMPONENTS:COMPONENTS_2}} TopNavBar.\n2. Hero: A massive headline using Playfair Display, something like \"The Spa That Comes to Your Doorstep.\" Use {{DATA:IMAGE:IMAGE_5}} as a large, off-center background image.\n3. Credibility: A minimalist row of logos or text-based accolades like 'Certified Professional', 'Eco-Friendly Products', 'McAllen's Favorite'.\n4. Services: A grid of 3 unique cards using Bubbled Aqua backgrounds. Offerings: 'The Full Spa Experience', 'Hydrating Bath & Brush', 'Specialty Styling'. Use {{DATA:IMAGE:IMAGE_3}} as a visual accent.\n5. About: An intimate section titled 'Crafted with Care'. Use {{DATA:IMAGE:IMAGE_4}} paired with a short, punchy story about Adrian's passion for dog wellness.\n6. Visit: A full-width section with a clean layout. Includes the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A refined, spacious form with validation UI placeholders. Use the 'Golden Retriever' (#D4A373) for the submit button.\n8. Footer: Use {{DATA:COMPONENTS:COMPONENTS_2}} Footer.\n\nTone: Professional, high-end, caring. No generic local business vibes. All content in English. Use the McAllen, TX contact info provided.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "DESIGN",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuaSh3pgVP5ocZ602Wk4EMMggNX59YIfcoFpAMDwmZCww6j_3OQv2W1m1xHP0-o5nR6297hbkERFYCEZX709ag3AK3N0LURkYfiNGK5F23AOOIy32ePLsPhnzqCSUYUPsDn9Zs3JjJewRv-DLPiP5s_f8t9DafdKcGE8C8UIniTxyEIe_VONrIACGBUYTfr1nhqRwht4g_daEX22jxFvkbqKuSBMDtf_z3DXHSVedF9gRcjfiRl01L0p7Ue",
-            "name": "projects/14837822087735321278/files/3d30be2b74844047bd92bd34c404f3e2"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv7zM22P3YXIYNsM_KC8XVqgNIrzMgGPAnEqLqWqgROB8fsanwm-r_a2qW_JTZYtak-ohVG8Lf47FTVo9kxBXHPXNATpYd16M2R-BC-lKMT-dVvL_hQBL-I-0c4t8jSDFrUCOLxQ0nUQ5xWxFhBUO36piloY8zCu8Z6YPnHi2LTFVTb1t0DistC5uClQ4jHG8_SJRiDFVDkGGYIkfzUCGUmQeksWfonVJ9_2h93W95gc1pJ_0kjeRhQYg",
+            "name": "projects/4672352249659912557/files/743e5c269ef5498b8109ce4aa95def0a"
           },
           "theme": {
-            "bodyFont": "DM_SANS",
-            "bodyFontFamily": "Dm Sans",
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
-            "customColor": "#1b3022",
-            "designMd": "---\nname: The Modern Groomer\ncolors:\n  surface: '#fcf9f8'\n  surface-dim: '#dcd9d9'\n  surface-bright: '#fcf9f8'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f6f3f2'\n  surface-container: '#f0eded'\n  surface-container-high: '#eae7e7'\n  surface-container-highest: '#e4e2e1'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#434843'\n  inverse-surface: '#303030'\n  inverse-on-surface: '#f3f0f0'\n  outline: '#737973'\n  outline-variant: '#c3c8c1'\n  surface-tint: '#4d6453'\n  primary: '#061b0e'\n  on-primary: '#ffffff'\n  primary-container: '#1b3022'\n  on-primary-container: '#819986'\n  inverse-primary: '#b4cdb8'\n  secondary: '#5e5e5b'\n  on-secondary: '#ffffff'\n  secondary-container: '#e1dfdb'\n  on-secondary-container: '#63635f'\n  tertiary: '#281100'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#462200'\n  on-tertiary-container: '#dc790a'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#d0e9d4'\n  primary-fixed-dim: '#b4cdb8'\n  on-primary-fixed: '#0b2013'\n  on-primary-fixed-variant: '#364c3c'\n  secondary-fixed: '#e4e2dd'\n  secondary-fixed-dim: '#c8c6c2'\n  on-secondary-fixed: '#1b1c19'\n  on-secondary-fixed-variant: '#474744'\n  tertiary-fixed: '#ffdcc3'\n  tertiary-fixed-dim: '#ffb77d'\n  on-tertiary-fixed: '#2f1500'\n  on-tertiary-fixed-variant: '#6e3900'\n  background: '#fcf9f8'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e1'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\n  vertical-accent:\n    fontFamily: Space Mono\n    fontSize: 10px\n    fontWeight: '400'\n    lineHeight: '1.0'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-padding-desktop: 80px\n  container-padding-mobile: 24px\n  gutter: 32px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe design system embodies a \"Modern Groomer\" aesthetic: a sophisticated, editorial-first approach to mobile pet care that balances high-end luxury with an approachable, organic warmth. It targets discerning pet owners who view grooming as a wellness ritual rather than a chore.\n\nThe style is **Editorial Minimalism** with a **Tactile** edge. It leverages generous whitespace to evoke a sense of calm and cleanliness, punctuated by bold typographic choices and organic, fluid containers that mimic the natural curves of water or soft silhouettes. To differentiate from standard corporate apps, the system avoids generic rounded corners in favor of a \"Chiseled & Pill\" hybrid—using sharp 90-degree intersections for structural containers and oversized, exaggerated pill shapes for interactive elements. A subtle film grain texture should be applied to large color fields to provide a premium, paper-like feel.\n\n## Colors\nThe palette is rooted in nature and high-end apothecary branding.\n- **Deep Forest Green (#1B3022):** The primary anchor. Used for backgrounds of high-impact sections and primary typography to convey stability and premium quality.\n- **Soft Cream (#F9F7F2):** The canvas. This replaces pure white to create a warmer, more inviting and sophisticated atmosphere.\n- **Burnt Orange (#D97706):** The kinetic accent. Used sparingly for calls-to-action, alerts, and vital interactive cues.\n- **Neutral (#2D2D2D):** Reserved for long-form body text on cream backgrounds to ensure optimal legibility without the harshness of pure black.\n\n## Typography\nThe typography strategy creates a high-contrast hierarchy common in luxury fashion magazines.\n- **Headlines:** Use *Playfair Display*. Its high-contrast serifs provide the \"editorial\" authority. Display sizes should use tight tracking to look like a masthead.\n- **Body:** Use *DM Sans*. Its wide-set, geometric construction ensures clarity and adds a contemporary, \"airy\" feel to the descriptions of services.\n- **Accents:** *Space Mono* is used for utility labels and vertical \"side-bar\" text. This adds a technical, precise layer to the organic brand, suggesting professional expertise. \n- **Vertical Accents:** Use vertical typography for dates, category tags, or decorative section markers to break the standard horizontal grid.\n\n## Layout & Spacing\nThis design system utilizes a **Fixed Grid** with an aggressive \"whitespace-first\" philosophy. \n- **Desktop:** 12-column grid with wide 80px side margins and 32px gutters.\n- **Mobile:** 4-column grid with 24px margins.\n- **Overlap Logic:** Key elements (like a dog portrait or a price chip) should intentionally break the grid, overlapping the boundary between two sections or a photo and a text block by 40-80px.\n- **Vertical Rhythm:** Use large gaps (120px+) between major sections to allow the content to breathe, mimicking a coffee-table book layout.\n\n## Elevation & Depth\nDepth is created through **Tonal Layering** and **Asymmetric Overlaps** rather than traditional shadows.\n- **Stacked Surfaces:** Use the Cream and Forest Green colors to create distinct depth levels. A Forest Green card sitting on a Cream background is considered \"Level 1.\"\n- **Floating Elements:** Only use shadows for floating action buttons or high-priority modals. When used, shadows must be extremely diffused (30px+ blur) and tinted with the Forest Green hex at 5-10% opacity to maintain a natural look.\n- **Grain Texture:** Apply a global CSS noise overlay (opacity 0.03) to all primary backgrounds to eliminate the \"flatness\" of digital screens and provide a tactile, premium paper feel.\n\n## Shapes\nThe shape language is a juxtaposition of **Architectural Precision** and **Fluid Organicism**.\n- **Containers:** All primary layout containers, image frames, and input fields use **0px (Sharp)** corners. This provides a modern, high-fashion structural look.\n- **Interactive Elements:** Buttons and selected state chips use **Pill-shaped (3)** rounding. This makes the primary actions feel \"touchable\" and friendly.\n- **Organic Masks:** Large imagery or decorative background shapes should use \"blob\" masks—reminiscent of water droplets or soft organic forms—to contrast against the sharp grid.\n\n## Components\n- **Buttons:** Primary buttons are oversized pills in Burnt Orange with Space Mono (All Caps) text. Secondary buttons are Forest Green outlines with no fill.\n- **Cards:** Use sharp 90-degree corners. Use an \"Editorial Spread\" layout where the image takes up 60% of the card and typography overlaps the bottom edge of the image.\n- **Inputs:** Simple bottom-border only (underline style) in Forest Green. Labels sit above in Space Mono.\n- **Vertical Labels:** Use as category markers on the far left or right of a section.\n- **Photography:** All placeholders should be high-contrast, \"lifestyle\" pet photography with a warm, slightly desaturated color grade.\n- **Chips/Status:** Small pills using the secondary Cream color with Forest Green text for a subtle, high-end look.",
+            "customColor": "#2d2e2e",
+            "designMd": "---\nname: Alpine Canine Editorial\ncolors:\n  surface: '#f8f9fa'\n  surface-dim: '#d9dadb'\n  surface-bright: '#f8f9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f4f5'\n  surface-container: '#edeeef'\n  surface-container-high: '#e7e8e9'\n  surface-container-highest: '#e1e3e4'\n  on-surface: '#191c1d'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2e3132'\n  inverse-on-surface: '#f0f1f2'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5e5e5e'\n  primary: '#181919'\n  on-primary: '#ffffff'\n  primary-container: '#2d2e2e'\n  on-primary-container: '#959595'\n  inverse-primary: '#c7c6c6'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#0c1c1c'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#213131'\n  on-tertiary-container: '#889998'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e3e2e2'\n  primary-fixed-dim: '#c7c6c6'\n  on-primary-fixed: '#1b1c1c'\n  on-primary-fixed-variant: '#464747'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#d4e6e5'\n  tertiary-fixed-dim: '#b8cac9'\n  on-tertiary-fixed: '#0e1e1e'\n  on-tertiary-fixed-variant: '#3a4a49'\n  background: '#f8f9fa'\n  on-background: '#191c1d'\n  surface-variant: '#e1e3e4'\ntypography:\n  headline-xl:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.1em\n  label-md:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\nrounded:\n  sm: 0.25rem\n  DEFAULT: 0.5rem\n  md: 0.75rem\n  lg: 1rem\n  xl: 1.5rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-tablet: 32px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThis design system is built upon the concept of a \"modern canine spa,\" merging high-end editorial aesthetics with a serene, aquatic atmosphere. The brand personality is professional yet nurturing, evoking the feeling of a premium, white-glove service that treats pets as family.\n\nThe visual style utilizes a sophisticated blend of **Minimalism** and **Glassmorphism**. Extensive whitespace ensures a clutter-free environment, while \"Floating Bubble\" motifs—rendered through soft translucency and organic curves—create a sense of lightness and cleanliness. The design avoids harsh corners in favor of a fluid, rhythmic interface that feels as refreshing as a luxury bath.\n\n## Colors\n\nThe \"Alpine Groom\" palette is designed to ground the user in trust while providing moments of warmth.\n\n- **Deep Charcoal (#2D2E2E):** Used primarily for typography and structural borders to provide an authoritative, high-contrast foundation.\n- **Soft Foam (#F8F9FA):** The primary canvas color. It is a near-white that feels softer and more premium than pure hex white.\n- **Bubbled Aqua (#E0F2F1):** A light, airy tint used for decorative backgrounds, subtle highlights, and \"bubble\" containers to evoke water.\n- **Golden Retriever (#D4A373):** A warm, sophisticated gold used exclusively for Call to Action (CTA) elements and key status indicators, providing a friendly contrast to the cooler tones.\n\n## Typography\n\nThis design system employs a classic high-contrast pairing to establish an editorial feel. \n\n**Playfair Display** is used for all headlines. Its elegant serifs and varying stroke weights communicate luxury and attention to detail. Large display type should use tight letter-spacing to enhance its fashionable impact.\n\n**Montserrat** provides a clean, geometric balance for body text and functional labels. It ensures legibility across all service descriptions and booking forms. Use `label-lg` for navigation items and small headings to introduce a modern, structured rhythm to the page.\n\n## Layout & Spacing\n\nThe layout philosophy is centered on **intentional asymmetry** and generous whitespace. Rather than a rigid, blocky grid, this design system encourages a fluid flow that mimics the movement of water.\n\n- **Grid Model:** A 12-column fixed grid for desktop, moving to 8 columns for tablet and 4 for mobile. \n- **Asymmetry:** Key elements (like hero images or feature cards) should be slightly offset from their background containers to create depth and an \"editorial\" layout.\n- **Section Gaps:** Use large vertical spacing (`section-gap`) to separate distinct service offerings, allowing each \"bubble\" of content to breathe.\n- **Floating Elements:** Content blocks often sit atop \"Bubbled Aqua\" shapes that do not perfectly align with the grid, reinforcing the organic visual motif.\n\n## Elevation & Depth\n\nVisual hierarchy is established through a combination of **Glassmorphism** and **Tonal Layers**. \n\n1. **The Bubble Layer:** Primary cards and modals use a semi-transparent `Soft Foam` background with a heavy `Backdrop Blur` (20px-40px). This creates the \"floating\" effect over background photography or organic aqua shapes.\n2. **Subtle Shadows:** Avoid heavy, dark shadows. Use extremely diffused, low-opacity shadows tinted with the `Deep Charcoal` color (e.g., 4% opacity) to provide just enough lift for interactive elements.\n3. **Outlines:** Use thin (1px) borders in `Bubbled Aqua` or a 10% opacity version of `Deep Charcoal` to define edges without adding visual weight.\n\n## Shapes\n\nThe shape language is defined by \"Organic Water Curves.\" \n\n- **Containers:** Standard cards and containers use a `1rem` (rounded-lg) radius to maintain a soft, approachable feel.\n- **Floating Motifs:** Background decorative elements should use irregular, blob-like radii (e.g., `60% 40% 30% 70% / 60% 30% 70% 40%`) to simulate water droplets.\n- **Interactive Elements:** Buttons and tags utilize pill-shaped (fully rounded) geometry to contrast against the more structured card containers.\n\n## Components\n\n### Buttons\nPrimary buttons are pill-shaped, using the `Golden Retriever` accent with `Deep Charcoal` text for maximum visibility. Hover states should include a subtle scale-up effect (1.02x) rather than a drastic color change. Secondary buttons use a transparent background with a `Deep Charcoal` border.\n\n### Cards\nCards are the heart of the \"Floating Bubble\" motif. They must feature a white-transparent background, a soft backdrop blur, and a delicate 1px border. Content inside cards should be center-aligned for an editorial look.\n\n### Input Fields\nInputs are minimalist: a single bottom border in `Deep Charcoal` (20% opacity) that becomes 100% opaque on focus. Labels sit above the line in `label-lg` Montserrat.\n\n### Chips & Tags\nUsed for service features (e.g., \"Deep Clean,\" \"De-shedding\"). These are small, pill-shaped elements with a `Bubbled Aqua` background and `Deep Charcoal` text.\n\n### Interactive Lists\nService menus should be displayed as a list where the item expands on hover, revealing a circular image of a dog within a \"bubble\" frame.",
             "font": "PLAYFAIR_DISPLAY",
             "headlineFont": "PLAYFAIR_DISPLAY",
             "headlineFontFamily": "Playfair Display",
-            "labelFont": "SPACE_MONO",
-            "labelFontFamily": "Space Mono",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
             "namedColors": {
-              "background": "#fcf9f8",
+              "background": "#f8f9fa",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f3f0f0",
-              "inverse_primary": "#b4cdb8",
-              "inverse_surface": "#303030",
-              "on_background": "#1b1c1c",
+              "inverse_on_surface": "#f0f1f2",
+              "inverse_primary": "#c7c6c6",
+              "inverse_surface": "#2e3132",
+              "on_background": "#191c1d",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
-              "on_primary_container": "#819986",
-              "on_primary_fixed": "#0b2013",
-              "on_primary_fixed_variant": "#364c3c",
+              "on_primary_container": "#959595",
+              "on_primary_fixed": "#1b1c1c",
+              "on_primary_fixed_variant": "#464747",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#63635f",
-              "on_secondary_fixed": "#1b1c19",
-              "on_secondary_fixed_variant": "#474744",
-              "on_surface": "#1b1c1c",
-              "on_surface_variant": "#434843",
+              "on_secondary_container": "#7a532a",
+              "on_secondary_fixed": "#2c1600",
+              "on_secondary_fixed_variant": "#623f18",
+              "on_surface": "#191c1d",
+              "on_surface_variant": "#444748",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#dc790a",
-              "on_tertiary_fixed": "#2f1500",
-              "on_tertiary_fixed_variant": "#6e3900",
-              "outline": "#737973",
-              "outline_variant": "#c3c8c1",
-              "primary": "#061b0e",
-              "primary_container": "#1b3022",
-              "primary_fixed": "#d0e9d4",
-              "primary_fixed_dim": "#b4cdb8",
-              "secondary": "#5e5e5b",
-              "secondary_container": "#e1dfdb",
-              "secondary_fixed": "#e4e2dd",
-              "secondary_fixed_dim": "#c8c6c2",
-              "surface": "#fcf9f8",
-              "surface_bright": "#fcf9f8",
-              "surface_container": "#f0eded",
-              "surface_container_high": "#eae7e7",
-              "surface_container_highest": "#e4e2e1",
-              "surface_container_low": "#f6f3f2",
+              "on_tertiary_container": "#889998",
+              "on_tertiary_fixed": "#0e1e1e",
+              "on_tertiary_fixed_variant": "#3a4a49",
+              "outline": "#747878",
+              "outline_variant": "#c4c7c7",
+              "primary": "#181919",
+              "primary_container": "#2d2e2e",
+              "primary_fixed": "#e3e2e2",
+              "primary_fixed_dim": "#c7c6c6",
+              "secondary": "#7d562d",
+              "secondary_container": "#ffca98",
+              "secondary_fixed": "#ffdcbd",
+              "secondary_fixed_dim": "#f0bd8b",
+              "surface": "#f8f9fa",
+              "surface_bright": "#f8f9fa",
+              "surface_container": "#edeeef",
+              "surface_container_high": "#e7e8e9",
+              "surface_container_highest": "#e1e3e4",
+              "surface_container_low": "#f3f4f5",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#dcd9d9",
-              "surface_tint": "#4d6453",
-              "surface_variant": "#e4e2e1",
-              "tertiary": "#281100",
-              "tertiary_container": "#462200",
-              "tertiary_fixed": "#ffdcc3",
-              "tertiary_fixed_dim": "#ffb77d"
+              "surface_dim": "#d9dadb",
+              "surface_tint": "#5e5e5e",
+              "surface_variant": "#e1e3e4",
+              "tertiary": "#0c1c1c",
+              "tertiary_container": "#213131",
+              "tertiary_fixed": "#d4e6e5",
+              "tertiary_fixed_dim": "#b8cac9"
             },
-            "overrideNeutralColor": "#2d2d2d",
-            "overridePrimaryColor": "#1b3022",
-            "overrideSecondaryColor": "#f9f7f2",
-            "overrideTertiaryColor": "#d97706",
+            "overrideNeutralColor": "#f8f9fa",
+            "overridePrimaryColor": "#2d2e2e",
+            "overrideSecondaryColor": "#d4a373",
+            "overrideTertiaryColor": "#e0f2f1",
+            "roundness": "ROUND_EIGHT",
             "spacing": {
-              "container-padding-desktop": "80px",
-              "container-padding-mobile": "24px",
+              "container-max": "1280px",
               "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "margin-tablet": "32px",
               "section-gap": "120px",
               "unit": "8px"
             },
             "spacingScale": 2,
             "typography": {
               "body-lg": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Montserrat",
                 "fontSize": "18px",
                 "fontWeight": "400",
-                "letterSpacing": "0.01em",
                 "lineHeight": "1.6"
               },
               "body-md": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Montserrat",
                 "fontSize": "16px",
                 "fontWeight": "400",
                 "lineHeight": "1.6"
               },
-              "display-lg": {
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "36px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "headline-xl": {
                 "fontFamily": "Playfair Display",
                 "fontSize": "64px",
                 "fontWeight": "700",
                 "letterSpacing": "-0.02em",
                 "lineHeight": "1.1"
               },
-              "headline-lg": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "40px",
-                "fontWeight": "700",
-                "lineHeight": "1.2"
-              },
-              "headline-lg-mobile": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "32px",
-                "fontWeight": "700",
-                "lineHeight": "1.2"
-              },
-              "headline-md": {
-                "fontFamily": "Playfair Display",
-                "fontSize": "28px",
+              "label-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
                 "fontWeight": "600",
-                "lineHeight": "1.3"
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.2"
               },
-              "label-caps": {
-                "fontFamily": "Space Mono",
+              "label-md": {
+                "fontFamily": "Montserrat",
                 "fontSize": "12px",
-                "fontWeight": "700",
-                "letterSpacing": "0.15em",
-                "lineHeight": "1.0"
-              },
-              "vertical-accent": {
-                "fontFamily": "Space Mono",
-                "fontSize": "10px",
-                "fontWeight": "400",
-                "letterSpacing": "0.2em",
-                "lineHeight": "1.0"
+                "fontWeight": "500",
+                "lineHeight": "1.2"
               }
             }
           },
-          "title": "K-9 Kleaners - Premium Mobile Grooming",
+          "title": "K-9 Kleaners | Premium Mobile Grooming Experience",
           "width": "2560"
         }
       ],
@@ -433,15 +511,15 @@
     }
   },
   {
-    "text": "I've designed a bespoke, editorial-grade homepage for **K-9 Kleaners Mobile Grooming**. \n\n### Design Rationale:\n*   **The Modern Groomer Identity**: I moved away from common \"paw-print\" cliches to create a visual language that feels like a premium wellness brand. The deep forest green (#1B3022) and soft cream palette establish immediate trust and sophistication.\n*   **Editorial Layout**: The asymmetrical hero and services sections use intentional whitespace and vertical line motifs to guide the eye and create a memorable, high-fashion aesthetic for a local business.\n*   **Hyper-Local Credibility**: The content emphasizes Adrian's McAllen roots and personalized care, positioning the mobile service as a bespoke \"spa ritual\" rather than just a chore.\n*   **Functional Polish**: The site includes a fully responsive navigation, smooth scrolling, a dedicated \"map slot\" for future integration, and a production-ready contact form.\n\nThe design is now live on the canvas for your review. How does this new direction feel for the brand?"
+    "text": "I've designed a bespoke, editorial-grade homepage for **K-9 Kleaners Mobile Grooming**, moving far beyond standard templates to create a truly premium \"Canine Spa\" experience.\n\n### Design Highlights:\n- **Visual Identity**: I established the **\"Alpine Canine Editorial\"** system, featuring a sophisticated charcoal and soft foam palette with a unique \"Golden Retriever\" accent for CTAs.\n- **Editorial Layout**: The design uses intentional asymmetry and a repeating \"Floating Bubble\" motif—subtle rounded shapes that evoke a clean, bubbly bath environment.\n- **Bespoke Imagery**:\n    - A high-end hero shot of a **pampered Samoyed** (Premium editorial photography of a happy, fluffy white Samoyed dog after a grooming session, looking clean and pampered. The dog is positioned slightly off-center. Background is a soft, minimalist interior with warm, natural lighting. High-end, spa-like aesthetic. Professional photography, shallow depth of field.) sets an immediate tone of luxury.\n    - Lifestyle photography of **artisanal grooming tools** (A close-up, high-end lifestyle shot of professional dog grooming tools: a pair of silver shears, a wooden brush, and a bottle of luxury dog shampoo on a clean white marble surface. Soft sunlight, elegant and clean composition. Editorial quality.) and **gentle care** (A professional portrait of a groomer's hands gently drying a small, cute puppy with a soft teal towel. The focus is on the care and gentleness. Minimalist, high-key lighting, premium spa feel.) reinforces the craft behind the service.\n- **Production-Ready**: The site includes a custom navigation system, a credibility bar for local trust, stylized service cards, and the requested interactive map slot for your McAllen location.\n\nThe entire layout is built with semantic HTML and modern CSS, ensuring a fast, responsive, and memorable first impression for your clients.\n\nWould you like to explore a mobile version of this layout, or should we refine the interactive elements of the service cards?"
   },
   {
-    "suggestion": "Can we try a dark mode version?"
+    "suggestion": "Generate mobile version"
   },
   {
-    "suggestion": "Add a section for customer testimonials."
+    "suggestion": "Refine service card interactions"
   },
   {
-    "suggestion": "Adjust the hero image to something more playful."
+    "suggestion": "Change color palette to something more vibrant"
   }
 ]

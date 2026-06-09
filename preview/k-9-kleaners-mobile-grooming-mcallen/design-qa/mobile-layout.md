@@ -1,19 +1,22 @@
 # Mobile layout — k-9-kleaners-mobile-grooming-mcallen
 
-**Result:** FAIL
+**Result:** PASS
 
 ## Autofix applied
 - refreshed map layout CSS
 - injected mobile safety CSS
-- refreshed map layout CSS
+- pulled in decorative absolute offsets
+- section overflow-hidden for decorative layers
+- nav min-width + tighter mobile gap
+- nav brand truncate on mobile
 
 ## Viewports
-- mobile (390px): overflow=no, tinyText=yes, navToggle=ok, width=ok
+- mobile (390px): overflow=no, tinyText=no, navToggle=ok, width=ok
 - tablet (768px): overflow=no, tinyText=no, navToggle=ok, width=ok
 - desktop (1280px): overflow=no, tinyText=no, navToggle=ok, width=ok
 
-## Errors (1)
-- mobile: body text below 12px
+## Errors (0)
+- none
 
 
 _Auto-run in post-build. Fixes overflow-x, nav toggle, and map slot gaps._

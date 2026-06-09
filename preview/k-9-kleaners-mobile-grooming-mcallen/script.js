@@ -1,36 +1,34 @@
-// Form Submission Interaction
+// Simple form validation micro-interaction
         document.getElementById('booking-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const form = this;
-            const successMsg = document.getElementById('form-success');
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerHTML;
             
-            // Simple visual feedback
-            form.style.opacity = '0.5';
-            form.style.pointerEvents = 'none';
+            btn.innerHTML = 'Preview only';
+            btn.classList.add('opacity-50', 'pointer-events-none');
             
             setTimeout(() => {
-                form.classList.add('hidden');
-                successMsg.classList.remove('hidden');
-            }, 800);
+                btn.innerHTML = 'Request Sent!';
+                btn.classList.remove('bg-secondary');
+                btn.classList.add('bg-green-600');
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('bg-green-600', 'opacity-50', 'pointer-events-none');
+                    btn.classList.add('bg-secondary');
+                    e.target.reset();
+                }, 3000);
+            }, 1500);
         });
 
-        // Smooth reveal on scroll for service cards
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
-            observer.observe(card);
+        // Sticky Header Effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 20) {
+                header.classList.add('shadow-md');
+            } else {
+                header.classList.remove('shadow-md');
+            }
         });
 
 (() => {
