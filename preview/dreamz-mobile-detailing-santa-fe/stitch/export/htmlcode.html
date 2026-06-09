@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>DREAMZ | The Art of the Reflection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-low": "#1b1b1c",
+                        "error": "#ffb4ab",
+                        "surface-container-high": "#2a2a2b",
+                        "secondary-container": "#0044eb",
+                        "inverse-surface": "#e5e2e3",
+                        "inverse-on-surface": "#303031",
+                        "secondary-fixed-dim": "#b8c3ff",
+                        "tertiary-fixed-dim": "#cac6c3",
+                        "inverse-primary": "#5f5e5e",
+                        "primary": "#c9c6c5",
+                        "on-tertiary-fixed": "#1d1b1a",
+                        "on-error": "#690005",
+                        "on-secondary": "#002387",
+                        "surface-tint": "#c9c6c5",
+                        "surface-container-lowest": "#0e0e0f",
+                        "surface-variant": "#353436",
+                        "primary-container": "#0a0a0a",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary": "#cac6c3",
+                        "on-primary": "#313030",
+                        "surface-dim": "#131314",
+                        "on-secondary-container": "#c6cfff",
+                        "background": "#131314",
+                        "tertiary-container": "#0b0a09",
+                        "secondary": "#b8c3ff",
+                        "secondary-fixed": "#dde1ff",
+                        "on-surface-variant": "#c4c7c7",
+                        "on-tertiary-container": "#7c7977",
+                        "primary-fixed-dim": "#c9c6c5",
+                        "surface-bright": "#39393a",
+                        "outline-variant": "#444748",
+                        "on-tertiary": "#32302f",
+                        "surface-container-highest": "#353436",
+                        "error-container": "#93000a",
+                        "on-secondary-fixed": "#001355",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#484645",
+                        "on-primary-fixed-variant": "#474646",
+                        "tertiary-fixed": "#e6e1df",
+                        "on-surface": "#e5e2e3",
+                        "on-secondary-fixed-variant": "#0035bd",
+                        "on-primary-container": "#7b7979",
+                        "on-background": "#e5e2e3",
+                        "surface": "#131314",
+                        "surface-container": "#1f1f20",
+                        "on-primary-fixed": "#1c1b1b",
+                        "outline": "#8e9192"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "container-max": "1440px",
+                        "unit": "4px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "margin-desktop": "80px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Archivo Narrow"],
+                        "display-xl": ["Archivo Narrow"],
+                        "numerical-index": ["Archivo Narrow"],
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "label-caps": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-xl": ["80px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                        "numerical-index": ["120px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #0a0a0a;
+            color: #e5e2e3;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        .grain {
+            position: fixed;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            background: url("https://grainy-gradients.vercel.app/noise.svg");
+            opacity: 0.05;
+        }
+
+        .atmospheric-glow {
+            position: absolute;
+            width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(184, 195, 255, 0.05) 0%, rgba(184, 195, 255, 0) 70%);
+            pointer-events: none;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .rim-light {
+            box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+        }
+
+        .no-rounded {
+            border-radius: 0 !important;
+        }
+
+        .service-card:hover .service-glow {
+            opacity: 0.15;
+        }
+
+        .btn-primary {
+            @apply font-label-caps text-label-caps uppercase bg-secondary text-on-secondary px-8 py-4 tracking-widest transition-all duration-300;
+            box-shadow: 0 0 20px rgba(184, 195, 255, 0.1);
+        }
+
+        .btn-primary:hover {
+            @apply scale-105;
+            box-shadow: 0 0 40px rgba(184, 195, 255, 0.3);
+        }
+
+        .btn-ghost {
+            @apply font-label-caps text-label-caps uppercase border border-white/20 text-white px-8 py-4 tracking-widest transition-all duration-300;
+        }
+
+        .btn-ghost:hover {
+            @apply bg-white text-black;
+        }
+
+        .glass-panel {
+            @apply bg-surface/40 backdrop-blur-xl border border-white/5;
+        }
+    </style>
+</head>
+<body class="font-body-md">
+<div class="grain"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-gutter py-4 rounded-xl mt-6 mx-auto w-[95%] max-w-container-max border border-secondary/20 bg-surface-container-lowest/40 backdrop-blur-xl shadow-2xl shadow-secondary/5">
+<div class="font-display-xl text-headline-md text-on-surface tracking-tighter">DREAMZ</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-on-surface transition-colors uppercase tracking-widest" href="#trilogy">The Trilogy</a>
+<a class="text-on-surface-variant font-body-md hover:text-on-surface transition-colors uppercase tracking-widest" href="#about">The Mind</a>
+<a class="text-on-surface-variant font-body-md hover:text-on-surface transition-colors uppercase tracking-widest" href="#visit">Location</a>
+<a class="text-on-surface-variant font-body-md hover:text-on-surface transition-colors uppercase tracking-widest" href="#contact">Secure Session</a>
+</div>
+<div class="flex gap-6 items-center">
+<span class="hidden md:block text-secondary font-headline-md text-headline-md uppercase tracking-widest">505-555-0123</span>
+<button class="bg-secondary text-on-secondary font-label-caps text-label-caps uppercase px-6 py-3 tracking-widest hover:bg-secondary/80 transition-all scale-95 active:scale-90">Book Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-32 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-black via-black/40 to-transparent z-10"></div>
+<img alt="The Art of Reflection Hero" class="w-full h-full object-cover object-center scale-110" src="https://lh3.googleusercontent.com/aida/AP1WRLuzT5uRmNW9zwNnSbuw3F60ZuyfVH3MqS37zi9vqSVscLg00-A8rnIcWlnD9VVKL2vlZJ0DrK5X0oO3wrKHRpX0K8ehgDawp1kLcMTf1otZtq_jab0TUeBzP7kFZNg_kAkWkWtW-n1ja2LMw9K-lgVd5B84CMjMpvWSwqG4JvXwxrODjotba61VTg3oxZE7LYhwgLvhV1MoqFz19FC1DWzl752cZ_8LURp0WZM8tDQA1MufLHppxDR6aCP7"/>
+</div>
+<div class="relative z-20 w-full max-w-container-max mx-auto px-margin-desktop grid grid-cols-12">
+<div class="col-span-12 md:col-span-8 flex flex-col gap-8">
+<div class="overflow-hidden">
+<h1 class="font-display-xl text-display-xl md:text-[120px] uppercase leading-[0.9] tracking-tighter text-white animate-slide-up">
+                        THE ART OF THE <br/> <span class="text-secondary italic">REFLECTION</span>
+</h1>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl md:ml-1 border-l border-secondary/30 pl-6">
+                    Bespoke mobile detailing for the high-desert climate. We treat every vehicle as a curated asset, delivering professional-grade restoration directly to your Santa Fe residence.
+                </p>
+<div class="flex flex-wrap gap-4 mt-4">
+<a class="btn-primary no-rounded" href="#contact">Inquire Now</a>
+<a class="btn-ghost no-rounded" href="#trilogy">View Services</a>
+</div>
+</div>
+</div>
+<div class="atmospheric-glow bottom-[-300px] left-[-200px]"></div>
+</section>
+<!-- Credibility Stats -->
+<section class="bg-surface-container-lowest py-20 relative z-10">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-white">500+</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest">Vehicles Perfected</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-white">10+ YEARS</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest">of Detailing Mastery</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-headline-lg text-headline-lg text-white">SF OWNED</span>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-widest">Local Santa Fe Heritage</span>
+</div>
+</div>
+</section>
+<!-- Services Section (The Trilogy) -->
+<section class="py-section-gap relative" id="trilogy">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.3em] block mb-4">The Service Menu</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-white">THE TRILOGY</h2>
+</div>
+<div class="max-w-md text-right">
+<p class="text-on-surface-variant font-body-md">Precision-engineered care protocols designed to restore and protect the structural and visual integrity of your automobile.</p>
+</div>
+</div>
+<div class="flex flex-col gap-12">
+<!-- Service 01 -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 items-center gap-12 border-t border-white/10 py-12 service-card transition-all duration-700">
+<div class="hidden md:block absolute left-[-60px] top-4 font-numerical-index text-numerical-index text-white/5 pointer-events-none group-hover:text-secondary/10 transition-colors">01</div>
+<div class="col-span-12 md:col-span-5 flex flex-col gap-6">
+<h3 class="font-headline-lg text-headline-lg uppercase text-white">Exterior Restoration</h3>
+<p class="text-on-surface-variant text-body-lg">Multi-stage decontamination, high-speed paint correction, and ultra-gloss polishing to reveal the factory finish hidden beneath Santa Fe's dust.</p>
+<ul class="flex flex-col gap-2 text-label-caps uppercase tracking-widest text-on-surface/60">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Clay Bar Treatment</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Dual-Action Machine Polish</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Iron Fallout Removal</li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-7 overflow-hidden rim-light">
+<img class="w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Close-up of a professional detailer wearing black nitrile gloves, using a high-end dual-action orbital polisher on the wet, black hood of a luxury vehicle. The water beads perfectly in the dramatic shop lighting, highlighting the deep reflective gloss and technical precision of the process. The atmosphere is technical and meticulous, emphasizing the high-contrast aesthetic of Nocturnal Precision." src="https://lh3.googleusercontent.com/aida/AP1WRLvXEM15ZbH8xxmq50KyWRQzNaxXyGnzI2xhWk1leiWtoFPIcmj5XCPse_AlHM1kaebhyTcklAYcWNeHLQeA4oRW1iUOx4J2su7JCZLuUH2AzeyIYrILisu6JDd3Uk8AdfNTbzPoHEMnXWvW9Woy1C7asdqPzo76n9LefxLPlJwKWfGOgCkTcUruXvpqceNNsMh26-LAq_KH_80B3e6UAPgAgnO9sHRupdvzDm2En8-T1aYBLNgHL7DsY1Ji"/>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 items-center gap-12 border-t border-white/10 py-12 service-card transition-all duration-700">
+<div class="hidden md:block absolute left-[-60px] top-4 font-numerical-index text-numerical-index text-white/5 pointer-events-none group-hover:text-secondary/10 transition-colors">02</div>
+<div class="col-span-12 md:col-span-7 order-2 md:order-1 overflow-hidden rim-light">
+<img class="w-full h-[400px] object-cover grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105" data-alt="Expert interior detailing session focusing on a premium carbon fiber center console and tan leather upholstery of a high-performance car. A detailer is meticulously using a soft-bristled boar's hair brush and a microfiber towel to clean the intricate buttons and surfaces. The lighting is warm and dramatic, creating a luxurious, spa-like atmosphere for the vehicle's cockpit. This editorial shot captures the technical precision and luxury care provided by Dreamz Mobile Detailing." src="https://lh3.googleusercontent.com/aida/AP1WRLsWVu_cIUjJe3qQkdiA7IMu7gu7TYlsqeGUAP1yK9FLXjMbmASogU5GjgD8xXf5O37OYc7AtDH2VhnKKVC4c7urbdNBKoFVdSiw6WNi1Uukayk7_94EAa9e4pj1yNvtThS4uUpVILHYkHgQGOzgE63pEcuQBnv9X2gSY4Pax98MaLRaHwl5RomoR3q5drijpirI1jrIRqgW19WmMD53eoiUwSh0CTfvw05GNFaOJXM77t_XYt43pX31pgo"/>
+</div>
+<div class="col-span-12 md:col-span-5 order-1 md:order-2 flex flex-col gap-6">
+<h3 class="font-headline-lg text-headline-lg uppercase text-white">Interior Spa</h3>
+<p class="text-on-surface-variant text-body-lg">A deep-cleansing ritual for your cabin. We neutralize odors, condition high-grade leathers, and purge fine sand from every crevice.</p>
+<ul class="flex flex-col gap-2 text-label-caps uppercase tracking-widest text-on-surface/60">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> pH-Balanced Leather Feed</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Steam Sanitization</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> UV Protection Shield</li>
+</ul>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="group relative grid grid-cols-1 md:grid-cols-12 items-center gap-12 border-t border-white/10 py-12 service-card transition-all duration-700">
+<div class="hidden md:block absolute left-[-60px] top-4 font-numerical-index text-numerical-index text-white/5 pointer-events-none group-hover:text-secondary/10 transition-colors">03</div>
+<div class="col-span-12 md:col-span-5 flex flex-col gap-6">
+<h3 class="font-headline-lg text-headline-lg uppercase text-white">Protection Plans</h3>
+<p class="text-on-surface-variant text-body-lg">Defend your investment with Ceramic Coatings and high-solids sealants designed to survive the intense New Mexican sun and winter road salt.</p>
+<ul class="flex flex-col gap-2 text-label-caps uppercase tracking-widest text-on-surface/60">
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Ceramic Pro Elite</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Graphene Spray Sealants</li>
+<li class="flex items-center gap-2"><span class="w-1.5 h-1.5 bg-secondary"></span> Hydrophobic Glass Coating</li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-7 overflow-hidden rim-light relative">
+<div class="w-full h-[400px] bg-surface-container flex items-center justify-center">
+
+<div class="relative z-10 text-center px-gutter">
+<span class="font-label-caps text-label-caps text-secondary mb-2 block tracking-[0.4em]">The Ultimate Shield</span>
+<h4 class="font-headline-md text-headline-md text-white uppercase tracking-widest">9H Nano-Protection</h4>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap bg-surface-container-lowest relative overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="col-span-12 md:col-span-5 relative">
+<div class="rim-light overflow-hidden">
+<img class="w-full grayscale filter contrast-125 transition-all duration-500 hover:grayscale-0" data-alt="An editorial portrait of David, the master detailer, in his professional workshop in Santa Fe. He is wearing a dark, branded work shirt, standing confidently with his arms crossed amidst a setting of high-end tools and a silhouette of a classic sports car in the background. The lighting is cinematic with deep shadows and sharp rim lighting, capturing a mood of quiet professionalism and intense focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDOndBlJOiKF7PkTymh0bCnw-Vxdbpb1A0i0ARcj_UJBU9yBymAvuhILQBtKXTuTkIOrwYN0UhydgXzJTIZ5bjk1RMOck2OAutF2aB3QfyoxzGABreLIYdKKud2IKD7l5WittIABdfZxDv6a7ZAevHXpstVm8af5RDm5kATGJhuidR6A-btn4Bfyv47kE0BrgTE2bUItYs07267Rqu3QeizLo_uVd6UYjCxgebHdZcjUiTXhVrkr523oxjrnEAqtwqdSGUsYU24kZZ"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-secondary p-8 text-on-secondary hidden lg:block">
+<span class="font-display-xl text-[64px] block mb-0 leading-none">100%</span>
+<span class="font-label-caps text-label-caps uppercase tracking-widest">Mastery Guarantee</span>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 flex flex-col gap-8">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.3em]">The Founder</span>
+<h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tight">THE METICULOUS MIND <br/>OF DAVID</h2>
+<div class="flex flex-col gap-6 text-body-lg text-on-surface-variant max-w-2xl">
+<p>Santa Fe isn't just home; it's a unique environmental challenge. The intense UV exposure, alkaline dust, and seasonal monsoon patterns demand a specialized approach to automotive preservation.</p>
+<p>David founded DREAMZ with a singular vision: to bring the surgical precision of high-end studio detailing directly to the client's doorstep. We don't just wash cars—we restore the factory-spec intent of the machine.</p>
+</div>
+<div class="flex items-center gap-8 mt-4">
+<div class="flex flex-col">
+<span class="font-headline-md text-white">5-STAR</span>
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-[0.2em]">Google Rated</span>
+</div>
+<div class="w-px h-12 bg-white/10"></div>
+<div class="flex flex-col">
+<span class="font-headline-md text-white">MOBILE</span>
+<span class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-[0.2em]">Full Service Van</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit/Map Section -->
+<section class="py-section-gap" id="visit">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-0 border border-white/5 bg-surface-container-lowest overflow-hidden">
+<div class="col-span-12 md:col-span-4 p-12 flex flex-col justify-center gap-8 bg-surface-container-low">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-widest">HQ &amp; Dispatch</span>
+<h2 class="font-headline-lg text-headline-lg text-white uppercase">LOCATE US</h2>
+<div class="flex flex-col gap-4">
+<p class="text-on-surface-variant text-body-lg">
+                            1437 G Street<br/>
+                            Santa Fe, NM 87501
+                        </p>
+<p class="text-on-surface-variant text-body-md mt-4">
+                            Dispatch Hours:<br/>
+                            Mon - Sat: 8:00 AM - 6:00 PM<br/>
+                            Closed Sundays
+                        </p>
+</div>
+</div>
+<div class="col-span-12 md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] grayscale contrast-125" data-location="Santa Fe" data-map-slot="" style=""></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-section-gap relative bg-[#0a0a0a]" id="contact">
+<div class="max-w-3xl mx-auto px-margin-mobile">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps uppercase text-secondary tracking-[0.4em] block mb-4">Request Availability</span>
+<h2 class="font-headline-lg text-headline-lg text-white uppercase tracking-tighter">SECURE YOUR SESSION</h2>
+</div>
+<form class="glass-panel p-8 md:p-12 rim-light flex flex-col gap-8 shadow-2xl">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-widest">Full Name</label>
+<input class="bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-secondary transition-colors text-white py-4 font-body-md" placeholder="Your Name" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-widest">Email Address</label>
+<input class="bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-secondary transition-colors text-white py-4 font-body-md" placeholder="email@provider.com" type="email"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-widest">Car Model &amp; Year</label>
+<input class="bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-secondary transition-colors text-white py-4 font-body-md" placeholder="e.g. 2023 Porsche 911" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-widest">Preferred Service</label>
+<select class="bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-secondary transition-colors text-white py-4 font-body-md appearance-none cursor-pointer">
+<option class="bg-surface">Exterior Restoration</option>
+<option class="bg-surface">Interior Spa</option>
+<option class="bg-surface">Protection Plans</option>
+<option class="bg-surface">The Full Dreamz Treatment</option>
+</select>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-[10px] uppercase text-on-surface-variant tracking-widest">Specific Requirements</label>
+<textarea class="bg-transparent border-0 border-b border-white/10 focus:ring-0 focus:border-secondary transition-colors text-white py-4 font-body-md min-h-[100px]" placeholder="Special attention to wheels, leather concerns, etc."></textarea>
+</div>
+<button class="btn-primary w-full mt-4 no-rounded" type="submit">Send Request</button>
+</form>
+</div>
+<div class="atmospheric-glow top-[20%] right-[-300px]"></div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest py-section-gap border-t border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-margin-desktop flex flex-col gap-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="col-span-12 md:col-span-5 flex flex-col gap-6">
+<div class="font-headline-lg text-headline-lg text-on-surface">DREAMZ</div>
+<p class="text-on-surface-variant font-body-md max-w-sm">Elevating the standards of mobile automotive care in Santa Fe through technical precision and high-desert expertise.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-white/10 text-on-surface-variant hover:text-secondary hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-white/10 text-on-surface-variant hover:text-secondary hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+</div>
+</div>
+<div class="col-span-6 md:col-span-3 flex flex-col gap-6">
+<span class="font-label-caps text-label-caps uppercase text-white tracking-widest">Navigation</span>
+<nav class="flex flex-col gap-3">
+<a class="text-on-surface-variant opacity-50 hover:opacity-100 hover:text-secondary transition-all font-body-md" href="#trilogy">The Trilogy</a>
+<a class="text-on-surface-variant opacity-50 hover:opacity-100 hover:text-secondary transition-all font-body-md" href="#about">The Mind</a>
+<a class="text-on-surface-variant opacity-50 hover:opacity-100 hover:text-secondary transition-all font-body-md" href="#visit">Location</a>
+<a class="text-on-surface-variant opacity-50 hover:opacity-100 hover:text-secondary transition-all font-body-md" href="#contact">Book Session</a>
+</nav>
+</div>
+<div class="col-span-6 md:col-span-4 flex flex-col gap-6">
+<span class="font-label-caps text-label-caps uppercase text-white tracking-widest">Connection</span>
+<div class="flex flex-col gap-3 font-body-md text-on-surface-variant">
+<a class="hover:text-secondary transition-colors" href="tel:5054556410">(505) 455-6410</a>
+<a class="hover:text-secondary transition-colors" href="mailto:David@Dreamzautospa.com">David@Dreamzautospa.com</a>
+<p class="opacity-50">1437 G Street, Santa Fe</p>
+</div>
+</div>
+</div>
+<div class="border-t border-white/5 pt-12 flex flex-col md:flex-row justify-between gap-6">
+<span class="font-body-md text-body-md text-on-surface-variant opacity-50">© 2024 DREAMZ MOBILE DETAILING. SANTA FE, NM. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-8">
+<a class="font-body-md text-body-md text-on-surface-variant opacity-50 hover:opacity-100 transition-opacity" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant opacity-50 hover:opacity-100 transition-opacity" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for service cards
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Simple smooth entrance animation
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>

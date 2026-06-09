@@ -1,0 +1,511 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Nocturnal Precision",
+          "styleGuidelines": "## Brand & Style\nThe design system is rooted in the concept of \"Nocturnal Precision,\" blending the aggressive elegance of midnight car culture with the meticulous serenity of a high-end spa. It targets a discerning clientele in Santa Fe who view their vehicles as curated assets. \n\nThe aesthetic is **Modern-Editorial with a cinematic edge**. It leverages high-contrast visuals, dramatic lighting, and \"Atmospheric Glow\" to simulate a professional studio environment. The interface should feel expensive, technical, and whisper-quiet, prioritizing depth and texture over flat surfaces.\n\n## Layout & Spacing\nThe layout follows a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve \"Intentional Density,\" the design system utilizes asymmetrical spacing:\n- **Compressed Zones:** Information-heavy specs or service details use tight 8px and 16px gaps to feel like technical data.\n- **Expansive Zones:** Hero sections and brand imagery use a minimum of 160px vertical padding to evoke luxury and \"breathing room.\"\n- **Offsets:** Use 1-column offsets for text blocks to create a dynamic, editorial flow rather than a centered corporate look.\n\n## Elevation & Depth\nDepth is not created with shadows, but through **Tonal Layering** and **Atmospheric Blurs**:\n- **Level 0 (Base):** Obsidian Black (#0A0A0A) with a subtle film grain texture overlay.\n- **Level 1 (Cards/Sections):** Deep Slate (#1A1A1B) with a 1px inner border of 10% white to define the edge.\n- **Level 2 (Floating Nav):** Glassmorphism with a 20px backdrop blur, 40% opacity Obsidian Black fill, and a 1px stroke of Electric Cobalt at 20% opacity.\n- **Atmospheric Glow:** Key interactions (like hovering a service card) should trigger a soft, radial Ethereal Cyan glow *behind* the element, rather than a drop shadow.\n\n## Components\n### Buttons\n- **Primary:** Sharp edges, Electric Cobalt background, white text (Caps). On hover, add an external glow of Ethereal Cyan.\n- **Ghost:** 1px white border, transparent background. On hover, invert to white background with black text.\n\n### Cards\n- No rounded corners. Use a 1px subtle border (#FFFFFF at 5% opacity). Backgrounds should be a dark-to-darker gradient. \n\n### Floating Navigation\n- A centered, pill-shaped (using `rounded-xl` only for this specific component) glassmorphic bar. High blur, low opacity.\n\n### Service Indices\n- Use the `numerical-index` typography style positioned behind the service title. The number should be \"cut off\" by the edge of the container or the next section to create an editorial bleed effect.\n\n### Input Fields\n- Underline-only style or sharp-edged boxes with `#1A1A1B` fill. Focus state is a 1px Ethereal Cyan bottom border with a subtle glow.\n\n### Credibility Logos\n- All partner/client logos must be rendered in grayscale and set to 50% opacity, returning to full white on hover.",
+          "theme": {
+            "bodyFont": "PLUS_JAKARTA_SANS",
+            "bodyFontFamily": "Plus Jakarta Sans",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0a0a0a",
+            "designMd": "---\nname: Nocturnal Precision\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1b1b1c'\n  surface-container: '#1f1f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#303031'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c9c6c5'\n  primary: '#c9c6c5'\n  on-primary: '#313030'\n  primary-container: '#0a0a0a'\n  on-primary-container: '#7b7979'\n  inverse-primary: '#5f5e5e'\n  secondary: '#b8c3ff'\n  on-secondary: '#002387'\n  secondary-container: '#0044eb'\n  on-secondary-container: '#c6cfff'\n  tertiary: '#cac6c3'\n  on-tertiary: '#32302f'\n  tertiary-container: '#0b0a09'\n  on-tertiary-container: '#7c7977'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c9c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474646'\n  secondary-fixed: '#dde1ff'\n  secondary-fixed-dim: '#b8c3ff'\n  on-secondary-fixed: '#001355'\n  on-secondary-fixed-variant: '#0035bd'\n  tertiary-fixed: '#e6e1df'\n  tertiary-fixed-dim: '#cac6c3'\n  on-tertiary-fixed: '#1d1b1a'\n  on-tertiary-fixed-variant: '#484645'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  numerical-index:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 4px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 160px\n---\n\n## Brand & Style\nThe design system is rooted in the concept of \"Nocturnal Precision,\" blending the aggressive elegance of midnight car culture with the meticulous serenity of a high-end spa. It targets a discerning clientele in Santa Fe who view their vehicles as curated assets. \n\nThe aesthetic is **Modern-Editorial with a cinematic edge**. It leverages high-contrast visuals, dramatic lighting, and \"Atmospheric Glow\" to simulate a professional studio environment. The interface should feel expensive, technical, and whisper-quiet, prioritizing depth and texture over flat surfaces.\n\n## Colors\nThe palette is dominated by **Obsidian Black**, serving as the \"canvas\" to make vehicle photography pop. **Electric Cobalt** is used sparingly for primary actions, while **Ethereal Cyan** functions as a high-energy \"glow\" accent for status indicators, active states, and light-leak effects. \n\nGradients should be used to create depth:\n- **Surface Gradients:** From `#1A1A1B` to `#0A0A0A` at 45 degrees.\n- **Glow Effects:** Radial gradients using Ethereal Cyan with 0% opacity at the edges to simulate soft studio lights behind key content blocks.\n\n## Typography\nThe typography strategy creates an editorial hierarchy. **Archivo Narrow** provides a condensed, technical feel for headlines, reminiscent of automotive gauges and high-fashion magazines. Tracking is intentionally tight on headings to increase visual impact.\n\n**Plus Jakarta Sans** is used for body copy to provide a friendly, premium counterpoint to the aggressive headlines. Generous line-height (1.8) is critical for readability against dark backgrounds. Large numerical indices (120px+) should be used as background watermarks for service lists to reinforce the \"intentional density\" of the layout.\n\n## Layout & Spacing\nThe layout follows a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve \"Intentional Density,\" the design system utilizes asymmetrical spacing:\n- **Compressed Zones:** Information-heavy specs or service details use tight 8px and 16px gaps to feel like technical data.\n- **Expansive Zones:** Hero sections and brand imagery use a minimum of 160px vertical padding to evoke luxury and \"breathing room.\"\n- **Offsets:** Use 1-column offsets for text blocks to create a dynamic, editorial flow rather than a centered corporate look.\n\n## Elevation & Depth\nDepth is not created with shadows, but through **Tonal Layering** and **Atmospheric Blurs**:\n- **Level 0 (Base):** Obsidian Black (#0A0A0A) with a subtle film grain texture overlay.\n- **Level 1 (Cards/Sections):** Deep Slate (#1A1A1B) with a 1px inner border of 10% white to define the edge.\n- **Level 2 (Floating Nav):** Glassmorphism with a 20px backdrop blur, 40% opacity Obsidian Black fill, and a 1px stroke of Electric Cobalt at 20% opacity.\n- **Atmospheric Glow:** Key interactions (like hovering a service card) should trigger a soft, radial Ethereal Cyan glow *behind* the element, rather than a drop shadow.\n\n## Shapes\nThe shape language is primarily **Sharp (0px)** to reflect precision, carbon fiber panels, and automotive glass. \n\nExceptions:\n- **Interactive Blurs:** Background glow elements and \"light leak\" shapes should have blurred radii exceeding 100px to contrast with the sharp-edged UI components.\n- **Form Inputs:** Maintain 0px radius to emphasize the \"technical tool\" aesthetic.\n\n## Components\n### Buttons\n- **Primary:** Sharp edges, Electric Cobalt background, white text (Caps). On hover, add an external glow of Ethereal Cyan.\n- **Ghost:** 1px white border, transparent background. On hover, invert to white background with black text.\n\n### Cards\n- No rounded corners. Use a 1px subtle border (#FFFFFF at 5% opacity). Backgrounds should be a dark-to-darker gradient. \n\n### Floating Navigation\n- A centered, pill-shaped (using `rounded-xl` only for this specific component) glassmorphic bar. High blur, low opacity.\n\n### Service Indices\n- Use the `numerical-index` typography style positioned behind the service title. The number should be \"cut off\" by the edge of the container or the next section to create an editorial bleed effect.\n\n### Input Fields\n- Underline-only style or sharp-edged boxes with `#1A1A1B` fill. Focus state is a 1px Ethereal Cyan bottom border with a subtle glow.\n\n### Credibility Logos\n- All partner/client logos must be rendered in grayscale and set to 50% opacity, returning to full white on hover.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "PLUS_JAKARTA_SANS",
+            "labelFontFamily": "Plus Jakarta Sans",
+            "namedColors": {
+              "background": "#131314",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303031",
+              "inverse_primary": "#5f5e5e",
+              "inverse_surface": "#e5e2e3",
+              "on_background": "#e5e2e3",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#313030",
+              "on_primary_container": "#7b7979",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474646",
+              "on_secondary": "#002387",
+              "on_secondary_container": "#c6cfff",
+              "on_secondary_fixed": "#001355",
+              "on_secondary_fixed_variant": "#0035bd",
+              "on_surface": "#e5e2e3",
+              "on_surface_variant": "#c4c7c7",
+              "on_tertiary": "#32302f",
+              "on_tertiary_container": "#7c7977",
+              "on_tertiary_fixed": "#1d1b1a",
+              "on_tertiary_fixed_variant": "#484645",
+              "outline": "#8e9192",
+              "outline_variant": "#444748",
+              "primary": "#c9c6c5",
+              "primary_container": "#0a0a0a",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c9c6c5",
+              "secondary": "#b8c3ff",
+              "secondary_container": "#0044eb",
+              "secondary_fixed": "#dde1ff",
+              "secondary_fixed_dim": "#b8c3ff",
+              "surface": "#131314",
+              "surface_bright": "#39393a",
+              "surface_container": "#1f1f20",
+              "surface_container_high": "#2a2a2b",
+              "surface_container_highest": "#353436",
+              "surface_container_low": "#1b1b1c",
+              "surface_container_lowest": "#0e0e0f",
+              "surface_dim": "#131314",
+              "surface_tint": "#c9c6c5",
+              "surface_variant": "#353436",
+              "tertiary": "#cac6c3",
+              "tertiary_container": "#0b0a09",
+              "tertiary_fixed": "#e6e1df",
+              "tertiary_fixed_dim": "#cac6c3"
+            },
+            "overrideNeutralColor": "#1a1a1b",
+            "overridePrimaryColor": "#0a0a0a",
+            "overrideSecondaryColor": "#2d5bff",
+            "spacing": {
+              "container-max": "1440px",
+              "gutter": "24px",
+              "margin-desktop": "80px",
+              "margin-mobile": "20px",
+              "section-gap": "160px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.8"
+              },
+              "body-md": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-xl": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "80px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "1.0"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "label-caps": {
+                "fontFamily": "Plus Jakarta Sans",
+                "fontSize": "12px",
+                "fontWeight": "700",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              },
+              "numerical-index": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "120px",
+                "fontWeight": "700",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/6cae747fff394d9c9650b7b4feacd4cb",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "d5e8fa69e5334d97b18c9ba9322d952d",
+            "name": "projects/12388237295548700464/screens/d5e8fa69e5334d97b18c9ba9322d952d",
+            "prompt": "Ultra-high-end automotive photography. A black luxury sports car (like a Porsche or Audi) in a dark, minimalist studio. Dramatic 'rim lighting' and 'atmospheric glow' catching the pristine, detailed curves and reflections of the car's body. Dark obsidian background. Editorial style, high contrast, meticulous detail, sleek and modern. No text.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuzT5uRmNW9zwNnSbuw3F60ZuyfVH3MqS37zi9vqSVscLg00-A8rnIcWlnD9VVKL2vlZJ0DrK5X0oO3wrKHRpX0K8ehgDawp1kLcMTf1otZtq_jab0TUeBzP7kFZNg_kAkWkWtW-n1ja2LMw9K-lgVd5B84CMjMpvWSwqG4JvXwxrODjotba61VTg3oxZE7LYhwgLvhV1MoqFz19FC1DWzl752cZ_8LURp0WZM8tDQA1MufLHppxDR6aCP7",
+              "name": "projects/12388237295548700464/files/76dd47cc6e14434fb42e2e32c7194358"
+            },
+            "theme": {},
+            "title": "Ultra-high-end automotive photography. A black luxury sports car (like a Porsche or Audi) in a dark, minimalist studio. Dramatic 'rim lighting' and 'atmospheric glow' catching the pristine, detailed curves and reflections of the car's body. Dark obsidian background. Editorial style, high contrast, meticulous detail, sleek and modern. No text.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "eaab345f8e274b4ba8dfeb510838ceb9",
+            "name": "projects/12388237295548700464/screens/eaab345f8e274b4ba8dfeb510838ceb9",
+            "prompt": "Extreme close-up of a high-end car detailing process. Macro shot of water beads on a freshly ceramic-coated deep black hood, or a professional detailer's hand using a high-end buffer with subtle motion blur. Dramatic studio lighting, dark obsidian palette, premium feel. Minimalist and editorial. No text.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvXEM15ZbH8xxmq50KyWRQzNaxXyGnzI2xhWk1leiWtoFPIcmj5XCPse_AlHM1kaebhyTcklAYcWNeHLQeA4oRW1iUOx4J2su7JCZLuUH2AzeyIYrILisu6JDd3Uk8AdfNTbzPoHEMnXWvW9Woy1C7asdqPzo76n9LefxLPlJwKWfGOgCkTcUruXvpqceNNsMh26-LAq_KH_80B3e6UAPgAgnO9sHRupdvzDm2En8-T1aYBLNgHL7DsY1Ji",
+              "name": "projects/12388237295548700464/files/c2566d0908564293869a068b6033777f"
+            },
+            "theme": {},
+            "title": "Extreme close-up of a high-end car detailing process. Macro shot of water beads on a freshly ceramic-coated deep black hood, or a professional detailer's hand using a high-end buffer with subtle motion blur. Dramatic studio lighting, dark obsidian palette, premium feel. Minimalist and editorial. No text.",
+            "width": "1200"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "d8b384f26a7f4bbcbcc24898483bcddc",
+            "name": "projects/12388237295548700464/screens/d8b384f26a7f4bbcbcc24898483bcddc",
+            "prompt": "Interior of a luxury vehicle, focusing on the meticulous cleaning of leather and carbon fiber details. Soft, warm ambient lighting contrasted with dark shadows. Clean, pristine, 'new car' aesthetic. Editorial photography style. No text.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsWVu_cIUjJe3qQkdiA7IMu7gu7TYlsqeGUAP1yK9FLXjMbmASogU5GjgD8xXf5O37OYc7AtDH2VhnKKVC4c7urbdNBKoFVdSiw6WNi1Uukayk7_94EAa9e4pj1yNvtThS4uUpVILHYkHgQGOzgE63pEcuQBnv9X2gSY4Pax98MaLRaHwl5RomoR3q5drijpirI1jrIRqgW19WmMD53eoiUwSh0CTfvw05GNFaOJXM77t_XYt43pX31pgo",
+              "name": "projects/12388237295548700464/files/d309ff982248422294a22d8b98ae4d2b"
+            },
+            "theme": {},
+            "title": "Interior of a luxury vehicle, focusing on the meticulous cleaning of leather and carbon fiber details. Soft, warm ambient lighting contrasted with dark shadows. Clean, pristine, 'new car' aesthetic. Editorial photography style. No text.",
+            "width": "1200"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Nocturnal Precision",
+                "styleGuidelines": "## Brand & Style\nThe design system is rooted in the concept of \"Nocturnal Precision,\" blending the aggressive elegance of midnight car culture with the meticulous serenity of a high-end spa. It targets a discerning clientele in Santa Fe who view their vehicles as curated assets. \n\nThe aesthetic is **Modern-Editorial with a cinematic edge**. It leverages high-contrast visuals, dramatic lighting, and \"Atmospheric Glow\" to simulate a professional studio environment. The interface should feel expensive, technical, and whisper-quiet, prioritizing depth and texture over flat surfaces.\n\n## Layout & Spacing\nThe layout follows a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve \"Intentional Density,\" the design system utilizes asymmetrical spacing:\n- **Compressed Zones:** Information-heavy specs or service details use tight 8px and 16px gaps to feel like technical data.\n- **Expansive Zones:** Hero sections and brand imagery use a minimum of 160px vertical padding to evoke luxury and \"breathing room.\"\n- **Offsets:** Use 1-column offsets for text blocks to create a dynamic, editorial flow rather than a centered corporate look.\n\n## Elevation & Depth\nDepth is not created with shadows, but through **Tonal Layering** and **Atmospheric Blurs**:\n- **Level 0 (Base):** Obsidian Black (#0A0A0A) with a subtle film grain texture overlay.\n- **Level 1 (Cards/Sections):** Deep Slate (#1A1A1B) with a 1px inner border of 10% white to define the edge.\n- **Level 2 (Floating Nav):** Glassmorphism with a 20px backdrop blur, 40% opacity Obsidian Black fill, and a 1px stroke of Electric Cobalt at 20% opacity.\n- **Atmospheric Glow:** Key interactions (like hovering a service card) should trigger a soft, radial Ethereal Cyan glow *behind* the element, rather than a drop shadow.\n\n## Components\n### Buttons\n- **Primary:** Sharp edges, Electric Cobalt background, white text (Caps). On hover, add an external glow of Ethereal Cyan.\n- **Ghost:** 1px white border, transparent background. On hover, invert to white background with black text.\n\n### Cards\n- No rounded corners. Use a 1px subtle border (#FFFFFF at 5% opacity). Backgrounds should be a dark-to-darker gradient. \n\n### Floating Navigation\n- A centered, pill-shaped (using `rounded-xl` only for this specific component) glassmorphic bar. High blur, low opacity.\n\n### Service Indices\n- Use the `numerical-index` typography style positioned behind the service title. The number should be \"cut off\" by the edge of the container or the next section to create an editorial bleed effect.\n\n### Input Fields\n- Underline-only style or sharp-edged boxes with `#1A1A1B` fill. Focus state is a 1px Ethereal Cyan bottom border with a subtle glow.\n\n### Credibility Logos\n- All partner/client logos must be rendered in grayscale and set to 50% opacity, returning to full white on hover.",
+                "theme": {
+                  "bodyFont": "PLUS_JAKARTA_SANS",
+                  "bodyFontFamily": "Plus Jakarta Sans",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#0a0a0a",
+                  "designMd": "---\nname: Nocturnal Precision\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1b1b1c'\n  surface-container: '#1f1f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#303031'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c9c6c5'\n  primary: '#c9c6c5'\n  on-primary: '#313030'\n  primary-container: '#0a0a0a'\n  on-primary-container: '#7b7979'\n  inverse-primary: '#5f5e5e'\n  secondary: '#b8c3ff'\n  on-secondary: '#002387'\n  secondary-container: '#0044eb'\n  on-secondary-container: '#c6cfff'\n  tertiary: '#cac6c3'\n  on-tertiary: '#32302f'\n  tertiary-container: '#0b0a09'\n  on-tertiary-container: '#7c7977'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c9c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474646'\n  secondary-fixed: '#dde1ff'\n  secondary-fixed-dim: '#b8c3ff'\n  on-secondary-fixed: '#001355'\n  on-secondary-fixed-variant: '#0035bd'\n  tertiary-fixed: '#e6e1df'\n  tertiary-fixed-dim: '#cac6c3'\n  on-tertiary-fixed: '#1d1b1a'\n  on-tertiary-fixed-variant: '#484645'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  numerical-index:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 4px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 160px\n---\n\n## Brand & Style\nThe design system is rooted in the concept of \"Nocturnal Precision,\" blending the aggressive elegance of midnight car culture with the meticulous serenity of a high-end spa. It targets a discerning clientele in Santa Fe who view their vehicles as curated assets. \n\nThe aesthetic is **Modern-Editorial with a cinematic edge**. It leverages high-contrast visuals, dramatic lighting, and \"Atmospheric Glow\" to simulate a professional studio environment. The interface should feel expensive, technical, and whisper-quiet, prioritizing depth and texture over flat surfaces.\n\n## Colors\nThe palette is dominated by **Obsidian Black**, serving as the \"canvas\" to make vehicle photography pop. **Electric Cobalt** is used sparingly for primary actions, while **Ethereal Cyan** functions as a high-energy \"glow\" accent for status indicators, active states, and light-leak effects. \n\nGradients should be used to create depth:\n- **Surface Gradients:** From `#1A1A1B` to `#0A0A0A` at 45 degrees.\n- **Glow Effects:** Radial gradients using Ethereal Cyan with 0% opacity at the edges to simulate soft studio lights behind key content blocks.\n\n## Typography\nThe typography strategy creates an editorial hierarchy. **Archivo Narrow** provides a condensed, technical feel for headlines, reminiscent of automotive gauges and high-fashion magazines. Tracking is intentionally tight on headings to increase visual impact.\n\n**Plus Jakarta Sans** is used for body copy to provide a friendly, premium counterpoint to the aggressive headlines. Generous line-height (1.8) is critical for readability against dark backgrounds. Large numerical indices (120px+) should be used as background watermarks for service lists to reinforce the \"intentional density\" of the layout.\n\n## Layout & Spacing\nThe layout follows a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve \"Intentional Density,\" the design system utilizes asymmetrical spacing:\n- **Compressed Zones:** Information-heavy specs or service details use tight 8px and 16px gaps to feel like technical data.\n- **Expansive Zones:** Hero sections and brand imagery use a minimum of 160px vertical padding to evoke luxury and \"breathing room.\"\n- **Offsets:** Use 1-column offsets for text blocks to create a dynamic, editorial flow rather than a centered corporate look.\n\n## Elevation & Depth\nDepth is not created with shadows, but through **Tonal Layering** and **Atmospheric Blurs**:\n- **Level 0 (Base):** Obsidian Black (#0A0A0A) with a subtle film grain texture overlay.\n- **Level 1 (Cards/Sections):** Deep Slate (#1A1A1B) with a 1px inner border of 10% white to define the edge.\n- **Level 2 (Floating Nav):** Glassmorphism with a 20px backdrop blur, 40% opacity Obsidian Black fill, and a 1px stroke of Electric Cobalt at 20% opacity.\n- **Atmospheric Glow:** Key interactions (like hovering a service card) should trigger a soft, radial Ethereal Cyan glow *behind* the element, rather than a drop shadow.\n\n## Shapes\nThe shape language is primarily **Sharp (0px)** to reflect precision, carbon fiber panels, and automotive glass. \n\nExceptions:\n- **Interactive Blurs:** Background glow elements and \"light leak\" shapes should have blurred radii exceeding 100px to contrast with the sharp-edged UI components.\n- **Form Inputs:** Maintain 0px radius to emphasize the \"technical tool\" aesthetic.\n\n## Components\n### Buttons\n- **Primary:** Sharp edges, Electric Cobalt background, white text (Caps). On hover, add an external glow of Ethereal Cyan.\n- **Ghost:** 1px white border, transparent background. On hover, invert to white background with black text.\n\n### Cards\n- No rounded corners. Use a 1px subtle border (#FFFFFF at 5% opacity). Backgrounds should be a dark-to-darker gradient. \n\n### Floating Navigation\n- A centered, pill-shaped (using `rounded-xl` only for this specific component) glassmorphic bar. High blur, low opacity.\n\n### Service Indices\n- Use the `numerical-index` typography style positioned behind the service title. The number should be \"cut off\" by the edge of the container or the next section to create an editorial bleed effect.\n\n### Input Fields\n- Underline-only style or sharp-edged boxes with `#1A1A1B` fill. Focus state is a 1px Ethereal Cyan bottom border with a subtle glow.\n\n### Credibility Logos\n- All partner/client logos must be rendered in grayscale and set to 50% opacity, returning to full white on hover.",
+                  "font": "ARCHIVO_NARROW",
+                  "headlineFont": "ARCHIVO_NARROW",
+                  "headlineFontFamily": "Archivo Narrow",
+                  "labelFont": "PLUS_JAKARTA_SANS",
+                  "labelFontFamily": "Plus Jakarta Sans",
+                  "namedColors": {
+                    "background": "#131314",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#303031",
+                    "inverse_primary": "#5f5e5e",
+                    "inverse_surface": "#e5e2e3",
+                    "on_background": "#e5e2e3",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#313030",
+                    "on_primary_container": "#7b7979",
+                    "on_primary_fixed": "#1c1b1b",
+                    "on_primary_fixed_variant": "#474646",
+                    "on_secondary": "#002387",
+                    "on_secondary_container": "#c6cfff",
+                    "on_secondary_fixed": "#001355",
+                    "on_secondary_fixed_variant": "#0035bd",
+                    "on_surface": "#e5e2e3",
+                    "on_surface_variant": "#c4c7c7",
+                    "on_tertiary": "#32302f",
+                    "on_tertiary_container": "#7c7977",
+                    "on_tertiary_fixed": "#1d1b1a",
+                    "on_tertiary_fixed_variant": "#484645",
+                    "outline": "#8e9192",
+                    "outline_variant": "#444748",
+                    "primary": "#c9c6c5",
+                    "primary_container": "#0a0a0a",
+                    "primary_fixed": "#e5e2e1",
+                    "primary_fixed_dim": "#c9c6c5",
+                    "secondary": "#b8c3ff",
+                    "secondary_container": "#0044eb",
+                    "secondary_fixed": "#dde1ff",
+                    "secondary_fixed_dim": "#b8c3ff",
+                    "surface": "#131314",
+                    "surface_bright": "#39393a",
+                    "surface_container": "#1f1f20",
+                    "surface_container_high": "#2a2a2b",
+                    "surface_container_highest": "#353436",
+                    "surface_container_low": "#1b1b1c",
+                    "surface_container_lowest": "#0e0e0f",
+                    "surface_dim": "#131314",
+                    "surface_tint": "#c9c6c5",
+                    "surface_variant": "#353436",
+                    "tertiary": "#cac6c3",
+                    "tertiary_container": "#0b0a09",
+                    "tertiary_fixed": "#e6e1df",
+                    "tertiary_fixed_dim": "#cac6c3"
+                  },
+                  "overrideNeutralColor": "#1a1a1b",
+                  "overridePrimaryColor": "#0a0a0a",
+                  "overrideSecondaryColor": "#2d5bff",
+                  "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "20px",
+                    "section-gap": "160px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.8"
+                    },
+                    "body-md": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-xl": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "80px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "1.0"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Plus Jakarta Sans",
+                      "fontSize": "12px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.0"
+                    },
+                    "numerical-index": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "120px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/6cae747fff394d9c9650b7b4feacd4cb",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9928",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FhOTZhMzNkYjk5ZjQyZDFhMTIxOGE2MzEzMmYzMjU4EgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMjM4ODIzNzI5NTU0ODcwMDQ2NA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/12388237295548700464/files/bae06ce33e664d0b94d0aa6316b130c3"
+            },
+            "id": "7ec0618ecc514f8abfe114fb22ca0c44",
+            "name": "projects/12388237295548700464/screens/7ec0618ecc514f8abfe114fb22ca0c44",
+            "prompt": "Build the complete bespoke landing page for Dreamz Mobile Detailing. \n\nVisual Identity: \n- Theme: 'Nocturnal Precision' - a dark, high-contrast obsidian aesthetic.\n- Color Palette: Deep blacks (#0A0A0A), metallic silvers (#A1A1A1), and electric blue accents (#2D5BFF) for interactivity.\n- Layout: Editorial-style grid with generous whitespace and bold typographic hierarchy.\n- Unique Motif: CSS-driven 'Atmospheric Glows' behind key sections.\n\nSections:\n1. Header: Use predicted TopNavBar. Ensure 'Book Now' and phone (505) 455-6410 are visible.\n2. Hero: Use {{DATA:IMAGE:IMAGE_5}} as a full-bleed or large-scale backdrop. Heading: 'The Art of the Reflection.' Subheading: 'Bespoke mobile detailing for Santa Fe’s most discerning drivers.'\n3. Credibility: '500+ Vehicles Perfected', '10+ Years of Mastery', 'Santa Fe Owned & Operated'. Styled as high-contrast typographic blocks.\n4. Services (The Trilogy): \n   - 01. EXTERIOR RESTORATION: Use {{DATA:IMAGE:IMAGE_4}}. Focus on paint correction and ceramic coatings.\n   - 02. INTERIOR SPA: Use {{DATA:IMAGE:IMAGE_3}}. Focus on leather care and deep sanitation.\n   - 03. PROTECTION PLANS: Long-term maintenance and maintenance washes.\n5. About: 'The Meticulous Mind of David.' Copy about the passion for perfection and mobile convenience in Santa Fe.\n6. Visit & Contact: \n   - Left: Contact form with fields for Name, Car Model, and Service Interest. \n   - Right: The required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px] bg-surface-container-low\" data-map-slot aria-label=\"Map\"></div>.\n   - Contact Info: (505) 455-6410 · David@Dreamzautospa.com · 1437 G Street, Santa Fe.\n7. Footer: Use predicted Footer.\n\nTechnical: Fully responsive, smooth scrolling, and dark-themed form validation UI. Use Archivo Narrow or a similar high-impact font from the design system.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsUWCn5rFcFIPS_TgOYNSZa2kGjiXMqZWWcmBaImBM5g4P37LIFrkhhaPoSnU7FgQJDTiLIqznng0BNSkC5kbcx-IOtRZM6fvYhXxViFxLQRiD4rEbmjsCdMsZttNerNRwiGtc5EHxwoxdWGIcMgLTx6UMHYuHlB1ueAYVb0wUl7RhnXxe6x082ppkhtZdS0_3XMIHMh-B4QCAqDiS97-GjaoK7vG0Z7btnYj2qW3QS2qaaDoGvqztMvQ1m",
+              "name": "projects/12388237295548700464/files/d0b6fa8d218d4334a18b7baee8f07605"
+            },
+            "theme": {
+              "bodyFont": "PLUS_JAKARTA_SANS",
+              "bodyFontFamily": "Plus Jakarta Sans",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#0a0a0a",
+              "designMd": "---\nname: Nocturnal Precision\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1b1b1c'\n  surface-container: '#1f1f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#303031'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c9c6c5'\n  primary: '#c9c6c5'\n  on-primary: '#313030'\n  primary-container: '#0a0a0a'\n  on-primary-container: '#7b7979'\n  inverse-primary: '#5f5e5e'\n  secondary: '#b8c3ff'\n  on-secondary: '#002387'\n  secondary-container: '#0044eb'\n  on-secondary-container: '#c6cfff'\n  tertiary: '#cac6c3'\n  on-tertiary: '#32302f'\n  tertiary-container: '#0b0a09'\n  on-tertiary-container: '#7c7977'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c9c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474646'\n  secondary-fixed: '#dde1ff'\n  secondary-fixed-dim: '#b8c3ff'\n  on-secondary-fixed: '#001355'\n  on-secondary-fixed-variant: '#0035bd'\n  tertiary-fixed: '#e6e1df'\n  tertiary-fixed-dim: '#cac6c3'\n  on-tertiary-fixed: '#1d1b1a'\n  on-tertiary-fixed-variant: '#484645'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-xl:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Plus Jakarta Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  numerical-index:\n    fontFamily: Archivo Narrow\n    fontSize: 120px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 4px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 160px\n---\n\n## Brand & Style\nThe design system is rooted in the concept of \"Nocturnal Precision,\" blending the aggressive elegance of midnight car culture with the meticulous serenity of a high-end spa. It targets a discerning clientele in Santa Fe who view their vehicles as curated assets. \n\nThe aesthetic is **Modern-Editorial with a cinematic edge**. It leverages high-contrast visuals, dramatic lighting, and \"Atmospheric Glow\" to simulate a professional studio environment. The interface should feel expensive, technical, and whisper-quiet, prioritizing depth and texture over flat surfaces.\n\n## Colors\nThe palette is dominated by **Obsidian Black**, serving as the \"canvas\" to make vehicle photography pop. **Electric Cobalt** is used sparingly for primary actions, while **Ethereal Cyan** functions as a high-energy \"glow\" accent for status indicators, active states, and light-leak effects. \n\nGradients should be used to create depth:\n- **Surface Gradients:** From `#1A1A1B` to `#0A0A0A` at 45 degrees.\n- **Glow Effects:** Radial gradients using Ethereal Cyan with 0% opacity at the edges to simulate soft studio lights behind key content blocks.\n\n## Typography\nThe typography strategy creates an editorial hierarchy. **Archivo Narrow** provides a condensed, technical feel for headlines, reminiscent of automotive gauges and high-fashion magazines. Tracking is intentionally tight on headings to increase visual impact.\n\n**Plus Jakarta Sans** is used for body copy to provide a friendly, premium counterpoint to the aggressive headlines. Generous line-height (1.8) is critical for readability against dark backgrounds. Large numerical indices (120px+) should be used as background watermarks for service lists to reinforce the \"intentional density\" of the layout.\n\n## Layout & Spacing\nThe layout follows a **12-column fixed grid** for desktop and a **4-column fluid grid** for mobile. \n\nTo achieve \"Intentional Density,\" the design system utilizes asymmetrical spacing:\n- **Compressed Zones:** Information-heavy specs or service details use tight 8px and 16px gaps to feel like technical data.\n- **Expansive Zones:** Hero sections and brand imagery use a minimum of 160px vertical padding to evoke luxury and \"breathing room.\"\n- **Offsets:** Use 1-column offsets for text blocks to create a dynamic, editorial flow rather than a centered corporate look.\n\n## Elevation & Depth\nDepth is not created with shadows, but through **Tonal Layering** and **Atmospheric Blurs**:\n- **Level 0 (Base):** Obsidian Black (#0A0A0A) with a subtle film grain texture overlay.\n- **Level 1 (Cards/Sections):** Deep Slate (#1A1A1B) with a 1px inner border of 10% white to define the edge.\n- **Level 2 (Floating Nav):** Glassmorphism with a 20px backdrop blur, 40% opacity Obsidian Black fill, and a 1px stroke of Electric Cobalt at 20% opacity.\n- **Atmospheric Glow:** Key interactions (like hovering a service card) should trigger a soft, radial Ethereal Cyan glow *behind* the element, rather than a drop shadow.\n\n## Shapes\nThe shape language is primarily **Sharp (0px)** to reflect precision, carbon fiber panels, and automotive glass. \n\nExceptions:\n- **Interactive Blurs:** Background glow elements and \"light leak\" shapes should have blurred radii exceeding 100px to contrast with the sharp-edged UI components.\n- **Form Inputs:** Maintain 0px radius to emphasize the \"technical tool\" aesthetic.\n\n## Components\n### Buttons\n- **Primary:** Sharp edges, Electric Cobalt background, white text (Caps). On hover, add an external glow of Ethereal Cyan.\n- **Ghost:** 1px white border, transparent background. On hover, invert to white background with black text.\n\n### Cards\n- No rounded corners. Use a 1px subtle border (#FFFFFF at 5% opacity). Backgrounds should be a dark-to-darker gradient. \n\n### Floating Navigation\n- A centered, pill-shaped (using `rounded-xl` only for this specific component) glassmorphic bar. High blur, low opacity.\n\n### Service Indices\n- Use the `numerical-index` typography style positioned behind the service title. The number should be \"cut off\" by the edge of the container or the next section to create an editorial bleed effect.\n\n### Input Fields\n- Underline-only style or sharp-edged boxes with `#1A1A1B` fill. Focus state is a 1px Ethereal Cyan bottom border with a subtle glow.\n\n### Credibility Logos\n- All partner/client logos must be rendered in grayscale and set to 50% opacity, returning to full white on hover.",
+              "font": "ARCHIVO_NARROW",
+              "headlineFont": "ARCHIVO_NARROW",
+              "headlineFontFamily": "Archivo Narrow",
+              "labelFont": "PLUS_JAKARTA_SANS",
+              "labelFontFamily": "Plus Jakarta Sans",
+              "namedColors": {
+                "background": "#131314",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#303031",
+                "inverse_primary": "#5f5e5e",
+                "inverse_surface": "#e5e2e3",
+                "on_background": "#e5e2e3",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#313030",
+                "on_primary_container": "#7b7979",
+                "on_primary_fixed": "#1c1b1b",
+                "on_primary_fixed_variant": "#474646",
+                "on_secondary": "#002387",
+                "on_secondary_container": "#c6cfff",
+                "on_secondary_fixed": "#001355",
+                "on_secondary_fixed_variant": "#0035bd",
+                "on_surface": "#e5e2e3",
+                "on_surface_variant": "#c4c7c7",
+                "on_tertiary": "#32302f",
+                "on_tertiary_container": "#7c7977",
+                "on_tertiary_fixed": "#1d1b1a",
+                "on_tertiary_fixed_variant": "#484645",
+                "outline": "#8e9192",
+                "outline_variant": "#444748",
+                "primary": "#c9c6c5",
+                "primary_container": "#0a0a0a",
+                "primary_fixed": "#e5e2e1",
+                "primary_fixed_dim": "#c9c6c5",
+                "secondary": "#b8c3ff",
+                "secondary_container": "#0044eb",
+                "secondary_fixed": "#dde1ff",
+                "secondary_fixed_dim": "#b8c3ff",
+                "surface": "#131314",
+                "surface_bright": "#39393a",
+                "surface_container": "#1f1f20",
+                "surface_container_high": "#2a2a2b",
+                "surface_container_highest": "#353436",
+                "surface_container_low": "#1b1b1c",
+                "surface_container_lowest": "#0e0e0f",
+                "surface_dim": "#131314",
+                "surface_tint": "#c9c6c5",
+                "surface_variant": "#353436",
+                "tertiary": "#cac6c3",
+                "tertiary_container": "#0b0a09",
+                "tertiary_fixed": "#e6e1df",
+                "tertiary_fixed_dim": "#cac6c3"
+              },
+              "overrideNeutralColor": "#1a1a1b",
+              "overridePrimaryColor": "#0a0a0a",
+              "overrideSecondaryColor": "#2d5bff",
+              "spacing": {
+                "container-max": "1440px",
+                "gutter": "24px",
+                "margin-desktop": "80px",
+                "margin-mobile": "20px",
+                "section-gap": "160px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.8"
+                },
+                "body-md": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-xl": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "80px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "1.0"
+                },
+                "headline-lg": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "headline-md": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "label-caps": {
+                  "fontFamily": "Plus Jakarta Sans",
+                  "fontSize": "12px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.0"
+                },
+                "numerical-index": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "120px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "Dreamz Mobile Detailing - Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Dreamz Mobile Detailing**, moving away from standard templates to create a high-end, \"Nocturnal Precision\" aesthetic.\n\n### Design Highlights:\n*   **Atmospheric \"Obsidian\" Theme:** A high-contrast dark palette that positions detailing as an art form. I've used dramatic \"rim lighting\" imagery and CSS-driven glows to evoke the feeling of a professional automotive studio.\n*   **Editorial Layout:** Instead of a standard card grid, I implemented \"The Trilogy\" service section using large-scale macro photography and bold numerical indices (01, 02, 03) for a more premium, magazine-like flow.\n*   **Meticulous Typography:** Used **Archivo Narrow** for headlines to provide a sharp, high-performance feel, contrasted with generous whitespace to ensure the luxury vehicles remain the focus.\n*   **Local Credibility:** Strategically placed Santa Fe branding and David's 10-year mastery metrics to build immediate trust with the local market.\n*   **Functional Precision:** A custom-styled \"Secure Your Session\" form and the requested map slot for location context, all wrapped in a glassmorphic navigation system.\n\nThe code is production-ready, featuring semantic HTML, localized Santa Fe content, and a responsive structure optimized for desktop viewing."
+    },
+    {
+      "suggestion": "Create a mobile-optimized version of this homepage"
+    },
+    {
+      "suggestion": "Add a gallery section for \"Before & After\" transformations"
+    },
+    {
+      "suggestion": "Refine the color palette to include more metallic accents"
+    }
+  ],
+  "projectId": "12388237295548700464",
+  "sessionId": "5498481027162170350"
+}
