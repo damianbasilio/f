@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scott's Towing &amp; Salvage | Battle Creek Recovery</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;700;800&amp;family=Inter:wght@400;600&amp;family=Geist:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@100..900&amp;family=Geist:wght@100..900&amp;family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary": "#c8c6c7",
+                        "secondary-fixed": "#dde3eb",
+                        "tertiary-fixed": "#e5e2e3",
+                        "surface-container-low": "#1b1b1c",
+                        "on-error": "#690005",
+                        "on-error-container": "#ffdad6",
+                        "surface-container-lowest": "#0e0e0f",
+                        "inverse-on-surface": "#303031",
+                        "on-secondary-fixed": "#161c22",
+                        "surface": "#131314",
+                        "on-secondary-fixed-variant": "#41474e",
+                        "on-primary": "#562000",
+                        "inverse-primary": "#a04100",
+                        "primary-fixed": "#ffdbcb",
+                        "tertiary-container": "#989697",
+                        "on-primary-fixed": "#341000",
+                        "primary": "#ffb693",
+                        "secondary-fixed-dim": "#c1c7cf",
+                        "error": "#ffb4ab",
+                        "outline-variant": "#584237",
+                        "on-primary-container": "#541f00",
+                        "on-surface-variant": "#e0c0b2",
+                        "surface-container-highest": "#353536",
+                        "surface-container": "#1f1f20",
+                        "inverse-surface": "#e4e2e3",
+                        "on-secondary": "#2b3137",
+                        "on-tertiary": "#303031",
+                        "secondary": "#c1c7cf",
+                        "background": "#131314",
+                        "primary-container": "#f37021",
+                        "error-container": "#93000a",
+                        "surface-dim": "#131314",
+                        "surface-bright": "#39393a",
+                        "on-surface": "#e4e2e3",
+                        "surface-variant": "#353536",
+                        "on-background": "#e4e2e3",
+                        "surface-container-high": "#2a2a2b",
+                        "on-tertiary-fixed-variant": "#474647",
+                        "on-primary-fixed-variant": "#7a3000",
+                        "on-secondary-container": "#afb6bd",
+                        "outline": "#a78b7e",
+                        "secondary-container": "#41474e",
+                        "primary-fixed-dim": "#ffb693",
+                        "tertiary-fixed-dim": "#c8c6c7",
+                        "on-tertiary-container": "#2f2f30",
+                        "on-tertiary-fixed": "#1b1b1c",
+                        "surface-tint": "#ffb693"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin": "32px",
+                        "stack-lg": "32px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "container-max": "1440px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Geist"],
+                        "headline-lg-mobile": ["Archivo Narrow"],
+                        "mono-sm": ["Geist"],
+                        "headline-lg": ["Archivo Narrow"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Archivo Narrow"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Archivo Narrow"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "mono-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "500"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "1.2", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .industrial-bevel {
+            box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.05), inset -1px -1px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid #41474e;
+        }
+        .hazard-stripes {
+            background: repeating-linear-gradient(
+                -45deg,
+                #f37021,
+                #f37021 10px,
+                #131314 10px,
+                #131314 20px
+            );
+        }
+        .map-slot {
+            background-color: #1f1f20;
+            background-image: radial-gradient(#353536 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Header / TopAppBar -->
+<header class="bg-background sticky top-0 z-50 border-b-2 border-secondary-container">
+<nav class="flex justify-between items-center w-full px-margin py-stack-md max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md font-extrabold text-primary tracking-tighter uppercase">
+                SCOTT'S TOWING &amp; SALVAGE
+            </div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="text-on-surface font-label-md text-label-md uppercase tracking-widest hover:text-primary transition-colors" href="#services">SERVICES</a>
+<a class="text-on-surface font-label-md text-label-md uppercase tracking-widest hover:text-primary transition-colors" href="#salvage">SALVAGE</a>
+<a class="text-on-surface font-label-md text-label-md uppercase tracking-widest hover:text-primary transition-colors" href="#about">ABOUT</a>
+<a class="text-on-surface font-label-md text-label-md uppercase tracking-widest hover:text-primary transition-colors" href="#visit">CONTACT</a>
+<div class="h-8 w-px bg-secondary-container mx-2"></div>
+<a class="bg-primary-container text-on-primary-container px-6 py-3 font-label-md text-label-md font-bold uppercase industrial-bevel hover:scale-95 transition-transform" href="tel:2695550199">
+                    24/7 EMERGENCY: (269) 555-0199
+                </a>
+</div>
+<!-- Mobile Menu Trigger -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative h-[85vh] flex items-center overflow-hidden border-b-4 border-primary">
+<div class="absolute inset-0 z-0">
+<img alt="A heavy-duty industrial rotator tow truck illuminated by orange safety lights in a dark industrial yard, emphasizing mechanical power and reliability." class="w-full h-full object-cover brightness-50" src="https://lh3.googleusercontent.com/aida/AP1WRLvt_vSepQhRo3DsXU1Y8QDAtODlCgft3s8-DhCgp853Oy3c-vMiiu8wKpjbuNv0UHVsukTr4dGC3XNxr6XOdGLV9JlKlNG98SU6_e4VnTvdaV2lIPJrS7RY-YvM1Lv31Bf21gFQ4EVY4GTrwur9Skw7e2fUjg_9ShEsspow0Cj_hr2ULRQeEuBK08Qix1EuZxmUpbs_iyzq7Rkj3agMG57kOfMVQ8hLfDNrDnU192c8w-WejyuecKGQgdk"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin w-full max-w-container-max mx-auto">
+<div class="max-w-3xl space-y-stack-md">
+<div class="inline-flex items-center gap-2 bg-primary-container text-on-primary-container px-3 py-1 font-label-md text-label-md uppercase tracking-tighter">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">warning</span>
+                    BATTLE CREEK'S HEAVIEST RECOVERY TEAM
+                </div>
+<h1 class="font-display-lg text-display-lg md:text-[96px] uppercase leading-none tracking-tighter text-on-surface italic">
+                    WE MOVE THE <span class="text-primary-container block not-italic">UNMOVABLE.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl border-l-2 border-primary pl-6">
+                    From stranded sedans to derailed heavy equipment, Scott’s provides the mechanical authority needed to clear the path. 24 hours a day. 7 days a week.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4 pt-stack-md">
+<a class="bg-primary-container text-on-primary-container px-8 py-5 font-headline-md text-headline-md font-bold uppercase industrial-bevel text-center hover:bg-primary transition-colors" href="#services">
+                        GET HELP NOW
+                    </a>
+<a class="border-2 border-primary text-primary px-8 py-5 font-headline-md text-headline-md font-bold uppercase text-center hover:bg-primary hover:text-on-primary transition-all" href="#visit">
+                        OUR LOCATION
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Ticker -->
+<div class="bg-surface-container-lowest border-b-2 border-secondary-container" id="credibility">
+<div class="max-w-container-max mx-auto px-margin py-stack-md grid grid-cols-2 md:grid-cols-4 gap-gutter divide-x divide-secondary-container">
+<div class="flex flex-col items-center md:items-start px-4">
+<span class="font-headline-md text-headline-md text-primary-container uppercase">EST. 2009</span>
+<span class="font-label-md text-label-md text-on-surface-variant">BATTLE CREEK NATIVE</span>
+</div>
+<div class="flex flex-col items-center md:items-start px-4">
+<span class="font-headline-md text-headline-md text-primary-container uppercase">15+ YEARS</span>
+<span class="font-label-md text-label-md text-on-surface-variant">OF RECOVERY EXPERIENCE</span>
+</div>
+<div class="flex flex-col items-center md:items-start px-4">
+<span class="font-headline-md text-headline-md text-primary-container uppercase">24/7/365</span>
+<span class="font-label-md text-label-md text-on-surface-variant">DISPATCH ACTIVE</span>
+</div>
+<div class="flex flex-col items-center md:items-start px-4 border-r md:border-r-0 border-secondary-container">
+<span class="font-headline-md text-headline-md text-primary-container uppercase">FLEET VET</span>
+<span class="font-label-md text-label-md text-on-surface-variant">LOGISTICS PARTNER</span>
+</div>
+</div>
+</div>
+<!-- Services Grid -->
+<section class="py-24 px-margin max-w-container-max mx-auto" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="space-y-4">
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">OUR CAPABILITIES</h2>
+<div class="w-24 h-2 bg-primary"></div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-md">
+                Heavy-duty recovery requires more than just a truck. It requires the right engineering and a crew that doesn't quit.
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="group border-2 border-secondary-container bg-surface-container-low p-8 flex flex-col industrial-bevel hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">art_track</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-4">24/7 TOWING</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                    Light and medium-duty towing for breakdowns, accidents, or illegal parking. Rapid response across Calhoun County.
+                </p>
+<div class="pt-6 border-t border-secondary-container flex justify-between items-center group-hover:border-primary transition-colors">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">RAPID RESPONSE</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="group border-2 border-secondary-container bg-surface-container-low p-8 flex flex-col industrial-bevel hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">construction</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-4">HEAVY SALVAGE</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                    Specialized recovery for heavy machinery, semi-trucks, and industrial equipment. If it's stuck, we have the gear to pull it out.
+                </p>
+<div class="pt-6 border-t border-secondary-container flex justify-between items-center group-hover:border-primary transition-colors">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">INDUSTRIAL GRADE</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group border-2 border-secondary-container bg-surface-container-low p-8 flex flex-col industrial-bevel hover:border-primary transition-all">
+<span class="material-symbols-outlined text-primary text-5xl mb-6">tire_repair</span>
+<h3 class="font-headline-md text-headline-md uppercase text-on-surface mb-4">ROADSIDE ASSIST</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow mb-8">
+                    Lockouts, jumpstarts, tire changes, and fuel delivery. We get you back on the road without the tow when possible.
+                </p>
+<div class="pt-6 border-t border-secondary-container flex justify-between items-center group-hover:border-primary transition-colors">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary">ON-SITE FIX</span>
+<span class="material-symbols-outlined text-primary">arrow_forward</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section / Heavy Salvage -->
+<section class="bg-surface-container-lowest border-y-4 border-secondary-container" id="salvage">
+<div class="max-w-container-max mx-auto px-margin py-24 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative order-2 md:order-1">
+<div class="absolute -top-4 -left-4 w-32 h-32 hazard-stripes z-0 opacity-30"></div>
+<div class="relative z-10 border-4 border-primary">
+<img alt="A heavy-duty weathered metal towing hook and chain on a gritty, industrial surface, symbolizing strength, endurance, and the rugged nature of salvage work." class="w-full grayscale hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuO-uwVzSiqD8YTIU6wT4jbi0W-VMy5kiqotrV1pH1z3IfUvzi0IPxKiMcwJB4cB3EA2sBKDeqauO1Bv1HzOu7_YAfmNBrp-sfAYpO2VRrdbOiYiAwbWsjVpLZOITybGtBQ1zhKOkELN6i_KesCgHk7a0LgY9DnyVpk4f5QaRlfSLNCxaH9HUDX8oDPBHupUOcrQZPAYs_osrmmsp6Om3J_5a6Iex2L80t8KeWrMPbwNCQvvIMffVNAYg"/>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-primary text-on-primary px-6 py-4 font-label-md text-label-md font-bold industrial-bevel z-20">
+                    TESTED IN THE MUD
+                </div>
+</div>
+<div class="space-y-stack-md order-1 md:order-2" id="about">
+<span class="font-label-md text-label-md uppercase tracking-widest text-primary-container">BRED IN BATTLE CREEK</span>
+<h2 class="font-headline-lg text-headline-lg uppercase text-on-surface">THE SCOTT BILLINGS STANDARD</h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+<p>
+                        Since 2009, Scott’s Towing &amp; Salvage has been the backbone of local recovery. Scott Billings started with one truck and a commitment to never leave a driver stranded.
+                    </p>
+<p>
+                        Today, our fleet handles everything from highway pile-ups to agricultural salvage. We don't just provide a service; we provide mechanical solutions for the toughest logistics problems in Michigan.
+                    </p>
+</div>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_box</span>
+<span class="font-label-md">FULLY LICENSED &amp; INSURED</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_box</span>
+<span class="font-label-md">DOT CERTIFIED OPERATORS</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_box</span>
+<span class="font-label-md">FAMILY OWNED &amp; OPERATED</span>
+</li>
+<li class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-primary-container">check_box</span>
+<span class="font-label-md">MICHIGAN-WIDE TRANSPORT</span>
+</li>
+</ul>
+</div>
+</div>
+</section>
+<!-- Visit & Contact Section -->
+<section class="py-24 px-margin max-w-container-max mx-auto" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Map & Contact Info -->
+<div class="lg:col-span-7 space-y-gutter">
+<div class="bg-surface-container border-2 border-secondary-container p-10 industrial-bevel">
+<h2 class="font-headline-md text-headline-md uppercase text-primary-container mb-8">DISPATCH HEADQUARTERS</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+<div class="space-y-4">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block">VISIT US</span>
+<p class="font-headline-md text-headline-md text-on-surface">
+                                923 East Michigan Avenue<br/>
+                                Battle Creek, MI 49014
+                            </p>
+<a class="text-primary font-label-md uppercase underline hover:text-primary-container" href="https://maps.google.com" target="_blank">OPEN IN NAVIGATION</a>
+</div>
+<div class="space-y-4">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest block">HOURS</span>
+<p class="font-body-lg text-body-lg text-on-surface">
+                                24/7 Emergency Dispatch<br/>
+                                Office: Mon-Fri 8AM - 5PM
+                            </p>
+<p class="font-headline-md text-headline-md text-primary mt-4">(269) 555-0199</p>
+</div>
+</div>
+</div>
+<div aria-label="Map showing Scott's Towing location in Battle Creek" class="map-slot relative overflow-hidden min-h-[400px] border-2 border-secondary-container industrial-bevel" data-location="Battle Creek, Michigan" data-map-slot="" style="">
+<!-- Map logic placeholder -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-2">location_on</span>
+<p class="font-label-md uppercase tracking-widest text-on-surface-variant">INTERACTIVE MAP LOADING...</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form -->
+<div class="lg:col-span-5">
+<div class="bg-surface-container-high border-2 border-primary p-10 industrial-bevel sticky top-32">
+<h2 class="font-headline-md text-headline-md uppercase text-on-surface mb-2">REQUEST SERVICE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 uppercase tracking-tighter">FOR NON-EMERGENCY ESTIMATES</p>
+<form class="space-y-6">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">FULL NAME</label>
+<input class="w-full bg-surface-container-lowest border-2 border-secondary-container text-on-surface focus:border-primary focus:ring-0 font-mono-sm uppercase px-4 py-3" placeholder="YOUR NAME" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">PHONE</label>
+<input class="w-full bg-surface-container-lowest border-2 border-secondary-container text-on-surface focus:border-primary focus:ring-0 font-mono-sm px-4 py-3" placeholder="(000) 000-0000" type="tel"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">CATEGORY</label>
+<select class="w-full bg-surface-container-lowest border-2 border-secondary-container text-on-surface focus:border-primary focus:ring-0 font-mono-sm px-4 py-3 appearance-none">
+<option>SELECT SERVICE</option>
+<option>LOCAL TOW</option>
+<option>LONG DISTANCE</option>
+<option>HEAVY RECOVERY</option>
+<option>SALVAGE QUOTE</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">CURRENT LOCATION</label>
+<input class="w-full bg-surface-container-lowest border-2 border-secondary-container text-on-surface focus:border-primary focus:ring-0 font-mono-sm uppercase px-4 py-3" placeholder="ADDRESS OR MILE MARKER" type="text"/>
+</div>
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant uppercase mb-2">ADDITIONAL DETAILS</label>
+<textarea class="w-full bg-surface-container-lowest border-2 border-secondary-container text-on-surface focus:border-primary focus:ring-0 font-mono-sm uppercase px-4 py-3" placeholder="VEHICLE TYPE / ISSUE" rows="3"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-5 font-headline-md text-headline-md uppercase font-bold industrial-bevel hover:bg-primary transition-colors flex items-center justify-center gap-3" type="submit">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+                            SUBMIT REQUEST
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-4 border-primary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin py-stack-lg max-w-container-max mx-auto">
+<div class="md:col-span-5 space-y-stack-md">
+<div class="font-headline-lg text-headline-lg font-black text-on-surface tracking-tighter uppercase leading-none">
+                    SCOTT'S TOWING<br/>&amp; SALVAGE
+                </div>
+<div class="flex items-center gap-3">
+<span class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
+<span class="font-label-md text-label-md text-primary uppercase tracking-widest">DISPATCH LIVE - 24/7 ACTIVE</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">
+                    Providing industrial-grade recovery and towing solutions for Battle Creek and surrounding West Michigan areas since 2009.
+                </p>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary uppercase">SERVICES</h4>
+<nav class="flex flex-col gap-2">
+<a class="text-on-surface-variant font-label-md hover:text-primary underline" href="#">24/7 TOWING</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary underline" href="#">ROADSIDE ASSISTANCE</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary underline" href="#">HEAVY SALVAGE</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary underline" href="#">ACCIDENT RECOVERY</a>
+<a class="text-on-surface-variant font-label-md hover:text-primary underline" href="#">FLEET LOGISTICS</a>
+</nav>
+</div>
+<div class="md:col-span-4 space-y-4">
+<h4 class="font-headline-md text-headline-md text-primary uppercase">CONNECT</h4>
+<div class="space-y-2">
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined">phone_in_talk</span>
+<span class="font-label-md">(269) 555-0199</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-md">DISPATCH@SCOTTSTOWINGBC.COM</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant">
+<span class="material-symbols-outlined">location_on</span>
+<span class="font-label-md uppercase">923 E Michigan Ave, Battle Creek</span>
+</div>
+</div>
+<div class="flex gap-4 pt-4">
+<a class="w-10 h-10 border border-secondary-container flex items-center justify-center hover:bg-primary hover:text-on-primary transition-all" href="#">
+<svg class="w-5 h-5 fill-current" viewbox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.469h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.469h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-secondary-container/30">
+<div class="max-w-container-max mx-auto px-margin py-stack-md flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant font-mono-sm uppercase text-[10px] tracking-[0.2em]">
+<span>©2024 SCOTT'S TOWING &amp; SALVAGE BATTLE CREEK. ALL RIGHTS RESERVED.</span>
+<div class="flex gap-6">
+<a class="hover:text-primary" href="#">PRIVACY POLICY</a>
+<a class="hover:text-primary" href="#">TERMS OF SERVICE</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- Hazard Sticky Call Button for Mobile -->
+<div class="md:hidden fixed bottom-0 left-0 right-0 z-50 p-4 bg-background border-t-2 border-primary">
+<a class="w-full flex items-center justify-center gap-3 bg-primary-container text-on-primary-container py-4 font-headline-md text-headline-md uppercase font-bold industrial-bevel" href="tel:2695550199">
+<span class="material-symbols-outlined animate-bounce">call</span>
+            24/7 EMERGENCY HELP
+        </a>
+</div>
+<script>
+        // Micro-interaction for form labels
+        const inputs = document.querySelectorAll('input, textarea, select');
+        inputs.forEach(input => {
+            input.addEventListener('focus', () => {
+                input.previousElementSibling.classList.add('text-primary');
+            });
+            input.addEventListener('blur', () => {
+                input.previousElementSibling.classList.remove('text-primary');
+            });
+        });
+
+        // Simple smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
