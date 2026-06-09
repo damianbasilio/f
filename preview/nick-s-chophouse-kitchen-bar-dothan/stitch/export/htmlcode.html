@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Nick's Chophouse | Kitchen + Bar</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-container": "#c16a64",
+                    "on-error-container": "#ffdad6",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "background": "#131410",
+                    "on-tertiary": "#5a1a19",
+                    "surface-container-low": "#1c1c18",
+                    "on-primary-container": "#848282",
+                    "tertiary-fixed-dim": "#ffb3ad",
+                    "surface-bright": "#3a3935",
+                    "surface-container-highest": "#353531",
+                    "surface-variant": "#353531",
+                    "on-tertiary-fixed-variant": "#77302d",
+                    "primary-fixed-dim": "#c8c6c5",
+                    "on-secondary": "#412d00",
+                    "primary-container": "#1a1a1a",
+                    "on-tertiary-fixed": "#3d0506",
+                    "on-surface": "#e5e2dc",
+                    "secondary": "#e9c176",
+                    "tertiary": "#ffb3ad",
+                    "inverse-primary": "#5f5e5e",
+                    "primary": "#c8c6c5",
+                    "tertiary-fixed": "#ffdad7",
+                    "primary-fixed": "#e5e2e1",
+                    "surface-dim": "#131410",
+                    "on-primary": "#313030",
+                    "surface-container": "#20201c",
+                    "error": "#ffb4ab",
+                    "inverse-surface": "#e5e2dc",
+                    "surface-container-lowest": "#0e0e0b",
+                    "on-secondary-container": "#dab36a",
+                    "outline": "#8e9192",
+                    "on-secondary-fixed": "#261900",
+                    "on-surface-variant": "#c4c7c7",
+                    "secondary-fixed": "#ffdea5",
+                    "tertiary-container": "#3b0405",
+                    "on-primary-fixed": "#1c1b1b",
+                    "on-error": "#690005",
+                    "surface-container-high": "#2a2a26",
+                    "surface": "#131410",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-background": "#e5e2dc",
+                    "outline-variant": "#444748",
+                    "error-container": "#93000a",
+                    "inverse-on-surface": "#31312d",
+                    "secondary-container": "#604403",
+                    "on-primary-fixed-variant": "#474746",
+                    "surface-tint": "#c8c6c5",
+                    "brand-gold": "#C5A059",
+                    "brand-bone": "#F9F6F0",
+                    "brand-charcoal": "#1A1A1A"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0px",
+                    "lg": "0px",
+                    "xl": "0px",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "vertical-rhythm": "128px",
+                    "container-max": "1200px",
+                    "unit": "8px",
+                    "margin-desktop": "64px",
+                    "gutter": "32px",
+                    "margin-mobile": "20px"
+            },
+            "fontFamily": {
+                    "display-lg-mobile": ["Bodoni Moda"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-lg": ["Bodoni Moda"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "label-numeric": ["Bodoni Moda"],
+                    "headline-md": ["Bodoni Moda"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "headline-lg-mobile": ["Bodoni Moda"]
+            },
+            "fontSize": {
+                    "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                    "label-numeric": ["16px", {"lineHeight": "1", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .grain-overlay {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.03;
+        }
+        
+        .grillwork-v {
+            width: 1px;
+            background: linear-gradient(to bottom, transparent, #C5A059 50%, transparent);
+            height: 100%;
+        }
+
+        .grillwork-h {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #C5A059 50%, transparent);
+            width: 100%;
+        }
+
+        .gold-accent {
+            width: 2px;
+            height: 40px;
+            background-color: #C5A059;
+        }
+
+        .scroll-reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.2, 0, 0.2, 1);
+        }
+
+        .scroll-reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<div class="grain-overlay"></div>
+<!-- Navigation Shell -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-xl border-b border-outline-variant/30 transition-all duration-500" id="top-nav">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-headline-md text-headline-md text-on-surface tracking-tighter uppercase font-bold">
+                NICK'S CHOPHOUSE
+            </div>
+<div class="hidden md:flex items-center space-x-12">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#menu">Menu</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#offerings">Offerings</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">About</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#visit">Visit</a>
+</div>
+<div class="flex items-center space-x-8">
+<span class="hidden lg:block font-label-caps text-label-caps text-secondary">(334) 699-2120</span>
+<button class="bg-brand-bone text-brand-charcoal px-6 py-3 font-label-caps text-label-caps hover:bg-secondary transition-colors duration-300 active:scale-95">
+                    RESERVATIONS
+                </button>
+</div>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent z-10"></div>
+<img alt="Hero Image" class="w-full h-full object-cover grayscale brightness-50" data-alt="A cinematic, high-contrast shot of a premium thick-cut ribeye steak being seared on a professional grill, with dramatic flames rising in the background. The lighting is moody and focused, highlighting the rich marbling and charred texture of the meat. Deep charcoal shadows and golden firelight create an atmosphere of luxury and culinary mastery. The overall style is editorial, sophisticated, and dark-themed to match the chophouse aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6bDaqXnGCN3OLij3GE2-6IHmss6H3BqZV1atNdVj0NLQ6G95waALIUJq9E6-b4Z3B2DgoHGKh4Zd1L-iHO6ACT25rIOPw__I37vja2ZYYSmWYLIZwkBQgM4VSXrmNZpG0frPdgKLPaZvJq4dLq0zAAqOmid361e8OUsw14uLGXszjjZLi5gudi1kf2mW-O1lqVMimp4yXxzlhl25zPATBnn7eduTBjoWTxRMs8XbFC2-JxlieBmGHLL3oCOeINJ-6fGrf0QuRo4s"/>
+</div>
+<div class="relative z-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-8 flex flex-col justify-center">
+<div class="gold-accent mb-8"></div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface leading-tight mb-4">
+                    NICK'S <br/> CHOPHOUSE
+                </h1>
+<p class="font-headline-md text-headline-md text-secondary tracking-[0.2em] mb-12">
+                    KITCHEN + BAR: THE ART OF THE STEAK
+                </p>
+<div class="flex space-x-6">
+<button class="border border-brand-gold text-brand-gold px-10 py-4 font-label-caps text-label-caps hover:bg-brand-gold hover:text-brand-charcoal transition-all duration-500">
+                        EXPLORE THE MENU
+                    </button>
+</div>
+</div>
+</div>
+<!-- Vertical Grillwork Line -->
+<div class="absolute right-[10%] top-0 bottom-0 grillwork-v opacity-20 hidden md:block"></div>
+</header>
+<!-- Credibility Bar -->
+<section class="bg-surface-container-lowest py-16 border-y border-secondary/20">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center text-center md:text-left">
+<div class="mb-6 md:mb-0">
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">THE RECOGNITION</p>
+<h2 class="font-headline-md text-headline-md text-on-surface">DOTHAN'S PREMIER STEAKHOUSE</h2>
+</div>
+<div class="hidden md:block w-px h-12 bg-secondary/30"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">THE HERITAGE</p>
+<h2 class="font-headline-md text-headline-md text-on-surface">ESTABLISHED IN THE HEART OF ALABAMA</h2>
+</div>
+</div>
+</section>
+<!-- Offerings Section (Bento/Staggered) -->
+<section class="py-vertical-rhythm px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="offerings">
+<div class="text-center mb-24">
+<div class="gold-accent mx-auto mb-6"></div>
+<p class="font-label-caps text-label-caps text-secondary mb-4">OUR CRAFT</p>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface">THE DEFINITIVE EXPERIENCE</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-stretch">
+<!-- Cut 1: The Chophouse Cuts -->
+<div class="md:col-span-7 group relative overflow-hidden h-[600px] border border-outline-variant/30 hover:border-brand-gold transition-colors duration-500">
+<img alt="The Chophouse Cuts" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 brightness-50" data-alt="A stunning editorial close-up of a perfectly cooked, bone-in Tomahawk steak resting on a dark slate board. Subtle flakes of sea salt and a sprig of charred rosemary garnish the meat. The lighting is low and dramatic, emphasizing the glistening texture and rich color of the medium-rare center. The background is a blurred, dark kitchen environment with golden ambient light, creating a mood of high-end culinary excellence." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzm58g9FlNRkV97CEKJ7xVc-pDt8sJKlEpA2adesVf7Yf2Djv5ncCpCT4g3fNdqHXQr8Uqa0JrTz9cjzfWLvCLhr0Nmu5_SsNUiPYqz7B0POwjnuRmYU8zR01TIh-19tK87okflAV1iyraP6_xULfL0fx_5OtMeFEdAleq_QMH-jgc5vNMSODCsmZHAVo7IoJbxT7l4DhZUgVsnYMyO18u6hYwOjpGJIT-D7JhQ-JN8fSEJnuZLdzKLnM3PIDlWwkxvfnhnMp53DE"/>
+<div class="absolute inset-0 p-12 flex flex-col justify-end bg-gradient-to-t from-background via-transparent">
+<h3 class="font-headline-lg text-headline-lg text-on-surface mb-2">The Chophouse Cuts</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6 max-w-md">USDA Prime, dry-aged for 28 days, and finished over high-heat charcoal for an unmatched depth of flavor.</p>
+<a class="font-label-caps text-label-caps text-brand-gold flex items-center space-x-2 group-hover:translate-x-2 transition-transform" href="#">
+<span>VIEW STEAK PROGRAM</span>
+<span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Cut 2: The Raw Bar -->
+<div class="md:col-span-5 flex flex-col space-y-12">
+<div class="flex-1 group relative overflow-hidden border border-outline-variant/30 hover:border-brand-gold transition-colors duration-500">
+<img alt="The Raw Bar" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 brightness-50" data-alt="An elegant, architectural arrangement of fresh oysters on a bed of crushed ice, presented in a minimalist ceramic dish. Mignonette sauce and lemon wedges are precisely placed. The lighting is bright and clean, leaning into a refined, high-key editorial style that contrasts with the dark surroundings. The image evokes freshness, sophistication, and meticulous attention to presentation." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9xCb9FvIf-bH7DUOhuVlVZ9TPjfNCjEOoYM3lsZos8u6LniBCtyhgkVzJ9rzSz9rFAl8pUp8IMPtIMxJhkv0X54jhhb29-ju7ZZ35qXTItem2uHxk2b2pVALDVhQH2HG57u-6G7ksLJqUGOzCbN6NWP9hxkdF55Fw0E1pcq6AwLWUNPFz7sN_-0jDa0M2WFgXF5bqH4hNeE3qFzXENDij387TJevb1iycFYzHAPK2z8IdSF8t0pxwTwy9ERUleEdQSZstN4xT7mk"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/80 via-transparent">
+<h3 class="font-headline-md text-headline-md text-on-surface">The Raw Bar</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">Pristine seafood sourced daily.</p>
+</div>
+</div>
+<!-- Cut 3: Handcrafted Cocktails -->
+<div class="flex-1 group relative overflow-hidden border border-outline-variant/30 hover:border-brand-gold transition-colors duration-500">
+<img alt="Handcrafted Cocktails" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700 brightness-50" data-alt="A sophisticated, dark-mood photograph of a classic Old Fashioned cocktail served in a heavy crystal tumbler. A large clear ice cube and an expressed orange peel are visible. Wisps of smoke from a scorched cinnamon stick curl around the glass. The scene is set on a dark walnut bar surface with subtle golden highlights reflecting in the glass, capturing the essence of a high-end chophouse bar." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVnMk_iwtZZFRObVXZ9TIgIFn8sB-xCuHr53RTJrWo-huUgG9q4tWd-jaQ4byw3f3GoBJnQkWB2xN11N2qz7NXk3kBfbc_0rDSJodIc3xADfaIqLSi7Qe_i9_1uHvxfcSmcWjH3DuWv9RnkxZBsswvWw-cBeIgjgCObN50WXDWyRtAkApRIyscqA-BrxqrAtpEwySKv9L6davMaBdqq_3vdT11SIB4Tyi9mtG3cUkBKwUA1BcRlZ5fExcpcZQdPvX6CnF3cHWQQUA"/>
+<div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-background/80 via-transparent">
+<h3 class="font-headline-md text-headline-md text-on-surface">Handcrafted Cocktails</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mt-2">A library of rare spirits and classic revisions.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-low py-vertical-rhythm relative overflow-hidden" id="about">
+<div class="absolute top-0 left-[20%] w-px h-full grillwork-v opacity-10"></div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<div class="md:col-span-5 md:col-start-2">
+<div class="gold-accent mb-8"></div>
+<p class="font-label-caps text-label-caps text-secondary mb-6">A LEGACY OF FLAVOR</p>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8 leading-tight">
+                    FIRE, <br/> HOSPITALITY &amp; <br/> FINE DETAIL.
+                </h2>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+<p>At Nick's Chophouse, we believe that a great meal is an architectural feat. It requires a foundation of quality, a structure of tradition, and the finishing touch of modern refinement.</p>
+<p class="text-on-surface">A legacy of flavor, fire, and fine hospitality at 256 North Foster Street.</p>
+</div>
+<div class="mt-12 grid grid-cols-2 gap-8 border-t border-secondary/20 pt-12">
+<div>
+<span class="font-label-numeric text-[32px] text-secondary">28</span>
+<p class="font-label-caps text-label-caps mt-2">DAYS DRY-AGED</p>
+</div>
+<div>
+<span class="font-label-numeric text-[32px] text-secondary">1200°</span>
+<p class="font-label-caps text-label-caps mt-2">INFRARED GRILL</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-5 md:col-start-8 mt-12 md:mt-0 relative">
+<div class="aspect-[4/5] border border-secondary/30 p-4">
+<img alt="Dining Interior" class="w-full h-full object-cover grayscale brightness-75" data-alt="A wide-angle, high-end interior shot of an upscale restaurant dining room at night. The design features dark wood paneling, plush leather booths, and warm, low-level architectural lighting. Subtle golden glow from pendant lights creates a soft ambiance. The atmosphere is intimate and exclusive, showcasing the intersection of traditional chophouse warmth and modern minimalist design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdysRvHRCWc3V6xaEHSJQtCV_IuSrhRoQJCXi8msILwuY1QtlaNsl7UFXmEYPKzZ1wPQfunurOTNso-NaQ9F4EBluZhv3qpELu279zqusFIUEjlS2z-pWTSwVEuDuI16CSzS3yH4YXmry8YhHrt8T7-6mYOhybXiAhMKbkSWsIBDVBQ6cEeBoP95O-89aPPzNjL4qXnX7IPBZSAd1ZLVfKpmT0TtS5ZpscPkHaUmvRIxD1EQdMHpT36WMriylq9ynDegatctCjKu8"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-brand-gold text-brand-charcoal p-8 hidden lg:block">
+<p class="font-label-caps text-label-caps text-center">AUTHENTIC <br/> SOUTHERN <br/> LUXURY</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-vertical-rhythm" id="visit">
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4 mb-12 md:mb-0">
+<p class="font-label-caps text-label-caps text-secondary mb-4">THE DESTINATION</p>
+<h2 class="font-display-lg text-headline-lg-mobile md:text-headline-lg text-on-surface mb-8">VISIT US</h2>
+<address class="not-italic space-y-4 mb-12">
+<p class="font-headline-md text-headline-md text-on-surface">256 North Foster Street</p>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Dothan, Alabama 36303</p>
+<p class="font-body-lg text-body-lg text-secondary">(334) 699-2120</p>
+</address>
+<div class="space-y-4">
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-label-caps text-label-caps">TUE - THU</span>
+<span class="font-label-caps text-label-caps">5:00 PM - 9:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-label-caps text-label-caps">FRI - SAT</span>
+<span class="font-label-caps text-label-caps">5:00 PM - 10:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-outline-variant/30 pb-2">
+<span class="font-label-caps text-label-caps text-secondary">SUN - MON</span>
+<span class="font-label-caps text-label-caps text-secondary">CLOSED</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 relative">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border border-outline-variant/30" data-location="Dothan, Alabama" data-map-slot="" style="">
+<!-- Custom Map Overlay -->
+<div class="absolute inset-0 bg-background/20 pointer-events-none z-10"></div>
+<div class="absolute inset-0 flex items-center justify-center bg-surface-container-high/40 backdrop-blur-sm grayscale z-0">
+<span class="material-symbols-outlined text-brand-gold text-6xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-surface-container-highest py-vertical-rhythm">
+<div class="px-margin-mobile md:px-margin-desktop max-w-[800px] mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg text-on-surface mb-4 uppercase tracking-widest">Inquiries</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Host your next private event or simply share your thoughts with our culinary team.</p>
+</div>
+<div class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<form action="#" class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+<div class="space-y-12">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant absolute -top-6 left-0">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-brand-bone py-4 px-0 focus:ring-0 focus:border-brand-gold transition-colors text-on-surface placeholder:text-surface-bright" placeholder="Enter your name" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant absolute -top-6 left-0">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-brand-bone py-4 px-0 focus:ring-0 focus:border-brand-gold transition-colors text-on-surface" required="" type="email" value="carrie.rickman1@gmail.com"/>
+</div>
+</div>
+<div class="flex flex-col justify-between">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant absolute -top-6 left-0">Message</label>
+<textarea class="w-full bg-transparent border-0 border-b border-brand-bone py-4 px-0 focus:ring-0 focus:border-brand-gold transition-colors text-on-surface placeholder:text-surface-bright" placeholder="How can we assist you?" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-brand-gold text-brand-charcoal py-5 font-label-caps text-label-caps hover:bg-brand-bone transition-all duration-300 mt-12 md:mt-0" type="submit">
+                        SEND MESSAGE
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-secondary/20">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter py-vertical-rhythm px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="md:col-span-4">
+<h2 class="font-display-lg text-headline-md text-primary uppercase mb-6">NICK'S CHOPHOUSE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">An architectural approach to the classic American steakhouse. Quality without compromise.</p>
+</div>
+<div class="md:col-span-2 md:col-start-6">
+<p class="font-label-caps text-label-caps text-on-surface mb-6">EXPERIENCE</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-all" href="#">Menu</a></li>
+<li><a class="hover:text-secondary transition-all" href="#">Offerings</a></li>
+<li><a class="hover:text-secondary transition-all" href="#">Private Dining</a></li>
+<li><a class="hover:text-secondary transition-all" href="#">Careers</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<p class="font-label-caps text-label-caps text-on-surface mb-6">LEGAL</p>
+<ul class="space-y-4 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-secondary transition-all" href="#">Press</a></li>
+<li><a class="hover:text-secondary transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<p class="font-label-caps text-label-caps text-on-surface mb-6">SOCIAL</p>
+<div class="flex space-x-6">
+<a class="w-10 h-10 border border-secondary/30 flex items-center justify-center hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-secondary/30 flex items-center justify-center hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-12 mt-16 pt-8 border-t border-outline-variant/10">
+<p class="font-label-caps text-label-caps text-on-surface-variant text-center">© 2024 NICK'S CHOPHOUSE KITCHEN + BAR. ALL RIGHTS RESERVED.</p>
+</div>
+</div>
+</footer>
+<script>
+        // Simple scroll reveal
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section, header > div').forEach(el => {
+            el.classList.add('scroll-reveal');
+            observer.observe(el);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.getElementById('top-nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('h-16', 'bg-background/95');
+                nav.classList.remove('h-20', 'bg-background/80');
+            } else {
+                nav.classList.remove('h-16', 'bg-background/95');
+                nav.classList.add('h-20', 'bg-background/80');
+            }
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

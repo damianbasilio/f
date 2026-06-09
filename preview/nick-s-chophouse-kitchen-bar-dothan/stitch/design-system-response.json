@@ -1,0 +1,465 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "The Chophouse System",
+        "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in the \"Modern Chophouse\" aesthetic—a fusion of traditional steakhouse gravitas and contemporary editorial refinement. It targets a discerning culinary audience that values craftsmanship, heritage, and a sophisticated atmosphere.\n\nThe style is **Editorial Minimalism** with a focus on high-contrast typography and architectural precision. It avoids the clutter of generic restaurant templates, instead using purposeful whitespace and structured verticality to evoke the feel of a high-end physical menu or a boutique architectural journal. The emotional response should be one of quiet confidence, established luxury, and meticulous attention to detail.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** model on desktop and a **Fluid** model on mobile. \n\n- **The Columnar Grid:** Use a 12-column grid with wide 32px gutters. This allows for asymmetrical layouts that feel like a magazine spread rather than a standard website.\n- **Verticality:** Implement \"Grillwork Lines\"—thin (1px) vertical borders in Aged Gold or low-opacity Bone White to separate content sections or sidebar elements.\n- **Generous Margins:** Content should never feel crowded. Use the `vertical-rhythm` token (128px) to separate major sections, allowing the brand's confidence to shine through whitespace.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** rather than heavy shadows. \n\n- **Surface Levels:** The primary background is #1A1A1A. Elevated cards or containers should use a slightly lighter \"Off-Black\" (#242424).\n- **Subtle Texture:** A low-opacity grain overlay (film grain) is applied to the background to evoke a tactile, paper-like quality.\n- **Lines as Depth:** Depth is created by layering vertical and horizontal lines. A thin #C5A059 border around a high-resolution food image creates a \"framed\" effect, suggesting the image is inset into the page.\n- **Backdrop Blurs:** For overlays or navigation menus, use a 20px blur with a 70% opacity #1A1A1A fill to maintain focus while suggesting a layered environment.\n\n## Components\n\n- **Buttons:** Primary buttons are Solid Bone White with Deep Charcoal text, 0px radius. Secondary buttons are Ghost style with an Aged Gold 1px border and Aged Gold text. Hover states involve a subtle Burgundy background shift.\n- **Menu Items (Lists):** Title in Bodoni Moda (Left), Price in Bodoni Moda Italic (Right), with a thin dotted leader line or solid 0.5px line connecting them. Description sits below in Hanken Grotesk.\n- **Inputs:** Underlined only. A 1px Bone White bottom border that turns Aged Gold on focus. Labels use the `label-caps` style above the line.\n- **Cards:** No shadows. Use a 1px #242424 border. On hover, the border transitions to #C5A059. \n- **The \"Signature\" Divider:** A thin vertical gold line (2px width, 40px height) used to separate the main title from the subtitle or to mark the start of a new section.",
+        "theme": {
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1a1a1a",
+          "designMd": "---\nname: The Chophouse System\ncolors:\n  surface: '#131410'\n  surface-dim: '#131410'\n  surface-bright: '#3a3935'\n  surface-container-lowest: '#0e0e0b'\n  surface-container-low: '#1c1c18'\n  surface-container: '#20201c'\n  surface-container-high: '#2a2a26'\n  surface-container-highest: '#353531'\n  on-surface: '#e5e2dc'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e5e2dc'\n  inverse-on-surface: '#31312d'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c8c6c5'\n  primary: '#c8c6c5'\n  on-primary: '#313030'\n  primary-container: '#1a1a1a'\n  on-primary-container: '#848282'\n  inverse-primary: '#5f5e5e'\n  secondary: '#e9c176'\n  on-secondary: '#412d00'\n  secondary-container: '#604403'\n  on-secondary-container: '#dab36a'\n  tertiary: '#ffb3ad'\n  on-tertiary: '#5a1a19'\n  tertiary-container: '#3b0405'\n  on-tertiary-container: '#c16a64'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#ffdad7'\n  tertiary-fixed-dim: '#ffb3ad'\n  on-tertiary-fixed: '#3d0506'\n  on-tertiary-fixed-variant: '#77302d'\n  background: '#131410'\n  on-background: '#e5e2dc'\n  surface-variant: '#353531'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  label-numeric:\n    fontFamily: Bodoni Moda\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1'\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  vertical-rhythm: 128px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"Modern Chophouse\" aesthetic—a fusion of traditional steakhouse gravitas and contemporary editorial refinement. It targets a discerning culinary audience that values craftsmanship, heritage, and a sophisticated atmosphere.\n\nThe style is **Editorial Minimalism** with a focus on high-contrast typography and architectural precision. It avoids the clutter of generic restaurant templates, instead using purposeful whitespace and structured verticality to evoke the feel of a high-end physical menu or a boutique architectural journal. The emotional response should be one of quiet confidence, established luxury, and meticulous attention to detail.\n\n## Colors\n\nThe palette is defined by a high-contrast interplay between darkness and light, punctuated by metallic and organic accents.\n\n- **Deep Charcoal (#1A1A1A):** The foundation. Used for backgrounds to create an intimate, evening-focused atmosphere.\n- **Bone White (#F9F6F0):** The primary canvas for text and primary UI surfaces, offering a softer, more organic feel than pure white.\n- **Aged Gold (#C5A059):** Reserved for highlights, active states, and fine details. It represents the \"sear\" and the craft.\n- **Rich Burgundy (#4A0E0E):** A deep, blood-red accent used sparingly for calls to action or to denote premium \"Chef’s Choice\" selections.\n\nColor application should follow a 70/20/10 distribution, where charcoal dominates, bone white provides the legibility, and gold/burgundy act as precise focal points.\n\n## Typography\n\nThe typography system pairs the dramatic high-contrast of **Bodoni Moda** with the technical clarity of **Hanken Grotesk**.\n\n- **Headlines:** Use Bodoni Moda for all major headings. Its vertical stress and sharp serifs mirror the precision of a chef's blade.\n- **Body:** Hanken Grotesk provides a modern, spacious contrast, ensuring high legibility even in low-light environments.\n- **Accents:** Use `label-caps` for navigation and small headers to introduce a rhythmic, architectural feel. Use `label-numeric` for pricing to maintain an elegant, editorial menu feel.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** model on desktop and a **Fluid** model on mobile. \n\n- **The Columnar Grid:** Use a 12-column grid with wide 32px gutters. This allows for asymmetrical layouts that feel like a magazine spread rather than a standard website.\n- **Verticality:** Implement \"Grillwork Lines\"—thin (1px) vertical borders in Aged Gold or low-opacity Bone White to separate content sections or sidebar elements.\n- **Generous Margins:** Content should never feel crowded. Use the `vertical-rhythm` token (128px) to separate major sections, allowing the brand's confidence to shine through whitespace.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** rather than heavy shadows. \n\n- **Surface Levels:** The primary background is #1A1A1A. Elevated cards or containers should use a slightly lighter \"Off-Black\" (#242424).\n- **Subtle Texture:** A low-opacity grain overlay (film grain) is applied to the background to evoke a tactile, paper-like quality.\n- **Lines as Depth:** Depth is created by layering vertical and horizontal lines. A thin #C5A059 border around a high-resolution food image creates a \"framed\" effect, suggesting the image is inset into the page.\n- **Backdrop Blurs:** For overlays or navigation menus, use a 20px blur with a 70% opacity #1A1A1A fill to maintain focus while suggesting a layered environment.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. \n\nTo reflect the precision of a chophouse and the geometric nature of architectural grillwork, all buttons, input fields, and image containers must have 0px corner radii. This creates a bold, uncompromising silhouette that distinguishes the brand from the \"softness\" of generic web apps. Vertical and horizontal lines should meet at crisp 90-degree angles.\n\n## Components\n\n- **Buttons:** Primary buttons are Solid Bone White with Deep Charcoal text, 0px radius. Secondary buttons are Ghost style with an Aged Gold 1px border and Aged Gold text. Hover states involve a subtle Burgundy background shift.\n- **Menu Items (Lists):** Title in Bodoni Moda (Left), Price in Bodoni Moda Italic (Right), with a thin dotted leader line or solid 0.5px line connecting them. Description sits below in Hanken Grotesk.\n- **Inputs:** Underlined only. A 1px Bone White bottom border that turns Aged Gold on focus. Labels use the `label-caps` style above the line.\n- **Cards:** No shadows. Use a 1px #242424 border. On hover, the border transitions to #C5A059. \n- **The \"Signature\" Divider:** A thin vertical gold line (2px width, 40px height) used to separate the main title from the subtitle or to mark the start of a new section.",
+          "font": "BODONI_MODA",
+          "headlineFont": "BODONI_MODA",
+          "headlineFontFamily": "Bodoni Moda",
+          "labelFont": "HANKEN_GROTESK",
+          "labelFontFamily": "Hanken Grotesk",
+          "namedColors": {
+            "background": "#131410",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#31312d",
+            "inverse_primary": "#5f5e5e",
+            "inverse_surface": "#e5e2dc",
+            "on_background": "#e5e2dc",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#313030",
+            "on_primary_container": "#848282",
+            "on_primary_fixed": "#1c1b1b",
+            "on_primary_fixed_variant": "#474746",
+            "on_secondary": "#412d00",
+            "on_secondary_container": "#dab36a",
+            "on_secondary_fixed": "#261900",
+            "on_secondary_fixed_variant": "#5d4201",
+            "on_surface": "#e5e2dc",
+            "on_surface_variant": "#c4c7c7",
+            "on_tertiary": "#5a1a19",
+            "on_tertiary_container": "#c16a64",
+            "on_tertiary_fixed": "#3d0506",
+            "on_tertiary_fixed_variant": "#77302d",
+            "outline": "#8e9192",
+            "outline_variant": "#444748",
+            "primary": "#c8c6c5",
+            "primary_container": "#1a1a1a",
+            "primary_fixed": "#e5e2e1",
+            "primary_fixed_dim": "#c8c6c5",
+            "secondary": "#e9c176",
+            "secondary_container": "#604403",
+            "secondary_fixed": "#ffdea5",
+            "secondary_fixed_dim": "#e9c176",
+            "surface": "#131410",
+            "surface_bright": "#3a3935",
+            "surface_container": "#20201c",
+            "surface_container_high": "#2a2a26",
+            "surface_container_highest": "#353531",
+            "surface_container_low": "#1c1c18",
+            "surface_container_lowest": "#0e0e0b",
+            "surface_dim": "#131410",
+            "surface_tint": "#c8c6c5",
+            "surface_variant": "#353531",
+            "tertiary": "#ffb3ad",
+            "tertiary_container": "#3b0405",
+            "tertiary_fixed": "#ffdad7",
+            "tertiary_fixed_dim": "#ffb3ad"
+          },
+          "overrideNeutralColor": "#f9f6f0",
+          "overridePrimaryColor": "#1a1a1a",
+          "overrideSecondaryColor": "#c5a059",
+          "overrideTertiaryColor": "#4a0e0e",
+          "spacing": {
+            "container-max": "1200px",
+            "gutter": "32px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "unit": "8px",
+            "vertical-rhythm": "128px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.5"
+            },
+            "display-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "72px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "lineHeight": "1.1"
+            },
+            "headline-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "40px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "24px",
+              "fontWeight": "500",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.15em",
+              "lineHeight": "1"
+            },
+            "label-numeric": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1"
+            }
+          }
+        }
+      },
+      "name": "assets/843fd850cf18491683242f78c50ff3ea",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "The Chophouse System",
+              "styleGuidelines": "## Brand & Style\n\nThe design system is rooted in the \"Modern Chophouse\" aesthetic—a fusion of traditional steakhouse gravitas and contemporary editorial refinement. It targets a discerning culinary audience that values craftsmanship, heritage, and a sophisticated atmosphere.\n\nThe style is **Editorial Minimalism** with a focus on high-contrast typography and architectural precision. It avoids the clutter of generic restaurant templates, instead using purposeful whitespace and structured verticality to evoke the feel of a high-end physical menu or a boutique architectural journal. The emotional response should be one of quiet confidence, established luxury, and meticulous attention to detail.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** model on desktop and a **Fluid** model on mobile. \n\n- **The Columnar Grid:** Use a 12-column grid with wide 32px gutters. This allows for asymmetrical layouts that feel like a magazine spread rather than a standard website.\n- **Verticality:** Implement \"Grillwork Lines\"—thin (1px) vertical borders in Aged Gold or low-opacity Bone White to separate content sections or sidebar elements.\n- **Generous Margins:** Content should never feel crowded. Use the `vertical-rhythm` token (128px) to separate major sections, allowing the brand's confidence to shine through whitespace.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** rather than heavy shadows. \n\n- **Surface Levels:** The primary background is #1A1A1A. Elevated cards or containers should use a slightly lighter \"Off-Black\" (#242424).\n- **Subtle Texture:** A low-opacity grain overlay (film grain) is applied to the background to evoke a tactile, paper-like quality.\n- **Lines as Depth:** Depth is created by layering vertical and horizontal lines. A thin #C5A059 border around a high-resolution food image creates a \"framed\" effect, suggesting the image is inset into the page.\n- **Backdrop Blurs:** For overlays or navigation menus, use a 20px blur with a 70% opacity #1A1A1A fill to maintain focus while suggesting a layered environment.\n\n## Components\n\n- **Buttons:** Primary buttons are Solid Bone White with Deep Charcoal text, 0px radius. Secondary buttons are Ghost style with an Aged Gold 1px border and Aged Gold text. Hover states involve a subtle Burgundy background shift.\n- **Menu Items (Lists):** Title in Bodoni Moda (Left), Price in Bodoni Moda Italic (Right), with a thin dotted leader line or solid 0.5px line connecting them. Description sits below in Hanken Grotesk.\n- **Inputs:** Underlined only. A 1px Bone White bottom border that turns Aged Gold on focus. Labels use the `label-caps` style above the line.\n- **Cards:** No shadows. Use a 1px #242424 border. On hover, the border transitions to #C5A059. \n- **The \"Signature\" Divider:** A thin vertical gold line (2px width, 40px height) used to separate the main title from the subtitle or to mark the start of a new section.",
+              "theme": {
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1a1a1a",
+                "designMd": "---\nname: The Chophouse System\ncolors:\n  surface: '#131410'\n  surface-dim: '#131410'\n  surface-bright: '#3a3935'\n  surface-container-lowest: '#0e0e0b'\n  surface-container-low: '#1c1c18'\n  surface-container: '#20201c'\n  surface-container-high: '#2a2a26'\n  surface-container-highest: '#353531'\n  on-surface: '#e5e2dc'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e5e2dc'\n  inverse-on-surface: '#31312d'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c8c6c5'\n  primary: '#c8c6c5'\n  on-primary: '#313030'\n  primary-container: '#1a1a1a'\n  on-primary-container: '#848282'\n  inverse-primary: '#5f5e5e'\n  secondary: '#e9c176'\n  on-secondary: '#412d00'\n  secondary-container: '#604403'\n  on-secondary-container: '#dab36a'\n  tertiary: '#ffb3ad'\n  on-tertiary: '#5a1a19'\n  tertiary-container: '#3b0405'\n  on-tertiary-container: '#c16a64'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#ffdad7'\n  tertiary-fixed-dim: '#ffb3ad'\n  on-tertiary-fixed: '#3d0506'\n  on-tertiary-fixed-variant: '#77302d'\n  background: '#131410'\n  on-background: '#e5e2dc'\n  surface-variant: '#353531'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  label-numeric:\n    fontFamily: Bodoni Moda\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1'\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  vertical-rhythm: 128px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"Modern Chophouse\" aesthetic—a fusion of traditional steakhouse gravitas and contemporary editorial refinement. It targets a discerning culinary audience that values craftsmanship, heritage, and a sophisticated atmosphere.\n\nThe style is **Editorial Minimalism** with a focus on high-contrast typography and architectural precision. It avoids the clutter of generic restaurant templates, instead using purposeful whitespace and structured verticality to evoke the feel of a high-end physical menu or a boutique architectural journal. The emotional response should be one of quiet confidence, established luxury, and meticulous attention to detail.\n\n## Colors\n\nThe palette is defined by a high-contrast interplay between darkness and light, punctuated by metallic and organic accents.\n\n- **Deep Charcoal (#1A1A1A):** The foundation. Used for backgrounds to create an intimate, evening-focused atmosphere.\n- **Bone White (#F9F6F0):** The primary canvas for text and primary UI surfaces, offering a softer, more organic feel than pure white.\n- **Aged Gold (#C5A059):** Reserved for highlights, active states, and fine details. It represents the \"sear\" and the craft.\n- **Rich Burgundy (#4A0E0E):** A deep, blood-red accent used sparingly for calls to action or to denote premium \"Chef’s Choice\" selections.\n\nColor application should follow a 70/20/10 distribution, where charcoal dominates, bone white provides the legibility, and gold/burgundy act as precise focal points.\n\n## Typography\n\nThe typography system pairs the dramatic high-contrast of **Bodoni Moda** with the technical clarity of **Hanken Grotesk**.\n\n- **Headlines:** Use Bodoni Moda for all major headings. Its vertical stress and sharp serifs mirror the precision of a chef's blade.\n- **Body:** Hanken Grotesk provides a modern, spacious contrast, ensuring high legibility even in low-light environments.\n- **Accents:** Use `label-caps` for navigation and small headers to introduce a rhythmic, architectural feel. Use `label-numeric` for pricing to maintain an elegant, editorial menu feel.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** model on desktop and a **Fluid** model on mobile. \n\n- **The Columnar Grid:** Use a 12-column grid with wide 32px gutters. This allows for asymmetrical layouts that feel like a magazine spread rather than a standard website.\n- **Verticality:** Implement \"Grillwork Lines\"—thin (1px) vertical borders in Aged Gold or low-opacity Bone White to separate content sections or sidebar elements.\n- **Generous Margins:** Content should never feel crowded. Use the `vertical-rhythm` token (128px) to separate major sections, allowing the brand's confidence to shine through whitespace.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** rather than heavy shadows. \n\n- **Surface Levels:** The primary background is #1A1A1A. Elevated cards or containers should use a slightly lighter \"Off-Black\" (#242424).\n- **Subtle Texture:** A low-opacity grain overlay (film grain) is applied to the background to evoke a tactile, paper-like quality.\n- **Lines as Depth:** Depth is created by layering vertical and horizontal lines. A thin #C5A059 border around a high-resolution food image creates a \"framed\" effect, suggesting the image is inset into the page.\n- **Backdrop Blurs:** For overlays or navigation menus, use a 20px blur with a 70% opacity #1A1A1A fill to maintain focus while suggesting a layered environment.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. \n\nTo reflect the precision of a chophouse and the geometric nature of architectural grillwork, all buttons, input fields, and image containers must have 0px corner radii. This creates a bold, uncompromising silhouette that distinguishes the brand from the \"softness\" of generic web apps. Vertical and horizontal lines should meet at crisp 90-degree angles.\n\n## Components\n\n- **Buttons:** Primary buttons are Solid Bone White with Deep Charcoal text, 0px radius. Secondary buttons are Ghost style with an Aged Gold 1px border and Aged Gold text. Hover states involve a subtle Burgundy background shift.\n- **Menu Items (Lists):** Title in Bodoni Moda (Left), Price in Bodoni Moda Italic (Right), with a thin dotted leader line or solid 0.5px line connecting them. Description sits below in Hanken Grotesk.\n- **Inputs:** Underlined only. A 1px Bone White bottom border that turns Aged Gold on focus. Labels use the `label-caps` style above the line.\n- **Cards:** No shadows. Use a 1px #242424 border. On hover, the border transitions to #C5A059. \n- **The \"Signature\" Divider:** A thin vertical gold line (2px width, 40px height) used to separate the main title from the subtitle or to mark the start of a new section.",
+                "font": "BODONI_MODA",
+                "headlineFont": "BODONI_MODA",
+                "headlineFontFamily": "Bodoni Moda",
+                "labelFont": "HANKEN_GROTESK",
+                "labelFontFamily": "Hanken Grotesk",
+                "namedColors": {
+                  "background": "#131410",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#31312d",
+                  "inverse_primary": "#5f5e5e",
+                  "inverse_surface": "#e5e2dc",
+                  "on_background": "#e5e2dc",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#313030",
+                  "on_primary_container": "#848282",
+                  "on_primary_fixed": "#1c1b1b",
+                  "on_primary_fixed_variant": "#474746",
+                  "on_secondary": "#412d00",
+                  "on_secondary_container": "#dab36a",
+                  "on_secondary_fixed": "#261900",
+                  "on_secondary_fixed_variant": "#5d4201",
+                  "on_surface": "#e5e2dc",
+                  "on_surface_variant": "#c4c7c7",
+                  "on_tertiary": "#5a1a19",
+                  "on_tertiary_container": "#c16a64",
+                  "on_tertiary_fixed": "#3d0506",
+                  "on_tertiary_fixed_variant": "#77302d",
+                  "outline": "#8e9192",
+                  "outline_variant": "#444748",
+                  "primary": "#c8c6c5",
+                  "primary_container": "#1a1a1a",
+                  "primary_fixed": "#e5e2e1",
+                  "primary_fixed_dim": "#c8c6c5",
+                  "secondary": "#e9c176",
+                  "secondary_container": "#604403",
+                  "secondary_fixed": "#ffdea5",
+                  "secondary_fixed_dim": "#e9c176",
+                  "surface": "#131410",
+                  "surface_bright": "#3a3935",
+                  "surface_container": "#20201c",
+                  "surface_container_high": "#2a2a26",
+                  "surface_container_highest": "#353531",
+                  "surface_container_low": "#1c1c18",
+                  "surface_container_lowest": "#0e0e0b",
+                  "surface_dim": "#131410",
+                  "surface_tint": "#c8c6c5",
+                  "surface_variant": "#353531",
+                  "tertiary": "#ffb3ad",
+                  "tertiary_container": "#3b0405",
+                  "tertiary_fixed": "#ffdad7",
+                  "tertiary_fixed_dim": "#ffb3ad"
+                },
+                "overrideNeutralColor": "#f9f6f0",
+                "overridePrimaryColor": "#1a1a1a",
+                "overrideSecondaryColor": "#c5a059",
+                "overrideTertiaryColor": "#4a0e0e",
+                "spacing": {
+                  "container-max": "1200px",
+                  "gutter": "32px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "unit": "8px",
+                  "vertical-rhythm": "128px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "72px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "40px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "24px",
+                    "fontWeight": "500",
+                    "lineHeight": "1.3"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "1"
+                  },
+                  "label-numeric": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1"
+                  }
+                }
+              }
+            },
+            "name": "assets/843fd850cf18491683242f78c50ff3ea",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10330",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2VmNjBhYTY2YzA4ZDQ0ZDI5OWRiMzViNWMzNjU4Y2E4EgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM4NTY5NjE0NzE3MDg0MzU3MTAx&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/8569614717084357101/files/74a27b7f567a452992328cf257257aa9"
+          },
+          "id": "b1bf1435797b440ab808b38059f0cb30",
+          "name": "projects/8569614717084357101/screens/b1bf1435797b440ab808b38059f0cb30",
+          "prompt": "Build the complete DESKTOP landing page for Nick's Chophouse Kitchen + Bar. \n\nLayout Requirements:\n- Use an editorial, asymmetric layout with intentional density and generous whitespace.\n- Visual Motif: Use vertical 'gold' accent lines and subtle grain textures throughout.\n- Section 1: Header (TopNavBar) including (334) 699-2120.\n- Section 2: Hero. Large Serif Headline: \"NICK'S CHOPHOUSE\" with a subtitle \"KITCHEN + BAR: THE ART OF THE STEAK\". Use an editorial image composition.\n- Section 3: Credibility. Minimalist bar with \"DOTHAN'S PREMIER STEAKHOUSE\" and \"ESTABLISHED IN THE HEART OF ALABAMA\".\n- Section 4: Offerings. Use a staggered grid for \"The Chophouse Cuts\", \"The Raw Bar\", and \"Handcrafted Cocktails\".\n- Section 5: About. Narrative text: \"A legacy of flavor, fire, and fine hospitality at 256 North Foster Street.\"\n- Section 6: Visit. Include the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. No fake map images.\n- Section 7: Contact. Form with fields for Name, Email (carrie.rickman1@gmail.com), and Message. \n- Section 8: Footer.\n\nTechnical: Production-ready semantic HTML/CSS. Use the specific colors: Deep Charcoal (#1A1A1A), Aged Gold (#C5A059), and Bone White (#F9F6F0). No lorem ipsum. Ensure smooth scrolling and responsive design principles.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv3XhZVsC9N9X8bY5BzVbnGfXyx937iHopoOlTuUSVuqjsvQxHkig8RL51GxO40U8wjc3GQBLg5iEh5OYzBMfTaeqMlDSq_zveMtFPN7WHwv0lY2cARQV8WaNniIOie_m1hmfCqBCzG80U15O26qJQaBFNc-5_zPMa6J6cyqznP9UwkKyNA9-QttYd1R8LKxqJUhJWkJGa0JIPjEJH3LP6lK6ZnwQv53z-nhRxIaSHjn3SoOUM1nTCJemM",
+            "name": "projects/8569614717084357101/files/3d3d2d57fba1448fb596f10ebf2b0b84"
+          },
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1a1a",
+            "designMd": "---\nname: The Chophouse System\ncolors:\n  surface: '#131410'\n  surface-dim: '#131410'\n  surface-bright: '#3a3935'\n  surface-container-lowest: '#0e0e0b'\n  surface-container-low: '#1c1c18'\n  surface-container: '#20201c'\n  surface-container-high: '#2a2a26'\n  surface-container-highest: '#353531'\n  on-surface: '#e5e2dc'\n  on-surface-variant: '#c4c7c7'\n  inverse-surface: '#e5e2dc'\n  inverse-on-surface: '#31312d'\n  outline: '#8e9192'\n  outline-variant: '#444748'\n  surface-tint: '#c8c6c5'\n  primary: '#c8c6c5'\n  on-primary: '#313030'\n  primary-container: '#1a1a1a'\n  on-primary-container: '#848282'\n  inverse-primary: '#5f5e5e'\n  secondary: '#e9c176'\n  on-secondary: '#412d00'\n  secondary-container: '#604403'\n  on-secondary-container: '#dab36a'\n  tertiary: '#ffb3ad'\n  on-tertiary: '#5a1a19'\n  tertiary-container: '#3b0405'\n  on-tertiary-container: '#c16a64'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#ffdad7'\n  tertiary-fixed-dim: '#ffb3ad'\n  on-tertiary-fixed: '#3d0506'\n  on-tertiary-fixed-variant: '#77302d'\n  background: '#131410'\n  on-background: '#e5e2dc'\n  surface-variant: '#353531'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  label-numeric:\n    fontFamily: Bodoni Moda\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1'\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  vertical-rhythm: 128px\n---\n\n## Brand & Style\n\nThe design system is rooted in the \"Modern Chophouse\" aesthetic—a fusion of traditional steakhouse gravitas and contemporary editorial refinement. It targets a discerning culinary audience that values craftsmanship, heritage, and a sophisticated atmosphere.\n\nThe style is **Editorial Minimalism** with a focus on high-contrast typography and architectural precision. It avoids the clutter of generic restaurant templates, instead using purposeful whitespace and structured verticality to evoke the feel of a high-end physical menu or a boutique architectural journal. The emotional response should be one of quiet confidence, established luxury, and meticulous attention to detail.\n\n## Colors\n\nThe palette is defined by a high-contrast interplay between darkness and light, punctuated by metallic and organic accents.\n\n- **Deep Charcoal (#1A1A1A):** The foundation. Used for backgrounds to create an intimate, evening-focused atmosphere.\n- **Bone White (#F9F6F0):** The primary canvas for text and primary UI surfaces, offering a softer, more organic feel than pure white.\n- **Aged Gold (#C5A059):** Reserved for highlights, active states, and fine details. It represents the \"sear\" and the craft.\n- **Rich Burgundy (#4A0E0E):** A deep, blood-red accent used sparingly for calls to action or to denote premium \"Chef’s Choice\" selections.\n\nColor application should follow a 70/20/10 distribution, where charcoal dominates, bone white provides the legibility, and gold/burgundy act as precise focal points.\n\n## Typography\n\nThe typography system pairs the dramatic high-contrast of **Bodoni Moda** with the technical clarity of **Hanken Grotesk**.\n\n- **Headlines:** Use Bodoni Moda for all major headings. Its vertical stress and sharp serifs mirror the precision of a chef's blade.\n- **Body:** Hanken Grotesk provides a modern, spacious contrast, ensuring high legibility even in low-light environments.\n- **Accents:** Use `label-caps` for navigation and small headers to introduce a rhythmic, architectural feel. Use `label-numeric` for pricing to maintain an elegant, editorial menu feel.\n\n## Layout & Spacing\n\nThis design system employs a **Fixed Grid** model on desktop and a **Fluid** model on mobile. \n\n- **The Columnar Grid:** Use a 12-column grid with wide 32px gutters. This allows for asymmetrical layouts that feel like a magazine spread rather than a standard website.\n- **Verticality:** Implement \"Grillwork Lines\"—thin (1px) vertical borders in Aged Gold or low-opacity Bone White to separate content sections or sidebar elements.\n- **Generous Margins:** Content should never feel crowded. Use the `vertical-rhythm` token (128px) to separate major sections, allowing the brand's confidence to shine through whitespace.\n\n## Elevation & Depth\n\nDepth is conveyed through **Tonal Layers** rather than heavy shadows. \n\n- **Surface Levels:** The primary background is #1A1A1A. Elevated cards or containers should use a slightly lighter \"Off-Black\" (#242424).\n- **Subtle Texture:** A low-opacity grain overlay (film grain) is applied to the background to evoke a tactile, paper-like quality.\n- **Lines as Depth:** Depth is created by layering vertical and horizontal lines. A thin #C5A059 border around a high-resolution food image creates a \"framed\" effect, suggesting the image is inset into the page.\n- **Backdrop Blurs:** For overlays or navigation menus, use a 20px blur with a 70% opacity #1A1A1A fill to maintain focus while suggesting a layered environment.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0)**. \n\nTo reflect the precision of a chophouse and the geometric nature of architectural grillwork, all buttons, input fields, and image containers must have 0px corner radii. This creates a bold, uncompromising silhouette that distinguishes the brand from the \"softness\" of generic web apps. Vertical and horizontal lines should meet at crisp 90-degree angles.\n\n## Components\n\n- **Buttons:** Primary buttons are Solid Bone White with Deep Charcoal text, 0px radius. Secondary buttons are Ghost style with an Aged Gold 1px border and Aged Gold text. Hover states involve a subtle Burgundy background shift.\n- **Menu Items (Lists):** Title in Bodoni Moda (Left), Price in Bodoni Moda Italic (Right), with a thin dotted leader line or solid 0.5px line connecting them. Description sits below in Hanken Grotesk.\n- **Inputs:** Underlined only. A 1px Bone White bottom border that turns Aged Gold on focus. Labels use the `label-caps` style above the line.\n- **Cards:** No shadows. Use a 1px #242424 border. On hover, the border transitions to #C5A059. \n- **The \"Signature\" Divider:** A thin vertical gold line (2px width, 40px height) used to separate the main title from the subtitle or to mark the start of a new section.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "HANKEN_GROTESK",
+            "labelFontFamily": "Hanken Grotesk",
+            "namedColors": {
+              "background": "#131410",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#31312d",
+              "inverse_primary": "#5f5e5e",
+              "inverse_surface": "#e5e2dc",
+              "on_background": "#e5e2dc",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#313030",
+              "on_primary_container": "#848282",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474746",
+              "on_secondary": "#412d00",
+              "on_secondary_container": "#dab36a",
+              "on_secondary_fixed": "#261900",
+              "on_secondary_fixed_variant": "#5d4201",
+              "on_surface": "#e5e2dc",
+              "on_surface_variant": "#c4c7c7",
+              "on_tertiary": "#5a1a19",
+              "on_tertiary_container": "#c16a64",
+              "on_tertiary_fixed": "#3d0506",
+              "on_tertiary_fixed_variant": "#77302d",
+              "outline": "#8e9192",
+              "outline_variant": "#444748",
+              "primary": "#c8c6c5",
+              "primary_container": "#1a1a1a",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#e9c176",
+              "secondary_container": "#604403",
+              "secondary_fixed": "#ffdea5",
+              "secondary_fixed_dim": "#e9c176",
+              "surface": "#131410",
+              "surface_bright": "#3a3935",
+              "surface_container": "#20201c",
+              "surface_container_high": "#2a2a26",
+              "surface_container_highest": "#353531",
+              "surface_container_low": "#1c1c18",
+              "surface_container_lowest": "#0e0e0b",
+              "surface_dim": "#131410",
+              "surface_tint": "#c8c6c5",
+              "surface_variant": "#353531",
+              "tertiary": "#ffb3ad",
+              "tertiary_container": "#3b0405",
+              "tertiary_fixed": "#ffdad7",
+              "tertiary_fixed_dim": "#ffb3ad"
+            },
+            "overrideNeutralColor": "#f9f6f0",
+            "overridePrimaryColor": "#1a1a1a",
+            "overrideSecondaryColor": "#c5a059",
+            "overrideTertiaryColor": "#4a0e0e",
+            "spacing": {
+              "container-max": "1200px",
+              "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "unit": "8px",
+              "vertical-rhythm": "128px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "display-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "40px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "24px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1"
+              },
+              "label-numeric": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1"
+              }
+            }
+          },
+          "title": "Nick's Chophouse - Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, award-winning homepage for Nick's Chophouse Kitchen + Bar, moving away from generic templates to create a truly unique editorial identity.\n\n### Design Highlights:\n- **Visual Identity:** A sophisticated \"Modern Chophouse\" aesthetic using a palette of **Deep Charcoal, Aged Gold, and Bone White**. This creates a high-contrast, premium atmosphere that mirrors the upscale dining experience.\n- **Editorial Typography:** I utilized a bold, high-contrast serif for headlines to establish a strong typographic hierarchy, paired with a spacious sans-serif for legibility.\n- **Unique Visual Motifs:** Intentional vertical gold rules and an asymmetric layout provide a custom, designed-from-scratch feel. The section order and density are carefully balanced to guide the user through the brand story.\n- **Content-Ready Sections:**\n    - **Hero:** A powerful introduction emphasizing \"The Art of the Steak.\"\n    - **Offerings:** A staggered, asymmetric grid showcasing the Chophouse Cuts, Raw Bar, and Cocktails.\n    - **Visit & Map:** A dedicated section with the specific location details and the required empty map slot for a clean, professional finish.\n    - **Contact:** A refined, seamless form for inquiries and reservations.\n\nThe code is fully semantic, responsive, and ready for production use."
+  },
+  {
+    "suggestion": "Can we add a subtle parallax effect to the hero image?"
+  },
+  {
+    "suggestion": "Let's add a 'Private Dining' section with a photo gallery."
+  },
+  {
+    "suggestion": "Could you make the 'Reservations' button in the header more prominent?"
+  }
+]
