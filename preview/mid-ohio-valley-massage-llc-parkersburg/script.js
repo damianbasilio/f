@@ -1,20 +1,62 @@
-// Simple Intersection Observer for scroll animations
+// Form Validation Logic
+        const bookingForm = document.getElementById('booking-form');
+        const formSuccess = document.getElementById('form-success');
+
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simple visual validation feedback
+            let isValid = true;
+            const inputs = bookingForm.querySelectorAll('input[required], select[required]');
+            
+            inputs.forEach(input => {
+                const errorMsg = input.parentElement.querySelector('.error-msg');
+                if (!input.value) {
+                    isValid = false;
+                    if (errorMsg) errorMsg.classList.remove('hidden');
+                    input.classList.add('border-error');
+                } else {
+                    if (errorMsg) errorMsg.classList.add('hidden');
+                    input.classList.remove('border-error');
+                }
+            });
+
+            if (isValid) {
+                // Simulate submission
+                bookingForm.style.opacity = '0.5';
+                bookingForm.style.pointerEvents = 'none';
+                
+                setTimeout(() => {
+                    bookingForm.classList.add('hidden');
+                    formSuccess.classList.remove('hidden');
+                    formSuccess.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }, 1000);
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileToggle = document.getElementById('mobile-menu-toggle');
+        mobileToggle.addEventListener('click', () => {
+            alert('Navigation Menu would expand here on a real production site with a drawer or overlay.');
+        });
+
+        // Intersection Observer for Reveal effects
         const observerOptions = {
             threshold: 0.1
         };
 
-        const observer = new IntersectionObserver((entries) => {
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                     entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        // Add reveal classes to sections
         document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'ease-out');
+            section.classList.add('transition-all', 'duration-1000', 'ease-out', 'opacity-0', 'translate-y-10');
+            revealObserver.observe(section);
         });
 
 (() => {

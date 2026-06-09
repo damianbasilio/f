@@ -1,169 +1,163 @@
-I have designed and built a bespoke, premium homepage for **Mid-Ohio Valley Massage LLC**. 
+I have designed a bespoke, editorial-grade homepage for Mid-Ohio Valley Massage LLC. 
 
-The design, titled **"Serenity Edge,"** moves away from standard local-business templates to create an editorial, high-end experience that positions the brand as Parkersburg's premier wellness destination.
+### Design Rationale:
+*   **Visual Identity:** Instead of a generic spa aesthetic, I developed the "Mid-Ohio Valley Visual Identity." This features a palette of deep moss greens and muted sandstone, reflecting the local natural landscape of the valley.
+*   **Editorial Layout:** I moved away from standard business templates, opting for a high-contrast serif typeface (*Playfair Display*) and asymmetrical content blocks. This creates a rhythmic, premium feel that emphasizes intentionality and craftsmanship.
+*   **Memorable Motif:** The site uses generous whitespace and subtle, overlapping color blocks to guide the eye through the "menu of restoration."
+*   **Functional Polish:** The site includes a fixed navigation bar for easy booking, a credibility section to build trust, and a custom visit section with the requested technical map integration.
 
-### Key Design Decisions:
-*   **Visual Identity:** A sophisticated palette of **Deep Forest Green** and **Soft Sand** provides a grounding, modern aesthetic that feels more like a wellness retreat than a generic clinic.
-*   **Editorial Layout:** I used asymmetric grids and overlapping containers to create visual interest and a unique flow that guides the eye through the "Art of Restoration" narrative.
-*   **Typography:** A combination of elegant serifs for headlines and clean sans-serifs for body text ensures a balance of premium feel and perfect readability.
-*   **Memorable Motif:** Subtle organic textures and intentional whitespace are used throughout to reinforce the brand's commitment to calm and precision.
-*   **Production-Ready:** The site includes the required contact details, service sections, a functional contact form UI, and the specific map slot for future integration.
+### Key Sections Included:
+*   **Bespoke Hero:** "Intentional Serenity in the Heart of the Valley."
+*   **The Art of Touch:** Credibility section highlighting local expertise.
+*   **A Menu of Restoration:** Services presented in an editorial, non-grid layout.
+*   **Rooted in Parkersburg:** A local-first "About" section.
+*   **The Studio:** Visit details with the integrated map container.
+*   **Connect:** A refined contact form with built-in validation states.
 
-The result is a distinct digital presence that transforms the business from a local massage provider into a curated wellness brand.
+The site is fully responsive and production-ready. You can explore the desktop version on the canvas now.
 
 ---
 
 ---
-name: Serenity Edge
+name: Mid-Ohio Valley Visual Identity
 colors:
-  surface: '#fcf9f8'
-  surface-dim: '#dcd9d9'
-  surface-bright: '#fcf9f8'
+  surface: '#fcf9f6'
+  surface-dim: '#dcd9d7'
+  surface-bright: '#fcf9f6'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f6f3f2'
-  surface-container: '#f0eded'
-  surface-container-high: '#eae7e7'
-  surface-container-highest: '#e4e2e1'
-  on-surface: '#1b1c1c'
-  on-surface-variant: '#434843'
-  inverse-surface: '#303030'
-  inverse-on-surface: '#f3f0f0'
-  outline: '#737973'
-  outline-variant: '#c3c8c1'
-  surface-tint: '#4d6453'
-  primary: '#061b0e'
+  surface-container-low: '#f6f3f0'
+  surface-container: '#f0edea'
+  surface-container-high: '#eae8e5'
+  surface-container-highest: '#e5e2df'
+  on-surface: '#1c1c1a'
+  on-surface-variant: '#444842'
+  inverse-surface: '#31302f'
+  inverse-on-surface: '#f3f0ed'
+  outline: '#747872'
+  outline-variant: '#c4c8c0'
+  surface-tint: '#536252'
+  primary: '#182519'
   on-primary: '#ffffff'
-  primary-container: '#1b3022'
-  on-primary-container: '#819986'
-  inverse-primary: '#b4cdb8'
-  secondary: '#56642b'
+  primary-container: '#2d3b2d'
+  on-primary-container: '#95a593'
+  inverse-primary: '#bbcbb8'
+  secondary: '#635d56'
   on-secondary: '#ffffff'
-  secondary-container: '#d6e7a1'
-  on-secondary-container: '#5a682f'
-  tertiary: '#171814'
+  secondary-container: '#e7ded5'
+  on-secondary-container: '#68625b'
+  tertiary: '#3d1708'
   on-tertiary: '#ffffff'
-  tertiary-container: '#2c2c28'
-  on-tertiary-container: '#95938d'
+  tertiary-container: '#572c1c'
+  on-tertiary-container: '#d1927c'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#d0e9d4'
-  primary-fixed-dim: '#b4cdb8'
-  on-primary-fixed: '#0b2013'
-  on-primary-fixed-variant: '#364c3c'
-  secondary-fixed: '#d9eaa3'
-  secondary-fixed-dim: '#bdce89'
-  on-secondary-fixed: '#161f00'
-  on-secondary-fixed-variant: '#3e4c16'
-  tertiary-fixed: '#e5e2db'
-  tertiary-fixed-dim: '#c9c6c0'
-  on-tertiary-fixed: '#1c1c18'
-  on-tertiary-fixed-variant: '#474742'
-  background: '#fcf9f8'
-  on-background: '#1b1c1c'
-  surface-variant: '#e4e2e1'
+  primary-fixed: '#d7e7d3'
+  primary-fixed-dim: '#bbcbb8'
+  on-primary-fixed: '#111f12'
+  on-primary-fixed-variant: '#3c4a3c'
+  secondary-fixed: '#eae1d8'
+  secondary-fixed-dim: '#cec5bc'
+  on-secondary-fixed: '#1f1b16'
+  on-secondary-fixed-variant: '#4b463f'
+  tertiary-fixed: '#ffdbcf'
+  tertiary-fixed-dim: '#fab79f'
+  on-tertiary-fixed: '#341004'
+  on-tertiary-fixed-variant: '#693a29'
+  background: '#fcf9f6'
+  on-background: '#1c1c1a'
+  surface-variant: '#e5e2df'
 typography:
   display-lg:
     fontFamily: Playfair Display
-    fontSize: 72px
-    fontWeight: '700'
+    fontSize: 64px
+    fontWeight: '600'
     lineHeight: '1.1'
     letterSpacing: -0.02em
   display-lg-mobile:
     fontFamily: Playfair Display
-    fontSize: 48px
-    fontWeight: '700'
-    lineHeight: '1.1'
-  headline-lg:
-    fontFamily: Playfair Display
     fontSize: 40px
-    fontWeight: '600'
-    lineHeight: '1.2'
-  headline-lg-mobile:
-    fontFamily: Playfair Display
-    fontSize: 32px
     fontWeight: '600'
     lineHeight: '1.2'
   headline-md:
     fontFamily: Playfair Display
-    fontSize: 24px
+    fontSize: 32px
     fontWeight: '500'
     lineHeight: '1.3'
+  headline-sm:
+    fontFamily: Playfair Display
+    fontSize: 24px
+    fontWeight: '500'
+    lineHeight: '1.4'
   body-lg:
-    fontFamily: Montserrat
+    fontFamily: Manrope
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
     letterSpacing: 0.01em
   body-md:
-    fontFamily: Montserrat
+    fontFamily: Manrope
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
-  label-sm:
-    fontFamily: Montserrat
+  label-caps:
+    fontFamily: Manrope
     fontSize: 12px
-    fontWeight: '600'
-    lineHeight: '1'
+    fontWeight: '700'
+    lineHeight: '1.0'
     letterSpacing: 0.1em
+rounded:
+  sm: 0.125rem
+  DEFAULT: 0.25rem
+  md: 0.375rem
+  lg: 0.5rem
+  xl: 0.75rem
+  full: 9999px
 spacing:
   unit: 8px
-  container-max: 1280px
   gutter: 24px
+  margin-desktop: 80px
   margin-mobile: 20px
-  margin-desktop: 64px
-  overlap-offset: 48px
+  section-gap: 120px
 ---
 
 ## Brand & Style
-The design system for Mid-Ohio Valley Massage LLC focuses on "Serenity Edge"—a juxtaposition of traditional wellness and sharp, editorial modernism. The brand personality is authoritative yet restorative, targeting a premium clientele who values both the art of massage and a sophisticated digital experience.
+This design system establishes a premium, editorial visual identity that distances itself from generic wellness clichés. The brand personality is grounded, sophisticated, and deeply connected to the geography of the Mid-Ohio Valley. It avoids "spa" tropes—like stock photos of bamboo or pebbles—in favor of a refined, tactile aesthetic that feels more like a high-end lifestyle journal than a clinical service provider.
 
-The style is a blend of **Minimalism** and **High-Contrast Editorial**. It avoids clinical coldness by utilizing organic grain textures and asymmetrical layouts that mimic the natural flow of the human body. The emotional response should be one of immediate decompression followed by a sense of professional trust. Key visual markers include large-scale typography, intentional use of "negative space" as a luxury element, and staggered image containers that break the traditional grid.
+The design style is a blend of **Minimalism** and **Tactile Modernism**. It prioritizes generous whitespace, asymmetrical content composition, and subtle organic motifs that mimic the flow of the local landscape. The emotional response is one of "intentional serenity"—a calm that feels earned and curated rather than passive.
 
 ## Colors
-The palette is rooted in an earthy, high-end "Forest & Sand" concept. 
+The palette is a direct reflection of the Mid-Ohio Valley’s natural environment. The primary color, **Deep Moss**, provides a heavy, grounded anchor for text and key structural elements. The secondary color, **Muted Sandstone**, serves as the primary canvas, offering a warmer, more tactile alternative to pure white. 
 
-- **Deep Forest Green (#1B3022):** Used for primary backgrounds in high-impact sections and "Ink-on-Paper" style typography. It provides the grounding weight of the design system.
-- **Soft Sand (#F4F1EA):** The primary canvas color. It is warmer than pure white, reducing eye strain and evoking a sense of natural linens and calm environments.
-- **Sage (#8A9A5B):** An accent for active states, call-to-action highlights, and subtle borders. It bridges the gap between the dark forest and the light sand.
-- **Charcoal (#2D2D2D):** Reserved strictly for body text on light backgrounds and UI icons to ensure maximum legibility and a modern edge.
-
-A subtle, low-opacity **organic grain overlay** should be applied to all Deep Forest Green and Soft Sand surfaces to give the UI a tactile, paper-like quality.
+**Soft Clay** acts as a strategic accent, used sparingly to draw the eye to calls-to-action or subtle flourishes. The background strategy utilizes tonal layering with **Neutral Sandstone** to create depth without relying on heavy shadows. This color system ensures high legibility while maintaining a soft, low-fatigue viewing experience.
 
 ## Typography
-The typography strategy utilizes a classic serif/sans-serif pairing to establish an editorial hierarchy. 
+The typography follows an editorial hierarchy. **Playfair Display** is the high-contrast serif used for headlines, bringing a sense of prestige and historical weight. It should be typeset with tight tracking in large formats to emphasize its elegant letterforms.
 
-**Playfair Display** handles all "Hero" and "Story" moments. It should be used with tight leading and slight negative tracking in large formats to emphasize its elegant, high-contrast strokes. 
-
-**Montserrat** provides the functional counterpart. It is set with generous line height and slightly increased tracking for body copy to ensure a breezy, readable experience. All labels and overlines must be in uppercase Montserrat with wide letter spacing to act as "architectural" markers within the layout.
+**Manrope** provides a clean, modern counterpoint for body copy and UI labels. Its generous x-height and open apertures ensure maximum readability even at smaller sizes. For a truly editorial feel, body text should be given ample line height (1.6) to allow the "breathability" required of a serene interface. Small caps are used for labels and secondary navigation to provide a structural, organized feel.
 
 ## Layout & Spacing
-The layout follows a **Fixed Grid** model but breaks it intentionally to create the "Edge." 
+The layout model uses a **Fixed Grid** (12-column) with a twist: content blocks are intentionally offset to create an asymmetrical, organic flow. This mimics the "unstructured" beauty of nature while maintaining underlying mathematical rigor.
 
-- **The Asymmetric Overlap:** Key sections should feature imagery that overlaps its container by the `overlap-offset` (48px). For example, an image might sit centered in a column while its background color block is shifted 48px to the left and 48px up.
-- **Rhythm:** Use a baseline of 8px. Major sections should be separated by large vertical gaps (128px - 160px) to simulate the breathing room of a luxury magazine.
-- **Mobile Adaptation:** On mobile, the 12-column desktop grid collapses to a single column, but the "overlap" motif is maintained by using negative margins on decorative elements to ensure the design doesn't feel "boxed in."
+- **Desktop:** Large margins (80px+) keep content focused in the center, creating a "frame" that evokes a printed magazine.
+- **Asymmetry:** Pair a 6-column text block with a 4-column image on the opposite side, leaving 2 columns of "dead" space to create visual tension.
+- **Transitions:** Instead of straight horizontal lines, sections should transition using subtle, hand-drawn organic SVG paths or generous vertical padding (120px+) to signify a change in pace.
 
 ## Elevation & Depth
-This design system avoids traditional shadows in favor of **Tonal Layers** and **Asymmetry**. 
+This design system avoids aggressive shadows. Depth is achieved through **Tonal Layers**—placing Sandstone-colored surfaces over Neutral Sandstone backgrounds. 
 
-Depth is communicated through the stacking order of elements:
-1. **Base Layer:** Soft Sand with grain texture.
-2. **Graphic Layer:** Large, abstract Deep Forest Green shapes or Sage blocks.
-3. **Content Layer:** Images and text.
-
-Instead of shadows, use **1px solid strokes** in Sage or Deep Forest Green (at 20% opacity) to define boundaries where necessary. When a modal or pop-over is required, use a high-density backdrop blur (64px) with a Soft Sand tint (80% opacity) to maintain the "Serenity" vibe without adding heavy drop shadows.
+When elevation is necessary (e.g., for modal windows or primary cards), use **Ambient Shadows**. These are extra-diffused (32px+ blur) with very low opacity (5-8%) and a slight Deep Moss tint. This makes the element feel like it is resting softly on a surface rather than floating in digital space. Semi-transparent backdrop blurs (10px) can be used on navigation bars to maintain the "Glassmorphism" sense of layered paper.
 
 ## Shapes
-The design system utilizes **Sharp (0)** edges to maintain its "Edge" and editorial authority. 
+The shape language is "Soft," utilizing subtle corner radii (0.25rem to 0.75rem) to humanize the interface without making it appear juvenile or "bubbly." 
 
-The "organic" feel is provided by the textures and asymmetrical placement, not by rounded corners. All buttons, image frames, and input fields must have 0px border radius. This creates a high-fashion, architectural look that differentiates the product from the typical "rounded and soft" wellness industry tropes.
+Organic line work is a key motif—thin, single-stroke illustrations of local flora or topography lines should be used as background decorations. These lines should be semi-transparent Moss or Clay, weaving between content blocks to connect disparate sections of the page.
 
 ## Components
-- **Buttons:** Primary buttons are solid Deep Forest Green with Soft Sand text, sharp corners, and a 1px border. The hover state should invert the colors. Use a wider-than-average horizontal padding for a more luxurious feel.
-- **Input Fields:** Minimalist under-line style. Only the bottom border is visible in Soft Sand (Darker tint) or Sage. Labels sit above in uppercase Montserrat.
-- **Cards:** Cards do not use shadows. They are defined by a background color change (e.g., a Soft Sand card on a Deep Forest Green section) and a signature "offset" border that sits 8px behind the card itself.
-- **Chips:** Small, sharp-edged rectangles in Sage with Deep Forest Green text. Used for "Service Types" or "Duration" tags.
-- **Lists:** Traditional bullet points are replaced with thin horizontal Sage lines that span the width of the container, creating a "Table of Contents" feel.
-- **Image Containers:** Always include a subtle "inner glow" or grain overlay to ensure digital photography blends into the textured background.
+- **Buttons:** Primary buttons use a solid Soft Clay background with white text. Secondary buttons are outlined in Deep Moss with high letter-spacing. Use a "Soft" (0.25rem) radius for a tailored look.
+- **Cards:** Cards should be borderless, using a slightly lighter Sandstone tone than the background to define their shape. Padding should be generous (32px+).
+- **Input Fields:** Use "Ghost" styling—only a bottom border in Moss Green, with Playfair Display for labels to elevate the form-filling experience.
+- **Lists:** Replace standard bullets with the Soft Clay accent color in a small, stylized organic leaf or dot.
+- **Chips:** Used for "Treatment Types" or "Amenities," these should be pill-shaped with a Sandstone fill and Deep Moss text.
+- **Unique Component - "The Journal Block":** A full-bleed section with a large background image, a centered Playfair Display quote, and a single Soft Clay call-to-action, designed to interrupt the scrolling flow and encourage a moment of pause.

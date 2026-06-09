@@ -90,7 +90,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/MOV.Massage/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-09T16:35:38.020Z
+- **Scraped:** 2026-06-09T16:39:31.943Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/MOV.Massage/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
