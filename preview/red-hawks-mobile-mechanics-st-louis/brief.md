@@ -10,12 +10,12 @@
 
 - **Gate:** PASS
 - **Evidence:** Active Facebook page with content and 5 post caption(s) scraped
-- **Checked:** 2026-06-08 — Facebook profile scrape
+- **Checked:** 2026-06-09 — Facebook profile scrape
 
 ## Human approval
 
 - **Reviewed by:** auto (Facebook-only verified lead)
-- **Date:** 2026-06-08
+- **Date:** 2026-06-09
 - **Website bad enough to proceed:** yes — no owned website on Facebook profile
 - **Gate:** PASS
 
@@ -45,10 +45,10 @@ Email: redhawksmobilemechanics@gmail.com
 
 Recent posts from their Facebook page:
 1. 🎆🚗 **Happy 4th of July!** 🚛🎆 While you're out celebrating, remember we're open and ready to assist with all your car repair and 18-wheeler service needs! Got an emergency? We've got you covered! **Ask about our 4th of July special** and tell them Facebook sent you for an extra surprise! 😉 Stay safe and enjoy the fireworks! 🎇 #AutoRepair #Mechanic #CarService #CarMaintenance #FourthOfJuly #IndependenceDay #July4th #RedWhiteAndBlue #America #EmergencyService #CarTroubles #GoodAsNew #Repairs #AutoMaintenance #HappyFourthOfJuly #PartyInTheUSA #redhawksmobile #Call 📱 +1 (252) 214-2005
-2. Red Hawks Mobile Mechanics's Photo
-3. 24/7 Certified mobile full auto repair in the Metro East IL & MO call 📱 or text at +1 (252) 214-2005
-4. St. Louis, MO, United States, Missouri
-5. linktr.ee/Redhawksmobilemechanics
+2. 24/7 Certified mobile full auto repair in the Metro East IL & MO call 📱 or text at +1 (252) 214-2005
+3. St. Louis, MO, United States, Missouri
+4. linktr.ee/Redhawksmobilemechanics
+5. Red Hawks Mobile Mechanics's Photo
 - **Category:** Trades / towing / home services
 - **Vertical:** Trades / towing / home services
 
@@ -89,7 +89,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/redhawksmobilemechanic
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T17:27:15.214Z
+- **Scraped:** 2026-06-09T16:35:54.633Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/redhawksmobilemechanic. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

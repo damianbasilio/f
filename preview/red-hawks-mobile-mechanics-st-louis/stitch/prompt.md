@@ -43,17 +43,17 @@ Email: redhawksmobilemechanics@gmail.com
 
 Recent posts from their Facebook page:
 1. 🎆🚗 **Happy 4th of July!** 🚛🎆 While you're out celebrating, remember we're open and ready to assist with all your car repair and 18-wheeler service needs! Got an emergency? We've got you covered! **Ask about our 4th of July special** and tell them Facebook sent you for an extra surprise! 😉 Stay safe and enjoy the fireworks! 🎇 #AutoRepair #Mechanic #CarService #CarMaintenance #FourthOfJuly #IndependenceDay #July4th #RedWhiteAndBlue #America #EmergencyService #CarTroubles #GoodAsNew #Repairs #AutoMaintenance #HappyFourthOfJuly #PartyInTheUSA #redhawksmobile #Call 📱 +1 (252) 214-2005
-2. Red Hawks Mobile Mechanics's Photo
-3. 24/7 Certified mobile full auto repair in the Metro East IL & MO call 📱 or text at +1 (252) 214-2005
-4. St. Louis, MO, United States, Missouri
-5. linktr.ee/Redhawksmobilemechanics
+2. 24/7 Certified mobile full auto repair in the Metro East IL & MO call 📱 or text at +1 (252) 214-2005
+3. St. Louis, MO, United States, Missouri
+4. linktr.ee/Redhawksmobilemechanics
+5. Red Hawks Mobile Mechanics's Photo
 
 **Recent post captions (5 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "🎆🚗 **Happy 4th of July!** 🚛🎆 While you're out celebrating, remember we're open and ready to assist with all your car repair and 18-wheeler service needs! Got an emergency? We've got you covered! **Ask about our 4th of July special** and tell them Facebook sent you for an extra surprise! 😉 Stay safe and enjoy the fireworks! 🎇 #AutoRepair #Mechanic #CarService #CarMaintenance #FourthOfJuly #In…"
-2. "Red Hawks Mobile Mechanics's Photo"
-3. "24/7 Certified mobile full auto repair in the Metro East IL & MO call 📱 or text at +1 (252) 214-2005"
-4. "St. Louis, MO, United States, Missouri"
-5. "linktr.ee/Redhawksmobilemechanics"
+2. "24/7 Certified mobile full auto repair in the Metro East IL & MO call 📱 or text at +1 (252) 214-2005"
+3. "St. Louis, MO, United States, Missouri"
+4. "linktr.ee/Redhawksmobilemechanics"
+5. "Red Hawks Mobile Mechanics's Photo"
 
 **Preserve:** real business name, city, services, phone, and the warm local tone from their page.
 **Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).

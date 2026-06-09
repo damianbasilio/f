@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>RED HAWK MOBILE MECHANICS | Precision Engineered Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&amp;family=Playfair+Display:wght@700;900&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .velocity-slant {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .velocity-slant-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        .hawk-watermark {
+            mask-image: linear-gradient(to bottom, rgba(0,0,0,1), rgba(0,0,0,0));
+            pointer-events: none;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-ticker {
+            display: flex;
+            width: fit-content;
+            animation: ticker 30s linear infinite;
+        }
+        .hazard-stripe {
+            background: repeating-linear-gradient(
+                45deg,
+                #bb152c,
+                #bb152c 10px,
+                #051425 10px,
+                #051425 20px
+            );
+        }
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #051425;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #bb152c;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c8c6c5",
+                        "surface-tint": "#ffb3b1",
+                        "tertiary-container": "#8d9195",
+                        "tertiary-fixed-dim": "#c3c7cb",
+                        "on-primary-fixed": "#410007",
+                        "primary-fixed": "#ffdad8",
+                        "on-surface": "#d5e3fc",
+                        "primary": "#ffb3b1",
+                        "surface-container-low": "#0d1c2e",
+                        "surface-bright": "#2c3a4d",
+                        "on-primary-fixed-variant": "#92001c",
+                        "tertiary-fixed": "#dfe3e7",
+                        "error-container": "#93000a",
+                        "on-primary-container": "#5b000e",
+                        "on-primary": "#680011",
+                        "secondary-fixed": "#e5e2e1",
+                        "on-error": "#690005",
+                        "outline": "#ab8987",
+                        "error": "#ffb4ab",
+                        "surface-container-lowest": "#010f20",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "tertiary": "#c3c7cb",
+                        "on-secondary-fixed-variant": "#474646",
+                        "primary-fixed-dim": "#ffb3b1",
+                        "surface-container-highest": "#283648",
+                        "on-tertiary-fixed-variant": "#43474b",
+                        "outline-variant": "#5b403f",
+                        "surface-variant": "#283648",
+                        "surface-container-high": "#1d2b3d",
+                        "inverse-on-surface": "#233144",
+                        "secondary": "#c8c6c5",
+                        "on-surface-variant": "#e4bebc",
+                        "on-tertiary-container": "#252a2d",
+                        "inverse-surface": "#d5e3fc",
+                        "surface-dim": "#051425",
+                        "on-tertiary-fixed": "#171c1f",
+                        "background": "#051425",
+                        "inverse-primary": "#bb152c",
+                        "on-tertiary": "#2c3134",
+                        "on-secondary-container": "#bab8b7",
+                        "on-secondary": "#313030",
+                        "on-background": "#d5e3fc",
+                        "on-error-container": "#ffdad6",
+                        "surface": "#051425",
+                        "secondary-container": "#4a4949",
+                        "primary-container": "#ff535b",
+                        "surface-container": "#122032"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "xl": "80px",
+                        "md": "24px",
+                        "sm": "12px",
+                        "xs": "4px",
+                        "margin-desktop": "64px",
+                        "lg": "48px",
+                        "gutter": "24px",
+                        "base": "8px"
+                    },
+                    "fontFamily": {
+                        "label-sm": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "body-lg": ["Montserrat"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "label-bold": ["Montserrat"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-sm": ["12px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "label-bold": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "900"}]
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md dark:bg-surface/95 border-b border-outline-variant/20">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-full mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary">RED HAWK</div>
+<div class="hidden md:flex gap-lg">
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors" href="#fleet">Fleet</a>
+<a class="font-label-bold text-label-bold uppercase text-on-surface-variant hover:text-primary transition-colors" href="#contact">Contact</a>
+</div>
+<button class="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-6 py-2 transition-all duration-300 hover:bg-primary hover:text-on-primary active:scale-95">Call Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/80 to-transparent z-10"></div>
+<img class="w-full h-full object-cover grayscale brightness-50" data-alt="A cinematic, low-angle shot of a high-performance engine being worked on in a dark, atmospheric garage. The scene is illuminated by sharp Phoenix Red rim lighting, highlighting the precision of the mechanical components. The aesthetic is high-contrast and editorial, with deep blacks and vibrant red accents reflecting the Red Hawk brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEdQuoh_7fq2Z-y7zAKUA07qsAVeYww2dkFFi_r9tALT6tv9JACBWB1B25bR45BStVimgqew0ci46nd8IKKNPNMFl7aXSd5asH1QbSyd8syu_4JrUsR8y5cqiA2WsJ7nhW3NdDt-0tGsVJtuTPY8ub3mYH7fzFJuzf1HdCzagyB2LlnjPrUw9jsmyNuRm9F7w-JwBRQFMmJkskgXiycY1IKNbzMn21ik49G0aHOCI3-WHfws6EsZAjXqncQuJOezDkSA7CIQcy1Bmp"/>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-20">
+<div class="max-w-4xl transform -rotate-2 origin-left">
+<span class="inline-block bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-4 py-1 mb-6">Mobile Excellence</span>
+<h1 class="font-display-lg text-display-lg leading-tight mb-8">
+                    MECHANICAL <br/>
+<span class="text-primary italic">PRECISION.</span><br/>
+                    WHEREVER YOU ARE.
+                </h1>
+<div class="flex flex-wrap gap-md">
+<a class="bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase px-10 py-4 transition-all hover:bg-primary hover:text-on-primary" href="#contact">Book Your Pit Crew</a>
+<div class="flex items-center gap-base">
+<span class="material-symbols-outlined text-primary text-4xl">phone_in_talk</span>
+<div>
+<p class="font-label-bold text-label-bold text-on-surface-variant">EMERGENCY LINE</p>
+<p class="font-headline-md text-headline-md text-primary leading-none">(252) 214-2005</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Velocity Motif -->
+<div class="absolute bottom-0 right-0 w-1/2 h-full velocity-slant bg-primary-container/5 -z-0"></div>
+</section>
+<!-- Ticker Banner -->
+<div class="bg-surface-container-high py-4 border-y border-outline-variant/20 overflow-hidden whitespace-nowrap">
+<div class="animate-ticker">
+<!-- Repeated for seamless loop -->
+<div class="flex gap-xl px-xl items-center">
+<span class="font-label-bold text-label-bold text-primary uppercase">24/7 Roadside Assistance</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-bold text-label-bold text-primary uppercase">St. Louis Local Expert</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-bold text-label-bold text-primary uppercase">ASE Certified Technicians</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-bold text-label-bold text-primary uppercase">Fleet Maintenance Specialists</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+</div>
+<div class="flex gap-xl px-xl items-center">
+<span class="font-label-bold text-label-bold text-primary uppercase">24/7 Roadside Assistance</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-bold text-label-bold text-primary uppercase">St. Louis Local Expert</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-bold text-label-bold text-primary uppercase">ASE Certified Technicians</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+<span class="font-label-bold text-label-bold text-primary uppercase">Fleet Maintenance Specialists</span>
+<span class="w-2 h-2 bg-primary rounded-full"></span>
+</div>
+</div>
+</div>
+<!-- Services Section (Bento/Dense Grid) -->
+<section class="py-xl bg-background" id="services">
+<div class="container mx-auto px-margin-desktop">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<p class="font-label-bold text-label-bold text-primary uppercase mb-2">Capabilities</p>
+<h2 class="font-headline-lg text-headline-lg">ELITE MOBILE CLINIC</h2>
+</div>
+<p class="max-w-xs text-on-surface-variant font-body-md">Precision diagnostics and repair executed at your driveway or job site.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-0 border-t border-l border-outline-variant/30">
+<!-- Engine -->
+<div class="group relative p-lg border-r border-b border-outline-variant/30 bg-surface-container-lowest transition-all hover:bg-primary-container/10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="settings_input_component">settings_input_component</span>
+<span class="font-label-bold text-label-sm text-outline">01</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Engine Care</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">Full top-end diagnostics, timing adjustments, and component replacement.</p>
+<div class="w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Brakes -->
+<div class="group relative p-lg border-r border-b border-outline-variant/30 bg-surface-container-lowest transition-all hover:bg-primary-container/10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="tire_repair">tire_repair</span>
+<span class="font-label-bold text-label-sm text-outline">02</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Brake Systems</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">Precision rotor resurfacing, pad replacement, and hydraulic line service.</p>
+<div class="w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Diagnostics -->
+<div class="group relative p-lg border-r border-b border-outline-variant/30 bg-surface-container-lowest transition-all hover:bg-primary-container/10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="computer">computer</span>
+<span class="font-label-bold text-label-sm text-outline">03</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Diagnostics</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">High-fidelity scanning and sensor recalibration for complex modern vehicles.</p>
+<div class="w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Fleet -->
+<div class="group relative p-lg border-r border-b border-outline-variant/30 bg-surface-container-lowest transition-all hover:bg-primary-container/10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="local_shipping">local_shipping</span>
+<span class="font-label-bold text-label-sm text-outline">04</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Fleet Service</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">Priority maintenance for commercial units to minimize operational downtime.</p>
+<div class="w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Electrical -->
+<div class="group relative p-lg border-r border-b border-outline-variant/30 bg-surface-container-lowest transition-all hover:bg-primary-container/10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="bolt">bolt</span>
+<span class="font-label-bold text-label-sm text-outline">05</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Electrical</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">Wire harness repair, alternator swaps, and battery management systems.</p>
+<div class="w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+<!-- Cooling -->
+<div class="group relative p-lg border-r border-b border-outline-variant/30 bg-surface-container-lowest transition-all hover:bg-primary-container/10">
+<div class="flex justify-between items-start mb-12">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="ac_unit">ac_unit</span>
+<span class="font-label-bold text-label-sm text-outline">06</span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 uppercase">Cooling/AC</h3>
+<p class="text-on-surface-variant mb-6 font-body-md">Radiator service, coolant flushes, and full HVAC system restoration.</p>
+<div class="w-0 h-1 bg-primary group-hover:w-full transition-all duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Indicator -->
+<div class="w-full h-8 hazard-stripe opacity-30"></div>
+<!-- About Section -->
+<section class="relative py-xl bg-surface-container-lowest overflow-hidden" id="about">
+<!-- Hawk Watermark -->
+<div class="absolute inset-0 hawk-watermark flex justify-center items-center opacity-5 select-none pointer-events-none">
+<span class="material-symbols-outlined text-[600px]" style="font-variation-settings: 'FILL' 1;">cable</span>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl items-center">
+<div>
+<h2 class="font-display-lg text-display-lg mb-8 tracking-tighter">THE MOBILE <br/><span class="text-primary italic">COMMAND CENTER.</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-lg leading-relaxed">
+                        Red Hawk isn't just a repair service—it's a precision response team. We've redesigned the mechanical experience around the philosophy of high-performance engineering. No waiting rooms. No towing fees. Just professional, factory-grade service delivered to your exact coordinates.
+                    </p>
+<div class="grid grid-cols-2 gap-md">
+<div>
+<p class="text-primary font-display-lg text-headline-lg mb-0">15+</p>
+<p class="font-label-bold text-label-bold uppercase text-on-surface">Years Expertise</p>
+</div>
+<div>
+<p class="text-primary font-display-lg text-headline-lg mb-0">60m</p>
+<p class="font-label-bold text-label-bold uppercase text-on-surface">Avg Response</p>
+</div>
+</div>
+</div>
+<div class="relative transform rotate-3">
+<div class="absolute inset-0 bg-primary-container -z-10 translate-x-4 translate-y-4 opacity-20"></div>
+<img class="w-full aspect-[4/5] object-cover border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-700" data-alt="A professional master technician in a sleek, dark uniform branded with the Red Hawk logo, standing next to a fully equipped, modern mobile service van at dusk. The lighting is dramatic and moody, focusing on the high-end tools and the technician's expert demeanor. The color palette emphasizes stealth black and sharp red highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvHr-r-qXj4kkzySbwIcD0bY_WZck6Llpc_u10_rsOPaR05TWv7sJVIRcfoHKxT7UX3ytzkMSIH4go9dcz70igvqJM_b4Xzb9h0jdEoaxx1FvZ2aCiDHsf37qbwUZ63Dd0oY0t_nY0NUuXBA5iFZco3wtHbcY_1_Hq0Kkqd7_wzLAVyWKj0U2Sxb9R_aBKZVyzMwksSIhgzLJCVBe9wWMSsAREuPX8jiR86bY1Y-Akat6IvkNmujcYdsg74jgO5Zc7fDAN7OMPIW37"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact / Booking Section -->
+<section class="py-xl bg-background relative" id="contact">
+<div class="container mx-auto px-margin-desktop">
+<div class="max-w-5xl mx-auto bg-surface-container-low border border-outline-variant/20 p-lg md:p-xl shadow-2xl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-xl">
+<div>
+<h2 class="font-display-lg text-headline-lg mb-4">GET BACK ON THE ROAD</h2>
+<p class="text-on-surface-variant font-body-md mb-lg">Fill out the field report below. Our lead technician will dispatch a response unit immediately.</p>
+<div class="space-y-md">
+<div class="flex items-center gap-md p-md bg-background/50 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-label-bold text-label-sm text-outline uppercase">Operational Hub</p>
+<p class="font-body-md text-on-surface">St. Louis Metropolitan Area</p>
+</div>
+</div>
+<div class="flex items-center gap-md p-md bg-background/50 border-l-4 border-primary">
+<span class="material-symbols-outlined text-primary">call</span>
+<div>
+<p class="font-label-bold text-label-sm text-outline uppercase">Rapid Dispatch</p>
+<p class="font-body-md text-on-surface">(252) 214-2005</p>
+</div>
+</div>
+</div>
+</div>
+<form class="space-y-gutter" id="dispatchForm">
+<div class="relative group">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/50 px-4 py-4 focus:outline-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all placeholder:text-outline" id="name" placeholder="Full Name" required="" type="text"/>
+</div>
+<div class="relative group">
+<input class="w-full bg-surface-container-lowest border border-outline-variant/50 px-4 py-4 focus:outline-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all placeholder:text-outline" id="phone" placeholder="Phone Number" required="" type="tel"/>
+</div>
+<div class="relative group">
+<select class="w-full bg-surface-container-lowest border border-outline-variant/50 px-4 py-4 focus:outline-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all text-on-surface appearance-none" id="service" required="">
+<option disabled="" selected="" value="">Select Service Type</option>
+<option value="engine">Engine Diagnostics</option>
+<option value="brakes">Brake System</option>
+<option value="electrical">Electrical Repair</option>
+<option value="fleet">Fleet Maintenance</option>
+<option value="emergency">Emergency Roadside</option>
+</select>
+</div>
+<div class="relative group">
+<textarea class="w-full bg-surface-container-lowest border border-outline-variant/50 px-4 py-4 focus:outline-none focus:ring-0 focus:border-b-2 focus:border-primary transition-all placeholder:text-outline" id="message" placeholder="Brief Issue Description" required="" rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container font-label-bold text-label-bold uppercase py-5 transition-all hover:bg-primary hover:text-on-primary active:scale-[0.98]" type="submit">
+                            Dispatch Technician
+                        </button>
+</form>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-lg px-margin-desktop py-xl">
+<div class="space-y-md">
+<div class="font-display-lg text-headline-md text-primary">RED HAWK</div>
+<p class="text-on-surface-variant max-w-xs font-body-md opacity-70">Mobilizing precision automotive engineering. We bring the garage to you.</p>
+</div>
+<div class="flex flex-col gap-sm">
+<p class="font-label-bold text-label-bold text-primary uppercase mb-base">QUICK LINKS</p>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">(252) 214-2005</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Terms of Service</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Careers</a>
+</div>
+<div class="space-y-md">
+<p class="font-label-bold text-label-bold text-primary uppercase mb-base">NEWSLETTER</p>
+<div class="flex border-b border-outline-variant">
+<input class="bg-transparent border-none focus:ring-0 py-2 w-full text-on-surface" placeholder="Email Address" type="email"/>
+<button class="material-symbols-outlined text-primary">arrow_forward</button>
+</div>
+<div class="flex gap-md mt-4">
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">share</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined text-on-surface-variant cursor-pointer hover:text-primary transition-colors">construction</span>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/5 text-center">
+<p class="font-body-md text-label-sm text-on-surface-variant opacity-50 uppercase tracking-widest">
+                © 2024 RED HAWK MOBILE MECHANICS. PRECISION ENGINEERED SERVICE.
+            </p>
+</div>
+</footer>
+<script>
+        // Smooth scroll for nav links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Form Submission Logic
+        const form = document.getElementById('dispatchForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            
+            // Interaction: Visual feedback
+            btn.innerText = 'TRANSMITTING...';
+            btn.classList.add('opacity-80', 'cursor-not-allowed');
+            
+            setTimeout(() => {
+                btn.innerText = 'DISPATCH CONFIRMED';
+                btn.style.backgroundColor = '#4ade80';
+                btn.style.color = '#051425';
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.style.backgroundColor = '';
+                    btn.style.color = '';
+                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Simple Parallax Effect for Hawk Watermark
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const watermark = document.querySelector('.hawk-watermark span');
+            if(watermark) {
+                watermark.style.transform = `translateY(${scrolled * 0.1}px) rotate(${scrolled * 0.02}deg)`;
+            }
+        });
+    </script>
+</body></html>
