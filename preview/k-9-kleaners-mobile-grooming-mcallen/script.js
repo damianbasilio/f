@@ -1,40 +1,20 @@
-// Mobile Menu Toggle
-        const menuToggle = document.getElementById('menu-toggle');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        function toggleMenu() {
-            mobileMenu.classList.toggle('hidden-menu');
-            document.body.classList.toggle('overflow-hidden');
-        }
-
-        menuToggle.addEventListener('click', toggleMenu);
-
-        // Simple Form Validation & Success UI
-        const bookingForm = document.getElementById('booking-form');
-        bookingForm.addEventListener('submit', (e) => {
+// Form Submission Interaction
+        document.getElementById('booking-form').addEventListener('submit', function(e) {
             e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.innerText;
+            const form = this;
+            const successMsg = document.getElementById('form-success');
             
-            btn.innerText = 'Processing...';
-            btn.disabled = true;
-
+            // Simple visual feedback
+            form.style.opacity = '0.5';
+            form.style.pointerEvents = 'none';
+            
             setTimeout(() => {
-                btn.classList.remove('bg-primary');
-                btn.classList.add('bg-secondary');
-                btn.innerText = 'Request Sent!';
-                bookingForm.reset();
-                
-                setTimeout(() => {
-                    btn.classList.add('bg-primary');
-                    btn.classList.remove('bg-secondary');
-                    btn.innerText = originalText;
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
+                form.classList.add('hidden');
+                successMsg.classList.remove('hidden');
+            }, 800);
         });
 
-        // Intersection Observer for fade-in animations
+        // Smooth reveal on scroll for service cards
         const observerOptions = {
             threshold: 0.1
         };
@@ -42,15 +22,15 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('translate-y-10');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
-            observer.observe(section);
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
         });
 
 (() => {

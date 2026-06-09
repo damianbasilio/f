@@ -2,7 +2,7 @@
 
 **Result:** PASS
 
-**Craft warnings:** 2 (see craft section)
+**Craft warnings:** 1 (see craft section)
 
 ## Skills run
 
@@ -18,6 +18,7 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
+- craft: fixed 1 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -28,10 +29,10 @@
 - OK: No AI purple gradient
 - OK: No fake ratings/hype
 - OK: No obvious buzzwords
-- WARN: Repeated 3-column grid pattern (3 hits) — likely template layout
+- OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 0
+- OK: Eyebrow count: 1
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -43,9 +44,8 @@
 
 ### taste
 
-- Eyebrow discipline: 0 uppercase-tracked labels
+- Eyebrow discipline: 1 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
-- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 

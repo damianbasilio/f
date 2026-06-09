@@ -1,178 +1,160 @@
-I have designed a bespoke, editorial-grade landing page for **K-9 Kleaners Mobile Grooming**. 
+I've designed a bespoke, editorial-grade homepage for **K-9 Kleaners Mobile Grooming**. 
 
-### Design Highlights:
-*   **Unique Visual Identity:** Moving away from generic local business templates, I've established a "Modern Groomery" aesthetic. This uses a sophisticated **Midnight Navy** and **Crisp Teal** palette paired with a high-contrast Serif typeface (**Playfair Display**) for an upscale, professional feel.
-*   **Editorial Layout:** The page features an asymmetric hero section and a "Treatment Menu" approach to services, elevating the grooming experience to a luxury service.
-*   **Personal Connection:** The "Meet Adrian" section highlights the local, expert touch that sets this mobile business apart from larger chains.
-*   **Conversion Focused:** A persistent navigation bar with a direct call-to-action (phone) and a clean, validated booking form ensures a seamless user journey from discovery to reservation.
-*   **Production Ready:** The design includes a dedicated `#visit` section with the requested interactive map container, a fully responsive mobile navigation, and semantic HTML structure.
+### Design Rationale:
+*   **The Modern Groomer Identity**: I moved away from common "paw-print" cliches to create a visual language that feels like a premium wellness brand. The deep forest green (#1B3022) and soft cream palette establish immediate trust and sophistication.
+*   **Editorial Layout**: The asymmetrical hero and services sections use intentional whitespace and vertical line motifs to guide the eye and create a memorable, high-fashion aesthetic for a local business.
+*   **Hyper-Local Credibility**: The content emphasizes Adrian's McAllen roots and personalized care, positioning the mobile service as a bespoke "spa ritual" rather than just a chore.
+*   **Functional Polish**: The site includes a fully responsive navigation, smooth scrolling, a dedicated "map slot" for future integration, and a production-ready contact form.
 
-The site is now live on your canvas for review. How does this new visual direction feel for the brand?
-
----
+The design is now live on the canvas for your review. How does this new direction feel for the brand?
 
 ---
-name: Modern Groomery
+
+---
+name: The Modern Groomer
 colors:
-  surface: '#f9f9ff'
-  surface-dim: '#cfdaf1'
-  surface-bright: '#f9f9ff'
+  surface: '#fcf9f8'
+  surface-dim: '#dcd9d9'
+  surface-bright: '#fcf9f8'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f0f3ff'
-  surface-container: '#e7eeff'
-  surface-container-high: '#dee8ff'
-  surface-container-highest: '#d8e3fa'
-  on-surface: '#111c2c'
-  on-surface-variant: '#45464c'
-  inverse-surface: '#263142'
-  inverse-on-surface: '#ebf1ff'
-  outline: '#76777c'
-  outline-variant: '#c6c6cc'
-  surface-tint: '#595e6d'
-  primary: '#030612'
+  surface-container-low: '#f6f3f2'
+  surface-container: '#f0eded'
+  surface-container-high: '#eae7e7'
+  surface-container-highest: '#e4e2e1'
+  on-surface: '#1b1c1c'
+  on-surface-variant: '#434843'
+  inverse-surface: '#303030'
+  inverse-on-surface: '#f3f0f0'
+  outline: '#737973'
+  outline-variant: '#c3c8c1'
+  surface-tint: '#4d6453'
+  primary: '#061b0e'
   on-primary: '#ffffff'
-  primary-container: '#1a1f2c'
-  on-primary-container: '#828697'
-  inverse-primary: '#c2c6d8'
-  secondary: '#006b5f'
+  primary-container: '#1b3022'
+  on-primary-container: '#819986'
+  inverse-primary: '#b4cdb8'
+  secondary: '#5e5e5b'
   on-secondary: '#ffffff'
-  secondary-container: '#62fae3'
-  on-secondary-container: '#007165'
-  tertiary: '#060605'
+  secondary-container: '#e1dfdb'
+  on-secondary-container: '#63635f'
+  tertiary: '#281100'
   on-tertiary: '#ffffff'
-  tertiary-container: '#1f1f1c'
-  on-tertiary-container: '#888682'
+  tertiary-container: '#462200'
+  on-tertiary-container: '#dc790a'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
-  primary-fixed: '#dee2f4'
-  primary-fixed-dim: '#c2c6d8'
-  on-primary-fixed: '#161b28'
-  on-primary-fixed-variant: '#424655'
-  secondary-fixed: '#62fae3'
-  secondary-fixed-dim: '#3cddc7'
-  on-secondary-fixed: '#00201c'
-  on-secondary-fixed-variant: '#005047'
-  tertiary-fixed: '#e5e2dd'
-  tertiary-fixed-dim: '#c9c6c2'
-  on-tertiary-fixed: '#1c1c19'
-  on-tertiary-fixed-variant: '#474743'
-  background: '#f9f9ff'
-  on-background: '#111c2c'
-  surface-variant: '#d8e3fa'
+  primary-fixed: '#d0e9d4'
+  primary-fixed-dim: '#b4cdb8'
+  on-primary-fixed: '#0b2013'
+  on-primary-fixed-variant: '#364c3c'
+  secondary-fixed: '#e4e2dd'
+  secondary-fixed-dim: '#c8c6c2'
+  on-secondary-fixed: '#1b1c19'
+  on-secondary-fixed-variant: '#474744'
+  tertiary-fixed: '#ffdcc3'
+  tertiary-fixed-dim: '#ffb77d'
+  on-tertiary-fixed: '#2f1500'
+  on-tertiary-fixed-variant: '#6e3900'
+  background: '#fcf9f8'
+  on-background: '#1b1c1c'
+  surface-variant: '#e4e2e1'
 typography:
   display-lg:
     fontFamily: Playfair Display
-    fontSize: 48px
+    fontSize: 64px
     fontWeight: '700'
     lineHeight: '1.1'
     letterSpacing: -0.02em
-  display-lg-mobile:
+  headline-lg:
+    fontFamily: Playfair Display
+    fontSize: 40px
+    fontWeight: '700'
+    lineHeight: '1.2'
+  headline-lg-mobile:
     fontFamily: Playfair Display
     fontSize: 32px
     fontWeight: '700'
     lineHeight: '1.2'
   headline-md:
     fontFamily: Playfair Display
-    fontSize: 32px
+    fontSize: 28px
     fontWeight: '600'
     lineHeight: '1.3'
-  headline-sm:
-    fontFamily: Playfair Display
-    fontSize: 24px
-    fontWeight: '600'
-    lineHeight: '1.4'
   body-lg:
-    fontFamily: Montserrat
+    fontFamily: DM Sans
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
     letterSpacing: 0.01em
   body-md:
-    fontFamily: Montserrat
+    fontFamily: DM Sans
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.6'
   label-caps:
-    fontFamily: Montserrat
+    fontFamily: Space Mono
     fontSize: 12px
     fontWeight: '700'
-    lineHeight: '1'
-    letterSpacing: 0.1em
-  button:
-    fontFamily: Montserrat
-    fontSize: 14px
-    fontWeight: '600'
-    lineHeight: '1'
-    letterSpacing: 0.05em
-rounded:
-  sm: 0.5rem
-  DEFAULT: 1rem
-  md: 1.5rem
-  lg: 2rem
-  xl: 3rem
-  full: 9999px
+    lineHeight: '1.0'
+    letterSpacing: 0.15em
+  vertical-accent:
+    fontFamily: Space Mono
+    fontSize: 10px
+    fontWeight: '400'
+    lineHeight: '1.0'
+    letterSpacing: 0.2em
 spacing:
-  base: 8px
-  section-gap-desktop: 120px
-  section-gap-mobile: 64px
-  grid-margin: 24px
-  gutter: 20px
+  unit: 8px
+  container-padding-desktop: 80px
+  container-padding-mobile: 24px
+  gutter: 32px
+  section-gap: 120px
 ---
 
 ## Brand & Style
+The design system embodies a "Modern Groomer" aesthetic: a sophisticated, editorial-first approach to mobile pet care that balances high-end luxury with an approachable, organic warmth. It targets discerning pet owners who view grooming as a wellness ritual rather than a chore.
 
-The design system is built upon the "Modern Groomery" aesthetic—a sophisticated, editorial-first approach to pet care that replaces typical industry cliches with high-end lifestyle cues. The brand personality is rooted in expert precision and the convenience of mobile luxury, targeting discerning pet owners who view grooming as an essential wellness ritual rather than a chore.
-
-The visual style blends **Minimalism** with **Modern Corporate** structure. It utilizes generous whitespace, high-contrast typography, and a "less is more" philosophy to evoke a sense of calm and cleanliness. By avoiding "paw-print" kitsch in favor of geometric rule lines and intentional layouts, the design system positions the service as a premium, professional operation.
+The style is **Editorial Minimalism** with a **Tactile** edge. It leverages generous whitespace to evoke a sense of calm and cleanliness, punctuated by bold typographic choices and organic, fluid containers that mimic the natural curves of water or soft silhouettes. To differentiate from standard corporate apps, the system avoids generic rounded corners in favor of a "Chiseled & Pill" hybrid—using sharp 90-degree intersections for structural containers and oversized, exaggerated pill shapes for interactive elements. A subtle film grain texture should be applied to large color fields to provide a premium, paper-like feel.
 
 ## Colors
-
-The "Deep Groom" palette is designed to feel authoritative yet refreshing. 
-
-- **Midnight Navy (#1A1F2C):** The primary anchor. Used for headings, heavy UI elements, and deep contrast areas to establish "Expert" status.
-- **Crisp Teal (#2DD4BF):** The accent color. Reserved for primary calls to action, active states, and success indicators. It suggests hygiene, water, and freshness.
-- **Soft Sand (#F5F2ED):** The foundational background color. It provides a tactile, "paper-like" editorial feel that is warmer and more premium than pure white.
-- **Neutrals:** A range of slate-greys used for body text and subtle borders to maintain a soft legibility against the sand background.
+The palette is rooted in nature and high-end apothecary branding.
+- **Deep Forest Green (#1B3022):** The primary anchor. Used for backgrounds of high-impact sections and primary typography to convey stability and premium quality.
+- **Soft Cream (#F9F7F2):** The canvas. This replaces pure white to create a warmer, more inviting and sophisticated atmosphere.
+- **Burnt Orange (#D97706):** The kinetic accent. Used sparingly for calls-to-action, alerts, and vital interactive cues.
+- **Neutral (#2D2D2D):** Reserved for long-form body text on cream backgrounds to ensure optimal legibility without the harshness of pure black.
 
 ## Typography
-
-This design system employs a high-contrast typographic pairing to balance editorial elegance with functional clarity.
-
-- **Headlines (Playfair Display):** Should be used for all primary storytelling and section headers. The serif nature adds a layer of "luxury publishing" to the service. Use tighter letter-spacing for large display sizes to maintain a sophisticated "tight" look.
-- **Body & Utility (Montserrat):** A wide, geometric sans-serif that ensures maximum readability. The increased width of Montserrat provides a modern, stable foundation for service descriptions, pricing, and functional labels.
-- **Labeling:** Utilize `label-caps` for small sub-headers (e.g., "SERVICE DETAILS") to create clear information hierarchy using the bold, uppercase geometric style.
+The typography strategy creates a high-contrast hierarchy common in luxury fashion magazines.
+- **Headlines:** Use *Playfair Display*. Its high-contrast serifs provide the "editorial" authority. Display sizes should use tight tracking to look like a masthead.
+- **Body:** Use *DM Sans*. Its wide-set, geometric construction ensures clarity and adds a contemporary, "airy" feel to the descriptions of services.
+- **Accents:** *Space Mono* is used for utility labels and vertical "side-bar" text. This adds a technical, precise layer to the organic brand, suggesting professional expertise. 
+- **Vertical Accents:** Use vertical typography for dates, category tags, or decorative section markers to break the standard horizontal grid.
 
 ## Layout & Spacing
-
-The layout philosophy follows a **Fixed Grid** model on desktop (12 columns) to maintain a centered, magazine-like reading experience. 
-
-- **Vertical Rhythm:** Sections are separated by significant "breathing room" (120px on desktop) to allow the premium photography and typography to stand out.
-- **Mobile Adaptation:** On mobile, the layout reflows to a single column with 24px side margins. High-level headlines should scale down to ensure they don't break awkwardly.
-- **Rule Lines:** Use 1px geometric lines (in Midnight Navy at 10% opacity) to separate content sections or list items, reinforcing the feeling of precision and care.
+This design system utilizes a **Fixed Grid** with an aggressive "whitespace-first" philosophy. 
+- **Desktop:** 12-column grid with wide 80px side margins and 32px gutters.
+- **Mobile:** 4-column grid with 24px margins.
+- **Overlap Logic:** Key elements (like a dog portrait or a price chip) should intentionally break the grid, overlapping the boundary between two sections or a photo and a text block by 40-80px.
+- **Vertical Rhythm:** Use large gaps (120px+) between major sections to allow the content to breathe, mimicking a coffee-table book layout.
 
 ## Elevation & Depth
-
-This design system avoids heavy drop shadows, opting instead for **Tonal Layers** and **Low-Contrast Outlines**.
-
-- **Surfaces:** Depth is created by placing Midnight Navy or Crisp Teal cards on top of the Soft Sand background.
-- **Borders:** Instead of shadows, use 1px solid borders for interactive elements like input fields or secondary cards.
-- **Active State:** A very subtle, blurred "glow" of Teal may be used for the primary button hover state, but otherwise, the UI remains flat and grounded to maintain its "Modern Groomery" precision.
+Depth is created through **Tonal Layering** and **Asymmetric Overlaps** rather than traditional shadows.
+- **Stacked Surfaces:** Use the Cream and Forest Green colors to create distinct depth levels. A Forest Green card sitting on a Cream background is considered "Level 1."
+- **Floating Elements:** Only use shadows for floating action buttons or high-priority modals. When used, shadows must be extremely diffused (30px+ blur) and tinted with the Forest Green hex at 5-10% opacity to maintain a natural look.
+- **Grain Texture:** Apply a global CSS noise overlay (opacity 0.03) to all primary backgrounds to eliminate the "flatness" of digital screens and provide a tactile, premium paper feel.
 
 ## Shapes
-
-The shape language is dominated by **Pill-shaped** containers and high-radius corners. This softens the high-contrast color palette and creates a friendly, approachable "grooming" metaphor—reminiscent of soap bars or rounded shears.
-
-- **Primary Buttons:** Always fully rounded (pill-shaped).
-- **Cards & Images:** Use `rounded-xl` (3rem) for large containers to maintain consistency with the brand's motif of "softened precision."
-- **Small Elements:** Chips and tags follow the pill-shaped standard.
+The shape language is a juxtaposition of **Architectural Precision** and **Fluid Organicism**.
+- **Containers:** All primary layout containers, image frames, and input fields use **0px (Sharp)** corners. This provides a modern, high-fashion structural look.
+- **Interactive Elements:** Buttons and selected state chips use **Pill-shaped (3)** rounding. This makes the primary actions feel "touchable" and friendly.
+- **Organic Masks:** Large imagery or decorative background shapes should use "blob" masks—reminiscent of water droplets or soft organic forms—to contrast against the sharp grid.
 
 ## Components
-
-- **Buttons:** Primary buttons use a Midnight Navy background with White text, or Crisp Teal for high-action items. They are always pill-shaped with significant horizontal padding.
-- **Input Fields:** Use a clean 1px border in Midnight Navy. Labels sit above the field in the `label-caps` style.
-- **Service Cards:** Large Soft Sand or White cards with `rounded-xl` corners. Use thin rule lines to separate price points from service descriptions.
-- **Status Chips:** Small, pill-shaped accents using Crisp Teal with 10% opacity backgrounds for "Available" or "Confirmed" states.
-- **Mobile Booking Bar:** A sticky bottom navigation element with a single, high-contrast "Book Now" pill-shaped button.
-- **Process List:** A vertical list where each step is connected by a thin 1px vertical line, suggesting a clean, methodical grooming process.
+- **Buttons:** Primary buttons are oversized pills in Burnt Orange with Space Mono (All Caps) text. Secondary buttons are Forest Green outlines with no fill.
+- **Cards:** Use sharp 90-degree corners. Use an "Editorial Spread" layout where the image takes up 60% of the card and typography overlaps the bottom edge of the image.
+- **Inputs:** Simple bottom-border only (underline style) in Forest Green. Labels sit above in Space Mono.
+- **Vertical Labels:** Use as category markers on the far left or right of a section.
+- **Photography:** All placeholders should be high-contrast, "lifestyle" pet photography with a warm, slightly desaturated color grade.
+- **Chips/Status:** Small pills using the secondary Cream color with Forest Green text for a subtle, high-end look.
