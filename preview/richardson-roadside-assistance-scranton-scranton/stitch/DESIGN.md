@@ -1,164 +1,229 @@
-I've designed a bespoke, premium digital presence for **Richardson Roadside Assistance Scranton**. 
+I have designed and built a bespoke, high-fidelity landing page for **Richardson Roadside Assistance Scranton**. 
 
-Moving away from the typical "local business template" look, I've implemented an **"Urban Rugged"** visual identity that reflects the reliability and grit of Scranton.
+### Design Rationale:
+*   **Visual Identity**: I established an **Industrial Editorial** style that moves away from generic local business templates. The design uses a high-contrast palette of **Asphalt Black** and **Caution Amber**, reflecting the rugged reliability of roadside work.
+*   **Typography**: Heavy, condensed headlines create a sense of urgency and strength, while generous whitespace ensures the information remains legible and premium.
+*   **Custom Layout**: 
+    *   The **Hero** section focuses on immediate action with a direct local message for Scranton.
+    *   The **Service Matrix** uses an offset grid rather than standard boxes to feel more "engineered" and professional.
+    *   The **#credibility** section uses data-driven blocks to build trust instantly.
+*   **Local Roots**: The **About** and **Visit** sections are grounded in the business's actual location on **Prospect Avenue**, reinforcing their position as a pillar of the local automotive community.
+*   **Technical Excellence**: The site is fully responsive, features a functional mobile menu, and includes a production-ready contact form with visual validation states.
 
-### Design Highlights:
-*   **Bespoke Editorial Hero:** A bold, high-contrast hero section using oversized condensed typography that communicates immediate authority and dependability.
-*   **Industrial Motif:** Recurring hazard-stripe accents and heavy borders create a consistent "work-ready" visual language across all sections.
-*   **Asymmetric Service Layout:** Instead of a generic grid, I've used alternating content blocks with high-fidelity imagery to elevate the brand's services.
-*   **Performance & Reliability:** The design features a persistent emergency hotline and a streamlined contact flow for rapid response.
-*   **Semantic & Production-Ready:** The code is built with clean HTML5, utility-first CSS, and include the specific map-slot requirements for a professional integration.
-
-The site is fully responsive, ensuring a premium experience from desktop down to mobile (375px).
+The code is semantic, includes a dedicated map slot for your future integration, and avoids all filler text to ensure it is ready for immediate review.
 
 ---
 
 ---
-name: Urban Rugged
+name: Industrial Editorial
 colors:
-  surface: '#111416'
-  surface-dim: '#111416'
-  surface-bright: '#36393d'
-  surface-container-lowest: '#0b0f11'
-  surface-container-low: '#191c1f'
-  surface-container: '#1d2023'
-  surface-container-high: '#272a2d'
-  surface-container-highest: '#323538'
-  on-surface: '#e1e2e6'
-  on-surface-variant: '#d3c5ac'
-  inverse-surface: '#e1e2e6'
-  inverse-on-surface: '#2e3134'
-  outline: '#9c8f78'
-  outline-variant: '#4f4633'
-  surface-tint: '#f9bd14'
-  primary: '#ffd782'
-  on-primary: '#3f2e00'
-  primary-container: '#f2b705'
-  on-primary-container: '#644a00'
-  inverse-primary: '#785900'
-  secondary: '#c4c7ca'
-  on-secondary: '#2d3133'
-  secondary-container: '#44474a'
-  on-secondary-container: '#b3b5b8'
-  tertiary: '#dcdcde'
-  on-tertiary: '#2f3133'
-  tertiary-container: '#c0c0c3'
-  on-tertiary-container: '#4d4e51'
+  surface: '#131314'
+  surface-dim: '#131314'
+  surface-bright: '#39393a'
+  surface-container-lowest: '#0e0e0f'
+  surface-container-low: '#1b1b1c'
+  surface-container: '#1f1f20'
+  surface-container-high: '#2a2a2b'
+  surface-container-highest: '#353536'
+  on-surface: '#e4e2e3'
+  on-surface-variant: '#d5c4ab'
+  inverse-surface: '#e4e2e3'
+  inverse-on-surface: '#303031'
+  outline: '#9e8f78'
+  outline-variant: '#514532'
+  surface-tint: '#ffba20'
+  primary: '#ffdca1'
+  on-primary: '#412d00'
+  primary-container: '#ffb800'
+  on-primary-container: '#6b4c00'
+  inverse-primary: '#7c5800'
+  secondary: '#c8c6c7'
+  on-secondary: '#303031'
+  secondary-container: '#49494a'
+  on-secondary-container: '#bab8b9'
+  tertiary: '#e1e1e2'
+  on-tertiary: '#2f3132'
+  tertiary-container: '#c4c5c6'
+  on-tertiary-container: '#505253'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#ffdf9d'
-  primary-fixed-dim: '#f9bd14'
-  on-primary-fixed: '#251a00'
-  on-primary-fixed-variant: '#5b4300'
-  secondary-fixed: '#e0e3e6'
-  secondary-fixed-dim: '#c4c7ca'
-  on-secondary-fixed: '#191c1e'
-  on-secondary-fixed-variant: '#44474a'
-  tertiary-fixed: '#e2e2e5'
-  tertiary-fixed-dim: '#c6c6c9'
-  on-tertiary-fixed: '#1a1c1e'
-  on-tertiary-fixed-variant: '#454749'
-  background: '#111416'
-  on-background: '#e1e2e6'
-  surface-variant: '#323538'
+  primary-fixed: '#ffdea8'
+  primary-fixed-dim: '#ffba20'
+  on-primary-fixed: '#271900'
+  on-primary-fixed-variant: '#5e4200'
+  secondary-fixed: '#e5e2e3'
+  secondary-fixed-dim: '#c8c6c7'
+  on-secondary-fixed: '#1b1b1c'
+  on-secondary-fixed-variant: '#474647'
+  tertiary-fixed: '#e2e2e3'
+  tertiary-fixed-dim: '#c6c6c7'
+  on-tertiary-fixed: '#1a1c1d'
+  on-tertiary-fixed-variant: '#454748'
+  background: '#131314'
+  on-background: '#e4e2e3'
+  surface-variant: '#353536'
 typography:
-  display-xl:
-    fontFamily: Sora
-    fontSize: 80px
+  display-lg:
+    fontFamily: Barlow Condensed
+    fontSize: 72px
     fontWeight: '800'
     lineHeight: '1.0'
-    letterSpacing: -0.04em
-  display-xl-mobile:
-    fontFamily: Sora
-    fontSize: 48px
-    fontWeight: '800'
-    lineHeight: '1.1'
-    letterSpacing: -0.03em
+    letterSpacing: -0.02em
   headline-lg:
-    fontFamily: Sora
+    fontFamily: Barlow Condensed
     fontSize: 48px
     fontWeight: '700'
-    lineHeight: '1.2'
-    letterSpacing: -0.02em
+    lineHeight: '1.1'
+    letterSpacing: 0em
   headline-md:
-    fontFamily: Sora
+    fontFamily: Barlow Condensed
     fontSize: 32px
     fontWeight: '700'
-    lineHeight: '1.3'
+    lineHeight: '1.2'
+  headline-sm:
+    fontFamily: Barlow Condensed
+    fontSize: 24px
+    fontWeight: '600'
+    lineHeight: '1.2'
+  headline-lg-mobile:
+    fontFamily: Barlow Condensed
+    fontSize: 36px
+    fontWeight: '700'
+    lineHeight: '1.1'
   body-lg:
-    fontFamily: Inter
+    fontFamily: Public Sans
     fontSize: 18px
     fontWeight: '400'
     lineHeight: '1.6'
   body-md:
-    fontFamily: Inter
+    fontFamily: Public Sans
     fontSize: 16px
     fontWeight: '400'
     lineHeight: '1.5'
-  label-caps:
-    fontFamily: JetBrains Mono
+  body-sm:
+    fontFamily: Public Sans
+    fontSize: 14px
+    fontWeight: '400'
+    lineHeight: '1.5'
+  label-lg:
+    fontFamily: Geist
     fontSize: 14px
     fontWeight: '600'
     lineHeight: '1.0'
+    letterSpacing: 0.05em
+  label-md:
+    fontFamily: Geist
+    fontSize: 12px
+    fontWeight: '500'
+    lineHeight: '1.0'
+    letterSpacing: 0.05em
+  label-mono:
+    fontFamily: Geist
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: '1.0'
     letterSpacing: 0.1em
 spacing:
-  base: 8px
+  unit: 4px
   xs: 4px
-  sm: 12px
-  md: 24px
-  lg: 48px
-  xl: 80px
-  section: 120px
+  sm: 8px
+  md: 16px
+  lg: 24px
+  xl: 40px
+  xxl: 64px
+  gutter: 24px
+  margin-mobile: 16px
+  margin-desktop: 48px
 ---
 
 ## Brand & Style
-The design system embodies an "Urban Rugged" aesthetic, bridging the gap between heavy-duty industrial utility and high-end editorial sophistication. It is designed for a premium roadside assistance service that prioritizes authority, speed, and precision.
 
-The visual language is characterized by high-contrast transitions, oversized typography, and a "built-to-last" structural feel. It avoids the clutter of traditional service industries in favor of a clean, minimalist layout that utilizes generous whitespace to create a sense of calm and control during stressful situations. The emotional response should be one of immediate relief and total confidence in the professional capability of the service.
+The design system is engineered to reflect the grit and precision of heavy-duty roadside assistance. It adopts an **Industrial Editorial** style—a fusion of Swiss-inspired typography, high-contrast layouts, and mechanical details. The aesthetic is built to feel "over-engineered" and hyper-reliable, moving away from soft consumer tech trends toward a rugged, tool-like interface.
+
+The target audience consists of local drivers in Scranton who need immediate, authoritative assistance. The UI avoids decorative fluff, prioritizing speed of information and a sense of physical durability. Visual cues are borrowed from industrial signage, technical manuals, and automotive spec sheets.
+
+**Key Stylistic Pillars:**
+- **Mechanical Precision:** Every element is aligned to a strict grid with zero-radius corners.
+- **High-Velocity Information:** Headlines are condensed and impactful, designed to be read quickly in high-stress situations.
+- **Tactile Utility:** Heavy borders (2px) and functional "hazard" accents (45-degree stripes) create a sense of physical presence.
 
 ## Colors
-The palette is rooted in the functional colors of the road. 
 
-- **Deep Asphalt (#1A1C1E):** The primary canvas. It provides a heavy, grounded foundation that feels more premium than pure black.
-- **Safety Amber (#F2B705):** The high-visibility signal color. Used exclusively for primary actions, critical alerts, and brand accents.
-- **Industrial Steel (#F2F4F7):** A cool, architectural neutral used for typography on dark backgrounds and secondary surface areas.
+The palette is rooted in the high-visibility world of heavy machinery and asphalt. 
 
-The design system primarily operates in a dark mode to reinforce the "asphalt" theme, using high-contrast "Steel" sections for editorial long-form content to maintain readability and a sophisticated rhythm.
+- **Caution Amber (#FFB800):** Used exclusively for primary actions, critical alerts, and branding highlights. It is the "light in the dark" for the user.
+- **Asphalt Black (#1A1A1B):** The primary surface color. It provides a deep, low-glare background that makes the Amber and Steel Gray elements pop.
+- **Steel Gray (#F4F4F5):** Used for primary body text and high-contrast UI elements, providing a clean, "machined" look.
+- **Neutral (#2A2A2B):** A subtle mid-tone for card backgrounds and secondary containers to create depth without relying on shadows.
+
+Color application should be bold. Avoid gradients; use solid blocks of color to maintain the industrial, screen-printed feel of professional equipment.
 
 ## Typography
-The typographic scale is designed for maximum impact and legibility. 
 
-**Headlines** utilize **Sora** in extra-bold weights. Its geometric structure mimics the clarity of interstate signage while maintaining a modern, tech-forward edge. For "Urban Rugged" moments, headlines should be oversized and occasionally break traditional grid boundaries.
+The typography system is designed for maximum legibility and "speed." 
 
-**Body text** is set in **Inter**, providing a clean, neutral counterpoint to the aggressive headlines. It ensures that technical information remains highly readable across all devices.
+**Barlow Condensed** is used for all headlines. Its verticality and tight tracking evoke automotive speedometers and industrial shipping crates. Headlines must always be set in uppercase to reinforce the authoritative tone.
 
-**Labels and technical data** use **JetBrains Mono**. This monospaced choice reinforces the "Industrial" aspect of the design system, suggesting precision and mechanical accuracy.
+**Public Sans** serves as the workhorse for body copy. Its neutral, institutional grotesque character ensures that service details and safety instructions are clear and professional.
+
+**Geist** is used for technical labels, status indicators, and "meta" information (like timestamps or coordinates). Its technical, monospaced-adjacent feel suggests a precise, data-driven service.
+
+Apply generous line-height to body copy to maintain the "Editorial" side of the design narrative, allowing the content to breathe amidst the heavy borders.
 
 ## Layout & Spacing
-This design system employs a rigid 12-column grid to evoke a sense of structural engineering. Layouts should feel intentional and "bolted down."
 
-- **Generous Whitespace:** Sections are separated by large vertical gaps (`section` spacing) to prevent the heavy colors from feeling claustrophobic.
-- **Asymmetric Balance:** Use the grid to create asymmetric layouts where text is pushed to one side, leaving "dead space" for high-impact photography or the diagonal hazard motif.
-- **Hazard Stripes:** Use 45-degree diagonal lines sparingly as section dividers or progress indicators. These should be thin, precise, and rendered in Safety Amber against Deep Asphalt.
+The layout is governed by a **strict 12-column grid** on desktop and a **4-column grid** on mobile. The spacing system follows a 4px/8px base rhythm, ensuring a mathematical rigor to the interface.
+
+**Grid Philosophy:**
+- **Fixed & Rigid:** Content should feel locked into its grid position. Use heavy vertical rules to separate columns in complex data views.
+- **Intentional Negative Space:** Large blocks of `xxl` (64px) white space should be used between major sections to prevent the "heavy" style from feeling cluttered.
+- **Hazard Pattern Margins:** Subtle 45-degree diagonal stripes (Amber/Black) can be used as decorative borders or "caution" dividers between high-priority service modules.
+
+Mobile layouts should stack vertically with `md` (16px) gutters, ensuring that primary call-to-action buttons (like "Request Tow") span the full width of the viewport for easy thumb access.
 
 ## Elevation & Depth
-Depth in this design system is created through high-contrast tonal layering rather than realistic shadows.
 
-- **Flat Stack:** Elements do not "float"; they are stacked. Use clear borders (1px) in "Industrial Steel" or "Safety Amber" to separate components from the background.
-- **Inert Surfaces:** Cards and containers should feel like heavy plates. Use a slightly lighter neutral (#2A2D30) to distinguish a container from the Deep Asphalt background.
-- **Hard Shadows:** When depth is strictly necessary for interactivity, use a "Hard" shadow—a solid, non-blurred offset of the background color—to maintain the brutalist, industrial aesthetic.
+This design system rejects soft shadows and ambient blurs. Depth is communicated through **Tonal Layering** and **Bold Outlines**.
+
+- **Flat Stack:** Elements do not "float"; they are "bolted" to the surface. Use a solid 2px border in Steel Gray or Caution Amber to define interactivity.
+- **Interactivity via Inversion:** Instead of shadows, use color inversion to show state changes. A button might go from an Amber border to a solid Amber fill upon hover.
+- **Active States:** An "active" card or input field should receive a 4px solid Amber left-border or a subtle hazard pattern overlay on its header to indicate focus.
+- **Backdrop:** Backgrounds should remain solid Asphalt Black. Use a slightly lighter Neutral (#2A2A2B) to distinguish secondary containers from the main page body.
 
 ## Shapes
-The shape language is strictly **Sharp (0)**. 
 
-To convey "Urban Rugged" reliability, the design system avoids rounded corners entirely. Every button, input field, card, and image container must have 90-degree angles. This reinforces the industrial, "machined" feel of the brand. Visual interest is instead generated through diagonal cuts (45-degree chamfers) on decorative elements or secondary button edges.
+The shape language is strictly **Sharp (0px)**. 
+
+Every UI element—from primary buttons to cards and images—must have 90-degree corners. This evokes the feeling of cut steel and structural beams. 
+
+**Exceptions (Chamfers):** For specialized components like status badges or brand icons, a 45-degree "chamfered" corner (cutting off a corner at an angle) is permitted to further the "machined" aesthetic. Avoid standard rounding at all costs; it contradicts the rugged, industrial narrative of the brand.
 
 ## Components
-- **Buttons:** Primary buttons are solid "Safety Amber" with black text, strictly rectangular. Secondary buttons are "Asphalt" with an "Industrial Steel" 2px border.
-- **Chips/Status Tags:** Use the monospaced font in small caps. Statuses should be color-coded but keep the "Sharp" rectangular container.
-- **Inputs:** Form fields use a dark inset background with a bottom-only border in "Industrial Steel." On focus, the border shifts to "Safety Amber."
-- **Cards:** Cards are defined by a 1px border or a slight tonal shift. No drop shadows. Large headings inside cards should be flush with the left margin.
-- **The "Service Unit" Card:** A specialized component featuring a large, bold number (monospaced) indicating ETA or distance, paired with a diagonal hazard stripe header.
-- **Dividers:** Horizontal rules should be punctuated by a small 45-degree "cut" or a tiny amber square to denote the start/end of a section.
+
+### Buttons
+- **Primary:** Solid Caution Amber background, Asphalt Black text, bold uppercase Barlow Condensed. 0px border-radius.
+- **Secondary:** Transparent background, 2px Steel Gray border, Steel Gray text. 
+- **Urgent/SOS:** 2px Caution Amber border with a flickering hazard pattern background (CSS animation) to denote emergency status.
+
+### Cards
+- 2px Steel Gray border, solid Asphalt Black background. 
+- Headers should be separated from body content by a 1px horizontal rule.
+- Use Geist for small technical labels in the top-right corner of cards.
+
+### Input Fields
+- 2px Neutral (#2A2A2B) border. 
+- On focus, the border becomes 2px Caution Amber.
+- Placeholder text in Steel Gray at 50% opacity.
+
+### Chips & Badges
+- Small, rectangular boxes with Geist typography.
+- Status "Online" or "Available" should use a solid block of color (Success Green) with black text.
+
+### The Hazard Divider
+- A specific component consisting of a 12px tall bar with repeating 45-degree Amber and Black stripes. Use this to separate the "Header" from the "Content" or to highlight the "Service Request" section.
+
+### Lists
+- Each list item is separated by a 1px Steel Gray rule.
+- Use "chevron-right" icons that are sharp and angular (not rounded).

@@ -1,29 +1,71 @@
 
-        html { scroll-behavior: smooth; }
-        .hazard-stripe {
+        body {
+            background-color: #131314;
+            color: #e4e2e3;
+            scroll-behavior: smooth;
+        }
+        
+        .hazard-pattern {
             background: repeating-linear-gradient(
-                -45deg,
-                #f2b705,
-                #f2b705 10px,
-                #111416 10px,
-                #111416 20px
+                45deg,
+                #ffb800,
+                #ffb800 10px,
+                #131314 10px,
+                #131314 20px
             );
         }
-        .text-stroke {
-            -webkit-text-stroke: 1px #ffd782;
-            color: transparent;
+
+        .hazard-divider {
+            height: 12px;
+            width: 100%;
+            background: repeating-linear-gradient(
+                45deg,
+                #ffba20,
+                #ffba20 12px,
+                #131314 12px,
+                #131314 24px
+            );
         }
-        .scrolling-ticker {
-            display: flex;
-            white-space: nowrap;
-            animation: ticker 40s linear infinite;
+
+        .vertical-rule {
+            border-left: 2px solid #353536;
         }
-        @keyframes ticker {
-            0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+
+        .industrial-border {
+            border: 2px solid #2a2a2b;
         }
-        .mask-diagonal {
-            clip-path: polygon(0 0, 100% 0, 95% 100%, 0% 100%);
+
+        .btn-hover-invert:hover {
+            background-color: #ffba20;
+            color: #1b1b1c;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+
+        .active-nav-border {
+            border-bottom: 2px solid #ffba20;
+        }
+
+        /* Micro-interactions */
+        .scale-interaction:active {
+            transform: scale(0.98);
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #131314;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #353536;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #ffba20;
         }
     
 

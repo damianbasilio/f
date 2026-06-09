@@ -88,7 +88,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/p/Richardson-Roadside-Assistance-Towing-Winch-Recovery-100090553342927/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-09T12:42:32.338Z
+- **Scraped:** 2026-06-09T16:36:00.311Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/p/Richardson-Roadside-Assistance-Towing-Winch-Recovery-100090553342927/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

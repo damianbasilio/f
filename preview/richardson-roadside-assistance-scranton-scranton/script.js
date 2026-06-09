@@ -1,21 +1,33 @@
-// Simple scroll observer for service cards
-        const observerOptions = {
-            threshold: 0.1
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100');
-                    entry.target.classList.remove('translate-y-10', 'opacity-0');
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('#services .group').forEach(el => {
-            el.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
-            observer.observe(el);
+// Form Submission Micro-interaction
+        const form = document.getElementById('dispatchForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'TRANSMITTING...';
+            btn.classList.add('bg-white');
+            
+            setTimeout(() => {
+                btn.innerText = 'DISPATCH CONFIRMED';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-green-500', 'text-white');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-green-500', 'bg-white', 'text-white');
+                    btn.classList.add('bg-primary', 'text-black');
+                }, 3000);
+            }, 1500);
         });
+
+        // Map Slot interaction
+        const mapSlot = document.querySelector('[data-map-slot]');
+        if (mapSlot) {
+            mapSlot.addEventListener('mouseenter', () => {
+                mapSlot.style.cursor = 'crosshair';
+            });
+        }
 
 (() => {
   function initMockupNotice() {
