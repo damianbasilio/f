@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NAIL #1 | Cleveland's Editorial Salon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400;0,600;0,700;0,800;1,400&amp;family=Hanken+Grotesk:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-variant": "#e2e2e2",
+                      "tertiary-container": "#74503d",
+                      "surface-container": "#eeeeee",
+                      "secondary-fixed": "#ffdcc2",
+                      "surface": "#f9f9f9",
+                      "secondary-container": "#fdad67",
+                      "primary-fixed-dim": "#ffb68c",
+                      "surface-container-high": "#e8e8e8",
+                      "inverse-surface": "#2f3131",
+                      "tertiary-fixed-dim": "#ecbda4",
+                      "primary-container": "#8b4513",
+                      "on-surface": "#1a1c1c",
+                      "on-primary-container": "#ffc29f",
+                      "on-primary-fixed": "#321200",
+                      "secondary": "#8c4f10",
+                      "on-tertiary-container": "#f5c5ac",
+                      "secondary-fixed-dim": "#ffb77b",
+                      "on-primary": "#ffffff",
+                      "on-tertiary-fixed-variant": "#603f2d",
+                      "on-tertiary-fixed": "#2e1506",
+                      "on-secondary-fixed": "#2e1500",
+                      "error-container": "#ffdad6",
+                      "primary-fixed": "#ffdbc9",
+                      "primary": "#6c2f00",
+                      "on-secondary-fixed-variant": "#6d3a00",
+                      "tertiary-fixed": "#ffdbca",
+                      "on-secondary": "#ffffff",
+                      "background": "#f9f9f9",
+                      "on-primary-fixed-variant": "#753401",
+                      "on-secondary-container": "#763f00",
+                      "outline": "#877369",
+                      "on-background": "#1a1c1c",
+                      "tertiary": "#593927",
+                      "on-error": "#ffffff",
+                      "surface-dim": "#dadada",
+                      "surface-container-low": "#f3f3f3",
+                      "surface-bright": "#f9f9f9",
+                      "on-tertiary": "#ffffff",
+                      "on-surface-variant": "#54433a",
+                      "surface-tint": "#934b19",
+                      "on-error-container": "#93000a",
+                      "outline-variant": "#dac2b6",
+                      "inverse-on-surface": "#f1f1f1",
+                      "surface-container-highest": "#e2e2e2",
+                      "inverse-primary": "#ffb68c",
+                      "surface-container-lowest": "#ffffff",
+                      "error": "#ba1a1a"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "grid-gutter": "1.5rem",
+                      "block-gap": "6rem",
+                      "offset-shift": "2rem",
+                      "grid-margin": "4rem"
+              },
+              "fontFamily": {
+                      "label-caps": ["Hanken Grotesk"],
+                      "headline-lg-mobile": ["Bodoni Moda"],
+                      "headline-md": ["Bodoni Moda"],
+                      "display-xl": ["Bodoni Moda"],
+                      "headline-lg": ["Bodoni Moda"],
+                      "body-lg": ["Hanken Grotesk"],
+                      "body-md": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "headline-lg-mobile": ["36px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .brushed-copper-border { border-color: #B87333; }
+        .iron-oxide-text { color: #6c2f00; }
+        .dusty-rose-bg { background-color: #ffdbca; }
+        
+        .offset-block-left { transform: translateX(-2rem); }
+        .offset-block-right { transform: translateX(2rem); }
+        
+        .editorial-line {
+            height: 1px;
+            background: #B87333;
+            width: 75%;
+            margin-left: 8.333333%;
+        }
+
+        .service-item:hover .service-thumb {
+            opacity: 1;
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .signature-font {
+            font-family: 'Bodoni Moda', serif;
+            font-style: italic;
+            opacity: 0.8;
+        }
+
+        .hover-fill:hover {
+            background-color: #6c2f00;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-grid-margin py-4 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md border-b border-outline-variant">
+<div class="font-headline-lg text-headline-lg tracking-tighter text-primary">NAIL #1</div>
+<div class="hidden md:flex gap-12">
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-300" href="#experience">Experience</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-300" href="#services">Services</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-300" href="#story">Story</a>
+<a class="text-on-surface-variant font-label-caps text-label-caps hover:text-secondary transition-colors duration-300" href="#visit">Visit</a>
+</div>
+<div class="font-label-caps text-label-caps text-primary">(216) 600-9781</div>
+</nav>
+<!-- Side Navigation (Mobile Trigger & Tablet View) -->
+<aside class="hidden lg:flex fixed left-0 top-0 h-full w-20 flex-col items-center justify-center border-r border-outline-variant py-8 z-40 bg-surface">
+<div class="rotate-90 whitespace-nowrap text-label-caps font-label-caps tracking-widest text-outline">ESTABLISHED 1978</div>
+</aside>
+<main class="lg:pl-20">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center px-grid-margin pt-20 overflow-hidden" id="experience">
+<div class="grid grid-cols-12 gap-grid-gutter w-full">
+<!-- Large Image Block -->
+<div class="col-span-12 md:col-span-8 relative">
+<div class="aspect-[4/5] md:aspect-[16/9] bg-surface-container overflow-hidden border border-outline-variant">
+<img alt="Luxury Nail Editorial" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700 scale-105 hover:scale-100" data-alt="A high-fashion editorial close-up of a hand with meticulously crafted long oval nails featuring a subtle copper leaf design over a dusty rose base. The hand is resting on a piece of dark, rusted industrial metal, creating a sharp contrast. The lighting is dramatic and directional, typical of a professional studio photoshoot. The overall atmosphere is sophisticated, moody, and embodies a modern industrial chic aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGeIzcMkm-DQCtjBMOwVx1NJWJ5-8jDvijlp6OsOUL04406kn21YJgTZSB1NB8rsgkYQD9TiKu0-fCD7BzdJouDyhowgHhscwOEgYZhobRQEIOa3j6W82Q6P4mxOgIGhIP_irfqcoPktTC0Kx6-NUlgNkaJgmcwlY23y1qqctBpgii63M54yy9QR6GoZMy2oxAqPglZpXX-bFaXJI4qU0YA9knhBUItC0ae9IM5DoENkAok3MO6XHcSHKlchfipHPu1FXmCx_rsg"/>
+</div>
+<div class="absolute -bottom-8 -right-8 bg-dusty-rose-bg p-12 max-w-sm hidden md:block border border-outline-variant">
+<p class="font-body-md text-body-md italic iron-oxide-text">"Precision is our only standard. We don't just paint; we architect."</p>
+</div>
+</div>
+<!-- Text Block -->
+<div class="col-span-12 md:col-span-4 flex flex-col justify-center gap-8 md:-ml-12 z-10 bg-surface md:bg-transparent py-12 md:py-0">
+<h1 class="font-display-xl text-display-xl iron-oxide-text">Precision<br/>is Our<br/>Signature.</h1>
+<div class="w-24 h-1 bg-primary"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xs">
+                        Cleveland's premiere editorial salon where industrial heritage meets haute couture aesthetic.
+                    </p>
+<button class="w-fit px-8 py-4 border border-primary font-label-caps text-label-caps tracking-widest hover-fill transition-all duration-300">
+                        BOOK CONSULTATION
+                    </button>
+</div>
+</div>
+<!-- Offset Grid Accent -->
+<div class="absolute top-0 right-0 w-1/4 h-full border-l border-outline-variant -z-10 opacity-30"></div>
+</section>
+<!-- Credibility Section -->
+<section class="py-block-gap px-grid-margin bg-surface-container-low">
+<div class="editorial-line mb-20"></div>
+<div class="grid grid-cols-12 gap-grid-gutter items-end">
+<div class="col-span-12 md:col-span-5">
+<h2 class="font-label-caps text-label-caps text-primary mb-4 uppercase">Legacy</h2>
+<h3 class="font-headline-lg text-headline-lg iron-oxide-text mb-8 leading-tight">Cleveland's Industrial Gem for over 20 years.</h3>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7">
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Since establishing our footprint in Cleveland's historic core, NAIL #1 has redefined the luxury nail experience. We merge the raw, honest texture of the city with the refined precision of editorial nail artistry. Our team are masters of structure, color, and avant-garde technique.
+                    </p>
+</div>
+</div>
+</section>
+<!-- Services Section: List Style -->
+<section class="py-block-gap px-grid-margin bg-surface" id="services">
+<div class="mb-20">
+<h2 class="font-display-xl text-display-xl text-center iron-oxide-text">The Menu</h2>
+<div class="editorial-line mx-auto mt-4"></div>
+</div>
+<div class="max-w-4xl mx-auto flex flex-col">
+<!-- Service 01 -->
+<div class="service-item group relative py-12 border-b border-outline-variant flex justify-between items-center cursor-pointer">
+<div class="flex items-baseline gap-6">
+<span class="font-label-caps text-label-caps text-outline">01</span>
+<h4 class="font-headline-md text-headline-md group-hover:italic group-hover:pl-4 transition-all duration-300">Structural Gel Overlay</h4>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary">From $75</span>
+</div>
+<!-- Hover Image Container -->
+<div class="service-thumb absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-64 opacity-0 scale-75 pointer-events-none transition-all duration-500 z-20 border border-primary p-2 bg-surface">
+<img alt="Gel Overlay" class="w-full h-full object-cover" data-alt="A macro photograph showing a perfectly executed nude gel overlay on almond-shaped nails. The surface is glass-like and reflects a soft, high-key studio light. The skin around the cuticles is impeccably clean and hydrated. The background is a soft-focus industrial gray concrete, emphasizing the high-gloss finish of the nails. The mood is minimalist, clean, and luxurious." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCbMMPWxXRTcZgZKSmWUg4njeXyIqZ3pKCu1MT18I_6Gn5Tx9LGZLK9YQvvKauctApUgDBwDul06Zi0f91gFoz_FSTLDd9RuAbfCNH1Mu9CSJf7vZ7VfbWBeDAoCKuKY2SMBEYZdZJ7xyPIzaoN3GUXNV5PARkQFUx0LGqPhWqH65sM1ce2AJ504nOZ_rp1h4NH0OANKQt-C7-BY_PTWbTXDvme174fCXjb3StvZ1KEmH1jbNeoyng7FeZc3rSpowa-C6b4xdqN6Q"/>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="service-item group relative py-12 border-b border-outline-variant flex justify-between items-center cursor-pointer">
+<div class="flex items-baseline gap-6">
+<span class="font-label-caps text-label-caps text-outline">02</span>
+<h4 class="font-headline-md text-headline-md group-hover:italic group-hover:pl-4 transition-all duration-300">Editorial Nail Art</h4>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary">By Quote</span>
+</div>
+<div class="service-thumb absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-64 opacity-0 scale-75 pointer-events-none transition-all duration-500 z-20 border border-primary p-2 bg-surface">
+<img alt="Nail Art" class="w-full h-full object-cover" data-alt="Abstract nail art featuring fine metallic copper lines and matte iron-oxide colored geometric shapes on a transparent base. The design mimics modern architectural blueprints or technical drawings. The lighting highlights the reflective quality of the copper against the matte textures. The image is framed with a slight tilt to enhance the editorial magazine aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCexURlkNuI8DhczcDUl4amoeGJhyC1Z6M5xAnT8kFz7INRFQfBQxllwWmC1SSUuyatWCX15gBFGiJxoCTZeOYJEnnXZz92Ft2YSr20yPDrTlsSH89wSIJTheMmJTjSgSS5TpN030McP68PLN1-S_JspQqSsZ_6HvJMcZVYppnrqtB9DPTGjKANkeZxPKS7OWsiNc555najQFIZd1oDYb2IENQx7OreJGROuelQaENqoir1Eh-vykzJIt7b67y3lo5liCR50ltUpQ"/>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="service-item group relative py-12 border-b border-outline-variant flex justify-between items-center cursor-pointer">
+<div class="flex items-baseline gap-6">
+<span class="font-label-caps text-label-caps text-outline">03</span>
+<h4 class="font-headline-md text-headline-md group-hover:italic group-hover:pl-4 transition-all duration-300">Signature Restoration</h4>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-primary">From $120</span>
+</div>
+<div class="service-thumb absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-64 opacity-0 scale-75 pointer-events-none transition-all duration-500 z-20 border border-primary p-2 bg-surface">
+<img alt="Restoration" class="w-full h-full object-cover" data-alt="A serene image of hands undergoing a luxury spa treatment. The hands are resting in a copper bowl filled with warm water and floating rose petals. The lighting is soft and golden, suggesting a late afternoon sun streaming through an industrial loft window. The focus is on the texture of the copper and the softness of the skin. The overall mood is one of tranquil restorative luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCQmPdrvjYDlXf6kETIQNa8WRQqL7-CyY6zodQIqoGRgZYUjXdMdQJVsTfG6_whj61zhlmqocYF83erXZqkwrpDX8oOOgoYThSz7jB1SGa4AAe5R5-LPs4HvLn9miM6wqtRvw0udzlsUsbQb2KwRwUweu3tYE_RwNSD5iIvjsqmTHLMAY9wkyXlwIF_-J3meH_WViqmk6EWb2kB1fJPIE6eTZ69dH1S4myu889xUchICS2zhv3i8tV_xrn2xaGTIsDnDDtAbJVntg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: Editorial Layout -->
+<section class="py-block-gap px-grid-margin bg-surface-container-high relative overflow-hidden" id="story">
+<div class="grid grid-cols-12 gap-grid-gutter relative z-10">
+<div class="col-span-12 lg:col-span-6 offset-block-left bg-surface p-12 md:p-24 border border-outline-variant">
+<h2 class="font-label-caps text-label-caps text-primary mb-12 uppercase tracking-widest">Our Story</h2>
+<p class="font-headline-md text-headline-md iron-oxide-text mb-8 leading-snug">
+                        Where the raw grit of East 55th meets the refined edge of a runway.
+                    </p>
+<div class="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
+<p>NAIL #1 was born from a desire to strip away the fluff of the traditional salon experience. We found beauty in the industrial architecture of Cleveland—the exposed brick, the weathered copper, the structural honesty.</p>
+<p>Our philosophy is simple: we respect the anatomy of the nail as much as we respect the art of the finish. Every technician at NAIL #1 is trained in an editorial-first methodology, ensuring your signature look is both durable and avant-garde.</p>
+</div>
+<div class="mt-12">
+<p class="signature-font text-3xl iron-oxide-text">L. Marshall</p>
+<p class="font-label-caps text-label-caps mt-2">Founder &amp; Creative Lead</p>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:col-start-8 mt-12 lg:mt-0 flex flex-col justify-center">
+<div class="relative">
+<img alt="Studio Interior" class="w-full aspect-[3/4] object-cover border border-outline-variant grayscale" data-alt="An interior shot of a high-end modern industrial nail salon. Large floor-to-ceiling warehouse windows reveal a glimpse of Cleveland's urban landscape. Inside, the space features polished concrete floors, minimalist copper-framed workstations, and velvet chairs in a dusty rose color. High-contrast lighting creates long shadows and highlights the clean, architectural lines of the furniture. The atmosphere is quiet, exclusive, and undeniably chic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBuO0_vgUXje4OcmcOGbkzNI2eu38G9XEev2t5kl6cbQxykeuBrYZPBtz0Nnmwo9iTHCiz1cbO0E0cmg19MBrNs_CI7JRHbk-twA0qRqOZXfaIucPYpeZuVaDIcEVC1-CSlUUh7k5zxdnhIIyDwu51Ga84OlAFGn_eZbJw-6LnPAeit5OsvPHGkySMKR3gBLMSEvN1nj4arxuHX2el5C8v2y7476dMo56D_M9BvqMOo_KwdaNGY2ZzAnQtJC1wDa18JpEaLxsMvlA"/>
+<div class="absolute -top-6 -left-6 w-full h-full border border-primary -z-10"></div>
+</div>
+</div>
+</div>
+<!-- Decorative Large Text -->
+<div class="absolute -bottom-20 -right-20 font-display-xl text-[200px] text-surface-variant opacity-50 select-none pointer-events-none uppercase">
+                Artisan
+            </div>
+</section>
+<!-- Visit & Map Section -->
+<section class="py-block-gap px-grid-margin bg-surface" id="visit">
+<div class="grid grid-cols-12 gap-grid-gutter">
+<div class="col-span-12 md:col-span-4 mb-12 md:mb-0">
+<h2 class="font-headline-lg text-headline-lg iron-oxide-text mb-8">Visit the Studio</h2>
+<ul class="space-y-8 font-body-lg text-body-lg">
+<li class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline mb-2">LOCATION</span>
+                            2535 East 55th Street<br/>Cleveland, OH 44104
+                        </li>
+<li class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline mb-2">HOURS</span>
+                            Mon – Sat: 10AM – 7PM<br/>Sun: Closed
+                        </li>
+<li class="flex flex-col">
+<span class="font-label-caps text-label-caps text-outline mb-2">INQUIRIES</span>
+                            (216) 600-9781<br/>nails19781@gmail.com
+                        </li>
+</ul>
+</div>
+<div class="col-span-12 md:col-span-8">
+<div class="relative group border border-outline-variant p-2">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] grayscale hover:grayscale-0 transition-all duration-700" data-location="Cleveland, OH" data-map-slot="" style=""></div>
+<div class="absolute top-8 right-8 bg-surface p-6 shadow-none border border-outline-variant">
+<span class="material-symbols-outlined text-primary mb-2">location_on</span>
+<p class="font-label-caps text-label-caps">CENTRAL CLEVELAND</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-block-gap px-grid-margin bg-inverse-surface text-inverse-on-surface">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-16">
+<h2 class="font-label-caps text-label-caps text-secondary-fixed mb-4">RESERVATIONS</h2>
+<h3 class="font-display-xl text-headline-lg md:text-display-xl">Start Your Journey.</h3>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12" id="contactForm">
+<div class="relative">
+<label class="font-label-caps text-label-caps block mb-2 uppercase opacity-60">Your Name</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary transition-colors py-2 outline-none text-body-lg" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps block mb-2 uppercase opacity-60">Email Address</label>
+<input class="w-full bg-transparent border-b border-outline-variant focus:border-secondary transition-colors py-2 outline-none text-body-lg" required="" type="email"/>
+</div>
+<div class="col-span-1 md:col-span-2">
+<label class="font-label-caps text-label-caps block mb-2 uppercase opacity-60">Service Interest</label>
+<select class="w-full bg-transparent border-b border-outline-variant focus:border-secondary transition-colors py-2 outline-none text-body-lg appearance-none cursor-pointer">
+<option class="bg-inverse-surface">Structural Gel Overlay</option>
+<option class="bg-inverse-surface">Editorial Nail Art</option>
+<option class="bg-inverse-surface">Signature Restoration</option>
+<option class="bg-inverse-surface">Consultation</option>
+</select>
+</div>
+<div class="col-span-1 md:col-span-2 pt-12 flex justify-center">
+<button class="group flex items-center gap-4 px-12 py-5 border border-secondary-fixed hover:bg-secondary-fixed hover:text-primary transition-all duration-500 font-label-caps text-label-caps tracking-[0.2em]" type="submit">
+                            SEND REQUEST
+                            <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">arrow_right_alt</span>
+</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full px-grid-margin py-20 bg-surface-container-highest grid grid-cols-1 md:grid-cols-2 gap-grid-gutter max-w-container-max mx-auto border-t border-secondary">
+<div class="space-y-8">
+<div class="font-headline-md text-headline-md text-primary">NAIL #1</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    © 2024 NAIL #1. Cleveland's Modern Industrial Chic. Crafting editorial excellence since 1978.
+                </p>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">share</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#"><span class="material-symbols-outlined">photo_camera</span></a>
+</div>
+</div>
+<div class="flex flex-col md:items-end justify-between space-y-12 md:space-y-0">
+<div class="flex flex-col md:text-right gap-4">
+<a class="text-on-surface-variant font-body-md hover:text-secondary underline underline-offset-4" href="https://maps.google.com/?q=2535+East+55th+Street+Cleveland+OH+44104" target="_blank">2535 East 55th Street, Cleveland, OH 44104</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary underline underline-offset-4" href="mailto:nails19781@gmail.com">nails19781@gmail.com</a>
+<a class="text-primary font-headline-md font-bold hover:text-secondary transition-colors" href="tel:2166009781">(216) 600-9781</a>
+</div>
+<div class="flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#">Terms</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#experience">Back to Top</a>
+</div>
+</div>
+</footer>
+</main>
+<script>
+        // Smooth Scroll Implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Form Submission Logic
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = 'SENDING...';
+            btn.style.opacity = '0.7';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.innerHTML = 'SENT SUCCESSFULLY';
+                btn.classList.add('bg-secondary-fixed', 'text-primary');
+                this.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.style.opacity = '1';
+                    btn.disabled = false;
+                    btn.classList.remove('bg-secondary-fixed', 'text-primary');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Intersection Observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-sm');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.add('py-4');
+                nav.classList.remove('py-2', 'shadow-sm');
+            }
+        });
+    </script>
+</body></html>
