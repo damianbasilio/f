@@ -41,13 +41,13 @@ Email: seventhhousehair@gmail.com
 
 Recent posts from their Facebook page:
 1. Looking to open up my space to 2 like minded stylists! Seventh House is full of natural light, happy plants, and good energy, and I’m ready to share that with stylists who value these qualities, but also teamwork, community, and creativity. Email Link in Bio! Ask me anything. Looking forward to meeting you ✨
-2. Non-Toxic Eco-friendly hair studio focused in intuitive hair design, natural textures, and specializ
-3. Seventh House is in Portsmouth, NH, United States.
+2. Seventh House is in Portsmouth, NH, United States.
+3. Non-Toxic Eco-friendly hair studio focused in intuitive hair design, natural textures, and specializ
 
 **Recent post captions (3 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "Looking to open up my space to 2 like minded stylists! Seventh House is full of natural light, happy plants, and good energy, and I’m ready to share that with stylists who value these qualities, but also teamwork, community, and creativity. Email Link in Bio! Ask me anything. Looking forward to meeting you ✨"
-2. "Non-Toxic Eco-friendly hair studio focused in intuitive hair design, natural textures, and specializ"
-3. "Seventh House is in Portsmouth, NH, United States."
+2. "Seventh House is in Portsmouth, NH, United States."
+3. "Non-Toxic Eco-friendly hair studio focused in intuitive hair design, natural textures, and specializ"
 
 **Preserve:** real business name, city, services, phone, and the warm local tone from their page.
 **Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).
@@ -106,7 +106,7 @@ Establish a clear type scale (display, h2, body, small) with intentional letter-
 Design as if you won a paid branding project: distinctive hero, memorable section rhythm, premium polish.
 Layout seed: **diagonal-cut** — interpret literally but creatively.
 You choose the full color palette and typography — there is nothing to extract from a website.
-They have 9 real Facebook photos — design hero and gallery for authentic local imagery.
+They have 8 real Facebook photos — design hero and gallery for authentic local imagery.
 
 **Layout archetype:** diagonal-cut
 Diagonal or angled section dividers (clip-path or skewed bands); hero with angled color block behind headline; dynamic but not chaotic.
@@ -117,7 +117,7 @@ hero → credibility → services → gallery → about → visit → contact
 
 **Hero direction:**
 
-- **H1 (adapt closely):** Seventh House — serving Portsmouth
+- **H1 (adapt closely):** Seventh House is in Portsmouth, NH, United States
 - **Subhead:** Looking to open up my space to 2 like minded stylists! Seventh House is full of natural…
 - **Primary CTA:** Book appointment
 - **Secondary CTA:** View services
@@ -151,7 +151,7 @@ There is **no existing website** and **nothing to extract**. Choose palette and 
 
 ### Photo inventory
 
-You will receive 9 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
+You will receive 8 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
 
 Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
@@ -189,7 +189,7 @@ Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery
 ### Required capabilities (implement with unique structure and naming)
 
 1. **Header** — wordmark or logotype treatment, nav, phone visible on desktop
-2. **Hero** — Seventh House — serving Portsmouth, subhead, Book appointment, your invented palette dominant
+2. **Hero** — Seventh House is in Portsmouth, NH, United States, subhead, Book appointment, your invented palette dominant
 3. **Credibility** — `#credibility` — only verifiable trust (local, years serving, review score if provided)
 4. **Offerings** — services from bullets above, not generic filler
 5. **About** — specific details from scraped profile and posts

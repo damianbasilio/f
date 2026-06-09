@@ -19,7 +19,7 @@ Agent-facing summary. Full gates and Stitch fields remain in `brief.md`.
 
 ## Mockup angle
 
-- **H1:** Seventh House — serving Portsmouth
+- **H1:** Seventh House is in Portsmouth, NH, United States
 - **Primary CTA:** Book appointment
 - **Why site hurts sales:** Business relies on Facebook only; Google searchers cannot reach a dedicated homepage with phone and services above the fold.
 
