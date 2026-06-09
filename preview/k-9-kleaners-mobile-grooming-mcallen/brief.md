@@ -10,12 +10,12 @@
 
 - **Gate:** PASS
 - **Evidence:** Active Facebook page with content and 5 post caption(s) scraped
-- **Checked:** 2026-06-08 — Facebook profile scrape
+- **Checked:** 2026-06-09 — Facebook profile scrape
 
 ## Human approval
 
 - **Reviewed by:** auto (Facebook-only verified lead)
-- **Date:** 2026-06-08
+- **Date:** 2026-06-09
 - **Website bad enough to proceed:** yes — no owned website on Facebook profile
 - **Gate:** PASS
 
@@ -45,10 +45,10 @@ Email: Adrianmendo55@gmail.com
 
 Recent posts from their Facebook page:
 1. Thank you for keeping us busy this holiday season! We are now taking a much needed break to rest up and come back in the new year ready to get back to you all! Any calls and messages will be returned when we are back in working hours . Thank you & Merry Christmas! 🎄
-2. Mobile Dog Grooming Services across the RGV. We come to you! No need to drop off and pick up your pe
-3. McAllen, TX, United States, Texas
-4. Merry Christmas from Mochi & Miso! 🎄
-5. K-9 Kleaners Mobile Grooming's Photo
+2. Merry Christmas from Mochi & Miso! 🎄
+3. K-9 Kleaners Mobile Grooming's Photo
+4. Mobile Dog Grooming Services across the RGV. We come to you! No need to drop off and pick up your pe
+5. McAllen, TX, United States, Texas
 - **Category:** Pet grooming / pet services
 - **Vertical:** Pet grooming / pet services
 
@@ -57,7 +57,7 @@ Recent posts from their Facebook page:
 - **Primary action:** Book grooming
 - **Secondary action:** Call us
 - **Must surface above fold:** Phone number, primary CTA, business name, city
-- **Service highlights:** Mobile Dog Grooming Services across the RGV; K-9 Kleaners Mobile Grooming's Photo; Full-service grooming; Breed-specific care
+- **Service highlights:** K-9 Kleaners Mobile Grooming's Photo; Mobile Dog Grooming Services across the RGV; Full-service grooming; Breed-specific care
 - **Trust signals available:** Local business; Facebook community presence
 
 ## Three verifiable issues
@@ -89,7 +89,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/k9kleanersrgv/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T18:25:56.541Z
+- **Scraped:** 2026-06-09T16:35:55.078Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/k9kleanersrgv/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

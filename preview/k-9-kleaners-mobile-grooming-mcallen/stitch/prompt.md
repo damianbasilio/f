@@ -43,17 +43,17 @@ Email: Adrianmendo55@gmail.com
 
 Recent posts from their Facebook page:
 1. Thank you for keeping us busy this holiday season! We are now taking a much needed break to rest up and come back in the new year ready to get back to you all! Any calls and messages will be returned when we are back in working hours . Thank you & Merry Christmas! 🎄
-2. Mobile Dog Grooming Services across the RGV. We come to you! No need to drop off and pick up your pe
-3. McAllen, TX, United States, Texas
-4. Merry Christmas from Mochi & Miso! 🎄
-5. K-9 Kleaners Mobile Grooming's Photo
+2. Merry Christmas from Mochi & Miso! 🎄
+3. K-9 Kleaners Mobile Grooming's Photo
+4. Mobile Dog Grooming Services across the RGV. We come to you! No need to drop off and pick up your pe
+5. McAllen, TX, United States, Texas
 
 **Recent post captions (5 — echo their voice in headlines; skip registry/SKU/listing lines):**
 1. "Thank you for keeping us busy this holiday season! We are now taking a much needed break to rest up and come back in the new year ready to get back to you all! Any calls and messages will be returned when we are back in working hours . Thank you & Merry Christmas! 🎄"
-2. "Mobile Dog Grooming Services across the RGV. We come to you! No need to drop off and pick up your pe"
-3. "McAllen, TX, United States, Texas"
-4. "Merry Christmas from Mochi & Miso! 🎄"
-5. "K-9 Kleaners Mobile Grooming's Photo"
+2. "Merry Christmas from Mochi & Miso! 🎄"
+3. "K-9 Kleaners Mobile Grooming's Photo"
+4. "Mobile Dog Grooming Services across the RGV. We come to you! No need to drop off and pick up your pe"
+5. "McAllen, TX, United States, Texas"
 
 **Preserve:** real business name, city, services, phone, and the warm local tone from their page.
 **Fix:** no dedicated homepage today — build phone + primary CTA above the fold, clear services, gallery, visit/map slot, contact (preview only).
@@ -129,8 +129,8 @@ hero → credibility → services → gallery → about → visit → contact
 - **Secondary CTA:** Call us
 
 **Services / offerings (feature prominently with business-specific language):**
-- Mobile Dog Grooming Services across the RGV
 - K-9 Kleaners Mobile Grooming's Photo
+- Mobile Dog Grooming Services across the RGV
 - Full-service grooming
 - Breed-specific care
 

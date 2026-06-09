@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>K-9 KLEANERS | Modern Mobile Groomery</title>
+<meta content="Professional mobile pet grooming in McAllen, TX. Expert care that comes to your doorstep." name="description"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Playfair+Display:wght@600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#c2c6d8",
+                    "primary-fixed-dim": "#c2c6d8",
+                    "secondary-fixed-dim": "#3cddc7",
+                    "on-surface-variant": "#45464c",
+                    "surface-bright": "#f9f9ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f0f3ff",
+                    "secondary-container": "#62fae3",
+                    "surface-dim": "#cfdaf1",
+                    "background": "#f9f9ff",
+                    "on-background": "#111c2c",
+                    "on-secondary-fixed": "#00201c",
+                    "error-container": "#ffdad6",
+                    "surface-tint": "#595e6d",
+                    "outline": "#76777c",
+                    "surface-container": "#e7eeff",
+                    "on-tertiary-fixed": "#1c1c19",
+                    "primary-fixed": "#dee2f4",
+                    "error": "#ba1a1a",
+                    "on-surface": "#111c2c",
+                    "on-secondary-container": "#007165",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-error": "#ffffff",
+                    "tertiary-fixed": "#e5e2dd",
+                    "inverse-surface": "#263142",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#424655",
+                    "surface-variant": "#d8e3fa",
+                    "primary": "#030612",
+                    "secondary": "#006b5f",
+                    "secondary-fixed": "#62fae3",
+                    "on-secondary-fixed-variant": "#005047",
+                    "outline-variant": "#c6c6cc",
+                    "tertiary": "#060605",
+                    "on-primary-container": "#828697",
+                    "primary-container": "#1a1f2c",
+                    "surface-container-highest": "#d8e3fa",
+                    "surface": "#f9f9ff",
+                    "on-tertiary-container": "#888682",
+                    "on-secondary": "#ffffff",
+                    "surface-container-high": "#dee8ff",
+                    "tertiary-fixed-dim": "#c9c6c2",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#1f1f1c",
+                    "on-primary-fixed": "#161b28",
+                    "on-tertiary-fixed-variant": "#474743"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap-mobile": "64px",
+                    "gutter": "20px",
+                    "grid-margin": "24px",
+                    "section-gap-desktop": "120px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["Montserrat"],
+                    "headline-sm": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "button": ["Montserrat"],
+                    "headline-md": ["Playfair Display"],
+                    "body-md": ["Montserrat"],
+                    "label-caps": ["Montserrat"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                    "display-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        
+        /* Modern Groomery Rule Lines */
+        .rule-line {
+            height: 1px;
+            background-color: rgba(3, 6, 18, 0.1);
+            width: 100%;
+        }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+
+        .service-list-item:hover .service-arrow {
+            transform: translateX(8px);
+            opacity: 1;
+        }
+
+        /* Nav Glassmorphism */
+        .glass-nav {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Mobile Menu */
+        #mobile-menu {
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        #mobile-menu.hidden-menu {
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/90 backdrop-blur-md border-b border-on-surface/10">
+<div class="flex justify-between items-center px-grid-margin py-4 max-w-7xl mx-auto">
+<a class="font-display-lg text-headline-sm tracking-tight text-primary" href="#">K-9 KLEANERS</a>
+<!-- Desktop Links -->
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#services">Services</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface-variant font-body-md hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
+<a class="bg-primary text-on-primary px-6 py-3 rounded-full font-button hover:opacity-90 transition-all active:scale-95" href="tel:9565550123">(956) 555-0123</a>
+</div>
+<!-- Mobile Toggle -->
+<button class="md:hidden text-primary p-2" id="menu-toggle">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 bg-surface z-40 flex flex-col items-center justify-center gap-8 hidden-menu md:hidden transition-all duration-300" id="mobile-menu">
+<a class="font-display-lg text-headline-md text-primary" href="#services" onclick="toggleMenu()">Services</a>
+<a class="font-display-lg text-headline-md text-primary" href="#about" onclick="toggleMenu()">About</a>
+<a class="font-display-lg text-headline-md text-primary" href="#contact" onclick="toggleMenu()">Contact</a>
+<a class="font-label-caps text-secondary text-lg" href="tel:9565550123">(956) 555-0123</a>
+<button class="absolute top-6 right-6" onclick="toggleMenu()">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+</div>
+<main class="mt-20">
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-grid-margin py-section-gap-mobile md:py-section-gap-desktop">
+<div class="asymmetric-grid items-center">
+<div class="col-span-12 lg:col-span-6 z-10">
+<span class="font-label-caps text-secondary mb-4 block">MOBILE LUXURY GROOMING</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 max-w-xl">
+                        Professional Care That Comes to You.
+                    </h1>
+<p class="font-body-lg text-on-surface-variant mb-10 max-w-lg">
+                        Elevating the grooming experience with personalized, low-stress treatments delivered at your doorstep in McAllen, Texas.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary px-10 py-5 rounded-full font-button text-center hover:bg-primary-container transition-colors" href="#booking">Reserve a Session</a>
+<a class="border border-outline px-10 py-5 rounded-full font-button text-center hover:bg-surface-container transition-colors" href="#services">View Menu</a>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-6 relative mt-12 lg:mt-0">
+<div class="rounded-xl overflow-hidden aspect-[4/5] md:aspect-square lg:translate-x-12 relative shadow-2xl">
+<img alt="Luxury pet grooming" class="w-full h-full object-cover" data-alt="A clean, minimalist high-end pet grooming salon environment with soft natural lighting and sophisticated equipment. A professional groomer is gently working with a well-behaved dog, emphasizing a calm and premium atmosphere. The color palette features Crisp Teal accents against a Soft Sand background, reflecting a modern, luxurious mobile grooming service. High-quality editorial photography style with shallow depth of field." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfNTQ6AyCyiGUknuFYSo2Y_PoDa4yvofl7b_q73p-gr45-oloFDoEJcSjl6uNayMnzfel9Ga2G8wxlaTkubPdD2D3Zg58R4KkytkeZIniKvrhVJxw-nB0jGLeoJsEe6_K4ArEsroHFAVIYMdju_wHBDDfKTaEIpGtf9uvbTlrH0_UYhkBpqOPITExkFejw--mpDA4CxSqP2hO_gL8bruuUepjnMJanb9W8ypRJIWPeR3DVu4jgQcYlqTcNcgqXoocm9GSlkTqkzWHN"/>
+</div>
+<!-- Decorative Element -->
+<div class="hidden lg:block absolute -bottom-10 -left-10 w-48 h-48 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+</div>
+</div>
+</section>
+<!-- Credibility Section: By the Numbers -->
+<section class="bg-primary-container py-24 text-on-primary">
+<div class="max-w-7xl mx-auto px-grid-margin">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 text-center">
+<div>
+<p class="font-display-lg text-display-lg text-secondary-fixed mb-2">500+</p>
+<p class="font-label-caps tracking-widest text-on-primary-container">Happy Pups</p>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-secondary-fixed mb-2">5 Years</p>
+<p class="font-label-caps tracking-widest text-on-primary-container">Serving McAllen</p>
+</div>
+<div>
+<p class="font-display-lg text-display-lg text-secondary-fixed mb-2">100%</p>
+<p class="font-label-caps tracking-widest text-on-primary-container">Mobile Service</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services: The Treatment Menu -->
+<section class="max-w-7xl mx-auto px-grid-margin py-section-gap-mobile md:py-section-gap-desktop" id="services">
+<div class="mb-20">
+<span class="font-label-caps text-secondary mb-4 block">EXPERT CURATED CARE</span>
+<h2 class="font-display-lg text-headline-md md:text-display-lg text-primary">The Treatment Menu</h2>
+</div>
+<div class="flex flex-col">
+<div class="rule-line"></div>
+<!-- Service Item 1 -->
+<div class="service-list-item py-12 group flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer transition-all">
+<div class="max-w-2xl">
+<h3 class="font-headline-sm text-primary mb-2">Full Groom</h3>
+<p class="font-body-md text-on-surface-variant">The ultimate luxury package including a precision haircut, bath, blow dry, nail trimming, and ear cleaning.</p>
+</div>
+<div class="mt-6 md:mt-0 flex items-center gap-6">
+<span class="font-display-lg text-headline-sm text-secondary">From $75</span>
+<span class="material-symbols-outlined service-arrow opacity-0 transition-all text-secondary">arrow_forward</span>
+</div>
+</div>
+<div class="rule-line"></div>
+<!-- Service Item 2 -->
+<div class="service-list-item py-12 group flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer transition-all">
+<div class="max-w-2xl">
+<h3 class="font-headline-sm text-primary mb-2">Bath &amp; Brush</h3>
+<p class="font-body-md text-on-surface-variant">Designed for maintenance between grooms. Includes deep cleaning, moisturizing treatment, and thorough brushing.</p>
+</div>
+<div class="mt-6 md:mt-0 flex items-center gap-6">
+<span class="font-display-lg text-headline-sm text-secondary">From $50</span>
+<span class="material-symbols-outlined service-arrow opacity-0 transition-all text-secondary">arrow_forward</span>
+</div>
+</div>
+<div class="rule-line"></div>
+<!-- Service Item 3 -->
+<div class="service-list-item py-12 group flex flex-col md:flex-row justify-between items-start md:items-center cursor-pointer transition-all">
+<div class="max-w-2xl">
+<h3 class="font-headline-sm text-primary mb-2">Puppy's First Groom</h3>
+<p class="font-body-md text-on-surface-variant">A gentle introduction to grooming for puppies up to 6 months, focusing on positive reinforcement and basic hygiene.</p>
+</div>
+<div class="mt-6 md:mt-0 flex items-center gap-6">
+<span class="font-display-lg text-headline-sm text-secondary">From $40</span>
+<span class="material-symbols-outlined service-arrow opacity-0 transition-all text-secondary">arrow_forward</span>
+</div>
+</div>
+<div class="rule-line"></div>
+</div>
+</section>
+<!-- About: Meet Adrian -->
+<section class="bg-surface-container-low py-section-gap-mobile md:py-section-gap-desktop" id="about">
+<div class="max-w-7xl mx-auto px-grid-margin grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<div class="rounded-xl overflow-hidden aspect-[3/4] relative z-10 grayscale hover:grayscale-0 transition-all duration-700">
+<img alt="Adrian Mendo - Professional Groomer" class="w-full h-full object-cover" data-alt="A portrait of a professional male pet groomer in a clean, modern workspace. He has a warm, trustworthy expression and is dressed in professional dark attire. The background is a minimalist mobile grooming van interior with Teal accents and Soft Sand walls. The lighting is soft and flattering, creating a premium feel that emphasizes personalized care and local expertise in McAllen, Texas." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9VZErarRQsDpeggW7KdDq94ezX0RC41HlXREC8HHBcB_KBzXjvUCeZ-kpijqXvEH1TpCw2ODhwLkrsCe5ytDW9TCXnQ3cwhkPohyHbYrRipibghhYSOrr8WvuXM_98kZ0pMMWGuj1qhldlQFYUmXgyiz3znP_S6ftQJHOGyhGCjN1CzEvEXG-JjUVW3RR_qN_U02ThFLsL8Mnc27PKWhfdpnv2u3J8XVIrmEq9Q_cOE3Vk54HwhHbMjhkcHTmBTLpFJbq0EjN9Kin"/>
+</div>
+<div class="absolute -top-6 -right-6 w-32 h-32 bg-secondary border border-secondary/20 flex items-center justify-center rounded-full z-20">
+<span class="text-white font-label-caps text-center">LOCAL<br/>EXPERT</span>
+</div>
+</div>
+<div>
+<span class="font-label-caps text-secondary mb-4 block">CRAFTSMANSHIP &amp; CARE</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-primary mb-8">Meet Adrian</h2>
+<p class="font-body-lg text-on-surface-variant mb-6">
+                        I founded K-9 KLEANERS with a simple mission: to provide the highest standard of grooming care without the stress of a traditional salon. 
+                    </p>
+<p class="font-body-md text-on-surface-variant mb-10">
+                        Every pet is unique, and I treat them with the patience and precision they deserve. As a local professional serving McAllen for over 5 years, I’ve built my reputation on trust, hygiene, and the happiness of every pup that enters my mobile studio.
+                    </p>
+<div class="flex gap-12">
+<div>
+<span class="block font-label-caps text-primary mb-1">FOUNDED</span>
+<span class="font-body-md">2019</span>
+</div>
+<div>
+<span class="block font-label-caps text-primary mb-1">CERTIFIED</span>
+<span class="font-body-md">Master Groomer</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Booking & Contact -->
+<section class="max-w-7xl mx-auto px-grid-margin py-section-gap-mobile md:py-section-gap-desktop" id="booking">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+<!-- Form -->
+<div>
+<h2 class="font-display-lg text-headline-md text-primary mb-4">Reserve a Session</h2>
+<p class="font-body-md text-on-surface-variant mb-12">Complete the form below and Adrian will contact you to confirm your mobile appointment.</p>
+<form class="space-y-8" id="booking-form">
+<div>
+<label class="block font-label-caps text-primary mb-3">YOUR NAME</label>
+<input class="w-full border-b border-outline bg-transparent py-4 focus:outline-none focus:border-secondary transition-colors" placeholder="First and Last Name" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div>
+<label class="block font-label-caps text-primary mb-3">PET BREED</label>
+<input class="w-full border-b border-outline bg-transparent py-4 focus:outline-none focus:border-secondary transition-colors" placeholder="e.g. Golden Retriever" required="" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-primary mb-3">SERVICE</label>
+<select class="w-full border-b border-outline bg-transparent py-4 focus:outline-none focus:border-secondary transition-colors appearance-none">
+<option>Full Groom</option>
+<option>Bath &amp; Brush</option>
+<option>Puppy's First Groom</option>
+</select>
+</div>
+</div>
+<button class="w-full md:w-auto bg-primary text-on-primary px-16 py-5 rounded-full font-button hover:bg-secondary transition-all transform active:scale-95 shadow-lg" type="submit">
+                            Request Appointment
+                        </button>
+</form>
+</div>
+<!-- Info & Map -->
+<div id="contact">
+<div class="mb-12 space-y-6">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">phone</span>
+<a class="font-body-lg text-primary font-semibold" href="tel:9563096209">(956) 309-6209</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<a class="font-body-lg text-primary" href="mailto:Adrianmendo55@gmail.com">Adrianmendo55@gmail.com</a>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="font-body-lg text-primary">McAllen, TX</span>
+</div>
+</div>
+<!-- Map Slot -->
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] rounded-xl bg-surface-container-high border border-outline/20" data-location="McAllen, TX" data-map-slot="" style="">
+<!-- Placeholder for map rendering -->
+<div class="absolute inset-0 flex items-center justify-center bg-surface-container">
+<p class="font-label-caps text-on-surface-variant">Interactive Map of McAllen, TX</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary rounded-t-lg">
+<div class="flex flex-col md:flex-row justify-between items-start gap-section-gap-mobile md:gap-base px-grid-margin py-16 max-w-7xl mx-auto">
+<div class="max-w-md">
+<h2 class="font-display-lg text-headline-md text-secondary mb-6">K-9 KLEANERS</h2>
+<p class="font-body-md text-on-primary-fixed-variant mb-8">
+                    Modern mobile grooming for the discerning pet owner. Serving the entire McAllen metropolitan area with expert, doorstep service.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-on-primary/20 rounded-full flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-on-primary/20 rounded-full flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+</div>
+</div>
+<div class="flex flex-col md:flex-row gap-12 lg:gap-24">
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-on-primary-fixed-variant opacity-60">EXPLORE</span>
+<a class="font-body-md hover:text-secondary transition-colors" href="#services">Services</a>
+<a class="font-body-md hover:text-secondary transition-colors" href="#about">About</a>
+<a class="font-body-md hover:text-secondary transition-colors" href="#booking">Booking FAQ</a>
+</div>
+<div class="flex flex-col gap-4">
+<span class="font-label-caps text-on-primary-fixed-variant opacity-60">LEGAL</span>
+<a class="font-body-md hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md hover:text-secondary transition-colors" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-grid-margin py-8 border-t border-on-primary/10">
+<p class="font-label-caps text-on-primary-fixed-variant text-xs text-center md:text-left">
+                © 2024 K-9 KLEANERS MOBILE GROOMING. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<!-- Mobile Booking Bar (Sticky) -->
+<div class="md:hidden fixed bottom-0 left-0 w-full p-4 bg-surface/80 backdrop-blur-md border-t border-on-surface/5 z-40">
+<a class="block w-full bg-primary text-on-primary text-center py-4 rounded-full font-button shadow-xl" href="#booking">
+            Book Now
+        </a>
+</div>
+<script>
+        // Mobile Menu Toggle
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        function toggleMenu() {
+            mobileMenu.classList.toggle('hidden-menu');
+            document.body.classList.toggle('overflow-hidden');
+        }
+
+        menuToggle.addEventListener('click', toggleMenu);
+
+        // Simple Form Validation & Success UI
+        const bookingForm = document.getElementById('booking-form');
+        bookingForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            
+            btn.innerText = 'Processing...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-secondary');
+                btn.innerText = 'Request Sent!';
+                bookingForm.reset();
+                
+                setTimeout(() => {
+                    btn.classList.add('bg-primary');
+                    btn.classList.remove('bg-secondary');
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'translate-y-10', 'opacity-0');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
