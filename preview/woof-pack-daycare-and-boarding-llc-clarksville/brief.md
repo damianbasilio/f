@@ -10,12 +10,12 @@
 
 - **Gate:** PASS
 - **Evidence:** Active Facebook page with content and 7 post caption(s) scraped
-- **Checked:** 2026-06-08 — Facebook profile scrape
+- **Checked:** 2026-06-09 — Facebook profile scrape
 
 ## Human approval
 
 - **Reviewed by:** auto (Facebook-only verified lead)
-- **Date:** 2026-06-08
+- **Date:** 2026-06-09
 - **Website bad enough to proceed:** yes — no owned website on Facebook profile
 - **Gate:** PASS
 
@@ -89,7 +89,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/woofpackdaycareandboarding/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-08T18:25:50.198Z
+- **Scraped:** 2026-06-09T16:42:31.514Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/woofpackdaycareandboarding/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

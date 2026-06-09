@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>WOOF PACK | Bespoke Canine Club</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=DM+Sans:ital,wght@0,100..1000;1,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-low": "#181c20",
+                    "secondary-container": "#604403",
+                    "surface-dim": "#0f1418",
+                    "surface-container": "#1c2024",
+                    "surface-tint": "#c3c6cd",
+                    "on-background": "#dfe3e8",
+                    "background": "#0f1418",
+                    "on-secondary-fixed": "#261900",
+                    "error-container": "#93000a",
+                    "outline": "#8f9195",
+                    "on-secondary-container": "#dab36a",
+                    "inverse-on-surface": "#2c3135",
+                    "on-tertiary-fixed": "#191e00",
+                    "primary-fixed": "#e0e2ea",
+                    "error": "#ffb4ab",
+                    "on-surface": "#dfe3e8",
+                    "inverse-primary": "#5b5f65",
+                    "on-tertiary": "#2c3400",
+                    "primary-fixed-dim": "#c3c6cd",
+                    "secondary-fixed-dim": "#e9c176",
+                    "on-surface-variant": "#c5c6cb",
+                    "surface-bright": "#353a3e",
+                    "on-primary": "#2d3136",
+                    "surface": "#0f1418",
+                    "on-tertiary-container": "#768800",
+                    "outline-variant": "#45474b",
+                    "tertiary": "#b8d300",
+                    "on-primary-container": "#7c8086",
+                    "primary-container": "#12161b",
+                    "surface-container-highest": "#313539",
+                    "on-secondary": "#412d00",
+                    "tertiary-fixed-dim": "#b8d300",
+                    "surface-container-high": "#262a2f",
+                    "on-primary-fixed": "#181c21",
+                    "on-tertiary-fixed-variant": "#414c00",
+                    "surface-container-lowest": "#0a0f12",
+                    "tertiary-container": "#131800",
+                    "on-error": "#690005",
+                    "inverse-surface": "#dfe3e8",
+                    "on-error-container": "#ffdad6",
+                    "tertiary-fixed": "#d2f000",
+                    "surface-variant": "#313539",
+                    "primary": "#c3c6cd",
+                    "on-primary-fixed-variant": "#43474d",
+                    "on-secondary-fixed-variant": "#5d4201",
+                    "secondary": "#e9c176",
+                    "secondary-fixed": "#ffdea5"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "overlap-offset": "-40px",
+                    "container-max": "1440px",
+                    "gutter": "32px",
+                    "margin-mobile": "24px",
+                    "margin-desktop": "64px"
+            },
+            "fontFamily": {
+                    "display-xl": ["Bodoni Moda"],
+                    "body-lg": ["DM Sans"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "headline-md": ["Bodoni Moda"],
+                    "headline-lg-mobile": ["Bodoni Moda"],
+                    "body-md": ["DM Sans"],
+                    "label-caps": ["DM Sans"]
+            },
+            "fontSize": {
+                    "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { @apply bg-background text-on-surface antialiased; }
+        .pack-overlap { position: relative; }
+        .pack-overlap::before {
+            content: '';
+            position: absolute;
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(233,193,118,0.03) 0%, transparent 70%);
+            top: -100px;
+            left: -100px;
+            z-index: -1;
+        }
+        .scroll-smooth { scroll-behavior: smooth; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24; }
+        .btn-tennis-ball { @apply bg-tertiary text-on-tertiary font-label-caps text-label-caps px-8 py-4 transition-all duration-300 hover:scale-105 active:scale-95; }
+        .btn-gold { @apply border border-secondary text-secondary font-label-caps text-label-caps px-8 py-4 hover:bg-secondary/10 transition-all duration-300; }
+    </style>
+</head>
+<body class="scroll-smooth">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex justify-between items-center px-gutter py-4 max-w-container-max mx-auto">
+<div class="font-display-xl text-headline-md tracking-tighter text-on-surface">WOOF PACK</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#club">THE CLUB</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#services">DAYCARE</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#services">BOARDING</a>
+<a class="font-label-caps text-label-caps text-secondary border-b-2 border-secondary pb-1" href="#contact">JOIN THE PACK</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-body-md text-body-md text-on-surface-variant">265.663 7265</span>
+<button class="md:hidden text-on-surface">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 md:grid-cols-12 gap-unit relative z-10">
+<div class="md:col-span-7 flex flex-col justify-center gap-8">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em]">CLARKSVILLE, TN</span>
+<h1 class="font-display-xl text-display-xl leading-none">The Pack <br/>Awaits.</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        An architectural sanctuary designed for the modern canine. Experience elite daycare and luxury boarding that prioritizes psychology, social harmony, and the comfort of home.
+                    </p>
+<div class="flex gap-4 mt-4">
+<button class="btn-tennis-ball">BOOK A STAY</button>
+<button class="btn-gold">VIEW SUITES</button>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="relative w-full aspect-[4/5] rounded-xl overflow-hidden shadow-2xl border border-outline-variant/20">
+<img alt="Luxury Canine Care" class="w-full h-full object-cover" data-alt="A professional, high-end editorial photograph of a dignified Weimaraner sitting gracefully in a minimalist modern architectural space. The room features dark charcoal concrete walls, subtle warm golden accent lighting, and polished stone floors. The composition is clean and asymmetric, echoing the premium luxury brand aesthetic of an elite canine club." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-wQlTHs2QREtLF4RJW-Jp2ehylZiEnGvXLKSwEFmiZ8MPwFJiNVXlbmL9mIcZXM29GDqs3M1beKeNy_5-OCnbLbmNlUSpGJvlfyog6Om1BDrOQm2ff4yDGWGvEZuJnFDfPWyBx8T2y2Aa8Uy_pg3WsNoSEbsPfL_onOqQtL_GvCenVTyA2HnNB1w7F1tTZ04yGCfrqnME--U9N9byfm6HqBtfQrmSbU-gMy7ljMIUy_cCDlM70L4zk97fdkzhjO0pmGz4jS62jRY"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent"></div>
+</div>
+<!-- Overlapping Geometric Blocks -->
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-secondary-container/30 backdrop-blur-xl border border-secondary/20 -z-10 rounded-lg"></div>
+<div class="absolute -top-12 -right-8 w-64 h-64 border border-tertiary/10 rounded-full -z-10"></div>
+</div>
+</div>
+<!-- Background Motif -->
+<div class="absolute inset-0 opacity-[0.02] pointer-events-none -z-20">
+<div class="absolute top-1/4 left-0 w-[800px] h-[800px] border border-on-surface rounded-full"></div>
+<div class="absolute bottom-0 right-0 w-[600px] h-[600px] border border-secondary rounded-full"></div>
+</div>
+</section>
+<!-- Credibility Band -->
+<section class="bg-surface-container-lowest py-20 border-y border-outline-variant/10">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="flex flex-col md:flex-row justify-between items-center gap-12">
+<div class="text-center md:text-left">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant mb-2">THE WOOF PACK STANDARD</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16 flex-1 max-w-4xl">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">shield_person</span>
+<div>
+<h3 class="font-label-caps text-label-caps mb-1">UNMATCHED SAFETY</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">24/7 on-site expertise.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">groups</span>
+<div>
+<h3 class="font-label-caps text-label-caps mb-1">ELITE COMMUNITY</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">Curated social groupings.</p>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary text-4xl">bed</span>
+<div>
+<h3 class="font-label-caps text-label-caps mb-1">ULTIMATE COMFORT</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-70">Boutique hotel amenities.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 bg-background overflow-hidden" id="services">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="mb-20 text-center md:text-left">
+<h2 class="font-display-xl text-headline-lg mb-4">The Club Services</h2>
+<div class="w-24 h-1 bg-secondary"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16">
+<!-- Daycare Card -->
+<div class="md:col-span-7 group">
+<div class="relative overflow-hidden rounded-xl aspect-[16/9] mb-6">
+<img alt="Canine Daycare" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A dynamic shot of multiple happy, well-groomed dogs of various breeds playing together in a bright, spacious indoor-outdoor daycare facility. The lighting is natural and airy, highlighting a clean, upscale environment with modern play structures. The image captures a sense of joyful social interaction and professional care in a high-contrast dark-mode brand aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGZfzT3yzh5ZXJsdJl2bChm72ll4ON2pHaTPDj7JMMbpaAOAzNiHnyrK010E0G5VgAM9a6thi3kx4KHnZsc9ahDGNncJMhqIdDAYfSmNW17gYQ7dtDK3nwLJpKam5OttF20e_E2XnHC9KFGviX6H0B3ZCnKVF1IkJVG1Pclo09eIdaTe4PQPaS70krH-R4IZvx9y8Z8VCYdC3899oEzfix0rQt4-V76vc2HTQDrgZCWXPd4DdCT-AiQRFr3dUGl9_m7gYyMA7O56E"/>
+<div class="absolute inset-0 bg-surface-dim/20 transition-opacity group-hover:opacity-0"></div>
+<div class="absolute top-6 left-6 bg-tertiary px-4 py-1 rounded-full">
+<span class="font-label-caps text-label-caps text-on-tertiary">DAYCARE</span>
+</div>
+</div>
+<div class="flex justify-between items-start">
+<div class="max-w-md">
+<h3 class="font-headline-md text-headline-md mb-2">All-Day Enrichment</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">More than just play. We focus on structured socialization and cognitive stimulation to ensure your dog returns home balanced and fulfilled.</p>
+</div>
+<a class="mt-2 text-tertiary hover:translate-x-2 transition-transform duration-300" href="#">
+<span class="material-symbols-outlined text-4xl">arrow_right_alt</span>
+</a>
+</div>
+</div>
+<!-- Boarding Card -->
+<div class="md:col-span-5 md:mt-32 group">
+<div class="relative overflow-hidden rounded-xl aspect-square mb-6">
+<img alt="Luxury Boarding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A serene image of a luxury dog boarding suite. The space features a plush designer dog bed, minimalist wooden accents, and soft, indirect warm lighting. Through a large window, a glimpse of a manicured outdoor area is visible. The atmosphere is calm, sophisticated, and reminiscent of a boutique hotel, perfectly aligned with the Woof Pack heritage style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBvmmvuGXeW5toniK3KnpLqDCA9igg1BblkjJMxXxdy79E12gDH4cZYB5J2Hq3I6WZA97xpHFe7VN8hITdOkTW9uB-OL6QewM4Z9Gq--zJeLBtqbb3846Y93s3vAmxlH4BTKX-BXKyNBfJRzfPav0TD_L92KGcP_mF2D5_trh4AA15ldBeEIHlmENmyd2Z_U7GtX3LX0iWLohT9awSbAwDAkApOeTIMtT4qm_61pBnI-8oBZG1Bp7d2i1QfVjcjI0IoZ2MjGGZ5_0I"/>
+<div class="absolute top-6 left-6 bg-secondary px-4 py-1 rounded-full">
+<span class="font-label-caps text-label-caps text-on-secondary">BOARDING</span>
+</div>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">Overnight Luxury</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Private suites and premium care for the ultimate home-away-from-home experience in Clarksville.</p>
+<button class="btn-gold w-full md:w-auto">EXPLORE SUITES</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-32 bg-surface-container-low relative" id="club">
+<div class="max-w-container-max mx-auto px-gutter grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="relative">
+<div class="grid grid-cols-2 gap-4">
+<div class="pt-20">
+<img alt="Our Heritage" class="rounded-xl shadow-xl grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close up detailed portrait of a beautiful Golden Retriever with soft focus background. The lighting is dramatic and cinematic, highlighting the texture of the fur and the soulful expression. This editorial-style image evokes trust and warmth within the premium design framework." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVohDwrYghbQ3g7p2CVdwCFx5yY0YIQGheB9_DTnVQR2NdGJH_Vtd9_dElKgeJVrG5r3rGAxUB7aP2glZHjAV2LbUwpbdaIB8iscR5nv9R-lhiGxRnUaUlnMm2aW_56kNWdrd9mm02ugdS3dHCNWLFd_MZa7vetzMtoXKgPn9bggBdZB29wp2tw_aqdGvMrfy5E4enSoVJBEBBz69QP3C-1pmijRekFk1yRxJoCo-pGNQDH5DoRdhctGarHJuh0HpiM7Bd3WokgZc"/>
+</div>
+<div>
+<img alt="Socialization" class="rounded-xl shadow-xl mb-4" data-alt="A sleek black Labrador playing in a modern, grassy outdoor park designed with clean geometric lines. The setting is upscale and professional, emphasizing the space and quality of the facility. High-contrast colors and professional photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAiPTsXXdpJtENvpK8NUS1_O2qGfxNoOPQlVgnJjiZrFoyidbS3cfBM2BgMvDChicjXxTsZFc0f5RQxIAnIZBucfrxUwkSxEbyw61231U3TYGjJs_lBv89hy9NZ9GJF1mzEvkRaxG79tY7t_Mw0DyKlDS5mVjjmjzp5T4vlVvidMcJeEV5FSveLz4e8ldDjdIwZU3ywqRBREH4rMThoaFOhbiaAzWYxt-Vyrcgolgn9un4bMwT5kvlGdpC3ZsORSny9aIrOQqsqTO4"/>
+</div>
+</div>
+<div class="absolute -z-10 -bottom-10 -right-10 w-64 h-64 border-2 border-secondary/20 rounded-full"></div>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] block mb-6">OUR HERITAGE</span>
+<h2 class="font-display-xl text-headline-lg mb-8 leading-tight">Rooted in Clarksville, <br/>Driven by Science.</h2>
+<div class="space-y-6">
+<p class="font-body-lg text-body-lg text-on-surface">
+                            Woof Pack was born from a simple realization: your dog isn't just a pet, they are a member of the pack. Our approach merges canine psychology with luxury hospitality.
+                        </p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                            Located in the heart of Clarksville, TN, we've built a sanctuary where socialization is curated, not chaotic. Every member of our staff is trained in behavioral cues, ensuring a safe and stress-free environment for dogs of all sizes and temperaments.
+                        </p>
+<div class="pt-4">
+<div class="flex items-center gap-4 mb-4">
+<div class="w-12 h-[1px] bg-secondary"></div>
+<span class="font-label-caps text-label-caps text-secondary">ESTABLISHED 2024</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-32 bg-background">
+<div class="max-w-container-max mx-auto px-gutter">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 items-end mb-16">
+<div class="md:col-span-8">
+<h2 class="font-display-xl text-headline-lg mb-4">Find the Den</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">Visit us in Clarksville to tour our facility and meet the team. We recommend booking a 'First Howl' assessment before your stay.</p>
+</div>
+<div class="md:col-span-4 text-right">
+<p class="font-label-caps text-label-caps text-on-surface-variant">LOCATION</p>
+<p class="font-headline-md text-headline-md text-on-surface">Clarksville, TN</p>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] rounded-xl border border-outline-variant/30 grayscale hover:grayscale-0 transition-all duration-1000" data-location="Clarksville, TN" data-map-slot="" style="">
+<!-- Map background fallback -->
+<div class="absolute inset-0 bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-surface-container-highest text-9xl">map</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-surface-container-lowest" id="contact">
+<div class="max-w-3xl mx-auto px-gutter text-center">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] block mb-6">RESERVATIONS</span>
+<h2 class="font-display-xl text-headline-lg mb-12">Start Your Journey</h2>
+<form class="space-y-12 text-left">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 px-0 focus:border-secondary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/40 transition-colors" id="name" placeholder="YOUR NAME" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 px-0 focus:border-secondary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/40 transition-colors" id="email" placeholder="EMAIL ADDRESS" type="email"/>
+</div>
+</div>
+<div class="relative">
+<select class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 px-0 focus:border-secondary focus:ring-0 text-on-surface-variant transition-colors appearance-none" id="service">
+<option disabled="" selected="" value="">INTERESTED IN...</option>
+<option value="daycare">DAYCARE</option>
+<option value="boarding">BOARDING</option>
+<option value="both">THE FULL CLUB EXPERIENCE</option>
+</select>
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-outline-variant py-4 px-0 focus:border-secondary focus:ring-0 text-on-surface placeholder:text-on-surface-variant/40 transition-colors resize-none" id="message" placeholder="TELL US ABOUT YOUR PACK" rows="4"></textarea>
+</div>
+<div class="flex justify-center pt-8">
+<button class="btn-tennis-ball px-16" type="submit">APPLY FOR MEMBERSHIP</button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t border-outline-variant/20 overflow-hidden">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 px-gutter py-20 max-w-container-max mx-auto">
+<!-- Brand Section -->
+<div class="md:col-span-4 flex flex-col gap-6">
+<div class="font-display-xl text-headline-lg-mobile text-primary">WOOF PACK</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">
+                    Elite canine social club and boutique boarding sanctuary.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center hover:bg-secondary/10 hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-on-surface text-xl">camera</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant rounded-full flex items-center justify-center hover:bg-secondary/10 hover:border-secondary transition-all" href="#">
+<span class="material-symbols-outlined text-on-surface text-xl">share</span>
+</a>
+</div>
+</div>
+<!-- Links Column 1 -->
+<div class="md:col-span-2 flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">EXPLORE</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">The Club</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Daycare</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Boarding</a>
+</div>
+<!-- Links Column 2 -->
+<div class="md:col-span-2 flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">LEGAL</h4>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" href="#">Terms of Service</a>
+</div>
+<!-- Contact Column -->
+<div class="md:col-span-4 flex flex-col gap-4">
+<h4 class="font-label-caps text-label-caps text-on-surface">CONTACT</h4>
+<p class="font-body-md text-body-md text-on-surface-variant">woofpacktn@gmail.com</p>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    123 Canine Lane <br/>
+                    Clarksville, TN 37040
+                </p>
+<p class="font-headline-md text-headline-md text-secondary mt-2">265.663 7265</p>
+</div>
+</div>
+<div class="px-gutter py-8 border-t border-outline-variant/10 max-w-container-max mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-caps text-[10px] text-on-surface-variant/50">© 2024 WOOF PACK DAYCARE &amp; BOARDING LLC. CLARKSVILLE, TN.</span>
+<div class="flex gap-8">
+<span class="font-label-caps text-[10px] text-on-surface-variant/50">CRAFTED FOR THE PACK</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.addEventListener('DOMContentLoaded', () => {
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            // Simple reveal effect for sections
+            document.querySelectorAll('section').forEach(section => {
+                section.classList.add('transition-all', 'duration-1000', 'ease-out');
+                // observer.observe(section); // Enable if progressive loading is desired
+            });
+
+            // Smooth Header Hide/Show logic
+            let lastScroll = 0;
+            const nav = document.querySelector('nav');
+            window.addEventListener('scroll', () => {
+                const currentScroll = window.pageYOffset;
+                if (currentScroll <= 0) {
+                    nav.classList.remove('-translate-y-full');
+                    return;
+                }
+                if (currentScroll > lastScroll && !nav.classList.contains('-translate-y-full')) {
+                    nav.classList.add('-translate-y-full');
+                } else if (currentScroll < lastScroll && nav.classList.contains('-translate-y-full')) {
+                    nav.classList.remove('-translate-y-full');
+                }
+                lastScroll = currentScroll;
+            });
+        });
+    </script>
+</body></html>

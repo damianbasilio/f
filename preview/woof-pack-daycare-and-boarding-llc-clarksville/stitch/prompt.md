@@ -112,7 +112,7 @@ Establish a clear type scale (display, h2, body, small) with intentional letter-
 Design as if you won a paid branding project: distinctive hero, memorable section rhythm, premium polish.
 Layout seed: **cinematic-bleed** — interpret literally but creatively.
 You choose the full color palette and typography — there is nothing to extract from a website.
-They have 10 real Facebook photos — design hero and gallery for authentic local imagery.
+They have 11 real Facebook photos — design hero and gallery for authentic local imagery.
 
 **Layout archetype:** cinematic-bleed
 Full-bleed hero photo with directional gradient overlay (not centered vignette); headline anchored bottom-left or bottom-right; strong contrast type; optional sticky mobile call bar.
@@ -157,7 +157,7 @@ There is **no existing website** and **nothing to extract**. Choose palette and 
 
 ### Photo inventory
 
-You will receive 10 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
+You will receive 11 real Facebook photos: hero = storefront/work sample, gallery slots = additional post photos. Design image areas as 16:9 or 4:3 placeholders.
 
 Use `<img>` with descriptive `alt`. Design generous photo regions (hero, gallery, about) — real Facebook images replace placeholders after build.
 
