@@ -1,4 +1,40 @@
-// Smooth scroll for nav links
+// Custom Cursor Logic
+        const cursor = document.getElementById('cursor');
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX + 'px';
+            cursor.style.top = e.clientY + 'px';
+        });
+
+        document.querySelectorAll('a, button, .service-row').forEach(el => {
+            el.addEventListener('mouseenter', () => {
+                cursor.style.transform = 'scale(2.5)';
+                cursor.style.backgroundColor = 'rgba(186, 26, 32, 0.1)';
+            });
+            el.addEventListener('mouseleave', () => {
+                cursor.style.transform = 'scale(1)';
+                cursor.style.backgroundColor = 'transparent';
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth Scroll handling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
@@ -6,41 +42,6 @@
                     behavior: 'smooth'
                 });
             });
-        });
-
-        // Form Submission Logic
-        const form = document.getElementById('dispatchForm');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            
-            // Interaction: Visual feedback
-            btn.innerText = 'TRANSMITTING...';
-            btn.classList.add('opacity-80', 'cursor-not-allowed');
-            
-            setTimeout(() => {
-                btn.innerText = 'DISPATCH CONFIRMED';
-                btn.style.backgroundColor = '#4ade80';
-                btn.style.color = '#051425';
-                form.reset();
-                
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.style.color = '';
-                    btn.classList.remove('opacity-80', 'cursor-not-allowed');
-                }, 3000);
-            }, 1500);
-        });
-
-        // Simple Parallax Effect for Hawk Watermark
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const watermark = document.querySelector('.hawk-watermark span');
-            if(watermark) {
-                watermark.style.transform = `translateY(${scrolled * 0.1}px) rotate(${scrolled * 0.02}deg)`;
-            }
         });
 
 (() => {

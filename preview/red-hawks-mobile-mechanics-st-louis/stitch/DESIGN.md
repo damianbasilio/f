@@ -1,170 +1,192 @@
-I've designed a bespoke, editorial-grade homepage for **Red Hawks Mobile Mechanics** that prioritizes a premium, high-performance aesthetic over traditional local-business templates.
+I have designed and built a bespoke, high-end homepage for **Red Hawks Mobile Mechanics**. Moving away from generic local-business templates, this design adopts an **editorial, high-performance aesthetic** tailored to the St. Louis market.
 
 ### Design Highlights:
-*   **Unique Visual Identity:** I established a "Stealth Black" and "Phoenix Red" palette, paired with high-contrast serif typography for a sophisticated, "Mechanical Precision" feel.
-*   **Editorial Layout:** The hero section uses oversized, bold typography and an asymmetric structure to create an immediate, memorable impact.
-*   **Intentional Density:** The services section uses a tightly packed grid with thin borders and diagonal motifs, moving away from generic card layouts.
-*   **St. Louis Local Branding:** Integrated localized copy and a "Trust & Speed" credibility bar to ground the brand in its service area.
-*   **Performance-Driven UI:** Included a clean, high-fidelity contact form and a minimalist map container for a modern, functional experience.
+*   **Unique Visual Identity:** I've established a 'Velocity Red' and 'Deep Asphalt' palette, paired with high-contrast, condensed typography to evoke a sense of speed, precision, and authority.
+*   **Editorial Layout:** The "Precision in Motion" hero and "The Lab" services section utilize an asymmetrical grid and generous whitespace to create a premium, memorable first impression.
+*   **The "Hawk Wing" Motif:** Subtle geometric accents and sharp angles are used throughout as section transitions and dividers, reinforcing the brand's name and mechanical focus.
+*   **Strategic Hierarchy:** The layout prioritizes immediate conversion with a prominent "Emergency Dispatch" header while building deep credibility through the "Engineered for the Road" about section.
+*   **Production-Ready:** The code is fully responsive, semantic, and includes the requested map slot and validated contact form UI.
 
-The result is a production-ready design that positions Red Hawks as a premium, reliable leader in the mobile mechanics space.
-
----
+How does this new direction feel for the Red Hawks brand? Would you like to adjust the visual density or add more technical specifications to the service list?
 
 ---
-name: Apex Velocity
+
+---
+name: Apex Precision
 colors:
-  surface: '#051425'
-  surface-dim: '#051425'
-  surface-bright: '#2c3a4d'
-  surface-container-lowest: '#010f20'
-  surface-container-low: '#0d1c2e'
-  surface-container: '#122032'
-  surface-container-high: '#1d2b3d'
-  surface-container-highest: '#283648'
-  on-surface: '#d5e3fc'
-  on-surface-variant: '#e4bebc'
-  inverse-surface: '#d5e3fc'
-  inverse-on-surface: '#233144'
-  outline: '#ab8987'
-  outline-variant: '#5b403f'
-  surface-tint: '#ffb3b1'
-  primary: '#ffb3b1'
-  on-primary: '#680011'
-  primary-container: '#ff535b'
-  on-primary-container: '#5b000e'
-  inverse-primary: '#bb152c'
+  surface: '#121414'
+  surface-dim: '#121414'
+  surface-bright: '#38393a'
+  surface-container-lowest: '#0c0f0f'
+  surface-container-low: '#1a1c1c'
+  surface-container: '#1e2020'
+  surface-container-high: '#282a2b'
+  surface-container-highest: '#333535'
+  on-surface: '#e2e2e2'
+  on-surface-variant: '#e4beba'
+  inverse-surface: '#e2e2e2'
+  inverse-on-surface: '#2f3131'
+  outline: '#ab8985'
+  outline-variant: '#5b403d'
+  surface-tint: '#ffb3ac'
+  primary: '#ffb3ac'
+  on-primary: '#680008'
+  primary-container: '#d32f2f'
+  on-primary-container: '#fff2f0'
+  inverse-primary: '#ba1a20'
   secondary: '#c8c6c5'
-  on-secondary: '#313030'
-  secondary-container: '#4a4949'
-  on-secondary-container: '#bab8b7'
-  tertiary: '#c3c7cb'
-  on-tertiary: '#2c3134'
-  tertiary-container: '#8d9195'
-  on-tertiary-container: '#252a2d'
+  on-secondary: '#303030'
+  secondary-container: '#474746'
+  on-secondary-container: '#b7b5b4'
+  tertiary: '#c8c6c6'
+  on-tertiary: '#303030'
+  tertiary-container: '#707070'
+  on-tertiary-container: '#f7f4f4'
   error: '#ffb4ab'
   on-error: '#690005'
   error-container: '#93000a'
   on-error-container: '#ffdad6'
-  primary-fixed: '#ffdad8'
-  primary-fixed-dim: '#ffb3b1'
-  on-primary-fixed: '#410007'
-  on-primary-fixed-variant: '#92001c'
+  primary-fixed: '#ffdad6'
+  primary-fixed-dim: '#ffb3ac'
+  on-primary-fixed: '#410003'
+  on-primary-fixed-variant: '#930010'
   secondary-fixed: '#e5e2e1'
   secondary-fixed-dim: '#c8c6c5'
-  on-secondary-fixed: '#1c1b1b'
-  on-secondary-fixed-variant: '#474646'
-  tertiary-fixed: '#dfe3e7'
-  tertiary-fixed-dim: '#c3c7cb'
-  on-tertiary-fixed: '#171c1f'
-  on-tertiary-fixed-variant: '#43474b'
-  background: '#051425'
-  on-background: '#d5e3fc'
-  surface-variant: '#283648'
+  on-secondary-fixed: '#1b1c1c'
+  on-secondary-fixed-variant: '#474746'
+  tertiary-fixed: '#e4e2e1'
+  tertiary-fixed-dim: '#c8c6c6'
+  on-tertiary-fixed: '#1b1c1c'
+  on-tertiary-fixed-variant: '#474747'
+  background: '#121414'
+  on-background: '#e2e2e2'
+  surface-variant: '#333535'
 typography:
   display-lg:
-    fontFamily: Playfair Display
-    fontSize: 64px
-    fontWeight: '900'
-    lineHeight: '1.1'
+    fontFamily: Oswald
+    fontSize: 80px
+    fontWeight: '700'
+    lineHeight: 90px
     letterSpacing: -0.02em
+  headline-xl:
+    fontFamily: Oswald
+    fontSize: 48px
+    fontWeight: '600'
+    lineHeight: 56px
   headline-lg:
-    fontFamily: Playfair Display
-    fontSize: 40px
-    fontWeight: '700'
-    lineHeight: '1.2'
-  headline-lg-mobile:
-    fontFamily: Playfair Display
+    fontFamily: Oswald
     fontSize: 32px
-    fontWeight: '700'
-    lineHeight: '1.2'
-  headline-md:
-    fontFamily: Playfair Display
+    fontWeight: '500'
+    lineHeight: 40px
+  headline-lg-mobile:
+    fontFamily: Oswald
     fontSize: 28px
-    fontWeight: '700'
-    lineHeight: '1.3'
+    fontWeight: '600'
+    lineHeight: 36px
   body-lg:
-    fontFamily: Montserrat
+    fontFamily: Hanken Grotesk
     fontSize: 18px
     fontWeight: '400'
-    lineHeight: '1.6'
+    lineHeight: 28px
   body-md:
-    fontFamily: Montserrat
+    fontFamily: Hanken Grotesk
     fontSize: 16px
     fontWeight: '400'
-    lineHeight: '1.6'
-  label-bold:
-    fontFamily: Montserrat
+    lineHeight: 24px
+  label-caps:
+    fontFamily: JetBrains Mono
     fontSize: 14px
-    fontWeight: '700'
-    lineHeight: '1.2'
-    letterSpacing: 0.1em
-  label-sm:
-    fontFamily: Montserrat
-    fontSize: 12px
     fontWeight: '500'
-    lineHeight: '1.2'
+    lineHeight: 20px
+    letterSpacing: 0.1em
+  technical-data:
+    fontFamily: JetBrains Mono
+    fontSize: 12px
+    fontWeight: '400'
+    lineHeight: 16px
 spacing:
-  base: 8px
-  xs: 4px
-  sm: 12px
-  md: 24px
-  lg: 48px
-  xl: 80px
-  gutter: 24px
-  margin-mobile: 16px
-  margin-desktop: 64px
+  unit: 8px
+  container-max: 1440px
+  gutter: 32px
+  margin-desktop: 80px
+  margin-mobile: 24px
+  section-gap: 120px
 ---
 
 ## Brand & Style
 
-The brand personality is high-performance, authoritative, and precision-engineered. It targets vehicle owners who value professional expertise over budget convenience, positioning mobile mechanics as a premium, "pit-crew" level service. The UI evokes the feeling of a high-end automotive editorial or a luxury performance brand.
+The design system is engineered to evoke a sense of high-performance automotive precision and elite craftsmanship. It targets a discerning clientele who values technical expertise and rapid, reliable service. The brand personality is authoritative yet modern, moving away from "grease-monkey" clichés toward a "mobile laboratory" aesthetic.
 
-The design style is **High-Contrast / Bold** with **Minimalist** layouts. It utilizes aggressive typography and a restricted color palette to create an atmosphere of urgent reliability. The aesthetic is punctuated by "velocity" motifs—diagonal lines at 15-degree angles—to suggest movement, speed, and the "Red Hawk" swooping in to solve mechanical issues.
+The visual style is a fusion of **Modern Editorial** and **High-Contrast Minimalism**. It utilizes an asymmetrical layout and bold, cinematic imagery to create a sense of forward motion. Every interaction should feel intentional and mechanical, reflecting the precision of a high-end engine. 
+
+Key visual principles include:
+- **Kinetic Energy:** Use of diagonal lines and "hawk-wing" chevrons to guide the eye and imply speed.
+- **Industrial Sophistication:** A balance of raw textures (asphalt/steel) with refined, high-end typography.
+- **Precision Focus:** Generous whitespace ensures that high-impact "Velocity Red" accents signal critical information and calls to action.
 
 ## Colors
 
-The palette is anchored in **Stealth Black (#121212)** to provide a deep, sophisticated foundation that feels premium and "industrial-clean." 
+The palette is rooted in the high-stakes world of automotive performance. 
 
-**Phoenix Red (#E63946)** is used as the high-impact signal color. It is reserved for primary actions, critical alerts, and brand-defining accents. It should never be used for large backgrounds; rather, it acts as the "ignition" for the user's eye.
-
-**Cool Slate (#F1F5F9)** serves as the primary typography color on dark backgrounds, ensuring maximum legibility. For secondary information and borders, a muted Slate is used to maintain the hierarchy. The default mode is **Dark**, reinforcing the "Stealth" mechanic aesthetic.
+- **Velocity Red (#D32F2F):** Used exclusively for primary actions, critical alerts, and strategic brand accents. It represents the "pulse" of the service.
+- **Deep Asphalt (#212121):** The primary background color. It provides a sophisticated, low-glare canvas that allows red and silver elements to pop with high contrast.
+- **Industrial Steel (#424242):** Used for secondary surfaces, borders, and UI containers. It adds depth and a metallic, structural feel.
+- **Silver Lining (#F5F5F5):** The primary text color for readability and used for high-light components. It provides a clean, surgical contrast against the darker base.
 
 ## Typography
 
-This system employs a dramatic contrast between an elegant, high-fashion serif (**Playfair Display**) and a functional, geometric sans-serif (**Montserrat**). 
+This design system employs a high-contrast typographic pairing to balance "mechanical power" with "modern clarity."
 
-Headlines should use Playfair Display with heavy weights to create an editorial feel. Display sizes should utilize tight letter spacing and minimal line height to appear as "blocks" of text. 
+- **Oswald (Headlines):** Used in uppercase to create a commanding, editorial presence. Its condensed nature allows for impactful, large-scale messaging without occupying excessive horizontal space.
+- **Hanken Grotesk (Body):** A sharp, contemporary sans-serif that ensures high readability for service descriptions and technical details.
+- **JetBrains Mono (Labels/Technical):** Used for small labels, status indicators, and "spec-sheet" style data. It reinforces the theme of technical precision and diagnostic expertise.
 
-Body copy uses Montserrat for its industrial, legible character. To maintain the premium feel, use "Label-Bold" (all-caps with wide tracking) for section headers, button labels, and small metadata to mimic the technical specifications found in automotive engineering manuals.
+All headlines should favor tight tracking to enhance the "solid" feel of the brand. Body text should maintain generous line-height for an effortless reading experience.
 
 ## Layout & Spacing
 
-The layout follows a **Fluid Grid** model with generous margins to enforce the editorial aesthetic. Desktop layouts utilize a 12-column grid, while mobile scales to 4 columns.
+The layout philosophy is **Asymmetrical & Dynamic**, breaking away from standard template rows to create a custom, editorial feel.
 
-- **Vertical Rhythm:** Use large `xl` (80px) gaps between major sections to allow the high-impact typography to breathe.
-- **Velocity Dividers:** Instead of horizontal lines, use 15-degree diagonal dividers or "slashed" edges on container backgrounds to imply momentum.
-- **Safe Zones:** Content containers should maintain a wide margin on desktop (64px) to avoid a cramped "service app" feel, leaning instead toward a "luxury experience" layout.
+- **Grid System:** Use a 12-column grid for desktop. Elements should frequently "break" the grid—for example, a headline might span columns 1-8 while an image sits in columns 6-12, creating overlapping visual interest.
+- **The "Hawk Wing" Motif:** Use 15-degree or 45-degree diagonal clips on background containers and image masks to suggest aerodynamic speed.
+- **Whitespace:** Use aggressive vertical spacing (`section-gap`) to separate services and narratives, allowing each "chapter" of the page to breathe.
+- **Mobile Reflow:** On mobile, the layout collapses to a single column, but the "Hawk Wing" diagonals remain as decorative dividers to maintain brand consistency.
 
 ## Elevation & Depth
 
-This design system eschews traditional soft shadows in favor of **Tonal Layers** and **Bold Outlines**. 
+Depth is conveyed through **Tonal Layering** and **Industrial Overlays** rather than traditional soft shadows.
 
-- **Depth:** Surfaces are distinguished by subtle shifts in dark grays. The base is `#121212`, and elevated cards or menus use `#1E1E1E`. 
-- **Outlines:** Use thin, low-opacity slate borders (1px) to define containers rather than drop shadows. 
-- **The "Hawk" Silhouette:** Use a subtle, large-scale watermark of the hawk wing silhouette in the background at 2-3% opacity to create a sense of environmental depth without cluttering the foreground.
+- **Surface Tiers:** The base layer is `Deep Asphalt`. Overlays and cards use `Industrial Steel` with 1px solid borders in a slightly lighter shade of grey or `Velocity Red` for active states.
+- **High-Contrast Outlines:** Instead of ambient shadows, use crisp 1px or 2px borders to define edges. This mimics the machined edges of engine components.
+- **Glassmorphism (Subtle):** Use background blurs exclusively for navigation bars and overlaying "diagnostic" panels to maintain focus on the content beneath while providing a "high-tech" feel.
+- **Shadows:** When necessary for functional depth (e.g., floating buttons), use "Hard Shadows"—low blur, high opacity—to maintain the brutalist, industrial aesthetic.
 
 ## Shapes
 
-The shape language is strictly **Sharp (0px)**. All buttons, input fields, and cards must have hard 90-degree corners. This evokes architectural precision and mechanical reliability. 
+The design system utilizes **Sharp (0px)** corners to communicate precision, strength, and technical accuracy. Rounded corners are strictly avoided to maintain the "machined" aesthetic.
 
-Rounded corners are seen as too "soft" or "consumer-grade" for this system; the sharp edges reinforce the professional, high-performance nature of the mobile mechanic service. Diagonal cuts (chamfered corners) can be used on primary action buttons at a 45-degree angle to create a "custom tool" look.
+- **Chevron Accents:** Use 45-degree angled corners on buttons or section dividers to create the "Hawk-wing" motif.
+- **Keyline Containers:** Use thin, sharp-edged borders for all cards and input fields.
+- **Directional Indicators:** Use sharp triangles and chevrons instead of rounded arrows for navigation and UI triggers.
 
 ## Components
 
-- **Buttons:** Primary buttons are solid Phoenix Red with white Montserrat (Bold, Caps) text. They use a hard-edge rectangular shape. Hover states should shift to a darker red or invert to a white background with red text.
-- **Input Fields:** Stealth Black background with a 1px Cool Slate border. On focus, the bottom border only thickens and turns Phoenix Red.
-- **Service Cards:** Use a heavy black background with a Phoenix Red accent bar (2px) at the top. The "velocity" diagonal line motif should appear as a subtle texture in the corner.
-- **Chips/Status Tags:** All-caps, small Montserrat text. Use "Phoenix Red" for urgent statuses (e.g., "Engine Alert") and "Cool Slate" for routine ones (e.g., "Scheduled").
-- **Booking Progress Bar:** A thick, horizontal bar using a diagonal "hazard" stripe pattern (Black and Red) to indicate active progress or movement.
-- **Iconography:** High-stroke-weight, linear icons. Avoid rounded terminals; icons should look like technical blueprints.
+### Buttons
+- **Primary:** Velocity Red background, white text (Oswald Bold), 0px border-radius. Features a subtle "clipped corner" on the top right.
+- **Secondary:** Transparent background, Industrial Steel 2px border, white text.
+- **Hover State:** Primary buttons shift to a darker red; Secondary buttons fill with Industrial Steel. All transitions should be instantaneous or very fast (100ms) to feel "mechanical."
+
+### Cards & Service Modules
+- Solid `Industrial Steel` background with a 1px `Silver Lining` top border. 
+- Use the `label-caps` typography for category headers to create a "technical manual" look.
+
+### Input Fields
+- Dark backgrounds (`Deep Asphalt`) with a `Silver Lining` bottom-border only. 
+- Labels should be in `JetBrains Mono` and positioned above the field.
+
+### Chips & Status Indicators
+- Small, rectangular blocks with uppercase `technical-data` text. 
+- Use `Velocity Red` for "Emergency/Live" status and `Industrial Steel` for "Standard" status.
+
+### Section Dividers
+- Use large, low-opacity "Chevron" watermarks or diagonal background shifts to transition between content blocks, ensuring the page feels like a continuous, high-speed narrative.

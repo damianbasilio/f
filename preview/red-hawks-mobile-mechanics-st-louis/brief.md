@@ -89,7 +89,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/redhawksmobilemechanic
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-09T16:35:54.633Z
+- **Scraped:** 2026-06-09T16:40:26.259Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/redhawksmobilemechanic. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

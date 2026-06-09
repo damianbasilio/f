@@ -2,7 +2,7 @@
 
 **Result:** NEEDS FIX
 
-**Craft warnings:** 1 (see craft section)
+**Craft warnings:** 2 (see craft section)
 
 ## Skills run
 
@@ -29,7 +29,7 @@
 - OK: No AI purple gradient
 - FAIL: Fake ratings or hype copy detected
 - OK: No obvious buzzwords
-- OK: Layout: no excessive 3-col grids
+- WARN: Repeated 3-column grid pattern (4 hits) — likely template layout
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
 - OK: Eyebrow count: 1
@@ -46,6 +46,7 @@
 
 - Eyebrow discipline: 1 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
+- WARN: Repeated 3-column utility grid — likely generic AI card layout
 
 ### audit
 

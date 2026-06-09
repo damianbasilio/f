@@ -6,9 +6,8 @@
 
 - none
 
-## Warnings (2)
+## Warnings (0)
 
-- Broken anchor: #about
-- Broken anchor: #fleet
+- none
 
 _Run after every build. Fix errors before images/outreach._
