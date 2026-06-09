@@ -1,9 +1,4 @@
-// Micro-interactions and simple state management
-        document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
-            alert('Mobile navigation would open here in full production version.');
-        });
-
-        // Simple Intersection Observer for scroll animations
+// Smooth revealed elements on scroll
         const observerOptions = {
             threshold: 0.1
         };
@@ -11,15 +6,29 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.add('opacity-100');
                     entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        // Apply to some sections
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'ease-out');
+        document.querySelectorAll('.service-card, h2, form').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Simple form validation micro-interaction
+        document.querySelector('form').addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = e.target.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Request Sent";
+            btn.classList.replace('bg-primary-container', 'bg-green-600');
+            setTimeout(() => {
+                btn.innerText = originalText;
+                btn.classList.replace('bg-green-600', 'bg-primary-container');
+                e.target.reset();
+            }, 3000);
         });
 
 (() => {

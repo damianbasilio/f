@@ -2,139 +2,132 @@
   {
     "designSystem": {
       "designSystem": {
-        "displayName": "High Desert Industrial",
-        "styleGuidelines": "## Brand & Style\nThe brand personality is **rugged but refined**, balancing the raw intensity of industrial pressure washing with the sophisticated precision of luxury vehicle detailing. It targets a discerning clientele in Santa Fe who value heritage, craftsmanship, and extreme attention to detail.\n\nThe visual style is **Editorial High-Contrast**. It rejects the typical \"splashy\" blue water aesthetics in favor of a moody, architectural approach. The UI evokes the feeling of a premium lifestyle magazine, utilizing heavy whitespace, dramatic shadow play, and a \"Horizon Line\" motif that mimics the expansive New Mexico landscape. The emotional response should be one of quiet confidence, technical mastery, and elite service.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop and a **Fluid Fluid** model on mobile, governed by a strict 8px baseline.\n\n**The Horizon Motif:**\n*   Layouts should be bisected by \"Horizon Lines\"—4px thick horizontal rules in `Asphalt`.\n*   Use staggered, asymmetrical grids for image galleries to create \"Shadow Play\" (alternating light and dark blocks).\n*   Sections should have significant vertical padding (80px - 120px) to simulate the vastness of the desert.\n\n**Breakpoints:**\n*   **Mobile:** 4-column grid. Margins are 20px. \n*   **Tablet:** 8-column grid. Margins are 40px.\n*   **Desktop:** 12-column grid. Content is centered with a 1280px max-width and 64px margins.\n\n## Elevation & Depth\nIn keeping with the \"Industrial\" theme, this system avoids soft, ambient shadows. Instead, it uses **Tonal Layers** and **Hard Shadows**.\n\n*   **Primary Surface:** `Stucco` (#F9F7F2).\n*   **Elevated Cards:** Use a 1px solid border in `Asphalt` (#1A1A1B) rather than a shadow. \n*   **Shadow Play:** If a shadow is required for a floating element (like a mobile FAB), use a hard-edged, high-opacity \"drop\" shadow (e.g., 4px 4px 0px #1A1A1B) rather than a blur.\n*   **Depth through Layering:** Elements should overlap slightly—for example, an image may break the \"horizon line\" rule to create a sense of three-dimensional space without using gradients.\n\n## Components\nConsistent component styling reinforces the \"High Desert Industrial\" narrative:\n\n*   **Buttons:** Primary buttons are solid `Asphalt` with `Stucco` text. Secondary buttons are `Adobe` with `Stucco` text. Both are sharp-edged, high-contrast, and use `label-caps` typography. Hover states should simply invert the colors.\n*   **Input Fields:** Ghost-style inputs with a 2px bottom-border only (the \"Horizon\" line). Labels should sit above the line in `label-caps`.\n*   **Chips/Tags:** Small, sharp-edged rectangles with `Asphalt` borders. Use these for service features (e.g., \"HAND WAX,\" \"STEAM CLEAN\").\n*   **Cards:** Use `Stucco` backgrounds with a 1px `Asphalt` border. Header images in cards should be treated with high contrast and deep blacks.\n*   **Horizon Rules:** Use thick `Asphalt` lines to separate major sections of the page, often accompanied by a `label-caps` category title sitting directly on the line.\n*   **Service Tiers:** Displayed in a vertical \"staggered\" list where the price is the largest element, using `Bodoni Moda`.",
+        "displayName": "High-Desert Precision",
+        "styleGuidelines": "## Brand & Style\nThe brand personality centers on \"Desert-Luxe\"—a fusion of rugged high-desert landscapes and high-end automotive craftsmanship. The target audience is discerning vehicle owners who view their cars as investments and appreciators of artisanal services.\n\nThe design style is **Modern Editorial with Glassmorphic accents**. It utilizes high-contrast typography and a precision-engineered grid. To evoke the \"high-gloss\" finish of a detailed car, the UI employs sharp architectural lines, expansive whitespace, and translucent, reflective layers. The emotional response is one of confidence, cleanliness, and premium exclusivity.\n\n## Layout & Spacing\nThis design system uses an **asymmetrical 12-column grid** to move away from \"templated\" looks. \n\n- **Asymmetry:** Key content blocks should often be offset (e.g., an image spanning columns 1-7 with text starting on column 9).\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow high-resolution automotive imagery to breathe.\n- **Mobile:** Transition to a single-column fluid layout with 20px side margins, prioritizing large \"hero\" style cards for service packages.\n\n## Elevation & Depth\nDepth is created through **Reflective Glassmorphism** rather than traditional shadows.\n\n- **The \"High-Gloss\" Surface:** Use `backdrop-filter: blur(12px)` with a 10% opacity white fill to simulate glass.\n- **Thin Borders:** Use 1px \"Silver\" or \"Electric Blue\" borders at 20% opacity to define edges without adding visual weight.\n- **Lens Flare:** Subtle, low-opacity radial gradients in \"Electric Blue\" can be placed behind primary surfaces to suggest a light reflection on a polished car surface.\n\n## Components\n- **Buttons:** Sharp-edged. Primary buttons use the Terracotta fill with white text; Secondary buttons use a transparent background with a 1px Electric Blue border and wide-tracked uppercase labels.\n- **Service Cards:** Use large-scale photography as the background. On hover, a glassmorphic overlay slides up to reveal pricing and details.\n- **Inputs:** Minimalist bottom-border only (1px Silver). On focus, the border transitions to Electric Blue with a subtle glow.\n- **The \"Detailer’s Gauge\":** A custom component (progress bar) using the Electric Blue gradient to show detailing progress or ceramic coating longevity.\n- **Chips:** Small, sharp-edged boxes with 1px borders for service tags (e.g., \"CLAY BAR\", \"EXTERIOR ONLY\").",
         "theme": {
-          "bodyFont": "DM_SANS",
-          "bodyFontFamily": "Dm Sans",
-          "colorMode": "LIGHT",
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "DARK",
           "colorVariant": "FIDELITY",
-          "customColor": "#1a1a1b",
-          "designMd": "---\nname: High Desert Industrial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#46474a'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#76777b'\n  outline-variant: '#c7c6ca'\n  surface-tint: '#5f5e5f'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1b1b1c'\n  on-primary-container: '#858384'\n  inverse-primary: '#c8c6c7'\n  secondary: '#96482d'\n  on-secondary: '#ffffff'\n  secondary-container: '#fd9a78'\n  on-secondary-container: '#763017'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cca730'\n  on-tertiary-container: '#4f3e00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1b1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#ffdbd0'\n  secondary-fixed-dim: '#ffb59d'\n  on-secondary-fixed: '#390c00'\n  on-secondary-fixed-variant: '#783118'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.4'\n    letterSpacing: 0.15em\n  technical-data:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  horizon-rule: 4px\n---\n\n## Brand & Style\nThe brand personality is **rugged but refined**, balancing the raw intensity of industrial pressure washing with the sophisticated precision of luxury vehicle detailing. It targets a discerning clientele in Santa Fe who value heritage, craftsmanship, and extreme attention to detail.\n\nThe visual style is **Editorial High-Contrast**. It rejects the typical \"splashy\" blue water aesthetics in favor of a moody, architectural approach. The UI evokes the feeling of a premium lifestyle magazine, utilizing heavy whitespace, dramatic shadow play, and a \"Horizon Line\" motif that mimics the expansive New Mexico landscape. The emotional response should be one of quiet confidence, technical mastery, and elite service.\n\n## Colors\nThis design system utilizes a palette inspired by the high-desert landscape and industrial machinery.\n\n*   **Asphalt (#1A1A1B):** The foundational primary color. Used for deep backgrounds, heavy typography, and technical UI elements. It represents precision and the vehicles being serviced.\n*   **Adobe (#C36B4D):** The secondary accent. Used for calls to action and highlights, grounding the brand in Santa Fe’s architectural heritage.\n*   **High Noon Gold (#D4AF37):** Reserved for luxury indicators, \"Premium\" service tiers, and subtle iconography.\n*   **Stucco (#F9F7F2):** The primary surface color. A warm off-white that provides a sophisticated, gallery-like canvas for high-resolution imagery.\n\nAvoid gradients. Colors should be applied in solid, bold blocks to maintain the industrial-editorial feel.\n\n## Typography\nThe typography system relies on a high-contrast pairing:\n\n*   **Headings:** `Bodoni Moda` provides an authoritative, editorial elegance. It should be used for large titles and pull quotes. Use \"optical sizing\" if available to ensure the hairlines remain crisp.\n*   **Body & Technical:** `DM Sans` is used for readability and its modern, geometric cleanliness. \n*   **The \"Wide-Track\" Rule:** All labels and small technical details should use increased letter spacing (`0.15em`) and uppercase styling to evoke industrial serial numbers and architectural blueprints.\n\nMaintain generous vertical rhythm. Headings should feel like they are \"resting\" on the horizon lines described in the layout section.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop and a **Fluid Fluid** model on mobile, governed by a strict 8px baseline.\n\n**The Horizon Motif:**\n*   Layouts should be bisected by \"Horizon Lines\"—4px thick horizontal rules in `Asphalt`.\n*   Use staggered, asymmetrical grids for image galleries to create \"Shadow Play\" (alternating light and dark blocks).\n*   Sections should have significant vertical padding (80px - 120px) to simulate the vastness of the desert.\n\n**Breakpoints:**\n*   **Mobile:** 4-column grid. Margins are 20px. \n*   **Tablet:** 8-column grid. Margins are 40px.\n*   **Desktop:** 12-column grid. Content is centered with a 1280px max-width and 64px margins.\n\n## Elevation & Depth\nIn keeping with the \"Industrial\" theme, this system avoids soft, ambient shadows. Instead, it uses **Tonal Layers** and **Hard Shadows**.\n\n*   **Primary Surface:** `Stucco` (#F9F7F2).\n*   **Elevated Cards:** Use a 1px solid border in `Asphalt` (#1A1A1B) rather than a shadow. \n*   **Shadow Play:** If a shadow is required for a floating element (like a mobile FAB), use a hard-edged, high-opacity \"drop\" shadow (e.g., 4px 4px 0px #1A1A1B) rather than a blur.\n*   **Depth through Layering:** Elements should overlap slightly—for example, an image may break the \"horizon line\" rule to create a sense of three-dimensional space without using gradients.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo reinforce the industrial and architectural tone, every element—from buttons and input fields to image containers and cards—must have 90-degree corners. Rounded corners are seen as too soft for this professional, rugged aesthetic. The only exception is the \"High Noon Gold\" seal which may be used for certification badges, which should be a perfect circle.\n\n## Components\nConsistent component styling reinforces the \"High Desert Industrial\" narrative:\n\n*   **Buttons:** Primary buttons are solid `Asphalt` with `Stucco` text. Secondary buttons are `Adobe` with `Stucco` text. Both are sharp-edged, high-contrast, and use `label-caps` typography. Hover states should simply invert the colors.\n*   **Input Fields:** Ghost-style inputs with a 2px bottom-border only (the \"Horizon\" line). Labels should sit above the line in `label-caps`.\n*   **Chips/Tags:** Small, sharp-edged rectangles with `Asphalt` borders. Use these for service features (e.g., \"HAND WAX,\" \"STEAM CLEAN\").\n*   **Cards:** Use `Stucco` backgrounds with a 1px `Asphalt` border. Header images in cards should be treated with high contrast and deep blacks.\n*   **Horizon Rules:** Use thick `Asphalt` lines to separate major sections of the page, often accompanied by a `label-caps` category title sitting directly on the line.\n*   **Service Tiers:** Displayed in a vertical \"staggered\" list where the price is the largest element, using `Bodoni Moda`.",
-          "font": "BODONI_MODA",
-          "headlineFont": "BODONI_MODA",
-          "headlineFontFamily": "Bodoni Moda",
-          "labelFont": "DM_SANS",
-          "labelFontFamily": "Dm Sans",
+          "customColor": "#e2725b",
+          "designMd": "---\nname: High-Desert Precision\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#20201f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#ddc0ba'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#a48b86'\n  outline-variant: '#56423e'\n  surface-tint: '#ffb4a5'\n  primary: '#ffb4a5'\n  on-primary: '#611205'\n  primary-container: '#e2725b'\n  on-primary-container: '#5a0d02'\n  inverse-primary: '#9f402d'\n  secondary: '#d3fbff'\n  on-secondary: '#00363a'\n  secondary-container: '#00eefc'\n  on-secondary-container: '#00686f'\n  tertiary: '#c6c6c6'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#929393'\n  on-tertiary-container: '#2a2c2c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad3'\n  primary-fixed-dim: '#ffb4a5'\n  on-primary-fixed: '#3e0500'\n  on-primary-fixed-variant: '#802918'\n  secondary-fixed: '#7df4ff'\n  secondary-fixed-dim: '#00dbe9'\n  on-secondary-fixed: '#002022'\n  on-secondary-fixed-variant: '#004f54'\n  tertiary-fixed: '#e3e2e2'\n  tertiary-fixed-dim: '#c6c6c6'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#464747'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality centers on \"Desert-Luxe\"—a fusion of rugged high-desert landscapes and high-end automotive craftsmanship. The target audience is discerning vehicle owners who view their cars as investments and appreciators of artisanal services.\n\nThe design style is **Modern Editorial with Glassmorphic accents**. It utilizes high-contrast typography and a precision-engineered grid. To evoke the \"high-gloss\" finish of a detailed car, the UI employs sharp architectural lines, expansive whitespace, and translucent, reflective layers. The emotional response is one of confidence, cleanliness, and premium exclusivity.\n\n## Colors\nThe palette is rooted in Santa Fe’s natural landscape but polished for a tech-forward automotive service.\n\n- **Primary (Terracotta):** Used for key brand moments and heritage-inspired accents.\n- **Secondary (Electric Blue):** Represents \"liquid chrome\" and high-gloss water finishes; used sparingly for primary actions and \"active\" states.\n- **Tertiary (Liquid Silver):** Used for metal-like accents and sophisticated line work.\n- **Neutral (Slate & Sand):** Deep charcoal forms the canvas (background), while toasted sand provides warmth in secondary text and subtle dividers.\n\n## Typography\nThe typography creates an editorial, high-fashion feel. **Playfair Display** serves as the authoritative voice for headlines, reflecting heritage and luxury. \n\n**Hanken Grotesk** provides a clean, technical counterpoint. For utility text and labels, we use a \"wide-tracked\" approach (increased letter spacing) to enhance readability and create an airy, premium feel. All labels should be set in uppercase to reinforce the architectural precision of the design system.\n\n## Layout & Spacing\nThis design system uses an **asymmetrical 12-column grid** to move away from \"templated\" looks. \n\n- **Asymmetry:** Key content blocks should often be offset (e.g., an image spanning columns 1-7 with text starting on column 9).\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow high-resolution automotive imagery to breathe.\n- **Mobile:** Transition to a single-column fluid layout with 20px side margins, prioritizing large \"hero\" style cards for service packages.\n\n## Elevation & Depth\nDepth is created through **Reflective Glassmorphism** rather than traditional shadows.\n\n- **The \"High-Gloss\" Surface:** Use `backdrop-filter: blur(12px)` with a 10% opacity white fill to simulate glass.\n- **Thin Borders:** Use 1px \"Silver\" or \"Electric Blue\" borders at 20% opacity to define edges without adding visual weight.\n- **Lens Flare:** Subtle, low-opacity radial gradients in \"Electric Blue\" can be placed behind primary surfaces to suggest a light reflection on a polished car surface.\n\n## Shapes\nTo maintain the \"Precision\" and \"Architectural\" keywords, this design system uses **Sharp (0px)** corners for all primary containers, buttons, and input fields. \n\nRoundedness is only permitted for \"organic\" elements like water-droplet icons or profile avatars. The strict 90-degree angles convey a sense of technical mastery and rigorous standards.\n\n## Components\n- **Buttons:** Sharp-edged. Primary buttons use the Terracotta fill with white text; Secondary buttons use a transparent background with a 1px Electric Blue border and wide-tracked uppercase labels.\n- **Service Cards:** Use large-scale photography as the background. On hover, a glassmorphic overlay slides up to reveal pricing and details.\n- **Inputs:** Minimalist bottom-border only (1px Silver). On focus, the border transitions to Electric Blue with a subtle glow.\n- **The \"Detailer’s Gauge\":** A custom component (progress bar) using the Electric Blue gradient to show detailing progress or ceramic coating longevity.\n- **Chips:** Small, sharp-edged boxes with 1px borders for service tags (e.g., \"CLAY BAR\", \"EXTERIOR ONLY\").",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "HANKEN_GROTESK",
+          "labelFontFamily": "Hanken Grotesk",
           "namedColors": {
-            "background": "#fbf9f4",
-            "error": "#ba1a1a",
-            "error_container": "#ffdad6",
-            "inverse_on_surface": "#f2f1ec",
-            "inverse_primary": "#c8c6c7",
-            "inverse_surface": "#30312e",
-            "on_background": "#1b1c19",
-            "on_error": "#ffffff",
-            "on_error_container": "#93000a",
-            "on_primary": "#ffffff",
-            "on_primary_container": "#858384",
-            "on_primary_fixed": "#1b1b1c",
-            "on_primary_fixed_variant": "#474647",
-            "on_secondary": "#ffffff",
-            "on_secondary_container": "#763017",
-            "on_secondary_fixed": "#390c00",
-            "on_secondary_fixed_variant": "#783118",
-            "on_surface": "#1b1c19",
-            "on_surface_variant": "#46474a",
-            "on_tertiary": "#ffffff",
-            "on_tertiary_container": "#4f3e00",
-            "on_tertiary_fixed": "#241a00",
-            "on_tertiary_fixed_variant": "#574500",
-            "outline": "#76777b",
-            "outline_variant": "#c7c6ca",
-            "primary": "#000000",
-            "primary_container": "#1b1b1c",
-            "primary_fixed": "#e5e2e3",
-            "primary_fixed_dim": "#c8c6c7",
-            "secondary": "#96482d",
-            "secondary_container": "#fd9a78",
-            "secondary_fixed": "#ffdbd0",
-            "secondary_fixed_dim": "#ffb59d",
-            "surface": "#fbf9f4",
-            "surface_bright": "#fbf9f4",
-            "surface_container": "#f0eee9",
-            "surface_container_high": "#eae8e3",
-            "surface_container_highest": "#e4e2dd",
-            "surface_container_low": "#f5f3ee",
-            "surface_container_lowest": "#ffffff",
-            "surface_dim": "#dbdad5",
-            "surface_tint": "#5f5e5f",
-            "surface_variant": "#e4e2dd",
-            "tertiary": "#735c00",
-            "tertiary_container": "#cca730",
-            "tertiary_fixed": "#ffe088",
-            "tertiary_fixed_dim": "#e9c349"
+            "background": "#131313",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#313030",
+            "inverse_primary": "#9f402d",
+            "inverse_surface": "#e5e2e1",
+            "on_background": "#e5e2e1",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#611205",
+            "on_primary_container": "#5a0d02",
+            "on_primary_fixed": "#3e0500",
+            "on_primary_fixed_variant": "#802918",
+            "on_secondary": "#00363a",
+            "on_secondary_container": "#00686f",
+            "on_secondary_fixed": "#002022",
+            "on_secondary_fixed_variant": "#004f54",
+            "on_surface": "#e5e2e1",
+            "on_surface_variant": "#ddc0ba",
+            "on_tertiary": "#2f3131",
+            "on_tertiary_container": "#2a2c2c",
+            "on_tertiary_fixed": "#1a1c1c",
+            "on_tertiary_fixed_variant": "#464747",
+            "outline": "#a48b86",
+            "outline_variant": "#56423e",
+            "primary": "#ffb4a5",
+            "primary_container": "#e2725b",
+            "primary_fixed": "#ffdad3",
+            "primary_fixed_dim": "#ffb4a5",
+            "secondary": "#d3fbff",
+            "secondary_container": "#00eefc",
+            "secondary_fixed": "#7df4ff",
+            "secondary_fixed_dim": "#00dbe9",
+            "surface": "#131313",
+            "surface_bright": "#393939",
+            "surface_container": "#20201f",
+            "surface_container_high": "#2a2a2a",
+            "surface_container_highest": "#353535",
+            "surface_container_low": "#1c1b1b",
+            "surface_container_lowest": "#0e0e0e",
+            "surface_dim": "#131313",
+            "surface_tint": "#ffb4a5",
+            "surface_variant": "#353535",
+            "tertiary": "#c6c6c6",
+            "tertiary_container": "#929393",
+            "tertiary_fixed": "#e3e2e2",
+            "tertiary_fixed_dim": "#c6c6c6"
           },
-          "overrideNeutralColor": "#f9f7f2",
-          "overridePrimaryColor": "#1a1a1b",
-          "overrideSecondaryColor": "#c36b4d",
-          "overrideTertiaryColor": "#d4af37",
+          "overrideNeutralColor": "#1a1a1a",
+          "overridePrimaryColor": "#e2725b",
+          "overrideSecondaryColor": "#00f0ff",
+          "overrideTertiaryColor": "#c0c0c0",
           "spacing": {
-            "container-max": "1280px",
+            "container-max": "1440px",
             "gutter": "24px",
-            "horizon-rule": "4px",
             "margin-desktop": "64px",
             "margin-mobile": "20px",
+            "section-gap": "120px",
             "unit": "8px"
           },
           "spacingScale": 2,
           "typography": {
             "body-lg": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Hanken Grotesk",
               "fontSize": "18px",
               "fontWeight": "400",
               "letterSpacing": "0.01em",
-              "lineHeight": "1.6"
+              "lineHeight": "28px"
             },
             "body-md": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Hanken Grotesk",
               "fontSize": "16px",
               "fontWeight": "400",
-              "lineHeight": "1.6"
+              "lineHeight": "24px"
             },
             "display-lg": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "64px",
+              "fontFamily": "Playfair Display",
+              "fontSize": "72px",
               "fontWeight": "700",
               "letterSpacing": "-0.02em",
-              "lineHeight": "1.1"
+              "lineHeight": "80px"
             },
             "headline-lg": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "40px",
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
               "fontWeight": "600",
-              "lineHeight": "1.2"
+              "lineHeight": "56px"
             },
             "headline-lg-mobile": {
-              "fontFamily": "Bodoni Moda",
+              "fontFamily": "Playfair Display",
               "fontSize": "32px",
               "fontWeight": "600",
-              "lineHeight": "1.2"
+              "lineHeight": "40px"
             },
             "headline-md": {
-              "fontFamily": "Bodoni Moda",
-              "fontSize": "28px",
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
               "fontWeight": "500",
-              "lineHeight": "1.3"
+              "lineHeight": "40px"
             },
             "label-caps": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Hanken Grotesk",
               "fontSize": "12px",
               "fontWeight": "700",
               "letterSpacing": "0.15em",
-              "lineHeight": "1.4"
-            },
-            "technical-data": {
-              "fontFamily": "DM Sans",
-              "fontSize": "14px",
-              "fontWeight": "500",
-              "letterSpacing": "0.05em",
-              "lineHeight": "1.2"
+              "lineHeight": "16px"
             }
           }
         }
       },
-      "name": "assets/8270260ded284e21b6ee0f7ec0e42de4",
+      "name": "assets/ccb5ccdaf0844643b9f81928a910714d",
       "version": "1"
     }
   },
@@ -142,293 +135,336 @@
     "design": {
       "screens": [
         {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "1aeea30d4876420381054b3bb57c1d3f",
+          "name": "projects/7452633150557821770/screens/1aeea30d4876420381054b3bb57c1d3f",
+          "prompt": "A high-end luxury black SUV parked in a dramatic, minimalist desert landscape in Santa Fe, New Mexico. The car is perfectly detailed, with a mirror-like reflection on its hood. The lighting is golden hour, casting long shadows. Architectural lines, premium editorial photography style, ultra-high resolution. Minimalist and clean.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLv2-3jVBz7BMAVXtBELJd7yxyIevi9w5mjBvNJtWAx19plZUV_6i-O6HurEnSrqGgHb_87C9v_ptkahqwhmyPMZZAsmvZMH3hWa72utlx0kDGJQ7hmibuTzBmwDYVmIzQGvDfuNcZ8_GR9uQfGY-cFHwa6DSTyvC5M6QVc1f3VaeRY76Tf0iHBmYUgxITv9JqcsNb2txCHrpU9CfPeRpk6DO_h2w4eG52kUotW-g1QjzOOrPCF-wGE1z58",
+            "name": "projects/7452633150557821770/files/040528a5fbdb43948d5e74a8aaf6e4ae"
+          },
+          "theme": {},
+          "title": "A high-end luxury black SUV parked in a dramatic, minimalist desert landscape in Santa Fe, New Mexico. The car is perfectly detailed, with a mirror-like reflection on its hood. The lighting is golden hour, casting long shadows. Architectural lines, premium editorial photography style, ultra-high resolution. Minimalist and clean.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1200",
+          "id": "cc7544077a8548c7bf2ff94412568f88",
+          "name": "projects/7452633150557821770/screens/cc7544077a8548c7bf2ff94412568f88",
+          "prompt": "Macro shot of water droplets beading off a freshly waxed, deep ceramic-coated car surface. Professional automotive detailing photography. High contrast, sharp focus, 'liquid silver' color palette. Editorial style.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvFJKg6HkOV3KqV7QcxZQUMqit29KiY3biRASbdODvSbe5CcPHw7ewlZHU3PBiM57lj6O7h9dhkR5wztVR-BlQJ-7QLMAziKQrnY2i3Q3rbFg8JU2D3lCFCSdWiKkbMJVhKMKSWRENmX34-s9oAh_CbwjdYRU3YY_4Th3ksDM5agdwVdpyCgW_J7jz5gHYnAWdQOz0RzOvPJ4CaikXR-ysqDjfl__OsJfkPeH2TkCn2gjFekQa8kuO27lg",
+            "name": "projects/7452633150557821770/files/a235cb6b2bcb4795979365e6f15caeae"
+          },
+          "theme": {},
+          "title": "Macro shot of water droplets beading off a freshly waxed, deep ceramic-coated car surface. Professional automotive detailing photography. High contrast, sharp focus, 'liquid silver' color palette. Editorial style.",
+          "width": "896"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "532066e4cad3482e935ccaa74f3e2e9b",
+          "name": "projects/7452633150557821770/screens/532066e4cad3482e935ccaa74f3e2e9b",
+          "prompt": "A professional detailer using a high-pressure wash on a high-end vehicle, with fine mist and sunlight creating a subtle rainbow/prism effect. Action shot, blurred background, premium and artisanal feel. High-desert aesthetic.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsGil4qIftTWxik2GvDnDsRkq9n8JN6kzhhe5Dk5hqLKVl6grhLjmMiY1yL6X63TNFB9QRs5-q3RC9MQFJMuE93z2v1yGsunYaAZpI4kPezhjW7bu89s0EZf3QDVZqIPS55csyQQDbXBNQ2LCeUqCEehHsx00Jufd8OnolDGcJS9EF4HfNKMMgLMzzvAlg-CBfakiOc5BizpzKOQqh57b4McegCWuOvlOAaH9i7BJE9-SIJaIFSNz8Rihg",
+            "name": "projects/7452633150557821770/files/d3ce84d7f0ab4c3082e321cc490c5c38"
+          },
+          "theme": {},
+          "title": "A professional detailer using a high-pressure wash on a high-end vehicle, with fine mist and sunlight creating a subtle rainbow/prism effect. Action shot, blurred background, premium and artisanal feel. High-desert aesthetic.",
+          "width": "1264"
+        },
+        {
           "designSystem": {
             "designSystem": {
-              "displayName": "High Desert Industrial",
-              "styleGuidelines": "## Brand & Style\nThe brand personality is **rugged but refined**, balancing the raw intensity of industrial pressure washing with the sophisticated precision of luxury vehicle detailing. It targets a discerning clientele in Santa Fe who value heritage, craftsmanship, and extreme attention to detail.\n\nThe visual style is **Editorial High-Contrast**. It rejects the typical \"splashy\" blue water aesthetics in favor of a moody, architectural approach. The UI evokes the feeling of a premium lifestyle magazine, utilizing heavy whitespace, dramatic shadow play, and a \"Horizon Line\" motif that mimics the expansive New Mexico landscape. The emotional response should be one of quiet confidence, technical mastery, and elite service.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop and a **Fluid Fluid** model on mobile, governed by a strict 8px baseline.\n\n**The Horizon Motif:**\n*   Layouts should be bisected by \"Horizon Lines\"—4px thick horizontal rules in `Asphalt`.\n*   Use staggered, asymmetrical grids for image galleries to create \"Shadow Play\" (alternating light and dark blocks).\n*   Sections should have significant vertical padding (80px - 120px) to simulate the vastness of the desert.\n\n**Breakpoints:**\n*   **Mobile:** 4-column grid. Margins are 20px. \n*   **Tablet:** 8-column grid. Margins are 40px.\n*   **Desktop:** 12-column grid. Content is centered with a 1280px max-width and 64px margins.\n\n## Elevation & Depth\nIn keeping with the \"Industrial\" theme, this system avoids soft, ambient shadows. Instead, it uses **Tonal Layers** and **Hard Shadows**.\n\n*   **Primary Surface:** `Stucco` (#F9F7F2).\n*   **Elevated Cards:** Use a 1px solid border in `Asphalt` (#1A1A1B) rather than a shadow. \n*   **Shadow Play:** If a shadow is required for a floating element (like a mobile FAB), use a hard-edged, high-opacity \"drop\" shadow (e.g., 4px 4px 0px #1A1A1B) rather than a blur.\n*   **Depth through Layering:** Elements should overlap slightly—for example, an image may break the \"horizon line\" rule to create a sense of three-dimensional space without using gradients.\n\n## Components\nConsistent component styling reinforces the \"High Desert Industrial\" narrative:\n\n*   **Buttons:** Primary buttons are solid `Asphalt` with `Stucco` text. Secondary buttons are `Adobe` with `Stucco` text. Both are sharp-edged, high-contrast, and use `label-caps` typography. Hover states should simply invert the colors.\n*   **Input Fields:** Ghost-style inputs with a 2px bottom-border only (the \"Horizon\" line). Labels should sit above the line in `label-caps`.\n*   **Chips/Tags:** Small, sharp-edged rectangles with `Asphalt` borders. Use these for service features (e.g., \"HAND WAX,\" \"STEAM CLEAN\").\n*   **Cards:** Use `Stucco` backgrounds with a 1px `Asphalt` border. Header images in cards should be treated with high contrast and deep blacks.\n*   **Horizon Rules:** Use thick `Asphalt` lines to separate major sections of the page, often accompanied by a `label-caps` category title sitting directly on the line.\n*   **Service Tiers:** Displayed in a vertical \"staggered\" list where the price is the largest element, using `Bodoni Moda`.",
+              "displayName": "High-Desert Precision",
+              "styleGuidelines": "## Brand & Style\nThe brand personality centers on \"Desert-Luxe\"—a fusion of rugged high-desert landscapes and high-end automotive craftsmanship. The target audience is discerning vehicle owners who view their cars as investments and appreciators of artisanal services.\n\nThe design style is **Modern Editorial with Glassmorphic accents**. It utilizes high-contrast typography and a precision-engineered grid. To evoke the \"high-gloss\" finish of a detailed car, the UI employs sharp architectural lines, expansive whitespace, and translucent, reflective layers. The emotional response is one of confidence, cleanliness, and premium exclusivity.\n\n## Layout & Spacing\nThis design system uses an **asymmetrical 12-column grid** to move away from \"templated\" looks. \n\n- **Asymmetry:** Key content blocks should often be offset (e.g., an image spanning columns 1-7 with text starting on column 9).\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow high-resolution automotive imagery to breathe.\n- **Mobile:** Transition to a single-column fluid layout with 20px side margins, prioritizing large \"hero\" style cards for service packages.\n\n## Elevation & Depth\nDepth is created through **Reflective Glassmorphism** rather than traditional shadows.\n\n- **The \"High-Gloss\" Surface:** Use `backdrop-filter: blur(12px)` with a 10% opacity white fill to simulate glass.\n- **Thin Borders:** Use 1px \"Silver\" or \"Electric Blue\" borders at 20% opacity to define edges without adding visual weight.\n- **Lens Flare:** Subtle, low-opacity radial gradients in \"Electric Blue\" can be placed behind primary surfaces to suggest a light reflection on a polished car surface.\n\n## Components\n- **Buttons:** Sharp-edged. Primary buttons use the Terracotta fill with white text; Secondary buttons use a transparent background with a 1px Electric Blue border and wide-tracked uppercase labels.\n- **Service Cards:** Use large-scale photography as the background. On hover, a glassmorphic overlay slides up to reveal pricing and details.\n- **Inputs:** Minimalist bottom-border only (1px Silver). On focus, the border transitions to Electric Blue with a subtle glow.\n- **The \"Detailer’s Gauge\":** A custom component (progress bar) using the Electric Blue gradient to show detailing progress or ceramic coating longevity.\n- **Chips:** Small, sharp-edged boxes with 1px borders for service tags (e.g., \"CLAY BAR\", \"EXTERIOR ONLY\").",
               "theme": {
-                "bodyFont": "DM_SANS",
-                "bodyFontFamily": "Dm Sans",
-                "colorMode": "LIGHT",
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "DARK",
                 "colorVariant": "FIDELITY",
-                "customColor": "#1a1a1b",
-                "designMd": "---\nname: High Desert Industrial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#46474a'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#76777b'\n  outline-variant: '#c7c6ca'\n  surface-tint: '#5f5e5f'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1b1b1c'\n  on-primary-container: '#858384'\n  inverse-primary: '#c8c6c7'\n  secondary: '#96482d'\n  on-secondary: '#ffffff'\n  secondary-container: '#fd9a78'\n  on-secondary-container: '#763017'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cca730'\n  on-tertiary-container: '#4f3e00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1b1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#ffdbd0'\n  secondary-fixed-dim: '#ffb59d'\n  on-secondary-fixed: '#390c00'\n  on-secondary-fixed-variant: '#783118'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.4'\n    letterSpacing: 0.15em\n  technical-data:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  horizon-rule: 4px\n---\n\n## Brand & Style\nThe brand personality is **rugged but refined**, balancing the raw intensity of industrial pressure washing with the sophisticated precision of luxury vehicle detailing. It targets a discerning clientele in Santa Fe who value heritage, craftsmanship, and extreme attention to detail.\n\nThe visual style is **Editorial High-Contrast**. It rejects the typical \"splashy\" blue water aesthetics in favor of a moody, architectural approach. The UI evokes the feeling of a premium lifestyle magazine, utilizing heavy whitespace, dramatic shadow play, and a \"Horizon Line\" motif that mimics the expansive New Mexico landscape. The emotional response should be one of quiet confidence, technical mastery, and elite service.\n\n## Colors\nThis design system utilizes a palette inspired by the high-desert landscape and industrial machinery.\n\n*   **Asphalt (#1A1A1B):** The foundational primary color. Used for deep backgrounds, heavy typography, and technical UI elements. It represents precision and the vehicles being serviced.\n*   **Adobe (#C36B4D):** The secondary accent. Used for calls to action and highlights, grounding the brand in Santa Fe’s architectural heritage.\n*   **High Noon Gold (#D4AF37):** Reserved for luxury indicators, \"Premium\" service tiers, and subtle iconography.\n*   **Stucco (#F9F7F2):** The primary surface color. A warm off-white that provides a sophisticated, gallery-like canvas for high-resolution imagery.\n\nAvoid gradients. Colors should be applied in solid, bold blocks to maintain the industrial-editorial feel.\n\n## Typography\nThe typography system relies on a high-contrast pairing:\n\n*   **Headings:** `Bodoni Moda` provides an authoritative, editorial elegance. It should be used for large titles and pull quotes. Use \"optical sizing\" if available to ensure the hairlines remain crisp.\n*   **Body & Technical:** `DM Sans` is used for readability and its modern, geometric cleanliness. \n*   **The \"Wide-Track\" Rule:** All labels and small technical details should use increased letter spacing (`0.15em`) and uppercase styling to evoke industrial serial numbers and architectural blueprints.\n\nMaintain generous vertical rhythm. Headings should feel like they are \"resting\" on the horizon lines described in the layout section.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop and a **Fluid Fluid** model on mobile, governed by a strict 8px baseline.\n\n**The Horizon Motif:**\n*   Layouts should be bisected by \"Horizon Lines\"—4px thick horizontal rules in `Asphalt`.\n*   Use staggered, asymmetrical grids for image galleries to create \"Shadow Play\" (alternating light and dark blocks).\n*   Sections should have significant vertical padding (80px - 120px) to simulate the vastness of the desert.\n\n**Breakpoints:**\n*   **Mobile:** 4-column grid. Margins are 20px. \n*   **Tablet:** 8-column grid. Margins are 40px.\n*   **Desktop:** 12-column grid. Content is centered with a 1280px max-width and 64px margins.\n\n## Elevation & Depth\nIn keeping with the \"Industrial\" theme, this system avoids soft, ambient shadows. Instead, it uses **Tonal Layers** and **Hard Shadows**.\n\n*   **Primary Surface:** `Stucco` (#F9F7F2).\n*   **Elevated Cards:** Use a 1px solid border in `Asphalt` (#1A1A1B) rather than a shadow. \n*   **Shadow Play:** If a shadow is required for a floating element (like a mobile FAB), use a hard-edged, high-opacity \"drop\" shadow (e.g., 4px 4px 0px #1A1A1B) rather than a blur.\n*   **Depth through Layering:** Elements should overlap slightly—for example, an image may break the \"horizon line\" rule to create a sense of three-dimensional space without using gradients.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo reinforce the industrial and architectural tone, every element—from buttons and input fields to image containers and cards—must have 90-degree corners. Rounded corners are seen as too soft for this professional, rugged aesthetic. The only exception is the \"High Noon Gold\" seal which may be used for certification badges, which should be a perfect circle.\n\n## Components\nConsistent component styling reinforces the \"High Desert Industrial\" narrative:\n\n*   **Buttons:** Primary buttons are solid `Asphalt` with `Stucco` text. Secondary buttons are `Adobe` with `Stucco` text. Both are sharp-edged, high-contrast, and use `label-caps` typography. Hover states should simply invert the colors.\n*   **Input Fields:** Ghost-style inputs with a 2px bottom-border only (the \"Horizon\" line). Labels should sit above the line in `label-caps`.\n*   **Chips/Tags:** Small, sharp-edged rectangles with `Asphalt` borders. Use these for service features (e.g., \"HAND WAX,\" \"STEAM CLEAN\").\n*   **Cards:** Use `Stucco` backgrounds with a 1px `Asphalt` border. Header images in cards should be treated with high contrast and deep blacks.\n*   **Horizon Rules:** Use thick `Asphalt` lines to separate major sections of the page, often accompanied by a `label-caps` category title sitting directly on the line.\n*   **Service Tiers:** Displayed in a vertical \"staggered\" list where the price is the largest element, using `Bodoni Moda`.",
-                "font": "BODONI_MODA",
-                "headlineFont": "BODONI_MODA",
-                "headlineFontFamily": "Bodoni Moda",
-                "labelFont": "DM_SANS",
-                "labelFontFamily": "Dm Sans",
+                "customColor": "#e2725b",
+                "designMd": "---\nname: High-Desert Precision\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#20201f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#ddc0ba'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#a48b86'\n  outline-variant: '#56423e'\n  surface-tint: '#ffb4a5'\n  primary: '#ffb4a5'\n  on-primary: '#611205'\n  primary-container: '#e2725b'\n  on-primary-container: '#5a0d02'\n  inverse-primary: '#9f402d'\n  secondary: '#d3fbff'\n  on-secondary: '#00363a'\n  secondary-container: '#00eefc'\n  on-secondary-container: '#00686f'\n  tertiary: '#c6c6c6'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#929393'\n  on-tertiary-container: '#2a2c2c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad3'\n  primary-fixed-dim: '#ffb4a5'\n  on-primary-fixed: '#3e0500'\n  on-primary-fixed-variant: '#802918'\n  secondary-fixed: '#7df4ff'\n  secondary-fixed-dim: '#00dbe9'\n  on-secondary-fixed: '#002022'\n  on-secondary-fixed-variant: '#004f54'\n  tertiary-fixed: '#e3e2e2'\n  tertiary-fixed-dim: '#c6c6c6'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#464747'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality centers on \"Desert-Luxe\"—a fusion of rugged high-desert landscapes and high-end automotive craftsmanship. The target audience is discerning vehicle owners who view their cars as investments and appreciators of artisanal services.\n\nThe design style is **Modern Editorial with Glassmorphic accents**. It utilizes high-contrast typography and a precision-engineered grid. To evoke the \"high-gloss\" finish of a detailed car, the UI employs sharp architectural lines, expansive whitespace, and translucent, reflective layers. The emotional response is one of confidence, cleanliness, and premium exclusivity.\n\n## Colors\nThe palette is rooted in Santa Fe’s natural landscape but polished for a tech-forward automotive service.\n\n- **Primary (Terracotta):** Used for key brand moments and heritage-inspired accents.\n- **Secondary (Electric Blue):** Represents \"liquid chrome\" and high-gloss water finishes; used sparingly for primary actions and \"active\" states.\n- **Tertiary (Liquid Silver):** Used for metal-like accents and sophisticated line work.\n- **Neutral (Slate & Sand):** Deep charcoal forms the canvas (background), while toasted sand provides warmth in secondary text and subtle dividers.\n\n## Typography\nThe typography creates an editorial, high-fashion feel. **Playfair Display** serves as the authoritative voice for headlines, reflecting heritage and luxury. \n\n**Hanken Grotesk** provides a clean, technical counterpoint. For utility text and labels, we use a \"wide-tracked\" approach (increased letter spacing) to enhance readability and create an airy, premium feel. All labels should be set in uppercase to reinforce the architectural precision of the design system.\n\n## Layout & Spacing\nThis design system uses an **asymmetrical 12-column grid** to move away from \"templated\" looks. \n\n- **Asymmetry:** Key content blocks should often be offset (e.g., an image spanning columns 1-7 with text starting on column 9).\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow high-resolution automotive imagery to breathe.\n- **Mobile:** Transition to a single-column fluid layout with 20px side margins, prioritizing large \"hero\" style cards for service packages.\n\n## Elevation & Depth\nDepth is created through **Reflective Glassmorphism** rather than traditional shadows.\n\n- **The \"High-Gloss\" Surface:** Use `backdrop-filter: blur(12px)` with a 10% opacity white fill to simulate glass.\n- **Thin Borders:** Use 1px \"Silver\" or \"Electric Blue\" borders at 20% opacity to define edges without adding visual weight.\n- **Lens Flare:** Subtle, low-opacity radial gradients in \"Electric Blue\" can be placed behind primary surfaces to suggest a light reflection on a polished car surface.\n\n## Shapes\nTo maintain the \"Precision\" and \"Architectural\" keywords, this design system uses **Sharp (0px)** corners for all primary containers, buttons, and input fields. \n\nRoundedness is only permitted for \"organic\" elements like water-droplet icons or profile avatars. The strict 90-degree angles convey a sense of technical mastery and rigorous standards.\n\n## Components\n- **Buttons:** Sharp-edged. Primary buttons use the Terracotta fill with white text; Secondary buttons use a transparent background with a 1px Electric Blue border and wide-tracked uppercase labels.\n- **Service Cards:** Use large-scale photography as the background. On hover, a glassmorphic overlay slides up to reveal pricing and details.\n- **Inputs:** Minimalist bottom-border only (1px Silver). On focus, the border transitions to Electric Blue with a subtle glow.\n- **The \"Detailer’s Gauge\":** A custom component (progress bar) using the Electric Blue gradient to show detailing progress or ceramic coating longevity.\n- **Chips:** Small, sharp-edged boxes with 1px borders for service tags (e.g., \"CLAY BAR\", \"EXTERIOR ONLY\").",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "HANKEN_GROTESK",
+                "labelFontFamily": "Hanken Grotesk",
                 "namedColors": {
-                  "background": "#fbf9f4",
-                  "error": "#ba1a1a",
-                  "error_container": "#ffdad6",
-                  "inverse_on_surface": "#f2f1ec",
-                  "inverse_primary": "#c8c6c7",
-                  "inverse_surface": "#30312e",
-                  "on_background": "#1b1c19",
-                  "on_error": "#ffffff",
-                  "on_error_container": "#93000a",
-                  "on_primary": "#ffffff",
-                  "on_primary_container": "#858384",
-                  "on_primary_fixed": "#1b1b1c",
-                  "on_primary_fixed_variant": "#474647",
-                  "on_secondary": "#ffffff",
-                  "on_secondary_container": "#763017",
-                  "on_secondary_fixed": "#390c00",
-                  "on_secondary_fixed_variant": "#783118",
-                  "on_surface": "#1b1c19",
-                  "on_surface_variant": "#46474a",
-                  "on_tertiary": "#ffffff",
-                  "on_tertiary_container": "#4f3e00",
-                  "on_tertiary_fixed": "#241a00",
-                  "on_tertiary_fixed_variant": "#574500",
-                  "outline": "#76777b",
-                  "outline_variant": "#c7c6ca",
-                  "primary": "#000000",
-                  "primary_container": "#1b1b1c",
-                  "primary_fixed": "#e5e2e3",
-                  "primary_fixed_dim": "#c8c6c7",
-                  "secondary": "#96482d",
-                  "secondary_container": "#fd9a78",
-                  "secondary_fixed": "#ffdbd0",
-                  "secondary_fixed_dim": "#ffb59d",
-                  "surface": "#fbf9f4",
-                  "surface_bright": "#fbf9f4",
-                  "surface_container": "#f0eee9",
-                  "surface_container_high": "#eae8e3",
-                  "surface_container_highest": "#e4e2dd",
-                  "surface_container_low": "#f5f3ee",
-                  "surface_container_lowest": "#ffffff",
-                  "surface_dim": "#dbdad5",
-                  "surface_tint": "#5f5e5f",
-                  "surface_variant": "#e4e2dd",
-                  "tertiary": "#735c00",
-                  "tertiary_container": "#cca730",
-                  "tertiary_fixed": "#ffe088",
-                  "tertiary_fixed_dim": "#e9c349"
+                  "background": "#131313",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#313030",
+                  "inverse_primary": "#9f402d",
+                  "inverse_surface": "#e5e2e1",
+                  "on_background": "#e5e2e1",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#611205",
+                  "on_primary_container": "#5a0d02",
+                  "on_primary_fixed": "#3e0500",
+                  "on_primary_fixed_variant": "#802918",
+                  "on_secondary": "#00363a",
+                  "on_secondary_container": "#00686f",
+                  "on_secondary_fixed": "#002022",
+                  "on_secondary_fixed_variant": "#004f54",
+                  "on_surface": "#e5e2e1",
+                  "on_surface_variant": "#ddc0ba",
+                  "on_tertiary": "#2f3131",
+                  "on_tertiary_container": "#2a2c2c",
+                  "on_tertiary_fixed": "#1a1c1c",
+                  "on_tertiary_fixed_variant": "#464747",
+                  "outline": "#a48b86",
+                  "outline_variant": "#56423e",
+                  "primary": "#ffb4a5",
+                  "primary_container": "#e2725b",
+                  "primary_fixed": "#ffdad3",
+                  "primary_fixed_dim": "#ffb4a5",
+                  "secondary": "#d3fbff",
+                  "secondary_container": "#00eefc",
+                  "secondary_fixed": "#7df4ff",
+                  "secondary_fixed_dim": "#00dbe9",
+                  "surface": "#131313",
+                  "surface_bright": "#393939",
+                  "surface_container": "#20201f",
+                  "surface_container_high": "#2a2a2a",
+                  "surface_container_highest": "#353535",
+                  "surface_container_low": "#1c1b1b",
+                  "surface_container_lowest": "#0e0e0e",
+                  "surface_dim": "#131313",
+                  "surface_tint": "#ffb4a5",
+                  "surface_variant": "#353535",
+                  "tertiary": "#c6c6c6",
+                  "tertiary_container": "#929393",
+                  "tertiary_fixed": "#e3e2e2",
+                  "tertiary_fixed_dim": "#c6c6c6"
                 },
-                "overrideNeutralColor": "#f9f7f2",
-                "overridePrimaryColor": "#1a1a1b",
-                "overrideSecondaryColor": "#c36b4d",
-                "overrideTertiaryColor": "#d4af37",
+                "overrideNeutralColor": "#1a1a1a",
+                "overridePrimaryColor": "#e2725b",
+                "overrideSecondaryColor": "#00f0ff",
+                "overrideTertiaryColor": "#c0c0c0",
                 "spacing": {
-                  "container-max": "1280px",
+                  "container-max": "1440px",
                   "gutter": "24px",
-                  "horizon-rule": "4px",
                   "margin-desktop": "64px",
                   "margin-mobile": "20px",
+                  "section-gap": "120px",
                   "unit": "8px"
                 },
                 "spacingScale": 2,
                 "typography": {
                   "body-lg": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Hanken Grotesk",
                     "fontSize": "18px",
                     "fontWeight": "400",
                     "letterSpacing": "0.01em",
-                    "lineHeight": "1.6"
+                    "lineHeight": "28px"
                   },
                   "body-md": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Hanken Grotesk",
                     "fontSize": "16px",
                     "fontWeight": "400",
-                    "lineHeight": "1.6"
+                    "lineHeight": "24px"
                   },
                   "display-lg": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "64px",
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "72px",
                     "fontWeight": "700",
                     "letterSpacing": "-0.02em",
-                    "lineHeight": "1.1"
+                    "lineHeight": "80px"
                   },
                   "headline-lg": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "40px",
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
                     "fontWeight": "600",
-                    "lineHeight": "1.2"
+                    "lineHeight": "56px"
                   },
                   "headline-lg-mobile": {
-                    "fontFamily": "Bodoni Moda",
+                    "fontFamily": "Playfair Display",
                     "fontSize": "32px",
                     "fontWeight": "600",
-                    "lineHeight": "1.2"
+                    "lineHeight": "40px"
                   },
                   "headline-md": {
-                    "fontFamily": "Bodoni Moda",
-                    "fontSize": "28px",
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
                     "fontWeight": "500",
-                    "lineHeight": "1.3"
+                    "lineHeight": "40px"
                   },
                   "label-caps": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Hanken Grotesk",
                     "fontSize": "12px",
                     "fontWeight": "700",
                     "letterSpacing": "0.15em",
-                    "lineHeight": "1.4"
-                  },
-                  "technical-data": {
-                    "fontFamily": "DM Sans",
-                    "fontSize": "14px",
-                    "fontWeight": "500",
-                    "letterSpacing": "0.05em",
-                    "lineHeight": "1.2"
+                    "lineHeight": "16px"
                   }
                 }
               }
             },
-            "name": "assets/8270260ded284e21b6ee0f7ec0e42de4",
+            "name": "assets/ccb5ccdaf0844643b9f81928a910714d",
             "version": "1"
           },
           "deviceType": "DESKTOP",
           "generatedBy": "figaro_agent",
-          "height": "10544",
+          "height": "9708",
           "htmlCode": {
-            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2U3N2JhZGI1YWYzZDRhZjNiMmFmMTBlY2M2ZmJhYzgyEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNjQzMDgzNDUxMTU2NzczNTQ4OA&filename=&opi=96797242",
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzhlYzE3ZmJiNDFmNjQyOTY5YjY2MzMzYzNiZjFkYzc2EgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM3NDUyNjMzMTUwNTU3ODIxNzcw&filename=&opi=96797242",
             "mimeType": "text/html",
-            "name": "projects/16430834511567735488/files/5b2898e6d896451fba046d01db613b26"
+            "name": "projects/7452633150557821770/files/4a23dec48a454435b1300f4c6eda48dc"
           },
-          "id": "177014f6d2f44c6b92d6f0fc8db42045",
-          "name": "projects/16430834511567735488/screens/177014f6d2f44c6b92d6f0fc8db42045",
-          "prompt": "Create the full production-ready desktop homepage for 'Santa Fe Mobile Auto Detailing & Pressure Wash'. \n\nVisual Identity: High Desert Industrial. Use the palette of Charcoal (#1A1A1B), Terracotta (#C36B4D), Gold (#D4AF37), and Off-White (#F9F7F2). \nStyle: Editorial, premium, and unique. Avoid any 'local business' templates. Use generous whitespace and strong typographic hierarchy.\n\nLayout Sections:\n1. Header: Include phone (505) 670-2190, mobile nav, and a 'Book Now' primary action.\n2. Hero: A dramatic, asymmetric introduction. Use a headline like 'High Desert Precision. High Pressure Care.' Integrate an image of a pristine black vehicle against a Santa Fe landscape.\n3. #credibility: A minimalist section highlighting 10+ years in Santa Fe and 5-star local service.\n4. Services: Display 'Mobile Auto Detailing' and 'Precision Pressure Washing' as distinct, large-scale editorial blocks. Use real copy about ceramic coatings and architectural stone cleaning.\n5. About: A section titled 'The Heritage of Clean'—emphasizing the owner's commitment to the Santa Fe community.\n6. Visit: A section with the exact map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A premium form with floating labels and terracotta submit button. Include email defever22@gmail.com and phone.\n8. Footer: Monolithic branding, copyright 2024, and social links.\n\nTechnical: Responsive, smooth scroll to IDs, form validation UI, and no lorem ipsum. Use semantic HTML5.",
+          "id": "7776852a2be340e9a36cdbad34e11f55",
+          "name": "projects/7452633150557821770/screens/7776852a2be340e9a36cdbad34e11f55",
+          "prompt": "A bespoke, editorial-grade homepage for 'Santa Fe Mobile Auto Detailing & Pressure Wash'. \n\nLayout Strategy:\n- Use an asymmetrical grid with generous whitespace to create a premium feel.\n- Hero: A split-screen layout with a massive, high-contrast headline using 'Playfair Display'. The background of the text side is a deep terracotta charcoal, while the other side features {{DATA:IMAGE:IMAGE_4}} in a sharp, rectangular frame.\n- Credibility: A horizontal scroll or ticker of service areas (Santa Fe, Tesuque, Eldorado, Los Alamos) styled in thin, all-caps sans-serif.\n- Services: 'The Precision Suite'. Use large {{DATA:IMAGE:IMAGE_3}} for Ceramic Coating and {{DATA:IMAGE:IMAGE_5}} for Pressure Washing. Each service should feel like a full-page spread with technical specs and a clear 'Call to Action' for the phone number: (505) 670-2190.\n- About: 'Artisanal Care in the High Desert'. A two-column text block with a large drop-cap and a subtle background texture of sand or polished metal.\n- Visit: A section titled 'Our Territory' featuring the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. Surround it with thin architectural grid lines.\n- Contact: A dark-themed form with 'Glass' inputs and a primary action button that glows slightly on hover.\n- Use the 'High-Desert Precision' design system tokens throughout. No generic sections. Every transition should be smooth and intentional. \n\nCopy should be professional, confident, and specific to the Santa Fe landscape. Include the email: defever22@gmail.com and phone: (505) 670-2190 prominently.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "DESIGN",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsqJaowKIn5jjLG1FCerTZexeyeJ5T2cg1443F4MxaTECCvzNFNInFU-dkO9xBywkQ8mu2GVj1EEdwlhWJb5ftXKlFyygly0IJqsANXzSo3dc20KDrkkniXrSlB7fZDgxayUZY529D10gjHTPHRAd2a1RsMC52h6OaNibD3uNmuZmQDH8fCyzHfKAnmP77NMl4HNv8-cCXKunbJWbtgCaI7DbNR78m7-g9EHFWp9QXnfy4M6J-k94fDngHD",
-            "name": "projects/16430834511567735488/files/c814054e36f2401986ecc0e19733bffa"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsfe57-d2gWTHmS7ph5UThaOr-aY9GzI7g0Wk7_MBHSYJ8cOdHNeD5zXTO7PFC3tE25e84VqawgUy3AZHgFu3yB190mLf1Xi_DwAcRIEYBL-iHDoo300ZwBKWH1eTjFC7TRtFJBb0FjyCSRaYJtZMro8nBh_0V-IXt7lXS5TMCtvrQLBV-mLtfsstQ6uPWvVOsz1yuEkaiar2eqIe_Gm4hBlVME6TTH0nBd80jAr9dA1Coq0Ig3I-9xA_E",
+            "name": "projects/7452633150557821770/files/67ae56be3d144a7c8586ab9c6d8f18f0"
           },
           "theme": {
-            "bodyFont": "DM_SANS",
-            "bodyFontFamily": "Dm Sans",
-            "colorMode": "LIGHT",
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "DARK",
             "colorVariant": "FIDELITY",
-            "customColor": "#1a1a1b",
-            "designMd": "---\nname: High Desert Industrial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#46474a'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#76777b'\n  outline-variant: '#c7c6ca'\n  surface-tint: '#5f5e5f'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1b1b1c'\n  on-primary-container: '#858384'\n  inverse-primary: '#c8c6c7'\n  secondary: '#96482d'\n  on-secondary: '#ffffff'\n  secondary-container: '#fd9a78'\n  on-secondary-container: '#763017'\n  tertiary: '#735c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#cca730'\n  on-tertiary-container: '#4f3e00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1b1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#ffdbd0'\n  secondary-fixed-dim: '#ffb59d'\n  on-secondary-fixed: '#390c00'\n  on-secondary-fixed-variant: '#783118'\n  tertiary-fixed: '#ffe088'\n  tertiary-fixed-dim: '#e9c349'\n  on-tertiary-fixed: '#241a00'\n  on-tertiary-fixed-variant: '#574500'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.4'\n    letterSpacing: 0.15em\n  technical-data:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  horizon-rule: 4px\n---\n\n## Brand & Style\nThe brand personality is **rugged but refined**, balancing the raw intensity of industrial pressure washing with the sophisticated precision of luxury vehicle detailing. It targets a discerning clientele in Santa Fe who value heritage, craftsmanship, and extreme attention to detail.\n\nThe visual style is **Editorial High-Contrast**. It rejects the typical \"splashy\" blue water aesthetics in favor of a moody, architectural approach. The UI evokes the feeling of a premium lifestyle magazine, utilizing heavy whitespace, dramatic shadow play, and a \"Horizon Line\" motif that mimics the expansive New Mexico landscape. The emotional response should be one of quiet confidence, technical mastery, and elite service.\n\n## Colors\nThis design system utilizes a palette inspired by the high-desert landscape and industrial machinery.\n\n*   **Asphalt (#1A1A1B):** The foundational primary color. Used for deep backgrounds, heavy typography, and technical UI elements. It represents precision and the vehicles being serviced.\n*   **Adobe (#C36B4D):** The secondary accent. Used for calls to action and highlights, grounding the brand in Santa Fe’s architectural heritage.\n*   **High Noon Gold (#D4AF37):** Reserved for luxury indicators, \"Premium\" service tiers, and subtle iconography.\n*   **Stucco (#F9F7F2):** The primary surface color. A warm off-white that provides a sophisticated, gallery-like canvas for high-resolution imagery.\n\nAvoid gradients. Colors should be applied in solid, bold blocks to maintain the industrial-editorial feel.\n\n## Typography\nThe typography system relies on a high-contrast pairing:\n\n*   **Headings:** `Bodoni Moda` provides an authoritative, editorial elegance. It should be used for large titles and pull quotes. Use \"optical sizing\" if available to ensure the hairlines remain crisp.\n*   **Body & Technical:** `DM Sans` is used for readability and its modern, geometric cleanliness. \n*   **The \"Wide-Track\" Rule:** All labels and small technical details should use increased letter spacing (`0.15em`) and uppercase styling to evoke industrial serial numbers and architectural blueprints.\n\nMaintain generous vertical rhythm. Headings should feel like they are \"resting\" on the horizon lines described in the layout section.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop and a **Fluid Fluid** model on mobile, governed by a strict 8px baseline.\n\n**The Horizon Motif:**\n*   Layouts should be bisected by \"Horizon Lines\"—4px thick horizontal rules in `Asphalt`.\n*   Use staggered, asymmetrical grids for image galleries to create \"Shadow Play\" (alternating light and dark blocks).\n*   Sections should have significant vertical padding (80px - 120px) to simulate the vastness of the desert.\n\n**Breakpoints:**\n*   **Mobile:** 4-column grid. Margins are 20px. \n*   **Tablet:** 8-column grid. Margins are 40px.\n*   **Desktop:** 12-column grid. Content is centered with a 1280px max-width and 64px margins.\n\n## Elevation & Depth\nIn keeping with the \"Industrial\" theme, this system avoids soft, ambient shadows. Instead, it uses **Tonal Layers** and **Hard Shadows**.\n\n*   **Primary Surface:** `Stucco` (#F9F7F2).\n*   **Elevated Cards:** Use a 1px solid border in `Asphalt` (#1A1A1B) rather than a shadow. \n*   **Shadow Play:** If a shadow is required for a floating element (like a mobile FAB), use a hard-edged, high-opacity \"drop\" shadow (e.g., 4px 4px 0px #1A1A1B) rather than a blur.\n*   **Depth through Layering:** Elements should overlap slightly—for example, an image may break the \"horizon line\" rule to create a sense of three-dimensional space without using gradients.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. \n\nTo reinforce the industrial and architectural tone, every element—from buttons and input fields to image containers and cards—must have 90-degree corners. Rounded corners are seen as too soft for this professional, rugged aesthetic. The only exception is the \"High Noon Gold\" seal which may be used for certification badges, which should be a perfect circle.\n\n## Components\nConsistent component styling reinforces the \"High Desert Industrial\" narrative:\n\n*   **Buttons:** Primary buttons are solid `Asphalt` with `Stucco` text. Secondary buttons are `Adobe` with `Stucco` text. Both are sharp-edged, high-contrast, and use `label-caps` typography. Hover states should simply invert the colors.\n*   **Input Fields:** Ghost-style inputs with a 2px bottom-border only (the \"Horizon\" line). Labels should sit above the line in `label-caps`.\n*   **Chips/Tags:** Small, sharp-edged rectangles with `Asphalt` borders. Use these for service features (e.g., \"HAND WAX,\" \"STEAM CLEAN\").\n*   **Cards:** Use `Stucco` backgrounds with a 1px `Asphalt` border. Header images in cards should be treated with high contrast and deep blacks.\n*   **Horizon Rules:** Use thick `Asphalt` lines to separate major sections of the page, often accompanied by a `label-caps` category title sitting directly on the line.\n*   **Service Tiers:** Displayed in a vertical \"staggered\" list where the price is the largest element, using `Bodoni Moda`.",
-            "font": "BODONI_MODA",
-            "headlineFont": "BODONI_MODA",
-            "headlineFontFamily": "Bodoni Moda",
-            "labelFont": "DM_SANS",
-            "labelFontFamily": "Dm Sans",
+            "customColor": "#e2725b",
+            "designMd": "---\nname: High-Desert Precision\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1c1b1b'\n  surface-container: '#20201f'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e5e2e1'\n  on-surface-variant: '#ddc0ba'\n  inverse-surface: '#e5e2e1'\n  inverse-on-surface: '#313030'\n  outline: '#a48b86'\n  outline-variant: '#56423e'\n  surface-tint: '#ffb4a5'\n  primary: '#ffb4a5'\n  on-primary: '#611205'\n  primary-container: '#e2725b'\n  on-primary-container: '#5a0d02'\n  inverse-primary: '#9f402d'\n  secondary: '#d3fbff'\n  on-secondary: '#00363a'\n  secondary-container: '#00eefc'\n  on-secondary-container: '#00686f'\n  tertiary: '#c6c6c6'\n  on-tertiary: '#2f3131'\n  tertiary-container: '#929393'\n  on-tertiary-container: '#2a2c2c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdad3'\n  primary-fixed-dim: '#ffb4a5'\n  on-primary-fixed: '#3e0500'\n  on-primary-fixed-variant: '#802918'\n  secondary-fixed: '#7df4ff'\n  secondary-fixed-dim: '#00dbe9'\n  on-secondary-fixed: '#002022'\n  on-secondary-fixed-variant: '#004f54'\n  tertiary-fixed: '#e3e2e2'\n  tertiary-fixed-dim: '#c6c6c6'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#464747'\n  background: '#131313'\n  on-background: '#e5e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: 40px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.15em\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  section-gap: 120px\n---\n\n## Brand & Style\nThe brand personality centers on \"Desert-Luxe\"—a fusion of rugged high-desert landscapes and high-end automotive craftsmanship. The target audience is discerning vehicle owners who view their cars as investments and appreciators of artisanal services.\n\nThe design style is **Modern Editorial with Glassmorphic accents**. It utilizes high-contrast typography and a precision-engineered grid. To evoke the \"high-gloss\" finish of a detailed car, the UI employs sharp architectural lines, expansive whitespace, and translucent, reflective layers. The emotional response is one of confidence, cleanliness, and premium exclusivity.\n\n## Colors\nThe palette is rooted in Santa Fe’s natural landscape but polished for a tech-forward automotive service.\n\n- **Primary (Terracotta):** Used for key brand moments and heritage-inspired accents.\n- **Secondary (Electric Blue):** Represents \"liquid chrome\" and high-gloss water finishes; used sparingly for primary actions and \"active\" states.\n- **Tertiary (Liquid Silver):** Used for metal-like accents and sophisticated line work.\n- **Neutral (Slate & Sand):** Deep charcoal forms the canvas (background), while toasted sand provides warmth in secondary text and subtle dividers.\n\n## Typography\nThe typography creates an editorial, high-fashion feel. **Playfair Display** serves as the authoritative voice for headlines, reflecting heritage and luxury. \n\n**Hanken Grotesk** provides a clean, technical counterpoint. For utility text and labels, we use a \"wide-tracked\" approach (increased letter spacing) to enhance readability and create an airy, premium feel. All labels should be set in uppercase to reinforce the architectural precision of the design system.\n\n## Layout & Spacing\nThis design system uses an **asymmetrical 12-column grid** to move away from \"templated\" looks. \n\n- **Asymmetry:** Key content blocks should often be offset (e.g., an image spanning columns 1-7 with text starting on column 9).\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow high-resolution automotive imagery to breathe.\n- **Mobile:** Transition to a single-column fluid layout with 20px side margins, prioritizing large \"hero\" style cards for service packages.\n\n## Elevation & Depth\nDepth is created through **Reflective Glassmorphism** rather than traditional shadows.\n\n- **The \"High-Gloss\" Surface:** Use `backdrop-filter: blur(12px)` with a 10% opacity white fill to simulate glass.\n- **Thin Borders:** Use 1px \"Silver\" or \"Electric Blue\" borders at 20% opacity to define edges without adding visual weight.\n- **Lens Flare:** Subtle, low-opacity radial gradients in \"Electric Blue\" can be placed behind primary surfaces to suggest a light reflection on a polished car surface.\n\n## Shapes\nTo maintain the \"Precision\" and \"Architectural\" keywords, this design system uses **Sharp (0px)** corners for all primary containers, buttons, and input fields. \n\nRoundedness is only permitted for \"organic\" elements like water-droplet icons or profile avatars. The strict 90-degree angles convey a sense of technical mastery and rigorous standards.\n\n## Components\n- **Buttons:** Sharp-edged. Primary buttons use the Terracotta fill with white text; Secondary buttons use a transparent background with a 1px Electric Blue border and wide-tracked uppercase labels.\n- **Service Cards:** Use large-scale photography as the background. On hover, a glassmorphic overlay slides up to reveal pricing and details.\n- **Inputs:** Minimalist bottom-border only (1px Silver). On focus, the border transitions to Electric Blue with a subtle glow.\n- **The \"Detailer’s Gauge\":** A custom component (progress bar) using the Electric Blue gradient to show detailing progress or ceramic coating longevity.\n- **Chips:** Small, sharp-edged boxes with 1px borders for service tags (e.g., \"CLAY BAR\", \"EXTERIOR ONLY\").",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "HANKEN_GROTESK",
+            "labelFontFamily": "Hanken Grotesk",
             "namedColors": {
-              "background": "#fbf9f4",
-              "error": "#ba1a1a",
-              "error_container": "#ffdad6",
-              "inverse_on_surface": "#f2f1ec",
-              "inverse_primary": "#c8c6c7",
-              "inverse_surface": "#30312e",
-              "on_background": "#1b1c19",
-              "on_error": "#ffffff",
-              "on_error_container": "#93000a",
-              "on_primary": "#ffffff",
-              "on_primary_container": "#858384",
-              "on_primary_fixed": "#1b1b1c",
-              "on_primary_fixed_variant": "#474647",
-              "on_secondary": "#ffffff",
-              "on_secondary_container": "#763017",
-              "on_secondary_fixed": "#390c00",
-              "on_secondary_fixed_variant": "#783118",
-              "on_surface": "#1b1c19",
-              "on_surface_variant": "#46474a",
-              "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#4f3e00",
-              "on_tertiary_fixed": "#241a00",
-              "on_tertiary_fixed_variant": "#574500",
-              "outline": "#76777b",
-              "outline_variant": "#c7c6ca",
-              "primary": "#000000",
-              "primary_container": "#1b1b1c",
-              "primary_fixed": "#e5e2e3",
-              "primary_fixed_dim": "#c8c6c7",
-              "secondary": "#96482d",
-              "secondary_container": "#fd9a78",
-              "secondary_fixed": "#ffdbd0",
-              "secondary_fixed_dim": "#ffb59d",
-              "surface": "#fbf9f4",
-              "surface_bright": "#fbf9f4",
-              "surface_container": "#f0eee9",
-              "surface_container_high": "#eae8e3",
-              "surface_container_highest": "#e4e2dd",
-              "surface_container_low": "#f5f3ee",
-              "surface_container_lowest": "#ffffff",
-              "surface_dim": "#dbdad5",
-              "surface_tint": "#5f5e5f",
-              "surface_variant": "#e4e2dd",
-              "tertiary": "#735c00",
-              "tertiary_container": "#cca730",
-              "tertiary_fixed": "#ffe088",
-              "tertiary_fixed_dim": "#e9c349"
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313030",
+              "inverse_primary": "#9f402d",
+              "inverse_surface": "#e5e2e1",
+              "on_background": "#e5e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#611205",
+              "on_primary_container": "#5a0d02",
+              "on_primary_fixed": "#3e0500",
+              "on_primary_fixed_variant": "#802918",
+              "on_secondary": "#00363a",
+              "on_secondary_container": "#00686f",
+              "on_secondary_fixed": "#002022",
+              "on_secondary_fixed_variant": "#004f54",
+              "on_surface": "#e5e2e1",
+              "on_surface_variant": "#ddc0ba",
+              "on_tertiary": "#2f3131",
+              "on_tertiary_container": "#2a2c2c",
+              "on_tertiary_fixed": "#1a1c1c",
+              "on_tertiary_fixed_variant": "#464747",
+              "outline": "#a48b86",
+              "outline_variant": "#56423e",
+              "primary": "#ffb4a5",
+              "primary_container": "#e2725b",
+              "primary_fixed": "#ffdad3",
+              "primary_fixed_dim": "#ffb4a5",
+              "secondary": "#d3fbff",
+              "secondary_container": "#00eefc",
+              "secondary_fixed": "#7df4ff",
+              "secondary_fixed_dim": "#00dbe9",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#20201f",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353535",
+              "surface_container_low": "#1c1b1b",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#ffb4a5",
+              "surface_variant": "#353535",
+              "tertiary": "#c6c6c6",
+              "tertiary_container": "#929393",
+              "tertiary_fixed": "#e3e2e2",
+              "tertiary_fixed_dim": "#c6c6c6"
             },
-            "overrideNeutralColor": "#f9f7f2",
-            "overridePrimaryColor": "#1a1a1b",
-            "overrideSecondaryColor": "#c36b4d",
-            "overrideTertiaryColor": "#d4af37",
+            "overrideNeutralColor": "#1a1a1a",
+            "overridePrimaryColor": "#e2725b",
+            "overrideSecondaryColor": "#00f0ff",
+            "overrideTertiaryColor": "#c0c0c0",
             "spacing": {
-              "container-max": "1280px",
+              "container-max": "1440px",
               "gutter": "24px",
-              "horizon-rule": "4px",
               "margin-desktop": "64px",
               "margin-mobile": "20px",
+              "section-gap": "120px",
               "unit": "8px"
             },
             "spacingScale": 2,
             "typography": {
               "body-lg": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Hanken Grotesk",
                 "fontSize": "18px",
                 "fontWeight": "400",
                 "letterSpacing": "0.01em",
-                "lineHeight": "1.6"
+                "lineHeight": "28px"
               },
               "body-md": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Hanken Grotesk",
                 "fontSize": "16px",
                 "fontWeight": "400",
-                "lineHeight": "1.6"
+                "lineHeight": "24px"
               },
               "display-lg": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "64px",
+                "fontFamily": "Playfair Display",
+                "fontSize": "72px",
                 "fontWeight": "700",
                 "letterSpacing": "-0.02em",
-                "lineHeight": "1.1"
+                "lineHeight": "80px"
               },
               "headline-lg": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "40px",
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
                 "fontWeight": "600",
-                "lineHeight": "1.2"
+                "lineHeight": "56px"
               },
               "headline-lg-mobile": {
-                "fontFamily": "Bodoni Moda",
+                "fontFamily": "Playfair Display",
                 "fontSize": "32px",
                 "fontWeight": "600",
-                "lineHeight": "1.2"
+                "lineHeight": "40px"
               },
               "headline-md": {
-                "fontFamily": "Bodoni Moda",
-                "fontSize": "28px",
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
                 "fontWeight": "500",
-                "lineHeight": "1.3"
+                "lineHeight": "40px"
               },
               "label-caps": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Hanken Grotesk",
                 "fontSize": "12px",
                 "fontWeight": "700",
                 "letterSpacing": "0.15em",
-                "lineHeight": "1.4"
-              },
-              "technical-data": {
-                "fontFamily": "DM Sans",
-                "fontSize": "14px",
-                "fontWeight": "500",
-                "letterSpacing": "0.05em",
-                "lineHeight": "1.2"
+                "lineHeight": "16px"
               }
             }
           },
-          "title": "Santa Fe Mobile Auto Detailing - Home",
+          "title": "Santa Fe Mobile Auto Detailing - Bespoke Homepage",
           "width": "2560"
         }
       ],
@@ -436,15 +472,15 @@
     }
   },
   {
-    "text": "I've completed the bespoke homepage for **Santa Fe Mobile Auto Detailing & Pressure Wash**. \n\n### Design Rationale:\n*   **Visual Identity:** I established a \"High Desert Industrial\" design system that moves away from generic blue/water motifs. Instead, it uses a sophisticated palette of **Asphalt Charcoal**, **Adobe Terracotta**, and **High Noon Gold** to reflect the rugged yet refined character of Santa Fe.\n*   **Editorial Layout:** The site uses an asymmetric, high-contrast layout. I've prioritized strong typographic hierarchy and generous whitespace to create a premium, \"magazine-style\" first impression.\n*   **Credibility & Services:** The service sections are designed as \"chapters\" rather than standard card grids, emphasizing the craftsmanship behind detailing and pressure washing. \n*   **Functional Integration:** The page includes a responsive navigation system, a production-ready contact form, and the required empty map panel for local reach.\n\nThe code is fully semantic, responsive, and uses custom CSS properties for easy brand scaling.\n\nHow do you feel about this visual direction? We can further refine the image treatments or adjust the service layout if needed."
+    "text": "I've designed a bespoke, editorial-grade homepage for **Santa Fe Mobile Auto Detailing & Pressure Wash**. \n\n### Design Rationale:\n*   **High-Desert Precision Identity:** I established a unique visual language called \"High-Desert Precision,\" which blends the rugged, warm tones of the New Mexico landscape (deep terracotta and charcoal) with the \"high-gloss\" precision of premium automotive detailing (liquid silver accents and glass-morphism).\n*   **Editorial Layout:** Moving away from standard templates, I used an asymmetrical grid and bold typographic hierarchy. The hero section makes a definitive statement with a massive high-contrast serif headline, positioning the business as a boutique, artisanal service rather than a generic utility.\n*   **Immersive Imagery:** I generated custom, high-resolution visual assets to anchor the design:\n    *   A luxury SUV in a minimalist Santa Fe landscape for the hero.\n    *   Macro photography of water beading to showcase ceramic coating quality.\n    *   An action shot of the artisanal pressure-washing process.\n*   **Technical Excellence:** The landing page is built with a fully responsive, semantic HTML structure. It includes a custom mobile navigation, smooth-scroll interactions, and a dedicated map slot for service area visualization.\n\nThe site is production-ready, featuring your specific contact details ((505) 670-2190 and defever22@gmail.com) integrated into the header, service sections, and contact form."
   },
   {
-    "suggestion": "Add more interactive hover effects to the service sections"
+    "suggestion": "Add subtle scroll animations to the service cards"
   },
   {
-    "suggestion": "Let's see a mobile version of this design"
+    "suggestion": "Create a dedicated 'Ceramic Coating' deep-dive page"
   },
   {
-    "suggestion": "Change the terracotta accent to a deeper sage green"
+    "suggestion": "Try a 'Light Mode' version with sand and white tones"
   }
 ]
