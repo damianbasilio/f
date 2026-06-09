@@ -1,4 +1,16 @@
-// Reveal on scroll logic
+// Header scroll behavior
+        window.addEventListener('scroll', () => {
+            const header = document.getElementById('main-header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-0', 'shadow-md');
+                header.classList.remove('shadow-sm');
+            } else {
+                header.classList.remove('py-0', 'shadow-md');
+                header.classList.add('shadow-sm');
+            }
+        });
+
+        // Simple Intersection Observer for scroll animations
         const observerOptions = {
             threshold: 0.1
         };
@@ -6,66 +18,15 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('active');
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.reveal-on-scroll').forEach(el => observer.observe(el));
-
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const closeMenuBtn = document.getElementById('close-menu-btn');
-        const mobileMenu = document.getElementById('mobile-menu');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            mobileMenu.classList.remove('hidden');
-            mobileMenu.classList.add('flex');
-            document.body.style.overflow = 'hidden';
-        });
-
-        const hideMenu = () => {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-            document.body.style.overflow = 'auto';
-        };
-
-        closeMenuBtn.addEventListener('click', hideMenu);
-        mobileMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', hideMenu));
-
-        // Form basic logic
-        const form = document.querySelector('form');
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = form.querySelector('button');
-            const originalText = btn.innerText;
-            btn.innerText = 'Preview only';
-            btn.disabled = true;
-            
-            setTimeout(() => {
-                btn.innerText = 'Sent Successfully!';
-                btn.style.backgroundColor = '#4caf50';
-                form.reset();
-                setTimeout(() => {
-                    btn.innerText = originalText;
-                    btn.style.backgroundColor = '';
-                    btn.disabled = false;
-                }, 3000);
-            }, 1500);
-        });
-
-        // Parallax or micro-interaction for circles
-        window.addEventListener('mousemove', (e) => {
-            const circles = document.querySelectorAll('.floating-circle');
-            const mouseX = e.clientX / window.innerWidth;
-            const mouseY = e.clientY / window.innerHeight;
-
-            circles.forEach(circle => {
-                const speed = 20;
-                const x = (window.innerWidth - e.pageX * speed) / 100;
-                const y = (window.innerHeight - e.pageY * speed) / 100;
-                circle.style.transform = `translate(${x}px, ${y}px)`;
-            });
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
         });
 
 (() => {

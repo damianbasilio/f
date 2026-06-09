@@ -6,11 +6,8 @@
 
 - none
 
-## Warnings (4)
+## Warnings (0)
 
-- Broken anchor: #portfolio
-- Broken anchor: #portfolio
-- Broken anchor: #portfolio
-- Duplicate image URLs on page
+- none
 
 _Run after every build. Fix errors before images/outreach._
