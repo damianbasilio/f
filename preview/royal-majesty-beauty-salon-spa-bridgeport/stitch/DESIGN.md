@@ -1,0 +1,1 @@
+I'm now generating high-quality, atmospheric imagery and the final bespoke homepage design. I'm focusing on a 'Modern Regency' aesthetic with arched visual motifs, deep emerald and gold accents, and an editorial layout that feels both timeless and contemporary.

@@ -1,0 +1,553 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Modern Regency Editorial",
+        "styleGuidelines": "## Brand & Style\n\nThe design system embodies \"Modern Regency\"—a synthesis of classical architectural symmetry and contemporary high-end minimalism. It is designed for an elite clientele seeking a sanctuary of \"quiet luxury.\" The emotional response should be one of immediate serenity, prestige, and meticulous attention to detail.\n\nThe visual style draws from **Minimalism** and **Modern Editorial** design. It prioritizes generous negative space to let high-quality photography and intentional typography breathe. Rather than using standard UI patterns, the aesthetic utilizes structural elements like thin hairlines and arched motifs to evoke the feeling of a luxury spa retreat. The interface is not just a tool, but a digital extension of the physical \"Royal Majesty\" experience.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain a composed, magazine-like appearance, transitioning to a fluid layout for mobile.\n\n*   **Desktop:** 12-column grid with a wide 32px gutter. Margins are generous (64px+) to create a frame around the content.\n*   **Vertical Rhythm:** Section spacing is intentionally oversized (120px) to force a slower, more deliberate scrolling pace, mimicking the unhurried atmosphere of a spa.\n*   **Alignment:** Mix centered \"hero\" alignments with asymmetrical grid placements for editorial interest. Arched containers should be used to frame key imagery, breaking the rigid grid with organic curves.\n\n## Elevation & Depth\n\nTo maintain a \"flat editorial\" aesthetic, this design system avoids traditional drop shadows. Depth is instead conveyed through:\n\n*   **Tonal Layering:** Using the primary Emerald Green as a backdrop for Paper White cards to create a physical sense of \"nesting.\"\n*   **Fine Lines:** 1px borders in Champagne Gold (#D4AF37) or soft greige define boundaries without adding visual weight.\n*   **Overlays:** Using high-transparency Emerald overlays on images to ensure typographic legibility while maintaining a consistent color grade.\n*   **The \"Arched\" Motif:** Using CSS `border-radius` only on the top edges of images or containers (e.g., `500px 500px 0 0`) to create architectural depth reminiscent of spa alcoves.\n\n## Components\n\n### Buttons\nButtons are strictly rectangular with no corner radius.\n*   **Primary:** Solid Emerald background, white uppercase text, 1px Gold border. On hover, the background transitions to Gold and text to Emerald.\n*   **Secondary/Ghost:** No background, 1px Gold border, Emerald uppercase text.\n\n### Inputs\nText fields consist only of a 1px bottom border (Emerald). Labels sit above in `label-sm` typography. Focus state changes the bottom border to Gold.\n\n### Cards\nCards are defined by their content rather than heavy containers. Use 1px soft-greige outlines or simple background color shifts. Featured cards may use the \"Arch\" top-clip on the image.\n\n### Chips & Tags\nSmall, sharp-edged boxes with `label-sm` text. Backgrounds should be very faint (e.g., 5% Emerald) to keep them subordinate to primary actions.\n\n### Lists\nService menus should be styled with a \"dot leader\" (e.g., Service Name ......... $Price) to evoke a physical spa menu.\n\n### Navigation\nTop navigation is minimalist with wide spacing. Use a \"Center-Out\" layout where the logo is flanked by two menu items on each side to create perfect symmetry.",
+        "theme": {
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#064e3b",
+          "designMd": "---\nname: Modern Regency Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#404944'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#707974'\n  outline-variant: '#bfc9c3'\n  surface-tint: '#2b6954'\n  primary: '#003527'\n  on-primary: '#ffffff'\n  primary-container: '#064e3b'\n  on-primary-container: '#80bea6'\n  inverse-primary: '#95d3ba'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#25312d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3b4743'\n  on-tertiary-container: '#a8b5b0'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#b0f0d6'\n  primary-fixed-dim: '#95d3ba'\n  on-primary-fixed: '#002117'\n  on-primary-fixed-variant: '#0b513d'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#d9e5e0'\n  tertiary-fixed-dim: '#bdc9c4'\n  on-tertiary-fixed: '#131e1b'\n  on-tertiary-fixed-variant: '#3e4945'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-md:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system embodies \"Modern Regency\"—a synthesis of classical architectural symmetry and contemporary high-end minimalism. It is designed for an elite clientele seeking a sanctuary of \"quiet luxury.\" The emotional response should be one of immediate serenity, prestige, and meticulous attention to detail.\n\nThe visual style draws from **Minimalism** and **Modern Editorial** design. It prioritizes generous negative space to let high-quality photography and intentional typography breathe. Rather than using standard UI patterns, the aesthetic utilizes structural elements like thin hairlines and arched motifs to evoke the feeling of a luxury spa retreat. The interface is not just a tool, but a digital extension of the physical \"Royal Majesty\" experience.\n\n## Colors\n\nThe palette is rooted in a heritage-inspired spectrum that balances depth with lightness:\n\n*   **Primary (Emerald Green):** Used for primary actions, navigation backgrounds, and deep typographic moments. It represents growth, luxury, and the spa’s botanical connection.\n*   **Secondary (Champagne Gold):** Reserved for accents, fine-line borders, and active states. It should be used sparingly to maintain its \"precious\" quality.\n*   **Neutral (Paper White):** The primary background color. It is a warm, textured off-white that prevents the digital eye-strain of pure white and evokes high-end stationery.\n*   **Tertiary (Midnight Green):** A near-black green used for maximum typographic contrast against the paper-white background.\n\n## Typography\n\nTypography is the cornerstone of this design system. We utilize a high-contrast pairing to establish clear hierarchy:\n\n*   **Playfair Display:** Used for all headlines and display text. Its elegant serifs and varying stroke weights provide a classical, authoritative feel.\n*   **Montserrat:** Used for body copy and labels. Chosen for its clean, geometric clarity, it provides a modern counterpoint to the serif.\n\n**Styling Note:** Body text should utilize a \"light\" weight (300) for a more airy, editorial feel in large blocks of text. Labels and navigation items should always be uppercase with increased letter-spacing to enhance the premium feel.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain a composed, magazine-like appearance, transitioning to a fluid layout for mobile.\n\n*   **Desktop:** 12-column grid with a wide 32px gutter. Margins are generous (64px+) to create a frame around the content.\n*   **Vertical Rhythm:** Section spacing is intentionally oversized (120px) to force a slower, more deliberate scrolling pace, mimicking the unhurried atmosphere of a spa.\n*   **Alignment:** Mix centered \"hero\" alignments with asymmetrical grid placements for editorial interest. Arched containers should be used to frame key imagery, breaking the rigid grid with organic curves.\n\n## Elevation & Depth\n\nTo maintain a \"flat editorial\" aesthetic, this design system avoids traditional drop shadows. Depth is instead conveyed through:\n\n*   **Tonal Layering:** Using the primary Emerald Green as a backdrop for Paper White cards to create a physical sense of \"nesting.\"\n*   **Fine Lines:** 1px borders in Champagne Gold (#D4AF37) or soft greige define boundaries without adding visual weight.\n*   **Overlays:** Using high-transparency Emerald overlays on images to ensure typographic legibility while maintaining a consistent color grade.\n*   **The \"Arched\" Motif:** Using CSS `border-radius` only on the top edges of images or containers (e.g., `500px 500px 0 0`) to create architectural depth reminiscent of spa alcoves.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)** for all functional UI elements (buttons, inputs, cards) to maintain a sense of formal elegance and architectural precision.\n\nHowever, a secondary \"Organic\" shape language is used for **decorative framing**:\n*   **Arches:** Images and specific featured sections should utilize a top-rounded arch.\n*   **Rule Lines:** Horizontal rules should be 1px thick and often center-aligned, not spanning the full width, to act as a sophisticated separator.\n\n## Components\n\n### Buttons\nButtons are strictly rectangular with no corner radius.\n*   **Primary:** Solid Emerald background, white uppercase text, 1px Gold border. On hover, the background transitions to Gold and text to Emerald.\n*   **Secondary/Ghost:** No background, 1px Gold border, Emerald uppercase text.\n\n### Inputs\nText fields consist only of a 1px bottom border (Emerald). Labels sit above in `label-sm` typography. Focus state changes the bottom border to Gold.\n\n### Cards\nCards are defined by their content rather than heavy containers. Use 1px soft-greige outlines or simple background color shifts. Featured cards may use the \"Arch\" top-clip on the image.\n\n### Chips & Tags\nSmall, sharp-edged boxes with `label-sm` text. Backgrounds should be very faint (e.g., 5% Emerald) to keep them subordinate to primary actions.\n\n### Lists\nService menus should be styled with a \"dot leader\" (e.g., Service Name ......... $Price) to evoke a physical spa menu.\n\n### Navigation\nTop navigation is minimalist with wide spacing. Use a \"Center-Out\" layout where the logo is flanked by two menu items on each side to create perfect symmetry.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
+          "namedColors": {
+            "background": "#fbf9f4",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f2f1ec",
+            "inverse_primary": "#95d3ba",
+            "inverse_surface": "#30312e",
+            "on_background": "#1b1c19",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#80bea6",
+            "on_primary_fixed": "#002117",
+            "on_primary_fixed_variant": "#0b513d",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#745c00",
+            "on_secondary_fixed": "#241a00",
+            "on_secondary_fixed_variant": "#574500",
+            "on_surface": "#1b1c19",
+            "on_surface_variant": "#404944",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#a8b5b0",
+            "on_tertiary_fixed": "#131e1b",
+            "on_tertiary_fixed_variant": "#3e4945",
+            "outline": "#707974",
+            "outline_variant": "#bfc9c3",
+            "primary": "#003527",
+            "primary_container": "#064e3b",
+            "primary_fixed": "#b0f0d6",
+            "primary_fixed_dim": "#95d3ba",
+            "secondary": "#735c00",
+            "secondary_container": "#fed65b",
+            "secondary_fixed": "#ffe088",
+            "secondary_fixed_dim": "#e9c349",
+            "surface": "#fbf9f4",
+            "surface_bright": "#fbf9f4",
+            "surface_container": "#f0eee9",
+            "surface_container_high": "#eae8e3",
+            "surface_container_highest": "#e4e2dd",
+            "surface_container_low": "#f5f3ee",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dbdad5",
+            "surface_tint": "#2b6954",
+            "surface_variant": "#e4e2dd",
+            "tertiary": "#25312d",
+            "tertiary_container": "#3b4743",
+            "tertiary_fixed": "#d9e5e0",
+            "tertiary_fixed_dim": "#bdc9c4"
+          },
+          "overrideNeutralColor": "#f9f7f2",
+          "overridePrimaryColor": "#064e3b",
+          "overrideSecondaryColor": "#d4af37",
+          "overrideTertiaryColor": "#101b18",
+          "spacing": {
+            "container-max": "1280px",
+            "gutter": "32px",
+            "margin-desktop": "64px",
+            "margin-mobile": "24px",
+            "section-gap": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "18px",
+              "fontWeight": "300",
+              "letterSpacing": "0.01em",
+              "lineHeight": "1.8"
+            },
+            "body-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "64px",
+              "fontWeight": "400",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "400",
+              "letterSpacing": "-0.01em",
+              "lineHeight": "1.2"
+            },
+            "headline-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "400",
+              "lineHeight": "1.3"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "28px",
+              "fontWeight": "400",
+              "lineHeight": "1.3"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "400",
+              "lineHeight": "1.4"
+            },
+            "label-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "14px",
+              "fontWeight": "500",
+              "letterSpacing": "0.15em",
+              "lineHeight": "1.2"
+            },
+            "label-sm": {
+              "fontFamily": "Montserrat",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.2em",
+              "lineHeight": "1.2"
+            }
+          }
+        }
+      },
+      "name": "assets/3b9b52e70f3f49b0bf07a5c27145413f",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "e6cdf68057294d4095ded8d3bf68af94",
+          "name": "projects/10902855468619074305/screens/e6cdf68057294d4095ded8d3bf68af94",
+          "prompt": "A high-fashion, editorial-style photograph of a luxurious beauty salon interior. The space features arched doorways, deep emerald velvet furniture, gold accents, and soft, warm lighting. The atmosphere is 'Modern Regency'—elegant, serene, and premium. High-end spa environment.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt89E-Ts6BKejyxAfqnHczhjizq2v9HqpqVMomiQBzRZKfxPqA7h3fWQd-6NRjtPkPRi32nIU8s6VZzLEWFzG6gA4KHPDl8RGgjI_iJZMY6ZhSMok5LJhdgeEXEIJhKqJ5FDrhl07oJw5M5dTeYm_nvGJxrivwRSBlMie7Uirp1wFGLRrur9d67cQL0wTQTUF4SVF8ApDmxHsntNEisQtBhw0xuKXWiFh_sTjhFB9bn50iNQ1C1qJ8jZcTd",
+            "name": "projects/10902855468619074305/files/e6916c4032a84694a75b74befb536341"
+          },
+          "theme": {},
+          "title": "A high-fashion, editorial-style photograph of a luxurious beauty salon interior. The space features arched doorways, deep emerald velvet furniture, gold accents, and soft, warm lighting. The atmosphere is 'Modern Regency'—elegant, serene, and premium. High-end spa environment.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1200",
+          "id": "87c15304759240f293e2146f20c8aed7",
+          "name": "projects/10902855468619074305/screens/87c15304759240f293e2146f20c8aed7",
+          "prompt": "Elegant hair styling in a luxury salon. High-contrast, high-fashion shot of a sophisticated hairstyle. Deep emerald and gold color palette. Arched architectural detail in the background.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsy-ZeudgxWxtUmeZ5ABFGz9OxtN8zU0FD9ePKukBmiQFQMcHT36PicAbSdNRixnQidMr6IE-DscTmVN8LoejOS71wh9TXmQdNvs-WdR7u569JJjClt8crKC2mqyqOsTQXhAstrJSF11Fmz8x8-BGzstC0Q6mwxl5-eRrvxHHlfCA6n39s2k7LOUPEuW-TVkmSTf9JXzlD42rxZfuJ03RK8KWhL0tyhGcnIboixFmSCblOcp9OxKGg-eec8",
+            "name": "projects/10902855468619074305/files/b276672f97eb43a9906f729f6427f637"
+          },
+          "theme": {},
+          "title": "Elegant hair styling in a luxury salon. High-contrast, high-fashion shot of a sophisticated hairstyle. Deep emerald and gold color palette. Arched architectural detail in the background.",
+          "width": "896"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1200",
+          "id": "f02f0f27d16a4dec872e011f97aabd28",
+          "name": "projects/10902855468619074305/screens/f02f0f27d16a4dec872e011f97aabd28",
+          "prompt": "A close-up, artistic shot of a woman receiving a luxurious facial treatment. Soft, diffused lighting, focus on skin texture and elegant hand movements. Deep emerald and gold tones in the background. Editorial beauty photography.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsuLoTEDMiZBUehCGtT1rb5nveN8wjvykbcxWXDEINRdRltHNFTpgD130hR1el2gwGFh2PWsvOqqlv2bu3vtZKF9kuc_aOwkFoA5H15NSadO5QIE9OjWnWj6qcmTID5IacR9DB-Q7H0QIC4rVEMOQof-NEXoPaK898wtUwxh2-suDnjtJVNrAOOkj1UpPcOMt90AUTc4qHHammEm-R4VTsFlDsZt46K9ZjYXbFleTNEaGwP_zmO0El4Hu5f",
+            "name": "projects/10902855468619074305/files/29754b9dc66e4f12b875907c1e2964c1"
+          },
+          "theme": {},
+          "title": "A close-up, artistic shot of a woman receiving a luxurious facial treatment. Soft, diffused lighting, focus on skin texture and elegant hand movements. Deep emerald and gold tones in the background. Editorial beauty photography.",
+          "width": "896"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "512",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzYzMzMxOTJiY2Y0ZjQzNGI4MzIwMGExOTJhN2RmOTZkEgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDkwMjg1NTQ2ODYxOTA3NDMwNQ&filename=&opi=96797242",
+            "mimeType": "image/svg+xml",
+            "name": "projects/10902855468619074305/files/eb144678094b4a65a3a4d5cc10763659"
+          },
+          "id": "39faefff16374f32af35acbfbb3f848f",
+          "name": "projects/10902855468619074305/screens/39faefff16374f32af35acbfbb3f848f",
+          "prompt": "Brand logo. - Primary color: #064e3b\n- Font: playfairDisplay\n- Mode: light\n- Roundness: rounded-lg\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "displayMode": "SVG",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtCuNmgcO-EJl3FTReQEdLnKgqNOPMLINzbsYobSVSBpDE2B2tq7VNVBZdLW9XYrBA44NfWf8uipWwCFNCuOXwS2JujyxYEsNC4fUwxGNavjtcQ1sQY0eYk3SKZwL-laMjG7LEpDVTOdGOadFHzPQToI2ETbEWHjUrvumZ92LOzcOVhd2PSsWsdx-3u-uacEquBE3PykrCKZMtocnKF5fCjdMnjn7rbHRx4uMynldFNagdaIY9sTicw0Zm9",
+            "name": "projects/10902855468619074305/files/2739c5ce6c7b45ceaabfedbee56e4510"
+          },
+          "theme": {},
+          "title": "Royal Majesty Wordmark Logo",
+          "width": "512"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Modern Regency Editorial",
+              "styleGuidelines": "## Brand & Style\n\nThe design system embodies \"Modern Regency\"—a synthesis of classical architectural symmetry and contemporary high-end minimalism. It is designed for an elite clientele seeking a sanctuary of \"quiet luxury.\" The emotional response should be one of immediate serenity, prestige, and meticulous attention to detail.\n\nThe visual style draws from **Minimalism** and **Modern Editorial** design. It prioritizes generous negative space to let high-quality photography and intentional typography breathe. Rather than using standard UI patterns, the aesthetic utilizes structural elements like thin hairlines and arched motifs to evoke the feeling of a luxury spa retreat. The interface is not just a tool, but a digital extension of the physical \"Royal Majesty\" experience.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain a composed, magazine-like appearance, transitioning to a fluid layout for mobile.\n\n*   **Desktop:** 12-column grid with a wide 32px gutter. Margins are generous (64px+) to create a frame around the content.\n*   **Vertical Rhythm:** Section spacing is intentionally oversized (120px) to force a slower, more deliberate scrolling pace, mimicking the unhurried atmosphere of a spa.\n*   **Alignment:** Mix centered \"hero\" alignments with asymmetrical grid placements for editorial interest. Arched containers should be used to frame key imagery, breaking the rigid grid with organic curves.\n\n## Elevation & Depth\n\nTo maintain a \"flat editorial\" aesthetic, this design system avoids traditional drop shadows. Depth is instead conveyed through:\n\n*   **Tonal Layering:** Using the primary Emerald Green as a backdrop for Paper White cards to create a physical sense of \"nesting.\"\n*   **Fine Lines:** 1px borders in Champagne Gold (#D4AF37) or soft greige define boundaries without adding visual weight.\n*   **Overlays:** Using high-transparency Emerald overlays on images to ensure typographic legibility while maintaining a consistent color grade.\n*   **The \"Arched\" Motif:** Using CSS `border-radius` only on the top edges of images or containers (e.g., `500px 500px 0 0`) to create architectural depth reminiscent of spa alcoves.\n\n## Components\n\n### Buttons\nButtons are strictly rectangular with no corner radius.\n*   **Primary:** Solid Emerald background, white uppercase text, 1px Gold border. On hover, the background transitions to Gold and text to Emerald.\n*   **Secondary/Ghost:** No background, 1px Gold border, Emerald uppercase text.\n\n### Inputs\nText fields consist only of a 1px bottom border (Emerald). Labels sit above in `label-sm` typography. Focus state changes the bottom border to Gold.\n\n### Cards\nCards are defined by their content rather than heavy containers. Use 1px soft-greige outlines or simple background color shifts. Featured cards may use the \"Arch\" top-clip on the image.\n\n### Chips & Tags\nSmall, sharp-edged boxes with `label-sm` text. Backgrounds should be very faint (e.g., 5% Emerald) to keep them subordinate to primary actions.\n\n### Lists\nService menus should be styled with a \"dot leader\" (e.g., Service Name ......... $Price) to evoke a physical spa menu.\n\n### Navigation\nTop navigation is minimalist with wide spacing. Use a \"Center-Out\" layout where the logo is flanked by two menu items on each side to create perfect symmetry.",
+              "theme": {
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#064e3b",
+                "designMd": "---\nname: Modern Regency Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#404944'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#707974'\n  outline-variant: '#bfc9c3'\n  surface-tint: '#2b6954'\n  primary: '#003527'\n  on-primary: '#ffffff'\n  primary-container: '#064e3b'\n  on-primary-container: '#80bea6'\n  inverse-primary: '#95d3ba'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#25312d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3b4743'\n  on-tertiary-container: '#a8b5b0'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#b0f0d6'\n  primary-fixed-dim: '#95d3ba'\n  on-primary-fixed: '#002117'\n  on-primary-fixed-variant: '#0b513d'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#d9e5e0'\n  tertiary-fixed-dim: '#bdc9c4'\n  on-tertiary-fixed: '#131e1b'\n  on-tertiary-fixed-variant: '#3e4945'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-md:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system embodies \"Modern Regency\"—a synthesis of classical architectural symmetry and contemporary high-end minimalism. It is designed for an elite clientele seeking a sanctuary of \"quiet luxury.\" The emotional response should be one of immediate serenity, prestige, and meticulous attention to detail.\n\nThe visual style draws from **Minimalism** and **Modern Editorial** design. It prioritizes generous negative space to let high-quality photography and intentional typography breathe. Rather than using standard UI patterns, the aesthetic utilizes structural elements like thin hairlines and arched motifs to evoke the feeling of a luxury spa retreat. The interface is not just a tool, but a digital extension of the physical \"Royal Majesty\" experience.\n\n## Colors\n\nThe palette is rooted in a heritage-inspired spectrum that balances depth with lightness:\n\n*   **Primary (Emerald Green):** Used for primary actions, navigation backgrounds, and deep typographic moments. It represents growth, luxury, and the spa’s botanical connection.\n*   **Secondary (Champagne Gold):** Reserved for accents, fine-line borders, and active states. It should be used sparingly to maintain its \"precious\" quality.\n*   **Neutral (Paper White):** The primary background color. It is a warm, textured off-white that prevents the digital eye-strain of pure white and evokes high-end stationery.\n*   **Tertiary (Midnight Green):** A near-black green used for maximum typographic contrast against the paper-white background.\n\n## Typography\n\nTypography is the cornerstone of this design system. We utilize a high-contrast pairing to establish clear hierarchy:\n\n*   **Playfair Display:** Used for all headlines and display text. Its elegant serifs and varying stroke weights provide a classical, authoritative feel.\n*   **Montserrat:** Used for body copy and labels. Chosen for its clean, geometric clarity, it provides a modern counterpoint to the serif.\n\n**Styling Note:** Body text should utilize a \"light\" weight (300) for a more airy, editorial feel in large blocks of text. Labels and navigation items should always be uppercase with increased letter-spacing to enhance the premium feel.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain a composed, magazine-like appearance, transitioning to a fluid layout for mobile.\n\n*   **Desktop:** 12-column grid with a wide 32px gutter. Margins are generous (64px+) to create a frame around the content.\n*   **Vertical Rhythm:** Section spacing is intentionally oversized (120px) to force a slower, more deliberate scrolling pace, mimicking the unhurried atmosphere of a spa.\n*   **Alignment:** Mix centered \"hero\" alignments with asymmetrical grid placements for editorial interest. Arched containers should be used to frame key imagery, breaking the rigid grid with organic curves.\n\n## Elevation & Depth\n\nTo maintain a \"flat editorial\" aesthetic, this design system avoids traditional drop shadows. Depth is instead conveyed through:\n\n*   **Tonal Layering:** Using the primary Emerald Green as a backdrop for Paper White cards to create a physical sense of \"nesting.\"\n*   **Fine Lines:** 1px borders in Champagne Gold (#D4AF37) or soft greige define boundaries without adding visual weight.\n*   **Overlays:** Using high-transparency Emerald overlays on images to ensure typographic legibility while maintaining a consistent color grade.\n*   **The \"Arched\" Motif:** Using CSS `border-radius` only on the top edges of images or containers (e.g., `500px 500px 0 0`) to create architectural depth reminiscent of spa alcoves.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)** for all functional UI elements (buttons, inputs, cards) to maintain a sense of formal elegance and architectural precision.\n\nHowever, a secondary \"Organic\" shape language is used for **decorative framing**:\n*   **Arches:** Images and specific featured sections should utilize a top-rounded arch.\n*   **Rule Lines:** Horizontal rules should be 1px thick and often center-aligned, not spanning the full width, to act as a sophisticated separator.\n\n## Components\n\n### Buttons\nButtons are strictly rectangular with no corner radius.\n*   **Primary:** Solid Emerald background, white uppercase text, 1px Gold border. On hover, the background transitions to Gold and text to Emerald.\n*   **Secondary/Ghost:** No background, 1px Gold border, Emerald uppercase text.\n\n### Inputs\nText fields consist only of a 1px bottom border (Emerald). Labels sit above in `label-sm` typography. Focus state changes the bottom border to Gold.\n\n### Cards\nCards are defined by their content rather than heavy containers. Use 1px soft-greige outlines or simple background color shifts. Featured cards may use the \"Arch\" top-clip on the image.\n\n### Chips & Tags\nSmall, sharp-edged boxes with `label-sm` text. Backgrounds should be very faint (e.g., 5% Emerald) to keep them subordinate to primary actions.\n\n### Lists\nService menus should be styled with a \"dot leader\" (e.g., Service Name ......... $Price) to evoke a physical spa menu.\n\n### Navigation\nTop navigation is minimalist with wide spacing. Use a \"Center-Out\" layout where the logo is flanked by two menu items on each side to create perfect symmetry.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
+                "namedColors": {
+                  "background": "#fbf9f4",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f2f1ec",
+                  "inverse_primary": "#95d3ba",
+                  "inverse_surface": "#30312e",
+                  "on_background": "#1b1c19",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#80bea6",
+                  "on_primary_fixed": "#002117",
+                  "on_primary_fixed_variant": "#0b513d",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#745c00",
+                  "on_secondary_fixed": "#241a00",
+                  "on_secondary_fixed_variant": "#574500",
+                  "on_surface": "#1b1c19",
+                  "on_surface_variant": "#404944",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#a8b5b0",
+                  "on_tertiary_fixed": "#131e1b",
+                  "on_tertiary_fixed_variant": "#3e4945",
+                  "outline": "#707974",
+                  "outline_variant": "#bfc9c3",
+                  "primary": "#003527",
+                  "primary_container": "#064e3b",
+                  "primary_fixed": "#b0f0d6",
+                  "primary_fixed_dim": "#95d3ba",
+                  "secondary": "#735c00",
+                  "secondary_container": "#fed65b",
+                  "secondary_fixed": "#ffe088",
+                  "secondary_fixed_dim": "#e9c349",
+                  "surface": "#fbf9f4",
+                  "surface_bright": "#fbf9f4",
+                  "surface_container": "#f0eee9",
+                  "surface_container_high": "#eae8e3",
+                  "surface_container_highest": "#e4e2dd",
+                  "surface_container_low": "#f5f3ee",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dbdad5",
+                  "surface_tint": "#2b6954",
+                  "surface_variant": "#e4e2dd",
+                  "tertiary": "#25312d",
+                  "tertiary_container": "#3b4743",
+                  "tertiary_fixed": "#d9e5e0",
+                  "tertiary_fixed_dim": "#bdc9c4"
+                },
+                "overrideNeutralColor": "#f9f7f2",
+                "overridePrimaryColor": "#064e3b",
+                "overrideSecondaryColor": "#d4af37",
+                "overrideTertiaryColor": "#101b18",
+                "spacing": {
+                  "container-max": "1280px",
+                  "gutter": "32px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "24px",
+                  "section-gap": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "18px",
+                    "fontWeight": "300",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "1.8"
+                  },
+                  "body-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "64px",
+                    "fontWeight": "400",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "400",
+                    "letterSpacing": "-0.01em",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "28px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.3"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.4"
+                  },
+                  "label-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "14px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "1.2"
+                  },
+                  "label-sm": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.2em",
+                    "lineHeight": "1.2"
+                  }
+                }
+              }
+            },
+            "name": "assets/3b9b52e70f3f49b0bf07a5c27145413f",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "8630",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2VjMTA1ZjIxNjM3NzQ0ZDdhNWQ2ZWM2NTI5OWM5NTg3EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxMDkwMjg1NTQ2ODYxOTA3NDMwNQ&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/10902855468619074305/files/25a956c668c54deb839c4a79aa0c821f"
+          },
+          "id": "5d42189a471e4346808669f4f0861bc5",
+          "name": "projects/10902855468619074305/screens/5d42189a471e4346808669f4f0861bc5",
+          "prompt": "Create a bespoke, editorial-grade homepage for 'Royal Majesty Beauty Salon & Spa'. \n\nThe design should strictly follow the 'Modern Regency Editorial' aesthetic:\n- Hero: Use {{DATA:IMAGE:IMAGE_5}} as a full-bleed or large-scale hero background. The headline should be bold, high-contrast serif (Royal Majesty: Your Crown Awaits) with a delicate subline. \n- Logo: Incorporate {{DATA:IMAGE:IMAGE_3}} in the navigation.\n- Arched Visual Motif: Use the arched shape (seen in {{DATA:IMAGE:IMAGE_5}}) as a framing device for other images. \n- Services Section: Feature {{DATA:IMAGE:IMAGE_4}} (Facial/Spa) and {{DATA:IMAGE:IMAGE_6}} (Hair) inside elegant arched frames. Use unique layout positioning (e.g., overlapping elements or staggered grid) to avoid a generic look.\n- Color Story: Dominated by the deep emerald green (#064E3B) and champagne gold (#D4AF37) accents against a cream paper-white background.\n- Typography: Strong hierarchy using 'Playfair Display' for headlines and 'Montserrat' for body copy.\n- Unique Detail: Add a 'Signature Experience' section that uses thin gold horizontal lines and vertical typography to create a high-fashion, editorial feel. \n\nMaintain generous whitespace and a sense of 'quiet luxury' throughout. No standard bootstrap-style cards. Every section should feel bespoke and designed.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_3}}\n  Alt Text: Royal Majesty Wordmark Logo\n  Description: Brand logo. - Primary color: #064e3b\n- Font: playfairDisplay\n- Mode: light\n- Roundness: rounded-lg\n\n  Dimensions: 512x512\n  Aspect Ratio: 1.00\n  Colors: #064E3B, #D4AF37\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsOhhbEqVbfN2GE-3yWsbNcDGqWrysU6N0dIw_eIpX8f4g-GrDdfgL0-UuIZy-ta0OdXlBzwFZM3KsQDhYLKR7UKhoTCLVtS_ftrEyaNbkUjPXgEueUQiv6Td8CEL7mMDePVl12Jf86FQjR3DHEoBMxkbwWYZu0xZBYrxL18Z74GwpG_bF-tslr0cVa-Qweiw7Dx9FMAYHePUx-YXW0mPTbA4Z5xdTE8TlNTuduTMLVi4XgSXR7MPNoZGOT",
+            "name": "projects/10902855468619074305/files/4d14a2a2da354917ba26534ff69b9773"
+          },
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#064e3b",
+            "designMd": "---\nname: Modern Regency Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#404944'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#707974'\n  outline-variant: '#bfc9c3'\n  surface-tint: '#2b6954'\n  primary: '#003527'\n  on-primary: '#ffffff'\n  primary-container: '#064e3b'\n  on-primary-container: '#80bea6'\n  inverse-primary: '#95d3ba'\n  secondary: '#735c00'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed65b'\n  on-secondary-container: '#745c00'\n  tertiary: '#25312d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#3b4743'\n  on-tertiary-container: '#a8b5b0'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#b0f0d6'\n  primary-fixed-dim: '#95d3ba'\n  on-primary-fixed: '#002117'\n  on-primary-fixed-variant: '#0b513d'\n  secondary-fixed: '#ffe088'\n  secondary-fixed-dim: '#e9c349'\n  on-secondary-fixed: '#241a00'\n  on-secondary-fixed-variant: '#574500'\n  tertiary-fixed: '#d9e5e0'\n  tertiary-fixed-dim: '#bdc9c4'\n  on-tertiary-fixed: '#131e1b'\n  on-tertiary-fixed-variant: '#3e4945'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '400'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-md:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: '1.2'\n    letterSpacing: -0.01em\n  headline-lg:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 28px\n    fontWeight: '400'\n    lineHeight: '1.3'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '300'\n    lineHeight: '1.8'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-lg:\n    fontFamily: Montserrat\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  label-sm:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.2em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 32px\n  margin-desktop: 64px\n  margin-mobile: 24px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe design system embodies \"Modern Regency\"—a synthesis of classical architectural symmetry and contemporary high-end minimalism. It is designed for an elite clientele seeking a sanctuary of \"quiet luxury.\" The emotional response should be one of immediate serenity, prestige, and meticulous attention to detail.\n\nThe visual style draws from **Minimalism** and **Modern Editorial** design. It prioritizes generous negative space to let high-quality photography and intentional typography breathe. Rather than using standard UI patterns, the aesthetic utilizes structural elements like thin hairlines and arched motifs to evoke the feeling of a luxury spa retreat. The interface is not just a tool, but a digital extension of the physical \"Royal Majesty\" experience.\n\n## Colors\n\nThe palette is rooted in a heritage-inspired spectrum that balances depth with lightness:\n\n*   **Primary (Emerald Green):** Used for primary actions, navigation backgrounds, and deep typographic moments. It represents growth, luxury, and the spa’s botanical connection.\n*   **Secondary (Champagne Gold):** Reserved for accents, fine-line borders, and active states. It should be used sparingly to maintain its \"precious\" quality.\n*   **Neutral (Paper White):** The primary background color. It is a warm, textured off-white that prevents the digital eye-strain of pure white and evokes high-end stationery.\n*   **Tertiary (Midnight Green):** A near-black green used for maximum typographic contrast against the paper-white background.\n\n## Typography\n\nTypography is the cornerstone of this design system. We utilize a high-contrast pairing to establish clear hierarchy:\n\n*   **Playfair Display:** Used for all headlines and display text. Its elegant serifs and varying stroke weights provide a classical, authoritative feel.\n*   **Montserrat:** Used for body copy and labels. Chosen for its clean, geometric clarity, it provides a modern counterpoint to the serif.\n\n**Styling Note:** Body text should utilize a \"light\" weight (300) for a more airy, editorial feel in large blocks of text. Labels and navigation items should always be uppercase with increased letter-spacing to enhance the premium feel.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain a composed, magazine-like appearance, transitioning to a fluid layout for mobile.\n\n*   **Desktop:** 12-column grid with a wide 32px gutter. Margins are generous (64px+) to create a frame around the content.\n*   **Vertical Rhythm:** Section spacing is intentionally oversized (120px) to force a slower, more deliberate scrolling pace, mimicking the unhurried atmosphere of a spa.\n*   **Alignment:** Mix centered \"hero\" alignments with asymmetrical grid placements for editorial interest. Arched containers should be used to frame key imagery, breaking the rigid grid with organic curves.\n\n## Elevation & Depth\n\nTo maintain a \"flat editorial\" aesthetic, this design system avoids traditional drop shadows. Depth is instead conveyed through:\n\n*   **Tonal Layering:** Using the primary Emerald Green as a backdrop for Paper White cards to create a physical sense of \"nesting.\"\n*   **Fine Lines:** 1px borders in Champagne Gold (#D4AF37) or soft greige define boundaries without adding visual weight.\n*   **Overlays:** Using high-transparency Emerald overlays on images to ensure typographic legibility while maintaining a consistent color grade.\n*   **The \"Arched\" Motif:** Using CSS `border-radius` only on the top edges of images or containers (e.g., `500px 500px 0 0`) to create architectural depth reminiscent of spa alcoves.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)** for all functional UI elements (buttons, inputs, cards) to maintain a sense of formal elegance and architectural precision.\n\nHowever, a secondary \"Organic\" shape language is used for **decorative framing**:\n*   **Arches:** Images and specific featured sections should utilize a top-rounded arch.\n*   **Rule Lines:** Horizontal rules should be 1px thick and often center-aligned, not spanning the full width, to act as a sophisticated separator.\n\n## Components\n\n### Buttons\nButtons are strictly rectangular with no corner radius.\n*   **Primary:** Solid Emerald background, white uppercase text, 1px Gold border. On hover, the background transitions to Gold and text to Emerald.\n*   **Secondary/Ghost:** No background, 1px Gold border, Emerald uppercase text.\n\n### Inputs\nText fields consist only of a 1px bottom border (Emerald). Labels sit above in `label-sm` typography. Focus state changes the bottom border to Gold.\n\n### Cards\nCards are defined by their content rather than heavy containers. Use 1px soft-greige outlines or simple background color shifts. Featured cards may use the \"Arch\" top-clip on the image.\n\n### Chips & Tags\nSmall, sharp-edged boxes with `label-sm` text. Backgrounds should be very faint (e.g., 5% Emerald) to keep them subordinate to primary actions.\n\n### Lists\nService menus should be styled with a \"dot leader\" (e.g., Service Name ......... $Price) to evoke a physical spa menu.\n\n### Navigation\nTop navigation is minimalist with wide spacing. Use a \"Center-Out\" layout where the logo is flanked by two menu items on each side to create perfect symmetry.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#fbf9f4",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f1ec",
+              "inverse_primary": "#95d3ba",
+              "inverse_surface": "#30312e",
+              "on_background": "#1b1c19",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#80bea6",
+              "on_primary_fixed": "#002117",
+              "on_primary_fixed_variant": "#0b513d",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#745c00",
+              "on_secondary_fixed": "#241a00",
+              "on_secondary_fixed_variant": "#574500",
+              "on_surface": "#1b1c19",
+              "on_surface_variant": "#404944",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#a8b5b0",
+              "on_tertiary_fixed": "#131e1b",
+              "on_tertiary_fixed_variant": "#3e4945",
+              "outline": "#707974",
+              "outline_variant": "#bfc9c3",
+              "primary": "#003527",
+              "primary_container": "#064e3b",
+              "primary_fixed": "#b0f0d6",
+              "primary_fixed_dim": "#95d3ba",
+              "secondary": "#735c00",
+              "secondary_container": "#fed65b",
+              "secondary_fixed": "#ffe088",
+              "secondary_fixed_dim": "#e9c349",
+              "surface": "#fbf9f4",
+              "surface_bright": "#fbf9f4",
+              "surface_container": "#f0eee9",
+              "surface_container_high": "#eae8e3",
+              "surface_container_highest": "#e4e2dd",
+              "surface_container_low": "#f5f3ee",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbdad5",
+              "surface_tint": "#2b6954",
+              "surface_variant": "#e4e2dd",
+              "tertiary": "#25312d",
+              "tertiary_container": "#3b4743",
+              "tertiary_fixed": "#d9e5e0",
+              "tertiary_fixed_dim": "#bdc9c4"
+            },
+            "overrideNeutralColor": "#f9f7f2",
+            "overridePrimaryColor": "#064e3b",
+            "overrideSecondaryColor": "#d4af37",
+            "overrideTertiaryColor": "#101b18",
+            "spacing": {
+              "container-max": "1280px",
+              "gutter": "32px",
+              "margin-desktop": "64px",
+              "margin-mobile": "24px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "300",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.8"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "400",
+                "lineHeight": "1.3"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "28px",
+                "fontWeight": "400",
+                "lineHeight": "1.3"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "1.4"
+              },
+              "label-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.2"
+              },
+              "label-sm": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.2em",
+                "lineHeight": "1.2"
+              }
+            }
+          },
+          "title": "Royal Majesty Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I'm now generating high-quality, atmospheric imagery and the final bespoke homepage design. I'm focusing on a 'Modern Regency' aesthetic with arched visual motifs, deep emerald and gold accents, and an editorial layout that feels both timeless and contemporary."
+  },
+  {
+    "suggestion": "Create a 'Book an Appointment' mobile screen with the same aesthetic."
+  },
+  {
+    "suggestion": "Design a 'Services Menu' page with detailed pricing and arched layouts."
+  },
+  {
+    "suggestion": "Add a subtle scroll animation to the hero section."
+  }
+]

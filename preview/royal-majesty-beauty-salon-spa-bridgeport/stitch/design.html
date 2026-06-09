@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Royal Majesty | Modern Regency Beauty Salon &amp; Spa</title>
+<meta content="Experience the pinnacle of Modern Regency beauty at Royal Majesty Salon &amp; Spa. Established in 1924." name="description"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Montserrat:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        :root {
+            --emerald-regency: #003527;
+            --gold-regency: #D4AF37;
+            --paper-white: #fbf9f4;
+        }
+
+        .arch-mask {
+            border-radius: 500px 500px 0 0;
+        }
+
+        .dot-leader {
+            display: flex;
+            align-items: baseline;
+        }
+
+        .dot-leader::after {
+            content: "";
+            flex: 1;
+            border-bottom: 1px dotted var(--emerald-regency);
+            margin: 0 10px;
+            opacity: 0.3;
+        }
+
+        .luxury-input {
+            border: none;
+            border-bottom: 1px solid #003527;
+            background: transparent;
+            border-radius: 0;
+            padding: 12px 0;
+            transition: border-color 0.3s ease;
+        }
+
+        .luxury-input:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: #D4AF37;
+        }
+
+        .btn-regency-primary {
+            background-color: #003527;
+            color: white;
+            border: 1px solid #D4AF37;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-regency-primary:hover {
+            background-color: #D4AF37;
+            color: #003527;
+        }
+
+        .btn-regency-outline {
+            border: 1px solid #D4AF37;
+            color: #003527;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+        }
+
+        .btn-regency-outline:hover {
+            background-color: #003527;
+            color: white;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .active-nav {
+            border-bottom: 1px solid #735c00;
+            color: #735c00;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-bright": "#fbf9f4",
+                      "secondary-container": "#fed65b",
+                      "error-container": "#ffdad6",
+                      "tertiary": "#25312d",
+                      "on-tertiary-container": "#a8b5b0",
+                      "on-primary-container": "#80bea6",
+                      "primary-fixed": "#b0f0d6",
+                      "on-secondary": "#ffffff",
+                      "inverse-primary": "#95d3ba",
+                      "secondary-fixed-dim": "#e9c349",
+                      "outline-variant": "#bfc9c3",
+                      "on-tertiary": "#ffffff",
+                      "on-secondary-fixed-variant": "#574500",
+                      "surface-tint": "#2b6954",
+                      "surface-container-highest": "#e4e2dd",
+                      "secondary": "#735c00",
+                      "primary": "#003527",
+                      "inverse-surface": "#30312e",
+                      "surface-container": "#f0eee9",
+                      "on-secondary-fixed": "#241a00",
+                      "tertiary-fixed-dim": "#bdc9c4",
+                      "secondary-fixed": "#ffe088",
+                      "tertiary-container": "#3b4743",
+                      "primary-container": "#064e3b",
+                      "surface-container-low": "#f5f3ee",
+                      "on-tertiary-fixed": "#131e1b",
+                      "surface-dim": "#dbdad5",
+                      "primary-fixed-dim": "#95d3ba",
+                      "on-primary-fixed-variant": "#0b513d",
+                      "inverse-on-surface": "#f2f1ec",
+                      "on-secondary-container": "#745c00",
+                      "surface-container-lowest": "#ffffff",
+                      "tertiary-fixed": "#d9e5e0",
+                      "surface": "#fbf9f4",
+                      "on-primary-fixed": "#002117",
+                      "on-tertiary-fixed-variant": "#3e4945",
+                      "on-primary": "#ffffff",
+                      "surface-variant": "#e4e2dd",
+                      "surface-container-high": "#eae8e3",
+                      "on-surface-variant": "#404944",
+                      "on-surface": "#1b1c19",
+                      "on-background": "#1b1c19",
+                      "on-error-container": "#93000a",
+                      "error": "#ba1a1a",
+                      "outline": "#707974",
+                      "on-error": "#ffffff",
+                      "background": "#fbf9f4"
+              },
+              "spacing": {
+                      "margin-mobile": "24px",
+                      "margin-desktop": "64px",
+                      "gutter": "32px",
+                      "container-max": "1280px",
+                      "section-gap": "120px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "headline-lg": ["Playfair Display"],
+                      "display-lg": ["Playfair Display"],
+                      "body-md": ["Montserrat"],
+                      "label-sm": ["Montserrat"],
+                      "label-lg": ["Montserrat"],
+                      "headline-md": ["Playfair Display"],
+                      "display-md": ["Playfair Display"]
+              },
+              "fontSize": {
+                      "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-sm": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.2em", "fontWeight": "600"}],
+                      "label-lg": ["14px", {"lineHeight": "1.2", "letterSpacing": "0.15em", "fontWeight": "500"}],
+                      "headline-md": ["24px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "display-md": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="bg-surface-bright text-on-surface font-body-md selection:bg-secondary-fixed selection:text-primary">
+<!-- TOP NAVIGATION BAR -->
+<header class="fixed top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-outline-variant/30 px-margin-desktop py-6">
+<div class="max-w-container-max mx-auto flex justify-between items-center">
+<!-- Secondary Info (Mobile Hidden) -->
+<div class="hidden md:flex items-center gap-6">
+<a class="font-label-lg text-label-lg text-primary hover:text-secondary transition-colors duration-300" href="tel:4753191359">
+                    (475) 319-1359
+                </a>
+<nav class="flex items-center gap-8 ml-8">
+<a class="font-label-lg text-label-lg text-primary hover:text-secondary transition-all" href="#services">Services</a>
+<a class="font-label-lg text-label-lg text-primary hover:text-secondary transition-all" href="#experience">Experience</a>
+</nav>
+</div>
+<!-- Brand Logo -->
+<a class="flex-shrink-0" href="#">
+<img alt="Royal Majesty Logo" class="h-16 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AP1WRLtCuNmgcO-EJl3FTReQEdLnKgqNOPMLINzbsYobSVSBpDE2B2tq7VNVBZdLW9XYrBA44NfWf8uipWwCFNCuOXwS2JujyxYEsNC4fUwxGNavjtcQ1sQY0eYk3SKZwL-laMjG7LEpDVTOdGOadFHzPQToI2ETbEWHjUrvumZ92LOzcOVhd2PSsWsdx-3u-uacEquBE3PykrCKZMtocnKF5fCjdMnjn7rbHRx4uMynldFNagdaIY9sTicw0Zm9"/>
+</a>
+<!-- Actions & Links -->
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex items-center gap-8 mr-8">
+<a class="font-label-lg text-label-lg text-primary hover:text-secondary transition-all" href="#gallery">Gallery</a>
+<a class="font-label-lg text-label-lg text-primary hover:text-secondary transition-all" href="#boutique">Boutique</a>
+</nav>
+<button class="btn-regency-primary px-8 py-3 font-label-lg text-label-lg tracking-widest cursor-pointer active:scale-95 transition-transform">
+                    Book Now
+                </button>
+<!-- Mobile Toggle -->
+<button class="md:hidden text-primary p-2" id="mobile-nav-toggle">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</div>
+</header>
+<!-- MOBILE NAV DRAWER -->
+<div class="fixed inset-0 z-[60] bg-surface flex-col items-center justify-center gap-8 hidden" id="mobile-nav">
+<button class="absolute top-8 right-8 text-primary" id="mobile-nav-close">
+<span class="material-symbols-outlined text-4xl">close</span>
+</button>
+<a class="font-headline-md text-headline-md text-primary" href="#services">Services</a>
+<a class="font-headline-md text-headline-md text-primary" href="#experience">Experience</a>
+<a class="font-headline-md text-headline-md text-primary" href="#gallery">Gallery</a>
+<a class="font-headline-md text-headline-md text-primary" href="#boutique">Boutique</a>
+<div class="mt-8">
+<a class="font-label-lg text-label-lg text-secondary" href="tel:4753191359">(475) 319-1359</a>
+</div>
+</div>
+<main>
+<!-- HERO SECTION -->
+<section class="relative h-[100vh] flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-primary/40 z-10"></div>
+<img alt="Luxury Salon Interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLt89E-Ts6BKejyxAfqnHczhjizq2v9HqpqVMomiQBzRZKfxPqA7h3fWQd-6NRjtPkPRi32nIU8s6VZzLEWFzG6gA4KHPDl8RGgjI_iJZMY6ZhSMok5LJhdgeEXEIJhKqJ5FDrhl07oJw5M5dTeYm_nvGJxrivwRSBlMie7Uirp1wFGLRrur9d67cQL0wTQTUF4SVF8ApDmxHsntNEisQtBhw0xuKXWiFh_sTjhFB9bn50iNQ1C1qJ8jZcTd"/>
+</div>
+<div class="relative z-20 text-center text-white px-margin-mobile">
+<span class="font-label-lg text-label-lg tracking-[0.4em] uppercase mb-6 block opacity-90">Est. 1924</span>
+<h1 class="font-display-lg text-[clamp(48px,8vw,120px)] leading-none mb-8">
+                    Your Crown <br class="hidden md:block"/> Awaits
+                </h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto mb-12 opacity-80">
+                    Experience the pinnacle of Modern Regency beauty. A sanctuary of serenity and high-end craftsmanship designed for those who seek the extraordinary.
+                </p>
+<div class="flex flex-col md:flex-row items-center justify-center gap-6">
+<button class="btn-regency-primary px-12 py-5 font-label-lg text-label-lg tracking-[0.2em] w-full md:w-auto">
+                        Reserve Experience
+                    </button>
+<button class="btn-regency-outline bg-white/10 backdrop-blur-sm border-white text-white px-12 py-5 font-label-lg text-label-lg tracking-[0.2em] w-full md:w-auto hover:bg-white hover:text-primary">
+                        View Rituals
+                    </button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 animate-bounce">
+<span class="font-label-sm text-label-sm text-white/60 tracking-widest uppercase mb-2">Scroll</span>
+<span class="material-symbols-outlined text-white/60">expand_more</span>
+</div>
+</section>
+<!-- CREDIBILITY BLOCK -->
+<section class="py-section-gap bg-surface" id="credibility">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-12 text-center border-y border-outline-variant/30 py-16">
+<div>
+<h3 class="font-display-md text-display-md text-primary mb-2">100+</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Years of Excellence</p>
+</div>
+<div>
+<h3 class="font-display-md text-display-md text-primary mb-2">Luxury</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Award Winner '23</p>
+</div>
+<div>
+<h3 class="font-display-md text-display-md text-primary mb-2">Elite</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-outline">Stylist Collective</p>
+</div>
+<div>
+<h3 class="font-display-md text-display-md text-primary mb-2">Vogue</h3>
+<p class="font-label-sm text-label-sm uppercase tracking-widest text-outline">As Seen In</p>
+</div>
+</div>
+<div class="mt-20 text-center max-w-4xl mx-auto italic">
+<p class="font-headline-md text-headline-md text-primary/80">
+                        "Royal Majesty isn't just a salon; it's a transformative retreat. Every detail, from the emerald velvet to the precise artistry, exudes a level of luxury rarely found in the modern world."
+                    </p>
+<cite class="not-italic block mt-6 font-label-lg text-label-lg text-secondary tracking-widest uppercase">— Harper's Bazaar</cite>
+</div>
+</div>
+</section>
+<!-- SERVICES / OFFERINGS -->
+<section class="py-section-gap overflow-hidden" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-2xl">
+<span class="font-label-sm text-label-sm text-secondary tracking-[0.3em] uppercase block mb-4">Our Curated Rituals</span>
+<h2 class="font-display-md text-display-md text-primary">Bespoke Artistry for the Modern Elite</h2>
+</div>
+<button class="btn-regency-outline px-8 py-4 font-label-lg text-label-lg tracking-widest">
+                        Full Menu
+                    </button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<!-- Facial Treatment -->
+<div class="md:col-span-5 space-y-12">
+<div class="group cursor-pointer">
+<div class="arch-mask overflow-hidden mb-8 aspect-[3/4] relative">
+<img alt="Facial Treatment Ritual" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsuLoTEDMiZBUehCGtT1rb5nveN8wjvykbcxWXDEINRdRltHNFTpgD130hR1el2gwGFh2PWsvOqqlv2bu3vtZKF9kuc_aOwkFoA5H15NSadO5QIE9OjWnWj6qcmTID5IacR9DB-Q7H0QIC4rVEMOQof-NEXoPaK898wtUwxh2-suDnjtJVNrAOOkj1UpPcOMt90AUTc4qHHammEm-R4VTsFlDsZt46K9ZjYXbFleTNEaGwP_zmO0El4Hu5f"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-4">
+<h3 class="font-headline-md text-headline-md text-primary">The Ritual Facial</h3>
+<span class="font-label-lg text-label-lg text-secondary">$245+</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md">A multi-sensory experience combining rare botanicals with advanced lymphatic drainage techniques.</p>
+</div>
+</div>
+<!-- Spacer / Center Column -->
+<div class="hidden md:block md:col-span-2"></div>
+<!-- Hair Artistry -->
+<div class="md:col-span-5 space-y-12 md:mt-32">
+<div class="group cursor-pointer">
+<div class="arch-mask overflow-hidden mb-8 aspect-[3/4] relative">
+<img alt="Hair Couture Styling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLsy-ZeudgxWxtUmeZ5ABFGz9OxtN8zU0FD9ePKukBmiQFQMcHT36PicAbSdNRixnQidMr6IE-DscTmVN8LoejOS71wh9TXmQdNvs-WdR7u569JJjClt8crKC2mqyqOsTQXhAstrJSF11Fmz8x8-BGzstC0Q6mwxl5-eRrvxHHlfCA6n39s2k7LOUPEuW-TVkmSTf9JXzlD42rxZfuJ03RK8KWhL0tyhGcnIboixFmSCblOcp9OxKGg-eec8"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+<div class="flex justify-between items-baseline border-b border-outline-variant/30 pb-4">
+<h3 class="font-headline-md text-headline-md text-primary">Hair Couture</h3>
+<span class="font-label-lg text-label-lg text-secondary">$180+</span>
+</div>
+<p class="mt-4 text-on-surface-variant font-body-md">Precision cutting and bespoke color palettes tailored to your unique architectural features.</p>
+</div>
+</div>
+</div>
+<!-- List Items (Alternative Layout) -->
+<div class="mt-32 max-w-4xl mx-auto space-y-8">
+<div class="dot-leader">
+<span class="font-headline-md text-headline-md text-primary">Sculptural Artistry</span>
+<span class="font-label-lg text-label-lg text-secondary">$120</span>
+</div>
+<div class="dot-leader">
+<span class="font-headline-md text-headline-md text-primary">Regency Royal Blowout</span>
+<span class="font-label-lg text-label-lg text-secondary">$95</span>
+</div>
+<div class="dot-leader">
+<span class="font-headline-md text-headline-md text-primary">Signature Hand Ritual</span>
+<span class="font-label-lg text-label-lg text-secondary">$75</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ABOUT SECTION -->
+<section class="py-section-gap bg-primary text-on-primary" id="experience">
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-gutter items-center">
+<div class="relative order-2 md:order-1">
+<div class="aspect-square border border-gold-regency/30 p-8">
+<div class="w-full h-full overflow-hidden arch-mask">
+<div class="w-full h-full bg-surface-container-highest relative flex items-center justify-center">
+<span class="material-symbols-outlined text-9xl text-primary/10" style="font-variation-settings: 'FILL' 1;">spa</span>
+<img alt="Salon Heritage" class="absolute inset-0 w-full h-full object-cover opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLt89E-Ts6BKejyxAfqnHczhjizq2v9HqpqVMomiQBzRZKfxPqA7h3fWQd-6NRjtPkPRi32nIU8s6VZzLEWFzG6gA4KHPDl8RGgjI_iJZMY6ZhSMok5LJhdgeEXEIJhKqJ5FDrhl07oJw5M5dTeYm_nvGJxrivwRSBlMie7Uirp1wFGLRrur9d67cQL0wTQTUF4SVF8ApDmxHsntNEisQtBhw0xuKXWiFh_sTjhFB9bn50iNQ1C1qJ8jZcTd"/>
+</div>
+</div>
+</div>
+<div class="absolute -bottom-12 -right-12 bg-secondary p-12 hidden md:block">
+<p class="font-display-md text-display-md leading-none">100</p>
+<p class="font-label-sm text-label-sm uppercase tracking-widest">Years of Artistry</p>
+</div>
+</div>
+<div class="order-1 md:order-2 space-y-8">
+<span class="font-label-sm text-label-sm text-secondary-fixed-dim tracking-[0.4em] uppercase block">A Century of Grace</span>
+<h2 class="font-display-md text-display-md text-on-primary">The Heritage of Royal Majesty</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80">
+                        Founded in 1924, Royal Majesty was born from a vision of uncompromising elegance. We believe that beauty is an architectural endeavor, requiring the finest tools, the most skilled hands, and an environment that speaks to the soul.
+                    </p>
+<p class="font-body-md text-body-md text-on-primary/70">
+                        Our Modern Regency approach blends the timeless symmetry of classical design with the effortless minimalism of the contemporary era. Here, every appointment is a private audience, and every service is a ritual of restoration.
+                    </p>
+<div class="pt-8">
+<a class="inline-flex items-center gap-4 font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed-dim hover:gap-6 transition-all" href="#visit">
+                            Visit the Sanctuary <span class="material-symbols-outlined">arrow_right_alt</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- VISIT & CONTACT SECTION -->
+<section class="py-section-gap" id="visit">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- Map & Info -->
+<div class="lg:col-span-5 space-y-12">
+<div>
+<h2 class="font-display-md text-display-md text-primary mb-6">Find the Sanctuary</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                                3931 Main Street,<br/>
+                                Bridgeport, CT 06606
+                            </p>
+<div class="space-y-4">
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined">call</span>
+<span class="font-label-lg text-label-lg">(475) 319-1359</span>
+</div>
+<div class="flex items-center gap-4 text-primary">
+<span class="material-symbols-outlined">mail</span>
+<span class="font-label-lg text-label-lg">Royalmaj1@hotmail.com</span>
+</div>
+</div>
+</div>
+<div aria-label="Map of Bridgeport, CT" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container border border-outline-variant/30" data-location="Bridgeport, CT" data-map-slot="" style="">
+<!-- Placeholder Map Style -->
+<div class="absolute inset-0 flex items-center justify-center">
+<div class="text-center opacity-40">
+<span class="material-symbols-outlined text-6xl mb-2">location_on</span>
+<p class="font-label-sm text-label-sm uppercase tracking-widest">Interactive Map Loading</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Contact Form -->
+<div class="lg:col-span-7 bg-white p-margin-mobile md:p-16 border border-outline-variant/30 shadow-sm">
+<h3 class="font-headline-lg text-headline-lg text-primary mb-10">Inquire About a Ritual</h3>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12" id="contact-form">
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1" for="name">Full Name</label>
+<input class="luxury-input" id="name" placeholder="Your Name" required="" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1" for="email">Email Address</label>
+<input class="luxury-input" id="email" placeholder="Royalmaj1@hotmail.com" required="" type="email"/>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1" for="service">Service Interest</label>
+<select class="luxury-input appearance-none" id="service">
+<option disabled="" selected="" value="">Select a Service</option>
+<option value="facial">The Ritual Facial</option>
+<option value="hair">Hair Couture</option>
+<option value="sculptural">Sculptural Artistry</option>
+<option value="other">General Inquiry</option>
+</select>
+</div>
+<div class="flex flex-col md:col-span-2">
+<label class="font-label-sm text-label-sm text-primary uppercase tracking-widest mb-1" for="message">Your Message</label>
+<textarea class="luxury-input resize-none" id="message" placeholder="How may we assist you?" required="" rows="4"></textarea>
+</div>
+<div class="md:col-span-2 pt-6">
+<button class="btn-regency-primary w-full py-5 font-label-lg text-label-lg tracking-[0.2em]" type="submit">
+                                    Send Inquiry
+                                </button>
+<div class="mt-4 hidden text-center font-label-sm text-label-sm uppercase tracking-widest py-2 px-4 rounded" id="form-feedback">
+                                    Thank you. We will contact you shortly.
+                                </div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- FOOTER -->
+<footer class="bg-primary text-on-primary">
+<div class="max-w-container-max mx-auto px-margin-desktop py-section-gap flex flex-col md:flex-row justify-between items-start gap-gutter">
+<div class="max-w-xs space-y-6">
+<img alt="Royal Majesty White Logo" class="h-16 w-auto brightness-0 invert" src="https://lh3.googleusercontent.com/aida/AP1WRLtCuNmgcO-EJl3FTReQEdLnKgqNOPMLINzbsYobSVSBpDE2B2tq7VNVBZdLW9XYrBA44NfWf8uipWwCFNCuOXwS2JujyxYEsNC4fUwxGNavjtcQ1sQY0eYk3SKZwL-laMjG7LEpDVTOdGOadFHzPQToI2ETbEWHjUrvumZ92LOzcOVhd2PSsWsdx-3u-uacEquBE3PykrCKZMtocnKF5fCjdMnjn7rbHRx4uMynldFNagdaIY9sTicw0Zm9"/>
+<p class="font-body-md text-body-md text-on-primary/70">
+                    A legacy of luxury and meticulous care, dedicated to the preservation of grace and grandeur.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 border border-outline/20 flex items-center justify-center hover:bg-secondary transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed">Navigation</h4>
+<ul class="space-y-4 font-label-sm text-label-sm text-on-primary/60">
+<li><a class="hover:text-on-primary transition-colors" href="#services">Services</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#experience">Experience</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#gallery">Gallery</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#boutique">Boutique</a></li>
+</ul>
+</div>
+<div class="space-y-6">
+<h4 class="font-label-lg text-label-lg uppercase tracking-widest text-secondary-fixed">Legal</h4>
+<ul class="space-y-4 font-label-sm text-label-sm text-on-primary/60">
+<li><a class="hover:text-on-primary transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#">Terms of Service</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-on-primary transition-colors" href="#visit">Contact Us</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop py-8 border-t border-outline/20">
+<p class="font-label-sm text-label-sm text-on-primary/40 text-center md:text-left">
+                © 2024 Royal Majesty Beauty Salon &amp; Spa. All rights reserved.
+            </p>
+</div>
+</footer>
+<script>
+        // Mobile Nav Toggle
+        const mobileNavToggle = document.getElementById('mobile-nav-toggle');
+        const mobileNavClose = document.getElementById('mobile-nav-close');
+        const mobileNav = document.getElementById('mobile-nav');
+
+        mobileNavToggle.addEventListener('click', () => {
+            mobileNav.classList.remove('hidden');
+            mobileNav.classList.add('flex');
+            document.body.style.overflow = 'hidden';
+        });
+
+        mobileNavClose.addEventListener('click', () => {
+            mobileNav.classList.add('hidden');
+            mobileNav.classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        });
+
+        // Close mobile nav on link click
+        mobileNav.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.add('hidden');
+                mobileNav.classList.remove('flex');
+                document.body.style.overflow = 'auto';
+            });
+        });
+
+        // Simple Form Submission Simulation
+        const contactForm = document.getElementById('contact-form');
+        const formFeedback = document.getElementById('form-feedback');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            setTimeout(() => {
+                contactForm.reset();
+                btn.textContent = 'Send Inquiry';
+                btn.disabled = false;
+                formFeedback.classList.remove('hidden');
+                formFeedback.classList.add('bg-primary-container', 'text-on-primary-container');
+                
+                setTimeout(() => {
+                    formFeedback.classList.add('hidden');
+                }, 5000);
+            }, 1500);
+        });
+
+        // Intersection Observer for active nav highlighting
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (pageYOffset >= (sectionTop - 200)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active-nav');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('active-nav');
+                }
+            });
+        });
+    </script>
+</body></html>
