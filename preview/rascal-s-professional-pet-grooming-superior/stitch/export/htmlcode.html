@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Rascal's | Professional Pet Grooming Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ba1a1a",
+                        "primary-container": "#1a2229",
+                        "tertiary-fixed": "#e4e2dd",
+                        "on-primary-fixed": "#141c23",
+                        "on-tertiary-fixed-variant": "#474744",
+                        "surface-dim": "#dbd9d9",
+                        "tertiary": "#090a08",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#303030",
+                        "surface-variant": "#e4e2e2",
+                        "on-tertiary-fixed": "#1b1c19",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e4e2e2",
+                        "primary": "#040b11",
+                        "on-primary-fixed-variant": "#40484f",
+                        "outline-variant": "#c4c6cb",
+                        "surface": "#fbf9f8",
+                        "error-container": "#ffdad6",
+                        "surface-container": "#efeded",
+                        "inverse-on-surface": "#f2f0f0",
+                        "tertiary-fixed-dim": "#c8c6c2",
+                        "surface-bright": "#fbf9f8",
+                        "outline": "#74777b",
+                        "on-tertiary-container": "#898884",
+                        "on-secondary-fixed-variant": "#5b4311",
+                        "primary-fixed-dim": "#bfc7d1",
+                        "on-surface": "#1b1c1c",
+                        "secondary": "#755a26",
+                        "on-primary-container": "#818992",
+                        "on-background": "#1b1c1c",
+                        "on-secondary": "#ffffff",
+                        "surface-container-low": "#f5f3f3",
+                        "on-secondary-fixed": "#271900",
+                        "primary-fixed": "#dbe3ed",
+                        "secondary-fixed": "#ffdea8",
+                        "background": "#fbf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "on-surface-variant": "#44474b",
+                        "tertiary-container": "#21211e",
+                        "on-error": "#ffffff",
+                        "inverse-primary": "#bfc7d1",
+                        "surface-container-high": "#eae8e7",
+                        "secondary-fixed-dim": "#e6c183",
+                        "secondary-container": "#fdd798",
+                        "surface-tint": "#575f67",
+                        "on-secondary-container": "#785c29"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "unit": "4px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "headline-xl": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "label-sm": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "label-caps": ["Hanken Grotesk"],
+                        "body-md": ["Hanken Grotesk"],
+                        "headline-xl-mobile": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "500"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-sm": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl-mobile": ["32px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .precision-line {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, #755a26, transparent);
+            width: 100%;
+        }
+        .grain-overlay {
+            position: relative;
+        }
+        .grain-overlay::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-image: url("https://www.transparenttextures.com/patterns/natural-paper.png");
+            opacity: 0.05;
+            pointer-events: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md selection:bg-secondary/20 overflow-x-hidden">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-margin-desktop py-6 bg-background/95 backdrop-blur-md border-b border-outline/10">
+<div class="flex items-center gap-12">
+<a class="font-headline-md text-headline-md tracking-tighter text-primary" href="#">Rascal's</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#rituals">Rituals</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#atelier">Atelier</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#visit">Contact</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:inline font-label-caps text-label-caps text-on-surface-variant tracking-widest">+1 (555) RASCAL</span>
+<button class="bg-primary text-on-primary px-6 py-3 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-all duration-500 shadow-sm">
+                Book Appointment
+            </button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="" class="w-full h-full object-cover grayscale-[0.2]" src="https://lh3.googleusercontent.com/aida/AP1WRLu5YYyDdM8tZQOFq-aQaClyPWSsXWktxsLg1e3FrFWuuMoN7C2c_k7zpBrDX7jf65xxuVpOLIUZ7zOZ3K3449dOaPWmCpWS5tlrjz5R4IkXJERm0gVkJZGENpRAAvgkCzn7jxGPEm9iG3spW8c9z4WWdsNgAThuXCNgsxpqwTX3d4NaI6imKl8T9uCrIA9glDK2theekzCeDy2NE3nrUVKIj3Cal5REe8vLKg0asW1izs1dVGqWw5n_XIMv"/>
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/60 to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-mobile md:px-margin-desktop w-full max-w-4xl">
+<span class="font-label-caps text-label-caps text-secondary tracking-[0.3em] uppercase block mb-6 animate-fade-in">Superior, Wisconsin</span>
+<h1 class="font-headline-xl text-headline-xl md:text-[84px] leading-tight mb-8 max-w-2xl">
+                Elegance in <br/><span class="italic">Every Scissor.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12 leading-relaxed">
+                Welcome to Rascal's, a sanctuary for canine aesthetics where grooming is elevated to a master craft. We provide a tranquil environment designed for the discerning pet owner.
+            </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps text-center uppercase tracking-widest hover:bg-secondary transition-all" href="#rituals">Explore Rituals</a>
+<a class="border border-primary/20 text-primary px-10 py-5 font-label-caps text-label-caps text-center uppercase tracking-widest hover:border-secondary hover:text-secondary transition-all" href="#atelier">Our Story</a>
+</div>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-y border-outline/5" id="credibility">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-16">
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">content_cut</span>
+<h3 class="font-label-caps text-label-caps tracking-widest mb-4">Certified Master Groomers</h3>
+<p class="text-on-surface-variant font-body-md max-w-xs">Artisans trained in the highest standards of technical scissor work and breed-specific sculpture.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">verified_user</span>
+<h3 class="font-label-caps text-label-caps tracking-widest mb-4">AKC S.A.F.E. Salon</h3>
+<p class="text-on-surface-variant font-body-md max-w-xs">Maintaining the most rigorous safety protocols and sanitized conditions in the Midwest.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-4xl text-secondary mb-6">workspace_premium</span>
+<h3 class="font-label-caps text-label-caps tracking-widest mb-4">Award-Winning Styling</h3>
+<p class="text-on-surface-variant font-body-md max-w-xs">Recognized for excellence in aesthetic maintenance and creative breed interpretation.</p>
+</div>
+</div>
+</section>
+<!-- Rituals (Services) Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop overflow-hidden" id="rituals">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-4 block">Curated Services</span>
+<h2 class="font-headline-xl text-headline-xl">Aesthetic Rituals</h2>
+</div>
+<p class="font-body-md text-on-surface-variant max-w-md italic border-l border-secondary pl-6">
+                "We do not simply clean; we restore the architectural beauty inherent in your companion."
+            </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<!-- Main Featured Service -->
+<div class="md:col-span-7 group cursor-pointer">
+<div class="relative overflow-hidden grain-overlay mb-8 h-[500px]">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A macro close-up of professional grooming tools, specifically a pair of high-carbon steel shears and a fine horn comb, resting on a polished dark marble slab. The lighting is warm and directional, casting long shadows that emphasize the texture of the marble and the metallic sheen of the tools. The mood is sophisticated and artisanal, reflecting a high-end pet grooming atelier with a focus on precision and craftsmanship." src="https://lh3.googleusercontent.com/aida/AP1WRLtDOfXC9_W51O8xlcfhklUIivjIs8r-RbXHvzG8pxKzzMywbzvf9PZoJztbg8VNS1uuLutoR1gsfv58bxwu-JP7On4AahHle7j20-Vxw1lvX9HecvDFjJOrTqxz51iQJhh_YQ1eEcW30ITlMnC5V9_wSWpZ2bdW0CSAlerKmDbHdbpdqT-ujFn6CEWBHn6MLOTOEcSpYYOkjbDikj2nfHB3Ht2nBVfaBTs2EsNs2nVjct_pq4_OCLBAW7Gn"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors"></div>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-headline-md text-headline-md mb-2">The Master Sculpt</h3>
+<p class="font-body-md text-on-surface-variant max-w-sm">Hand-scissored finishing for breeds requiring anatomical precision and structural balance.</p>
+</div>
+<span class="font-label-caps text-label-caps text-secondary text-lg">From $120</span>
+</div>
+</div>
+<!-- Side Rituals -->
+<div class="md:col-span-5 flex flex-col gap-12">
+<div class="border-b border-outline/10 pb-8 hover:border-secondary transition-colors duration-500">
+<div class="flex justify-between items-baseline mb-4">
+<h4 class="font-headline-md text-headline-md text-[20px]">Essential Hydration</h4>
+<span class="font-label-caps text-label-caps text-secondary">From $65</span>
+</div>
+<p class="font-body-md text-on-surface-variant">A pH-balanced deep conditioning treatment utilizing botanical extracts to restore coat luster and skin health.</p>
+</div>
+<div class="border-b border-outline/10 pb-8 hover:border-secondary transition-colors duration-500">
+<div class="flex justify-between items-baseline mb-4">
+<h4 class="font-headline-md text-headline-md text-[20px]">Hand Stripping Ritual</h4>
+<span class="font-label-caps text-label-caps text-secondary">From $150</span>
+</div>
+<p class="font-body-md text-on-surface-variant">Traditional technique for wire-coated breeds to maintain texture integrity and vibrant color saturation.</p>
+</div>
+<div class="border-b border-outline/10 pb-8 hover:border-secondary transition-colors duration-500">
+<div class="flex justify-between items-baseline mb-4">
+<h4 class="font-headline-md text-headline-md text-[20px]">Aromatherapeutic Spa</h4>
+<span class="font-label-caps text-label-caps text-secondary">From $45</span>
+</div>
+<p class="font-body-md text-on-surface-variant">A sensory journey designed to reduce canine anxiety through lavender and chamomile hydrotherapy.</p>
+</div>
+<a class="inline-flex items-center gap-4 text-primary font-label-caps text-label-caps tracking-widest uppercase mt-4 hover:gap-6 transition-all" href="#">
+                    View Full Menu <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Atelier (About) Section -->
+<section class="py-32 bg-primary text-on-primary" id="atelier">
+<div class="px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 items-center gap-24">
+<div class="relative order-2 md:order-1">
+<div class="w-full aspect-[4/5] overflow-hidden grain-overlay">
+<img class="w-full h-full object-cover" data-alt="A portrait-style image of a professional pet groomer meticulously working on a well-behaved dog in a minimalist, light-filled studio. The groomer is dressed in a dark, clean apron, focusing intently on their work. The background is composed of soft concrete walls and minimalist wooden furniture, creating a serene and disciplined atmosphere typical of a high-end boutique hotel or atelier. The lighting is soft and diffused, emphasizing the quiet luxury and precision of the craftsmanship." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzsq-s2mXAPnYwI_X_W8UoDBO33k53N7utdu8aHt5Qv-HrM4Bk-vypXyV2lplsZb7nz-83Z3kxtguX5S0RRXoZaQ0jiWf8jpTkmcDIr9282DWXPz5dn_QDffki_vKoJlpGRyrRvCStOxgByLknB5XpZo6Y6te1EppHgP1-PGDueFlTtqJP0M1Ir04ZptTFpPSkPLlwkbWwwtgQLHj6I_swtG3ZLR1HiLyPrU4k9v4EVg69JGcJGr4UQTW0C76TAo1cBr1bgwiTmHJJ"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-40 h-40 border border-secondary p-4 hidden md:flex items-center justify-center bg-primary">
+<span class="text-secondary font-headline-md text-center italic text-lg uppercase tracking-tighter">Est. <br/> 2012</span>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label-caps text-label-caps text-secondary-fixed-dim tracking-[0.4em] uppercase mb-8 block">The Atelier</span>
+<h2 class="font-headline-xl text-headline-xl mb-10 leading-snug">A Discipline <br/> of Precision.</h2>
+<div class="space-y-8 font-body-lg text-primary-fixed-dim/80 leading-relaxed max-w-xl">
+<p>Located in the historic heart of Superior, WI, Rascal's was founded on the belief that grooming is an essential pillar of health and dignity for our companions.</p>
+<p>Our studio is designed to be a calm harbor. We shun the frenetic pace of volume-based salons in favor of a one-on-one, bespoke approach where each pet is treated as a singular masterpiece.</p>
+<p>Every stroke of the brush and every cut of the shear is executed with the discipline of a master craftsman, ensuring your pet leaves not just clean, but transformed.</p>
+</div>
+<div class="mt-12 precision-line opacity-20"></div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-start">
+<div>
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-4 block">Location</span>
+<h2 class="font-headline-xl text-headline-xl mb-12">Visit the Studio</h2>
+<div class="space-y-12 mb-16">
+<div>
+<h4 class="font-label-caps text-label-caps tracking-widest text-on-surface-variant mb-4 uppercase">Address</h4>
+<p class="font-headline-md text-headline-md">119 Belknap Street<br/>Superior, WI 54880</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-label-caps text-label-caps tracking-widest text-on-surface-variant mb-4 uppercase">Studio Hours</h4>
+<p class="font-body-md">Mon — Sat: 8am — 5pm<br/>Sunday: Closed</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps tracking-widest text-on-surface-variant mb-4 uppercase">Connection</h4>
+<p class="font-body-md">hello@rascalsgrooming.com<br/>(715) 718-0998</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-4 text-primary font-label-caps text-label-caps border border-primary/20 px-8 py-4 tracking-widest uppercase hover:bg-primary hover:text-on-primary transition-all" href="#">
+                    Get Directions <span class="material-symbols-outlined text-sm">near_me</span>
+</a>
+</div>
+<div class="relative group">
+<div aria-label="Map of Rascal's location in Superior, WI" class="map-slot relative overflow-hidden min-h-[500px] bg-surface-dim border border-outline/10 shadow-2xl" data-location="Superior, Wisconsin" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center bg-surface-container/40 backdrop-blur-[2px]">
+<span class="font-label-caps text-label-caps text-primary/40 tracking-widest">Interactive Map Loading</span>
+</div>
+</div>
+<div class="absolute top-8 right-8 bg-background p-6 shadow-lg border border-outline/5 hidden md:block">
+<p class="font-label-caps text-label-caps text-secondary mb-1">Status</p>
+<p class="font-body-md font-medium">Open Now</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Inquiries Section (Form) -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-low border-t border-outline/5" id="inquiries">
+<div class="max-w-4xl mx-auto">
+<div class="text-center mb-20">
+<span class="font-label-caps text-label-caps text-secondary tracking-widest uppercase mb-4 block">Inquiries</span>
+<h2 class="font-headline-xl text-headline-xl mb-6">Begin the Transformation</h2>
+<p class="font-body-lg text-on-surface-variant">Request a consultation or inquire about our ritual openings.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="name">Owner Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-secondary focus:ring-0 py-3 transition-colors px-0 placeholder:text-on-surface-variant/30" id="name" name="name" placeholder="e.g. Julian Vane" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="breed">Pet's Breed</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-secondary focus:ring-0 py-3 transition-colors px-0 placeholder:text-on-surface-variant/30" id="breed" name="breed" placeholder="e.g. Standard Poodle" type="text"/>
+</div>
+<div class="relative md:col-span-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="email">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-secondary focus:ring-0 py-3 transition-colors px-0 placeholder:text-on-surface-variant/30" id="email" name="email" placeholder="e.g. julian@studio.com" type="email"/>
+</div>
+<div class="relative md:col-span-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant uppercase mb-2 block" for="message">Message / Preferences</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline/30 focus:border-secondary focus:ring-0 py-3 transition-colors px-0 placeholder:text-on-surface-variant/30 resize-none" id="message" name="message" placeholder="Detail any specific stylistic requirements..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 flex justify-center mt-8">
+<button class="bg-primary text-on-primary px-16 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-secondary transition-all shadow-xl" type="submit">
+                        Submit Inquiry
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary py-24 px-6 md:px-margin-desktop border-t border-outline/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+<div class="md:col-span-2">
+<a class="font-headline-lg text-headline-lg text-on-primary mb-8 block" href="#">Rascal's</a>
+<p class="font-body-md text-primary-fixed-dim/60 max-w-sm mb-8 leading-relaxed">
+                    © 2024 Rascal's Professional Pet Grooming. <br/> Excellence in Every Scissor. Crafted with discipline in Superior, Wisconsin.
+                </p>
+<div class="flex gap-6">
+<a class="text-secondary-fixed-dim hover:text-on-primary transition-colors" href="#"><span class="font-label-caps text-label-caps uppercase tracking-widest">Instagram</span></a>
+<a class="text-secondary-fixed-dim hover:text-on-primary transition-colors" href="#"><span class="font-label-caps text-label-caps uppercase tracking-widest">Facebook</span></a>
+</div>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-on-primary tracking-widest uppercase mb-8">Navigation</h5>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#rituals">Rituals</a></li>
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#atelier">Atelier</a></li>
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#visit">Contact</a></li>
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#">Careers</a></li>
+</ul>
+</div>
+<div>
+<h5 class="font-label-caps text-label-caps text-on-primary tracking-widest uppercase mb-8">Legal</h5>
+<ul class="space-y-4">
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#">Terms of Service</a></li>
+<li><a class="font-label-caps text-label-caps text-primary-container hover:text-secondary-fixed-dim transition-all" href="#">Press Kit</a></li>
+</ul>
+</div>
+</div>
+<div class="pt-12 border-t border-on-primary/10 flex justify-between items-center flex-wrap gap-4">
+<span class="font-label-caps text-label-caps text-primary-container/40">Handcrafted in Superior, WI</span>
+<button class="font-label-caps text-label-caps text-secondary-fixed-dim uppercase tracking-widest flex items-center gap-2 group" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+                Back to Top <span class="material-symbols-outlined text-sm group-hover:-translate-y-1 transition-transform">arrow_upward</span>
+</button>
+</div>
+</footer>
+<script>
+        // Simple form validation micro-interaction
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'TRANSMITTING...';
+            btn.classList.add('opacity-50');
+            setTimeout(() => {
+                btn.innerText = 'SENT SUCCESSFULLY';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-secondary');
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.add('bg-primary');
+                    btn.classList.remove('bg-secondary', 'opacity-50');
+                    this.reset();
+                }, 3000);
+            }, 1500);
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = { threshold: 0.1 };
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in-up');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.style.opacity = '0';
+            section.style.transition = 'opacity 1s ease-out, transform 1s ease-out';
+            section.style.transform = 'translateY(20px)';
+            
+            const internalObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, {threshold: 0.05});
+            internalObserver.observe(section);
+        });
+    </script>
+</body></html>
