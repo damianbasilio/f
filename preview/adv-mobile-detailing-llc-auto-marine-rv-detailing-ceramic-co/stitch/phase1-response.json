@@ -1,0 +1,505 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Ceramic & Chrome",
+          "styleGuidelines": "## Brand & Style\nThe brand personality is rooted in high-performance automotive precision and luxury craftsmanship. It targets a discerning clientele that values meticulous care and technical excellence. The UI evokes the sensation of a high-end detailing studio: clean, organized, and technologically advanced.\n\nThe design style utilizes a **High-Contrast Editorial** approach mixed with **Glassmorphism**. It features a \"Ceramic\" finish—characterized by deep, glossy blacks and crisp whites—accented by \"Chrome\" highlights via Electric Cobalt. Surfaces are sharp and architectural, emphasizing a \"no-room-for-error\" philosophy. Visuals should be high-fidelity, using generous whitespace to allow hero imagery of reflective car surfaces to dominate the composition.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a fluid 4-column model on mobile. A 4px baseline grid ensures technical alignment.\n\nMargins are intentionally generous (`64px` on desktop) to create an editorial, premium feel that avoids information density. Content should be grouped in clear, high-contrast sections with substantial vertical padding (`128px` or more) to separate different service tiers or brand stories. Elements should align to a strict vertical axis to maintain the \"razor-sharp\" brand promise.\n\n## Elevation & Depth\nDepth is achieved through **Glassmorphism** and **Tonal Layers** rather than traditional shadows. \n- **Tier 1 (Base):** Deep Midnight (#0A0A0B).\n- **Tier 2 (Surface):** Metallic Charcoal (#1A1C1E) with a 1px solid border (#2D2F31).\n- **Tier 3 (Floating):** Semi-transparent Metallic Charcoal (70% opacity) with a background blur (20px) and a subtle 1px \"Chrome\" highlight border on the top and left edges.\n\nShadows, if used, must be \"Long and Sharp\"—low spread, high offset, and very low opacity, mimicking the hard directional lighting of a car photography studio.\n\n## Components\n- **Buttons:** Primary buttons use a solid Electric Cobalt background with White text, using a heavy weight Montserrat. Secondary buttons use a \"Ghost\" style with a 2px white border and no fill. All buttons are rectangular with zero radius.\n- **Inputs:** Fields use the Metallic Charcoal background with a 1px border that turns Electric Cobalt on focus. Labels use JetBrains Mono in all caps.\n- **Cards:** Service cards feature a subtle glassmorphic background-blur. Imagery within cards should fill the top half, with a 1px internal divider separating text.\n- **Chips/Status:** Use a monospaced font. \"Active\" or \"Premium\" statuses should use an Electric Cobalt glow (thin outer stroke) rather than a solid fill.\n- **Progress Bars:** Use for service tracking (e.g., \"Polishing Phase\"). Use a high-contrast white-on-charcoal track with a glowing Electric Cobalt indicator.\n- **Service Lists:** Use large numeric indicators (e.g., 01, 02) in a thin weight Montserrat to guide the user through the detailing process.",
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#2e5bff",
+            "designMd": "---\nname: Ceramic & Chrome\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#3a393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1c1b1c'\n  surface-container: '#201f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#c4c5d9'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#313031'\n  outline: '#8e90a2'\n  outline-variant: '#434656'\n  surface-tint: '#b8c3ff'\n  primary: '#b8c3ff'\n  on-primary: '#002388'\n  primary-container: '#2e5bff'\n  on-primary-container: '#efefff'\n  inverse-primary: '#124af0'\n  secondary: '#c4c7c9'\n  on-secondary: '#2d3133'\n  secondary-container: '#464a4b'\n  on-secondary-container: '#b6b9bb'\n  tertiary: '#c6c6c9'\n  on-tertiary: '#2f3133'\n  tertiary-container: '#6c6d6f'\n  on-tertiary-container: '#f0f0f2'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dde1ff'\n  primary-fixed-dim: '#b8c3ff'\n  on-primary-fixed: '#001356'\n  on-primary-fixed-variant: '#0035be'\n  secondary-fixed: '#e0e3e5'\n  secondary-fixed-dim: '#c4c7c9'\n  on-secondary-fixed: '#191c1e'\n  on-secondary-fixed-variant: '#444749'\n  tertiary-fixed: '#e2e2e5'\n  tertiary-fixed-dim: '#c6c6c9'\n  on-tertiary-fixed: '#1a1c1e'\n  on-tertiary-fixed-variant: '#454749'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-lg:\n    fontFamily: Montserrat\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Montserrat\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Montserrat\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Montserrat\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  container-max: 1440px\n---\n\n## Brand & Style\nThe brand personality is rooted in high-performance automotive precision and luxury craftsmanship. It targets a discerning clientele that values meticulous care and technical excellence. The UI evokes the sensation of a high-end detailing studio: clean, organized, and technologically advanced.\n\nThe design style utilizes a **High-Contrast Editorial** approach mixed with **Glassmorphism**. It features a \"Ceramic\" finish—characterized by deep, glossy blacks and crisp whites—accented by \"Chrome\" highlights via Electric Cobalt. Surfaces are sharp and architectural, emphasizing a \"no-room-for-error\" philosophy. Visuals should be high-fidelity, using generous whitespace to allow hero imagery of reflective car surfaces to dominate the composition.\n\n## Colors\nThe palette is dominated by **Deep Midnight**, serving as the \"Deep\" background to mimic the infinite depth of a fresh ceramic coating. **Metallic Charcoal** provides the \"Surface\" layer for cards and containers, creating subtle separation without losing the dark aesthetic. \n\n**Electric Cobalt** is used sparingly but with high impact for technical highlights, interactive states, and primary actions, representing the \"spark\" of electricity and high-performance fluids. **Crisp Arctic White** is reserved for primary typography and high-contrast iconography, ensuring maximum legibility against the dark void of the background.\n\n## Typography\nThe typography strategy pairings high-performance strength with technical clarity. **Montserrat** is used for headlines to convey power and geometric perfection. For body copy, **Hanken Grotesk** offers a clean, spacious reading experience that feels modern and approachable. \n\nA third typeface, **JetBrains Mono**, is introduced for technical labels, specifications, and pricing data to reinforce the \"technical service\" aspect of mobile detailing. All caps should be used for `label-sm` to create a \"technical blueprint\" aesthetic.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a fluid 4-column model on mobile. A 4px baseline grid ensures technical alignment.\n\nMargins are intentionally generous (`64px` on desktop) to create an editorial, premium feel that avoids information density. Content should be grouped in clear, high-contrast sections with substantial vertical padding (`128px` or more) to separate different service tiers or brand stories. Elements should align to a strict vertical axis to maintain the \"razor-sharp\" brand promise.\n\n## Elevation & Depth\nDepth is achieved through **Glassmorphism** and **Tonal Layers** rather than traditional shadows. \n- **Tier 1 (Base):** Deep Midnight (#0A0A0B).\n- **Tier 2 (Surface):** Metallic Charcoal (#1A1C1E) with a 1px solid border (#2D2F31).\n- **Tier 3 (Floating):** Semi-transparent Metallic Charcoal (70% opacity) with a background blur (20px) and a subtle 1px \"Chrome\" highlight border on the top and left edges.\n\nShadows, if used, must be \"Long and Sharp\"—low spread, high offset, and very low opacity, mimicking the hard directional lighting of a car photography studio.\n\n## Shapes\nThe shape language is strictly **Sharp**. To emphasize precision and the \"razor-edge\" of professional detailing, the `roundedness` is set to `0`. \n\nButtons, input fields, cards, and images must use 90-degree corners. This geometric rigidity differentiates the brand from \"soft\" consumer apps and aligns it with luxury automotive design and architectural blueprints.\n\n## Components\n- **Buttons:** Primary buttons use a solid Electric Cobalt background with White text, using a heavy weight Montserrat. Secondary buttons use a \"Ghost\" style with a 2px white border and no fill. All buttons are rectangular with zero radius.\n- **Inputs:** Fields use the Metallic Charcoal background with a 1px border that turns Electric Cobalt on focus. Labels use JetBrains Mono in all caps.\n- **Cards:** Service cards feature a subtle glassmorphic background-blur. Imagery within cards should fill the top half, with a 1px internal divider separating text.\n- **Chips/Status:** Use a monospaced font. \"Active\" or \"Premium\" statuses should use an Electric Cobalt glow (thin outer stroke) rather than a solid fill.\n- **Progress Bars:** Use for service tracking (e.g., \"Polishing Phase\"). Use a high-contrast white-on-charcoal track with a glowing Electric Cobalt indicator.\n- **Service Lists:** Use large numeric indicators (e.g., 01, 02) in a thin weight Montserrat to guide the user through the detailing process.",
+            "font": "MONTSERRAT",
+            "headlineFont": "MONTSERRAT",
+            "headlineFontFamily": "Montserrat",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#131314",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#313031",
+              "inverse_primary": "#124af0",
+              "inverse_surface": "#e5e2e3",
+              "on_background": "#e5e2e3",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#002388",
+              "on_primary_container": "#efefff",
+              "on_primary_fixed": "#001356",
+              "on_primary_fixed_variant": "#0035be",
+              "on_secondary": "#2d3133",
+              "on_secondary_container": "#b6b9bb",
+              "on_secondary_fixed": "#191c1e",
+              "on_secondary_fixed_variant": "#444749",
+              "on_surface": "#e5e2e3",
+              "on_surface_variant": "#c4c5d9",
+              "on_tertiary": "#2f3133",
+              "on_tertiary_container": "#f0f0f2",
+              "on_tertiary_fixed": "#1a1c1e",
+              "on_tertiary_fixed_variant": "#454749",
+              "outline": "#8e90a2",
+              "outline_variant": "#434656",
+              "primary": "#b8c3ff",
+              "primary_container": "#2e5bff",
+              "primary_fixed": "#dde1ff",
+              "primary_fixed_dim": "#b8c3ff",
+              "secondary": "#c4c7c9",
+              "secondary_container": "#464a4b",
+              "secondary_fixed": "#e0e3e5",
+              "secondary_fixed_dim": "#c4c7c9",
+              "surface": "#131314",
+              "surface_bright": "#3a393a",
+              "surface_container": "#201f20",
+              "surface_container_high": "#2a2a2b",
+              "surface_container_highest": "#353436",
+              "surface_container_low": "#1c1b1c",
+              "surface_container_lowest": "#0e0e0f",
+              "surface_dim": "#131314",
+              "surface_tint": "#b8c3ff",
+              "surface_variant": "#353436",
+              "tertiary": "#c6c6c9",
+              "tertiary_container": "#6c6d6f",
+              "tertiary_fixed": "#e2e2e5",
+              "tertiary_fixed_dim": "#c6c6c9"
+            },
+            "overrideNeutralColor": "#0a0a0b",
+            "overridePrimaryColor": "#2e5bff",
+            "overrideSecondaryColor": "#f8fafc",
+            "overrideTertiaryColor": "#1a1c1e",
+            "spacing": {
+              "container-max": "1440px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Montserrat",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "label-md": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.4"
+              },
+              "label-sm": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.4"
+              }
+            }
+          }
+        },
+        "name": "assets/941adadcc9f740c3a6897e98f401ab81",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "2c504d8d2d0b4c959a470db638f1eb7f",
+            "name": "projects/14637578085897543538/screens/2c504d8d2d0b4c959a470db638f1eb7f",
+            "prompt": "A stunning, close-up cinematic shot of a luxury black sports car after a professional ceramic coating. The surface is like a mirror, reflecting sharp architectural lines and a deep, wet gloss. High-end automotive detailing, 'Ceramic & Chrome' aesthetic. Deep shadows, electric blue highlights on the metallic edges. Professional photography, 8k resolution, sleek and modern.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuR2HA3CCBYJEu3Ps38WDwGEEReKGnBko4B4bmmpdGnW8aiFqE7bsWHeG5hYFui9Z_SGwG4HsPtOsA7JCgktMxVZasb6_HBMhYF_IoUVdVbZ_K0BJH5Nl4lNBAQ629y2KiswgItyjx5rN-aDWg3cqm5Y0WLuv0Ya6Uuks5orT-f2IhSX_yWZn8kcUsBZ2Ew1CGUsjVhNKpRpyn2n7bB-VU1nD1sNBxtAS_JNOIoxYQw1W3_lhtEJVKWE1Lo",
+              "name": "projects/14637578085897543538/files/81952bb2044d4bd582c8942ef633be31"
+            },
+            "theme": {},
+            "title": "A stunning, close-up cinematic shot of a luxury black sports car after a professional ceramic coating. The surface is like a mirror, reflecting sharp architectural lines and a deep, wet gloss. High-end automotive detailing, 'Ceramic & Chrome' aesthetic. Deep shadows, electric blue highlights on the metallic edges. Professional photography, 8k resolution, sleek and modern.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "864",
+            "id": "108b8511e9c940f6bd2ec7ebbb5a0024",
+            "name": "projects/14637578085897543538/screens/108b8511e9c940f6bd2ec7ebbb5a0024",
+            "prompt": "A high-end, modern Class A RV with a flawless, polished exterior. Parked in a scenic Oklahoma landscape at sunset. Premium RV detailing and protection. Professional photography.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuWFVqaah9ixQ-dPAYZYrJM7XWLH9DS9I06TSCL11QW22AbAXYdx0jzdmFPqIau5AXyZkmuS3IrAz5mqicI5EFp_a-zvU-D84c5azixMjx-4xrLwu-emKULw3a58z98MVECPnLP0ou6XwNrTMMLgdEjzY14RwvYYZAyOeucFP0Fc-5zQSsIgWE1O_ULecYejStmTaORO3ixuGwx6jUcvEjoTGbSZEHPOLdkvAGFA2tRHDRwH-yhAfVEM52f",
+              "name": "projects/14637578085897543538/files/fd7d54e607c84801a28c0b60d6ef3a79"
+            },
+            "theme": {},
+            "title": "A high-end, modern Class A RV with a flawless, polished exterior. Parked in a scenic Oklahoma landscape at sunset. Premium RV detailing and protection. Professional photography.",
+            "width": "1184"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "864",
+            "id": "93a5a1a374324edd9951ae5a8e231bd6",
+            "name": "projects/14637578085897543538/screens/93a5a1a374324edd9951ae5a8e231bd6",
+            "prompt": "A luxury yacht being detailed at a sun-drenched marina. Focus on the sparkling white fiberglass and polished chrome railings. High-end marine detailing. Professional, bright, clean aesthetic.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvBNSrFbekxBihOMvuusYULYvt5k2sK3jzzt83mk8XSgu4jUpSyAmtTKm2g3Mwdlk3HMCdeLsILLPHe5NdaN4vR1Y3g5HTPbMs8qDPrlAZkc9BazA72KCpV6n1Q1lA4dZDFCK71l5f1AIr3LOf-ItyGshHOaDnFltN2gLgqx52n-Mgc8--51gzecX6jeRRrTYqGq3CnyUV9XtSFMrM-l7W_74p65WxtBMUB0i2e65lMKCl5wkVihn2N5-Gn",
+              "name": "projects/14637578085897543538/files/f53f35f1871e4489b0c27f4cc7d96e1e"
+            },
+            "theme": {},
+            "title": "A luxury yacht being detailed at a sun-drenched marina. Focus on the sparkling white fiberglass and polished chrome railings. High-end marine detailing. Professional, bright, clean aesthetic.",
+            "width": "1184"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Ceramic & Chrome",
+                "styleGuidelines": "## Brand & Style\nThe brand personality is rooted in high-performance automotive precision and luxury craftsmanship. It targets a discerning clientele that values meticulous care and technical excellence. The UI evokes the sensation of a high-end detailing studio: clean, organized, and technologically advanced.\n\nThe design style utilizes a **High-Contrast Editorial** approach mixed with **Glassmorphism**. It features a \"Ceramic\" finish—characterized by deep, glossy blacks and crisp whites—accented by \"Chrome\" highlights via Electric Cobalt. Surfaces are sharp and architectural, emphasizing a \"no-room-for-error\" philosophy. Visuals should be high-fidelity, using generous whitespace to allow hero imagery of reflective car surfaces to dominate the composition.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a fluid 4-column model on mobile. A 4px baseline grid ensures technical alignment.\n\nMargins are intentionally generous (`64px` on desktop) to create an editorial, premium feel that avoids information density. Content should be grouped in clear, high-contrast sections with substantial vertical padding (`128px` or more) to separate different service tiers or brand stories. Elements should align to a strict vertical axis to maintain the \"razor-sharp\" brand promise.\n\n## Elevation & Depth\nDepth is achieved through **Glassmorphism** and **Tonal Layers** rather than traditional shadows. \n- **Tier 1 (Base):** Deep Midnight (#0A0A0B).\n- **Tier 2 (Surface):** Metallic Charcoal (#1A1C1E) with a 1px solid border (#2D2F31).\n- **Tier 3 (Floating):** Semi-transparent Metallic Charcoal (70% opacity) with a background blur (20px) and a subtle 1px \"Chrome\" highlight border on the top and left edges.\n\nShadows, if used, must be \"Long and Sharp\"—low spread, high offset, and very low opacity, mimicking the hard directional lighting of a car photography studio.\n\n## Components\n- **Buttons:** Primary buttons use a solid Electric Cobalt background with White text, using a heavy weight Montserrat. Secondary buttons use a \"Ghost\" style with a 2px white border and no fill. All buttons are rectangular with zero radius.\n- **Inputs:** Fields use the Metallic Charcoal background with a 1px border that turns Electric Cobalt on focus. Labels use JetBrains Mono in all caps.\n- **Cards:** Service cards feature a subtle glassmorphic background-blur. Imagery within cards should fill the top half, with a 1px internal divider separating text.\n- **Chips/Status:** Use a monospaced font. \"Active\" or \"Premium\" statuses should use an Electric Cobalt glow (thin outer stroke) rather than a solid fill.\n- **Progress Bars:** Use for service tracking (e.g., \"Polishing Phase\"). Use a high-contrast white-on-charcoal track with a glowing Electric Cobalt indicator.\n- **Service Lists:** Use large numeric indicators (e.g., 01, 02) in a thin weight Montserrat to guide the user through the detailing process.",
+                "theme": {
+                  "bodyFont": "HANKEN_GROTESK",
+                  "bodyFontFamily": "Hanken Grotesk",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#2e5bff",
+                  "designMd": "---\nname: Ceramic & Chrome\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#3a393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1c1b1c'\n  surface-container: '#201f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#c4c5d9'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#313031'\n  outline: '#8e90a2'\n  outline-variant: '#434656'\n  surface-tint: '#b8c3ff'\n  primary: '#b8c3ff'\n  on-primary: '#002388'\n  primary-container: '#2e5bff'\n  on-primary-container: '#efefff'\n  inverse-primary: '#124af0'\n  secondary: '#c4c7c9'\n  on-secondary: '#2d3133'\n  secondary-container: '#464a4b'\n  on-secondary-container: '#b6b9bb'\n  tertiary: '#c6c6c9'\n  on-tertiary: '#2f3133'\n  tertiary-container: '#6c6d6f'\n  on-tertiary-container: '#f0f0f2'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dde1ff'\n  primary-fixed-dim: '#b8c3ff'\n  on-primary-fixed: '#001356'\n  on-primary-fixed-variant: '#0035be'\n  secondary-fixed: '#e0e3e5'\n  secondary-fixed-dim: '#c4c7c9'\n  on-secondary-fixed: '#191c1e'\n  on-secondary-fixed-variant: '#444749'\n  tertiary-fixed: '#e2e2e5'\n  tertiary-fixed-dim: '#c6c6c9'\n  on-tertiary-fixed: '#1a1c1e'\n  on-tertiary-fixed-variant: '#454749'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-lg:\n    fontFamily: Montserrat\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Montserrat\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Montserrat\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Montserrat\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  container-max: 1440px\n---\n\n## Brand & Style\nThe brand personality is rooted in high-performance automotive precision and luxury craftsmanship. It targets a discerning clientele that values meticulous care and technical excellence. The UI evokes the sensation of a high-end detailing studio: clean, organized, and technologically advanced.\n\nThe design style utilizes a **High-Contrast Editorial** approach mixed with **Glassmorphism**. It features a \"Ceramic\" finish—characterized by deep, glossy blacks and crisp whites—accented by \"Chrome\" highlights via Electric Cobalt. Surfaces are sharp and architectural, emphasizing a \"no-room-for-error\" philosophy. Visuals should be high-fidelity, using generous whitespace to allow hero imagery of reflective car surfaces to dominate the composition.\n\n## Colors\nThe palette is dominated by **Deep Midnight**, serving as the \"Deep\" background to mimic the infinite depth of a fresh ceramic coating. **Metallic Charcoal** provides the \"Surface\" layer for cards and containers, creating subtle separation without losing the dark aesthetic. \n\n**Electric Cobalt** is used sparingly but with high impact for technical highlights, interactive states, and primary actions, representing the \"spark\" of electricity and high-performance fluids. **Crisp Arctic White** is reserved for primary typography and high-contrast iconography, ensuring maximum legibility against the dark void of the background.\n\n## Typography\nThe typography strategy pairings high-performance strength with technical clarity. **Montserrat** is used for headlines to convey power and geometric perfection. For body copy, **Hanken Grotesk** offers a clean, spacious reading experience that feels modern and approachable. \n\nA third typeface, **JetBrains Mono**, is introduced for technical labels, specifications, and pricing data to reinforce the \"technical service\" aspect of mobile detailing. All caps should be used for `label-sm` to create a \"technical blueprint\" aesthetic.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a fluid 4-column model on mobile. A 4px baseline grid ensures technical alignment.\n\nMargins are intentionally generous (`64px` on desktop) to create an editorial, premium feel that avoids information density. Content should be grouped in clear, high-contrast sections with substantial vertical padding (`128px` or more) to separate different service tiers or brand stories. Elements should align to a strict vertical axis to maintain the \"razor-sharp\" brand promise.\n\n## Elevation & Depth\nDepth is achieved through **Glassmorphism** and **Tonal Layers** rather than traditional shadows. \n- **Tier 1 (Base):** Deep Midnight (#0A0A0B).\n- **Tier 2 (Surface):** Metallic Charcoal (#1A1C1E) with a 1px solid border (#2D2F31).\n- **Tier 3 (Floating):** Semi-transparent Metallic Charcoal (70% opacity) with a background blur (20px) and a subtle 1px \"Chrome\" highlight border on the top and left edges.\n\nShadows, if used, must be \"Long and Sharp\"—low spread, high offset, and very low opacity, mimicking the hard directional lighting of a car photography studio.\n\n## Shapes\nThe shape language is strictly **Sharp**. To emphasize precision and the \"razor-edge\" of professional detailing, the `roundedness` is set to `0`. \n\nButtons, input fields, cards, and images must use 90-degree corners. This geometric rigidity differentiates the brand from \"soft\" consumer apps and aligns it with luxury automotive design and architectural blueprints.\n\n## Components\n- **Buttons:** Primary buttons use a solid Electric Cobalt background with White text, using a heavy weight Montserrat. Secondary buttons use a \"Ghost\" style with a 2px white border and no fill. All buttons are rectangular with zero radius.\n- **Inputs:** Fields use the Metallic Charcoal background with a 1px border that turns Electric Cobalt on focus. Labels use JetBrains Mono in all caps.\n- **Cards:** Service cards feature a subtle glassmorphic background-blur. Imagery within cards should fill the top half, with a 1px internal divider separating text.\n- **Chips/Status:** Use a monospaced font. \"Active\" or \"Premium\" statuses should use an Electric Cobalt glow (thin outer stroke) rather than a solid fill.\n- **Progress Bars:** Use for service tracking (e.g., \"Polishing Phase\"). Use a high-contrast white-on-charcoal track with a glowing Electric Cobalt indicator.\n- **Service Lists:** Use large numeric indicators (e.g., 01, 02) in a thin weight Montserrat to guide the user through the detailing process.",
+                  "font": "MONTSERRAT",
+                  "headlineFont": "MONTSERRAT",
+                  "headlineFontFamily": "Montserrat",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#131314",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#313031",
+                    "inverse_primary": "#124af0",
+                    "inverse_surface": "#e5e2e3",
+                    "on_background": "#e5e2e3",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#002388",
+                    "on_primary_container": "#efefff",
+                    "on_primary_fixed": "#001356",
+                    "on_primary_fixed_variant": "#0035be",
+                    "on_secondary": "#2d3133",
+                    "on_secondary_container": "#b6b9bb",
+                    "on_secondary_fixed": "#191c1e",
+                    "on_secondary_fixed_variant": "#444749",
+                    "on_surface": "#e5e2e3",
+                    "on_surface_variant": "#c4c5d9",
+                    "on_tertiary": "#2f3133",
+                    "on_tertiary_container": "#f0f0f2",
+                    "on_tertiary_fixed": "#1a1c1e",
+                    "on_tertiary_fixed_variant": "#454749",
+                    "outline": "#8e90a2",
+                    "outline_variant": "#434656",
+                    "primary": "#b8c3ff",
+                    "primary_container": "#2e5bff",
+                    "primary_fixed": "#dde1ff",
+                    "primary_fixed_dim": "#b8c3ff",
+                    "secondary": "#c4c7c9",
+                    "secondary_container": "#464a4b",
+                    "secondary_fixed": "#e0e3e5",
+                    "secondary_fixed_dim": "#c4c7c9",
+                    "surface": "#131314",
+                    "surface_bright": "#3a393a",
+                    "surface_container": "#201f20",
+                    "surface_container_high": "#2a2a2b",
+                    "surface_container_highest": "#353436",
+                    "surface_container_low": "#1c1b1c",
+                    "surface_container_lowest": "#0e0e0f",
+                    "surface_dim": "#131314",
+                    "surface_tint": "#b8c3ff",
+                    "surface_variant": "#353436",
+                    "tertiary": "#c6c6c9",
+                    "tertiary_container": "#6c6d6f",
+                    "tertiary_fixed": "#e2e2e5",
+                    "tertiary_fixed_dim": "#c6c6c9"
+                  },
+                  "overrideNeutralColor": "#0a0a0b",
+                  "overridePrimaryColor": "#2e5bff",
+                  "overrideSecondaryColor": "#f8fafc",
+                  "overrideTertiaryColor": "#1a1c1e",
+                  "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Montserrat",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "label-md": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "14px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.4"
+                    },
+                    "label-sm": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.4"
+                    }
+                  }
+                }
+              },
+              "name": "assets/941adadcc9f740c3a6897e98f401ab81",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "11576",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM5ZTM2OWYzYjVjZjRlOWRhNzU0MWVmYTc2YTM1OWI1EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDYzNzU3ODA4NTg5NzU0MzUzOA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/14637578085897543538/files/9952c9c1919246729601ae299460d53e"
+            },
+            "id": "fc1560bf50c341adb83ffdd82134b814",
+            "name": "projects/14637578085897543538/screens/fc1560bf50c341adb83ffdd82134b814",
+            "prompt": "Build the complete bespoke DESKTOP landing page for Adv Mobile Detailing LLC. \n\nVisual Identity: 'Ceramic & Chrome'. Use a Dark Mode palette (Midnight #0A0A0B, Charcoal #1A1C1E, Cobalt #2E5BFF). High-end, editorial feel with sharp corners and generous whitespace.\n\nSections:\n1. TopNavBar: Product name 'ADV MOBILE DETAILING', links (AUTO, MARINE, RV, CRAFTSMANSHIP), Action: 'BOOK NOW', 'DIRECT LINE: (405) 365-0108'.\n2. Hero: Headline: 'THE ARCHITECTS OF GLOSS.' Subheadline: 'Premier Mobile Detailing & Ceramic Protection for Auto, Marine, and RV. Precision-crafted in Oklahoma City.' Use {{DATA:IMAGE:IMAGE_5}} as the main background.\n3. #credibility: 'THE STANDARD.' List: 'CERAMIC PRO CERTIFIED', 'MOBILE STUDIO', 'FULL PROTECTION'.\n4. Services/Offerings: Use a 'Gallery' style layout. \n   - AUTO: 'Showroom Perfection.'\n   - MARINE: 'Ocean-Ready Protection.' using {{DATA:IMAGE:IMAGE_3}}.\n   - RV: 'Landscape Endurance.' using {{DATA:IMAGE:IMAGE_4}}.\n5. About: 'CRAFTSMANSHIP BEYOND THE SURFACE.' Narrative about the pursuit of the perfect finish. \n6. Visit (#visit): Text 'STUDIO & MOBILE OPERATIONS'. Address: '7804 Northwest 94th Street, Oklahoma City, OK 73132'. Include the required map-slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: 'INITIATE THE TRANSFORMATION.' Fields for Name, Service Type (Auto/Marine/RV), and Details. \n8. Footer: 'ADV MOBILE DETAILING LLC. PRECISION CRAFTED.' (405) 365-0108 · Advmobiledetailing@Gmail.com.\n\nTechnical: Smooth scroll, form validation UI, responsive at 375px. Use custom CSS properties from the design system.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtn-H41d246AlAIptkpEFkXOWyy__KwW1_0QTw1mPN-NhkrunIJ5ZHezwdLTI2ggpW_x5pQkqt6ksX0ezjNuRcT_f_GjIFHVVp1pxzyM_dtfwKzWzejSU1CfaSh35h85fUjE8lEAdAII_UpLDeFMEWU7QVsH3HnFRrf7BMNOMIhn1jfcvWXZGtajiZbvHnJ9Xhc4lBXZuqcLI00ISN92Kmy1jCTJgpoSYSRwqZnGmmJC8MUPJY08huUGFwh",
+              "name": "projects/14637578085897543538/files/4477b66ec0424589bbb9eec0dd5139d9"
+            },
+            "theme": {
+              "bodyFont": "HANKEN_GROTESK",
+              "bodyFontFamily": "Hanken Grotesk",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#2e5bff",
+              "designMd": "---\nname: Ceramic & Chrome\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#3a393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1c1b1c'\n  surface-container: '#201f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353436'\n  on-surface: '#e5e2e3'\n  on-surface-variant: '#c4c5d9'\n  inverse-surface: '#e5e2e3'\n  inverse-on-surface: '#313031'\n  outline: '#8e90a2'\n  outline-variant: '#434656'\n  surface-tint: '#b8c3ff'\n  primary: '#b8c3ff'\n  on-primary: '#002388'\n  primary-container: '#2e5bff'\n  on-primary-container: '#efefff'\n  inverse-primary: '#124af0'\n  secondary: '#c4c7c9'\n  on-secondary: '#2d3133'\n  secondary-container: '#464a4b'\n  on-secondary-container: '#b6b9bb'\n  tertiary: '#c6c6c9'\n  on-tertiary: '#2f3133'\n  tertiary-container: '#6c6d6f'\n  on-tertiary-container: '#f0f0f2'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#dde1ff'\n  primary-fixed-dim: '#b8c3ff'\n  on-primary-fixed: '#001356'\n  on-primary-fixed-variant: '#0035be'\n  secondary-fixed: '#e0e3e5'\n  secondary-fixed-dim: '#c4c7c9'\n  on-secondary-fixed: '#191c1e'\n  on-secondary-fixed-variant: '#444749'\n  tertiary-fixed: '#e2e2e5'\n  tertiary-fixed-dim: '#c6c6c9'\n  on-tertiary-fixed: '#1a1c1e'\n  on-tertiary-fixed-variant: '#454749'\n  background: '#131314'\n  on-background: '#e5e2e3'\n  surface-variant: '#353436'\ntypography:\n  display-lg:\n    fontFamily: Montserrat\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Montserrat\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Montserrat\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Montserrat\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-md:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.05em\n  label-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  container-max: 1440px\n---\n\n## Brand & Style\nThe brand personality is rooted in high-performance automotive precision and luxury craftsmanship. It targets a discerning clientele that values meticulous care and technical excellence. The UI evokes the sensation of a high-end detailing studio: clean, organized, and technologically advanced.\n\nThe design style utilizes a **High-Contrast Editorial** approach mixed with **Glassmorphism**. It features a \"Ceramic\" finish—characterized by deep, glossy blacks and crisp whites—accented by \"Chrome\" highlights via Electric Cobalt. Surfaces are sharp and architectural, emphasizing a \"no-room-for-error\" philosophy. Visuals should be high-fidelity, using generous whitespace to allow hero imagery of reflective car surfaces to dominate the composition.\n\n## Colors\nThe palette is dominated by **Deep Midnight**, serving as the \"Deep\" background to mimic the infinite depth of a fresh ceramic coating. **Metallic Charcoal** provides the \"Surface\" layer for cards and containers, creating subtle separation without losing the dark aesthetic. \n\n**Electric Cobalt** is used sparingly but with high impact for technical highlights, interactive states, and primary actions, representing the \"spark\" of electricity and high-performance fluids. **Crisp Arctic White** is reserved for primary typography and high-contrast iconography, ensuring maximum legibility against the dark void of the background.\n\n## Typography\nThe typography strategy pairings high-performance strength with technical clarity. **Montserrat** is used for headlines to convey power and geometric perfection. For body copy, **Hanken Grotesk** offers a clean, spacious reading experience that feels modern and approachable. \n\nA third typeface, **JetBrains Mono**, is introduced for technical labels, specifications, and pricing data to reinforce the \"technical service\" aspect of mobile detailing. All caps should be used for `label-sm` to create a \"technical blueprint\" aesthetic.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a fluid 4-column model on mobile. A 4px baseline grid ensures technical alignment.\n\nMargins are intentionally generous (`64px` on desktop) to create an editorial, premium feel that avoids information density. Content should be grouped in clear, high-contrast sections with substantial vertical padding (`128px` or more) to separate different service tiers or brand stories. Elements should align to a strict vertical axis to maintain the \"razor-sharp\" brand promise.\n\n## Elevation & Depth\nDepth is achieved through **Glassmorphism** and **Tonal Layers** rather than traditional shadows. \n- **Tier 1 (Base):** Deep Midnight (#0A0A0B).\n- **Tier 2 (Surface):** Metallic Charcoal (#1A1C1E) with a 1px solid border (#2D2F31).\n- **Tier 3 (Floating):** Semi-transparent Metallic Charcoal (70% opacity) with a background blur (20px) and a subtle 1px \"Chrome\" highlight border on the top and left edges.\n\nShadows, if used, must be \"Long and Sharp\"—low spread, high offset, and very low opacity, mimicking the hard directional lighting of a car photography studio.\n\n## Shapes\nThe shape language is strictly **Sharp**. To emphasize precision and the \"razor-edge\" of professional detailing, the `roundedness` is set to `0`. \n\nButtons, input fields, cards, and images must use 90-degree corners. This geometric rigidity differentiates the brand from \"soft\" consumer apps and aligns it with luxury automotive design and architectural blueprints.\n\n## Components\n- **Buttons:** Primary buttons use a solid Electric Cobalt background with White text, using a heavy weight Montserrat. Secondary buttons use a \"Ghost\" style with a 2px white border and no fill. All buttons are rectangular with zero radius.\n- **Inputs:** Fields use the Metallic Charcoal background with a 1px border that turns Electric Cobalt on focus. Labels use JetBrains Mono in all caps.\n- **Cards:** Service cards feature a subtle glassmorphic background-blur. Imagery within cards should fill the top half, with a 1px internal divider separating text.\n- **Chips/Status:** Use a monospaced font. \"Active\" or \"Premium\" statuses should use an Electric Cobalt glow (thin outer stroke) rather than a solid fill.\n- **Progress Bars:** Use for service tracking (e.g., \"Polishing Phase\"). Use a high-contrast white-on-charcoal track with a glowing Electric Cobalt indicator.\n- **Service Lists:** Use large numeric indicators (e.g., 01, 02) in a thin weight Montserrat to guide the user through the detailing process.",
+              "font": "MONTSERRAT",
+              "headlineFont": "MONTSERRAT",
+              "headlineFontFamily": "Montserrat",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#131314",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#313031",
+                "inverse_primary": "#124af0",
+                "inverse_surface": "#e5e2e3",
+                "on_background": "#e5e2e3",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#002388",
+                "on_primary_container": "#efefff",
+                "on_primary_fixed": "#001356",
+                "on_primary_fixed_variant": "#0035be",
+                "on_secondary": "#2d3133",
+                "on_secondary_container": "#b6b9bb",
+                "on_secondary_fixed": "#191c1e",
+                "on_secondary_fixed_variant": "#444749",
+                "on_surface": "#e5e2e3",
+                "on_surface_variant": "#c4c5d9",
+                "on_tertiary": "#2f3133",
+                "on_tertiary_container": "#f0f0f2",
+                "on_tertiary_fixed": "#1a1c1e",
+                "on_tertiary_fixed_variant": "#454749",
+                "outline": "#8e90a2",
+                "outline_variant": "#434656",
+                "primary": "#b8c3ff",
+                "primary_container": "#2e5bff",
+                "primary_fixed": "#dde1ff",
+                "primary_fixed_dim": "#b8c3ff",
+                "secondary": "#c4c7c9",
+                "secondary_container": "#464a4b",
+                "secondary_fixed": "#e0e3e5",
+                "secondary_fixed_dim": "#c4c7c9",
+                "surface": "#131314",
+                "surface_bright": "#3a393a",
+                "surface_container": "#201f20",
+                "surface_container_high": "#2a2a2b",
+                "surface_container_highest": "#353436",
+                "surface_container_low": "#1c1b1c",
+                "surface_container_lowest": "#0e0e0f",
+                "surface_dim": "#131314",
+                "surface_tint": "#b8c3ff",
+                "surface_variant": "#353436",
+                "tertiary": "#c6c6c9",
+                "tertiary_container": "#6c6d6f",
+                "tertiary_fixed": "#e2e2e5",
+                "tertiary_fixed_dim": "#c6c6c9"
+              },
+              "overrideNeutralColor": "#0a0a0b",
+              "overridePrimaryColor": "#2e5bff",
+              "overrideSecondaryColor": "#f8fafc",
+              "overrideTertiaryColor": "#1a1c1e",
+              "spacing": {
+                "container-max": "1440px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Montserrat",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "label-md": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "14px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.4"
+                },
+                "label-sm": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.4"
+                }
+              }
+            },
+            "title": "Adv Mobile Detailing - Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, production-ready landing page for **Adv Mobile Detailing LLC**, establishing a premium \"Ceramic & Chrome\" visual identity.\n\n### Design Highlights:\n*   **Visual Direction**: A high-performance \"Dark Mode\" aesthetic using a palette of Midnight, Metallic Charcoal, and Electric Cobalt. This reflects the deep gloss and precision of professional ceramic coatings.\n*   **Editorial Layout**: Moved away from generic templates to a structured, editorial-style layout. I've used sharp geometric lines and generous whitespace to communicate professional craftsmanship.\n*   **Custom Imagery**: Generated high-fidelity visual assets for Automotive, Marine, and RV segments, ensuring each service category feels distinctly premium.\n*   **Technical Implementation**: \n    *   Full semantic HTML5 structure.\n    *   Responsive design targeting desktop and mobile (375px+).\n    *   Custom CSS properties for brand-wide consistency.\n    *   Included the requested `map-slot` and a high-conversion \"Initiate the Transformation\" contact form.\n\nThe site is now ready for your review on the canvas. How would you like to proceed?"
+    },
+    {
+      "suggestion": "Refine the service section layout"
+    },
+    {
+      "suggestion": "Adjust the cobalt accent color brightness"
+    },
+    {
+      "suggestion": "See the mobile version of the design"
+    }
+  ],
+  "projectId": "14637578085897543538",
+  "sessionId": "13564298774352130170"
+}
