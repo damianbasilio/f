@@ -1,0 +1,450 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Automotive Editorial System",
+        "styleGuidelines": "## Brand & Style\n\nThis design system is built upon the intersection of high-performance automotive engineering and premium editorial design. It targets a clientele that values precision, technical expertise, and a sophisticated service experience. The aesthetic leans heavily into a **Modern Editorial** style, utilizing structured layouts, high-contrast typography, and a technical grit that avoids the clichés of \"grease-monkey\" shops in favor of a \"modern laboratory\" feel.\n\nThe emotional response should be one of absolute confidence and controlled speed. We achieve this through a blend of **High-Contrast Bold** elements and **Corporate Modern** reliability. The UI should feel like a high-end digital dashboard: functional, data-rich, yet elegantly sparse where it matters most.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** system inspired by technical blueprints. We use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **The Macro/Micro Contrast:** Layouts should alternate between generous, airy sections (macro spacing) and dense, information-heavy \"Data Blocks\" (micro spacing). \n- **The Blueprint Grid:** Use subtle 1px Machined Silver lines to separate sections, mimicking the look of an architectural or technical drawing.\n- **Speed Lines:** Horizontal separators should never be static; use 1px lines that vary in opacity from 0% to 40% across the container width to imply movement and focus.\n- **Breakpoints:**\n  - Mobile: < 600px (Margins: 16px)\n  - Tablet: 600px - 1024px (Margins: 32px)\n  - Desktop: > 1024px (Margins: 64px, Max-width: 1280px)\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Technical Outlines**. Depth is communicated through z-axis stacking of \"Deep Asphalt\" shades.\n\n- **Base Layer:** #12171D (Deep Asphalt).\n- **Surface Layer:** #1A1F26 (Slightly lighter, used for cards and containers).\n- **Overlay Layer:** #252B33 (Used for modals or elevated action items).\n- **Outlines:** Instead of shadows, use 1px \"Machined Silver\" borders at 15-20% opacity to define boundaries. \n- **Glow Effects:** Critical alerts or active \"Ignition Orange\" elements may use a soft, 8px gaussian blur of the same color at 20% opacity to simulate the glow of a dashboard indicator.\n\n## Components\n\n### Buttons\n- **Primary:** Background: Ignition Orange; Text: Deep Asphalt (Bold, Uppercase); Sharp 4px corners. No shadow.\n- **Secondary:** Background: Transparent; Border: 1px Machined Silver; Text: Neutral White.\n- **Tertiary:** Text-only with a leading \"speed line\" (a 24px horizontal 2px line) that expands on hover.\n\n### Data Blocks (Cards)\nCards are used to display service details. They should feature a `label-technical` header in monospaced type, followed by a `headline-md` title. Use 1px internal dividers to separate price, duration, and technical specs.\n\n### Input Fields\nDark backgrounds (#1A1F26) with a bottom-only 1px border in Machined Silver. The border transitions to Ignition Orange on focus. Use JetBrains Mono for placeholder text to maintain the technical vibe.\n\n### Chips/Tags\nSmall, rectangular containers with `label-technical` text. Use a low-opacity Machined Silver background. These are used for status indicators like \"In Progress\" or \"Completed.\"\n\n### Progress Indicators\nLinear bars only. Use a thin 2px grey track with a high-contrast Ignition Orange fill to mimic a tachometer or digital gauge.",
+        "theme": {
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#ff5f1f",
+          "designMd": "---\nname: Automotive Editorial System\ncolors:\n  surface: '#111415'\n  surface-dim: '#111415'\n  surface-bright: '#37393b'\n  surface-container-lowest: '#0c0f10'\n  surface-container-low: '#191c1e'\n  surface-container: '#1d2022'\n  surface-container-high: '#282a2c'\n  surface-container-highest: '#323537'\n  on-surface: '#e1e2e4'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e1e2e4'\n  inverse-on-surface: '#2e3132'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c2c7cf'\n  on-secondary: '#2c3137'\n  secondary-container: '#42474e'\n  on-secondary-container: '#b1b5be'\n  tertiary: '#bec7d5'\n  on-tertiary: '#28313c'\n  tertiary-container: '#8c95a2'\n  on-tertiary-container: '#252e38'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#dee3eb'\n  secondary-fixed-dim: '#c2c7cf'\n  on-secondary-fixed: '#171c22'\n  on-secondary-fixed-variant: '#42474e'\n  tertiary-fixed: '#dae3f1'\n  tertiary-fixed-dim: '#bec7d5'\n  on-tertiary-fixed: '#131c26'\n  on-tertiary-fixed-variant: '#3f4753'\n  background: '#111415'\n  on-background: '#e1e2e4'\n  surface-variant: '#323537'\ntypography:\n  headline-display:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-technical:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  block-gap: 120px\n---\n\n## Brand & Style\n\nThis design system is built upon the intersection of high-performance automotive engineering and premium editorial design. It targets a clientele that values precision, technical expertise, and a sophisticated service experience. The aesthetic leans heavily into a **Modern Editorial** style, utilizing structured layouts, high-contrast typography, and a technical grit that avoids the clichés of \"grease-monkey\" shops in favor of a \"modern laboratory\" feel.\n\nThe emotional response should be one of absolute confidence and controlled speed. We achieve this through a blend of **High-Contrast Bold** elements and **Corporate Modern** reliability. The UI should feel like a high-end digital dashboard: functional, data-rich, yet elegantly sparse where it matters most.\n\n## Colors\n\nThe palette is rooted in the \"Deep Asphalt\" environment, using a dark mode default to emphasize depth and premium quality.\n\n- **Deep Asphalt (Secondary):** A rich, dark charcoal navy used for the primary canvas and deep background layers. It provides the foundation of stability.\n- **Ignition Orange (Primary):** A high-vibrancy accent reserved strictly for calls to action, active states, and critical performance indicators. It represents energy and the spark of ignition.\n- **Machined Silver (Tertiary):** A spectrum of cool greys used for borders, secondary text, and technical illustrations. It evokes the feel of brushed aluminum and steel components.\n- **Pure White (Neutral):** Used primarily for body copy and high-level headings to ensure maximum legibility against the dark backgrounds.\n\n## Typography\n\nTypography is the primary driver of the brand's editorial authority. \n\n**Archivo Narrow** is used for all major headings. Its condensed nature evokes speed, efficiency, and the verticality of luxury magazine covers. For the body, **Hanken Grotesk** provides a sharp, contemporary sans-serif experience that remains highly legible during long technical reads. \n\nWe introduce **JetBrains Mono** for \"data blocks\" and technical specifications. This monospaced font reinforces the engineering narrative, making service details and pricing feel like precise telemetry data. \n\nUse heavy weight contrasts—pair `headline-display` with `body-md` to create a dramatic hierarchy that draws the eye to key service offerings.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** system inspired by technical blueprints. We use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **The Macro/Micro Contrast:** Layouts should alternate between generous, airy sections (macro spacing) and dense, information-heavy \"Data Blocks\" (micro spacing). \n- **The Blueprint Grid:** Use subtle 1px Machined Silver lines to separate sections, mimicking the look of an architectural or technical drawing.\n- **Speed Lines:** Horizontal separators should never be static; use 1px lines that vary in opacity from 0% to 40% across the container width to imply movement and focus.\n- **Breakpoints:**\n  - Mobile: < 600px (Margins: 16px)\n  - Tablet: 600px - 1024px (Margins: 32px)\n  - Desktop: > 1024px (Margins: 64px, Max-width: 1280px)\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Technical Outlines**. Depth is communicated through z-axis stacking of \"Deep Asphalt\" shades.\n\n- **Base Layer:** #12171D (Deep Asphalt).\n- **Surface Layer:** #1A1F26 (Slightly lighter, used for cards and containers).\n- **Overlay Layer:** #252B33 (Used for modals or elevated action items).\n- **Outlines:** Instead of shadows, use 1px \"Machined Silver\" borders at 15-20% opacity to define boundaries. \n- **Glow Effects:** Critical alerts or active \"Ignition Orange\" elements may use a soft, 8px gaussian blur of the same color at 20% opacity to simulate the glow of a dashboard indicator.\n\n## Shapes\n\nThe shape language is **Soft (0.25rem)**. While a completely sharp edge feels aggressive, a small radius suggests \"machined precision\"—like the chamfered edge of a metallic engine part.\n\n- **Primary Buttons:** Utilize a 4px (0.25rem) radius.\n- **Data Cards:** Utilize a 4px (0.25rem) radius with a subtle 1px border.\n- **Input Fields:** Maintain the 4px radius for a consistent, \"tooled\" look.\n- **Iconography:** Use linear, 2px stroke icons with square terminals to match the technical font choices.\n\n## Components\n\n### Buttons\n- **Primary:** Background: Ignition Orange; Text: Deep Asphalt (Bold, Uppercase); Sharp 4px corners. No shadow.\n- **Secondary:** Background: Transparent; Border: 1px Machined Silver; Text: Neutral White.\n- **Tertiary:** Text-only with a leading \"speed line\" (a 24px horizontal 2px line) that expands on hover.\n\n### Data Blocks (Cards)\nCards are used to display service details. They should feature a `label-technical` header in monospaced type, followed by a `headline-md` title. Use 1px internal dividers to separate price, duration, and technical specs.\n\n### Input Fields\nDark backgrounds (#1A1F26) with a bottom-only 1px border in Machined Silver. The border transitions to Ignition Orange on focus. Use JetBrains Mono for placeholder text to maintain the technical vibe.\n\n### Chips/Tags\nSmall, rectangular containers with `label-technical` text. Use a low-opacity Machined Silver background. These are used for status indicators like \"In Progress\" or \"Completed.\"\n\n### Progress Indicators\nLinear bars only. Use a thin 2px grey track with a high-contrast Ignition Orange fill to mimic a tachometer or digital gauge.",
+          "font": "ARCHIVO_NARROW",
+          "headlineFont": "ARCHIVO_NARROW",
+          "headlineFontFamily": "Archivo Narrow",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#111415",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#2e3132",
+            "inverse_primary": "#ab3600",
+            "inverse_surface": "#e1e2e4",
+            "on_background": "#e1e2e4",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#5c1900",
+            "on_primary_container": "#561700",
+            "on_primary_fixed": "#390c00",
+            "on_primary_fixed_variant": "#832700",
+            "on_secondary": "#2c3137",
+            "on_secondary_container": "#b1b5be",
+            "on_secondary_fixed": "#171c22",
+            "on_secondary_fixed_variant": "#42474e",
+            "on_surface": "#e1e2e4",
+            "on_surface_variant": "#e3bfb3",
+            "on_tertiary": "#28313c",
+            "on_tertiary_container": "#252e38",
+            "on_tertiary_fixed": "#131c26",
+            "on_tertiary_fixed_variant": "#3f4753",
+            "outline": "#aa897f",
+            "outline_variant": "#5b4138",
+            "primary": "#ffb59c",
+            "primary_container": "#ff5f1f",
+            "primary_fixed": "#ffdbcf",
+            "primary_fixed_dim": "#ffb59c",
+            "secondary": "#c2c7cf",
+            "secondary_container": "#42474e",
+            "secondary_fixed": "#dee3eb",
+            "secondary_fixed_dim": "#c2c7cf",
+            "surface": "#111415",
+            "surface_bright": "#37393b",
+            "surface_container": "#1d2022",
+            "surface_container_high": "#282a2c",
+            "surface_container_highest": "#323537",
+            "surface_container_low": "#191c1e",
+            "surface_container_lowest": "#0c0f10",
+            "surface_dim": "#111415",
+            "surface_tint": "#ffb59c",
+            "surface_variant": "#323537",
+            "tertiary": "#bec7d5",
+            "tertiary_container": "#8c95a2",
+            "tertiary_fixed": "#dae3f1",
+            "tertiary_fixed_dim": "#bec7d5"
+          },
+          "overrideNeutralColor": "#f4f5f7",
+          "overridePrimaryColor": "#ff5f1f",
+          "overrideSecondaryColor": "#12171d",
+          "overrideTertiaryColor": "#8e97a4",
+          "roundness": "ROUND_FOUR",
+          "spacing": {
+            "base": "8px",
+            "block-gap": "120px",
+            "container-max": "1280px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.5"
+            },
+            "button-text": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "14px",
+              "fontWeight": "700",
+              "lineHeight": "1.0"
+            },
+            "headline-display": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "80px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.04em",
+              "lineHeight": "1.0"
+            },
+            "headline-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "36px",
+              "fontWeight": "700",
+              "lineHeight": "1.1"
+            },
+            "headline-md": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "label-technical": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/35775b8658bb43eba3665a47d3748a69",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Automotive Editorial System",
+              "styleGuidelines": "## Brand & Style\n\nThis design system is built upon the intersection of high-performance automotive engineering and premium editorial design. It targets a clientele that values precision, technical expertise, and a sophisticated service experience. The aesthetic leans heavily into a **Modern Editorial** style, utilizing structured layouts, high-contrast typography, and a technical grit that avoids the clichés of \"grease-monkey\" shops in favor of a \"modern laboratory\" feel.\n\nThe emotional response should be one of absolute confidence and controlled speed. We achieve this through a blend of **High-Contrast Bold** elements and **Corporate Modern** reliability. The UI should feel like a high-end digital dashboard: functional, data-rich, yet elegantly sparse where it matters most.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** system inspired by technical blueprints. We use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **The Macro/Micro Contrast:** Layouts should alternate between generous, airy sections (macro spacing) and dense, information-heavy \"Data Blocks\" (micro spacing). \n- **The Blueprint Grid:** Use subtle 1px Machined Silver lines to separate sections, mimicking the look of an architectural or technical drawing.\n- **Speed Lines:** Horizontal separators should never be static; use 1px lines that vary in opacity from 0% to 40% across the container width to imply movement and focus.\n- **Breakpoints:**\n  - Mobile: < 600px (Margins: 16px)\n  - Tablet: 600px - 1024px (Margins: 32px)\n  - Desktop: > 1024px (Margins: 64px, Max-width: 1280px)\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Technical Outlines**. Depth is communicated through z-axis stacking of \"Deep Asphalt\" shades.\n\n- **Base Layer:** #12171D (Deep Asphalt).\n- **Surface Layer:** #1A1F26 (Slightly lighter, used for cards and containers).\n- **Overlay Layer:** #252B33 (Used for modals or elevated action items).\n- **Outlines:** Instead of shadows, use 1px \"Machined Silver\" borders at 15-20% opacity to define boundaries. \n- **Glow Effects:** Critical alerts or active \"Ignition Orange\" elements may use a soft, 8px gaussian blur of the same color at 20% opacity to simulate the glow of a dashboard indicator.\n\n## Components\n\n### Buttons\n- **Primary:** Background: Ignition Orange; Text: Deep Asphalt (Bold, Uppercase); Sharp 4px corners. No shadow.\n- **Secondary:** Background: Transparent; Border: 1px Machined Silver; Text: Neutral White.\n- **Tertiary:** Text-only with a leading \"speed line\" (a 24px horizontal 2px line) that expands on hover.\n\n### Data Blocks (Cards)\nCards are used to display service details. They should feature a `label-technical` header in monospaced type, followed by a `headline-md` title. Use 1px internal dividers to separate price, duration, and technical specs.\n\n### Input Fields\nDark backgrounds (#1A1F26) with a bottom-only 1px border in Machined Silver. The border transitions to Ignition Orange on focus. Use JetBrains Mono for placeholder text to maintain the technical vibe.\n\n### Chips/Tags\nSmall, rectangular containers with `label-technical` text. Use a low-opacity Machined Silver background. These are used for status indicators like \"In Progress\" or \"Completed.\"\n\n### Progress Indicators\nLinear bars only. Use a thin 2px grey track with a high-contrast Ignition Orange fill to mimic a tachometer or digital gauge.",
+              "theme": {
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#ff5f1f",
+                "designMd": "---\nname: Automotive Editorial System\ncolors:\n  surface: '#111415'\n  surface-dim: '#111415'\n  surface-bright: '#37393b'\n  surface-container-lowest: '#0c0f10'\n  surface-container-low: '#191c1e'\n  surface-container: '#1d2022'\n  surface-container-high: '#282a2c'\n  surface-container-highest: '#323537'\n  on-surface: '#e1e2e4'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e1e2e4'\n  inverse-on-surface: '#2e3132'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c2c7cf'\n  on-secondary: '#2c3137'\n  secondary-container: '#42474e'\n  on-secondary-container: '#b1b5be'\n  tertiary: '#bec7d5'\n  on-tertiary: '#28313c'\n  tertiary-container: '#8c95a2'\n  on-tertiary-container: '#252e38'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#dee3eb'\n  secondary-fixed-dim: '#c2c7cf'\n  on-secondary-fixed: '#171c22'\n  on-secondary-fixed-variant: '#42474e'\n  tertiary-fixed: '#dae3f1'\n  tertiary-fixed-dim: '#bec7d5'\n  on-tertiary-fixed: '#131c26'\n  on-tertiary-fixed-variant: '#3f4753'\n  background: '#111415'\n  on-background: '#e1e2e4'\n  surface-variant: '#323537'\ntypography:\n  headline-display:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-technical:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  block-gap: 120px\n---\n\n## Brand & Style\n\nThis design system is built upon the intersection of high-performance automotive engineering and premium editorial design. It targets a clientele that values precision, technical expertise, and a sophisticated service experience. The aesthetic leans heavily into a **Modern Editorial** style, utilizing structured layouts, high-contrast typography, and a technical grit that avoids the clichés of \"grease-monkey\" shops in favor of a \"modern laboratory\" feel.\n\nThe emotional response should be one of absolute confidence and controlled speed. We achieve this through a blend of **High-Contrast Bold** elements and **Corporate Modern** reliability. The UI should feel like a high-end digital dashboard: functional, data-rich, yet elegantly sparse where it matters most.\n\n## Colors\n\nThe palette is rooted in the \"Deep Asphalt\" environment, using a dark mode default to emphasize depth and premium quality.\n\n- **Deep Asphalt (Secondary):** A rich, dark charcoal navy used for the primary canvas and deep background layers. It provides the foundation of stability.\n- **Ignition Orange (Primary):** A high-vibrancy accent reserved strictly for calls to action, active states, and critical performance indicators. It represents energy and the spark of ignition.\n- **Machined Silver (Tertiary):** A spectrum of cool greys used for borders, secondary text, and technical illustrations. It evokes the feel of brushed aluminum and steel components.\n- **Pure White (Neutral):** Used primarily for body copy and high-level headings to ensure maximum legibility against the dark backgrounds.\n\n## Typography\n\nTypography is the primary driver of the brand's editorial authority. \n\n**Archivo Narrow** is used for all major headings. Its condensed nature evokes speed, efficiency, and the verticality of luxury magazine covers. For the body, **Hanken Grotesk** provides a sharp, contemporary sans-serif experience that remains highly legible during long technical reads. \n\nWe introduce **JetBrains Mono** for \"data blocks\" and technical specifications. This monospaced font reinforces the engineering narrative, making service details and pricing feel like precise telemetry data. \n\nUse heavy weight contrasts—pair `headline-display` with `body-md` to create a dramatic hierarchy that draws the eye to key service offerings.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** system inspired by technical blueprints. We use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **The Macro/Micro Contrast:** Layouts should alternate between generous, airy sections (macro spacing) and dense, information-heavy \"Data Blocks\" (micro spacing). \n- **The Blueprint Grid:** Use subtle 1px Machined Silver lines to separate sections, mimicking the look of an architectural or technical drawing.\n- **Speed Lines:** Horizontal separators should never be static; use 1px lines that vary in opacity from 0% to 40% across the container width to imply movement and focus.\n- **Breakpoints:**\n  - Mobile: < 600px (Margins: 16px)\n  - Tablet: 600px - 1024px (Margins: 32px)\n  - Desktop: > 1024px (Margins: 64px, Max-width: 1280px)\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Technical Outlines**. Depth is communicated through z-axis stacking of \"Deep Asphalt\" shades.\n\n- **Base Layer:** #12171D (Deep Asphalt).\n- **Surface Layer:** #1A1F26 (Slightly lighter, used for cards and containers).\n- **Overlay Layer:** #252B33 (Used for modals or elevated action items).\n- **Outlines:** Instead of shadows, use 1px \"Machined Silver\" borders at 15-20% opacity to define boundaries. \n- **Glow Effects:** Critical alerts or active \"Ignition Orange\" elements may use a soft, 8px gaussian blur of the same color at 20% opacity to simulate the glow of a dashboard indicator.\n\n## Shapes\n\nThe shape language is **Soft (0.25rem)**. While a completely sharp edge feels aggressive, a small radius suggests \"machined precision\"—like the chamfered edge of a metallic engine part.\n\n- **Primary Buttons:** Utilize a 4px (0.25rem) radius.\n- **Data Cards:** Utilize a 4px (0.25rem) radius with a subtle 1px border.\n- **Input Fields:** Maintain the 4px radius for a consistent, \"tooled\" look.\n- **Iconography:** Use linear, 2px stroke icons with square terminals to match the technical font choices.\n\n## Components\n\n### Buttons\n- **Primary:** Background: Ignition Orange; Text: Deep Asphalt (Bold, Uppercase); Sharp 4px corners. No shadow.\n- **Secondary:** Background: Transparent; Border: 1px Machined Silver; Text: Neutral White.\n- **Tertiary:** Text-only with a leading \"speed line\" (a 24px horizontal 2px line) that expands on hover.\n\n### Data Blocks (Cards)\nCards are used to display service details. They should feature a `label-technical` header in monospaced type, followed by a `headline-md` title. Use 1px internal dividers to separate price, duration, and technical specs.\n\n### Input Fields\nDark backgrounds (#1A1F26) with a bottom-only 1px border in Machined Silver. The border transitions to Ignition Orange on focus. Use JetBrains Mono for placeholder text to maintain the technical vibe.\n\n### Chips/Tags\nSmall, rectangular containers with `label-technical` text. Use a low-opacity Machined Silver background. These are used for status indicators like \"In Progress\" or \"Completed.\"\n\n### Progress Indicators\nLinear bars only. Use a thin 2px grey track with a high-contrast Ignition Orange fill to mimic a tachometer or digital gauge.",
+                "font": "ARCHIVO_NARROW",
+                "headlineFont": "ARCHIVO_NARROW",
+                "headlineFontFamily": "Archivo Narrow",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#111415",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#2e3132",
+                  "inverse_primary": "#ab3600",
+                  "inverse_surface": "#e1e2e4",
+                  "on_background": "#e1e2e4",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#5c1900",
+                  "on_primary_container": "#561700",
+                  "on_primary_fixed": "#390c00",
+                  "on_primary_fixed_variant": "#832700",
+                  "on_secondary": "#2c3137",
+                  "on_secondary_container": "#b1b5be",
+                  "on_secondary_fixed": "#171c22",
+                  "on_secondary_fixed_variant": "#42474e",
+                  "on_surface": "#e1e2e4",
+                  "on_surface_variant": "#e3bfb3",
+                  "on_tertiary": "#28313c",
+                  "on_tertiary_container": "#252e38",
+                  "on_tertiary_fixed": "#131c26",
+                  "on_tertiary_fixed_variant": "#3f4753",
+                  "outline": "#aa897f",
+                  "outline_variant": "#5b4138",
+                  "primary": "#ffb59c",
+                  "primary_container": "#ff5f1f",
+                  "primary_fixed": "#ffdbcf",
+                  "primary_fixed_dim": "#ffb59c",
+                  "secondary": "#c2c7cf",
+                  "secondary_container": "#42474e",
+                  "secondary_fixed": "#dee3eb",
+                  "secondary_fixed_dim": "#c2c7cf",
+                  "surface": "#111415",
+                  "surface_bright": "#37393b",
+                  "surface_container": "#1d2022",
+                  "surface_container_high": "#282a2c",
+                  "surface_container_highest": "#323537",
+                  "surface_container_low": "#191c1e",
+                  "surface_container_lowest": "#0c0f10",
+                  "surface_dim": "#111415",
+                  "surface_tint": "#ffb59c",
+                  "surface_variant": "#323537",
+                  "tertiary": "#bec7d5",
+                  "tertiary_container": "#8c95a2",
+                  "tertiary_fixed": "#dae3f1",
+                  "tertiary_fixed_dim": "#bec7d5"
+                },
+                "overrideNeutralColor": "#f4f5f7",
+                "overridePrimaryColor": "#ff5f1f",
+                "overrideSecondaryColor": "#12171d",
+                "overrideTertiaryColor": "#8e97a4",
+                "roundness": "ROUND_FOUR",
+                "spacing": {
+                  "base": "8px",
+                  "block-gap": "120px",
+                  "container-max": "1280px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "16px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.5"
+                  },
+                  "button-text": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "14px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.0"
+                  },
+                  "headline-display": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "80px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.04em",
+                    "lineHeight": "1.0"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "36px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "label-technical": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/35775b8658bb43eba3665a47d3748a69",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "10004",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzE4ZDE3YWQzNzhhYzRmYjI5NDk5MTZhNzU4YmJkMGI4EgsSBxCbzKqCsBkYAZIBIwoKcHJvamVjdF9pZBIVQhMxNjY1NjYwNzE3NTEwODA4MDg5&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/1665660717510808089/files/71ee649f617a4b42a7f1974cd1408e2c"
+          },
+          "id": "9f2e70d6fbe04fc298bc90d7d1a657c2",
+          "name": "projects/1665660717510808089/screens/9f2e70d6fbe04fc298bc90d7d1a657c2",
+          "prompt": "Generate the complete, bespoke desktop landing page for JCmotive Mobile Services LLC.\n\nLayout Strategy:\n- Hero: Use an asymmetrical layout. Text on one side, with a background image treated with a \"blueprint\" overlay or high-contrast monochromatic automotive photography. Heading: \"Precision Performance, Delivered to Your Door.\"\n- Credibility: A horizontal strip featuring bold technical stats (e.g., \"15+ Years Experience\", \"24/7 Mobile Response\", \"100% Certified Technicians\") in large, condensed typography.\n- Services: Instead of cards, use an \"Accordion Gallery\" or a layered vertical list where each service (Brakes, Diagnostics, Engine Repair, Maintenance) reveals more detail on hover/click.\n- About: A section titled \"The Mobile Advantage\" with high-quality copy about Pace and Pensacola local expertise.\n- Visit (#visit): A dedicated section for the map. Include the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>. Surround it with \"Service Area\" technical data (zip codes, response times).\n- Contact Form: A \"Service Request\" portal with a clean, grid-based layout. Form validation UI must be present.\n- Visual Motif: Incorporate subtle orange \"indicator lights\" and thin silver \"rule lines\" throughout the design to guide the eye.\n\nContent Requirements:\n- Use phone: (248) 770-5033\n- Use email: Jcmotivegarage@gmail.com\n- Use location: Pace, Pensacola, United States\n- Language: English.\n\nTechnical:\n- Full semantic HTML.\n- Custom CSS using the design system tokens.\n- Vanilla JS for smooth scroll and form validation.\n- Responsive design.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsNREOP1RDGapFuBwM2LPZJAH2T8tivNb5AtFSE7wASn8IskTF6lIdWVvg00_aAQRotYV6F2ExuFjpfvsNEAUcBXHrukNgLJgH4rWb5De3poA6o3dvw3iqh7TfFwfXjiatB-jgsQ6rLIreebwfjPWxNd7JYnv7QTVj3-y_afTCx0q6H5sbLl9-dADGay99c3B3XbzxH98tD6ek3af-SaKYshK4Mjil3aghRrvaglrCB7q6XzwIm-QSktQ",
+            "name": "projects/1665660717510808089/files/4c9f7bdacbea41599b4bf28cd3a73e11"
+          },
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ff5f1f",
+            "designMd": "---\nname: Automotive Editorial System\ncolors:\n  surface: '#111415'\n  surface-dim: '#111415'\n  surface-bright: '#37393b'\n  surface-container-lowest: '#0c0f10'\n  surface-container-low: '#191c1e'\n  surface-container: '#1d2022'\n  surface-container-high: '#282a2c'\n  surface-container-highest: '#323537'\n  on-surface: '#e1e2e4'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e1e2e4'\n  inverse-on-surface: '#2e3132'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c2c7cf'\n  on-secondary: '#2c3137'\n  secondary-container: '#42474e'\n  on-secondary-container: '#b1b5be'\n  tertiary: '#bec7d5'\n  on-tertiary: '#28313c'\n  tertiary-container: '#8c95a2'\n  on-tertiary-container: '#252e38'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#dee3eb'\n  secondary-fixed-dim: '#c2c7cf'\n  on-secondary-fixed: '#171c22'\n  on-secondary-fixed-variant: '#42474e'\n  tertiary-fixed: '#dae3f1'\n  tertiary-fixed-dim: '#bec7d5'\n  on-tertiary-fixed: '#131c26'\n  on-tertiary-fixed-variant: '#3f4753'\n  background: '#111415'\n  on-background: '#e1e2e4'\n  surface-variant: '#323537'\ntypography:\n  headline-display:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  label-technical:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\n  button-text:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  block-gap: 120px\n---\n\n## Brand & Style\n\nThis design system is built upon the intersection of high-performance automotive engineering and premium editorial design. It targets a clientele that values precision, technical expertise, and a sophisticated service experience. The aesthetic leans heavily into a **Modern Editorial** style, utilizing structured layouts, high-contrast typography, and a technical grit that avoids the clichés of \"grease-monkey\" shops in favor of a \"modern laboratory\" feel.\n\nThe emotional response should be one of absolute confidence and controlled speed. We achieve this through a blend of **High-Contrast Bold** elements and **Corporate Modern** reliability. The UI should feel like a high-end digital dashboard: functional, data-rich, yet elegantly sparse where it matters most.\n\n## Colors\n\nThe palette is rooted in the \"Deep Asphalt\" environment, using a dark mode default to emphasize depth and premium quality.\n\n- **Deep Asphalt (Secondary):** A rich, dark charcoal navy used for the primary canvas and deep background layers. It provides the foundation of stability.\n- **Ignition Orange (Primary):** A high-vibrancy accent reserved strictly for calls to action, active states, and critical performance indicators. It represents energy and the spark of ignition.\n- **Machined Silver (Tertiary):** A spectrum of cool greys used for borders, secondary text, and technical illustrations. It evokes the feel of brushed aluminum and steel components.\n- **Pure White (Neutral):** Used primarily for body copy and high-level headings to ensure maximum legibility against the dark backgrounds.\n\n## Typography\n\nTypography is the primary driver of the brand's editorial authority. \n\n**Archivo Narrow** is used for all major headings. Its condensed nature evokes speed, efficiency, and the verticality of luxury magazine covers. For the body, **Hanken Grotesk** provides a sharp, contemporary sans-serif experience that remains highly legible during long technical reads. \n\nWe introduce **JetBrains Mono** for \"data blocks\" and technical specifications. This monospaced font reinforces the engineering narrative, making service details and pricing feel like precise telemetry data. \n\nUse heavy weight contrasts—pair `headline-display` with `body-md` to create a dramatic hierarchy that draws the eye to key service offerings.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** system inspired by technical blueprints. We use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **The Macro/Micro Contrast:** Layouts should alternate between generous, airy sections (macro spacing) and dense, information-heavy \"Data Blocks\" (micro spacing). \n- **The Blueprint Grid:** Use subtle 1px Machined Silver lines to separate sections, mimicking the look of an architectural or technical drawing.\n- **Speed Lines:** Horizontal separators should never be static; use 1px lines that vary in opacity from 0% to 40% across the container width to imply movement and focus.\n- **Breakpoints:**\n  - Mobile: < 600px (Margins: 16px)\n  - Tablet: 600px - 1024px (Margins: 32px)\n  - Desktop: > 1024px (Margins: 64px, Max-width: 1280px)\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows in favor of **Tonal Layering** and **Technical Outlines**. Depth is communicated through z-axis stacking of \"Deep Asphalt\" shades.\n\n- **Base Layer:** #12171D (Deep Asphalt).\n- **Surface Layer:** #1A1F26 (Slightly lighter, used for cards and containers).\n- **Overlay Layer:** #252B33 (Used for modals or elevated action items).\n- **Outlines:** Instead of shadows, use 1px \"Machined Silver\" borders at 15-20% opacity to define boundaries. \n- **Glow Effects:** Critical alerts or active \"Ignition Orange\" elements may use a soft, 8px gaussian blur of the same color at 20% opacity to simulate the glow of a dashboard indicator.\n\n## Shapes\n\nThe shape language is **Soft (0.25rem)**. While a completely sharp edge feels aggressive, a small radius suggests \"machined precision\"—like the chamfered edge of a metallic engine part.\n\n- **Primary Buttons:** Utilize a 4px (0.25rem) radius.\n- **Data Cards:** Utilize a 4px (0.25rem) radius with a subtle 1px border.\n- **Input Fields:** Maintain the 4px radius for a consistent, \"tooled\" look.\n- **Iconography:** Use linear, 2px stroke icons with square terminals to match the technical font choices.\n\n## Components\n\n### Buttons\n- **Primary:** Background: Ignition Orange; Text: Deep Asphalt (Bold, Uppercase); Sharp 4px corners. No shadow.\n- **Secondary:** Background: Transparent; Border: 1px Machined Silver; Text: Neutral White.\n- **Tertiary:** Text-only with a leading \"speed line\" (a 24px horizontal 2px line) that expands on hover.\n\n### Data Blocks (Cards)\nCards are used to display service details. They should feature a `label-technical` header in monospaced type, followed by a `headline-md` title. Use 1px internal dividers to separate price, duration, and technical specs.\n\n### Input Fields\nDark backgrounds (#1A1F26) with a bottom-only 1px border in Machined Silver. The border transitions to Ignition Orange on focus. Use JetBrains Mono for placeholder text to maintain the technical vibe.\n\n### Chips/Tags\nSmall, rectangular containers with `label-technical` text. Use a low-opacity Machined Silver background. These are used for status indicators like \"In Progress\" or \"Completed.\"\n\n### Progress Indicators\nLinear bars only. Use a thin 2px grey track with a high-contrast Ignition Orange fill to mimic a tachometer or digital gauge.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#111415",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2e3132",
+              "inverse_primary": "#ab3600",
+              "inverse_surface": "#e1e2e4",
+              "on_background": "#e1e2e4",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#5c1900",
+              "on_primary_container": "#561700",
+              "on_primary_fixed": "#390c00",
+              "on_primary_fixed_variant": "#832700",
+              "on_secondary": "#2c3137",
+              "on_secondary_container": "#b1b5be",
+              "on_secondary_fixed": "#171c22",
+              "on_secondary_fixed_variant": "#42474e",
+              "on_surface": "#e1e2e4",
+              "on_surface_variant": "#e3bfb3",
+              "on_tertiary": "#28313c",
+              "on_tertiary_container": "#252e38",
+              "on_tertiary_fixed": "#131c26",
+              "on_tertiary_fixed_variant": "#3f4753",
+              "outline": "#aa897f",
+              "outline_variant": "#5b4138",
+              "primary": "#ffb59c",
+              "primary_container": "#ff5f1f",
+              "primary_fixed": "#ffdbcf",
+              "primary_fixed_dim": "#ffb59c",
+              "secondary": "#c2c7cf",
+              "secondary_container": "#42474e",
+              "secondary_fixed": "#dee3eb",
+              "secondary_fixed_dim": "#c2c7cf",
+              "surface": "#111415",
+              "surface_bright": "#37393b",
+              "surface_container": "#1d2022",
+              "surface_container_high": "#282a2c",
+              "surface_container_highest": "#323537",
+              "surface_container_low": "#191c1e",
+              "surface_container_lowest": "#0c0f10",
+              "surface_dim": "#111415",
+              "surface_tint": "#ffb59c",
+              "surface_variant": "#323537",
+              "tertiary": "#bec7d5",
+              "tertiary_container": "#8c95a2",
+              "tertiary_fixed": "#dae3f1",
+              "tertiary_fixed_dim": "#bec7d5"
+            },
+            "overrideNeutralColor": "#f4f5f7",
+            "overridePrimaryColor": "#ff5f1f",
+            "overrideSecondaryColor": "#12171d",
+            "overrideTertiaryColor": "#8e97a4",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "base": "8px",
+              "block-gap": "120px",
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.5"
+              },
+              "button-text": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "lineHeight": "1.0"
+              },
+              "headline-display": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "80px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "1.0"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "36px",
+                "fontWeight": "700",
+                "lineHeight": "1.1"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "label-technical": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "JCmotive Mobile Services - Bespoke Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have designed a bespoke, editorial-grade homepage for **JCmotive Mobile Services LLC.** that establishes a premium and high-performance visual identity.\n\n### Design Decisions & Rationale:\n\n*   **Editorial Typography & Layout**: I used **Archivo Narrow** for headings to create a technical, high-speed aesthetic reminiscent of automotive performance magazines. The layout moves away from generic templates, utilizing asymmetrical hero sections and overlapping elements to create a sense of bespoke engineering.\n*   **Precision Color Palette**: The \"Deep Asphalt\" background provides a sophisticated, low-glare canvas that makes the \"Ignition Orange\" accents pop. This choice reflects the professional, no-nonsense nature of elite automotive diagnostics.\n*   **Unique Visual Motifs**: \n    *   **The \"Technical Protocol\" Grid**: I implemented a layout inspired by technical blueprints, featuring thin rule lines and data-driven \"Credibility Strips\" to reinforce the technician's expertise.\n    *   **Interactive Service List**: Instead of standard cards, I used a structured vertical list that focuses on clarity and technical precision.\n*   **Localized Authority**: The \"Dispatch Coordinates\" section explicitly highlights **Pace and Pensacola**, framing the mobile service not just as a convenience, but as a specialized local logistical advantage.\n*   **Production-Ready Features**: The site includes a floating navigation bar for immediate booking, a custom-styled service request form with validation UI, and a dedicated map slot for the dispatch area.\n\nThe final result is a memorable, unique digital presence that positions JCmotive as the premier choice for mobile automotive excellence in the Florida Panhandle."
+  },
+  {
+    "suggestion": "Add a 'Mobile Unit' gallery section"
+  },
+  {
+    "suggestion": "Animate the technical stat counters on scroll"
+  },
+  {
+    "suggestion": "Create a mobile-optimized version of this design"
+  }
+]
