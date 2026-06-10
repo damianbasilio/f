@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Sweet Emotion | Avant-Garde Chocolate Boutique</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Montserrat:wght@300;400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-secondary-container": "#666461",
+                        "tertiary-fixed-dim": "#e7c185",
+                        "surface-variant": "#eedfdc",
+                        "inverse-primary": "#d3c3bf",
+                        "on-secondary-fixed-variant": "#484744",
+                        "on-primary-fixed": "#221a17",
+                        "tertiary-fixed": "#ffdeab",
+                        "on-primary-fixed-variant": "#4f4442",
+                        "error-container": "#ffdad6",
+                        "on-tertiary": "#ffffff",
+                        "secondary-container": "#e6e2de",
+                        "primary": "#000000",
+                        "outline-variant": "#d1c3c0",
+                        "primary-container": "#221a17",
+                        "on-background": "#211a18",
+                        "on-surface-variant": "#4e4542",
+                        "surface-container": "#faebe7",
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "tertiary-container": "#271900",
+                        "surface-tint": "#685c59",
+                        "tertiary": "#000000",
+                        "surface": "#fff8f6",
+                        "surface-dim": "#e5d7d4",
+                        "on-primary-container": "#8e817e",
+                        "secondary-fixed": "#e6e2de",
+                        "on-surface": "#211a18",
+                        "on-primary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#5c4212",
+                        "surface-container-highest": "#eedfdc",
+                        "surface-container-high": "#f4e5e2",
+                        "secondary": "#605e5b",
+                        "outline": "#807572",
+                        "surface-container-low": "#fff1ed",
+                        "surface-container-lowest": "#ffffff",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#d3c3bf",
+                        "on-tertiary-fixed": "#271900",
+                        "on-secondary-fixed": "#1c1c19",
+                        "on-error-container": "#93000a",
+                        "surface-bright": "#fff8f6",
+                        "on-tertiary-container": "#9f7f49",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#372f2d",
+                        "inverse-on-surface": "#fceeea",
+                        "background": "#fff8f6",
+                        "primary-fixed": "#f0dfdb",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "overlap-offset": "-40px",
+                        "editorial-gap": "120px",
+                        "margin-edge": "48px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "headline-xl": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.8", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                        "body-md": ["15px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "headline-xl": ["48px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "headline-lg": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .organic-melt {
+            border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+            transition: border-radius 0.6s ease-in-out;
+        }
+        .organic-melt:hover {
+            border-radius: 40% 60% 70% 30% / 40% 70% 30% 60%;
+        }
+        .gold-rule {
+            background-color: #e7c185; /* Gold leaf accent */
+            width: 1px;
+            height: 100%;
+        }
+        .text-midnight-cocoa { color: #1a1210; }
+        .bg-silk-ganache { background-color: #fff8f6; }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #fff8f6; }
+        ::-webkit-scrollbar-thumb { background: #1a1210; }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+    </style>
+</head>
+<body class="bg-silk-ganache text-midnight-cocoa font-body-md selection:bg-tertiary-fixed-dim selection:text-primary-container overflow-x-hidden">
+<!-- TopNavBar Shell -->
+<nav class="fixed top-0 w-full z-50 bg-transparent transition-colors duration-300 border-b border-on-secondary-fixed-variant/10 flex justify-between items-center px-margin-edge py-6 w-full" id="main-nav">
+<div class="flex items-center gap-8">
+<span class="font-display-lg text-headline-lg text-primary">Sweet Emotion</span>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#collection">The Collection</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#atelier">The Atelier</a>
+<a class="text-on-surface-variant font-body-md text-body-md hover:text-primary transition-colors" href="#visit">The Visit</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-label-caps text-label-caps opacity-60 tracking-widest">(417) 691-8504</span>
+<button class="bg-primary text-on-primary px-8 py-3 rounded-DEFAULT font-label-caps text-label-caps uppercase hover:opacity-80 transition-all active:scale-95">
+                Order Now
+            </button>
+</div>
+</nav>
+<main>
+<!-- Section 2: Hero -->
+<section class="relative min-h-screen flex items-center pt-24 overflow-hidden px-margin-edge">
+<div class="absolute right-0 top-0 w-1/2 h-full z-0 overflow-hidden">
+<div class="w-full h-full relative">
+<img alt="Luxury chocolate truffles" class="w-full h-full object-cover object-center grayscale hover:grayscale-0 transition-all duration-1000 scale-110 hover:scale-100" src="https://lh3.googleusercontent.com/aida/AP1WRLuY8d7YtFvgCVjzEIawBbdcld7iBt9l5dyczVzoBD2uJPdocnZkEOVvXqnasicB4FwOaB38w1NbSoM199gXnZlAzwSh78Ob_ol9E8S_ZmP0QP7tI6n_Bxg96Iv8UwZadzZu0wowg2Y9xydNNqrhiFpCoxuAsLFC50VNACln_-jXS0bKWR-htBEyJdwKklO-o07u5Ddr6yfVj485f1JxuBAkv-ISa-OG2uEz2VEDGOkeS_8zocgdTUfIww"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+</div>
+<div class="relative z-10 w-full md:w-2/3 lg:w-1/2">
+<div class="mb-6 flex items-center gap-4">
+<span class="h-[1px] w-12 bg-tertiary-fixed-dim"></span>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim uppercase">Established MMXXIV</span>
+</div>
+<h1 class="font-display-lg text-display-lg md:text-display-lg leading-tight mb-8">
+                    The Architecture <br/> of <i class="font-normal italic">Pure Indulgence</i>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-12">
+                    A Webb City laboratory where dark cocoa meets avant-garde design. We compose edible emotions using the world's most rare single-origin beans.
+                </p>
+<div class="flex gap-8">
+<button class="border-b-2 border-primary pb-2 font-label-caps text-label-caps tracking-[0.2em] hover:text-tertiary-fixed-dim hover:border-tertiary-fixed-dim transition-colors">EXPLORE THE ARCHIVE</button>
+</div>
+</div>
+<!-- Scroll Indicator -->
+<div class="absolute bottom-12 left-margin-edge flex flex-col items-center gap-4 opacity-40">
+<span class="font-label-caps text-label-caps rotate-90">SCROLL</span>
+<div class="w-[1px] h-20 bg-primary"></div>
+</div>
+</section>
+<!-- Section 3: Credibility -->
+<section class="py-editorial-gap px-margin-edge bg-surface-container-lowest">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-editorial-gap relative">
+<!-- Vertical Divider -->
+<div class="hidden md:block absolute left-1/3 top-0 h-full w-[0.5px] bg-tertiary-fixed-dim opacity-30"></div>
+<div class="hidden md:block absolute left-2/3 top-0 h-full w-[0.5px] bg-tertiary-fixed-dim opacity-30"></div>
+<div class="flex flex-col items-center text-center px-gutter">
+<span class="material-symbols-outlined text-4xl mb-6 text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">temp_preferences_custom</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Hand-Crafted Daily</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Small-batch tempering ensures every ganache core achieves the perfect silk-melt temperature.</p>
+</div>
+<div class="flex flex-col items-center text-center px-gutter">
+<span class="material-symbols-outlined text-4xl mb-6 text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">eco</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Ethically Sourced</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Direct-trade partnerships with cacao farmers in Madagascar and Ecuador, honoring the soil.</p>
+</div>
+<div class="flex flex-col items-center text-center px-gutter">
+<span class="material-symbols-outlined text-4xl mb-6 text-tertiary-fixed-dim" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<h3 class="font-headline-lg text-headline-lg mb-4">Award-Winning</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Recognized for our 'Midnight Cocoa' profile, balancing bitter botanicals with floral honey.</p>
+</div>
+</div>
+</section>
+<!-- Section 4: The Collection -->
+<section class="py-editorial-gap px-margin-edge" id="collection">
+<div class="mb-24 flex justify-between items-end">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim mb-4 block">PORTFOLIO</span>
+<h2 class="font-display-lg text-headline-xl">The Curated Reserve</h2>
+</div>
+<div class="hidden md:block h-[0.5px] flex-grow mx-12 bg-tertiary-fixed-dim opacity-30"></div>
+</div>
+<div class="asymmetric-grid">
+<!-- Box 1 -->
+<div class="col-span-12 md:col-span-7 group relative overflow-hidden">
+<div class="aspect-[16/9] bg-surface-container-high overflow-hidden">
+<img class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105" data-alt="A macro photograph of artisan dark chocolate truffles arranged on a slate tile. The lighting is low and moody, highlighting the dusting of gold leaf and the smooth, matte cocoa finish. Soft ambient glows illuminate the scene, reflecting a premium boutique aesthetic with deep blacks and rich browns." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUtIdFwWIwpUbaWUICmoDXBonSkgEt5FruHTcxs2EGMVJ0DjiiTc0erlwBnICBrTpTyWr122CpPrVJxv52GHxIJDRbxmudGHqgevDXRhqXZt739ZFmrg8r4wGBGBvZopjddaAN1f7CaM-0-eV9LxIZk5IVeR8ZH_3-_JdJhwSy3tp3cKp5bvibhHP4NkErDnKOTR75SZLsoYYF48Kv_iYTTdvLmJPSsyzg7M7FmtZVTQv8AvkFkM9Iv3xew0q5Lt2T0XNWHyEtbg"/>
+</div>
+<div class="mt-6">
+<h4 class="font-headline-lg text-headline-lg mb-2">The Truffle Reserve</h4>
+<p class="font-body-md text-body-md opacity-60">A rotating selection of sixteen hand-painted expressions.</p>
+</div>
+</div>
+<!-- Box 2 -->
+<div class="col-span-12 md:col-span-4 md:col-start-9 group">
+<div class="aspect-[4/5] overflow-hidden organic-melt">
+<img class="w-full h-full object-cover" data-alt="Modern geometric pralines featuring clean lines and sharp corners, presented in a minimalist Silk Ganache porcelain tray. The setting is bright and high-fashion, with a sophisticated interplay between the chocolate's dark texture and the cream-colored background. Lighting is soft and diffused." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAN4dXmlACexmE4Gm1IEUgHe7vto7dSjtEXyI-lvRlHp0rJXaA7NkaRY4RqgkX6tkEl3EiHtHeEqUfp2_FGmCd6uWHYy4b7ffUljETGOac90WHmMvyugNSUC8fEZmJiZo-RJMeeIsMwBddOz8V3XqqXWGZUZyufyZlTQYkMu7GVNHoBYER7LclaqhI5OZTR4UPtM3Nka2TCIrGPusBSqNsg2G0-FJbIcN_Qy1r8qAIIgqKVvvbVBYD5V3WdtT4a8jj-sIAU3Noqxg"/>
+</div>
+<div class="mt-6">
+<h4 class="font-headline-lg text-headline-lg mb-2">Modern Pralines</h4>
+<p class="font-body-md text-body-md opacity-60">Architectural forms meets hazelnut crunch.</p>
+</div>
+</div>
+<!-- Box 3 (Overlapping) -->
+<div class="col-span-12 md:col-span-5 md:mt-overlap-offset group">
+<div class="aspect-square bg-primary-container p-12 flex flex-col justify-between">
+<span class="font-label-caps text-label-caps text-on-primary">EDITION 04</span>
+<div class="text-on-primary">
+<h4 class="font-headline-lg text-headline-lg mb-4">The Seasonal Box</h4>
+<p class="font-body-md text-body-md opacity-70 mb-8">Inspired by the changing landscape of Missouri, featuring smoked salt and locally foraged lavender.</p>
+<button class="border-b border-on-primary pb-1 font-label-caps text-label-caps hover:text-tertiary-fixed-dim hover:border-tertiary-fixed-dim transition-colors">VIEW SEASONAL DROP</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: The Atelier (About) -->
+<section class="py-editorial-gap px-margin-edge bg-surface-container-low overflow-hidden" id="atelier">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-24">
+<div class="w-full md:w-1/2 relative">
+<div class="relative z-10 w-full aspect-[4/5] overflow-hidden">
+<img alt="The Sweet Emotion Atelier Interior" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvXo_oqtAv8HvBzdfWYvYqp0wRhujHC5I2at5E1SajiAwTDAbA6Iz4yY5WOA1WF6yAoTTtZAwa9PvmApJirC8NGBM2cKg3o_-xgdSw5TT0UhoJonlR16bq94QdMpjJTI9unfhmNhk0wwr01Eebm0PoeVnJu_jW8Sn15x7NvynoZP58O39fPnlJiq-0BaJgFSWt-WxLdUe-doibj6ehwa7Nk0QfWNxLVzbFJjA-659LR-g4WQrIr4t6LZQ"/>
+</div>
+<div class="absolute -bottom-10 -right-10 w-2/3 aspect-square bg-tertiary-fixed-dim opacity-10 -z-0 organic-melt animate-pulse"></div>
+</div>
+<div class="w-full md:w-1/2">
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim mb-4 block">THE LABORATORY</span>
+<h2 class="font-display-lg text-display-lg mb-8">Crafting at the <br/> <i class="font-normal italic">Speed of Soul</i></h2>
+<p class="font-body-lg text-body-lg mb-6 leading-relaxed">
+                        In Webb City, we operate with the precision of a laboratory and the heart of a poet. Our Atelier is not just a storefront; it is an experimental space where we dissect the complexities of the cacao fruit.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant mb-12">
+                        Every bar is poured by hand, every truffle tempered to the degree. We believe chocolate is more than a confection—it is a vessel for memory, a silent communicator of affection.
+                    </p>
+<div class="flex items-center gap-12">
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg">100%</span>
+<span class="font-label-caps text-label-caps opacity-50 uppercase">Botanical</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg">08+</span>
+<span class="font-label-caps text-label-caps opacity-50 uppercase">Origins</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-lg text-headline-lg">Daily</span>
+<span class="font-label-caps text-label-caps opacity-50 uppercase">Freshness</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 6: Plan Your Visit -->
+<section class="py-editorial-gap px-margin-edge" id="visit">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<h2 class="font-display-lg text-headline-xl mb-8 italic">Find the Boutique</h2>
+<div class="space-y-8">
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim block mb-2">LOCATION</span>
+<p class="font-body-lg text-body-lg">1206 West MacArthur Drive<br/>Webb City, MO 64870</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim block mb-2">HOURS</span>
+<p class="font-body-md text-body-md">Tuesday — Saturday: 10am to 6pm<br/>Sunday &amp; Monday: By Private Appointment</p>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-tertiary-fixed-dim block mb-2">CONTACT</span>
+<p class="font-body-md text-body-md">(417) 691-8504<br/>sweetemotionscandyandbakery@gmail.com</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] bg-surface-container-high rounded-lg group" data-location="Webb City, MO" data-map-slot="" style="">
+<div class="absolute inset-0 bg-primary/5 flex items-center justify-center">
+<div class="text-center group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-6xl text-primary mb-4">location_on</span>
+<p class="font-label-caps text-label-caps opacity-40">INTERACTIVE MAP LOADING</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 7: Contact -->
+<section class="py-editorial-gap px-margin-edge bg-primary text-on-primary">
+<div class="max-w-4xl mx-auto text-center">
+<h2 class="font-display-lg text-display-lg mb-6">Bespoke Collections</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-16">For galas, weddings, or private curations—let us design an sensory experience tailored to your narrative.</p>
+<form class="text-left grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-12" id="contact-form">
+<div class="relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-primary-container block mb-2">Your Name</label>
+<input class="w-full bg-transparent border-b border-on-primary-fixed-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors py-3" required="" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-primary-container block mb-2">Email Address</label>
+<input class="w-full bg-transparent border-b border-on-primary-fixed-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors py-3" required="" type="email"/>
+</div>
+<div class="col-span-full relative group">
+<label class="font-label-caps text-label-caps uppercase text-on-primary-container block mb-2">The Occasion</label>
+<textarea class="w-full bg-transparent border-b border-on-primary-fixed-variant focus:border-tertiary-fixed-dim focus:ring-0 transition-colors py-3 h-24" required=""></textarea>
+</div>
+<div class="col-span-full text-center">
+<button class="bg-silk-ganache text-midnight-cocoa px-16 py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-tertiary-fixed-dim transition-colors active:scale-95" type="submit">
+                            Submit Inquiry
+                        </button>
+</div>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="bg-surface-container-lowest dark:bg-primary-container w-full py-editorial-gap border-t border-on-secondary-fixed-variant/20">
+<div class="max-w-7xl mx-auto px-margin-edge grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="flex flex-col gap-6">
+<span class="font-display-lg text-headline-xl text-primary dark:text-primary-fixed-dim">Sweet Emotion</span>
+<p class="font-body-md text-on-surface-variant max-w-xs">An avant-garde chocolate boutique dedicated to the art of sensory composition.</p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-tertiary-fixed-dim mb-2">LINKS</h5>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Sustainability</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Shipping</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-md" href="#">Terms</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-tertiary-fixed-dim mb-2">FOLLOW</h5>
+<div class="flex gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">camera</span></a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#"><span class="material-symbols-outlined">brand_awareness</span></a>
+</div>
+<div class="mt-8">
+<p class="font-body-md text-on-surface dark:text-on-primary-fixed-variant opacity-60">
+                        © 2024 Sweet Emotion - A Chocolate Boutique. All rights reserved.
+                    </p>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Header transparency shift on scroll
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                nav.classList.remove('bg-transparent');
+                nav.classList.add('bg-silk-ganache', 'shadow-sm');
+            } else {
+                nav.classList.add('bg-transparent');
+                nav.classList.remove('bg-silk-ganache', 'shadow-sm');
+            }
+        });
+
+        // Simple form validation UI simulation
+        const form = document.getElementById('contact-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = 'SENDING...';
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = 'INQUIRY RECEIVED';
+                btn.classList.add('bg-tertiary-fixed-dim');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.classList.remove('bg-tertiary-fixed-dim');
+                    btn.disabled = false;
+                }, 3000);
+            }, 1500);
+        });
+
+        // Intersection Observer for fade-in effects
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
