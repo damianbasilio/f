@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JLC MOBILE | Pensacola Premier Mobile Mechanical Service</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface": "#ede1d0",
+                        "on-error-container": "#ffdad6",
+                        "background": "#181309",
+                        "on-background": "#ede1d0",
+                        "surface-dim": "#181309",
+                        "primary": "#ffdca1",
+                        "outline-variant": "#514532",
+                        "on-tertiary-fixed-variant": "#004e5d",
+                        "error": "#ffb4ab",
+                        "on-secondary-fixed": "#111c2c",
+                        "tertiary-fixed": "#b0ecff",
+                        "on-secondary": "#263142",
+                        "secondary-fixed-dim": "#bcc7dd",
+                        "on-primary-fixed-variant": "#5e4200",
+                        "on-tertiary-fixed": "#001f27",
+                        "outline": "#9e8f78",
+                        "error-container": "#93000a",
+                        "primary-fixed": "#ffdea8",
+                        "primary-container": "#ffb800",
+                        "inverse-primary": "#7c5800",
+                        "surface-tint": "#ffba20",
+                        "on-primary-container": "#6b4c00",
+                        "surface-bright": "#3f382d",
+                        "on-tertiary-container": "#005a6b",
+                        "tertiary-container": "#00d7fe",
+                        "on-primary-fixed": "#271900",
+                        "surface": "#181309",
+                        "secondary-fixed": "#d8e3fa",
+                        "secondary-container": "#3c475a",
+                        "on-tertiary": "#003641",
+                        "on-secondary-fixed-variant": "#3c475a",
+                        "on-secondary-container": "#aab6cc",
+                        "on-primary": "#412d00",
+                        "surface-variant": "#3b3428",
+                        "on-error": "#690005",
+                        "inverse-surface": "#ede1d0",
+                        "secondary": "#bcc7dd",
+                        "tertiary-fixed-dim": "#17d8ff",
+                        "surface-container-lowest": "#130d05",
+                        "surface-container-high": "#30291e",
+                        "inverse-on-surface": "#362f24",
+                        "primary-fixed-dim": "#ffba20",
+                        "tertiary": "#abebff",
+                        "surface-container-low": "#211b11",
+                        "surface-container-highest": "#3b3428",
+                        "on-surface-variant": "#d5c4ab",
+                        "surface-container": "#251f14"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "20px",
+                        "section-gap": "120px",
+                        "unit": "4px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Oswald"],
+                        "display-lg-mobile": ["Oswald"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Oswald"],
+                        "display-lg": ["Oswald"],
+                        "label-mono": ["JetBrains Mono"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                        "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "display-lg": ["84px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-mono": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #181309;
+            color: #ede1d0;
+            background-image: 
+                linear-gradient(to right, #2D2D2D 1px, transparent 1px),
+                linear-gradient(to bottom, #2D2D2D 1px, transparent 1px);
+            background-size: 8.333333% 80px;
+        }
+        .blueprint-border { border: 1px solid #2D2D2D; }
+        .blueprint-accent-border { border: 1px solid #ffdca1; }
+        .vertical-label { writing-mode: vertical-rl; transform: rotate(180deg); }
+        .glass-panel { backdrop-filter: blur(32px); background-color: rgba(24, 19, 9, 0.8); }
+        .amber-hover:hover { background-color: #ffb800; color: #181309; transition: all 0.3s ease; }
+        .btn-primary { background-color: #ffb800; color: #181309; padding: 12px 32px; font-family: 'JetBrains Mono'; font-size: 14px; font-weight: bold; text-transform: uppercase; border: none; cursor: pointer; transition: 0.3s; }
+        .btn-primary:hover { background-color: transparent; outline: 2px solid #ffb800; color: #ffb800; }
+        .btn-secondary { background-color: transparent; border: 2px solid #ffdca1; color: #ede1d0; padding: 10px 28px; font-family: 'JetBrains Mono'; font-size: 14px; text-transform: uppercase; cursor: pointer; transition: 0.3s; }
+        .btn-secondary:hover { background-color: #ffdca1; color: #181309; }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-xl border-b border-outline-variant px-margin-desktop py-4 flex justify-between items-center">
+<div class="flex items-center gap-8">
+<a class="flex items-center" href="#">
+<img alt="JLC Mobile Logo" class="h-12 w-auto" src="https://lh3.googleusercontent.com/aida/AP1WRLv19XpLiq-28Huc9gXKf7ttVsZ3nrU1Te4gIGlCHH8_XAuug-mjhIbtje9NbjbbEKage2W8ztIFO6-86ouKX47c1pq1NeDEH5RagPCjSXGncwnWuBBMqWEutg53crFdHO0o6qucLEbbR_x1ob_nfEbiFuBgpQGMoZZPCmKkYBXubrV_Ml1moG4tQDmd-raqqUhazlhzOysAJSzy2G5qN097bLq1cFEHDb0m0vKtBVkf8_MyYBz794kMWw"/>
+<span class="font-headline-md text-headline-md font-bold tracking-tighter text-primary ml-2">JLC MOBILE</span>
+</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#services">SERVICES</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#credibility">CREDIBILITY</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#about">ABOUT</a>
+<a class="font-label-mono text-label-mono text-on-surface-variant hover:text-primary transition-colors" href="#contact">CONTACT</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-mono text-label-mono text-primary font-bold" href="tel:8506102033">(850) 610-2033</a>
+<button class="btn-primary">CALL NOW</button>
+</div>
+</header>
+<main class="relative">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center px-margin-desktop pt-24">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent z-10"></div>
+<img alt="Cinematic engine close-up" class="w-full h-full object-cover filter brightness-50 contrast-125 grayscale-[30%]" src="https://lh3.googleusercontent.com/aida/AP1WRLtX5g2NvjRXhTG-fXVuWE9UuHGgeq9KHm3bPF-RL-yND_EkdCfu7V4ztgLs7QinKaPLz48mnk0kva2A5aj5nLEmRooNaayRKPgijgysoseR0Rr7dszRQzyIGOrcYItgEPfHa1sFN8FysNd2EbPyeNyTkfe1722dpeFlIsEiL1MtIThId2O6Y9P321rO4v-VwObktLnqowMZhJUXL7DkVbdoMnB-0uyzCMS2ALZEp0J-Eu4GFf21r5NHtck"/>
+</div>
+<div class="relative z-20 max-w-4xl">
+<div class="mb-4">
+<span class="font-label-mono text-label-mono text-primary bg-primary/10 px-3 py-1 border-l-2 border-primary uppercase tracking-widest">Mobile Elite Diagnostics</span>
+</div>
+<h1 class="font-display-lg text-display-lg uppercase leading-[0.9] mb-8">ENGINEERED FOR <span class="text-primary-container">RELIABILITY.</span></h1>
+<p class="font-body-lg text-body-lg max-w-2xl mb-12 text-on-surface-variant leading-relaxed">
+                    Pensacola's Premier Mobile Mechanical Service. Elite diagnostics and repair delivered to your doorstep. We bring the high-performance workshop to you.
+                </p>
+<div class="flex flex-wrap gap-4">
+<button class="btn-primary px-10 py-5 text-lg">BOOK SERVICE NOW</button>
+<button class="btn-secondary px-10 py-5 text-lg">VIEW SERVICES</button>
+</div>
+</div>
+<!-- Vertical Section Label -->
+<div class="absolute right-margin-desktop bottom-margin-desktop hidden lg:block">
+<span class="vertical-label font-label-mono text-label-mono text-outline uppercase opacity-40">SYSTEM COORDINATES: 30.4213° N, 87.2169° W</span>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-section-gap px-margin-desktop border-t border-outline-variant relative" id="credibility">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary/20"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col justify-end">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-6 leading-none">PRECISION <br/>BY THE NUMBERS</h2>
+<p class="font-body-md text-on-surface-variant max-w-sm">Mechanical excellence isn't measured in promises, but in performance and verified results.</p>
+</div>
+<div class="md:col-span-8 grid grid-cols-1 sm:grid-cols-3 gap-1">
+<div class="bg-surface-container-low p-10 border border-outline-variant flex flex-col justify-between h-[300px] hover:border-primary transition-all group">
+<span class="font-label-mono text-label-mono text-primary opacity-50 group-hover:opacity-100">EXP_01</span>
+<div>
+<div class="font-display-lg text-[64px] text-primary mb-2">15+</div>
+<div class="font-label-mono text-label-mono uppercase tracking-widest">Years Experience</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 border border-outline-variant flex flex-col justify-between h-[300px] hover:border-primary transition-all group">
+<span class="font-label-mono text-label-mono text-primary opacity-50 group-hover:opacity-100">SVC_02</span>
+<div>
+<div class="font-display-lg text-[64px] text-primary mb-2">1000+</div>
+<div class="font-label-mono text-label-mono uppercase tracking-widest">Vehicles Serviced</div>
+</div>
+</div>
+<div class="bg-surface-container-low p-10 border border-outline-variant flex flex-col justify-between h-[300px] hover:border-primary transition-all group">
+<span class="font-label-mono text-label-mono text-primary opacity-50 group-hover:opacity-100">LOC_03</span>
+<div>
+<div class="font-display-lg text-[64px] text-primary mb-2">PENS</div>
+<div class="font-label-mono text-label-mono uppercase tracking-widest">Locally Owned</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap px-margin-desktop bg-surface-container-lowest relative" id="services">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16">
+<div>
+<span class="font-label-mono text-label-mono text-primary mb-2 block uppercase">Standardized Procedures</span>
+<h2 class="font-headline-lg text-headline-lg uppercase">CORE CAPABILITIES</h2>
+</div>
+<div class="hidden md:block h-[1px] flex-grow mx-12 bg-outline-variant mb-6"></div>
+<a class="font-label-mono text-label-mono text-primary flex items-center gap-2 hover:translate-x-2 transition-transform" href="#contact">
+                    FULL CAPABILITY LIST <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="group border-l-2 border-outline-variant hover:border-primary p-8 transition-all bg-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="computer">computer</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">Diagnostic Scans</h3>
+<p class="font-body-md text-on-surface-variant">OEM-level electronic troubleshooting and data logging to pinpoint complex electrical and module issues.</p>
+</div>
+<div class="group border-l-2 border-outline-variant hover:border-primary p-8 transition-all bg-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="car_repair">car_repair</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">Brake Systems</h3>
+<p class="font-body-md text-on-surface-variant">From performance rotors to ABS module repair, ensuring high-speed deceleration integrity and safety.</p>
+</div>
+<div class="group border-l-2 border-outline-variant hover:border-primary p-8 transition-all bg-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="settings_input_component">settings_input_component</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">Engine Repair</h3>
+<p class="font-body-md text-on-surface-variant">Full-spectrum mechanical restoration, timing components, and fluid management systems for peak performance.</p>
+</div>
+<div class="group border-l-2 border-outline-variant hover:border-primary p-8 transition-all bg-surface hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-primary mb-6 text-4xl" data-icon="construction">construction</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-4">Suspension</h3>
+<p class="font-body-md text-on-surface-variant">Precision handling restorations including steering racks, control arms, and shock absorber system upgrades.</p>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="relative py-section-gap" id="about">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-0">
+<div class="lg:col-span-7 relative h-[600px] lg:h-auto">
+<img alt="JLC Mobile Van in Pensacola" class="w-full h-full object-cover filter grayscale" src="https://lh3.googleusercontent.com/aida/AP1WRLuofbsEOQX_fERUlOEZwiukIoE69K9WYCHkEAbxPTzlRm7RK3u7E6Dc1EdKO1S5i9rmCoTk1dUwJUGufm7-i2PFVNU3FvL2wFCX7G5ABF7eSiL9WyCLDfoztHkUVh_1AiMcbTPKZ0ZkUGYWQLdYqVDtIjS7XCvPI1xvFHH9PnXqi_dM3sBlQ1NoumvtfQQPXVAGhlOHw0G7Ir0_ApPxkwkRU076UG0_YE5ZgoakTgBQvPNdywRUL_XPK5A"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-multiply"></div>
+</div>
+<div class="lg:col-span-5 bg-surface p-margin-desktop flex flex-col justify-center border-l border-outline-variant">
+<span class="font-label-mono text-label-mono text-primary mb-6 uppercase tracking-widest">The Professional Narrative</span>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8 leading-tight">PRECISION <br/>WITHOUT <br/>COMPROMISE</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant leading-relaxed">
+<p>Founded by Justin L. Corbitt, JLC Mobile Mechanic was established to bridge the gap between dealership-grade expertise and client convenience.</p>
+<p>We believe that luxury and performance vehicles shouldn't have to wait in line at a generic shop. Our mobile unit is a fully-equipped surgical suite for automotive repair, operational throughout the Pensacola region.</p>
+</div>
+<div class="mt-12 flex items-center gap-4">
+<div class="w-12 h-1 bg-primary"></div>
+<span class="font-label-mono text-label-mono text-primary">J.L. CORBITT, FOUNDER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="px-margin-desktop py-section-gap bg-surface-container-low border-y border-outline-variant" id="visit">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-gutter items-center">
+<div class="order-2 lg:order-1">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[450px] border-2 border-outline-variant" data-location="Pensacola, Florida" data-map-slot="" style="">
+<!-- Map integration placeholder -->
+<div class="absolute inset-0 bg-background flex flex-col items-center justify-center p-12 text-center">
+<span class="material-symbols-outlined text-primary text-6xl mb-4" data-icon="explore">explore</span>
+<h3 class="font-headline-md text-headline-md uppercase mb-2">Service Radius</h3>
+<p class="font-label-mono text-label-mono opacity-60"> Pensacola • Gulf Breeze • Milton • Pace</p>
+</div>
+</div>
+</div>
+<div class="order-1 lg:order-2 px-8">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-6">HQ COORDINATES</h2>
+<div class="space-y-8">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="location_on">location_on</span>
+<div>
+<div class="font-label-mono text-label-mono text-primary uppercase mb-1">STATION ADDRESS</div>
+<div class="font-headline-md text-headline-md uppercase">6901 N 9th Avenue<br/>Pensacola, FL 32504</div>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary" data-icon="schedule">schedule</span>
+<div>
+<div class="font-label-mono text-label-mono text-primary uppercase mb-1">OPERATION HOURS</div>
+<div class="font-body-lg">Mon - Fri: 0800 — 1800<br/>Sat: By Appointment Only</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-desktop bg-background" id="contact">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-5">
+<h2 class="font-display-lg text-display-lg uppercase leading-none mb-8">SECURE <br/>YOUR <br/><span class="text-primary">SESSION.</span></h2>
+<div class="space-y-6">
+<a class="flex items-center gap-4 group" href="tel:8506102033">
+<span class="w-12 h-12 flex items-center justify-center border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="call">call</span>
+</span>
+<span class="font-headline-md text-headline-md">(850) 610-2033</span>
+</a>
+<a class="flex items-center gap-4 group" href="mailto:jlcmobilemech@gmail.com">
+<span class="w-12 h-12 flex items-center justify-center border border-outline-variant group-hover:border-primary transition-colors">
+<span class="material-symbols-outlined text-primary" data-icon="mail">mail</span>
+</span>
+<span class="font-body-lg text-on-surface-variant">jlcmobilemech@gmail.com</span>
+</a>
+</div>
+</div>
+<div class="lg:col-span-7 bg-surface-container-high p-8 lg:p-12 border border-outline-variant relative overflow-hidden">
+<div class="absolute top-0 right-0 w-24 h-24 border-t-2 border-r-2 border-primary translate-x-12 -translate-y-12"></div>
+<form class="space-y-8" onsubmit="event.preventDefault(); alert('Booking Request Received. A technician will contact you shortly.');">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<label class="font-label-mono text-label-mono text-primary uppercase mb-2 block">Client Identity</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant focus:border-primary focus:ring-0 transition-all p-4 outline-none font-body-md" placeholder="FULL NAME" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-mono text-label-mono text-primary uppercase mb-2 block">Direct Line</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant focus:border-primary focus:ring-0 transition-all p-4 outline-none font-body-md" placeholder="PHONE NUMBER" required="" type="tel"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-mono text-label-mono text-primary uppercase mb-2 block">Vehicle Intelligence</label>
+<input class="w-full bg-surface-container-lowest border-b border-outline-variant focus:border-primary focus:ring-0 transition-all p-4 outline-none font-body-md" placeholder="YEAR, MAKE, MODEL" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-mono text-label-mono text-primary uppercase mb-2 block">Fault Narrative</label>
+<textarea class="w-full bg-surface-container-lowest border-b border-outline-variant focus:border-primary focus:ring-0 transition-all p-4 outline-none font-body-md resize-none" placeholder="DESCRIBE THE ISSUE OR REQUIRED SERVICE" required="" rows="4"></textarea>
+</div>
+<button class="btn-primary w-full py-6 text-xl tracking-widest" type="submit">INITIALIZE BOOKING REQUEST</button>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="w-full relative bg-surface-container-lowest border-t-2 border-outline px-margin-desktop py-section-gap">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter w-full">
+<div class="md:col-span-5">
+<div class="font-headline-md text-headline-md font-bold text-primary mb-6 flex items-center">
+<img alt="JLC Mobile" class="h-10 w-auto mr-4 grayscale brightness-200" src="https://lh3.googleusercontent.com/aida/AP1WRLv19XpLiq-28Huc9gXKf7ttVsZ3nrU1Te4gIGlCHH8_XAuug-mjhIbtje9NbjbbEKage2W8ztIFO6-86ouKX47c1pq1NeDEH5RagPCjSXGncwnWuBBMqWEutg53crFdHO0o6qucLEbbR_x1ob_nfEbiFuBgpQGMoZZPCmKkYBXubrV_Ml1moG4tQDmd-raqqUhazlhzOysAJSzy2G5qN097bLq1cFEHDb0m0vKtBVkf8_MyYBz794kMWw"/>
+                    JLC MOBILE
+                </div>
+<p class="font-body-md text-on-surface-variant max-w-sm mb-8">Pensacola's premier mobile technician. Providing elite automotive maintenance and diagnostic solutions directly to your location with precision and integrity.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-surface transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="facebook">face_nod</span>
+</a>
+<a class="w-10 h-10 border border-outline-variant flex items-center justify-center text-primary hover:bg-primary hover:text-surface transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="instagram">infrared</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-mono text-label-mono text-primary uppercase mb-6 tracking-widest">NAVIGATION</h4>
+<ul class="space-y-3 font-label-mono text-label-mono">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#services">SERVICES</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#credibility">CREDIBILITY</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#about">ABOUT</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#contact">CONTACT</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h4 class="font-label-mono text-label-mono text-primary uppercase mb-6 tracking-widest">RESOURCES</h4>
+<ul class="space-y-3 font-label-mono text-label-mono">
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">PRIVACY POLICY</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">TERMS OF SERVICE</a></li>
+<li><a class="text-on-surface-variant hover:text-tertiary transition-colors" href="#">WARRANTY INFO</a></li>
+</ul>
+</div>
+<div class="md:col-span-3">
+<h4 class="font-label-mono text-label-mono text-primary uppercase mb-6 tracking-widest">VERIFIED SERVICE</h4>
+<div class="p-4 border border-outline-variant bg-surface">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary" data-icon="verified_user">verified_user</span>
+<span class="font-label-mono text-label-mono uppercase">Certified Expert</span>
+</div>
+<p class="font-label-mono text-[10px] text-outline leading-tight uppercase">ASE CERTIFIED TECHNICIAN • PENSACOLA LOCALLY OWNED • LICENSED &amp; INSURED</p>
+</div>
+</div>
+</div>
+<div class="mt-section-gap pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-mono text-label-mono text-on-surface-variant uppercase text-[10px]">© 2024 JLC MOBILE MECHANIC PENSACOLA. ENGINEERED FOR PRECISION.</p>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-mono text-label-mono text-primary uppercase text-[10px]">SYSTEMS ONLINE</span>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and grid effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Sticky header opacity on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('shadow-2xl', 'bg-background/95');
+            } else {
+                header.classList.remove('shadow-2xl', 'bg-background/95');
+            }
+        });
+    </script>
+</body></html>
