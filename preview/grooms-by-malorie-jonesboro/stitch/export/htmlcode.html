@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Grooms By Malorie | The Modern Groomer's Atelier</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed": "#0e1e1c",
+                        "surface-tint": "#51625e",
+                        "tertiary": "#1d1100",
+                        "primary-fixed-dim": "#b8cac6",
+                        "inverse-surface": "#2f312e",
+                        "secondary-fixed-dim": "#c2c9bd",
+                        "secondary-fixed": "#dee5d9",
+                        "outline-variant": "#c2c8c5",
+                        "surface-dim": "#dbdad6",
+                        "surface": "#faf9f5",
+                        "tertiary-container": "#372405",
+                        "on-secondary": "#ffffff",
+                        "surface-variant": "#e3e2df",
+                        "on-surface": "#1b1c1a",
+                        "on-tertiary-fixed": "#281800",
+                        "inverse-on-surface": "#f2f1ed",
+                        "outline": "#727876",
+                        "primary": "#061614",
+                        "surface-container-low": "#f4f4f0",
+                        "on-error-container": "#93000a",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-highest": "#e3e2df",
+                        "surface-container-high": "#e9e8e4",
+                        "secondary": "#596057",
+                        "primary-fixed": "#d4e6e1",
+                        "surface-container": "#efeeea",
+                        "on-background": "#1b1c1a",
+                        "on-secondary-container": "#5e655b",
+                        "on-tertiary-fixed-variant": "#594320",
+                        "background": "#faf9f5",
+                        "on-surface-variant": "#424846",
+                        "error": "#ba1a1a",
+                        "on-secondary-fixed": "#171d16",
+                        "on-secondary-fixed-variant": "#424940",
+                        "on-tertiary-container": "#a78a61",
+                        "on-primary-fixed-variant": "#3a4a47",
+                        "on-primary": "#ffffff",
+                        "tertiary-fixed": "#ffddb0",
+                        "primary-container": "#1b2b28",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#dbe2d6",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-primary": "#b8cac6",
+                        "on-primary-container": "#81938f",
+                        "surface-bright": "#faf9f5",
+                        "tertiary-fixed-dim": "#e2c195",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "vertical-rule-width": "1px",
+                        "gutter": "24px",
+                        "margin-mobile": "20px",
+                        "unit": "4px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "headline-sm": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "label-caps": ["Inter"],
+                        "button": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "button": ["14px", {"lineHeight": "1", "letterSpacing": "0.05em", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .vertical-divider {
+            width: 1px;
+            background-color: rgba(6, 22, 20, 0.1);
+        }
+        .editorial-offset {
+            transform: translateX(12px);
+        }
+        .matte-image {
+            filter: sepia(0.1) contrast(0.95) brightness(1.02);
+        }
+        .booking-step-active::before {
+            content: '';
+            position: absolute;
+            left: -1px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #a78a61; /* Burnished Gold approximation */
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Top Navigation Anchor -->
+<nav class="fixed top-0 w-full z-50 bg-background/90 dark:bg-primary/90 border-b border-primary/10 dark:border-primary-fixed-dim/10 backdrop-blur-md flex justify-between items-center px-margin-desktop py-4 max-w-full mx-auto">
+<div class="flex items-center gap-8">
+<a class="font-headline-sm text-headline-sm text-primary dark:text-primary-fixed-dim font-bold tracking-tight" href="#">Grooms By Malorie</a>
+<div class="hidden md:flex gap-6">
+<a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#atelier">Atelier</a>
+<a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#collection">Services</a>
+<a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#philosophy">Philosophy</a>
+<a class="font-button text-button uppercase tracking-widest text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim transition-colors" href="#visit">Visit</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:flex items-center gap-2 font-label-caps text-label-caps text-primary/70" href="tel:4172931032">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                (417) 293-1032
+            </a>
+<a class="bg-primary text-on-primary font-button text-button uppercase tracking-widest px-6 py-3 transition-transform active:scale-95 hover:bg-primary-container" href="#contact">
+                Book Appointment
+            </a>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative min-h-screen flex items-center pt-20 overflow-hidden" id="atelier">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover matte-image opacity-90" data-alt="A sophisticated, high-fashion editorial photograph of a well-groomed Standard Poodle standing elegantly in a minimalist studio. The lighting is soft and warm, casting gentle shadows against a bone-white backdrop. The composition is clean and spacious, mirroring a luxury boutique aesthetic. The dog's coat is perfectly sculpted, reflecting the precision of artisanal grooming. The overall mood is serene, upscale, and meticulously professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5LiiwmjLDpmQeRAdhXwmf-8-fYfc1hvpgi-b_Wfleq7qQSOpDXzVsnu01JYu3weFkwrhRxu9i50yyJdtKBbruPX23F97LAOI7-6gRVbzr-vyam3BGlDkEkm_kjLkgd6EAB47LIY_vBWBsiw7UBw2q-JE65kigHbM55tH7e1Fp9arh9DJmi2Z5N4GnLqjRstLUlu3BoKfJKJTV2NbPsKNc0bG6DH9wJGOiDemCo_jZiGWMlJxEeqkk9Ej9HkxOtjOTGQkLt7v-P8g"/>
+</div>
+<div class="absolute right-0 top-0 h-full w-1/3 bg-primary/5 backdrop-blur-sm hidden lg:block"></div>
+<div class="container mx-auto px-margin-desktop relative z-10 flex flex-col items-start max-w-7xl">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-6 block tracking-[0.3em]">Established 2024</span>
+<h1 class="font-display-lg text-display-lg text-primary max-w-3xl mb-8">
+                Bespoke Grooming for the <br/><span class="italic font-normal">Modern Canine.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">
+                A sanctuary of craft and care in Jonesboro, where technical precision meets a low-stress, artisanal environment for your most loyal companions.
+            </p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary font-button text-button uppercase tracking-widest px-10 py-5 hover:bg-primary-container transition-all flex items-center gap-3" href="#contact">
+                    Request an Atelier Visit
+                    <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Decorative vertical rule -->
+<div class="absolute left-margin-desktop bottom-0 h-32 vertical-divider hidden lg:block"></div>
+</header>
+<!-- Credibility Section -->
+<section class="py-24 bg-surface border-y border-primary/5">
+<div class="container mx-auto px-margin-desktop max-w-7xl">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter relative">
+<!-- Vertical Rule Decor -->
+<div class="hidden md:block absolute left-1/3 top-0 bottom-0 vertical-divider opacity-20"></div>
+<div class="hidden md:block absolute left-2/3 top-0 bottom-0 vertical-divider opacity-20"></div>
+<div class="flex flex-col gap-4 pr-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">verified_user</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">AKC Safety Certified</h3>
+<p class="text-on-surface-variant font-body-md">Adhering to the highest industry benchmarks for canine health, handling, and sanitization protocols.</p>
+</div>
+<div class="flex flex-col gap-4 px-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">architecture</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Handcrafted Excellence</h3>
+<p class="text-on-surface-variant font-body-md">Every trim is a custom sculpture, tailored to your breed’s standard and your companion’s unique lifestyle.</p>
+</div>
+<div class="flex flex-col gap-4 pl-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-weight="fill">spa</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Low-Stress Haven</h3>
+<p class="text-on-surface-variant font-body-md">An intentional, quiet atmosphere designed to soothe and comfort, ensuring a positive experience every visit.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Collection Section -->
+<section class="py-32 bg-background relative overflow-hidden" id="collection">
+<!-- Watermark Background -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-[0.03] pointer-events-none select-none">
+<span class="material-symbols-outlined text-[600px]">content_cut</span>
+</div>
+<div class="container mx-auto px-margin-desktop max-w-7xl relative z-10">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-4 block">The Services</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">The Collection.</h2>
+</div>
+<div class="h-px bg-primary/10 flex-grow mx-12 hidden md:block mb-4"></div>
+<p class="font-body-md text-on-surface-variant max-w-xs mb-2">Each service is a comprehensive journey of transformation and well-being.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-start">
+<!-- Service Card 1 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden mb-8 aspect-[4/5] relative">
+<img class="w-full h-full object-cover matte-image group-hover:scale-105 transition-transform duration-700" data-alt="A close-up, editorial shot of a Goldendoodle after receiving a signature groom. The fur is fluffy, clean, and expertly shaped around the face and paws. The dog sits calmly against a soft, sage-mist colored background in a sun-drenched atelier. The lighting highlights the texture of the coat and the brightness of the dog's eyes, conveying a sense of premium care and luxury. The aesthetic is modern and minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjJYAer9HPsUi8abdE6aL2icfdL-RczBwyJoSZUB6AeO1bytyXh34vHhErCjPpHaSc-82iKIYTjw7gXzL3W-V8UDbwo76FigS86RfzFP5UCr9lfG9e0BbLCcObO10EaiZnu7FAXaNBAVc9lnF69ev9x1F5NNftc9WSN5mQfXP9Snli9qszLhf2dSqQee_U5rSLCXAaB9AnOlpOFNfKSXnjUNu8opePHa2_SxBeV-yucemssxmCQVeBzWNime-qSl8OmQHqLOUMt88"/>
+<div class="absolute inset-0 border border-primary/10 pointer-events-none"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">The Signature Groom</h4>
+<p class="text-on-surface-variant mb-6">A full transformation including haircut, deep-cleansing bath, and precision styling.</p>
+<div class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2 inline-block">Starting from $85</div>
+</div>
+<!-- Service Card 2 (Offset) -->
+<div class="group cursor-pointer md:mt-24">
+<div class="overflow-hidden mb-8 aspect-[4/5] relative">
+<img class="w-full h-full object-cover matte-image group-hover:scale-105 transition-transform duration-700" data-alt="A beautifully composed photograph showing the bathing process of a small Maltese in a sleek, modern stainless steel tub. The water is clear, with organic lavender-infused suds visible. The lighting is high-key and professional, emphasizing cleanliness and a sanctuary-like atmosphere. The dog looks relaxed and cared for, with the human hands gently massaging the coat. The overall image reflects high-end botanical pet care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa-cq17pe1-KB3PHVxK780RVY81nYkiIRfHBS2qi8jC-vJU5S4SNqhysdZsZgpZcPxsJlcQS_INXVzVSA1NCkreSqXZGPql2n8QLTHvvLccxO0FBL3MreF31LbqTL86_rORpdsyR1r4x6-QG1HciXvuhUEF8Qgxu-xQzH6VsHGoJhB0abxjtgxPx3jrTllatUNf5D70kv2nsFaaHdEM_DoADKtPrjnVhcoj_rQiaAFFNunLRAIr-ww2A1mBpfQJmn_obSGok88F3E"/>
+<div class="absolute inset-0 border border-primary/10 pointer-events-none"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">The Refresh</h4>
+<p class="text-on-surface-variant mb-6">A maintenance ritual: deep bath, comprehensive brush out, and tactical tidy-up.</p>
+<div class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2 inline-block">Starting from $55</div>
+</div>
+<!-- Service Card 3 -->
+<div class="group cursor-pointer">
+<div class="overflow-hidden mb-8 aspect-[4/5] relative">
+<img class="w-full h-full object-cover matte-image group-hover:scale-105 transition-transform duration-700" data-alt="A tender, soft-focus photograph of a young Golden Retriever puppy during its first visit to the groomer. The puppy is curious and happy, sitting on a warm bone-white surface. The environment is organized and clean, with soft sage-green accents. The image captures the essence of a positive first experience, emphasizing the low-stress philosophy of the atelier. The lighting is ethereal and bright, conveying warmth and trust." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC89hoojfmbahj9U1LKTUTZhiWCqqhNndLRXjCh68g0xS4ej42jJHNK1s9XxODcyHiDob3c5zLNGlUnjmeJRP8rFHleWWOrlNC-X1Y7c6Hx5nScaNDFmHkMo7QxgEzxukedSpHxa7-OfG63mFJPDv2QPjfswlUS8csFGA407p_W08qoeNWkxDnjupiiPnubIA8db0vitmjEjFORf0IHPLm4akuWlrFpxunlEnMqEXJEO0h1ZiQW5wZoQlbhHqvJaMLo7m3Ufg3v1hc"/>
+<div class="absolute inset-0 border border-primary/10 pointer-events-none"></div>
+</div>
+<h4 class="font-headline-sm text-headline-sm text-primary mb-2">The Puppy’s First Atelier</h4>
+<p class="text-on-surface-variant mb-6">A gentle introduction to the sights and sounds of the atelier for companions under 6 months.</p>
+<div class="font-label-caps text-label-caps text-primary border-b border-primary/20 pb-2 inline-block">Starting from $45</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Philosophy -->
+<section class="bg-surface py-32 overflow-hidden border-t border-primary/5" id="philosophy">
+<div class="container mx-auto px-margin-desktop max-w-7xl">
+<div class="flex flex-col lg:flex-row gap-20 items-center">
+<div class="w-full lg:w-1/2 relative">
+<div class="relative z-10">
+<img class="w-full aspect-square object-cover matte-image" data-alt="A portrait-style photograph of a professional groomer, Malorie, at work in her beautifully designed atelier. She is focused, gently using shears on a small Yorkshire Terrier. The background shows a minimalist, organized workstation with high-end tools neatly arranged. The color palette is composed of deep forest greens and warm bone whites, reflecting the brand identity. The lighting is purposeful, creating a scene of artisanal craftsmanship and dedication." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNaBuduNIjZxWfiY7giWc-z3wDJ7va-E4dIuQkEUcim6sBCr4yj_XIDwp0DtDarcR5Ger2yLWe6TciJQBI95Jse8cYoH5PK6_TIoVp-wotr1QMTA_Esr_6aawpqEix831U8TJNSfU9lzwZdj4cgT--ifTDwR6PC5mPYvkZQgGLQW2LeZqMQkCn7DyvktTU-9LO3Q4CbsybxKF2ic1r_Fk4yGXuZRIKzkoroH3YRi7aEdoQIoMMXz-YUU6ywcqD-XxXubmY4zZxSPA"/>
+</div>
+<!-- Decorative elements -->
+<div class="absolute -bottom-10 -right-10 w-64 h-64 bg-primary-container/10 -z-0"></div>
+<div class="absolute top-1/2 -left-12 h-32 vertical-divider hidden xl:block"></div>
+</div>
+<div class="w-full lg:w-1/2">
+<span class="font-label-caps text-label-caps text-primary uppercase mb-6 block">Our Founder</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-10 italic">Malorie's Philosophy.</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>
+                            Grooming is more than a utility; it is an act of care and a display of craftsmanship. At Grooms By Malorie, we believe every pet deserves an environment that honors their sensitivity while delivering exceptional results.
+                        </p>
+<p>
+                            My philosophy is rooted in "Low-Stress" handling. By removing the frantic pace of traditional salons, we create space for connection, precision, and excellence. We use only the finest botanical products and state-of-the-art equipment to ensure your companion leaves looking and feeling their absolute best.
+                        </p>
+<div class="pt-8 flex flex-col gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Handcrafted Excellence.</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">MALORIE, FOUNDER &amp; MASTER GROOMER</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit & Map Section -->
+<section class="bg-background py-32 border-t border-primary/5" id="visit">
+<div class="container mx-auto px-margin-desktop max-w-7xl">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24">
+<div>
+<span class="font-label-caps text-label-caps text-primary uppercase mb-4 block">The Destination</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12">Visit the Atelier.</h2>
+<div class="space-y-12">
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<h5 class="font-button text-button uppercase tracking-widest text-primary mb-2">Location</h5>
+<p class="text-on-surface-variant font-body-lg">4313 East Johnson Avenue<br/>Jonesboro, AR 72401</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<div>
+<h5 class="font-button text-button uppercase tracking-widest text-primary mb-2">Hours</h5>
+<p class="text-on-surface-variant font-body-lg">Tuesday — Saturday<br/>8:00 AM — 5:00 PM</p>
+<p class="text-on-surface-variant font-body-md italic mt-2">By Appointment Only</p>
+</div>
+</div>
+<div class="flex gap-6">
+<span class="material-symbols-outlined text-primary text-3xl">contact_support</span>
+<div>
+<h5 class="font-button text-button uppercase tracking-widest text-primary mb-2">Direct Contact</h5>
+<p class="text-on-surface-variant font-body-lg">(417) 293-1032</p>
+<p class="text-on-surface-variant font-body-lg">elitegrooming03@yahoo.com</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 border border-primary/5 group-hover:border-primary/10 transition-colors"></div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] h-full bg-surface-container shadow-xl" data-location="Jonesboro, AR" data-map-slot="" style="">
+<!-- Map integration placeholder -->
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-9xl">map</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="bg-primary text-on-primary py-32" id="contact">
+<div class="container mx-auto px-margin-desktop max-w-5xl text-center">
+<span class="font-label-caps text-label-caps text-primary-fixed-dim uppercase mb-6 block tracking-widest">Inquiry</span>
+<h2 class="font-headline-lg text-headline-lg mb-12">Begin the Transformation.</h2>
+<form class="text-left grid grid-cols-1 md:grid-cols-2 gap-10" id="booking-form">
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-primary-fixed-dim" for="name">Pet Owner Name</label>
+<input class="bg-transparent border-b border-on-primary/20 focus:border-primary-fixed-dim focus:ring-0 px-0 py-3 text-body-lg placeholder:text-on-primary/30 transition-colors" id="name" placeholder="Full Name" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-primary-fixed-dim" for="email">Email Address</label>
+<input class="bg-transparent border-b border-on-primary/20 focus:border-primary-fixed-dim focus:ring-0 px-0 py-3 text-body-lg placeholder:text-on-primary/30 transition-colors" id="email" placeholder="email@address.com" required="" type="email"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-primary-fixed-dim" for="breed">Companion Breed</label>
+<input class="bg-transparent border-b border-on-primary/20 focus:border-primary-fixed-dim focus:ring-0 px-0 py-3 text-body-lg placeholder:text-on-primary/30 transition-colors" id="breed" placeholder="e.g. Goldendoodle, Yorkie" required="" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="font-label-caps text-label-caps uppercase text-primary-fixed-dim" for="service">Desired Collection</label>
+<select class="bg-transparent border-b border-on-primary/20 focus:border-primary-fixed-dim focus:ring-0 px-0 py-3 text-body-lg transition-colors appearance-none cursor-pointer" id="service">
+<option class="text-primary">The Signature Groom</option>
+<option class="text-primary">The Refresh</option>
+<option class="text-primary">The Puppy’s First Atelier</option>
+<option class="text-primary">Other / Consultation</option>
+</select>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="font-label-caps text-label-caps uppercase text-primary-fixed-dim" for="message">Special Considerations</label>
+<textarea class="bg-transparent border-b border-on-primary/20 focus:border-primary-fixed-dim focus:ring-0 px-0 py-3 text-body-lg placeholder:text-on-primary/30 transition-colors resize-none" id="message" placeholder="Allergies, sensitivities, or specific style requests..." rows="3"></textarea>
+</div>
+<div class="md:col-span-2 pt-10 flex justify-center">
+<button class="bg-surface text-primary font-button text-button uppercase tracking-[0.2em] px-16 py-6 hover:bg-primary-fixed transition-all shadow-lg active:scale-95" type="submit">
+                        Submit Inquiry
+                    </button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-primary-container border-t border-primary/10 dark:border-primary-fixed-dim/10">
+<div class="container mx-auto px-margin-desktop py-16 max-w-full grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="flex flex-col gap-6 md:col-span-1">
+<span class="font-headline-md text-headline-md text-primary dark:text-primary-fixed-dim font-bold">Grooms By Malorie</span>
+<p class="font-body-md text-on-surface-variant dark:text-on-primary-container max-w-xs">
+                    Handcrafted excellence and bespoke grooming for the modern companion.
+                </p>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim uppercase tracking-widest mb-2">Explore</h5>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#atelier">Atelier</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#collection">Collection</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#philosophy">Philosophy</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim uppercase tracking-widest mb-2">Support</h5>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Accessibility</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant dark:text-on-primary-container hover:text-primary dark:hover:text-primary-fixed-dim underline transition-all" href="#">Sustainability</a>
+</div>
+<div class="flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim uppercase tracking-widest mb-2">Social</h5>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="w-10 h-10 border border-primary/20 flex items-center justify-center hover:bg-primary hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">camera</span>
+</a>
+</div>
+</div>
+</div>
+<div class="container mx-auto px-margin-desktop py-8 border-t border-primary/5 flex flex-col md:flex-row justify-between items-center gap-4 text-on-surface-variant dark:text-on-primary-container text-xs font-label-caps">
+<span>© 2024 Grooms By Malorie. Handcrafted Excellence.</span>
+<div class="flex gap-8">
+<span>Jonesboro, AR</span>
+<a class="hover:text-primary transition-colors" href="mailto:elitegrooming03@yahoo.com">elitegrooming03@yahoo.com</a>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll implementation
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Form Interactivity
+        const form = document.getElementById('booking-form');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerText;
+            btn.innerText = "Sending Inquiry...";
+            btn.disabled = true;
+            
+            setTimeout(() => {
+                btn.innerText = "Inquiry Sent. We'll reach out soon.";
+                btn.classList.replace('bg-surface', 'bg-tertiary-fixed-dim');
+                form.reset();
+                setTimeout(() => {
+                    btn.innerText = originalText;
+                    btn.disabled = false;
+                    btn.classList.replace('bg-tertiary-fixed-dim', 'bg-surface');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2', 'shadow-md');
+                nav.classList.remove('py-4');
+            } else {
+                nav.classList.remove('py-2', 'shadow-md');
+                nav.classList.add('py-4');
+            }
+        });
+    </script>
+</body></html>
