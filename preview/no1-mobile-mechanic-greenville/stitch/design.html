@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>No1 Mobile Mechanic | Precision Greenville Repair</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Public+Sans:wght@700;800;900&family=Libre+Caslon+Text&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Libre+Caslon+Text:wght@100..900&family=Public+Sans:wght@100..900&display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "error-container": "#ffdad6",
+                      "background": "#fdf8f8",
+                      "outline": "#747878",
+                      "primary-container": "#1c1b1b",
+                      "secondary-fixed-dim": "#e9c400",
+                      "on-primary": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "secondary-fixed": "#ffe16d",
+                      "outline-variant": "#c4c7c7",
+                      "surface-container-high": "#ebe7e6",
+                      "on-secondary-container": "#6e5c00",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-surface": "#1c1b1b",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "surface-tint": "#5f5e5e",
+                      "on-error-container": "#93000a",
+                      "inverse-on-surface": "#f4f0ef",
+                      "tertiary-fixed": "#d8e3fa",
+                      "inverse-primary": "#c8c6c5",
+                      "tertiary-container": "#111c2c",
+                      "primary": "#000000",
+                      "on-tertiary-fixed": "#111c2c",
+                      "error": "#ba1a1a",
+                      "surface-variant": "#e5e2e1",
+                      "surface-container-highest": "#e5e2e1",
+                      "on-error": "#ffffff",
+                      "surface": "#fdf8f8",
+                      "inverse-surface": "#313030",
+                      "secondary": "#705d00",
+                      "tertiary": "#000000",
+                      "tertiary-fixed-dim": "#bcc7dd",
+                      "on-tertiary-fixed-variant": "#3c475a",
+                      "surface-bright": "#fdf8f8",
+                      "on-secondary-fixed": "#221b00",
+                      "primary-fixed": "#e5e2e1",
+                      "surface-dim": "#ddd9d8",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary-container": "#798499",
+                      "surface-container": "#f1edec",
+                      "on-surface-variant": "#444748",
+                      "on-background": "#1c1b1b",
+                      "surface-container-low": "#f7f3f2",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed-variant": "#474746",
+                      "secondary-container": "#fcd400",
+                      "on-secondary-fixed-variant": "#544600",
+                      "on-primary-container": "#858383"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-mobile": "20px",
+                      "border-thin": "1px",
+                      "border-thick": "4px",
+                      "margin-desktop": "64px",
+                      "unit": "4px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-serif": ["Libre Caslon Text"],
+                      "display-lg-mobile": ["Public Sans"],
+                      "headline-sm": ["Public Sans"],
+                      "body-lg": ["Inter"],
+                      "label-caps": ["Public Sans"],
+                      "display-lg": ["Public Sans"],
+                      "body-md": ["Inter"]
+              },
+              "fontSize": {
+                      "headline-serif": ["32px", {"lineHeight": "1.4", "fontWeight": "400"}],
+                      "display-lg-mobile": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                      "headline-sm": ["20px", {"lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                      "display-lg": ["72px", {"lineHeight": "1.0", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 10;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation -->
+<nav class="bg-background sticky top-0 z-50 border-b-thick border-primary">
+<div class="flex justify-between items-center w-full px-margin-mobile md:px-margin-desktop py-6 max-w-full mx-auto">
+<div class="font-headline-sm text-headline-sm font-black tracking-tighter text-primary">No1</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors text-primary border-b-thick border-primary pb-1" href="#services">REPAIR</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#services">DIAGNOSTICS</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#fleet">FLEET</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#about">ABOUT</a>
+</div>
+<a class="font-label-caps text-label-caps text-primary hover:text-secondary transition-all active:scale-95 duration-75" href="tel:9292476286">(929) 247-6286</a>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center overflow-hidden px-margin-mobile md:px-margin-desktop py-20">
+<div class="grid grid-cols-1 md:grid-cols-12 w-full gap-gutter">
+<div class="md:col-span-7 flex flex-col justify-center z-20">
+<span class="font-label-caps text-label-caps text-secondary mb-4">ESTABLISHED IN GREENVILLE, NC</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg mb-8">
+                        PRECISION <br/>MOBILE REPAIR <br/>AT YOUR DOOR.
+                    </h1>
+<p class="font-headline-serif text-headline-serif max-w-xl mb-10 text-on-surface-variant">
+                        Professional automotive solutions delivered with the authority of a master technician. No tow trucks, no waiting rooms, just elite service.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary text-on-primary px-10 py-5 font-label-caps text-label-caps hover:bg-secondary transition-colors uppercase tracking-widest" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Request Service</button>
+<button class="border-thick border-primary px-10 py-5 font-label-caps text-label-caps hover:bg-primary hover:text-on-primary transition-all uppercase tracking-widest">View Services</button>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="border-thick border-primary p-2 bg-white">
+<img alt="Mechanical Detail" class="w-full h-[500px] object-cover grayscale contrast-125" data-alt="A high-contrast, professional close-up of a high-performance engine bay with gleaming metallic components and complex wiring. The lighting is sharp and editorial, highlighting the intricate mechanical textures of the clean engine. The overall mood is industrial and precise, using a stark palette of silver, black, and subtle golden highlights that reflect the premium service of a master mechanic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCF2m9PrRSOcZn2Cn_cfAaBQ9kJfziuEmcVd0MuO55BnfjZqsJ9HQccJjNeP-0Nkk1U3gD12yuBvecXcxMz90_ihUFYb_l0MRrJ5MeXtHv3dfNSqU3k3ssT3br7o-bMu-telhDN1U7Fffjn7-0nzAAFOgpLv1Qa9xKifmtlvCllrzRyhzjt7pFs1bFd3e1U6rcfeO3elCm_r0yhNnbahD_urjnUWRW2d2f0pkrBKDNh10CPPTNAU-zWJDcdzij1oc7KgYkQCwlPrqlD"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-secondary-container p-8 border-thick border-primary hidden md:block">
+<p class="font-label-caps text-label-caps text-on-secondary-container">24/7 ROADSIDE ASSISTANCE AVAILABLE</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Trust Marquee -->
+<section class="bg-primary py-8 overflow-hidden border-y-thick border-primary">
+<div class="flex whitespace-nowrap animate-marquee">
+<div class="flex items-center gap-16 px-8">
+<span class="font-display-lg-mobile text-on-primary opacity-20 text-3xl">GREENVILLE'S MOST TRUSTED</span>
+<span class="material-symbols-outlined text-secondary text-4xl">settings_input_component</span>
+<span class="font-display-lg-mobile text-on-primary opacity-20 text-3xl">ASE CERTIFIED EXPERTISE</span>
+<span class="material-symbols-outlined text-secondary text-4xl">build</span>
+<span class="font-display-lg-mobile text-on-primary opacity-20 text-3xl">FULL FLEET SOLUTIONS</span>
+<span class="material-symbols-outlined text-secondary text-4xl">verified_user</span>
+</div>
+<div aria-hidden="true" class="flex items-center gap-16 px-8">
+<span class="font-display-lg-mobile text-on-primary opacity-20 text-3xl">GREENVILLE'S MOST TRUSTED</span>
+<span class="material-symbols-outlined text-secondary text-4xl">settings_input_component</span>
+<span class="font-display-lg-mobile text-on-primary opacity-20 text-3xl">ASE CERTIFIED EXPERTISE</span>
+<span class="material-symbols-outlined text-secondary text-4xl">build</span>
+<span class="font-display-lg-mobile text-on-primary opacity-20 text-3xl">FULL FLEET SOLUTIONS</span>
+<span class="material-symbols-outlined text-secondary text-4xl">verified_user</span>
+</div>
+</div>
+</section>
+<!-- Service Directory -->
+<section class="px-margin-mobile md:px-margin-desktop py-24 bg-surface" id="services">
+<div class="max-w-full mx-auto">
+<div class="mb-20">
+<h2 class="font-display-lg-mobile text-display-lg-mobile border-l-thick border-primary pl-8">SERVICE DIRECTORY</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-20">
+<!-- Service 01 -->
+<div class="reveal border-t-thick border-primary pt-8 flex flex-col md:flex-row gap-8">
+<div class="font-display-lg-mobile text-primary opacity-20 shrink-0">01</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-4 uppercase">Full Diagnostics</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Utilizing state-of-the-art computer scanning and old-school mechanical intuition to pinpoint the exact source of failure.</p>
+<ul class="space-y-2 font-label-caps text-[10px]">
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> OBD-II SYSTEM SCANNING</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> ELECTRICAL FAULT TRACING</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> SENSOR RECALIBRATION</li>
+</ul>
+</div>
+</div>
+<!-- Service 02 -->
+<div class="reveal border-t-thick border-primary pt-8 flex flex-col md:flex-row gap-8">
+<div class="font-display-lg-mobile text-primary opacity-20 shrink-0">02</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-4 uppercase">Roadside Repair</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">On-the-spot solutions for sudden breakdowns. We bring the garage to your location, wherever that may be.</p>
+<ul class="space-y-2 font-label-caps text-[10px]">
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> BATTERY & ALTERNATOR</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> COOLING SYSTEM FIXES</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> FUEL SYSTEM SERVICE</li>
+</ul>
+</div>
+</div>
+<!-- Service 03 -->
+<div class="reveal border-t-thick border-primary pt-8 flex flex-col md:flex-row gap-8" id="fleet">
+<div class="font-display-lg-mobile text-primary opacity-20 shrink-0">03</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-4 uppercase">Fleet Management</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Minimize downtime for your business. We handle the logistical headache of keeping your work vehicles in peak condition.</p>
+<ul class="space-y-2 font-label-caps text-[10px]">
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> LOGBOOK MAINTENANCE</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> BULK COMPONENT SERVICE</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> PRIORITY EMERGENCY CALLS</li>
+</ul>
+</div>
+</div>
+<!-- Service 04 -->
+<div class="reveal border-t-thick border-primary pt-8 flex flex-col md:flex-row gap-8">
+<div class="font-display-lg-mobile text-primary opacity-20 shrink-0">04</div>
+<div>
+<h3 class="font-headline-sm text-headline-sm mb-4 uppercase">Scheduled Care</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Proactive maintenance to avoid the costly repairs of tomorrow. Convenience combined with technical rigour.</p>
+<ul class="space-y-2 font-label-caps text-[10px]">
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> BRAKE PAD & ROTOR REPLACEMENT</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> BELT & HOSE INSPECTIONS</li>
+<li class="flex items-center gap-2"><span class="w-2 h-2 bg-secondary"></span> TRANSMISSION FLUSHES</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: Editorial Layout -->
+<section class="bg-primary text-on-primary py-32 px-margin-mobile md:px-margin-desktop grain-overlay relative" id="about">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-20">
+<div class="md:col-span-5">
+<h2 class="font-display-lg-mobile text-display-lg-mobile text-secondary-fixed leading-tight mb-12">THE <br/>No1 <br/>DIFFERENCE</h2>
+<img alt="Expertise" class="w-full aspect-square object-cover border-thick border-secondary-fixed mt-12 grayscale" data-alt="A gritty, black and white editorial photograph of a master mechanic's hands covered in grease, working on a complex vintage engine. The focus is sharp on the texture of the metallic tools and the weathered skin. The lighting is moody and dramatic, reminiscent of a luxury lifestyle magazine profile on industrial craftsmanship. The composition is off-center and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAMYmtzqMyKFTeqfPFjrh2_o6cPhwNvP-9SHPextOXnuvm3QxRlOamxlyvCd6SUH0Vqt_wQUOW0D8f4K5tjmI0pCb398QsOh02dB-TnPB7mHP-B1rmdEJlUS5H3RJn0-pAk92TfVr084Qnb5o0wXC9ww_5gyJuKwH61HviaPtadWlVva_uqC_xb5_yOWLCnugXLNUFY0m0dy9UzJzZr1q06NII9R0GvXZE9qvMXvUT6f5OZTVGqxSljc23y8X4QafIP19c0lRZn8gKb"/>
+</div>
+<div class="md:col-span-6 md:col-start-7 flex flex-col justify-end">
+<div class="space-y-8">
+<p class="font-headline-serif text-headline-serif text-surface">
+                            We aren't just mechanics; we are industrial artisans serving the Greenville community. Our philosophy is built on three unshakeable pillars: Precision, Transparency, and Mobility.
+                        </p>
+<p class="font-body-lg text-body-lg text-on-primary-fixed-variant leading-relaxed">
+                            For years, No1 Mobile Mechanic has rewritten the script for automotive care in North Carolina. We recognized that the traditional shop model was broken—long wait times, deceptive pricing, and the logistical nightmare of towing. 
+                        </p>
+<div class="pt-8 border-t border-outline-variant">
+<div class="grid grid-cols-2 gap-8">
+<div>
+<p class="font-display-lg-mobile text-3xl text-secondary-fixed">15+</p>
+<p class="font-label-caps text-[10px]">YEARS OF EXPERIENCE</p>
+</div>
+<div>
+<p class="font-display-lg-mobile text-3xl text-secondary-fixed">5.0</p>
+<p class="font-label-caps text-[10px]">AVERAGE GOOGLE RATING</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Map & Contact Form -->
+<section class="grid grid-cols-1 lg:grid-cols-2" id="contact">
+<!-- Form Side -->
+<div class="px-margin-mobile md:px-margin-desktop py-24 bg-white">
+<h2 class="font-display-lg-mobile text-display-lg-mobile mb-4">REQUEST SERVICE</h2>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-12">GREENVILLE & SURROUNDING AREAS</p>
+<form class="space-y-8" id="serviceForm">
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2">FULL NAME</label>
+<input class="w-full border-b-thick border-primary focus:border-secondary outline-none py-4 px-0 transition-all font-headline-sm" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2">PHONE NUMBER</label>
+<input class="w-full border-b-thick border-primary focus:border-secondary outline-none py-4 px-0 transition-all font-headline-sm" placeholder="(555) 000-0000" required="" type="tel"/>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2">VEHICLE MAKE/MODEL</label>
+<input class="w-full border-b-thick border-primary focus:border-secondary outline-none py-4 px-0 transition-all font-headline-sm" placeholder="2020 Ford F-150" required="" type="text"/>
+</div>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2">SERVICE REQUIRED</label>
+<select class="w-full border-b-thick border-primary focus:border-secondary outline-none py-4 px-0 transition-all font-headline-sm appearance-none bg-transparent">
+<option>Diagnostic Check</option>
+<option>Roadside Assistance</option>
+<option>Scheduled Maintenance</option>
+<option>Fleet Inquiry</option>
+</select>
+</div>
+<div class="group">
+<label class="font-label-caps text-label-caps block mb-2">DESCRIBE THE ISSUE</label>
+<textarea class="w-full border-b-thick border-primary focus:border-secondary outline-none py-4 px-0 transition-all font-body-md" placeholder="Provide details about the mechanical symptoms..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-8 font-label-caps text-label-caps hover:bg-secondary transition-all uppercase tracking-[0.2em] flex items-center justify-center gap-4 group" type="submit">
+                        DISPATCH MECHANIC
+                        <span class="material-symbols-outlined transition-transform group-hover:translate-x-2">trending_flat</span>
+</button>
+</form>
+</div>
+<!-- Map Side -->
+<div class="bg-primary-container relative">
+<div aria-label="Map" class="map-slot relative overflow-hidden h-full min-h-[500px]" data-location="Greenville, NC" data-map-slot="" style="">
+<!-- Visual Placeholder for Map Style -->
+<div class="absolute inset-0 grayscale opacity-40 mix-blend-luminosity">
+<img alt="Map Overlay" class="w-full h-full object-cover" data-alt="A dark, high-contrast satellite or map-style image showing the geometric grid of a modern city at night. The lighting is focused on primary arteries with deep shadows in residential areas. The aesthetic is tech-focused and industrial, using a monochromatic blue and black palette with golden points of light." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMR0WcjM75fCx_s_VmzZulv9ipfAtwYRa_OiilEQQRtGNbH2SBWJE3yRCeMVP__8RwocWbfZnMzPA4RcoJLufzRuZpZoYt4ZgPj8Ng9mPfa3OeXJZgMBtDE9mar9ZWv2KV6AJ26tLBwbvbgcE91sjwNKCuqEyIxiV3RTo3LsTyS1wvuYFQSw0Uene3Btk-jyNH4T0c1_tHiq07YI3mD9SDwyPqYlilgjLBfxQcG5XQG_Y25bXRGh5hGE32sucWgIK10ilBChmQJDqF"/>
+</div>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<div class="bg-primary border-thick border-secondary p-8 flex flex-col items-center max-w-xs text-center pointer-events-auto">
+<span class="material-symbols-outlined text-secondary text-5xl mb-4" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<h4 class="font-headline-sm text-on-primary mb-2">SERVICE RADIUS</h4>
+<p class="font-label-caps text-[10px] text-surface-variant">Operating throughout Greenville, NC & Pitt County</p>
+<div class="mt-6 font-body-md text-on-primary opacity-80 text-sm">
+                                1315 Tice Circle<br/>
+                                Greenville, NC 27834
+                            </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-primary text-on-primary">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop py-16 w-full">
+<div class="md:col-span-4">
+<div class="font-headline-sm text-headline-sm text-secondary mb-6">No1</div>
+<p class="font-body-md text-surface-variant mb-8 max-w-sm">
+                    Precision mobile automotive service for personal and commercial fleets. Greenville's standard for mechanical excellence.
+                </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">share</span>
+</a>
+<a class="w-10 h-10 border border-outline flex items-center justify-center hover:bg-secondary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined text-sm">mail</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-3 md:col-start-6">
+<h4 class="font-label-caps text-label-caps text-on-secondary-fixed-variant mb-8 uppercase">Navigation</h4>
+<ul class="space-y-4">
+<li><a class="text-surface-variant hover:text-on-primary transition-all font-label-caps text-[11px]" href="#">SERVICES</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all font-label-caps text-[11px]" href="#">FLEET SOLUTIONS</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all font-label-caps text-[11px]" href="#">SERVICE AREAS</a></li>
+<li><a class="text-surface-variant hover:text-on-primary transition-all font-label-caps text-[11px]" href="#">FLEET LOGIN</a></li>
+</ul>
+</div>
+<div class="md:col-span-3 md:col-start-10">
+<h4 class="font-label-caps text-label-caps text-on-secondary-fixed-variant mb-8 uppercase">Direct Contact</h4>
+<div class="space-y-6">
+<div>
+<p class="font-label-caps text-[10px] text-outline-variant mb-1">PHONE</p>
+<p class="font-headline-sm text-lg">(929) 247-6286</p>
+</div>
+<div>
+<p class="font-label-caps text-[10px] text-outline-variant mb-1">EMAIL</p>
+<p class="font-body-md">No1mobilemechanicllc@gmail.com</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-12 border-t border-outline-variant/30 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+<p class="font-label-caps text-[10px] text-outline-variant">© 2024 No1 Mobile Mechanic Greenville. All rights reserved.</p>
+<div class="flex gap-8">
+<a class="font-label-caps text-[10px] text-outline-variant hover:text-secondary" href="#">Terms</a>
+<a class="font-label-caps text-[10px] text-outline-variant hover:text-secondary" href="#">Privacy</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+        // Form Submission Interaction
+        const form = document.getElementById('serviceForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const btn = form.querySelector('button');
+            const originalText = btn.innerHTML;
+            
+            btn.innerHTML = 'DISPATCHING...';
+            btn.classList.add('opacity-50', 'pointer-events-none');
+            
+            setTimeout(() => {
+                btn.innerHTML = 'DISPATCHED SUCCESSFUL';
+                btn.classList.remove('bg-primary');
+                btn.classList.add('bg-secondary', 'text-primary');
+                form.reset();
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.classList.remove('opacity-50', 'pointer-events-none', 'bg-secondary', 'text-primary');
+                    btn.classList.add('bg-primary');
+                }, 3000);
+            }, 1500);
+        });
+
+        // Marquee duplicate check for smooth looping (already handled by CSS animation)
+        
+        // Sticky Header Shrink
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.classList.add('py-2');
+                nav.querySelector('div').classList.replace('py-6', 'py-3');
+            } else {
+                nav.classList.remove('py-2');
+                nav.querySelector('div').classList.replace('py-3', 'py-6');
+            }
+        });
+    </script>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            animation: marquee 30s linear infinite;
+        }
+        
+        /* Custom Scrollbar for the Industrial Look */
+        ::-webkit-scrollbar {
+            width: 12px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #fdf8f8;
+            border-left: 1px solid #000;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #000;
+            border: 3px solid #fdf8f8;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #705d00;
+        }
+    </style>
+</body></html>
