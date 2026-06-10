@@ -1,0 +1,430 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "High-End Utility System",
+          "styleGuidelines": "## Brand & Style\nThe brand personality is **rugged, professional, and elite**, moving away from \"local service\" tropes toward a high-performance logistics aesthetic. The design system follows a **Modern Industrial** style—combining the precision of high-end software with the grit of roadside recovery.\n\nThe UI should feel authoritative and urgent. We achieve this through:\n- **High-Contrast Minimalism:** Extreme clarity through limited color use and vast whitespace.\n- **Precision Engineering:** Sharp corners and mechanical alignment that suggest technical expertise.\n- **Subtle Texture:** Use of fine grain overlays (2-3% opacity) on dark surfaces to mimic asphalt and heavy-duty machinery.\n- **Hazard Motifs:** Stylized 45-degree stripes used sparingly for progress bars, top-edge borders of cards, or loading states to evoke safety and visibility.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. Content should feel locked into place, suggesting stability and order.\n\n- **Grid:** A 12-column grid for desktop with wide 64px margins to create a \"letterboxed\" premium feel.\n- **Rhythm:** An 8px linear scale (8, 16, 24, 32, 48, 64, 96). \n- **Density:** Use generous vertical padding (96px+) between major sections to allow the bold typography to breathe.\n- **Mobile:** Transition to a 4-column grid with reduced margins (16px), but maintain the large heading sizes for immediate brand impact upon landing.\n\n## Elevation & Depth\nIn this dark-mode-first system, depth is conveyed through **Tonal Layering** rather than traditional shadows.\n\n- **Level 0 (Base):** Midnight Asphalt (#121417).\n- **Level 1 (Cards/Surface):** Steel Grain (#1A1D21) with a 1px solid border (#2C2F36).\n- **Level 2 (Modals/Popovers):** Slate Grey (#25282E) with a subtle outer glow of the primary color (low opacity) only for emergency alerts.\n- **Outlines:** Use \"Ghost Borders\"—thin, 1px lines in low-contrast greys—to define sections without breaking the flat, minimalist aesthetic.\n\n## Components\n- **Primary Buttons:** Solid Dakota Flare background with black text. Sharp corners. Hover state: slight desaturation or addition of a subtle \"hazard stripe\" pattern on the right edge.\n- **Secondary Buttons:** Ghost style. 1px Frost White border, white text. No fill.\n- **Input Fields:** Dark background (#1A1D21) with a 1px bottom-border only, mimicking technical forms. Labels use the Monospaced font in uppercase.\n- **Status Chips:** Rectangular tags with monospaced text. For \"In Transit\" or \"Active\" states, use a tiny animated \"hazard stripe\" loader.\n- **Cards:** No shadow. 1px border. The top border of \"Featured\" or \"Emergency\" cards can be 4px thick Dakota Flare to draw immediate attention.\n- **Hazard Dividers:** Instead of simple lines, use a repeating 45-degree diagonal pattern (2px wide) for section breaks where urgency is required.",
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ff5f00",
+            "designMd": "---\nname: High-End Utility System\ncolors:\n  surface: '#10131a'\n  surface-dim: '#10131a'\n  surface-bright: '#363940'\n  surface-container-lowest: '#0b0e14'\n  surface-container-low: '#191c22'\n  surface-container: '#1d2026'\n  surface-container-high: '#272a31'\n  surface-container-highest: '#32353c'\n  on-surface: '#e0e2eb'\n  on-surface-variant: '#e4bfb1'\n  inverse-surface: '#e0e2eb'\n  inverse-on-surface: '#2d3037'\n  outline: '#ab8a7d'\n  outline-variant: '#5b4137'\n  surface-tint: '#ffb599'\n  primary: '#ffb599'\n  on-primary: '#5a1c00'\n  primary-container: '#ff5f00'\n  on-primary-container: '#531a00'\n  inverse-primary: '#a63b00'\n  secondary: '#c6c6ca'\n  on-secondary: '#2f3034'\n  secondary-container: '#4a4b4f'\n  on-secondary-container: '#bbbbbf'\n  tertiary: '#c5c7c8'\n  on-tertiary: '#2e3132'\n  tertiary-container: '#929495'\n  on-tertiary-container: '#2a2d2e'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbce'\n  primary-fixed-dim: '#ffb599'\n  on-primary-fixed: '#370e00'\n  on-primary-fixed-variant: '#7f2b00'\n  secondary-fixed: '#e2e2e6'\n  secondary-fixed-dim: '#c6c6ca'\n  on-secondary-fixed: '#1a1c1f'\n  on-secondary-fixed-variant: '#45474a'\n  tertiary-fixed: '#e1e3e4'\n  tertiary-fixed-dim: '#c5c7c8'\n  on-tertiary-fixed: '#191c1d'\n  on-tertiary-fixed-variant: '#454748'\n  background: '#10131a'\n  on-background: '#e0e2eb'\n  surface-variant: '#32353c'\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\nThe brand personality is **rugged, professional, and elite**, moving away from \"local service\" tropes toward a high-performance logistics aesthetic. The design system follows a **Modern Industrial** style—combining the precision of high-end software with the grit of roadside recovery.\n\nThe UI should feel authoritative and urgent. We achieve this through:\n- **High-Contrast Minimalism:** Extreme clarity through limited color use and vast whitespace.\n- **Precision Engineering:** Sharp corners and mechanical alignment that suggest technical expertise.\n- **Subtle Texture:** Use of fine grain overlays (2-3% opacity) on dark surfaces to mimic asphalt and heavy-duty machinery.\n- **Hazard Motifs:** Stylized 45-degree stripes used sparingly for progress bars, top-edge borders of cards, or loading states to evoke safety and visibility.\n\n## Colors\nThe palette is rooted in the \"Midnight\" environment of recovery operations.\n\n- **Dakota Flare (#FF5F00):** A vibrant, high-visibility hazard orange. Use exclusively for primary actions, emergency alerts, and critical brand accents.\n- **Midnight Asphalt (#121417):** The core background color. It is a deep, desaturated slate that provides a premium alternative to pure black.\n- **Frost White (#F8F9FA):** Used for primary typography and icons to ensure maximum legibility against dark backgrounds.\n- **Steel Grain (#2C2F36):** Used for secondary surfaces, input fields, and borders to create subtle depth.\n\n## Typography\nThe typography system prioritizes impact and technical precision.\n\n- **Headlines:** Uses **Hanken Grotesk**. It provides a sharp, industrial character with tight tracking. Large scales should be used to anchor the layout.\n- **Body:** Uses **Inter**. This is the workhorse for readability, ensuring that service details and location data are instantly digestible.\n- **Labels/Technical Data:** Uses **JetBrains Mono**. This monospaced font is used for VIN numbers, coordinates, timestamps, and status labels to reinforce the \"utility\" aspect of the system.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. Content should feel locked into place, suggesting stability and order.\n\n- **Grid:** A 12-column grid for desktop with wide 64px margins to create a \"letterboxed\" premium feel.\n- **Rhythm:** An 8px linear scale (8, 16, 24, 32, 48, 64, 96). \n- **Density:** Use generous vertical padding (96px+) between major sections to allow the bold typography to breathe.\n- **Mobile:** Transition to a 4-column grid with reduced margins (16px), but maintain the large heading sizes for immediate brand impact upon landing.\n\n## Elevation & Depth\nIn this dark-mode-first system, depth is conveyed through **Tonal Layering** rather than traditional shadows.\n\n- **Level 0 (Base):** Midnight Asphalt (#121417).\n- **Level 1 (Cards/Surface):** Steel Grain (#1A1D21) with a 1px solid border (#2C2F36).\n- **Level 2 (Modals/Popovers):** Slate Grey (#25282E) with a subtle outer glow of the primary color (low opacity) only for emergency alerts.\n- **Outlines:** Use \"Ghost Borders\"—thin, 1px lines in low-contrast greys—to define sections without breaking the flat, minimalist aesthetic.\n\n## Shapes\nThis design system utilizes **Sharp Edges (0px)** exclusively. \n\nThere are no rounded corners in the interface. This reinforces the \"hard-edged,\" rugged nature of the towing industry. Buttons, input fields, cards, and images must all have 90-degree angles. This geometric severity distinguishes the product from softer, \"friendly\" consumer apps and aligns it with professional equipment and industrial tools.\n\n## Components\n- **Primary Buttons:** Solid Dakota Flare background with black text. Sharp corners. Hover state: slight desaturation or addition of a subtle \"hazard stripe\" pattern on the right edge.\n- **Secondary Buttons:** Ghost style. 1px Frost White border, white text. No fill.\n- **Input Fields:** Dark background (#1A1D21) with a 1px bottom-border only, mimicking technical forms. Labels use the Monospaced font in uppercase.\n- **Status Chips:** Rectangular tags with monospaced text. For \"In Transit\" or \"Active\" states, use a tiny animated \"hazard stripe\" loader.\n- **Cards:** No shadow. 1px border. The top border of \"Featured\" or \"Emergency\" cards can be 4px thick Dakota Flare to draw immediate attention.\n- **Hazard Dividers:** Instead of simple lines, use a repeating 45-degree diagonal pattern (2px wide) for section breaks where urgency is required.",
+            "font": "HANKEN_GROTESK",
+            "headlineFont": "HANKEN_GROTESK",
+            "headlineFontFamily": "Hanken Grotesk",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#10131a",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2d3037",
+              "inverse_primary": "#a63b00",
+              "inverse_surface": "#e0e2eb",
+              "on_background": "#e0e2eb",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#5a1c00",
+              "on_primary_container": "#531a00",
+              "on_primary_fixed": "#370e00",
+              "on_primary_fixed_variant": "#7f2b00",
+              "on_secondary": "#2f3034",
+              "on_secondary_container": "#bbbbbf",
+              "on_secondary_fixed": "#1a1c1f",
+              "on_secondary_fixed_variant": "#45474a",
+              "on_surface": "#e0e2eb",
+              "on_surface_variant": "#e4bfb1",
+              "on_tertiary": "#2e3132",
+              "on_tertiary_container": "#2a2d2e",
+              "on_tertiary_fixed": "#191c1d",
+              "on_tertiary_fixed_variant": "#454748",
+              "outline": "#ab8a7d",
+              "outline_variant": "#5b4137",
+              "primary": "#ffb599",
+              "primary_container": "#ff5f00",
+              "primary_fixed": "#ffdbce",
+              "primary_fixed_dim": "#ffb599",
+              "secondary": "#c6c6ca",
+              "secondary_container": "#4a4b4f",
+              "secondary_fixed": "#e2e2e6",
+              "secondary_fixed_dim": "#c6c6ca",
+              "surface": "#10131a",
+              "surface_bright": "#363940",
+              "surface_container": "#1d2026",
+              "surface_container_high": "#272a31",
+              "surface_container_highest": "#32353c",
+              "surface_container_low": "#191c22",
+              "surface_container_lowest": "#0b0e14",
+              "surface_dim": "#10131a",
+              "surface_tint": "#ffb599",
+              "surface_variant": "#32353c",
+              "tertiary": "#c5c7c8",
+              "tertiary_container": "#929495",
+              "tertiary_fixed": "#e1e3e4",
+              "tertiary_fixed_dim": "#c5c7c8"
+            },
+            "overrideNeutralColor": "#2c2f36",
+            "overridePrimaryColor": "#ff5f00",
+            "overrideSecondaryColor": "#121417",
+            "overrideTertiaryColor": "#f8f9fa",
+            "spacing": {
+              "base": "8px",
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "72px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              }
+            }
+          }
+        },
+        "name": "assets/f88e83acc3d44d6fb3ac2b4aa88513dd",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "High-End Utility System",
+                "styleGuidelines": "## Brand & Style\nThe brand personality is **rugged, professional, and elite**, moving away from \"local service\" tropes toward a high-performance logistics aesthetic. The design system follows a **Modern Industrial** style—combining the precision of high-end software with the grit of roadside recovery.\n\nThe UI should feel authoritative and urgent. We achieve this through:\n- **High-Contrast Minimalism:** Extreme clarity through limited color use and vast whitespace.\n- **Precision Engineering:** Sharp corners and mechanical alignment that suggest technical expertise.\n- **Subtle Texture:** Use of fine grain overlays (2-3% opacity) on dark surfaces to mimic asphalt and heavy-duty machinery.\n- **Hazard Motifs:** Stylized 45-degree stripes used sparingly for progress bars, top-edge borders of cards, or loading states to evoke safety and visibility.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. Content should feel locked into place, suggesting stability and order.\n\n- **Grid:** A 12-column grid for desktop with wide 64px margins to create a \"letterboxed\" premium feel.\n- **Rhythm:** An 8px linear scale (8, 16, 24, 32, 48, 64, 96). \n- **Density:** Use generous vertical padding (96px+) between major sections to allow the bold typography to breathe.\n- **Mobile:** Transition to a 4-column grid with reduced margins (16px), but maintain the large heading sizes for immediate brand impact upon landing.\n\n## Elevation & Depth\nIn this dark-mode-first system, depth is conveyed through **Tonal Layering** rather than traditional shadows.\n\n- **Level 0 (Base):** Midnight Asphalt (#121417).\n- **Level 1 (Cards/Surface):** Steel Grain (#1A1D21) with a 1px solid border (#2C2F36).\n- **Level 2 (Modals/Popovers):** Slate Grey (#25282E) with a subtle outer glow of the primary color (low opacity) only for emergency alerts.\n- **Outlines:** Use \"Ghost Borders\"—thin, 1px lines in low-contrast greys—to define sections without breaking the flat, minimalist aesthetic.\n\n## Components\n- **Primary Buttons:** Solid Dakota Flare background with black text. Sharp corners. Hover state: slight desaturation or addition of a subtle \"hazard stripe\" pattern on the right edge.\n- **Secondary Buttons:** Ghost style. 1px Frost White border, white text. No fill.\n- **Input Fields:** Dark background (#1A1D21) with a 1px bottom-border only, mimicking technical forms. Labels use the Monospaced font in uppercase.\n- **Status Chips:** Rectangular tags with monospaced text. For \"In Transit\" or \"Active\" states, use a tiny animated \"hazard stripe\" loader.\n- **Cards:** No shadow. 1px border. The top border of \"Featured\" or \"Emergency\" cards can be 4px thick Dakota Flare to draw immediate attention.\n- **Hazard Dividers:** Instead of simple lines, use a repeating 45-degree diagonal pattern (2px wide) for section breaks where urgency is required.",
+                "theme": {
+                  "bodyFont": "INTER",
+                  "bodyFontFamily": "Inter",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#ff5f00",
+                  "designMd": "---\nname: High-End Utility System\ncolors:\n  surface: '#10131a'\n  surface-dim: '#10131a'\n  surface-bright: '#363940'\n  surface-container-lowest: '#0b0e14'\n  surface-container-low: '#191c22'\n  surface-container: '#1d2026'\n  surface-container-high: '#272a31'\n  surface-container-highest: '#32353c'\n  on-surface: '#e0e2eb'\n  on-surface-variant: '#e4bfb1'\n  inverse-surface: '#e0e2eb'\n  inverse-on-surface: '#2d3037'\n  outline: '#ab8a7d'\n  outline-variant: '#5b4137'\n  surface-tint: '#ffb599'\n  primary: '#ffb599'\n  on-primary: '#5a1c00'\n  primary-container: '#ff5f00'\n  on-primary-container: '#531a00'\n  inverse-primary: '#a63b00'\n  secondary: '#c6c6ca'\n  on-secondary: '#2f3034'\n  secondary-container: '#4a4b4f'\n  on-secondary-container: '#bbbbbf'\n  tertiary: '#c5c7c8'\n  on-tertiary: '#2e3132'\n  tertiary-container: '#929495'\n  on-tertiary-container: '#2a2d2e'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbce'\n  primary-fixed-dim: '#ffb599'\n  on-primary-fixed: '#370e00'\n  on-primary-fixed-variant: '#7f2b00'\n  secondary-fixed: '#e2e2e6'\n  secondary-fixed-dim: '#c6c6ca'\n  on-secondary-fixed: '#1a1c1f'\n  on-secondary-fixed-variant: '#45474a'\n  tertiary-fixed: '#e1e3e4'\n  tertiary-fixed-dim: '#c5c7c8'\n  on-tertiary-fixed: '#191c1d'\n  on-tertiary-fixed-variant: '#454748'\n  background: '#10131a'\n  on-background: '#e0e2eb'\n  surface-variant: '#32353c'\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\nThe brand personality is **rugged, professional, and elite**, moving away from \"local service\" tropes toward a high-performance logistics aesthetic. The design system follows a **Modern Industrial** style—combining the precision of high-end software with the grit of roadside recovery.\n\nThe UI should feel authoritative and urgent. We achieve this through:\n- **High-Contrast Minimalism:** Extreme clarity through limited color use and vast whitespace.\n- **Precision Engineering:** Sharp corners and mechanical alignment that suggest technical expertise.\n- **Subtle Texture:** Use of fine grain overlays (2-3% opacity) on dark surfaces to mimic asphalt and heavy-duty machinery.\n- **Hazard Motifs:** Stylized 45-degree stripes used sparingly for progress bars, top-edge borders of cards, or loading states to evoke safety and visibility.\n\n## Colors\nThe palette is rooted in the \"Midnight\" environment of recovery operations.\n\n- **Dakota Flare (#FF5F00):** A vibrant, high-visibility hazard orange. Use exclusively for primary actions, emergency alerts, and critical brand accents.\n- **Midnight Asphalt (#121417):** The core background color. It is a deep, desaturated slate that provides a premium alternative to pure black.\n- **Frost White (#F8F9FA):** Used for primary typography and icons to ensure maximum legibility against dark backgrounds.\n- **Steel Grain (#2C2F36):** Used for secondary surfaces, input fields, and borders to create subtle depth.\n\n## Typography\nThe typography system prioritizes impact and technical precision.\n\n- **Headlines:** Uses **Hanken Grotesk**. It provides a sharp, industrial character with tight tracking. Large scales should be used to anchor the layout.\n- **Body:** Uses **Inter**. This is the workhorse for readability, ensuring that service details and location data are instantly digestible.\n- **Labels/Technical Data:** Uses **JetBrains Mono**. This monospaced font is used for VIN numbers, coordinates, timestamps, and status labels to reinforce the \"utility\" aspect of the system.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. Content should feel locked into place, suggesting stability and order.\n\n- **Grid:** A 12-column grid for desktop with wide 64px margins to create a \"letterboxed\" premium feel.\n- **Rhythm:** An 8px linear scale (8, 16, 24, 32, 48, 64, 96). \n- **Density:** Use generous vertical padding (96px+) between major sections to allow the bold typography to breathe.\n- **Mobile:** Transition to a 4-column grid with reduced margins (16px), but maintain the large heading sizes for immediate brand impact upon landing.\n\n## Elevation & Depth\nIn this dark-mode-first system, depth is conveyed through **Tonal Layering** rather than traditional shadows.\n\n- **Level 0 (Base):** Midnight Asphalt (#121417).\n- **Level 1 (Cards/Surface):** Steel Grain (#1A1D21) with a 1px solid border (#2C2F36).\n- **Level 2 (Modals/Popovers):** Slate Grey (#25282E) with a subtle outer glow of the primary color (low opacity) only for emergency alerts.\n- **Outlines:** Use \"Ghost Borders\"—thin, 1px lines in low-contrast greys—to define sections without breaking the flat, minimalist aesthetic.\n\n## Shapes\nThis design system utilizes **Sharp Edges (0px)** exclusively. \n\nThere are no rounded corners in the interface. This reinforces the \"hard-edged,\" rugged nature of the towing industry. Buttons, input fields, cards, and images must all have 90-degree angles. This geometric severity distinguishes the product from softer, \"friendly\" consumer apps and aligns it with professional equipment and industrial tools.\n\n## Components\n- **Primary Buttons:** Solid Dakota Flare background with black text. Sharp corners. Hover state: slight desaturation or addition of a subtle \"hazard stripe\" pattern on the right edge.\n- **Secondary Buttons:** Ghost style. 1px Frost White border, white text. No fill.\n- **Input Fields:** Dark background (#1A1D21) with a 1px bottom-border only, mimicking technical forms. Labels use the Monospaced font in uppercase.\n- **Status Chips:** Rectangular tags with monospaced text. For \"In Transit\" or \"Active\" states, use a tiny animated \"hazard stripe\" loader.\n- **Cards:** No shadow. 1px border. The top border of \"Featured\" or \"Emergency\" cards can be 4px thick Dakota Flare to draw immediate attention.\n- **Hazard Dividers:** Instead of simple lines, use a repeating 45-degree diagonal pattern (2px wide) for section breaks where urgency is required.",
+                  "font": "HANKEN_GROTESK",
+                  "headlineFont": "HANKEN_GROTESK",
+                  "headlineFontFamily": "Hanken Grotesk",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#10131a",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2d3037",
+                    "inverse_primary": "#a63b00",
+                    "inverse_surface": "#e0e2eb",
+                    "on_background": "#e0e2eb",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#5a1c00",
+                    "on_primary_container": "#531a00",
+                    "on_primary_fixed": "#370e00",
+                    "on_primary_fixed_variant": "#7f2b00",
+                    "on_secondary": "#2f3034",
+                    "on_secondary_container": "#bbbbbf",
+                    "on_secondary_fixed": "#1a1c1f",
+                    "on_secondary_fixed_variant": "#45474a",
+                    "on_surface": "#e0e2eb",
+                    "on_surface_variant": "#e4bfb1",
+                    "on_tertiary": "#2e3132",
+                    "on_tertiary_container": "#2a2d2e",
+                    "on_tertiary_fixed": "#191c1d",
+                    "on_tertiary_fixed_variant": "#454748",
+                    "outline": "#ab8a7d",
+                    "outline_variant": "#5b4137",
+                    "primary": "#ffb599",
+                    "primary_container": "#ff5f00",
+                    "primary_fixed": "#ffdbce",
+                    "primary_fixed_dim": "#ffb599",
+                    "secondary": "#c6c6ca",
+                    "secondary_container": "#4a4b4f",
+                    "secondary_fixed": "#e2e2e6",
+                    "secondary_fixed_dim": "#c6c6ca",
+                    "surface": "#10131a",
+                    "surface_bright": "#363940",
+                    "surface_container": "#1d2026",
+                    "surface_container_high": "#272a31",
+                    "surface_container_highest": "#32353c",
+                    "surface_container_low": "#191c22",
+                    "surface_container_lowest": "#0b0e14",
+                    "surface_dim": "#10131a",
+                    "surface_tint": "#ffb599",
+                    "surface_variant": "#32353c",
+                    "tertiary": "#c5c7c8",
+                    "tertiary_container": "#929495",
+                    "tertiary_fixed": "#e1e3e4",
+                    "tertiary_fixed_dim": "#c5c7c8"
+                  },
+                  "overrideNeutralColor": "#2c2f36",
+                  "overridePrimaryColor": "#ff5f00",
+                  "overrideSecondaryColor": "#121417",
+                  "overrideTertiaryColor": "#f8f9fa",
+                  "spacing": {
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Inter",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Inter",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "72px",
+                      "fontWeight": "800",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.3"
+                    },
+                    "label-caps": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "1.0"
+                    }
+                  }
+                }
+              },
+              "name": "assets/f88e83acc3d44d6fb3ac2b4aa88513dd",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "7740",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2M3NzcwMmZmNjM1MDQ4ZTM5Y2M3MTE2ODNiYzllOTczEgsSBxDb5PK-owYYAZIBIwoKcHJvamVjdF9pZBIVQhMzODA0Mjk0MDY5MDAyMzg0NzMw&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/3804294069002384730/files/67ea73bcb8214318bed73f44ec0f7a1c"
+            },
+            "id": "ac67337619784ab1918cf575d6694d07",
+            "name": "projects/3804294069002384730/screens/ac67337619784ab1918cf575d6694d07",
+            "prompt": "Create a bespoke, premium landing page for NoDak Towing & Recovery. \n\nLayout Requirements:\n- Use a non-standard, editorial grid with intentional asymmetry and generous whitespace.\n- Visual Motif: Subtle industrial hazard stripes (orange/black) used as section dividers or accent lines.\n- Hero: \"MINOT'S PREMIER RECOVERY FORCE\" in massive, tight-kerned display type. Subtext: \"Professional towing and roadside solutions, delivered with surgical precision 24/7.\" Primary CTA: \"Request Dispatch\" (linking to phone).\n- Credibility Section: A \"Status Bar\" style row with \"AVAILABILITY: 24/7/365\", \"FLEET: HEAVY & LIGHT DUTY\", \"LOCATION: MINOT, ND\".\n- Services: Instead of cards, use an \"Accordion-plus-Image\" or \"List-based\" layout where each service (Light-Duty Towing, Heavy-Duty Recovery, Roadside Assistance, Flatbed Transport) feels like a high-end capability.\n- About: Focus on \"THE NODAK STANDARD\" — a commitment to safety, speed, and integrity.\n- Visit: Address is 625 42nd Street Southeast, Minot, ND 58701. Use the specific map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: Form with fields for Name, Phone, and Service Type.\n- Footer: Professional, dark, and minimalist.\n\nContact Details: (701) 509-9851 · nodaktowing@gmail.com.\nColor: Midnight Asphalt background, Dakota Flare orange highlights, Frost White text.\nStyle: Industrial, sharp, precise, and authoritative. No generic stock feel.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsJrtc585AHdaM5EhUD_3dFHwR832yCcx3sr-FwWNoD_rxxSAcB0VKwnbLd2l7glA-Bk-P2Lm7U5Y6nk8hHFEsgDMcQqRbIXBrIKRFL6RHRNdPgmzWwpBv3p02L45sa_1HaUYBpaBcIeIB8uOplFGXqUDTG_utuqLWIDDd-Wbe7P1369AiRx0UWFsEqkAZGVo8iKmTf8tBTO4ZXKqJWCY98I5qnCUTjx8Wk5FijF7Gy7y_WcbpreogDASQ",
+              "name": "projects/3804294069002384730/files/74b3579fddb24921b6907ab8f732ebda"
+            },
+            "theme": {
+              "bodyFont": "INTER",
+              "bodyFontFamily": "Inter",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#ff5f00",
+              "designMd": "---\nname: High-End Utility System\ncolors:\n  surface: '#10131a'\n  surface-dim: '#10131a'\n  surface-bright: '#363940'\n  surface-container-lowest: '#0b0e14'\n  surface-container-low: '#191c22'\n  surface-container: '#1d2026'\n  surface-container-high: '#272a31'\n  surface-container-highest: '#32353c'\n  on-surface: '#e0e2eb'\n  on-surface-variant: '#e4bfb1'\n  inverse-surface: '#e0e2eb'\n  inverse-on-surface: '#2d3037'\n  outline: '#ab8a7d'\n  outline-variant: '#5b4137'\n  surface-tint: '#ffb599'\n  primary: '#ffb599'\n  on-primary: '#5a1c00'\n  primary-container: '#ff5f00'\n  on-primary-container: '#531a00'\n  inverse-primary: '#a63b00'\n  secondary: '#c6c6ca'\n  on-secondary: '#2f3034'\n  secondary-container: '#4a4b4f'\n  on-secondary-container: '#bbbbbf'\n  tertiary: '#c5c7c8'\n  on-tertiary: '#2e3132'\n  tertiary-container: '#929495'\n  on-tertiary-container: '#2a2d2e'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbce'\n  primary-fixed-dim: '#ffb599'\n  on-primary-fixed: '#370e00'\n  on-primary-fixed-variant: '#7f2b00'\n  secondary-fixed: '#e2e2e6'\n  secondary-fixed-dim: '#c6c6ca'\n  on-secondary-fixed: '#1a1c1f'\n  on-secondary-fixed-variant: '#45474a'\n  tertiary-fixed: '#e1e3e4'\n  tertiary-fixed-dim: '#c5c7c8'\n  on-tertiary-fixed: '#191c1d'\n  on-tertiary-fixed-variant: '#454748'\n  background: '#10131a'\n  on-background: '#e0e2eb'\n  surface-variant: '#32353c'\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nspacing:\n  base: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n---\n\n## Brand & Style\nThe brand personality is **rugged, professional, and elite**, moving away from \"local service\" tropes toward a high-performance logistics aesthetic. The design system follows a **Modern Industrial** style—combining the precision of high-end software with the grit of roadside recovery.\n\nThe UI should feel authoritative and urgent. We achieve this through:\n- **High-Contrast Minimalism:** Extreme clarity through limited color use and vast whitespace.\n- **Precision Engineering:** Sharp corners and mechanical alignment that suggest technical expertise.\n- **Subtle Texture:** Use of fine grain overlays (2-3% opacity) on dark surfaces to mimic asphalt and heavy-duty machinery.\n- **Hazard Motifs:** Stylized 45-degree stripes used sparingly for progress bars, top-edge borders of cards, or loading states to evoke safety and visibility.\n\n## Colors\nThe palette is rooted in the \"Midnight\" environment of recovery operations.\n\n- **Dakota Flare (#FF5F00):** A vibrant, high-visibility hazard orange. Use exclusively for primary actions, emergency alerts, and critical brand accents.\n- **Midnight Asphalt (#121417):** The core background color. It is a deep, desaturated slate that provides a premium alternative to pure black.\n- **Frost White (#F8F9FA):** Used for primary typography and icons to ensure maximum legibility against dark backgrounds.\n- **Steel Grain (#2C2F36):** Used for secondary surfaces, input fields, and borders to create subtle depth.\n\n## Typography\nThe typography system prioritizes impact and technical precision.\n\n- **Headlines:** Uses **Hanken Grotesk**. It provides a sharp, industrial character with tight tracking. Large scales should be used to anchor the layout.\n- **Body:** Uses **Inter**. This is the workhorse for readability, ensuring that service details and location data are instantly digestible.\n- **Labels/Technical Data:** Uses **JetBrains Mono**. This monospaced font is used for VIN numbers, coordinates, timestamps, and status labels to reinforce the \"utility\" aspect of the system.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. Content should feel locked into place, suggesting stability and order.\n\n- **Grid:** A 12-column grid for desktop with wide 64px margins to create a \"letterboxed\" premium feel.\n- **Rhythm:** An 8px linear scale (8, 16, 24, 32, 48, 64, 96). \n- **Density:** Use generous vertical padding (96px+) between major sections to allow the bold typography to breathe.\n- **Mobile:** Transition to a 4-column grid with reduced margins (16px), but maintain the large heading sizes for immediate brand impact upon landing.\n\n## Elevation & Depth\nIn this dark-mode-first system, depth is conveyed through **Tonal Layering** rather than traditional shadows.\n\n- **Level 0 (Base):** Midnight Asphalt (#121417).\n- **Level 1 (Cards/Surface):** Steel Grain (#1A1D21) with a 1px solid border (#2C2F36).\n- **Level 2 (Modals/Popovers):** Slate Grey (#25282E) with a subtle outer glow of the primary color (low opacity) only for emergency alerts.\n- **Outlines:** Use \"Ghost Borders\"—thin, 1px lines in low-contrast greys—to define sections without breaking the flat, minimalist aesthetic.\n\n## Shapes\nThis design system utilizes **Sharp Edges (0px)** exclusively. \n\nThere are no rounded corners in the interface. This reinforces the \"hard-edged,\" rugged nature of the towing industry. Buttons, input fields, cards, and images must all have 90-degree angles. This geometric severity distinguishes the product from softer, \"friendly\" consumer apps and aligns it with professional equipment and industrial tools.\n\n## Components\n- **Primary Buttons:** Solid Dakota Flare background with black text. Sharp corners. Hover state: slight desaturation or addition of a subtle \"hazard stripe\" pattern on the right edge.\n- **Secondary Buttons:** Ghost style. 1px Frost White border, white text. No fill.\n- **Input Fields:** Dark background (#1A1D21) with a 1px bottom-border only, mimicking technical forms. Labels use the Monospaced font in uppercase.\n- **Status Chips:** Rectangular tags with monospaced text. For \"In Transit\" or \"Active\" states, use a tiny animated \"hazard stripe\" loader.\n- **Cards:** No shadow. 1px border. The top border of \"Featured\" or \"Emergency\" cards can be 4px thick Dakota Flare to draw immediate attention.\n- **Hazard Dividers:** Instead of simple lines, use a repeating 45-degree diagonal pattern (2px wide) for section breaks where urgency is required.",
+              "font": "HANKEN_GROTESK",
+              "headlineFont": "HANKEN_GROTESK",
+              "headlineFontFamily": "Hanken Grotesk",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#10131a",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2d3037",
+                "inverse_primary": "#a63b00",
+                "inverse_surface": "#e0e2eb",
+                "on_background": "#e0e2eb",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#5a1c00",
+                "on_primary_container": "#531a00",
+                "on_primary_fixed": "#370e00",
+                "on_primary_fixed_variant": "#7f2b00",
+                "on_secondary": "#2f3034",
+                "on_secondary_container": "#bbbbbf",
+                "on_secondary_fixed": "#1a1c1f",
+                "on_secondary_fixed_variant": "#45474a",
+                "on_surface": "#e0e2eb",
+                "on_surface_variant": "#e4bfb1",
+                "on_tertiary": "#2e3132",
+                "on_tertiary_container": "#2a2d2e",
+                "on_tertiary_fixed": "#191c1d",
+                "on_tertiary_fixed_variant": "#454748",
+                "outline": "#ab8a7d",
+                "outline_variant": "#5b4137",
+                "primary": "#ffb599",
+                "primary_container": "#ff5f00",
+                "primary_fixed": "#ffdbce",
+                "primary_fixed_dim": "#ffb599",
+                "secondary": "#c6c6ca",
+                "secondary_container": "#4a4b4f",
+                "secondary_fixed": "#e2e2e6",
+                "secondary_fixed_dim": "#c6c6ca",
+                "surface": "#10131a",
+                "surface_bright": "#363940",
+                "surface_container": "#1d2026",
+                "surface_container_high": "#272a31",
+                "surface_container_highest": "#32353c",
+                "surface_container_low": "#191c22",
+                "surface_container_lowest": "#0b0e14",
+                "surface_dim": "#10131a",
+                "surface_tint": "#ffb599",
+                "surface_variant": "#32353c",
+                "tertiary": "#c5c7c8",
+                "tertiary_container": "#929495",
+                "tertiary_fixed": "#e1e3e4",
+                "tertiary_fixed_dim": "#c5c7c8"
+              },
+              "overrideNeutralColor": "#2c2f36",
+              "overridePrimaryColor": "#ff5f00",
+              "overrideSecondaryColor": "#121417",
+              "overrideTertiaryColor": "#f8f9fa",
+              "spacing": {
+                "base": "8px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Inter",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Inter",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "72px",
+                  "fontWeight": "800",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.3"
+                },
+                "label-caps": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "1.0"
+                }
+              }
+            },
+            "title": "NoDak Towing & Recovery - Official Site",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed a bespoke, premium homepage for **NoDak Towing & Recovery** that moves away from generic local-business templates in favor of a \"High-End Utility\" editorial aesthetic.\n\n### Design Highlights:\n*   **Visual Identity**: Built around a \"Midnight Asphalt\" and \"Dakota Flare\" palette, using high-visibility orange against deep slates to communicate both urgency and professional reliability.\n*   **Industrial Motif**: I implemented a subtle \"hazard stripe\" motif as a repeating visual rule, framing content and sections with a sense of precision and safety.\n*   **Editorial Layout**: The hero section uses massive, tight-kerned typography to establish NoDak as a \"Recovery Force,\" while the \"Core Capabilities\" section avoids standard card grids in favor of a sophisticated list-and-image interaction.\n*   **Rapid Action Focus**: The \"Command Center\" contact section and prominent persistent dispatch number are designed for high conversion and quick access during emergencies.\n*   **Credibility Strip**: A dedicated \"Status Bar\" provides immediate reassurance of fleet availability and regional expertise.\n\nThe code is fully production-ready, semantic, and includes a responsive mobile navigation and form validation UI. Would you like to see how this layout adapts to mobile, or should we refine the \"Core Capabilities\" section further?"
+    },
+    {
+      "suggestion": "Generate the mobile version"
+    },
+    {
+      "suggestion": "Make the orange accents more subtle"
+    },
+    {
+      "suggestion": "Add a detailed fleet gallery section"
+    }
+  ],
+  "projectId": "3804294069002384730",
+  "sessionId": "6688778111933830835"
+}

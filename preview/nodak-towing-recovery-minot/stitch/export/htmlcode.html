@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>NoDak Towing &amp; Recovery | Minot's Premier Recovery Force</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@600;700;800&amp;family=Inter:wght@400;500&amp;family=JetBrains+Mono:wght@600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hazard-pattern {
+            background: repeating-linear-gradient(
+                -45deg,
+                #ffb599,
+                #ffb599 10px,
+                #10131a 10px,
+                #10131a 20px
+            );
+        }
+        .grain-overlay {
+            position: relative;
+        }
+        .grain-overlay::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            opacity: 0.03;
+            background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(224, 226, 235, 0.3);
+            color: transparent;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-on-surface": "#2d3037",
+                        "tertiary": "#c5c7c8",
+                        "primary-fixed": "#ffdbce",
+                        "surface-bright": "#363940",
+                        "on-primary": "#5a1c00",
+                        "on-tertiary": "#2e3132",
+                        "surface": "#10131a",
+                        "on-secondary": "#2f3034",
+                        "secondary-container": "#4a4b4f",
+                        "error-container": "#93000a",
+                        "on-primary-fixed": "#370e00",
+                        "surface-dim": "#10131a",
+                        "on-secondary-fixed": "#1a1c1f",
+                        "outline-variant": "#5b4137",
+                        "surface-tint": "#ffb599",
+                        "tertiary-fixed-dim": "#c5c7c8",
+                        "on-tertiary-fixed": "#191c1d",
+                        "inverse-surface": "#e0e2eb",
+                        "on-background": "#e0e2eb",
+                        "background": "#10131a",
+                        "on-secondary-container": "#bbbbbf",
+                        "surface-container-low": "#191c22",
+                        "on-tertiary-fixed-variant": "#454748",
+                        "secondary-fixed-dim": "#c6c6ca",
+                        "secondary-fixed": "#e2e2e6",
+                        "on-primary-container": "#531a00",
+                        "primary-container": "#ff5f00",
+                        "outline": "#ab8a7d",
+                        "tertiary-container": "#929495",
+                        "tertiary-fixed": "#e1e3e4",
+                        "secondary": "#c6c6ca",
+                        "on-primary-fixed-variant": "#7f2b00",
+                        "primary-fixed-dim": "#ffb599",
+                        "surface-container-highest": "#32353c",
+                        "on-tertiary-container": "#2a2d2e",
+                        "primary": "#ffb599",
+                        "on-secondary-fixed-variant": "#45474a",
+                        "on-error-container": "#ffdad6",
+                        "inverse-primary": "#a63b00",
+                        "surface-container-high": "#272a31",
+                        "on-surface": "#e0e2eb",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#32353c",
+                        "on-error": "#690005",
+                        "on-surface-variant": "#e4bfb1",
+                        "surface-container": "#1d2026",
+                        "surface-container-lowest": "#0b0e14"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "base": "8px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "64px",
+                        "container-max": "1280px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["JetBrains Mono"],
+                        "display-lg": ["Hanken Grotesk"],
+                        "headline-lg": ["Hanken Grotesk"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "headline-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container grain-overlay">
+<!-- Top Navigation -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop py-base bg-surface/95 backdrop-blur-sm border-b border-outline-variant dark:border-outline-variant">
+<div class="font-display-lg text-headline-md uppercase tracking-tighter text-primary dark:text-primary">NoDak Towing</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#services">Services</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#about">About</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#location">Location</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant font-label-caps text-label-caps hover:text-primary transition-colors duration-300" href="#contact">Dispatch</a>
+</div>
+<a class="font-label-caps text-label-caps bg-primary text-on-primary px-6 py-3 hover:opacity-80 active:scale-95 transition-all" href="tel:701-509-9851">701-509-9851</a>
+</nav>
+<main class="pt-24 overflow-hidden">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] px-margin-desktop flex flex-col justify-center">
+<div class="grid grid-cols-12 gap-gutter items-end">
+<div class="col-span-12 md:col-span-10">
+<span class="font-label-caps text-label-caps text-primary tracking-widest block mb-4">RECOVERY &amp; TRANSPORT SPECIALISTS</span>
+<h1 class="font-display-lg text-[10vw] leading-[0.9] uppercase font-extrabold tracking-tighter mb-8">
+                        MINOT'S PREMIER <br/>
+<span class="text-stroke">RECOVERY FORCE</span>
+</h1>
+</div>
+<div class="col-span-12 md:col-span-4 md:col-start-8">
+<p class="font-body-lg text-on-surface-variant mb-12 border-l-2 border-primary pl-6">
+                        Professional towing and roadside solutions, delivered with surgical precision 24/7. Built for the rugged demands of North Dakota.
+                    </p>
+<a class="inline-flex items-center gap-4 bg-primary text-on-primary font-label-caps text-label-caps px-10 py-5 group" href="tel:701-509-9851">
+                        REQUEST DISPATCH
+                        <span class="material-symbols-outlined group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Absolute Hazard Accents -->
+<div class="absolute bottom-0 right-0 w-1/3 h-2 hazard-pattern"></div>
+</section>
+<!-- Status Bar -->
+<div class="border-y border-outline-variant py-8 px-margin-desktop bg-surface-container">
+<div class="flex flex-col md:flex-row justify-between gap-8">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">timer</span>
+<span class="font-label-caps text-label-caps opacity-60">AVAILABILITY:</span>
+<span class="font-label-caps text-label-caps">24/7/365</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+<span class="font-label-caps text-label-caps opacity-60">FLEET:</span>
+<span class="font-label-caps text-label-caps">HEAVY &amp; LIGHT DUTY</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">location_on</span>
+<span class="font-label-caps text-label-caps opacity-60">LOCATION:</span>
+<span class="font-label-caps text-label-caps">MINOT, ND</span>
+</div>
+<div class="hidden md:flex items-center gap-4 text-primary">
+<div class="h-2 w-2 rounded-full bg-primary animate-pulse"></div>
+<span class="font-label-caps text-label-caps">SYSTEMS ONLINE</span>
+</div>
+</div>
+</div>
+<!-- Services Section: List-Based Industrial Layout -->
+<section class="py-24 px-margin-desktop" id="services">
+<div class="flex justify-between items-end mb-16 border-b border-outline-variant pb-8">
+<h2 class="font-display-lg text-headline-lg uppercase">Core Capabilities</h2>
+<span class="font-label-caps text-label-caps text-on-surface-variant">01 — SERVICES</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-start">
+<div class="space-y-0">
+<div class="group border-b border-outline-variant py-10 flex justify-between items-center cursor-pointer hover:bg-surface-container transition-colors px-4">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-label-caps opacity-40">01</span>
+<h3 class="font-headline-md uppercase">Light-Duty Towing</h3>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<div class="group border-b border-outline-variant py-10 flex justify-between items-center cursor-pointer hover:bg-surface-container transition-colors px-4">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-label-caps opacity-40">02</span>
+<h3 class="font-headline-md uppercase">Heavy-Duty Recovery</h3>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<div class="group border-b border-outline-variant py-10 flex justify-between items-center cursor-pointer hover:bg-surface-container transition-colors px-4">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-label-caps opacity-40">03</span>
+<h3 class="font-headline-md uppercase">Roadside Assistance</h3>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+<div class="group border-b border-outline-variant py-10 flex justify-between items-center cursor-pointer hover:bg-surface-container transition-colors px-4">
+<div class="flex items-center gap-8">
+<span class="font-label-caps text-label-caps opacity-40">04</span>
+<h3 class="font-headline-md uppercase">Flatbed Transport</h3>
+</div>
+<span class="material-symbols-outlined text-primary opacity-0 group-hover:opacity-100 transition-opacity">north_east</span>
+</div>
+</div>
+<div class="relative aspect-square bg-surface-container overflow-hidden border border-outline-variant">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="A powerful commercial tow truck with a polished metallic finish parked on an industrial site in Minot, North Dakota. The scene is set during a moody, overcast twilight, highlighting the dramatic amber hazard lights reflecting off the wet asphalt. The composition is sharp and authoritative, emphasizing the heavy-duty machinery and rugged elite performance of a premium recovery service." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY6UMqBdnKaZAf-Z_a5RSn6f8DsdRujuWnwl4suMjZRBkgAGQyfmE3nWVv7FyUiw6u__r7EEtKvGfcDhGfF2XkE83eoaf-a2Xal0TAV-AZssoUlwR2HZHA8UDq9DUWw2BwPUrgzHGXCejEC5TveAyphF1wz3Xgg9VQs_y0TqTeKmsCoYSJO2nARiATj4hW7yvQ8YTCJH0vVuUGHFj4DizTnvFXZpO1juszTe5odoUVae49lT085lpEGwd0oubsFYSa9BUJ9Kf_iAE"/>
+<div class="absolute top-0 left-0 hazard-pattern h-1 w-full"></div>
+</div>
+</div>
+</section>
+<!-- About Section: Asymmetric -->
+<section class="py-24 px-margin-desktop bg-surface-container-low relative overflow-hidden" id="about">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-5 relative z-10">
+<span class="font-label-caps text-label-caps text-primary mb-6 block">02 — THE NODAK STANDARD</span>
+<h2 class="font-display-lg text-headline-lg uppercase mb-8">Unyielding Integrity</h2>
+<p class="font-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        At NoDak Towing &amp; Recovery, we don't just move vehicles; we restore order. Every dispatch is a mission executed with a commitment to three core pillars: Safety, Speed, and Integrity. 
+                    </p>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">verified</span>
+<div>
+<p class="font-label-caps text-label-caps mb-1">PRECISION LOGISTICS</p>
+<p class="text-on-surface-variant font-body-md">Optimized routing for minimum response times.</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary">shield</span>
+<div>
+<p class="font-label-caps text-label-caps mb-1">ASSET PROTECTION</p>
+<p class="text-on-surface-variant font-body-md">Advanced securement protocols for all cargo types.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 md:col-start-7 mt-12 md:mt-0">
+<div class="relative border-4 border-outline-variant p-8 bg-surface">
+<div class="absolute -top-1 -right-1 w-24 h-24 hazard-pattern opacity-30"></div>
+<p class="font-display-lg text-headline-md mb-6 italic opacity-80">"When North Dakota's elements are at their worst, our force is at its best. We are the calm in the storm."</p>
+<span class="font-label-caps text-label-caps tracking-[0.2em]">— DISPATCH COMMAND</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact & Visit Section -->
+<section class="py-24 px-margin-desktop" id="contact">
+<div class="grid grid-cols-12 gap-gutter">
+<div class="col-span-12 md:col-span-6">
+<div class="mb-16">
+<span class="font-label-caps text-label-caps text-primary mb-4 block">03 — CONTACT DISPATCH</span>
+<h2 class="font-display-lg text-headline-lg uppercase mb-12">Command Center</h2>
+<form class="space-y-8 max-w-lg">
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-on-surface-variant group-focus-within:text-primary transition-colors">FULL NAME</label>
+<input class="w-full bg-surface-container border-0 border-b border-outline focus:ring-0 focus:border-primary px-0 py-4 font-body-md text-on-surface" placeholder="John Doe" type="text"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-on-surface-variant group-focus-within:text-primary transition-colors">CONTACT PHONE</label>
+<input class="w-full bg-surface-container border-0 border-b border-outline focus:ring-0 focus:border-primary px-0 py-4 font-body-md text-on-surface" placeholder="(701) 000-0000" type="tel"/>
+</div>
+<div class="relative group">
+<label class="font-label-caps text-label-caps text-on-surface-variant group-focus-within:text-primary transition-colors">SERVICE REQUIRED</label>
+<select class="w-full bg-surface-container border-0 border-b border-outline focus:ring-0 focus:border-primary px-0 py-4 font-body-md text-on-surface appearance-none">
+<option>Emergency Recovery</option>
+<option>Standard Tow</option>
+<option>Roadside Assistance</option>
+<option>Long Distance Transport</option>
+</select>
+</div>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-12 py-5 hover:opacity-90 transition-all flex items-center gap-4" type="submit">
+                                SEND REQUEST
+                                <span class="material-symbols-outlined">send</span>
+</button>
+</form>
+</div>
+</div>
+<div class="col-span-12 md:col-span-6 flex flex-col gap-8" id="location">
+<div class="bg-surface-container p-8 border border-outline-variant relative">
+<div class="flex justify-between items-start mb-6">
+<div>
+<p class="font-label-caps text-label-caps text-primary mb-2">STRATEGIC OUTPOST</p>
+<p class="font-body-lg">625 42nd Street Southeast<br/>Minot, ND 58701</p>
+</div>
+<span class="material-symbols-outlined text-primary-container text-4xl">map</span>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border border-outline-variant" data-location="Minot, ND" data-map-slot="" style=""></div>
+</div>
+<div class="flex flex-col md:flex-row gap-8">
+<div class="flex-1 p-6 border border-outline-variant bg-surface-container-low">
+<span class="font-label-caps text-label-caps opacity-50 block mb-2">DIRECT LINE</span>
+<a class="font-headline-md text-primary underline decoration-2 underline-offset-4 hover:opacity-80" href="tel:7015099851">(701) 509-9851</a>
+</div>
+<div class="flex-1 p-6 border border-outline-variant bg-surface-container-low">
+<span class="font-label-caps text-label-caps opacity-50 block mb-2">CORRESPONDENCE</span>
+<a class="font-headline-md text-primary underline decoration-2 underline-offset-4 hover:opacity-80" href="mailto:nodaktowing@gmail.com">Email Support</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-24 px-margin-desktop flex flex-col md:flex-row justify-between items-start bg-surface-container-lowest dark:bg-surface-container-lowest border-t-4 border-primary dark:border-primary">
+<div class="mb-12 md:mb-0">
+<div class="font-display-lg text-headline-md text-on-surface dark:text-on-surface mb-4">NoDak Towing</div>
+<p class="font-body-md text-on-surface-variant max-w-xs mb-8">Providing elite recovery services for the Minot region and beyond. Professionalism on every hook.</p>
+<div class="flex gap-4">
+<a class="h-10 w-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">terminal</span>
+</a>
+<a class="h-10 w-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">radar</span>
+</a>
+<a class="h-10 w-10 flex items-center justify-center border border-outline-variant hover:bg-primary hover:text-on-primary transition-all" href="#">
+<span class="material-symbols-outlined">safety_check</span>
+</a>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-16">
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">RESOURCES</h4>
+<nav class="flex flex-col gap-4">
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all font-label-caps text-label-caps" href="#">Fleet Support</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all font-label-caps text-label-caps" href="#">Careers</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all font-label-caps text-label-caps" href="#">Privacy</a>
+<a class="text-on-surface-variant dark:text-on-surface-variant hover:text-primary underline transition-all font-label-caps text-label-caps" href="#">Terms</a>
+</nav>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-primary mb-6">CERTIFICATIONS</h4>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">WRECKER MASTER CLASS IV</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant mb-2">ND DOT COMPLIANT</p>
+<p class="font-label-caps text-label-caps text-on-surface-variant">INSURED &amp; BONDED</p>
+</div>
+</div>
+<div class="mt-16 md:mt-0 self-end">
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-60">© 2024 NoDak Towing &amp; Recovery. All Rights Reserved.</p>
+</div>
+</footer>
+<script>
+        // Simple micro-interaction for the industrial items
+        document.querySelectorAll('input, select').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.parentElement.querySelector('label').style.letterSpacing = '0.2em';
+            });
+            el.addEventListener('blur', () => {
+                el.parentElement.querySelector('label').style.letterSpacing = '0.1em';
+            });
+        });
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
