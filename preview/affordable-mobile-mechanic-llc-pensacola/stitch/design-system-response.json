@@ -1,0 +1,482 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Overhaul Industrial",
+        "styleGuidelines": "## Brand & Style\n\nThis design system establishes a \"Garage Editorial\" aesthetic—a premium, high-utility identity that elevates the mobile mechanic trade into a sophisticated industrial service. It targets discerning vehicle owners in Pensacola who value technical expertise and precision over budget-bin alternatives.\n\nThe style is **Industrial Minimalism mixed with Technical Brutalism**. It rejects soft gradients and generic imagery in favor of raw textures, high-contrast utility, and a \"blueprint\" layout logic. The emotional response should be one of absolute confidence: the UI feels as calibrated and reliable as a torque wrench.\n\nKey visual pillars include:\n- **Asymmetrical Tension:** Layouts avoid perfect symmetry to mimic the organized chaos of a high-end workshop.\n- **Utility Indicators:** Small technical annotations (e.g., coordinates, part numbers, or timestamps) used as decorative elements.\n- **Heavy Linework:** 1px or 2px solid borders that define the structure, reminiscent of technical drawings.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid Technical Grid**. Use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **Asymmetry:** Offset content blocks by one or two columns to create visual interest. For example, a headline might start on Column 1, while the supporting body text starts on Column 3.\n- **Blueprint Lines:** Use 1px Off-White (#F9F9F7 at 10% opacity) lines to define the grid visually. These lines should extend to the edges of the viewport, creating a \"schematic\" feel.\n- **Rhythm:** Stick to an 8px base unit. Component padding should be generous (24px or 32px) to allow the \"premium\" nature of the brand to breathe.\n- **Pensacola Context:** Incorporate localized coordinates (30.4213° N, 87.2169° W) as small monospaced footer elements or decorative corner accents.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows and blurs. Instead, depth is achieved through **Tonal Stacking and Hard Borders**.\n\n- **Stacked Tiers:** The background is the darkest (#1A1A1B). Cards and containers use the Surface Neutral (#2D2D2E). \n- **The \"Overhang\" Effect:** Instead of shadows, use 1px solid borders in Off-White or Safety Orange to define the edge of an element. \n- **No Softness:** Absolutely no background blurs or glassmorphism. Surfaces are opaque and solid, suggesting the heavy-duty materials of an automotive shop.\n- **Interactive Depth:** On hover, elements should shift 4px up and to the left, revealing a \"ghost\" 1px border beneath them, rather than a shadow.\n\n## Components\n\n- **Primary Action (Button):** Solid Safety Orange (#FF5F1F) background, black uppercase Oswald text. 0px radius. Hover state: Inverse (Orange border, Transparent background).\n- **Service Cards:** Deep Charcoal background with a 1px Off-White border. Headline in the top-left, price/data point in the bottom-right using JetBrains Mono.\n- **Input Fields:** 1px Off-White border (20% opacity). On focus, the border turns Safety Orange and a small JetBrains Mono \"Ready\" indicator appears in the corner.\n- **Utility Chips:** Small, monospaced text blocks with a thin border and no background. Used for tags like \"FLUID EXCHANGE\" or \"DIAGNOSTIC.\"\n- **Status Indicators:** Use \"High-Vis\" patterns. For example, a \"System Active\" bar might use a diagonal \"hazard stripe\" pattern (Orange/Black) in a small 4px strip.\n- **The \"Blueprint\" List:** Vertical lists separated by full-width 1px lines. Each list item should be numbered (e.g., 01, 02, 03) in JetBrains Mono.",
+        "theme": {
+          "bodyFont": "INTER",
+          "bodyFontFamily": "Inter",
+          "colorMode": "DARK",
+          "colorVariant": "FIDELITY",
+          "customColor": "#ff5f1f",
+          "designMd": "---\nname: Overhaul Industrial\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1b1b1c'\n  surface-container: '#1f1f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353536'\n  on-surface: '#e4e2e3'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e4e2e3'\n  inverse-on-surface: '#303031'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#c6c7c5'\n  on-tertiary: '#2f3130'\n  tertiary-container: '#939493'\n  on-tertiary-container: '#2b2d2c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e2e3e1'\n  tertiary-fixed-dim: '#c6c7c5'\n  on-tertiary-fixed: '#1a1c1b'\n  on-tertiary-fixed-variant: '#454746'\n  background: '#131314'\n  on-background: '#e4e2e3'\n  surface-variant: '#353536'\ntypography:\n  headline-xl:\n    fontFamily: Oswald\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Oswald\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-lg-mobile:\n    fontFamily: Oswald\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  subheading:\n    fontFamily: Oswald\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  technical-label:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  data-point:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  container-max: 1440px\n---\n\n## Brand & Style\n\nThis design system establishes a \"Garage Editorial\" aesthetic—a premium, high-utility identity that elevates the mobile mechanic trade into a sophisticated industrial service. It targets discerning vehicle owners in Pensacola who value technical expertise and precision over budget-bin alternatives.\n\nThe style is **Industrial Minimalism mixed with Technical Brutalism**. It rejects soft gradients and generic imagery in favor of raw textures, high-contrast utility, and a \"blueprint\" layout logic. The emotional response should be one of absolute confidence: the UI feels as calibrated and reliable as a torque wrench.\n\nKey visual pillars include:\n- **Asymmetrical Tension:** Layouts avoid perfect symmetry to mimic the organized chaos of a high-end workshop.\n- **Utility Indicators:** Small technical annotations (e.g., coordinates, part numbers, or timestamps) used as decorative elements.\n- **Heavy Linework:** 1px or 2px solid borders that define the structure, reminiscent of technical drawings.\n\n## Colors\n\nThe palette is strictly limited to three core pillars to maintain an authoritative, high-end editorial feel. \n\n- **Deep Charcoal (#1A1A1B):** The primary canvas. It evokes the depth of fresh motor oil and the asphalt of Florida’s coastal roads. Use this for all backgrounds to create a focused, low-glare environment.\n- **Safety Orange (#FF5F1F):** The high-visibility accent. This color is used exclusively for primary actions, critical status alerts, and branding highlights. It should be used sparingly to maintain its \"warning\" and \"utility\" impact.\n- **Off-White (#F9F9F7):** The \"Paper\" color. Used for high-readability typography and technical illustrations. It provides a sharp, clean contrast against the charcoal base.\n- **Surface Neutral (#2D2D2E):** A secondary charcoal used for card surfaces and input backgrounds to provide subtle depth without breaking the dark-mode immersion.\n\n## Typography\n\nTypography is the primary driver of the \"Editorial\" feel. The system utilizes a hierarchy of three distinct typefaces:\n\n1.  **Oswald (Headlines):** A bold, condensed sans-serif that commands attention. All major headlines must be uppercase to reinforce the industrial, sign-age aesthetic. \n2.  **Inter (Body):** Used for all long-form text and descriptions. Its neutrality ensures that the technical details remain the hero while providing maximum readability.\n3.  **JetBrains Mono (Technical/Data):** This monospaced font is used for labels, timestamps, pricing, and service codes. It signifies \"precision\" and \"manuals,\" grounding the brand in expertise.\n\n**Vertical Typography:** For desktop layouts, use \"Subheading\" styles rotated 90 degrees as sidebar labels or section dividers to create the asymmetrical editorial look.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid Technical Grid**. Use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **Asymmetry:** Offset content blocks by one or two columns to create visual interest. For example, a headline might start on Column 1, while the supporting body text starts on Column 3.\n- **Blueprint Lines:** Use 1px Off-White (#F9F9F7 at 10% opacity) lines to define the grid visually. These lines should extend to the edges of the viewport, creating a \"schematic\" feel.\n- **Rhythm:** Stick to an 8px base unit. Component padding should be generous (24px or 32px) to allow the \"premium\" nature of the brand to breathe.\n- **Pensacola Context:** Incorporate localized coordinates (30.4213° N, 87.2169° W) as small monospaced footer elements or decorative corner accents.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows and blurs. Instead, depth is achieved through **Tonal Stacking and Hard Borders**.\n\n- **Stacked Tiers:** The background is the darkest (#1A1A1B). Cards and containers use the Surface Neutral (#2D2D2E). \n- **The \"Overhang\" Effect:** Instead of shadows, use 1px solid borders in Off-White or Safety Orange to define the edge of an element. \n- **No Softness:** Absolutely no background blurs or glassmorphism. Surfaces are opaque and solid, suggesting the heavy-duty materials of an automotive shop.\n- **Interactive Depth:** On hover, elements should shift 4px up and to the left, revealing a \"ghost\" 1px border beneath them, rather than a shadow.\n\n## Shapes\n\nThe shape language is **Strictly Geometric and Sharp**. \n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. Round corners conflict with the industrial, technical-drawing motif.\n- **Angled Accents:** Use 45-degree \"clipped corners\" for decorative containers or primary buttons to mimic industrial machinery components.\n- **Iconography:** Use stroke-based, 2px weight icons. Icons should be sharp-edged; avoid any rounded terminals or \"bubbly\" icon sets.\n\n## Components\n\n- **Primary Action (Button):** Solid Safety Orange (#FF5F1F) background, black uppercase Oswald text. 0px radius. Hover state: Inverse (Orange border, Transparent background).\n- **Service Cards:** Deep Charcoal background with a 1px Off-White border. Headline in the top-left, price/data point in the bottom-right using JetBrains Mono.\n- **Input Fields:** 1px Off-White border (20% opacity). On focus, the border turns Safety Orange and a small JetBrains Mono \"Ready\" indicator appears in the corner.\n- **Utility Chips:** Small, monospaced text blocks with a thin border and no background. Used for tags like \"FLUID EXCHANGE\" or \"DIAGNOSTIC.\"\n- **Status Indicators:** Use \"High-Vis\" patterns. For example, a \"System Active\" bar might use a diagonal \"hazard stripe\" pattern (Orange/Black) in a small 4px strip.\n- **The \"Blueprint\" List:** Vertical lists separated by full-width 1px lines. Each list item should be numbered (e.g., 01, 02, 03) in JetBrains Mono.",
+          "font": "OSWALD",
+          "headlineFont": "OSWALD",
+          "headlineFontFamily": "Oswald",
+          "labelFont": "JETBRAINS_MONO",
+          "labelFontFamily": "Jetbrains Mono",
+          "namedColors": {
+            "background": "#131314",
+            "error": "#ffb4ab",
+            "error_container": "#93000a",
+            "inverse_on_surface": "#303031",
+            "inverse_primary": "#ab3600",
+            "inverse_surface": "#e4e2e3",
+            "on_background": "#e4e2e3",
+            "on_error": "#690005",
+            "on_error_container": "#ffdad6",
+            "on_primary": "#5c1900",
+            "on_primary_container": "#561700",
+            "on_primary_fixed": "#390c00",
+            "on_primary_fixed_variant": "#832700",
+            "on_secondary": "#303031",
+            "on_secondary_container": "#bab8b9",
+            "on_secondary_fixed": "#1b1b1c",
+            "on_secondary_fixed_variant": "#474647",
+            "on_surface": "#e4e2e3",
+            "on_surface_variant": "#e3bfb3",
+            "on_tertiary": "#2f3130",
+            "on_tertiary_container": "#2b2d2c",
+            "on_tertiary_fixed": "#1a1c1b",
+            "on_tertiary_fixed_variant": "#454746",
+            "outline": "#aa897f",
+            "outline_variant": "#5b4138",
+            "primary": "#ffb59c",
+            "primary_container": "#ff5f1f",
+            "primary_fixed": "#ffdbcf",
+            "primary_fixed_dim": "#ffb59c",
+            "secondary": "#c8c6c7",
+            "secondary_container": "#49494a",
+            "secondary_fixed": "#e5e2e3",
+            "secondary_fixed_dim": "#c8c6c7",
+            "surface": "#131314",
+            "surface_bright": "#39393a",
+            "surface_container": "#1f1f20",
+            "surface_container_high": "#2a2a2b",
+            "surface_container_highest": "#353536",
+            "surface_container_low": "#1b1b1c",
+            "surface_container_lowest": "#0e0e0f",
+            "surface_dim": "#131314",
+            "surface_tint": "#ffb59c",
+            "surface_variant": "#353536",
+            "tertiary": "#c6c7c5",
+            "tertiary_container": "#939493",
+            "tertiary_fixed": "#e2e3e1",
+            "tertiary_fixed_dim": "#c6c7c5"
+          },
+          "overrideNeutralColor": "#2d2d2e",
+          "overridePrimaryColor": "#ff5f1f",
+          "overrideSecondaryColor": "#1a1a1b",
+          "overrideTertiaryColor": "#f9f9f7",
+          "spacing": {
+            "container-max": "1440px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Inter",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Inter",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "data-point": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "14px",
+              "fontWeight": "700",
+              "lineHeight": "1.0"
+            },
+            "headline-lg": {
+              "fontFamily": "Oswald",
+              "fontSize": "48px",
+              "fontWeight": "600",
+              "lineHeight": "1.1"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Oswald",
+              "fontSize": "36px",
+              "fontWeight": "600",
+              "lineHeight": "1.1"
+            },
+            "headline-xl": {
+              "fontFamily": "Oswald",
+              "fontSize": "72px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "subheading": {
+              "fontFamily": "Oswald",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.4"
+            },
+            "technical-label": {
+              "fontFamily": "JetBrains Mono",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "letterSpacing": "0.05em",
+              "lineHeight": "1.2"
+            }
+          }
+        }
+      },
+      "name": "assets/026883d40d88431aa0b1ce97b8ccc764",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "9eb8ad0e7a664544815c0eb42dcafd73",
+          "name": "projects/9954270960136432594/screens/9eb8ad0e7a664544815c0eb42dcafd73",
+          "prompt": "Editorial photography of a high-end mobile mechanic service in Pensacola, Florida. Close-up of a professional mechanic's hand using a high-quality wrench on a modern car engine. Cinematic lighting, deep shadows, industrial mood. Color palette: charcoal, deep blacks, and subtle pops of safety orange. 4k resolution, professional lens blur. No text.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuRW4gEq7MEjrkplcrjlv2h57M2u2UMlLmaFcy1n-zx7EWHOQf6vkPjJYrvHna5vYmhe3eRRa7gkntkKwpr4eGgioUntxRLtXmDZnwVYSbvmC-K4A6RAPHsQPTqAdAT5GWLHhu9HBuLpHqrJZEap7XAOx56puA8064_W9g3q5vd0Nuz6QFVPBz_DvWFAsrSIO-QWtq0CZlnf6lItd7jdy457ARlFK0gwEiGZwYB1iVja9TIzrZfhQ-iwWQ",
+            "name": "projects/9954270960136432594/files/55da8a87ea834632828d19c526324495"
+          },
+          "theme": {},
+          "title": "Editorial photography of a high-end mobile mechanic service in Pensacola, Florida. Close-up of a professional mechanic's hand using a high-quality wrench on a modern car engine. Cinematic lighting, deep shadows, industrial mood. Color palette: charcoal, deep blacks, and subtle pops of safety orange. 4k resolution, professional lens blur. No text.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1200",
+          "id": "d75a64b0f1f741a4b524e2992417be11",
+          "name": "projects/9954270960136432594/screens/d75a64b0f1f741a4b524e2992417be11",
+          "prompt": "A professional mechanic standing confidently by a clean, modern mobile service van at dusk in a coastal industrial setting. Moody, editorial style, high contrast. Safety orange accents on the van. Background features subtle industrial structures. No text.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLu6P1wUCRVMmv1uRKKTceOVbxQDtd69Ck6owRN7ThuP61TZUzaahAJJoP5siLtKuON5DjZONENs69jvTHJjDY10s4xRmOuvqiNtpIcRfg8L9k5vHnmHjVcjgA07uU677zmtQTn6rYpGFuqnfYM2WbzNuo1S3iBtcQrhd35Bt8jGazKAVlAe4pu3EP_9o0GqJUGv5c4tAw_oie7GjWAEL06bN_cUGimaSfOg_4WI-Xbi10rNBz0x4eejF5A",
+            "name": "projects/9954270960136432594/files/1fb0d328fe444d489d4aa87abb7eff99"
+          },
+          "theme": {},
+          "title": "A professional mechanic standing confidently by a clean, modern mobile service van at dusk in a coastal industrial setting. Moody, editorial style, high contrast. Safety orange accents on the van. Background features subtle industrial structures. No text.",
+          "width": "896"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Overhaul Industrial",
+              "styleGuidelines": "## Brand & Style\n\nThis design system establishes a \"Garage Editorial\" aesthetic—a premium, high-utility identity that elevates the mobile mechanic trade into a sophisticated industrial service. It targets discerning vehicle owners in Pensacola who value technical expertise and precision over budget-bin alternatives.\n\nThe style is **Industrial Minimalism mixed with Technical Brutalism**. It rejects soft gradients and generic imagery in favor of raw textures, high-contrast utility, and a \"blueprint\" layout logic. The emotional response should be one of absolute confidence: the UI feels as calibrated and reliable as a torque wrench.\n\nKey visual pillars include:\n- **Asymmetrical Tension:** Layouts avoid perfect symmetry to mimic the organized chaos of a high-end workshop.\n- **Utility Indicators:** Small technical annotations (e.g., coordinates, part numbers, or timestamps) used as decorative elements.\n- **Heavy Linework:** 1px or 2px solid borders that define the structure, reminiscent of technical drawings.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid Technical Grid**. Use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **Asymmetry:** Offset content blocks by one or two columns to create visual interest. For example, a headline might start on Column 1, while the supporting body text starts on Column 3.\n- **Blueprint Lines:** Use 1px Off-White (#F9F9F7 at 10% opacity) lines to define the grid visually. These lines should extend to the edges of the viewport, creating a \"schematic\" feel.\n- **Rhythm:** Stick to an 8px base unit. Component padding should be generous (24px or 32px) to allow the \"premium\" nature of the brand to breathe.\n- **Pensacola Context:** Incorporate localized coordinates (30.4213° N, 87.2169° W) as small monospaced footer elements or decorative corner accents.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows and blurs. Instead, depth is achieved through **Tonal Stacking and Hard Borders**.\n\n- **Stacked Tiers:** The background is the darkest (#1A1A1B). Cards and containers use the Surface Neutral (#2D2D2E). \n- **The \"Overhang\" Effect:** Instead of shadows, use 1px solid borders in Off-White or Safety Orange to define the edge of an element. \n- **No Softness:** Absolutely no background blurs or glassmorphism. Surfaces are opaque and solid, suggesting the heavy-duty materials of an automotive shop.\n- **Interactive Depth:** On hover, elements should shift 4px up and to the left, revealing a \"ghost\" 1px border beneath them, rather than a shadow.\n\n## Components\n\n- **Primary Action (Button):** Solid Safety Orange (#FF5F1F) background, black uppercase Oswald text. 0px radius. Hover state: Inverse (Orange border, Transparent background).\n- **Service Cards:** Deep Charcoal background with a 1px Off-White border. Headline in the top-left, price/data point in the bottom-right using JetBrains Mono.\n- **Input Fields:** 1px Off-White border (20% opacity). On focus, the border turns Safety Orange and a small JetBrains Mono \"Ready\" indicator appears in the corner.\n- **Utility Chips:** Small, monospaced text blocks with a thin border and no background. Used for tags like \"FLUID EXCHANGE\" or \"DIAGNOSTIC.\"\n- **Status Indicators:** Use \"High-Vis\" patterns. For example, a \"System Active\" bar might use a diagonal \"hazard stripe\" pattern (Orange/Black) in a small 4px strip.\n- **The \"Blueprint\" List:** Vertical lists separated by full-width 1px lines. Each list item should be numbered (e.g., 01, 02, 03) in JetBrains Mono.",
+              "theme": {
+                "bodyFont": "INTER",
+                "bodyFontFamily": "Inter",
+                "colorMode": "DARK",
+                "colorVariant": "FIDELITY",
+                "customColor": "#ff5f1f",
+                "designMd": "---\nname: Overhaul Industrial\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1b1b1c'\n  surface-container: '#1f1f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353536'\n  on-surface: '#e4e2e3'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e4e2e3'\n  inverse-on-surface: '#303031'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#c6c7c5'\n  on-tertiary: '#2f3130'\n  tertiary-container: '#939493'\n  on-tertiary-container: '#2b2d2c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e2e3e1'\n  tertiary-fixed-dim: '#c6c7c5'\n  on-tertiary-fixed: '#1a1c1b'\n  on-tertiary-fixed-variant: '#454746'\n  background: '#131314'\n  on-background: '#e4e2e3'\n  surface-variant: '#353536'\ntypography:\n  headline-xl:\n    fontFamily: Oswald\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Oswald\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-lg-mobile:\n    fontFamily: Oswald\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  subheading:\n    fontFamily: Oswald\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  technical-label:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  data-point:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  container-max: 1440px\n---\n\n## Brand & Style\n\nThis design system establishes a \"Garage Editorial\" aesthetic—a premium, high-utility identity that elevates the mobile mechanic trade into a sophisticated industrial service. It targets discerning vehicle owners in Pensacola who value technical expertise and precision over budget-bin alternatives.\n\nThe style is **Industrial Minimalism mixed with Technical Brutalism**. It rejects soft gradients and generic imagery in favor of raw textures, high-contrast utility, and a \"blueprint\" layout logic. The emotional response should be one of absolute confidence: the UI feels as calibrated and reliable as a torque wrench.\n\nKey visual pillars include:\n- **Asymmetrical Tension:** Layouts avoid perfect symmetry to mimic the organized chaos of a high-end workshop.\n- **Utility Indicators:** Small technical annotations (e.g., coordinates, part numbers, or timestamps) used as decorative elements.\n- **Heavy Linework:** 1px or 2px solid borders that define the structure, reminiscent of technical drawings.\n\n## Colors\n\nThe palette is strictly limited to three core pillars to maintain an authoritative, high-end editorial feel. \n\n- **Deep Charcoal (#1A1A1B):** The primary canvas. It evokes the depth of fresh motor oil and the asphalt of Florida’s coastal roads. Use this for all backgrounds to create a focused, low-glare environment.\n- **Safety Orange (#FF5F1F):** The high-visibility accent. This color is used exclusively for primary actions, critical status alerts, and branding highlights. It should be used sparingly to maintain its \"warning\" and \"utility\" impact.\n- **Off-White (#F9F9F7):** The \"Paper\" color. Used for high-readability typography and technical illustrations. It provides a sharp, clean contrast against the charcoal base.\n- **Surface Neutral (#2D2D2E):** A secondary charcoal used for card surfaces and input backgrounds to provide subtle depth without breaking the dark-mode immersion.\n\n## Typography\n\nTypography is the primary driver of the \"Editorial\" feel. The system utilizes a hierarchy of three distinct typefaces:\n\n1.  **Oswald (Headlines):** A bold, condensed sans-serif that commands attention. All major headlines must be uppercase to reinforce the industrial, sign-age aesthetic. \n2.  **Inter (Body):** Used for all long-form text and descriptions. Its neutrality ensures that the technical details remain the hero while providing maximum readability.\n3.  **JetBrains Mono (Technical/Data):** This monospaced font is used for labels, timestamps, pricing, and service codes. It signifies \"precision\" and \"manuals,\" grounding the brand in expertise.\n\n**Vertical Typography:** For desktop layouts, use \"Subheading\" styles rotated 90 degrees as sidebar labels or section dividers to create the asymmetrical editorial look.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid Technical Grid**. Use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **Asymmetry:** Offset content blocks by one or two columns to create visual interest. For example, a headline might start on Column 1, while the supporting body text starts on Column 3.\n- **Blueprint Lines:** Use 1px Off-White (#F9F9F7 at 10% opacity) lines to define the grid visually. These lines should extend to the edges of the viewport, creating a \"schematic\" feel.\n- **Rhythm:** Stick to an 8px base unit. Component padding should be generous (24px or 32px) to allow the \"premium\" nature of the brand to breathe.\n- **Pensacola Context:** Incorporate localized coordinates (30.4213° N, 87.2169° W) as small monospaced footer elements or decorative corner accents.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows and blurs. Instead, depth is achieved through **Tonal Stacking and Hard Borders**.\n\n- **Stacked Tiers:** The background is the darkest (#1A1A1B). Cards and containers use the Surface Neutral (#2D2D2E). \n- **The \"Overhang\" Effect:** Instead of shadows, use 1px solid borders in Off-White or Safety Orange to define the edge of an element. \n- **No Softness:** Absolutely no background blurs or glassmorphism. Surfaces are opaque and solid, suggesting the heavy-duty materials of an automotive shop.\n- **Interactive Depth:** On hover, elements should shift 4px up and to the left, revealing a \"ghost\" 1px border beneath them, rather than a shadow.\n\n## Shapes\n\nThe shape language is **Strictly Geometric and Sharp**. \n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. Round corners conflict with the industrial, technical-drawing motif.\n- **Angled Accents:** Use 45-degree \"clipped corners\" for decorative containers or primary buttons to mimic industrial machinery components.\n- **Iconography:** Use stroke-based, 2px weight icons. Icons should be sharp-edged; avoid any rounded terminals or \"bubbly\" icon sets.\n\n## Components\n\n- **Primary Action (Button):** Solid Safety Orange (#FF5F1F) background, black uppercase Oswald text. 0px radius. Hover state: Inverse (Orange border, Transparent background).\n- **Service Cards:** Deep Charcoal background with a 1px Off-White border. Headline in the top-left, price/data point in the bottom-right using JetBrains Mono.\n- **Input Fields:** 1px Off-White border (20% opacity). On focus, the border turns Safety Orange and a small JetBrains Mono \"Ready\" indicator appears in the corner.\n- **Utility Chips:** Small, monospaced text blocks with a thin border and no background. Used for tags like \"FLUID EXCHANGE\" or \"DIAGNOSTIC.\"\n- **Status Indicators:** Use \"High-Vis\" patterns. For example, a \"System Active\" bar might use a diagonal \"hazard stripe\" pattern (Orange/Black) in a small 4px strip.\n- **The \"Blueprint\" List:** Vertical lists separated by full-width 1px lines. Each list item should be numbered (e.g., 01, 02, 03) in JetBrains Mono.",
+                "font": "OSWALD",
+                "headlineFont": "OSWALD",
+                "headlineFontFamily": "Oswald",
+                "labelFont": "JETBRAINS_MONO",
+                "labelFontFamily": "Jetbrains Mono",
+                "namedColors": {
+                  "background": "#131314",
+                  "error": "#ffb4ab",
+                  "error_container": "#93000a",
+                  "inverse_on_surface": "#303031",
+                  "inverse_primary": "#ab3600",
+                  "inverse_surface": "#e4e2e3",
+                  "on_background": "#e4e2e3",
+                  "on_error": "#690005",
+                  "on_error_container": "#ffdad6",
+                  "on_primary": "#5c1900",
+                  "on_primary_container": "#561700",
+                  "on_primary_fixed": "#390c00",
+                  "on_primary_fixed_variant": "#832700",
+                  "on_secondary": "#303031",
+                  "on_secondary_container": "#bab8b9",
+                  "on_secondary_fixed": "#1b1b1c",
+                  "on_secondary_fixed_variant": "#474647",
+                  "on_surface": "#e4e2e3",
+                  "on_surface_variant": "#e3bfb3",
+                  "on_tertiary": "#2f3130",
+                  "on_tertiary_container": "#2b2d2c",
+                  "on_tertiary_fixed": "#1a1c1b",
+                  "on_tertiary_fixed_variant": "#454746",
+                  "outline": "#aa897f",
+                  "outline_variant": "#5b4138",
+                  "primary": "#ffb59c",
+                  "primary_container": "#ff5f1f",
+                  "primary_fixed": "#ffdbcf",
+                  "primary_fixed_dim": "#ffb59c",
+                  "secondary": "#c8c6c7",
+                  "secondary_container": "#49494a",
+                  "secondary_fixed": "#e5e2e3",
+                  "secondary_fixed_dim": "#c8c6c7",
+                  "surface": "#131314",
+                  "surface_bright": "#39393a",
+                  "surface_container": "#1f1f20",
+                  "surface_container_high": "#2a2a2b",
+                  "surface_container_highest": "#353536",
+                  "surface_container_low": "#1b1b1c",
+                  "surface_container_lowest": "#0e0e0f",
+                  "surface_dim": "#131314",
+                  "surface_tint": "#ffb59c",
+                  "surface_variant": "#353536",
+                  "tertiary": "#c6c7c5",
+                  "tertiary_container": "#939493",
+                  "tertiary_fixed": "#e2e3e1",
+                  "tertiary_fixed_dim": "#c6c7c5"
+                },
+                "overrideNeutralColor": "#2d2d2e",
+                "overridePrimaryColor": "#ff5f1f",
+                "overrideSecondaryColor": "#1a1a1b",
+                "overrideTertiaryColor": "#f9f9f7",
+                "spacing": {
+                  "container-max": "1440px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "16px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Inter",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Inter",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "data-point": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "14px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.0"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "48px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "36px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.1"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "72px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "subheading": {
+                    "fontFamily": "Oswald",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.4"
+                  },
+                  "technical-label": {
+                    "fontFamily": "JetBrains Mono",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "1.2"
+                  }
+                }
+              }
+            },
+            "name": "assets/026883d40d88431aa0b1ce97b8ccc764",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "8856",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzJmY2I3MGM5N2RjNTRkZjM5MTkwM2EyNTg1YjYzODdkEgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM5OTU0MjcwOTYwMTM2NDMyNTk0&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/9954270960136432594/files/9dc387b2bfa840329d07a2e4620bf74f"
+          },
+          "id": "fce5ddb329a746c0a95f647ca98abcc9",
+          "name": "projects/9954270960136432594/screens/fce5ddb329a746c0a95f647ca98abcc9",
+          "prompt": "Build a bespoke, editorial-grade desktop landing page for Affordable Mobile Mechanic LLC. \n\n### Visual Identity\n- Use the 'Overhaul Industrial' design system. \n- Theme: Dark Mode. \n- Colors: Charcoal base, High-Vis Orange accents, Mono-style labels.\n- Layout: Asymmetrical, strong verticality, generous whitespace. \n\n### Content Sections\n1. **Header**: Minimalist navigation (Services, About, Credentials) + Emergency Contact: (850) 485-1483.\n2. **Hero**: Oversized heading: 'PRECISION ON-SITE.' Subtext: 'Pensacola’s premier mobile mechanical response unit.' Use {{DATA:IMAGE:IMAGE_3}} as a large, vertically-oriented secondary element or hero background.\n3. **#Credibility**: A technical spec-sheet style section. 'FLEET-READY. ASE CERTIFIED. 24/7 AVAILABILITY.'\n4. **Services**: Use a 'Technical Blueprint' layout. Grid of services (Diagnostics, Brakes, Suspension, Fleet Maintenance) with mono-spaced descriptions and high-contrast borders.\n5. **About**: Use {{DATA:IMAGE:IMAGE_4}} paired with bold typography. Focus on 'The Affordable Mobile Mechanic' story — professional grade service delivered to your driveway.\n6. **Visit (#visit)**: Localization section for Pensacola. Include the required empty map slot: `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`.\n7. **Contact**: A high-end contact form using the brand's 'Industrial' styling. \n8. **Footer**: Clean utility footer with copyright, contact info (abmobilemechanics@gmail.com), and Pensacola coordinates.\n\n### Technical Requirements\n- Production-ready HTML/CSS/JS.\n- Responsive at 375px.\n- Smooth scroll and form validation UI.\n- No Lorem Ipsum. \n- Unique, non-template layout.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvvkNf2RLkGtRjr9Yfxa3dM_ryiEXi-0sopdd2wcjkgz-5Rp8e6Du1D9kVi5kJp9ZK5uH7WZ22d_J9MEXmSWK4OKsT591nfSIvIwclSkdN6SUv2OAqQAlfNp-qc3LN3ECcAOijg-FHBqfUO6VPFopAvVYqq24maqdV3lyZ5anyeS4G70RwNDtB3AxOryBOS8C16ReoNaKzDLRvvlrxHIFtwZuO5SxPKbx1vLD626UR6VY76DoLAveRRyjc",
+            "name": "projects/9954270960136432594/files/ba8905f72c28432bacca0beae6c0be1b"
+          },
+          "theme": {
+            "bodyFont": "INTER",
+            "bodyFontFamily": "Inter",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ff5f1f",
+            "designMd": "---\nname: Overhaul Industrial\ncolors:\n  surface: '#131314'\n  surface-dim: '#131314'\n  surface-bright: '#39393a'\n  surface-container-lowest: '#0e0e0f'\n  surface-container-low: '#1b1b1c'\n  surface-container: '#1f1f20'\n  surface-container-high: '#2a2a2b'\n  surface-container-highest: '#353536'\n  on-surface: '#e4e2e3'\n  on-surface-variant: '#e3bfb3'\n  inverse-surface: '#e4e2e3'\n  inverse-on-surface: '#303031'\n  outline: '#aa897f'\n  outline-variant: '#5b4138'\n  surface-tint: '#ffb59c'\n  primary: '#ffb59c'\n  on-primary: '#5c1900'\n  primary-container: '#ff5f1f'\n  on-primary-container: '#561700'\n  inverse-primary: '#ab3600'\n  secondary: '#c8c6c7'\n  on-secondary: '#303031'\n  secondary-container: '#49494a'\n  on-secondary-container: '#bab8b9'\n  tertiary: '#c6c7c5'\n  on-tertiary: '#2f3130'\n  tertiary-container: '#939493'\n  on-tertiary-container: '#2b2d2c'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcf'\n  primary-fixed-dim: '#ffb59c'\n  on-primary-fixed: '#390c00'\n  on-primary-fixed-variant: '#832700'\n  secondary-fixed: '#e5e2e3'\n  secondary-fixed-dim: '#c8c6c7'\n  on-secondary-fixed: '#1b1b1c'\n  on-secondary-fixed-variant: '#474647'\n  tertiary-fixed: '#e2e3e1'\n  tertiary-fixed-dim: '#c6c7c5'\n  on-tertiary-fixed: '#1a1c1b'\n  on-tertiary-fixed-variant: '#454746'\n  background: '#131314'\n  on-background: '#e4e2e3'\n  surface-variant: '#353536'\ntypography:\n  headline-xl:\n    fontFamily: Oswald\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Oswald\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-lg-mobile:\n    fontFamily: Oswald\n    fontSize: 36px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  subheading:\n    fontFamily: Oswald\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.4'\n    letterSpacing: 0.1em\n  body-lg:\n    fontFamily: Inter\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Inter\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  technical-label:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1.2'\n    letterSpacing: 0.05em\n  data-point:\n    fontFamily: JetBrains Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  container-max: 1440px\n---\n\n## Brand & Style\n\nThis design system establishes a \"Garage Editorial\" aesthetic—a premium, high-utility identity that elevates the mobile mechanic trade into a sophisticated industrial service. It targets discerning vehicle owners in Pensacola who value technical expertise and precision over budget-bin alternatives.\n\nThe style is **Industrial Minimalism mixed with Technical Brutalism**. It rejects soft gradients and generic imagery in favor of raw textures, high-contrast utility, and a \"blueprint\" layout logic. The emotional response should be one of absolute confidence: the UI feels as calibrated and reliable as a torque wrench.\n\nKey visual pillars include:\n- **Asymmetrical Tension:** Layouts avoid perfect symmetry to mimic the organized chaos of a high-end workshop.\n- **Utility Indicators:** Small technical annotations (e.g., coordinates, part numbers, or timestamps) used as decorative elements.\n- **Heavy Linework:** 1px or 2px solid borders that define the structure, reminiscent of technical drawings.\n\n## Colors\n\nThe palette is strictly limited to three core pillars to maintain an authoritative, high-end editorial feel. \n\n- **Deep Charcoal (#1A1A1B):** The primary canvas. It evokes the depth of fresh motor oil and the asphalt of Florida’s coastal roads. Use this for all backgrounds to create a focused, low-glare environment.\n- **Safety Orange (#FF5F1F):** The high-visibility accent. This color is used exclusively for primary actions, critical status alerts, and branding highlights. It should be used sparingly to maintain its \"warning\" and \"utility\" impact.\n- **Off-White (#F9F9F7):** The \"Paper\" color. Used for high-readability typography and technical illustrations. It provides a sharp, clean contrast against the charcoal base.\n- **Surface Neutral (#2D2D2E):** A secondary charcoal used for card surfaces and input backgrounds to provide subtle depth without breaking the dark-mode immersion.\n\n## Typography\n\nTypography is the primary driver of the \"Editorial\" feel. The system utilizes a hierarchy of three distinct typefaces:\n\n1.  **Oswald (Headlines):** A bold, condensed sans-serif that commands attention. All major headlines must be uppercase to reinforce the industrial, sign-age aesthetic. \n2.  **Inter (Body):** Used for all long-form text and descriptions. Its neutrality ensures that the technical details remain the hero while providing maximum readability.\n3.  **JetBrains Mono (Technical/Data):** This monospaced font is used for labels, timestamps, pricing, and service codes. It signifies \"precision\" and \"manuals,\" grounding the brand in expertise.\n\n**Vertical Typography:** For desktop layouts, use \"Subheading\" styles rotated 90 degrees as sidebar labels or section dividers to create the asymmetrical editorial look.\n\n## Layout & Spacing\n\nThe layout follows a **Rigid Technical Grid**. Use a 12-column grid for desktop and a 4-column grid for mobile.\n\n- **Asymmetry:** Offset content blocks by one or two columns to create visual interest. For example, a headline might start on Column 1, while the supporting body text starts on Column 3.\n- **Blueprint Lines:** Use 1px Off-White (#F9F9F7 at 10% opacity) lines to define the grid visually. These lines should extend to the edges of the viewport, creating a \"schematic\" feel.\n- **Rhythm:** Stick to an 8px base unit. Component padding should be generous (24px or 32px) to allow the \"premium\" nature of the brand to breathe.\n- **Pensacola Context:** Incorporate localized coordinates (30.4213° N, 87.2169° W) as small monospaced footer elements or decorative corner accents.\n\n## Elevation & Depth\n\nThis design system avoids traditional drop shadows and blurs. Instead, depth is achieved through **Tonal Stacking and Hard Borders**.\n\n- **Stacked Tiers:** The background is the darkest (#1A1A1B). Cards and containers use the Surface Neutral (#2D2D2E). \n- **The \"Overhang\" Effect:** Instead of shadows, use 1px solid borders in Off-White or Safety Orange to define the edge of an element. \n- **No Softness:** Absolutely no background blurs or glassmorphism. Surfaces are opaque and solid, suggesting the heavy-duty materials of an automotive shop.\n- **Interactive Depth:** On hover, elements should shift 4px up and to the left, revealing a \"ghost\" 1px border beneath them, rather than a shadow.\n\n## Shapes\n\nThe shape language is **Strictly Geometric and Sharp**. \n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. Round corners conflict with the industrial, technical-drawing motif.\n- **Angled Accents:** Use 45-degree \"clipped corners\" for decorative containers or primary buttons to mimic industrial machinery components.\n- **Iconography:** Use stroke-based, 2px weight icons. Icons should be sharp-edged; avoid any rounded terminals or \"bubbly\" icon sets.\n\n## Components\n\n- **Primary Action (Button):** Solid Safety Orange (#FF5F1F) background, black uppercase Oswald text. 0px radius. Hover state: Inverse (Orange border, Transparent background).\n- **Service Cards:** Deep Charcoal background with a 1px Off-White border. Headline in the top-left, price/data point in the bottom-right using JetBrains Mono.\n- **Input Fields:** 1px Off-White border (20% opacity). On focus, the border turns Safety Orange and a small JetBrains Mono \"Ready\" indicator appears in the corner.\n- **Utility Chips:** Small, monospaced text blocks with a thin border and no background. Used for tags like \"FLUID EXCHANGE\" or \"DIAGNOSTIC.\"\n- **Status Indicators:** Use \"High-Vis\" patterns. For example, a \"System Active\" bar might use a diagonal \"hazard stripe\" pattern (Orange/Black) in a small 4px strip.\n- **The \"Blueprint\" List:** Vertical lists separated by full-width 1px lines. Each list item should be numbered (e.g., 01, 02, 03) in JetBrains Mono.",
+            "font": "OSWALD",
+            "headlineFont": "OSWALD",
+            "headlineFontFamily": "Oswald",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#131314",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303031",
+              "inverse_primary": "#ab3600",
+              "inverse_surface": "#e4e2e3",
+              "on_background": "#e4e2e3",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#5c1900",
+              "on_primary_container": "#561700",
+              "on_primary_fixed": "#390c00",
+              "on_primary_fixed_variant": "#832700",
+              "on_secondary": "#303031",
+              "on_secondary_container": "#bab8b9",
+              "on_secondary_fixed": "#1b1b1c",
+              "on_secondary_fixed_variant": "#474647",
+              "on_surface": "#e4e2e3",
+              "on_surface_variant": "#e3bfb3",
+              "on_tertiary": "#2f3130",
+              "on_tertiary_container": "#2b2d2c",
+              "on_tertiary_fixed": "#1a1c1b",
+              "on_tertiary_fixed_variant": "#454746",
+              "outline": "#aa897f",
+              "outline_variant": "#5b4138",
+              "primary": "#ffb59c",
+              "primary_container": "#ff5f1f",
+              "primary_fixed": "#ffdbcf",
+              "primary_fixed_dim": "#ffb59c",
+              "secondary": "#c8c6c7",
+              "secondary_container": "#49494a",
+              "secondary_fixed": "#e5e2e3",
+              "secondary_fixed_dim": "#c8c6c7",
+              "surface": "#131314",
+              "surface_bright": "#39393a",
+              "surface_container": "#1f1f20",
+              "surface_container_high": "#2a2a2b",
+              "surface_container_highest": "#353536",
+              "surface_container_low": "#1b1b1c",
+              "surface_container_lowest": "#0e0e0f",
+              "surface_dim": "#131314",
+              "surface_tint": "#ffb59c",
+              "surface_variant": "#353536",
+              "tertiary": "#c6c7c5",
+              "tertiary_container": "#939493",
+              "tertiary_fixed": "#e2e3e1",
+              "tertiary_fixed_dim": "#c6c7c5"
+            },
+            "overrideNeutralColor": "#2d2d2e",
+            "overridePrimaryColor": "#ff5f1f",
+            "overrideSecondaryColor": "#1a1a1b",
+            "overrideTertiaryColor": "#f9f9f7",
+            "spacing": {
+              "container-max": "1440px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Inter",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Inter",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "data-point": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "lineHeight": "1.0"
+              },
+              "headline-lg": {
+                "fontFamily": "Oswald",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.1"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Oswald",
+                "fontSize": "36px",
+                "fontWeight": "600",
+                "lineHeight": "1.1"
+              },
+              "headline-xl": {
+                "fontFamily": "Oswald",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "subheading": {
+                "fontFamily": "Oswald",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.4"
+              },
+              "technical-label": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.2"
+              }
+            }
+          },
+          "title": "AMM LLC | Pensacola Mobile Mechanics",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed a bespoke, editorial-grade homepage for **Affordable Mobile Mechanic LLC**. This landing page moves away from typical local-business templates, opting for a high-contrast \"Industrial High-End\" aesthetic that emphasizes precision and professional reliability.\n\n### Design Decisions & Rationale\n- **Visual Identity**: I established the \"Overhaul Industrial\" system, utilizing a deep charcoal base with \"High-Visibility Safety Orange\" as the primary accent color to evoke a sense of urgency and technical expertise.\n- **Editorial Layout**: The design uses an asymmetrical grid and generous whitespace to create a premium feel. Strong typographic hierarchy with condensed headings and monospaced technical labels reinforces the \"precision engineering\" brand voice.\n- **Imagery**: I generated two custom cinematic images—a wide shot of a mobile service unit at dusk and a close-up \"action\" shot—to provide authentic visual context that feels like a professional photo shoot rather than stock imagery.\n- **Technical Blueprint Motif**: The services and credibility sections use sharp, fine borders and monospaced data to mimic technical documentation, positioning the business as an elite mechanical response unit.\n- **Interactivity**: The site features smooth-scrolling navigation, a mobile-ready hamburger menu, and a custom-styled contact form ready for lead generation.\n\nThe page is fully responsive, semantically structured, and ready for deployment.\n\n### Next Steps\n- Would you like me to create the **Mobile** version of this design to ensure a seamless experience on smaller screens?\n- Do you want to refine any of the **Service Matrix** descriptions to include more specific pricing or specializations?\n- Should I add any **micro-interactions** or motion effects, such as hover-triggered blueprint lines or smooth section transitions?"
+  },
+  {
+    "suggestion": "Generate the mobile version of this screen"
+  },
+  {
+    "suggestion": "Add scroll-triggered animations to the sections"
+  },
+  {
+    "suggestion": "Update the services with pricing details"
+  }
+]

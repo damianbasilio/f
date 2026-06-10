@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AMM LLC | Precision On-Site Mobile Mechanics</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&amp;family=JetBrains+Mono:wght@400;500;700&amp;family=Inter:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "inverse-surface": "#e4e2e3",
+                        "secondary-fixed-dim": "#c8c6c7",
+                        "on-secondary-container": "#bab8b9",
+                        "surface-container-low": "#1b1b1c",
+                        "on-primary": "#5c1900",
+                        "secondary": "#c8c6c7",
+                        "tertiary-container": "#939493",
+                        "secondary-fixed": "#e5e2e3",
+                        "error-container": "#93000a",
+                        "surface-bright": "#39393a",
+                        "on-secondary-fixed": "#1b1b1c",
+                        "on-secondary": "#303031",
+                        "surface": "#131314",
+                        "surface-container-high": "#2a2a2b",
+                        "primary-fixed-dim": "#ffb59c",
+                        "surface-variant": "#353536",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "background": "#131314",
+                        "primary": "#ffb59c",
+                        "on-primary-container": "#561700",
+                        "tertiary": "#c6c7c5",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "on-tertiary-container": "#2b2d2c",
+                        "surface-tint": "#ffb59c",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "on-secondary-fixed-variant": "#474647",
+                        "on-surface": "#e4e2e3",
+                        "tertiary-fixed": "#e2e3e1",
+                        "surface-container-highest": "#353536",
+                        "outline": "#aa897f",
+                        "on-background": "#e4e2e3",
+                        "surface-dim": "#131314",
+                        "inverse-on-surface": "#303031",
+                        "on-error": "#690005",
+                        "on-tertiary": "#2f3130",
+                        "on-primary-fixed-variant": "#832700",
+                        "secondary-container": "#49494a",
+                        "inverse-primary": "#ab3600",
+                        "outline-variant": "#5b4138",
+                        "on-surface-variant": "#e3bfb3",
+                        "surface-container-lowest": "#0e0e0f",
+                        "error": "#ffb4ab",
+                        "surface-container": "#1f1f20",
+                        "primary-fixed": "#ffdbcf",
+                        "on-primary-fixed": "#390c00",
+                        "primary-container": "#ff5f1f"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0rem",
+                        "lg": "0rem",
+                        "xl": "0rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "gutter": "24px",
+                        "container-max": "1440px",
+                        "margin-mobile": "16px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Oswald"],
+                        "data-point": ["JetBrains Mono"],
+                        "body-lg": ["Inter"],
+                        "headline-lg-mobile": ["Oswald"],
+                        "technical-label": ["JetBrains Mono"],
+                        "subheading": ["Oswald"],
+                        "body-md": ["Inter"],
+                        "headline-xl": ["Oswald"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "600"}],
+                        "data-point": ["14px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "600"}],
+                        "technical-label": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "500"}],
+                        "subheading": ["18px", {"lineHeight": "1.4", "letterSpacing": "0.1em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "headline-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            background-color: #131314;
+            color: #e4e2e3;
+            scroll-behavior: smooth;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .blueprint-grid {
+            background-image: linear-gradient(rgba(249, 249, 247, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(249, 249, 247, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .technical-border {
+            border: 1px solid rgba(228, 226, 227, 0.1);
+        }
+        .safety-orange-hover:hover {
+            box-shadow: -4px -4px 0px 0px #ff5f1f;
+            transform: translate(4px, 4px);
+        }
+        .hazard-pattern {
+            background: repeating-linear-gradient(
+                -45deg,
+                #ff5f1f,
+                #ff5f1f 10px,
+                #000 10px,
+                #000 20px
+            );
+        }
+        input:focus, textarea:focus {
+            outline: none;
+            border-color: #ff5f1f !important;
+            box-shadow: none !important;
+        }
+    </style>
+</head>
+<body class="font-body-md bg-background text-on-background">
+<!-- Header / TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-background/90 backdrop-blur-sm border-b border-on-surface/10">
+<div class="flex items-center gap-8">
+<span class="font-headline-lg text-headline-lg text-on-background uppercase tracking-tighter">AMM LLC</span>
+<nav class="hidden md:flex gap-6">
+<a class="font-subheading text-subheading uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#services">SERVICES</a>
+<a class="font-subheading text-subheading uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#about">ABOUT</a>
+<a class="font-subheading text-subheading uppercase tracking-widest text-on-surface hover:text-primary transition-colors" href="#credentials">CREDENTIALS</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="font-technical-label text-technical-label text-primary hover:underline" href="tel:8504851483">(850) 485-1483</a>
+<button class="bg-primary-container text-black font-headline-lg text-[18px] px-6 py-2 transition-all duration-200 active:scale-95 uppercase">EMERGENCY</button>
+</div>
+</header>
+<main class="pt-24 blueprint-grid">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col md:flex-row items-stretch border-b border-on-surface/20">
+<div class="md:w-1/2 p-margin-desktop flex flex-col justify-center border-r border-on-surface/20">
+<div class="mb-4 flex items-center gap-2">
+<div class="h-[2px] w-12 bg-primary-container"></div>
+<span class="font-technical-label text-technical-label uppercase tracking-widest text-primary">Deployment Ready // Pensacola</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl uppercase mb-8 leading-[0.95]">PRECISION<br/><span class="text-primary-container">ON-SITE.</span></h1>
+<p class="font-body-lg text-body-lg max-w-md mb-12 text-secondary-fixed-dim">Elite-grade mobile diagnostics and repair delivered directly to your fleet or driveway. No waiting rooms. No towing. Pure utility.</p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary-container text-black font-headline-lg text-[20px] px-10 py-4 hover:bg-transparent hover:text-primary-container border-2 border-primary-container transition-all uppercase">BOOK DEPLOYMENT</button>
+<button class="border border-on-surface/30 text-on-surface font-headline-lg text-[20px] px-10 py-4 hover:border-primary-container hover:text-primary-container transition-all uppercase">VIEW FLEET SERVICES</button>
+</div>
+<div class="mt-20 font-technical-label text-technical-label flex gap-8 text-on-tertiary-fixed-variant">
+<span>LAT: 30.4213° N</span>
+<span>LONG: 87.2169° W</span>
+<span>EST. 2024</span>
+</div>
+</div>
+<div class="md:w-1/2 relative overflow-hidden bg-surface-container-low">
+<img alt="A sleek silver mobile mechanic service van parked at a Pensacola industrial port during a dramatic orange and purple dusk. The van doors are open, revealing a meticulously organized internal workshop with technical tools and parts bins under bright LED lights. The background features heavy-duty shipping cranes and industrial storage tanks against a moody, cloud-filled sky." class="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLu6P1wUCRVMmv1uRKKTceOVbxQDtd69Ck6owRN7ThuP61TZUzaahAJJoP5siLtKuON5DjZONENs69jvTHJjDY10s4xRmOuvqiNtpIcRfg8L9k5vHnmHjVcjgA07uU677zmtQTn6rYpGFuqnfYM2WbzNuo1S3iBtcQrhd35Bt8jGazKAVlAe4pu3EP_9o0GqJUGv5c4tAw_oie7GjWAEL06bN_cUGimaSfOg_4WI-Xbi10rNBz0x4eejF5A"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-60"></div>
+<!-- Technical Overlay -->
+<div class="absolute bottom-8 right-8 bg-background/80 backdrop-blur-md p-6 border border-primary-container/40">
+<div class="flex items-center gap-3 mb-2">
+<span class="material-symbols-outlined text-primary-container">verified</span>
+<span class="font-technical-label text-technical-label uppercase">System Status: Active</span>
+</div>
+<div class="w-full h-1 bg-on-surface/10 mb-4">
+<div class="h-full bg-primary-container w-[88%]"></div>
+</div>
+<div class="font-data-point text-data-point text-primary-container">MOBILE UNIT 01 // PENSACOLA SECTOR</div>
+</div>
+</div>
+</section>
+<!-- Credibility Grid -->
+<section class="grid grid-cols-1 md:grid-cols-3 border-b border-on-surface/20" id="credentials">
+<div class="p-12 border-r border-on-surface/20 hover:bg-surface-container transition-colors group">
+<div class="font-technical-label text-technical-label text-on-tertiary-fixed-variant mb-4">01 // READINESS</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-4 group-hover:text-primary-container transition-colors">FLEET-READY</h3>
+<p class="font-body-md text-secondary-fixed-dim">Heavy-duty mobile infrastructure capable of servicing individual premium vehicles or entire corporate logistics fleets on-location.</p>
+</div>
+<div class="p-12 border-r border-on-surface/20 hover:bg-surface-container transition-colors group">
+<div class="font-technical-label text-technical-label text-on-tertiary-fixed-variant mb-4">02 // CERTIFICATION</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-4 group-hover:text-primary-container transition-colors">ASE CERTIFIED</h3>
+<p class="font-body-md text-secondary-fixed-dim">Technical expertise backed by national certification. Every diagnostic is performed with precision-calibrated equipment and deep mastery.</p>
+</div>
+<div class="p-12 hover:bg-surface-container transition-colors group">
+<div class="font-technical-label text-technical-label text-on-tertiary-fixed-variant mb-4">03 // RESPONSE</div>
+<h3 class="font-headline-lg text-[32px] uppercase mb-4 group-hover:text-primary-container transition-colors">24/7 AVAILABILITY</h3>
+<p class="font-body-md text-secondary-fixed-dim">Critical mechanical failures don't follow business hours. Our rapid-response unit is staged for emergency deployment across Escambia County.</p>
+</div>
+</section>
+<!-- Service Matrix -->
+<section class="py-24 px-margin-desktop" id="services">
+<div class="flex justify-between items-end mb-16">
+<div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-2">SERVICE MATRIX</h2>
+<p class="font-technical-label text-technical-label text-on-tertiary-fixed-variant">PROTOCOL-DRIVEN REPAIR &amp; MAINTENANCE</p>
+</div>
+<div class="font-data-point text-data-point text-primary-container border border-primary-container px-4 py-2">
+                    ACTIVE_DIAGNOSTICS_ENABLED
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-0">
+<!-- Service 01 -->
+<div class="border border-on-surface/10 p-8 flex flex-col min-h-[350px] relative hover:z-10 bg-surface-container shadow-xl hover:translate-x-[-4px] hover:translate-y-[-4px] transition-all group">
+<span class="material-symbols-outlined text-[40px] text-primary-container mb-8 group-hover:scale-110 transition-transform">biotech</span>
+<h4 class="font-headline-lg text-[24px] uppercase mb-4">DIAGNOSTICS</h4>
+<p class="font-body-md text-secondary-fixed-dim text-sm mb-auto">Full system scanning, electrical troubleshooting, and ECU fault mapping using dealer-level hardware.</p>
+<div class="mt-8 pt-4 border-t border-on-surface/5 flex justify-between items-center">
+<span class="font-data-point text-data-point text-primary-container">CODE: DX-01</span>
+<span class="material-symbols-outlined text-on-surface/20">arrow_forward</span>
+</div>
+<div class="absolute top-0 right-0 h-1 w-0 bg-primary-container group-hover:w-full transition-all"></div>
+</div>
+<!-- Service 02 -->
+<div class="border border-on-surface/10 p-8 flex flex-col min-h-[350px] relative hover:z-10 bg-surface-container shadow-xl hover:translate-x-[-4px] hover:translate-y-[-4px] transition-all group">
+<span class="material-symbols-outlined text-[40px] text-primary-container mb-8 group-hover:scale-110 transition-transform">settings_input_component</span>
+<h4 class="font-headline-lg text-[24px] uppercase mb-4">BRAKES</h4>
+<p class="font-body-md text-secondary-fixed-dim text-sm mb-auto">Performance pad replacement, rotor surfacing, fluid hydration testing, and ABS line recalibration.</p>
+<div class="mt-8 pt-4 border-t border-on-surface/5 flex justify-between items-center">
+<span class="font-data-point text-data-point text-primary-container">CODE: BK-44</span>
+<span class="material-symbols-outlined text-on-surface/20">arrow_forward</span>
+</div>
+<div class="absolute top-0 right-0 h-1 w-0 bg-primary-container group-hover:w-full transition-all"></div>
+</div>
+<!-- Service 03 -->
+<div class="border border-on-surface/10 p-8 flex flex-col min-h-[350px] relative hover:z-10 bg-surface-container shadow-xl hover:translate-x-[-4px] hover:translate-y-[-4px] transition-all group">
+<span class="material-symbols-outlined text-[40px] text-primary-container mb-8 group-hover:scale-110 transition-transform">conveyor_belt</span>
+<h4 class="font-headline-lg text-[24px] uppercase mb-4">SUSPENSION</h4>
+<p class="font-body-md text-secondary-fixed-dim text-sm mb-auto">Shock/strut integration, control arm replacement, and precision leveling for commercial or luxury vehicles.</p>
+<div class="mt-8 pt-4 border-t border-on-surface/5 flex justify-between items-center">
+<span class="font-data-point text-data-point text-primary-container">CODE: SS-09</span>
+<span class="material-symbols-outlined text-on-surface/20">arrow_forward</span>
+</div>
+<div class="absolute top-0 right-0 h-1 w-0 bg-primary-container group-hover:w-full transition-all"></div>
+</div>
+<!-- Service 04 -->
+<div class="border border-on-surface/10 p-8 flex flex-col min-h-[350px] relative hover:z-10 bg-surface-container shadow-xl hover:translate-x-[-4px] hover:translate-y-[-4px] transition-all group">
+<span class="material-symbols-outlined text-[40px] text-primary-container mb-8 group-hover:scale-110 transition-transform">corporate_fare</span>
+<h4 class="font-headline-lg text-[24px] uppercase mb-4">FLEET MAINT</h4>
+<p class="font-body-md text-secondary-fixed-dim text-sm mb-auto">High-volume preventative maintenance scheduling and rapid-repair services for logistic operations.</p>
+<div class="mt-8 pt-4 border-t border-on-surface/5 flex justify-between items-center">
+<span class="font-data-point text-data-point text-primary-container">CODE: FM-00</span>
+<span class="material-symbols-outlined text-on-surface/20">arrow_forward</span>
+</div>
+<div class="absolute top-0 right-0 h-1 w-0 bg-primary-container group-hover:w-full transition-all"></div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-24 bg-surface-container-lowest border-y border-on-surface/20 overflow-hidden" id="about">
+<div class="px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
+<div class="md:col-span-7 relative">
+<div class="absolute -top-10 -left-10 w-32 h-32 border-l border-t border-primary-container/40"></div>
+<img alt="A high-contrast, editorial close-up shot of a mechanic's hand in a professional black nitrile glove using a high-precision orange-accented torque wrench on a modern vehicle engine. The lighting is moody and dramatic, emphasizing the metallic textures of the engine block and the mechanical precision of the tool. The overall aesthetic is clean, technical, and premium industrial." class="w-full grayscale brightness-75 hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuRW4gEq7MEjrkplcrjlv2h57M2u2UMlLmaFcy1n-zx7EWHOQf6vkPjJYrvHna5vYmhe3eRRa7gkntkKwpr4eGgioUntxRLtXmDZnwVYSbvmC-K4A6RAPHsQPTqAdAT5GWLHhu9HBuLpHqrJZEap7XAOx56puA8064_W9g3q5vd0Nuz6QFVPBz_DvWFAsrSIO-QWtq0CZlnf6lItd7jdy457ARlFK0gwEiGZwYB1iVja9TIzrZfhQ-iwWQ"/>
+<div class="absolute -bottom-4 -right-4 bg-primary-container p-4">
+<span class="font-technical-label text-black font-bold">TORQUE SPECS VERIFIED</span>
+</div>
+</div>
+<div class="md:col-span-5">
+<div class="mb-4 font-technical-label text-technical-label text-primary-container flex items-center gap-2">
+<div class="w-2 h-2 bg-primary-container animate-pulse"></div>
+                        ELITE GRADE SERVICE
+                    </div>
+<h2 class="font-headline-lg text-headline-lg uppercase mb-8 leading-none">THE NEW STANDARD OF DRIVEWAY REPAIR.</h2>
+<div class="space-y-6 font-body-lg text-secondary-fixed-dim">
+<p>At AMM LLC, we've removed the bottleneck of traditional auto shops. We bring a fully-equipped technical lab to your location, providing unparalleled transparency and zero downtime for the owner.</p>
+<p>Our philosophy is simple: **Technical Integrity.** No upselling, no vague estimates—just master-level mechanics and blueprint-perfect repairs on every deployment.</p>
+</div>
+<div class="mt-12 flex items-center gap-6">
+<div class="p-4 border border-on-surface/10 bg-surface">
+<span class="font-headline-lg text-[40px] block leading-none">15+</span>
+<span class="font-technical-label text-on-tertiary-fixed-variant">YEARS EXP</span>
+</div>
+<div class="p-4 border border-on-surface/10 bg-surface">
+<span class="font-headline-lg text-[40px] block leading-none">5.0</span>
+<span class="font-technical-label text-on-tertiary-fixed-variant">RATING</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Sector Coverage / Map -->
+<section class="py-24 px-margin-desktop">
+<div class="text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-2">PENSACOLA SECTOR COVERAGE</h2>
+<p class="font-technical-label text-technical-label text-primary-container">OPERATIONAL RADIUS: 50 MILES FROM CORE</p>
+</div>
+<div aria-label="Map showing Pensacola coverage area" class="map-slot relative overflow-hidden min-h-[400px] border border-on-surface/20" data-location="Pensacola, FL" data-map-slot="" style="">
+<!-- Simulation of a technical map overlay -->
+<div class="absolute inset-0 bg-background/20 pointer-events-none z-10"></div>
+<div class="absolute top-4 left-4 z-20 bg-background/90 p-4 border border-primary-container/20 font-technical-label text-[10px]">
+<div class="flex items-center gap-2 mb-1"><div class="w-2 h-2 rounded-full bg-primary-container"></div> SECTOR ALPHA (CORE)</div>
+<div class="flex items-center gap-2 mb-1"><div class="w-2 h-2 rounded-full bg-on-surface/30"></div> SECTOR BETA (PERIMETER)</div>
+<div class="mt-2 text-primary-container">SIGNAL: STABLE</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-desktop border-t border-on-surface/20" id="contact">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24">
+<div>
+<h2 class="font-headline-xl text-[64px] uppercase mb-8">INITIATE<br/>CONTACT.</h2>
+<div class="space-y-12">
+<div>
+<span class="font-technical-label text-on-tertiary-fixed-variant block mb-2 uppercase">Direct Communications</span>
+<a class="font-headline-lg text-[40px] text-primary hover:text-primary-container transition-colors tracking-tight" href="tel:8504851483">(850) 485-1483</a>
+</div>
+<div>
+<span class="font-technical-label text-on-tertiary-fixed-variant block mb-2 uppercase">Digital Transmission</span>
+<a class="font-headline-lg text-[32px] text-on-surface hover:text-primary transition-colors tracking-tight" href="mailto:abmobilemechanics@gmail.com">abmobilemechanics@gmail.com</a>
+</div>
+<div class="pt-8 flex gap-4">
+<div class="h-10 w-10 border border-on-surface/20 flex items-center justify-center hover:border-primary-container hover:text-primary-container cursor-pointer transition-all">
+<span class="material-symbols-outlined">share</span>
+</div>
+<div class="h-10 w-10 border border-on-surface/20 flex items-center justify-center hover:border-primary-container hover:text-primary-container cursor-pointer transition-all">
+<span class="material-symbols-outlined">map</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container p-12 border border-on-surface/10 relative">
+<div class="absolute top-0 right-0 w-16 h-1 w-full hazard-pattern opacity-30"></div>
+<form class="space-y-6">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="relative">
+<label class="font-technical-label text-[10px] text-on-tertiary-fixed-variant absolute -top-2 left-3 bg-surface-container px-1 z-10">VEHICLE_YEAR</label>
+<input class="w-full bg-transparent border border-on-surface/20 p-4 font-data-point text-on-surface focus:border-primary-container transition-all" placeholder="e.g. 2022" type="text"/>
+</div>
+<div class="relative">
+<label class="font-technical-label text-[10px] text-on-tertiary-fixed-variant absolute -top-2 left-3 bg-surface-container px-1 z-10">MAKE_MODEL</label>
+<input class="w-full bg-transparent border border-on-surface/20 p-4 font-data-point text-on-surface focus:border-primary-container transition-all" placeholder="e.g. Ford F-150" type="text"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-technical-label text-[10px] text-on-tertiary-fixed-variant absolute -top-2 left-3 bg-surface-container px-1 z-10">SERVICE_REQUIRED</label>
+<select class="w-full bg-transparent border border-on-surface/20 p-4 font-data-point text-on-surface focus:border-primary-container transition-all appearance-none">
+<option class="bg-surface">Diagnostic Scan</option>
+<option class="bg-surface">Brake Service</option>
+<option class="bg-surface">Suspension Repair</option>
+<option class="bg-surface">Fleet Maintenance</option>
+<option class="bg-surface">Emergency Repair</option>
+</select>
+</div>
+<div class="relative">
+<label class="font-technical-label text-[10px] text-on-tertiary-fixed-variant absolute -top-2 left-3 bg-surface-container px-1 z-10">SITUATION_DETAILS</label>
+<textarea class="w-full bg-transparent border border-on-surface/20 p-4 font-body-md text-on-surface focus:border-primary-container transition-all" placeholder="Describe the mechanical failure or requirement..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary-container text-black font-headline-lg text-[20px] py-4 hover:bg-black hover:text-primary-container border-2 border-primary-container transition-all uppercase group flex items-center justify-center gap-3" type="submit">
+<span>TRANSMIT REQUEST</span>
+<span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">send</span>
+</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-gutter py-12 flex flex-col md:flex-row justify-between items-center gap-unit bg-surface-container-lowest border-t border-on-surface/20">
+<div class="flex flex-col items-center md:items-start gap-4">
+<span class="font-headline-lg text-headline-lg text-primary uppercase">AMM LLC</span>
+<span class="font-technical-label text-technical-label uppercase text-on-tertiary-fixed-variant">© 2024 AFFORDABLE MOBILE MECHANIC LLC. 30.4213° N, 87.2169° W</span>
+</div>
+<div class="flex gap-8">
+<a class="font-technical-label text-technical-label uppercase text-on-tertiary-fixed-variant hover:text-on-surface hover:underline decoration-primary transition-all" href="#">PRIVACY</a>
+<a class="font-technical-label text-technical-label uppercase text-on-tertiary-fixed-variant hover:text-on-surface hover:underline decoration-primary transition-all" href="#">TERMS</a>
+<a class="font-technical-label text-technical-label uppercase text-on-tertiary-fixed-variant hover:text-on-surface hover:underline decoration-primary transition-all" href="#">DIAGNOSTICS</a>
+<a class="font-technical-label text-technical-label uppercase text-on-tertiary-fixed-variant hover:text-on-surface hover:underline decoration-primary transition-all" href="#">FLEET</a>
+</div>
+</footer>
+<script>
+        // Micro-interactions for technical indicators
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputs = document.querySelectorAll('input, textarea, select');
+            inputs.forEach(input => {
+                input.addEventListener('focus', () => {
+                    const label = input.parentElement.querySelector('label');
+                    if (label) label.classList.add('text-primary-container');
+                });
+                input.addEventListener('blur', () => {
+                    const label = input.parentElement.querySelector('label');
+                    if (label) label.classList.remove('text-primary-container');
+                });
+            });
+
+            // Smooth scroll anchor navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body></html>
