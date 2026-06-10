@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JEFF'S JAMAICAN | Authentic Caribbean Soul Food</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&family=Hanken+Grotesk:wght@300;400;600;800&family=Space+Mono:wght@400;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@100..900&family=Hanken+Grotesk:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary": "#601400",
+                        "tertiary-fixed": "#ffdbd1",
+                        "error-container": "#93000a",
+                        "secondary-container": "#2e5041",
+                        "surface-dim": "#131313",
+                        "surface-container-highest": "#353534",
+                        "on-primary-container": "#614a00",
+                        "tertiary-fixed-dim": "#ffb5a1",
+                        "outline": "#9a907a",
+                        "inverse-on-surface": "#313030",
+                        "secondary": "#aacfbb",
+                        "inverse-surface": "#e5e2e1",
+                        "on-surface": "#e5e2e1",
+                        "on-primary-fixed": "#241a00",
+                        "surface-container-high": "#2a2a2a",
+                        "on-tertiary-fixed-variant": "#882000",
+                        "on-error": "#690005",
+                        "primary-fixed-dim": "#f0c12c",
+                        "on-secondary-container": "#9cc1ae",
+                        "on-secondary-fixed-variant": "#2c4d3f",
+                        "surface": "#131313",
+                        "on-primary-fixed-variant": "#584400",
+                        "surface-container-lowest": "#0e0e0e",
+                        "inverse-primary": "#755b00",
+                        "error": "#ffb4ab",
+                        "secondary-fixed": "#c5ebd7",
+                        "outline-variant": "#4e4633",
+                        "primary-container": "#e8b923",
+                        "surface-bright": "#3a3939",
+                        "on-primary": "#3d2e00",
+                        "secondary-fixed-dim": "#aacfbb",
+                        "on-tertiary-fixed": "#3b0900",
+                        "on-surface-variant": "#d1c5ad",
+                        "surface-container-low": "#1c1b1b",
+                        "surface-container": "#201f1f",
+                        "primary": "#ffd669",
+                        "background": "#131313",
+                        "surface-tint": "#f0c12c",
+                        "on-tertiary-container": "#932502",
+                        "on-error-container": "#ffdad6",
+                        "on-background": "#e5e2e1",
+                        "on-secondary-fixed": "#002115",
+                        "surface-variant": "#353534",
+                        "tertiary-container": "#ffaa93",
+                        "on-secondary": "#143629",
+                        "tertiary": "#ffd1c5",
+                        "primary-fixed": "#ffdf90"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "border-thick": "4px",
+                        "base": "8px",
+                        "margin": "32px",
+                        "offset-small": "12px",
+                        "offset-large": "24px",
+                        "border-thin": "1px"
+                    },
+                    "fontFamily": {
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-md": ["Hanken Grotesk"],
+                        "utility-data": ["Space Mono"],
+                        "headline-md": ["Bodoni Moda"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "utility-label": ["Space Mono"],
+                        "display-xl": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "display-lg-mobile": ["36px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "display-lg": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                        "utility-data": ["12px", {"lineHeight": "1.2", "fontWeight": "400"}],
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "utility-label": ["14px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                        "display-xl": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+        }
+
+        .rhythmic-border-b {
+            border-bottom: 4px solid #ffd669;
+        }
+
+        .rhythmic-border-l {
+            border-left: 4px solid #ffd669;
+        }
+
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker {
+            display: inline-block;
+            animation: ticker 30s linear infinite;
+        }
+
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #0e0e0e; }
+        ::-webkit-scrollbar-thumb { background: #ffd669; border-radius: 0; }
+
+        .btn-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(27, 61, 47, 1);
+        }
+
+        .btn-shadow:active {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0px 0px rgba(27, 61, 47, 1);
+        }
+    </style>
+</head>
+<body class="font-body-md antialiased">
+<!-- Header / TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-background/90 backdrop-blur-md border-b-thick border-primary shadow-[4px_4px_0px_0px_rgba(46,80,65,1)]">
+<nav class="flex justify-between items-center px-gutter py-offset-small w-full max-w-full">
+<div class="flex items-center gap-4">
+<a class="font-display-lg text-display-lg-mobile md:text-display-lg text-primary tracking-tighter" href="#">JEFF'S JAMAICAN</a>
+</div>
+<!-- Desktop Links -->
+<div class="hidden md:flex items-center gap-margin font-utility-label text-utility-label">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#menu">Menu</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#visit">Visit</a>
+<a class="bg-primary text-on-primary px-6 py-2 uppercase tracking-widest font-bold hover:bg-primary-container transition-all active:translate-y-1" href="tel:2078159506">Call Now</a>
+<button class="text-primary p-2">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" id="menu-toggle">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</nav>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen pt-32 flex flex-col justify-center overflow-hidden">
+<div class="container mx-auto px-margin grid md:grid-cols-12 gap-8 items-end relative z-10">
+<div class="md:col-span-7 mb-offset-large">
+<h1 class="font-display-xl text-display-xl text-primary leading-tight mb-6">
+                    AUTHENTIC RHYTHM.<br/>GENUINE SPICE.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-8">
+                    Lewiston's premier Jamaican soul food trailer. We bring the heat of Kingston directly to the streets of Maine with uncompromising flavor and tradition.
+                </p>
+<div class="flex gap-4">
+<a class="bg-primary text-on-primary font-utility-label text-utility-label px-8 py-4 uppercase tracking-widest btn-shadow" href="#menu">Explore Menu</a>
+<a class="border-thick border-primary text-primary font-utility-label text-utility-label px-8 py-4 uppercase tracking-widest hover:bg-primary/10 transition-all" href="#visit">Find Us</a>
+</div>
+</div>
+<div class="md:col-span-5 relative group">
+<div class="absolute -top-4 -left-4 w-full h-full border-thick border-primary -z-10 group-hover:translate-x-2 group-hover:translate-y-2 transition-transform"></div>
+<img alt="Premium jerk chicken" class="w-full h-[600px] object-cover grayscale-[20%] hover:grayscale-0 transition-all duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLvqvkmvyeb5e5TmLKx7ViMIItlzJUhSR4IfjEOPJmVrLQ7TPOA1OhlK8tJk76OzzSVOBr-TpBuowVQWnq8PDDKabE7kszY5KIfsV3GIr6f7oyQ_zyHO-cO6veOBNs1yn08N2zjmiYqTV41lOJ--x47CVqB3faE994cSJSk5EYGFyLZ7Jk61FwgA_mpBncIrYlsYKASxQUh-uyi_YlZ65e9ltwXvLy6d6BZsXPH0ckao7zah3Lq_P-LAf5g"/>
+<div class="absolute bottom-4 right-4 bg-on-tertiary-container text-on-tertiary px-4 py-2 font-utility-data text-utility-data uppercase">
+                    Our Signature Jerk
+                </div>
+</div>
+</div>
+<!-- Background Accents -->
+<div class="absolute top-0 right-0 w-1/3 h-full bg-secondary-container/20 -z-20 skew-x-12 translate-x-24"></div>
+</section>
+<!-- Credibility Ticker -->
+<div class="bg-primary text-on-primary py-4 overflow-hidden border-y-thick border-primary">
+<div class="ticker-wrap">
+<div class="ticker font-utility-label text-utility-label uppercase tracking-[0.3em] flex gap-12 items-center">
+<span>AUTHENTIC RECIPES • LOCALLY LOVED • VIBRANT FLAVORS • JAMAICAN SOUL • AUTHENTIC RECIPES • LOCALLY LOVED • VIBRANT FLAVORS • JAMAICAN SOUL • </span>
+<span>AUTHENTIC RECIPES • LOCALLY LOVED • VIBRANT FLAVORS • JAMAICAN SOUL • AUTHENTIC RECIPES • LOCALLY LOVED • VIBRANT FLAVORS • JAMAICAN SOUL • </span>
+</div>
+</div>
+</div>
+<!-- The Menu Edit / Services -->
+<section class="py-offset-large px-margin bg-surface" id="services">
+<div class="container mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-baseline mb-16 gap-8">
+<h2 class="font-display-lg text-display-lg text-primary">THE MENU EDIT</h2>
+<div class="h-1 bg-primary flex-grow hidden md:block mx-8 opacity-30"></div>
+<p class="font-utility-label text-utility-label text-on-surface-variant max-w-xs">(001-003) OFFERINGS</p>
+</div>
+<div class="grid md:grid-cols-3 gap-0">
+<!-- Daily Specials -->
+<div class="border-thick border-primary p-offset-large relative group hover:bg-secondary-container/10 transition-colors">
+<span class="font-utility-data text-primary text-4xl block mb-6">01</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Daily Specials</h3>
+<p class="text-on-surface-variant mb-8 font-body-md">Rotating classics like Oxtail Stew, Curry Goat, and Ackee & Saltfish. Fresh ingredients, time-honored methods.</p>
+<div class="rhythmic-border-b w-12 mb-4"></div>
+<ul class="font-utility-label text-utility-label text-on-surface-variant space-y-2">
+<li>• SLOW ROASTED OXTAIL</li>
+<li>• CURRY GOAT</li>
+<li>• FESTIVAL BREAD</li>
+</ul>
+</div>
+<!-- Catering -->
+<div class="border-thick border-primary md:border-l-0 p-offset-large relative group hover:bg-secondary-container/10 transition-colors">
+<span class="font-utility-data text-primary text-4xl block mb-6">02</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Catering</h3>
+<p class="text-on-surface-variant mb-8 font-body-md">Bring the vibration of the island to your private party or corporate lunch. Customizable packages for any size.</p>
+<div class="rhythmic-border-b w-12 mb-4"></div>
+<ul class="font-utility-label text-utility-label text-on-surface-variant space-y-2">
+<li>• OFFICE LUNCHEONS</li>
+<li>• BIRTHDAYS</li>
+<li>• FAMILY REUNIONS</li>
+</ul>
+</div>
+<!-- Event Bookings -->
+<div class="border-thick border-primary md:border-l-0 p-offset-large relative group hover:bg-secondary-container/10 transition-colors">
+<span class="font-utility-data text-primary text-4xl block mb-6">03</span>
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Event Bookings</h3>
+<p class="text-on-surface-variant mb-8 font-body-md">Book our trailer for festivals, brewery pop-ups, and community gatherings across Maine.</p>
+<div class="rhythmic-border-b w-12 mb-4"></div>
+<ul class="font-utility-label text-utility-label text-on-surface-variant space-y-2">
+<li>• BREWERY POP-UPS</li>
+<li>• FOOD FESTIVALS</li>
+<li>• WEDDING AFTER-PARTIES</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Jeff's Story -->
+<section class="py-offset-large overflow-hidden" id="about">
+<div class="container mx-auto px-margin">
+<div class="grid md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-5 relative">
+<div class="aspect-[4/5] bg-surface-container-high border-thick border-primary overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A professional and soulful portrait of a Caribbean chef in a modern kitchen. He is wearing a clean white apron over a dark shirt, looking thoughtfully into the distance. The lighting is dramatic and moody, casting deep shadows while highlighting the rich textures of his clothing and skin. The background features blurred elements of a professional kitchen with Monsterra green accents and gold highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAy9DgY0WzVbVBiuD1A5PLAL5b8_pAu20LOgfOfCzaGjvSlstqg4Ipt2wylk71OPWL6jwmzqEUby_tjGeFSCrcnS50F4lTztZhzurKKHuOZA3EvWyXAHAfrycc8NVUkdFjROF7pm6iE5QYaiphixkM7nK28G6FnOU79kbkWo_UDXDBQo_Xh7EIN2EwWl_VHYdgJSUbMJqFq5q1vYH_q4x1jueGih5LjA-QXh9TFfJO31Qq36kAriGZrhzPfK7RqAcbmj3SQEV_FTV9C"/>
+</div>
+<div class="absolute -bottom-8 -right-8 p-8 bg-primary text-on-primary w-2/3 btn-shadow">
+<p class="font-display-lg text-display-lg-mobile leading-none italic font-bold">"Spice is life."</p>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7">
+<h2 class="font-display-lg text-display-lg text-primary mb-8 underline decoration-4 underline-offset-8">THE STORY OF JEFF</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>Jeff's Jamaican Cuisine isn't just about food; it's a culmination of a lifelong journey from the vibrant parishes of Jamaica to the heart of Maine. Our founder, Jeff, believes that every dish should tell a story—one of resilience, rhythm, and spice.</p>
+<p>Using recipes passed down through generations and refined in the heat of his kitchen, Jeff brings an uncompromising dedication to authenticity. Every piece of chicken is marinated for 24 hours, every spice blend is handcrafted, and every customer is treated like family.</p>
+<div class="pt-6">
+<a class="inline-flex items-center gap-4 text-primary font-utility-label text-utility-label uppercase tracking-widest hover:gap-6 transition-all" href="#contact">
+                                Meet the Crew <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Us / Location -->
+<section class="bg-surface-container-lowest py-offset-large border-y-thick border-primary" id="visit">
+<div class="container mx-auto px-margin grid md:grid-cols-12 gap-0">
+<div class="md:col-span-4 p-margin border-thick border-primary bg-background">
+<h2 class="font-display-lg text-display-lg text-primary mb-8">LOCATE THE SOUL</h2>
+<div class="space-y-8 font-utility-label text-utility-label">
+<div>
+<p class="text-on-surface-variant mb-2">STREET ADDRESS</p>
+<p class="text-primary text-xl">940 Lisbon Street,<br/>Lewiston, ME 04240</p>
+</div>
+<div>
+<p class="text-on-surface-variant mb-2">OPERATING HOURS</p>
+<p class="text-primary">TUE - SAT: 11AM — 7PM<br/>SUN: 12PM — 5PM<br/>MON: CLOSED</p>
+</div>
+<div>
+<p class="text-on-surface-variant mb-2">DIRECT LINE</p>
+<a class="text-primary text-xl hover:underline" href="tel:2078159506">(207) 815-9506</a>
+</div>
+</div>
+</div>
+<div class="md:col-span-8 border-thick border-primary md:border-l-0 overflow-hidden relative group">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] h-full grayscale group-hover:grayscale-0 transition-all duration-700" data-location="Lewiston, Maine" style="">
+<!-- Placeholder for actual map rendering -->
+<div class="absolute inset-0 bg-neutral-900 flex items-center justify-center">
+<span class="text-on-surface-variant font-utility-data">INTERACTIVE MAP LOADING...</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-offset-large px-margin bg-background relative overflow-hidden" id="contact">
+<div class="container mx-auto">
+<div class="grid md:grid-cols-12 gap-12">
+<div class="md:col-span-5">
+<h2 class="font-display-lg text-display-lg text-primary mb-6 leading-none">LET'S TALK<br/>FLAVOR.</h2>
+<p class="text-body-lg text-on-surface-variant mb-12">Planning an event or have a question about our menu? Reach out and we'll get back to you with that island spirit.</p>
+<div class="p-8 border-thick border-primary bg-secondary-container/10">
+<div class="flex items-center gap-6 mb-8">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="mail">mail</span>
+<div>
+<p class="font-utility-data text-on-surface-variant text-xs">EMAIL US</p>
+<p class="text-primary font-utility-label break-all">Jjcanjamaicancuisine@gmail.com</p>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="call">call</span>
+<div>
+<p class="font-utility-data text-on-surface-variant text-xs">TEXT OR CALL</p>
+<p class="text-primary font-utility-label">(207) 815-9506</p>
+</div>
+</div>
+</div>
+</div>
+<div class="md:col-span-7">
+<form class="grid grid-cols-1 gap-8" id="contact-form">
+<div class="group relative">
+<input class="w-full bg-transparent border-0 border-b-thin border-outline focus:border-primary focus:ring-0 text-primary py-4 font-utility-label transition-all placeholder:text-on-surface-variant/30" id="name" placeholder="NAME" required="" type="text"/>
+<div class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary group-focus-within:w-full transition-all duration-500"></div>
+</div>
+<div class="group relative">
+<input class="w-full bg-transparent border-0 border-b-thin border-outline focus:border-primary focus:ring-0 text-primary py-4 font-utility-label transition-all placeholder:text-on-surface-variant/30" id="email" placeholder="EMAIL ADDRESS" required="" type="email"/>
+<div class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary group-focus-within:w-full transition-all duration-500"></div>
+</div>
+<div class="group relative">
+<textarea class="w-full bg-transparent border-0 border-b-thin border-outline focus:border-primary focus:ring-0 text-primary py-4 font-utility-label transition-all placeholder:text-on-surface-variant/30" id="message" placeholder="HOW CAN WE HELP?" required="" rows="4"></textarea>
+<div class="absolute bottom-0 left-0 h-[1px] w-0 bg-primary group-focus-within:w-full transition-all duration-500"></div>
+</div>
+<button class="bg-primary text-on-primary py-6 uppercase font-utility-label tracking-[0.3em] hover:bg-primary-container transition-all btn-shadow text-center" type="submit">
+                            SEND MESSAGE
+                        </button>
+</form>
+<div class="mt-4 hidden font-utility-label text-primary p-4 border-thick border-primary animate-pulse" id="form-feedback">
+                        MESSAGE DISPATCHED SUCCESSFULLY. WE'LL BE IN TOUCH.
+                    </div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest border-t-thick border-primary px-margin py-offset-large flex flex-col md:flex-row justify-between items-start md:items-center">
+<div class="mb-8 md:mb-0">
+<h2 class="font-display-lg text-display-lg-mobile text-primary mb-4">JEFF'S JAMAICAN</h2>
+<p class="font-utility-label text-utility-label text-primary/60 max-w-xs uppercase">Authentic flavors from the heart of the island to the streets of Maine.</p>
+</div>
+<div class="flex flex-col md:items-end gap-6">
+<div class="flex gap-8 font-body-md text-body-md text-on-surface-variant">
+<a class="hover:text-tertiary transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-tertiary transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-tertiary transition-colors" href="#">Accessibility</a>
+</div>
+<p class="font-utility-label text-utility-label text-primary/40">© 2024 JEFF'S JAMAICAN CUISINE. ALL RIGHTS RESERVED.</p>
+</div>
+</footer>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 bg-background z-[100] transform translate-x-full transition-transform duration-500 flex flex-col items-center justify-center" id="mobile-menu">
+<button class="absolute top-8 right-8 text-primary" id="menu-close">
+<span class="material-symbols-outlined scale-150" data-icon="close">close</span>
+</button>
+<nav class="flex flex-col items-center gap-8 text-center">
+<a class="font-display-lg text-primary" href="#menu">MENU</a>
+<a class="font-display-lg text-primary" href="#about">ABOUT</a>
+<a class="font-display-lg text-primary" href="#services">SERVICES</a>
+<a class="font-display-lg text-primary" href="#visit">VISIT</a>
+<a class="bg-primary text-on-primary px-8 py-4 uppercase font-utility-label mt-8" href="tel:2078159506">ORDER NOW</a>
+</nav>
+</div>
+<script>
+        // Form Handling
+        const form = document.getElementById('contact-form');
+        const feedback = document.getElementById('form-feedback');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.classList.add('opacity-50', 'pointer-events-none');
+            feedback.classList.remove('hidden');
+            form.reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+                form.classList.remove('opacity-50', 'pointer-events-none');
+            }, 5000);
+        });
+
+        // Mobile Menu
+        const menuToggle = document.getElementById('menu-toggle');
+        const menuClose = document.getElementById('menu-close');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        menuClose.addEventListener('click', () => {
+            mobileMenu.classList.add('translate-x-full');
+        });
+
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('translate-x-full');
+            });
+        });
+
+        // Intersection Observer for Reveal Animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-1000');
+            revealObserver.observe(el);
+        });
+
+        // Smooth reveal for images
+        document.querySelectorAll('img').forEach(img => {
+            img.style.opacity = '0';
+            img.onload = () => {
+                img.style.transition = 'opacity 1.5s ease-in-out';
+                img.style.opacity = '1';
+            };
+        });
+    </script>
+</body></html>
