@@ -1,0 +1,448 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Industrial Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe brand personality for this design system is **Reliable, Expert, and Rugged-Premium**. It moves away from the \"grease-monkey\" clichés of the automotive industry toward a high-end, bespoke editorial aesthetic. It should evoke the feeling of a precision engineering firm—authoritative and clean, yet capable of getting the job done.\n\nThe design style is a hybrid of **Modern Minimalism and Industrial Brutalism**. It utilizes heavy whitespace to create a premium feel, while employing \"raw\" structural elements—like hairline borders and monospaced technical readouts—to signal mechanical expertise. The UI should feel like a high-end workshop manual: structured, efficient, and intentional.\n\n- **Tone:** Direct and masculine.\n- **Visual Motif:** Use thin `1px` grid lines (Deep Slate at 10% opacity) to create a blueprint-like background structure. \n- **Imagery:** High-contrast, desaturated photography with Deep Slate overlays.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed-Fluid Hybrid Grid**. Content is housed in a 12-column grid on desktop with a maximum width of 1440px.\n\n- **The \"Blueprint\" Grid:** Vertical and horizontal hairlines (0.5pt) should occasionally be visible to divide sections, mimicking technical drawings.\n- **Asymmetry:** Content should favor a slight left-weighted bias, leaving larger right-side margins for oversized vertical monospaced text (watermarks).\n- **Rhythm:** Use a strict 4px/8px base unit. Section spacing is aggressive (120px+) to allow the \"premium\" feel to breathe.\n- **Mobile:** Reflow to a single-column stack with 20px side margins. Use horizontal scrolling for \"Service Cards\" to maintain an editorial horizontal flow.\n\n## Elevation & Depth\n\nTo maintain the \"rugged-premium\" feel, avoid soft, generic drop shadows. Instead, use:\n\n1. **Hard Tonal Layers:** Depth is created by stacking surfaces of slightly different shades (Neutral -> Cool Silver -> White).\n2. **Industrial Insets:** Instead of shadows, use subtle inner-borders (1px) or slight value shifts to indicate \"pressed\" or \"active\" states.\n3. **Ghost Borders:** Elements like cards use a `1px` solid border in Deep Slate at 15% opacity rather than a shadow.\n4. **Active Highlighting:** When an element is focused or active, it should gain a solid `2px` border of High-Octane Amber, creating a \"caution-tape\" high-visibility effect.\n\n## Components\n\n- **Primary Buttons:** Solid High-Octane Amber background, Deep Slate text (Hanken Grotesk Bold). No rounding. 1px solid black bottom-border for \"tactile\" weight.\n- **Service Cards:** White background with a 1px Cool Silver border. The \"Technical-SM\" monospace type is used at the top-right of the card for service IDs or pricing.\n- **Inputs:** Underline-style inputs only, or full-width boxes with a 1px Deep Slate border. No background fill unless focused. Focus state turns the border to Amber.\n- **Chips/Status:** Rectangular blocks with monospaced text. For example, a \"MOBILE\" tag should be a Deep Slate block with white monospaced text.\n- **Specialty Component: \"The Spec Sheet\":** A table-style list for technical specs (e.g., Oil Type, Diagnostic Codes) using alternating Cool Silver/White zebra striping and JetBrains Mono text.\n- **Navigation:** Minimalist top bar. The \"Nick's Mobile Mechanic\" logo should be bold, all-caps Hanken Grotesk.",
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#ffb400",
+            "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#f8f9fa'\n  surface-dim: '#d9dadb'\n  surface-bright: '#f8f9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f4f5'\n  surface-container: '#edeeef'\n  surface-container-high: '#e7e8e9'\n  surface-container-highest: '#e1e3e4'\n  on-surface: '#191c1d'\n  on-surface-variant: '#514532'\n  inverse-surface: '#2e3132'\n  inverse-on-surface: '#f0f1f2'\n  outline: '#847560'\n  outline-variant: '#d6c4ac'\n  surface-tint: '#7e5700'\n  primary: '#7e5700'\n  on-primary: '#ffffff'\n  primary-container: '#ffb400'\n  on-primary-container: '#6b4900'\n  inverse-primary: '#ffba35'\n  secondary: '#5d5e61'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2e2e5'\n  on-secondary-container: '#636467'\n  tertiary: '#5d5e62'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#c2c2c6'\n  on-tertiary-container: '#4e5053'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdeac'\n  primary-fixed-dim: '#ffba35'\n  on-primary-fixed: '#281900'\n  on-primary-fixed-variant: '#5f4100'\n  secondary-fixed: '#e2e2e5'\n  secondary-fixed-dim: '#c6c6c9'\n  on-secondary-fixed: '#1a1c1e'\n  on-secondary-fixed-variant: '#454749'\n  tertiary-fixed: '#e2e2e6'\n  tertiary-fixed-dim: '#c6c6ca'\n  on-tertiary-fixed: '#1a1c1f'\n  on-tertiary-fixed-variant: '#45474a'\n  background: '#f8f9fa'\n  on-background: '#191c1d'\n  surface-variant: '#e1e3e4'\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  technical-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: '500'\n    lineHeight: '1.5'\n    letterSpacing: 0.05em\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-padding: 120px\n---\n\n## Brand & Style\n\nThe brand personality for this design system is **Reliable, Expert, and Rugged-Premium**. It moves away from the \"grease-monkey\" clichés of the automotive industry toward a high-end, bespoke editorial aesthetic. It should evoke the feeling of a precision engineering firm—authoritative and clean, yet capable of getting the job done.\n\nThe design style is a hybrid of **Modern Minimalism and Industrial Brutalism**. It utilizes heavy whitespace to create a premium feel, while employing \"raw\" structural elements—like hairline borders and monospaced technical readouts—to signal mechanical expertise. The UI should feel like a high-end workshop manual: structured, efficient, and intentional.\n\n- **Tone:** Direct and masculine.\n- **Visual Motif:** Use thin `1px` grid lines (Deep Slate at 10% opacity) to create a blueprint-like background structure. \n- **Imagery:** High-contrast, desaturated photography with Deep Slate overlays.\n\n## Colors\n\nThe palette is rooted in high-visibility industrial colors, refined for a premium digital experience.\n\n- **High-Octane Amber (#FFB400):** Reserved strictly for primary actions, critical alerts, and brand highlights. It represents the energy and urgency of mobile service.\n- **Deep Slate (#1A1C1E):** Used for primary typography, backgrounds in dark modes, and heavy structural elements. It provides the \"heavy metal\" weight of the brand.\n- **Cool Silver (#E2E2E6):** A sophisticated neutral for secondary backgrounds, borders, and subtle technical partitions.\n- **Functional Accents:** Success states should use a desaturated Forest Green; errors should use a muted Oxide Red to maintain the industrial harmony.\n\n## Typography\n\nTypography is the cornerstone of this system's \"Industrial Editorial\" look. \n\n1. **Hanken Grotesk:** Chosen for its sharp, contemporary, and engineered feel. Use **ExtraBold (800)** for massive typographic watermarks (e.g., \"01 SERVICE\" or \"PENSACOLA\") set at 10% opacity behind content.\n2. **JetBrains Mono:** Used for all \"technical\" data—pricing, timestamps, VIN numbers, and contact details. This reinforces the precision of a mechanic.\n3. **Contrast:** Pair large, tight-tracked headlines with small, wide-tracked monospaced labels for a blueprint aesthetic.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed-Fluid Hybrid Grid**. Content is housed in a 12-column grid on desktop with a maximum width of 1440px.\n\n- **The \"Blueprint\" Grid:** Vertical and horizontal hairlines (0.5pt) should occasionally be visible to divide sections, mimicking technical drawings.\n- **Asymmetry:** Content should favor a slight left-weighted bias, leaving larger right-side margins for oversized vertical monospaced text (watermarks).\n- **Rhythm:** Use a strict 4px/8px base unit. Section spacing is aggressive (120px+) to allow the \"premium\" feel to breathe.\n- **Mobile:** Reflow to a single-column stack with 20px side margins. Use horizontal scrolling for \"Service Cards\" to maintain an editorial horizontal flow.\n\n## Elevation & Depth\n\nTo maintain the \"rugged-premium\" feel, avoid soft, generic drop shadows. Instead, use:\n\n1. **Hard Tonal Layers:** Depth is created by stacking surfaces of slightly different shades (Neutral -> Cool Silver -> White).\n2. **Industrial Insets:** Instead of shadows, use subtle inner-borders (1px) or slight value shifts to indicate \"pressed\" or \"active\" states.\n3. **Ghost Borders:** Elements like cards use a `1px` solid border in Deep Slate at 15% opacity rather than a shadow.\n4. **Active Highlighting:** When an element is focused or active, it should gain a solid `2px` border of High-Octane Amber, creating a \"caution-tape\" high-visibility effect.\n\n## Shapes\n\nThe shape language is **strictly sharp (0px)**. \n\nCurves are avoided to maintain an architectural, engineered aesthetic. Every button, input field, and card should have crisp 90-degree corners. This communicates precision, stability, and a \"built to last\" mentality. \n\nFor specific circular elements (like status pips or specialized iconography), use perfect circles, but never \"rounded rectangles.\"\n\n## Components\n\n- **Primary Buttons:** Solid High-Octane Amber background, Deep Slate text (Hanken Grotesk Bold). No rounding. 1px solid black bottom-border for \"tactile\" weight.\n- **Service Cards:** White background with a 1px Cool Silver border. The \"Technical-SM\" monospace type is used at the top-right of the card for service IDs or pricing.\n- **Inputs:** Underline-style inputs only, or full-width boxes with a 1px Deep Slate border. No background fill unless focused. Focus state turns the border to Amber.\n- **Chips/Status:** Rectangular blocks with monospaced text. For example, a \"MOBILE\" tag should be a Deep Slate block with white monospaced text.\n- **Specialty Component: \"The Spec Sheet\":** A table-style list for technical specs (e.g., Oil Type, Diagnostic Codes) using alternating Cool Silver/White zebra striping and JetBrains Mono text.\n- **Navigation:** Minimalist top bar. The \"Nick's Mobile Mechanic\" logo should be bold, all-caps Hanken Grotesk.",
+            "font": "HANKEN_GROTESK",
+            "headlineFont": "HANKEN_GROTESK",
+            "headlineFontFamily": "Hanken Grotesk",
+            "labelFont": "JETBRAINS_MONO",
+            "labelFontFamily": "Jetbrains Mono",
+            "namedColors": {
+              "background": "#f8f9fa",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f0f1f2",
+              "inverse_primary": "#ffba35",
+              "inverse_surface": "#2e3132",
+              "on_background": "#191c1d",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#6b4900",
+              "on_primary_fixed": "#281900",
+              "on_primary_fixed_variant": "#5f4100",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#636467",
+              "on_secondary_fixed": "#1a1c1e",
+              "on_secondary_fixed_variant": "#454749",
+              "on_surface": "#191c1d",
+              "on_surface_variant": "#514532",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#4e5053",
+              "on_tertiary_fixed": "#1a1c1f",
+              "on_tertiary_fixed_variant": "#45474a",
+              "outline": "#847560",
+              "outline_variant": "#d6c4ac",
+              "primary": "#7e5700",
+              "primary_container": "#ffb400",
+              "primary_fixed": "#ffdeac",
+              "primary_fixed_dim": "#ffba35",
+              "secondary": "#5d5e61",
+              "secondary_container": "#e2e2e5",
+              "secondary_fixed": "#e2e2e5",
+              "secondary_fixed_dim": "#c6c6c9",
+              "surface": "#f8f9fa",
+              "surface_bright": "#f8f9fa",
+              "surface_container": "#edeeef",
+              "surface_container_high": "#e7e8e9",
+              "surface_container_highest": "#e1e3e4",
+              "surface_container_low": "#f3f4f5",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#d9dadb",
+              "surface_tint": "#7e5700",
+              "surface_variant": "#e1e3e4",
+              "tertiary": "#5d5e62",
+              "tertiary_container": "#c2c2c6",
+              "tertiary_fixed": "#e2e2e6",
+              "tertiary_fixed_dim": "#c6c6ca"
+            },
+            "overrideNeutralColor": "#f8f9fa",
+            "overridePrimaryColor": "#ffb400",
+            "overrideSecondaryColor": "#1a1c1e",
+            "overrideTertiaryColor": "#e2e2e6",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "section-padding": "120px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "72px",
+                "fontWeight": "800",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "32px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.4"
+              },
+              "label-caps": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "12px",
+                "fontWeight": "700",
+                "lineHeight": "1.0"
+              },
+              "technical-sm": {
+                "fontFamily": "JetBrains Mono",
+                "fontSize": "13px",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1.5"
+              }
+            }
+          }
+        },
+        "name": "assets/9c37ae22cf33484893ffafdf132cfe98",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Industrial Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe brand personality for this design system is **Reliable, Expert, and Rugged-Premium**. It moves away from the \"grease-monkey\" clichés of the automotive industry toward a high-end, bespoke editorial aesthetic. It should evoke the feeling of a precision engineering firm—authoritative and clean, yet capable of getting the job done.\n\nThe design style is a hybrid of **Modern Minimalism and Industrial Brutalism**. It utilizes heavy whitespace to create a premium feel, while employing \"raw\" structural elements—like hairline borders and monospaced technical readouts—to signal mechanical expertise. The UI should feel like a high-end workshop manual: structured, efficient, and intentional.\n\n- **Tone:** Direct and masculine.\n- **Visual Motif:** Use thin `1px` grid lines (Deep Slate at 10% opacity) to create a blueprint-like background structure. \n- **Imagery:** High-contrast, desaturated photography with Deep Slate overlays.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed-Fluid Hybrid Grid**. Content is housed in a 12-column grid on desktop with a maximum width of 1440px.\n\n- **The \"Blueprint\" Grid:** Vertical and horizontal hairlines (0.5pt) should occasionally be visible to divide sections, mimicking technical drawings.\n- **Asymmetry:** Content should favor a slight left-weighted bias, leaving larger right-side margins for oversized vertical monospaced text (watermarks).\n- **Rhythm:** Use a strict 4px/8px base unit. Section spacing is aggressive (120px+) to allow the \"premium\" feel to breathe.\n- **Mobile:** Reflow to a single-column stack with 20px side margins. Use horizontal scrolling for \"Service Cards\" to maintain an editorial horizontal flow.\n\n## Elevation & Depth\n\nTo maintain the \"rugged-premium\" feel, avoid soft, generic drop shadows. Instead, use:\n\n1. **Hard Tonal Layers:** Depth is created by stacking surfaces of slightly different shades (Neutral -> Cool Silver -> White).\n2. **Industrial Insets:** Instead of shadows, use subtle inner-borders (1px) or slight value shifts to indicate \"pressed\" or \"active\" states.\n3. **Ghost Borders:** Elements like cards use a `1px` solid border in Deep Slate at 15% opacity rather than a shadow.\n4. **Active Highlighting:** When an element is focused or active, it should gain a solid `2px` border of High-Octane Amber, creating a \"caution-tape\" high-visibility effect.\n\n## Components\n\n- **Primary Buttons:** Solid High-Octane Amber background, Deep Slate text (Hanken Grotesk Bold). No rounding. 1px solid black bottom-border for \"tactile\" weight.\n- **Service Cards:** White background with a 1px Cool Silver border. The \"Technical-SM\" monospace type is used at the top-right of the card for service IDs or pricing.\n- **Inputs:** Underline-style inputs only, or full-width boxes with a 1px Deep Slate border. No background fill unless focused. Focus state turns the border to Amber.\n- **Chips/Status:** Rectangular blocks with monospaced text. For example, a \"MOBILE\" tag should be a Deep Slate block with white monospaced text.\n- **Specialty Component: \"The Spec Sheet\":** A table-style list for technical specs (e.g., Oil Type, Diagnostic Codes) using alternating Cool Silver/White zebra striping and JetBrains Mono text.\n- **Navigation:** Minimalist top bar. The \"Nick's Mobile Mechanic\" logo should be bold, all-caps Hanken Grotesk.",
+                "theme": {
+                  "bodyFont": "HANKEN_GROTESK",
+                  "bodyFontFamily": "Hanken Grotesk",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#ffb400",
+                  "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#f8f9fa'\n  surface-dim: '#d9dadb'\n  surface-bright: '#f8f9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f4f5'\n  surface-container: '#edeeef'\n  surface-container-high: '#e7e8e9'\n  surface-container-highest: '#e1e3e4'\n  on-surface: '#191c1d'\n  on-surface-variant: '#514532'\n  inverse-surface: '#2e3132'\n  inverse-on-surface: '#f0f1f2'\n  outline: '#847560'\n  outline-variant: '#d6c4ac'\n  surface-tint: '#7e5700'\n  primary: '#7e5700'\n  on-primary: '#ffffff'\n  primary-container: '#ffb400'\n  on-primary-container: '#6b4900'\n  inverse-primary: '#ffba35'\n  secondary: '#5d5e61'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2e2e5'\n  on-secondary-container: '#636467'\n  tertiary: '#5d5e62'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#c2c2c6'\n  on-tertiary-container: '#4e5053'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdeac'\n  primary-fixed-dim: '#ffba35'\n  on-primary-fixed: '#281900'\n  on-primary-fixed-variant: '#5f4100'\n  secondary-fixed: '#e2e2e5'\n  secondary-fixed-dim: '#c6c6c9'\n  on-secondary-fixed: '#1a1c1e'\n  on-secondary-fixed-variant: '#454749'\n  tertiary-fixed: '#e2e2e6'\n  tertiary-fixed-dim: '#c6c6ca'\n  on-tertiary-fixed: '#1a1c1f'\n  on-tertiary-fixed-variant: '#45474a'\n  background: '#f8f9fa'\n  on-background: '#191c1d'\n  surface-variant: '#e1e3e4'\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  technical-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: '500'\n    lineHeight: '1.5'\n    letterSpacing: 0.05em\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-padding: 120px\n---\n\n## Brand & Style\n\nThe brand personality for this design system is **Reliable, Expert, and Rugged-Premium**. It moves away from the \"grease-monkey\" clichés of the automotive industry toward a high-end, bespoke editorial aesthetic. It should evoke the feeling of a precision engineering firm—authoritative and clean, yet capable of getting the job done.\n\nThe design style is a hybrid of **Modern Minimalism and Industrial Brutalism**. It utilizes heavy whitespace to create a premium feel, while employing \"raw\" structural elements—like hairline borders and monospaced technical readouts—to signal mechanical expertise. The UI should feel like a high-end workshop manual: structured, efficient, and intentional.\n\n- **Tone:** Direct and masculine.\n- **Visual Motif:** Use thin `1px` grid lines (Deep Slate at 10% opacity) to create a blueprint-like background structure. \n- **Imagery:** High-contrast, desaturated photography with Deep Slate overlays.\n\n## Colors\n\nThe palette is rooted in high-visibility industrial colors, refined for a premium digital experience.\n\n- **High-Octane Amber (#FFB400):** Reserved strictly for primary actions, critical alerts, and brand highlights. It represents the energy and urgency of mobile service.\n- **Deep Slate (#1A1C1E):** Used for primary typography, backgrounds in dark modes, and heavy structural elements. It provides the \"heavy metal\" weight of the brand.\n- **Cool Silver (#E2E2E6):** A sophisticated neutral for secondary backgrounds, borders, and subtle technical partitions.\n- **Functional Accents:** Success states should use a desaturated Forest Green; errors should use a muted Oxide Red to maintain the industrial harmony.\n\n## Typography\n\nTypography is the cornerstone of this system's \"Industrial Editorial\" look. \n\n1. **Hanken Grotesk:** Chosen for its sharp, contemporary, and engineered feel. Use **ExtraBold (800)** for massive typographic watermarks (e.g., \"01 SERVICE\" or \"PENSACOLA\") set at 10% opacity behind content.\n2. **JetBrains Mono:** Used for all \"technical\" data—pricing, timestamps, VIN numbers, and contact details. This reinforces the precision of a mechanic.\n3. **Contrast:** Pair large, tight-tracked headlines with small, wide-tracked monospaced labels for a blueprint aesthetic.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed-Fluid Hybrid Grid**. Content is housed in a 12-column grid on desktop with a maximum width of 1440px.\n\n- **The \"Blueprint\" Grid:** Vertical and horizontal hairlines (0.5pt) should occasionally be visible to divide sections, mimicking technical drawings.\n- **Asymmetry:** Content should favor a slight left-weighted bias, leaving larger right-side margins for oversized vertical monospaced text (watermarks).\n- **Rhythm:** Use a strict 4px/8px base unit. Section spacing is aggressive (120px+) to allow the \"premium\" feel to breathe.\n- **Mobile:** Reflow to a single-column stack with 20px side margins. Use horizontal scrolling for \"Service Cards\" to maintain an editorial horizontal flow.\n\n## Elevation & Depth\n\nTo maintain the \"rugged-premium\" feel, avoid soft, generic drop shadows. Instead, use:\n\n1. **Hard Tonal Layers:** Depth is created by stacking surfaces of slightly different shades (Neutral -> Cool Silver -> White).\n2. **Industrial Insets:** Instead of shadows, use subtle inner-borders (1px) or slight value shifts to indicate \"pressed\" or \"active\" states.\n3. **Ghost Borders:** Elements like cards use a `1px` solid border in Deep Slate at 15% opacity rather than a shadow.\n4. **Active Highlighting:** When an element is focused or active, it should gain a solid `2px` border of High-Octane Amber, creating a \"caution-tape\" high-visibility effect.\n\n## Shapes\n\nThe shape language is **strictly sharp (0px)**. \n\nCurves are avoided to maintain an architectural, engineered aesthetic. Every button, input field, and card should have crisp 90-degree corners. This communicates precision, stability, and a \"built to last\" mentality. \n\nFor specific circular elements (like status pips or specialized iconography), use perfect circles, but never \"rounded rectangles.\"\n\n## Components\n\n- **Primary Buttons:** Solid High-Octane Amber background, Deep Slate text (Hanken Grotesk Bold). No rounding. 1px solid black bottom-border for \"tactile\" weight.\n- **Service Cards:** White background with a 1px Cool Silver border. The \"Technical-SM\" monospace type is used at the top-right of the card for service IDs or pricing.\n- **Inputs:** Underline-style inputs only, or full-width boxes with a 1px Deep Slate border. No background fill unless focused. Focus state turns the border to Amber.\n- **Chips/Status:** Rectangular blocks with monospaced text. For example, a \"MOBILE\" tag should be a Deep Slate block with white monospaced text.\n- **Specialty Component: \"The Spec Sheet\":** A table-style list for technical specs (e.g., Oil Type, Diagnostic Codes) using alternating Cool Silver/White zebra striping and JetBrains Mono text.\n- **Navigation:** Minimalist top bar. The \"Nick's Mobile Mechanic\" logo should be bold, all-caps Hanken Grotesk.",
+                  "font": "HANKEN_GROTESK",
+                  "headlineFont": "HANKEN_GROTESK",
+                  "headlineFontFamily": "Hanken Grotesk",
+                  "labelFont": "JETBRAINS_MONO",
+                  "labelFontFamily": "Jetbrains Mono",
+                  "namedColors": {
+                    "background": "#f8f9fa",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f0f1f2",
+                    "inverse_primary": "#ffba35",
+                    "inverse_surface": "#2e3132",
+                    "on_background": "#191c1d",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#6b4900",
+                    "on_primary_fixed": "#281900",
+                    "on_primary_fixed_variant": "#5f4100",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#636467",
+                    "on_secondary_fixed": "#1a1c1e",
+                    "on_secondary_fixed_variant": "#454749",
+                    "on_surface": "#191c1d",
+                    "on_surface_variant": "#514532",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#4e5053",
+                    "on_tertiary_fixed": "#1a1c1f",
+                    "on_tertiary_fixed_variant": "#45474a",
+                    "outline": "#847560",
+                    "outline_variant": "#d6c4ac",
+                    "primary": "#7e5700",
+                    "primary_container": "#ffb400",
+                    "primary_fixed": "#ffdeac",
+                    "primary_fixed_dim": "#ffba35",
+                    "secondary": "#5d5e61",
+                    "secondary_container": "#e2e2e5",
+                    "secondary_fixed": "#e2e2e5",
+                    "secondary_fixed_dim": "#c6c6c9",
+                    "surface": "#f8f9fa",
+                    "surface_bright": "#f8f9fa",
+                    "surface_container": "#edeeef",
+                    "surface_container_high": "#e7e8e9",
+                    "surface_container_highest": "#e1e3e4",
+                    "surface_container_low": "#f3f4f5",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#d9dadb",
+                    "surface_tint": "#7e5700",
+                    "surface_variant": "#e1e3e4",
+                    "tertiary": "#5d5e62",
+                    "tertiary_container": "#c2c2c6",
+                    "tertiary_fixed": "#e2e2e6",
+                    "tertiary_fixed_dim": "#c6c6ca"
+                  },
+                  "overrideNeutralColor": "#f8f9fa",
+                  "overridePrimaryColor": "#ffb400",
+                  "overrideSecondaryColor": "#1a1c1e",
+                  "overrideTertiaryColor": "#e2e2e6",
+                  "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "section-padding": "120px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "body-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "72px",
+                      "fontWeight": "800",
+                      "letterSpacing": "-0.04em",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "48px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "32px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.4"
+                    },
+                    "label-caps": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.0"
+                    },
+                    "technical-sm": {
+                      "fontFamily": "JetBrains Mono",
+                      "fontSize": "13px",
+                      "fontWeight": "500",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "1.5"
+                    }
+                  }
+                }
+              },
+              "name": "assets/9c37ae22cf33484893ffafdf132cfe98",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10408",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2JhMzliOTdkMzE1MDRiYzg4ZmQyMGZhNmY1ZGYyODg1EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzE5MDAwMDg2MDU1OTg3Nzg2MQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/13190000860559877861/files/1344b22c78494e38884344ec9ab281d9"
+            },
+            "id": "5ca03a855326425d8510dab0d843d2bf",
+            "name": "projects/13190000860559877861/screens/5ca03a855326425d8510dab0d843d2bf",
+            "prompt": "Create a bespoke, editorial-style landing page for 'Nick's Mobile Mechanic' in Pensacola. \n\nVisual Style:\n- Use an 'Industrial Editorial' approach: Generous whitespace, bold black/amber/silver palette, and thick border rules (1px-2px) to create a structured, 'blueprint' feel.\n- Hero: Asymmetrical layout. Left side features oversized vertical text 'ON-SITE PRECISION'. Right side has a premium photo of a mechanic working. \n- #credibility: A wide, low-profile banner with '5-STAR RATED IN PENSACOLA' and 'CERTIFIED MOBILE EXPERTS' in a scrolling ticker style.\n- Services: Instead of cards, use an 'Invoice Style' list with large numbers and technical monospace descriptions.\n- About: A 'Behind the Wrench' section with a gritty but clean aesthetic.\n- #visit: Contains the required `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>` with a minimalist border.\n- Contact: A form that looks like a digital service request sheet.\n\nContent:\n- Phone: 265.663 7265\n- Email: nmobilemechanic@gmail.com\n- Area: 32583, Pensacola, United States\n- Voice: Direct, expert, and reliable. No generic 'We fix cars' fluff. Focus on the convenience of a shop coming to you.\n\nTechnical:\n- Ensure smooth scrolling and a functional mobile menu.\n- Use CSS variables for the color palette.\n- High-quality image placeholders for mechanical parts and tools.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLst1bhxVc7_EA4tkpVM-gIaFkrcsfyLVXBev3kmqjWrqBA_hn-Vy_H5lUNTzPu1XfYhd9NTp4DZg9gsgQCqfKoA_ehnhVUoX1uguaQBnZ_a3b5WatCWOnJulYj4vgIEkXOLR7bxopfss4C06CBu-pAS55VMtnamOoX_GY7MXfUFyme0GzCMwE4_AmWqwfiOkMfIpQ5kH0_oDsgZr4YxXfcyxgvRLafT3LfSHsYgN7DWYmap3B2AumSnogst",
+              "name": "projects/13190000860559877861/files/6f254ef301384408aea4f2d1ab3894c4"
+            },
+            "theme": {
+              "bodyFont": "HANKEN_GROTESK",
+              "bodyFontFamily": "Hanken Grotesk",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#ffb400",
+              "designMd": "---\nname: Industrial Editorial\ncolors:\n  surface: '#f8f9fa'\n  surface-dim: '#d9dadb'\n  surface-bright: '#f8f9fa'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f3f4f5'\n  surface-container: '#edeeef'\n  surface-container-high: '#e7e8e9'\n  surface-container-highest: '#e1e3e4'\n  on-surface: '#191c1d'\n  on-surface-variant: '#514532'\n  inverse-surface: '#2e3132'\n  inverse-on-surface: '#f0f1f2'\n  outline: '#847560'\n  outline-variant: '#d6c4ac'\n  surface-tint: '#7e5700'\n  primary: '#7e5700'\n  on-primary: '#ffffff'\n  primary-container: '#ffb400'\n  on-primary-container: '#6b4900'\n  inverse-primary: '#ffba35'\n  secondary: '#5d5e61'\n  on-secondary: '#ffffff'\n  secondary-container: '#e2e2e5'\n  on-secondary-container: '#636467'\n  tertiary: '#5d5e62'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#c2c2c6'\n  on-tertiary-container: '#4e5053'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdeac'\n  primary-fixed-dim: '#ffba35'\n  on-primary-fixed: '#281900'\n  on-primary-fixed-variant: '#5f4100'\n  secondary-fixed: '#e2e2e5'\n  secondary-fixed-dim: '#c6c6c9'\n  on-secondary-fixed: '#1a1c1e'\n  on-secondary-fixed-variant: '#454749'\n  tertiary-fixed: '#e2e2e6'\n  tertiary-fixed-dim: '#c6c6ca'\n  on-tertiary-fixed: '#1a1c1f'\n  on-tertiary-fixed-variant: '#45474a'\n  background: '#f8f9fa'\n  on-background: '#191c1d'\n  surface-variant: '#e1e3e4'\ntypography:\n  display-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 72px\n    fontWeight: '800'\n    lineHeight: '1.1'\n    letterSpacing: -0.04em\n  headline-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.2'\n    letterSpacing: -0.02em\n  headline-lg-mobile:\n    fontFamily: Hanken Grotesk\n    fontSize: 32px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.4'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  technical-sm:\n    fontFamily: JetBrains Mono\n    fontSize: 13px\n    fontWeight: '500'\n    lineHeight: '1.5'\n    letterSpacing: 0.05em\n  label-caps:\n    fontFamily: JetBrains Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-padding: 120px\n---\n\n## Brand & Style\n\nThe brand personality for this design system is **Reliable, Expert, and Rugged-Premium**. It moves away from the \"grease-monkey\" clichés of the automotive industry toward a high-end, bespoke editorial aesthetic. It should evoke the feeling of a precision engineering firm—authoritative and clean, yet capable of getting the job done.\n\nThe design style is a hybrid of **Modern Minimalism and Industrial Brutalism**. It utilizes heavy whitespace to create a premium feel, while employing \"raw\" structural elements—like hairline borders and monospaced technical readouts—to signal mechanical expertise. The UI should feel like a high-end workshop manual: structured, efficient, and intentional.\n\n- **Tone:** Direct and masculine.\n- **Visual Motif:** Use thin `1px` grid lines (Deep Slate at 10% opacity) to create a blueprint-like background structure. \n- **Imagery:** High-contrast, desaturated photography with Deep Slate overlays.\n\n## Colors\n\nThe palette is rooted in high-visibility industrial colors, refined for a premium digital experience.\n\n- **High-Octane Amber (#FFB400):** Reserved strictly for primary actions, critical alerts, and brand highlights. It represents the energy and urgency of mobile service.\n- **Deep Slate (#1A1C1E):** Used for primary typography, backgrounds in dark modes, and heavy structural elements. It provides the \"heavy metal\" weight of the brand.\n- **Cool Silver (#E2E2E6):** A sophisticated neutral for secondary backgrounds, borders, and subtle technical partitions.\n- **Functional Accents:** Success states should use a desaturated Forest Green; errors should use a muted Oxide Red to maintain the industrial harmony.\n\n## Typography\n\nTypography is the cornerstone of this system's \"Industrial Editorial\" look. \n\n1. **Hanken Grotesk:** Chosen for its sharp, contemporary, and engineered feel. Use **ExtraBold (800)** for massive typographic watermarks (e.g., \"01 SERVICE\" or \"PENSACOLA\") set at 10% opacity behind content.\n2. **JetBrains Mono:** Used for all \"technical\" data—pricing, timestamps, VIN numbers, and contact details. This reinforces the precision of a mechanic.\n3. **Contrast:** Pair large, tight-tracked headlines with small, wide-tracked monospaced labels for a blueprint aesthetic.\n\n## Layout & Spacing\n\nThis design system follows a **Fixed-Fluid Hybrid Grid**. Content is housed in a 12-column grid on desktop with a maximum width of 1440px.\n\n- **The \"Blueprint\" Grid:** Vertical and horizontal hairlines (0.5pt) should occasionally be visible to divide sections, mimicking technical drawings.\n- **Asymmetry:** Content should favor a slight left-weighted bias, leaving larger right-side margins for oversized vertical monospaced text (watermarks).\n- **Rhythm:** Use a strict 4px/8px base unit. Section spacing is aggressive (120px+) to allow the \"premium\" feel to breathe.\n- **Mobile:** Reflow to a single-column stack with 20px side margins. Use horizontal scrolling for \"Service Cards\" to maintain an editorial horizontal flow.\n\n## Elevation & Depth\n\nTo maintain the \"rugged-premium\" feel, avoid soft, generic drop shadows. Instead, use:\n\n1. **Hard Tonal Layers:** Depth is created by stacking surfaces of slightly different shades (Neutral -> Cool Silver -> White).\n2. **Industrial Insets:** Instead of shadows, use subtle inner-borders (1px) or slight value shifts to indicate \"pressed\" or \"active\" states.\n3. **Ghost Borders:** Elements like cards use a `1px` solid border in Deep Slate at 15% opacity rather than a shadow.\n4. **Active Highlighting:** When an element is focused or active, it should gain a solid `2px` border of High-Octane Amber, creating a \"caution-tape\" high-visibility effect.\n\n## Shapes\n\nThe shape language is **strictly sharp (0px)**. \n\nCurves are avoided to maintain an architectural, engineered aesthetic. Every button, input field, and card should have crisp 90-degree corners. This communicates precision, stability, and a \"built to last\" mentality. \n\nFor specific circular elements (like status pips or specialized iconography), use perfect circles, but never \"rounded rectangles.\"\n\n## Components\n\n- **Primary Buttons:** Solid High-Octane Amber background, Deep Slate text (Hanken Grotesk Bold). No rounding. 1px solid black bottom-border for \"tactile\" weight.\n- **Service Cards:** White background with a 1px Cool Silver border. The \"Technical-SM\" monospace type is used at the top-right of the card for service IDs or pricing.\n- **Inputs:** Underline-style inputs only, or full-width boxes with a 1px Deep Slate border. No background fill unless focused. Focus state turns the border to Amber.\n- **Chips/Status:** Rectangular blocks with monospaced text. For example, a \"MOBILE\" tag should be a Deep Slate block with white monospaced text.\n- **Specialty Component: \"The Spec Sheet\":** A table-style list for technical specs (e.g., Oil Type, Diagnostic Codes) using alternating Cool Silver/White zebra striping and JetBrains Mono text.\n- **Navigation:** Minimalist top bar. The \"Nick's Mobile Mechanic\" logo should be bold, all-caps Hanken Grotesk.",
+              "font": "HANKEN_GROTESK",
+              "headlineFont": "HANKEN_GROTESK",
+              "headlineFontFamily": "Hanken Grotesk",
+              "labelFont": "JETBRAINS_MONO",
+              "labelFontFamily": "Jetbrains Mono",
+              "namedColors": {
+                "background": "#f8f9fa",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f0f1f2",
+                "inverse_primary": "#ffba35",
+                "inverse_surface": "#2e3132",
+                "on_background": "#191c1d",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#6b4900",
+                "on_primary_fixed": "#281900",
+                "on_primary_fixed_variant": "#5f4100",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#636467",
+                "on_secondary_fixed": "#1a1c1e",
+                "on_secondary_fixed_variant": "#454749",
+                "on_surface": "#191c1d",
+                "on_surface_variant": "#514532",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#4e5053",
+                "on_tertiary_fixed": "#1a1c1f",
+                "on_tertiary_fixed_variant": "#45474a",
+                "outline": "#847560",
+                "outline_variant": "#d6c4ac",
+                "primary": "#7e5700",
+                "primary_container": "#ffb400",
+                "primary_fixed": "#ffdeac",
+                "primary_fixed_dim": "#ffba35",
+                "secondary": "#5d5e61",
+                "secondary_container": "#e2e2e5",
+                "secondary_fixed": "#e2e2e5",
+                "secondary_fixed_dim": "#c6c6c9",
+                "surface": "#f8f9fa",
+                "surface_bright": "#f8f9fa",
+                "surface_container": "#edeeef",
+                "surface_container_high": "#e7e8e9",
+                "surface_container_highest": "#e1e3e4",
+                "surface_container_low": "#f3f4f5",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#d9dadb",
+                "surface_tint": "#7e5700",
+                "surface_variant": "#e1e3e4",
+                "tertiary": "#5d5e62",
+                "tertiary_container": "#c2c2c6",
+                "tertiary_fixed": "#e2e2e6",
+                "tertiary_fixed_dim": "#c6c6ca"
+              },
+              "overrideNeutralColor": "#f8f9fa",
+              "overridePrimaryColor": "#ffb400",
+              "overrideSecondaryColor": "#1a1c1e",
+              "overrideTertiaryColor": "#e2e2e6",
+              "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "section-padding": "120px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "body-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "72px",
+                  "fontWeight": "800",
+                  "letterSpacing": "-0.04em",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "48px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "32px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.4"
+                },
+                "label-caps": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.0"
+                },
+                "technical-sm": {
+                  "fontFamily": "JetBrains Mono",
+                  "fontSize": "13px",
+                  "fontWeight": "500",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "1.5"
+                }
+              }
+            },
+            "title": "Nick's Mobile Mechanic - Bespoke Editorial Landing Page",
+            "width": "5120"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, award-winning-quality homepage for **Nick's Mobile Mechanic** that breaks away from the standard \"local business\" template.\n\n### Design Highlights:\n*   **Industrial Editorial Identity:** I established a visual language called \"Industrial Editorial,\" using a high-contrast palette of **Deep Slate**, **High-Octane Amber**, and **Cool Silver**. The layout utilizes intentional density and thick rule lines to mimic the precision of mechanical blueprints.\n*   **Bespoke Hero Layout:** Instead of a centered banner, I used an asymmetrical layout with a vertical typographic watermark (\"ON-SITE PRECISION\") to create immediate brand memorability.\n*   **\"Invoice-Style\" Services:** To reinforce the mechanic theme, I designed the service section to look like a high-end service log, using large technical numbering and monospace type for a professional, \"spec-sheet\" feel.\n*   **Interactive Elements:** The site includes a scrolling credibility ticker, a \"Service Request\" form styled as a digital work order, and the requested placeholder for your local Pensacola service map.\n*   **Mobile-First Precision:** While designed for desktop, the layout is fully responsive down to 375px with a clean, slide-out navigation menu.\n\nThe code is production-ready, featuring semantic HTML5, utility-first styling with custom CSS properties for easy brand adjustments, and lightweight JavaScript for interactions.\n\nHow does this new visual direction feel for Nick's brand? We can refine the color balance or add more specific service details next."
+    },
+    {
+      "suggestion": "Make the amber more prominent in the services section"
+    },
+    {
+      "suggestion": "Add a section for customer testimonials"
+    },
+    {
+      "suggestion": "Switch the background to a darker theme"
+    }
+  ],
+  "projectId": "13190000860559877861",
+  "sessionId": "15476344381954280558"
+}
