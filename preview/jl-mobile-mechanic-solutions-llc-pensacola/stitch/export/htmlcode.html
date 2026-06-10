@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>JL MOBILE MECHANIC | Precision Mobile Repair</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary-fixed-variant": "#683d00",
+                    "primary-container": "#1b2a41",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#d5e3ff",
+                    "surface-dim": "#dcd9d9",
+                    "on-error-container": "#93000a",
+                    "outline": "#75777e",
+                    "secondary": "#895100",
+                    "surface-bright": "#fcf9f8",
+                    "inverse-surface": "#313030",
+                    "secondary-fixed-dim": "#ffb86b",
+                    "tertiary-fixed": "#dee3ea",
+                    "surface-container-high": "#ebe7e7",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffdcbc",
+                    "surface-container-low": "#f6f3f2",
+                    "on-surface": "#1c1b1b",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1c1b1b",
+                    "primary-fixed-dim": "#b8c7e5",
+                    "surface-container-highest": "#e5e2e1",
+                    "primary": "#05152b",
+                    "on-primary-fixed": "#0c1c32",
+                    "outline-variant": "#c5c6ce",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-secondary-fixed": "#2c1700",
+                    "on-primary-fixed-variant": "#394760",
+                    "surface": "#fcf9f8",
+                    "surface-tint": "#505f79",
+                    "on-surface-variant": "#44474d",
+                    "background": "#fcf9f8",
+                    "error": "#ba1a1a",
+                    "on-error": "#ffffff",
+                    "tertiary-container": "#252a2f",
+                    "surface-variant": "#e5e2e1",
+                    "surface-container": "#f0edec",
+                    "on-tertiary-container": "#8c9197",
+                    "on-primary-container": "#8291ad",
+                    "on-secondary-container": "#663b00",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#c2c7cd",
+                    "on-tertiary-fixed": "#171c21",
+                    "tertiary": "#11161a",
+                    "on-tertiary-fixed-variant": "#42474d",
+                    "secondary-container": "#fd9d1a",
+                    "inverse-primary": "#b8c7e5",
+                    "on-tertiary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "technical-gap-sm": "16px",
+                    "unit": "4px",
+                    "margin-mobile": "20px",
+                    "margin-desktop": "80px",
+                    "section-gap-lg": "128px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Hanken Grotesk"],
+                    "display-lg": ["Bodoni Moda"],
+                    "headline-lg": ["Bodoni Moda"],
+                    "subhead-tech": ["JetBrains Mono"],
+                    "headline-lg-mobile": ["Bodoni Moda"],
+                    "body-md": ["Hanken Grotesk"],
+                    "label-sm": ["JetBrains Mono"],
+                    "ui-button": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "subhead-tech": ["14px", {"lineHeight": "1.4", "fontWeight": "500"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                    "ui-button": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .blueprint-grid {
+            background-image: 
+                linear-gradient(to right, rgba(117, 119, 126, 0.08) 1px, transparent 1px),
+                linear-gradient(to bottom, rgba(117, 119, 126, 0.08) 1px, transparent 1px);
+            background-size: 40px 40px;
+        }
+        .perspective-text {
+            transform: skewY(-2deg);
+        }
+        .oil-shadow {
+            box-shadow: 6px 6px 0px 0px #1c1b1b;
+        }
+        .corner-mark::before, .corner-mark::after {
+            content: '+';
+            position: absolute;
+            font-family: 'JetBrains Mono';
+            font-size: 10px;
+            color: #75777e;
+        }
+        .top-left::before { top: -8px; left: -8px; }
+        .top-right::after { top: -8px; right: -8px; }
+        .bottom-left::before { bottom: -8px; left: -8px; }
+        .bottom-right::after { bottom: -8px; right: -8px; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-secondary-container selection:text-on-secondary-container font-body-md overflow-x-hidden">
+<!-- Header Section -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-margin-desktop bg-surface/90 backdrop-blur-md h-20 border-b border-outline/20">
+<div class="flex items-center gap-4">
+<span class="font-headline-lg text-[24px] tracking-tighter text-primary font-bold">JL MOBILE MECHANIC</span>
+<div class="hidden md:block h-6 w-[1px] bg-outline/30 mx-2"></div>
+<span class="hidden md:block font-subhead-tech text-label-sm text-outline tracking-widest uppercase">EST. 1988</span>
+</div>
+<nav class="hidden md:flex items-center gap-gutter">
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#services">SERVICES</a>
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#about">SPECIFICATIONS</a>
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#reviews">REVIEWS</a>
+<a class="font-ui-button text-ui-button text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#fleet">FLEET</a>
+</nav>
+<div class="flex items-center gap-6">
+<a class="font-subhead-tech text-secondary font-bold hover:underline transition-all" href="tel:8502082714">
+                (850) 208-2714
+            </a>
+<a class="hidden md:block bg-primary text-on-primary px-6 py-3 font-ui-button text-ui-button hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-95" href="#contact">
+                DIRECT LINE
+            </a>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 px-margin-desktop blueprint-grid overflow-hidden">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-[80%] opacity-10 pointer-events-none">
+<!-- Abstract Blueprint Motif -->
+<svg class="w-full h-full" viewbox="0 0 400 400">
+<circle cx="200" cy="200" fill="none" r="180" stroke="currentColor" stroke-dasharray="10 5" stroke-width="0.5"></circle>
+<line stroke="currentColor" stroke-width="0.5" x1="0" x2="400" y1="200" y2="200"></line>
+<line stroke="currentColor" stroke-width="0.5" x1="200" x2="200" y1="0" y2="400"></line>
+</svg>
+</div>
+<div class="relative z-10 w-full max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-16">
+<div class="md:w-3/5 space-y-8">
+<div class="inline-block border border-outline px-3 py-1">
+<span class="font-label-sm text-label-sm text-outline uppercase tracking-widest">Master Technician Certification #88-204</span>
+</div>
+<h1 class="font-display-lg text-display-lg text-primary max-w-4xl leading-tight">
+                        PRECISION REPAIR.<br/>
+<span class="text-outline-variant font-light italic">AT YOUR LOCATION.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        A higher standard of automotive engineering delivered to your driveway. We specialize in high-end diagnostics and heavy mechanical repair without the dealership overhead.
+                    </p>
+<div class="flex flex-wrap gap-4 pt-4">
+<a class="bg-primary text-on-primary px-10 py-5 font-ui-button text-ui-button text-lg tracking-widest hover:bg-secondary-container hover:text-on-secondary-container transition-all oil-shadow" href="#contact">
+                            SCHEDULE DIAGNOSTIC
+                        </a>
+<div class="flex items-center gap-3 px-6">
+<span class="material-symbols-outlined text-secondary">verified</span>
+<span class="font-subhead-tech text-subhead-tech uppercase">Pensacola Native / Veteran Owned</span>
+</div>
+</div>
+</div>
+<div class="md:w-2/5 relative group">
+<div class="absolute -top-10 -left-10 w-full h-full border border-outline/20 -z-10 translate-x-4 translate-y-4 transition-transform group-hover:translate-x-6 group-hover:translate-y-6"></div>
+<img alt="Mechanical precision" class="w-full grayscale hover:grayscale-0 transition-all duration-700 object-cover aspect-[4/5] oil-shadow" data-alt="A high-contrast, professional close-up of a meticulously organized mechanical workshop interior featuring heavy tools and chrome engine components. The lighting is sophisticated and dramatic, emphasizing metallic textures and engineering precision with a clean, luxury industrial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAu8Gp2_WNn82aGK65cxcSVHa1G5b8jei7EZyGV6Rr9r7S9ORJ308aMYXuig9ppnEv8Ob4SJF0B2ohXVr265tq7NjauJ0Jbv2UTm3patw2x3rPnRHuUGMMDWdGNflb3E8V7v18iuBkgEI2oODTFOZjoQHCOWCZ1dBe0Rj07HaGJLwJYHK5dClBscPVyjcefDN-Ycenkd3CCK7c4xmkRIFQ0yIxSrLu5Xv28F0B7fYhxI7kIcQh06t73ytTxSabuVLDTWGLx_V2MXac"/>
+<div class="absolute bottom-4 right-4 bg-surface px-4 py-2 border border-outline">
+<span class="font-label-sm text-label-sm text-primary uppercase">JL MOBILE UNIT-01</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility Bar -->
+<section class="bg-primary text-on-primary py-12 px-margin-desktop overflow-hidden border-y border-outline/20">
+<div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-8 md:gap-16">
+<div class="flex items-center gap-6">
+<span class="font-subhead-tech text-[40px] text-secondary font-bold">35+</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant uppercase tracking-[0.2em]">Years Of</span>
+<span class="font-headline-lg text-[18px] uppercase font-bold">Expertise</span>
+</div>
+</div>
+<div class="hidden md:block h-12 w-[1px] bg-on-primary-container/30"></div>
+<div class="flex items-center gap-6">
+<span class="font-subhead-tech text-[40px] text-secondary font-bold">01</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant uppercase tracking-[0.2em]">Deployment</span>
+<span class="font-headline-lg text-[18px] uppercase font-bold">Mobile Workshop</span>
+</div>
+</div>
+<div class="hidden md:block h-12 w-[1px] bg-on-primary-container/30"></div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-[48px] text-secondary">location_on</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant uppercase tracking-[0.2em]">Serving</span>
+<span class="font-headline-lg text-[18px] uppercase font-bold">Pensacola Area</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section: THE MOBILE WORKSHOP -->
+<section class="py-section-gap-lg px-margin-desktop bg-surface-container-low relative" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<span class="font-subhead-tech text-label-sm text-secondary uppercase tracking-[0.4em] block mb-4">Core Capabilities</span>
+<h2 class="font-display-lg text-headline-lg md:text-[64px] text-primary">THE MOBILE WORKSHOP</h2>
+</div>
+<div class="text-right">
+<span class="font-label-sm text-label-sm text-outline block">SYSTEM.04 - SERVICE LIST</span>
+<div class="h-[1px] w-32 bg-outline mt-2 ml-auto"></div>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter relative">
+<!-- Technical Card: Diagnostics -->
+<div class="group bg-surface border border-outline/20 p-8 flex flex-col min-h-[400px] relative transition-all hover:bg-primary hover:text-on-primary">
+<span class="absolute top-4 right-4 font-label-sm text-label-sm text-outline/50 group-hover:text-secondary transition-colors">SEC_01</span>
+<div class="mb-12">
+<span class="material-symbols-outlined text-[48px] text-secondary mb-4">troubleshoot</span>
+<h3 class="font-headline-lg text-[24px] uppercase tracking-tight">Technical<br/>Diagnostics</h3>
+</div>
+<p class="font-body-md text-on-surface-variant group-hover:text-on-primary/70 mb-auto">
+                            Computerized scanning and physical verification of all vehicle subsystems. Specialized in electrical troubleshooting and MIL analysis.
+                        </p>
+<div class="pt-8 border-t border-outline/10 group-hover:border-on-primary/20">
+<span class="font-subhead-tech text-label-sm uppercase tracking-widest">OBD-II / CAN BUS</span>
+</div>
+</div>
+<!-- Technical Card: Engine Repair -->
+<div class="group bg-surface border border-outline/20 p-8 flex flex-col min-h-[400px] relative transition-all hover:bg-primary hover:text-on-primary lg:mt-12">
+<span class="absolute top-4 right-4 font-label-sm text-label-sm text-outline/50 group-hover:text-secondary transition-colors">SEC_02</span>
+<div class="mb-12">
+<span class="material-symbols-outlined text-[48px] text-secondary mb-4" data-weight="fill">settings_suggest</span>
+<h3 class="font-headline-lg text-[24px] uppercase tracking-tight">Precision<br/>Engine Repair</h3>
+</div>
+<p class="font-body-md text-on-surface-variant group-hover:text-on-primary/70 mb-auto">
+                            Timing belts, water pumps, fuel systems, and intricate top-end repairs. We handle the heavy lifting at your convenience.
+                        </p>
+<div class="pt-8 border-t border-outline/10 group-hover:border-on-primary/20">
+<span class="font-subhead-tech text-label-sm uppercase tracking-widest">OEM SPEC PARTS</span>
+</div>
+</div>
+<!-- Technical Card: Brake Systems -->
+<div class="group bg-surface border border-outline/20 p-8 flex flex-col min-h-[400px] relative transition-all hover:bg-primary hover:text-on-primary">
+<span class="absolute top-4 right-4 font-label-sm text-label-sm text-outline/50 group-hover:text-secondary transition-colors">SEC_03</span>
+<div class="mb-12">
+<span class="material-symbols-outlined text-[48px] text-secondary mb-4">emergency_home</span>
+<h3 class="font-headline-lg text-[24px] uppercase tracking-tight">Brake<br/>Engineering</h3>
+</div>
+<p class="font-body-md text-on-surface-variant group-hover:text-on-primary/70 mb-auto">
+                            Full system overhaul including ABS modules, rotors, performance pads, and hydraulic line repair. Total safety assurance.
+                        </p>
+<div class="pt-8 border-t border-outline/10 group-hover:border-on-primary/20">
+<span class="font-subhead-tech text-label-sm uppercase tracking-widest">HYDRAULIC FLUID CERT</span>
+</div>
+</div>
+<!-- Technical Card: Roadside -->
+<div class="group bg-surface border border-outline/20 p-8 flex flex-col min-h-[400px] relative transition-all hover:bg-primary hover:text-on-primary lg:mt-12">
+<span class="absolute top-4 right-4 font-label-sm text-label-sm text-outline/50 group-hover:text-secondary transition-colors">SEC_04</span>
+<div class="mb-12">
+<span class="material-symbols-outlined text-[48px] text-secondary mb-4">minor_crash</span>
+<h3 class="font-headline-lg text-[24px] uppercase tracking-tight">Rapid<br/>Roadside</h3>
+</div>
+<p class="font-body-md text-on-surface-variant group-hover:text-on-primary/70 mb-auto">
+                            No-start issues, battery replacements, and emergency lockouts. The fastest response in Escambia County for technical failures.
+                        </p>
+<div class="pt-8 border-t border-outline/10 group-hover:border-on-primary/20">
+<span class="font-subhead-tech text-label-sm uppercase tracking-widest">24/7 SUPPORT</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: MECHANICAL MASTERY -->
+<section class="py-section-gap-lg px-margin-desktop overflow-hidden" id="about">
+<div class="max-w-7xl mx-auto flex flex-col lg:flex-row items-center gap-20">
+<div class="lg:w-1/2 relative">
+<div class="absolute -top-12 -left-12 font-display-lg text-[180px] text-outline/5 select-none z-0">1988</div>
+<div class="relative z-10 border-[10px] border-surface shadow-2xl">
+<img alt="Mechanical Mastery" class="w-full h-auto grayscale" data-alt="A cinematic, high-key portrait of a master mechanic at work, desaturated with strong emphasis on silver and blue tones. The professional setting shows specialized tools and a pristine engine bay, capturing an atmosphere of deep focus, absolute expertise, and clean industrial luxury." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPYM5LKvCseEkvuDpzOhnrs9EumodlsTyxsQqetRORCiJ9br3JTvLsNvFWjDX-NFe-qVJYWmfACLFtNoiyZX0s_OpNCgSdShT0-EzWdqD7wo7jTxULthedlcJoee3D_EeUMDO5QibbVHfuhRtgUlQLO9Qgy3SVisMQ3_uJ_mYAu8BwlUkoVCE-hte6jLq_yhUs72h6WD-oldzcnr7_JUOSYhqPm6cex3KWu_5Es1NOmS-C-zWAiTH6jANktKUxbSJIXYPC0ZNy6dc"/>
+</div>
+<!-- Corner Marks -->
+<div class="absolute top-0 left-0 w-8 h-8 border-t-2 border-l-2 border-secondary -translate-x-4 -translate-y-4"></div>
+<div class="absolute bottom-0 right-0 w-8 h-8 border-b-2 border-r-2 border-secondary translate-x-4 translate-y-4"></div>
+</div>
+<div class="lg:w-1/2 space-y-8">
+<span class="font-subhead-tech text-label-sm text-secondary uppercase tracking-[0.4em]">The Specialist</span>
+<h2 class="font-display-lg text-headline-lg text-primary leading-tight">THE ART OF MECHANICAL STEWARDSHIP</h2>
+<p class="font-body-lg text-on-surface-variant">
+                        JL Mobile Mechanic Solutions LLC isn't just a repair service—it's a commitment to automotive longevity. Founded in 1988 in Pensacola, we've spent decades refining a process that prioritizes technical accuracy over throughput speed.
+                    </p>
+<p class="font-body-md text-on-surface-variant italic">
+                        "I don't just fix cars; I restore the engineering intent of the manufacturer. When I arrive at your location, you’re getting a full service bay’s expertise with the transparency of a one-on-one consultation."
+                    </p>
+<div class="grid grid-cols-2 gap-8 border-t border-outline/20 pt-8">
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase block mb-2">Location</span>
+<span class="font-subhead-tech text-subhead-tech text-on-surface-variant uppercase">Pensacola, Florida</span>
+</div>
+<div>
+<span class="font-label-sm text-label-sm text-primary uppercase block mb-2">Philosophy</span>
+<span class="font-subhead-tech text-subhead-tech text-on-surface-variant uppercase">Technical Integrity</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="py-section-gap-lg px-margin-desktop bg-primary text-on-primary">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-4 space-y-6">
+<h2 class="font-display-lg text-headline-lg text-secondary">AREA OF DEPLOYMENT</h2>
+<p class="font-body-md text-on-primary/70">
+                        Operating a fully equipped mobile unit throughout Pensacola and surrounding areas. We come to your home, office, or roadside emergency.
+                    </p>
+<ul class="space-y-4 font-subhead-tech text-subhead-tech text-secondary uppercase tracking-widest">
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Pensacola Metro</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Gulf Breeze</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Milton / Pace</li>
+<li class="flex items-center gap-3"><span class="w-1.5 h-1.5 bg-secondary"></span> Perdido Key</li>
+</ul>
+</div>
+<div class="lg:col-span-8 relative">
+<div class="absolute -top-4 -left-4 w-12 h-12 border-t border-l border-on-primary opacity-20"></div>
+<div class="absolute -bottom-4 -right-4 w-12 h-12 border-b border-r border-on-primary opacity-20"></div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] border border-outline/30 grayscale contrast-125" data-location="Pensacola, Florida" data-map-slot="" style="">
+<!-- Map would render here -->
+<div class="absolute inset-0 flex items-center justify-center bg-primary-container">
+<span class="font-label-sm text-label-sm text-on-primary-container tracking-[0.5em] uppercase">Loading Tactical Grid...</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap-lg px-margin-desktop blueprint-grid" id="contact">
+<div class="max-w-4xl mx-auto bg-surface border border-primary p-12 oil-shadow relative">
+<div class="absolute top-0 right-0 bg-primary text-on-primary px-4 py-1">
+<span class="font-label-sm text-[10px] tracking-widest uppercase">Form 88-A: Service Request</span>
+</div>
+<div class="mb-12 text-center">
+<h2 class="font-display-lg text-headline-lg text-primary mb-4">COMMENCE DIAGNOSTIC</h2>
+<p class="font-body-md text-on-surface-variant">Provide your vehicle specifications and location for an immediate quote.</p>
+</div>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase">Operator Name</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-all font-subhead-tech" placeholder="REQUIRED" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase">Electronic Mail</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-all font-subhead-tech" placeholder="CONTACT@DOMAIN.COM" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase">Vehicle Make/Model</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-all font-subhead-tech" placeholder="YEAR / MAKE / MODEL" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase">Deployment Zip Code</label>
+<input class="w-full border-0 border-b border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-all font-subhead-tech" placeholder="32501" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-sm text-label-sm text-outline uppercase">Fault Description</label>
+<textarea class="w-full border border-outline-variant bg-transparent focus:ring-0 focus:border-secondary transition-all font-subhead-tech" placeholder="DESCRIBE SYMPTOMS OR REQUIRED SERVICE..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-6 font-ui-button text-ui-button text-lg tracking-[0.2em] hover:bg-secondary-container hover:text-on-secondary-container transition-all active:scale-[0.98]" type="submit">
+                        TRANSMIT REQUEST
+                    </button>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer Section -->
+<footer class="bg-primary text-on-primary py-section-gap-lg px-margin-desktop border-t-2 border-secondary">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-20">
+<div class="md:col-span-5 space-y-6">
+<span class="font-headline-lg text-headline-lg text-on-primary tracking-tighter">JL MOBILE MECHANIC</span>
+<p class="font-body-md text-on-primary-fixed-variant max-w-sm">
+                        High-precision automotive engineering and mobile repair solutions for the modern vehicle fleet. Serving Northwest Florida since 1988.
+                    </p>
+<div class="pt-4 flex gap-6">
+<a class="font-subhead-tech text-secondary hover:text-secondary-fixed transition-colors" href="tel:8502082714">(850) 208-2714</a>
+<span class="text-outline">/</span>
+<a class="font-subhead-tech text-on-primary hover:text-secondary transition-colors" href="mailto:jlmobilemechanic1988@gmail.com">jlmobilemechanic1988@gmail.com</a>
+</div>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Navigation</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-label-sm text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">DIAGNOSTICS</a>
+<a class="font-label-sm text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">ROADSIDE</a>
+<a class="font-label-sm text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">SCHEDULE</a>
+<a class="font-label-sm text-on-primary-fixed-variant hover:text-secondary-fixed-dim transition-colors" href="#">PRIVACY</a>
+</nav>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Office</h4>
+<div class="font-label-sm text-on-primary-fixed-variant leading-relaxed">
+                        PENSACOLA, FL<br/>
+                        ESCAMBIA COUNTY<br/>
+                        DEPLOYMENT READY
+                    </div>
+</div>
+<div class="md:col-span-3 space-y-4">
+<h4 class="font-label-sm text-label-sm text-secondary uppercase tracking-widest">Status</h4>
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+<span class="font-subhead-tech text-on-primary text-[10px]">MOBILE UNIT ONLINE</span>
+</div>
+<div class="border border-outline/30 p-4 font-label-sm text-[10px] text-on-primary-fixed-variant uppercase leading-tight">
+                        SYSTEM UPDATE: VER 2024.11<br/>
+                        CERTIFIED MASTER TECHNICIAN<br/>
+                        LICENSED &amp; INSURED
+                    </div>
+</div>
+</div>
+<div class="pt-8 border-t border-outline/20 flex flex-col md:flex-row justify-between items-center gap-4">
+<span class="font-label-sm text-label-sm text-on-primary-fixed-variant">© 2024 JL MOBILE MECHANIC SOLUTIONS LLC. ALL TECHNICAL RIGHTS RESERVED.</span>
+<div class="flex gap-4">
+<div class="w-8 h-[1px] bg-secondary"></div>
+<span class="font-label-sm text-[10px] text-outline uppercase tracking-widest">Precision Engineered In Florida</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Simple Intersection Observer for scroll animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Form interaction
+        const form = document.querySelector('form');
+        if(form) {
+            form.addEventListener('submit', (e) => {
+                e.preventDefault();
+                alert('Transmission Received. Technical Specialist will contact you shortly.');
+            });
+        }
+    </script>
+</body></html>
