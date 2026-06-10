@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html class="light scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Paul &amp; Jack | The Raleigh Standard</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;family=Courier+Prime&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-high": "#e9e8e8",
+                        "secondary-container": "#e2dfdc",
+                        "on-primary": "#ffffff",
+                        "on-primary-fixed": "#1a1c1e",
+                        "inverse-primary": "#c6c6c9",
+                        "surface-variant": "#e3e2e2",
+                        "surface-container": "#efeded",
+                        "on-tertiary-fixed": "#301400",
+                        "tertiary-container": "#301400",
+                        "on-tertiary-container": "#cb6a06",
+                        "inverse-on-surface": "#f2f0f0",
+                        "secondary-fixed-dim": "#c8c6c3",
+                        "secondary-fixed": "#e5e2df",
+                        "on-primary-container": "#838486",
+                        "tertiary": "#000000",
+                        "primary-container": "#1a1c1e",
+                        "surface": "#faf9f9",
+                        "on-secondary-container": "#636260",
+                        "error-container": "#ffdad6",
+                        "surface-container-low": "#f4f3f3",
+                        "primary": "#000101",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-dim": "#dbdad9",
+                        "on-secondary-fixed": "#1c1c1a",
+                        "error": "#ba1a1a",
+                        "secondary": "#5f5e5c",
+                        "surface-bright": "#faf9f9",
+                        "surface-container-highest": "#e3e2e2",
+                        "on-background": "#1b1c1c",
+                        "inverse-surface": "#2f3031",
+                        "background": "#faf9f9",
+                        "surface-tint": "#5d5e61",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#713700",
+                        "primary-fixed": "#e2e2e5",
+                        "outline": "#75777a",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary-fixed-variant": "#474745",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb783",
+                        "primary-fixed-dim": "#c6c6c9",
+                        "on-primary-fixed-variant": "#454749",
+                        "outline-variant": "#c5c6ca",
+                        "on-surface-variant": "#44474a",
+                        "on-surface": "#1b1c1c",
+                        "tertiary-fixed": "#ffdcc5"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-mobile": "20px",
+                        "section-gap": "128px",
+                        "gutter": "24px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "body-lg": ["Montserrat"],
+                        "utility-mono": ["Courier Prime"],
+                        "headline-sm": ["Playfair Display"],
+                        "label-caps": ["Montserrat"],
+                        "body-md": ["Montserrat"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "utility-mono": ["14px", {"lineHeight": "1.0", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.15em", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg-mobile": ["42px", {"lineHeight": "1.2", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .editorial-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 24px;
+        }
+        .stamp-badge {
+            background-color: #cb6a06; /* Electric Copper / tertiary-container */
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #faf9f9;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-tertiary-fixed-dim selection:text-tertiary-container">
+<!-- Header: TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 bg-background border-b border-primary dark:border-outline">
+<div class="font-headline-md text-headline-md text-primary dark:text-primary-fixed uppercase tracking-tighter">Paul &amp; Jack</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim hover:text-tertiary-container transition-colors duration-200" href="#heritage">Heritage</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim hover:text-tertiary-container transition-colors duration-200" href="#craft">Craft</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim hover:text-tertiary-container transition-colors duration-200" href="#visit">Visit</a>
+<a class="font-label-caps text-label-caps text-primary dark:text-primary-fixed-dim hover:text-tertiary-container transition-colors duration-200" href="#contact">Contact</a>
+</nav>
+<div class="font-label-caps text-label-caps text-primary dark:text-primary-fixed">(919) 999-0044</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative h-[90vh] overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img alt="Paul &amp; Jack Workshop" class="w-full h-full object-cover grayscale-[0.2]" src="https://lh3.googleusercontent.com/aida/AP1WRLvh5ahNUzVfAJY3Sx4euhKC2lWu7OVLC2fjvGqWI4_cxLtOWGbYrNgRaxwfRo-ip7fL-GT7Clp5n1y4Vbjow6YKpgc6Sr_MtFtOGuV65HzQbQCmOgESH-Sc6Hd7QqTXoZvg_RgP1V5s2YAklaLun_sVuRazAjxhVS9Ctp5wwn9Mia83PZzXK8miqzsnt3MYfgz3fXiodhRk8KaPzamoWAJaoVJSonuYagMtnojfUiSnkwDDE1N_3AslWAM"/>
+<div class="absolute inset-0 bg-primary/20 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 h-full flex flex-col justify-end px-margin-desktop pb-section-gap">
+<div class="max-w-4xl">
+<span class="font-label-caps text-label-caps text-surface tracking-[0.3em] mb-4 block">ESTABLISHED IN RALEIGH</span>
+<h1 class="font-display-lg text-display-lg text-surface mb-8">THE RALEIGH STANDARD</h1>
+<div class="flex items-center gap-6">
+<a class="bg-primary text-on-primary px-8 py-4 font-label-caps text-label-caps hover:bg-tertiary-container transition-colors duration-300" href="#contact">Initiate Inquiry</a>
+<div class="h-[1px] w-32 bg-surface/40"></div>
+<span class="font-utility-mono text-utility-mono text-surface">01 / ARCHIVE</span>
+</div>
+</div>
+</div>
+</section>
+<!-- #credibility Scrolling Ticker -->
+<section class="py-12 border-b border-primary overflow-hidden whitespace-nowrap bg-surface">
+<div class="flex gap-24 animate-marquee">
+<span class="font-label-caps text-label-caps text-primary opacity-60">BORN IN NORTH CAROLINA — ART OF THE FINISH — BESPOKE BY DESIGN — RALEIGH HERITAGE — THE RALEIGH STANDARD — LOCAL LEGACY</span>
+<span class="font-label-caps text-label-caps text-primary opacity-60">BORN IN NORTH CAROLINA — ART OF THE FINISH — BESPOKE BY DESIGN — RALEIGH HERITAGE — THE RALEIGH STANDARD — LOCAL LEGACY</span>
+</div>
+</section>
+<!-- Services/Offerings -->
+<section class="px-margin-desktop py-section-gap" id="craft">
+<div class="editorial-grid mb-16">
+<div class="col-span-12 md:col-span-5">
+<h2 class="font-headline-md text-headline-md mb-8">Intentional geometry, realized through historical technique.</h2>
+<p class="font-body-lg text-body-lg text-secondary">Our process is an architectural dialogue between raw material and refined form. We operate at the intersection of traditional joinery and contemporary aesthetics.</p>
+</div>
+</div>
+<div class="editorial-grid">
+<!-- 01 Bespoke Design -->
+<div class="col-span-12 md:col-span-4 group">
+<div class="relative mb-6 overflow-hidden">
+<img alt="Artisanal Hands" class="w-full aspect-[4/5] object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLuVDZ56SkAson0CF8OZgF3KNvpbwULRPJ4mfBhBveGh2dRqwvMUZy4d2zAq7ugifII-nxWJTsh0YmB9f6YeUYQfXdMpcUB26P3vtC6NM8Ozk7w0IT_nLWlXnecZQJ2YTJsgwVzpLLnP1id5JpQkDQCZbGk0x5LZCw-u6d6qeM4MJBJF0ZyA5FRjLrr7MWZE0lgNoM7_HWMYeFc16WXxJ4VAmGbR8SjfCoXI7xZowY2dD--uQwoTclvSNsE"/>
+<div class="absolute top-0 right-0 stamp-badge">
+<span class="font-utility-mono">01</span>
+</div>
+</div>
+<h3 class="font-label-caps text-label-caps mb-4">Bespoke Design</h3>
+<p class="font-body-md text-body-md text-secondary border-l border-outline-variant pl-4">Custom configurations drafted for the specific architectural volumes of your environment.</p>
+</div>
+<!-- 02 Artisan Craft -->
+<div class="col-span-12 md:col-span-4 group md:mt-24">
+<div class="relative mb-6 overflow-hidden">
+<img alt="Architectural Exterior" class="w-full aspect-[4/5] object-cover grayscale transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida/AP1WRLt79QrIWjOQmFHpUQZCbZDhfqHImoC4pIe8pDibZM5yl_Vp5xr4cXQKiUFemJCTkBMXg0PvVT-4gJZeHvjiaeZ44zWQqYhAZGQK6o8t0D9Vz9MN9oP8xPnyzxy877n1GG61u1QuxmA1BLJBt9zHN6glQM9sv09Wi_YgIgyyFB6ZhmFBzf7NpLIUEtrag7ShCK0tQZM79fawPs5FAVrcV2Jsmm5X4wjlgpSCLeU9kbE_zYg_Ejq7yZTUkn8"/>
+<div class="absolute top-0 right-0 stamp-badge">
+<span class="font-utility-mono">02</span>
+</div>
+</div>
+<h3 class="font-label-caps text-label-caps mb-4">Artisan Craft</h3>
+<p class="font-body-md text-body-md text-secondary border-l border-outline-variant pl-4">Material integrity remains our highest priority. We use only the finest regional hardwoods and hand-stitched leathers.</p>
+</div>
+<!-- 03 Local Legacy -->
+<div class="col-span-12 md:col-span-4 group">
+<div class="relative mb-6 overflow-hidden">
+<div class="w-full aspect-[4/5] bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-6xl" style="font-variation-settings: 'wght' 200">architecture</span>
+</div>
+<div class="absolute top-0 right-0 stamp-badge">
+<span class="font-utility-mono">03</span>
+</div>
+</div>
+<h3 class="font-label-caps text-label-caps mb-4">Local Legacy</h3>
+<p class="font-body-md text-body-md text-secondary border-l border-outline-variant pl-4">Rooted in the North West Street corridor, our studio serves as a hub for Raleigh's artisanal revival.</p>
+</div>
+</div>
+</section>
+<!-- About: Narrative Letter -->
+<section class="bg-secondary-fixed py-section-gap px-margin-desktop" id="heritage">
+<div class="max-w-4xl mx-auto border border-primary/10 p-12 md:p-24 bg-surface-container-lowest shadow-sm">
+<span class="font-utility-mono text-utility-mono text-on-tertiary-container mb-8 block underline decoration-tertiary-container underline-offset-8">A LETTER FROM THE FOUNDERS</span>
+<h2 class="font-headline-md text-headline-md mb-12 italic">"We believe that objects should outlast their owners."</h2>
+<div class="space-y-8 font-body-lg text-body-lg text-on-surface">
+<p>Paul &amp; Jack was born from a singular frustration: the vanishing of the permanent. In an era of mass-produced disposability, we chose the path of the slow, the deliberate, and the difficult.</p>
+<p>Based in the heart of Raleigh, North Carolina, our workshop is more than a production space. It is a laboratory of legacy. Each piece that leaves our doors carries the weight of its making—the smell of the tannin, the grain of the white oak, and the precision of the hand-turned joint.</p>
+<p>Our commitment is simple. We design for the future by honoring the methods of the past. The Raleigh Standard isn't just a tagline; it's a promise of durability that spans generations.</p>
+<div class="pt-12">
+<p class="font-headline-sm text-headline-sm">P. &amp; J.</p>
+<p class="font-label-caps text-label-caps text-secondary opacity-60 mt-2">EST. 2014</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap px-margin-desktop" id="visit">
+<div class="editorial-grid mb-16 items-end">
+<div class="col-span-12 md:col-span-6">
+<span class="font-label-caps text-label-caps text-tertiary-container block mb-4">FIND US</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-display-lg">911 NORTH WEST ST.</h2>
+</div>
+<div class="col-span-12 md:col-span-6 md:text-right">
+<p class="font-body-md text-body-md text-secondary max-w-sm ml-auto">Appointments encouraged. Experience the tactile nature of our collection in our curated gallery space.</p>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] bg-surface-container-high border border-primary" data-location="911 North West Street, Raleigh, NC" data-map-slot="" style="">
+<!-- Map UI Placeholder -->
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none opacity-20">
+<span class="material-symbols-outlined text-9xl">explore</span>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-primary text-on-primary py-section-gap px-margin-desktop" id="contact">
+<div class="editorial-grid">
+<div class="col-span-12 md:col-span-4">
+<h2 class="font-headline-md text-headline-md mb-8">Initiate Your Project</h2>
+<div class="space-y-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] opacity-50 uppercase tracking-widest mb-1">Direct Correspondence</span>
+<a class="font-body-lg text-body-lg hover:text-tertiary-fixed-dim transition-colors" href="mailto:boozaposta@hotmail.com">boozaposta@hotmail.com</a>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] opacity-50 uppercase tracking-widest mb-1">Telephone</span>
+<span class="font-body-lg text-body-lg">(919) 999-0044</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-[10px] opacity-50 uppercase tracking-widest mb-1">Studio Address</span>
+<span class="font-body-lg text-body-lg">911 North West Street<br/>Raleigh, NC 27603</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 md:col-start-6 mt-16 md:mt-0">
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12" id="inquiryForm">
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-surface/30 focus:border-tertiary-fixed-dim focus:ring-0 px-0 py-4 text-surface placeholder:text-surface/30 font-body-md" id="name" placeholder="NAME" required="" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-surface/30 focus:border-tertiary-fixed-dim focus:ring-0 px-0 py-4 text-surface placeholder:text-surface/30 font-body-md" id="email" placeholder="EMAIL ADDRESS" required="" type="email"/>
+</div>
+<div class="col-span-2 relative">
+<input class="w-full bg-transparent border-t-0 border-x-0 border-b border-surface/30 focus:border-tertiary-fixed-dim focus:ring-0 px-0 py-4 text-surface placeholder:text-surface/30 font-body-md" id="interest" placeholder="PROJECT TYPE (E.G. RESIDENTIAL, GALLERY, BESPOKE)" type="text"/>
+</div>
+<div class="col-span-2 relative">
+<textarea class="w-full bg-transparent border-t-0 border-x-0 border-b border-surface/30 focus:border-tertiary-fixed-dim focus:ring-0 px-0 py-4 text-surface placeholder:text-surface/30 font-body-md" id="message" placeholder="TELL US ABOUT THE VISION" rows="4"></textarea>
+</div>
+<div class="col-span-2 pt-8">
+<button class="w-full md:w-auto bg-tertiary-fixed-dim text-tertiary px-12 py-5 font-label-caps text-label-caps hover:bg-white transition-all duration-300 flex items-center justify-center gap-4 group" type="submit">
+                                SUBMIT INQUIRY
+                                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+</button>
+</div>
+</form>
+<div class="hidden mt-8 p-6 border border-tertiary-fixed-dim text-tertiary-fixed-dim font-body-md animate-pulse" id="formSuccess">
+                        Inquiry received. A consultant will follow up within 48 business hours.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap px-margin-desktop grid grid-cols-12 gap-gutter bg-primary dark:bg-primary-container border-t border-primary dark:border-outline">
+<div class="col-span-12 md:col-span-4">
+<div class="font-headline-sm text-headline-sm text-secondary-fixed mb-6 uppercase tracking-tighter">Paul &amp; Jack</div>
+<p class="font-utility-mono text-utility-mono text-secondary-fixed-dim mb-12">© 2024 Paul &amp; Jack. Raleigh, NC.</p>
+</div>
+<div class="col-span-6 md:col-span-2 flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-40 mb-2">DIRECTORY</span>
+<a class="font-label-caps text-label-caps text-secondary-fixed-dim hover:text-white transition-colors duration-300" href="#heritage">Heritage</a>
+<a class="font-label-caps text-label-caps text-secondary-fixed-dim hover:text-white transition-colors duration-300" href="#craft">The Craft</a>
+<a class="font-label-caps text-label-caps text-secondary-fixed-dim hover:text-white transition-colors duration-300" href="#visit">Visit Us</a>
+</div>
+<div class="col-span-6 md:col-span-3 flex flex-col gap-4">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-40 mb-2">CONNECT</span>
+<a class="font-label-caps text-label-caps text-secondary-fixed-dim hover:text-white transition-colors duration-300" href="#">Instagram</a>
+<a class="font-label-caps text-label-caps text-secondary-fixed-dim hover:text-white transition-colors duration-300" href="#">Twitter</a>
+<a class="font-label-caps text-label-caps text-secondary-fixed-dim hover:text-white transition-colors duration-300" href="#">LinkedIn</a>
+</div>
+<div class="col-span-12 md:col-span-3 mt-12 md:mt-0 flex flex-col items-start md:items-end">
+<span class="font-label-caps text-label-caps text-secondary-fixed opacity-40 mb-2">LOCALE</span>
+<span class="font-utility-mono text-utility-mono text-secondary-fixed-dim text-left md:text-right">
+                911 North West Street<br/>
+                Raleigh, NC 27603
+            </span>
+<div class="mt-12 flex gap-4">
+<div class="h-10 w-10 border border-secondary-fixed-dim flex items-center justify-center group cursor-pointer hover:bg-secondary-fixed transition-colors">
+<span class="material-symbols-outlined text-secondary-fixed-dim group-hover:text-primary">north_east</span>
+</div>
+</div>
+</div>
+</footer>
+<style>
+        @keyframes marquee {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .animate-marquee {
+            display: inline-flex;
+            animation: marquee 40s linear infinite;
+        }
+        .animate-marquee:hover {
+            animation-play-state: paused;
+        }
+    </style>
+<script>
+        // Form Validation UI Preview
+        document.getElementById('inquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('opacity-30', 'pointer-events-none');
+            document.getElementById('formSuccess').classList.remove('hidden');
+            setTimeout(() => {
+                this.reset();
+                this.classList.remove('opacity-30', 'pointer-events-none');
+                document.getElementById('formSuccess').classList.add('hidden');
+            }, 5000);
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
