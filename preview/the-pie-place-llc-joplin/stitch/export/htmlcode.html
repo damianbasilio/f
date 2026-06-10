@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Pie Place | Artisanal Hand-Baked Pies</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        
+        .flour-texture {
+            background-image: url("https://www.transparenttextures.com/patterns/dust.png");
+            opacity: 0.05;
+        }
+
+        .asymmetric-caption {
+            transform: translateY(24px);
+        }
+
+        .hairline-berry {
+            border-color: rgba(107, 53, 78, 0.2);
+        }
+
+        .hover-lift {
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+        .hover-lift:hover {
+            transform: translateY(-4px);
+        }
+
+        @keyframes flour-drift {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+        .animate-flour {
+            animation: flour-drift 30s linear infinite;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#fdf9f4",
+                        "on-secondary-fixed-variant": "#6b354e",
+                        "surface": "#fdf9f4",
+                        "on-background": "#1c1c19",
+                        "inverse-surface": "#31302d",
+                        "error": "#ba1a1a",
+                        "on-primary-container": "#fffbff",
+                        "on-primary-fixed-variant": "#7f2a12",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#874f00",
+                        "tertiary-fixed": "#ffdcbd",
+                        "surface-variant": "#e6e2dd",
+                        "surface-container-highest": "#e6e2dd",
+                        "surface-container-low": "#f7f3ee",
+                        "on-tertiary-container": "#fffbff",
+                        "primary-container": "#bb563b",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-dim": "#ddd9d5",
+                        "outline": "#89726c",
+                        "on-secondary-container": "#7a435c",
+                        "on-error": "#ffffff",
+                        "secondary": "#864c66",
+                        "primary-fixed-dim": "#ffb5a1",
+                        "on-tertiary-fixed": "#2c1600",
+                        "primary": "#9b3f25",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary-fixed": "#370a22",
+                        "background": "#fdf9f4",
+                        "secondary-container": "#fdb5d2",
+                        "inverse-on-surface": "#f4f0eb",
+                        "tertiary-container": "#a56618",
+                        "surface-container": "#f1ede8",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed-dim": "#ffb86e",
+                        "on-primary": "#ffffff",
+                        "secondary-fixed": "#ffd8e6",
+                        "on-surface": "#1c1c19",
+                        "primary-fixed": "#ffdbd1",
+                        "on-surface-variant": "#56423d",
+                        "secondary-fixed-dim": "#fab2cf",
+                        "inverse-primary": "#ffb5a1",
+                        "surface-tint": "#9e4127",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#ddc0b9",
+                        "on-tertiary": "#ffffff",
+                        "surface-container-high": "#ebe8e3",
+                        "on-primary-fixed": "#3b0800"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "margin-desktop": "64px",
+                        "hairline": "1px",
+                        "margin-mobile": "20px",
+                        "gutter": "24px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-sm": ["Bodoni Moda"],
+                        "label-md": ["DM Sans"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["DM Sans"],
+                        "body-lg": ["DM Sans"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "500"}],
+                        "label-md": ["14px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                        "display-lg-mobile": ["40px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.03em", "fontWeight": "400"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-surface text-on-surface font-body-md selection:bg-primary-fixed selection:text-on-primary-fixed overflow-x-hidden">
+<!-- Top Navigation Shell -->
+<nav class="w-full top-0 sticky z-50 bg-surface/90 backdrop-blur-md border-b border-on-secondary-fixed-variant/20">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-7xl mx-auto">
+<div class="flex items-center space-x-8">
+<a class="text-headline-sm font-headline-sm text-primary uppercase tracking-widest" href="/">The Pie Place</a>
+<div class="hidden md:flex space-x-6">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#menu">Menu</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#heritage">Heritage</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#daily-bake">Daily Bake</a>
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors duration-300 font-label-md text-label-md" href="#visit">Visit</a>
+</div>
+</div>
+<div class="flex items-center space-x-6">
+<a class="hidden lg:block font-label-md text-label-md text-on-surface-variant hover:text-primary" href="tel:3039218381">(303) 921-8381</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md uppercase tracking-wider hover:opacity-90 transition-opacity">Order Now</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex items-center px-margin-desktop py-20 overflow-hidden">
+<div class="absolute inset-0 flour-texture animate-flour pointer-events-none"></div>
+<div class="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-12 gap-gutter relative z-10">
+<div class="md:col-span-7 flex flex-col justify-center space-y-8">
+<span class="font-label-md text-label-md text-primary uppercase tracking-[0.3em]">Established 2004</span>
+<h1 class="font-display-lg text-display-lg md:text-[84px] leading-tight text-on-background">
+                        The Art of the <br/>
+<span class="italic font-normal serif">Perfect Crust.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                        Deeply rooted in Joplin's soil, we craft each pie by hand using century-old techniques and local harvests. A testament to slow living and honest ingredients.
+                    </p>
+<div class="pt-4">
+<a class="inline-flex items-center space-x-4 group" href="#daily-bake">
+<span class="bg-primary text-on-primary w-12 h-12 flex items-center justify-center rounded-full transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined">arrow_downward</span>
+</span>
+<span class="font-label-md text-label-md uppercase tracking-widest text-on-surface">Explore Today's Oven</span>
+</a>
+</div>
+</div>
+<div class="md:col-span-5 relative mt-12 md:mt-0">
+<div class="relative w-full aspect-[4/5] overflow-hidden rounded-lg shadow-sm">
+<img alt="Artisanal Pie" class="w-full h-full object-cover" data-alt="A macro overhead shot of a rustic, golden-brown artisanal pie crust with intricate lattice work and a dusting of flour. The pie sits on a weathered dark wood tabletop, illuminated by soft, natural morning light coming from a nearby window, creating deep, warm shadows. The aesthetic is high-end editorial, celebrating the tactile texture of the baked dough and the rich, warm terracotta and cream tones of a professional bakery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAIweTHkcFJ8uxjXVcT6h_RRCeIDsDh465JaD7XRD8f9i9piqkvLz9GfgUXGtIEZg07iA-LVDJgBovLxBVVsNRsckiqDBDGSa-XtJa6l_URDjpofSGGDRieEII7JeYWoe3V_W4Lq_Ovv9XH1K7f-JopVMWBTLPb_29cKHeqduyCWBOMfZySfCQ7p4TEpQCNqYGThxfBlBSmHSbNMx07BHQ-mJwgLp4YiJYEnKr-Y3yaOGtx6CZs7K_-HH832dPR7xW4ypJfp2fnV-w"/>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-surface-container-high p-8 hidden lg:block border border-on-secondary-fixed-variant/10 asymmetric-caption max-w-[240px]">
+<p class="font-label-md text-label-md text-primary mb-2">SEASONAL PICK</p>
+<p class="font-headline-sm text-headline-sm italic">Blackberry &amp; Thyme</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility / Divider -->
+<section class="border-y hairline-berry bg-surface-container-low py-12">
+<div class="max-w-7xl mx-auto px-margin-desktop flex flex-wrap justify-between items-center gap-8">
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary text-4xl">bakery_dining</span>
+<div>
+<p class="font-label-md text-label-md uppercase">Hand-Cranked</p>
+<p class="text-on-surface-variant">Traditional Batch Method</p>
+</div>
+</div>
+<div class="h-8 w-px bg-on-secondary-fixed-variant/20 hidden md:block"></div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary text-4xl">local_shipping</span>
+<div>
+<p class="font-label-md text-label-md uppercase">Locally Sourced</p>
+<p class="text-on-surface-variant">Missouri Orchard Fruits</p>
+</div>
+</div>
+<div class="h-8 w-px bg-on-secondary-fixed-variant/20 hidden md:block"></div>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-primary text-4xl">history</span>
+<div>
+<p class="font-label-md text-label-md uppercase">20 Years</p>
+<p class="text-on-surface-variant">Joplin Heritage Since 2004</p>
+</div>
+</div>
+</div>
+</section>
+<!-- The Daily Bake (Offerings) -->
+<section class="py-24 px-margin-desktop" id="daily-bake">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+<div class="max-w-2xl">
+<span class="font-label-md text-label-md text-primary uppercase tracking-[0.3em] block mb-4">The Collection</span>
+<h2 class="font-headline-lg text-headline-lg">Today’s Fresh Bake</h2>
+</div>
+<div class="font-body-md text-on-surface-variant max-w-sm text-right">
+                        Our menu rotates with the moon and the harvest. Every morning at 4 AM, the ovens begin their work.
+                    </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Savory Pies -->
+<div class="space-y-8 hover-lift">
+<div class="aspect-square bg-surface-container overflow-hidden rounded-lg relative">
+<img alt="Savory Pie" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="A close-up shot of a savory meat pie with a perfectly crimped edge and a golden, egg-washed crust. The pie is resting on a simple linen cloth in a rustic kitchen setting. Steam gently rises from a small vent in the center. The lighting is moody and dramatic, emphasizing the flaky texture of the pastry against a dark, out-of-focus background of kitchen herbs." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQqzMcVnUqTF6XIRoHsPXU7G6KsSdY2TgI3xtBJ8bekeGUegxWM8-t0GV0NWjB3bfavO3raPGA9769ouALegt-xYpiFMy4crRAu2gpIu2EGu0Sv6UTtXXuCYINv5Tm87X3VjggSgPWPNRuFPdr6ach3JtnjZIkYdOEO83Cf0ud_Tx3USv6lGRGbXl0xCGJDn4bYBnnn4A03VzERuH5s6TlNrkMr-ohK1lQEdFtoMFPUJJVNzkvZmrN0L3rlEViUVFvQmDURGvDlLc"/>
+<span class="absolute top-4 left-4 bg-primary text-on-primary px-3 py-1 font-label-md text-xs uppercase tracking-widest">Savory</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Savory Pies</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Slow-Roasted Pot Roast</span> <span>$32</span></li>
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Chicken &amp; Leek Velvet</span> <span>$28</span></li>
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Wild Mushroom &amp; Gruyère</span> <span>$30</span></li>
+</ul>
+</div>
+</div>
+<!-- Fruit Galettes -->
+<div class="space-y-8 mt-12 md:mt-24 hover-lift">
+<div class="aspect-square bg-surface-container overflow-hidden rounded-lg relative">
+<img alt="Fruit Galette" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="A beautiful, open-faced fruit galette featuring vibrant sliced peaches and blueberries nestled in a roughly folded, rustic pastry crust. The galette is dusted with coarse sparkling sugar that catches the light. It sits on a piece of parchment paper on a marble countertop, surrounded by a few stray blueberries and a sprig of mint. The scene is bright and airy, with a soft editorial feel." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5CNeTfH8z6wKW3gnwq1R6Fx_P__I-evprlhBSjHiv1o-05Yy6ss7A0EJYVbkMPwwgA5Pn-_fGy_AwEtbMtQh7y2jEJ1odn6q8xyu_mkFA3ovasYtCpEp2bpE6BoLH9HHbx_FeQRoztwOHn0Z5JLB5odNxGEVRX1qDC3Gk7lxkWx3uhWB3NzpjOkT_ZbnznchS0Yw7B6cwNWUJVItDKeY-scqY9dQ6LlOE1lU_F6JqTfiHZj3lc3UcMYdSivJKL_WgnrwuNXzMe-g"/>
+<span class="absolute top-4 left-4 bg-secondary text-on-secondary px-3 py-1 font-label-md text-xs uppercase tracking-widest">Seasonal</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Fruit Galettes</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Honey-Glazed Peach</span> <span>$24</span></li>
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Spiced Heirloom Apple</span> <span>$22</span></li>
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Triple Berry Rustic</span> <span>$26</span></li>
+</ul>
+</div>
+</div>
+<!-- Signature Crumbles -->
+<div class="space-y-8 hover-lift">
+<div class="aspect-square bg-surface-container overflow-hidden rounded-lg relative">
+<img alt="Crumble Pie" class="w-full h-full object-cover grayscale-[0.2] hover:grayscale-0 transition-all duration-700" data-alt="A deep-dish berry crumble pie with a thick, golden oat topping and bubbles of dark purple fruit juice escaping around the edges. The pie is presented in a vintage ceramic dish. The background features a soft-focus artisanal bakery environment with bags of organic flour and wooden rolling pins. Warm, amber-toned lighting creates an inviting and nostalgic atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPFhkLkSDJe_GCMjs_DSatZnOVNSvk3IPsD_1qlI0Pum19roRuoe1JNnSznXi9myNzM8IaS_VQrxeXbb6PcXsIylD0VvOk2oZcJGmwDzxpx5iRQHCMsGSgnW3AYK0LnWRDU-4Snjn-CTXe8l0tx0LW4NCjTIt_zc4GSGiojjwfe-CI96_vm41wDQOCbDZpo8XUjjbMDoo6MFN8r7OJZ-e0xGeebOJCidGLG6wN2zX_QhnB1edQ_CrowMrH44DJ9Z09oEROngCuxqM"/>
+<span class="absolute top-4 left-4 bg-tertiary-container text-on-tertiary-container px-3 py-1 font-label-md text-xs uppercase tracking-widest">Signature</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md mb-4">Signature Crumbles</h3>
+<ul class="space-y-3 font-body-md text-on-surface-variant">
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Bourbon Pecan Oat</span> <span>$34</span></li>
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Brown Butter Pear</span> <span>$28</span></li>
+<li class="flex justify-between border-b hairline-berry pb-2"><span>Rhubarb Strawberry Crisp</span> <span>$26</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section: Heritage -->
+<section class="bg-inverse-surface text-inverse-on-surface py-32 overflow-hidden relative" id="heritage">
+<div class="absolute inset-0 opacity-10 flour-texture"></div>
+<div class="max-w-7xl mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[3/4] bg-surface-dim rounded-lg overflow-hidden">
+<img alt="Baker Hands" class="w-full h-full object-cover" data-alt="A striking black and white photograph focusing on the floured hands of a baker as they expertly knead dough on a thick wooden table. Fine dustings of flour are caught mid-air, illuminated by a single spotlight. The image is high-contrast and evokes a sense of deep tradition, craftsmanship, and the quiet beauty of manual labor in an artisanal bakery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAozqPrdQtfYepZxsX2TrpiRG8vPa78it1JON6OQBJdzY0zP-iv58RJRSm-Ot3rNG0yYY78_pTH86Q7SjAklMvrnTiv-oxePDpWqwCxMsZUJ9EekFPnSmJlObHE4lrhTNQXoo8Cs2WRKwlQV7BFu-dmIh86iBRBOjKqu9I0vM_XZwdrqKTImopOIip_4lYIwfWGlqBRu74WEKK-3DZXJ3M9mG8ZPCSjHr7k32TRBK2T4E6sD8XPolYDyExT6r2UtJqMf9R72kOvlYw"/>
+</div>
+<div class="absolute -top-12 -right-12 w-48 h-48 border border-primary/30 rounded-full flex items-center justify-center p-4 text-center">
+<p class="font-label-md text-[10px] uppercase tracking-widest text-primary-fixed-dim">Small Batch Philosophy</p>
+</div>
+</div>
+<div class="space-y-8">
+<span class="font-label-md text-label-md text-primary-fixed-dim uppercase tracking-[0.4em]">Our Story</span>
+<h2 class="font-headline-lg text-headline-lg leading-tight">Born in Joplin, <br/>Refined by Time.</h2>
+<p class="font-body-lg text-body-lg text-surface-dim/80">
+                        The Pie Place began with a single wood-fired oven and a commitment to never take a shortcut. Twenty years later, we still use the same hand-cranked mixers and locally milled flour that defined our first batch.
+                    </p>
+<p class="font-body-md text-body-md text-surface-dim/60 italic">
+                        "A pie is only as good as the hands that shaped it. We believe in the slow way, the right way, the Joplin way."
+                    </p>
+<div class="pt-8 flex space-x-12">
+<div>
+<p class="text-4xl font-headline-lg text-primary-fixed-dim">4k+</p>
+<p class="font-label-md text-xs uppercase tracking-widest text-surface-dim/50">Pies Baked Monthly</p>
+</div>
+<div>
+<p class="text-4xl font-headline-lg text-primary-fixed-dim">12</p>
+<p class="font-label-md text-xs uppercase tracking-widest text-surface-dim/50">Local Farm Partners</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-24 px-margin-desktop bg-surface-container-low" id="visit">
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<div class="lg:col-span-4 space-y-12">
+<div>
+<span class="font-label-md text-label-md text-primary uppercase tracking-[0.3em] block mb-4">Visit Us</span>
+<h2 class="font-headline-lg text-headline-lg mb-6">Come Home to the Smell of Pie.</h2>
+<p class="font-body-md text-on-surface-variant">
+                                402 Main Street<br/>
+                                Joplin, MO 64801
+                            </p>
+</div>
+<div class="space-y-4">
+<p class="font-label-md text-label-md uppercase border-b hairline-berry pb-2">Hours</p>
+<div class="flex justify-between text-on-surface-variant">
+<span>Mon — Fri</span>
+<span>7:00 AM — 6:00 PM</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Saturday</span>
+<span>8:00 AM — 4:00 PM</span>
+</div>
+<div class="flex justify-between text-primary font-medium">
+<span>Sunday</span>
+<span>Closed for Rest</span>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] bg-surface-dim rounded-lg shadow-inner group" data-map-slot="">
+<div class="absolute inset-0 flex items-center justify-center bg-black/5 group-hover:bg-black/0 transition-colors pointer-events-none">
+<span class="bg-white/90 px-6 py-3 font-label-md text-label-md uppercase tracking-widest shadow-sm">View in Joplin, MO</span>
+</div>
+<!-- Map placeholder would be rendered here by the system -->
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-24 px-margin-desktop border-t hairline-berry">
+<div class="max-w-4xl mx-auto text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">Inquire About a Custom Bake</h2>
+<p class="font-body-lg text-on-surface-variant">Wholesale, weddings, or just a large family gathering. We bake for your most important moments.</p>
+</div>
+<form class="max-w-2xl mx-auto space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-on-secondary-fixed-variant/20 focus:ring-0 focus:border-primary py-4 px-0 font-body-md transition-all" placeholder="Your Name" type="text"/>
+</div>
+<div class="relative">
+<input class="w-full bg-transparent border-0 border-b border-on-secondary-fixed-variant/20 focus:ring-0 focus:border-primary py-4 px-0 font-body-md transition-all" placeholder="Email Address" type="email"/>
+</div>
+</div>
+<div class="relative">
+<textarea class="w-full bg-transparent border-0 border-b border-on-secondary-fixed-variant/20 focus:ring-0 focus:border-primary py-4 px-0 font-body-md transition-all" placeholder="Tell us about your event or favorite flavor..." rows="4"></textarea>
+</div>
+<div class="flex flex-col md:flex-row items-center justify-between gap-8 pt-4">
+<p class="font-body-md text-on-surface-variant">
+                        Reach us directly: <a class="text-primary hover:underline" href="mailto:thepieplace05@gmail.com">thepieplace05@gmail.com</a>
+</p>
+<button class="bg-primary text-on-primary px-12 py-4 rounded-lg font-label-md text-label-md uppercase tracking-[0.2em] hover:opacity-90 transition-opacity" type="submit">
+                        Send Inquiry
+                    </button>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-highest dark:bg-inverse-surface border-t border-on-secondary-fixed-variant/20">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop py-12 space-y-8 md:space-y-0 max-w-7xl mx-auto">
+<div class="flex flex-col items-center md:items-start space-y-4">
+<span class="font-headline-md text-headline-md text-primary">The Pie Place</span>
+<p class="font-label-md text-label-md text-on-surface-variant text-center md:text-left">
+                    © 2024 The Pie Place, LLC. Hand-baked in small batches.
+                </p>
+</div>
+<div class="flex flex-col items-center space-y-6">
+<div class="flex space-x-8">
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Provenance</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Wholesale</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Privacy</a>
+<a class="text-on-surface-variant hover:text-on-surface transition-colors font-label-md text-label-md" href="#">Accessibility</a>
+</div>
+<div class="flex space-x-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"></path></svg>
+</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors" href="#">
+<svg class="w-6 h-6 fill-current" viewbox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+</a>
+</div>
+</div>
+<div class="text-center md:text-right">
+<p class="font-label-md text-xs uppercase tracking-widest text-on-surface-variant mb-2">Visit the Oven</p>
+<p class="font-body-md">402 Main Street<br/>Joplin, MO 64801</p>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll interaction enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
+    </script>
+</body></html>
