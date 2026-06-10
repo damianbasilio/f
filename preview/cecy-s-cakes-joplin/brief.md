@@ -85,7 +85,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/11ceci2271/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-10T12:18:31.605Z
+- **Scraped:** 2026-06-10T12:28:18.757Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/11ceci2271/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 

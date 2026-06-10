@@ -1,42 +1,32 @@
-// Smooth intersection observer for fade-in elements
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
+// Reveal animation on scroll
+        const reveals = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('opacity-100', 'translate-y-0');
-                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                    entry.target.classList.add('active');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
-        document.querySelectorAll('section').forEach(section => {
-            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
-            observer.observe(section);
+        reveals.forEach(reveal => revealObserver.observe(reveal));
+
+        // Mobile menu toggle logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        mobileMenuBtn.addEventListener('click', () => {
+            // Simple visual feedback for button click
+            mobileMenuBtn.style.transform = 'scale(0.9)';
+            setTimeout(() => mobileMenuBtn.style.transform = 'scale(1)', 100);
+            alert('Mobile Navigation Overlay - Implementation would go here for production.');
         });
 
-        // Simple form handling
-        document.querySelector('form').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button');
-            const originalText = btn.textContent;
-            btn.textContent = 'Preview only';
-            btn.classList.add('opacity-50');
-            
-            setTimeout(() => {
-                btn.textContent = 'Inquiry Sent';
-                btn.classList.remove('bg-secondary');
-                btn.classList.add('bg-tertiary');
-                e.target.reset();
-                setTimeout(() => {
-                    btn.textContent = originalText;
-                    btn.classList.remove('bg-tertiary', 'opacity-50');
-                    btn.classList.add('bg-secondary');
-                }, 3000);
-            }, 1500);
+        // Smooth scroll refinement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
         });
 
 (() => {

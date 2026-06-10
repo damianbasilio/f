@@ -2,125 +2,138 @@
   {
     "designSystem": {
       "designSystem": {
-        "displayName": "Modern Artisan Patisserie",
-        "styleGuidelines": "## Brand & Style\nThe brand personality is **Modern Artisan Patisserie**—an intersection of traditional French pastry craftsmanship and contemporary editorial design. It targets a discerning audience that values quality, ingredients, and the aesthetic experience of fine baking.\n\nThe design style is **Editorial Minimalism**. It utilizes generous whitespace to create a \"gallery\" feel for product photography, allowing the vibrant colors of the pastries to lead. Key characteristics include:\n- **Sophisticated Overlaps:** Elements like images and text boxes should subtly overlap to create depth without relying on heavy shadows.\n- **Organic Textures:** Implementation of subtle \"flour-dust\" grain overlays on background surfaces to evoke a tactile, kitchen-side feeling.\n- **Refined Accents:** Usage of thin, high-contrast borders and delicate scalloped dividers to reinforce the artisanal theme.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Grid:** A 12-column grid with 24px gutters. Elements should often \"break the grid\" slightly—for example, an image might span 7 columns while its caption spans 4, leaving a 1-column gap for asymmetric balance.\n- **Whitespace:** Emphasize vertical rhythm with large section gaps (80px+). Content should never feel crowded; if in doubt, add more padding.\n- **Mobile Adaptivity:** On mobile, the 12-column grid collapses to 4 columns. Section gaps should scale down to 48px to maintain momentum while scrolling.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layers** and **Refined Outlines** rather than heavy shadows.\n\n- **Layering:** Use the Warm Cream base for the background, and a pure White (#FFFFFF) for elevated cards or \"floating\" recipe modules.\n- **Borders:** Define containers with 1px solid lines in Deep Cocoa at 15-20% opacity. This creates structure without visual noise.\n- **Subtle Shadows:** If elevation is required (e.g., for a \"Buy\" button or a modal), use a very soft, multi-layered shadow tinted with Deep Cocoa (e.g., `box-shadow: 0 10px 30px -10px rgba(61, 43, 31, 0.1)`).\n- **Glassmorphism:** Apply backdrop blurs (20px) to navigation bars to allow the rich colors of the pastry photography to bleed through as the user scrolls.\n\n## Components\n- **Buttons:** Primary buttons use a solid Dusty Rose background with Deep Cocoa text. Secondary buttons are \"Ghost\" style with a 1px Deep Cocoa border.\n- **Input Fields:** Minimalist design with only a bottom border in Deep Cocoa (40% opacity). Labels use the `label-caps` typography style positioned above the field.\n- **Cards:** Product cards should feature \"full-bleed\" photography at the top with a 1px border. The price and title should be set in Bodoni Moda.\n- **Chips/Tags:** Use Sage Leaf with 10% opacity for the background and 100% opacity for the text to indicate categories like \"Gluten-Free\" or \"Seasonal.\"\n- **Lists:** Ingredient lists should use custom bullets—either a small scalloped dot or a simple Deep Cocoa dash—with generous 12px spacing between items.\n- **Flour-Dust Texture:** Apply a global CSS noise overlay (opacity 0.03) to the main background to prevent the cream from looking \"flat\" or digital.",
+        "displayName": "Modern Editorial Bakery",
+        "styleGuidelines": "## Brand & Style\n\nThe design system is built for a premium, boutique culinary experience. The brand personality is sophisticated, artisanal, and curated, positioning the product as a luxury item rather than a commodity. The target audience values craftsmanship, intentionality, and high-end aesthetics.\n\nThe visual style is **Modern Editorial**. This approach treats the digital interface like a high-fashion lookbook or an architectural digest. Key characteristics include:\n- **Quiet Luxury:** Avoiding \"loud\" marketing patterns in favor of subtle, confident interactions.\n- **Gallery-Style Presentation:** Large, high-fidelity photography is treated as the primary content, framed by expansive whitespace.\n- **Architectural Rigor:** The use of asymmetric layouts and delicate hairline strokes creates a sense of structured elegance.\n- **Tactile Refinement:** Subtle transitions and soft color shifts mimic the experience of flipping through a heavy-stock paper magazine.\n\n## Layout & Spacing\n\nThe layout is governed by a 12-column grid but encourages **intentional asymmetry**.\n\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow the high-end photography to breathe. Avoid crowding elements; every product deserves its own \"frame.\"\n- **Asymmetric Offsets:** Images should often be slightly offset from their text descriptors, or overlap slightly using Z-index layers to create a sense of depth and modern composition.\n- **The Hairline Rule:** Use 0.5px lines in *Dark Cocoa* (at 20% opacity) to separate navigation, footer, or specific content blocks. These should feel like delicate threads rather than heavy dividers.\n- **Breakpoints:** \n  - **Desktop (1440px+):** Max-width 1280px with 80px side margins.\n  - **Tablet (768px-1024px):** 40px margins, 2-column product grids.\n  - **Mobile (below 768px):** 20px margins, single-column stack with center-aligned typography for headers.\n\n## Elevation & Depth\n\nTo maintain the \"Modern Editorial\" aesthetic, this design system avoids heavy drop shadows and standard material elevations.\n\n- **Tonal Layering:** Depth is created by placing *Vanilla Bean* containers over slightly darker *Neutral* backgrounds, or vice versa.\n- **Soft Shadows:** If a shadow is absolutely required (e.g., a floating cart or modal), it must be an ambient, highly-diffused shadow with a 0.05 opacity cocoa tint.\n- **Glassmorphism:** Use very subtle backdrop blurs (4px - 8px) for navigation bars when scrolling over imagery, maintaining a 90% opacity of the *Vanilla Bean* color.\n- **Image Overlaps:** Depth is primarily achieved through layout layering—text partially overlapping the edge of a clean, high-key cake photograph.\n\n## Components\n\n- **Buttons:** Primary buttons are solid *Dark Cocoa* with *Vanilla Bean* text, sharp corners, and 12px horizontal padding. Secondary buttons are \"Ghost\" style with a 0.5px border.\n- **Inputs:** Underline-only inputs are preferred for a minimal look. A simple hairline at the bottom that darkens on focus.\n- **Cards:** Product cards are borderless. The image takes the full width, with the title in *Playfair Display* and the price in *Hanken Grotesk* wide-tracked below it.\n- **Chips/Tags:** Used for flavors or categories. These should be small, all-caps, with wide tracking and no background—separated by a vertical slash `/`.\n- **Navigation:** A minimal top bar. Links are small, uppercase, and disappear on scroll, reappearing only on \"scroll up\" to maximize the gallery view.\n- **Image Containers:** Always use a subtle 1px inset border or a soft cream background-color as a placeholder to maintain the \"frame\" before high-res assets load.",
         "theme": {
-          "bodyFont": "DM_SANS",
-          "bodyFontFamily": "Dm Sans",
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
           "colorMode": "LIGHT",
           "colorVariant": "FIDELITY",
-          "customColor": "#fdf8f5",
-          "designMd": "---\nname: Modern Artisan Patisserie\ncolors:\n  surface: '#fdf8f7'\n  surface-dim: '#ddd9d8'\n  surface-bright: '#fdf8f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3f2'\n  surface-container: '#f1edec'\n  surface-container-high: '#ebe7e6'\n  surface-container-highest: '#e6e2e1'\n  on-surface: '#1c1b1b'\n  on-surface-variant: '#4a4640'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f4f0ef'\n  outline: '#7b766f'\n  outline-variant: '#ccc6bd'\n  surface-tint: '#605e5c'\n  primary: '#605e5c'\n  on-primary: '#ffffff'\n  primary-container: '#fdf8f5'\n  on-primary-container: '#74726f'\n  inverse-primary: '#cac6c3'\n  secondary: '#705a4c'\n  on-secondary: '#ffffff'\n  secondary-container: '#f8dac8'\n  on-secondary-container: '#755e50'\n  tertiary: '#7d562d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#fff8f5'\n  on-tertiary-container: '#946a3f'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2df'\n  primary-fixed-dim: '#cac6c3'\n  on-primary-fixed: '#1c1b1a'\n  on-primary-fixed-variant: '#484644'\n  secondary-fixed: '#fbddca'\n  secondary-fixed-dim: '#dec1af'\n  on-secondary-fixed: '#28180d'\n  on-secondary-fixed-variant: '#574335'\n  tertiary-fixed: '#ffdcbd'\n  tertiary-fixed-dim: '#f0bd8b'\n  on-tertiary-fixed: '#2c1600'\n  on-tertiary-fixed-variant: '#623f18'\n  background: '#fdf8f7'\n  on-background: '#1c1b1b'\n  surface-variant: '#e6e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 80px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n---\n\n## Brand & Style\nThe brand personality is **Modern Artisan Patisserie**—an intersection of traditional French pastry craftsmanship and contemporary editorial design. It targets a discerning audience that values quality, ingredients, and the aesthetic experience of fine baking.\n\nThe design style is **Editorial Minimalism**. It utilizes generous whitespace to create a \"gallery\" feel for product photography, allowing the vibrant colors of the pastries to lead. Key characteristics include:\n- **Sophisticated Overlaps:** Elements like images and text boxes should subtly overlap to create depth without relying on heavy shadows.\n- **Organic Textures:** Implementation of subtle \"flour-dust\" grain overlays on background surfaces to evoke a tactile, kitchen-side feeling.\n- **Refined Accents:** Usage of thin, high-contrast borders and delicate scalloped dividers to reinforce the artisanal theme.\n\n## Colors\nThe palette is rooted in natural, earthy tones that reflect raw baking ingredients.\n\n- **Warm Cream (#FDF8F5):** The primary canvas. Used for all large surfaces to maintain a soft, inviting, and premium atmosphere.\n- **Deep Cocoa (#3D2B1F):** The primary ink color. Used for all typography and structural borders to ensure maximum legibility and a high-end feel.\n- **Dusty Rose (#D4A373):** Used for primary calls to action, highlights, and decorative flourishes. It provides a warm, celebratory energy.\n- **Sage Leaf (#A3B18A):** A secondary accent used for botanical elements, health-related callouts, or environmental storytelling.\n\n## Typography\nThe typography strategy relies on the tension between a romantic, high-contrast Serif and a functional, airy Sans-Serif.\n\n- **Headlines (Bodoni Moda):** Should be treated as a design element. Use tight letter-spacing for large display sizes to emphasize the thick-and-thin stroke contrast.\n- **Body & Utility (DM Sans):** Selected for its geometric clarity and wide apertures. For body copy, use generous line heights (1.6) to improve readability against the cream background.\n- **Labels:** Always use uppercase with wide tracking (0.15em) for category headers and small metadata to maintain the editorial \"masthead\" look.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Grid:** A 12-column grid with 24px gutters. Elements should often \"break the grid\" slightly—for example, an image might span 7 columns while its caption spans 4, leaving a 1-column gap for asymmetric balance.\n- **Whitespace:** Emphasize vertical rhythm with large section gaps (80px+). Content should never feel crowded; if in doubt, add more padding.\n- **Mobile Adaptivity:** On mobile, the 12-column grid collapses to 4 columns. Section gaps should scale down to 48px to maintain momentum while scrolling.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layers** and **Refined Outlines** rather than heavy shadows.\n\n- **Layering:** Use the Warm Cream base for the background, and a pure White (#FFFFFF) for elevated cards or \"floating\" recipe modules.\n- **Borders:** Define containers with 1px solid lines in Deep Cocoa at 15-20% opacity. This creates structure without visual noise.\n- **Subtle Shadows:** If elevation is required (e.g., for a \"Buy\" button or a modal), use a very soft, multi-layered shadow tinted with Deep Cocoa (e.g., `box-shadow: 0 10px 30px -10px rgba(61, 43, 31, 0.1)`).\n- **Glassmorphism:** Apply backdrop blurs (20px) to navigation bars to allow the rich colors of the pastry photography to bleed through as the user scrolls.\n\n## Shapes\nThe shape language is primarily **Soft (0.25rem)**, echoing the precision of a pastry chef's knife.\n\n- **Corner Radius:** Standard buttons and cards use a subtle 4px (0.25rem) radius. Large image containers can go up to 12px (0.75rem).\n- **The Scallop Motif:** Use a repeating semi-circle \"scalloped\" edge for horizontal dividers or the bottom edge of hero sections. This motif should be used sparingly as a \"signature\" rather than a frequent container shape.\n- **Buttons:** Buttons are rectangular with soft corners, never fully rounded pills, to maintain the architectural feel of the design.\n\n## Components\n- **Buttons:** Primary buttons use a solid Dusty Rose background with Deep Cocoa text. Secondary buttons are \"Ghost\" style with a 1px Deep Cocoa border.\n- **Input Fields:** Minimalist design with only a bottom border in Deep Cocoa (40% opacity). Labels use the `label-caps` typography style positioned above the field.\n- **Cards:** Product cards should feature \"full-bleed\" photography at the top with a 1px border. The price and title should be set in Bodoni Moda.\n- **Chips/Tags:** Use Sage Leaf with 10% opacity for the background and 100% opacity for the text to indicate categories like \"Gluten-Free\" or \"Seasonal.\"\n- **Lists:** Ingredient lists should use custom bullets—either a small scalloped dot or a simple Deep Cocoa dash—with generous 12px spacing between items.\n- **Flour-Dust Texture:** Apply a global CSS noise overlay (opacity 0.03) to the main background to prevent the cream from looking \"flat\" or digital.",
-          "font": "BODONI_MODA",
-          "headlineFont": "BODONI_MODA",
-          "headlineFontFamily": "Bodoni Moda",
-          "labelFont": "DM_SANS",
-          "labelFontFamily": "Dm Sans",
+          "customColor": "#f9f5f0",
+          "designMd": "---\nname: Modern Editorial Bakery\ncolors:\n  surface: '#fff8f0'\n  surface-dim: '#dfd9d1'\n  surface-bright: '#fff8f0'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f9f3ea'\n  surface-container: '#f3ede5'\n  surface-container-high: '#ede7df'\n  surface-container-highest: '#e8e2da'\n  on-surface: '#1d1b17'\n  on-surface-variant: '#484740'\n  inverse-surface: '#33302b'\n  inverse-on-surface: '#f6f0e8'\n  outline: '#79776f'\n  outline-variant: '#c9c6bd'\n  surface-tint: '#605e5b'\n  primary: '#605e5b'\n  on-primary: '#ffffff'\n  primary-container: '#f9f5f0'\n  on-primary-container: '#72706c'\n  inverse-primary: '#c9c6c1'\n  secondary: '#655c5a'\n  on-secondary: '#ffffff'\n  secondary-container: '#eaddd9'\n  on-secondary-container: '#6a615e'\n  tertiary: '#615d5f'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#faf4f6'\n  on-tertiary-container: '#736f71'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2dd'\n  primary-fixed-dim: '#c9c6c1'\n  on-primary-fixed: '#1c1c19'\n  on-primary-fixed-variant: '#484743'\n  secondary-fixed: '#ede0dc'\n  secondary-fixed-dim: '#d0c4c0'\n  on-secondary-fixed: '#201a18'\n  on-secondary-fixed-variant: '#4d4542'\n  tertiary-fixed: '#e7e1e3'\n  tertiary-fixed-dim: '#cac5c7'\n  on-tertiary-fixed: '#1d1b1d'\n  on-tertiary-fixed-variant: '#494648'\n  background: '#fff8f0'\n  on-background: '#1d1b17'\n  surface-variant: '#e8e2da'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  nav-link:\n    fontFamily: Hanken Grotesk\n    fontSize: 13px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  label-sm:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 120px\n  hairline: 0.5px\n---\n\n## Brand & Style\n\nThe design system is built for a premium, boutique culinary experience. The brand personality is sophisticated, artisanal, and curated, positioning the product as a luxury item rather than a commodity. The target audience values craftsmanship, intentionality, and high-end aesthetics.\n\nThe visual style is **Modern Editorial**. This approach treats the digital interface like a high-fashion lookbook or an architectural digest. Key characteristics include:\n- **Quiet Luxury:** Avoiding \"loud\" marketing patterns in favor of subtle, confident interactions.\n- **Gallery-Style Presentation:** Large, high-fidelity photography is treated as the primary content, framed by expansive whitespace.\n- **Architectural Rigor:** The use of asymmetric layouts and delicate hairline strokes creates a sense of structured elegance.\n- **Tactile Refinement:** Subtle transitions and soft color shifts mimic the experience of flipping through a heavy-stock paper magazine.\n\n## Colors\n\nThe palette is rooted in organic, culinary tones to evoke quality and warmth without relying on traditional \"sweet\" clichés.\n\n- **Vanilla Bean (#F9F5F0):** The primary canvas color. A rich, warm off-white that feels more premium and softer than pure white.\n- **Dark Cocoa (#1A1412):** Used for primary typography and structural elements. It provides a softer, more sophisticated contrast than pure black.\n- **Sage (#8A9A8E):** A singular, muted accent used sparingly for call-to-actions, success states, or subtle highlighting.\n- **Tonal Neutrals:** Secondary surfaces use slight variations of the base cream to create soft depth and separation between sections.\n\n## Typography\n\nThis design system utilizes a high-contrast typographic pairing to achieve an editorial feel.\n\n- **Headlines:** Uses *Playfair Display*. The Serif is used for storytelling, product names, and section headers. It should be set with tight leading and slight negative tracking for a \"locked-in\" professional look.\n- **Utility & Navigation:** Uses *Hanken Grotesk*. This clean, contemporary Sans-Serif provides functional clarity. \n- **Tracking:** Navigation elements and labels use wide letter-spacing (15%) and uppercase styling to evoke luxury branding and ensure legibility at small sizes.\n- **Hierarchy:** Maintain a clear distinction between the \"voice\" (Serif) and the \"engine\" (Sans-Serif) of the interface.\n\n## Layout & Spacing\n\nThe layout is governed by a 12-column grid but encourages **intentional asymmetry**.\n\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow the high-end photography to breathe. Avoid crowding elements; every product deserves its own \"frame.\"\n- **Asymmetric Offsets:** Images should often be slightly offset from their text descriptors, or overlap slightly using Z-index layers to create a sense of depth and modern composition.\n- **The Hairline Rule:** Use 0.5px lines in *Dark Cocoa* (at 20% opacity) to separate navigation, footer, or specific content blocks. These should feel like delicate threads rather than heavy dividers.\n- **Breakpoints:** \n  - **Desktop (1440px+):** Max-width 1280px with 80px side margins.\n  - **Tablet (768px-1024px):** 40px margins, 2-column product grids.\n  - **Mobile (below 768px):** 20px margins, single-column stack with center-aligned typography for headers.\n\n## Elevation & Depth\n\nTo maintain the \"Modern Editorial\" aesthetic, this design system avoids heavy drop shadows and standard material elevations.\n\n- **Tonal Layering:** Depth is created by placing *Vanilla Bean* containers over slightly darker *Neutral* backgrounds, or vice versa.\n- **Soft Shadows:** If a shadow is absolutely required (e.g., a floating cart or modal), it must be an ambient, highly-diffused shadow with a 0.05 opacity cocoa tint.\n- **Glassmorphism:** Use very subtle backdrop blurs (4px - 8px) for navigation bars when scrolling over imagery, maintaining a 90% opacity of the *Vanilla Bean* color.\n- **Image Overlaps:** Depth is primarily achieved through layout layering—text partially overlapping the edge of a clean, high-key cake photograph.\n\n## Shapes\n\nThe design system adopts a **Sharp (0)** roundedness philosophy. \n\n- **Hard Edges:** All buttons, input fields, and image containers use 0px border radius. This reinforces the architectural, high-fashion editorial look.\n- **Structural Lines:** Use the 0.5px hairline for borders rather than fills whenever possible to keep the interface feeling light and \"sketched.\"\n- **Interaction:** Hover states should involve color fills or shifts rather than rounding of corners to maintain consistency with the sharp-edged aesthetic.\n\n## Components\n\n- **Buttons:** Primary buttons are solid *Dark Cocoa* with *Vanilla Bean* text, sharp corners, and 12px horizontal padding. Secondary buttons are \"Ghost\" style with a 0.5px border.\n- **Inputs:** Underline-only inputs are preferred for a minimal look. A simple hairline at the bottom that darkens on focus.\n- **Cards:** Product cards are borderless. The image takes the full width, with the title in *Playfair Display* and the price in *Hanken Grotesk* wide-tracked below it.\n- **Chips/Tags:** Used for flavors or categories. These should be small, all-caps, with wide tracking and no background—separated by a vertical slash `/`.\n- **Navigation:** A minimal top bar. Links are small, uppercase, and disappear on scroll, reappearing only on \"scroll up\" to maximize the gallery view.\n- **Image Containers:** Always use a subtle 1px inset border or a soft cream background-color as a placeholder to maintain the \"frame\" before high-res assets load.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "HANKEN_GROTESK",
+          "labelFontFamily": "Hanken Grotesk",
           "namedColors": {
-            "background": "#fdf8f7",
+            "background": "#fff8f0",
             "error": "#ba1a1a",
             "error_container": "#ffdad6",
-            "inverse_on_surface": "#f4f0ef",
-            "inverse_primary": "#cac6c3",
-            "inverse_surface": "#313030",
-            "on_background": "#1c1b1b",
+            "inverse_on_surface": "#f6f0e8",
+            "inverse_primary": "#c9c6c1",
+            "inverse_surface": "#33302b",
+            "on_background": "#1d1b17",
             "on_error": "#ffffff",
             "on_error_container": "#93000a",
             "on_primary": "#ffffff",
-            "on_primary_container": "#74726f",
-            "on_primary_fixed": "#1c1b1a",
-            "on_primary_fixed_variant": "#484644",
+            "on_primary_container": "#72706c",
+            "on_primary_fixed": "#1c1c19",
+            "on_primary_fixed_variant": "#484743",
             "on_secondary": "#ffffff",
-            "on_secondary_container": "#755e50",
-            "on_secondary_fixed": "#28180d",
-            "on_secondary_fixed_variant": "#574335",
-            "on_surface": "#1c1b1b",
-            "on_surface_variant": "#4a4640",
+            "on_secondary_container": "#6a615e",
+            "on_secondary_fixed": "#201a18",
+            "on_secondary_fixed_variant": "#4d4542",
+            "on_surface": "#1d1b17",
+            "on_surface_variant": "#484740",
             "on_tertiary": "#ffffff",
-            "on_tertiary_container": "#946a3f",
-            "on_tertiary_fixed": "#2c1600",
-            "on_tertiary_fixed_variant": "#623f18",
-            "outline": "#7b766f",
-            "outline_variant": "#ccc6bd",
-            "primary": "#605e5c",
-            "primary_container": "#fdf8f5",
-            "primary_fixed": "#e6e2df",
-            "primary_fixed_dim": "#cac6c3",
-            "secondary": "#705a4c",
-            "secondary_container": "#f8dac8",
-            "secondary_fixed": "#fbddca",
-            "secondary_fixed_dim": "#dec1af",
-            "surface": "#fdf8f7",
-            "surface_bright": "#fdf8f7",
-            "surface_container": "#f1edec",
-            "surface_container_high": "#ebe7e6",
-            "surface_container_highest": "#e6e2e1",
-            "surface_container_low": "#f7f3f2",
+            "on_tertiary_container": "#736f71",
+            "on_tertiary_fixed": "#1d1b1d",
+            "on_tertiary_fixed_variant": "#494648",
+            "outline": "#79776f",
+            "outline_variant": "#c9c6bd",
+            "primary": "#605e5b",
+            "primary_container": "#f9f5f0",
+            "primary_fixed": "#e6e2dd",
+            "primary_fixed_dim": "#c9c6c1",
+            "secondary": "#655c5a",
+            "secondary_container": "#eaddd9",
+            "secondary_fixed": "#ede0dc",
+            "secondary_fixed_dim": "#d0c4c0",
+            "surface": "#fff8f0",
+            "surface_bright": "#fff8f0",
+            "surface_container": "#f3ede5",
+            "surface_container_high": "#ede7df",
+            "surface_container_highest": "#e8e2da",
+            "surface_container_low": "#f9f3ea",
             "surface_container_lowest": "#ffffff",
-            "surface_dim": "#ddd9d8",
-            "surface_tint": "#605e5c",
-            "surface_variant": "#e6e2e1",
-            "tertiary": "#7d562d",
-            "tertiary_container": "#fff8f5",
-            "tertiary_fixed": "#ffdcbd",
-            "tertiary_fixed_dim": "#f0bd8b"
+            "surface_dim": "#dfd9d1",
+            "surface_tint": "#605e5b",
+            "surface_variant": "#e8e2da",
+            "tertiary": "#615d5f",
+            "tertiary_container": "#faf4f6",
+            "tertiary_fixed": "#e7e1e3",
+            "tertiary_fixed_dim": "#cac5c7"
           },
-          "overridePrimaryColor": "#fdf8f5",
-          "overrideSecondaryColor": "#3d2b1f",
-          "overrideTertiaryColor": "#d4a373",
-          "roundness": "ROUND_FOUR",
+          "overrideNeutralColor": "#e8e2da",
+          "overridePrimaryColor": "#f9f5f0",
+          "overrideSecondaryColor": "#1a1412",
           "spacing": {
-            "base": "8px",
-            "container-max": "1280px",
             "gutter": "24px",
+            "hairline": "0.5px",
+            "margin-desktop": "80px",
             "margin-mobile": "20px",
-            "section-gap": "80px"
+            "section-gap": "120px",
+            "unit": "4px"
           },
           "spacingScale": 2,
           "typography": {
             "body-lg": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Hanken Grotesk",
               "fontSize": "18px",
               "fontWeight": "400",
               "letterSpacing": "0.01em",
               "lineHeight": "1.6"
             },
             "body-md": {
-              "fontFamily": "DM Sans",
+              "fontFamily": "Hanken Grotesk",
               "fontSize": "16px",
               "fontWeight": "400",
-              "lineHeight": "1.6"
+              "lineHeight": "1.5"
             },
             "display-lg": {
-              "fontFamily": "Bodoni Moda",
+              "fontFamily": "Playfair Display",
               "fontSize": "64px",
-              "fontWeight": "700",
+              "fontWeight": "600",
               "letterSpacing": "-0.02em",
               "lineHeight": "1.1"
             },
             "display-lg-mobile": {
-              "fontFamily": "Bodoni Moda",
+              "fontFamily": "Playfair Display",
               "fontSize": "40px",
-              "fontWeight": "700",
-              "lineHeight": "1.2"
+              "fontWeight": "600",
+              "lineHeight": "1.1"
             },
             "headline-md": {
-              "fontFamily": "Bodoni Moda",
+              "fontFamily": "Playfair Display",
               "fontSize": "32px",
-              "fontWeight": "600",
+              "fontWeight": "500",
+              "lineHeight": "1.2"
+            },
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "500",
               "lineHeight": "1.3"
             },
-            "label-caps": {
-              "fontFamily": "DM Sans",
+            "label-sm": {
+              "fontFamily": "Hanken Grotesk",
               "fontSize": "12px",
-              "fontWeight": "700",
+              "fontWeight": "500",
+              "letterSpacing": "0.05em",
+              "lineHeight": "1"
+            },
+            "nav-link": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "13px",
+              "fontWeight": "600",
               "letterSpacing": "0.15em",
-              "lineHeight": "1.0"
+              "lineHeight": "1"
             }
           }
         }
       },
-      "name": "assets/05c4629fd1ce4e68875173921e728986",
+      "name": "assets/7b927d5a520443ef9608e6838d446497",
       "version": "1"
     }
   },
@@ -130,320 +143,371 @@
         {
           "generatedBy": "interactive_ui_controller",
           "height": "768",
-          "id": "6fb2369e6e9543f790b6703e724670fa",
-          "name": "projects/14924921870643557920/screens/6fb2369e6e9543f790b6703e724670fa",
-          "prompt": "Editorial photography of a bespoke, multi-tiered wedding cake with delicate floral palette-knife frosting textures. Minimalist studio setting with soft side lighting, warm cream background, professional food styling. High-end bakery aesthetic.",
+          "id": "1c5e1b0feb0a4dc48ac4d703708107f7",
+          "name": "projects/7581446318728368559/screens/1c5e1b0feb0a4dc48ac4d703708107f7",
+          "prompt": "Editorial food photography of a stunning, multi-tiered artisanal wedding cake with delicate buttercream textures and fresh, minimal floral accents. Soft, warm morning light, shallow depth of field, high-end boutique bakery setting. Colors: cream, ivory, soft gold, and a hint of sage. Premium, sophisticated, inviting.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "IMAGE",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt_CxlYg1HuE7mCxKozngqOEazutk-e-ncb_L-_-RaU9FivhLRYMWjnk5bmCPKyhTK_gu7u_PLlzAQU7woahSfwHKb9KHS8iOt56lA4k1O3wMFIzg5mhTsdEN2t5M7wmEnu3Rf1Dl4lxXUu1RjzXMsxtuOWzLQCeAyXR12rOa0JjO8Majuy20tj94sCyvwM1dMsmMd2BtN9ZTcNWOjnZGM1xbUnTz0c2iOLhxmyE5PFigPIJtVCLzwaYwPz",
-            "name": "projects/14924921870643557920/files/c1d1716c62a94eca8788ff2ea0a5cc9a"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtghxJjcpeQmqXXYCWL5vZLKzrA2WYSBIFdaVTzaps-2Gg_CGlig--8-sElC9bzhqzfXZvRWKeswRlyU-ROF9i2JOsLd4WzMgEIWbhAjdugLfTRko-N8kkuDKBSQB-IUqTy5KiZujeSsdQinZSvK3pUyb0SmI3qCioQlGFw95IiWlj2L7cTeUf4iqaNU3amgurfrosfcqxzkYYom2XArEjLrWB7DXLKpfNEPpLDkdUPrlFdHCcISbYsPRM",
+            "name": "projects/7581446318728368559/files/b94038dd367f45b7943d80cffa35fcf2"
           },
           "theme": {},
-          "title": "Editorial photography of a bespoke, multi-tiered wedding cake with delicate floral palette-knife frosting textures. Minimalist studio setting with soft side lighting, warm cream background, professional food styling. High-end bakery aesthetic.",
+          "title": "Editorial food photography of a stunning, multi-tiered artisanal wedding cake with delicate buttercream textures and fresh, minimal floral accents. Soft, warm morning light, shallow depth of field, high-end boutique bakery setting. Colors: cream, ivory, soft gold, and a hint of sage. Premium, sophisticated, inviting.",
           "width": "1376"
         },
         {
           "generatedBy": "interactive_ui_controller",
-          "height": "896",
-          "id": "50dafaecc3a5477faabe49e184498107",
-          "name": "projects/14924921870643557920/screens/50dafaecc3a5477faabe49e184498107",
-          "prompt": "Close-up of a baker's hands dusted with flour, decorating a rustic cake. Warm, moody lighting, artisanal feel, shallow depth of field. Professional culinary photography.",
+          "height": "848",
+          "id": "9080c3e73b99449c8660a4e6cb2ad50b",
+          "name": "projects/7581446318728368559/screens/9080c3e73b99449c8660a4e6cb2ad50b",
+          "prompt": "Close-up of a pastry chef's hands delicately placing a final garnish on a batch of gourmet cupcakes. Dusting of flour, warm wood surfaces, artisanal kitchen atmosphere. Soft-focus background. High-quality, authentic, local charm.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "IMAGE",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvxmRbQvkgt2A42VJOjDfqMMR_CzSMsD8Ro7OdAW1SugXkhJXc62htnUf_eWQTuEuXsHd6gv0cRPFBJod-JOwv3z9FsUyXzzY5zQOJjLcjmokzpEzj-EOHsccJ0E3E30JsYHJgT_JFSD0NDoZUcsr2raxQmL3EeJydxVzBKY26EUXXLPXiXzPvSYNj8kjQx2hvoItXzglGWb7J2F9q27qvYBNyIjnLElkg098F2vYSbD_sWAS5l7Mu1WRp4",
-            "name": "projects/14924921870643557920/files/c699f53a09ea433782562fdd0c9e981c"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt_17Lf4j31B_OUowNj4MMmc6vi23s75nQsAA87Nb1UsjjfSz53jEOwgU2odwMKPRc_7dak8_7PML35a2qp7In36MlAye1XiRLTRTNTCNSOXxN8vvtLy_4oEK0Thkb56FE1fjldzTzDEQnZXj9RZ66b_plF5p-J7ry1Qx8lpPchFWeV3M8aq_3fD1VuUzODFajPSrw5j96V-rqOYX7gUVnrBh3tOmS-ZeLH5V3SPTxpNR7OD2171YGAHhE",
+            "name": "projects/7581446318728368559/files/bbcb1f301b9b4689b705b7533de9d4f5"
           },
           "theme": {},
-          "title": "Close-up of a baker's hands dusted with flour, decorating a rustic cake. Warm, moody lighting, artisanal feel, shallow depth of field. Professional culinary photography.",
-          "width": "1200"
+          "title": "Close-up of a pastry chef's hands delicately placing a final garnish on a batch of gourmet cupcakes. Dusting of flour, warm wood surfaces, artisanal kitchen atmosphere. Soft-focus background. High-quality, authentic, local charm.",
+          "width": "1264"
         },
         {
           "generatedBy": "interactive_ui_controller",
-          "height": "1024",
-          "id": "4ff79907f8ec4776b61d79ad73de8a32",
-          "name": "projects/14924921870643557920/screens/4ff79907f8ec4776b61d79ad73de8a32",
-          "prompt": "A collection of gourmet cupcakes and pastries arranged artfully on a marble slab. High-end patisserie style, soft pastel accents, elegant composition.",
+          "height": "512",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sXzA4MGQ4NzBjOWFhNDQyNDk5NDk2ZWY0ZTgwZTFmZGEyEgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM3NTgxNDQ2MzE4NzI4MzY4NTU5&filename=&opi=96797242",
+            "mimeType": "image/svg+xml",
+            "name": "projects/7581446318728368559/files/086390b3d3fd4548b6cd4f6863ba086b"
+          },
+          "id": "61899f6f16bf4b9e94ba7db06e487a61",
+          "name": "projects/7581446318728368559/screens/61899f6f16bf4b9e94ba7db06e487a61",
+          "prompt": "Brand logo. - Primary color: #f9f5f0\n- Font: playfairDisplay\n- Mode: light\n- Roundness: rounded-lg\n",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "displayMode": "SVG",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtBANyu-xMEKmldw_ze_PEltOca2NsFblKpV6odd1kYQLEm4Jv5xmZdIyx-w7t-Fc-bpJOdVk4_Zlqt2eweBdyKgyaDjMF9-5OjEo95Di7MIHpB43JBxezr_6wmj0eydUXXZa5d4gMUq_WdSVCFLdRRlnXUB46vGJdPRR7e2rOaegis6vyYbHLJBVEvwIJ4YGinTd3naPX_VdOHmfiYKAhH6svzDSXEHgkkew2DAUD1dRWCUxjBaGPFURo",
+            "name": "projects/7581446318728368559/files/8e48e882e0324222b92c6964f87113df"
+          },
+          "theme": {},
+          "title": "Cecy's Cakes Logo",
+          "width": "512"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "670264f0ad544293a543072a2c281f3e",
+          "name": "projects/7581446318728368559/screens/670264f0ad544293a543072a2c281f3e",
+          "prompt": "A collection of artisanal baked goods (macarons, tarts, and small cakes) arranged on a marble counter in a sun-drenched bakery. Minimalist styling, editorial composition with generous whitespace. Elegant and appetizing.",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "IMAGE",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtN59m8cWSNaIqcE6fVcKQgo2VXPJQreECUnJWs0Rk5PKTuYDEVxYsVixmVTJi2KKhaxzMG5u5mq-KOtcgFnxKADWxrLCiYWaqQYiBOlRgAruJJ04akqVKA2lCnc36w6wPqAgkFHZDDDkM-ffqvbEn4ag9zgkkFi_g0VXZqT3T6nbFWQn4JpK8evUekhcz7NvYbvI9rClKWQggkbJHiTlJPjcuxNFdMGZNMYCegtpl22xyje7YVsA-Ghlw",
-            "name": "projects/14924921870643557920/files/9411022da0ab4cb782863fb581c356c9"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtGRwLxglq2bHQjhXRytlvhKqC0Ke8DmSbuJdHqSXDyhmRvUu4FE7olYu1Hxf5HBP_RAb-4IUw38DWVJ0viU8YyFBx6q5_5z3eZhYD2KkzthoUMLH9xmW2RZJy9_n1lLnNVqxCtrPnsGr5hQuRPEAw7SfPklHFX_bN8ElYEubkQR_BDgHc6w7u-DBa_pO6EiTnDxn7Fi25TmcUYj-cP09Vhh3TPq1UaQGyvOqvf-_4Q26Y2lrcQXvw1veo",
+            "name": "projects/7581446318728368559/files/3f0bdb544f03458dbb2992340089c808"
           },
           "theme": {},
-          "title": "A collection of gourmet cupcakes and pastries arranged artfully on a marble slab. High-end patisserie style, soft pastel accents, elegant composition.",
-          "width": "1024"
+          "title": "A collection of artisanal baked goods (macarons, tarts, and small cakes) arranged on a marble counter in a sun-drenched bakery. Minimalist styling, editorial composition with generous whitespace. Elegant and appetizing.",
+          "width": "1200"
         },
         {
           "designSystem": {
             "designSystem": {
-              "displayName": "Modern Artisan Patisserie",
-              "styleGuidelines": "## Brand & Style\nThe brand personality is **Modern Artisan Patisserie**—an intersection of traditional French pastry craftsmanship and contemporary editorial design. It targets a discerning audience that values quality, ingredients, and the aesthetic experience of fine baking.\n\nThe design style is **Editorial Minimalism**. It utilizes generous whitespace to create a \"gallery\" feel for product photography, allowing the vibrant colors of the pastries to lead. Key characteristics include:\n- **Sophisticated Overlaps:** Elements like images and text boxes should subtly overlap to create depth without relying on heavy shadows.\n- **Organic Textures:** Implementation of subtle \"flour-dust\" grain overlays on background surfaces to evoke a tactile, kitchen-side feeling.\n- **Refined Accents:** Usage of thin, high-contrast borders and delicate scalloped dividers to reinforce the artisanal theme.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Grid:** A 12-column grid with 24px gutters. Elements should often \"break the grid\" slightly—for example, an image might span 7 columns while its caption spans 4, leaving a 1-column gap for asymmetric balance.\n- **Whitespace:** Emphasize vertical rhythm with large section gaps (80px+). Content should never feel crowded; if in doubt, add more padding.\n- **Mobile Adaptivity:** On mobile, the 12-column grid collapses to 4 columns. Section gaps should scale down to 48px to maintain momentum while scrolling.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layers** and **Refined Outlines** rather than heavy shadows.\n\n- **Layering:** Use the Warm Cream base for the background, and a pure White (#FFFFFF) for elevated cards or \"floating\" recipe modules.\n- **Borders:** Define containers with 1px solid lines in Deep Cocoa at 15-20% opacity. This creates structure without visual noise.\n- **Subtle Shadows:** If elevation is required (e.g., for a \"Buy\" button or a modal), use a very soft, multi-layered shadow tinted with Deep Cocoa (e.g., `box-shadow: 0 10px 30px -10px rgba(61, 43, 31, 0.1)`).\n- **Glassmorphism:** Apply backdrop blurs (20px) to navigation bars to allow the rich colors of the pastry photography to bleed through as the user scrolls.\n\n## Components\n- **Buttons:** Primary buttons use a solid Dusty Rose background with Deep Cocoa text. Secondary buttons are \"Ghost\" style with a 1px Deep Cocoa border.\n- **Input Fields:** Minimalist design with only a bottom border in Deep Cocoa (40% opacity). Labels use the `label-caps` typography style positioned above the field.\n- **Cards:** Product cards should feature \"full-bleed\" photography at the top with a 1px border. The price and title should be set in Bodoni Moda.\n- **Chips/Tags:** Use Sage Leaf with 10% opacity for the background and 100% opacity for the text to indicate categories like \"Gluten-Free\" or \"Seasonal.\"\n- **Lists:** Ingredient lists should use custom bullets—either a small scalloped dot or a simple Deep Cocoa dash—with generous 12px spacing between items.\n- **Flour-Dust Texture:** Apply a global CSS noise overlay (opacity 0.03) to the main background to prevent the cream from looking \"flat\" or digital.",
+              "displayName": "Modern Editorial Bakery",
+              "styleGuidelines": "## Brand & Style\n\nThe design system is built for a premium, boutique culinary experience. The brand personality is sophisticated, artisanal, and curated, positioning the product as a luxury item rather than a commodity. The target audience values craftsmanship, intentionality, and high-end aesthetics.\n\nThe visual style is **Modern Editorial**. This approach treats the digital interface like a high-fashion lookbook or an architectural digest. Key characteristics include:\n- **Quiet Luxury:** Avoiding \"loud\" marketing patterns in favor of subtle, confident interactions.\n- **Gallery-Style Presentation:** Large, high-fidelity photography is treated as the primary content, framed by expansive whitespace.\n- **Architectural Rigor:** The use of asymmetric layouts and delicate hairline strokes creates a sense of structured elegance.\n- **Tactile Refinement:** Subtle transitions and soft color shifts mimic the experience of flipping through a heavy-stock paper magazine.\n\n## Layout & Spacing\n\nThe layout is governed by a 12-column grid but encourages **intentional asymmetry**.\n\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow the high-end photography to breathe. Avoid crowding elements; every product deserves its own \"frame.\"\n- **Asymmetric Offsets:** Images should often be slightly offset from their text descriptors, or overlap slightly using Z-index layers to create a sense of depth and modern composition.\n- **The Hairline Rule:** Use 0.5px lines in *Dark Cocoa* (at 20% opacity) to separate navigation, footer, or specific content blocks. These should feel like delicate threads rather than heavy dividers.\n- **Breakpoints:** \n  - **Desktop (1440px+):** Max-width 1280px with 80px side margins.\n  - **Tablet (768px-1024px):** 40px margins, 2-column product grids.\n  - **Mobile (below 768px):** 20px margins, single-column stack with center-aligned typography for headers.\n\n## Elevation & Depth\n\nTo maintain the \"Modern Editorial\" aesthetic, this design system avoids heavy drop shadows and standard material elevations.\n\n- **Tonal Layering:** Depth is created by placing *Vanilla Bean* containers over slightly darker *Neutral* backgrounds, or vice versa.\n- **Soft Shadows:** If a shadow is absolutely required (e.g., a floating cart or modal), it must be an ambient, highly-diffused shadow with a 0.05 opacity cocoa tint.\n- **Glassmorphism:** Use very subtle backdrop blurs (4px - 8px) for navigation bars when scrolling over imagery, maintaining a 90% opacity of the *Vanilla Bean* color.\n- **Image Overlaps:** Depth is primarily achieved through layout layering—text partially overlapping the edge of a clean, high-key cake photograph.\n\n## Components\n\n- **Buttons:** Primary buttons are solid *Dark Cocoa* with *Vanilla Bean* text, sharp corners, and 12px horizontal padding. Secondary buttons are \"Ghost\" style with a 0.5px border.\n- **Inputs:** Underline-only inputs are preferred for a minimal look. A simple hairline at the bottom that darkens on focus.\n- **Cards:** Product cards are borderless. The image takes the full width, with the title in *Playfair Display* and the price in *Hanken Grotesk* wide-tracked below it.\n- **Chips/Tags:** Used for flavors or categories. These should be small, all-caps, with wide tracking and no background—separated by a vertical slash `/`.\n- **Navigation:** A minimal top bar. Links are small, uppercase, and disappear on scroll, reappearing only on \"scroll up\" to maximize the gallery view.\n- **Image Containers:** Always use a subtle 1px inset border or a soft cream background-color as a placeholder to maintain the \"frame\" before high-res assets load.",
               "theme": {
-                "bodyFont": "DM_SANS",
-                "bodyFontFamily": "Dm Sans",
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
                 "colorMode": "LIGHT",
                 "colorVariant": "FIDELITY",
-                "customColor": "#fdf8f5",
-                "designMd": "---\nname: Modern Artisan Patisserie\ncolors:\n  surface: '#fdf8f7'\n  surface-dim: '#ddd9d8'\n  surface-bright: '#fdf8f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3f2'\n  surface-container: '#f1edec'\n  surface-container-high: '#ebe7e6'\n  surface-container-highest: '#e6e2e1'\n  on-surface: '#1c1b1b'\n  on-surface-variant: '#4a4640'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f4f0ef'\n  outline: '#7b766f'\n  outline-variant: '#ccc6bd'\n  surface-tint: '#605e5c'\n  primary: '#605e5c'\n  on-primary: '#ffffff'\n  primary-container: '#fdf8f5'\n  on-primary-container: '#74726f'\n  inverse-primary: '#cac6c3'\n  secondary: '#705a4c'\n  on-secondary: '#ffffff'\n  secondary-container: '#f8dac8'\n  on-secondary-container: '#755e50'\n  tertiary: '#7d562d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#fff8f5'\n  on-tertiary-container: '#946a3f'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2df'\n  primary-fixed-dim: '#cac6c3'\n  on-primary-fixed: '#1c1b1a'\n  on-primary-fixed-variant: '#484644'\n  secondary-fixed: '#fbddca'\n  secondary-fixed-dim: '#dec1af'\n  on-secondary-fixed: '#28180d'\n  on-secondary-fixed-variant: '#574335'\n  tertiary-fixed: '#ffdcbd'\n  tertiary-fixed-dim: '#f0bd8b'\n  on-tertiary-fixed: '#2c1600'\n  on-tertiary-fixed-variant: '#623f18'\n  background: '#fdf8f7'\n  on-background: '#1c1b1b'\n  surface-variant: '#e6e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 80px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n---\n\n## Brand & Style\nThe brand personality is **Modern Artisan Patisserie**—an intersection of traditional French pastry craftsmanship and contemporary editorial design. It targets a discerning audience that values quality, ingredients, and the aesthetic experience of fine baking.\n\nThe design style is **Editorial Minimalism**. It utilizes generous whitespace to create a \"gallery\" feel for product photography, allowing the vibrant colors of the pastries to lead. Key characteristics include:\n- **Sophisticated Overlaps:** Elements like images and text boxes should subtly overlap to create depth without relying on heavy shadows.\n- **Organic Textures:** Implementation of subtle \"flour-dust\" grain overlays on background surfaces to evoke a tactile, kitchen-side feeling.\n- **Refined Accents:** Usage of thin, high-contrast borders and delicate scalloped dividers to reinforce the artisanal theme.\n\n## Colors\nThe palette is rooted in natural, earthy tones that reflect raw baking ingredients.\n\n- **Warm Cream (#FDF8F5):** The primary canvas. Used for all large surfaces to maintain a soft, inviting, and premium atmosphere.\n- **Deep Cocoa (#3D2B1F):** The primary ink color. Used for all typography and structural borders to ensure maximum legibility and a high-end feel.\n- **Dusty Rose (#D4A373):** Used for primary calls to action, highlights, and decorative flourishes. It provides a warm, celebratory energy.\n- **Sage Leaf (#A3B18A):** A secondary accent used for botanical elements, health-related callouts, or environmental storytelling.\n\n## Typography\nThe typography strategy relies on the tension between a romantic, high-contrast Serif and a functional, airy Sans-Serif.\n\n- **Headlines (Bodoni Moda):** Should be treated as a design element. Use tight letter-spacing for large display sizes to emphasize the thick-and-thin stroke contrast.\n- **Body & Utility (DM Sans):** Selected for its geometric clarity and wide apertures. For body copy, use generous line heights (1.6) to improve readability against the cream background.\n- **Labels:** Always use uppercase with wide tracking (0.15em) for category headers and small metadata to maintain the editorial \"masthead\" look.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Grid:** A 12-column grid with 24px gutters. Elements should often \"break the grid\" slightly—for example, an image might span 7 columns while its caption spans 4, leaving a 1-column gap for asymmetric balance.\n- **Whitespace:** Emphasize vertical rhythm with large section gaps (80px+). Content should never feel crowded; if in doubt, add more padding.\n- **Mobile Adaptivity:** On mobile, the 12-column grid collapses to 4 columns. Section gaps should scale down to 48px to maintain momentum while scrolling.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layers** and **Refined Outlines** rather than heavy shadows.\n\n- **Layering:** Use the Warm Cream base for the background, and a pure White (#FFFFFF) for elevated cards or \"floating\" recipe modules.\n- **Borders:** Define containers with 1px solid lines in Deep Cocoa at 15-20% opacity. This creates structure without visual noise.\n- **Subtle Shadows:** If elevation is required (e.g., for a \"Buy\" button or a modal), use a very soft, multi-layered shadow tinted with Deep Cocoa (e.g., `box-shadow: 0 10px 30px -10px rgba(61, 43, 31, 0.1)`).\n- **Glassmorphism:** Apply backdrop blurs (20px) to navigation bars to allow the rich colors of the pastry photography to bleed through as the user scrolls.\n\n## Shapes\nThe shape language is primarily **Soft (0.25rem)**, echoing the precision of a pastry chef's knife.\n\n- **Corner Radius:** Standard buttons and cards use a subtle 4px (0.25rem) radius. Large image containers can go up to 12px (0.75rem).\n- **The Scallop Motif:** Use a repeating semi-circle \"scalloped\" edge for horizontal dividers or the bottom edge of hero sections. This motif should be used sparingly as a \"signature\" rather than a frequent container shape.\n- **Buttons:** Buttons are rectangular with soft corners, never fully rounded pills, to maintain the architectural feel of the design.\n\n## Components\n- **Buttons:** Primary buttons use a solid Dusty Rose background with Deep Cocoa text. Secondary buttons are \"Ghost\" style with a 1px Deep Cocoa border.\n- **Input Fields:** Minimalist design with only a bottom border in Deep Cocoa (40% opacity). Labels use the `label-caps` typography style positioned above the field.\n- **Cards:** Product cards should feature \"full-bleed\" photography at the top with a 1px border. The price and title should be set in Bodoni Moda.\n- **Chips/Tags:** Use Sage Leaf with 10% opacity for the background and 100% opacity for the text to indicate categories like \"Gluten-Free\" or \"Seasonal.\"\n- **Lists:** Ingredient lists should use custom bullets—either a small scalloped dot or a simple Deep Cocoa dash—with generous 12px spacing between items.\n- **Flour-Dust Texture:** Apply a global CSS noise overlay (opacity 0.03) to the main background to prevent the cream from looking \"flat\" or digital.",
-                "font": "BODONI_MODA",
-                "headlineFont": "BODONI_MODA",
-                "headlineFontFamily": "Bodoni Moda",
-                "labelFont": "DM_SANS",
-                "labelFontFamily": "Dm Sans",
+                "customColor": "#f9f5f0",
+                "designMd": "---\nname: Modern Editorial Bakery\ncolors:\n  surface: '#fff8f0'\n  surface-dim: '#dfd9d1'\n  surface-bright: '#fff8f0'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f9f3ea'\n  surface-container: '#f3ede5'\n  surface-container-high: '#ede7df'\n  surface-container-highest: '#e8e2da'\n  on-surface: '#1d1b17'\n  on-surface-variant: '#484740'\n  inverse-surface: '#33302b'\n  inverse-on-surface: '#f6f0e8'\n  outline: '#79776f'\n  outline-variant: '#c9c6bd'\n  surface-tint: '#605e5b'\n  primary: '#605e5b'\n  on-primary: '#ffffff'\n  primary-container: '#f9f5f0'\n  on-primary-container: '#72706c'\n  inverse-primary: '#c9c6c1'\n  secondary: '#655c5a'\n  on-secondary: '#ffffff'\n  secondary-container: '#eaddd9'\n  on-secondary-container: '#6a615e'\n  tertiary: '#615d5f'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#faf4f6'\n  on-tertiary-container: '#736f71'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2dd'\n  primary-fixed-dim: '#c9c6c1'\n  on-primary-fixed: '#1c1c19'\n  on-primary-fixed-variant: '#484743'\n  secondary-fixed: '#ede0dc'\n  secondary-fixed-dim: '#d0c4c0'\n  on-secondary-fixed: '#201a18'\n  on-secondary-fixed-variant: '#4d4542'\n  tertiary-fixed: '#e7e1e3'\n  tertiary-fixed-dim: '#cac5c7'\n  on-tertiary-fixed: '#1d1b1d'\n  on-tertiary-fixed-variant: '#494648'\n  background: '#fff8f0'\n  on-background: '#1d1b17'\n  surface-variant: '#e8e2da'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  nav-link:\n    fontFamily: Hanken Grotesk\n    fontSize: 13px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  label-sm:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 120px\n  hairline: 0.5px\n---\n\n## Brand & Style\n\nThe design system is built for a premium, boutique culinary experience. The brand personality is sophisticated, artisanal, and curated, positioning the product as a luxury item rather than a commodity. The target audience values craftsmanship, intentionality, and high-end aesthetics.\n\nThe visual style is **Modern Editorial**. This approach treats the digital interface like a high-fashion lookbook or an architectural digest. Key characteristics include:\n- **Quiet Luxury:** Avoiding \"loud\" marketing patterns in favor of subtle, confident interactions.\n- **Gallery-Style Presentation:** Large, high-fidelity photography is treated as the primary content, framed by expansive whitespace.\n- **Architectural Rigor:** The use of asymmetric layouts and delicate hairline strokes creates a sense of structured elegance.\n- **Tactile Refinement:** Subtle transitions and soft color shifts mimic the experience of flipping through a heavy-stock paper magazine.\n\n## Colors\n\nThe palette is rooted in organic, culinary tones to evoke quality and warmth without relying on traditional \"sweet\" clichés.\n\n- **Vanilla Bean (#F9F5F0):** The primary canvas color. A rich, warm off-white that feels more premium and softer than pure white.\n- **Dark Cocoa (#1A1412):** Used for primary typography and structural elements. It provides a softer, more sophisticated contrast than pure black.\n- **Sage (#8A9A8E):** A singular, muted accent used sparingly for call-to-actions, success states, or subtle highlighting.\n- **Tonal Neutrals:** Secondary surfaces use slight variations of the base cream to create soft depth and separation between sections.\n\n## Typography\n\nThis design system utilizes a high-contrast typographic pairing to achieve an editorial feel.\n\n- **Headlines:** Uses *Playfair Display*. The Serif is used for storytelling, product names, and section headers. It should be set with tight leading and slight negative tracking for a \"locked-in\" professional look.\n- **Utility & Navigation:** Uses *Hanken Grotesk*. This clean, contemporary Sans-Serif provides functional clarity. \n- **Tracking:** Navigation elements and labels use wide letter-spacing (15%) and uppercase styling to evoke luxury branding and ensure legibility at small sizes.\n- **Hierarchy:** Maintain a clear distinction between the \"voice\" (Serif) and the \"engine\" (Sans-Serif) of the interface.\n\n## Layout & Spacing\n\nThe layout is governed by a 12-column grid but encourages **intentional asymmetry**.\n\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow the high-end photography to breathe. Avoid crowding elements; every product deserves its own \"frame.\"\n- **Asymmetric Offsets:** Images should often be slightly offset from their text descriptors, or overlap slightly using Z-index layers to create a sense of depth and modern composition.\n- **The Hairline Rule:** Use 0.5px lines in *Dark Cocoa* (at 20% opacity) to separate navigation, footer, or specific content blocks. These should feel like delicate threads rather than heavy dividers.\n- **Breakpoints:** \n  - **Desktop (1440px+):** Max-width 1280px with 80px side margins.\n  - **Tablet (768px-1024px):** 40px margins, 2-column product grids.\n  - **Mobile (below 768px):** 20px margins, single-column stack with center-aligned typography for headers.\n\n## Elevation & Depth\n\nTo maintain the \"Modern Editorial\" aesthetic, this design system avoids heavy drop shadows and standard material elevations.\n\n- **Tonal Layering:** Depth is created by placing *Vanilla Bean* containers over slightly darker *Neutral* backgrounds, or vice versa.\n- **Soft Shadows:** If a shadow is absolutely required (e.g., a floating cart or modal), it must be an ambient, highly-diffused shadow with a 0.05 opacity cocoa tint.\n- **Glassmorphism:** Use very subtle backdrop blurs (4px - 8px) for navigation bars when scrolling over imagery, maintaining a 90% opacity of the *Vanilla Bean* color.\n- **Image Overlaps:** Depth is primarily achieved through layout layering—text partially overlapping the edge of a clean, high-key cake photograph.\n\n## Shapes\n\nThe design system adopts a **Sharp (0)** roundedness philosophy. \n\n- **Hard Edges:** All buttons, input fields, and image containers use 0px border radius. This reinforces the architectural, high-fashion editorial look.\n- **Structural Lines:** Use the 0.5px hairline for borders rather than fills whenever possible to keep the interface feeling light and \"sketched.\"\n- **Interaction:** Hover states should involve color fills or shifts rather than rounding of corners to maintain consistency with the sharp-edged aesthetic.\n\n## Components\n\n- **Buttons:** Primary buttons are solid *Dark Cocoa* with *Vanilla Bean* text, sharp corners, and 12px horizontal padding. Secondary buttons are \"Ghost\" style with a 0.5px border.\n- **Inputs:** Underline-only inputs are preferred for a minimal look. A simple hairline at the bottom that darkens on focus.\n- **Cards:** Product cards are borderless. The image takes the full width, with the title in *Playfair Display* and the price in *Hanken Grotesk* wide-tracked below it.\n- **Chips/Tags:** Used for flavors or categories. These should be small, all-caps, with wide tracking and no background—separated by a vertical slash `/`.\n- **Navigation:** A minimal top bar. Links are small, uppercase, and disappear on scroll, reappearing only on \"scroll up\" to maximize the gallery view.\n- **Image Containers:** Always use a subtle 1px inset border or a soft cream background-color as a placeholder to maintain the \"frame\" before high-res assets load.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "HANKEN_GROTESK",
+                "labelFontFamily": "Hanken Grotesk",
                 "namedColors": {
-                  "background": "#fdf8f7",
+                  "background": "#fff8f0",
                   "error": "#ba1a1a",
                   "error_container": "#ffdad6",
-                  "inverse_on_surface": "#f4f0ef",
-                  "inverse_primary": "#cac6c3",
-                  "inverse_surface": "#313030",
-                  "on_background": "#1c1b1b",
+                  "inverse_on_surface": "#f6f0e8",
+                  "inverse_primary": "#c9c6c1",
+                  "inverse_surface": "#33302b",
+                  "on_background": "#1d1b17",
                   "on_error": "#ffffff",
                   "on_error_container": "#93000a",
                   "on_primary": "#ffffff",
-                  "on_primary_container": "#74726f",
-                  "on_primary_fixed": "#1c1b1a",
-                  "on_primary_fixed_variant": "#484644",
+                  "on_primary_container": "#72706c",
+                  "on_primary_fixed": "#1c1c19",
+                  "on_primary_fixed_variant": "#484743",
                   "on_secondary": "#ffffff",
-                  "on_secondary_container": "#755e50",
-                  "on_secondary_fixed": "#28180d",
-                  "on_secondary_fixed_variant": "#574335",
-                  "on_surface": "#1c1b1b",
-                  "on_surface_variant": "#4a4640",
+                  "on_secondary_container": "#6a615e",
+                  "on_secondary_fixed": "#201a18",
+                  "on_secondary_fixed_variant": "#4d4542",
+                  "on_surface": "#1d1b17",
+                  "on_surface_variant": "#484740",
                   "on_tertiary": "#ffffff",
-                  "on_tertiary_container": "#946a3f",
-                  "on_tertiary_fixed": "#2c1600",
-                  "on_tertiary_fixed_variant": "#623f18",
-                  "outline": "#7b766f",
-                  "outline_variant": "#ccc6bd",
-                  "primary": "#605e5c",
-                  "primary_container": "#fdf8f5",
-                  "primary_fixed": "#e6e2df",
-                  "primary_fixed_dim": "#cac6c3",
-                  "secondary": "#705a4c",
-                  "secondary_container": "#f8dac8",
-                  "secondary_fixed": "#fbddca",
-                  "secondary_fixed_dim": "#dec1af",
-                  "surface": "#fdf8f7",
-                  "surface_bright": "#fdf8f7",
-                  "surface_container": "#f1edec",
-                  "surface_container_high": "#ebe7e6",
-                  "surface_container_highest": "#e6e2e1",
-                  "surface_container_low": "#f7f3f2",
+                  "on_tertiary_container": "#736f71",
+                  "on_tertiary_fixed": "#1d1b1d",
+                  "on_tertiary_fixed_variant": "#494648",
+                  "outline": "#79776f",
+                  "outline_variant": "#c9c6bd",
+                  "primary": "#605e5b",
+                  "primary_container": "#f9f5f0",
+                  "primary_fixed": "#e6e2dd",
+                  "primary_fixed_dim": "#c9c6c1",
+                  "secondary": "#655c5a",
+                  "secondary_container": "#eaddd9",
+                  "secondary_fixed": "#ede0dc",
+                  "secondary_fixed_dim": "#d0c4c0",
+                  "surface": "#fff8f0",
+                  "surface_bright": "#fff8f0",
+                  "surface_container": "#f3ede5",
+                  "surface_container_high": "#ede7df",
+                  "surface_container_highest": "#e8e2da",
+                  "surface_container_low": "#f9f3ea",
                   "surface_container_lowest": "#ffffff",
-                  "surface_dim": "#ddd9d8",
-                  "surface_tint": "#605e5c",
-                  "surface_variant": "#e6e2e1",
-                  "tertiary": "#7d562d",
-                  "tertiary_container": "#fff8f5",
-                  "tertiary_fixed": "#ffdcbd",
-                  "tertiary_fixed_dim": "#f0bd8b"
+                  "surface_dim": "#dfd9d1",
+                  "surface_tint": "#605e5b",
+                  "surface_variant": "#e8e2da",
+                  "tertiary": "#615d5f",
+                  "tertiary_container": "#faf4f6",
+                  "tertiary_fixed": "#e7e1e3",
+                  "tertiary_fixed_dim": "#cac5c7"
                 },
-                "overridePrimaryColor": "#fdf8f5",
-                "overrideSecondaryColor": "#3d2b1f",
-                "overrideTertiaryColor": "#d4a373",
-                "roundness": "ROUND_FOUR",
+                "overrideNeutralColor": "#e8e2da",
+                "overridePrimaryColor": "#f9f5f0",
+                "overrideSecondaryColor": "#1a1412",
                 "spacing": {
-                  "base": "8px",
-                  "container-max": "1280px",
                   "gutter": "24px",
+                  "hairline": "0.5px",
+                  "margin-desktop": "80px",
                   "margin-mobile": "20px",
-                  "section-gap": "80px"
+                  "section-gap": "120px",
+                  "unit": "4px"
                 },
                 "spacingScale": 2,
                 "typography": {
                   "body-lg": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Hanken Grotesk",
                     "fontSize": "18px",
                     "fontWeight": "400",
                     "letterSpacing": "0.01em",
                     "lineHeight": "1.6"
                   },
                   "body-md": {
-                    "fontFamily": "DM Sans",
+                    "fontFamily": "Hanken Grotesk",
                     "fontSize": "16px",
                     "fontWeight": "400",
-                    "lineHeight": "1.6"
+                    "lineHeight": "1.5"
                   },
                   "display-lg": {
-                    "fontFamily": "Bodoni Moda",
+                    "fontFamily": "Playfair Display",
                     "fontSize": "64px",
-                    "fontWeight": "700",
+                    "fontWeight": "600",
                     "letterSpacing": "-0.02em",
                     "lineHeight": "1.1"
                   },
                   "display-lg-mobile": {
-                    "fontFamily": "Bodoni Moda",
+                    "fontFamily": "Playfair Display",
                     "fontSize": "40px",
-                    "fontWeight": "700",
-                    "lineHeight": "1.2"
+                    "fontWeight": "600",
+                    "lineHeight": "1.1"
                   },
                   "headline-md": {
-                    "fontFamily": "Bodoni Moda",
+                    "fontFamily": "Playfair Display",
                     "fontSize": "32px",
-                    "fontWeight": "600",
+                    "fontWeight": "500",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "500",
                     "lineHeight": "1.3"
                   },
-                  "label-caps": {
-                    "fontFamily": "DM Sans",
+                  "label-sm": {
+                    "fontFamily": "Hanken Grotesk",
                     "fontSize": "12px",
-                    "fontWeight": "700",
+                    "fontWeight": "500",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "1"
+                  },
+                  "nav-link": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "13px",
+                    "fontWeight": "600",
                     "letterSpacing": "0.15em",
-                    "lineHeight": "1.0"
+                    "lineHeight": "1"
                   }
                 }
               }
             },
-            "name": "assets/05c4629fd1ce4e68875173921e728986",
+            "name": "assets/7b927d5a520443ef9608e6838d446497",
             "version": "1"
           },
           "deviceType": "DESKTOP",
           "generatedBy": "figaro_agent",
-          "height": "10946",
+          "height": "11736",
           "htmlCode": {
-            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzRiMzUxODkwMTk4YjRiNDNhNTZlNTI0ZmQzZjEzNTE1EgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDkyNDkyMTg3MDY0MzU1NzkyMA&filename=&opi=96797242",
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2RkMDM0OTc5MDEzYTRmNmJiYmY0NWFlNDlmYzQ1MWY4EgsSBxDBloTL-h4YAZIBIwoKcHJvamVjdF9pZBIVQhM3NTgxNDQ2MzE4NzI4MzY4NTU5&filename=&opi=96797242",
             "mimeType": "text/html",
-            "name": "projects/14924921870643557920/files/8fa813a25deb422791a10a83224aa6a8"
+            "name": "projects/7581446318728368559/files/864620e1dff640d288e4cc41d64518d9"
           },
-          "id": "f819dca9f3ad45d083d0533766dd8c4a",
-          "name": "projects/14924921870643557920/screens/f819dca9f3ad45d083d0533766dd8c4a",
-          "prompt": "Create a bespoke, editorial-grade homepage for Cecy's Cakes. \n\n- Header: Includes (417) 529-9422 and a logo \"Cecy's Cakes\" in high-contrast serif.\n- Hero: Large high-end typography \"Artistry You Can Taste\" overlapping with {{DATA:IMAGE:IMAGE_2}}.\n- Credibility: A minimalist section with a single powerful testimonial and \"As featured in...\" brand mentions.\n- Services: Grid with overlapping edges featuring 'Wedding Collections' (using {{DATA:IMAGE:IMAGE_2}}), 'Gourmet Cupcakes' (using {{DATA:IMAGE:IMAGE_4}}), and 'Celebration Cakes'.\n- About: \"The Hands Behind the Batter\" featuring {{DATA:IMAGE:IMAGE_3}} and copy about artisan craft in Joplin, MO.\n- Visit: Section with address (116 North Rangeline Road, Joplin, MO 64801) and a map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: A elegant form for cake inquiries.\n- Footer: Comprehensive with cecyvilla71@gmail.com and secondary navigation.\n\nDesign style: Use the \"Modern Artisan Patisserie\" theme from the design system. High contrast between Deep Cocoa text and Warm Cream backgrounds. Subtle floral motifs and generous whitespace. CSS animations for smooth entrance of text and images.",
+          "id": "8350cb4cf1204511b2e158623e7e56a3",
+          "name": "projects/7581446318728368559/screens/8350cb4cf1204511b2e158623e7e56a3",
+          "prompt": "Build the full DESKTOP landing page for Cecy's Cakes. \n- Business Name: Cecy's Cakes\n- Contact: (417) 529-9422 | cecyvilla71@gmail.com | 116 North Rangeline Road, Joplin, MO 64801\n- Sections Required: Header (phone, logo, nav), Hero (stunning cake image {{DATA:IMAGE:IMAGE_4}}), Credibility (The Cecy's standard), Offerings (Wedding, Custom, Daily), About (Meet the Baker), Visit (with empty map panel `<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`), Contact form, Footer.\n\nDesign Style:\n- Unique 'Editorial' layout. Not a template. Use a mix of full-width and staggered sections.\n- Thin 0.5px horizontal and vertical lines as decorative borders and separators.\n- Overlapping elements (e.g., text blocks over images {{DATA:IMAGE:IMAGE_5}} or {{DATA:IMAGE:IMAGE_6}}).\n- High-contrast serif typography for large, confident headlines.\n- Minimalist contact form with floating labels.\n- The logo {{DATA:IMAGE:IMAGE_2}} should be prominent in the header and footer.\n- Smooth scroll and subtle reveal animations on scroll.\n- Responsive design ensuring a premium look on all screens.\n- NO LOREM IPSUM. Write real, evocative copy about Joplin's finest artisanal bakery.\n## Available Images\nYou MUST include the following images in this design. You must reference them\nby putting their exact placeholder IDs in `src` attributes or CSS\n`background-image` rules. Do NOT use external URLs or generate new\nplaceholders. Preserve these IDs exactly as written. Read each image's\nDescription to understand its subject, intended section, and visual role.\n\n- {{DATA:IMAGE:IMAGE_2}}\n  Alt Text: Cecy's Cakes Logo\n  Description: Brand logo. - Primary color: #f9f5f0\n- Font: playfairDisplay\n- Mode: light\n- Roundness: rounded-lg\n\n  Dimensions: 512x512\n  Aspect Ratio: 1.00\n  Colors: #2D241E\n",
           "screenMetadata": {
             "agentType": "PRO_AGENT",
             "status": "COMPLETE"
           },
           "screenType": "DESIGN",
           "screenshot": {
-            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLshQ483sO9cIKOeRTFtY77eeGP0M1bvmyyIwFMCyx4tE8ClaGGdWuwFDShnKsFJb6WpIynNw9HapgsGMSdwTZYz8_xFVCoWo-YAcTdzte3FpACj8Zv_jII8v0GzEFo-nTl8eMXo3XMAt5NHaQXbTfUKpn3Wq0omb4yDMIi_rpKg_Fug_KeL7CYRyE-iKs8XoJcOuerTpBAvDQsw__riughYKr0o2sJWEV5e0PNBJkyKFXQzg91C6qpSRAFf",
-            "name": "projects/14924921870643557920/files/1b2263e1f3ab4b74ab494f4e65ea04a3"
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtf57Uw-NJRgmycKKNaRfKxKw_5S_cMY9RVg0EHQQnXge4f7Xcq_8o5ivQ8h3mcQ88bI4XPVu66F0Hf1KDluDhcSYChGUZJA77d0rTzMP-YbYKsr6e7A5K3x0Vep62RJyEUxc6KhZ1Jp0vb2e6SFocSQrH73nLIopbsJQevKOrXJ8IF92o8hKhBLMbGevVNfr6Mw7ck95axTrlKBbb1KNHSnXJIwTYgCPVd2VyWqNrU-B1P75xdeXi9DQ",
+            "name": "projects/7581446318728368559/files/3630660b82bb4df48e0972ac47552f49"
           },
           "theme": {
-            "bodyFont": "DM_SANS",
-            "bodyFontFamily": "Dm Sans",
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
             "colorMode": "LIGHT",
             "colorVariant": "FIDELITY",
-            "customColor": "#fdf8f5",
-            "designMd": "---\nname: Modern Artisan Patisserie\ncolors:\n  surface: '#fdf8f7'\n  surface-dim: '#ddd9d8'\n  surface-bright: '#fdf8f7'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f7f3f2'\n  surface-container: '#f1edec'\n  surface-container-high: '#ebe7e6'\n  surface-container-highest: '#e6e2e1'\n  on-surface: '#1c1b1b'\n  on-surface-variant: '#4a4640'\n  inverse-surface: '#313030'\n  inverse-on-surface: '#f4f0ef'\n  outline: '#7b766f'\n  outline-variant: '#ccc6bd'\n  surface-tint: '#605e5c'\n  primary: '#605e5c'\n  on-primary: '#ffffff'\n  primary-container: '#fdf8f5'\n  on-primary-container: '#74726f'\n  inverse-primary: '#cac6c3'\n  secondary: '#705a4c'\n  on-secondary: '#ffffff'\n  secondary-container: '#f8dac8'\n  on-secondary-container: '#755e50'\n  tertiary: '#7d562d'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#fff8f5'\n  on-tertiary-container: '#946a3f'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2df'\n  primary-fixed-dim: '#cac6c3'\n  on-primary-fixed: '#1c1b1a'\n  on-primary-fixed-variant: '#484644'\n  secondary-fixed: '#fbddca'\n  secondary-fixed-dim: '#dec1af'\n  on-secondary-fixed: '#28180d'\n  on-secondary-fixed-variant: '#574335'\n  tertiary-fixed: '#ffdcbd'\n  tertiary-fixed-dim: '#f0bd8b'\n  on-tertiary-fixed: '#2c1600'\n  on-tertiary-fixed-variant: '#623f18'\n  background: '#fdf8f7'\n  on-background: '#1c1b1b'\n  surface-variant: '#e6e2e1'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: DM Sans\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.15em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  base: 8px\n  section-gap: 80px\n  container-max: 1280px\n  gutter: 24px\n  margin-mobile: 20px\n---\n\n## Brand & Style\nThe brand personality is **Modern Artisan Patisserie**—an intersection of traditional French pastry craftsmanship and contemporary editorial design. It targets a discerning audience that values quality, ingredients, and the aesthetic experience of fine baking.\n\nThe design style is **Editorial Minimalism**. It utilizes generous whitespace to create a \"gallery\" feel for product photography, allowing the vibrant colors of the pastries to lead. Key characteristics include:\n- **Sophisticated Overlaps:** Elements like images and text boxes should subtly overlap to create depth without relying on heavy shadows.\n- **Organic Textures:** Implementation of subtle \"flour-dust\" grain overlays on background surfaces to evoke a tactile, kitchen-side feeling.\n- **Refined Accents:** Usage of thin, high-contrast borders and delicate scalloped dividers to reinforce the artisanal theme.\n\n## Colors\nThe palette is rooted in natural, earthy tones that reflect raw baking ingredients.\n\n- **Warm Cream (#FDF8F5):** The primary canvas. Used for all large surfaces to maintain a soft, inviting, and premium atmosphere.\n- **Deep Cocoa (#3D2B1F):** The primary ink color. Used for all typography and structural borders to ensure maximum legibility and a high-end feel.\n- **Dusty Rose (#D4A373):** Used for primary calls to action, highlights, and decorative flourishes. It provides a warm, celebratory energy.\n- **Sage Leaf (#A3B18A):** A secondary accent used for botanical elements, health-related callouts, or environmental storytelling.\n\n## Typography\nThe typography strategy relies on the tension between a romantic, high-contrast Serif and a functional, airy Sans-Serif.\n\n- **Headlines (Bodoni Moda):** Should be treated as a design element. Use tight letter-spacing for large display sizes to emphasize the thick-and-thin stroke contrast.\n- **Body & Utility (DM Sans):** Selected for its geometric clarity and wide apertures. For body copy, use generous line heights (1.6) to improve readability against the cream background.\n- **Labels:** Always use uppercase with wide tracking (0.15em) for category headers and small metadata to maintain the editorial \"masthead\" look.\n\n## Layout & Spacing\nThis design system uses a **Fixed Grid** model on desktop and a **Fluid Grid** on mobile.\n\n- **Grid:** A 12-column grid with 24px gutters. Elements should often \"break the grid\" slightly—for example, an image might span 7 columns while its caption spans 4, leaving a 1-column gap for asymmetric balance.\n- **Whitespace:** Emphasize vertical rhythm with large section gaps (80px+). Content should never feel crowded; if in doubt, add more padding.\n- **Mobile Adaptivity:** On mobile, the 12-column grid collapses to 4 columns. Section gaps should scale down to 48px to maintain momentum while scrolling.\n\n## Elevation & Depth\nDepth is achieved through **Tonal Layers** and **Refined Outlines** rather than heavy shadows.\n\n- **Layering:** Use the Warm Cream base for the background, and a pure White (#FFFFFF) for elevated cards or \"floating\" recipe modules.\n- **Borders:** Define containers with 1px solid lines in Deep Cocoa at 15-20% opacity. This creates structure without visual noise.\n- **Subtle Shadows:** If elevation is required (e.g., for a \"Buy\" button or a modal), use a very soft, multi-layered shadow tinted with Deep Cocoa (e.g., `box-shadow: 0 10px 30px -10px rgba(61, 43, 31, 0.1)`).\n- **Glassmorphism:** Apply backdrop blurs (20px) to navigation bars to allow the rich colors of the pastry photography to bleed through as the user scrolls.\n\n## Shapes\nThe shape language is primarily **Soft (0.25rem)**, echoing the precision of a pastry chef's knife.\n\n- **Corner Radius:** Standard buttons and cards use a subtle 4px (0.25rem) radius. Large image containers can go up to 12px (0.75rem).\n- **The Scallop Motif:** Use a repeating semi-circle \"scalloped\" edge for horizontal dividers or the bottom edge of hero sections. This motif should be used sparingly as a \"signature\" rather than a frequent container shape.\n- **Buttons:** Buttons are rectangular with soft corners, never fully rounded pills, to maintain the architectural feel of the design.\n\n## Components\n- **Buttons:** Primary buttons use a solid Dusty Rose background with Deep Cocoa text. Secondary buttons are \"Ghost\" style with a 1px Deep Cocoa border.\n- **Input Fields:** Minimalist design with only a bottom border in Deep Cocoa (40% opacity). Labels use the `label-caps` typography style positioned above the field.\n- **Cards:** Product cards should feature \"full-bleed\" photography at the top with a 1px border. The price and title should be set in Bodoni Moda.\n- **Chips/Tags:** Use Sage Leaf with 10% opacity for the background and 100% opacity for the text to indicate categories like \"Gluten-Free\" or \"Seasonal.\"\n- **Lists:** Ingredient lists should use custom bullets—either a small scalloped dot or a simple Deep Cocoa dash—with generous 12px spacing between items.\n- **Flour-Dust Texture:** Apply a global CSS noise overlay (opacity 0.03) to the main background to prevent the cream from looking \"flat\" or digital.",
-            "font": "BODONI_MODA",
-            "headlineFont": "BODONI_MODA",
-            "headlineFontFamily": "Bodoni Moda",
-            "labelFont": "DM_SANS",
-            "labelFontFamily": "Dm Sans",
+            "customColor": "#f9f5f0",
+            "designMd": "---\nname: Modern Editorial Bakery\ncolors:\n  surface: '#fff8f0'\n  surface-dim: '#dfd9d1'\n  surface-bright: '#fff8f0'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f9f3ea'\n  surface-container: '#f3ede5'\n  surface-container-high: '#ede7df'\n  surface-container-highest: '#e8e2da'\n  on-surface: '#1d1b17'\n  on-surface-variant: '#484740'\n  inverse-surface: '#33302b'\n  inverse-on-surface: '#f6f0e8'\n  outline: '#79776f'\n  outline-variant: '#c9c6bd'\n  surface-tint: '#605e5b'\n  primary: '#605e5b'\n  on-primary: '#ffffff'\n  primary-container: '#f9f5f0'\n  on-primary-container: '#72706c'\n  inverse-primary: '#c9c6c1'\n  secondary: '#655c5a'\n  on-secondary: '#ffffff'\n  secondary-container: '#eaddd9'\n  on-secondary-container: '#6a615e'\n  tertiary: '#615d5f'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#faf4f6'\n  on-tertiary-container: '#736f71'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e6e2dd'\n  primary-fixed-dim: '#c9c6c1'\n  on-primary-fixed: '#1c1c19'\n  on-primary-fixed-variant: '#484743'\n  secondary-fixed: '#ede0dc'\n  secondary-fixed-dim: '#d0c4c0'\n  on-secondary-fixed: '#201a18'\n  on-secondary-fixed-variant: '#4d4542'\n  tertiary-fixed: '#e7e1e3'\n  tertiary-fixed-dim: '#cac5c7'\n  on-tertiary-fixed: '#1d1b1d'\n  on-tertiary-fixed-variant: '#494648'\n  background: '#fff8f0'\n  on-background: '#1d1b17'\n  surface-variant: '#e8e2da'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '600'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '600'\n    lineHeight: '1.1'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.2'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.5'\n  nav-link:\n    fontFamily: Hanken Grotesk\n    fontSize: 13px\n    fontWeight: '600'\n    lineHeight: '1'\n    letterSpacing: 0.15em\n  label-sm:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: '1'\n    letterSpacing: 0.05em\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-desktop: 80px\n  margin-mobile: 20px\n  section-gap: 120px\n  hairline: 0.5px\n---\n\n## Brand & Style\n\nThe design system is built for a premium, boutique culinary experience. The brand personality is sophisticated, artisanal, and curated, positioning the product as a luxury item rather than a commodity. The target audience values craftsmanship, intentionality, and high-end aesthetics.\n\nThe visual style is **Modern Editorial**. This approach treats the digital interface like a high-fashion lookbook or an architectural digest. Key characteristics include:\n- **Quiet Luxury:** Avoiding \"loud\" marketing patterns in favor of subtle, confident interactions.\n- **Gallery-Style Presentation:** Large, high-fidelity photography is treated as the primary content, framed by expansive whitespace.\n- **Architectural Rigor:** The use of asymmetric layouts and delicate hairline strokes creates a sense of structured elegance.\n- **Tactile Refinement:** Subtle transitions and soft color shifts mimic the experience of flipping through a heavy-stock paper magazine.\n\n## Colors\n\nThe palette is rooted in organic, culinary tones to evoke quality and warmth without relying on traditional \"sweet\" clichés.\n\n- **Vanilla Bean (#F9F5F0):** The primary canvas color. A rich, warm off-white that feels more premium and softer than pure white.\n- **Dark Cocoa (#1A1412):** Used for primary typography and structural elements. It provides a softer, more sophisticated contrast than pure black.\n- **Sage (#8A9A8E):** A singular, muted accent used sparingly for call-to-actions, success states, or subtle highlighting.\n- **Tonal Neutrals:** Secondary surfaces use slight variations of the base cream to create soft depth and separation between sections.\n\n## Typography\n\nThis design system utilizes a high-contrast typographic pairing to achieve an editorial feel.\n\n- **Headlines:** Uses *Playfair Display*. The Serif is used for storytelling, product names, and section headers. It should be set with tight leading and slight negative tracking for a \"locked-in\" professional look.\n- **Utility & Navigation:** Uses *Hanken Grotesk*. This clean, contemporary Sans-Serif provides functional clarity. \n- **Tracking:** Navigation elements and labels use wide letter-spacing (15%) and uppercase styling to evoke luxury branding and ensure legibility at small sizes.\n- **Hierarchy:** Maintain a clear distinction between the \"voice\" (Serif) and the \"engine\" (Sans-Serif) of the interface.\n\n## Layout & Spacing\n\nThe layout is governed by a 12-column grid but encourages **intentional asymmetry**.\n\n- **Whitespace:** Use generous vertical spacing (`section-gap`) to allow the high-end photography to breathe. Avoid crowding elements; every product deserves its own \"frame.\"\n- **Asymmetric Offsets:** Images should often be slightly offset from their text descriptors, or overlap slightly using Z-index layers to create a sense of depth and modern composition.\n- **The Hairline Rule:** Use 0.5px lines in *Dark Cocoa* (at 20% opacity) to separate navigation, footer, or specific content blocks. These should feel like delicate threads rather than heavy dividers.\n- **Breakpoints:** \n  - **Desktop (1440px+):** Max-width 1280px with 80px side margins.\n  - **Tablet (768px-1024px):** 40px margins, 2-column product grids.\n  - **Mobile (below 768px):** 20px margins, single-column stack with center-aligned typography for headers.\n\n## Elevation & Depth\n\nTo maintain the \"Modern Editorial\" aesthetic, this design system avoids heavy drop shadows and standard material elevations.\n\n- **Tonal Layering:** Depth is created by placing *Vanilla Bean* containers over slightly darker *Neutral* backgrounds, or vice versa.\n- **Soft Shadows:** If a shadow is absolutely required (e.g., a floating cart or modal), it must be an ambient, highly-diffused shadow with a 0.05 opacity cocoa tint.\n- **Glassmorphism:** Use very subtle backdrop blurs (4px - 8px) for navigation bars when scrolling over imagery, maintaining a 90% opacity of the *Vanilla Bean* color.\n- **Image Overlaps:** Depth is primarily achieved through layout layering—text partially overlapping the edge of a clean, high-key cake photograph.\n\n## Shapes\n\nThe design system adopts a **Sharp (0)** roundedness philosophy. \n\n- **Hard Edges:** All buttons, input fields, and image containers use 0px border radius. This reinforces the architectural, high-fashion editorial look.\n- **Structural Lines:** Use the 0.5px hairline for borders rather than fills whenever possible to keep the interface feeling light and \"sketched.\"\n- **Interaction:** Hover states should involve color fills or shifts rather than rounding of corners to maintain consistency with the sharp-edged aesthetic.\n\n## Components\n\n- **Buttons:** Primary buttons are solid *Dark Cocoa* with *Vanilla Bean* text, sharp corners, and 12px horizontal padding. Secondary buttons are \"Ghost\" style with a 0.5px border.\n- **Inputs:** Underline-only inputs are preferred for a minimal look. A simple hairline at the bottom that darkens on focus.\n- **Cards:** Product cards are borderless. The image takes the full width, with the title in *Playfair Display* and the price in *Hanken Grotesk* wide-tracked below it.\n- **Chips/Tags:** Used for flavors or categories. These should be small, all-caps, with wide tracking and no background—separated by a vertical slash `/`.\n- **Navigation:** A minimal top bar. Links are small, uppercase, and disappear on scroll, reappearing only on \"scroll up\" to maximize the gallery view.\n- **Image Containers:** Always use a subtle 1px inset border or a soft cream background-color as a placeholder to maintain the \"frame\" before high-res assets load.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "HANKEN_GROTESK",
+            "labelFontFamily": "Hanken Grotesk",
             "namedColors": {
-              "background": "#fdf8f7",
+              "background": "#fff8f0",
               "error": "#ba1a1a",
               "error_container": "#ffdad6",
-              "inverse_on_surface": "#f4f0ef",
-              "inverse_primary": "#cac6c3",
-              "inverse_surface": "#313030",
-              "on_background": "#1c1b1b",
+              "inverse_on_surface": "#f6f0e8",
+              "inverse_primary": "#c9c6c1",
+              "inverse_surface": "#33302b",
+              "on_background": "#1d1b17",
               "on_error": "#ffffff",
               "on_error_container": "#93000a",
               "on_primary": "#ffffff",
-              "on_primary_container": "#74726f",
-              "on_primary_fixed": "#1c1b1a",
-              "on_primary_fixed_variant": "#484644",
+              "on_primary_container": "#72706c",
+              "on_primary_fixed": "#1c1c19",
+              "on_primary_fixed_variant": "#484743",
               "on_secondary": "#ffffff",
-              "on_secondary_container": "#755e50",
-              "on_secondary_fixed": "#28180d",
-              "on_secondary_fixed_variant": "#574335",
-              "on_surface": "#1c1b1b",
-              "on_surface_variant": "#4a4640",
+              "on_secondary_container": "#6a615e",
+              "on_secondary_fixed": "#201a18",
+              "on_secondary_fixed_variant": "#4d4542",
+              "on_surface": "#1d1b17",
+              "on_surface_variant": "#484740",
               "on_tertiary": "#ffffff",
-              "on_tertiary_container": "#946a3f",
-              "on_tertiary_fixed": "#2c1600",
-              "on_tertiary_fixed_variant": "#623f18",
-              "outline": "#7b766f",
-              "outline_variant": "#ccc6bd",
-              "primary": "#605e5c",
-              "primary_container": "#fdf8f5",
-              "primary_fixed": "#e6e2df",
-              "primary_fixed_dim": "#cac6c3",
-              "secondary": "#705a4c",
-              "secondary_container": "#f8dac8",
-              "secondary_fixed": "#fbddca",
-              "secondary_fixed_dim": "#dec1af",
-              "surface": "#fdf8f7",
-              "surface_bright": "#fdf8f7",
-              "surface_container": "#f1edec",
-              "surface_container_high": "#ebe7e6",
-              "surface_container_highest": "#e6e2e1",
-              "surface_container_low": "#f7f3f2",
+              "on_tertiary_container": "#736f71",
+              "on_tertiary_fixed": "#1d1b1d",
+              "on_tertiary_fixed_variant": "#494648",
+              "outline": "#79776f",
+              "outline_variant": "#c9c6bd",
+              "primary": "#605e5b",
+              "primary_container": "#f9f5f0",
+              "primary_fixed": "#e6e2dd",
+              "primary_fixed_dim": "#c9c6c1",
+              "secondary": "#655c5a",
+              "secondary_container": "#eaddd9",
+              "secondary_fixed": "#ede0dc",
+              "secondary_fixed_dim": "#d0c4c0",
+              "surface": "#fff8f0",
+              "surface_bright": "#fff8f0",
+              "surface_container": "#f3ede5",
+              "surface_container_high": "#ede7df",
+              "surface_container_highest": "#e8e2da",
+              "surface_container_low": "#f9f3ea",
               "surface_container_lowest": "#ffffff",
-              "surface_dim": "#ddd9d8",
-              "surface_tint": "#605e5c",
-              "surface_variant": "#e6e2e1",
-              "tertiary": "#7d562d",
-              "tertiary_container": "#fff8f5",
-              "tertiary_fixed": "#ffdcbd",
-              "tertiary_fixed_dim": "#f0bd8b"
+              "surface_dim": "#dfd9d1",
+              "surface_tint": "#605e5b",
+              "surface_variant": "#e8e2da",
+              "tertiary": "#615d5f",
+              "tertiary_container": "#faf4f6",
+              "tertiary_fixed": "#e7e1e3",
+              "tertiary_fixed_dim": "#cac5c7"
             },
-            "overridePrimaryColor": "#fdf8f5",
-            "overrideSecondaryColor": "#3d2b1f",
-            "overrideTertiaryColor": "#d4a373",
-            "roundness": "ROUND_FOUR",
+            "overrideNeutralColor": "#e8e2da",
+            "overridePrimaryColor": "#f9f5f0",
+            "overrideSecondaryColor": "#1a1412",
             "spacing": {
-              "base": "8px",
-              "container-max": "1280px",
               "gutter": "24px",
+              "hairline": "0.5px",
+              "margin-desktop": "80px",
               "margin-mobile": "20px",
-              "section-gap": "80px"
+              "section-gap": "120px",
+              "unit": "4px"
             },
             "spacingScale": 2,
             "typography": {
               "body-lg": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Hanken Grotesk",
                 "fontSize": "18px",
                 "fontWeight": "400",
                 "letterSpacing": "0.01em",
                 "lineHeight": "1.6"
               },
               "body-md": {
-                "fontFamily": "DM Sans",
+                "fontFamily": "Hanken Grotesk",
                 "fontSize": "16px",
                 "fontWeight": "400",
-                "lineHeight": "1.6"
+                "lineHeight": "1.5"
               },
               "display-lg": {
-                "fontFamily": "Bodoni Moda",
+                "fontFamily": "Playfair Display",
                 "fontSize": "64px",
-                "fontWeight": "700",
+                "fontWeight": "600",
                 "letterSpacing": "-0.02em",
                 "lineHeight": "1.1"
               },
               "display-lg-mobile": {
-                "fontFamily": "Bodoni Moda",
+                "fontFamily": "Playfair Display",
                 "fontSize": "40px",
-                "fontWeight": "700",
-                "lineHeight": "1.2"
+                "fontWeight": "600",
+                "lineHeight": "1.1"
               },
               "headline-md": {
-                "fontFamily": "Bodoni Moda",
+                "fontFamily": "Playfair Display",
                 "fontSize": "32px",
-                "fontWeight": "600",
+                "fontWeight": "500",
+                "lineHeight": "1.2"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "500",
                 "lineHeight": "1.3"
               },
-              "label-caps": {
-                "fontFamily": "DM Sans",
+              "label-sm": {
+                "fontFamily": "Hanken Grotesk",
                 "fontSize": "12px",
-                "fontWeight": "700",
+                "fontWeight": "500",
+                "letterSpacing": "0.05em",
+                "lineHeight": "1"
+              },
+              "nav-link": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "13px",
+                "fontWeight": "600",
                 "letterSpacing": "0.15em",
-                "lineHeight": "1.0"
+                "lineHeight": "1"
               }
             }
           },
-          "title": "Cecy's Cakes | Artisanal Patisserie Homepage",
+          "title": "Cecy's Cakes - Bespoke Artisanal Bakery",
           "width": "2560"
         }
       ],
@@ -451,15 +515,15 @@
     }
   },
   {
-    "text": "I've designed a bespoke, editorial-grade homepage for **Cecy's Cakes** that moves away from generic templates to create a truly premium first impression.\n\n### Design Rationale:\n*   **Visual Identity**: Developed a \"Modern Artisan Patisserie\" aesthetic using a high-contrast palette of **Deep Cocoa** and **Warm Cream**, accented with sophisticated **Dusty Rose** and **Sage Leaf** tones.\n*   **Editorial Typography**: Leveraged **Bodoni Moda** for high-impact, artistic headlines that evoke the feel of a luxury food magazine.\n*   **Artisanal Imagery**: Integrated custom-generated photography, including the hero wedding cake and close-ups of the baking process, to emphasize the \"handcrafted\" nature of the business.\n*   **Bespoke Layout**: Instead of a standard grid, I used overlapping elements and varied section structures—such as the \"Artistry You Can Taste\" hero and the \"Hands Behind the Batter\" about section—to create a memorable visual rhythm.\n*   **Technical Details**: The site includes a fully functional inquiry form, a dedicated map slot for your Joplin location, and a responsive navigation system that maintains its elegance on all devices.\n\nThe site is production-ready, featuring semantic HTML, smooth-scroll interactions, and custom CSS variables for easy future styling adjustments."
+    "text": "I've completed the bespoke, editorial-grade homepage for **Cecy's Cakes**. \n\nThis design breaks away from standard bakery templates to establish a unique, premium digital presence for this Joplin-based brand.\n\n### Design Highlights:\n- **Bespoke Editorial Layout**: Moving away from generic grids, I’ve implemented an asymmetric layout with sophisticated overlapping elements and generous whitespace, mirroring the aesthetics of a high-end food magazine.\n- **Custom Visual Assets**: \n    - **Logo**: A minimalist, high-end wordmark created specifically for the brand.\n    - **Imagery**: I generated a series of custom editorial photos (Artisanal Wedding Cake, Baker's Hands, and a Collection of Tarts) to emphasize craftsmanship and quality.\n- **Modern Design System**: Built on a palette of 'Vanilla Bean' and 'Dark Cocoa' with subtle sage accents, using high-contrast serif typography (**Playfair Display**) for a sophisticated, boutique feel.\n- **Unique Visual Motif**: Delicate hairline rules and subtle CSS-driven reveal animations create a sense of lightness and precision throughout the page.\n- **Production-Ready**: The site is fully responsive, semantically structured, and includes a functional contact inquiry form and a custom map slot for the Joplin studio.\n\nThe final product provides Cecy's Cakes with a memorable, high-fidelity first impression that truly reflects the artisanal nature of their work."
   },
   {
-    "suggestion": "Make the color palette even warmer and more 'honey' toned."
+    "suggestion": "Make it dark mode for a night-time bakery vibe"
   },
   {
-    "suggestion": "Add a section for a seasonal menu or \"Cake of the Month\"."
+    "suggestion": "Add a gallery section for recent commissions"
   },
   {
-    "suggestion": "Add more subtle animations to the image transitions."
+    "suggestion": "Add a simple e-commerce button for 'Daily Delights'"
   }
 ]
