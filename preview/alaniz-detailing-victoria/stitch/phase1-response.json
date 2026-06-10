@@ -1,0 +1,469 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Alaniz Precision System",
+          "styleGuidelines": "## Brand & Style\n\nThe design system is engineered to evoke the meticulous nature of high-end automotive restoration and protection. The brand personality is authoritative, sophisticated, and deeply rooted in craftsmanship. It targets a discerning clientele that views their vehicles as investments and works of art.\n\nThe visual style is **Modern Editorial Minimalism** with **Tactile/Skeuomorphic** accents. It leverages high-contrast layouts reminiscent of luxury automotive journals, characterized by expansive whitespace, razor-sharp precision lines, and subtle metallic textures that mimic the finish of polished paint and machined aluminum. The emotional response should be one of immediate trust, reflecting the \"award-winning craft\" of the studio.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid** model on mobile. \n\n- **Generous Margins:** Desktop margins are set to a wide 80px to create a \"frame\" around the content, mimicking a magazine spread.\n- **Vertical Rhythm:** Section gaps are intentionally large (160px) to force the user to focus on one service or image at a time.\n- **Precision Lines:** Thin (1px) horizontal and vertical lines in `accent_silver` should be used to separate content blocks, reinforcing the \"precision\" motif of the brand.\n- **Imagery:** Photography should be full-bleed or set in large-span columns (8-10 columns) to emphasize the quality of the detailing work.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows for **Tonal Layering** and **Linear Depth**.\n\n1.  **Surfaces:** The base layer is `primary_color_hex` (Obsidian). Secondary containers use `secondary_color_hex` (Slate) with a subtle 1px border of `accent_silver` at 20% opacity.\n2.  **Metallic Gradients:** Instead of shadows, depth is created using subtle linear gradients (e.g., `primary_color_hex` to `secondary_color_hex`) to simulate the way light hits a curved car panel.\n3.  **Glassmorphism:** Navigation bars and floating spec-sheets use a \"Smoked Glass\" effect: a background blur of 20px with a 40% opaque `primary_color_hex` fill.\n4.  **The \"Glint\":** Interactive elements may feature a sharp, diagonal gradient highlight to simulate a light reflection on a polished surface.\n\n## Components\n\n- **Buttons:** Primary buttons use a solid `tertiary_color_hex` (Electric Cobalt) fill with `label-caps` typography in white. Secondary buttons are \"Ghost\" style with a 1px `accent_silver` border and no fill.\n- **Precision Lines:** Use 1px dividers in `secondary_color_hex` to separate list items or header sections. These should feel like hairline fractures in the obsidian background.\n- **Cards (Service Panels):** Cards should have no background fill by default, defined only by the image and a bottom-aligned `headline-md`. On hover, a subtle `secondary_color_hex` background may fade in.\n- **Input Fields:** Bottom-border only (1px `accent_silver`). No box. Labels should use `label-caps` positioned above the line.\n- **Interactive States:** Hovering over an image should trigger a \"macro-zoom\" effect (1.05x scale) to emphasize the detail of the paintwork. \n- **Status Chips:** Small, rectangular tags with a `label-tech` font. Used for \"Certified,\" \"Award-Winning,\" or \"In-Stock.\"\n- **Data Grids:** For technical specifications (e.g., coating thickness, durability years), use a 2-column grid with a thin vertical divider and `label-caps` for the keys.",
+          "theme": {
+            "bodyFont": "DM_SANS",
+            "bodyFontFamily": "Dm Sans",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#0a0a0b",
+            "designMd": "---\nname: Alaniz Precision System\ncolors:\n  surface: '#101417'\n  surface-dim: '#101417'\n  surface-bright: '#36393d'\n  surface-container-lowest: '#0b0f12'\n  surface-container-low: '#191c20'\n  surface-container: '#1d2024'\n  surface-container-high: '#272a2e'\n  surface-container-highest: '#323539'\n  on-surface: '#e0e2e7'\n  on-surface-variant: '#c7c6ca'\n  inverse-surface: '#e0e2e7'\n  inverse-on-surface: '#2d3135'\n  outline: '#919094'\n  outline-variant: '#46464a'\n  surface-tint: '#c8c6c7'\n  primary: '#c8c6c7'\n  on-primary: '#313031'\n  primary-container: '#0a0a0b'\n  on-primary-container: '#7a797a'\n  inverse-primary: '#5f5e5f'\n  secondary: '#c6c6ca'\n  on-secondary: '#2e3033'\n  secondary-container: '#47494c'\n  on-secondary-container: '#b7b8bc'\n  tertiary: '#b8c3ff'\n  on-tertiary: '#002487'\n  tertiary-container: '#00062c'\n  on-tertiary-container: '#476cff'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1c1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#e2e2e6'\n  secondary-fixed-dim: '#c6c6ca'\n  on-secondary-fixed: '#1a1c1f'\n  on-secondary-fixed-variant: '#45474a'\n  tertiary-fixed: '#dde1ff'\n  tertiary-fixed-dim: '#b8c3ff'\n  on-tertiary-fixed: '#001355'\n  on-tertiary-fixed-variant: '#0035bd'\n  background: '#101417'\n  on-background: '#e0e2e7'\n  surface-variant: '#323539'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 44px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Space Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  label-tech:\n    fontFamily: Space Grotesk\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 160px\n---\n\n## Brand & Style\n\nThe design system is engineered to evoke the meticulous nature of high-end automotive restoration and protection. The brand personality is authoritative, sophisticated, and deeply rooted in craftsmanship. It targets a discerning clientele that views their vehicles as investments and works of art.\n\nThe visual style is **Modern Editorial Minimalism** with **Tactile/Skeuomorphic** accents. It leverages high-contrast layouts reminiscent of luxury automotive journals, characterized by expansive whitespace, razor-sharp precision lines, and subtle metallic textures that mimic the finish of polished paint and machined aluminum. The emotional response should be one of immediate trust, reflecting the \"award-winning craft\" of the studio.\n\n## Colors\n\nThe \"Obsidian & Slate\" palette is the foundation of the design system. \n\n- **Primary (Obsidian):** `#0A0A0B` - A deep, ink-like charcoal used for backgrounds to allow vehicle photography to pop.\n- **Secondary (Slate/Steel):** `#2E3033` - Used for containers and surface elevations, providing a subtle metallic depth.\n- **Tertiary (Electric Cobalt):** `#2956F3` - A high-energy, precision-focused blue used exclusively for primary calls to action and critical interactive states.\n- **Neutral (High-Contrast White):** `#E2E4E9` - Not a pure white, but a slightly cool-toned silver-white for maximum legibility against dark backgrounds.\n- **Accent (Chrome):** `#8E9196` - Used for borders and \"precision lines\" to evoke machined metal.\n\nThe system utilizes high-contrast whitespace (negative space) in the dark mode to ensure a premium, spacious feel.\n\n## Typography\n\nThe typography strategy relies on a dramatic contrast between heritage and technology.\n\n- **Headlines (Bodoni Moda):** A high-contrast serif that communicates prestige, history, and luxury. Used for large display titles and section headings.\n- **Body (DM Sans):** A wide-set, low-contrast sans-serif that offers technical precision and readability. The generous letter spacing in body copy reinforces the \"editorial\" feel.\n- **Labels (Space Grotesk):** Used for technical specs, service categories, and micro-copy. Its geometric, slightly futuristic structure suggests the advanced chemical engineering used in detailing (ceramic coatings, PPF).\n\n**Editorial Rule:** Headlines should often be used in a \"Hero\" context with significant padding-bottom to separate them from the technical body copy.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid** model on mobile. \n\n- **Generous Margins:** Desktop margins are set to a wide 80px to create a \"frame\" around the content, mimicking a magazine spread.\n- **Vertical Rhythm:** Section gaps are intentionally large (160px) to force the user to focus on one service or image at a time.\n- **Precision Lines:** Thin (1px) horizontal and vertical lines in `accent_silver` should be used to separate content blocks, reinforcing the \"precision\" motif of the brand.\n- **Imagery:** Photography should be full-bleed or set in large-span columns (8-10 columns) to emphasize the quality of the detailing work.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows for **Tonal Layering** and **Linear Depth**.\n\n1.  **Surfaces:** The base layer is `primary_color_hex` (Obsidian). Secondary containers use `secondary_color_hex` (Slate) with a subtle 1px border of `accent_silver` at 20% opacity.\n2.  **Metallic Gradients:** Instead of shadows, depth is created using subtle linear gradients (e.g., `primary_color_hex` to `secondary_color_hex`) to simulate the way light hits a curved car panel.\n3.  **Glassmorphism:** Navigation bars and floating spec-sheets use a \"Smoked Glass\" effect: a background blur of 20px with a 40% opaque `primary_color_hex` fill.\n4.  **The \"Glint\":** Interactive elements may feature a sharp, diagonal gradient highlight to simulate a light reflection on a polished surface.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\nTo reflect the precision and masculine refinement of high-end automotive design, the system avoids rounded corners. Every button, input field, and card container must have 90-degree angles. This geometric rigidity communicates discipline and accuracy. \n\nThe only exception to the \"sharp\" rule is the use of circular \"Quality Seals\" or \"Award Badges,\" which should be treated as floating decorative elements rather than structural UI components.\n\n## Components\n\n- **Buttons:** Primary buttons use a solid `tertiary_color_hex` (Electric Cobalt) fill with `label-caps` typography in white. Secondary buttons are \"Ghost\" style with a 1px `accent_silver` border and no fill.\n- **Precision Lines:** Use 1px dividers in `secondary_color_hex` to separate list items or header sections. These should feel like hairline fractures in the obsidian background.\n- **Cards (Service Panels):** Cards should have no background fill by default, defined only by the image and a bottom-aligned `headline-md`. On hover, a subtle `secondary_color_hex` background may fade in.\n- **Input Fields:** Bottom-border only (1px `accent_silver`). No box. Labels should use `label-caps` positioned above the line.\n- **Interactive States:** Hovering over an image should trigger a \"macro-zoom\" effect (1.05x scale) to emphasize the detail of the paintwork. \n- **Status Chips:** Small, rectangular tags with a `label-tech` font. Used for \"Certified,\" \"Award-Winning,\" or \"In-Stock.\"\n- **Data Grids:** For technical specifications (e.g., coating thickness, durability years), use a 2-column grid with a thin vertical divider and `label-caps` for the keys.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "SPACE_GROTESK",
+            "labelFontFamily": "Space Grotesk",
+            "namedColors": {
+              "background": "#101417",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#2d3135",
+              "inverse_primary": "#5f5e5f",
+              "inverse_surface": "#e0e2e7",
+              "on_background": "#e0e2e7",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#313031",
+              "on_primary_container": "#7a797a",
+              "on_primary_fixed": "#1c1b1c",
+              "on_primary_fixed_variant": "#474647",
+              "on_secondary": "#2e3033",
+              "on_secondary_container": "#b7b8bc",
+              "on_secondary_fixed": "#1a1c1f",
+              "on_secondary_fixed_variant": "#45474a",
+              "on_surface": "#e0e2e7",
+              "on_surface_variant": "#c7c6ca",
+              "on_tertiary": "#002487",
+              "on_tertiary_container": "#476cff",
+              "on_tertiary_fixed": "#001355",
+              "on_tertiary_fixed_variant": "#0035bd",
+              "outline": "#919094",
+              "outline_variant": "#46464a",
+              "primary": "#c8c6c7",
+              "primary_container": "#0a0a0b",
+              "primary_fixed": "#e5e2e3",
+              "primary_fixed_dim": "#c8c6c7",
+              "secondary": "#c6c6ca",
+              "secondary_container": "#47494c",
+              "secondary_fixed": "#e2e2e6",
+              "secondary_fixed_dim": "#c6c6ca",
+              "surface": "#101417",
+              "surface_bright": "#36393d",
+              "surface_container": "#1d2024",
+              "surface_container_high": "#272a2e",
+              "surface_container_highest": "#323539",
+              "surface_container_low": "#191c20",
+              "surface_container_lowest": "#0b0f12",
+              "surface_dim": "#101417",
+              "surface_tint": "#c8c6c7",
+              "surface_variant": "#323539",
+              "tertiary": "#b8c3ff",
+              "tertiary_container": "#00062c",
+              "tertiary_fixed": "#dde1ff",
+              "tertiary_fixed_dim": "#b8c3ff"
+            },
+            "overrideNeutralColor": "#e2e4e9",
+            "overridePrimaryColor": "#0a0a0b",
+            "overrideSecondaryColor": "#2e3033",
+            "overrideTertiaryColor": "#2956f3",
+            "spacing": {
+              "container-max": "1440px",
+              "gutter": "32px",
+              "margin-desktop": "80px",
+              "margin-mobile": "24px",
+              "section-gap": "160px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "1.7"
+              },
+              "body-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "44px",
+                "fontWeight": "700",
+                "lineHeight": "1.1"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "500",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "Space Grotesk",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "1.2"
+              },
+              "label-tech": {
+                "fontFamily": "Space Grotesk",
+                "fontSize": "14px",
+                "fontWeight": "400",
+                "lineHeight": "1.4"
+              }
+            }
+          }
+        },
+        "name": "assets/b0d72b38203c4233a857358a0c0432c9",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Alaniz Precision System",
+                "styleGuidelines": "## Brand & Style\n\nThe design system is engineered to evoke the meticulous nature of high-end automotive restoration and protection. The brand personality is authoritative, sophisticated, and deeply rooted in craftsmanship. It targets a discerning clientele that views their vehicles as investments and works of art.\n\nThe visual style is **Modern Editorial Minimalism** with **Tactile/Skeuomorphic** accents. It leverages high-contrast layouts reminiscent of luxury automotive journals, characterized by expansive whitespace, razor-sharp precision lines, and subtle metallic textures that mimic the finish of polished paint and machined aluminum. The emotional response should be one of immediate trust, reflecting the \"award-winning craft\" of the studio.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid** model on mobile. \n\n- **Generous Margins:** Desktop margins are set to a wide 80px to create a \"frame\" around the content, mimicking a magazine spread.\n- **Vertical Rhythm:** Section gaps are intentionally large (160px) to force the user to focus on one service or image at a time.\n- **Precision Lines:** Thin (1px) horizontal and vertical lines in `accent_silver` should be used to separate content blocks, reinforcing the \"precision\" motif of the brand.\n- **Imagery:** Photography should be full-bleed or set in large-span columns (8-10 columns) to emphasize the quality of the detailing work.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows for **Tonal Layering** and **Linear Depth**.\n\n1.  **Surfaces:** The base layer is `primary_color_hex` (Obsidian). Secondary containers use `secondary_color_hex` (Slate) with a subtle 1px border of `accent_silver` at 20% opacity.\n2.  **Metallic Gradients:** Instead of shadows, depth is created using subtle linear gradients (e.g., `primary_color_hex` to `secondary_color_hex`) to simulate the way light hits a curved car panel.\n3.  **Glassmorphism:** Navigation bars and floating spec-sheets use a \"Smoked Glass\" effect: a background blur of 20px with a 40% opaque `primary_color_hex` fill.\n4.  **The \"Glint\":** Interactive elements may feature a sharp, diagonal gradient highlight to simulate a light reflection on a polished surface.\n\n## Components\n\n- **Buttons:** Primary buttons use a solid `tertiary_color_hex` (Electric Cobalt) fill with `label-caps` typography in white. Secondary buttons are \"Ghost\" style with a 1px `accent_silver` border and no fill.\n- **Precision Lines:** Use 1px dividers in `secondary_color_hex` to separate list items or header sections. These should feel like hairline fractures in the obsidian background.\n- **Cards (Service Panels):** Cards should have no background fill by default, defined only by the image and a bottom-aligned `headline-md`. On hover, a subtle `secondary_color_hex` background may fade in.\n- **Input Fields:** Bottom-border only (1px `accent_silver`). No box. Labels should use `label-caps` positioned above the line.\n- **Interactive States:** Hovering over an image should trigger a \"macro-zoom\" effect (1.05x scale) to emphasize the detail of the paintwork. \n- **Status Chips:** Small, rectangular tags with a `label-tech` font. Used for \"Certified,\" \"Award-Winning,\" or \"In-Stock.\"\n- **Data Grids:** For technical specifications (e.g., coating thickness, durability years), use a 2-column grid with a thin vertical divider and `label-caps` for the keys.",
+                "theme": {
+                  "bodyFont": "DM_SANS",
+                  "bodyFontFamily": "Dm Sans",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#0a0a0b",
+                  "designMd": "---\nname: Alaniz Precision System\ncolors:\n  surface: '#101417'\n  surface-dim: '#101417'\n  surface-bright: '#36393d'\n  surface-container-lowest: '#0b0f12'\n  surface-container-low: '#191c20'\n  surface-container: '#1d2024'\n  surface-container-high: '#272a2e'\n  surface-container-highest: '#323539'\n  on-surface: '#e0e2e7'\n  on-surface-variant: '#c7c6ca'\n  inverse-surface: '#e0e2e7'\n  inverse-on-surface: '#2d3135'\n  outline: '#919094'\n  outline-variant: '#46464a'\n  surface-tint: '#c8c6c7'\n  primary: '#c8c6c7'\n  on-primary: '#313031'\n  primary-container: '#0a0a0b'\n  on-primary-container: '#7a797a'\n  inverse-primary: '#5f5e5f'\n  secondary: '#c6c6ca'\n  on-secondary: '#2e3033'\n  secondary-container: '#47494c'\n  on-secondary-container: '#b7b8bc'\n  tertiary: '#b8c3ff'\n  on-tertiary: '#002487'\n  tertiary-container: '#00062c'\n  on-tertiary-container: '#476cff'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1c1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#e2e2e6'\n  secondary-fixed-dim: '#c6c6ca'\n  on-secondary-fixed: '#1a1c1f'\n  on-secondary-fixed-variant: '#45474a'\n  tertiary-fixed: '#dde1ff'\n  tertiary-fixed-dim: '#b8c3ff'\n  on-tertiary-fixed: '#001355'\n  on-tertiary-fixed-variant: '#0035bd'\n  background: '#101417'\n  on-background: '#e0e2e7'\n  surface-variant: '#323539'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 44px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Space Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  label-tech:\n    fontFamily: Space Grotesk\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 160px\n---\n\n## Brand & Style\n\nThe design system is engineered to evoke the meticulous nature of high-end automotive restoration and protection. The brand personality is authoritative, sophisticated, and deeply rooted in craftsmanship. It targets a discerning clientele that views their vehicles as investments and works of art.\n\nThe visual style is **Modern Editorial Minimalism** with **Tactile/Skeuomorphic** accents. It leverages high-contrast layouts reminiscent of luxury automotive journals, characterized by expansive whitespace, razor-sharp precision lines, and subtle metallic textures that mimic the finish of polished paint and machined aluminum. The emotional response should be one of immediate trust, reflecting the \"award-winning craft\" of the studio.\n\n## Colors\n\nThe \"Obsidian & Slate\" palette is the foundation of the design system. \n\n- **Primary (Obsidian):** `#0A0A0B` - A deep, ink-like charcoal used for backgrounds to allow vehicle photography to pop.\n- **Secondary (Slate/Steel):** `#2E3033` - Used for containers and surface elevations, providing a subtle metallic depth.\n- **Tertiary (Electric Cobalt):** `#2956F3` - A high-energy, precision-focused blue used exclusively for primary calls to action and critical interactive states.\n- **Neutral (High-Contrast White):** `#E2E4E9` - Not a pure white, but a slightly cool-toned silver-white for maximum legibility against dark backgrounds.\n- **Accent (Chrome):** `#8E9196` - Used for borders and \"precision lines\" to evoke machined metal.\n\nThe system utilizes high-contrast whitespace (negative space) in the dark mode to ensure a premium, spacious feel.\n\n## Typography\n\nThe typography strategy relies on a dramatic contrast between heritage and technology.\n\n- **Headlines (Bodoni Moda):** A high-contrast serif that communicates prestige, history, and luxury. Used for large display titles and section headings.\n- **Body (DM Sans):** A wide-set, low-contrast sans-serif that offers technical precision and readability. The generous letter spacing in body copy reinforces the \"editorial\" feel.\n- **Labels (Space Grotesk):** Used for technical specs, service categories, and micro-copy. Its geometric, slightly futuristic structure suggests the advanced chemical engineering used in detailing (ceramic coatings, PPF).\n\n**Editorial Rule:** Headlines should often be used in a \"Hero\" context with significant padding-bottom to separate them from the technical body copy.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid** model on mobile. \n\n- **Generous Margins:** Desktop margins are set to a wide 80px to create a \"frame\" around the content, mimicking a magazine spread.\n- **Vertical Rhythm:** Section gaps are intentionally large (160px) to force the user to focus on one service or image at a time.\n- **Precision Lines:** Thin (1px) horizontal and vertical lines in `accent_silver` should be used to separate content blocks, reinforcing the \"precision\" motif of the brand.\n- **Imagery:** Photography should be full-bleed or set in large-span columns (8-10 columns) to emphasize the quality of the detailing work.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows for **Tonal Layering** and **Linear Depth**.\n\n1.  **Surfaces:** The base layer is `primary_color_hex` (Obsidian). Secondary containers use `secondary_color_hex` (Slate) with a subtle 1px border of `accent_silver` at 20% opacity.\n2.  **Metallic Gradients:** Instead of shadows, depth is created using subtle linear gradients (e.g., `primary_color_hex` to `secondary_color_hex`) to simulate the way light hits a curved car panel.\n3.  **Glassmorphism:** Navigation bars and floating spec-sheets use a \"Smoked Glass\" effect: a background blur of 20px with a 40% opaque `primary_color_hex` fill.\n4.  **The \"Glint\":** Interactive elements may feature a sharp, diagonal gradient highlight to simulate a light reflection on a polished surface.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\nTo reflect the precision and masculine refinement of high-end automotive design, the system avoids rounded corners. Every button, input field, and card container must have 90-degree angles. This geometric rigidity communicates discipline and accuracy. \n\nThe only exception to the \"sharp\" rule is the use of circular \"Quality Seals\" or \"Award Badges,\" which should be treated as floating decorative elements rather than structural UI components.\n\n## Components\n\n- **Buttons:** Primary buttons use a solid `tertiary_color_hex` (Electric Cobalt) fill with `label-caps` typography in white. Secondary buttons are \"Ghost\" style with a 1px `accent_silver` border and no fill.\n- **Precision Lines:** Use 1px dividers in `secondary_color_hex` to separate list items or header sections. These should feel like hairline fractures in the obsidian background.\n- **Cards (Service Panels):** Cards should have no background fill by default, defined only by the image and a bottom-aligned `headline-md`. On hover, a subtle `secondary_color_hex` background may fade in.\n- **Input Fields:** Bottom-border only (1px `accent_silver`). No box. Labels should use `label-caps` positioned above the line.\n- **Interactive States:** Hovering over an image should trigger a \"macro-zoom\" effect (1.05x scale) to emphasize the detail of the paintwork. \n- **Status Chips:** Small, rectangular tags with a `label-tech` font. Used for \"Certified,\" \"Award-Winning,\" or \"In-Stock.\"\n- **Data Grids:** For technical specifications (e.g., coating thickness, durability years), use a 2-column grid with a thin vertical divider and `label-caps` for the keys.",
+                  "font": "BODONI_MODA",
+                  "headlineFont": "BODONI_MODA",
+                  "headlineFontFamily": "Bodoni Moda",
+                  "labelFont": "SPACE_GROTESK",
+                  "labelFontFamily": "Space Grotesk",
+                  "namedColors": {
+                    "background": "#101417",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#2d3135",
+                    "inverse_primary": "#5f5e5f",
+                    "inverse_surface": "#e0e2e7",
+                    "on_background": "#e0e2e7",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#313031",
+                    "on_primary_container": "#7a797a",
+                    "on_primary_fixed": "#1c1b1c",
+                    "on_primary_fixed_variant": "#474647",
+                    "on_secondary": "#2e3033",
+                    "on_secondary_container": "#b7b8bc",
+                    "on_secondary_fixed": "#1a1c1f",
+                    "on_secondary_fixed_variant": "#45474a",
+                    "on_surface": "#e0e2e7",
+                    "on_surface_variant": "#c7c6ca",
+                    "on_tertiary": "#002487",
+                    "on_tertiary_container": "#476cff",
+                    "on_tertiary_fixed": "#001355",
+                    "on_tertiary_fixed_variant": "#0035bd",
+                    "outline": "#919094",
+                    "outline_variant": "#46464a",
+                    "primary": "#c8c6c7",
+                    "primary_container": "#0a0a0b",
+                    "primary_fixed": "#e5e2e3",
+                    "primary_fixed_dim": "#c8c6c7",
+                    "secondary": "#c6c6ca",
+                    "secondary_container": "#47494c",
+                    "secondary_fixed": "#e2e2e6",
+                    "secondary_fixed_dim": "#c6c6ca",
+                    "surface": "#101417",
+                    "surface_bright": "#36393d",
+                    "surface_container": "#1d2024",
+                    "surface_container_high": "#272a2e",
+                    "surface_container_highest": "#323539",
+                    "surface_container_low": "#191c20",
+                    "surface_container_lowest": "#0b0f12",
+                    "surface_dim": "#101417",
+                    "surface_tint": "#c8c6c7",
+                    "surface_variant": "#323539",
+                    "tertiary": "#b8c3ff",
+                    "tertiary_container": "#00062c",
+                    "tertiary_fixed": "#dde1ff",
+                    "tertiary_fixed_dim": "#b8c3ff"
+                  },
+                  "overrideNeutralColor": "#e2e4e9",
+                  "overridePrimaryColor": "#0a0a0b",
+                  "overrideSecondaryColor": "#2e3033",
+                  "overrideTertiaryColor": "#2956f3",
+                  "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "32px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "1.7"
+                    },
+                    "body-md": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.6"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "72px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "1.1"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "44px",
+                      "fontWeight": "700",
+                      "lineHeight": "1.1"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "48px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "1.2"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Bodoni Moda",
+                      "fontSize": "32px",
+                      "fontWeight": "500",
+                      "lineHeight": "1.3"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": "12px",
+                      "fontWeight": "600",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "1.2"
+                    },
+                    "label-tech": {
+                      "fontFamily": "Space Grotesk",
+                      "fontSize": "14px",
+                      "fontWeight": "400",
+                      "lineHeight": "1.4"
+                    }
+                  }
+                }
+              },
+              "name": "assets/b0d72b38203c4233a857358a0c0432c9",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "10698",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2JmY2I1Yzc0MWQ2ZDQ4NGY5ODIzNjA3MGUyNWI2MWM3EgsSBxCbzKqCsBkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDk3OTUxMzE3ODcyNzM3NjE1OA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/14979513178727376158/files/4d256a91236b45d1b316f079cfe8e115"
+            },
+            "id": "78bcb8fcf86a4f8b858b9d5f5819b60b",
+            "name": "projects/14979513178727376158/screens/78bcb8fcf86a4f8b858b9d5f5819b60b",
+            "prompt": "Build the complete bespoke DESKTOP landing page for Alaniz Detailing. \n\nLayout Requirements (Editorial Style):\n1. Header: Use the predicted TopNavBar. Premium, sticky, minimal.\n2. Hero: A massive, high-contrast serif headline (\"THE ART OF THE FINISH.\") staggered with a technical subhead. Use an obsidian background with a subtle metallic gradient.\n3. Credibility: A horizontal scroll or a minimalist row of 'Detailing Standards' (e.g., 100-Point Inspection, Ceramic Mastery). Use thin precision lines as dividers.\n4. Services: A non-standard, masonry-style grid for 'Ceramic Coating', 'Paint Correction', and 'Interior Preservation'. Avoid generic icons; use descriptive text and large imagery placeholders.\n5. About: A two-column split. Left: Large, atmospheric image placeholder. Right: Meticulously typeset story about Marcos Alaniz's dedication to the craft in Victoria.\n6. Visit: A full-width section. Left: Contact details ((361) 649-9815, marcosalaniz87@gmail.com). Right: The required map-slot div (`<div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>`).\n7. Contact: A sophisticated, dark-themed form. Inputs should have subtle bottom borders only. Include custom validation UI (success/error states).\n8. Footer: Use the predicted Footer.\n\nVisual Motif: Incorporate vertical 'precision lines' that act as structural guides throughout the page. Use the 'Electric Cobalt' sparingly for interaction points.\n\nTechnical: Production-ready semantic HTML, Tailwind CSS for styling, and vanilla JS for smooth scroll and form validation. No placeholder text; use Alaniz-specific copy.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLve18ONIdUNOAea_RVHWTexcuzUljpuEsB3hhksqBfw3HyV3FVt31FEOcgzJp_odC25YUwNZPkYt7SRFkPI09bKeiyZBeHUsxbt70OjEcEHqVT4weBwSiw9YcG40j8ihPUUD0-kSI1QlV1O2ktZDzn-Hv6KxO-RlOY_J2wKnkVB95vh9Ia4q1tFnaIiqdoMCOP3uIh5OWVda5TlyCTbgCsTrSlWAXVOEQY_CoFvcf-VcHsVrbpIfhOYmd4-",
+              "name": "projects/14979513178727376158/files/95029089954443a88211e8c72adee128"
+            },
+            "theme": {
+              "bodyFont": "DM_SANS",
+              "bodyFontFamily": "Dm Sans",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#0a0a0b",
+              "designMd": "---\nname: Alaniz Precision System\ncolors:\n  surface: '#101417'\n  surface-dim: '#101417'\n  surface-bright: '#36393d'\n  surface-container-lowest: '#0b0f12'\n  surface-container-low: '#191c20'\n  surface-container: '#1d2024'\n  surface-container-high: '#272a2e'\n  surface-container-highest: '#323539'\n  on-surface: '#e0e2e7'\n  on-surface-variant: '#c7c6ca'\n  inverse-surface: '#e0e2e7'\n  inverse-on-surface: '#2d3135'\n  outline: '#919094'\n  outline-variant: '#46464a'\n  surface-tint: '#c8c6c7'\n  primary: '#c8c6c7'\n  on-primary: '#313031'\n  primary-container: '#0a0a0b'\n  on-primary-container: '#7a797a'\n  inverse-primary: '#5f5e5f'\n  secondary: '#c6c6ca'\n  on-secondary: '#2e3033'\n  secondary-container: '#47494c'\n  on-secondary-container: '#b7b8bc'\n  tertiary: '#b8c3ff'\n  on-tertiary: '#002487'\n  tertiary-container: '#00062c'\n  on-tertiary-container: '#476cff'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#e5e2e3'\n  primary-fixed-dim: '#c8c6c7'\n  on-primary-fixed: '#1c1b1c'\n  on-primary-fixed-variant: '#474647'\n  secondary-fixed: '#e2e2e6'\n  secondary-fixed-dim: '#c6c6ca'\n  on-secondary-fixed: '#1a1c1f'\n  on-secondary-fixed-variant: '#45474a'\n  tertiary-fixed: '#dde1ff'\n  tertiary-fixed-dim: '#b8c3ff'\n  on-tertiary-fixed: '#001355'\n  on-tertiary-fixed-variant: '#0035bd'\n  background: '#101417'\n  on-background: '#e0e2e7'\n  surface-variant: '#323539'\ntypography:\n  display-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 44px\n    fontWeight: '700'\n    lineHeight: '1.1'\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '500'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.7'\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Space Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: '1.2'\n    letterSpacing: 0.15em\n  label-tech:\n    fontFamily: Space Grotesk\n    fontSize: 14px\n    fontWeight: '400'\n    lineHeight: '1.4'\nspacing:\n  unit: 8px\n  container-max: 1440px\n  gutter: 32px\n  margin-desktop: 80px\n  margin-mobile: 24px\n  section-gap: 160px\n---\n\n## Brand & Style\n\nThe design system is engineered to evoke the meticulous nature of high-end automotive restoration and protection. The brand personality is authoritative, sophisticated, and deeply rooted in craftsmanship. It targets a discerning clientele that views their vehicles as investments and works of art.\n\nThe visual style is **Modern Editorial Minimalism** with **Tactile/Skeuomorphic** accents. It leverages high-contrast layouts reminiscent of luxury automotive journals, characterized by expansive whitespace, razor-sharp precision lines, and subtle metallic textures that mimic the finish of polished paint and machined aluminum. The emotional response should be one of immediate trust, reflecting the \"award-winning craft\" of the studio.\n\n## Colors\n\nThe \"Obsidian & Slate\" palette is the foundation of the design system. \n\n- **Primary (Obsidian):** `#0A0A0B` - A deep, ink-like charcoal used for backgrounds to allow vehicle photography to pop.\n- **Secondary (Slate/Steel):** `#2E3033` - Used for containers and surface elevations, providing a subtle metallic depth.\n- **Tertiary (Electric Cobalt):** `#2956F3` - A high-energy, precision-focused blue used exclusively for primary calls to action and critical interactive states.\n- **Neutral (High-Contrast White):** `#E2E4E9` - Not a pure white, but a slightly cool-toned silver-white for maximum legibility against dark backgrounds.\n- **Accent (Chrome):** `#8E9196` - Used for borders and \"precision lines\" to evoke machined metal.\n\nThe system utilizes high-contrast whitespace (negative space) in the dark mode to ensure a premium, spacious feel.\n\n## Typography\n\nThe typography strategy relies on a dramatic contrast between heritage and technology.\n\n- **Headlines (Bodoni Moda):** A high-contrast serif that communicates prestige, history, and luxury. Used for large display titles and section headings.\n- **Body (DM Sans):** A wide-set, low-contrast sans-serif that offers technical precision and readability. The generous letter spacing in body copy reinforces the \"editorial\" feel.\n- **Labels (Space Grotesk):** Used for technical specs, service categories, and micro-copy. Its geometric, slightly futuristic structure suggests the advanced chemical engineering used in detailing (ceramic coatings, PPF).\n\n**Editorial Rule:** Headlines should often be used in a \"Hero\" context with significant padding-bottom to separate them from the technical body copy.\n\n## Layout & Spacing\n\nThe layout follows a **Fixed Grid** model on desktop (12 columns) and a **Fluid** model on mobile. \n\n- **Generous Margins:** Desktop margins are set to a wide 80px to create a \"frame\" around the content, mimicking a magazine spread.\n- **Vertical Rhythm:** Section gaps are intentionally large (160px) to force the user to focus on one service or image at a time.\n- **Precision Lines:** Thin (1px) horizontal and vertical lines in `accent_silver` should be used to separate content blocks, reinforcing the \"precision\" motif of the brand.\n- **Imagery:** Photography should be full-bleed or set in large-span columns (8-10 columns) to emphasize the quality of the detailing work.\n\n## Elevation & Depth\n\nThis design system eschews traditional soft shadows for **Tonal Layering** and **Linear Depth**.\n\n1.  **Surfaces:** The base layer is `primary_color_hex` (Obsidian). Secondary containers use `secondary_color_hex` (Slate) with a subtle 1px border of `accent_silver` at 20% opacity.\n2.  **Metallic Gradients:** Instead of shadows, depth is created using subtle linear gradients (e.g., `primary_color_hex` to `secondary_color_hex`) to simulate the way light hits a curved car panel.\n3.  **Glassmorphism:** Navigation bars and floating spec-sheets use a \"Smoked Glass\" effect: a background blur of 20px with a 40% opaque `primary_color_hex` fill.\n4.  **The \"Glint\":** Interactive elements may feature a sharp, diagonal gradient highlight to simulate a light reflection on a polished surface.\n\n## Shapes\n\nThe shape language is **Sharp (0px)**. \n\nTo reflect the precision and masculine refinement of high-end automotive design, the system avoids rounded corners. Every button, input field, and card container must have 90-degree angles. This geometric rigidity communicates discipline and accuracy. \n\nThe only exception to the \"sharp\" rule is the use of circular \"Quality Seals\" or \"Award Badges,\" which should be treated as floating decorative elements rather than structural UI components.\n\n## Components\n\n- **Buttons:** Primary buttons use a solid `tertiary_color_hex` (Electric Cobalt) fill with `label-caps` typography in white. Secondary buttons are \"Ghost\" style with a 1px `accent_silver` border and no fill.\n- **Precision Lines:** Use 1px dividers in `secondary_color_hex` to separate list items or header sections. These should feel like hairline fractures in the obsidian background.\n- **Cards (Service Panels):** Cards should have no background fill by default, defined only by the image and a bottom-aligned `headline-md`. On hover, a subtle `secondary_color_hex` background may fade in.\n- **Input Fields:** Bottom-border only (1px `accent_silver`). No box. Labels should use `label-caps` positioned above the line.\n- **Interactive States:** Hovering over an image should trigger a \"macro-zoom\" effect (1.05x scale) to emphasize the detail of the paintwork. \n- **Status Chips:** Small, rectangular tags with a `label-tech` font. Used for \"Certified,\" \"Award-Winning,\" or \"In-Stock.\"\n- **Data Grids:** For technical specifications (e.g., coating thickness, durability years), use a 2-column grid with a thin vertical divider and `label-caps` for the keys.",
+              "font": "BODONI_MODA",
+              "headlineFont": "BODONI_MODA",
+              "headlineFontFamily": "Bodoni Moda",
+              "labelFont": "SPACE_GROTESK",
+              "labelFontFamily": "Space Grotesk",
+              "namedColors": {
+                "background": "#101417",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#2d3135",
+                "inverse_primary": "#5f5e5f",
+                "inverse_surface": "#e0e2e7",
+                "on_background": "#e0e2e7",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#313031",
+                "on_primary_container": "#7a797a",
+                "on_primary_fixed": "#1c1b1c",
+                "on_primary_fixed_variant": "#474647",
+                "on_secondary": "#2e3033",
+                "on_secondary_container": "#b7b8bc",
+                "on_secondary_fixed": "#1a1c1f",
+                "on_secondary_fixed_variant": "#45474a",
+                "on_surface": "#e0e2e7",
+                "on_surface_variant": "#c7c6ca",
+                "on_tertiary": "#002487",
+                "on_tertiary_container": "#476cff",
+                "on_tertiary_fixed": "#001355",
+                "on_tertiary_fixed_variant": "#0035bd",
+                "outline": "#919094",
+                "outline_variant": "#46464a",
+                "primary": "#c8c6c7",
+                "primary_container": "#0a0a0b",
+                "primary_fixed": "#e5e2e3",
+                "primary_fixed_dim": "#c8c6c7",
+                "secondary": "#c6c6ca",
+                "secondary_container": "#47494c",
+                "secondary_fixed": "#e2e2e6",
+                "secondary_fixed_dim": "#c6c6ca",
+                "surface": "#101417",
+                "surface_bright": "#36393d",
+                "surface_container": "#1d2024",
+                "surface_container_high": "#272a2e",
+                "surface_container_highest": "#323539",
+                "surface_container_low": "#191c20",
+                "surface_container_lowest": "#0b0f12",
+                "surface_dim": "#101417",
+                "surface_tint": "#c8c6c7",
+                "surface_variant": "#323539",
+                "tertiary": "#b8c3ff",
+                "tertiary_container": "#00062c",
+                "tertiary_fixed": "#dde1ff",
+                "tertiary_fixed_dim": "#b8c3ff"
+              },
+              "overrideNeutralColor": "#e2e4e9",
+              "overridePrimaryColor": "#0a0a0b",
+              "overrideSecondaryColor": "#2e3033",
+              "overrideTertiaryColor": "#2956f3",
+              "spacing": {
+                "container-max": "1440px",
+                "gutter": "32px",
+                "margin-desktop": "80px",
+                "margin-mobile": "24px",
+                "section-gap": "160px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "1.7"
+                },
+                "body-md": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.6"
+                },
+                "display-lg": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "72px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "1.1"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "44px",
+                  "fontWeight": "700",
+                  "lineHeight": "1.1"
+                },
+                "headline-lg": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "48px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "1.2"
+                },
+                "headline-md": {
+                  "fontFamily": "Bodoni Moda",
+                  "fontSize": "32px",
+                  "fontWeight": "500",
+                  "lineHeight": "1.3"
+                },
+                "label-caps": {
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": "12px",
+                  "fontWeight": "600",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "1.2"
+                },
+                "label-tech": {
+                  "fontFamily": "Space Grotesk",
+                  "fontSize": "14px",
+                  "fontWeight": "400",
+                  "lineHeight": "1.4"
+                }
+              }
+            },
+            "title": "Alaniz Detailing | Bespoke Automotive Care",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed a bespoke, premium visual identity and a high-fidelity desktop homepage for Alaniz Detailing. \n\n### Design Decisions:\n- **Visual Identity**: Established the \"Alaniz Precision System,\" featuring an **Obsidian & Slate** palette with high-contrast **Bodoni Moda** serif headers and clean sans-serif body text.\n- **Editorial Layout**: Avoided generic template structures in favor of an editorial-style composition with generous whitespace, vertical \"precision lines\" as structural motifs, and a non-standard services grid.\n- **Craft & Credibility**: Integrated a dedicated \"Standards\" section and an atmospheric \"About\" section to communicate the meticulous, award-winning nature of Marcos Alaniz's work in Victoria.\n- **Technical Excellence**: The site is built with semantic HTML, a sticky navigation system, and a custom-styled contact form with integrated validation UI.\n\nThe result is a unique, memorable digital presence that positions Alaniz Detailing as the premier choice for automotive preservation."
+    },
+    {
+      "suggestion": "Make the hero section more immersive with a video background placeholder"
+    },
+    {
+      "suggestion": "Add a 'Process' section with a step-by-step detailing breakdown"
+    },
+    {
+      "suggestion": "Create a mobile version of this homepage"
+    }
+  ],
+  "projectId": "14979513178727376158",
+  "sessionId": "4154398206538162792"
+}
