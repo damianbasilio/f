@@ -1,0 +1,483 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Artisanal Hearth",
+        "styleGuidelines": "## Brand & Style\n\nThis design system is built on the philosophy of \"Warm Editorial.\" It departs from the sterile aesthetics of modern tech to embrace the tactile, imperfect, and sensory experience of an artisanal bakery. The goal is to evoke the smell of fresh bread and the comfort of a morning brew through a digital interface.\n\nThe style leverages **Minimalism** blended with **Tactile** elements. We utilize generous whitespace to allow product photography and sophisticated typography to breathe, mirroring a high-end food magazine. A subtle grain texture is applied to background surfaces to eliminate the \"plastic\" feel of digital screens, creating a \"paper-like\" quality that feels grounded and authentic. \n\n**Target Audience:** Local food enthusiasts, coffee connoisseurs, and neighbors seeking quality and community.\n**Emotional Response:** Comfort, trust, appetite appeal, and a sense of belonging.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain the \"magazine\" feel, centered on the screen with generous outer margins. \n\n- **Desktop:** 12-column grid, 1200px max-width, 24px gutters.\n- **Mobile:** Single column with 20px side margins. \n- **Vertical Rhythm:** We use a base-8 spacing scale. Sections are separated by large gaps (`section-gap`) to reinforce the feeling of \"quality over quantity.\" \n\nAvoid dense clusters of information. Items should be grouped logically with white space acting as the primary separator rather than lines or boxes.\n\n## Elevation & Depth\n\nTo maintain the \"paper\" and \"artisanal\" aesthetic, we avoid heavy drop shadows and synthetic blurs.\n\n- **Tonal Layers:** Depth is created through subtle shifts in background color. For example, a card might use a slightly darker cream or a very thin 1px border in a \"Crust\" tint (#D4A373 at 20% opacity).\n- **Low-Contrast Outlines:** Instead of shadows, use delicate borders (1px) in `Espresso` at very low opacity (10-15%) to define boundaries.\n- **Floating Elements:** Only the primary \"Order Now\" or \"Cart\" buttons may use a very soft, ambient shadow to indicate interactability, using the `Espresso` color as the shadow tint rather than black.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Espresso` with `Flour` text. Secondary buttons use a `Crust` 1px border with `Espresso` text. Interaction states should involve a subtle shift in background warmth rather than a dramatic color change.\n- **Cards:** Eschew the \"boxed\" card look. Use \"Editorial Cards\"—an image on top, followed by a `label-caps` category, a `headline-sm` title, and no containing border. Use whitespace to separate items in a list.\n- **Inputs:** Simple bottom-border only or a very light-tinted 4-sided border. Use `Montserrat` for placeholder text.\n- **Chips/Badges:** Use the `Moss` green for \"New\" or \"Daily Special\" tags, using a subtle background fill and dark green text.\n- **Lists:** Menu items should be styled with the name of the item in `Playfair Display` and the price/description in `Montserrat`, separated by a thin, dotted leader line to evoke classic cafe menus.",
+        "theme": {
+          "bodyFont": "MONTSERRAT",
+          "bodyFontFamily": "Montserrat",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#3c2a21",
+          "designMd": "---\nname: Artisanal Hearth\ncolors:\n  surface: '#faf9f5'\n  surface-dim: '#dbdad6'\n  surface-bright: '#faf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4f0'\n  surface-container: '#efeeea'\n  surface-container-high: '#e9e8e4'\n  surface-container-highest: '#e3e2df'\n  on-surface: '#1b1c1a'\n  on-surface-variant: '#4f4540'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f2f1ed'\n  outline: '#81756f'\n  outline-variant: '#d3c3bd'\n  surface-tint: '#705a4f'\n  primary: '#25160e'\n  on-primary: '#ffffff'\n  primary-container: '#3c2a21'\n  on-primary-container: '#aa9084'\n  inverse-primary: '#dec1b3'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#151c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#283204'\n  on-tertiary-container: '#8f9c62'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fbdcce'\n  primary-fixed-dim: '#dec1b3'\n  on-primary-fixed: '#281810'\n  on-primary-fixed-variant: '#574238'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#dbe9a9'\n  tertiary-fixed-dim: '#bfcd8f'\n  on-tertiary-fixed: '#171e00'\n  on-tertiary-fixed-variant: '#404b1b'\n  background: '#faf9f5'\n  on-background: '#1b1c1a'\n  surface-variant: '#e3e2df'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 20px\n  section-gap: 80px\n---\n\n## Brand & Style\n\nThis design system is built on the philosophy of \"Warm Editorial.\" It departs from the sterile aesthetics of modern tech to embrace the tactile, imperfect, and sensory experience of an artisanal bakery. The goal is to evoke the smell of fresh bread and the comfort of a morning brew through a digital interface.\n\nThe style leverages **Minimalism** blended with **Tactile** elements. We utilize generous whitespace to allow product photography and sophisticated typography to breathe, mirroring a high-end food magazine. A subtle grain texture is applied to background surfaces to eliminate the \"plastic\" feel of digital screens, creating a \"paper-like\" quality that feels grounded and authentic. \n\n**Target Audience:** Local food enthusiasts, coffee connoisseurs, and neighbors seeking quality and community.\n**Emotional Response:** Comfort, trust, appetite appeal, and a sense of belonging.\n\n## Colors\n\nThe palette is derived from the raw ingredients of the craft. \n\n- **Espresso (#3C2A21):** Our primary ink and grounding color. Used for high-level typography and primary actions. It is deep, rich, and provides more warmth than a standard black.\n- **Crust (#D4A373):** A golden amber used for highlights, secondary buttons, and active states. It represents the perfect bake.\n- **Flour (#FDFCF8):** The foundational surface color. It is a warm, off-white cream that reduces eye strain and feels more organic than pure white.\n- **Moss (#606C38):** An accent color used sparingly for \"Fresh\" indicators, organic sourcing callouts, or success states.\n\nBackgrounds should occasionally utilize a very faint noise overlay (opacity 3-5%) to simulate paper texture.\n\n## Typography\n\nThe typography follows an editorial hierarchy. **Playfair Display** provides the sophisticated, artisanal voice for all headlines. Use it with slightly tighter letter-spacing for large display text to maintain a premium feel.\n\n**Montserrat** is used for body text and functional labels. To maintain the high-contrast editorial look, ensure body text has ample line-height (1.6) for maximum readability. Labels and small navigation items should use the `label-caps` style to provide a structured, architectural contrast to the fluid curves of the serif headers.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain the \"magazine\" feel, centered on the screen with generous outer margins. \n\n- **Desktop:** 12-column grid, 1200px max-width, 24px gutters.\n- **Mobile:** Single column with 20px side margins. \n- **Vertical Rhythm:** We use a base-8 spacing scale. Sections are separated by large gaps (`section-gap`) to reinforce the feeling of \"quality over quantity.\" \n\nAvoid dense clusters of information. Items should be grouped logically with white space acting as the primary separator rather than lines or boxes.\n\n## Elevation & Depth\n\nTo maintain the \"paper\" and \"artisanal\" aesthetic, we avoid heavy drop shadows and synthetic blurs.\n\n- **Tonal Layers:** Depth is created through subtle shifts in background color. For example, a card might use a slightly darker cream or a very thin 1px border in a \"Crust\" tint (#D4A373 at 20% opacity).\n- **Low-Contrast Outlines:** Instead of shadows, use delicate borders (1px) in `Espresso` at very low opacity (10-15%) to define boundaries.\n- **Floating Elements:** Only the primary \"Order Now\" or \"Cart\" buttons may use a very soft, ambient shadow to indicate interactability, using the `Espresso` color as the shadow tint rather than black.\n\n## Shapes\n\nWe use **Soft** roundedness (0.25rem / 4px). This provides a gentle, hand-finished feel without appearing \"bubbly\" or overly \"techy.\" \n\n- **Images:** Should feature either sharp corners for a strict editorial look or the base 4px radius for a softer touch.\n- **Buttons:** Use the base `rounded` (4px) or `rounded-lg` (8px). Never use full-pill shapes, as they conflict with the sophisticated serif typography.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Espresso` with `Flour` text. Secondary buttons use a `Crust` 1px border with `Espresso` text. Interaction states should involve a subtle shift in background warmth rather than a dramatic color change.\n- **Cards:** Eschew the \"boxed\" card look. Use \"Editorial Cards\"—an image on top, followed by a `label-caps` category, a `headline-sm` title, and no containing border. Use whitespace to separate items in a list.\n- **Inputs:** Simple bottom-border only or a very light-tinted 4-sided border. Use `Montserrat` for placeholder text.\n- **Chips/Badges:** Use the `Moss` green for \"New\" or \"Daily Special\" tags, using a subtle background fill and dark green text.\n- **Lists:** Menu items should be styled with the name of the item in `Playfair Display` and the price/description in `Montserrat`, separated by a thin, dotted leader line to evoke classic cafe menus.",
+          "font": "PLAYFAIR_DISPLAY",
+          "headlineFont": "PLAYFAIR_DISPLAY",
+          "headlineFontFamily": "Playfair Display",
+          "labelFont": "MONTSERRAT",
+          "labelFontFamily": "Montserrat",
+          "namedColors": {
+            "background": "#faf9f5",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f2f1ed",
+            "inverse_primary": "#dec1b3",
+            "inverse_surface": "#2f312e",
+            "on_background": "#1b1c1a",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#aa9084",
+            "on_primary_fixed": "#281810",
+            "on_primary_fixed_variant": "#574238",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#7a532a",
+            "on_secondary_fixed": "#2c1600",
+            "on_secondary_fixed_variant": "#623f18",
+            "on_surface": "#1b1c1a",
+            "on_surface_variant": "#4f4540",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#8f9c62",
+            "on_tertiary_fixed": "#171e00",
+            "on_tertiary_fixed_variant": "#404b1b",
+            "outline": "#81756f",
+            "outline_variant": "#d3c3bd",
+            "primary": "#25160e",
+            "primary_container": "#3c2a21",
+            "primary_fixed": "#fbdcce",
+            "primary_fixed_dim": "#dec1b3",
+            "secondary": "#7d562d",
+            "secondary_container": "#ffca98",
+            "secondary_fixed": "#ffdcbd",
+            "secondary_fixed_dim": "#f0bd8b",
+            "surface": "#faf9f5",
+            "surface_bright": "#faf9f5",
+            "surface_container": "#efeeea",
+            "surface_container_high": "#e9e8e4",
+            "surface_container_highest": "#e3e2df",
+            "surface_container_low": "#f4f4f0",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dbdad6",
+            "surface_tint": "#705a4f",
+            "surface_variant": "#e3e2df",
+            "tertiary": "#151c00",
+            "tertiary_container": "#283204",
+            "tertiary_fixed": "#dbe9a9",
+            "tertiary_fixed_dim": "#bfcd8f"
+          },
+          "overrideNeutralColor": "#fdfcf8",
+          "overridePrimaryColor": "#3c2a21",
+          "overrideSecondaryColor": "#d4a373",
+          "overrideTertiaryColor": "#606c38",
+          "roundness": "ROUND_FOUR",
+          "spacing": {
+            "container-max": "1200px",
+            "gutter": "24px",
+            "margin-mobile": "20px",
+            "section-gap": "80px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Montserrat",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "body-md": {
+              "fontFamily": "Montserrat",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "1.6"
+            },
+            "display-lg": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "1.1"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "36px",
+              "fontWeight": "700",
+              "lineHeight": "1.2"
+            },
+            "headline-md": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "1.2"
+            },
+            "headline-sm": {
+              "fontFamily": "Playfair Display",
+              "fontSize": "24px",
+              "fontWeight": "600",
+              "lineHeight": "1.3"
+            },
+            "label-caps": {
+              "fontFamily": "Montserrat",
+              "fontSize": "12px",
+              "fontWeight": "700",
+              "letterSpacing": "0.1em",
+              "lineHeight": "1.0"
+            }
+          }
+        }
+      },
+      "name": "assets/aeb792b7ac584666b2ffb8d1a83f3ca2",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "848",
+          "id": "add16208b6934d04b68e58048d998d90",
+          "name": "projects/13564804429341310772/screens/add16208b6934d04b68e58048d998d90",
+          "prompt": "A close-up shot of a baker's flour-dusted hands scoring a loaf of bread. Authentic, artisanal, moody lighting, showcasing the craft and texture. Background is a dimly lit, professional bakery kitchen.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuVv1uH1d9WKE6w5O3WQOvGUuueFFge3feufcfufvF6wZR6e5nbBnorfgUlLhRRiXG0jc0LfNxbsnQQ2Q5uLSqAoR7TQIltBiQeFXuLw8PQxRYxNX7TXsB5f_GCHwrQ08K7vpzdJxOaU7s-U3hUrsWWEiU5-xFJsyYqG7XKj0C6jA05jZTF6dwBIPJba5BhPb-FdRctvZCVm9gZiw_JUascqWXtWCLyRz8p_57YVZNfpH8ouRARnyWSAxou",
+            "name": "projects/13564804429341310772/files/34b352963d064b0eba6863954d0dd7ea"
+          },
+          "theme": {},
+          "title": "A close-up shot of a baker's flour-dusted hands scoring a loaf of bread. Authentic, artisanal, moody lighting, showcasing the craft and texture. Background is a dimly lit, professional bakery kitchen.",
+          "width": "1264"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "97799cd5ba1f4fcf84cc62aef8205e4e",
+          "name": "projects/13564804429341310772/screens/97799cd5ba1f4fcf84cc62aef8205e4e",
+          "prompt": "A high-end, editorial photograph of artisanal sourdough bread and a perfectly poured latte on a rustic wooden table. Warm, natural morning light, soft shadows, steam rising from the coffee. Shallow depth of field, premium quality, magazine style. Color palette: warm ambers, deep browns, and cream.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvMwdfMWhLbNa5xqW0uvBcE855Toe0ora4kFO-GtY05xdd0nKtGEVtF0J6Nm-av52VVi4MuiBmOkBSaeejFgQsDp9RteU_J6TGRNo9XqOYSVayP82cN6471OGQX507feUVOMDGdijVLctFdD6IM_WyDe9r3KWNZtqgk_ZP7yHct05h5ZekvyktJMhSuUUDeEwtX6IF2CkFVLKCIRP4ulXHkOATnVepmAFLe_6d3L5f-OckUIPraWW4vTCjb",
+            "name": "projects/13564804429341310772/files/fd55a6d4113544e4afe0b8f162130b8e"
+          },
+          "theme": {},
+          "title": "A high-end, editorial photograph of artisanal sourdough bread and a perfectly poured latte on a rustic wooden table. Warm, natural morning light, soft shadows, steam rising from the coffee. Shallow depth of field, premium quality, magazine style. Color palette: warm ambers, deep browns, and cream.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "f2f0b83b79bd4095a789b79822698126",
+          "name": "projects/13564804429341310772/screens/f2f0b83b79bd4095a789b79822698126",
+          "prompt": "An interior shot of a cozy, modern-rustic cafe 'Pan Y KaFe'. Warm wood textures, green plants, soft lighting, and a welcoming atmosphere. Empty of people to focus on the design and vibe.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuLRl5tmelRqiVhG7D16UF7O7-n2JLctD5aUgUJfP8mYJsI75TJWx2IVScMIVNA47BcTTQmM2DJBNqmFM1PJgOqnjynKKNB7pCJXtzY7gx3I-opuHBVbTexN7YSiouIt3auJnYavaA7hFQrDkFdAss7Udfk4dTIev0V8vhTzFyILz92xd4B0SrViTrjQsg4gcvLtyhHWtnCFX4W1sZr9jB_8cnzeTQlPE2c2MKySIPW3aST6XzHRS-F-tj9",
+            "name": "projects/13564804429341310772/files/98c53814f16e40e18fb5c55e6557c8af"
+          },
+          "theme": {},
+          "title": "An interior shot of a cozy, modern-rustic cafe 'Pan Y KaFe'. Warm wood textures, green plants, soft lighting, and a welcoming atmosphere. Empty of people to focus on the design and vibe.",
+          "width": "1200"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Artisanal Hearth",
+              "styleGuidelines": "## Brand & Style\n\nThis design system is built on the philosophy of \"Warm Editorial.\" It departs from the sterile aesthetics of modern tech to embrace the tactile, imperfect, and sensory experience of an artisanal bakery. The goal is to evoke the smell of fresh bread and the comfort of a morning brew through a digital interface.\n\nThe style leverages **Minimalism** blended with **Tactile** elements. We utilize generous whitespace to allow product photography and sophisticated typography to breathe, mirroring a high-end food magazine. A subtle grain texture is applied to background surfaces to eliminate the \"plastic\" feel of digital screens, creating a \"paper-like\" quality that feels grounded and authentic. \n\n**Target Audience:** Local food enthusiasts, coffee connoisseurs, and neighbors seeking quality and community.\n**Emotional Response:** Comfort, trust, appetite appeal, and a sense of belonging.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain the \"magazine\" feel, centered on the screen with generous outer margins. \n\n- **Desktop:** 12-column grid, 1200px max-width, 24px gutters.\n- **Mobile:** Single column with 20px side margins. \n- **Vertical Rhythm:** We use a base-8 spacing scale. Sections are separated by large gaps (`section-gap`) to reinforce the feeling of \"quality over quantity.\" \n\nAvoid dense clusters of information. Items should be grouped logically with white space acting as the primary separator rather than lines or boxes.\n\n## Elevation & Depth\n\nTo maintain the \"paper\" and \"artisanal\" aesthetic, we avoid heavy drop shadows and synthetic blurs.\n\n- **Tonal Layers:** Depth is created through subtle shifts in background color. For example, a card might use a slightly darker cream or a very thin 1px border in a \"Crust\" tint (#D4A373 at 20% opacity).\n- **Low-Contrast Outlines:** Instead of shadows, use delicate borders (1px) in `Espresso` at very low opacity (10-15%) to define boundaries.\n- **Floating Elements:** Only the primary \"Order Now\" or \"Cart\" buttons may use a very soft, ambient shadow to indicate interactability, using the `Espresso` color as the shadow tint rather than black.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Espresso` with `Flour` text. Secondary buttons use a `Crust` 1px border with `Espresso` text. Interaction states should involve a subtle shift in background warmth rather than a dramatic color change.\n- **Cards:** Eschew the \"boxed\" card look. Use \"Editorial Cards\"—an image on top, followed by a `label-caps` category, a `headline-sm` title, and no containing border. Use whitespace to separate items in a list.\n- **Inputs:** Simple bottom-border only or a very light-tinted 4-sided border. Use `Montserrat` for placeholder text.\n- **Chips/Badges:** Use the `Moss` green for \"New\" or \"Daily Special\" tags, using a subtle background fill and dark green text.\n- **Lists:** Menu items should be styled with the name of the item in `Playfair Display` and the price/description in `Montserrat`, separated by a thin, dotted leader line to evoke classic cafe menus.",
+              "theme": {
+                "bodyFont": "MONTSERRAT",
+                "bodyFontFamily": "Montserrat",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#3c2a21",
+                "designMd": "---\nname: Artisanal Hearth\ncolors:\n  surface: '#faf9f5'\n  surface-dim: '#dbdad6'\n  surface-bright: '#faf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4f0'\n  surface-container: '#efeeea'\n  surface-container-high: '#e9e8e4'\n  surface-container-highest: '#e3e2df'\n  on-surface: '#1b1c1a'\n  on-surface-variant: '#4f4540'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f2f1ed'\n  outline: '#81756f'\n  outline-variant: '#d3c3bd'\n  surface-tint: '#705a4f'\n  primary: '#25160e'\n  on-primary: '#ffffff'\n  primary-container: '#3c2a21'\n  on-primary-container: '#aa9084'\n  inverse-primary: '#dec1b3'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#151c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#283204'\n  on-tertiary-container: '#8f9c62'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fbdcce'\n  primary-fixed-dim: '#dec1b3'\n  on-primary-fixed: '#281810'\n  on-primary-fixed-variant: '#574238'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#dbe9a9'\n  tertiary-fixed-dim: '#bfcd8f'\n  on-tertiary-fixed: '#171e00'\n  on-tertiary-fixed-variant: '#404b1b'\n  background: '#faf9f5'\n  on-background: '#1b1c1a'\n  surface-variant: '#e3e2df'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 20px\n  section-gap: 80px\n---\n\n## Brand & Style\n\nThis design system is built on the philosophy of \"Warm Editorial.\" It departs from the sterile aesthetics of modern tech to embrace the tactile, imperfect, and sensory experience of an artisanal bakery. The goal is to evoke the smell of fresh bread and the comfort of a morning brew through a digital interface.\n\nThe style leverages **Minimalism** blended with **Tactile** elements. We utilize generous whitespace to allow product photography and sophisticated typography to breathe, mirroring a high-end food magazine. A subtle grain texture is applied to background surfaces to eliminate the \"plastic\" feel of digital screens, creating a \"paper-like\" quality that feels grounded and authentic. \n\n**Target Audience:** Local food enthusiasts, coffee connoisseurs, and neighbors seeking quality and community.\n**Emotional Response:** Comfort, trust, appetite appeal, and a sense of belonging.\n\n## Colors\n\nThe palette is derived from the raw ingredients of the craft. \n\n- **Espresso (#3C2A21):** Our primary ink and grounding color. Used for high-level typography and primary actions. It is deep, rich, and provides more warmth than a standard black.\n- **Crust (#D4A373):** A golden amber used for highlights, secondary buttons, and active states. It represents the perfect bake.\n- **Flour (#FDFCF8):** The foundational surface color. It is a warm, off-white cream that reduces eye strain and feels more organic than pure white.\n- **Moss (#606C38):** An accent color used sparingly for \"Fresh\" indicators, organic sourcing callouts, or success states.\n\nBackgrounds should occasionally utilize a very faint noise overlay (opacity 3-5%) to simulate paper texture.\n\n## Typography\n\nThe typography follows an editorial hierarchy. **Playfair Display** provides the sophisticated, artisanal voice for all headlines. Use it with slightly tighter letter-spacing for large display text to maintain a premium feel.\n\n**Montserrat** is used for body text and functional labels. To maintain the high-contrast editorial look, ensure body text has ample line-height (1.6) for maximum readability. Labels and small navigation items should use the `label-caps` style to provide a structured, architectural contrast to the fluid curves of the serif headers.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain the \"magazine\" feel, centered on the screen with generous outer margins. \n\n- **Desktop:** 12-column grid, 1200px max-width, 24px gutters.\n- **Mobile:** Single column with 20px side margins. \n- **Vertical Rhythm:** We use a base-8 spacing scale. Sections are separated by large gaps (`section-gap`) to reinforce the feeling of \"quality over quantity.\" \n\nAvoid dense clusters of information. Items should be grouped logically with white space acting as the primary separator rather than lines or boxes.\n\n## Elevation & Depth\n\nTo maintain the \"paper\" and \"artisanal\" aesthetic, we avoid heavy drop shadows and synthetic blurs.\n\n- **Tonal Layers:** Depth is created through subtle shifts in background color. For example, a card might use a slightly darker cream or a very thin 1px border in a \"Crust\" tint (#D4A373 at 20% opacity).\n- **Low-Contrast Outlines:** Instead of shadows, use delicate borders (1px) in `Espresso` at very low opacity (10-15%) to define boundaries.\n- **Floating Elements:** Only the primary \"Order Now\" or \"Cart\" buttons may use a very soft, ambient shadow to indicate interactability, using the `Espresso` color as the shadow tint rather than black.\n\n## Shapes\n\nWe use **Soft** roundedness (0.25rem / 4px). This provides a gentle, hand-finished feel without appearing \"bubbly\" or overly \"techy.\" \n\n- **Images:** Should feature either sharp corners for a strict editorial look or the base 4px radius for a softer touch.\n- **Buttons:** Use the base `rounded` (4px) or `rounded-lg` (8px). Never use full-pill shapes, as they conflict with the sophisticated serif typography.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Espresso` with `Flour` text. Secondary buttons use a `Crust` 1px border with `Espresso` text. Interaction states should involve a subtle shift in background warmth rather than a dramatic color change.\n- **Cards:** Eschew the \"boxed\" card look. Use \"Editorial Cards\"—an image on top, followed by a `label-caps` category, a `headline-sm` title, and no containing border. Use whitespace to separate items in a list.\n- **Inputs:** Simple bottom-border only or a very light-tinted 4-sided border. Use `Montserrat` for placeholder text.\n- **Chips/Badges:** Use the `Moss` green for \"New\" or \"Daily Special\" tags, using a subtle background fill and dark green text.\n- **Lists:** Menu items should be styled with the name of the item in `Playfair Display` and the price/description in `Montserrat`, separated by a thin, dotted leader line to evoke classic cafe menus.",
+                "font": "PLAYFAIR_DISPLAY",
+                "headlineFont": "PLAYFAIR_DISPLAY",
+                "headlineFontFamily": "Playfair Display",
+                "labelFont": "MONTSERRAT",
+                "labelFontFamily": "Montserrat",
+                "namedColors": {
+                  "background": "#faf9f5",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f2f1ed",
+                  "inverse_primary": "#dec1b3",
+                  "inverse_surface": "#2f312e",
+                  "on_background": "#1b1c1a",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#aa9084",
+                  "on_primary_fixed": "#281810",
+                  "on_primary_fixed_variant": "#574238",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#7a532a",
+                  "on_secondary_fixed": "#2c1600",
+                  "on_secondary_fixed_variant": "#623f18",
+                  "on_surface": "#1b1c1a",
+                  "on_surface_variant": "#4f4540",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#8f9c62",
+                  "on_tertiary_fixed": "#171e00",
+                  "on_tertiary_fixed_variant": "#404b1b",
+                  "outline": "#81756f",
+                  "outline_variant": "#d3c3bd",
+                  "primary": "#25160e",
+                  "primary_container": "#3c2a21",
+                  "primary_fixed": "#fbdcce",
+                  "primary_fixed_dim": "#dec1b3",
+                  "secondary": "#7d562d",
+                  "secondary_container": "#ffca98",
+                  "secondary_fixed": "#ffdcbd",
+                  "secondary_fixed_dim": "#f0bd8b",
+                  "surface": "#faf9f5",
+                  "surface_bright": "#faf9f5",
+                  "surface_container": "#efeeea",
+                  "surface_container_high": "#e9e8e4",
+                  "surface_container_highest": "#e3e2df",
+                  "surface_container_low": "#f4f4f0",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dbdad6",
+                  "surface_tint": "#705a4f",
+                  "surface_variant": "#e3e2df",
+                  "tertiary": "#151c00",
+                  "tertiary_container": "#283204",
+                  "tertiary_fixed": "#dbe9a9",
+                  "tertiary_fixed_dim": "#bfcd8f"
+                },
+                "overrideNeutralColor": "#fdfcf8",
+                "overridePrimaryColor": "#3c2a21",
+                "overrideSecondaryColor": "#d4a373",
+                "overrideTertiaryColor": "#606c38",
+                "roundness": "ROUND_FOUR",
+                "spacing": {
+                  "container-max": "1200px",
+                  "gutter": "24px",
+                  "margin-mobile": "20px",
+                  "section-gap": "80px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "body-md": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "1.6"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "1.1"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "36px",
+                    "fontWeight": "700",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.2"
+                  },
+                  "headline-sm": {
+                    "fontFamily": "Playfair Display",
+                    "fontSize": "24px",
+                    "fontWeight": "600",
+                    "lineHeight": "1.3"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Montserrat",
+                    "fontSize": "12px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "1.0"
+                  }
+                }
+              }
+            },
+            "name": "assets/aeb792b7ac584666b2ffb8d1a83f3ca2",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "9086",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2Y3OGUwZGJiMzU0YTQ4ODg5Zjg2NTdmZWJlMGJkNDE0EgsSBxDBloTL-h4YAZIBJAoKcHJvamVjdF9pZBIWQhQxMzU2NDgwNDQyOTM0MTMxMDc3Mg&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/13564804429341310772/files/1466e893d73a4660a91814df9cd6ac9b"
+          },
+          "id": "a7f66368ad364369b042f20d6175b1e9",
+          "name": "projects/13564804429341310772/screens/a7f66368ad364369b042f20d6175b1e9",
+          "prompt": "Build a complete, bespoke, editorial-grade DESKTOP landing page for Pan Y KaFe. \n\nLayout Strategy:\n- Use an asymmetric, 'magazine-style' layout. Move away from standard 12-column grids and centered heroes.\n- Visual Motif: Use thick, elegant rule lines and vertical text elements to create a unique rhythm.\n- Section Order: \n  1. Header: Elegant navigation with (417) 622-0390 prominent.\n  2. Hero: A split-screen layout. Left side features a bold, overlapping serif headline 'The Daily Ritual'. Right side features the editorial image {{DATA:IMAGE:IMAGE_5}}.\n  3. Credibility: A narrow, sophisticated banner with a subtle grain texture, emphasizing 'Handcrafted in Webb City since 2022'.\n  4. Offerings: 'The Hearth & The Bean'. Use an overlapping card design or staggered images ({{DATA:IMAGE:IMAGE_3}}) to showcase sourdough, pastries, and specialty coffee. No standard 3-column grid.\n  5. About: 'A Story Written in Flour'. A side-by-side layout with a personal touch.\n  6. Visit: Split layout. Left side has contact details (2609 North Rangeline Road, Webb City, MO 64870) and email (Panykafe2022@gmail.com). Right side has the non-negotiable map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n  7. Contact: A refined, minimal form with elegant line-based inputs.\n  8. Footer: Anchored with the brand mission and links.\n\nTechnical:\n- Production-ready HTML/CSS/JS.\n- Responsive for desktop (mobile handles in other passes but ensure 375px readiness).\n- Custom color properties based on the design system (Espresso, Flour, Crust, Sage).\n- No lorem ipsum. Use the provided contact info exactly.\n- Include smooth scroll and form validation UI.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsIFVipaewwYACJbL_WafslXviJiFW54A_X4WHBvmgwVVoTPSH4MPwjWmDFK0q1ZuvthNzROT7daX9CL40Y9uRSBnlUknJxL92xEDPkTUoPurXCTplFHn_uCOWQs8sDZoqxMXhriqQk0kZQNay8yRpnBFXydv2GnM_cXkL9U9liMxJfEcXiPAqld9kuiJsA2MptndadSojGcg4M3Dul6bj-waQ6woQCdQwnAWzjYM8Mhveee_1hDzSbJozj",
+            "name": "projects/13564804429341310772/files/64a403d051b74011b88efa5cbc181578"
+          },
+          "theme": {
+            "bodyFont": "MONTSERRAT",
+            "bodyFontFamily": "Montserrat",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#3c2a21",
+            "designMd": "---\nname: Artisanal Hearth\ncolors:\n  surface: '#faf9f5'\n  surface-dim: '#dbdad6'\n  surface-bright: '#faf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4f0'\n  surface-container: '#efeeea'\n  surface-container-high: '#e9e8e4'\n  surface-container-highest: '#e3e2df'\n  on-surface: '#1b1c1a'\n  on-surface-variant: '#4f4540'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f2f1ed'\n  outline: '#81756f'\n  outline-variant: '#d3c3bd'\n  surface-tint: '#705a4f'\n  primary: '#25160e'\n  on-primary: '#ffffff'\n  primary-container: '#3c2a21'\n  on-primary-container: '#aa9084'\n  inverse-primary: '#dec1b3'\n  secondary: '#7d562d'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffca98'\n  on-secondary-container: '#7a532a'\n  tertiary: '#151c00'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#283204'\n  on-tertiary-container: '#8f9c62'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#fbdcce'\n  primary-fixed-dim: '#dec1b3'\n  on-primary-fixed: '#281810'\n  on-primary-fixed-variant: '#574238'\n  secondary-fixed: '#ffdcbd'\n  secondary-fixed-dim: '#f0bd8b'\n  on-secondary-fixed: '#2c1600'\n  on-secondary-fixed-variant: '#623f18'\n  tertiary-fixed: '#dbe9a9'\n  tertiary-fixed-dim: '#bfcd8f'\n  on-tertiary-fixed: '#171e00'\n  on-tertiary-fixed-variant: '#404b1b'\n  background: '#faf9f5'\n  on-background: '#1b1c1a'\n  surface-variant: '#e3e2df'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: '1.1'\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 36px\n    fontWeight: '700'\n    lineHeight: '1.2'\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: '1.2'\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: '1.3'\n  body-lg:\n    fontFamily: Montserrat\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  body-md:\n    fontFamily: Montserrat\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: '1.6'\n  label-caps:\n    fontFamily: Montserrat\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: '1.0'\n    letterSpacing: 0.1em\nrounded:\n  sm: 0.125rem\n  DEFAULT: 0.25rem\n  md: 0.375rem\n  lg: 0.5rem\n  xl: 0.75rem\n  full: 9999px\nspacing:\n  unit: 8px\n  container-max: 1200px\n  gutter: 24px\n  margin-mobile: 20px\n  section-gap: 80px\n---\n\n## Brand & Style\n\nThis design system is built on the philosophy of \"Warm Editorial.\" It departs from the sterile aesthetics of modern tech to embrace the tactile, imperfect, and sensory experience of an artisanal bakery. The goal is to evoke the smell of fresh bread and the comfort of a morning brew through a digital interface.\n\nThe style leverages **Minimalism** blended with **Tactile** elements. We utilize generous whitespace to allow product photography and sophisticated typography to breathe, mirroring a high-end food magazine. A subtle grain texture is applied to background surfaces to eliminate the \"plastic\" feel of digital screens, creating a \"paper-like\" quality that feels grounded and authentic. \n\n**Target Audience:** Local food enthusiasts, coffee connoisseurs, and neighbors seeking quality and community.\n**Emotional Response:** Comfort, trust, appetite appeal, and a sense of belonging.\n\n## Colors\n\nThe palette is derived from the raw ingredients of the craft. \n\n- **Espresso (#3C2A21):** Our primary ink and grounding color. Used for high-level typography and primary actions. It is deep, rich, and provides more warmth than a standard black.\n- **Crust (#D4A373):** A golden amber used for highlights, secondary buttons, and active states. It represents the perfect bake.\n- **Flour (#FDFCF8):** The foundational surface color. It is a warm, off-white cream that reduces eye strain and feels more organic than pure white.\n- **Moss (#606C38):** An accent color used sparingly for \"Fresh\" indicators, organic sourcing callouts, or success states.\n\nBackgrounds should occasionally utilize a very faint noise overlay (opacity 3-5%) to simulate paper texture.\n\n## Typography\n\nThe typography follows an editorial hierarchy. **Playfair Display** provides the sophisticated, artisanal voice for all headlines. Use it with slightly tighter letter-spacing for large display text to maintain a premium feel.\n\n**Montserrat** is used for body text and functional labels. To maintain the high-contrast editorial look, ensure body text has ample line-height (1.6) for maximum readability. Labels and small navigation items should use the `label-caps` style to provide a structured, architectural contrast to the fluid curves of the serif headers.\n\n## Layout & Spacing\n\nThis design system uses a **Fixed Grid** approach for desktop to maintain the \"magazine\" feel, centered on the screen with generous outer margins. \n\n- **Desktop:** 12-column grid, 1200px max-width, 24px gutters.\n- **Mobile:** Single column with 20px side margins. \n- **Vertical Rhythm:** We use a base-8 spacing scale. Sections are separated by large gaps (`section-gap`) to reinforce the feeling of \"quality over quantity.\" \n\nAvoid dense clusters of information. Items should be grouped logically with white space acting as the primary separator rather than lines or boxes.\n\n## Elevation & Depth\n\nTo maintain the \"paper\" and \"artisanal\" aesthetic, we avoid heavy drop shadows and synthetic blurs.\n\n- **Tonal Layers:** Depth is created through subtle shifts in background color. For example, a card might use a slightly darker cream or a very thin 1px border in a \"Crust\" tint (#D4A373 at 20% opacity).\n- **Low-Contrast Outlines:** Instead of shadows, use delicate borders (1px) in `Espresso` at very low opacity (10-15%) to define boundaries.\n- **Floating Elements:** Only the primary \"Order Now\" or \"Cart\" buttons may use a very soft, ambient shadow to indicate interactability, using the `Espresso` color as the shadow tint rather than black.\n\n## Shapes\n\nWe use **Soft** roundedness (0.25rem / 4px). This provides a gentle, hand-finished feel without appearing \"bubbly\" or overly \"techy.\" \n\n- **Images:** Should feature either sharp corners for a strict editorial look or the base 4px radius for a softer touch.\n- **Buttons:** Use the base `rounded` (4px) or `rounded-lg` (8px). Never use full-pill shapes, as they conflict with the sophisticated serif typography.\n\n## Components\n\n- **Buttons:** Primary buttons are solid `Espresso` with `Flour` text. Secondary buttons use a `Crust` 1px border with `Espresso` text. Interaction states should involve a subtle shift in background warmth rather than a dramatic color change.\n- **Cards:** Eschew the \"boxed\" card look. Use \"Editorial Cards\"—an image on top, followed by a `label-caps` category, a `headline-sm` title, and no containing border. Use whitespace to separate items in a list.\n- **Inputs:** Simple bottom-border only or a very light-tinted 4-sided border. Use `Montserrat` for placeholder text.\n- **Chips/Badges:** Use the `Moss` green for \"New\" or \"Daily Special\" tags, using a subtle background fill and dark green text.\n- **Lists:** Menu items should be styled with the name of the item in `Playfair Display` and the price/description in `Montserrat`, separated by a thin, dotted leader line to evoke classic cafe menus.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "MONTSERRAT",
+            "labelFontFamily": "Montserrat",
+            "namedColors": {
+              "background": "#faf9f5",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f1ed",
+              "inverse_primary": "#dec1b3",
+              "inverse_surface": "#2f312e",
+              "on_background": "#1b1c1a",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#aa9084",
+              "on_primary_fixed": "#281810",
+              "on_primary_fixed_variant": "#574238",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#7a532a",
+              "on_secondary_fixed": "#2c1600",
+              "on_secondary_fixed_variant": "#623f18",
+              "on_surface": "#1b1c1a",
+              "on_surface_variant": "#4f4540",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#8f9c62",
+              "on_tertiary_fixed": "#171e00",
+              "on_tertiary_fixed_variant": "#404b1b",
+              "outline": "#81756f",
+              "outline_variant": "#d3c3bd",
+              "primary": "#25160e",
+              "primary_container": "#3c2a21",
+              "primary_fixed": "#fbdcce",
+              "primary_fixed_dim": "#dec1b3",
+              "secondary": "#7d562d",
+              "secondary_container": "#ffca98",
+              "secondary_fixed": "#ffdcbd",
+              "secondary_fixed_dim": "#f0bd8b",
+              "surface": "#faf9f5",
+              "surface_bright": "#faf9f5",
+              "surface_container": "#efeeea",
+              "surface_container_high": "#e9e8e4",
+              "surface_container_highest": "#e3e2df",
+              "surface_container_low": "#f4f4f0",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbdad6",
+              "surface_tint": "#705a4f",
+              "surface_variant": "#e3e2df",
+              "tertiary": "#151c00",
+              "tertiary_container": "#283204",
+              "tertiary_fixed": "#dbe9a9",
+              "tertiary_fixed_dim": "#bfcd8f"
+            },
+            "overrideNeutralColor": "#fdfcf8",
+            "overridePrimaryColor": "#3c2a21",
+            "overrideSecondaryColor": "#d4a373",
+            "overrideTertiaryColor": "#606c38",
+            "roundness": "ROUND_FOUR",
+            "spacing": {
+              "container-max": "1200px",
+              "gutter": "24px",
+              "margin-mobile": "20px",
+              "section-gap": "80px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Montserrat",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "body-md": {
+                "fontFamily": "Montserrat",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "1.6"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "1.1"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "36px",
+                "fontWeight": "700",
+                "lineHeight": "1.2"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "1.2"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "1.3"
+              },
+              "label-caps": {
+                "fontFamily": "Montserrat",
+                "fontSize": "12px",
+                "fontWeight": "700",
+                "letterSpacing": "0.1em",
+                "lineHeight": "1.0"
+              }
+            }
+          },
+          "title": "Pan Y KaFe | The Daily Ritual",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've designed and built a bespoke, editorial-grade homepage for **Pan Y KaFe**. \n\nThis design breaks away from generic local-business templates by adopting a **magazine-style layout** that emphasizes artisanal craft and the \"Daily Ritual\" of coffee and bread.\n\n### Design Highlights:\n- **Asymmetric Layout:** I utilized a split-screen hero and staggered content sections to create a premium, non-standard visual flow that guides the eye naturally.\n- **Editorial Typography:** The pairing of *Playfair Display* for large, overlapping headlines with a clean, high-contrast sans-serif creates a sophisticated, high-end feel.\n- **Visual Motif:** I introduced subtle vertical typography and thin, elegant rule lines to act as a recurring brand signature throughout the page.\n- **Artisanal Palette:** The color story is built on deep Espresso browns, soft Flour creams, and golden Crust ambers, evoking the warmth of a morning bakery.\n- **Functional Precision:** The site includes a dedicated map slot for your Webb City location, a responsive navigation system, and a refined contact form designed for high-conversion inquiries.\n\nThe code is production-ready, featuring semantic HTML, custom CSS properties for the brand colors, and smooth-scroll interactivity."
+  },
+  {
+    "suggestion": "Adjust the 'Services' section layout"
+  },
+  {
+    "suggestion": "Try a dark mode version of this design"
+  },
+  {
+    "suggestion": "Add more motion to the hero section"
+  }
+]
