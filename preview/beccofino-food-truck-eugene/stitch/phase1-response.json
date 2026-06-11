@@ -1,0 +1,495 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Beccofino",
+          "styleGuidelines": "## Brand & Style\nThe design system embodies a \"Rustic-Modern Italian\" aesthetic, bridging the gap between traditional culinary craftsmanship and contemporary editorial design. It targets a discerning audience that values authenticity, high-quality ingredients, and the artisanal nature of gourmet street food. \n\nThe visual style is **Editorial Minimalism** mixed with **Tactile/Skeuomorphic** accents. The interface should feel like a high-end food journal—refined, intentional, and spacious. Key characteristics include:\n- **Asymmetrical Grids:** Breaking the standard digital box to create a sense of movement and \"hand-arranged\" composition.\n- **Hand-Drawn Accents:** Charcoal-style illustrations of basil leaves, peppercorns, and flour dust provide organic texture against clean UI.\n- **Refined Borders:** Thin, elegant lines used to frame content like a printed menu.\n\n## Layout & Spacing\nThe layout follows a **Fluid Editorial Grid**. Unlike standard 12-column layouts, this system encourages \"offset\" positioning where images and text blocks overlap slightly or are staggered vertically to create a dynamic, magazine-style flow.\n\n- **Generous Whitespace:** Blocks of content should never feel crowded. Use the `margin-desktop` unit to create breathing room between sections.\n- **Asymmetric Rule:** When displaying food items, alternate between left-aligned and right-aligned text with an `asymmetric-offset` to break the vertical line.\n- **Mobile Reflow:** On mobile, the grid collapses to a single column, but retains the character through varying padding and the use of the \"Creamy Ricotta\" background to define sections rather than harsh dividers.\n\n## Elevation & Depth\nIn alignment with the editorial and rustic theme, the design system avoids heavy shadows. \n- **Tonal Layers:** Depth is created through color blocking. A slightly darker shade of the neutral background or a very thin 1px border in Deep Espresso defines \"elevated\" areas.\n- **Low-Contrast Outlines:** Instead of shadows, cards and containers use a 1px border with 20% opacity of Deep Espresso.\n- **Physicality:** The \"elevation\" comes from the layering of charcoal illustrations *behind* or *overlapping* text, creating a flat but multi-dimensional collage effect.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are \"Burnt Sienna\" with \"Creamy Ricotta\" text. Secondary buttons are outlined in \"Deep Espresso\" with wide letter spacing.\n- **Cards:** Use for menu items. A 1px \"Deep Espresso\" border (low opacity) frames the image and description. Typography is centered or aggressively left-aligned within the card.\n- **Input Fields:** Underlined style (bottom border only) to mimic a guest check or order form. \n- **Chips/Tags:** Small, sharp-edged boxes with \"Space Mono\" text. Used for dietary restrictions (e.g., \"VG\", \"GF\").\n- **Menu Lists:** Use a dot-leader (dotted line) between the item name and the price to bridge the gap in a traditional Italian trattoria style.\n- **Illustrative Breaks:** Use horizontal lines with a small charcoal leaf icon in the center to separate major page sections.",
+          "theme": {
+            "bodyFont": "DM_SANS",
+            "bodyFontFamily": "Dm Sans",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#a0522d",
+            "designMd": "---\nname: Beccofino\ncolors:\n  surface: '#fff8ef'\n  surface-dim: '#e1d9cb'\n  surface-bright: '#fff8ef'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf3e4'\n  surface-container: '#f5edde'\n  surface-container-high: '#efe7d9'\n  surface-container-highest: '#e9e2d3'\n  on-surface: '#1e1b13'\n  on-surface-variant: '#54433c'\n  inverse-surface: '#343026'\n  inverse-on-surface: '#f8f0e1'\n  outline: '#87736b'\n  outline-variant: '#dac1b8'\n  surface-tint: '#944925'\n  primary: '#823b18'\n  on-primary: '#ffffff'\n  primary-container: '#a0522d'\n  on-primary-container: '#ffe1d6'\n  inverse-primary: '#ffb596'\n  secondary: '#705a4f'\n  on-secondary: '#ffffff'\n  secondary-container: '#fbdcce'\n  on-secondary-container: '#766055'\n  tertiary: '#315926'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#48723c'\n  on-tertiary-container: '#c5f5b1'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb596'\n  on-primary-fixed: '#360f00'\n  on-primary-fixed-variant: '#76320f'\n  secondary-fixed: '#fbdcce'\n  secondary-fixed-dim: '#dec1b3'\n  on-secondary-fixed: '#281810'\n  on-secondary-fixed-variant: '#574238'\n  tertiary-fixed: '#c0f0ad'\n  tertiary-fixed-dim: '#a4d393'\n  on-tertiary-fixed: '#022100'\n  on-tertiary-fixed-variant: '#28501e'\n  background: '#fff8ef'\n  on-background: '#1e1b13'\n  surface-variant: '#e9e2d3'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies a \"Rustic-Modern Italian\" aesthetic, bridging the gap between traditional culinary craftsmanship and contemporary editorial design. It targets a discerning audience that values authenticity, high-quality ingredients, and the artisanal nature of gourmet street food. \n\nThe visual style is **Editorial Minimalism** mixed with **Tactile/Skeuomorphic** accents. The interface should feel like a high-end food journal—refined, intentional, and spacious. Key characteristics include:\n- **Asymmetrical Grids:** Breaking the standard digital box to create a sense of movement and \"hand-arranged\" composition.\n- **Hand-Drawn Accents:** Charcoal-style illustrations of basil leaves, peppercorns, and flour dust provide organic texture against clean UI.\n- **Refined Borders:** Thin, elegant lines used to frame content like a printed menu.\n\n## Colors\nThe palette is grounded in the earthy tones of the Italian landscape and kitchen.\n- **Creamy Ricotta (#FDF5E6):** The primary background color. It is softer than pure white, providing a warm, parchment-like canvas that reduces eye strain and feels premium.\n- **Burnt Sienna (#A0522D):** Used for primary actions, accents, and high-energy highlights. It evokes terracotta and roasted ingredients.\n- **Deep Espresso (#3C2A21):** The core color for typography and structural elements, ensuring high legibility and a grounded, professional feel.\n- **Basil Green (#4F7942):** A secondary accent used for success states, botanical illustrations, and organic markers.\n\n## Typography\nThe typography system relies on a high-contrast pairing to evoke an editorial feel.\n- **Headlines:** Playfair Display is used for large displays and section headers. Its high stroke contrast gives a sophisticated, \"Vogue-esque\" culinary vibe.\n- **Body:** DM Sans provides a clean, wide-spaced counterpoint to the serif, ensuring menus and descriptions are effortless to read.\n- **Labels/Technical:** Space Mono is used sparingly for prices, nutritional data, and timestamps to introduce a subtle \"typewritten\" or \"receipt\" feel that suits the food truck context.\n\n## Layout & Spacing\nThe layout follows a **Fluid Editorial Grid**. Unlike standard 12-column layouts, this system encourages \"offset\" positioning where images and text blocks overlap slightly or are staggered vertically to create a dynamic, magazine-style flow.\n\n- **Generous Whitespace:** Blocks of content should never feel crowded. Use the `margin-desktop` unit to create breathing room between sections.\n- **Asymmetric Rule:** When displaying food items, alternate between left-aligned and right-aligned text with an `asymmetric-offset` to break the vertical line.\n- **Mobile Reflow:** On mobile, the grid collapses to a single column, but retains the character through varying padding and the use of the \"Creamy Ricotta\" background to define sections rather than harsh dividers.\n\n## Elevation & Depth\nIn alignment with the editorial and rustic theme, the design system avoids heavy shadows. \n- **Tonal Layers:** Depth is created through color blocking. A slightly darker shade of the neutral background or a very thin 1px border in Deep Espresso defines \"elevated\" areas.\n- **Low-Contrast Outlines:** Instead of shadows, cards and containers use a 1px border with 20% opacity of Deep Espresso.\n- **Physicality:** The \"elevation\" comes from the layering of charcoal illustrations *behind* or *overlapping* text, creating a flat but multi-dimensional collage effect.\n\n## Shapes\nThe shape language is **Sharp (0)**. To maintain the premium, editorial feel of a printed menu, the design system avoids rounded corners. \n- All buttons, input fields, and image containers use 90-degree angles.\n- This sharpness communicates precision, professional culinary standards, and architectural modernism. \n- Exception: The only \"round\" elements in the UI should be the natural curves of the charcoal illustrations and circular badges for \"New\" or \"Hot\" items, which act as organic counterpoints to the rigid grid.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are \"Burnt Sienna\" with \"Creamy Ricotta\" text. Secondary buttons are outlined in \"Deep Espresso\" with wide letter spacing.\n- **Cards:** Use for menu items. A 1px \"Deep Espresso\" border (low opacity) frames the image and description. Typography is centered or aggressively left-aligned within the card.\n- **Input Fields:** Underlined style (bottom border only) to mimic a guest check or order form. \n- **Chips/Tags:** Small, sharp-edged boxes with \"Space Mono\" text. Used for dietary restrictions (e.g., \"VG\", \"GF\").\n- **Menu Lists:** Use a dot-leader (dotted line) between the item name and the price to bridge the gap in a traditional Italian trattoria style.\n- **Illustrative Breaks:** Use horizontal lines with a small charcoal leaf icon in the center to separate major page sections.",
+            "font": "PLAYFAIR_DISPLAY",
+            "headlineFont": "PLAYFAIR_DISPLAY",
+            "headlineFontFamily": "Playfair Display",
+            "labelFont": "SPACE_MONO",
+            "labelFontFamily": "Space Mono",
+            "namedColors": {
+              "background": "#fff8ef",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f8f0e1",
+              "inverse_primary": "#ffb596",
+              "inverse_surface": "#343026",
+              "on_background": "#1e1b13",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#ffe1d6",
+              "on_primary_fixed": "#360f00",
+              "on_primary_fixed_variant": "#76320f",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#766055",
+              "on_secondary_fixed": "#281810",
+              "on_secondary_fixed_variant": "#574238",
+              "on_surface": "#1e1b13",
+              "on_surface_variant": "#54433c",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#c5f5b1",
+              "on_tertiary_fixed": "#022100",
+              "on_tertiary_fixed_variant": "#28501e",
+              "outline": "#87736b",
+              "outline_variant": "#dac1b8",
+              "primary": "#823b18",
+              "primary_container": "#a0522d",
+              "primary_fixed": "#ffdbcd",
+              "primary_fixed_dim": "#ffb596",
+              "secondary": "#705a4f",
+              "secondary_container": "#fbdcce",
+              "secondary_fixed": "#fbdcce",
+              "secondary_fixed_dim": "#dec1b3",
+              "surface": "#fff8ef",
+              "surface_bright": "#fff8ef",
+              "surface_container": "#f5edde",
+              "surface_container_high": "#efe7d9",
+              "surface_container_highest": "#e9e2d3",
+              "surface_container_low": "#fbf3e4",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#e1d9cb",
+              "surface_tint": "#944925",
+              "surface_variant": "#e9e2d3",
+              "tertiary": "#315926",
+              "tertiary_container": "#48723c",
+              "tertiary_fixed": "#c0f0ad",
+              "tertiary_fixed_dim": "#a4d393"
+            },
+            "overrideNeutralColor": "#fdf5e6",
+            "overridePrimaryColor": "#a0522d",
+            "overrideSecondaryColor": "#3c2a21",
+            "overrideTertiaryColor": "#4f7942",
+            "spacing": {
+              "asymmetric-offset": "48px",
+              "container-max": "1280px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "DM Sans",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "DM Sans",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "button": {
+                "fontFamily": "DM Sans",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.05em",
+                "lineHeight": "20px"
+              },
+              "display-lg": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "64px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "72px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "48px"
+              },
+              "headline-md": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-sm": {
+                "fontFamily": "Playfair Display",
+                "fontSize": "24px",
+                "fontWeight": "600",
+                "lineHeight": "32px"
+              },
+              "label-caps": {
+                "fontFamily": "Space Mono",
+                "fontSize": "12px",
+                "fontWeight": "700",
+                "letterSpacing": "0.15em",
+                "lineHeight": "16px"
+              }
+            }
+          }
+        },
+        "name": "assets/f0c04651104d4cafb520aec5170a36c3",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "96304f934ff048e2b2d89b2b1389e784",
+            "name": "projects/13083033910450060621/screens/96304f934ff048e2b2d89b2b1389e784",
+            "prompt": "High-end, editorial food photography of a gourmet Italian pasta dish being plated by a chef in a modern food truck setting. Warm, rustic lighting, shallow depth of field, rich textures of flour and herbs. 8k resolution, cinematic quality. Style: Rustic-modern Italian. Color palette: Burnt Sienna, Deep Espresso, Creamy Ricotta.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvENRfZYCCSnzeHy9yq3-cmjTn4-Qt5CUd08WAZ9vwXxMFv5dlAjhHMFExtwW_H1kkr6prCX0qvyj2x2YXOFvJZLtQI0M25Wbu5AZtomn_7g5d5ComOcFwPFWqBz_iZeCb-cDtarP_nC84spO9eerA3gp-_lyxsRHpCn_Fsbhqq_CEVPfI8rnDmRdeFaWQRs9IUxVAsyeiJDD_DlXaz-A7IcahnyVEuPFzpzWRck6n3g3S1nsPh1RSqhSuM",
+              "name": "projects/13083033910450060621/files/0d2803aa83a14628baa1d4514d8899a9"
+            },
+            "theme": {},
+            "title": "High-end, editorial food photography of a gourmet Italian pasta dish being plated by a chef in a modern food truck setting. Warm, rustic lighting, shallow depth of field, rich textures of flour and herbs. 8k resolution, cinematic quality. Style: Rustic-modern Italian. Color palette: Burnt Sienna, Deep Espresso, Creamy Ricotta.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "88fdee5efa6e427eb6647cf5725dbf96",
+            "name": "projects/13083033910450060621/screens/88fdee5efa6e427eb6647cf5725dbf96",
+            "prompt": "A close-up shot of artisanal Italian ingredients: a bunch of fresh basil, a block of aged parmesan, and a splash of olive oil on a rustic wooden table. Artistic, high-contrast lighting. Hand-drawn charcoal-style sketch overlays.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvaCEov076u1eYFRBSqGH4K66yPV9zRto9TOtckWuEPhFX_8OMpyTCfsUx_DevF99ACKsPRIuylEEBKMB2EQwS3QnSLWYFLRzdgzawGJA2ha8DLDiqQU8F6BPGDRYLQ-QD-2Z-tmQK2desEEonXdPknMKG-OW-lOoIb6NGCHkOkoZKebkzZZuI9_Eqk9FfM_UWI6PvhOEBic6M-QJh7C84yloNdT86wdagsAub897B8y9Wj3TJCDokMe5Y",
+              "name": "projects/13083033910450060621/files/7eb1ed7363924fc88009e926aa15e78d"
+            },
+            "theme": {},
+            "title": "A close-up shot of artisanal Italian ingredients: a bunch of fresh basil, a block of aged parmesan, and a splash of olive oil on a rustic wooden table. Artistic, high-contrast lighting. Hand-drawn charcoal-style sketch overlays.",
+            "width": "1200"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Beccofino",
+                "styleGuidelines": "## Brand & Style\nThe design system embodies a \"Rustic-Modern Italian\" aesthetic, bridging the gap between traditional culinary craftsmanship and contemporary editorial design. It targets a discerning audience that values authenticity, high-quality ingredients, and the artisanal nature of gourmet street food. \n\nThe visual style is **Editorial Minimalism** mixed with **Tactile/Skeuomorphic** accents. The interface should feel like a high-end food journal—refined, intentional, and spacious. Key characteristics include:\n- **Asymmetrical Grids:** Breaking the standard digital box to create a sense of movement and \"hand-arranged\" composition.\n- **Hand-Drawn Accents:** Charcoal-style illustrations of basil leaves, peppercorns, and flour dust provide organic texture against clean UI.\n- **Refined Borders:** Thin, elegant lines used to frame content like a printed menu.\n\n## Layout & Spacing\nThe layout follows a **Fluid Editorial Grid**. Unlike standard 12-column layouts, this system encourages \"offset\" positioning where images and text blocks overlap slightly or are staggered vertically to create a dynamic, magazine-style flow.\n\n- **Generous Whitespace:** Blocks of content should never feel crowded. Use the `margin-desktop` unit to create breathing room between sections.\n- **Asymmetric Rule:** When displaying food items, alternate between left-aligned and right-aligned text with an `asymmetric-offset` to break the vertical line.\n- **Mobile Reflow:** On mobile, the grid collapses to a single column, but retains the character through varying padding and the use of the \"Creamy Ricotta\" background to define sections rather than harsh dividers.\n\n## Elevation & Depth\nIn alignment with the editorial and rustic theme, the design system avoids heavy shadows. \n- **Tonal Layers:** Depth is created through color blocking. A slightly darker shade of the neutral background or a very thin 1px border in Deep Espresso defines \"elevated\" areas.\n- **Low-Contrast Outlines:** Instead of shadows, cards and containers use a 1px border with 20% opacity of Deep Espresso.\n- **Physicality:** The \"elevation\" comes from the layering of charcoal illustrations *behind* or *overlapping* text, creating a flat but multi-dimensional collage effect.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are \"Burnt Sienna\" with \"Creamy Ricotta\" text. Secondary buttons are outlined in \"Deep Espresso\" with wide letter spacing.\n- **Cards:** Use for menu items. A 1px \"Deep Espresso\" border (low opacity) frames the image and description. Typography is centered or aggressively left-aligned within the card.\n- **Input Fields:** Underlined style (bottom border only) to mimic a guest check or order form. \n- **Chips/Tags:** Small, sharp-edged boxes with \"Space Mono\" text. Used for dietary restrictions (e.g., \"VG\", \"GF\").\n- **Menu Lists:** Use a dot-leader (dotted line) between the item name and the price to bridge the gap in a traditional Italian trattoria style.\n- **Illustrative Breaks:** Use horizontal lines with a small charcoal leaf icon in the center to separate major page sections.",
+                "theme": {
+                  "bodyFont": "DM_SANS",
+                  "bodyFontFamily": "Dm Sans",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#a0522d",
+                  "designMd": "---\nname: Beccofino\ncolors:\n  surface: '#fff8ef'\n  surface-dim: '#e1d9cb'\n  surface-bright: '#fff8ef'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf3e4'\n  surface-container: '#f5edde'\n  surface-container-high: '#efe7d9'\n  surface-container-highest: '#e9e2d3'\n  on-surface: '#1e1b13'\n  on-surface-variant: '#54433c'\n  inverse-surface: '#343026'\n  inverse-on-surface: '#f8f0e1'\n  outline: '#87736b'\n  outline-variant: '#dac1b8'\n  surface-tint: '#944925'\n  primary: '#823b18'\n  on-primary: '#ffffff'\n  primary-container: '#a0522d'\n  on-primary-container: '#ffe1d6'\n  inverse-primary: '#ffb596'\n  secondary: '#705a4f'\n  on-secondary: '#ffffff'\n  secondary-container: '#fbdcce'\n  on-secondary-container: '#766055'\n  tertiary: '#315926'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#48723c'\n  on-tertiary-container: '#c5f5b1'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb596'\n  on-primary-fixed: '#360f00'\n  on-primary-fixed-variant: '#76320f'\n  secondary-fixed: '#fbdcce'\n  secondary-fixed-dim: '#dec1b3'\n  on-secondary-fixed: '#281810'\n  on-secondary-fixed-variant: '#574238'\n  tertiary-fixed: '#c0f0ad'\n  tertiary-fixed-dim: '#a4d393'\n  on-tertiary-fixed: '#022100'\n  on-tertiary-fixed-variant: '#28501e'\n  background: '#fff8ef'\n  on-background: '#1e1b13'\n  surface-variant: '#e9e2d3'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies a \"Rustic-Modern Italian\" aesthetic, bridging the gap between traditional culinary craftsmanship and contemporary editorial design. It targets a discerning audience that values authenticity, high-quality ingredients, and the artisanal nature of gourmet street food. \n\nThe visual style is **Editorial Minimalism** mixed with **Tactile/Skeuomorphic** accents. The interface should feel like a high-end food journal—refined, intentional, and spacious. Key characteristics include:\n- **Asymmetrical Grids:** Breaking the standard digital box to create a sense of movement and \"hand-arranged\" composition.\n- **Hand-Drawn Accents:** Charcoal-style illustrations of basil leaves, peppercorns, and flour dust provide organic texture against clean UI.\n- **Refined Borders:** Thin, elegant lines used to frame content like a printed menu.\n\n## Colors\nThe palette is grounded in the earthy tones of the Italian landscape and kitchen.\n- **Creamy Ricotta (#FDF5E6):** The primary background color. It is softer than pure white, providing a warm, parchment-like canvas that reduces eye strain and feels premium.\n- **Burnt Sienna (#A0522D):** Used for primary actions, accents, and high-energy highlights. It evokes terracotta and roasted ingredients.\n- **Deep Espresso (#3C2A21):** The core color for typography and structural elements, ensuring high legibility and a grounded, professional feel.\n- **Basil Green (#4F7942):** A secondary accent used for success states, botanical illustrations, and organic markers.\n\n## Typography\nThe typography system relies on a high-contrast pairing to evoke an editorial feel.\n- **Headlines:** Playfair Display is used for large displays and section headers. Its high stroke contrast gives a sophisticated, \"Vogue-esque\" culinary vibe.\n- **Body:** DM Sans provides a clean, wide-spaced counterpoint to the serif, ensuring menus and descriptions are effortless to read.\n- **Labels/Technical:** Space Mono is used sparingly for prices, nutritional data, and timestamps to introduce a subtle \"typewritten\" or \"receipt\" feel that suits the food truck context.\n\n## Layout & Spacing\nThe layout follows a **Fluid Editorial Grid**. Unlike standard 12-column layouts, this system encourages \"offset\" positioning where images and text blocks overlap slightly or are staggered vertically to create a dynamic, magazine-style flow.\n\n- **Generous Whitespace:** Blocks of content should never feel crowded. Use the `margin-desktop` unit to create breathing room between sections.\n- **Asymmetric Rule:** When displaying food items, alternate between left-aligned and right-aligned text with an `asymmetric-offset` to break the vertical line.\n- **Mobile Reflow:** On mobile, the grid collapses to a single column, but retains the character through varying padding and the use of the \"Creamy Ricotta\" background to define sections rather than harsh dividers.\n\n## Elevation & Depth\nIn alignment with the editorial and rustic theme, the design system avoids heavy shadows. \n- **Tonal Layers:** Depth is created through color blocking. A slightly darker shade of the neutral background or a very thin 1px border in Deep Espresso defines \"elevated\" areas.\n- **Low-Contrast Outlines:** Instead of shadows, cards and containers use a 1px border with 20% opacity of Deep Espresso.\n- **Physicality:** The \"elevation\" comes from the layering of charcoal illustrations *behind* or *overlapping* text, creating a flat but multi-dimensional collage effect.\n\n## Shapes\nThe shape language is **Sharp (0)**. To maintain the premium, editorial feel of a printed menu, the design system avoids rounded corners. \n- All buttons, input fields, and image containers use 90-degree angles.\n- This sharpness communicates precision, professional culinary standards, and architectural modernism. \n- Exception: The only \"round\" elements in the UI should be the natural curves of the charcoal illustrations and circular badges for \"New\" or \"Hot\" items, which act as organic counterpoints to the rigid grid.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are \"Burnt Sienna\" with \"Creamy Ricotta\" text. Secondary buttons are outlined in \"Deep Espresso\" with wide letter spacing.\n- **Cards:** Use for menu items. A 1px \"Deep Espresso\" border (low opacity) frames the image and description. Typography is centered or aggressively left-aligned within the card.\n- **Input Fields:** Underlined style (bottom border only) to mimic a guest check or order form. \n- **Chips/Tags:** Small, sharp-edged boxes with \"Space Mono\" text. Used for dietary restrictions (e.g., \"VG\", \"GF\").\n- **Menu Lists:** Use a dot-leader (dotted line) between the item name and the price to bridge the gap in a traditional Italian trattoria style.\n- **Illustrative Breaks:** Use horizontal lines with a small charcoal leaf icon in the center to separate major page sections.",
+                  "font": "PLAYFAIR_DISPLAY",
+                  "headlineFont": "PLAYFAIR_DISPLAY",
+                  "headlineFontFamily": "Playfair Display",
+                  "labelFont": "SPACE_MONO",
+                  "labelFontFamily": "Space Mono",
+                  "namedColors": {
+                    "background": "#fff8ef",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f8f0e1",
+                    "inverse_primary": "#ffb596",
+                    "inverse_surface": "#343026",
+                    "on_background": "#1e1b13",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#ffe1d6",
+                    "on_primary_fixed": "#360f00",
+                    "on_primary_fixed_variant": "#76320f",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#766055",
+                    "on_secondary_fixed": "#281810",
+                    "on_secondary_fixed_variant": "#574238",
+                    "on_surface": "#1e1b13",
+                    "on_surface_variant": "#54433c",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#c5f5b1",
+                    "on_tertiary_fixed": "#022100",
+                    "on_tertiary_fixed_variant": "#28501e",
+                    "outline": "#87736b",
+                    "outline_variant": "#dac1b8",
+                    "primary": "#823b18",
+                    "primary_container": "#a0522d",
+                    "primary_fixed": "#ffdbcd",
+                    "primary_fixed_dim": "#ffb596",
+                    "secondary": "#705a4f",
+                    "secondary_container": "#fbdcce",
+                    "secondary_fixed": "#fbdcce",
+                    "secondary_fixed_dim": "#dec1b3",
+                    "surface": "#fff8ef",
+                    "surface_bright": "#fff8ef",
+                    "surface_container": "#f5edde",
+                    "surface_container_high": "#efe7d9",
+                    "surface_container_highest": "#e9e2d3",
+                    "surface_container_low": "#fbf3e4",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#e1d9cb",
+                    "surface_tint": "#944925",
+                    "surface_variant": "#e9e2d3",
+                    "tertiary": "#315926",
+                    "tertiary_container": "#48723c",
+                    "tertiary_fixed": "#c0f0ad",
+                    "tertiary_fixed_dim": "#a4d393"
+                  },
+                  "overrideNeutralColor": "#fdf5e6",
+                  "overridePrimaryColor": "#a0522d",
+                  "overrideSecondaryColor": "#3c2a21",
+                  "overrideTertiaryColor": "#4f7942",
+                  "spacing": {
+                    "asymmetric-offset": "48px",
+                    "container-max": "1280px",
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "20px",
+                    "unit": "8px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "18px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.01em",
+                      "lineHeight": "28px"
+                    },
+                    "body-md": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px"
+                    },
+                    "button": {
+                      "fontFamily": "DM Sans",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.05em",
+                      "lineHeight": "20px"
+                    },
+                    "display-lg": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "64px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "72px"
+                    },
+                    "display-lg-mobile": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "40px",
+                      "fontWeight": "700",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "48px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "32px",
+                      "fontWeight": "600",
+                      "lineHeight": "40px"
+                    },
+                    "headline-sm": {
+                      "fontFamily": "Playfair Display",
+                      "fontSize": "24px",
+                      "fontWeight": "600",
+                      "lineHeight": "32px"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Space Mono",
+                      "fontSize": "12px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.15em",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/f0c04651104d4cafb520aec5170a36c3",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9470",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2JjYmJkMDA0OTI5NzQ4NDY4Y2FjMTk4ZjBlZjY2MGM2EgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzA4MzAzMzkxMDQ1MDA2MDYyMQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/13083033910450060621/files/f3148af6ba2e49f2acaac27d6c710268"
+            },
+            "id": "37046b3f1d3649c7a65f64a912c81d2b",
+            "name": "projects/13083033910450060621/screens/37046b3f1d3649c7a65f64a912c81d2b",
+            "prompt": "Build a complete, bespoke DESKTOP landing page for Beccofino Food Truck. \nLayout: Editorial, high-fashion culinary aesthetic. Use asymmetrical grids, overlapping elements, and generous whitespace. \nSections:\n1. Header: Minimalist, featuring the phone number (458) 221-5038 and links: Menu, Story, Find Us.\n2. Hero: A massive, off-center headline 'Artisanal Soul. Street Food Spirit.' overlapping a stunning image of a dish being plated ({{DATA:IMAGE:IMAGE_3}}).\n3. Credibility: A subtle horizontal strip with quotes from local food critics and 'The Eugene Register'.\n4. Offerings: A grid titled 'Il Nostro Menu' using large serif typography. Items are listed with elegant descriptions, not just cards.\n5. About: 'The Vision of Maurizio Bianchi' — text on one side, an image of ingredients ({{DATA:IMAGE:IMAGE_4}}) on the other, with a slight overlap. Mention 520 Charnelton Street.\n6. Visit: A full-width section titled 'Trova il Gusto' with the specific map-slot div: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact: A minimalist form with ivory inputs and dark espresso text.\n8. Footer: Semantic footer with copyright, links, and the chef's email.\n\nStyling: Use CSS variables for the color palette (Espresso #3C2A21, Ricotta #FDF5E6, Sienna #A0522D). Incorporate smooth scroll and a mobile-responsive nav menu. Ensure high accessibility and descriptive alt tags. No generic templates.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLs-Jecn0c55PFywW8npdr9Rakj1sbM3ZtsiJxr1erTQIhBWGhRYMHjiXAjO9OcX8zwpXBHU8Ka5kCR9RwtKdkuPpbDbkVjZlLONZ6VMZMuuqIY5ccOqvk7CeptW1GbqcDbqnMYum3q1Q17ogvD6hXvCbQZ2w-WElk6p1iv8tJW9ESSz2Q299_i4sAbuYC2wmETUyIVdKLdvOY7xQrGmMpJOvroCiFZ9yRb9v7jQw1loQky56cXR9P8uPytl",
+              "name": "projects/13083033910450060621/files/ff10501191eb42a984ec5d3f1b2346af"
+            },
+            "theme": {
+              "bodyFont": "DM_SANS",
+              "bodyFontFamily": "Dm Sans",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#a0522d",
+              "designMd": "---\nname: Beccofino\ncolors:\n  surface: '#fff8ef'\n  surface-dim: '#e1d9cb'\n  surface-bright: '#fff8ef'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#fbf3e4'\n  surface-container: '#f5edde'\n  surface-container-high: '#efe7d9'\n  surface-container-highest: '#e9e2d3'\n  on-surface: '#1e1b13'\n  on-surface-variant: '#54433c'\n  inverse-surface: '#343026'\n  inverse-on-surface: '#f8f0e1'\n  outline: '#87736b'\n  outline-variant: '#dac1b8'\n  surface-tint: '#944925'\n  primary: '#823b18'\n  on-primary: '#ffffff'\n  primary-container: '#a0522d'\n  on-primary-container: '#ffe1d6'\n  inverse-primary: '#ffb596'\n  secondary: '#705a4f'\n  on-secondary: '#ffffff'\n  secondary-container: '#fbdcce'\n  on-secondary-container: '#766055'\n  tertiary: '#315926'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#48723c'\n  on-tertiary-container: '#c5f5b1'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb596'\n  on-primary-fixed: '#360f00'\n  on-primary-fixed-variant: '#76320f'\n  secondary-fixed: '#fbdcce'\n  secondary-fixed-dim: '#dec1b3'\n  on-secondary-fixed: '#281810'\n  on-secondary-fixed-variant: '#574238'\n  tertiary-fixed: '#c0f0ad'\n  tertiary-fixed-dim: '#a4d393'\n  on-tertiary-fixed: '#022100'\n  on-tertiary-fixed-variant: '#28501e'\n  background: '#fff8ef'\n  on-background: '#1e1b13'\n  surface-variant: '#e9e2d3'\ntypography:\n  display-lg:\n    fontFamily: Playfair Display\n    fontSize: 64px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.02em\n  display-lg-mobile:\n    fontFamily: Playfair Display\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 48px\n    letterSpacing: -0.01em\n  headline-md:\n    fontFamily: Playfair Display\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-sm:\n    fontFamily: Playfair Display\n    fontSize: 24px\n    fontWeight: '600'\n    lineHeight: 32px\n  body-lg:\n    fontFamily: DM Sans\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: DM Sans\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 12px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  button:\n    fontFamily: DM Sans\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.05em\nspacing:\n  unit: 8px\n  container-max: 1280px\n  gutter: 24px\n  margin-desktop: 64px\n  margin-mobile: 20px\n  asymmetric-offset: 48px\n---\n\n## Brand & Style\nThe design system embodies a \"Rustic-Modern Italian\" aesthetic, bridging the gap between traditional culinary craftsmanship and contemporary editorial design. It targets a discerning audience that values authenticity, high-quality ingredients, and the artisanal nature of gourmet street food. \n\nThe visual style is **Editorial Minimalism** mixed with **Tactile/Skeuomorphic** accents. The interface should feel like a high-end food journal—refined, intentional, and spacious. Key characteristics include:\n- **Asymmetrical Grids:** Breaking the standard digital box to create a sense of movement and \"hand-arranged\" composition.\n- **Hand-Drawn Accents:** Charcoal-style illustrations of basil leaves, peppercorns, and flour dust provide organic texture against clean UI.\n- **Refined Borders:** Thin, elegant lines used to frame content like a printed menu.\n\n## Colors\nThe palette is grounded in the earthy tones of the Italian landscape and kitchen.\n- **Creamy Ricotta (#FDF5E6):** The primary background color. It is softer than pure white, providing a warm, parchment-like canvas that reduces eye strain and feels premium.\n- **Burnt Sienna (#A0522D):** Used for primary actions, accents, and high-energy highlights. It evokes terracotta and roasted ingredients.\n- **Deep Espresso (#3C2A21):** The core color for typography and structural elements, ensuring high legibility and a grounded, professional feel.\n- **Basil Green (#4F7942):** A secondary accent used for success states, botanical illustrations, and organic markers.\n\n## Typography\nThe typography system relies on a high-contrast pairing to evoke an editorial feel.\n- **Headlines:** Playfair Display is used for large displays and section headers. Its high stroke contrast gives a sophisticated, \"Vogue-esque\" culinary vibe.\n- **Body:** DM Sans provides a clean, wide-spaced counterpoint to the serif, ensuring menus and descriptions are effortless to read.\n- **Labels/Technical:** Space Mono is used sparingly for prices, nutritional data, and timestamps to introduce a subtle \"typewritten\" or \"receipt\" feel that suits the food truck context.\n\n## Layout & Spacing\nThe layout follows a **Fluid Editorial Grid**. Unlike standard 12-column layouts, this system encourages \"offset\" positioning where images and text blocks overlap slightly or are staggered vertically to create a dynamic, magazine-style flow.\n\n- **Generous Whitespace:** Blocks of content should never feel crowded. Use the `margin-desktop` unit to create breathing room between sections.\n- **Asymmetric Rule:** When displaying food items, alternate between left-aligned and right-aligned text with an `asymmetric-offset` to break the vertical line.\n- **Mobile Reflow:** On mobile, the grid collapses to a single column, but retains the character through varying padding and the use of the \"Creamy Ricotta\" background to define sections rather than harsh dividers.\n\n## Elevation & Depth\nIn alignment with the editorial and rustic theme, the design system avoids heavy shadows. \n- **Tonal Layers:** Depth is created through color blocking. A slightly darker shade of the neutral background or a very thin 1px border in Deep Espresso defines \"elevated\" areas.\n- **Low-Contrast Outlines:** Instead of shadows, cards and containers use a 1px border with 20% opacity of Deep Espresso.\n- **Physicality:** The \"elevation\" comes from the layering of charcoal illustrations *behind* or *overlapping* text, creating a flat but multi-dimensional collage effect.\n\n## Shapes\nThe shape language is **Sharp (0)**. To maintain the premium, editorial feel of a printed menu, the design system avoids rounded corners. \n- All buttons, input fields, and image containers use 90-degree angles.\n- This sharpness communicates precision, professional culinary standards, and architectural modernism. \n- Exception: The only \"round\" elements in the UI should be the natural curves of the charcoal illustrations and circular badges for \"New\" or \"Hot\" items, which act as organic counterpoints to the rigid grid.\n\n## Components\n- **Buttons:** Rectangular with no radius. Primary buttons are \"Burnt Sienna\" with \"Creamy Ricotta\" text. Secondary buttons are outlined in \"Deep Espresso\" with wide letter spacing.\n- **Cards:** Use for menu items. A 1px \"Deep Espresso\" border (low opacity) frames the image and description. Typography is centered or aggressively left-aligned within the card.\n- **Input Fields:** Underlined style (bottom border only) to mimic a guest check or order form. \n- **Chips/Tags:** Small, sharp-edged boxes with \"Space Mono\" text. Used for dietary restrictions (e.g., \"VG\", \"GF\").\n- **Menu Lists:** Use a dot-leader (dotted line) between the item name and the price to bridge the gap in a traditional Italian trattoria style.\n- **Illustrative Breaks:** Use horizontal lines with a small charcoal leaf icon in the center to separate major page sections.",
+              "font": "PLAYFAIR_DISPLAY",
+              "headlineFont": "PLAYFAIR_DISPLAY",
+              "headlineFontFamily": "Playfair Display",
+              "labelFont": "SPACE_MONO",
+              "labelFontFamily": "Space Mono",
+              "namedColors": {
+                "background": "#fff8ef",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f8f0e1",
+                "inverse_primary": "#ffb596",
+                "inverse_surface": "#343026",
+                "on_background": "#1e1b13",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#ffe1d6",
+                "on_primary_fixed": "#360f00",
+                "on_primary_fixed_variant": "#76320f",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#766055",
+                "on_secondary_fixed": "#281810",
+                "on_secondary_fixed_variant": "#574238",
+                "on_surface": "#1e1b13",
+                "on_surface_variant": "#54433c",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#c5f5b1",
+                "on_tertiary_fixed": "#022100",
+                "on_tertiary_fixed_variant": "#28501e",
+                "outline": "#87736b",
+                "outline_variant": "#dac1b8",
+                "primary": "#823b18",
+                "primary_container": "#a0522d",
+                "primary_fixed": "#ffdbcd",
+                "primary_fixed_dim": "#ffb596",
+                "secondary": "#705a4f",
+                "secondary_container": "#fbdcce",
+                "secondary_fixed": "#fbdcce",
+                "secondary_fixed_dim": "#dec1b3",
+                "surface": "#fff8ef",
+                "surface_bright": "#fff8ef",
+                "surface_container": "#f5edde",
+                "surface_container_high": "#efe7d9",
+                "surface_container_highest": "#e9e2d3",
+                "surface_container_low": "#fbf3e4",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#e1d9cb",
+                "surface_tint": "#944925",
+                "surface_variant": "#e9e2d3",
+                "tertiary": "#315926",
+                "tertiary_container": "#48723c",
+                "tertiary_fixed": "#c0f0ad",
+                "tertiary_fixed_dim": "#a4d393"
+              },
+              "overrideNeutralColor": "#fdf5e6",
+              "overridePrimaryColor": "#a0522d",
+              "overrideSecondaryColor": "#3c2a21",
+              "overrideTertiaryColor": "#4f7942",
+              "spacing": {
+                "asymmetric-offset": "48px",
+                "container-max": "1280px",
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "unit": "8px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "18px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.01em",
+                  "lineHeight": "28px"
+                },
+                "body-md": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px"
+                },
+                "button": {
+                  "fontFamily": "DM Sans",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.05em",
+                  "lineHeight": "20px"
+                },
+                "display-lg": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "64px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "72px"
+                },
+                "display-lg-mobile": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "40px",
+                  "fontWeight": "700",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "48px"
+                },
+                "headline-md": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "32px",
+                  "fontWeight": "600",
+                  "lineHeight": "40px"
+                },
+                "headline-sm": {
+                  "fontFamily": "Playfair Display",
+                  "fontSize": "24px",
+                  "fontWeight": "600",
+                  "lineHeight": "32px"
+                },
+                "label-caps": {
+                  "fontFamily": "Space Mono",
+                  "fontSize": "12px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.15em",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Beccofino | Artisanal Italian Food Truck",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have designed a bespoke, editorial-grade homepage for **Beccofino**, tailored to establish a premium and memorable first impression.\n\n### Design Highlights:\n*   **Editorial Layout:** I avoided generic templates in favor of an asymmetrical, high-fashion culinary aesthetic. The layout uses generous whitespace and overlapping elements to create depth and visual interest.\n*   **Custom Visual Identity:** The palette is anchored in rich, earthy tones: **Deep Espresso**, **Burnt Sienna**, and **Creamy Ricotta**, reflecting the artisanal nature of the food truck.\n*   **High-Fidelity Assets:** I generated custom photography—including a cinematic plating shot and artistic ingredient studies—to elevate the brand's perceived value.\n*   **Semantic & Production-Ready:** The code is structured with semantic HTML, CSS custom properties for theme management, and includes the specific required sections like the map slot and contact form.\n*   **Distinctive Typography:** High-contrast serif headlines create a sophisticated hierarchy, while clean sans-serif body text ensures readability.\n\nThe site is fully responsive and features smooth-scroll navigation and a custom mobile menu.\n\nWould you like to refine the menu presentation or perhaps explore some custom charcoal-style illustrations for the background?"
+    },
+    {
+      "suggestion": "Make the menu section more interactive"
+    },
+    {
+      "suggestion": "Add a 'Current Location' banner for daily updates"
+    },
+    {
+      "suggestion": "Adjust the color palette to be slightly brighter"
+    }
+  ],
+  "projectId": "13083033910450060621",
+  "sessionId": "5545935350402491607"
+}
