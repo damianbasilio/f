@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Brazilian Touch | Luxe Tropical Modernism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,wght@0,400..900;1,400..900&amp;family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-container": "#fed65b",
+                        "on-primary-fixed": "#002114",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary-fixed": "#1c1c19",
+                        "surface-container": "#f0eded",
+                        "primary-container": "#062c1d",
+                        "tertiary-fixed-dim": "#c9c6c2",
+                        "surface-bright": "#fcf9f8",
+                        "on-error-container": "#93000a",
+                        "background": "#fcf9f8",
+                        "secondary-fixed-dim": "#e9c349",
+                        "tertiary": "#11110f",
+                        "tertiary-container": "#262623",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#c4ecd4",
+                        "on-primary-container": "#709581",
+                        "on-background": "#1c1b1b",
+                        "on-primary": "#ffffff",
+                        "inverse-on-surface": "#f3f0ef",
+                        "primary-fixed-dim": "#a8cfb9",
+                        "outline": "#727973",
+                        "surface": "#fcf9f8",
+                        "inverse-primary": "#a8cfb9",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed-variant": "#474743",
+                        "on-surface": "#1c1b1b",
+                        "on-secondary-fixed": "#241a00",
+                        "on-tertiary": "#ffffff",
+                        "surface-dim": "#dcd9d9",
+                        "error-container": "#ffdad6",
+                        "surface-tint": "#426653",
+                        "surface-container-high": "#eae7e7",
+                        "on-secondary": "#ffffff",
+                        "tertiary-fixed": "#e5e2dd",
+                        "primary": "#00150b",
+                        "on-secondary-container": "#745c00",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#313030",
+                        "secondary-fixed": "#ffe088",
+                        "secondary": "#735c00",
+                        "surface-variant": "#e5e2e1",
+                        "outline-variant": "#c1c8c2",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface-variant": "#414844",
+                        "on-primary-fixed-variant": "#2a4e3d",
+                        "on-tertiary-container": "#8e8d89"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "24px",
+                        "gutter": "32px",
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "body-md": ["DM Sans"],
+                        "label-caps": ["DM Sans"],
+                        "body-lg": ["DM Sans"],
+                        "display-lg": ["Bodoni Moda"],
+                        "headline-lg": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "500"}],
+                        "body-md": ["16px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.15em", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "32px", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                        "display-lg": ["80px", {"lineHeight": "90px", "letterSpacing": "-0.02em", "fontWeight": "600"}],
+                        "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "500"}],
+                        "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .luxury-rule {
+            height: 1px;
+            background-color: #ffe088; /* secondary-fixed / gold */
+        }
+        .asymmetric-bleed {
+            margin-right: calc(-1 * theme('spacing.margin-desktop'));
+        }
+        @media (max-width: 768px) {
+            .asymmetric-bleed { margin-right: 0; }
+        }
+        .btn-primary {
+            background-color: #00150b;
+            color: #ffffff;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:hover {
+            background-color: #062c1d;
+            transform: translateY(-2px);
+        }
+        .btn-secondary {
+            border: 1px solid #735c00;
+            color: #735c00;
+            transition: all 0.3s ease;
+        }
+        .btn-secondary:hover {
+            background-color: #735c00;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary-fixed selection:text-on-secondary-fixed">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-margin-desktop py-6 max-w-container-max mx-auto bg-surface/80 backdrop-blur-md border-b border-outline-variant/30">
+<div class="flex items-center gap-8">
+<span class="font-headline-md text-headline-md tracking-tighter text-primary">Brazilian Touch</span>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase" href="#salon">The Salon</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase border-b border-primary pb-1" href="#narrative">Narrative</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors uppercase" href="#location">Location</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-caps text-label-caps text-primary" href="tel:8602362952">(860) 236-2952</a>
+<button class="btn-primary font-label-caps text-label-caps px-8 py-3 uppercase tracking-widest">Book Now</button>
+<button class="md:hidden flex flex-col gap-1" id="mobile-menu-toggle">
+<span class="w-6 h-px bg-primary"></span>
+<span class="w-4 h-px bg-primary self-end"></span>
+</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex items-center overflow-hidden px-6 md:px-margin-desktop py-20">
+<div class="grid grid-cols-12 w-full max-w-container-max mx-auto items-center gap-12">
+<div class="col-span-12 md:col-span-5 relative z-10 order-2 md:order-1">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.3em] block mb-6">Est. 2024</span>
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-primary mb-8 leading-[1.1]">
+                        The <span class="italic font-normal">Brazilian</span> Touch
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-md">
+                        Luxe Artistry meets tropical heritage. Experience hair as an art form in a sanctuary designed for the modern elite.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="btn-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest">Explore Services</button>
+<button class="btn-secondary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest">Our Story</button>
+</div>
+</div>
+<div class="col-span-12 md:col-span-7 order-1 md:order-2 relative">
+<div class="asymmetric-bleed aspect-[4/5] md:aspect-auto md:h-[80vh] overflow-hidden border border-secondary-fixed/30 p-2">
+<img alt="Hero" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLunIzfbSAf6zWiTsl7_lf4U6-41mw-87jfb7pr61b0vVTpJTdX65VsQKYBYF5CQaneWXdgwaE0oi_5T3paCC7CimetHzhl7b508mA1ewzbWK2i6V5HUjnchbS4f6lrL6tWF7FUxQrz4NKAH_8WGi9wgTb3uCARz3Lh0Z7Ah-UmIMNaJkc5Qs3lnpUPGGpDzMwHJQVgNyTwjl2zjqeq6e2NTCepJEMB4_CMSBIPfhzyoe7NF77uB-wYrcqk"/>
+</div>
+<div class="absolute -bottom-8 -left-8 md:-left-16 bg-surface-container p-8 hidden md:block max-w-[300px]">
+<p class="font-label-caps text-label-caps text-on-surface-variant italic leading-relaxed">
+                            "A masterclass in tropical luxury and editorial precision."
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility -->
+<section class="py-24 border-y border-outline-variant/20">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-12">
+<span class="font-label-caps text-label-caps text-outline uppercase tracking-widest">Featured In</span>
+<div class="flex flex-wrap justify-center gap-x-16 gap-y-8 opacity-40 grayscale">
+<span class="font-headline-md text-headline-md tracking-tighter">VOGUE</span>
+<span class="font-headline-md text-headline-md tracking-tighter italic">Bazaar</span>
+<span class="font-headline-md text-headline-md tracking-tighter">ELLE</span>
+<span class="font-headline-md text-headline-md tracking-tighter">L'OFFICIEL</span>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-40 bg-surface-container-lowest" id="services">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="flex flex-col md:flex-row justify-between items-end mb-24 gap-8">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.3em] block mb-4">The Rituals</span>
+<h2 class="font-headline-lg text-headline-lg text-primary leading-tight">Elevated Artistry for the Discerning Soul</h2>
+</div>
+<div class="hidden md:block w-32 luxury-rule mb-4"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-16 items-start">
+<!-- Left Column: Image -->
+<div class="md:col-span-5 sticky top-32">
+<div class="border border-outline-variant/30 p-3 aspect-[3/4] overflow-hidden">
+<img alt="Service Detail" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLv3ZZUh-qvtZvLNphqyVWGexmrBr12VHRugTMPMQsp_Z7VWfXaggqGj8po-1CHba18mGGCptluMFuJlyJ4UbV2Zm2lLdaNfTHvSH9mScr5SoU73tJoFvZD-qHIi0nEzyF5NeOCAM3ZFDkdK5Ej4QQT0U2RyYCLrFsOehAZuOVexrzf8nMdS9dCHzRlcnJAjZtzQY7AJbjyKWMI7n_3tQeddLju7HE-LwvypRaAelh0RCKfrZNDqHBY7Sw"/>
+</div>
+<div class="mt-8 flex items-center gap-4">
+<div class="w-2 h-2 bg-secondary-fixed rotate-45"></div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase">Captured at Brazilian Touch Hartford</p>
+</div>
+</div>
+<!-- Right Column: Services List -->
+<div class="md:col-span-7 flex flex-col gap-12">
+<div class="group py-8 border-b border-outline-variant/20 flex justify-between items-start hover:border-secondary transition-colors">
+<div class="max-w-md">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors">Master Coloring</h3>
+<p class="text-on-surface-variant">Signature balayage and corrective transformations tailored to your natural undertones.</p>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mt-2">FROM $250</span>
+</div>
+<div class="group py-8 border-b border-outline-variant/20 flex justify-between items-start hover:border-secondary transition-colors">
+<div class="max-w-md">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors">Precision Cuts</h3>
+<p class="text-on-surface-variant">Editorial sculpting designed to frame your unique features with effortless movement.</p>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mt-2">FROM $120</span>
+</div>
+<div class="group py-8 border-b border-outline-variant/20 flex justify-between items-start hover:border-secondary transition-colors">
+<div class="max-w-md">
+<h3 class="font-headline-md text-headline-md text-primary mb-2 group-hover:text-secondary transition-colors">Tropical Scalp Rituals</h3>
+<p class="text-on-surface-variant">Botanical infusions of Amazonian oils and therapeutic massage for deep-rooted wellness.</p>
+</div>
+<span class="font-label-caps text-label-caps text-secondary mt-2">FROM $85</span>
+</div>
+<div class="mt-12">
+<a class="inline-flex items-center gap-4 text-primary font-label-caps text-label-caps group" href="#">
+                                VIEW COMPLETE MENU 
+                                <span class="material-symbols-outlined group-hover:translate-x-2 transition-transform">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Narrative Section -->
+<section class="py-40 relative overflow-hidden" id="narrative">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-12 items-center">
+<div class="md:col-span-6 relative order-2 md:order-1">
+<div class="relative z-10 p-8 md:p-20 bg-primary text-on-primary">
+<span class="font-label-caps text-label-caps text-secondary-fixed uppercase tracking-[0.3em] block mb-6">Our Legacy</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">Healthy Hair, Brazilian Soul</h2>
+<p class="font-body-lg text-body-lg text-on-primary/80 mb-10 italic">
+                            "Born from the lush biodiversity of the Amazon and the refined elegance of Ipanema, Brazilian Touch is more than a salon. It is a philosophy of beauty that honors both heritage and innovation."
+                        </p>
+<p class="text-on-primary/70 mb-12">
+                            We utilize exclusive botanical extracts sourced sustainably from Brazil, ensuring each treatment nourishes the spirit as much as the strand. Our technicians are trained in the specific geometry of tropical textures.
+                        </p>
+<button class="btn-secondary border-on-primary text-on-primary px-10 py-4 font-label-caps text-label-caps uppercase tracking-widest hover:bg-on-primary hover:text-primary">Meet the Curators</button>
+</div>
+<div class="absolute -top-12 -right-12 w-64 h-64 border border-secondary-fixed/20 -z-10 hidden md:block"></div>
+</div>
+<div class="md:col-span-6 order-1 md:order-2">
+<div class="ml-auto w-full max-w-lg aspect-[4/5] overflow-hidden border border-outline-variant/30 p-2">
+<img alt="Botanicals" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLvEIJZ-0pBKJSWBbTZEs3_Zv9omGjRqowXb_JhtbgEwKZ_yTAbuTVF0h40FyqdAo3fxBB5Dj5QpMiSofY-XynAN4vk0I4n4dI3g5Lq18EUnAqXSlDcaqR-S9lPjGPwrD4eFm3ZORnUSiATJLAsN8LSVylNxpd_-5W39L_4LmtZB7qXS5Wll3TYRMG4Nh6ir_GAC-8BLOJLrezis2BurtqC_FY3rYd06OkvHaW-PTHVHeRntf1dH560KDiU"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit / Map Section -->
+<section class="py-40 bg-surface-container-low" id="location">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-8">Visit the Sanctuary</h2>
+<div class="space-y-12">
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary uppercase mb-4">Address</h4>
+<p class="text-on-surface-variant text-body-lg">5 South Whitney Street<br/>Hartford, CT 06106</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary uppercase mb-4">Hours</h4>
+<p class="text-on-surface-variant flex justify-between max-w-[240px]"><span>Tue — Sat</span> <span>09:00 — 19:00</span></p>
+<p class="text-on-surface-variant flex justify-between max-w-[240px]"><span>Sun — Mon</span> <span>By Appointment</span></p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary uppercase mb-4">Contact</h4>
+<a class="text-on-surface-variant hover:text-primary block mb-2" href="mailto:Braziliantouch1840@gmail.com">Braziliantouch1840@gmail.com</a>
+<a class="text-on-surface-variant hover:text-primary block" href="tel:8602362952">(860) 236-2952</a>
+</div>
+</div>
+</div>
+<div class="md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border border-outline-variant/30" data-location="Hartford, CT" data-map-slot="" style="">
+<!-- Placeholder for map visualization -->
+<div class="absolute inset-0 bg-surface-container-highest flex items-center justify-center">
+<span class="material-symbols-outlined text-outline text-6xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form -->
+<section class="py-40">
+<div class="max-w-xl mx-auto px-6">
+<div class="text-center mb-16">
+<span class="font-label-caps text-label-caps text-secondary uppercase tracking-[0.3em] block mb-4">Connect</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Secure Your Session</h2>
+<p class="text-on-surface-variant">Leave a message and our concierge will reach out within 24 hours.</p>
+</div>
+<form class="space-y-12" id="contact-form">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Full Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 transition-all placeholder:text-outline-variant/50" placeholder="Gisele Bündchen" required="" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 transition-all placeholder:text-outline-variant/50" placeholder="gisele@brazil.com" required="" type="email"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Desired Service</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 transition-all appearance-none cursor-pointer">
+<option>Master Coloring</option>
+<option>Precision Cuts</option>
+<option>Tropical Scalp Rituals</option>
+<option>Wedding &amp; Editorial</option>
+</select>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Inquiry</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-4 transition-all placeholder:text-outline-variant/50 resize-none" placeholder="Tell us about your hair goals..." rows="4"></textarea>
+</div>
+<button class="w-full btn-primary py-5 font-label-caps text-label-caps uppercase tracking-[0.4em]" type="submit">Send Inquiry</button>
+</form>
+<div class="hidden mt-8 p-6 bg-primary-container text-primary-fixed border border-primary text-center font-label-caps text-label-caps" id="form-success">
+                    Your message has been received with elegance.
+                </div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-tertiary text-on-tertiary">
+<div class="max-w-container-max mx-auto px-6 md:px-margin-desktop py-24 flex flex-col gap-20">
+<div class="flex flex-col md:flex-row justify-between items-start gap-12">
+<div class="max-w-xs">
+<span class="font-headline-lg text-headline-lg tracking-tighter block mb-6">Brazilian Touch</span>
+<p class="text-on-tertiary-container text-body-md opacity-70">Redefining tropical luxury through precise craftsmanship and botanical soul since 2024.</p>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-3 gap-16">
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-6">Discovery</h4>
+<ul class="space-y-4 font-body-md text-on-tertiary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">The Salon</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Services</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Narrative</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-6">Company</h4>
+<ul class="space-y-4 font-body-md text-on-tertiary-container">
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Press</a></li>
+<li><a class="hover:text-secondary-fixed transition-colors" href="#">Privacy</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-secondary-fixed uppercase mb-6">Connect</h4>
+<div class="flex gap-4">
+<a class="w-10 h-10 border border-on-tertiary/20 flex items-center justify-center hover:border-secondary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">public</span>
+</a>
+<a class="w-10 h-10 border border-on-tertiary/20 flex items-center justify-center hover:border-secondary-fixed transition-colors" href="#">
+<span class="material-symbols-outlined text-sm">camera</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="pt-12 border-t border-on-tertiary/10 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-caps text-label-caps text-on-tertiary-container/50 uppercase tracking-widest">
+                    © 2024 Brazilian Touch. Luxe Tropical Modernism.
+                </p>
+<div class="flex items-center gap-8">
+<span class="text-[10px] uppercase tracking-tighter opacity-30">Designed for the Discerning</span>
+<div class="w-12 h-px bg-on-tertiary/20"></div>
+<span class="text-[10px] uppercase tracking-tighter opacity-30">Handcrafted in Hartford</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Form Handling
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('opacity-50', 'pointer-events-none');
+            setTimeout(() => {
+                this.classList.add('hidden');
+                document.getElementById('form-success').classList.remove('hidden');
+            }, 1000);
+        });
+
+        // Simple Mobile Menu (Logically minimal for editorial feel)
+        const toggle = document.getElementById('mobile-menu-toggle');
+        toggle.addEventListener('click', () => {
+            alert('Menu navigation triggered. In a full implementation, this would open a full-screen minimalist overlay.');
+        });
+
+        // Smooth Scroll Enhancement
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
