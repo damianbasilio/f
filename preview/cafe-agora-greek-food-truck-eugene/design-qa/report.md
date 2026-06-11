@@ -18,7 +18,6 @@
 ## Fixes applied
 
 - normalize: single DOCTYPE
-- craft: fixed 2 broken hash anchor(s)
 - harden: preview-only form behavior (removed fake send UX)
 - harden: mobile nav aria labels
 
@@ -32,7 +31,7 @@
 - OK: Layout: no excessive 3-col grids
 - OK: Typography: brand fonts referenced
 - WARN: Ghost-card pattern (1px border + heavy shadow) detected
-- OK: Eyebrow count: 1
+- OK: Eyebrow count: 0
 - OK: No transition: all
 - OK: Reduced motion: present
 - OK: Button :active feedback
@@ -44,7 +43,7 @@
 
 ### taste
 
-- Eyebrow discipline: 1 uppercase-tracked labels
+- Eyebrow discipline: 0 uppercase-tracked labels
 - Anti-slop: no em dashes, layout families from Stitch brief
 
 ### audit

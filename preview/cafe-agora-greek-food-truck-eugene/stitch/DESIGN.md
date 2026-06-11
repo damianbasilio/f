@@ -1,79 +1,83 @@
-I've completed the bespoke landing page for Cafe Agora. 
+I've designed a bespoke, editorial-grade homepage for **Cafe Agora** that establishes a premium first impression for their Greek food truck. 
 
-The design, titled **Aegean Heritage**, moves away from standard food truck templates to create a premium, editorial feel that emphasizes the artisanal quality of the food. 
+### Design Highlights:
+*   **Unique Visual Identity:** I've moved away from standard local-business templates in favor of a "Modern Aegean" aesthetic. This features a high-contrast color story using **Aegean Blue**, **Santorini White**, and **Terra Cotta** accents.
+*   **Editorial Typography:** I used a sophisticated serif for headlines to create an "award-winning" editorial feel, paired with a clean, widely-tracked sans-serif for body copy.
+*   **Bespoke Layouts:** 
+    *   **Hero:** An asymmetrical composition that treats food photography as art rather than just a product shot.
+    *   **The Agora Menu:** A custom-styled menu section that feels like a physical printed menu, moving away from typical card grids.
+    *   **About Section:** Incorporates organic-shaped image masks and a layout that emphasizes the "local soul" of the business.
+*   **Functional Elements:**
+    *   Included the required `#visit` section with the specified `data-map-slot` for production readiness.
+    *   A custom contact form designed with minimalist underlined inputs and tailored validation UI states.
+    *   Full responsive support, ensuring the editorial quality translates to mobile devices.
 
-### Key Design Decisions:
-- **Visual Motif**: I used a "deckle-edge" jagged divider and asymmetric grid layouts to give the site a handcrafted, boutique feel.
-- **Color Story**: A sophisticated palette of **Aegean Blue** and **Warm Parchment** provides a high-contrast, clean backdrop that makes the food photography pop.
-- **Typography**: I paired **Playfair Display** (for that bold, high-end editorial look) with a spacious sans-serif to ensure readability and modern functionality.
-- **Section Architecture**: Instead of a generic list, the "Offerings" section uses an overlapping card layout, and the "Visit" section includes a dedicated interactive-ready map slot as requested.
-
-The code is fully responsive, semantic, and production-ready with custom form validation UI and smooth-scroll navigation.
+The site is built with semantic HTML and CSS custom properties, making it production-ready and easy to maintain. Would you like to adjust the visual motif or add more detail to the menu section?
 
 ---
 
 ---
-name: Aegean Heritage
+name: Aegean Editorial
 colors:
-  surface: '#fbf9f4'
-  surface-dim: '#dbdad5'
-  surface-bright: '#fbf9f4'
+  surface: '#faf9fd'
+  surface-dim: '#dad9dd'
+  surface-bright: '#faf9fd'
   surface-container-lowest: '#ffffff'
-  surface-container-low: '#f5f3ee'
-  surface-container: '#f0eee9'
-  surface-container-high: '#eae8e3'
-  surface-container-highest: '#e4e2dd'
-  on-surface: '#1b1c19'
-  on-surface-variant: '#44474e'
-  inverse-surface: '#30312e'
-  inverse-on-surface: '#f2f1ec'
-  outline: '#74777e'
+  surface-container-low: '#f4f3f7'
+  surface-container: '#eeedf1'
+  surface-container-high: '#e9e7eb'
+  surface-container-highest: '#e3e2e6'
+  on-surface: '#1a1c1e'
+  on-surface-variant: '#43474e'
+  inverse-surface: '#2f3033'
+  inverse-on-surface: '#f1f0f4'
+  outline: '#74777f'
   outline-variant: '#c4c6cf'
-  surface-tint: '#4a5f81'
+  surface-tint: '#455f88'
   primary: '#000d22'
   on-primary: '#ffffff'
-  primary-container: '#0a2342'
-  on-primary-container: '#768baf'
-  inverse-primary: '#b2c7ef'
-  secondary: '#924a37'
+  primary-container: '#002349'
+  on-primary-container: '#718bb7'
+  inverse-primary: '#adc8f6'
+  secondary: '#5e5f5d'
   on-secondary: '#ffffff'
-  secondary-container: '#fda18a'
-  on-secondary-container: '#783525'
-  tertiary: '#080e0b'
+  secondary-container: '#e0e0dd'
+  on-secondary-container: '#626361'
+  tertiary: '#0a1000'
   on-tertiary: '#ffffff'
-  tertiary-container: '#1e2420'
-  on-tertiary-container: '#858b86'
+  tertiary-container: '#1d2700'
+  on-tertiary-container: '#809246'
   error: '#ba1a1a'
   on-error: '#ffffff'
   error-container: '#ffdad6'
   on-error-container: '#93000a'
   primary-fixed: '#d5e3ff'
-  primary-fixed-dim: '#b2c7ef'
-  on-primary-fixed: '#021c3a'
-  on-primary-fixed-variant: '#324768'
-  secondary-fixed: '#ffdad2'
-  secondary-fixed-dim: '#ffb4a2'
-  on-secondary-fixed: '#3b0901'
-  on-secondary-fixed-variant: '#753322'
-  tertiary-fixed: '#dee4de'
-  tertiary-fixed-dim: '#c2c8c2'
-  on-tertiary-fixed: '#171d19'
-  on-tertiary-fixed-variant: '#424844'
-  background: '#fbf9f4'
-  on-background: '#1b1c19'
-  surface-variant: '#e4e2dd'
+  primary-fixed-dim: '#adc8f6'
+  on-primary-fixed: '#001b3c'
+  on-primary-fixed-variant: '#2c476f'
+  secondary-fixed: '#e3e2e0'
+  secondary-fixed-dim: '#c7c6c4'
+  on-secondary-fixed: '#1a1c1a'
+  on-secondary-fixed-variant: '#464745'
+  tertiary-fixed: '#d7ec95'
+  tertiary-fixed-dim: '#bbcf7c'
+  on-tertiary-fixed: '#161e00'
+  on-tertiary-fixed-variant: '#3d4c05'
+  background: '#faf9fd'
+  on-background: '#1a1c1e'
+  surface-variant: '#e3e2e6'
 typography:
   display-lg:
     fontFamily: Playfair Display
-    fontSize: 48px
+    fontSize: 64px
     fontWeight: '700'
-    lineHeight: 56px
+    lineHeight: 72px
     letterSpacing: -0.02em
   display-lg-mobile:
     fontFamily: Playfair Display
-    fontSize: 36px
+    fontSize: 40px
     fontWeight: '700'
-    lineHeight: 42px
+    lineHeight: 48px
     letterSpacing: -0.01em
   headline-md:
     fontFamily: Playfair Display
@@ -86,73 +90,92 @@ typography:
     fontWeight: '600'
     lineHeight: 32px
   body-lg:
-    fontFamily: Inter
+    fontFamily: DM Sans
     fontSize: 18px
     fontWeight: '400'
     lineHeight: 28px
+    letterSpacing: 0.01em
   body-md:
-    fontFamily: Inter
+    fontFamily: DM Sans
     fontSize: 16px
     fontWeight: '400'
     lineHeight: 24px
+    letterSpacing: 0.01em
   label-caps:
-    fontFamily: Inter
+    fontFamily: DM Sans
     fontSize: 12px
-    fontWeight: '600'
+    fontWeight: '700'
     lineHeight: 16px
-    letterSpacing: 0.1em
-rounded:
-  sm: 0.125rem
-  DEFAULT: 0.25rem
-  md: 0.375rem
-  lg: 0.5rem
-  xl: 0.75rem
-  full: 9999px
+    letterSpacing: 0.15em
 spacing:
   unit: 8px
-  container-max: 1200px
+  container-max: 1280px
   gutter: 24px
   margin-mobile: 20px
-  section-gap: 80px
+  margin-desktop: 64px
+  section-gap: 120px
 ---
 
 ## Brand & Style
-The design system embodies the "Cafe Agora" identity: a premium, bespoke editorial experience that bridges ancient Greek heritage with modern food truck culture. The aesthetic leans into **Minimalist Editorial** with **Tactile** influences, focusing on intentional asymmetry and high-quality whitespace to evoke the feeling of a printed Mediterranean travelogue.
 
-The target audience seeks authenticity and artisanal quality. The UI must feel curated rather than industrial, using textured paper overlays and subtle geometric motifs to create a warm, "slow-food" digital presence in a fast-paced mobile environment.
+The design system is built on the philosophy of "Editorial Premium," treating a food truck digital experience with the same reverence as a high-end culinary publication. The brand personality is authentic and elevated, moving away from street-food clichés toward a sophisticated, Mediterranean aesthetic. 
+
+The visual style blends **Minimalism** with **Modern Brutalist** structures—specifically through the use of heavy borders and generous whitespace—balanced by organic, asymmetrical shapes that mimic the coastal geography of Greece. The goal is to evoke the sensory memory of a sun-drenched afternoon in the Mediterranean: warm, calm, and memorable.
 
 ## Colors
-The palette is rooted in the natural landscape of the Cyclades. 
-- **Deep Aegean Blue (#0A2342):** Used for primary navigation, high-level headers, and critical call-to-action backgrounds to establish authority and depth.
-- **Sun-bleached Terracotta (#E38B75):** Used as an accent color for highlights, active states, and secondary buttons, providing a warm, human contrast to the blue.
-- **Warm Parchment (#F9F7F2):** The primary background color. It serves as a textured canvas, softer and more premium than pure white.
-- **Charcoal Olive (#2D332F):** Reserved for body text and subtle iconography, offering high legibility without the harshness of true black.
+
+The palette is a curated "unique color story" that avoids the high-saturation blues often associated with Greek themes.
+
+- **Agora Blue (#002349):** A deep, ink-like navy used for primary typography, borders, and heavy structural elements.
+- **Santorini White (#FAF9F6):** The primary canvas. A soft, warm off-white that reduces eye strain and provides a premium, paper-like feel.
+- **Olive Grove (#708238):** A muted, sophisticated sage used for secondary text, icons, and subtle decorative accents.
+- **Terra Cotta (#C05746):** An earthy, clay-inspired red reserved exclusively for high-priority Call-to-Actions (CTAs) and critical price points.
 
 ## Typography
-Typography is the primary vehicle for the brand’s "Bespoke" feel. **Playfair Display** provides high-contrast elegance for storytelling and menu categories. **Inter** balances this with functional clarity for descriptions and pricing. 
 
-Use `label-caps` for eyebrows and small metadata to maintain an organized, editorial structure. Ensure generous line-height in body text to reflect the airy, Mediterranean personality.
+The typography system relies on a high-contrast pairing to achieve its editorial look. 
+
+**Headlines** use *Playfair Display*, a transitional serif that conveys elegance and authority. Large display sizes should utilize negative letter-spacing to feel more "locked-in" and bespoke.
+
+**Body Text** uses *DM Sans*, chosen for its geometric purity and low contrast, which provides a modern counterpoint to the serif headings. Generous tracking (letter-spacing) is applied to all body copy to enhance the airy, luxurious feel of the layout.
+
+**Labels** are strictly uppercase with significant letter-spacing to act as navigational anchors without distracting from the editorial flow.
 
 ## Layout & Spacing
-The layout follows a **Fluid Grid** model with an emphasis on asymmetric compositions. While components align to a standard 12-column grid on desktop, images and text blocks should occasionally break the grid or use staggered offsets to mimic a magazine layout.
 
-- **Mobile:** 4-column grid with 20px side margins. 
-- **Desktop:** 12-column grid with 24px gutters.
-- **Vertical Spacing:** Use large gaps (`section-gap`) between content blocks to allow the "Warm Parchment" background to act as a visual breather.
+The layout follows a **Fluid Grid** with an emphasis on "negative space as a feature." 
+
+- **Desktop:** A 12-column grid with wide 64px margins. Content is often offset; for example, a description might occupy columns 2-6 while the corresponding image occupies 8-12, creating an asymmetrical editorial flow.
+- **Mobile:** A 4-column grid with 20px margins. Vertical rhythm is prioritized, with large gaps between sections to prevent the UI from feeling "cramped."
+- **Greek Key Motif:** Modernized Greek key patterns are used as thin, horizontal dividers (1px height) to separate major sections, replacing standard solid lines.
 
 ## Elevation & Depth
-This design system avoids heavy shadows, opting instead for **Tonal Layers** and **Low-contrast Outlines**. 
-- **Surfaces:** Depth is created by placing Warm Parchment cards over a slightly darker "Sand" or "Olive" tinted background.
-- **Outlines:** Use 1px borders in `Deep Aegean Blue` at 10-15% opacity to define sections without breaking the organic feel.
-- **Overlays:** Use a subtle "grain" or "paper texture" SVG filter on the main background to reinforce the artisanal, tactile nature of the brand.
+
+This design system eschews traditional shadows in favor of **Tonal Layers** and **Bold Outlines**. 
+
+Depth is communicated through the physical stacking of elements rather than light sources. Components like cards or menus utilize 1px solid borders in *Agora Blue* or *Olive Grove*. To create a "lifted" effect, elements may use a hard, 4px offset "block shadow" (a solid color fill shifted down and right) rather than a soft blur, maintaining the crisp, graphic nature of the brand.
+
+Asymmetrical organic shapes—inspired by rough-cut marble or island coastlines—are placed in the background layer at low opacity (5-10%) to provide a subtle sense of terrain and movement behind the structured grid.
 
 ## Shapes
-Shapes are generally **Soft** to keep the interface approachable. However, decorative elements like image frames may utilize a "deckle-edge" (rough, hand-torn paper effect) on one or two sides to emphasize the artisanal theme. Standard buttons and input fields should maintain a consistent `0.25rem` radius to feel precise yet friendly.
+
+The shape language is **Sharp (0px)** for structural components to maintain a premium, architectural feel. 
+
+Rectilinear buttons, input fields, and containers provide a disciplined framework. However, this rigidity is intentionally broken by **Organic Image Masks**. High-quality food photography should be housed in containers with custom, hand-drawn asymmetrical paths (blobs or "stone" shapes) to contrast against the sharp-edged UI.
 
 ## Components
-- **Buttons:** Primary buttons use a solid `Deep Aegean Blue` fill with white `Inter` text. Secondary buttons use a "ghost" style with a 1px `Terracotta` border.
-- **Cards:** Product and Menu cards should have no visible border-radius or shadows; instead, use a 1px soft stroke and asymmetric text alignment (e.g., price top-right, title bottom-left).
-- **Dividers:** Use custom Mediterranean geometric patterns (thin, repeated line-work) instead of standard solid lines to separate menu sections.
-- **Chips/Tags:** Use `Terracotta` at 10% opacity for backgrounds with `Terracotta` text for dietary labels (e.g., "Vegan", "Gluten-Free").
-- **Inputs:** Minimalist bottom-border only or very light four-sided borders to keep the forms feeling light and non-intrusive.
-- **Interactive Motif:** Use a "Stamp" or "Wax Seal" style component for special offers or "Local Favorite" badges.
+
+### Buttons
+Primary buttons are rectangular (0px radius) with an *Agora Blue* fill and *Santorini White* text. For CTAs like "Order Now," use a *Terra Cotta* fill. Hover states involve a slight shift in the 1px border weight or a color inversion.
+
+### Cards
+Menu items are displayed on *Santorini White* cards with a subtle 1px *Olive Grove* border. Titles are Serif, and prices are set in *DM Sans* Bold.
+
+### Input Fields
+Inputs are minimalist: a single 1px bottom border in *Agora Blue*. Labels sit above in `label-caps` style.
+
+### Greek Motifs
+A "Modern Key" component—a simplified, single-line geometric pattern—is used as a decorative footer element or a header underline to reinforce brand identity without looking dated.
+
+### Food Photography
+All imagery must utilize "moody" lighting (Chiaroscuro style), emphasizing texture and deep shadows. Images should never be full-bleed rectangles; they must always be masked by an organic, asymmetrical shape or offset from their container.
