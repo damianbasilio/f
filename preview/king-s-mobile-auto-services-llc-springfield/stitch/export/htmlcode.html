@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>King's Mobile | Automotive Excellence Delivered</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=Playfair+Display:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            background-color: #0A0A0B; /* Royal Obsidian */
+            color: #E2E2E2; /* Pure Ivory */
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0A0A0B;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2D3436;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #e9c349;
+        }
+
+        /* Service Row Animation */
+        .service-row:hover .service-accent {
+            transform: scaleY(1);
+        }
+        .service-row:hover .service-name {
+            transform: translateX(20px);
+        }
+
+        /* Button Hover Effects */
+        .btn-primary {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary:active {
+            transform: scale(0.98);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-highest": "#333535",
+                        "on-tertiary": "#2b3234",
+                        "surface-container": "#1e2020",
+                        "on-secondary-fixed-variant": "#574500",
+                        "on-primary-container": "#7a797a",
+                        "inverse-surface": "#e2e2e2",
+                        "error-container": "#93000a",
+                        "secondary": "#e9c349",
+                        "surface-bright": "#38393a",
+                        "on-primary": "#313031",
+                        "outline": "#919094",
+                        "on-tertiary-fixed": "#161d1f",
+                        "on-error-container": "#ffdad6",
+                        "on-tertiary-container": "#737b7d",
+                        "tertiary-fixed-dim": "#c1c8ca",
+                        "tertiary-container": "#050b0d",
+                        "tertiary": "#c1c8ca",
+                        "surface-dim": "#121414",
+                        "surface-container-high": "#282a2b",
+                        "on-surface-variant": "#c7c6ca",
+                        "surface-container-low": "#1a1c1c",
+                        "primary": "#c8c6c7",
+                        "on-primary-fixed": "#1c1b1c",
+                        "on-tertiary-fixed-variant": "#41484a",
+                        "on-background": "#e2e2e2",
+                        "on-secondary": "#3c2f00",
+                        "secondary-fixed": "#ffe088",
+                        "surface-container-lowest": "#0c0f0f",
+                        "surface": "#121414",
+                        "inverse-primary": "#5f5e5f",
+                        "secondary-container": "#af8d11",
+                        "outline-variant": "#46464a",
+                        "secondary-fixed-dim": "#e9c349",
+                        "on-secondary-container": "#342800",
+                        "on-secondary-fixed": "#241a00",
+                        "tertiary-fixed": "#dde4e6",
+                        "primary-fixed": "#e5e2e3",
+                        "inverse-on-surface": "#2f3131",
+                        "primary-fixed-dim": "#c8c6c7",
+                        "on-error": "#690005",
+                        "surface-tint": "#c8c6c7",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#333535",
+                        "background": "#121414",
+                        "primary-container": "#0a0a0b",
+                        "on-surface": "#e2e2e2",
+                        "on-primary-fixed-variant": "#474647"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "160px",
+                        "stack-md": "24px",
+                        "gutter": "32px",
+                        "margin-page": "5vw",
+                        "stack-sm": "8px",
+                        "stack-lg": "48px"
+                    },
+                    "fontFamily": {
+                        "headline-sm": ["Playfair Display"],
+                        "body-lg": ["Inter"],
+                        "body-md": ["Inter"],
+                        "display-lg": ["Playfair Display"],
+                        "label-caps": ["Inter"],
+                        "headline-md": ["Playfair Display"],
+                        "display-lg-mobile": ["Playfair Display"],
+                        "utility-bold": ["Inter"]
+                    },
+                    "fontSize": {
+                        "headline-sm": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                        "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.2em", "fontWeight": "700"}],
+                        "headline-md": ["40px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                        "display-lg-mobile": ["48px", {"lineHeight": "1.1", "fontWeight": "700"}],
+                        "utility-bold": ["14px", {"lineHeight": "1.0", "letterSpacing": "0.05em", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="selection:bg-secondary selection:text-on-secondary">
+<!-- TopNavBar -->
+<header class="fixed top-0 z-50 w-full bg-background border-b border-surface-container-highest flex justify-between items-center px-margin-page py-stack-sm max-w-full">
+<div class="flex items-center gap-stack-lg">
+<span class="font-headline-sm text-headline-sm text-on-background uppercase tracking-tighter">King's Mobile</span>
+<nav class="hidden md:flex gap-gutter">
+<a class="font-label-caps text-label-caps text-on-background opacity-70 hover:text-secondary transition-colors duration-300" href="#services">Services</a>
+<a class="font-label-caps text-label-caps text-on-background opacity-70 hover:text-secondary transition-colors duration-300" href="#about">About</a>
+<a class="font-label-caps text-label-caps text-on-background opacity-70 hover:text-secondary transition-colors duration-300" href="#contact">Contact</a>
+</nav>
+</div>
+<div class="font-label-caps text-label-caps text-secondary font-bold">
+            (937) 342-6578
+        </div>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center px-margin-page pt-32 overflow-hidden">
+<div class="relative z-10 w-full max-w-[60%] space-y-stack-md">
+<h1 class="font-display-lg text-display-lg text-on-background leading-tight">
+                    Automotive Excellence, <br/>
+<span class="italic text-secondary">Delivered to Your Door.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                    The premium mobile service for Springfield's most discerning drivers. White-glove reliability meets professional automotive mastery.
+                </p>
+<div class="pt-stack-lg flex gap-gutter">
+<a class="btn-primary bg-secondary text-on-secondary px-10 py-5 font-utility-bold uppercase tracking-widest hover:brightness-110 active:scale-95 transition-all" href="#contact">
+                        Schedule Consultation
+                    </a>
+<a class="border border-outline-variant text-on-background px-10 py-5 font-utility-bold uppercase tracking-widest hover:border-secondary hover:text-secondary transition-all" href="#services">
+                        View Services
+                    </a>
+</div>
+</div>
+<!-- Hero Image Offset -->
+<div class="absolute right-0 top-0 w-1/2 h-full hidden lg:block overflow-hidden">
+<div class="w-full h-full bg-surface-container">
+<img alt="Luxury vehicle detail" class="w-full h-full object-cover grayscale opacity-60 mix-blend-luminosity" data-alt="A high-contrast, professional close-up shot of a luxury black Porsche 911 being detailed with soft, cinematic lighting illuminating its sleek curves. The setting is a minimalist, modern garage with high-end tools in the background. The color palette is dominated by deep obsidian blacks, matte slates, and subtle golden highlights from the workshop lights. The atmosphere is sophisticated, representing precision and royal-level automotive care." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEBYpM7y6iFn_-jN2pbn-KHZKf8xUMplMTj24CrGEjRn2PLDYnXYqOFCYXQXQte1tkC0DvBD91EkgsN-BDpULfKds57KiQXaeBEvg31DLv2_CTHVunjv8uvRouINrlzhYfwos-3FS58A2z9QzvwnI0m1Ms3VJ0ERfJVOrNhOr-dr08v9a0l1JGOCCbWzNF7jy5ssT3LjyNeBLi2qARFHgBO2qJx4y4C5DpO9E7VPeb_z9LhZq6FMNH1z50SnunWfkV23aPO978LXA"/>
+</div>
+<!-- Frame Decoration -->
+<div class="absolute inset-y-16 inset-x-16 border border-secondary/20 pointer-events-none"></div>
+</div>
+</section>
+<!-- Credibility Bar -->
+<div class="border-y border-surface-container-highest bg-surface-container-lowest py-8 overflow-hidden">
+<div class="px-margin-page flex justify-between items-center max-w-7xl mx-auto font-label-caps text-label-caps tracking-[0.3em] text-on-surface-variant">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">star</span>
+                    5-STAR SERVICE
+                </div>
+<div class="w-[1px] h-4 bg-surface-container-highest"></div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">verified</span>
+                    LICENSED &amp; INSURED
+                </div>
+<div class="w-[1px] h-4 bg-surface-container-highest"></div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+                    SPRINGFIELD, OH
+                </div>
+</div>
+</div>
+<!-- The Service Ledger -->
+<section class="py-section-gap px-margin-page bg-background" id="services">
+<div class="max-w-7xl mx-auto">
+<div class="mb-stack-lg">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">AVAILABLE EXPERTISE</span>
+<h2 class="font-headline-md text-headline-md text-on-background">The Service Ledger</h2>
+</div>
+<div class="border-t-2 border-secondary mt-12">
+<!-- Service Item 1 -->
+<div class="service-row group relative border-b border-surface-container-highest py-12 flex items-center justify-between cursor-pointer transition-all duration-500">
+<div class="service-accent absolute left-0 top-0 bottom-0 w-1 bg-secondary scale-y-0 transition-transform duration-500 origin-top"></div>
+<div class="service-name flex items-baseline gap-12 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-surface-container-highest">01</span>
+<h3 class="font-display-lg text-headline-md lg:text-display-lg text-on-background group-hover:text-secondary transition-colors">Advanced Diagnostics</h3>
+</div>
+<span class="material-symbols-outlined text-surface-container-highest group-hover:text-secondary group-hover:rotate-45 transition-all duration-500" style="font-size: 48px;">north_east</span>
+</div>
+<!-- Service Item 2 -->
+<div class="service-row group relative border-b border-surface-container-highest py-12 flex items-center justify-between cursor-pointer transition-all duration-500">
+<div class="service-accent absolute left-0 top-0 bottom-0 w-1 bg-secondary scale-y-0 transition-transform duration-500 origin-top"></div>
+<div class="service-name flex items-baseline gap-12 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-surface-container-highest">02</span>
+<h3 class="font-display-lg text-headline-md lg:text-display-lg text-on-background group-hover:text-secondary transition-colors">Precision Maintenance</h3>
+</div>
+<span class="material-symbols-outlined text-surface-container-highest group-hover:text-secondary group-hover:rotate-45 transition-all duration-500" style="font-size: 48px;">north_east</span>
+</div>
+<!-- Service Item 3 -->
+<div class="service-row group relative border-b border-surface-container-highest py-12 flex items-center justify-between cursor-pointer transition-all duration-500">
+<div class="service-accent absolute left-0 top-0 bottom-0 w-1 bg-secondary scale-y-0 transition-transform duration-500 origin-top"></div>
+<div class="service-name flex items-baseline gap-12 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-surface-container-highest">03</span>
+<h3 class="font-display-lg text-headline-md lg:text-display-lg text-on-background group-hover:text-secondary transition-colors">Emergency Roadside</h3>
+</div>
+<span class="material-symbols-outlined text-surface-container-highest group-hover:text-secondary group-hover:rotate-45 transition-all duration-500" style="font-size: 48px;">north_east</span>
+</div>
+<!-- Service Item 4 -->
+<div class="service-row group relative border-b border-surface-container-highest py-12 flex items-center justify-between cursor-pointer transition-all duration-500">
+<div class="service-accent absolute left-0 top-0 bottom-0 w-1 bg-secondary scale-y-0 transition-transform duration-500 origin-top"></div>
+<div class="service-name flex items-baseline gap-12 transition-transform duration-500">
+<span class="font-label-caps text-label-caps text-surface-container-highest">04</span>
+<h3 class="font-display-lg text-headline-md lg:text-display-lg text-on-background group-hover:text-secondary transition-colors">Fleet Management</h3>
+</div>
+<span class="material-symbols-outlined text-surface-container-highest group-hover:text-secondary group-hover:rotate-45 transition-all duration-500" style="font-size: 48px;">north_east</span>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap px-margin-page bg-surface-container-lowest" id="about">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div class="relative">
+<div class="aspect-[4/5] bg-surface-container relative z-10 p-gutter">
+<img alt="Isaac at work" class="w-full h-full object-cover grayscale" data-alt="A portrait of Isaac, a professional mechanic with a confident and royal demeanor, standing next to a sophisticated mobile service van. He is wearing high-quality dark grey workwear with a subtle King's Mobile logo. The background is a clean Springfield street at sunset, with golden hour light casting a warm glow on his face. The overall aesthetic is editorial and premium, with a focus on trust and mastery." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNTDPcSY246CQ2LKATQJ7HZNwX0JQFEPNQNEJZbNx1O5xKv49_IxG0oA_vDs9_WP-XQHJgPU1w5Re72-7DZn_DNrCIoXBuBciAlpEwuPyRs0vz-cges2rrfWCDQpobMOQYmJsxAxFAXROT3tbxSNVRjlKwWDY97JzID3axxB8k4jMisPn2zWuGwbI5RSi03QCcaPVXUJV44zFcdGPKclTDVKNu70xL71Y7a498N47wEglJf9tK3F_cl_gLYqxXmzSCVw8-l9u21Kg"/>
+</div>
+<!-- Absolute Frame Offset -->
+<div class="absolute -top-12 -right-12 w-full h-full border-2 border-secondary z-0 opacity-20"></div>
+</div>
+<div class="space-y-stack-md">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">THE MASTER TECHNICIAN</span>
+<h2 class="font-headline-md text-headline-md text-on-background">A Legacy of Service</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+                        Founded by Isaac, King’s Mobile Auto Services LLC was born from a singular vision: to bring world-class automotive mastery directly to the driveway. We believe that your time is as valuable as your vehicle.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                        Our mission is to redefine the mobile mechanic industry by blending advanced technology with traditional craftsmanship. Every diagnostic we run and every nut we torque is a commitment to the 'Royal Precision' standard that Springfield has come to trust.
+                    </p>
+<div class="pt-stack-md">
+<div class="italic font-headline-sm text-secondary">"Your mobility is our mandate."</div>
+<div class="font-label-caps text-label-caps mt-2">— Isaac R. Sali, Founder</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap px-margin-page bg-background">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-gutter">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">OPERATIONAL HUB</span>
+<h2 class="font-headline-md text-headline-md text-on-background">Service Area Coverage</h2>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant pb-2">SERVING SPRINGFIELD, OH &amp; SURROUNDING AREAS</p>
+</div>
+<div aria-label="Map" class="map-slot relative border-2 border-secondary p-8 bg-surface-container-lowest min-h-[500px]" data-location="Springfield, OH" data-map-slot="" style="">
+<div class="absolute inset-0 opacity-40 mix-blend-luminosity grayscale">
+<!-- Simulated Map View -->
+<div class="w-full h-full bg-[#121414] pattern-dots"></div>
+</div>
+<div class="relative z-10 flex items-center justify-center h-full flex-col gap-4">
+<span class="material-symbols-outlined text-secondary" style="font-size: 64px; font-variation-settings: 'FILL' 1;">location_on</span>
+<div class="text-center">
+<div class="font-headline-sm text-on-background">Master Hub Springfield</div>
+<div class="font-body-md text-on-surface-variant">Mobile dispatch covering a 30-mile radius.</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-margin-page bg-surface-container-lowest" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-24">
+<div class="lg:col-span-1">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">INQUIRIES</span>
+<h2 class="font-headline-md text-headline-md text-on-background mb-8">Begin Your Consultation</h2>
+<p class="font-body-md text-on-surface-variant mb-12">
+                        Professional evaluation and dispatch for all makes and models. Reach out to schedule your service.
+                    </p>
+<div class="space-y-stack-md">
+<div>
+<div class="font-label-caps text-label-caps text-secondary">DIRECT LINE</div>
+<div class="font-headline-sm text-on-background">(937) 342-6578</div>
+</div>
+<div>
+<div class="font-label-caps text-label-caps text-secondary">EMAIL CONSULTS</div>
+<div class="font-body-lg text-on-background underline underline-offset-4 decoration-secondary">Isaacrsali@gmail.com</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-2">
+<form class="space-y-gutter">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">FULL NAME</label>
+<input class="w-full bg-transparent border-b border-surface-container-highest focus:border-secondary focus:ring-0 px-0 py-3 text-on-background transition-colors placeholder:opacity-20" placeholder="Enter name" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">VEHICLE TYPE</label>
+<input class="w-full bg-transparent border-b border-surface-container-highest focus:border-secondary focus:ring-0 px-0 py-3 text-on-background transition-colors placeholder:opacity-20" placeholder="Make, Model, Year" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">SERVICE REQUIRED</label>
+<select class="w-full bg-transparent border-b border-surface-container-highest focus:border-secondary focus:ring-0 px-0 py-3 text-on-background transition-colors appearance-none">
+<option class="bg-surface-container">Select a service...</option>
+<option class="bg-surface-container">Advanced Diagnostics</option>
+<option class="bg-surface-container">Precision Maintenance</option>
+<option class="bg-surface-container">Emergency Roadside</option>
+<option class="bg-surface-container">Fleet Management</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label-caps text-label-caps text-on-surface-variant block">DETAILS &amp; SYMPTOMS</label>
+<textarea class="w-full bg-transparent border-b border-surface-container-highest focus:border-secondary focus:ring-0 px-0 py-3 text-on-background transition-colors placeholder:opacity-20 resize-none" placeholder="Describe the issue..." rows="4"></textarea>
+</div>
+<button class="w-full btn-primary bg-secondary text-on-secondary py-6 font-utility-bold uppercase tracking-[0.3em] hover:brightness-110" type="submit">
+                            TRANSMIT REQUEST
+                        </button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-2 border-surface-container-highest px-margin-page py-stack-lg w-full grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="md:col-span-1 flex flex-col justify-between h-full">
+<span class="font-headline-md text-headline-md text-on-background block mb-4">King's Mobile</span>
+<p class="font-label-caps text-label-caps text-on-surface-variant opacity-60">Professional Mobile Automotive Maintenance</p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-secondary mb-2">QUICK LINKS</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#about">Careers</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Service Area</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-all" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-secondary mb-2">OPERATING HOURS</span>
+<p class="font-body-md text-on-surface-variant">Mon – Fri: 8AM — 6PM</p>
+<p class="font-body-md text-on-surface-variant">Sat: 9AM — 4PM</p>
+<p class="font-body-md text-on-surface-variant">Sun: Emergency Only</p>
+</div>
+<div class="flex flex-col justify-end items-start md:items-end">
+<p class="font-body-md text-body-md text-on-surface-variant text-sm opacity-50 mb-4">© 2024 King's Mobile Auto Services LLC. All rights reserved.</p>
+<div class="flex gap-4">
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+<a class="text-on-surface-variant hover:text-secondary transition-colors" href="#">
+<span class="material-symbols-outlined">call</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple animation for the service ledger scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-row').forEach(row => {
+            row.style.opacity = "0";
+            row.style.transform = "translateY(20px)";
+            observer.observe(row);
+        });
+    </script>
+</body></html>
