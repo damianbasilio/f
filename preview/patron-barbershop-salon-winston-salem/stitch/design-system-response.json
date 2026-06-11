@@ -1,0 +1,507 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Patron Barbershop Salon",
+        "styleGuidelines": "## Brand & Style\n\nThe brand personality is rooted in **Modern Classicism**, blending the heritage of traditional grooming with the refined service of boutique hospitality. The design system prioritizes a sense of \"quiet luxury\"—avoiding common industry tropes like clippers or barber poles in favor of an aesthetic that feels like a private members' club.\n\nThe design style is **Minimalist with Tactile Accents**. It leverages heavy whitespace and high-quality typography to evoke an editorial feel. Visual interest is driven by high-contrast color pairings and intentional asymmetry, creating a dynamic yet composed experience. The target audience is the discerning professional who values craft, legacy, and a serene atmosphere.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop and a **Fluid Grid** for mobile. The layout is inspired by luxury magazine spreads, characterized by large asymmetrical margins and intentional \"dead space\" that focuses the user's eye on key content.\n\n- **Asymmetry:** Content blocks should rarely be centered. Use a 12-column grid where the main text often starts at column 3 or 4 to create a sophisticated, off-center balance.\n- **Hairline Rules:** Use 0.5pt to 1pt Gold rules to separate sections or define vertical gutters, mimicking the precision of a master barber's lines.\n- **Sectioning:** Large vertical gaps (120px+) are encouraged between different service categories or narrative blocks to allow the brand to \"breathe.\"\n\n## Elevation & Depth\n\nTo maintain a \"Modern Classic\" aesthetic, avoid heavy drop shadows or floating effects. Instead, depth is conveyed through **Tonal Layering** and **Minimalist Framing**.\n\n- **Stacked Tiers:** Use the Parchment background for the primary canvas and Midnight Slate for immersive, full-width sections. \n- **Ghost Borders:** High-contrast outlines in Burnished Gold replace shadows. Elements like cards or modals should use a thin 1px gold border to define their boundary.\n- **Depth via Imagery:** Depth is achieved through high-quality photography featuring dramatic lighting and deep blacks, rather than UI-based elevation techniques.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Midnight Slate with Parchment text, set in `label-caps`. The hover state shifts to a Burnished Gold background. Secondary buttons use a 1px Gold border with no fill.\n- **Inputs:** Simple bottom-border only (1px Midnight Slate), transitioning to Burnished Gold on focus. Labels sit above in `label-caps`.\n- **Cards:** Defined by 1px Midnight Slate or Burnished Gold borders. No shadows. Content within cards follows the asymmetrical spacing rules.\n- **Service Lists:** Large typographic list items with Bodoni Moda for the service name and Hanken Grotesk for the price. Separated by thin 0.5px horizontal rules.\n- **Booking Modal:** A centered, sharp-edged container with a Parchment background and a thick Midnight Slate header.\n- **Gold Dividers:** Decorative 1px lines used to lead the eye towards key call-to-actions or to frame large-scale photography.",
+        "theme": {
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1a1a1a",
+          "designMd": "---\nname: Patron Barbershop Salon\ncolors:\n  surface: '#faf9f5'\n  surface-dim: '#dadad6'\n  surface-bright: '#faf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4f0'\n  surface-container: '#eeeeea'\n  surface-container-high: '#e8e8e4'\n  surface-container-highest: '#e3e3df'\n  on-surface: '#1a1c1a'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f1f1ed'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1a'\n  on-tertiary-container: '#838481'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e2e3df'\n  tertiary-fixed-dim: '#c6c7c3'\n  on-tertiary-fixed: '#1a1c1a'\n  on-tertiary-fixed-variant: '#454745'\n  background: '#faf9f5'\n  on-background: '#1a1c1a'\n  surface-variant: '#e3e3df'\ntypography:\n  headline-xxl:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.1em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe brand personality is rooted in **Modern Classicism**, blending the heritage of traditional grooming with the refined service of boutique hospitality. The design system prioritizes a sense of \"quiet luxury\"—avoiding common industry tropes like clippers or barber poles in favor of an aesthetic that feels like a private members' club.\n\nThe design style is **Minimalist with Tactile Accents**. It leverages heavy whitespace and high-quality typography to evoke an editorial feel. Visual interest is driven by high-contrast color pairings and intentional asymmetry, creating a dynamic yet composed experience. The target audience is the discerning professional who values craft, legacy, and a serene atmosphere.\n\n## Colors\n\nThe palette is anchored by **Midnight Slate** (#1A1A1A), which provides a deep, authoritative foundation for primary text and dark-mode surfaces. **Burnished Gold** (#C5A059) is used sparingly as a high-value accent for call-to-actions, borders, and decorative hairline rules to signify premium quality.\n\nThe primary background is **Parchment** (#F5F5F1), a warm, sophisticated off-white that feels more organic and expensive than pure white. It reduces eye strain and provides a soft canvas for high-contrast typography. Secondary neutrals are used for subtle UI layering and dividers to maintain the editorial rhythm without introducing heavy shadows.\n\n## Typography\n\nThe typography system is built on a \"High-Low\" pairing strategy. **Bodoni Moda** is the primary display face, delivering a sharp, editorial elegance that feels timeless yet contemporary. It should be used for large, impactful headlines, often set with negative letter-spacing in larger sizes to emphasize its vertical contrast.\n\n**Hanken Grotesk** serves as the functional workhorse. It is set with generous tracking (letter-spacing) for body copy and UI labels to ensure a clean, airy feel. All navigational and label elements should use the `label-caps` style to maintain a structured, architectural look. For mobile, headline scales are tightened to maintain readability while preserving the dramatic contrast of the serif typeface.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop and a **Fluid Grid** for mobile. The layout is inspired by luxury magazine spreads, characterized by large asymmetrical margins and intentional \"dead space\" that focuses the user's eye on key content.\n\n- **Asymmetry:** Content blocks should rarely be centered. Use a 12-column grid where the main text often starts at column 3 or 4 to create a sophisticated, off-center balance.\n- **Hairline Rules:** Use 0.5pt to 1pt Gold rules to separate sections or define vertical gutters, mimicking the precision of a master barber's lines.\n- **Sectioning:** Large vertical gaps (120px+) are encouraged between different service categories or narrative blocks to allow the brand to \"breathe.\"\n\n## Elevation & Depth\n\nTo maintain a \"Modern Classic\" aesthetic, avoid heavy drop shadows or floating effects. Instead, depth is conveyed through **Tonal Layering** and **Minimalist Framing**.\n\n- **Stacked Tiers:** Use the Parchment background for the primary canvas and Midnight Slate for immersive, full-width sections. \n- **Ghost Borders:** High-contrast outlines in Burnished Gold replace shadows. Elements like cards or modals should use a thin 1px gold border to define their boundary.\n- **Depth via Imagery:** Depth is achieved through high-quality photography featuring dramatic lighting and deep blacks, rather than UI-based elevation techniques.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to preserve the architectural and masculine nature of the brand. Every button, input field, and image container must have crisp 90-degree angles. This severity is balanced by the elegance of the serif typography and the warmth of the color palette. \n\nImage masks should favor vertical or horizontal rectangles, and occasionally circular frames for staff portraits to provide a singular, soft counterpoint to the rigid grid.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Midnight Slate with Parchment text, set in `label-caps`. The hover state shifts to a Burnished Gold background. Secondary buttons use a 1px Gold border with no fill.\n- **Inputs:** Simple bottom-border only (1px Midnight Slate), transitioning to Burnished Gold on focus. Labels sit above in `label-caps`.\n- **Cards:** Defined by 1px Midnight Slate or Burnished Gold borders. No shadows. Content within cards follows the asymmetrical spacing rules.\n- **Service Lists:** Large typographic list items with Bodoni Moda for the service name and Hanken Grotesk for the price. Separated by thin 0.5px horizontal rules.\n- **Booking Modal:** A centered, sharp-edged container with a Parchment background and a thick Midnight Slate header.\n- **Gold Dividers:** Decorative 1px lines used to lead the eye towards key call-to-actions or to frame large-scale photography.",
+          "font": "BODONI_MODA",
+          "headlineFont": "BODONI_MODA",
+          "headlineFontFamily": "Bodoni Moda",
+          "labelFont": "HANKEN_GROTESK",
+          "labelFontFamily": "Hanken Grotesk",
+          "namedColors": {
+            "background": "#faf9f5",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f1f1ed",
+            "inverse_primary": "#c8c6c5",
+            "inverse_surface": "#2f312e",
+            "on_background": "#1a1c1a",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#858383",
+            "on_primary_fixed": "#1c1b1b",
+            "on_primary_fixed_variant": "#474746",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#785a1a",
+            "on_secondary_fixed": "#261900",
+            "on_secondary_fixed_variant": "#5d4201",
+            "on_surface": "#1a1c1a",
+            "on_surface_variant": "#444748",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#838481",
+            "on_tertiary_fixed": "#1a1c1a",
+            "on_tertiary_fixed_variant": "#454745",
+            "outline": "#747878",
+            "outline_variant": "#c4c7c7",
+            "primary": "#000000",
+            "primary_container": "#1c1b1b",
+            "primary_fixed": "#e5e2e1",
+            "primary_fixed_dim": "#c8c6c5",
+            "secondary": "#775a19",
+            "secondary_container": "#fed488",
+            "secondary_fixed": "#ffdea5",
+            "secondary_fixed_dim": "#e9c176",
+            "surface": "#faf9f5",
+            "surface_bright": "#faf9f5",
+            "surface_container": "#eeeeea",
+            "surface_container_high": "#e8e8e4",
+            "surface_container_highest": "#e3e3df",
+            "surface_container_low": "#f4f4f0",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dadad6",
+            "surface_tint": "#5f5e5e",
+            "surface_variant": "#e3e3df",
+            "tertiary": "#000000",
+            "tertiary_container": "#1a1c1a",
+            "tertiary_fixed": "#e2e3df",
+            "tertiary_fixed_dim": "#c6c7c3"
+          },
+          "overrideNeutralColor": "#e5e5e1",
+          "overridePrimaryColor": "#1a1a1a",
+          "overrideSecondaryColor": "#c5a059",
+          "overrideTertiaryColor": "#f5f5f1",
+          "spacing": {
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "20px",
+            "section-gap": "120px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "letterSpacing": "0.01em",
+              "lineHeight": "24px"
+            },
+            "button": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "14px",
+              "fontWeight": "600",
+              "letterSpacing": "0.1em",
+              "lineHeight": "20px"
+            },
+            "headline-lg": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "40px"
+            },
+            "headline-lg-mobile": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "28px",
+              "fontWeight": "600",
+              "lineHeight": "36px"
+            },
+            "headline-xl": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "48px",
+              "fontWeight": "600",
+              "lineHeight": "56px"
+            },
+            "headline-xxl": {
+              "fontFamily": "Bodoni Moda",
+              "fontSize": "72px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "80px"
+            },
+            "label-caps": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "12px",
+              "fontWeight": "600",
+              "letterSpacing": "0.15em",
+              "lineHeight": "16px"
+            }
+          }
+        }
+      },
+      "name": "assets/28c6ff21f9ac4a95b56254df1bd0959c",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "768",
+          "id": "af67e062d84d4f44a7295d06bd013784",
+          "name": "projects/14263127901159152977/screens/af67e062d84d4f44a7295d06bd013784",
+          "prompt": "Editorial photography of a high-end, modern-classic barbershop interior. Moody lighting with shadows. Midnight Slate walls, dark wood accents, leather chairs, and subtle gold highlights. Professional, cinematic atmosphere. No people. 8k resolution.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLtS3W-vVSWKhQiDs3Rv4dKCrHWv0tu_aajUVXj7wl2MS0h4gKCm7x0rpeekeI1GAkGZbtkmGzNpgPYR1GTYBSEOrvbxFwVJ0husYAhKK0LqGCwEulBX3n8gWDaPy824wv-7yPLcsQnyCxzGgzdYSnqUKayIaCaZkzRAtP766ciKxK7PIiV6EuDJy8fIakgqjqu6t3U7xBPYDXyqe7PJM30eYMoEPDX9jfrPZ2WvoaGq5p113T1jrpnUI6BV",
+            "name": "projects/14263127901159152977/files/245aae92d67244d2a229cdc493b1960d"
+          },
+          "theme": {},
+          "title": "Editorial photography of a high-end, modern-classic barbershop interior. Moody lighting with shadows. Midnight Slate walls, dark wood accents, leather chairs, and subtle gold highlights. Professional, cinematic atmosphere. No people. 8k resolution.",
+          "width": "1376"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "1024",
+          "id": "ac94e29de8bb469bb315ee176e04ef11",
+          "name": "projects/14263127901159152977/screens/ac94e29de8bb469bb315ee176e04ef11",
+          "prompt": "Close-up of a perfectly executed classic fade haircut on a stylish man. Focus on the sharp lines and texture of the hair. Clean, high-end studio lighting. Midnight Slate background. Editorial style.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvPYd72bDzfyc29n0628NMoDmqtFnLcuego6MY2YFMEdr41Mjja4RrzuLCocHwMaIRl97WV8iDS2dxCmFnbp_UPRciUF27QmKq_k-ETpuSyHBTxu69CZKx024iBhASyFZH6IuhdHgyugnNtxpSc1CoTPHXOgSosPpbyM8DN4s3MPZYKHAlHklviJCZIAiIZXiB22hnuJa-JvKozCSmwOde-EErD_IaQGJ51CR5Ocx5Hn7GL4lXQsLo1X70",
+            "name": "projects/14263127901159152977/files/e452cd119acf4cdd9b43f02681ba875a"
+          },
+          "theme": {},
+          "title": "Close-up of a perfectly executed classic fade haircut on a stylish man. Focus on the sharp lines and texture of the hair. Clean, high-end studio lighting. Midnight Slate background. Editorial style.",
+          "width": "1024"
+        },
+        {
+          "generatedBy": "interactive_ui_controller",
+          "height": "896",
+          "id": "d385d105d4514282a6ef547a6b4ebac8",
+          "name": "projects/14263127901159152977/screens/d385d105d4514282a6ef547a6b4ebac8",
+          "prompt": "Close-up of professional grooming tools (straight razor, shears, fine comb) resting on a dark marble surface. Sharp focus, dramatic lighting with warm gold tones. Editorial quality. High contrast.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "IMAGE",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuVwyIrZje8dkx69aGlxfT5mPMK4NqaPRS6A566kXJKfG1CKnbW9ER82bcSgTzgUtiVzGDBCALZh1kW1y8dg4qdPa1ggn-o2aUesNml-PYi48t86eB_SNuhyW0u63u7mVExBohFf6wiKd1Dtdt2A7gVgmPPoIQsA4dP-aXP07VMNqDoovzKKDmeT0wxYpnIribt0v7gojJG0xxLwckIeeQRbMKDpjDVo8PDxC_YExGiFKTGqACGWj_qTq26",
+            "name": "projects/14263127901159152977/files/9065abf71d534a6eb0f06b41b29e5eac"
+          },
+          "theme": {},
+          "title": "Close-up of professional grooming tools (straight razor, shears, fine comb) resting on a dark marble surface. Sharp focus, dramatic lighting with warm gold tones. Editorial quality. High contrast.",
+          "width": "1200"
+        },
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Patron Barbershop Salon",
+              "styleGuidelines": "## Brand & Style\n\nThe brand personality is rooted in **Modern Classicism**, blending the heritage of traditional grooming with the refined service of boutique hospitality. The design system prioritizes a sense of \"quiet luxury\"—avoiding common industry tropes like clippers or barber poles in favor of an aesthetic that feels like a private members' club.\n\nThe design style is **Minimalist with Tactile Accents**. It leverages heavy whitespace and high-quality typography to evoke an editorial feel. Visual interest is driven by high-contrast color pairings and intentional asymmetry, creating a dynamic yet composed experience. The target audience is the discerning professional who values craft, legacy, and a serene atmosphere.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop and a **Fluid Grid** for mobile. The layout is inspired by luxury magazine spreads, characterized by large asymmetrical margins and intentional \"dead space\" that focuses the user's eye on key content.\n\n- **Asymmetry:** Content blocks should rarely be centered. Use a 12-column grid where the main text often starts at column 3 or 4 to create a sophisticated, off-center balance.\n- **Hairline Rules:** Use 0.5pt to 1pt Gold rules to separate sections or define vertical gutters, mimicking the precision of a master barber's lines.\n- **Sectioning:** Large vertical gaps (120px+) are encouraged between different service categories or narrative blocks to allow the brand to \"breathe.\"\n\n## Elevation & Depth\n\nTo maintain a \"Modern Classic\" aesthetic, avoid heavy drop shadows or floating effects. Instead, depth is conveyed through **Tonal Layering** and **Minimalist Framing**.\n\n- **Stacked Tiers:** Use the Parchment background for the primary canvas and Midnight Slate for immersive, full-width sections. \n- **Ghost Borders:** High-contrast outlines in Burnished Gold replace shadows. Elements like cards or modals should use a thin 1px gold border to define their boundary.\n- **Depth via Imagery:** Depth is achieved through high-quality photography featuring dramatic lighting and deep blacks, rather than UI-based elevation techniques.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Midnight Slate with Parchment text, set in `label-caps`. The hover state shifts to a Burnished Gold background. Secondary buttons use a 1px Gold border with no fill.\n- **Inputs:** Simple bottom-border only (1px Midnight Slate), transitioning to Burnished Gold on focus. Labels sit above in `label-caps`.\n- **Cards:** Defined by 1px Midnight Slate or Burnished Gold borders. No shadows. Content within cards follows the asymmetrical spacing rules.\n- **Service Lists:** Large typographic list items with Bodoni Moda for the service name and Hanken Grotesk for the price. Separated by thin 0.5px horizontal rules.\n- **Booking Modal:** A centered, sharp-edged container with a Parchment background and a thick Midnight Slate header.\n- **Gold Dividers:** Decorative 1px lines used to lead the eye towards key call-to-actions or to frame large-scale photography.",
+              "theme": {
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1a1a1a",
+                "designMd": "---\nname: Patron Barbershop Salon\ncolors:\n  surface: '#faf9f5'\n  surface-dim: '#dadad6'\n  surface-bright: '#faf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4f0'\n  surface-container: '#eeeeea'\n  surface-container-high: '#e8e8e4'\n  surface-container-highest: '#e3e3df'\n  on-surface: '#1a1c1a'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f1f1ed'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1a'\n  on-tertiary-container: '#838481'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e2e3df'\n  tertiary-fixed-dim: '#c6c7c3'\n  on-tertiary-fixed: '#1a1c1a'\n  on-tertiary-fixed-variant: '#454745'\n  background: '#faf9f5'\n  on-background: '#1a1c1a'\n  surface-variant: '#e3e3df'\ntypography:\n  headline-xxl:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.1em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe brand personality is rooted in **Modern Classicism**, blending the heritage of traditional grooming with the refined service of boutique hospitality. The design system prioritizes a sense of \"quiet luxury\"—avoiding common industry tropes like clippers or barber poles in favor of an aesthetic that feels like a private members' club.\n\nThe design style is **Minimalist with Tactile Accents**. It leverages heavy whitespace and high-quality typography to evoke an editorial feel. Visual interest is driven by high-contrast color pairings and intentional asymmetry, creating a dynamic yet composed experience. The target audience is the discerning professional who values craft, legacy, and a serene atmosphere.\n\n## Colors\n\nThe palette is anchored by **Midnight Slate** (#1A1A1A), which provides a deep, authoritative foundation for primary text and dark-mode surfaces. **Burnished Gold** (#C5A059) is used sparingly as a high-value accent for call-to-actions, borders, and decorative hairline rules to signify premium quality.\n\nThe primary background is **Parchment** (#F5F5F1), a warm, sophisticated off-white that feels more organic and expensive than pure white. It reduces eye strain and provides a soft canvas for high-contrast typography. Secondary neutrals are used for subtle UI layering and dividers to maintain the editorial rhythm without introducing heavy shadows.\n\n## Typography\n\nThe typography system is built on a \"High-Low\" pairing strategy. **Bodoni Moda** is the primary display face, delivering a sharp, editorial elegance that feels timeless yet contemporary. It should be used for large, impactful headlines, often set with negative letter-spacing in larger sizes to emphasize its vertical contrast.\n\n**Hanken Grotesk** serves as the functional workhorse. It is set with generous tracking (letter-spacing) for body copy and UI labels to ensure a clean, airy feel. All navigational and label elements should use the `label-caps` style to maintain a structured, architectural look. For mobile, headline scales are tightened to maintain readability while preserving the dramatic contrast of the serif typeface.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop and a **Fluid Grid** for mobile. The layout is inspired by luxury magazine spreads, characterized by large asymmetrical margins and intentional \"dead space\" that focuses the user's eye on key content.\n\n- **Asymmetry:** Content blocks should rarely be centered. Use a 12-column grid where the main text often starts at column 3 or 4 to create a sophisticated, off-center balance.\n- **Hairline Rules:** Use 0.5pt to 1pt Gold rules to separate sections or define vertical gutters, mimicking the precision of a master barber's lines.\n- **Sectioning:** Large vertical gaps (120px+) are encouraged between different service categories or narrative blocks to allow the brand to \"breathe.\"\n\n## Elevation & Depth\n\nTo maintain a \"Modern Classic\" aesthetic, avoid heavy drop shadows or floating effects. Instead, depth is conveyed through **Tonal Layering** and **Minimalist Framing**.\n\n- **Stacked Tiers:** Use the Parchment background for the primary canvas and Midnight Slate for immersive, full-width sections. \n- **Ghost Borders:** High-contrast outlines in Burnished Gold replace shadows. Elements like cards or modals should use a thin 1px gold border to define their boundary.\n- **Depth via Imagery:** Depth is achieved through high-quality photography featuring dramatic lighting and deep blacks, rather than UI-based elevation techniques.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to preserve the architectural and masculine nature of the brand. Every button, input field, and image container must have crisp 90-degree angles. This severity is balanced by the elegance of the serif typography and the warmth of the color palette. \n\nImage masks should favor vertical or horizontal rectangles, and occasionally circular frames for staff portraits to provide a singular, soft counterpoint to the rigid grid.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Midnight Slate with Parchment text, set in `label-caps`. The hover state shifts to a Burnished Gold background. Secondary buttons use a 1px Gold border with no fill.\n- **Inputs:** Simple bottom-border only (1px Midnight Slate), transitioning to Burnished Gold on focus. Labels sit above in `label-caps`.\n- **Cards:** Defined by 1px Midnight Slate or Burnished Gold borders. No shadows. Content within cards follows the asymmetrical spacing rules.\n- **Service Lists:** Large typographic list items with Bodoni Moda for the service name and Hanken Grotesk for the price. Separated by thin 0.5px horizontal rules.\n- **Booking Modal:** A centered, sharp-edged container with a Parchment background and a thick Midnight Slate header.\n- **Gold Dividers:** Decorative 1px lines used to lead the eye towards key call-to-actions or to frame large-scale photography.",
+                "font": "BODONI_MODA",
+                "headlineFont": "BODONI_MODA",
+                "headlineFontFamily": "Bodoni Moda",
+                "labelFont": "HANKEN_GROTESK",
+                "labelFontFamily": "Hanken Grotesk",
+                "namedColors": {
+                  "background": "#faf9f5",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f1f1ed",
+                  "inverse_primary": "#c8c6c5",
+                  "inverse_surface": "#2f312e",
+                  "on_background": "#1a1c1a",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#858383",
+                  "on_primary_fixed": "#1c1b1b",
+                  "on_primary_fixed_variant": "#474746",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#785a1a",
+                  "on_secondary_fixed": "#261900",
+                  "on_secondary_fixed_variant": "#5d4201",
+                  "on_surface": "#1a1c1a",
+                  "on_surface_variant": "#444748",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#838481",
+                  "on_tertiary_fixed": "#1a1c1a",
+                  "on_tertiary_fixed_variant": "#454745",
+                  "outline": "#747878",
+                  "outline_variant": "#c4c7c7",
+                  "primary": "#000000",
+                  "primary_container": "#1c1b1b",
+                  "primary_fixed": "#e5e2e1",
+                  "primary_fixed_dim": "#c8c6c5",
+                  "secondary": "#775a19",
+                  "secondary_container": "#fed488",
+                  "secondary_fixed": "#ffdea5",
+                  "secondary_fixed_dim": "#e9c176",
+                  "surface": "#faf9f5",
+                  "surface_bright": "#faf9f5",
+                  "surface_container": "#eeeeea",
+                  "surface_container_high": "#e8e8e4",
+                  "surface_container_highest": "#e3e3df",
+                  "surface_container_low": "#f4f4f0",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dadad6",
+                  "surface_tint": "#5f5e5e",
+                  "surface_variant": "#e3e3df",
+                  "tertiary": "#000000",
+                  "tertiary_container": "#1a1c1a",
+                  "tertiary_fixed": "#e2e3df",
+                  "tertiary_fixed_dim": "#c6c7c3"
+                },
+                "overrideNeutralColor": "#e5e5e1",
+                "overridePrimaryColor": "#1a1a1a",
+                "overrideSecondaryColor": "#c5a059",
+                "overrideTertiaryColor": "#f5f5f1",
+                "spacing": {
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "20px",
+                  "section-gap": "120px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "letterSpacing": "0.01em",
+                    "lineHeight": "24px"
+                  },
+                  "button": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "14px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.1em",
+                    "lineHeight": "20px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "40px"
+                  },
+                  "headline-lg-mobile": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "28px",
+                    "fontWeight": "600",
+                    "lineHeight": "36px"
+                  },
+                  "headline-xl": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "48px",
+                    "fontWeight": "600",
+                    "lineHeight": "56px"
+                  },
+                  "headline-xxl": {
+                    "fontFamily": "Bodoni Moda",
+                    "fontSize": "72px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "80px"
+                  },
+                  "label-caps": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "12px",
+                    "fontWeight": "600",
+                    "letterSpacing": "0.15em",
+                    "lineHeight": "16px"
+                  }
+                }
+              }
+            },
+            "name": "assets/28c6ff21f9ac4a95b56254df1bd0959c",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "11506",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sX2FjYjMyNjlhNDIwNzQ2MTZhYjNiMDZhMmExOTllNjY5EgsSBxDb5PK-owYYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDI2MzEyNzkwMTE1OTE1Mjk3Nw&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/14263127901159152977/files/14c7aea3f2a64dc792dacf562991cad4"
+          },
+          "id": "655eddfffbc2408988a1173425ac2a1f",
+          "name": "projects/14263127901159152977/screens/655eddfffbc2408988a1173425ac2a1f",
+          "prompt": "Create a bespoke, editorial-grade desktop homepage for 'Patron Barbershop Salon'. \n\nVisual Direction: 'Editorial Density'. Use large, high-contrast serif typography (Bodoni style) for massive overlapping headings. Implement thin gold hairline rules (#C5A059) as section separators. The color palette is strictly 'Midnight Slate' (#1A1A1A) and 'Parchment' (#F5F5F1) with 'Burnished Gold' accents.\n\nContent Structure:\n1. Header: Use the TopNavBar component. High-contrast, sticky.\n2. Hero Section: Asymmetrical layout. Left side: Large vertical text 'THE PATRON'. Right side: Cinematic image {{DATA:IMAGE:IMAGE_5}} with a floating text block: 'Legacy. Precision. The Art of the Groom.'\n3. Credibility Section: 'A Winston-Salem Standard'. Use a minimalist layout with thin vertical rules. Mention 'Est. 2013' and 'Master Craftsmanship'.\n4. Services (The Menu): A non-grid, full-width section. List services like 'The Signature Fade', 'Classic Straight Razor Shave', and 'Patron Grooming Package' with prices and descriptions in a sophisticated typographic list. Use {{DATA:IMAGE:IMAGE_3}} as a background or side element.\n5. About (The Experience): 'Refined for the Modern Man'. High-contrast text block against a dark slate background. Use {{DATA:IMAGE:IMAGE_4}} to show the quality of work.\n6. Visit: Section title 'THE SALON'. Include address '1353 Lockland Avenue, Winston-Salem, NC 27103' and the required map slot: <div class='map-slot relative overflow-hidden min-h-[400px] bg-surface-dim' data-map-slot aria-label='Map'></div>.\n7. Contact: A minimal, elegant inquiry form. No cards—just clean input fields with gold underlines.\n8. Footer: Use the Footer component.\n\nTechnical: Responsive, smooth scroll, use CSS custom properties for the palette. No lorem ipsum. Use real copy based on the premium barber theme.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLuyXWCvxCgh0SHL4ZUPiaocb7jPOowBeKzuXzAM6iJN1wR93jECfVxpSXBVRu3fyFdkYej_V_-hu48kaLwmDVRsQz_arZkUkjCBDQt-EQfGrrr4GCmLx2o4h3oPPmk8NAsWE2LiZoysaVWuoj6H931GZNQejw03O7wpRjc5BOJvHGfliKUwDKP3lVXi9pdSCUfRal0fJAOE_6-W8ywr3ESGkN9caUYYVBEZsdUlLA3jFrUmdsJuYagaWc4",
+            "name": "projects/14263127901159152977/files/97c3db3f49fa4419a493ab55a2958f98"
+          },
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1a1a",
+            "designMd": "---\nname: Patron Barbershop Salon\ncolors:\n  surface: '#faf9f5'\n  surface-dim: '#dadad6'\n  surface-bright: '#faf9f5'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f4f4f0'\n  surface-container: '#eeeeea'\n  surface-container-high: '#e8e8e4'\n  surface-container-highest: '#e3e3df'\n  on-surface: '#1a1c1a'\n  on-surface-variant: '#444748'\n  inverse-surface: '#2f312e'\n  inverse-on-surface: '#f1f1ed'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#775a19'\n  on-secondary: '#ffffff'\n  secondary-container: '#fed488'\n  on-secondary-container: '#785a1a'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1a'\n  on-tertiary-container: '#838481'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdea5'\n  secondary-fixed-dim: '#e9c176'\n  on-secondary-fixed: '#261900'\n  on-secondary-fixed-variant: '#5d4201'\n  tertiary-fixed: '#e2e3df'\n  tertiary-fixed-dim: '#c6c7c3'\n  on-tertiary-fixed: '#1a1c1a'\n  on-tertiary-fixed-variant: '#454745'\n  background: '#faf9f5'\n  on-background: '#1a1c1a'\n  surface-variant: '#e3e3df'\ntypography:\n  headline-xxl:\n    fontFamily: Bodoni Moda\n    fontSize: 72px\n    fontWeight: '700'\n    lineHeight: 80px\n    letterSpacing: -0.02em\n  headline-xl:\n    fontFamily: Bodoni Moda\n    fontSize: 48px\n    fontWeight: '600'\n    lineHeight: 56px\n  headline-lg:\n    fontFamily: Bodoni Moda\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 40px\n  headline-lg-mobile:\n    fontFamily: Bodoni Moda\n    fontSize: 28px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n    letterSpacing: 0.01em\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n    letterSpacing: 0.01em\n  label-caps:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '600'\n    lineHeight: 16px\n    letterSpacing: 0.15em\n  button:\n    fontFamily: Hanken Grotesk\n    fontSize: 14px\n    fontWeight: '600'\n    lineHeight: 20px\n    letterSpacing: 0.1em\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 20px\n  margin-desktop: 64px\n  section-gap: 120px\n---\n\n## Brand & Style\n\nThe brand personality is rooted in **Modern Classicism**, blending the heritage of traditional grooming with the refined service of boutique hospitality. The design system prioritizes a sense of \"quiet luxury\"—avoiding common industry tropes like clippers or barber poles in favor of an aesthetic that feels like a private members' club.\n\nThe design style is **Minimalist with Tactile Accents**. It leverages heavy whitespace and high-quality typography to evoke an editorial feel. Visual interest is driven by high-contrast color pairings and intentional asymmetry, creating a dynamic yet composed experience. The target audience is the discerning professional who values craft, legacy, and a serene atmosphere.\n\n## Colors\n\nThe palette is anchored by **Midnight Slate** (#1A1A1A), which provides a deep, authoritative foundation for primary text and dark-mode surfaces. **Burnished Gold** (#C5A059) is used sparingly as a high-value accent for call-to-actions, borders, and decorative hairline rules to signify premium quality.\n\nThe primary background is **Parchment** (#F5F5F1), a warm, sophisticated off-white that feels more organic and expensive than pure white. It reduces eye strain and provides a soft canvas for high-contrast typography. Secondary neutrals are used for subtle UI layering and dividers to maintain the editorial rhythm without introducing heavy shadows.\n\n## Typography\n\nThe typography system is built on a \"High-Low\" pairing strategy. **Bodoni Moda** is the primary display face, delivering a sharp, editorial elegance that feels timeless yet contemporary. It should be used for large, impactful headlines, often set with negative letter-spacing in larger sizes to emphasize its vertical contrast.\n\n**Hanken Grotesk** serves as the functional workhorse. It is set with generous tracking (letter-spacing) for body copy and UI labels to ensure a clean, airy feel. All navigational and label elements should use the `label-caps` style to maintain a structured, architectural look. For mobile, headline scales are tightened to maintain readability while preserving the dramatic contrast of the serif typeface.\n\n## Layout & Spacing\n\nThis design system utilizes a **Fixed Grid** model for desktop and a **Fluid Grid** for mobile. The layout is inspired by luxury magazine spreads, characterized by large asymmetrical margins and intentional \"dead space\" that focuses the user's eye on key content.\n\n- **Asymmetry:** Content blocks should rarely be centered. Use a 12-column grid where the main text often starts at column 3 or 4 to create a sophisticated, off-center balance.\n- **Hairline Rules:** Use 0.5pt to 1pt Gold rules to separate sections or define vertical gutters, mimicking the precision of a master barber's lines.\n- **Sectioning:** Large vertical gaps (120px+) are encouraged between different service categories or narrative blocks to allow the brand to \"breathe.\"\n\n## Elevation & Depth\n\nTo maintain a \"Modern Classic\" aesthetic, avoid heavy drop shadows or floating effects. Instead, depth is conveyed through **Tonal Layering** and **Minimalist Framing**.\n\n- **Stacked Tiers:** Use the Parchment background for the primary canvas and Midnight Slate for immersive, full-width sections. \n- **Ghost Borders:** High-contrast outlines in Burnished Gold replace shadows. Elements like cards or modals should use a thin 1px gold border to define their boundary.\n- **Depth via Imagery:** Depth is achieved through high-quality photography featuring dramatic lighting and deep blacks, rather than UI-based elevation techniques.\n\n## Shapes\n\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to preserve the architectural and masculine nature of the brand. Every button, input field, and image container must have crisp 90-degree angles. This severity is balanced by the elegance of the serif typography and the warmth of the color palette. \n\nImage masks should favor vertical or horizontal rectangles, and occasionally circular frames for staff portraits to provide a singular, soft counterpoint to the rigid grid.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Midnight Slate with Parchment text, set in `label-caps`. The hover state shifts to a Burnished Gold background. Secondary buttons use a 1px Gold border with no fill.\n- **Inputs:** Simple bottom-border only (1px Midnight Slate), transitioning to Burnished Gold on focus. Labels sit above in `label-caps`.\n- **Cards:** Defined by 1px Midnight Slate or Burnished Gold borders. No shadows. Content within cards follows the asymmetrical spacing rules.\n- **Service Lists:** Large typographic list items with Bodoni Moda for the service name and Hanken Grotesk for the price. Separated by thin 0.5px horizontal rules.\n- **Booking Modal:** A centered, sharp-edged container with a Parchment background and a thick Midnight Slate header.\n- **Gold Dividers:** Decorative 1px lines used to lead the eye towards key call-to-actions or to frame large-scale photography.",
+            "font": "BODONI_MODA",
+            "headlineFont": "BODONI_MODA",
+            "headlineFontFamily": "Bodoni Moda",
+            "labelFont": "HANKEN_GROTESK",
+            "labelFontFamily": "Hanken Grotesk",
+            "namedColors": {
+              "background": "#faf9f5",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f1f1ed",
+              "inverse_primary": "#c8c6c5",
+              "inverse_surface": "#2f312e",
+              "on_background": "#1a1c1a",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#858383",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474746",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#785a1a",
+              "on_secondary_fixed": "#261900",
+              "on_secondary_fixed_variant": "#5d4201",
+              "on_surface": "#1a1c1a",
+              "on_surface_variant": "#444748",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#838481",
+              "on_tertiary_fixed": "#1a1c1a",
+              "on_tertiary_fixed_variant": "#454745",
+              "outline": "#747878",
+              "outline_variant": "#c4c7c7",
+              "primary": "#000000",
+              "primary_container": "#1c1b1b",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#775a19",
+              "secondary_container": "#fed488",
+              "secondary_fixed": "#ffdea5",
+              "secondary_fixed_dim": "#e9c176",
+              "surface": "#faf9f5",
+              "surface_bright": "#faf9f5",
+              "surface_container": "#eeeeea",
+              "surface_container_high": "#e8e8e4",
+              "surface_container_highest": "#e3e3df",
+              "surface_container_low": "#f4f4f0",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dadad6",
+              "surface_tint": "#5f5e5e",
+              "surface_variant": "#e3e3df",
+              "tertiary": "#000000",
+              "tertiary_container": "#1a1c1a",
+              "tertiary_fixed": "#e2e3df",
+              "tertiary_fixed_dim": "#c6c7c3"
+            },
+            "overrideNeutralColor": "#e5e5e1",
+            "overridePrimaryColor": "#1a1a1a",
+            "overrideSecondaryColor": "#c5a059",
+            "overrideTertiaryColor": "#f5f5f1",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "20px",
+              "section-gap": "120px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "letterSpacing": "0.01em",
+                "lineHeight": "24px"
+              },
+              "button": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "14px",
+                "fontWeight": "600",
+                "letterSpacing": "0.1em",
+                "lineHeight": "20px"
+              },
+              "headline-lg": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "40px"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "28px",
+                "fontWeight": "600",
+                "lineHeight": "36px"
+              },
+              "headline-xl": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "48px",
+                "fontWeight": "600",
+                "lineHeight": "56px"
+              },
+              "headline-xxl": {
+                "fontFamily": "Bodoni Moda",
+                "fontSize": "72px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "80px"
+              },
+              "label-caps": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "12px",
+                "fontWeight": "600",
+                "letterSpacing": "0.15em",
+                "lineHeight": "16px"
+              }
+            }
+          },
+          "title": "Patron Barbershop Salon - Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I've completed the bespoke homepage for **Patron Barbershop Salon**. \n\nThis design avoids the common \"local business\" template in favor of an **Editorial Density** aesthetic—inspired by high-end magazine layouts and boutique hospitality.\n\n### Design Highlights:\n- **Typographic Authority**: Large, overlapping serif headings create a sense of legacy and confidence, moving away from standard grid-based layouts.\n- **Atmospheric Palette**: A rich combination of 'Midnight Slate' and 'Burnished Gold' communicates premium craft and a refined, masculine environment.\n- **Cinematic Photography**: I've integrated custom-generated imagery that focuses on the tools of the trade and the sharp, technical precision of the haircuts.\n- **Minimalist Credibility**: Instead of generic icons, I've used thin gold hairline separators and structured typography to highlight their history and Winston-Salem roots.\n- **Bespoke Services Menu**: A clean, list-style service menu that focuses on readability and high-end positioning.\n\nThe site is fully responsive and built with production-ready semantic HTML and CSS. You can find the required map slot and contact details integrated seamlessly into the layout.\n\nHow does this editorial direction feel for the brand? We can refine the typographic weight or adjust the image treatments if you'd like."
+  },
+  {
+    "suggestion": "Make the typography even more bold and overlapping"
+  },
+  {
+    "suggestion": "Switch the color palette to a lighter 'Parchment' focus"
+  },
+  {
+    "suggestion": "Add a detailed 'Barber Team' section"
+  }
+]
