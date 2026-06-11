@@ -1,0 +1,447 @@
+[
+  {
+    "designSystem": {
+      "designSystem": {
+        "displayName": "Asphalt & Signal",
+        "styleGuidelines": "## Brand & Style\nThe design system is built on a narrative of industrial reliability and emergency precision. It rejects the generic \"grease-monkey\" aesthetic in favor of a high-end, editorial approach to automotive service. The brand personality is authoritative and urgent, utilizing an **Industrial-Chic** style that blends the raw utility of roadside infrastructure with the refined layout of a premium architectural journal.\n\nThe emotional response is one of immediate trust and modern efficiency. Visual interest is generated through high-contrast surfaces, heavy structural lines, and intentional typographic overlaps that mimic the layering of signage on urban landscapes. Brutalist influences appear in the form of thick borders and uncompromising geometric alignment, ensuring the UI feels as sturdy as the service it represents.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. It uses a 12-column grid on desktop with generous outer margins to simulate a premium magazine spread.\n\n- **The 8px Rhythm:** All spacing, padding, and height variables must be multiples of 8px to maintain industrial precision.\n- **Hazard Accents:** Use 45-degree diagonal \"hazard\" stripes (Carbon and Orange) as thin dividers or edge treatments for containers.\n- **Structural Borders:** Elements are separated by \"Deep Carbon\" borders (3px for primary containers, 1px for internal divisions) rather than shadows. \n- **Mobile Reflow:** On mobile, the 12-column grid collapses to a 2-column or 4-column system. Large display type should scale aggressively to remain impactful while avoiding word-breaks.\n\n## Elevation & Depth\nThis design system eschews soft shadows in favor of **Tonal Layering and Hard Borders**. \n\nDepth is communicated through the physical stacking of high-contrast planes. Surfaces should appear \"bolted down\" or flush with the grid.\n- **Level 0 (Base):** Concrete Gray (#F2F2F2).\n- **Level 1 (Card/Surface):** Pure White or Deep Carbon containers with 3px solid borders.\n- **Level 2 (Interaction):** When an element is hovered or active, it should not rise with a shadow; instead, it should shift its fill color to Safety Orange or swap its border thickness.\n- **Overlays:** Use high-opacity (90%) Deep Carbon for modals to completely isolate the user's focus, mimicking the transition from day to night.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Carbon background, White Archivo Narrow bold text, 0px radius. On hover, the background flips to Safety Orange.\n- **Secondary:** Transparent background, 3px Deep Carbon border, Archivo Narrow bold text.\n- **Emergency:** Solid Safety Orange background, Deep Carbon text. Reserved for \"Call Now\" or \"Request Tow.\"\n\n### Input Fields\n- Solid White background with a 1px Deep Carbon bottom border only (monospaced-style). Labels must be in uppercase Archivo Narrow, positioned above the field.\n\n### Cards & Lists\n- Cards use a 3px Deep Carbon border. No shadows. \n- **List Items:** Separated by 1px Concrete Gray dividers. Use Safety Orange \"chevron\" icons to indicate drill-downs.\n\n### Hazard Striping\n- A custom component used as a header-bottom accent or a loading bar, consisting of alternating Deep Carbon and Safety Orange diagonal lines at a 45-degree angle.\n\n### Data Displays (Service Status)\n- Use large, bold numbers in Archivo Narrow. High-contrast indicators (e.g., \"EN ROUTE\") should be encased in a solid Deep Carbon \"tag\" with White text.",
+        "theme": {
+          "bodyFont": "HANKEN_GROTESK",
+          "bodyFontFamily": "Hanken Grotesk",
+          "colorMode": "LIGHT",
+          "colorVariant": "FIDELITY",
+          "customColor": "#1a1a1a",
+          "designMd": "---\nname: Asphalt & Signal\ncolors:\n  surface: '#fbf9f9'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f9'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#ab3600'\n  on-secondary: '#ffffff'\n  secondary-container: '#fe5e1e'\n  on-secondary-container: '#551600'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1c'\n  on-tertiary-container: '#838484'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdbcf'\n  secondary-fixed-dim: '#ffb59c'\n  on-secondary-fixed: '#390c00'\n  on-secondary-fixed-variant: '#832700'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#fbf9f9'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.04em\n  display-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.05em\n  caption:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  border-thick: 3px\n  border-thin: 1px\n---\n\n## Brand & Style\nThe design system is built on a narrative of industrial reliability and emergency precision. It rejects the generic \"grease-monkey\" aesthetic in favor of a high-end, editorial approach to automotive service. The brand personality is authoritative and urgent, utilizing an **Industrial-Chic** style that blends the raw utility of roadside infrastructure with the refined layout of a premium architectural journal.\n\nThe emotional response is one of immediate trust and modern efficiency. Visual interest is generated through high-contrast surfaces, heavy structural lines, and intentional typographic overlaps that mimic the layering of signage on urban landscapes. Brutalist influences appear in the form of thick borders and uncompromising geometric alignment, ensuring the UI feels as sturdy as the service it represents.\n\n## Colors\nThe palette is derived from the textures of the road and the signals that govern it.\n\n- **Deep Carbon (#1A1A1A):** Used for primary surfaces, heavy borders, and dominant typography to ground the interface in strength.\n- **Safety Orange (#FF5F1F):** A high-visibility \"emergency\" accent. It is used sparingly but impactfully for primary actions, critical status indicators, and hazard motifs.\n- **Concrete Gray (#F2F2F2):** The primary background color, providing a clean, industrial canvas that allows the Deep Carbon and Safety Orange to pop without visual fatigue.\n- **Functional Accents:** Success states should utilize a desaturated foliage green, while warnings remain strictly within the Safety Orange spectrum to maintain brand cohesion.\n\n## Typography\nThe typographic hierarchy mirrors industrial wayfinding. \n\n**Headlines** utilize **Archivo Narrow**, a condensed grotesque that evokes the utility of road signs and equipment labeling. For large display roles, typography should be set with tight leading and negative letter-spacing to create \"blocks\" of text that feel structural. Use uppercase transformations for all primary navigation and section headings to reinforce authority.\n\n**Body Text** is set in **Hanken Grotesk**, providing a sharp, contemporary contrast to the condensed headers. It offers high legibility for service descriptions and technical specifications. \n\n**Typographic Overlaps:** In editorial layouts, allow large display type (e.g., \"TOWING\") to be partially obscured by images or container edges to create a sense of scale and depth.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. It uses a 12-column grid on desktop with generous outer margins to simulate a premium magazine spread.\n\n- **The 8px Rhythm:** All spacing, padding, and height variables must be multiples of 8px to maintain industrial precision.\n- **Hazard Accents:** Use 45-degree diagonal \"hazard\" stripes (Carbon and Orange) as thin dividers or edge treatments for containers.\n- **Structural Borders:** Elements are separated by \"Deep Carbon\" borders (3px for primary containers, 1px for internal divisions) rather than shadows. \n- **Mobile Reflow:** On mobile, the 12-column grid collapses to a 2-column or 4-column system. Large display type should scale aggressively to remain impactful while avoiding word-breaks.\n\n## Elevation & Depth\nThis design system eschews soft shadows in favor of **Tonal Layering and Hard Borders**. \n\nDepth is communicated through the physical stacking of high-contrast planes. Surfaces should appear \"bolted down\" or flush with the grid.\n- **Level 0 (Base):** Concrete Gray (#F2F2F2).\n- **Level 1 (Card/Surface):** Pure White or Deep Carbon containers with 3px solid borders.\n- **Level 2 (Interaction):** When an element is hovered or active, it should not rise with a shadow; instead, it should shift its fill color to Safety Orange or swap its border thickness.\n- **Overlays:** Use high-opacity (90%) Deep Carbon for modals to completely isolate the user's focus, mimicking the transition from day to night.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to maintain the industrial, heavy-machinery aesthetic. \n\nEvery button, input field, and card must have 90-degree angles. This lack of softness communicates a \"no-nonsense\" professional attitude. To prevent the UI from feeling dated, use thin, precise internal lines and oversized typography to provide the modern \"chic\" balance.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Carbon background, White Archivo Narrow bold text, 0px radius. On hover, the background flips to Safety Orange.\n- **Secondary:** Transparent background, 3px Deep Carbon border, Archivo Narrow bold text.\n- **Emergency:** Solid Safety Orange background, Deep Carbon text. Reserved for \"Call Now\" or \"Request Tow.\"\n\n### Input Fields\n- Solid White background with a 1px Deep Carbon bottom border only (monospaced-style). Labels must be in uppercase Archivo Narrow, positioned above the field.\n\n### Cards & Lists\n- Cards use a 3px Deep Carbon border. No shadows. \n- **List Items:** Separated by 1px Concrete Gray dividers. Use Safety Orange \"chevron\" icons to indicate drill-downs.\n\n### Hazard Striping\n- A custom component used as a header-bottom accent or a loading bar, consisting of alternating Deep Carbon and Safety Orange diagonal lines at a 45-degree angle.\n\n### Data Displays (Service Status)\n- Use large, bold numbers in Archivo Narrow. High-contrast indicators (e.g., \"EN ROUTE\") should be encased in a solid Deep Carbon \"tag\" with White text.",
+          "font": "ARCHIVO_NARROW",
+          "headlineFont": "ARCHIVO_NARROW",
+          "headlineFontFamily": "Archivo Narrow",
+          "labelFont": "ARCHIVO_NARROW",
+          "labelFontFamily": "Archivo Narrow",
+          "namedColors": {
+            "background": "#fbf9f9",
+            "error": "#ba1a1a",
+            "error_container": "#ffdad6",
+            "inverse_on_surface": "#f2f0f0",
+            "inverse_primary": "#c8c6c5",
+            "inverse_surface": "#303031",
+            "on_background": "#1b1c1c",
+            "on_error": "#ffffff",
+            "on_error_container": "#93000a",
+            "on_primary": "#ffffff",
+            "on_primary_container": "#858383",
+            "on_primary_fixed": "#1c1b1b",
+            "on_primary_fixed_variant": "#474746",
+            "on_secondary": "#ffffff",
+            "on_secondary_container": "#551600",
+            "on_secondary_fixed": "#390c00",
+            "on_secondary_fixed_variant": "#832700",
+            "on_surface": "#1b1c1c",
+            "on_surface_variant": "#444748",
+            "on_tertiary": "#ffffff",
+            "on_tertiary_container": "#838484",
+            "on_tertiary_fixed": "#1a1c1c",
+            "on_tertiary_fixed_variant": "#454747",
+            "outline": "#747878",
+            "outline_variant": "#c4c7c7",
+            "primary": "#000000",
+            "primary_container": "#1c1b1b",
+            "primary_fixed": "#e5e2e1",
+            "primary_fixed_dim": "#c8c6c5",
+            "secondary": "#ab3600",
+            "secondary_container": "#fe5e1e",
+            "secondary_fixed": "#ffdbcf",
+            "secondary_fixed_dim": "#ffb59c",
+            "surface": "#fbf9f9",
+            "surface_bright": "#fbf9f9",
+            "surface_container": "#efeded",
+            "surface_container_high": "#e9e8e7",
+            "surface_container_highest": "#e4e2e2",
+            "surface_container_low": "#f5f3f3",
+            "surface_container_lowest": "#ffffff",
+            "surface_dim": "#dbdad9",
+            "surface_tint": "#5f5e5e",
+            "surface_variant": "#e4e2e2",
+            "tertiary": "#000000",
+            "tertiary_container": "#1a1c1c",
+            "tertiary_fixed": "#e2e2e2",
+            "tertiary_fixed_dim": "#c6c6c7"
+          },
+          "overrideNeutralColor": "#707070",
+          "overridePrimaryColor": "#1a1a1a",
+          "overrideSecondaryColor": "#ff5f1f",
+          "overrideTertiaryColor": "#f2f2f2",
+          "spacing": {
+            "border-thick": "3px",
+            "border-thin": "1px",
+            "gutter": "24px",
+            "margin-desktop": "64px",
+            "margin-mobile": "16px",
+            "unit": "8px"
+          },
+          "spacingScale": 2,
+          "typography": {
+            "body-lg": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "18px",
+              "fontWeight": "400",
+              "lineHeight": "28px"
+            },
+            "body-md": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "16px",
+              "fontWeight": "400",
+              "lineHeight": "24px"
+            },
+            "caption": {
+              "fontFamily": "Hanken Grotesk",
+              "fontSize": "12px",
+              "fontWeight": "500",
+              "lineHeight": "16px"
+            },
+            "display-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "80px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.04em",
+              "lineHeight": "72px"
+            },
+            "display-lg-mobile": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "48px",
+              "fontWeight": "700",
+              "letterSpacing": "-0.02em",
+              "lineHeight": "44px"
+            },
+            "headline-lg": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "40px",
+              "fontWeight": "700",
+              "lineHeight": "44px"
+            },
+            "headline-md": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "32px",
+              "fontWeight": "600",
+              "lineHeight": "36px"
+            },
+            "label-bold": {
+              "fontFamily": "Archivo Narrow",
+              "fontSize": "14px",
+              "fontWeight": "700",
+              "letterSpacing": "0.05em",
+              "lineHeight": "16px"
+            }
+          }
+        }
+      },
+      "name": "assets/4d0cc4d02342455e881f79f4069145ef",
+      "version": "1"
+    }
+  },
+  {
+    "design": {
+      "screens": [
+        {
+          "designSystem": {
+            "designSystem": {
+              "displayName": "Asphalt & Signal",
+              "styleGuidelines": "## Brand & Style\nThe design system is built on a narrative of industrial reliability and emergency precision. It rejects the generic \"grease-monkey\" aesthetic in favor of a high-end, editorial approach to automotive service. The brand personality is authoritative and urgent, utilizing an **Industrial-Chic** style that blends the raw utility of roadside infrastructure with the refined layout of a premium architectural journal.\n\nThe emotional response is one of immediate trust and modern efficiency. Visual interest is generated through high-contrast surfaces, heavy structural lines, and intentional typographic overlaps that mimic the layering of signage on urban landscapes. Brutalist influences appear in the form of thick borders and uncompromising geometric alignment, ensuring the UI feels as sturdy as the service it represents.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. It uses a 12-column grid on desktop with generous outer margins to simulate a premium magazine spread.\n\n- **The 8px Rhythm:** All spacing, padding, and height variables must be multiples of 8px to maintain industrial precision.\n- **Hazard Accents:** Use 45-degree diagonal \"hazard\" stripes (Carbon and Orange) as thin dividers or edge treatments for containers.\n- **Structural Borders:** Elements are separated by \"Deep Carbon\" borders (3px for primary containers, 1px for internal divisions) rather than shadows. \n- **Mobile Reflow:** On mobile, the 12-column grid collapses to a 2-column or 4-column system. Large display type should scale aggressively to remain impactful while avoiding word-breaks.\n\n## Elevation & Depth\nThis design system eschews soft shadows in favor of **Tonal Layering and Hard Borders**. \n\nDepth is communicated through the physical stacking of high-contrast planes. Surfaces should appear \"bolted down\" or flush with the grid.\n- **Level 0 (Base):** Concrete Gray (#F2F2F2).\n- **Level 1 (Card/Surface):** Pure White or Deep Carbon containers with 3px solid borders.\n- **Level 2 (Interaction):** When an element is hovered or active, it should not rise with a shadow; instead, it should shift its fill color to Safety Orange or swap its border thickness.\n- **Overlays:** Use high-opacity (90%) Deep Carbon for modals to completely isolate the user's focus, mimicking the transition from day to night.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Carbon background, White Archivo Narrow bold text, 0px radius. On hover, the background flips to Safety Orange.\n- **Secondary:** Transparent background, 3px Deep Carbon border, Archivo Narrow bold text.\n- **Emergency:** Solid Safety Orange background, Deep Carbon text. Reserved for \"Call Now\" or \"Request Tow.\"\n\n### Input Fields\n- Solid White background with a 1px Deep Carbon bottom border only (monospaced-style). Labels must be in uppercase Archivo Narrow, positioned above the field.\n\n### Cards & Lists\n- Cards use a 3px Deep Carbon border. No shadows. \n- **List Items:** Separated by 1px Concrete Gray dividers. Use Safety Orange \"chevron\" icons to indicate drill-downs.\n\n### Hazard Striping\n- A custom component used as a header-bottom accent or a loading bar, consisting of alternating Deep Carbon and Safety Orange diagonal lines at a 45-degree angle.\n\n### Data Displays (Service Status)\n- Use large, bold numbers in Archivo Narrow. High-contrast indicators (e.g., \"EN ROUTE\") should be encased in a solid Deep Carbon \"tag\" with White text.",
+              "theme": {
+                "bodyFont": "HANKEN_GROTESK",
+                "bodyFontFamily": "Hanken Grotesk",
+                "colorMode": "LIGHT",
+                "colorVariant": "FIDELITY",
+                "customColor": "#1a1a1a",
+                "designMd": "---\nname: Asphalt & Signal\ncolors:\n  surface: '#fbf9f9'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f9'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#ab3600'\n  on-secondary: '#ffffff'\n  secondary-container: '#fe5e1e'\n  on-secondary-container: '#551600'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1c'\n  on-tertiary-container: '#838484'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdbcf'\n  secondary-fixed-dim: '#ffb59c'\n  on-secondary-fixed: '#390c00'\n  on-secondary-fixed-variant: '#832700'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#fbf9f9'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.04em\n  display-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.05em\n  caption:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  border-thick: 3px\n  border-thin: 1px\n---\n\n## Brand & Style\nThe design system is built on a narrative of industrial reliability and emergency precision. It rejects the generic \"grease-monkey\" aesthetic in favor of a high-end, editorial approach to automotive service. The brand personality is authoritative and urgent, utilizing an **Industrial-Chic** style that blends the raw utility of roadside infrastructure with the refined layout of a premium architectural journal.\n\nThe emotional response is one of immediate trust and modern efficiency. Visual interest is generated through high-contrast surfaces, heavy structural lines, and intentional typographic overlaps that mimic the layering of signage on urban landscapes. Brutalist influences appear in the form of thick borders and uncompromising geometric alignment, ensuring the UI feels as sturdy as the service it represents.\n\n## Colors\nThe palette is derived from the textures of the road and the signals that govern it.\n\n- **Deep Carbon (#1A1A1A):** Used for primary surfaces, heavy borders, and dominant typography to ground the interface in strength.\n- **Safety Orange (#FF5F1F):** A high-visibility \"emergency\" accent. It is used sparingly but impactfully for primary actions, critical status indicators, and hazard motifs.\n- **Concrete Gray (#F2F2F2):** The primary background color, providing a clean, industrial canvas that allows the Deep Carbon and Safety Orange to pop without visual fatigue.\n- **Functional Accents:** Success states should utilize a desaturated foliage green, while warnings remain strictly within the Safety Orange spectrum to maintain brand cohesion.\n\n## Typography\nThe typographic hierarchy mirrors industrial wayfinding. \n\n**Headlines** utilize **Archivo Narrow**, a condensed grotesque that evokes the utility of road signs and equipment labeling. For large display roles, typography should be set with tight leading and negative letter-spacing to create \"blocks\" of text that feel structural. Use uppercase transformations for all primary navigation and section headings to reinforce authority.\n\n**Body Text** is set in **Hanken Grotesk**, providing a sharp, contemporary contrast to the condensed headers. It offers high legibility for service descriptions and technical specifications. \n\n**Typographic Overlaps:** In editorial layouts, allow large display type (e.g., \"TOWING\") to be partially obscured by images or container edges to create a sense of scale and depth.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. It uses a 12-column grid on desktop with generous outer margins to simulate a premium magazine spread.\n\n- **The 8px Rhythm:** All spacing, padding, and height variables must be multiples of 8px to maintain industrial precision.\n- **Hazard Accents:** Use 45-degree diagonal \"hazard\" stripes (Carbon and Orange) as thin dividers or edge treatments for containers.\n- **Structural Borders:** Elements are separated by \"Deep Carbon\" borders (3px for primary containers, 1px for internal divisions) rather than shadows. \n- **Mobile Reflow:** On mobile, the 12-column grid collapses to a 2-column or 4-column system. Large display type should scale aggressively to remain impactful while avoiding word-breaks.\n\n## Elevation & Depth\nThis design system eschews soft shadows in favor of **Tonal Layering and Hard Borders**. \n\nDepth is communicated through the physical stacking of high-contrast planes. Surfaces should appear \"bolted down\" or flush with the grid.\n- **Level 0 (Base):** Concrete Gray (#F2F2F2).\n- **Level 1 (Card/Surface):** Pure White or Deep Carbon containers with 3px solid borders.\n- **Level 2 (Interaction):** When an element is hovered or active, it should not rise with a shadow; instead, it should shift its fill color to Safety Orange or swap its border thickness.\n- **Overlays:** Use high-opacity (90%) Deep Carbon for modals to completely isolate the user's focus, mimicking the transition from day to night.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to maintain the industrial, heavy-machinery aesthetic. \n\nEvery button, input field, and card must have 90-degree angles. This lack of softness communicates a \"no-nonsense\" professional attitude. To prevent the UI from feeling dated, use thin, precise internal lines and oversized typography to provide the modern \"chic\" balance.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Carbon background, White Archivo Narrow bold text, 0px radius. On hover, the background flips to Safety Orange.\n- **Secondary:** Transparent background, 3px Deep Carbon border, Archivo Narrow bold text.\n- **Emergency:** Solid Safety Orange background, Deep Carbon text. Reserved for \"Call Now\" or \"Request Tow.\"\n\n### Input Fields\n- Solid White background with a 1px Deep Carbon bottom border only (monospaced-style). Labels must be in uppercase Archivo Narrow, positioned above the field.\n\n### Cards & Lists\n- Cards use a 3px Deep Carbon border. No shadows. \n- **List Items:** Separated by 1px Concrete Gray dividers. Use Safety Orange \"chevron\" icons to indicate drill-downs.\n\n### Hazard Striping\n- A custom component used as a header-bottom accent or a loading bar, consisting of alternating Deep Carbon and Safety Orange diagonal lines at a 45-degree angle.\n\n### Data Displays (Service Status)\n- Use large, bold numbers in Archivo Narrow. High-contrast indicators (e.g., \"EN ROUTE\") should be encased in a solid Deep Carbon \"tag\" with White text.",
+                "font": "ARCHIVO_NARROW",
+                "headlineFont": "ARCHIVO_NARROW",
+                "headlineFontFamily": "Archivo Narrow",
+                "labelFont": "ARCHIVO_NARROW",
+                "labelFontFamily": "Archivo Narrow",
+                "namedColors": {
+                  "background": "#fbf9f9",
+                  "error": "#ba1a1a",
+                  "error_container": "#ffdad6",
+                  "inverse_on_surface": "#f2f0f0",
+                  "inverse_primary": "#c8c6c5",
+                  "inverse_surface": "#303031",
+                  "on_background": "#1b1c1c",
+                  "on_error": "#ffffff",
+                  "on_error_container": "#93000a",
+                  "on_primary": "#ffffff",
+                  "on_primary_container": "#858383",
+                  "on_primary_fixed": "#1c1b1b",
+                  "on_primary_fixed_variant": "#474746",
+                  "on_secondary": "#ffffff",
+                  "on_secondary_container": "#551600",
+                  "on_secondary_fixed": "#390c00",
+                  "on_secondary_fixed_variant": "#832700",
+                  "on_surface": "#1b1c1c",
+                  "on_surface_variant": "#444748",
+                  "on_tertiary": "#ffffff",
+                  "on_tertiary_container": "#838484",
+                  "on_tertiary_fixed": "#1a1c1c",
+                  "on_tertiary_fixed_variant": "#454747",
+                  "outline": "#747878",
+                  "outline_variant": "#c4c7c7",
+                  "primary": "#000000",
+                  "primary_container": "#1c1b1b",
+                  "primary_fixed": "#e5e2e1",
+                  "primary_fixed_dim": "#c8c6c5",
+                  "secondary": "#ab3600",
+                  "secondary_container": "#fe5e1e",
+                  "secondary_fixed": "#ffdbcf",
+                  "secondary_fixed_dim": "#ffb59c",
+                  "surface": "#fbf9f9",
+                  "surface_bright": "#fbf9f9",
+                  "surface_container": "#efeded",
+                  "surface_container_high": "#e9e8e7",
+                  "surface_container_highest": "#e4e2e2",
+                  "surface_container_low": "#f5f3f3",
+                  "surface_container_lowest": "#ffffff",
+                  "surface_dim": "#dbdad9",
+                  "surface_tint": "#5f5e5e",
+                  "surface_variant": "#e4e2e2",
+                  "tertiary": "#000000",
+                  "tertiary_container": "#1a1c1c",
+                  "tertiary_fixed": "#e2e2e2",
+                  "tertiary_fixed_dim": "#c6c6c7"
+                },
+                "overrideNeutralColor": "#707070",
+                "overridePrimaryColor": "#1a1a1a",
+                "overrideSecondaryColor": "#ff5f1f",
+                "overrideTertiaryColor": "#f2f2f2",
+                "spacing": {
+                  "border-thick": "3px",
+                  "border-thin": "1px",
+                  "gutter": "24px",
+                  "margin-desktop": "64px",
+                  "margin-mobile": "16px",
+                  "unit": "8px"
+                },
+                "spacingScale": 2,
+                "typography": {
+                  "body-lg": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "18px",
+                    "fontWeight": "400",
+                    "lineHeight": "28px"
+                  },
+                  "body-md": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "16px",
+                    "fontWeight": "400",
+                    "lineHeight": "24px"
+                  },
+                  "caption": {
+                    "fontFamily": "Hanken Grotesk",
+                    "fontSize": "12px",
+                    "fontWeight": "500",
+                    "lineHeight": "16px"
+                  },
+                  "display-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "80px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.04em",
+                    "lineHeight": "72px"
+                  },
+                  "display-lg-mobile": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "48px",
+                    "fontWeight": "700",
+                    "letterSpacing": "-0.02em",
+                    "lineHeight": "44px"
+                  },
+                  "headline-lg": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "40px",
+                    "fontWeight": "700",
+                    "lineHeight": "44px"
+                  },
+                  "headline-md": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "32px",
+                    "fontWeight": "600",
+                    "lineHeight": "36px"
+                  },
+                  "label-bold": {
+                    "fontFamily": "Archivo Narrow",
+                    "fontSize": "14px",
+                    "fontWeight": "700",
+                    "letterSpacing": "0.05em",
+                    "lineHeight": "16px"
+                  }
+                }
+              }
+            },
+            "name": "assets/4d0cc4d02342455e881f79f4069145ef",
+            "version": "1"
+          },
+          "deviceType": "DESKTOP",
+          "generatedBy": "figaro_agent",
+          "height": "8716",
+          "htmlCode": {
+            "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ7Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpaCiVodG1sX2ZiNTdhMGM2MmU0NzQ2MzBiNDFiZDVjMGQ5YThjY2RmEgsSBxCbzKqCsBkYAZIBIwoKcHJvamVjdF9pZBIVQhM2MDExNTA4NjU1MDAyMjYwMjU5&filename=&opi=96797242",
+            "mimeType": "text/html",
+            "name": "projects/6011508655002260259/files/80b26cd438a247beac9f28d3f5ef0ca0"
+          },
+          "id": "5fe9daf6428a435ab08f06a75b21d082",
+          "name": "projects/6011508655002260259/screens/5fe9daf6428a435ab08f06a75b21d082",
+          "prompt": "Build a complete, bespoke desktop landing page for Vally Auto Service & Towing. \n\nDesign Requirements:\n- Use an editorial, high-contrast layout. Avoid standard template structures.\n- Hero: Large-scale typography overlapping an industrial background. Main headline: 'INDUSTRIAL RELIABILITY. LOCAL TRUST.'\n- Sections in order: \n  1. Header (minimal, with (401) 437-6566)\n  2. Hero (Split layout or Typographic focus)\n  3. #credibility: Large bold text 'SERVING EAST PROVIDENCE SINCE [Year].'\n  4. Services: 24/7 Towing, Expert Auto Repair, Fleet Maintenance, Roadside Assistance. Use unique grid styling.\n  5. About: A 'Letter from the Shop' style layout.\n  6. Visit (#visit): Include the specific map-slot div: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>\n  7. Contact Form: 'GET BACK ON THE ROAD' call to action.\n  8. Footer.\n\nTechnical:\n- Primary Color: Deep Carbon (#1A1A1A)\n- Accent: Safety Orange (#FF5F1F)\n- Surface: Concrete Gray (#F2F2F2)\n- High-visibility form validation UI.\n- Smooth scroll and responsive design (desktop focused but mobile-ready).\n- No placeholder text—use the provided contact info: (401) 437-6566 · Vallytowing@gmail.com · 517 Warren Avenue, East Providence, RI 02914.",
+          "screenMetadata": {
+            "agentType": "PRO_AGENT",
+            "status": "COMPLETE"
+          },
+          "screenType": "DESIGN",
+          "screenshot": {
+            "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvTlr-yQFpc5a358iuvmm513ftEMy15QBApUboKRE5Ayy8CZUIONNtZWSD3XdRQE4IOWEEYN8r9ooqrOHZJyflXzXjcya2D6pFTmKYnI8ZItiB6SMNkiG5SvkUkcgykLaxGEL1FoJ0rHpZskhGh3lcIHcL97_WS-WerEpQIipqF4v8HEaN3VJsx-ejoq--LXlWjW-6ZCPyxRQoQSxxGELqcaj0nfJbKZmNT8Cf8sZRNqDUf5nhZLlDnbqI",
+            "name": "projects/6011508655002260259/files/b099dd1958c5400e94c580aea9427775"
+          },
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1a1a",
+            "designMd": "---\nname: Asphalt & Signal\ncolors:\n  surface: '#fbf9f9'\n  surface-dim: '#dbdad9'\n  surface-bright: '#fbf9f9'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3f3'\n  surface-container: '#efeded'\n  surface-container-high: '#e9e8e7'\n  surface-container-highest: '#e4e2e2'\n  on-surface: '#1b1c1c'\n  on-surface-variant: '#444748'\n  inverse-surface: '#303031'\n  inverse-on-surface: '#f2f0f0'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#ab3600'\n  on-secondary: '#ffffff'\n  secondary-container: '#fe5e1e'\n  on-secondary-container: '#551600'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#1a1c1c'\n  on-tertiary-container: '#838484'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdbcf'\n  secondary-fixed-dim: '#ffb59c'\n  on-secondary-fixed: '#390c00'\n  on-secondary-fixed-variant: '#832700'\n  tertiary-fixed: '#e2e2e2'\n  tertiary-fixed-dim: '#c6c6c7'\n  on-tertiary-fixed: '#1a1c1c'\n  on-tertiary-fixed-variant: '#454747'\n  background: '#fbf9f9'\n  on-background: '#1b1c1c'\n  surface-variant: '#e4e2e2'\ntypography:\n  display-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 80px\n    fontWeight: '700'\n    lineHeight: 72px\n    letterSpacing: -0.04em\n  display-lg-mobile:\n    fontFamily: Archivo Narrow\n    fontSize: 48px\n    fontWeight: '700'\n    lineHeight: 44px\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Archivo Narrow\n    fontSize: 40px\n    fontWeight: '700'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Archivo Narrow\n    fontSize: 32px\n    fontWeight: '600'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 18px\n    fontWeight: '400'\n    lineHeight: 28px\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 16px\n    letterSpacing: 0.05em\n  caption:\n    fontFamily: Hanken Grotesk\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 8px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  border-thick: 3px\n  border-thin: 1px\n---\n\n## Brand & Style\nThe design system is built on a narrative of industrial reliability and emergency precision. It rejects the generic \"grease-monkey\" aesthetic in favor of a high-end, editorial approach to automotive service. The brand personality is authoritative and urgent, utilizing an **Industrial-Chic** style that blends the raw utility of roadside infrastructure with the refined layout of a premium architectural journal.\n\nThe emotional response is one of immediate trust and modern efficiency. Visual interest is generated through high-contrast surfaces, heavy structural lines, and intentional typographic overlaps that mimic the layering of signage on urban landscapes. Brutalist influences appear in the form of thick borders and uncompromising geometric alignment, ensuring the UI feels as sturdy as the service it represents.\n\n## Colors\nThe palette is derived from the textures of the road and the signals that govern it.\n\n- **Deep Carbon (#1A1A1A):** Used for primary surfaces, heavy borders, and dominant typography to ground the interface in strength.\n- **Safety Orange (#FF5F1F):** A high-visibility \"emergency\" accent. It is used sparingly but impactfully for primary actions, critical status indicators, and hazard motifs.\n- **Concrete Gray (#F2F2F2):** The primary background color, providing a clean, industrial canvas that allows the Deep Carbon and Safety Orange to pop without visual fatigue.\n- **Functional Accents:** Success states should utilize a desaturated foliage green, while warnings remain strictly within the Safety Orange spectrum to maintain brand cohesion.\n\n## Typography\nThe typographic hierarchy mirrors industrial wayfinding. \n\n**Headlines** utilize **Archivo Narrow**, a condensed grotesque that evokes the utility of road signs and equipment labeling. For large display roles, typography should be set with tight leading and negative letter-spacing to create \"blocks\" of text that feel structural. Use uppercase transformations for all primary navigation and section headings to reinforce authority.\n\n**Body Text** is set in **Hanken Grotesk**, providing a sharp, contemporary contrast to the condensed headers. It offers high legibility for service descriptions and technical specifications. \n\n**Typographic Overlaps:** In editorial layouts, allow large display type (e.g., \"TOWING\") to be partially obscured by images or container edges to create a sense of scale and depth.\n\n## Layout & Spacing\nThe layout follows a **Rigid Grid** philosophy. It uses a 12-column grid on desktop with generous outer margins to simulate a premium magazine spread.\n\n- **The 8px Rhythm:** All spacing, padding, and height variables must be multiples of 8px to maintain industrial precision.\n- **Hazard Accents:** Use 45-degree diagonal \"hazard\" stripes (Carbon and Orange) as thin dividers or edge treatments for containers.\n- **Structural Borders:** Elements are separated by \"Deep Carbon\" borders (3px for primary containers, 1px for internal divisions) rather than shadows. \n- **Mobile Reflow:** On mobile, the 12-column grid collapses to a 2-column or 4-column system. Large display type should scale aggressively to remain impactful while avoiding word-breaks.\n\n## Elevation & Depth\nThis design system eschews soft shadows in favor of **Tonal Layering and Hard Borders**. \n\nDepth is communicated through the physical stacking of high-contrast planes. Surfaces should appear \"bolted down\" or flush with the grid.\n- **Level 0 (Base):** Concrete Gray (#F2F2F2).\n- **Level 1 (Card/Surface):** Pure White or Deep Carbon containers with 3px solid borders.\n- **Level 2 (Interaction):** When an element is hovered or active, it should not rise with a shadow; instead, it should shift its fill color to Safety Orange or swap its border thickness.\n- **Overlays:** Use high-opacity (90%) Deep Carbon for modals to completely isolate the user's focus, mimicking the transition from day to night.\n\n## Shapes\nThe shape language is strictly **Sharp (0px)**. Rounded corners are avoided to maintain the industrial, heavy-machinery aesthetic. \n\nEvery button, input field, and card must have 90-degree angles. This lack of softness communicates a \"no-nonsense\" professional attitude. To prevent the UI from feeling dated, use thin, precise internal lines and oversized typography to provide the modern \"chic\" balance.\n\n## Components\n\n### Buttons\n- **Primary:** Solid Deep Carbon background, White Archivo Narrow bold text, 0px radius. On hover, the background flips to Safety Orange.\n- **Secondary:** Transparent background, 3px Deep Carbon border, Archivo Narrow bold text.\n- **Emergency:** Solid Safety Orange background, Deep Carbon text. Reserved for \"Call Now\" or \"Request Tow.\"\n\n### Input Fields\n- Solid White background with a 1px Deep Carbon bottom border only (monospaced-style). Labels must be in uppercase Archivo Narrow, positioned above the field.\n\n### Cards & Lists\n- Cards use a 3px Deep Carbon border. No shadows. \n- **List Items:** Separated by 1px Concrete Gray dividers. Use Safety Orange \"chevron\" icons to indicate drill-downs.\n\n### Hazard Striping\n- A custom component used as a header-bottom accent or a loading bar, consisting of alternating Deep Carbon and Safety Orange diagonal lines at a 45-degree angle.\n\n### Data Displays (Service Status)\n- Use large, bold numbers in Archivo Narrow. High-contrast indicators (e.g., \"EN ROUTE\") should be encased in a solid Deep Carbon \"tag\" with White text.",
+            "font": "ARCHIVO_NARROW",
+            "headlineFont": "ARCHIVO_NARROW",
+            "headlineFontFamily": "Archivo Narrow",
+            "labelFont": "ARCHIVO_NARROW",
+            "labelFontFamily": "Archivo Narrow",
+            "namedColors": {
+              "background": "#fbf9f9",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f0f0",
+              "inverse_primary": "#c8c6c5",
+              "inverse_surface": "#303031",
+              "on_background": "#1b1c1c",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#858383",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474746",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#551600",
+              "on_secondary_fixed": "#390c00",
+              "on_secondary_fixed_variant": "#832700",
+              "on_surface": "#1b1c1c",
+              "on_surface_variant": "#444748",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#838484",
+              "on_tertiary_fixed": "#1a1c1c",
+              "on_tertiary_fixed_variant": "#454747",
+              "outline": "#747878",
+              "outline_variant": "#c4c7c7",
+              "primary": "#000000",
+              "primary_container": "#1c1b1b",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#ab3600",
+              "secondary_container": "#fe5e1e",
+              "secondary_fixed": "#ffdbcf",
+              "secondary_fixed_dim": "#ffb59c",
+              "surface": "#fbf9f9",
+              "surface_bright": "#fbf9f9",
+              "surface_container": "#efeded",
+              "surface_container_high": "#e9e8e7",
+              "surface_container_highest": "#e4e2e2",
+              "surface_container_low": "#f5f3f3",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbdad9",
+              "surface_tint": "#5f5e5e",
+              "surface_variant": "#e4e2e2",
+              "tertiary": "#000000",
+              "tertiary_container": "#1a1c1c",
+              "tertiary_fixed": "#e2e2e2",
+              "tertiary_fixed_dim": "#c6c6c7"
+            },
+            "overrideNeutralColor": "#707070",
+            "overridePrimaryColor": "#1a1a1a",
+            "overrideSecondaryColor": "#ff5f1f",
+            "overrideTertiaryColor": "#f2f2f2",
+            "spacing": {
+              "border-thick": "3px",
+              "border-thin": "1px",
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "unit": "8px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "18px",
+                "fontWeight": "400",
+                "lineHeight": "28px"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "caption": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "lineHeight": "16px"
+              },
+              "display-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "80px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.04em",
+                "lineHeight": "72px"
+              },
+              "display-lg-mobile": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "48px",
+                "fontWeight": "700",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "44px"
+              },
+              "headline-lg": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "40px",
+                "fontWeight": "700",
+                "lineHeight": "44px"
+              },
+              "headline-md": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "32px",
+                "fontWeight": "600",
+                "lineHeight": "36px"
+              },
+              "label-bold": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.05em",
+                "lineHeight": "16px"
+              }
+            }
+          },
+          "title": "Vally Auto Service & Towing - Homepage",
+          "width": "2560"
+        }
+      ],
+      "theme": {}
+    }
+  },
+  {
+    "text": "I have designed a bespoke, editorial-grade homepage for **Vally Auto Service & Towing**. \n\n### Design Highlights:\n*   **Unique Visual Identity**: I’ve moved away from standard local-business templates in favor of a high-contrast, industrial aesthetic. The palette of **Carbon, Safety Orange, and Concrete** creates an immediate sense of reliability and urgency.\n*   **Editorial Layout**: The design uses a strong typographic hierarchy and asymmetrical grids to feel custom-crafted rather than assembled from a library. The hero section uses bold, overlapping elements to create depth and impact.\n*   **Brand Continuity**: The \"hazard stripe\" visual motif is integrated subtly across the site, reinforcing the towing and emergency service nature of the business.\n*   **Production-Ready**: The site includes a dedicated map slot, a fully functional contact form UI, and is built with semantic HTML and modern CSS.\n\nYou can now view the full desktop experience on the canvas. Would you like to see how this translates to a mobile view, or shall we refine the specific wording of the 'About' section?"
+  },
+  {
+    "suggestion": "Create the mobile version"
+  },
+  {
+    "suggestion": "Refine the service card hover effects"
+  },
+  {
+    "suggestion": "Add a 'Fleet Services' detailed section"
+  }
+]
