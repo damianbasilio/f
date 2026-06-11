@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Scrub-A-Pup | The Modern Laundromutt Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Hanken+Grotesk:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-dim": "#dbd9e1",
+                        "secondary-container": "#c5edc6",
+                        "on-primary-fixed": "#000767",
+                        "inverse-surface": "#303036",
+                        "on-secondary-fixed-variant": "#2c4e32",
+                        "error-container": "#ffdad6",
+                        "on-surface": "#1b1b21",
+                        "tertiary-fixed": "#ffe088",
+                        "surface-container": "#efecf5",
+                        "on-error-container": "#93000a",
+                        "primary-fixed-dim": "#bdc2ff",
+                        "background": "#fbf8ff",
+                        "on-background": "#1b1b21",
+                        "on-tertiary-fixed": "#241a00",
+                        "tertiary-container": "#cba72f",
+                        "on-surface-variant": "#454652",
+                        "tertiary": "#735c00",
+                        "primary-fixed": "#e0e0ff",
+                        "surface": "#fbf8ff",
+                        "inverse-primary": "#bdc2ff",
+                        "surface-variant": "#e4e1ea",
+                        "outline-variant": "#c6c5d4",
+                        "inverse-on-surface": "#f2eff8",
+                        "tertiary-fixed-dim": "#e9c349",
+                        "secondary-fixed-dim": "#aad0ab",
+                        "surface-container-high": "#eae7ef",
+                        "primary": "#000666",
+                        "on-secondary-fixed": "#00210a",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#4c56af",
+                        "on-primary-container": "#8690ee",
+                        "surface-container-low": "#f5f2fb",
+                        "secondary-fixed": "#c5edc6",
+                        "on-tertiary-container": "#4e3d00",
+                        "primary-container": "#1a237e",
+                        "outline": "#767683",
+                        "on-secondary": "#ffffff",
+                        "on-secondary-container": "#4a6c4e",
+                        "on-primary": "#ffffff",
+                        "secondary": "#446648",
+                        "on-primary-fixed-variant": "#343d96",
+                        "on-error": "#ffffff",
+                        "on-tertiary-fixed-variant": "#574500",
+                        "on-tertiary": "#ffffff",
+                        "surface-bright": "#fbf8ff",
+                        "surface-container-highest": "#e4e1ea",
+                        "surface-container-lowest": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "unit": "8px",
+                        "margin-desktop": "80px",
+                        "section-gap": "120px",
+                        "margin-mobile": "24px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-md": ["Hanken Grotesk"],
+                        "headline-lg": ["Playfair Display"],
+                        "display-lg": ["Playfair Display"],
+                        "headline-lg-mobile": ["Playfair Display"],
+                        "body-md": ["Hanken Grotesk"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-md": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                        "display-lg": ["56px", {"lineHeight": "64px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["28px", {"lineHeight": "36px", "fontWeight": "600"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bubble-mask {
+            border-bottom-right-radius: 4rem;
+        }
+        .glass-nav {
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+        .suds-shadow {
+            box-shadow: 0 4px 30px rgba(0, 6, 102, 0.05);
+        }
+        .tile-pattern {
+            background-image: radial-gradient(circle at 1px 1px, #000666 1px, transparent 0);
+            background-size: 24px 24px;
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl dark:bg-surface-dim/85 border-b border-on-surface/10 transition-all duration-300 suds-shadow">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop w-full mx-auto max-w-[1440px]">
+<a class="font-display-lg text-headline-md tracking-tighter text-primary dark:text-primary-fixed" href="#">Scrub-A-Pup</a>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#services">Services</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-primary transition-colors" href="#visit">Location</a>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden sm:flex items-center gap-2 font-label-md text-label-md text-primary font-bold" href="tel:8593535033">
+<span class="material-symbols-outlined text-[18px]">call</span>
+                    (859) 353-5033
+                </a>
+<button aria-label="Menu" class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative pt-32 pb-section-gap overflow-hidden">
+<div class="absolute inset-0 tile-pattern pointer-events-none"></div>
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-6 relative z-10">
+<span class="inline-block px-4 py-1.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-md text-[12px] mb-6">REFINED GROOMING</span>
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-primary mb-8 leading-tight">
+                        The Modern <br/>Laundromutt <br/><span class="italic font-normal">Experience</span>.
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md mb-10">
+                        Elevating self-serve dog washing to an art form. Premium products, boutique environment, and a local Kentucky heart.
+                    </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="px-8 py-4 bg-primary text-on-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:opacity-90 transition-all active:scale-95" href="#services">
+                            Explore Services
+                            <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</a>
+<a class="px-8 py-4 border-2 border-primary text-primary font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-primary/5 transition-all active:scale-95" href="#visit">
+                            Visit Us
+                        </a>
+</div>
+</div>
+<div class="md:col-span-6 relative mt-12 md:mt-0">
+<div class="relative rounded-[2rem] overflow-hidden suds-shadow bubble-mask group">
+<img alt="Golden Retriever in wash" class="w-full h-full object-cover aspect-[4/5] scale-105 group-hover:scale-100 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLuDrz1xUWzqUERODzy6Qd_SYgKUeXyzFQlyMTriEMgtJn0MA0JDr3-HaRdPqAfefvmw9r84V4ADLuV4kQH1FITlZtoC5gLMhWYPf1MHlPzmz4a-Gq59aR10pkGQsHD9HlG6Dlm5RfpBFbGTcvYFo3xtQx2UbVZub3fM1rjALv52ThSqEBtRNVxfJl0TbNJQQkXf5txU8SoAjqKzspO01S346bFDgoB_7QIENx9_yCHd8jJPQnApSWh4jDU-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent"></div>
+</div>
+<!-- Accent Element -->
+<div class="absolute -bottom-8 -left-8 w-40 h-40 bg-tertiary-fixed rounded-full -z-10 blur-2xl opacity-40"></div>
+</div>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="py-section-gap bg-surface-container-lowest relative" id="credibility">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 order-2 md:order-1">
+<div class="relative rounded-3xl overflow-hidden suds-shadow aspect-square">
+<img alt="Store atmosphere" class="w-full h-full object-cover" data-alt="A luxurious and minimalist interior of a modern pet grooming facility in Kentucky. The space features white shiplap walls, warm wooden accents, a cozy stone fireplace, and boutique shelving stocked with premium pet care products. Soft, ambient lighting creates a serene and inviting atmosphere, reflecting the brand's 'Modern Pastoral' aesthetic with a focus on cleanliness and comfort." src="https://lh3.googleusercontent.com/aida/AP1WRLuvsKHbmsnQUti2AAe4rXvY5zC1Vtu9SjcDHpeqk3rlH2bJ76l0XV1JkhQ2L0fq_zIezAlfjRLoTiaJnQOK_xdtzPEbWFwyA_mTS4S1dPHdxsnWXdlDglgwbSuyO6nEi9J__GRHfM1dFzPAtK2iuHwaZEV3UU0VnRiYSFLQpJAu4K5qulutlXRKySmFdEL46xFzOPiTuZWM8qLNYq9PdZ4N8ENsDV0Lham5usPENPmmvJsT6v6d-PBIH8Hc"/>
+</div>
+</div>
+<div class="md:col-span-7 order-1 md:order-2 md:pl-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-12">Kentucky Grown. <br/>Local Heart.</h2>
+<div class="space-y-12">
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border-2 border-secondary flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-secondary mb-2">Our Roots</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded in the heart of Richmond, KY, we set out to redefine the messy chore of dog washing into a premium community experience.</p>
+</div>
+<div class="relative pl-12">
+<div class="absolute left-0 top-0 w-8 h-8 rounded-full border-2 border-outline flex items-center justify-center">
+<div class="w-2 h-2 rounded-full bg-outline"></div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-2">Neighborhood Hub</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">More than a wash—we're a destination where local pet parents meet, share stories, and pamper their furry companions.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap" id="services">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="text-center mb-20">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Elevated Care for Every Pup</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">Premium results without the boutique price tag.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Service Card 1 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 suds-shadow bubble-mask hover:translate-y-[-8px] transition-all duration-500 group flex flex-col h-full">
+<div class="mb-8 overflow-hidden rounded-lg aspect-video relative">
+<img alt="Grooming tools" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida/AP1WRLsylmF1IwdPpmuOuKmQvu_tbRfbdS604wdmTjCHZe4y2in8EjHJl_e-WEfaaxIscS1C-SZVqU1lRfOwMGshIU_qDRZdxmCuv7KWrGFnucGU0NpBDw0T1kefM8V_T6xZgVQdTQVY71cDW2v0GCz5p1pOk0tH8cavLhRFWPGCWeRqaUGbhA-CY0liL2ljj2RZmfb-566famIy3ESdZ8WT0ecuKpPunFSuYIT9ok5GPDDCeE6mHJwDBfF474_z"/>
+<div class="absolute top-4 right-4 bg-white/90 backdrop-blur px-3 py-1 rounded-full font-label-md text-[12px] text-primary">POPULAR</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Self-Serve Suds</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Includes premium shampoos, high-velocity dryers, and all the tools you need for a pristine finish.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-display-lg text-headline-md text-primary">$20.00</span>
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Service Card 2 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 suds-shadow bubble-mask hover:translate-y-[-8px] transition-all duration-500 group flex flex-col h-full">
+<div class="mb-8 rounded-lg aspect-video flex items-center justify-center bg-surface-container-high relative overflow-hidden">
+<div class="absolute inset-0 tile-pattern opacity-10"></div>
+<span class="material-symbols-outlined text-[64px] text-secondary opacity-40">content_cut</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">Professional Grooming</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Full-service care from our expert stylists. Bath, haircut, and the works for a runway-ready pup.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-display-lg text-headline-md text-primary">From $65.00</span>
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+<!-- Service Card 3 -->
+<div class="bg-surface p-8 rounded-xl border border-outline-variant/30 suds-shadow bubble-mask hover:translate-y-[-8px] transition-all duration-500 group flex flex-col h-full">
+<div class="mb-8 rounded-lg aspect-video flex items-center justify-center bg-tertiary-fixed/20 relative overflow-hidden">
+<div class="absolute inset-0 tile-pattern opacity-10"></div>
+<span class="material-symbols-outlined text-[64px] text-tertiary opacity-40">spa</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mb-4">A La Carte</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">Nail trims, ear cleaning, and moisturizing paw treatments. Small touches that make a big difference.</p>
+<div class="flex items-center justify-between mt-auto">
+<span class="font-display-lg text-headline-md text-primary">From $12.00</span>
+<button class="w-12 h-12 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-colors">
+<span class="material-symbols-outlined">add</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap overflow-hidden bg-primary text-on-primary relative" id="about">
+<div class="absolute inset-0 tile-pattern opacity-5"></div>
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-section-gap items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">A Vision of Home-Grown Hospitality</h2>
+<div class="space-y-6 text-on-primary/80 font-body-lg">
+<p>Scrub-A-Pup was born from a simple observation: our dogs deserve the same level of care and aesthetic consideration that we expect for ourselves.</p>
+<p>We've stripped away the chaotic, plastic environment of traditional pet stores and replaced it with a sophisticated, calming space inspired by the natural beauty of the Kentucky Bluegrass region.</p>
+<p>Every decision, from the artisanal soaps we source to the ergonomic design of our wash stations, is guided by a commitment to quality and a love for the local community we call home.</p>
+</div>
+<div class="mt-12 flex items-center gap-4">
+<div class="w-16 h-16 rounded-full border border-on-primary/30 flex items-center justify-center">
+<span class="material-symbols-outlined text-[32px]">signature</span>
+</div>
+<div>
+<p class="font-label-md">The Washburn Family</p>
+<p class="text-[12px] opacity-60 uppercase tracking-widest">Founders</p>
+</div>
+</div>
+</div>
+<div class="relative">
+<div class="rounded-[4rem] rounded-tl-none border-2 border-on-primary/20 p-4">
+<div class="relative aspect-square rounded-[3rem] rounded-tl-none overflow-hidden">
+<img alt="Owners with dog" class="w-full h-full object-cover" data-alt="A portrait of the friendly owners of a boutique dog grooming facility, posing warmly with a happy golden retriever in a sun-drenched, sophisticated entryway. The scene is filled with natural light, featuring elegant architectural details and a high-end editorial feel that emphasizes premium hospitality and local Kentucky charm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAboSP-qgz2JIO7R6W_hyECtOieTeBGnSkAq-0wxbFAN-c-GRQr8aUrEk43coKN6egICsYhofGTJzvE1U1Ej-zNGCgw_O3vNGqO5WgHMqOxU3gqJq8Gs09k66WoJzxxUAIBpQ8myUT9jfOPUav9MtX3yMfQcfDWNG774sEVgpkx_Iie9Bne9DTwShHQ2T1e9AZ_pjlITVbbeAXvvQkXw5_wljpMVLsH4NoqcJRVyH8vFzBOsalaEvD93k2QPt6jcKzwc4zx-FmZWI8K"/>
+</div>
+</div>
+<div class="absolute -top-10 -right-10 w-32 h-32 bg-secondary-container/20 rounded-full blur-3xl"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-section-gap" id="visit">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4 flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Locate the Laundromutt</h2>
+<div class="space-y-8 mb-12">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<p class="font-body-md text-on-surface-variant">2019 Catalpa Loop,<br/>Richmond, KY 40475</p>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<p class="font-body-md text-on-surface-variant">Mon – Sat: 9am – 7pm<br/>Sunday: 11am – 5pm</p>
+</div>
+</div>
+<a class="font-label-md text-primary flex items-center gap-2 group" href="https://maps.google.com" target="_blank">
+                            Get Directions
+                            <span class="material-symbols-outlined text-[18px] group-hover:translate-x-1 transition-transform">arrow_right_alt</span>
+</a>
+</div>
+<div class="md:col-span-8">
+<div class="rounded-3xl overflow-hidden suds-shadow border border-outline-variant/30 min-h-[400px]">
+<div aria-label="Map showing Scrub-A-Pup location in Richmond, KY" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container" data-location="Richmond, Kentucky" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center opacity-20">
+<span class="material-symbols-outlined text-[120px]">map</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap bg-surface-container-low relative">
+<div class="max-w-[1200px] mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="max-w-2xl mx-auto bg-surface p-10 md:p-16 rounded-[2rem] border border-outline-variant/20 suds-shadow">
+<div class="text-center mb-12">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-4">Reach Out</h2>
+<p class="font-body-md text-on-surface-variant">Questions about our services? We're here to help.</p>
+</div>
+<form class="space-y-10" onsubmit="event.preventDefault(); alert('Message sent! We\'ll get back to you soon.');">
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:ring-0 focus:border-primary transition-colors text-body-lg" id="name" placeholder=" " required="" type="text"/>
+<label class="absolute left-0 top-2 font-label-md text-label-md text-tertiary -translate-y-8 transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-on-surface-variant peer-focus:-translate-y-8 peer-focus:text-tertiary" for="name">Full Name</label>
+</div>
+<div class="relative">
+<input class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:ring-0 focus:border-primary transition-colors text-body-lg" id="email" placeholder=" " required="" type="email"/>
+<label class="absolute left-0 top-2 font-label-md text-label-md text-tertiary -translate-y-8 transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-on-surface-variant peer-focus:-translate-y-8 peer-focus:text-tertiary" for="email">Email Address</label>
+</div>
+<div class="relative">
+<textarea class="peer w-full bg-transparent border-0 border-b-2 border-outline-variant py-2 focus:ring-0 focus:border-primary transition-colors text-body-lg resize-none" id="message" placeholder=" " required="" rows="3"></textarea>
+<label class="absolute left-0 top-2 font-label-md text-label-md text-tertiary -translate-y-8 transition-all peer-placeholder-shown:translate-y-0 peer-placeholder-shown:text-on-surface-variant peer-focus:-translate-y-8 peer-focus:text-tertiary" for="message">How can we help?</label>
+</div>
+<button class="w-full py-4 bg-primary text-on-primary font-label-md text-label-md rounded-lg hover:opacity-90 transition-all active:scale-[0.98]" type="submit">
+                            Send Message
+                        </button>
+</form>
+<div class="mt-12 pt-12 border-t border-outline-variant/30 text-center">
+<p class="font-label-md text-label-md text-on-surface-variant mb-2">Direct Inquiry</p>
+<a class="font-body-lg text-primary font-bold hover:underline" href="mailto:thelaundromutt22@gmail.com">thelaundromutt22@gmail.com</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface-container-lowest dark:bg-surface-dim border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1200px] mx-auto">
+<div class="md:col-span-4">
+<a class="font-display-lg text-headline-md text-primary dark:text-primary-fixed block mb-6" href="#">Scrub-A-Pup</a>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Elevating the everyday for Kentucky's most discerning pups since 2022.</p>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Navigation</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 duration-300" href="#services">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 duration-300" href="#about">Our Story</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 duration-300" href="#visit">Location</a>
+</nav>
+</div>
+<div class="md:col-span-2 space-y-4">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest">Legal</h4>
+<nav class="flex flex-col gap-2">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 duration-300" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 duration-300" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-transform hover:translate-x-1 duration-300" href="#">Contact</a>
+</nav>
+</div>
+<div class="md:col-span-4">
+<h4 class="font-label-md text-label-md text-primary uppercase tracking-widest mb-4">Kentucky Grown</h4>
+<div class="flex items-center gap-4 p-4 rounded-xl bg-secondary-container/30 border border-secondary/10">
+<span class="material-symbols-outlined text-secondary text-[32px]">park</span>
+<p class="font-body-md text-on-secondary-container text-sm">Rooted in local values and premium standards of care.</p>
+</div>
+<p class="mt-12 font-body-md text-body-md text-on-surface-variant/60 text-sm">
+                    © 2024 Scrub-A-Pup Self-Serve Laundromutt. Kentucky Grown.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple Nav Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 20) {
+                nav.classList.add('py-2', 'shadow-lg');
+                nav.classList.remove('h-20');
+            } else {
+                nav.classList.remove('py-2', 'shadow-lg');
+                nav.classList.add('h-20');
+            }
+        });
+    </script>
+</body></html>
