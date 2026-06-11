@@ -1,69 +1,54 @@
-// Intersection Observer for scroll animations
-    const observerOptions = {
-      threshold: 0.1
-    };
+// Mobile Menu Logic
+        const menuToggle = document.getElementById('mobile-menu-toggle');
+        const closeMenu = document.getElementById('close-menu');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
+        function toggleMenu(show) {
+            if (show) {
+                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
+                mobileMenu.classList.add('opacity-100', 'pointer-events-auto');
+                document.body.style.overflow = 'hidden';
+            } else {
+                mobileMenu.classList.remove('opacity-100', 'pointer-events-auto');
+                mobileMenu.classList.add('opacity-0', 'pointer-events-none');
+                document.body.style.overflow = '';
+            }
         }
-      });
-    }, observerOptions);
 
-    document.querySelectorAll('.fade-in-section').forEach(section => {
-      observer.observe(section);
-    });
+        menuToggle.addEventListener('click', () => toggleMenu(true));
+        closeMenu.addEventListener('click', () => toggleMenu(false));
+        menuLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
 
-    // Mobile Menu Logic
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const closeMenuBtn = document.getElementById('close-menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-    const closeTriggers = document.querySelectorAll('.close-trigger');
+        // Reveal on Scroll Effect
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
 
-    function toggleMenu() {
-      mobileMenu.classList.toggle('translate-x-full');
-      document.body.classList.toggle('overflow-hidden');
-    }
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
 
-    mobileMenuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
-    closeTriggers.forEach(trigger => trigger.addEventListener('click', toggleMenu));
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-8');
+            observer.observe(section);
+        });
 
-    // Header Shrink on Scroll
-    const header = document.getElementById('main-header');
-    window.addEventListener('scroll', () => {
-      if (window.scrollY > 50) {
-        header.classList.add('py-2', 'bg-surface/95', 'shadow-sm');
-        header.classList.remove('py-4');
-      } else {
-        header.classList.add('py-4');
-        header.classList.remove('py-2', 'bg-surface/95', 'shadow-sm');
-      }
-    });
-
-    // Form Handling
-    const inquiryForm = document.getElementById('inquiry-form');
-    const formSuccess = document.getElementById('form-success');
-
-    inquiryForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      inquiryForm.classList.add('hidden');
-      formSuccess.classList.remove('hidden');
-    });
-
-    // Smooth Scroll for local links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) {
-          target.scrollIntoView({
-            behavior: 'smooth'
-          });
-        }
-      });
-    });
+        // Simple smooth scroll for the whole page
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
 (() => {
   function initMockupNotice() {

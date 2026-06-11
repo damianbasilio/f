@@ -90,7 +90,7 @@ Recent posts from their Facebook page:
 
 - **Source:** https://www.facebook.com/patronMarcos/
 - **Platform:** Facebook (no dedicated website)
-- **Scraped:** 2026-06-11T12:37:50.712Z
+- **Scraped:** 2026-06-11T12:44:05.743Z
 - **Colors / typography:** Stitch decides — there is no website or brand manual to sample
 - **Guidance:** Facebook-only at https://www.facebook.com/patronMarcos/. Use post photos (0) for hero and gallery. Stitch chooses all colors and typography from business type and identity.
 
