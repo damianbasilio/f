@@ -1,0 +1,508 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Smoky Industrial",
+          "styleGuidelines": "## Brand & Style\nThe design system for Big A BBQ & Grill is rooted in a \"Smoky Industrial\" aesthetic—a blend of raw, fire-forged strength and premium editorial refinement. The target audience values authenticity, craft, and high-quality culinary experiences. \n\nThe visual direction leans heavily into **Editorial Brutalism**. It utilizes high-contrast typography, heavy structural borders, and offset containers to evoke the feeling of a modern smokehouse menu. The UI should feel immersive, tactile, and unapologetically bold, using depth not through shadows, but through layering and texture.\n\n- **Primary Motif:** Intentional layering of solid blocks and 2px borders.\n- **Texture:** A persistent subtle grain or \"ash\" noise should be applied to primary dark surfaces to prevent them from feeling digitally flat.\n- **Emotional Response:** Robust, artisanal, authoritative, and appetizing.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** philosophy with a focus on \"Intentional Density.\" \n\n- **Grid:** 12-column grid for desktop with wide 64px margins to create a \"frame\" around the content. \n- **The Offset Look:** Important containers (cards, featured images) should use a staggered layout. For example, a 2px border frame might be offset by 8px from the image it contains, creating a layered, mechanical feel.\n- **Density vs. Air:** Content inside blocks (like a menu item description) should be tightly packed. However, the space *between* major sections should be generous (stack-lg) to allow the \"smoke\" to breathe and emphasize the premium nature of the brand.\n\n## Elevation & Depth\nThis design system rejects soft ambient shadows in favor of **Structural Stacking**.\n\n- **Z-Axis:** Depth is communicated through thickness and color. Higher elevation items are signaled by a 2px stroke of #FDFCF0 (Cream) or by being \"offset\" physically.\n- **Borders:** All interactive or distinct elements must have a solid 2px border. \n- **Texture Overlay:** A 5% opacity noise/grain SVG should be applied globally to all #1A1A1A surfaces to simulate the matte texture of cast iron or soot.\n- **Active State:** When an element is pressed or active, it should \"fill\" with the Ember (#D35400) color rather than moving closer to the user.\n\n## Components\nConsistent execution of these components is vital for the industrial aesthetic:\n\n- **Buttons:** Primary buttons are solid Ember (#D35400) with Black text (#1A1A1A) in Anton. Secondary buttons are transparent with a 2px Cream (#FDFCF0) border. All buttons are rectangular.\n- **Cards:** Cards use the Charcoal (#1A1A1A) background with a 2px Iron (#2C2C2C) border. Featured cards may use an offset \"shadow\" effect created by a second 2px border shifted 4px to the bottom right.\n- **Input Fields:** Heavy 2px borders on all sides. Label text (Archivo Narrow) should be placed inside the top border, breaking the line, or directly above in all-caps.\n- **Chips/Tags:** Small, sharp-edged boxes with 1px borders, using Archivo Narrow for the text. Use these for meat types (e.g., \"BRISKET\", \"PORK\").\n- **Lists:** Menu lists should use dotted leaders or solid 1px horizontal lines to connect the item name (Anton) to the price (Anton), creating a structured, grid-like feel.\n- **Specialty Component - \"The Stamp\":** A circular or hexagonal graphic element (like a quality seal) containing Anton typography, used as an overlay on images to denote \"Pitmaster's Choice.\"",
+          "theme": {
+            "bodyFont": "SOURCE_SERIF_FOUR",
+            "bodyFontFamily": "Source Serif Four",
+            "colorMode": "DARK",
+            "colorVariant": "FIDELITY",
+            "customColor": "#d35400",
+            "designMd": "---\nname: Smoky Industrial\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#e0c0b2'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#a88a7e'\n  outline-variant: '#594238'\n  surface-tint: '#ffb595'\n  primary: '#ffb595'\n  on-primary: '#571e00'\n  primary-container: '#ee671c'\n  on-primary-container: '#4c1a00'\n  inverse-primary: '#a23f00'\n  secondary: '#c7c7bc'\n  on-secondary: '#303129'\n  secondary-container: '#494a41'\n  on-secondary-container: '#b9b9ae'\n  tertiary: '#c8c6c5'\n  on-tertiary: '#313030'\n  tertiary-container: '#929090'\n  on-tertiary-container: '#2a2a2a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb595'\n  on-primary-fixed: '#351000'\n  on-primary-fixed-variant: '#7c2e00'\n  secondary-fixed: '#e4e3d7'\n  secondary-fixed-dim: '#c7c7bc'\n  on-secondary-fixed: '#1b1c15'\n  on-secondary-fixed-variant: '#46473f'\n  tertiary-fixed: '#e5e2e1'\n  tertiary-fixed-dim: '#c8c6c5'\n  on-tertiary-fixed: '#1c1b1b'\n  on-tertiary-fixed-variant: '#474746'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-xl:\n    fontFamily: Anton\n    fontSize: 80px\n    fontWeight: '400'\n    lineHeight: 88px\n    letterSpacing: 0.02em\n  display-xl-mobile:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Source Serif 4\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-md:\n    fontFamily: Source Serif 4\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Archivo Narrow\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  stack-sm: 8px\n  stack-md: 24px\n  stack-lg: 80px\n---\n\n## Brand & Style\nThe design system for Big A BBQ & Grill is rooted in a \"Smoky Industrial\" aesthetic—a blend of raw, fire-forged strength and premium editorial refinement. The target audience values authenticity, craft, and high-quality culinary experiences. \n\nThe visual direction leans heavily into **Editorial Brutalism**. It utilizes high-contrast typography, heavy structural borders, and offset containers to evoke the feeling of a modern smokehouse menu. The UI should feel immersive, tactile, and unapologetically bold, using depth not through shadows, but through layering and texture.\n\n- **Primary Motif:** Intentional layering of solid blocks and 2px borders.\n- **Texture:** A persistent subtle grain or \"ash\" noise should be applied to primary dark surfaces to prevent them from feeling digitally flat.\n- **Emotional Response:** Robust, artisanal, authoritative, and appetizing.\n\n## Colors\nThe palette is centered on the heat of the pit and the darkness of the smokehouse.\n\n- **Ember (Primary):** #D35400. Used for calls to action, highlights, and critical brand moments. It represents the glow of live coals.\n- **Cream (Text/Bg):** #FDFCF0. The primary ink color for text and occasional light-mode section backgrounds. It provides a warm, organic contrast to the dark surroundings.\n- **Charcoal (Surface):** #1A1A1A. The foundation of the UI. All primary surfaces use this deep, matte black.\n- **Iron (Neutral):** #2C2C2C. Used for secondary containers, input fields, and subtle UI divisions to maintain depth without losing the industrial vibe.\n\n## Typography\nThe typography system uses a high-contrast pairing to balance industrial grit with premium service.\n\n- **Headlines:** Use **Anton**. It is heavy, condensed, and commanding. All headlines should be treated as \"signage\"—uppercase and impactful.\n- **Body:** Use **Source Serif 4**. This provides an editorial, literary quality that elevates the brand from a standard fast-food joint to a premium grill house. It ensures long-form menus and stories are highly readable.\n- **Utility/Labels:** Use **Archivo Narrow**. Its compact nature works perfectly for data-heavy sections like nutritional info, prices, or technical UI labels, maintaining the industrial efficiency of the design.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** philosophy with a focus on \"Intentional Density.\" \n\n- **Grid:** 12-column grid for desktop with wide 64px margins to create a \"frame\" around the content. \n- **The Offset Look:** Important containers (cards, featured images) should use a staggered layout. For example, a 2px border frame might be offset by 8px from the image it contains, creating a layered, mechanical feel.\n- **Density vs. Air:** Content inside blocks (like a menu item description) should be tightly packed. However, the space *between* major sections should be generous (stack-lg) to allow the \"smoke\" to breathe and emphasize the premium nature of the brand.\n\n## Elevation & Depth\nThis design system rejects soft ambient shadows in favor of **Structural Stacking**.\n\n- **Z-Axis:** Depth is communicated through thickness and color. Higher elevation items are signaled by a 2px stroke of #FDFCF0 (Cream) or by being \"offset\" physically.\n- **Borders:** All interactive or distinct elements must have a solid 2px border. \n- **Texture Overlay:** A 5% opacity noise/grain SVG should be applied globally to all #1A1A1A surfaces to simulate the matte texture of cast iron or soot.\n- **Active State:** When an element is pressed or active, it should \"fill\" with the Ember (#D35400) color rather than moving closer to the user.\n\n## Shapes\nThe shape language is **Sharp (0)**. There are no rounded corners in this design system. \n\nEvery button, card, input, and image container must have 90-degree angles. This reinforces the industrial, architectural nature of the brand. The only exception is the natural geometry of photography; however, all photo containers must remain strictly rectangular with heavy 2px borders.\n\n## Components\nConsistent execution of these components is vital for the industrial aesthetic:\n\n- **Buttons:** Primary buttons are solid Ember (#D35400) with Black text (#1A1A1A) in Anton. Secondary buttons are transparent with a 2px Cream (#FDFCF0) border. All buttons are rectangular.\n- **Cards:** Cards use the Charcoal (#1A1A1A) background with a 2px Iron (#2C2C2C) border. Featured cards may use an offset \"shadow\" effect created by a second 2px border shifted 4px to the bottom right.\n- **Input Fields:** Heavy 2px borders on all sides. Label text (Archivo Narrow) should be placed inside the top border, breaking the line, or directly above in all-caps.\n- **Chips/Tags:** Small, sharp-edged boxes with 1px borders, using Archivo Narrow for the text. Use these for meat types (e.g., \"BRISKET\", \"PORK\").\n- **Lists:** Menu lists should use dotted leaders or solid 1px horizontal lines to connect the item name (Anton) to the price (Anton), creating a structured, grid-like feel.\n- **Specialty Component - \"The Stamp\":** A circular or hexagonal graphic element (like a quality seal) containing Anton typography, used as an overlay on images to denote \"Pitmaster's Choice.\"",
+            "font": "ANTON",
+            "headlineFont": "ANTON",
+            "headlineFontFamily": "Anton",
+            "labelFont": "ARCHIVO_NARROW",
+            "labelFontFamily": "Archivo Narrow",
+            "namedColors": {
+              "background": "#131313",
+              "error": "#ffb4ab",
+              "error_container": "#93000a",
+              "inverse_on_surface": "#303030",
+              "inverse_primary": "#a23f00",
+              "inverse_surface": "#e4e2e1",
+              "on_background": "#e4e2e1",
+              "on_error": "#690005",
+              "on_error_container": "#ffdad6",
+              "on_primary": "#571e00",
+              "on_primary_container": "#4c1a00",
+              "on_primary_fixed": "#351000",
+              "on_primary_fixed_variant": "#7c2e00",
+              "on_secondary": "#303129",
+              "on_secondary_container": "#b9b9ae",
+              "on_secondary_fixed": "#1b1c15",
+              "on_secondary_fixed_variant": "#46473f",
+              "on_surface": "#e4e2e1",
+              "on_surface_variant": "#e0c0b2",
+              "on_tertiary": "#313030",
+              "on_tertiary_container": "#2a2a2a",
+              "on_tertiary_fixed": "#1c1b1b",
+              "on_tertiary_fixed_variant": "#474746",
+              "outline": "#a88a7e",
+              "outline_variant": "#594238",
+              "primary": "#ffb595",
+              "primary_container": "#ee671c",
+              "primary_fixed": "#ffdbcd",
+              "primary_fixed_dim": "#ffb595",
+              "secondary": "#c7c7bc",
+              "secondary_container": "#494a41",
+              "secondary_fixed": "#e4e3d7",
+              "secondary_fixed_dim": "#c7c7bc",
+              "surface": "#131313",
+              "surface_bright": "#393939",
+              "surface_container": "#1f2020",
+              "surface_container_high": "#2a2a2a",
+              "surface_container_highest": "#353535",
+              "surface_container_low": "#1b1c1c",
+              "surface_container_lowest": "#0e0e0e",
+              "surface_dim": "#131313",
+              "surface_tint": "#ffb595",
+              "surface_variant": "#353535",
+              "tertiary": "#c8c6c5",
+              "tertiary_container": "#929090",
+              "tertiary_fixed": "#e5e2e1",
+              "tertiary_fixed_dim": "#c8c6c5"
+            },
+            "overrideNeutralColor": "#2c2c2c",
+            "overridePrimaryColor": "#d35400",
+            "overrideSecondaryColor": "#fdfcf0",
+            "overrideTertiaryColor": "#1a1a1a",
+            "spacing": {
+              "gutter": "24px",
+              "margin-desktop": "64px",
+              "margin-mobile": "16px",
+              "stack-lg": "80px",
+              "stack-md": "24px",
+              "stack-sm": "8px",
+              "unit": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Source Serif 4",
+                "fontSize": "20px",
+                "fontWeight": "400",
+                "lineHeight": "32px"
+              },
+              "body-md": {
+                "fontFamily": "Source Serif 4",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "24px"
+              },
+              "display-xl": {
+                "fontFamily": "Anton",
+                "fontSize": "80px",
+                "fontWeight": "400",
+                "letterSpacing": "0.02em",
+                "lineHeight": "88px"
+              },
+              "display-xl-mobile": {
+                "fontFamily": "Anton",
+                "fontSize": "48px",
+                "fontWeight": "400",
+                "lineHeight": "52px"
+              },
+              "headline-lg": {
+                "fontFamily": "Anton",
+                "fontSize": "40px",
+                "fontWeight": "400",
+                "lineHeight": "44px"
+              },
+              "headline-md": {
+                "fontFamily": "Anton",
+                "fontSize": "32px",
+                "fontWeight": "400",
+                "lineHeight": "36px"
+              },
+              "label-bold": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.1em",
+                "lineHeight": "20px"
+              },
+              "label-sm": {
+                "fontFamily": "Archivo Narrow",
+                "fontSize": "12px",
+                "fontWeight": "500",
+                "lineHeight": "16px"
+              }
+            }
+          }
+        },
+        "name": "assets/fa5d4fe39e9748fc8617d3b175718255",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "896",
+            "id": "50f505d61e114204ba33a56f61d9b01c",
+            "name": "projects/13247363120573170689/screens/50f505d61e114204ba33a56f61d9b01c",
+            "prompt": "A close-up of a charcoal grill with glowing hot embers and subtle smoke, industrial metal textures, warm orange glow against deep shadows, professional architectural/interior photography.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLu3JFkyIL3zwi8BnVDbL4hv2l6uYiUcIRTxvu62ITlWydVyVV4d2lPVX7PAwE7pjQQeySPWJgSDYqpFmauJXzRXViw5XBW9N23oPjX9GYzeYtHRRvR-mC3fEMu6vEqDg_OESUtphPIRtR5j-X0-ky1r3pd26uDuny4BhNYLI-Gz1ao0dC70GeTcc1QJUmr-tdhu-KwR5-vAnC5ncHVGJVKzk7u8HQAwenB9Bh3eJwKB6gB4tshHwxg-xRI_",
+              "name": "projects/13247363120573170689/files/ff4f5debfd1940b1a15a0eb6d4dad3bb"
+            },
+            "theme": {},
+            "title": "A close-up of a charcoal grill with glowing hot embers and subtle smoke, industrial metal textures, warm orange glow against deep shadows, professional architectural/interior photography.",
+            "width": "1200"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "768",
+            "id": "d1a13c986b104a698a9f8681e7fa37a3",
+            "name": "projects/13247363120573170689/screens/d1a13c986b104a698a9f8681e7fa37a3",
+            "prompt": "A high-end, editorial food photography shot of a perfectly smoked brisket being sliced, steam rising, rich bark texture, glowing embers in the background, dark industrial kitchen setting, shallow depth of field, dramatic lighting, premium BBQ restaurant aesthetic. Dark charcoal and burnt orange tones.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsB-6OhUzHc5fksrG9_YIKHDLFDsGhc8kUK0VXJ33lRE_URX8U430A7n-aDce8xCQv3P--5me0Au_g9Dvd7sU42I5guJwbuDCji8l1vZhSigfaozqzDmLIx_V_GIVDmbfKQXYEJidXkCyuJfRGi2xJe1dlNTtLs-UDhuN519bBookB5tbLBsKKUvxIXONRCRoIIIfcIn_wawQthLmfFP8ZHgAVdb3F5uEJQQBBktceaSoATKK6lEuOZdEKU",
+              "name": "projects/13247363120573170689/files/a66b91bc181e443c984fcb2cf3b2f22f"
+            },
+            "theme": {},
+            "title": "A high-end, editorial food photography shot of a perfectly smoked brisket being sliced, steam rising, rich bark texture, glowing embers in the background, dark industrial kitchen setting, shallow depth of field, dramatic lighting, premium BBQ restaurant aesthetic. Dark charcoal and burnt orange tones.",
+            "width": "1376"
+          },
+          {
+            "generatedBy": "interactive_ui_controller",
+            "height": "848",
+            "id": "bd236bbf31714e9b97c67cb346b1b4d6",
+            "name": "projects/13247363120573170689/screens/bd236bbf31714e9b97c67cb346b1b4d6",
+            "prompt": "Interior of a premium industrial-style BBQ restaurant in Miamisburg, Ohio. Exposed brick, black metal beams, warm amber lighting, reclaimed wood tables, sophisticated and inviting atmosphere.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "IMAGE",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLsfrk_t-GY36hbY63TtMq8ZDo_QX2eW6OaSD572syrq1m6TeG1vwaT8dfzuBla1S2X6tNlPbDbFIwlg2ejc9XtiOmr4k9ZnNs40TbKcI_PsKIAe4-8knTM9CZJxH4tGWj0QaHkGY_M3MBbmNZwN69xsEVhqR-2YBxIkCXMkbYRprN8tOTldMn8NSSRWF7htVNTsUBxewDT_ieIlfSCccGkIghh4fPX4_4WEP1xMRpxVDmnUjpL2kXdi-hpA",
+              "name": "projects/13247363120573170689/files/86aef0dda9ad4011962a3d7f1e93e545"
+            },
+            "theme": {},
+            "title": "Interior of a premium industrial-style BBQ restaurant in Miamisburg, Ohio. Exposed brick, black metal beams, warm amber lighting, reclaimed wood tables, sophisticated and inviting atmosphere.",
+            "width": "1264"
+          },
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Smoky Industrial",
+                "styleGuidelines": "## Brand & Style\nThe design system for Big A BBQ & Grill is rooted in a \"Smoky Industrial\" aesthetic—a blend of raw, fire-forged strength and premium editorial refinement. The target audience values authenticity, craft, and high-quality culinary experiences. \n\nThe visual direction leans heavily into **Editorial Brutalism**. It utilizes high-contrast typography, heavy structural borders, and offset containers to evoke the feeling of a modern smokehouse menu. The UI should feel immersive, tactile, and unapologetically bold, using depth not through shadows, but through layering and texture.\n\n- **Primary Motif:** Intentional layering of solid blocks and 2px borders.\n- **Texture:** A persistent subtle grain or \"ash\" noise should be applied to primary dark surfaces to prevent them from feeling digitally flat.\n- **Emotional Response:** Robust, artisanal, authoritative, and appetizing.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** philosophy with a focus on \"Intentional Density.\" \n\n- **Grid:** 12-column grid for desktop with wide 64px margins to create a \"frame\" around the content. \n- **The Offset Look:** Important containers (cards, featured images) should use a staggered layout. For example, a 2px border frame might be offset by 8px from the image it contains, creating a layered, mechanical feel.\n- **Density vs. Air:** Content inside blocks (like a menu item description) should be tightly packed. However, the space *between* major sections should be generous (stack-lg) to allow the \"smoke\" to breathe and emphasize the premium nature of the brand.\n\n## Elevation & Depth\nThis design system rejects soft ambient shadows in favor of **Structural Stacking**.\n\n- **Z-Axis:** Depth is communicated through thickness and color. Higher elevation items are signaled by a 2px stroke of #FDFCF0 (Cream) or by being \"offset\" physically.\n- **Borders:** All interactive or distinct elements must have a solid 2px border. \n- **Texture Overlay:** A 5% opacity noise/grain SVG should be applied globally to all #1A1A1A surfaces to simulate the matte texture of cast iron or soot.\n- **Active State:** When an element is pressed or active, it should \"fill\" with the Ember (#D35400) color rather than moving closer to the user.\n\n## Components\nConsistent execution of these components is vital for the industrial aesthetic:\n\n- **Buttons:** Primary buttons are solid Ember (#D35400) with Black text (#1A1A1A) in Anton. Secondary buttons are transparent with a 2px Cream (#FDFCF0) border. All buttons are rectangular.\n- **Cards:** Cards use the Charcoal (#1A1A1A) background with a 2px Iron (#2C2C2C) border. Featured cards may use an offset \"shadow\" effect created by a second 2px border shifted 4px to the bottom right.\n- **Input Fields:** Heavy 2px borders on all sides. Label text (Archivo Narrow) should be placed inside the top border, breaking the line, or directly above in all-caps.\n- **Chips/Tags:** Small, sharp-edged boxes with 1px borders, using Archivo Narrow for the text. Use these for meat types (e.g., \"BRISKET\", \"PORK\").\n- **Lists:** Menu lists should use dotted leaders or solid 1px horizontal lines to connect the item name (Anton) to the price (Anton), creating a structured, grid-like feel.\n- **Specialty Component - \"The Stamp\":** A circular or hexagonal graphic element (like a quality seal) containing Anton typography, used as an overlay on images to denote \"Pitmaster's Choice.\"",
+                "theme": {
+                  "bodyFont": "SOURCE_SERIF_FOUR",
+                  "bodyFontFamily": "Source Serif Four",
+                  "colorMode": "DARK",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#d35400",
+                  "designMd": "---\nname: Smoky Industrial\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#e0c0b2'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#a88a7e'\n  outline-variant: '#594238'\n  surface-tint: '#ffb595'\n  primary: '#ffb595'\n  on-primary: '#571e00'\n  primary-container: '#ee671c'\n  on-primary-container: '#4c1a00'\n  inverse-primary: '#a23f00'\n  secondary: '#c7c7bc'\n  on-secondary: '#303129'\n  secondary-container: '#494a41'\n  on-secondary-container: '#b9b9ae'\n  tertiary: '#c8c6c5'\n  on-tertiary: '#313030'\n  tertiary-container: '#929090'\n  on-tertiary-container: '#2a2a2a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb595'\n  on-primary-fixed: '#351000'\n  on-primary-fixed-variant: '#7c2e00'\n  secondary-fixed: '#e4e3d7'\n  secondary-fixed-dim: '#c7c7bc'\n  on-secondary-fixed: '#1b1c15'\n  on-secondary-fixed-variant: '#46473f'\n  tertiary-fixed: '#e5e2e1'\n  tertiary-fixed-dim: '#c8c6c5'\n  on-tertiary-fixed: '#1c1b1b'\n  on-tertiary-fixed-variant: '#474746'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-xl:\n    fontFamily: Anton\n    fontSize: 80px\n    fontWeight: '400'\n    lineHeight: 88px\n    letterSpacing: 0.02em\n  display-xl-mobile:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Source Serif 4\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-md:\n    fontFamily: Source Serif 4\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Archivo Narrow\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  stack-sm: 8px\n  stack-md: 24px\n  stack-lg: 80px\n---\n\n## Brand & Style\nThe design system for Big A BBQ & Grill is rooted in a \"Smoky Industrial\" aesthetic—a blend of raw, fire-forged strength and premium editorial refinement. The target audience values authenticity, craft, and high-quality culinary experiences. \n\nThe visual direction leans heavily into **Editorial Brutalism**. It utilizes high-contrast typography, heavy structural borders, and offset containers to evoke the feeling of a modern smokehouse menu. The UI should feel immersive, tactile, and unapologetically bold, using depth not through shadows, but through layering and texture.\n\n- **Primary Motif:** Intentional layering of solid blocks and 2px borders.\n- **Texture:** A persistent subtle grain or \"ash\" noise should be applied to primary dark surfaces to prevent them from feeling digitally flat.\n- **Emotional Response:** Robust, artisanal, authoritative, and appetizing.\n\n## Colors\nThe palette is centered on the heat of the pit and the darkness of the smokehouse.\n\n- **Ember (Primary):** #D35400. Used for calls to action, highlights, and critical brand moments. It represents the glow of live coals.\n- **Cream (Text/Bg):** #FDFCF0. The primary ink color for text and occasional light-mode section backgrounds. It provides a warm, organic contrast to the dark surroundings.\n- **Charcoal (Surface):** #1A1A1A. The foundation of the UI. All primary surfaces use this deep, matte black.\n- **Iron (Neutral):** #2C2C2C. Used for secondary containers, input fields, and subtle UI divisions to maintain depth without losing the industrial vibe.\n\n## Typography\nThe typography system uses a high-contrast pairing to balance industrial grit with premium service.\n\n- **Headlines:** Use **Anton**. It is heavy, condensed, and commanding. All headlines should be treated as \"signage\"—uppercase and impactful.\n- **Body:** Use **Source Serif 4**. This provides an editorial, literary quality that elevates the brand from a standard fast-food joint to a premium grill house. It ensures long-form menus and stories are highly readable.\n- **Utility/Labels:** Use **Archivo Narrow**. Its compact nature works perfectly for data-heavy sections like nutritional info, prices, or technical UI labels, maintaining the industrial efficiency of the design.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** philosophy with a focus on \"Intentional Density.\" \n\n- **Grid:** 12-column grid for desktop with wide 64px margins to create a \"frame\" around the content. \n- **The Offset Look:** Important containers (cards, featured images) should use a staggered layout. For example, a 2px border frame might be offset by 8px from the image it contains, creating a layered, mechanical feel.\n- **Density vs. Air:** Content inside blocks (like a menu item description) should be tightly packed. However, the space *between* major sections should be generous (stack-lg) to allow the \"smoke\" to breathe and emphasize the premium nature of the brand.\n\n## Elevation & Depth\nThis design system rejects soft ambient shadows in favor of **Structural Stacking**.\n\n- **Z-Axis:** Depth is communicated through thickness and color. Higher elevation items are signaled by a 2px stroke of #FDFCF0 (Cream) or by being \"offset\" physically.\n- **Borders:** All interactive or distinct elements must have a solid 2px border. \n- **Texture Overlay:** A 5% opacity noise/grain SVG should be applied globally to all #1A1A1A surfaces to simulate the matte texture of cast iron or soot.\n- **Active State:** When an element is pressed or active, it should \"fill\" with the Ember (#D35400) color rather than moving closer to the user.\n\n## Shapes\nThe shape language is **Sharp (0)**. There are no rounded corners in this design system. \n\nEvery button, card, input, and image container must have 90-degree angles. This reinforces the industrial, architectural nature of the brand. The only exception is the natural geometry of photography; however, all photo containers must remain strictly rectangular with heavy 2px borders.\n\n## Components\nConsistent execution of these components is vital for the industrial aesthetic:\n\n- **Buttons:** Primary buttons are solid Ember (#D35400) with Black text (#1A1A1A) in Anton. Secondary buttons are transparent with a 2px Cream (#FDFCF0) border. All buttons are rectangular.\n- **Cards:** Cards use the Charcoal (#1A1A1A) background with a 2px Iron (#2C2C2C) border. Featured cards may use an offset \"shadow\" effect created by a second 2px border shifted 4px to the bottom right.\n- **Input Fields:** Heavy 2px borders on all sides. Label text (Archivo Narrow) should be placed inside the top border, breaking the line, or directly above in all-caps.\n- **Chips/Tags:** Small, sharp-edged boxes with 1px borders, using Archivo Narrow for the text. Use these for meat types (e.g., \"BRISKET\", \"PORK\").\n- **Lists:** Menu lists should use dotted leaders or solid 1px horizontal lines to connect the item name (Anton) to the price (Anton), creating a structured, grid-like feel.\n- **Specialty Component - \"The Stamp\":** A circular or hexagonal graphic element (like a quality seal) containing Anton typography, used as an overlay on images to denote \"Pitmaster's Choice.\"",
+                  "font": "ANTON",
+                  "headlineFont": "ANTON",
+                  "headlineFontFamily": "Anton",
+                  "labelFont": "ARCHIVO_NARROW",
+                  "labelFontFamily": "Archivo Narrow",
+                  "namedColors": {
+                    "background": "#131313",
+                    "error": "#ffb4ab",
+                    "error_container": "#93000a",
+                    "inverse_on_surface": "#303030",
+                    "inverse_primary": "#a23f00",
+                    "inverse_surface": "#e4e2e1",
+                    "on_background": "#e4e2e1",
+                    "on_error": "#690005",
+                    "on_error_container": "#ffdad6",
+                    "on_primary": "#571e00",
+                    "on_primary_container": "#4c1a00",
+                    "on_primary_fixed": "#351000",
+                    "on_primary_fixed_variant": "#7c2e00",
+                    "on_secondary": "#303129",
+                    "on_secondary_container": "#b9b9ae",
+                    "on_secondary_fixed": "#1b1c15",
+                    "on_secondary_fixed_variant": "#46473f",
+                    "on_surface": "#e4e2e1",
+                    "on_surface_variant": "#e0c0b2",
+                    "on_tertiary": "#313030",
+                    "on_tertiary_container": "#2a2a2a",
+                    "on_tertiary_fixed": "#1c1b1b",
+                    "on_tertiary_fixed_variant": "#474746",
+                    "outline": "#a88a7e",
+                    "outline_variant": "#594238",
+                    "primary": "#ffb595",
+                    "primary_container": "#ee671c",
+                    "primary_fixed": "#ffdbcd",
+                    "primary_fixed_dim": "#ffb595",
+                    "secondary": "#c7c7bc",
+                    "secondary_container": "#494a41",
+                    "secondary_fixed": "#e4e3d7",
+                    "secondary_fixed_dim": "#c7c7bc",
+                    "surface": "#131313",
+                    "surface_bright": "#393939",
+                    "surface_container": "#1f2020",
+                    "surface_container_high": "#2a2a2a",
+                    "surface_container_highest": "#353535",
+                    "surface_container_low": "#1b1c1c",
+                    "surface_container_lowest": "#0e0e0e",
+                    "surface_dim": "#131313",
+                    "surface_tint": "#ffb595",
+                    "surface_variant": "#353535",
+                    "tertiary": "#c8c6c5",
+                    "tertiary_container": "#929090",
+                    "tertiary_fixed": "#e5e2e1",
+                    "tertiary_fixed_dim": "#c8c6c5"
+                  },
+                  "overrideNeutralColor": "#2c2c2c",
+                  "overridePrimaryColor": "#d35400",
+                  "overrideSecondaryColor": "#fdfcf0",
+                  "overrideTertiaryColor": "#1a1a1a",
+                  "spacing": {
+                    "gutter": "24px",
+                    "margin-desktop": "64px",
+                    "margin-mobile": "16px",
+                    "stack-lg": "80px",
+                    "stack-md": "24px",
+                    "stack-sm": "8px",
+                    "unit": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": "20px",
+                      "fontWeight": "400",
+                      "lineHeight": "32px"
+                    },
+                    "body-md": {
+                      "fontFamily": "Source Serif 4",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "24px"
+                    },
+                    "display-xl": {
+                      "fontFamily": "Anton",
+                      "fontSize": "80px",
+                      "fontWeight": "400",
+                      "letterSpacing": "0.02em",
+                      "lineHeight": "88px"
+                    },
+                    "display-xl-mobile": {
+                      "fontFamily": "Anton",
+                      "fontSize": "48px",
+                      "fontWeight": "400",
+                      "lineHeight": "52px"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Anton",
+                      "fontSize": "40px",
+                      "fontWeight": "400",
+                      "lineHeight": "44px"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Anton",
+                      "fontSize": "32px",
+                      "fontWeight": "400",
+                      "lineHeight": "36px"
+                    },
+                    "label-bold": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "20px"
+                    },
+                    "label-sm": {
+                      "fontFamily": "Archivo Narrow",
+                      "fontSize": "12px",
+                      "fontWeight": "500",
+                      "lineHeight": "16px"
+                    }
+                  }
+                }
+              },
+              "name": "assets/fa5d4fe39e9748fc8617d3b175718255",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "9566",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzE1YTE2ZTMyNDdlMTQ5OWU4M2Q2OGY3OGI3MzBmZDQ2EgsSBxDb1ZDNzgsYAZIBJAoKcHJvamVjdF9pZBIWQhQxMzI0NzM2MzEyMDU3MzE3MDY4OQ&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/13247363120573170689/files/10278962defa428daee28608023c0150"
+            },
+            "id": "faab5aa8d8d34f3082bb9a81da8a749c",
+            "name": "projects/13247363120573170689/screens/faab5aa8d8d34f3082bb9a81da8a749c",
+            "prompt": "Build the complete, production-ready desktop landing page for Big A BBQ & Grill. \n\nLayout Design:\n- Bespoke, editorial style. NO generic templates.\n- Memorable visual motif: Thick 2px industrial borders and offset content containers that break the standard grid.\n- Use a grain/noise texture on surfaces to enhance the 'Smoky' feel.\n\nSections:\n1. Header: Fixed, floating glass-morphism style with (937) 247-5329 prominently displayed.\n2. Hero: High-impact typography overlaying {{DATA:IMAGE:IMAGE_4}}. Headline: 'FORGED IN SMOKE. REFINED BY FIRE.' \n3. #credibility: A high-density horizontal marquee of accolades or 'The Pitmaster's Promise' - handcrafted, slow-smoked, Ohio-raised.\n4. Services/Offerings: Use an asymmetrical card layout for 'Dine-In', 'Catering', and 'Bulk Orders'. Feature {{DATA:IMAGE:IMAGE_3}} as a background element for one.\n5. About: 'The BIG A Legacy' - offset text block next to {{DATA:IMAGE:IMAGE_5}}. Focus on the Miamisburg roots.\n6. #visit: Large, bold typography with the address. Include the required map slot: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n7. Contact Form: Minimalist, industrial form with dark inputs and a burnt orange 'Send' button.\n8. Footer: Integrated into the design with large typography and social links.\n\nTechnical:\n- Production-ready HTML/CSS.\n- Responsive design.\n- Form validation UI for the contact form.\n- Smooth scroll navigation.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLt4SJdWoXCpDHWDvJMhXBSYrYmlP6uxNsK0VrS4lAOKf4IKctts3PotkiV176xZNssXgYAbepdCiGKbr6sZI8CqZUjIVhC7BSKLCngLS9WOsJDOXAnaqj7HoQ4K8wISK_7qL6Ppap71NnKp7jAhgcEmeEkmFD6TZ99DvHkNn5RqVnpB83fcaVYzaa6lJ5ABEPiVyNlw_2oXcv_0k1aoi3liv3skCD8kfszcxgCR7yZBGCaCWR4PsQIZmpUQ",
+              "name": "projects/13247363120573170689/files/e9568eb433b2414bb9f7ab504c97a81f"
+            },
+            "theme": {
+              "bodyFont": "SOURCE_SERIF_FOUR",
+              "bodyFontFamily": "Source Serif Four",
+              "colorMode": "DARK",
+              "colorVariant": "FIDELITY",
+              "customColor": "#d35400",
+              "designMd": "---\nname: Smoky Industrial\ncolors:\n  surface: '#131313'\n  surface-dim: '#131313'\n  surface-bright: '#393939'\n  surface-container-lowest: '#0e0e0e'\n  surface-container-low: '#1b1c1c'\n  surface-container: '#1f2020'\n  surface-container-high: '#2a2a2a'\n  surface-container-highest: '#353535'\n  on-surface: '#e4e2e1'\n  on-surface-variant: '#e0c0b2'\n  inverse-surface: '#e4e2e1'\n  inverse-on-surface: '#303030'\n  outline: '#a88a7e'\n  outline-variant: '#594238'\n  surface-tint: '#ffb595'\n  primary: '#ffb595'\n  on-primary: '#571e00'\n  primary-container: '#ee671c'\n  on-primary-container: '#4c1a00'\n  inverse-primary: '#a23f00'\n  secondary: '#c7c7bc'\n  on-secondary: '#303129'\n  secondary-container: '#494a41'\n  on-secondary-container: '#b9b9ae'\n  tertiary: '#c8c6c5'\n  on-tertiary: '#313030'\n  tertiary-container: '#929090'\n  on-tertiary-container: '#2a2a2a'\n  error: '#ffb4ab'\n  on-error: '#690005'\n  error-container: '#93000a'\n  on-error-container: '#ffdad6'\n  primary-fixed: '#ffdbcd'\n  primary-fixed-dim: '#ffb595'\n  on-primary-fixed: '#351000'\n  on-primary-fixed-variant: '#7c2e00'\n  secondary-fixed: '#e4e3d7'\n  secondary-fixed-dim: '#c7c7bc'\n  on-secondary-fixed: '#1b1c15'\n  on-secondary-fixed-variant: '#46473f'\n  tertiary-fixed: '#e5e2e1'\n  tertiary-fixed-dim: '#c8c6c5'\n  on-tertiary-fixed: '#1c1b1b'\n  on-tertiary-fixed-variant: '#474746'\n  background: '#131313'\n  on-background: '#e4e2e1'\n  surface-variant: '#353535'\ntypography:\n  display-xl:\n    fontFamily: Anton\n    fontSize: 80px\n    fontWeight: '400'\n    lineHeight: 88px\n    letterSpacing: 0.02em\n  display-xl-mobile:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 52px\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 40px\n    fontWeight: '400'\n    lineHeight: 44px\n  headline-md:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 36px\n  body-lg:\n    fontFamily: Source Serif 4\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 32px\n  body-md:\n    fontFamily: Source Serif 4\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 24px\n  label-bold:\n    fontFamily: Archivo Narrow\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 20px\n    letterSpacing: 0.1em\n  label-sm:\n    fontFamily: Archivo Narrow\n    fontSize: 12px\n    fontWeight: '500'\n    lineHeight: 16px\nspacing:\n  unit: 4px\n  gutter: 24px\n  margin-mobile: 16px\n  margin-desktop: 64px\n  stack-sm: 8px\n  stack-md: 24px\n  stack-lg: 80px\n---\n\n## Brand & Style\nThe design system for Big A BBQ & Grill is rooted in a \"Smoky Industrial\" aesthetic—a blend of raw, fire-forged strength and premium editorial refinement. The target audience values authenticity, craft, and high-quality culinary experiences. \n\nThe visual direction leans heavily into **Editorial Brutalism**. It utilizes high-contrast typography, heavy structural borders, and offset containers to evoke the feeling of a modern smokehouse menu. The UI should feel immersive, tactile, and unapologetically bold, using depth not through shadows, but through layering and texture.\n\n- **Primary Motif:** Intentional layering of solid blocks and 2px borders.\n- **Texture:** A persistent subtle grain or \"ash\" noise should be applied to primary dark surfaces to prevent them from feeling digitally flat.\n- **Emotional Response:** Robust, artisanal, authoritative, and appetizing.\n\n## Colors\nThe palette is centered on the heat of the pit and the darkness of the smokehouse.\n\n- **Ember (Primary):** #D35400. Used for calls to action, highlights, and critical brand moments. It represents the glow of live coals.\n- **Cream (Text/Bg):** #FDFCF0. The primary ink color for text and occasional light-mode section backgrounds. It provides a warm, organic contrast to the dark surroundings.\n- **Charcoal (Surface):** #1A1A1A. The foundation of the UI. All primary surfaces use this deep, matte black.\n- **Iron (Neutral):** #2C2C2C. Used for secondary containers, input fields, and subtle UI divisions to maintain depth without losing the industrial vibe.\n\n## Typography\nThe typography system uses a high-contrast pairing to balance industrial grit with premium service.\n\n- **Headlines:** Use **Anton**. It is heavy, condensed, and commanding. All headlines should be treated as \"signage\"—uppercase and impactful.\n- **Body:** Use **Source Serif 4**. This provides an editorial, literary quality that elevates the brand from a standard fast-food joint to a premium grill house. It ensures long-form menus and stories are highly readable.\n- **Utility/Labels:** Use **Archivo Narrow**. Its compact nature works perfectly for data-heavy sections like nutritional info, prices, or technical UI labels, maintaining the industrial efficiency of the design.\n\n## Layout & Spacing\nThe layout follows a **Fixed Grid** philosophy with a focus on \"Intentional Density.\" \n\n- **Grid:** 12-column grid for desktop with wide 64px margins to create a \"frame\" around the content. \n- **The Offset Look:** Important containers (cards, featured images) should use a staggered layout. For example, a 2px border frame might be offset by 8px from the image it contains, creating a layered, mechanical feel.\n- **Density vs. Air:** Content inside blocks (like a menu item description) should be tightly packed. However, the space *between* major sections should be generous (stack-lg) to allow the \"smoke\" to breathe and emphasize the premium nature of the brand.\n\n## Elevation & Depth\nThis design system rejects soft ambient shadows in favor of **Structural Stacking**.\n\n- **Z-Axis:** Depth is communicated through thickness and color. Higher elevation items are signaled by a 2px stroke of #FDFCF0 (Cream) or by being \"offset\" physically.\n- **Borders:** All interactive or distinct elements must have a solid 2px border. \n- **Texture Overlay:** A 5% opacity noise/grain SVG should be applied globally to all #1A1A1A surfaces to simulate the matte texture of cast iron or soot.\n- **Active State:** When an element is pressed or active, it should \"fill\" with the Ember (#D35400) color rather than moving closer to the user.\n\n## Shapes\nThe shape language is **Sharp (0)**. There are no rounded corners in this design system. \n\nEvery button, card, input, and image container must have 90-degree angles. This reinforces the industrial, architectural nature of the brand. The only exception is the natural geometry of photography; however, all photo containers must remain strictly rectangular with heavy 2px borders.\n\n## Components\nConsistent execution of these components is vital for the industrial aesthetic:\n\n- **Buttons:** Primary buttons are solid Ember (#D35400) with Black text (#1A1A1A) in Anton. Secondary buttons are transparent with a 2px Cream (#FDFCF0) border. All buttons are rectangular.\n- **Cards:** Cards use the Charcoal (#1A1A1A) background with a 2px Iron (#2C2C2C) border. Featured cards may use an offset \"shadow\" effect created by a second 2px border shifted 4px to the bottom right.\n- **Input Fields:** Heavy 2px borders on all sides. Label text (Archivo Narrow) should be placed inside the top border, breaking the line, or directly above in all-caps.\n- **Chips/Tags:** Small, sharp-edged boxes with 1px borders, using Archivo Narrow for the text. Use these for meat types (e.g., \"BRISKET\", \"PORK\").\n- **Lists:** Menu lists should use dotted leaders or solid 1px horizontal lines to connect the item name (Anton) to the price (Anton), creating a structured, grid-like feel.\n- **Specialty Component - \"The Stamp\":** A circular or hexagonal graphic element (like a quality seal) containing Anton typography, used as an overlay on images to denote \"Pitmaster's Choice.\"",
+              "font": "ANTON",
+              "headlineFont": "ANTON",
+              "headlineFontFamily": "Anton",
+              "labelFont": "ARCHIVO_NARROW",
+              "labelFontFamily": "Archivo Narrow",
+              "namedColors": {
+                "background": "#131313",
+                "error": "#ffb4ab",
+                "error_container": "#93000a",
+                "inverse_on_surface": "#303030",
+                "inverse_primary": "#a23f00",
+                "inverse_surface": "#e4e2e1",
+                "on_background": "#e4e2e1",
+                "on_error": "#690005",
+                "on_error_container": "#ffdad6",
+                "on_primary": "#571e00",
+                "on_primary_container": "#4c1a00",
+                "on_primary_fixed": "#351000",
+                "on_primary_fixed_variant": "#7c2e00",
+                "on_secondary": "#303129",
+                "on_secondary_container": "#b9b9ae",
+                "on_secondary_fixed": "#1b1c15",
+                "on_secondary_fixed_variant": "#46473f",
+                "on_surface": "#e4e2e1",
+                "on_surface_variant": "#e0c0b2",
+                "on_tertiary": "#313030",
+                "on_tertiary_container": "#2a2a2a",
+                "on_tertiary_fixed": "#1c1b1b",
+                "on_tertiary_fixed_variant": "#474746",
+                "outline": "#a88a7e",
+                "outline_variant": "#594238",
+                "primary": "#ffb595",
+                "primary_container": "#ee671c",
+                "primary_fixed": "#ffdbcd",
+                "primary_fixed_dim": "#ffb595",
+                "secondary": "#c7c7bc",
+                "secondary_container": "#494a41",
+                "secondary_fixed": "#e4e3d7",
+                "secondary_fixed_dim": "#c7c7bc",
+                "surface": "#131313",
+                "surface_bright": "#393939",
+                "surface_container": "#1f2020",
+                "surface_container_high": "#2a2a2a",
+                "surface_container_highest": "#353535",
+                "surface_container_low": "#1b1c1c",
+                "surface_container_lowest": "#0e0e0e",
+                "surface_dim": "#131313",
+                "surface_tint": "#ffb595",
+                "surface_variant": "#353535",
+                "tertiary": "#c8c6c5",
+                "tertiary_container": "#929090",
+                "tertiary_fixed": "#e5e2e1",
+                "tertiary_fixed_dim": "#c8c6c5"
+              },
+              "overrideNeutralColor": "#2c2c2c",
+              "overridePrimaryColor": "#d35400",
+              "overrideSecondaryColor": "#fdfcf0",
+              "overrideTertiaryColor": "#1a1a1a",
+              "spacing": {
+                "gutter": "24px",
+                "margin-desktop": "64px",
+                "margin-mobile": "16px",
+                "stack-lg": "80px",
+                "stack-md": "24px",
+                "stack-sm": "8px",
+                "unit": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Source Serif 4",
+                  "fontSize": "20px",
+                  "fontWeight": "400",
+                  "lineHeight": "32px"
+                },
+                "body-md": {
+                  "fontFamily": "Source Serif 4",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "24px"
+                },
+                "display-xl": {
+                  "fontFamily": "Anton",
+                  "fontSize": "80px",
+                  "fontWeight": "400",
+                  "letterSpacing": "0.02em",
+                  "lineHeight": "88px"
+                },
+                "display-xl-mobile": {
+                  "fontFamily": "Anton",
+                  "fontSize": "48px",
+                  "fontWeight": "400",
+                  "lineHeight": "52px"
+                },
+                "headline-lg": {
+                  "fontFamily": "Anton",
+                  "fontSize": "40px",
+                  "fontWeight": "400",
+                  "lineHeight": "44px"
+                },
+                "headline-md": {
+                  "fontFamily": "Anton",
+                  "fontSize": "32px",
+                  "fontWeight": "400",
+                  "lineHeight": "36px"
+                },
+                "label-bold": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "20px"
+                },
+                "label-sm": {
+                  "fontFamily": "Archivo Narrow",
+                  "fontSize": "12px",
+                  "fontWeight": "500",
+                  "lineHeight": "16px"
+                }
+              }
+            },
+            "title": "Big A BBQ & Grill - Bespoke Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I have completed the bespoke homepage for **Big A BBQ & Grill**. \n\n### Design Strategy\nTo ensure this design stands apart from generic local-business mockups, I've implemented a **\"Smoky Industrial\"** aesthetic that leverages the following unique elements:\n\n*   **Editorial Layout:** I avoided standard symmetric grids in favor of an **offset, asymmetrical composition**. This creates a more dynamic, high-end \"magazine\" feel that communicates a premium brand.\n*   **Industrial Motif:** The design uses a consistent visual language of **heavy 2px borders** and **sharp, geometric containers**. This mimics the rugged steel of a professional smoker.\n*   **Immersive Atmosphere:** A subtle **grain texture** was applied across the surfaces to evoke the texture of smoke and ash, paired with a high-contrast palette of **Charcoal, Burnt Orange, and Cream**.\n*   **Strong Typography:** I used a mix of bold, condensed headlines and a refined serif for body copy, establishing a clear hierarchy that guides the user through the brand's story.\n\n### Technical Features\n*   **Full Semantic HTML:** Clean, production-ready structure.\n*   **Custom Map Slot:** The requested empty map container is integrated within a dedicated \"Visit\" section.\n*   **Responsive Excellence:** The layout adapts fluidly for all screen sizes while maintaining its editorial integrity.\n*   **Interactive Forms:** A styled contact section with focus states and a \"Send Transmission\" button consistent with the industrial theme.\n\nThe site is now ready for your review on the canvas."
+    },
+    {
+      "suggestion": "Make the colors even more dramatic with deeper oranges."
+    },
+    {
+      "suggestion": "Add a menu section with an industrial list style."
+    },
+    {
+      "suggestion": "Create a mobile-optimized view for this layout."
+    }
+  ],
+  "projectId": "13247363120573170689",
+  "sessionId": "9614111791376931034"
+}
