@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Holycow | Bold Chilean Heritage</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;600;700;800&family=Space+Mono:wght@400;700&family=Hanken+Grotesk:wght@400;500&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@100..900&family=Hanken+Grotesk:wght@100..900&family=Space+Mono:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container": "#f1ede9",
+                      "tertiary-fixed": "#ffddb6",
+                      "surface-variant": "#e6e2de",
+                      "tertiary": "#533300",
+                      "on-primary-container": "#ffb0ab",
+                      "on-secondary-container": "#656464",
+                      "surface-dim": "#ddd9d6",
+                      "on-surface-variant": "#58413f",
+                      "on-surface": "#1c1c19",
+                      "inverse-on-surface": "#f4f0ec",
+                      "on-error": "#ffffff",
+                      "surface-bright": "#fdf9f5",
+                      "outline": "#8c716e",
+                      "primary-fixed-dim": "#ffb3ae",
+                      "inverse-primary": "#ffb3ae",
+                      "surface-container-high": "#ebe7e4",
+                      "background": "#fdf9f5",
+                      "on-tertiary-fixed": "#2a1800",
+                      "on-tertiary-container": "#ffb650",
+                      "tertiary-fixed-dim": "#ffb95a",
+                      "secondary-fixed": "#e5e2e1",
+                      "on-primary-fixed": "#410005",
+                      "secondary-container": "#e5e2e1",
+                      "on-secondary": "#ffffff",
+                      "inverse-surface": "#31302e",
+                      "primary-fixed": "#ffdad7",
+                      "on-secondary-fixed-variant": "#474646",
+                      "on-background": "#1c1c19",
+                      "secondary": "#5f5e5e",
+                      "surface-container-low": "#f7f3ef",
+                      "on-primary": "#ffffff",
+                      "on-secondary-fixed": "#1c1b1b",
+                      "primary": "#7a0412",
+                      "tertiary-container": "#724800",
+                      "on-tertiary": "#ffffff",
+                      "outline-variant": "#e0bfbc",
+                      "error": "#ba1a1a",
+                      "primary-container": "#9b2226",
+                      "surface-container-highest": "#e6e2de",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-fixed-variant": "#643f00",
+                      "secondary-fixed-dim": "#c8c6c5",
+                      "surface-tint": "#ad3031",
+                      "error-container": "#ffdad6",
+                      "surface": "#fdf9f5",
+                      "on-primary-fixed-variant": "#8c161d"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "unit": "8px",
+                      "gutter": "24px",
+                      "margin-mobile": "20px",
+                      "margin-desktop": "64px",
+                      "slash-angle": "15deg"
+              },
+              "fontFamily": {
+                      "display-lg": ["Bricolage Grotesque"],
+                      "label-caps": ["Space Mono"],
+                      "headline-lg-mobile": ["Bricolage Grotesque"],
+                      "headline-md": ["Bricolage Grotesque"],
+                      "body-md": ["Hanken Grotesk"],
+                      "headline-lg": ["Bricolage Grotesque"],
+                      "body-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "display-lg": ["84px", { "lineHeight": "90%", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                      "label-caps": ["12px", { "lineHeight": "100%", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                      "headline-lg-mobile": ["36px", { "lineHeight": "110%", "fontWeight": "700" }],
+                      "headline-md": ["32px", { "lineHeight": "120%", "fontWeight": "600" }],
+                      "body-md": ["16px", { "lineHeight": "160%", "fontWeight": "400" }],
+                      "headline-lg": ["48px", { "lineHeight": "110%", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                      "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .slash-mask {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .slash-mask-reverse {
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+        }
+        .diagonal-divider {
+            height: 8px;
+            background: currentColor;
+            clip-path: polygon(0 0, calc(100% - 40px) 0, 100% 100%, 0 100%);
+        }
+        .text-vertical {
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+        }
+        .ticker-wrap {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .ticker {
+            display: inline-block;
+            animation: ticker 20s linear infinite;
+        }
+        @keyframes ticker {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .grain {
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.05;
+        }
+    </style>
+</head>
+<body class="bg-surface-bright font-body-md text-on-surface antialiased overflow-x-hidden">
+<!-- Header (Shared Component: TopAppBar) -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-desktop py-4 w-full bg-surface-bright/95 backdrop-blur-sm border-b-2 border-on-surface">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-headline-md text-primary uppercase tracking-tighter" href="#">Holycow</a>
+<nav class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors border-b-2 border-primary pb-1" href="#offerings">Menu</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors" href="#about">About</a>
+<a class="font-label-caps text-label-caps text-on-surface hover:text-primary transition-colors" href="#visit">Locations</a>
+</nav>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden md:block font-label-caps text-label-caps text-primary" href="tel:+56912345678">(385) 298-9591</a>
+<button class="bg-primary-container text-white px-6 py-2 font-label-caps text-label-caps hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-all active:scale-95">Order Now</button>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-24">
+<div class="absolute inset-0 z-0 overflow-hidden slash-mask bg-inverse-surface">
+<img alt="Chilean Sandwich Hero" class="w-full h-full object-cover opacity-70 grayscale-[20%]" data-alt="A macro, high-contrast photograph of a traditional Chilean Churrasco sandwich with thinly sliced grilled steak, melted cheese, and fresh avocado. The lighting is cinematic with warm embers in the background, capturing the charred texture of the bread and dripping juices. The aesthetic is modern editorial, featuring rich textures of seared meat and vibrant green vegetables against a dark, moody charred background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC1uLoaflCU27Rz6S3Km2sZ0Bd09ECvDKxgRaDEO8-ilzijTQNNKRVoyPyamg2Ro7dN-CMG6rxTP_DM0nX3GbK2rJC7fODWtLckKvpai4lnEfARCECl_UG4Z3I1sk5cH_L1Us53abskNX_2t3zzsVS1y5-WvisCn0b7H44n0t0wA-bCohaFZZRV4lw8Ls_jNu8BMkjh9lBMnfF5NJLu-2QKWdduKK1EPpbZ8UuJWH228tl_vhtrhQYy2PUnpuPVgKhzMlzk9f1NKVa-"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/40 to-transparent"></div>
+</div>
+<div class="container mx-auto px-margin-desktop relative z-10">
+<div class="max-w-4xl">
+<span class="font-label-caps text-label-caps text-tertiary-fixed mb-4 block">BORN IN THE FLAME, BREAD IN CHILE</span>
+<h1 class="font-display-lg text-display-lg text-white leading-none mb-8">
+                    HOLY<br/><span class="text-tertiary-container italic">COW</span>
+</h1>
+<p class="font-body-lg text-body-lg text-white max-w-xl mb-12 border-l-4 border-primary pl-6">
+                    Taste the primal energy of wood-fired Chilean soul. We don't just make sandwiches; we sear heritage into every bite.
+                </p>
+<div class="flex gap-4">
+<button class="bg-primary text-white px-10 py-4 font-label-caps text-label-caps hover:bg-tertiary-fixed hover:text-on-tertiary-fixed transition-transform hover:-translate-y-1">View The Menu</button>
+<button class="border-2 border-white text-white px-10 py-4 font-label-caps text-label-caps hover:bg-white hover:text-primary transition-all">Find Us</button>
+</div>
+</div>
+</div>
+</section>
+<!-- #credibility (Ticker) -->
+<section class="bg-primary text-white py-12 overflow-hidden border-t-8 border-inverse-surface relative">
+<div class="ticker-wrap flex items-center">
+<div class="ticker flex gap-12 font-display-lg text-headline-lg uppercase tracking-widest opacity-90">
+<span>Authentic</span> <span class="text-tertiary-fixed">•</span>
+<span>Smoky</span> <span class="text-tertiary-fixed">•</span>
+<span>Sizzling</span> <span class="text-tertiary-fixed">•</span>
+<span>Chilean</span> <span class="text-tertiary-fixed">•</span>
+<span>Bold</span> <span class="text-tertiary-fixed">•</span>
+<span>Authentic</span> <span class="text-tertiary-fixed">•</span>
+<span>Smoky</span> <span class="text-tertiary-fixed">•</span>
+<span>Sizzling</span> <span class="text-tertiary-fixed">•</span>
+<span>Chilean</span> <span class="text-tertiary-fixed">•</span>
+<span>Bold</span> <span class="text-tertiary-fixed">•</span>
+</div>
+</div>
+</section>
+<!-- Offerings Section -->
+<section class="py-32 bg-surface-bright relative" id="offerings">
+<div class="grain absolute inset-0 pointer-events-none"></div>
+<div class="container mx-auto px-margin-desktop">
+<div class="mb-24 flex justify-between items-end">
+<div>
+<h2 class="font-display-lg text-headline-lg text-on-surface uppercase mb-4">The Offerings</h2>
+<div class="w-24 h-2 bg-primary"></div>
+</div>
+<div class="font-label-caps text-label-caps text-secondary max-w-xs text-right">
+                    TRADITIONAL RECIPES MEETS HIGH-END CULINARY RESTRAINT.
+                </div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-start">
+<!-- Item 1 -->
+<div class="md:col-span-5 space-y-8 group">
+<div class="relative overflow-hidden aspect-[4/5] border-2 border-on-surface slash-mask">
+<img alt="The Churrasco" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A detailed, magazine-style shot of a Churrasco sandwich featuring thinly sliced, flame-grilled beef topped with melted mantecoso cheese and green beans. The lighting is high-contrast, highlighting the moisture of the meat and the texture of the toasted bread. The background is a clean, parchment-colored stone surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdixOTv2nSUGhGmgWrTArIihY7Zd1g2ogA6fPh_xOwtyAnVgbFjSa7kw51Yd4yu_owWfQdQGBRid46aXi752013qQQGsZl-zfbGNQR63ccm6tLwchAx_lTGnxGIx4-sehe_Uo3xF67dGNA0R-VrlCFPuOjjkHhKOq2bW0kNn7tRtkOpouzjsa8yBf8x940YJLtBInJ_WzB9YOW1NTsMpNx1viEiRJ-V_tMfW0jLtA0IdeWkMtHNk3qUelSYm7vkcGIjesXC0YkTXhB"/>
+</div>
+<div class="flex justify-between items-start pt-4 border-t-2 border-primary">
+<div>
+<h3 class="font-display-lg text-headline-md text-on-surface">The Churrasco</h3>
+<p class="font-body-md text-on-surface-variant mt-2">Signature thin-sliced sirloin, melted mantecoso cheese, and tomato.</p>
+</div>
+<span class="font-label-caps text-headline-md text-tertiary">$16.50</span>
+</div>
+</div>
+<!-- Item 2 - Offset -->
+<div class="md:col-span-7 md:mt-48 space-y-8 group">
+<div class="relative overflow-hidden aspect-[16/9] border-2 border-on-surface">
+<img alt="The Completo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up photograph of a Chilean Completo hot dog, heavily layered with avocado mash, diced tomatoes, and a generous spiral of artisanal mayonnaise. The image is captured with shallow depth of field, emphasizing the fresh, vibrant ingredients against a dark charred wood background. The style is bold editorial with high saturation on the reds and greens." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDd5AVnLLtgmMsRhzqDhwnqqHIw7XxiQ5PefOwIP3tQmHbfsy39cPGn7Yb0EyVpRnkZHwfDF58a0XBo-Od8fX8t19xNL7TNj21OnmmfEoF9ssYNaNO7gUP1xo3PcIzL18ChxZebQ5Jn-v6SRIej4CKRCNIZq_7RdSG-UiIH8VYG_VM3VXtiqyFBH7Nkpae-T5c2ca2cjIa7y_zGzHrMHxl5fILqqclrrriLY3xYpaVIZDmQ9avoUIJsHX5zqqjZhhrGP5z8NJYhzLO_"/>
+<div class="absolute top-4 right-4 bg-tertiary text-white px-3 py-1 font-label-caps text-label-caps">CROWD FAVORITE</div>
+</div>
+<div class="flex justify-between items-start pt-4 border-t-2 border-primary">
+<div>
+<h3 class="font-display-lg text-headline-md text-on-surface">The Completo</h3>
+<p class="font-body-md text-on-surface-variant mt-2">The ultimate Chilean street food. Loaded with avocado mash and homemade mayo.</p>
+</div>
+<span class="font-label-caps text-headline-md text-tertiary">$12.00</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="md:col-span-4 md:-mt-24 space-y-8 group">
+<div class="relative overflow-hidden aspect-square border-2 border-on-surface slash-mask-reverse">
+<img alt="The Lomito" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A studio shot of a Chilean Lomito sandwich with tender, slow-braised pork shoulder, sauerkraut, and chili paste. The sandwich is stacked high, revealing the layered textures of the succulent meat and crisp cabbage. The lighting is focused and dramatic, creating sharp shadows that reinforce a modern, aggressive editorial aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAm4ip3NgEqTZxQtfafbXMx5vy-VM6Eiv5fTBHkwgdHmXHzAQP7UDYKTz9zJIl41-VfoodYZmk-zdhTp_L0SKH04u7DELtZVGlCO6F7enFGs4lx_aEelN2CdMAzz3JRJKaHehnKNxDQybKvCrG2z1Nar7B7vlk-jPozcQFaybxsToJxGK4Ll_NYplEgZcmMy8LlWP9di3bH6QTB72GRmOM8nB9bNhvin8yL88FtdDI9YuH7VK0Ef-8IgWKbr39DtPVWxGdgX6Au-L7d"/>
+</div>
+<div class="flex justify-between items-start pt-4 border-t-2 border-primary">
+<div>
+<h3 class="font-display-lg text-headline-md text-on-surface">The Lomito</h3>
+<p class="font-body-md text-on-surface-variant mt-2">Slow-braised pork loin with sauerkraut and spicy ají verde.</p>
+</div>
+<span class="font-label-caps text-headline-md text-tertiary">$15.75</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="relative py-32 bg-inverse-surface text-white overflow-hidden" id="about">
+<div class="absolute inset-0 opacity-10 slash-mask bg-primary rotate-3 translate-x-12"></div>
+<div class="container mx-auto px-margin-desktop relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+<div class="order-2 md:order-1">
+<div class="relative">
+<img alt="Chef Grilling" class="border-8 border-primary grayscale hover:grayscale-0 transition-all duration-1000" data-alt="A black and white cinematic photograph of a chef's hands working over a wood-fired grill, with sparks and smoke rising into the air. The image captures the raw, intense heat and motion of traditional Chilean cooking. The contrast is extreme, with bright highlights on the glowing embers and deep, rich blacks in the shadows, embodying a bold heritage aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOgqiwK6FPhlPH83_rJwJo_cD46gGUuD5JSbhnLxqkvgPGllIisv7lznruNj3IDemchzQxyx1F2s7gtKP7uAQqoUyg-9Xo1lzeL5202R_VbAOM3JH7EbsskfTgyHKo7jQ90ac1CXH6L6xzXEfUYHGcIvNauk1D3uxrU96ZEk9TQRB8lKYGdpRKZeXJ1M6XQc-GoO1WLS5WEXVjALydHHJHBJwOwDZiutDZ2w4koNaz_nJ_Qk_yVmiLlLqFJBAQ92mg2QaMVCVjvdA3"/>
+<div class="absolute -bottom-10 -right-10 bg-tertiary-container p-8 hidden md:block">
+<span class="font-display-lg text-headline-lg">EST. 2024</span>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label-caps text-label-caps text-tertiary-fixed mb-4 block">OUR STORY</span>
+<h2 class="font-display-lg text-display-lg leading-tight mb-8">The Flame &<br/>The Bread</h2>
+<p class="font-body-lg text-body-lg text-surface-container mb-8">
+                        Holycow was born from a singular obsession: the perfect crust. We brought the smokey, intense flavors of Chilean street food to the heart of Orem, UT, blending traditional wood-firing techniques with premium local ingredients. 
+                    </p>
+<p class="font-body-md text-surface-variant mb-12">
+                        Every sandwich is a tribute to the open fires of the central valley, a marriage of charred bread and succulent meats that tells the story of our heritage with every bite. This isn't just fast food; it's a culinary ritual.
+                    </p>
+<div class="diagonal-divider w-full text-primary mb-8"></div>
+<button class="bg-surface-bright text-on-surface px-10 py-4 font-label-caps text-label-caps hover:bg-tertiary-fixed transition-colors">Learn More</button>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-32 bg-surface-container-low" id="visit">
+<div class="container mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-4">
+<h2 class="font-display-lg text-headline-lg text-primary uppercase mb-6">Find The Cow</h2>
+<div class="space-y-8">
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2">LOCATION</h4>
+<p class="font-headline-md text-headline-md text-on-surface">515 North State Street<br/>Orem, UT 84057</p>
+</div>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2">HOURS</h4>
+<ul class="font-body-lg space-y-1">
+<li class="flex justify-between"><span>Mon - Thu</span> <span class="font-bold">11:00 - 21:00</span></li>
+<li class="flex justify-between"><span>Fri - Sat</span> <span class="font-bold">11:00 - 22:00</span></li>
+<li class="flex justify-between"><span>Sunday</span> <span class="font-bold">Closed</span></li>
+</ul>
+</div>
+<a class="inline-flex items-center gap-2 font-label-caps text-label-caps text-primary hover:underline" href="https://maps.google.com" target="_blank">
+<span class="material-symbols-outlined">directions</span> GET DIRECTIONS
+                        </a>
+</div>
+</div>
+<div class="md:col-span-8">
+<div class="border-2 border-on-surface relative overflow-hidden group">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px]" data-location="Orem, Utah" data-map-slot="" style=""></div>
+<div class="absolute inset-0 bg-primary/10 pointer-events-none group-hover:bg-transparent transition-colors"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-32 bg-inverse-surface text-white">
+<div class="container mx-auto px-margin-desktop max-w-4xl">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-lg mb-4">Catering & Inquiries</h2>
+<p class="font-body-lg text-surface-container-low">Planning a bold event? Let Holycow handle the fire.</p>
+</div>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter gap-y-12" id="contactForm">
+<div class="relative group">
+<input class="peer w-full bg-transparent border-t-0 border-x-0 border-b-2 border-surface-container focus:border-primary-container focus:ring-0 px-0 py-3 font-body-lg" id="name" placeholder=" " required="" type="text"/>
+<label class="absolute left-0 top-3 font-label-caps text-label-caps text-surface-variant transition-all peer-focus:-top-4 peer-focus:text-xs peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="name">Your Name</label>
+</div>
+<div class="relative group">
+<input class="peer w-full bg-transparent border-t-0 border-x-0 border-b-2 border-surface-container focus:border-primary-container focus:ring-0 px-0 py-3 font-body-lg" id="email" placeholder=" " required="" type="email"/>
+<label class="absolute left-0 top-3 font-label-caps text-label-caps text-surface-variant transition-all peer-focus:-top-4 peer-focus:text-xs peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="email">Email Address</label>
+</div>
+<div class="md:col-span-2 relative group">
+<textarea class="peer w-full bg-transparent border-t-0 border-x-0 border-b-2 border-surface-container focus:border-primary-container focus:ring-0 px-0 py-3 font-body-lg" id="message" placeholder=" " required="" rows="4"></textarea>
+<label class="absolute left-0 top-3 font-label-caps text-label-caps text-surface-variant transition-all peer-focus:-top-4 peer-focus:text-xs peer-[:not(:placeholder-shown)]:-top-4 peer-[:not(:placeholder-shown)]:text-xs" for="message">How can we help?</label>
+</div>
+<div class="md:col-span-2 flex justify-center pt-8">
+<button class="bg-primary hover:bg-tertiary-fixed hover:text-on-tertiary-fixed text-white px-16 py-5 font-display-lg text-headline-md uppercase transition-all active:scale-95" type="submit">Send Request</button>
+</div>
+</form>
+<div class="hidden mt-8 text-center bg-primary/20 border border-primary p-6" id="formSuccess">
+<p class="font-headline-md text-primary">Message Received! We'll get back to you soon.</p>
+</div>
+</div>
+</section>
+<!-- Footer (Shared Component: Footer) -->
+<footer class="w-full pt-16 pb-8 bg-inverse-surface border-t-8 border-primary text-on-primary-container font-body-md text-body-md font-label-caps text-label-caps">
+<div class="grid grid-cols-1 md:grid-cols-12 px-margin-desktop gap-gutter">
+<div class="md:col-span-6">
+<h3 class="font-display-lg text-headline-lg text-surface-container-lowest mb-gutter uppercase tracking-tighter">Holycow</h3>
+<p class="font-body-md normal-case text-surface-container-low max-w-sm mb-8">
+                    Bringing the authentic, bold flavors of Chilean wood-fired sandwiches to Utah. Quality ingredients, heritage recipes, unparalleled heat.
+                </p>
+<div class="flex gap-6">
+<a class="text-surface-container-low hover:text-primary-fixed transition-transform hover:translate-x-1 duration-300" href="#">Instagram</a>
+<a class="text-surface-container-low hover:text-primary-fixed transition-transform hover:translate-x-1 duration-300" href="#">Facebook</a>
+<a class="text-surface-container-low hover:text-primary-fixed transition-transform hover:translate-x-1 duration-300" href="#">Twitter</a>
+</div>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-primary-fixed-dim font-bold mb-6">Contact</h4>
+<address class="not-italic space-y-2 text-surface-container-low normal-case">
+<p>515 North State Street<br/>Orem, UT 84057</p>
+<p class="mt-4">holycowchile@gmail.com</p>
+<p>(385) 298-9591</p>
+</address>
+</div>
+<div class="md:col-span-3">
+<h4 class="text-primary-fixed-dim font-bold mb-6">Explore</h4>
+<ul class="space-y-2">
+<li><a class="text-surface-container-low hover:text-primary-fixed transition-all" href="#offerings">Our Menu</a></li>
+<li><a class="text-surface-container-low hover:text-primary-fixed transition-all" href="#about">The Story</a></li>
+<li><a class="text-surface-container-low hover:text-primary-fixed transition-all" href="#">Careers</a></li>
+<li><a class="text-surface-container-low hover:text-primary-fixed transition-all" href="#">Privacy Policy</a></li>
+</ul>
+</div>
+<div class="md:col-span-12 mt-16 pt-8 border-t border-surface-variant flex justify-between items-center text-[10px] opacity-60">
+<span>© 2024 HOLYCOW CHILEAN SANDWICHES. ALL RIGHTS RESERVED.</span>
+<span>DESIGNED BY CULINARY SOUL</span>
+</div>
+</div>
+</footer>
+<script>
+        // Form Preview Logic
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            this.classList.add('opacity-0');
+            setTimeout(() => {
+                this.classList.add('hidden');
+                document.getElementById('formSuccess').classList.remove('hidden');
+            }, 300);
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section > div').forEach(el => {
+            el.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+
+        // Scroll highlight for nav
+        window.addEventListener('scroll', () => {
+            const sections = document.querySelectorAll('section');
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = "";
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                link.classList.add('text-on-surface');
+                if (link.getAttribute('href').includes(current) && current !== "") {
+                    link.classList.add('text-primary', 'font-bold', 'border-b-2', 'border-primary', 'pb-1');
+                    link.classList.remove('text-on-surface');
+                }
+            });
+        });
+    </script>
+</body></html>
