@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FATBACK'S BARBECUE | Real Smoke. Real Wood. Real Dayton.</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Anton&amp;family=Hanken+Grotesk:wght@400;700&amp;family=Space+Mono:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        /* Custom scrollbar for that industrial feel */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #fbf9f4; }
+        ::-webkit-scrollbar-thumb { background: #000000; }
+
+        /* Grain texture overlay */
+        .smoke-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url("https://www.transparenttextures.com/patterns/stardust.png");
+            opacity: 0.05;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .drop-cap::first-letter {
+            font-family: 'Anton', sans-serif;
+            font-size: 5rem;
+            float: left;
+            line-height: 1;
+            padding-right: 1rem;
+            color: #000000;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "outline": "#747878",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-fixed-variant": "#6e3900",
+                        "surface-variant": "#e4e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-fixed": "#2f1500",
+                        "on-secondary-fixed": "#2e1413",
+                        "error": "#ba1a1a",
+                        "primary-fixed": "#e5e2e1",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-bright": "#fbf9f4",
+                        "on-tertiary-container": "#c76c00",
+                        "secondary-container": "#ffcfcb",
+                        "on-secondary-fixed-variant": "#5f3e3c",
+                        "on-surface-variant": "#444748",
+                        "surface-tint": "#5f5e5e",
+                        "on-primary-fixed-variant": "#474746",
+                        "on-surface": "#1b1c19",
+                        "inverse-surface": "#30312e",
+                        "surface-dim": "#dbdad5",
+                        "background": "#fbf9f4",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary-container": "#858383",
+                        "surface-container-highest": "#e4e2dd",
+                        "on-tertiary": "#ffffff",
+                        "tertiary": "#000000",
+                        "primary": "#000000",
+                        "surface-container-low": "#f5f3ee",
+                        "secondary": "#795553",
+                        "tertiary-container": "#2f1500",
+                        "error-container": "#ffdad6",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "tertiary-fixed": "#ffdcc3",
+                        "on-secondary-container": "#7a5653",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#eabcb8",
+                        "outline-variant": "#c4c7c7",
+                        "surface-container-high": "#eae8e3",
+                        "on-background": "#1b1c19",
+                        "surface-container": "#f0eee9",
+                        "primary-container": "#1c1b1b",
+                        "surface": "#fbf9f4",
+                        "inverse-on-surface": "#f2f1ec",
+                        "tertiary-fixed-dim": "#ffb77d",
+                        "secondary-fixed": "#ffdad7",
+                        "inverse-primary": "#c8c6c5",
+                        "smoked-amber": "#c76c00"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0px",
+                        "lg": "0px",
+                        "xl": "0px",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-xs": "4px",
+                        "stack-xl": "64px",
+                        "gutter": "24px",
+                        "stack-lg": "32px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "margin-edge": "40px"
+                    },
+                    "fontFamily": {
+                        "headline-lg": ["Anton"],
+                        "body-lg": ["Hanken Grotesk"],
+                        "headline-lg-mobile": ["Anton"],
+                        "headline-md": ["Anton"],
+                        "headline-xl": ["Anton"],
+                        "price-display": ["Anton"],
+                        "label-caps": ["Space Mono"],
+                        "body-md": ["Hanken Grotesk"]
+                    },
+                    "fontSize": {
+                        "headline-lg": ["48px", { "lineHeight": "100%", "letterSpacing": "-0.01em", "fontWeight": "400" }],
+                        "body-lg": ["20px", { "lineHeight": "160%", "fontWeight": "400" }],
+                        "headline-lg-mobile": ["36px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "headline-md": ["32px", { "lineHeight": "110%", "fontWeight": "400" }],
+                        "headline-xl": ["84px", { "lineHeight": "90%", "letterSpacing": "-0.02em", "fontWeight": "400" }],
+                        "price-display": ["24px", { "lineHeight": "100%", "fontWeight": "400" }],
+                        "label-caps": ["14px", { "lineHeight": "120%", "letterSpacing": "0.1em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "150%", "fontWeight": "400" }]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface font-body-md smoke-overlay relative">
+<!-- TopNavBar -->
+<nav class="docked full-width top-0 sticky bg-surface/80 backdrop-blur-md z-50 border-b-2 border-primary flex justify-between items-center w-full px-margin-edge py-stack-sm max-w-full">
+<div class="font-headline-md text-headline-md text-primary tracking-tighter">FATBACK'S</div>
+<div class="hidden md:flex items-center space-x-gutter">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors duration-200 px-2 py-1" href="#menu">Menu</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors duration-200 px-2 py-1" href="#catering">Catering</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:bg-primary hover:text-on-primary transition-colors duration-200 px-2 py-1" href="#story">Story</a>
+</div>
+<div class="flex items-center space-x-stack-md">
+<span class="hidden lg:block font-label-caps text-label-caps text-primary">(937) 254-7427</span>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps px-stack-lg py-stack-sm hover:bg-smoked-amber transition-colors active:opacity-80 active:scale-95">ORDER NOW</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative w-full h-[921px] overflow-hidden flex items-end md:items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Smoked Brisket" class="w-full h-full object-cover filter grayscale contrast-125" data-alt="A cinematic, high-contrast close-up of a slow-cooked beef brisket resting on a dark industrial metal surface. Thick, atmospheric wood smoke curls around the charred bark of the meat, catching glints of low-key amber lighting. The scene is moody and artisanal, emphasizing raw textures and an authentic, gritty barbecue aesthetic suited for a premium editorial layout. Deep blacks and rich earthy tones dominate the palette." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2e-ayWRdw-eYf7AK1PqLCg8neVopPJpRnkJAX7FK6n1MZLnefjaojMkfmdSUkvQA1uHIEAxLUWbhS1TmqBNxIdOhDBO0XIVuWpAZVhKfEzXkEipaS1dyLBbaIya7z9o87AkstqGTvt18mymNxsgdmL_y4omgN-NKfL-FGmSyoQ21rbDz6GwCmjyuzjtVxDvLH0iAlWh6uHfea6Ean3SQ1ZSVz3eXFCYbhmScg3pvbtF9or31_slreeBV-c9zW5BJf1gg6-IyoO97P"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
+</div>
+<div class="relative z-10 px-margin-edge max-w-7xl w-full mx-auto md:grid md:grid-cols-12">
+<div class="md:col-start-2 md:col-span-8">
+<h1 class="font-headline-xl text-headline-xl text-white uppercase break-words leading-[0.85] md:-ml-12">
+                    Fatback's <br/> Barbecue: <span class="text-white/50 block md:inline">The Heart of Dayton BBQ.</span>
+</h1>
+<div class="mt-stack-lg border-l-4 border-white pl-stack-md max-w-md">
+<p class="font-body-lg text-body-lg text-white/90">Real Wood. Real Smoke. Low and slow is the only way we know.</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Credibility Section -->
+<section class="py-stack-xl px-margin-edge bg-surface border-b-2 border-primary" id="credibility">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="border-2 border-primary p-stack-lg hover:bg-smoked-amber hover:text-white transition-all group">
+<span class="font-label-caps text-label-caps block mb-stack-sm text-outline group-hover:text-white/80">AUTHENTICITY</span>
+<h3 class="font-headline-md text-headline-md uppercase">Dayton's Choice for Real Smoke</h3>
+<p class="mt-stack-sm font-body-md text-body-md opacity-80">Serving the community with passion since the first fire was lit.</p>
+</div>
+<div class="border-2 border-primary p-stack-lg hover:bg-smoked-amber hover:text-white transition-all group">
+<span class="font-label-caps text-label-caps block mb-stack-sm text-outline group-hover:text-white/80">THE STANDARD</span>
+<h3 class="font-headline-md text-headline-md uppercase">100% Real Hickory &amp; Oak</h3>
+<p class="mt-stack-sm font-body-md text-body-md opacity-80">No gas, no shortcuts. Just wood and patience for 14 hours.</p>
+</div>
+<div class="border-2 border-primary p-stack-lg hover:bg-smoked-amber hover:text-white transition-all group">
+<span class="font-label-caps text-label-caps block mb-stack-sm text-outline group-hover:text-white/80">RECOGNITION</span>
+<h3 class="font-headline-md text-headline-md uppercase">Award Winning Brisket</h3>
+<p class="mt-stack-sm font-body-md text-body-md opacity-80">Voted Best in the Miami Valley three years running.</p>
+</div>
+</div>
+</section>
+<!-- Menu/Offerings Section (The Daily Board) -->
+<section class="py-stack-xl px-margin-edge" id="menu">
+<div class="max-w-4xl mx-auto">
+<div class="mb-stack-xl text-center md:text-left">
+<h2 class="font-headline-xl text-headline-xl uppercase">The Daily Board</h2>
+<div class="h-1 w-24 bg-primary mt-stack-sm mx-auto md:mx-0"></div>
+</div>
+<!-- Categories -->
+<div class="space-y-stack-xl">
+<!-- BBQ Trays -->
+<div>
+<h3 class="font-label-caps text-label-caps text-smoked-amber border-b-2 border-outline/30 pb-2 mb-stack-md">01. BBQ TRAYS</h3>
+<ul class="space-y-stack-sm">
+<li class="flex justify-between items-end border-b-2 border-primary py-2 group hover:bg-surface-container transition-colors">
+<div class="flex-1">
+<span class="font-body-lg font-bold uppercase block">Prime Sliced Brisket</span>
+<span class="text-on-surface-variant font-body-md italic">Half-pound of 14-hour smoked black angus</span>
+</div>
+<span class="font-price-display text-price-display pl-stack-md">$18.50</span>
+</li>
+<li class="flex justify-between items-end border-b-2 border-primary py-2 group hover:bg-surface-container transition-colors">
+<div class="flex-1">
+<span class="font-body-lg font-bold uppercase block">Pulled Pork Shoulder</span>
+<span class="text-on-surface-variant font-body-md italic">Hand-pulled, lightly sauced Dayton style</span>
+</div>
+<span class="font-price-display text-price-display pl-stack-md">$14.00</span>
+</li>
+<li class="flex justify-between items-end border-b-2 border-primary py-2 group hover:bg-surface-container transition-colors">
+<div class="flex-1">
+<span class="font-body-lg font-bold uppercase block">St. Louis Rib Slab</span>
+<span class="text-on-surface-variant font-body-md italic">Dry-rubbed, wood-fired, falling off the bone</span>
+</div>
+<span class="font-price-display text-price-display pl-stack-md">$28.00</span>
+</li>
+</ul>
+</div>
+<!-- Sandwiches -->
+<div>
+<h3 class="font-label-caps text-label-caps text-smoked-amber border-b-2 border-outline/30 pb-2 mb-stack-md">02. SANDWICHES</h3>
+<ul class="space-y-stack-sm">
+<li class="flex justify-between items-end border-b-2 border-primary py-2 group hover:bg-surface-container transition-colors">
+<div class="flex-1">
+<span class="font-body-lg font-bold uppercase block">The Fatback Special</span>
+<span class="text-on-surface-variant font-body-md italic">Brisket, pulled pork, and slaw on a brioche bun</span>
+</div>
+<span class="font-price-display text-price-display pl-stack-md">$15.75</span>
+</li>
+<li class="flex justify-between items-end border-b-2 border-primary py-2 group hover:bg-surface-container transition-colors">
+<div class="flex-1">
+<span class="font-body-lg font-bold uppercase block">Smoked Turkey Club</span>
+<span class="text-on-surface-variant font-body-md italic">Thinly sliced, house-cured, bacon jam</span>
+</div>
+<span class="font-price-display text-price-display pl-stack-md">$12.50</span>
+</li>
+</ul>
+</div>
+<!-- Sides -->
+<div>
+<h3 class="font-label-caps text-label-caps text-smoked-amber border-b-2 border-outline/30 pb-2 mb-stack-md">03. SCRATCH SIDES</h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-gutter">
+<ul class="space-y-stack-sm">
+<li class="flex justify-between items-center border-b-2 border-primary py-2">
+<span class="font-body-md font-bold uppercase">Collard Greens w/ Bacon</span>
+<span class="font-price-display text-price-display">$4.50</span>
+</li>
+<li class="flex justify-between items-center border-b-2 border-primary py-2">
+<span class="font-body-md font-bold uppercase">Jalapeño Cornbread</span>
+<span class="font-price-display text-price-display">$3.50</span>
+</li>
+</ul>
+<ul class="space-y-stack-sm">
+<li class="flex justify-between items-center border-b-2 border-primary py-2">
+<span class="font-body-md font-bold uppercase">Smoked Mac &amp; Cheese</span>
+<span class="font-price-display text-price-display">$5.00</span>
+</li>
+<li class="flex justify-between items-center border-b-2 border-primary py-2">
+<span class="font-body-md font-bold uppercase">Vinegar Slaw</span>
+<span class="font-price-display text-price-display">$3.50</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-stack-xl bg-surface-container-low overflow-hidden" id="story">
+<div class="px-margin-edge max-w-7xl mx-auto md:grid md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 relative mb-stack-lg md:mb-0">
+<div class="absolute -top-4 -left-4 w-24 h-24 border-t-4 border-l-4 border-primary"></div>
+<img alt="The Pitmaster" class="w-full h-auto grayscale border-2 border-primary filter contrast-110" data-alt="A portrait of a seasoned pitmaster working over a massive black steel offset smoker in a rustic, industrial Dayton warehouse kitchen. The lighting is dramatic and directional, highlighting the smoke and the grit of the environment. The pitmaster wears a heavy leather apron, and the overall mood is one of dedicated craftsmanship and long-standing tradition. The aesthetic is clean, editorial, and monochrome with high contrast." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxAGTf1r5dXATI_9oI1pjZlpaJHwfjj2GiRsWLmRpe8NeZUYVamQd419zOiENUNvQG3wUdmNkkUlKdsk52txABVD8zx-R1F_2_ttb-vW90ItOdUxHhUwUOPnd__yeC5M3KxsHwKPSKVZRnXoUHORDAK-BFJr3FmZIT30r7CGUM6ER6B1tcbLeOw3ylnT8mlYojoTT9qV6Lk70u2p9rg3RrugJ-yVcui76NEY4pqpeKwmD-CKADKfyiBC2G-q7a9qu_BycU1utl8IPT"/>
+<div class="absolute -bottom-4 -right-4 bg-primary text-white p-4 font-label-caps text-label-caps">
+                    EST. 2012
+                </div>
+</div>
+<div class="md:col-start-7 md:col-span-6">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-stack-md">Our Story</h2>
+<div class="font-body-lg text-body-lg drop-cap space-y-stack-md leading-relaxed">
+<p>Fatback’s Barbecue didn’t start in a boardroom; it started in a backyard on the east side of Dayton with a dream of bringing real, wood-fired barbecue back to the community. We believe that shortcuts are for the weak and that the only true way to get that deep smoke ring is through patience, heat, and hardwood.</p>
+<p>Our pitmasters are artisans of the flame, tending to the fires through the dead of night to ensure that every bite of brisket you take is as tender as it is flavorful. We source our meats locally whenever possible and hand-craft our sauces to complement, not cover, the flavor of the smoke. This is Dayton BBQ. This is Fatback's.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="px-margin-edge py-stack-xl" id="visit">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 border-4 border-primary">
+<div class="p-stack-xl bg-primary text-on-primary flex flex-col justify-center">
+<h2 class="font-headline-lg text-headline-lg uppercase mb-stack-sm">Find Us on Linden Ave</h2>
+<p class="font-body-lg text-body-lg opacity-80 mb-stack-lg">We're located in the heart of Dayton, serving up the best BBQ in the valley five days a week.</p>
+<div class="space-y-stack-md">
+<div class="flex items-start space-x-stack-md">
+<span class="material-symbols-outlined mt-1">location_on</span>
+<div>
+<p class="font-label-caps text-label-caps">ADDRESS</p>
+<p class="font-body-lg">1334 Linden Ave, Dayton, OH 45410</p>
+</div>
+</div>
+<div class="flex items-start space-x-stack-md">
+<span class="material-symbols-outlined mt-1">schedule</span>
+<div>
+<p class="font-label-caps text-label-caps">HOURS</p>
+<p class="font-body-lg">TUE - SAT: 11AM - 8PM (OR UNTIL SOLD OUT)</p>
+<p class="font-body-lg text-smoked-amber">Closed SUN &amp; MON</p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container" data-location="Dayton, Ohio" data-map-slot="" style="">
+<!-- Map Placeholder with overlay texture -->
+<div class="absolute inset-0 smoke-overlay pointer-events-none"></div>
+</div>
+</div>
+</section>
+<!-- Contact & Catering Section -->
+<section class="py-stack-xl px-margin-edge max-w-7xl mx-auto" id="catering">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-xl">
+<!-- Left: Contact Details -->
+<div class="space-y-stack-lg">
+<h2 class="font-headline-lg text-headline-lg uppercase leading-tight">Catering &amp; <br/> Inquiries</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-md">Whether it's a corporate event, a wedding, or a neighborhood block party, we've got you covered with the finest smoked meats in the city.</p>
+<div class="pt-stack-md border-t-2 border-primary space-y-stack-sm">
+<a class="flex items-center space-x-stack-sm group" href="tel:9372547427">
+<span class="material-symbols-outlined text-smoked-amber">phone</span>
+<span class="font-price-display group-hover:underline transition-all">(937) 254-7427</span>
+</a>
+<a class="flex items-center space-x-stack-sm group" href="mailto:FatBacksBarbecue@gmail.com">
+<span class="material-symbols-outlined text-smoked-amber">mail</span>
+<span class="font-body-lg font-bold group-hover:underline transition-all">FatBacksBarbecue@gmail.com</span>
+</a>
+</div>
+</div>
+<!-- Right: Industrial Form -->
+<form class="space-y-stack-md bg-surface p-stack-lg border-2 border-primary">
+<div>
+<label class="font-label-caps text-label-caps block mb-1">NAME</label>
+<input class="w-full bg-background border-2 border-primary p-3 focus:ring-0 focus:border-smoked-amber placeholder:opacity-30" placeholder="John Doe" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-stack-md">
+<div>
+<label class="font-label-caps text-label-caps block mb-1">EMAIL</label>
+<input class="w-full bg-background border-2 border-primary p-3 focus:ring-0 focus:border-smoked-amber placeholder:opacity-30" placeholder="john@example.com" type="email"/>
+</div>
+<div>
+<label class="font-label-caps text-label-caps block mb-1">DATE OF EVENT</label>
+<input class="w-full bg-background border-2 border-primary p-3 focus:ring-0 focus:border-smoked-amber" type="date"/>
+</div>
+</div>
+<div>
+<label class="font-label-caps text-label-caps block mb-1">INQUIRY TYPE</label>
+<select class="w-full bg-background border-2 border-primary p-3 focus:ring-0 focus:border-smoked-amber">
+<option>Catering Request</option>
+<option>General Feedback</option>
+<option>Employment</option>
+</select>
+</div>
+<div>
+<label class="font-label-caps text-label-caps block mb-1">MESSAGE</label>
+<textarea class="w-full bg-background border-2 border-primary p-3 focus:ring-0 focus:border-smoked-amber placeholder:opacity-30" placeholder="Tell us about your event..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary text-on-primary py-stack-md font-label-caps text-label-caps hover:bg-smoked-amber transition-colors" type="submit">SEND INQUIRY</button>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="full-width border-t-4 border-primary bg-primary grid grid-cols-1 md:grid-cols-3 gap-stack-lg px-margin-edge py-stack-xl w-full">
+<div class="flex flex-col space-y-stack-sm">
+<div class="font-headline-lg text-headline-lg text-on-primary">FATBACK'S</div>
+<p class="font-label-caps text-label-caps text-on-primary/70">REAL SMOKE. REAL WOOD. REAL DAYTON.</p>
+</div>
+<div class="flex flex-col space-y-stack-sm">
+<p class="font-label-caps text-label-caps text-on-primary mb-2">QUICK LINKS</p>
+<a class="text-on-primary/70 font-body-md hover:text-secondary-fixed-dim transition-colors" href="#visit">1334 Linden Ave, Dayton, OH</a>
+<a class="text-on-primary/70 font-body-md hover:text-secondary-fixed-dim transition-colors" href="#catering">Catering Inquiries</a>
+<a class="text-on-primary/70 font-body-md hover:text-secondary-fixed-dim transition-colors" href="#">Privacy Policy</a>
+<a class="text-on-primary/70 font-body-md hover:text-secondary-fixed-dim transition-colors" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col justify-end md:items-end">
+<p class="font-body-md text-on-primary/50 text-xs md:text-right">
+                © 2024 FATBACK'S BARBECUE. <br/> ALL RIGHTS RESERVED.
+            </p>
+<div class="flex space-x-stack-md mt-stack-md">
+<a class="w-10 h-10 border-2 border-on-primary/30 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">face_nod</span>
+</a>
+<a class="w-10 h-10 border-2 border-on-primary/30 flex items-center justify-center hover:bg-on-primary hover:text-primary transition-all" href="#">
+<span class="material-symbols-outlined">photo_camera</span>
+</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for the menu items
+        document.querySelectorAll('.group').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                // Subtle interaction logic if needed
+            });
+        });
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>

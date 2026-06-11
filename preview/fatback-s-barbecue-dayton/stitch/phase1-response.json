@@ -1,0 +1,454 @@
+{
+  "outputComponents": [
+    {
+      "designSystem": {
+        "designSystem": {
+          "displayName": "Smoky Industrial Editorial",
+          "styleGuidelines": "## Brand & Style\n\nThe design system establishes a premium, \"Smoky Industrial Editorial\" identity for a local BBQ legend. It captures the raw grit of a pitmaster’s workspace and elevates it with the refined pacing of a high-end food magazine. The brand personality is authoritative, seasoned, and unapologetically bold.\n\nThe style leans into a **Modern Industrial** aesthetic with **Editorial** influences:\n- **High-Contrast Typography:** Massive, rugged headlines paired with utilitarian body text.\n- **Asymmetrical Layouts:** Avoiding standard card grids in favor of intentional density and overlapping elements.\n- **Tactile Boundaries:** Heavy 2px–4px borders that evoke butcher shop signage and industrial steel framing.\n- **Negative Space:** Generous \"Paper Cream\" whitespace to allow high-quality photography of smoked meats to breathe.\n\n## Layout & Spacing\n\nThis design system eschews standard bootstrap-style grids in favor of a **Modular Editorial Layout**.\n\n- **Density vs. Air:** Menu sections use high density with tight vertical spacing (stack-sm) and 2px dividers to mimic vintage price lists. Narrative sections (About, Process) use expansive margins (stack-xl) to evoke luxury.\n- **Asymmetry:** Content blocks should be offset. For example, a headline may start on column 2 of a 12-column grid while the body text starts on column 5.\n- **Borders as Structure:** Use 2px–4px Deep Charcoal borders to define sections instead of background color changes. \n- **Breakpoints:**\n  - **Desktop (1280px+):** 12-column grid, 40px outer margins.\n  - **Tablet (768px):** 6-column grid, 24px outer margins.\n  - **Mobile (375px):** 2-column grid, 16px outer margins. Headlines scale down significantly to maintain legibility.\n\n## Elevation & Depth\n\nDepth is achieved through **Layered Flatness** rather than shadows. \n\n- **Tonal Stacking:** Use \"Burnt Umber\" surfaces behind \"Paper Cream\" content blocks to create a physical sense of stacked paper or boards.\n- **Heavy Outlines:** All interactive elements and containers use a solid 2px Deep Charcoal border. \n- **No Shadows:** Shadows are strictly prohibited. The \"weight\" of the UI comes from thickness of lines and opacity of the Smoked Amber accents.\n- **Smoke Textures:** Apply a low-opacity (5-10%) grain or smoke texture overlay on the Burnt Umber or Deep Charcoal backgrounds to add organic grit.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Charcoal with Paper Cream text in \"Label-Caps\" typography. Secondary buttons are Paper Cream with a 2px Deep Charcoal border. Interaction state: Fill with Smoked Amber on hover.\n- **The \"Butcher List\":** Menu items are styled as a list with a 2px bottom border. The item name is in Hanken Grotesk Bold, and the price is in Anton (Price-Display) aligned to the right.\n- **Input Fields:** Sharp 0px corners, 2px Deep Charcoal border. Labels use Space Mono in all caps above the field.\n- **Cards:** No standard cards. Instead, use \"Framed Sections\"—large 2px charcoal boxes that contain imagery and text, often with the headline overlapping the top border.\n- **Chips/Badges:** Use Space Mono, white text on Burnt Umber background, 0px radius. Used for tags like \"Award Winning\" or \"Sold Out.\"\n- **Checkboxes:** Square, 2px border, filled with a Deep Charcoal \"X\" when selected, rather than a checkmark.",
+          "theme": {
+            "bodyFont": "HANKEN_GROTESK",
+            "bodyFontFamily": "Hanken Grotesk",
+            "colorMode": "LIGHT",
+            "colorVariant": "FIDELITY",
+            "customColor": "#1a1a1a",
+            "designMd": "---\nname: Smoky Industrial Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#444748'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#795553'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffcfcb'\n  on-secondary-container: '#7a5653'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2f1500'\n  on-tertiary-container: '#c76c00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdad7'\n  secondary-fixed-dim: '#eabcb8'\n  on-secondary-fixed: '#2e1413'\n  on-secondary-fixed-variant: '#5f3e3c'\n  tertiary-fixed: '#ffdcc3'\n  tertiary-fixed-dim: '#ffb77d'\n  on-tertiary-fixed: '#2f1500'\n  on-tertiary-fixed-variant: '#6e3900'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  headline-xl:\n    fontFamily: Anton\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 90%\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 100%\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Anton\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: 100%\n  headline-md:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 110%\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 160%\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 150%\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 120%\n    letterSpacing: 0.1em\n  price-display:\n    fontFamily: Anton\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 100%\nspacing:\n  stack-xs: 4px\n  stack-sm: 8px\n  stack-md: 16px\n  stack-lg: 32px\n  stack-xl: 64px\n  gutter: 24px\n  margin-edge: 40px\n---\n\n## Brand & Style\n\nThe design system establishes a premium, \"Smoky Industrial Editorial\" identity for a local BBQ legend. It captures the raw grit of a pitmaster’s workspace and elevates it with the refined pacing of a high-end food magazine. The brand personality is authoritative, seasoned, and unapologetically bold.\n\nThe style leans into a **Modern Industrial** aesthetic with **Editorial** influences:\n- **High-Contrast Typography:** Massive, rugged headlines paired with utilitarian body text.\n- **Asymmetrical Layouts:** Avoiding standard card grids in favor of intentional density and overlapping elements.\n- **Tactile Boundaries:** Heavy 2px–4px borders that evoke butcher shop signage and industrial steel framing.\n- **Negative Space:** Generous \"Paper Cream\" whitespace to allow high-quality photography of smoked meats to breathe.\n\n## Colors\n\nThe palette is rooted in the materials of the craft: soot, wood, flame, and parchment.\n\n- **Deep Charcoal (#1A1A1A):** Used for primary text, heavy borders, and structural elements. It provides the \"ink\" on the page.\n- **Paper Cream (#F9F7F2):** The universal background color. It avoids the clinical feel of pure white, providing a warm, organic texture reminiscent of butcher paper.\n- **Smoked Amber (#D97706):** An accent color used sparingly for calls to action, highlights, and status indicators. It represents the glow of the embers.\n- **Burnt Umber (#4A2C2A):** Used for secondary surfaces, subtle textures, and decorative accents to add depth without losing the industrial vibe.\n\n## Typography\n\nThe typography strategy relies on the tension between the \"Rugged Display\" and the \"Technical Utility.\"\n\n- **Headlines:** Use **Anton** for its heavy, condensed, and impactful presence. It should feel like it was stamped onto a wooden crate. In editorial sections, use extreme scale (84px+) to create visual anchors.\n- **Body:** Use **Hanken Grotesk** for all long-form content. Its clean, contemporary lines provide a necessary \"modern\" counter-balance to the gritty headlines.\n- **Labels & Data:** Use **Space Mono** for prices, nutritional info, or menu categories. This reinforces the industrial/utilitarian butcher shop feel.\n\n## Layout & Spacing\n\nThis design system eschews standard bootstrap-style grids in favor of a **Modular Editorial Layout**.\n\n- **Density vs. Air:** Menu sections use high density with tight vertical spacing (stack-sm) and 2px dividers to mimic vintage price lists. Narrative sections (About, Process) use expansive margins (stack-xl) to evoke luxury.\n- **Asymmetry:** Content blocks should be offset. For example, a headline may start on column 2 of a 12-column grid while the body text starts on column 5.\n- **Borders as Structure:** Use 2px–4px Deep Charcoal borders to define sections instead of background color changes. \n- **Breakpoints:**\n  - **Desktop (1280px+):** 12-column grid, 40px outer margins.\n  - **Tablet (768px):** 6-column grid, 24px outer margins.\n  - **Mobile (375px):** 2-column grid, 16px outer margins. Headlines scale down significantly to maintain legibility.\n\n## Elevation & Depth\n\nDepth is achieved through **Layered Flatness** rather than shadows. \n\n- **Tonal Stacking:** Use \"Burnt Umber\" surfaces behind \"Paper Cream\" content blocks to create a physical sense of stacked paper or boards.\n- **Heavy Outlines:** All interactive elements and containers use a solid 2px Deep Charcoal border. \n- **No Shadows:** Shadows are strictly prohibited. The \"weight\" of the UI comes from thickness of lines and opacity of the Smoked Amber accents.\n- **Smoke Textures:** Apply a low-opacity (5-10%) grain or smoke texture overlay on the Burnt Umber or Deep Charcoal backgrounds to add organic grit.\n\n## Shapes\n\nThe shape language is **Strictly Geometric and Sharp**.\n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. This reinforces the industrial, \"cut-with-a-cleaver\" aesthetic.\n- **Thick Strokes:** Use a consistent 2px stroke for standard components and a 4px stroke for primary call-to-action buttons or featured \"Hero\" sections.\n- **Angled Accents:** Occasional 45-degree corner \"cuts\" can be used on decorative elements to mimic industrial metalwork.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Charcoal with Paper Cream text in \"Label-Caps\" typography. Secondary buttons are Paper Cream with a 2px Deep Charcoal border. Interaction state: Fill with Smoked Amber on hover.\n- **The \"Butcher List\":** Menu items are styled as a list with a 2px bottom border. The item name is in Hanken Grotesk Bold, and the price is in Anton (Price-Display) aligned to the right.\n- **Input Fields:** Sharp 0px corners, 2px Deep Charcoal border. Labels use Space Mono in all caps above the field.\n- **Cards:** No standard cards. Instead, use \"Framed Sections\"—large 2px charcoal boxes that contain imagery and text, often with the headline overlapping the top border.\n- **Chips/Badges:** Use Space Mono, white text on Burnt Umber background, 0px radius. Used for tags like \"Award Winning\" or \"Sold Out.\"\n- **Checkboxes:** Square, 2px border, filled with a Deep Charcoal \"X\" when selected, rather than a checkmark.",
+            "font": "ANTON",
+            "headlineFont": "ANTON",
+            "headlineFontFamily": "Anton",
+            "labelFont": "SPACE_MONO",
+            "labelFontFamily": "Space Mono",
+            "namedColors": {
+              "background": "#fbf9f4",
+              "error": "#ba1a1a",
+              "error_container": "#ffdad6",
+              "inverse_on_surface": "#f2f1ec",
+              "inverse_primary": "#c8c6c5",
+              "inverse_surface": "#30312e",
+              "on_background": "#1b1c19",
+              "on_error": "#ffffff",
+              "on_error_container": "#93000a",
+              "on_primary": "#ffffff",
+              "on_primary_container": "#858383",
+              "on_primary_fixed": "#1c1b1b",
+              "on_primary_fixed_variant": "#474746",
+              "on_secondary": "#ffffff",
+              "on_secondary_container": "#7a5653",
+              "on_secondary_fixed": "#2e1413",
+              "on_secondary_fixed_variant": "#5f3e3c",
+              "on_surface": "#1b1c19",
+              "on_surface_variant": "#444748",
+              "on_tertiary": "#ffffff",
+              "on_tertiary_container": "#c76c00",
+              "on_tertiary_fixed": "#2f1500",
+              "on_tertiary_fixed_variant": "#6e3900",
+              "outline": "#747878",
+              "outline_variant": "#c4c7c7",
+              "primary": "#000000",
+              "primary_container": "#1c1b1b",
+              "primary_fixed": "#e5e2e1",
+              "primary_fixed_dim": "#c8c6c5",
+              "secondary": "#795553",
+              "secondary_container": "#ffcfcb",
+              "secondary_fixed": "#ffdad7",
+              "secondary_fixed_dim": "#eabcb8",
+              "surface": "#fbf9f4",
+              "surface_bright": "#fbf9f4",
+              "surface_container": "#f0eee9",
+              "surface_container_high": "#eae8e3",
+              "surface_container_highest": "#e4e2dd",
+              "surface_container_low": "#f5f3ee",
+              "surface_container_lowest": "#ffffff",
+              "surface_dim": "#dbdad5",
+              "surface_tint": "#5f5e5e",
+              "surface_variant": "#e4e2dd",
+              "tertiary": "#000000",
+              "tertiary_container": "#2f1500",
+              "tertiary_fixed": "#ffdcc3",
+              "tertiary_fixed_dim": "#ffb77d"
+            },
+            "overrideNeutralColor": "#f9f7f2",
+            "overridePrimaryColor": "#1a1a1a",
+            "overrideSecondaryColor": "#4a2c2a",
+            "overrideTertiaryColor": "#d97706",
+            "spacing": {
+              "gutter": "24px",
+              "margin-edge": "40px",
+              "stack-lg": "32px",
+              "stack-md": "16px",
+              "stack-sm": "8px",
+              "stack-xl": "64px",
+              "stack-xs": "4px"
+            },
+            "spacingScale": 2,
+            "typography": {
+              "body-lg": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "20px",
+                "fontWeight": "400",
+                "lineHeight": "160%"
+              },
+              "body-md": {
+                "fontFamily": "Hanken Grotesk",
+                "fontSize": "16px",
+                "fontWeight": "400",
+                "lineHeight": "150%"
+              },
+              "headline-lg": {
+                "fontFamily": "Anton",
+                "fontSize": "48px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.01em",
+                "lineHeight": "100%"
+              },
+              "headline-lg-mobile": {
+                "fontFamily": "Anton",
+                "fontSize": "36px",
+                "fontWeight": "400",
+                "lineHeight": "100%"
+              },
+              "headline-md": {
+                "fontFamily": "Anton",
+                "fontSize": "32px",
+                "fontWeight": "400",
+                "lineHeight": "110%"
+              },
+              "headline-xl": {
+                "fontFamily": "Anton",
+                "fontSize": "84px",
+                "fontWeight": "400",
+                "letterSpacing": "-0.02em",
+                "lineHeight": "90%"
+              },
+              "label-caps": {
+                "fontFamily": "Space Mono",
+                "fontSize": "14px",
+                "fontWeight": "700",
+                "letterSpacing": "0.1em",
+                "lineHeight": "120%"
+              },
+              "price-display": {
+                "fontFamily": "Anton",
+                "fontSize": "24px",
+                "fontWeight": "400",
+                "lineHeight": "100%"
+              }
+            }
+          }
+        },
+        "name": "assets/eff73d85a8ac4365b518249142f2ee13",
+        "version": "1"
+      }
+    },
+    {
+      "design": {
+        "screens": [
+          {
+            "designSystem": {
+              "designSystem": {
+                "displayName": "Smoky Industrial Editorial",
+                "styleGuidelines": "## Brand & Style\n\nThe design system establishes a premium, \"Smoky Industrial Editorial\" identity for a local BBQ legend. It captures the raw grit of a pitmaster’s workspace and elevates it with the refined pacing of a high-end food magazine. The brand personality is authoritative, seasoned, and unapologetically bold.\n\nThe style leans into a **Modern Industrial** aesthetic with **Editorial** influences:\n- **High-Contrast Typography:** Massive, rugged headlines paired with utilitarian body text.\n- **Asymmetrical Layouts:** Avoiding standard card grids in favor of intentional density and overlapping elements.\n- **Tactile Boundaries:** Heavy 2px–4px borders that evoke butcher shop signage and industrial steel framing.\n- **Negative Space:** Generous \"Paper Cream\" whitespace to allow high-quality photography of smoked meats to breathe.\n\n## Layout & Spacing\n\nThis design system eschews standard bootstrap-style grids in favor of a **Modular Editorial Layout**.\n\n- **Density vs. Air:** Menu sections use high density with tight vertical spacing (stack-sm) and 2px dividers to mimic vintage price lists. Narrative sections (About, Process) use expansive margins (stack-xl) to evoke luxury.\n- **Asymmetry:** Content blocks should be offset. For example, a headline may start on column 2 of a 12-column grid while the body text starts on column 5.\n- **Borders as Structure:** Use 2px–4px Deep Charcoal borders to define sections instead of background color changes. \n- **Breakpoints:**\n  - **Desktop (1280px+):** 12-column grid, 40px outer margins.\n  - **Tablet (768px):** 6-column grid, 24px outer margins.\n  - **Mobile (375px):** 2-column grid, 16px outer margins. Headlines scale down significantly to maintain legibility.\n\n## Elevation & Depth\n\nDepth is achieved through **Layered Flatness** rather than shadows. \n\n- **Tonal Stacking:** Use \"Burnt Umber\" surfaces behind \"Paper Cream\" content blocks to create a physical sense of stacked paper or boards.\n- **Heavy Outlines:** All interactive elements and containers use a solid 2px Deep Charcoal border. \n- **No Shadows:** Shadows are strictly prohibited. The \"weight\" of the UI comes from thickness of lines and opacity of the Smoked Amber accents.\n- **Smoke Textures:** Apply a low-opacity (5-10%) grain or smoke texture overlay on the Burnt Umber or Deep Charcoal backgrounds to add organic grit.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Charcoal with Paper Cream text in \"Label-Caps\" typography. Secondary buttons are Paper Cream with a 2px Deep Charcoal border. Interaction state: Fill with Smoked Amber on hover.\n- **The \"Butcher List\":** Menu items are styled as a list with a 2px bottom border. The item name is in Hanken Grotesk Bold, and the price is in Anton (Price-Display) aligned to the right.\n- **Input Fields:** Sharp 0px corners, 2px Deep Charcoal border. Labels use Space Mono in all caps above the field.\n- **Cards:** No standard cards. Instead, use \"Framed Sections\"—large 2px charcoal boxes that contain imagery and text, often with the headline overlapping the top border.\n- **Chips/Badges:** Use Space Mono, white text on Burnt Umber background, 0px radius. Used for tags like \"Award Winning\" or \"Sold Out.\"\n- **Checkboxes:** Square, 2px border, filled with a Deep Charcoal \"X\" when selected, rather than a checkmark.",
+                "theme": {
+                  "bodyFont": "HANKEN_GROTESK",
+                  "bodyFontFamily": "Hanken Grotesk",
+                  "colorMode": "LIGHT",
+                  "colorVariant": "FIDELITY",
+                  "customColor": "#1a1a1a",
+                  "designMd": "---\nname: Smoky Industrial Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#444748'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#795553'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffcfcb'\n  on-secondary-container: '#7a5653'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2f1500'\n  on-tertiary-container: '#c76c00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdad7'\n  secondary-fixed-dim: '#eabcb8'\n  on-secondary-fixed: '#2e1413'\n  on-secondary-fixed-variant: '#5f3e3c'\n  tertiary-fixed: '#ffdcc3'\n  tertiary-fixed-dim: '#ffb77d'\n  on-tertiary-fixed: '#2f1500'\n  on-tertiary-fixed-variant: '#6e3900'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  headline-xl:\n    fontFamily: Anton\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 90%\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 100%\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Anton\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: 100%\n  headline-md:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 110%\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 160%\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 150%\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 120%\n    letterSpacing: 0.1em\n  price-display:\n    fontFamily: Anton\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 100%\nspacing:\n  stack-xs: 4px\n  stack-sm: 8px\n  stack-md: 16px\n  stack-lg: 32px\n  stack-xl: 64px\n  gutter: 24px\n  margin-edge: 40px\n---\n\n## Brand & Style\n\nThe design system establishes a premium, \"Smoky Industrial Editorial\" identity for a local BBQ legend. It captures the raw grit of a pitmaster’s workspace and elevates it with the refined pacing of a high-end food magazine. The brand personality is authoritative, seasoned, and unapologetically bold.\n\nThe style leans into a **Modern Industrial** aesthetic with **Editorial** influences:\n- **High-Contrast Typography:** Massive, rugged headlines paired with utilitarian body text.\n- **Asymmetrical Layouts:** Avoiding standard card grids in favor of intentional density and overlapping elements.\n- **Tactile Boundaries:** Heavy 2px–4px borders that evoke butcher shop signage and industrial steel framing.\n- **Negative Space:** Generous \"Paper Cream\" whitespace to allow high-quality photography of smoked meats to breathe.\n\n## Colors\n\nThe palette is rooted in the materials of the craft: soot, wood, flame, and parchment.\n\n- **Deep Charcoal (#1A1A1A):** Used for primary text, heavy borders, and structural elements. It provides the \"ink\" on the page.\n- **Paper Cream (#F9F7F2):** The universal background color. It avoids the clinical feel of pure white, providing a warm, organic texture reminiscent of butcher paper.\n- **Smoked Amber (#D97706):** An accent color used sparingly for calls to action, highlights, and status indicators. It represents the glow of the embers.\n- **Burnt Umber (#4A2C2A):** Used for secondary surfaces, subtle textures, and decorative accents to add depth without losing the industrial vibe.\n\n## Typography\n\nThe typography strategy relies on the tension between the \"Rugged Display\" and the \"Technical Utility.\"\n\n- **Headlines:** Use **Anton** for its heavy, condensed, and impactful presence. It should feel like it was stamped onto a wooden crate. In editorial sections, use extreme scale (84px+) to create visual anchors.\n- **Body:** Use **Hanken Grotesk** for all long-form content. Its clean, contemporary lines provide a necessary \"modern\" counter-balance to the gritty headlines.\n- **Labels & Data:** Use **Space Mono** for prices, nutritional info, or menu categories. This reinforces the industrial/utilitarian butcher shop feel.\n\n## Layout & Spacing\n\nThis design system eschews standard bootstrap-style grids in favor of a **Modular Editorial Layout**.\n\n- **Density vs. Air:** Menu sections use high density with tight vertical spacing (stack-sm) and 2px dividers to mimic vintage price lists. Narrative sections (About, Process) use expansive margins (stack-xl) to evoke luxury.\n- **Asymmetry:** Content blocks should be offset. For example, a headline may start on column 2 of a 12-column grid while the body text starts on column 5.\n- **Borders as Structure:** Use 2px–4px Deep Charcoal borders to define sections instead of background color changes. \n- **Breakpoints:**\n  - **Desktop (1280px+):** 12-column grid, 40px outer margins.\n  - **Tablet (768px):** 6-column grid, 24px outer margins.\n  - **Mobile (375px):** 2-column grid, 16px outer margins. Headlines scale down significantly to maintain legibility.\n\n## Elevation & Depth\n\nDepth is achieved through **Layered Flatness** rather than shadows. \n\n- **Tonal Stacking:** Use \"Burnt Umber\" surfaces behind \"Paper Cream\" content blocks to create a physical sense of stacked paper or boards.\n- **Heavy Outlines:** All interactive elements and containers use a solid 2px Deep Charcoal border. \n- **No Shadows:** Shadows are strictly prohibited. The \"weight\" of the UI comes from thickness of lines and opacity of the Smoked Amber accents.\n- **Smoke Textures:** Apply a low-opacity (5-10%) grain or smoke texture overlay on the Burnt Umber or Deep Charcoal backgrounds to add organic grit.\n\n## Shapes\n\nThe shape language is **Strictly Geometric and Sharp**.\n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. This reinforces the industrial, \"cut-with-a-cleaver\" aesthetic.\n- **Thick Strokes:** Use a consistent 2px stroke for standard components and a 4px stroke for primary call-to-action buttons or featured \"Hero\" sections.\n- **Angled Accents:** Occasional 45-degree corner \"cuts\" can be used on decorative elements to mimic industrial metalwork.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Charcoal with Paper Cream text in \"Label-Caps\" typography. Secondary buttons are Paper Cream with a 2px Deep Charcoal border. Interaction state: Fill with Smoked Amber on hover.\n- **The \"Butcher List\":** Menu items are styled as a list with a 2px bottom border. The item name is in Hanken Grotesk Bold, and the price is in Anton (Price-Display) aligned to the right.\n- **Input Fields:** Sharp 0px corners, 2px Deep Charcoal border. Labels use Space Mono in all caps above the field.\n- **Cards:** No standard cards. Instead, use \"Framed Sections\"—large 2px charcoal boxes that contain imagery and text, often with the headline overlapping the top border.\n- **Chips/Badges:** Use Space Mono, white text on Burnt Umber background, 0px radius. Used for tags like \"Award Winning\" or \"Sold Out.\"\n- **Checkboxes:** Square, 2px border, filled with a Deep Charcoal \"X\" when selected, rather than a checkmark.",
+                  "font": "ANTON",
+                  "headlineFont": "ANTON",
+                  "headlineFontFamily": "Anton",
+                  "labelFont": "SPACE_MONO",
+                  "labelFontFamily": "Space Mono",
+                  "namedColors": {
+                    "background": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "error_container": "#ffdad6",
+                    "inverse_on_surface": "#f2f1ec",
+                    "inverse_primary": "#c8c6c5",
+                    "inverse_surface": "#30312e",
+                    "on_background": "#1b1c19",
+                    "on_error": "#ffffff",
+                    "on_error_container": "#93000a",
+                    "on_primary": "#ffffff",
+                    "on_primary_container": "#858383",
+                    "on_primary_fixed": "#1c1b1b",
+                    "on_primary_fixed_variant": "#474746",
+                    "on_secondary": "#ffffff",
+                    "on_secondary_container": "#7a5653",
+                    "on_secondary_fixed": "#2e1413",
+                    "on_secondary_fixed_variant": "#5f3e3c",
+                    "on_surface": "#1b1c19",
+                    "on_surface_variant": "#444748",
+                    "on_tertiary": "#ffffff",
+                    "on_tertiary_container": "#c76c00",
+                    "on_tertiary_fixed": "#2f1500",
+                    "on_tertiary_fixed_variant": "#6e3900",
+                    "outline": "#747878",
+                    "outline_variant": "#c4c7c7",
+                    "primary": "#000000",
+                    "primary_container": "#1c1b1b",
+                    "primary_fixed": "#e5e2e1",
+                    "primary_fixed_dim": "#c8c6c5",
+                    "secondary": "#795553",
+                    "secondary_container": "#ffcfcb",
+                    "secondary_fixed": "#ffdad7",
+                    "secondary_fixed_dim": "#eabcb8",
+                    "surface": "#fbf9f4",
+                    "surface_bright": "#fbf9f4",
+                    "surface_container": "#f0eee9",
+                    "surface_container_high": "#eae8e3",
+                    "surface_container_highest": "#e4e2dd",
+                    "surface_container_low": "#f5f3ee",
+                    "surface_container_lowest": "#ffffff",
+                    "surface_dim": "#dbdad5",
+                    "surface_tint": "#5f5e5e",
+                    "surface_variant": "#e4e2dd",
+                    "tertiary": "#000000",
+                    "tertiary_container": "#2f1500",
+                    "tertiary_fixed": "#ffdcc3",
+                    "tertiary_fixed_dim": "#ffb77d"
+                  },
+                  "overrideNeutralColor": "#f9f7f2",
+                  "overridePrimaryColor": "#1a1a1a",
+                  "overrideSecondaryColor": "#4a2c2a",
+                  "overrideTertiaryColor": "#d97706",
+                  "spacing": {
+                    "gutter": "24px",
+                    "margin-edge": "40px",
+                    "stack-lg": "32px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "stack-xl": "64px",
+                    "stack-xs": "4px"
+                  },
+                  "spacingScale": 2,
+                  "typography": {
+                    "body-lg": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "20px",
+                      "fontWeight": "400",
+                      "lineHeight": "160%"
+                    },
+                    "body-md": {
+                      "fontFamily": "Hanken Grotesk",
+                      "fontSize": "16px",
+                      "fontWeight": "400",
+                      "lineHeight": "150%"
+                    },
+                    "headline-lg": {
+                      "fontFamily": "Anton",
+                      "fontSize": "48px",
+                      "fontWeight": "400",
+                      "letterSpacing": "-0.01em",
+                      "lineHeight": "100%"
+                    },
+                    "headline-lg-mobile": {
+                      "fontFamily": "Anton",
+                      "fontSize": "36px",
+                      "fontWeight": "400",
+                      "lineHeight": "100%"
+                    },
+                    "headline-md": {
+                      "fontFamily": "Anton",
+                      "fontSize": "32px",
+                      "fontWeight": "400",
+                      "lineHeight": "110%"
+                    },
+                    "headline-xl": {
+                      "fontFamily": "Anton",
+                      "fontSize": "84px",
+                      "fontWeight": "400",
+                      "letterSpacing": "-0.02em",
+                      "lineHeight": "90%"
+                    },
+                    "label-caps": {
+                      "fontFamily": "Space Mono",
+                      "fontSize": "14px",
+                      "fontWeight": "700",
+                      "letterSpacing": "0.1em",
+                      "lineHeight": "120%"
+                    },
+                    "price-display": {
+                      "fontFamily": "Anton",
+                      "fontSize": "24px",
+                      "fontWeight": "400",
+                      "lineHeight": "100%"
+                    }
+                  }
+                }
+              },
+              "name": "assets/eff73d85a8ac4365b518249142f2ee13",
+              "version": "1"
+            },
+            "deviceType": "DESKTOP",
+            "generatedBy": "figaro_agent",
+            "height": "8842",
+            "htmlCode": {
+              "downloadUrl": "https://contribution.usercontent.google.com/download?c=CgthaWRhX2NvZGVmeBJ8Eh1hcHBfY29tcGFuaW9uX2dlbmVyYXRlZF9maWxlcxpbCiVodG1sXzM3NTg0M2JjNDFhYjQyZjliZTBiNGQ5NzI0MGI1MTVhEgsSBxCuyafx8hkYAZIBJAoKcHJvamVjdF9pZBIWQhQxNDAyNDY3MTQ5MDg4Mjc2MTkwOA&filename=&opi=96797242",
+              "mimeType": "text/html",
+              "name": "projects/14024671490882761908/files/8e19198c0eb14bcea13e379049aa126a"
+            },
+            "id": "6201347d5b134ee8b16f295be5b60e3e",
+            "name": "projects/14024671490882761908/screens/6201347d5b134ee8b16f295be5b60e3e",
+            "prompt": "Design a bespoke, premium editorial homepage for Fatback's Barbecue. \n\nLayout Requirements:\n- Header: Sticky TopNavBar from components.\n- Hero: \"Fatback's Barbecue: The Heart of Dayton BBQ.\" Use a full-bleed, high-contrast atmospheric image of wood smoke or a slow-cooked brisket. Text should be bold, overlapping the image in an asymmetrical editorial style.\n- #credibility: \"Dayton's Choice for Real Smoke.\" A section featuring three bold typographic blocks highlighting awards, years in business, and the \"Real Wood\" promise. \n- Services/Offerings: \"The Daily Board.\" A high-density, menu-style section. Instead of cards, use a list format with thick horizontal rules and Smoked Amber accents. Categories: BBQ Trays, Sandwiches, and Sides.\n- About: \"Our Story.\" Use generous whitespace here. Large, serif drop cap for the body text. Focus on the authentic Dayton roots and traditional smoking methods.\n- Visit (#visit): \"Find Us on Linden Ave.\" include address (1334 Linden Ave, Dayton, OH 45410) and the required map placeholder: <div class=\"map-slot relative overflow-hidden min-h-[400px]\" data-map-slot aria-label=\"Map\"></div>.\n- Contact: \"Catering & Inquiries.\" A 2-column layout with contact details on the left (Phone: (937) 254-7427, Email: FatBacksBarbecue@gmail.com) and a modern, industrial contact form on the right.\n- Footer: Footer component.\n\nStyle Guidelines:\n- Background: Paper Cream (#F9F7F2).\n- Typography: Heavy condensed headings (Anton-like) and clean body text.\n- Motif: Use 2px solid charcoal borders and subtle parchment/smoke textures. No generic rounded cards. Everything should feel hand-crafted and industrial.\n- Interactive: Smooth scroll links, hover effects that shift color to Smoked Amber.",
+            "screenMetadata": {
+              "agentType": "PRO_AGENT",
+              "status": "COMPLETE"
+            },
+            "screenType": "DESIGN",
+            "screenshot": {
+              "downloadUrl": "https://lh3.googleusercontent.com/aida/AP1WRLvjzXz7rYq4f0U9kLmrpKAX56LMzjrcszB7yB6cR4g-ChN5hJPIK-tw6Kju8w4Io7BSXyGu20iGP3hvNexmsbQVHY3dhpznOIQDpLJBpqHh9CF3UtKD3CRVLZsvuszlzz2HcL9-EC-DIWdr5ui907zpSgzn3SyOm2FfFpMvVUTM9jEYLx9ntO2QDgMc7hxFL4MgLX-i4eXowmy_q-GjvzxEFIsBg02L85L8pjy1odDxEkzvv2hubaVNfys0",
+              "name": "projects/14024671490882761908/files/e28c35e59ada4d94b497866dc9337d5b"
+            },
+            "theme": {
+              "bodyFont": "HANKEN_GROTESK",
+              "bodyFontFamily": "Hanken Grotesk",
+              "colorMode": "LIGHT",
+              "colorVariant": "FIDELITY",
+              "customColor": "#1a1a1a",
+              "designMd": "---\nname: Smoky Industrial Editorial\ncolors:\n  surface: '#fbf9f4'\n  surface-dim: '#dbdad5'\n  surface-bright: '#fbf9f4'\n  surface-container-lowest: '#ffffff'\n  surface-container-low: '#f5f3ee'\n  surface-container: '#f0eee9'\n  surface-container-high: '#eae8e3'\n  surface-container-highest: '#e4e2dd'\n  on-surface: '#1b1c19'\n  on-surface-variant: '#444748'\n  inverse-surface: '#30312e'\n  inverse-on-surface: '#f2f1ec'\n  outline: '#747878'\n  outline-variant: '#c4c7c7'\n  surface-tint: '#5f5e5e'\n  primary: '#000000'\n  on-primary: '#ffffff'\n  primary-container: '#1c1b1b'\n  on-primary-container: '#858383'\n  inverse-primary: '#c8c6c5'\n  secondary: '#795553'\n  on-secondary: '#ffffff'\n  secondary-container: '#ffcfcb'\n  on-secondary-container: '#7a5653'\n  tertiary: '#000000'\n  on-tertiary: '#ffffff'\n  tertiary-container: '#2f1500'\n  on-tertiary-container: '#c76c00'\n  error: '#ba1a1a'\n  on-error: '#ffffff'\n  error-container: '#ffdad6'\n  on-error-container: '#93000a'\n  primary-fixed: '#e5e2e1'\n  primary-fixed-dim: '#c8c6c5'\n  on-primary-fixed: '#1c1b1b'\n  on-primary-fixed-variant: '#474746'\n  secondary-fixed: '#ffdad7'\n  secondary-fixed-dim: '#eabcb8'\n  on-secondary-fixed: '#2e1413'\n  on-secondary-fixed-variant: '#5f3e3c'\n  tertiary-fixed: '#ffdcc3'\n  tertiary-fixed-dim: '#ffb77d'\n  on-tertiary-fixed: '#2f1500'\n  on-tertiary-fixed-variant: '#6e3900'\n  background: '#fbf9f4'\n  on-background: '#1b1c19'\n  surface-variant: '#e4e2dd'\ntypography:\n  headline-xl:\n    fontFamily: Anton\n    fontSize: 84px\n    fontWeight: '400'\n    lineHeight: 90%\n    letterSpacing: -0.02em\n  headline-lg:\n    fontFamily: Anton\n    fontSize: 48px\n    fontWeight: '400'\n    lineHeight: 100%\n    letterSpacing: -0.01em\n  headline-lg-mobile:\n    fontFamily: Anton\n    fontSize: 36px\n    fontWeight: '400'\n    lineHeight: 100%\n  headline-md:\n    fontFamily: Anton\n    fontSize: 32px\n    fontWeight: '400'\n    lineHeight: 110%\n  body-lg:\n    fontFamily: Hanken Grotesk\n    fontSize: 20px\n    fontWeight: '400'\n    lineHeight: 160%\n  body-md:\n    fontFamily: Hanken Grotesk\n    fontSize: 16px\n    fontWeight: '400'\n    lineHeight: 150%\n  label-caps:\n    fontFamily: Space Mono\n    fontSize: 14px\n    fontWeight: '700'\n    lineHeight: 120%\n    letterSpacing: 0.1em\n  price-display:\n    fontFamily: Anton\n    fontSize: 24px\n    fontWeight: '400'\n    lineHeight: 100%\nspacing:\n  stack-xs: 4px\n  stack-sm: 8px\n  stack-md: 16px\n  stack-lg: 32px\n  stack-xl: 64px\n  gutter: 24px\n  margin-edge: 40px\n---\n\n## Brand & Style\n\nThe design system establishes a premium, \"Smoky Industrial Editorial\" identity for a local BBQ legend. It captures the raw grit of a pitmaster’s workspace and elevates it with the refined pacing of a high-end food magazine. The brand personality is authoritative, seasoned, and unapologetically bold.\n\nThe style leans into a **Modern Industrial** aesthetic with **Editorial** influences:\n- **High-Contrast Typography:** Massive, rugged headlines paired with utilitarian body text.\n- **Asymmetrical Layouts:** Avoiding standard card grids in favor of intentional density and overlapping elements.\n- **Tactile Boundaries:** Heavy 2px–4px borders that evoke butcher shop signage and industrial steel framing.\n- **Negative Space:** Generous \"Paper Cream\" whitespace to allow high-quality photography of smoked meats to breathe.\n\n## Colors\n\nThe palette is rooted in the materials of the craft: soot, wood, flame, and parchment.\n\n- **Deep Charcoal (#1A1A1A):** Used for primary text, heavy borders, and structural elements. It provides the \"ink\" on the page.\n- **Paper Cream (#F9F7F2):** The universal background color. It avoids the clinical feel of pure white, providing a warm, organic texture reminiscent of butcher paper.\n- **Smoked Amber (#D97706):** An accent color used sparingly for calls to action, highlights, and status indicators. It represents the glow of the embers.\n- **Burnt Umber (#4A2C2A):** Used for secondary surfaces, subtle textures, and decorative accents to add depth without losing the industrial vibe.\n\n## Typography\n\nThe typography strategy relies on the tension between the \"Rugged Display\" and the \"Technical Utility.\"\n\n- **Headlines:** Use **Anton** for its heavy, condensed, and impactful presence. It should feel like it was stamped onto a wooden crate. In editorial sections, use extreme scale (84px+) to create visual anchors.\n- **Body:** Use **Hanken Grotesk** for all long-form content. Its clean, contemporary lines provide a necessary \"modern\" counter-balance to the gritty headlines.\n- **Labels & Data:** Use **Space Mono** for prices, nutritional info, or menu categories. This reinforces the industrial/utilitarian butcher shop feel.\n\n## Layout & Spacing\n\nThis design system eschews standard bootstrap-style grids in favor of a **Modular Editorial Layout**.\n\n- **Density vs. Air:** Menu sections use high density with tight vertical spacing (stack-sm) and 2px dividers to mimic vintage price lists. Narrative sections (About, Process) use expansive margins (stack-xl) to evoke luxury.\n- **Asymmetry:** Content blocks should be offset. For example, a headline may start on column 2 of a 12-column grid while the body text starts on column 5.\n- **Borders as Structure:** Use 2px–4px Deep Charcoal borders to define sections instead of background color changes. \n- **Breakpoints:**\n  - **Desktop (1280px+):** 12-column grid, 40px outer margins.\n  - **Tablet (768px):** 6-column grid, 24px outer margins.\n  - **Mobile (375px):** 2-column grid, 16px outer margins. Headlines scale down significantly to maintain legibility.\n\n## Elevation & Depth\n\nDepth is achieved through **Layered Flatness** rather than shadows. \n\n- **Tonal Stacking:** Use \"Burnt Umber\" surfaces behind \"Paper Cream\" content blocks to create a physical sense of stacked paper or boards.\n- **Heavy Outlines:** All interactive elements and containers use a solid 2px Deep Charcoal border. \n- **No Shadows:** Shadows are strictly prohibited. The \"weight\" of the UI comes from thickness of lines and opacity of the Smoked Amber accents.\n- **Smoke Textures:** Apply a low-opacity (5-10%) grain or smoke texture overlay on the Burnt Umber or Deep Charcoal backgrounds to add organic grit.\n\n## Shapes\n\nThe shape language is **Strictly Geometric and Sharp**.\n\n- **Zero Radius:** All buttons, cards, and input fields must have a 0px border radius. This reinforces the industrial, \"cut-with-a-cleaver\" aesthetic.\n- **Thick Strokes:** Use a consistent 2px stroke for standard components and a 4px stroke for primary call-to-action buttons or featured \"Hero\" sections.\n- **Angled Accents:** Occasional 45-degree corner \"cuts\" can be used on decorative elements to mimic industrial metalwork.\n\n## Components\n\n- **Buttons:** Primary buttons are solid Deep Charcoal with Paper Cream text in \"Label-Caps\" typography. Secondary buttons are Paper Cream with a 2px Deep Charcoal border. Interaction state: Fill with Smoked Amber on hover.\n- **The \"Butcher List\":** Menu items are styled as a list with a 2px bottom border. The item name is in Hanken Grotesk Bold, and the price is in Anton (Price-Display) aligned to the right.\n- **Input Fields:** Sharp 0px corners, 2px Deep Charcoal border. Labels use Space Mono in all caps above the field.\n- **Cards:** No standard cards. Instead, use \"Framed Sections\"—large 2px charcoal boxes that contain imagery and text, often with the headline overlapping the top border.\n- **Chips/Badges:** Use Space Mono, white text on Burnt Umber background, 0px radius. Used for tags like \"Award Winning\" or \"Sold Out.\"\n- **Checkboxes:** Square, 2px border, filled with a Deep Charcoal \"X\" when selected, rather than a checkmark.",
+              "font": "ANTON",
+              "headlineFont": "ANTON",
+              "headlineFontFamily": "Anton",
+              "labelFont": "SPACE_MONO",
+              "labelFontFamily": "Space Mono",
+              "namedColors": {
+                "background": "#fbf9f4",
+                "error": "#ba1a1a",
+                "error_container": "#ffdad6",
+                "inverse_on_surface": "#f2f1ec",
+                "inverse_primary": "#c8c6c5",
+                "inverse_surface": "#30312e",
+                "on_background": "#1b1c19",
+                "on_error": "#ffffff",
+                "on_error_container": "#93000a",
+                "on_primary": "#ffffff",
+                "on_primary_container": "#858383",
+                "on_primary_fixed": "#1c1b1b",
+                "on_primary_fixed_variant": "#474746",
+                "on_secondary": "#ffffff",
+                "on_secondary_container": "#7a5653",
+                "on_secondary_fixed": "#2e1413",
+                "on_secondary_fixed_variant": "#5f3e3c",
+                "on_surface": "#1b1c19",
+                "on_surface_variant": "#444748",
+                "on_tertiary": "#ffffff",
+                "on_tertiary_container": "#c76c00",
+                "on_tertiary_fixed": "#2f1500",
+                "on_tertiary_fixed_variant": "#6e3900",
+                "outline": "#747878",
+                "outline_variant": "#c4c7c7",
+                "primary": "#000000",
+                "primary_container": "#1c1b1b",
+                "primary_fixed": "#e5e2e1",
+                "primary_fixed_dim": "#c8c6c5",
+                "secondary": "#795553",
+                "secondary_container": "#ffcfcb",
+                "secondary_fixed": "#ffdad7",
+                "secondary_fixed_dim": "#eabcb8",
+                "surface": "#fbf9f4",
+                "surface_bright": "#fbf9f4",
+                "surface_container": "#f0eee9",
+                "surface_container_high": "#eae8e3",
+                "surface_container_highest": "#e4e2dd",
+                "surface_container_low": "#f5f3ee",
+                "surface_container_lowest": "#ffffff",
+                "surface_dim": "#dbdad5",
+                "surface_tint": "#5f5e5e",
+                "surface_variant": "#e4e2dd",
+                "tertiary": "#000000",
+                "tertiary_container": "#2f1500",
+                "tertiary_fixed": "#ffdcc3",
+                "tertiary_fixed_dim": "#ffb77d"
+              },
+              "overrideNeutralColor": "#f9f7f2",
+              "overridePrimaryColor": "#1a1a1a",
+              "overrideSecondaryColor": "#4a2c2a",
+              "overrideTertiaryColor": "#d97706",
+              "spacing": {
+                "gutter": "24px",
+                "margin-edge": "40px",
+                "stack-lg": "32px",
+                "stack-md": "16px",
+                "stack-sm": "8px",
+                "stack-xl": "64px",
+                "stack-xs": "4px"
+              },
+              "spacingScale": 2,
+              "typography": {
+                "body-lg": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "20px",
+                  "fontWeight": "400",
+                  "lineHeight": "160%"
+                },
+                "body-md": {
+                  "fontFamily": "Hanken Grotesk",
+                  "fontSize": "16px",
+                  "fontWeight": "400",
+                  "lineHeight": "150%"
+                },
+                "headline-lg": {
+                  "fontFamily": "Anton",
+                  "fontSize": "48px",
+                  "fontWeight": "400",
+                  "letterSpacing": "-0.01em",
+                  "lineHeight": "100%"
+                },
+                "headline-lg-mobile": {
+                  "fontFamily": "Anton",
+                  "fontSize": "36px",
+                  "fontWeight": "400",
+                  "lineHeight": "100%"
+                },
+                "headline-md": {
+                  "fontFamily": "Anton",
+                  "fontSize": "32px",
+                  "fontWeight": "400",
+                  "lineHeight": "110%"
+                },
+                "headline-xl": {
+                  "fontFamily": "Anton",
+                  "fontSize": "84px",
+                  "fontWeight": "400",
+                  "letterSpacing": "-0.02em",
+                  "lineHeight": "90%"
+                },
+                "label-caps": {
+                  "fontFamily": "Space Mono",
+                  "fontSize": "14px",
+                  "fontWeight": "700",
+                  "letterSpacing": "0.1em",
+                  "lineHeight": "120%"
+                },
+                "price-display": {
+                  "fontFamily": "Anton",
+                  "fontSize": "24px",
+                  "fontWeight": "400",
+                  "lineHeight": "100%"
+                }
+              }
+            },
+            "title": "Fatback's Barbecue | Bespoke Editorial Homepage",
+            "width": "2560"
+          }
+        ],
+        "theme": {}
+      }
+    },
+    {
+      "text": "I've designed a bespoke, editorial-grade homepage for **Fatback's Barbecue**, moving away from standard local-business templates to create a premium, memorable first impression.\n\n### Key Design Decisions:\n- **Visual Identity**: Established a \"Smoky Industrial Editorial\" aesthetic using a high-contrast palette of **Deep Charcoal**, **Smoked Amber**, and a refined **Paper Cream** background.\n- **The Daily Board**: Reimagined the menu/offerings section as a high-density typographic list with thick rules, mimicking a traditional butcher's shop board rather than using generic cards.\n- **Editorial Layout**: Balanced intentional density in the menu with generous whitespace in the \"Our Story\" section, utilizing bold, condensed typography (Anton) to reflect the rugged, authentic nature of BBQ.\n- **Memorable Motif**: Integrated 2px solid borders and asymmetrical layout blocks as a repeating visual theme, ensuring the site feels custom-crafted.\n- **Functionality**: Included a sticky navigation for quick access to ordering and contact, a specialized catering inquiry form, and the required `#visit` map placeholder.\n\nThe design is fully responsive and built with production-ready semantic HTML, CSS, and interactive JavaScript for smooth scrolling and form validation.\n\nHow would you like to refine this design? We could explore adding motion effects to the smoke textures or perhaps building out a dedicated catering sub-page."
+    },
+    {
+      "suggestion": "Add subtle smoke animations to the hero section"
+    },
+    {
+      "suggestion": "Create a mobile-optimized menu variant"
+    },
+    {
+      "suggestion": "Refine the 'Our Story' section with more grit and texture"
+    }
+  ],
+  "projectId": "14024671490882761908",
+  "sessionId": "11002440179964579063"
+}
