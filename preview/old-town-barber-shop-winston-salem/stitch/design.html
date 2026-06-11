@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Old Town Barber Shop | Tradition, Sharpened.</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&amp;family=Hanken+Grotesk:wght@300;400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary": "#2d0000",
+                    "on-primary-fixed-variant": "#4f453e",
+                    "on-primary-fixed": "#221a14",
+                    "on-secondary-container": "#785c2d",
+                    "primary-fixed": "#f0dfd6",
+                    "surface-tint": "#685c55",
+                    "on-tertiary-fixed": "#410000",
+                    "inverse-primary": "#d3c3ba",
+                    "error-container": "#ffdad6",
+                    "outline": "#7f756f",
+                    "tertiary-fixed-dim": "#ffb4a8",
+                    "surface-variant": "#e4e2dd",
+                    "surface-container-high": "#eae8e3",
+                    "on-error-container": "#93000a",
+                    "primary-container": "#2d241e",
+                    "on-surface": "#1b1c19",
+                    "primary-fixed-dim": "#d3c3ba",
+                    "on-tertiary-fixed-variant": "#920703",
+                    "inverse-on-surface": "#f2f1ec",
+                    "surface-container": "#f0eee9",
+                    "on-primary": "#ffffff",
+                    "surface-container-low": "#f5f3ee",
+                    "on-tertiary": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-secondary-fixed-variant": "#5b4215",
+                    "surface-container-highest": "#e4e2dd",
+                    "background": "#fbf9f4",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-container": "#fdd79c",
+                    "on-tertiary-container": "#f65642",
+                    "primary": "#170f0a",
+                    "inverse-surface": "#30312e",
+                    "secondary-fixed-dim": "#e6c188",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#988a82",
+                    "outline-variant": "#d1c4bd",
+                    "secondary-fixed": "#ffdeac",
+                    "tertiary-fixed": "#ffdad4",
+                    "secondary": "#755a2b",
+                    "on-surface-variant": "#4e4540",
+                    "on-background": "#1b1c19",
+                    "surface-dim": "#dbdad5",
+                    "tertiary-container": "#550000",
+                    "on-secondary-fixed": "#281900",
+                    "surface-bright": "#fbf9f4",
+                    "error": "#ba1a1a",
+                    "surface": "#fbf9f4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "120px",
+                    "unit": "8px",
+                    "content-margin": "40px",
+                    "arch-radius-lg": "200px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Playfair Display"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg-mobile": ["Playfair Display"],
+                    "label-numeric": ["Playfair Display"],
+                    "body-lg": ["Hanken Grotesk"],
+                    "label-caps": ["Hanken Grotesk"],
+                    "body-md": ["Hanken Grotesk"],
+                    "display-hero": ["Playfair Display"]
+            },
+            "fontSize": {
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg-mobile": ["36px", {"lineHeight": "42px", "fontWeight": "700"}],
+                    "label-numeric": ["14px", {"lineHeight": "20px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "display-hero": ["120px", {"lineHeight": "110px", "letterSpacing": "-0.03em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .arch-mask {
+            border-radius: var(--arch-radius-lg) var(--arch-radius-lg) 0 0;
+        }
+        .dotted-line {
+            border-bottom: 1px dotted #755a2b;
+            flex-grow: 1;
+            margin: 0 12px;
+            margin-bottom: 8px;
+        }
+        .barber-seal {
+            background-color: #ba1a1a;
+            width: 80px;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            z-index: 50;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+        .barber-seal:hover {
+            transform: scale(1.1) rotate(15deg);
+        }
+        .brass-rule {
+            height: 1px;
+            background-color: #755a2b;
+            width: 75%;
+        }
+        .input-editorial {
+            border: none;
+            border-bottom: 1px solid #4e4540;
+            background: transparent;
+            padding: 12px 0;
+            border-radius: 0;
+            transition: border-color 0.3s ease;
+        }
+        .input-editorial:focus {
+            outline: none;
+            border-bottom: 1px solid #755a2b;
+            box-shadow: none;
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md overflow-x-hidden">
+<!-- Header / TopNavBar -->
+<header class="bg-background sticky top-0 z-40 border-b border-outline/15 w-full">
+<nav class="flex justify-between items-center w-full px-content-margin py-6 max-w-full">
+<a class="font-headline-md text-headline-md uppercase tracking-tighter text-primary" href="#">Old Town Barber Shop</a>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex space-x-8 items-center">
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#services">Services</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#story">Our Story</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#visit">Location</a></li>
+<li><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-300" href="#contact">Contact</a></li>
+</ul>
+<a class="hidden md:block font-label-caps text-label-caps text-primary border border-primary px-6 py-2 hover:bg-secondary hover:text-on-secondary hover:border-secondary transition-all active:scale-95" href="tel:3369241685">(336) 924-1685</a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary" id="mobile-menu-btn">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</nav>
+</header>
+<!-- Mobile Menu Overlay -->
+<div class="fixed inset-0 bg-background z-50 flex flex-col items-center justify-center space-y-8 transform translate-x-full transition-transform duration-500 md:hidden" id="mobile-menu">
+<button class="absolute top-6 right-10 text-primary" id="close-menu">
+<span class="material-symbols-outlined">close</span>
+</button>
+<a class="font-headline-md text-headline-md text-primary" href="#services">Services</a>
+<a class="font-headline-md text-headline-md text-primary" href="#story">Our Story</a>
+<a class="font-headline-md text-headline-md text-primary" href="#visit">Location</a>
+<a class="font-headline-md text-headline-md text-primary" href="#contact">Contact</a>
+</div>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[90vh] flex flex-col justify-end px-content-margin pb-section-gap">
+<div class="absolute inset-0 z-0">
+<img alt="Luxury Barber Experience" class="w-full h-full object-cover grayscale-[0.2]" src="https://lh3.googleusercontent.com/aida/AP1WRLul6fJVilXz9duboNAt7avAJoYkxq_JZc_liBjEM0-SS3fSeW6XbEs_3lWj02EvK7AwHvvmSTuzbbR8TkiG5C278pO2NVr81ZHkS39gehAlHEvdP1k6UPjVwXA_774XlXO3ZwBVu9jRrbSbTbf1cJz_Tm98OpFHq0LzcE2FEXCqcUUOjxYRALv-tQEWEkaoHwM9u8r-hSsSx2glWZ4-dZrvMc5wTrNTxs9a8Q3ElLnl3KEErLZ3HHGvnus"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label-caps text-label-caps text-secondary mb-4 uppercase tracking-[0.2em]">Crafting Confidence Since 1954</p>
+<h1 class="font-display-hero text-display-hero text-primary mb-8">Tradition,<br/>Sharpened.</h1>
+<div class="brass-rule mb-12"></div>
+<button class="bg-primary text-on-primary font-label-caps text-label-caps py-4 px-10 transition-colors hover:bg-secondary">BOOK A CHAIR</button>
+</div>
+</section>
+<!-- Credibility / Heritage -->
+<section class="py-section-gap px-content-margin max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10 items-center" id="story">
+<div class="md:col-span-5 space-y-8">
+<h2 class="font-headline-lg text-headline-lg text-primary">A Legacy of the Straight Razor.</h2>
+<div class="brass-rule"></div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+                    At Old Town Barber Shop, we believe grooming is more than a chore—it is an art. For seven decades, we have remained anchored in Winston-Salem, offering a sanctuary for those who appreciate the weight of a metal shear and the precision of a hand-honed blade.
+                </p>
+<div class="grid grid-cols-2 gap-8 pt-4">
+<div>
+<span class="block font-label-numeric text-[32px] text-secondary">1954</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Established</span>
+</div>
+<div>
+<span class="block font-label-numeric text-[32px] text-secondary">04</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Master Barbers</span>
+</div>
+</div>
+</div>
+<div class="md:col-span-7 flex justify-end">
+<div class="w-full md:w-[90%] arch-mask overflow-hidden border border-outline/15 p-4 bg-white/50">
+<img alt="Barbering Tools Detail" class="arch-mask w-full h-[600px] object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLuHWaCqWu18sNS88dVMf-EQnXpbdccZDBXSAFOH45kyFhTMk4UXMInxk3S7BNu40LlWpLRDh95oqxBqc3MBSPEyz7PzoeIF0JjEmrfaktDB8kT9e4loJTwet6kaiBcigDjv_2YpGDwlEJKLbptDObYEXAgKGW66_yrTOkcGGU9nB0pjcpLtHaHtgbv912D2DYBqyUlWcmaORWqBk2Vg33VFDQVMpru8_-fHVa1Qi6mliD4pnuT2yFq4oi0"/>
+</div>
+</div>
+</section>
+<!-- Editorial Quote -->
+<section class="py-section-gap px-content-margin text-center">
+<div class="max-w-4xl mx-auto">
+<div class="brass-rule mx-auto mb-10"></div>
+<blockquote class="font-headline-lg text-headline-lg italic text-primary leading-tight">
+                    "A haircut is a conversation between history and personal style."
+                </blockquote>
+<div class="brass-rule mx-auto mt-10"></div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-section-gap bg-surface-container-lowest" id="services">
+<div class="px-content-margin max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-xl">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-2 block">Our Menu</span>
+<h2 class="font-headline-lg text-headline-lg text-primary">Master Craftsmanship</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-sm">All services include a signature aromatic hot towel finish and premium pomade styling.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-12">
+<!-- Service 1 -->
+<div class="group cursor-pointer">
+<div class="flex items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">The Signature Cut</h3>
+<div class="dotted-line"></div>
+<span class="font-label-numeric text-[24px] text-primary">$45</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">A tailored consultation followed by a precision cut using scissors and clippers. Finished with a straight-razor neck shave.</p>
+</div>
+<!-- Service 2 -->
+<div class="group cursor-pointer">
+<div class="flex items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Classic Straight Shave</h3>
+<div class="dotted-line"></div>
+<span class="font-label-numeric text-[24px] text-primary">$55</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The ultimate indulgence. Multi-stage hot towel treatments, premium lather, and a two-pass straight razor shave.</p>
+</div>
+<!-- Service 3 -->
+<div class="group cursor-pointer">
+<div class="flex items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">Beard Sculpting</h3>
+<div class="dotted-line"></div>
+<span class="font-label-numeric text-[24px] text-primary">$35</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Precision shaping and trimming of facial hair, defined by sharp razor lines and finished with nourishing beard oil.</p>
+</div>
+<!-- Service 4 -->
+<div class="group cursor-pointer">
+<div class="flex items-baseline mb-2">
+<h3 class="font-headline-md text-headline-md text-primary group-hover:text-secondary transition-colors">The Executive</h3>
+<div class="dotted-line"></div>
+<span class="font-label-numeric text-[24px] text-primary">$85</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">The full works. Signature Cut and Straight Shave combo with a scalp massage and facial tonic.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About / Image Section -->
+<section class="relative min-h-[700px] flex items-center">
+<div class="absolute inset-0 z-0">
+<img alt="Master Barber at Work" class="w-full h-full object-cover filter contrast-125" src="https://lh3.googleusercontent.com/aida/AP1WRLunj9djJfbsGkhaArFoIAfCT0CVRFDHD-Ho1lZGf3F_349Xd-BzlCqq__StC4z7DlZWTFCTJzQ5aJPPAGck2t_EOx4bQY9MZOtdUMboOwdMAD5sBNyGrpniBO3BahfbdeaQYXafsnMhC2sYoCa_jHxRtuqOezW_4_f3WU00nJtendYsuU3tjnb3-CRcfng2Hi-U6hNar6SJiabTu_8qLCvgPWOyc6aPqnEi4VYLuzhKbviQVZgXsW4Zhu4"/>
+<div class="absolute inset-0 bg-primary/40 mix-blend-multiply"></div>
+</div>
+<div class="relative z-10 px-content-margin w-full max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12">
+<div class="md:col-start-7 md:col-span-6 bg-background p-12 md:p-20 border border-outline/10">
+<span class="font-label-caps text-label-caps text-secondary uppercase mb-4 block">The Philosophy</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">The Art of the Groom</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                        We don’t rush our work. Every fade, every taper, and every shave is executed with the patient precision that only decades of experience can provide. We honor the quiet ritual of the barbershop—a space for stillness and quality.
+                    </p>
+<button class="font-label-caps text-label-caps text-primary border-b-2 border-secondary pb-1 hover:text-secondary transition-colors">DISCOVER OUR BARBERS</button>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap px-content-margin max-w-7xl mx-auto" id="visit">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-12 mb-20">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-primary mb-6">Visit The Shop</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Conveniently located in the heart of Winston-Salem.</p>
+<div class="space-y-6">
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Address</span>
+<address class="not-italic font-body-lg text-body-lg text-primary">
+                                3800 Reynolda Road<br/>
+                                Winston-Salem, NC 27106
+                            </address>
+</div>
+<div>
+<span class="font-label-caps text-label-caps text-secondary uppercase block mb-1">Hours</span>
+<ul class="font-body-md text-body-md text-primary">
+<li class="flex justify-between"><span>Tues - Fri</span> <span>9:00am - 6:00pm</span></li>
+<li class="flex justify-between"><span>Saturday</span> <span>8:00am - 1:00pm</span></li>
+<li class="flex justify-between text-on-surface-variant/50"><span>Sun - Mon</span> <span>Closed</span></li>
+</ul>
+</div>
+</div>
+</div>
+<div class="md:col-span-8">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[450px] border border-outline/15 bg-surface-container-high" data-location="Winston-Salem, NC" data-map-slot="" style="">
+<div class="absolute inset-0 flex items-center justify-center opacity-20 grayscale pointer-events-none">
+<span class="material-symbols-outlined text-[120px]">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-section-gap px-content-margin bg-primary text-on-primary" id="contact">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+<div>
+<h2 class="font-headline-lg text-headline-lg text-primary-fixed mb-6">Booking Inquiries</h2>
+<p class="font-body-lg text-body-lg text-on-primary-container mb-12">
+                        For specific requests or wedding party inquiries, please reach out. We respond to all digital inquiries within 24 hours.
+                    </p>
+<div class="flex items-center space-x-4">
+<span class="material-symbols-outlined text-secondary">mail</span>
+<a class="font-body-lg text-body-lg border-b border-on-primary-container/30 hover:border-secondary transition-colors" href="mailto:rtljm@aol.com">rtljm@aol.com</a>
+</div>
+</div>
+<form class="space-y-8" id="booking-form">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-primary-container mb-2 uppercase">Your Name</label>
+<input class="input-editorial text-on-primary border-on-primary-container/50 focus:border-secondary" placeholder="John Doe" required="" type="text"/>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-primary-container mb-2 uppercase">Email Address</label>
+<input class="input-editorial text-on-primary border-on-primary-container/50 focus:border-secondary" placeholder="email@example.com" required="" type="email"/>
+</div>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-primary-container mb-2 uppercase">Service Interest</label>
+<select class="input-editorial text-on-primary border-on-primary-container/50 focus:border-secondary bg-primary appearance-none">
+<option>The Signature Cut</option>
+<option>Classic Straight Shave</option>
+<option>Beard Sculpting</option>
+<option>The Executive</option>
+</select>
+</div>
+<div class="flex flex-col">
+<label class="font-label-caps text-label-caps text-on-primary-container mb-2 uppercase">Message</label>
+<textarea class="input-editorial text-on-primary border-on-primary-container/50 focus:border-secondary resize-none" placeholder="Preferred date, special requirements..." rows="3"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-label-caps text-label-caps py-4 transition-all hover:bg-secondary-fixed-dim active:scale-95 uppercase tracking-widest" type="submit">Send Inquiry</button>
+<p class="hidden text-secondary text-center font-label-caps mt-4" id="form-feedback">Thank you. Your message has been sent.</p>
+</form>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-background dark:bg-background border-t border-secondary/30 full-width py-section-gap">
+<div class="flex flex-col items-center justify-center space-y-unit px-content-margin">
+<span class="font-headline-md text-headline-md text-primary mb-4">Old Town Barber Shop</span>
+<div class="flex space-x-6 mb-8">
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-200" href="#"><span class="material-symbols-outlined">brand_family</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-200" href="#"><span class="material-symbols-outlined">social_leaderboard</span></a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-200" href="#"><span class="material-symbols-outlined">video_camera_front</span></a>
+</div>
+<p class="font-body-md text-body-md text-on-surface text-center mb-6">
+                © 2024 Old Town Barber Shop. Established in Tradition.
+            </p>
+<nav class="flex space-x-8">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors" href="#">Careers</a>
+</nav>
+</div>
+</footer>
+<!-- Barber Seal / FAB -->
+<a class="barber-seal group" href="#contact" title="Book Now">
+<span class="material-symbols-outlined text-white text-[32px]" style="font-variation-settings: 'FILL' 1;">content_cut</span>
+</a>
+<script>
+        // Mobile Menu Logic
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const closeMenu = document.getElementById('close-menu');
+        const menuLinks = mobileMenu.querySelectorAll('a');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-full');
+        });
+
+        const hideMenu = () => {
+            mobileMenu.classList.add('translate-x-full');
+        };
+
+        closeMenu.addEventListener('click', hideMenu);
+        menuLinks.forEach(link => link.addEventListener('click', hideMenu));
+
+        // Form Logic
+        const form = document.getElementById('booking-form');
+        const feedback = document.getElementById('form-feedback');
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            form.querySelectorAll('input, textarea, select, button').forEach(el => el.disabled = true);
+            feedback.classList.remove('hidden');
+            form.style.opacity = '0.5';
+        });
+
+        // Simple Parallax / Scroll Interaction
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroImg = document.querySelector('section:first-of-type img');
+            if (heroImg) {
+                heroImg.style.transform = `translateY(${scrolled * 0.15}px)`;
+            }
+        });
+    </script>
+</body></html>
