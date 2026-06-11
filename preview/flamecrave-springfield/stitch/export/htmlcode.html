@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FlameCrave | Live-Fire Dining Springfield</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&amp;family=Hanken+Grotesk:wght@400;600;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&family=Hanken+Grotesk:wght@400;700&display=swap');
+
+        :root {
+            --ember-orange: #ff571a;
+            --charcoal: #121212;
+            --bone-white: #e5e2e1;
+        }
+
+        body {
+            background-color: var(--charcoal);
+            color: var(--bone-white);
+            scrollbar-width: thin;
+            scrollbar-color: var(--ember-orange) var(--charcoal);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: var(--charcoal);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: var(--ember-orange);
+        }
+
+        .grain-overlay {
+            pointer-events: none;
+            background-image: url("https://www.transparenttextures.com/patterns/carbon-fibre.png");
+            opacity: 0.05;
+        }
+
+        .charred-border {
+            border: 2px solid #5c4037;
+        }
+
+        .dotted-leader {
+            border-bottom: 2px dotted #5c4037;
+            flex-grow: 1;
+            margin: 0 12px;
+            margin-bottom: 8px;
+        }
+
+        .asymmetric-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+        }
+
+        .smooth-scroll {
+            scroll-behavior: smooth;
+        }
+
+        .ember-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 87, 26, 0.4);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-surface": "#e5e2e1",
+                      "primary-container": "#ff571a",
+                      "on-tertiary-container": "#282a27",
+                      "on-primary": "#5e1700",
+                      "on-surface-variant": "#e6beb2",
+                      "primary": "#ffb59e",
+                      "surface-container-lowest": "#0e0e0e",
+                      "outline-variant": "#5c4037",
+                      "background": "#131313",
+                      "surface": "#131313",
+                      "surface-variant": "#353534",
+                      "outline": "#ad897e"
+              },
+              "spacing": {
+                      "container-max": "1280px",
+                      "margin-desktop": "64px",
+                      "gutter": "24px",
+                      "unit": "8px",
+                      "margin-mobile": "20px",
+                      "block-gap": "120px"
+              },
+              "fontFamily": {
+                      "label-caps": ["Hanken Grotesk"],
+                      "display-lg": ["Playfair Display"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-md": ["Hanken Grotesk"],
+                      "body-lg": ["Hanken Grotesk"]
+              },
+              "fontSize": {
+                      "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                      "display-lg": ["72px", {"lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "900"}],
+                      "headline-lg": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "28px", "letterSpacing": "0.01em", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+      </script>
+</head>
+<body class="smooth-scroll font-body-md text-body-md selection:bg-primary-container selection:text-white">
+<div class="fixed inset-0 grain-overlay z-[100]"></div>
+<!-- Navigation -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto bg-background/90 backdrop-blur-xl border-b-2 border-outline-variant">
+<div class="flex items-center gap-8">
+<a class="font-display-lg text-2xl md:text-display-lg text-primary tracking-tighter uppercase" href="#">FlameCrave</a>
+<div class="hidden md:flex gap-6">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#menu">The Menu</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#story">Our Story</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors" href="#visit">Visit Us</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<span class="hidden lg:block font-label-caps text-label-caps text-primary">(541) 852-5732</span>
+<button class="bg-primary-container text-on-primary-container font-label-caps text-label-caps px-6 py-3 uppercase tracking-widest transition-all hover:scale-105 active:scale-95 ember-glow">Order Now</button>
+</div>
+</nav>
+<main class="pt-24">
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center px-margin-mobile md:px-margin-desktop py-block-gap">
+<div class="asymmetric-grid w-full">
+<div class="col-span-12 lg:col-span-7 z-10">
+<h1 class="font-display-lg text-[48px] md:text-display-lg uppercase mb-8 leading-[1] text-on-surface">
+                        THE HEART<br/>OF THE <span class="text-primary-container">HEAT.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">
+                        Springfield's premier live-fire destination. We honor the ancient craft of open-flame cooking, using locally sourced oak and seasonal harvests to create a sensory journey that stays with you long after the embers fade.
+                    </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-container text-black font-label-caps text-label-caps px-10 py-4 uppercase ember-glow transition-all">Book a Table</button>
+<button class="border-2 border-on-surface font-label-caps text-label-caps px-10 py-4 uppercase hover:bg-on-surface hover:text-black transition-all">View Menu</button>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 relative mt-12 lg:mt-0">
+<div class="aspect-[4/5] charred-border overflow-hidden relative">
+<img class="w-full h-full object-cover grayscale-[0.2] sepia-[0.2]" data-alt="A high-contrast cinematic shot of a massive iron grill over an open wood fire in a dimly lit, rustic kitchen. Embers are sparking into the air, illuminated by the intense orange glow of the burning oak logs. The atmosphere is smoky and dramatic, reflecting the artisanal, brutalist aesthetic of FlameCrave with deep blacks and vibrant orange highlights." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC5-G-beRRxHip3wRKfHT_c8zXJcvJaOe9nRu93UEUtsfEBWm2bcnAFKmQff90nPEXUAeJ3Phfz79BveuuW2jHHjzA1S8IzR5A7H5gZc83AHZBVuDKKsU_UnejCScbYXvjwVZfzt-W5pxcRmx27PRcyOVv_D0OyUBZx1Sd8cqZf0oryfCAsO4_k3qVUgK24snJAcsZpTmtKUbZx2njqzq-AD00hPy_zrR5xMXvnampHUZmwWC292MlsBkDNnp0d4WdDwBOp_MmHREAU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-charcoal/80 to-transparent"></div>
+</div>
+<div class="absolute -bottom-8 -left-8 bg-primary-container p-6 hidden md:block">
+<span class="font-label-caps text-black block">SINCE</span>
+<span class="font-display-lg text-4xl text-black">2024</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Credibility -->
+<section class="bg-surface-container-lowest py-20 border-y-4 border-primary-container">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
+<h2 class="font-display-lg text-4xl md:text-5xl uppercase tracking-tighter text-on-surface max-w-md">
+                    BORN IN SPRINGFIELD. <br/><span class="text-primary">BUILT ON FIRE.</span>
+</h2>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-label-caps uppercase text-sm">100% White Oak Fired</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">agriculture</span>
+<span class="font-label-caps uppercase text-sm">Willamette Valley Sourced</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">restaurant</span>
+<span class="font-label-caps uppercase text-sm">Artisanal Craftsmanship</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Offerings: Menu Highlights -->
+<section class="py-block-gap px-margin-mobile md:px-margin-desktop" id="menu">
+<div class="flex justify-between items-end mb-20">
+<div>
+<span class="font-label-caps text-primary uppercase mb-4 block tracking-[0.2em]">Signature Selections</span>
+<h2 class="font-display-lg text-display-lg uppercase text-on-surface">THE MENU <span class="block md:inline">HIGHLIGHTS</span></h2>
+</div>
+<a class="hidden md:block font-label-caps border-b-2 border-primary pb-1 text-primary hover:text-on-surface transition-colors" href="#">FULL MENU</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 1 -->
+<div class="group relative charred-border p-8 hover:bg-surface-variant/20 transition-all">
+<div class="aspect-square mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A gourmet wood-fired pizza with charred, bubbly crust and molten buffalo mozzarella on a dark slate surface. The lighting is low and moody, focusing on the vibrant red of the organic tomato sauce and the deep brown of the fire-kissed dough. Fine smoke wisps curl around the pizza, maintaining a sophisticated editorial food photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPdLFHM-O1KzdoJHMYq8oImJv-2pCIx-gJzKB1KGbUzexFoFJdcRW46BNusObzI2nbAzCLS5TU0JHc_NkOgvU8rcmwtLOTKsSkgF4iycR0-hN3i1F1lS6pV_EjqFhBpRcEGKG1u1gR3XBKr79AZHefTyebV1hs899O3on0FmdVnbu1zA9ORhrEOUsmkPjr_P0sLPwMonb-4a1CKemBQiKLi5mlLdU-6aooVdIVhEgrzOXe9hVjvipfF2qKkNxY_lQb1WptMT8hJOB1"/>
+</div>
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-lg text-2xl uppercase">Wood-Fired Pizza</h3>
+<span class="font-label-caps bg-primary-container text-black px-2 py-1">BEST SELLER</span>
+</div>
+<p class="text-on-surface-variant mb-6">48-hour fermented dough, hand-stretched and fired at 900° with local white oak.</p>
+<div class="flex items-center justify-between">
+<span class="font-body-lg text-primary">$19</span>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">add_circle</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group relative charred-border p-8 md:mt-12 bg-surface-container-low transition-all">
+<div class="aspect-square mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A thick, pit-smoked beef brisket sliced to reveal a perfect pink smoke ring and glistening, tender fat. The meat is served on coarse brown butcher paper atop a blackened steel tray. Soft, warm lighting emphasizes the tactile, charred exterior crust, creating a raw and high-end culinary visual consistent with the Smoldering Ember theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAK5BLmQR23aB6Hkdb8CUDmMmAz2qY4hgrFNiVLu83r0Y6vIG8Wx491qHDSGoc2EWuAIo7JJygnH2_Kw8GZ2EwhDYwEWEacYfij6J2Lf1B3E5CSjXojXNXDT8tYT0Ji_8sQ_obW5tH_cIK4N_U0WfGqrTdBQYccXcIE-qvRZy3Gk6mH3oLFPoHrvBZkp414Eq-cT55TKnRVyT6xX1ixAR_oDAKXXtdmFPfa-fmkACp0IQFdaGI6cSrIBmGJ89iS0pTXm-pqA4jWK4N"/>
+</div>
+<h3 class="font-headline-lg text-2xl uppercase mb-4">Pit-Smoked BBQ</h3>
+<p class="text-on-surface-variant mb-6">Willamette Valley brisket, smoked low and slow for 14 hours over seasonal fruitwood.</p>
+<div class="flex items-center justify-between">
+<span class="font-body-lg text-primary">$26</span>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">add_circle</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group relative charred-border p-8 transition-all">
+<div class="aspect-square mb-8 overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="A modern bowl of craft sides featuring roasted heirloom carrots with a balsamic glaze and toasted pistachios, set against a dark cast-iron backdrop. The lighting is focused, bringing out the vibrant orange and deep green colors of the fresh ingredients. The composition is asymmetrical and artistic, fitting the editorial brutalism of the FlameCrave brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD9DZwAHeYlpj6told7T_-JDtZ3UGvVmZsuEIdkBWA1BOkudAeWYEHmaVg6WeQu-ZiyFHrK2dRoHOIexfYH6QpVtymSOMRf1u4bAPzFJm7J8ka6B5or4tErilpwsPPo8u7sFGmjBtN9B9wXAGf-di8eSay2BmIruZAhK1eE5gAGgegnt-fDXUB8d97SuxkPdb-cnBFWkhajF5Vm4hKFqiZL4XR2Z6cFMJ-nsspuywsQEYQRJED0_W6wZrQDoNTja6fQcclLRnaa7Cjx"/>
+</div>
+<h3 class="font-headline-lg text-2xl uppercase mb-4">Craft Sides</h3>
+<p class="text-on-surface-variant mb-6">Fire-roasted seasonal vegetables tossed in house-made ember oils and smoked salts.</p>
+<div class="flex items-center justify-between">
+<span class="font-body-lg text-primary">$12</span>
+<button class="material-symbols-outlined text-on-surface hover:text-primary transition-colors">add_circle</button>
+</div>
+</div>
+</div>
+</section>
+<!-- About: Our Story (Editorial Block) -->
+<section class="py-block-gap bg-surface-container-lowest" id="story">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="asymmetric-grid items-center gap-16">
+<div class="col-span-12 lg:col-span-5 order-2 lg:order-1">
+<div class="relative">
+<div class="absolute -top-10 -left-10 w-40 h-40 border-l-4 border-t-4 border-primary-container z-0"></div>
+<img class="relative z-10 w-full charred-border grayscale" data-alt="An editorial-style black and white photograph of a chef's hands carefully arranging food on a rustic plate. The chef's forearms are dusted with flour and ash, emphasizing the manual labor and artisanal skill of live-fire cooking. The lighting is high-contrast, highlighting the textures of skin, fabric, and ceramic in a sophisticated, publication-ready aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCB9RRE2b6GZ-zhJSu3Okhxb1z5tEYjtAokXaUGveIOutxrb0oO75PawLAPKJ8sXvbDv0Kk9-P6BJc2WQQdnhD2Lgk8fJvVpEro4y_7ticNfWyXNuDKShwTt8MWpzOj6EkXUAEpz8KxX1mkrwG6HG84AABEknFhWBuZ9h10y72CSkdWwisiv_lMXTbFlDMmk0xw9YUERWaDZhs-YvZ8DWcGocvtCXhpJisFAQdcmEmTBV3jXl9ueOG0RgBCnNJ0sxTe1CmSMVAunDD4"/>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-7 order-1 lg:order-2">
+<span class="font-label-caps text-primary uppercase mb-6 block">Our Heritage</span>
+<h2 class="font-display-lg text-4xl md:text-5xl uppercase mb-10 text-on-surface border-b-4 border-primary-container pb-6 inline-block">RAW PASSION. <br/>TRUE FIRE.</h2>
+<div class="space-y-6 text-on-surface-variant font-body-lg">
+<p>Founded on the belief that the most profound flavors are born from the simplest elements: wood, smoke, and heat. Our journey started in a small backyard in Springfield, experimenting with white oak and Oregon-grown produce.</p>
+<p class="font-bold text-on-surface italic border-l-2 border-primary-container pl-6 py-2">"We don't just cook with fire; we listen to it. Every log tells a story of the season, and every spark is an invitation to taste the landscape."</p>
+<p>Today, FlameCrave stands as a monument to that obsession. We source 90% of our ingredients within a 50-mile radius, ensuring that the soul of the Willamette Valley is present in every bite.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit: Find The Flame -->
+<section class="py-block-gap px-margin-mobile md:px-margin-desktop" id="visit">
+<div class="flex flex-col md:flex-row justify-between gap-12 mb-16 items-start">
+<div class="max-w-xl">
+<h2 class="font-display-lg text-display-lg uppercase mb-6 text-on-surface">FIND THE <span class="text-primary-container">FLAME.</span></h2>
+<p class="font-body-lg text-on-surface-variant">Located in the heart of Springfield's historic district, our doors are open to those who seek the warmth of the hearth.</p>
+</div>
+<div class="charred-border p-8 bg-surface-container-low min-w-[300px]">
+<div class="flex items-start gap-4 mb-6">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<span class="font-label-caps block mb-1">LOCATION</span>
+<span class="text-on-surface">4425 Main Street<br/>Springfield, OR 97478</span>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<span class="font-label-caps block mb-1">HOURS</span>
+<span class="text-on-surface">Tue – Sun: 4PM – 10PM<br/>Mon: Closed</span>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Map of FlameCrave Restaurant location" class="map-slot relative overflow-hidden min-h-[500px] charred-border" data-location="Springfield, OR" data-map-slot="" style="">
+<!-- Fallback content if map fails -->
+<div class="absolute inset-0 bg-surface-variant flex items-center justify-center">
+<div class="text-center opacity-50">
+<span class="material-symbols-outlined text-6xl mb-4">map</span>
+<p class="font-label-caps">Map Visualization Loading...</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact: Reach Out -->
+<section class="py-block-gap bg-surface-container-low px-margin-mobile md:px-margin-desktop">
+<div class="asymmetric-grid">
+<div class="col-span-12 lg:col-span-4 mb-16 lg:mb-0">
+<h2 class="font-display-lg text-4xl uppercase mb-8">REACH OUT</h2>
+<p class="text-on-surface-variant mb-10">Inquiries for private events, large reservations, or just to say hello.</p>
+<div class="space-y-6">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 charred-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">mail</span>
+</div>
+<span class="font-label-caps">hello@flamecrave.com</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 charred-border flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" style="font-size: 20px;">phone</span>
+</div>
+<span class="font-label-caps">(541) 852-5732</span>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-8 lg:pl-16">
+<form class="space-y-12" id="contactForm">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 text-on-surface py-3 transition-colors peer" placeholder="E.g. James Miller" required="" type="text"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-container transition-all duration-300 peer-focus:w-full"></div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 text-on-surface py-3 transition-colors peer" placeholder="E.g. james@example.com" required="" type="email"/>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-container transition-all duration-300 peer-focus:w-full"></div>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2">MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b-2 border-outline-variant focus:border-primary-container focus:ring-0 text-on-surface py-3 transition-colors peer" placeholder="How can we help you?" required="" rows="4"></textarea>
+<div class="absolute bottom-0 left-0 w-0 h-[2px] bg-primary-container transition-all duration-300 peer-focus:w-full"></div>
+</div>
+<button class="bg-primary-container text-black font-label-caps px-12 py-5 uppercase tracking-[0.2em] hover:bg-white transition-all ember-glow w-full md:w-auto" type="submit">Send Message</button>
+</form>
+<div class="hidden mt-8 p-4 charred-border bg-primary-container/10 text-primary font-label-caps text-center" id="formFeedback">
+                        Message sent successfully. We will follow up shortly.
+                    </div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest border-t-4 border-primary-container px-margin-mobile md:px-margin-desktop py-block-gap">
+<div class="max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+<div class="col-span-1 md:col-span-1 mb-12 md:mb-0">
+<a class="font-headline-lg text-headline-lg text-on-surface block mb-6 uppercase tracking-tighter" href="#">FlameCrave</a>
+<p class="text-on-surface-variant text-sm mb-8">Elevated live-fire dining in Springfield, OR. Crafted with oak, passion, and local bounty.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary-container text-on-surface-variant hover:text-primary-container transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant hover:border-primary-container text-on-surface-variant hover:text-primary-container transition-all" href="#">
+<span class="material-symbols-outlined">share</span>
+</a>
+</div>
+</div>
+<div class="col-span-1 mb-8 md:mb-0">
+<h4 class="font-label-caps text-primary mb-8 tracking-widest">NAVIGATION</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-surface-variant hover:text-on-surface transition-all" href="#menu">The Menu</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Reservations</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Local Sourcing</a></li>
+</ul>
+</div>
+<div class="col-span-1 mb-8 md:mb-0">
+<h4 class="font-label-caps text-primary mb-8 tracking-widest">LEGAL</h4>
+<ul class="space-y-4">
+<li><a class="font-body-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Privacy Policy</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Accessibility</a></li>
+<li><a class="font-body-md text-on-surface-variant hover:text-on-surface transition-all" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="col-span-1">
+<h4 class="font-label-caps text-primary mb-8 tracking-widest">JOIN THE LIST</h4>
+<p class="text-on-surface-variant text-sm mb-6">Receive seasonal menu updates and special event invitations.</p>
+<div class="flex gap-0">
+<input class="bg-surface-variant border-0 text-white p-3 w-full font-label-caps" placeholder="Email Address" type="email"/>
+<button class="bg-primary-container text-black px-4 flex items-center justify-center">
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto mt-20 pt-8 border-t border-outline-variant flex flex-col md:flex-row justify-between items-center gap-6 opacity-60">
+<span class="font-body-md text-sm">© 2024 FlameCrave Springfield. Built on Live Fire.</span>
+<div class="flex gap-8 font-label-caps text-[10px] tracking-[0.2em] uppercase">
+<span class="text-primary-container">Est. 2024</span>
+<span>Springfield, OR</span>
+</div>
+</div>
+</footer>
+<script>
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            feedback.classList.remove('hidden');
+            this.reset();
+            setTimeout(() => {
+                feedback.classList.add('hidden');
+            }, 5000);
+        });
+
+        // Simple smooth scroll highlighting for nav could be added here
+        window.addEventListener('scroll', () => {
+            const sections = ['menu', 'story', 'visit'];
+            const navLinks = document.querySelectorAll('nav a');
+            
+            let current = '';
+            sections.forEach(section => {
+                const element = document.getElementById(section);
+                if (element) {
+                    const sectionTop = element.offsetTop;
+                    if (pageYOffset >= sectionTop - 120) {
+                        current = section;
+                    }
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'border-b-2', 'border-primary-container', 'pb-1');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.add('text-primary', 'border-b-2', 'border-primary-container', 'pb-1');
+                }
+            });
+        });
+    </script>
+</body></html>
