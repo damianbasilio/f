@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>7 Luminarias | The Alchemy of Smoke &amp; Star</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500&amp;family=Space+Mono:wght@400;700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@100..900&amp;family=Playfair+Display:wght@100..900&amp;family=Space+Mono:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                "on-background": "#e5e2e1",
+                "secondary-fixed": "#ffe08b",
+                "on-tertiary": "#34302c",
+                "on-error": "#690005",
+                "background": "#131313",
+                "error-container": "#93000a",
+                "tertiary": "#cdc5c0",
+                "surface-container-high": "#2a2a2a",
+                "tertiary-container": "#968f8b",
+                "surface-container": "#20201f",
+                "inverse-surface": "#e5e2e1",
+                "on-secondary-fixed": "#241a00",
+                "inverse-primary": "#a73918",
+                "on-primary-fixed-variant": "#862201",
+                "tertiary-fixed": "#eae1dc",
+                "on-error-container": "#ffdad6",
+                "primary-fixed": "#ffdbd1",
+                "on-primary-container": "#541100",
+                "surface-dim": "#131313",
+                "primary-fixed-dim": "#ffb5a0",
+                "outline-variant": "#58423c",
+                "surface-bright": "#393939",
+                "tertiary-fixed-dim": "#cdc5c0",
+                "secondary-fixed-dim": "#ebc246",
+                "secondary": "#ebc246",
+                "on-tertiary-container": "#2d2926",
+                "on-surface-variant": "#dfc0b7",
+                "surface": "#131313",
+                "on-surface": "#e5e2e1",
+                "surface-variant": "#353535",
+                "on-tertiary-fixed-variant": "#4b4642",
+                "primary": "#ffb5a0",
+                "inverse-on-surface": "#313030",
+                "outline": "#a78b83",
+                "error": "#ffb4ab",
+                "on-primary-fixed": "#3b0900",
+                "on-secondary-container": "#352800",
+                "on-primary": "#601500",
+                "surface-tint": "#ffb5a0",
+                "on-tertiary-fixed": "#1f1b18",
+                "surface-container-lowest": "#0e0e0e",
+                "surface-container-low": "#1c1b1b",
+                "secondary-container": "#b08c09",
+                "on-secondary": "#3d2f00",
+                "surface-container-highest": "#353535",
+                "on-secondary-fixed-variant": "#584400",
+                "primary-container": "#ea6944"
+            },
+            "borderRadius": {
+                "DEFAULT": "0.25rem",
+                "lg": "0.5rem",
+                "xl": "0.75rem",
+                "full": "9999px"
+            },
+            "spacing": {
+                "unit": "8px",
+                "margin-desktop": "64px",
+                "margin-mobile": "20px",
+                "container-max": "1280px",
+                "gutter": "24px"
+            },
+            "fontFamily": {
+                "display-lg": ["Playfair Display"],
+                "body-sm": ["DM Sans"],
+                "headline-md": ["Playfair Display"],
+                "body-lg": ["DM Sans"],
+                "label-caps": ["Space Mono"],
+                "display-lg-mobile": ["Playfair Display"]
+            },
+            "fontSize": {
+                "display-lg": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                "body-sm": ["14px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                "headline-md": ["32px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                "body-lg": ["18px", {"lineHeight": "1.6", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.15em", "fontWeight": "500"}],
+                "display-lg-mobile": ["44px", {"lineHeight": "1.1", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131313;
+            color: #e5e2e1;
+            scroll-behavior: smooth;
+        }
+
+        .stippled-bg {
+            background-image: radial-gradient(circle at 2px 2px, rgba(255, 181, 160, 0.05) 1px, transparent 0);
+            background-size: 24px 24px;
+        }
+
+        .luminaria-divider {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .luminaria-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background-color: #ffb5a0;
+            opacity: 0.4;
+        }
+
+        .luminaria-dot.active {
+            opacity: 1;
+            box-shadow: 0 0 10px #ffb5a0;
+        }
+
+        .text-glow {
+            text-shadow: 0 0 20px rgba(255, 181, 160, 0.3);
+        }
+
+        .image-reveal {
+            clip-path: inset(0 100% 0 0);
+            transition: clip-path 1.2s cubic-bezier(0.77, 0, 0.175, 1);
+        }
+
+        .image-reveal.visible {
+            clip-path: inset(0 0 0 0);
+        }
+
+        .obsidian-overlay {
+            background: linear-gradient(to bottom, transparent, #131313);
+        }
+
+        .map-slot {
+            filter: grayscale(1) invert(1) contrast(1.2);
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden stippled-bg">
+<!-- Header Section (Shared Component: TopNavBar) -->
+<header class="fixed top-0 left-0 w-full z-50 bg-background/95 backdrop-blur-md border-b border-outline-variant/30">
+<nav class="flex justify-between items-center px-margin-desktop py-unit max-w-container-max mx-auto h-20">
+<div class="flex items-center gap-12">
+<a class="font-display-lg text-headline-md uppercase tracking-widest text-primary" href="#">7 Luminarias</a>
+<div class="hidden md:flex gap-8">
+<a class="text-on-surface-variant font-label-caps hover:text-secondary-fixed transition-colors duration-300" href="#story">Story</a>
+<a class="text-on-surface-variant font-label-caps hover:text-secondary-fixed transition-colors duration-300" href="#menu">Menu</a>
+<a class="text-on-surface-variant font-label-caps hover:text-secondary-fixed transition-colors duration-300" href="#visit">Visit</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<a class="hidden lg:block font-label-caps text-primary border-b border-primary/30 pb-1 hover:border-primary transition-all" href="tel:8013906234">(801) 390-6234</a>
+<button class="bg-primary-container text-on-primary-container px-6 py-2 font-label-caps hover:scale-95 active:opacity-80 transition-all">Order Now</button>
+</div>
+</nav>
+</header>
+<main class="pt-20">
+<!-- Hero Section: The Alchemy of Smoke & Star -->
+<section class="relative min-h-[921px] flex flex-col justify-center items-center px-margin-mobile md:px-margin-desktop py-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+
+<div class="absolute inset-0 obsidian-overlay"></div>
+</div>
+<div class="relative z-10 text-center max-w-4xl mx-auto">
+<div class="luminaria-divider mb-12">
+<span class="luminaria-dot"></span>
+<span class="luminaria-dot"></span>
+<span class="luminaria-dot"></span>
+<span class="luminaria-dot active"></span>
+<span class="luminaria-dot"></span>
+<span class="luminaria-dot"></span>
+<span class="luminaria-dot"></span>
+</div>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg text-glow mb-8 leading-[0.9]">
+                    THE ALCHEMY OF <br/>
+<span class="text-secondary italic">SMOKE &amp; STAR</span>
+</h1>
+<p class="font-body-lg text-on-surface-variant max-w-xl mx-auto mb-12">
+                    Born in the volcanic valleys of Guanajuato, refined under the high desert skies of Utah. Experience Mexican heritage reimagined through fire and celestial precision.
+                </p>
+<div class="flex flex-col sm:flex-row gap-6 justify-center">
+<a class="px-12 py-4 bg-inverse-primary text-on-primary font-label-caps tracking-widest hover:bg-primary transition-colors duration-500" href="#menu">View The Collection</a>
+<a class="px-12 py-4 border border-outline text-on-background font-label-caps tracking-widest hover:bg-surface-container transition-colors duration-500" href="#visit">Find Us in Orem</a>
+</div>
+</div>
+</section>
+<!-- Credibility: Heritage in Every Grain -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto" id="heritage">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter items-center">
+<div class="md:col-span-5 space-y-12">
+<h2 class="font-display-lg text-headline-md text-primary-fixed uppercase tracking-tight">Heritage in Every Grain</h2>
+<div class="space-y-16">
+<div class="group border-l-2 border-primary/20 pl-8 hover:border-primary transition-all duration-700">
+<span class="font-label-caps text-secondary block mb-4">EST. 1994</span>
+<h3 class="font-headline-md text-on-surface mb-2">30 Years of Tradition</h3>
+<p class="font-body-sm text-on-surface-variant">Three decades of perfecting the ancestral recipes of the Valle de Santiago, passed down through generations of culinary masters.</p>
+</div>
+<div class="group border-l-2 border-primary/20 pl-8 hover:border-primary transition-all duration-700">
+<span class="font-label-caps text-secondary block mb-4">THE ANCHOR</span>
+<h3 class="font-headline-md text-on-surface mb-2">Hand-Pressed Tortillas</h3>
+<p class="font-body-sm text-on-surface-variant">Made from organic nixtamalized corn, pressed by hand for every single order. The foundation of every celestial bite.</p>
+</div>
+<div class="group border-l-2 border-primary/20 pl-8 hover:border-primary transition-all duration-700">
+<span class="font-label-caps text-secondary block mb-4">LOCAL LEGACY</span>
+<h3 class="font-headline-md text-on-surface mb-2">Orem's Best Kept Secret</h3>
+<p class="font-body-sm text-on-surface-variant">Tucked away in the heart of Orem, we serve a community that appreciates the depth of authentic Mexican gastronomy.</p>
+</div>
+</div>
+</div>
+<div class="md:col-span-6 md:col-start-7 relative">
+<div class="aspect-[4/5] overflow-hidden relative">
+<img alt="Traditional Tortilla Preparation" class="w-full h-full object-cover filter grayscale contrast-125" data-alt="A moody, high-contrast close-up shot of a pair of weathered hands expertly pressing a fresh corn tortilla on a dark stone surface. The lighting is dramatic and low-key, highlighting the textures of the dough and the skin. Burnt terracotta and deep charcoal tones dominate the image, evoking a sense of ancient culinary tradition and artisanal precision." src="https://lh3.googleusercontent.com/aida-public/AB6AXuActC24kkxTbz1-rB1QaNqIV7sG9fNHjpyi2_0ohuVGREqf_g6_pMDHjZAe_A_w1XVN92J2fVXZjjtOfemUydV0fCJwVhG6PozAv5_jjUe23Bo-FS4FzdY0JtnEfV4Xi6GXzLLPzEhzwQ005VqrFs9MWYg1U2RcmlAFZrGTxBX-qFTbDR0mlX8VCtyt8qTcpwY77-hX7oek0OjH6oma6vCs5yYOfV3TIHKWwFtRKszN_ZrlnPWO5ZslYqLj8XSqP_CMmDa50kJ5epY"/>
+<div class="absolute inset-0 border-[24px] border-background mix-blend-multiply"></div>
+</div>
+<div class="absolute -bottom-8 -left-8 w-48 h-48 bg-primary/10 backdrop-blur-xl border border-primary/20 p-6 hidden lg:block">
+<p class="font-label-caps text-[10px] text-secondary tracking-widest leading-relaxed">
+                            NIXTAMAL PROCESS<br/>
+                            TEMPERATURE: 850°C<br/>
+                            ORIGIN: GUANAJUATO
+                        </p>
+</div>
+</div>
+</div>
+</section>
+<!-- Offerings: The Collection -->
+<section class="bg-surface-container-lowest py-32 px-margin-mobile md:px-margin-desktop overflow-hidden" id="menu">
+<div class="max-w-container-max mx-auto">
+<div class="flex justify-between items-end mb-24">
+<div class="max-w-xl">
+<span class="font-label-caps text-primary tracking-[0.4em] block mb-6 uppercase">Curated Menu</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface uppercase">The Collection</h2>
+</div>
+<div class="hidden lg:block">
+<span class="material-symbols-outlined text-4xl text-primary-container animate-pulse">flare</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+<!-- Card 1 -->
+<div class="relative group mt-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high mb-8 relative">
+<img alt="Tacos al Pastor" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" data-alt="A gourmet presentation of Tacos al Pastor on a matte black ceramic plate. The meat is expertly charred with vibrant orange adobo, topped with fine-diced pineapple and fresh cilantro. The background is a dark, moody restaurant setting with a single warm spotlight focusing on the dish, creating deep shadows and high-contrast highlights in a celestial earth style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCcfGh5Ylkh68XBVulaMsvllCcLMWaduVimBxyCvnm_X-Wd1pfuDg6unLLbfW_bUjpZoevn9sDfaNrv10T_3NxYektYKmy2Pt0Omwlp0oX2AE38ggdiZTs8Yl0WZMyYKc0QF88wjSpgS42CAMJCSkTBaS32y4af4yUobQdI_EKASCOp5bf4gRLFjF4_oyiO72f_CdNWb8Jp7CUYQZJSEg83Y6cWj0xfmZ-ZO0iPy9vIEAA7zka2FJXKtka6LaV-6QMGOGKz8M7Xn2I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline-md text-on-surface">Tacos al Pastor</h3>
+<span class="font-label-caps text-primary">$14.00</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-6">Guajillo-marinated pork, vertical roast, fresh pineapple, nixtamal tortilla.</p>
+<div class="w-full h-px bg-outline-variant/30 group-hover:bg-primary transition-colors duration-500"></div>
+</div>
+<!-- Card 2 -->
+<div class="relative group md:-mt-12">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high mb-8 relative">
+<img alt="Asada Platters" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" data-alt="A premium Asada Platter featuring thinly sliced, fire-grilled steak with visible char marks. The meat is garnished with blistered pearl onions and roasted serrano peppers. The plate is artisanal stoneware, set against an obsidian background with subtle smoky textures and golden maize accents in the lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJZTSFqM1jySeuvMIEYUK_8JeZSh3UryrJQEOCOhnnRyu0q66ZZYHoQza4snhAjA81xdmV7KDlksVB4ChC0AorWYk5bkmq_pujhsR5aGouPu7eU0EXvY6g7uS1JiBFHztEMY3f9a_n45wekukfaSqKrKEX3Zeuxvev1G2oXtx94L8LqoanvlRWw8SMjLDBQ1Z2-Wntf6LtwWFOebbH_JM301ZSVx7S19PoPgJ91cRW-P7rahBeXvmjFQLXbnB5udXlFrN0P-iqEf8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline-md text-on-surface">Asada Platters</h3>
+<span class="font-label-caps text-primary">$18.50</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-6">Prime charcoal-grilled ribeye, charred spring onions, hand-pressed tortillas.</p>
+<div class="w-full h-px bg-outline-variant/30 group-hover:bg-primary transition-colors duration-500"></div>
+</div>
+<!-- Card 3 -->
+<div class="relative group mt-6">
+<div class="aspect-[3/4] overflow-hidden bg-surface-container-high mb-8 relative">
+<img alt="Horchata de la Casa" class="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000" data-alt="A refreshing glass of Horchata de la Casa, dusted with fine cinnamon powder and a whole cinnamon stick garnish. The milky white liquid is captured with high-speed photography showing subtle ripples. The scene is lit with warm, golden maize tones reflecting off the condensation on the glass, set in a minimalist obsidian environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxlwsBTH4TRTOcIuMtkW4nFJJfbkJBAc-zgFaVedtwp7teTP19EI-eJYxxg_iSkkVDa-mEIv990y0_lCExw7OF_VPDOW-78tvEq_vy2VrXqeEEmQlicYtSutaFfg0N5cJCTigphGUE1NOtowwVo-nvoBirSHhW8j00DddPZo0oNBWZywlukIXxUy1ZhZSZ6cNndU0HLrq_Jb01ZhAAgYCil-1ACob-kyYsxNJOcft_BzD7wUKNfSgMTlN1SCrLmPm4CDLrvmMaLU0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent"></div>
+</div>
+<div class="flex justify-between items-baseline mb-4">
+<h3 class="font-headline-md text-on-surface">Horchata</h3>
+<span class="font-label-caps text-primary">$4.50</span>
+</div>
+<p class="font-body-sm text-on-surface-variant mb-6">House-blended rice milk, Ceylon cinnamon, toasted almonds, Madagascar vanilla.</p>
+<div class="w-full h-px bg-outline-variant/30 group-hover:bg-primary transition-colors duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- About: The Valle de Santiago Story -->
+<section class="py-48 relative" id="story">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter items-center">
+<div class="lg:col-span-7 relative z-10">
+<div class="p-margin-mobile md:p-16 bg-surface-container-low border border-outline-variant/20 relative">
+<span class="font-label-caps text-secondary block mb-6">OUR GENESIS</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md text-on-surface mb-8">The Valle de Santiago Story</h2>
+<div class="space-y-6 font-body-lg text-on-surface-variant">
+<p>Deep within the Mexican state of Guanajuato lies a geological marvel—the Valle de Santiago, home to seven prehistoric volcanic craters known as the Seven Luminarias. These natural apertures were believed by the Purépecha to be aligned with the stars.</p>
+<p>Tacos 7 Luminarias was born from this mysticism. We translate the power of the volcanic hearth into the culinary arts, using traditional techniques that respect both the earth and the cosmos.</p>
+<p>In Orem, we continue this legacy, honoring the ancestral spirits through every taco we serve and every guest we welcome into our orbit.</p>
+</div>
+<div class="mt-12">
+<a class="font-label-caps text-primary border-b border-primary pb-2 hover:text-secondary-fixed hover:border-secondary transition-all" href="#">READ OUR FULL MANIFESTO</a>
+</div>
+</div>
+</div>
+<div class="lg:col-span-6 lg:-ml-24 mt-12 lg:mt-0 relative z-0">
+<img alt="Valle de Santiago Vistas" class="w-full aspect-video lg:aspect-square object-cover shadow-2xl" data-alt="A breathtaking landscape of a volcanic crater in Guanajuato, Mexico, captured during the blue hour. The lighting is mystical with deep indigo and obsidian shadows, while a faint celestial glow from the rising moon illuminates the rim of the crater. The overall atmosphere is ethereal and vast, perfectly embodying the Celestial Earth narrative of the brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZF6cO761bBwKZDp5j9cZImEk4qriuorIbPrKL3DNPAPOTX0EudX7rybfaeRG_Qqxk0H4m7boQL2MxZxd7K-7hkfZlXJqnxudPBcocVDg1y-R4pCp-agEtbvgmSdMP5Mk6tWWq2p18nhpBhfAVxi0lDhJh04WMKNfek5jOS47XU5GmQPSNeTLZEVDmXyFh1Hm_ID8OTgITq9pPkorb0zHRReaz0_iXjqon0eWZzsOH8h-Sx6ylresxElj5_fkbyzxeRwmw_Q1mXvg"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="bg-background relative py-32 border-t border-outline-variant/10" id="visit">
+<div class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-display-lg text-headline-md text-on-surface mb-12 uppercase tracking-widest">Orbit Our Kitchen</h2>
+<div class="space-y-12">
+<div>
+<h4 class="font-label-caps text-secondary mb-4">LOCATION</h4>
+<p class="font-display-lg text-headline-md text-on-background">615 North State Street<br/>Orem, UT 84057</p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div>
+<h4 class="font-label-caps text-secondary mb-4">HOURS</h4>
+<p class="font-body-sm text-on-surface-variant">Mon – Thu: 11am - 9pm<br/>Fri – Sat: 11am - 10pm<br/>Sun: Closed</p>
+</div>
+<div>
+<h4 class="font-label-caps text-secondary mb-4">CONTACT</h4>
+<p class="font-body-sm text-on-surface-variant">Tacos7luminarias@gmail.com<br/>(801) 390-6234</p>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[500px] border border-outline-variant/30" data-location="Orem, Utah" data-map-slot="" style=""></div>
+<div class="absolute inset-0 bg-primary/5 pointer-events-none group-hover:bg-transparent transition-colors duration-500"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact: Catering Inquiry -->
+<section class="py-32 px-margin-mobile md:px-margin-desktop bg-surface-container-lowest" id="contact">
+<div class="max-w-3xl mx-auto text-center mb-20">
+<h2 class="font-display-lg text-headline-md text-on-surface mb-4">Bring the Alchemy to Your Event</h2>
+<p class="font-body-lg text-on-surface-variant">Catering for celestial gatherings, corporate events, and family milestones.</p>
+</div>
+<form class="max-w-2xl mx-auto space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+<div class="relative">
+<label class="font-label-caps text-secondary block mb-2">FULL NAME</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background py-3 transition-colors placeholder-on-surface-variant/30" placeholder="Juan Archuleta" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-secondary block mb-2">EMAIL ADDRESS</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background py-3 transition-colors placeholder-on-surface-variant/30" placeholder="juan@cosmos.com" type="email"/>
+</div>
+</div>
+<div class="relative">
+<label class="font-label-caps text-secondary block mb-2">EVENT TYPE &amp; DATE</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background py-3 transition-colors placeholder-on-surface-variant/30" placeholder="Wedding Celebration - Oct 12th" type="text"/>
+</div>
+<div class="relative">
+<label class="font-label-caps text-secondary block mb-2">YOUR MESSAGE</label>
+<textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary text-on-background py-3 transition-colors placeholder-on-surface-variant/30" placeholder="Tell us about your celestial vision..." rows="4"></textarea>
+</div>
+<div class="text-center">
+<button class="group relative px-16 py-5 bg-primary text-on-primary font-label-caps tracking-[0.2em] overflow-hidden" type="submit">
+<span class="relative z-10">TRANSMIT REQUEST</span>
+<div class="absolute inset-0 bg-secondary scale-x-0 group-hover:scale-x-100 origin-left transition-transform duration-500"></div>
+</button>
+</div>
+</form>
+</section>
+</main>
+<!-- Footer Section (Shared Component: Footer) -->
+<footer class="bg-surface-container-lowest text-tertiary-fixed border-t border-outline-variant/20">
+<div class="bg-gradient-to-t from-black to-surface-container-lowest flex flex-col md:flex-row justify-between items-start px-margin-desktop py-24 gap-gutter max-w-container-max mx-auto">
+<div class="max-w-md">
+<h2 class="font-display-lg text-display-lg-mobile text-primary mb-6">7 Luminarias</h2>
+<p class="font-body-sm text-on-surface-variant mb-12">
+                    A culinary journey through volcanic heritage and celestial alignment. Rooted in tradition, elevated by smoke, served with cosmic precision in the heart of Orem.
+                </p>
+<div class="flex gap-8">
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-500 font-label-caps" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary transition-all duration-500 font-label-caps" href="#">Facebook</a>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-2 gap-16 mt-12 md:mt-0">
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-primary mb-4">EXPLORE</h4>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#story">Story</a>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#menu">Menu</a>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#visit">Visit</a>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#">Catering</a>
+</div>
+<div class="flex flex-col gap-4">
+<h4 class="font-label-caps text-primary mb-4">LEGAL</h4>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#">Celestial Policy</a>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#">Ancestral Heritage</a>
+<a class="font-body-sm text-on-surface-variant hover:text-secondary" href="#">Terms of Space</a>
+</div>
+</div>
+</div>
+<div class="px-margin-desktop py-8 border-t border-outline-variant/10 text-center">
+<p class="font-label-caps text-[10px] text-on-surface-variant/40 tracking-[0.5em]">
+                © 2024 TACOS 7 LUMINARIAS. CELESTIAL EARTH NARRATIVE. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interactions and effects
+        document.addEventListener('DOMContentLoaded', () => {
+            // Intersection Observer for image reveals
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('.image-reveal').forEach(img => {
+                observer.observe(img);
+            });
+
+            // Parallax effect for hero shader background
+            window.addEventListener('scroll', () => {
+                const scrolled = window.pageYOffset;
+                const heroShader = document.querySelector('webgl-shader');
+                if (heroShader) {
+                    heroShader.style.transform = `translateY(${scrolled * 0.4}px)`;
+                }
+            });
+
+            // Smooth scroll for anchors
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body></html>
