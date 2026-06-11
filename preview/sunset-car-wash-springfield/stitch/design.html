@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>SUNSET | Premium Car Wash &amp; Detailing Studio</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&amp;family=DM+Sans:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-secondary": "#2c2d4d",
+                    "outline": "#a48c7f",
+                    "error-container": "#93000a",
+                    "surface-variant": "#3e322c",
+                    "surface-bright": "#433730",
+                    "inverse-surface": "#f2dfd5",
+                    "inverse-primary": "#9b4500",
+                    "on-surface": "#f2dfd5",
+                    "on-secondary-fixed": "#171837",
+                    "error": "#ffb4ab",
+                    "primary-container": "#ff8c42",
+                    "secondary-container": "#454668",
+                    "tertiary-fixed-dim": "#cbc6bf",
+                    "secondary-fixed": "#e1e0ff",
+                    "tertiary": "#cbc6bf",
+                    "secondary-fixed-dim": "#c3c3eb",
+                    "surface-dim": "#1b110c",
+                    "on-primary": "#532200",
+                    "inverse-on-surface": "#3a2e28",
+                    "on-primary-fixed-variant": "#763300",
+                    "on-error-container": "#ffdad6",
+                    "on-primary-container": "#6a2d00",
+                    "on-tertiary-fixed-variant": "#494642",
+                    "on-secondary-container": "#b5b5dd",
+                    "surface-container": "#281d18",
+                    "surface-tint": "#ffb68d",
+                    "surface-container-high": "#332822",
+                    "background": "#1b110c",
+                    "surface": "#1b110c",
+                    "surface-container-low": "#231914",
+                    "on-tertiary": "#32302c",
+                    "on-tertiary-fixed": "#1d1b17",
+                    "on-primary-fixed": "#331200",
+                    "surface-container-lowest": "#150c07",
+                    "primary-fixed": "#ffdbc9",
+                    "primary": "#ffb68d",
+                    "on-error": "#690005",
+                    "on-tertiary-container": "#413f3a",
+                    "on-background": "#f2dfd5",
+                    "primary-fixed-dim": "#ffb68d",
+                    "outline-variant": "#564338",
+                    "surface-container-highest": "#3e322c",
+                    "tertiary-fixed": "#e7e2db",
+                    "tertiary-container": "#aeaaa4",
+                    "on-surface-variant": "#ddc1b3",
+                    "on-secondary-fixed-variant": "#434465",
+                    "secondary": "#c3c3eb"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1440px",
+                    "gutter": "32px",
+                    "margin-desktop": "80px",
+                    "margin-mobile": "24px",
+                    "section-gap": "160px"
+            },
+            "fontFamily": {
+                    "label-caps": ["DM Sans"],
+                    "headline-md": ["Playfair Display"],
+                    "headline-lg": ["Playfair Display"],
+                    "display-lg-mobile": ["Playfair Display"],
+                    "display-lg": ["Playfair Display"],
+                    "body-lg": ["DM Sans"],
+                    "body-md": ["DM Sans"]
+            },
+            "fontSize": {
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.1em", "fontWeight": "700"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "headline-lg": ["48px", {"lineHeight": "56px", "fontWeight": "600"}],
+                    "display-lg-mobile": ["48px", {"lineHeight": "52px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["84px", {"lineHeight": "92px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-lg": ["20px", {"lineHeight": "32px", "letterSpacing": "0.01em", "fontWeight": "400"}],
+                    "body-md": ["16px", {"lineHeight": "26px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        html { scroll-behavior: smooth; }
+        body { background-color: #1b110c; color: #f2dfd5; }
+        .glass-card {
+            background: rgba(40, 29, 24, 0.6);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 249, 242, 0.1);
+        }
+        .light-leak {
+            background: radial-gradient(circle at center, #ff8c421a 0%, transparent 70%);
+        }
+        .hover-glow:hover {
+            box-shadow: 0 0 20px rgba(255, 140, 66, 0.4);
+            border-color: #ff8c42;
+        }
+        .text-glow {
+            text-shadow: 0 0 15px rgba(255, 182, 141, 0.3);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- Header (Shared Component) -->
+<header class="fixed top-0 w-full z-50 bg-transparent backdrop-blur-md border-b border-white/10 flex justify-between items-center px-margin-desktop py-6 w-full">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">SUNSET</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#services">SERVICES</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#about">ABOUT</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#visit">VISIT</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-primary transition-colors duration-300" href="#contact">CONTACT</a>
+</nav>
+<div class="flex items-center gap-4">
+<a class="font-label-caps text-label-caps text-primary border border-primary/20 px-6 py-2 rounded-full hover:bg-primary hover:text-on-primary transition-all active:scale-95" href="tel:4175550199">(417) 555-0199</a>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="relative h-screen w-full flex items-end overflow-hidden">
+<img alt="SUNSET Hero Image" class="absolute inset-0 w-full h-full object-cover grayscale-[20%] contrast-[110%] brightness-[70%]" src="https://lh3.googleusercontent.com/aida/AP1WRLt4oaZjmvTv42q_6vpheQJ50fICwi63keZt5k42vyHixF_JElwC2d0HNpMJz9KNCQSFSg2sGKJtNvluWcGwgsnKdcrRWB7fvM8dmlfTbsWsHJYBp8A_EHhsRay022SNhpXPYnu4SLfMYgGSPP5-r6DDSRYiZu2WUCHFOOjlMnM5sFR0HQ8ZlOPsI1Kz4NGd-ivEUaGx2oDqLs0BiwrRuOs2tC1ed7gFadQF5czWqQL6PiiTEY1PEctx_EAI"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+<div class="relative px-margin-desktop pb-24 z-10 max-w-4xl">
+<span class="font-label-caps text-label-caps text-primary-container mb-4 block tracking-[0.3em]">ESTABLISHED QUALITY</span>
+<h1 class="font-display-lg text-display-lg text-glow text-on-surface leading-none mb-8">THE ART OF <br/>THE SHINE</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl">
+                A premium ritual for the discerning vehicle owner. We transform the ordinary into the extraordinary through meticulous care and the golden light of perfection.
+            </p>
+<div class="flex gap-6">
+<a class="bg-primary-container text-on-primary-container px-10 py-5 font-label-caps text-label-caps rounded-none hover:brightness-110 transition-all uppercase tracking-widest" href="#contact">Book Appointment</a>
+<a class="border border-on-surface/20 text-on-surface px-10 py-5 font-label-caps text-label-caps rounded-none hover:bg-on-surface hover:text-background transition-all uppercase tracking-widest backdrop-blur-sm" href="#services">Our Levels of Care</a>
+</div>
+</div>
+<div class="absolute bottom-10 right-margin-desktop animate-bounce">
+<span class="material-symbols-outlined text-primary text-4xl">keyboard_double_arrow_down</span>
+</div>
+</section>
+<!-- Credibility Section -->
+<section class="relative py-section-gap overflow-hidden" id="credibility">
+<div class="light-leak absolute -left-1/4 top-0 w-1/2 h-full opacity-30"></div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-5 relative z-10">
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">Master Detailer <br/><span class="text-primary italic">Excellence</span></h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-12">
+                    Our studio is more than a facility; it's a sanctuary for automotive preservation. Every vehicle that enters SUNSET undergoes a rigorous assessment and a bespoke treatment plan executed by craftspeople who view detailing as a fine art.
+                </p>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<div class="font-display-lg text-headline-lg text-primary mb-2">20+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Years Experience</p>
+</div>
+<div>
+<div class="font-display-lg text-headline-lg text-primary mb-2">10k+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest">Showroom Finishes</p>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-6 lg:col-start-7 relative">
+<div class="aspect-[4/5] overflow-hidden rounded-none border-[12px] border-surface-container shadow-2xl">
+<img alt="Local Craftsmanship at Sunset" class="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-1000" src="https://lh3.googleusercontent.com/aida/AP1WRLsS8TDLqt0uMZdbYAsbCNsOrQdCxaH_qHOMtQgoPJ9A24P6-LUP323JuS1-L1mFJcCjU3hAL3nfimD6lybQnuN9SDvATpjtn7vUyDgL5LXmJ4vAgrlbDj2hiVwxVCwuEJ8P_Mrw5UdpvOWsXLIGWdTIQdPigUQduNyDMLliNNos1oHPDfIL8MfmBFhKyC9NbAiuTaJSvmpXmgxdR0nUnQ1nYCnKkX0rvh-_LRB7ItZmSOXWsR_o5n1T4IQv"/>
+</div>
+<div class="absolute -bottom-10 -left-10 glass-card p-12 max-w-sm hidden md:block">
+<h3 class="font-headline-md text-headline-md mb-4 text-primary">Local Legacy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Founded in Springfield, we've spent two decades perfecting the science of reflection for our community.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="bg-surface-container-low py-section-gap relative" id="services">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="text-center mb-24">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.4em] uppercase mb-4 block">The Collections</span>
+<h2 class="font-display-lg text-headline-lg text-on-surface">Select Your Level of Care</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Tier 1 -->
+<div class="glass-card p-12 flex flex-col group hover-glow transition-all duration-500">
+<span class="font-label-caps text-label-caps text-outline mb-6">COLLECTION 01</span>
+<h3 class="font-headline-lg text-headline-md mb-2">The Signature Wash</h3>
+<div class="text-primary font-display-lg text-headline-lg mb-8">$45</div>
+<ul class="space-y-4 mb-12 flex-grow text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Ph-Neutral Hand Wash</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Wheel &amp; Tire Decontamination</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Interior Vacuum &amp; Wipe-down</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Spray Sealant Protection</li>
+</ul>
+<a class="w-full text-center py-4 border border-primary/30 font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-all uppercase tracking-widest" href="#contact">Reserve Session</a>
+</div>
+<!-- Tier 2 -->
+<div class="glass-card p-12 flex flex-col group border-primary/40 relative transform md:-translate-y-8 hover-glow transition-all duration-500">
+<div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary-container text-on-primary-container px-6 py-1 font-label-caps text-[10px] tracking-widest uppercase">Most Refined</div>
+<span class="font-label-caps text-label-caps text-outline mb-6">COLLECTION 02</span>
+<h3 class="font-headline-lg text-headline-md mb-2">The Horizon Detail</h3>
+<div class="text-primary font-display-lg text-headline-lg mb-8">$185</div>
+<ul class="space-y-4 mb-12 flex-grow text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Deep Clay Bar Treatment</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Single Stage Machine Polish</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Premium Carnauba Wax</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Full Interior Steam Clean</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Leather Conditioning</li>
+</ul>
+<a class="w-full text-center py-4 bg-primary text-on-primary font-label-caps text-label-caps transition-all uppercase tracking-widest" href="#contact">Reserve Session</a>
+</div>
+<!-- Tier 3 -->
+<div class="glass-card p-12 flex flex-col group hover-glow transition-all duration-500">
+<span class="font-label-caps text-label-caps text-outline mb-6">COLLECTION 03</span>
+<h3 class="font-headline-lg text-headline-md mb-2">Ceramic Shield</h3>
+<div class="text-primary font-display-lg text-headline-lg mb-8">Quote</div>
+<ul class="space-y-4 mb-12 flex-grow text-on-surface-variant">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Multi-Stage Paint Correction</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> 5-Year Ceramic Coating</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Hydrophobic Glass Coating</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary text-lg">check_circle</span> Infrared Curing Process</li>
+</ul>
+<a class="w-full text-center py-4 border border-primary/30 font-label-caps text-label-caps hover:bg-primary-container hover:text-on-primary-container hover:border-primary-container transition-all uppercase tracking-widest" href="#contact">Inquire Directly</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="py-section-gap bg-background relative overflow-hidden" id="about">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-12 gap-gutter items-center">
+<div class="col-span-12 lg:col-span-7">
+<div class="aspect-video relative overflow-hidden group">
+<img alt="Lance and the Sunset Detail Team" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida/AP1WRLugu3-dEKmhyqHBsiYXGDvWutXbLxuAk8xCYsH6AJomzFMbdKhjiCeozemlu18G2zKRaF-wFd4PPe455zHzAv31oi87HcFGMUW4a71_PJDwkuOPJ0Qu-buIZTXzzZx00AIeAJ7fYlTFsoadAwNE_50VkG3YkMqZ8cih3wzl0x-8zDOe3r4cCAgrziIj8-96XlLKGlo8xr0IqPbHTKQIMx8NPSZPNwifnZpHrKV4SwiJs8JbRzk2sMij3WRj"/>
+<div class="absolute inset-0 bg-primary/10 mix-blend-overlay"></div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-5 lg:pl-12">
+<span class="font-label-caps text-label-caps text-primary tracking-[0.3em] uppercase mb-4 block">Our Team</span>
+<h2 class="font-headline-lg text-headline-lg mb-8 leading-tight">Meet the Hands Behind the Shine</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                        Led by Master Detailer Lance, our team is a collective of certified specialists dedicated to automotive restoration. We don't just wash cars; we preserve investments.
+                    </p>
+<p class="font-body-md text-body-md text-on-surface-variant/80 mb-10 italic border-l-4 border-primary pl-6">
+                        "Precision is our minimum standard. We use eco-conscious methods and the world's finest chemistry to ensure every vehicle leaves with a signature sunset glow."
+                    </p>
+<div class="flex items-center gap-6">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface font-bold uppercase">Certified Master Detailers</span>
+<span class="text-xs text-outline tracking-wider uppercase">IDA Professional Membership</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit Section -->
+<section class="py-section-gap bg-surface-container-lowest" id="visit">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-24 items-center">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">Visit the Studio</h2>
+<div class="space-y-8">
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-3xl">location_on</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2 tracking-widest uppercase">Location</h4>
+<p class="text-on-surface-variant">1605 Selma Road<br/>Springfield, OH 45505</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-3xl">schedule</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2 tracking-widest uppercase">Hours</h4>
+<p class="text-on-surface-variant">Mon – Fri: 8:00 AM – 6:00 PM<br/>Sat: 9:00 AM – 4:00 PM<br/>Sun: Closed</p>
+</div>
+</div>
+<div class="flex gap-6 items-start">
+<span class="material-symbols-outlined text-primary text-3xl">contact_support</span>
+<div>
+<h4 class="font-label-caps text-label-caps text-on-surface mb-2 tracking-widest uppercase">Direct line</h4>
+<p class="text-on-surface-variant">(417) 555-0199<br/>lance5177@yahoo.com</p>
+</div>
+</div>
+</div>
+</div>
+<div aria-label="Map" class="map-slot relative overflow-hidden min-h-[400px] bg-surface-container grayscale opacity-70 hover:opacity-100 transition-opacity duration-500 border border-white/5" data-location="1605 Selma Road, Springfield, OH" style="">
+<!-- Dynamic Map Placeholder -->
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="font-label-caps text-label-caps text-outline animate-pulse">LOADING CARTOGRAPHY...</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Form Section -->
+<section class="py-section-gap relative" id="contact">
+<div class="light-leak absolute right-0 bottom-0 w-1/3 h-1/2 opacity-20 pointer-events-none"></div>
+<div class="max-w-4xl mx-auto px-margin-mobile md:px-0">
+<div class="text-center mb-16">
+<h2 class="font-display-lg text-headline-lg mb-4">Request an Appointment</h2>
+<p class="font-body-md text-on-surface-variant">Complete the form below and our studio manager will reach out to confirm your session.</p>
+</div>
+<form class="space-y-12">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest block mb-2">Full Name</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline/30 focus:border-primary-container focus:ring-0 transition-all text-on-surface px-0 py-4 placeholder:text-surface-variant" placeholder="John Doe" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest block mb-2">Email Address</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline/30 focus:border-primary-container focus:ring-0 transition-all text-on-surface px-0 py-4 placeholder:text-surface-variant" placeholder="john@example.com" type="email"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest block mb-2">Vehicle Type</label>
+<input class="w-full bg-surface-container-low border-0 border-b border-outline/30 focus:border-primary-container focus:ring-0 transition-all text-on-surface px-0 py-4 placeholder:text-surface-variant" placeholder="2024 Porsche 911" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest block mb-2">Service Selection</label>
+<select class="w-full bg-surface-container-low border-0 border-b border-outline/30 focus:border-primary-container focus:ring-0 transition-all text-on-surface px-0 py-4">
+<option>Signature Wash ($45)</option>
+<option>Horizon Detail ($185)</option>
+<option>Ceramic Shield (Quote)</option>
+</select>
+</div>
+</div>
+<div class="space-y-1">
+<label class="font-label-caps text-label-caps text-outline uppercase tracking-widest block mb-2">Additional Notes</label>
+<textarea class="w-full bg-surface-container-low border-0 border-b border-outline/30 focus:border-primary-container focus:ring-0 transition-all text-on-surface px-0 py-4 placeholder:text-surface-variant" placeholder="Specific areas of concern or special requests..." rows="4"></textarea>
+</div>
+<div class="text-center">
+<button class="bg-primary-container text-on-primary-container px-16 py-6 font-label-caps text-label-caps rounded-none hover:scale-[1.02] active:scale-[0.98] transition-all uppercase tracking-widest shadow-xl" type="submit">Secure Your Session</button>
+</div>
+</form>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-dim border-t border-white/5 w-full py-section-gap">
+<div class="grid grid-cols-12 gap-gutter px-margin-desktop max-w-container-max mx-auto">
+<div class="col-span-12 md:col-span-4 space-y-8">
+<div class="font-display-lg text-headline-md text-primary">SUNSET</div>
+<p class="font-body-md text-on-surface-variant max-w-xs">Premium automotive aesthetics studio specializing in advanced protection and restoration rituals since 2004.</p>
+<div class="flex gap-4">
+<a class="w-10 h-10 flex items-center justify-center border border-outline/30 hover:border-primary transition-colors text-outline hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">social_leaderboard</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline/30 hover:border-primary transition-colors text-outline hover:text-primary" href="#">
+<span class="material-symbols-outlined text-sm">photo_camera</span>
+</a>
+</div>
+</div>
+<div class="col-span-6 md:col-span-2 flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4">Nav</h5>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#services">SERVICES</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#about">ABOUT</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#visit">VISIT</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#contact">RESERVE</a>
+</div>
+<div class="col-span-6 md:col-span-2 flex flex-col gap-4">
+<h5 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4">Studio</h5>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#">CAREERS</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#">PRIVACY</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#">TERMS</a>
+<a class="text-on-surface-variant hover:text-primary-container transition-all" href="#">MEMBERSHIP</a>
+</div>
+<div class="col-span-12 md:col-span-4 space-y-6">
+<h5 class="font-label-caps text-label-caps text-primary tracking-widest uppercase mb-4">Direct Contact</h5>
+<p class="text-on-surface-variant">Phone: 265.663 7265</p>
+<p class="text-on-surface-variant">Email: lance5177@yahoo.com</p>
+<p class="text-on-surface-variant">Address: 1605 Selma Road, Springfield, OH 45505</p>
+</div>
+<div class="col-span-12 pt-24 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="font-label-caps text-[10px] text-outline tracking-widest uppercase">© 2024 SUNSET CAR WASH. ESTABLISHED IN SPRINGFIELD.</p>
+<div class="flex gap-8">
+<span class="text-[10px] text-outline font-label-caps tracking-widest">MADE WITH PRECISION</span>
+<span class="text-[10px] text-outline font-label-caps tracking-widest">ECO-FRIENDLY STUDIO</span>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for form inputs
+        document.querySelectorAll('input, textarea, select').forEach(el => {
+            el.addEventListener('focus', () => {
+                el.previousElementSibling.classList.add('text-primary');
+            });
+            el.addEventListener('blur', () => {
+                el.previousElementSibling.classList.remove('text-primary');
+            });
+        });
+
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.classList.add('bg-background/95', 'py-4');
+                header.classList.remove('bg-transparent', 'py-6');
+            } else {
+                header.classList.remove('bg-background/95', 'py-4');
+                header.classList.add('bg-transparent', 'py-6');
+            }
+        });
+    </script>
+</body></html>
